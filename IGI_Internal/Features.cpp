@@ -1,5 +1,7 @@
 #include "Features.hpp"
 
+void RestartLevel();
+
 void DllMainLoop() {
 	g_menu_screen = READ_PTR(menu_screen_ptr);
 	g_game_level = LEVEL::GET();
@@ -50,6 +52,10 @@ void DllMainLoop() {
 				int weapon_id = GAME_WEAPON::WEAPON_ID_AK47;
 				WEAPON::WEAPON_PICKUP(weapon_id);
 				MISC::STATUS_MESSAGE_SHOW(string("WeaponPickup Id:" + std::to_string(weapon_id) + " done!"));
+
+				// show total weapons count in status message.
+				int total_weapons = WEAPON::TOTAL_COUNT();
+				MISC::STATUS_MESSAGE_SHOW(string("Total weapons in game: " + std::to_string(total_weapons)));
 			}
 			catch (const std::exception& ex)
 			{
@@ -75,12 +81,37 @@ void DllMainLoop() {
 			HUMAN::HUMAN_PLAYER_LOAD();
 			MISC::STATUS_MESSAGE_SHOW("Humanplayer load success!");
 		}
+
+		// Find next human camera via native (Ctrl+F6)
+		else if (GT_HotKeysPressed(VK_CONTROL, VK_F6)) {
+			try {
+				
+				if (READ_PTR(DEBUG_KEYS_ADDR) != 1) {
+					*DEBUG_KEYS_ADDR = 1; // Enable debug keys if not already enabled.
+				}
+
+				int human_addr = (int)READ_PTR(humanplayer_ptr);
+				if (human_addr == 0) {
+					MISC::STATUS_MESSAGE_SHOW("Humanplayer structure not available");
+				}
+				else {
+					
+					HUMAN::FIND_NEXT_CAMERA(human_addr);
+					MISC::STATUS_MESSAGE_SHOW("Invoked FindNextHumanCamera");
+				}
+			}
+			catch (const std::exception& ex)
+			{
+				LOG_INFO("Exception: %s", ex.what());
+			}
+		}
 	}
 
 	else if (g_menu_screen == MENU_SCREEN_RESTART) {
 		soldiers.clear();
 		if (!g_PlayerEnabled) GAME::INPUT_DISABLE();
 	}
+
 
 }
 

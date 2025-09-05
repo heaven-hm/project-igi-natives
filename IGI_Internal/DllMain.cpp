@@ -81,8 +81,8 @@ BOOL WINAPI  DllMain(HMODULE hmod, DWORD reason, PVOID)
 
 					//Invincible-Jones.
 #ifdef DBG_x86
-					//GT_WriteNOP(PLAYER_XPL_HIT_ADDR, 6);
-					//WEAPON::UNLIMITED_AMMO_SET(true);20.5990
+					GT_WriteNOP(PLAYER_XPL_HIT_ADDR, 6);
+					WEAPON::UNLIMITED_AMMO_SET(true);
 					MISC::STATUS_MESSAGE_SHOW((PROJECT_NAME + string(" v1.1 Attached")).c_str());
 #else
 					MISC::STATUS_MESSAGE_SHOW((PROJECT_NAME + string(" v1.1 Attached")).c_str());

@@ -104,6 +104,7 @@ namespace IGI {
 #define	VIEWPORT_TASK_ADDR (void*)0x00497E94
 #define	VIEWPORT_SIZE 9
 #define FLOAT_SIZE 4
+#define DEBUG_KEYS_ADDR (int*)0x0057B194
 
 	//Datatypes re-defined.
 	typedef uint16_t soldier_t;

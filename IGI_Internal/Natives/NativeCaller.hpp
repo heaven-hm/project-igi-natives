@@ -1,91 +1,58 @@
-#pragma once 
-#include "Common.hpp" 
-#include "Logger.hpp" 
-#include "CommonConst.hpp" 
+#pragma once
+#include "Common.hpp"
+#include "Logger.hpp"
+#include "CommonConst.hpp"
 #include "Natives.hpp"
 
-using namespace IGI;
-
 namespace IGI {
+    using NativeHash = uint32_t;
+    using Void = void*;
 
-	typedef uint32_t NativeHash;
-	typedef void* Void;
+    class NativeCaller {
+        bool m_hash_found = false;
 
-	class NativeCaller {
-		int native_argc = 0;
-		bool m_hash_found = false;
+    public:
+        template<typename ReturnType = Void, typename... Args>
+        ReturnType Invoke(Void native_hash, Args... parameters) {
+            const int argument_count = sizeof...(Args);
+            m_hash_found = (native_hash != nullptr);
 
-		template <typename RT = Void>
-		RT NativeInvoke(void* func_ptr) {
-			return NativeInvokeT<RT>(func_ptr);
-		}
+            // Log call details
+            std::stringstream ss;
+            ss << "Hash: " << native_hash;
+            int parameter_index = 0;
+            ((ss << " Param" << ++parameter_index << "="
+                << HEX_ADDR_FMT(parameters)
+                << " type=" << TYPE(parameters)), ...);
+            ss << " Argc=" << argument_count;
+            LOG_FILE("%s(): %s", FUNC_NAME, ss.str().c_str());
 
-		template <typename RT = Void, typename T>
-		RT NativeInvoke(void* func_ptr, T param) {
-			return NativeInvokeT<RT>(func_ptr, param);
-		}
+            if (m_hash_found) {
+                LOG_FILE("Found handler for Hash %p Symbol: %s", native_hash,
+                    ::g_Natives->FindNativeName(reinterpret_cast<NativeHash>(native_hash)).c_str());
 
-		template <typename RT = Void, typename T1, typename T2>
-		RT NativeInvoke(void* func_ptr, T1 param1, T2 param2) {
-			return NativeInvokeT<RT>(func_ptr, param1, param2);
-		}
+                using FunctionType = ReturnType(__cdecl*)(Args...);
+                auto function = reinterpret_cast<FunctionType>(native_hash);
 
-		template <typename RT = Void, typename T1, typename T2, typename T3 = Void>
-		RT NativeInvoke(void* func_ptr, T1 param1, T2 param2, T3 param3) {
-			return NativeInvokeT<RT>(func_ptr, param1, param2, param3);
-		}
+                if constexpr (std::is_void_v<ReturnType>) {
+                    function(parameters...);
+                }
+                else {
+                    return function(parameters...);
+                }
+            }
+            else {
+                LOG_FILE("Error finding handler for Hash 0x%X", reinterpret_cast<NativeHash>(native_hash));
+            }
 
-		template<typename RT = Void, typename T1 = Void, typename T2 = Void, typename T3 = Void, typename T4 = Void>
-		RT NativeInvoke(void* func_ptr, T1 param1, T2 param2, T3 param3, T4 param4) {
-			return NativeInvokeT<RT>(func_ptr, param1, param2, param3, param4);
-		}
+            if constexpr (!std::is_void_v<ReturnType>) {
+                if constexpr (std::is_pointer_v<ReturnType>)
+                    return nullptr;
+                else
+                    return ReturnType{};
+            }
+        }
+    };
 
-		template<typename RT = Void, typename T1 = Void, typename T2 = Void, typename T3 = Void, typename T4 = Void>
-		RT NativeInvokeT(Void native_hash, T1 param1 = nullptr, T2 param2 = nullptr, T3 param3 = nullptr, T4 param4 = nullptr) {
-			std::stringstream ss;
-			ss << "Hash : " << native_hash << " Param1: " << HEX_ADDR_FMT(param1) << " type: " << TYPE(param1) << " Param2: " << HEX_ADDR_FMT(param2) << " type: " << TYPE(param2) <<
-				" Param3: " << HEX_ADDR_FMT(param3) << " type: " << TYPE(param3) << " Param4: " << HEX_ADDR_FMT(param4) << " type: " << TYPE(param4) << " Argc: " << native_argc << std::endl;
-			LOG_FILE("%s(): %s", FUNC_NAME, ss.str().data());
-
-#define IS_SAME_T1(T) std::is_same_v<T1,T> 
-			m_hash_found = false;
-			if constexpr (!IS_SAME_T1(void*)) {
-				if (native_argc >= 1) {
-					LOG_FILE("Found handler for Hash %p\tSymbol : %s", native_hash, ::g_Natives->FindNativeName(reinterpret_cast<NativeHash>(native_hash)).c_str());
-					m_hash_found = true;
-
-					std::function<RT(T1, T2, T3, T4)> hash_invoker{ (RT(_cdecl*)(T1,T2,T3,T4))native_hash };
-					auto ret_val = std::invoke(hash_invoker, param1, param2, param3, param4);
-					if constexpr (!std::is_same_v<RT, Void>) return ret_val;
-				}
-			}
-			else {
-				LOG_FILE("Found handler for Hash %p\tSymbol : %s", native_hash, ::g_Natives->FindNativeName(reinterpret_cast<NativeHash>(native_hash)).c_str());
-				m_hash_found = true;
-
-				std::function<RT(void)> hash_invoker{ (RT(_cdecl*)(void))native_hash };
-				auto ret_val = std::invoke(hash_invoker);
-				if constexpr (!std::is_same_v<RT, Void>) return ret_val;
-			}
-			if (!m_hash_found)
-				LOG_FILE("Error finding handler for Hash 0x%X", native_hash);
-			return reinterpret_cast<RT>(nullptr);
-		}
-
-	public:
-		NativeCaller() = default;
-		~NativeCaller() = default;
-
-		template<typename RT = Void, class... Args>
-		RT Invoke(Args... args)
-		{
-			native_argc = sizeof...(Args) - 1;//Not counting native_hash as Arg. 
-			auto ret_val = NativeInvoke<RT>(args...);
-
-			if constexpr (!std::is_same_v<RT, void>)
-				return ret_val;
-		}
-
-	};
-	inline NativeCaller g_NativeCaller;
+    inline NativeCaller g_NativeCaller;
 }

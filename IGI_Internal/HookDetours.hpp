@@ -4,7 +4,6 @@
 #include "Logger.hpp"
 #include "Utils/DbgHelper.hpp"
 #include "GTLibc.hpp"
-#include "DbgHelper.hpp"
 #include "CommonConst.hpp"
 #include "Natives/NativeHelper.hpp"
 #include "HumanSoldier.hpp"
@@ -15,7 +14,7 @@
 //Testing.
 bool graph_runner = false;
 
-Graph graph;
+IGI::Graph graph;
 //Graph::Node node;
 using namespace IGI;
 
@@ -203,7 +202,7 @@ auto ResourceFlush = (void(__cdecl*)(int*))0x004B63D0;
 decltype(ResourceFlush) ResourceFlushOut;
 
 
-/**
+ /**
 ** A.I Graph Hooks methods section.
 **/
 

@@ -75,6 +75,7 @@ namespace IGI {
 		NATIVE_DECL void HUMAN_PLAYER_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::HUMANPLAYER_LOAD); }
 		NATIVE_DECL uint32_t HIT_DAMAGE_GET() { return NATIVE_INVOKE<uint32_t>((Void)HASH::HUMAN_HIT_DAMAGE); }
 		NATIVE_DECL void CAM_VIEW_SET(int cam_type) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_CAM_VIEW, (int)READ_PTR(humanplayer_ptr), cam_type); }
+		NATIVE_DECL void FIND_NEXT_CAMERA(int human_addr) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_FIND_NEXT_CAMERA, human_addr); }
 	}
 
 	namespace SOLDIER {
