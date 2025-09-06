@@ -28,6 +28,7 @@ So don't use this project to misuse the game's identity and source of original g
 
 #### 🛠️ Technical Changes
 - **AutoMsgBox Removal**: Completely removed AutoMsgBox component and replaced with FiberPool-based asynchronous execution for safer native calls
+- **Fiber Scheduler Integration**: Added Fiber scheduler to game methods that update every frame (DrawTextUI and PlaySoundSFX) to create a proper GameLoop alternative. IGI (2000) uses dispatch event-based Windows Message loop instead of modern game engine loops, so we reverse-engineered the best methods with AI/LLM assistance to resolve this architectural challenge
 - **Include Path Fixes**: Fixed all header file include paths to use proper relative paths for better build compatibility
 - **Build System Improvements**: Resolved compilation errors and improved project structure
 - Enhanced debugging features and refactor codebase
