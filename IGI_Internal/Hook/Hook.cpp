@@ -1,5 +1,5 @@
 #include "Hook.hpp"
-#include <HookDetours.hpp>
+#include "../HookDetours.hpp"
 using namespace IGI;
 using namespace IGI;
 

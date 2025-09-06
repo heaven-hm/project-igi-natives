@@ -210,7 +210,6 @@
     <ClInclude Include="Libs\json.hpp" />
     <ClInclude Include="Memory\Memory.hpp" />
     <ClInclude Include="Player\HumanSoldier.hpp" />
-    <ClInclude Include="Utils\AutoMsgBox.hpp" />
     <ClInclude Include="Utils\Console.hpp" />
     <ClInclude Include="DllMain.hpp" />
     <ClInclude Include="Utils\DbgHelper.hpp" />
@@ -235,7 +234,6 @@
     <ClCompile Include="Memory\Memory.cpp" />
     <ClCompile Include="Natives\Natives.cpp" />
     <ClCompile Include="Player\HumanSoldier.cpp" />
-    <ClCompile Include="Utils\AutoMsgBox.cpp" />
     <ClCompile Include="Utils\Console.cpp" />
     <ClCompile Include="DllMain.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\haseeb_mir\source\repos\IGI_Internal_v1\IGI_Internal\Natives;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

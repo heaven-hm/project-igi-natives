@@ -1,7 +1,7 @@
 #ifndef __LOGGER_H__ 
 #define __LOGGER_H__ 
 
-#include "Common.hpp" 
+#include "../Common.hpp" 
 #define LOG_INFO( fmt, ...) g_Log->WriteA(true,true, ELOG_TYPE::TYPE_PRINT, fmt, ##__VA_ARGS__ )
 #define LOG_DEBUG( fmt, ...) g_Log->WriteA(true,true,  ELOG_TYPE::TYPE_DEBUG, fmt, ##__VA_ARGS__ )
 #define LOG_WARNING( fmt, ...) g_Log->WriteA(true,true,  ELOG_TYPE::TYPE_WARNING, fmt, ##__VA_ARGS__ )

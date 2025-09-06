@@ -1,16 +1,16 @@
 #pragma once
 #define SOLDIER_DATA_ALL
 #include "Common.hpp"
-#include "Logger.hpp"
+#include "Utils/Logger.hpp"
 #include "Utils/DbgHelper.hpp"
-#include "GTLibc.hpp"
+#include "Libs/GTLibc.hpp"
 #include "CommonConst.hpp"
 #include "Natives/NativeHelper.hpp"
-#include "HumanSoldier.hpp"
+#include "Player/HumanSoldier.hpp"
 #include "Utils/Utility.hpp"
-#include "GameResource.hpp"
+#include "GameResources/GameResource.hpp"
 #include "Graphs/Graph.hpp"
-#include <Features.hpp>
+#include "Features.hpp"
 
 //Testing.
 bool graph_runner = false;

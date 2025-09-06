@@ -2,8 +2,8 @@
 #ifndef __UTILS_H__ 
 #define __UTILS_H__ 
 
-#include "Common.hpp" 
-#include "CommonConst.hpp"
+#include "../Common.hpp" 
+#include "../CommonConst.hpp"
 using std::string;
 enum { BINARY_FILE, ASCII_FILE, HEX_FILE };
 #define ReadFileType(file,FILE_TYPE) std::get<FILE_TYPE>(g_Utility.ReadFile(file, FILE_TYPE));

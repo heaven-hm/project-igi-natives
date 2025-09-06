@@ -1,7 +1,7 @@
 #pragma once
-#include "Common.hpp"
-#include "Logger.hpp"
-#include "CommonConst.hpp"
+#include "../Common.hpp"
+#include "../Utils/Logger.hpp"
+#include "../CommonConst.hpp"
 #include "Natives.hpp"
 
 namespace IGI {

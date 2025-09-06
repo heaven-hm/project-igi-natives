@@ -1,6 +1,6 @@
 #pragma once
-#include "Common.hpp"
-#include "CommonConst.hpp"
+#include "../Common.hpp"
+#include "../CommonConst.hpp"
 
 namespace IGI {
 	//Class to hold Level/A.I Graph information.

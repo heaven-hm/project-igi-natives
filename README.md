@@ -27,6 +27,9 @@ So don't use this project to misuse the game's identity and source of original g
 - **Random Weapon System**: Added random weapon selection functionality
 
 #### 🛠️ Technical Changes
+- **AutoMsgBox Removal**: Completely removed AutoMsgBox component and replaced with FiberPool-based asynchronous execution for safer native calls
+- **Include Path Fixes**: Fixed all header file include paths to use proper relative paths for better build compatibility
+- **Build System Improvements**: Resolved compilation errors and improved project structure
 - Enhanced debugging features and refactor codebase
 - Updated timing parameters across various game operations
 - Improved asynchronous task management architecture

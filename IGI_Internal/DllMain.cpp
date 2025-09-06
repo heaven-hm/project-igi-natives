@@ -1,4 +1,4 @@
-﻿//ich liebe es zu programmieren und Deustchland <3 
+//ich liebe es zu programmieren und Deustchland <3 
 #define USE_STACKTRACE_LIB 
 #define USE_MINHOOK_LIB 
 #define USE_GTLIBC_LIB 
@@ -30,7 +30,6 @@ std::unique_ptr<Console> console_instance;
 std::unique_ptr<Log> logger_instance;
 std::unique_ptr<Natives> native_instance;
 std::unique_ptr<Memory> memory_instance;
-std::unique_ptr<AutoMsgBox> auto_msg_box;
 std::unique_ptr<GameResource> game_resources_ptr;
 #ifdef USE_MINHOOK_LIB
 std::unique_ptr<Hook> hook_instance;
@@ -73,8 +72,6 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID)
             memory_instance = std::make_unique<Memory>(true);
             LOG_WARNING("Memory initialized.");
 
-            auto_msg_box = std::make_unique<AutoMsgBox>();
-            LOG_WARNING("AutoMsgBox initialized.");
 
             game_resources_ptr = std::make_unique<GameResource>();
             LOG_WARNING("GameResources initialized.");

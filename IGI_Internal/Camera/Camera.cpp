@@ -1,8 +1,8 @@
 #include "Camera.hpp"
-#include "CommonConst.hpp"
-#include "NativeHelper.hpp"
-#include "GTConsole.hpp"
-#include "Features.hpp"
+#include "../CommonConst.hpp"
+#include "../Natives/NativeHelper.hpp"
+#include "../Libs/GTConsole.hpp"
+#include "../Features.hpp"
 using namespace IGI;
 
 Camera::Position Camera::ReadPosition()

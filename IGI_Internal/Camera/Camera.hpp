@@ -1,6 +1,6 @@
 #pragma once
-#include "Common.hpp"
-#include "GTLibc.hpp"
+#include "../Common.hpp"
+#include "../Libs/GTLibc.hpp"
 
 namespace IGI {
 	class Camera

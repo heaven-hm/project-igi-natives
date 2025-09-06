@@ -6,33 +6,32 @@
 #define DLL_EXPORT __declspec( dllexport )
 
 #include "Common.hpp" 
-#include "Logger.hpp" 
-#include "Console.hpp" 
-#include "AutoMsgBox.hpp" 
-#include "Utility.hpp" 
-#include "NativeCaller.hpp" 
-#include "NativeHelper.hpp" 
-#include "Natives.hpp" 
-#include "Memory.hpp"
-#include "GameResource.hpp"
-#include "HumanSoldier.hpp"
-#include "Camera.hpp"
-#include "Graph.hpp"
+#include "Utils/Logger.hpp" 
+#include "Utils/Console.hpp" 
+#include "Utils/Utility.hpp" 
+#include "Natives/NativeCaller.hpp" 
+#include "Natives/NativeHelper.hpp" 
+#include "Natives/Natives.hpp" 
+#include "Memory/Memory.hpp"
+#include "GameResources/GameResource.hpp"
+#include "Player/HumanSoldier.hpp"
+#include "Camera/Camera.hpp"
+#include "Graphs/Graph.hpp"
 
 #include "Utils/FiberPool.hpp" // add scheduler declaration for RunPending/RunExternal
 
 #ifdef USE_MINHOOK_LIB 
-#include "Hook.hpp" 
+#include "Hook/Hook.hpp" 
 #endif 
 
 #ifdef USE_GTLIBC_LIB 
-#include "GTLibc.hpp" 
+#include "Libs/GTLibc.hpp" 
 #endif 
 
 #if defined(USE_STACKTRACE_LIB) && defined(RLS_x86)
 #pragma warning (Stacktrace only works for optimised code. Change your build settings to Debug)
 #elif defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
-#include "DbgHelper.hpp" 
+#include "Utils/DbgHelper.hpp" 
 #endif 
 
 using namespace IGI;

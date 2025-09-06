@@ -41,10 +41,10 @@ void DllMainLoop() {
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F2)) {
-			QTASK::UPDATE();
-			g_AutoMsgBox->Show("", 70);
-			LEVEL::LOAD();
-			g_AutoMsgBox->Show("", 70);
+			FiberPool::Instance().RunExternal([] {
+				QTASK::UPDATE();
+				LEVEL::LOAD();
+			}, 250, 100);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F3)) {

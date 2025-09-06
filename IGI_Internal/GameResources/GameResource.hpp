@@ -1,7 +1,7 @@
 #pragma once
-#include "Common.hpp"
-#include "CommonConst.hpp"
-#include "Utility.hpp"
+#include "../Common.hpp"
+#include "../CommonConst.hpp"
+#include "../Utils/Utility.hpp"
 
 namespace IGI {
 	//Struct to hold internal resource properties.

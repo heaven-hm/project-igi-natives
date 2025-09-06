@@ -1,6 +1,6 @@
 #include "Graph.hpp"
-#include "Logger.hpp"
-#include "Utils/Utility.hpp"
+#include "../Utils/Logger.hpp"
+#include "../Utils/Utility.hpp"
 
 using namespace IGI;
 

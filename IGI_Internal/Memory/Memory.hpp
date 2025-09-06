@@ -1,6 +1,6 @@
 #pragma once 
-#include "Common.hpp"
-#include "Logger.hpp"
+#include "../Common.hpp"
+#include "../Utils/Logger.hpp"
 using namespace IGI;
 
 namespace IGI {
