@@ -1,4 +1,5 @@
 #include "Features.hpp"
+#include "Utils/FiberPool.hpp"
 
 void DllMainLoop() {
 	static bool model_bool = false;
@@ -32,11 +33,13 @@ void DllMainLoop() {
 
 		//Ctrl-Menu Controls.
 		if (GT_HotKeysPressed(VK_CONTROL, VK_F1)) {
-			DEBUG::INIT(GAME_FONT_BIG);
-			DEBUG::ENABLE(g_DbgEnabled);
-			string dbg_msg = "Debug mode " + std::string((g_DbgEnabled) ? "Enabled" : "Disabled");
-			LOG_INFO("%s", dbg_msg.c_str());
-			MISC::STATUS_MESSAGE_SHOW(dbg_msg.c_str());
+			FiberPool::Instance().RunExternal([=] {
+				DEBUG::INIT(GAME_FONT_BIG);
+				DEBUG::ENABLE(g_DbgEnabled);
+				string dbg_msg = "Debug mode " + std::string((g_DbgEnabled) ? "Enabled" : "Disabled");
+				LOG_INFO("%s", dbg_msg.c_str());
+				MISC::STATUS_MESSAGE_SHOW(dbg_msg.c_str());
+			}, 3);
 			g_DbgEnabled = !g_DbgEnabled;
 		}
 
@@ -44,28 +47,31 @@ void DllMainLoop() {
 			FiberPool::Instance().RunExternal([] {
 				QTASK::UPDATE();
 				LEVEL::LOAD();
-			}, 250, 100);
+			}, 20 * 10);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F3)) {
 			try {
 				auto internal_data = InternalDataRead();
 				int weapon_id = std::stoi(internal_data);
-				WEAPON::WEAPON_PICKUP(weapon_id);
+				FiberPool::Instance().RunExternal([=] {
+					WEAPON::WEAPON_PICKUP(weapon_id);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
 				LOG_INFO("Exception: %s", ex.what());
 			}
-			//MISC::STATUS_MESSAGE_SHOW(string("WeaponPickup Id:" + std::to_string(weapon_id) + " done!"));
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F4)) {
 			try {
 				auto internal_data = InternalDataRead();
 				int frames = std::stoi(internal_data);
-				MISC::FRAMES_SET(frames);
-				MISC::STATUS_MESSAGE_SHOW(string("Game frames changed to " + std::to_string(frames) + "FPS"));
+				FiberPool::Instance().RunExternal([=] {
+					MISC::FRAMES_SET(frames);
+					MISC::STATUS_MESSAGE_SHOW(string("Game frames changed to " + std::to_string(frames) + "FPS"));
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -74,60 +80,76 @@ void DllMainLoop() {
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F5)) {
-			CONFIG::READ();
-			MISC::STATUS_MESSAGE_SHOW("Game config read!");
+			FiberPool::Instance().RunExternal([] {
+				CONFIG::READ();
+				MISC::STATUS_MESSAGE_SHOW("Game config read!");
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F6)) {
-			CONFIG::WRITE();
-			MISC::STATUS_MESSAGE_SHOW("Game config write!");
+			FiberPool::Instance().RunExternal([] {
+				CONFIG::WRITE();
+				MISC::STATUS_MESSAGE_SHOW("Game config write!");
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F7)) {
-			CONFIG::WEAPON_CONFIG_READ();
-			MISC::STATUS_MESSAGE_SHOW("Weapon config read!");
+			FiberPool::Instance().RunExternal([] {
+				CONFIG::WEAPON_CONFIG_READ();
+				MISC::STATUS_MESSAGE_SHOW("Weapon config read!");
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F8)) {
-			HUMAN::HUMAN_PLAYER_LOAD();
-			MISC::STATUS_MESSAGE_SHOW("Humanplayer load success!");
+			FiberPool::Instance().RunExternal([] {
+				HUMAN::PLAYER_LOAD();
+				MISC::STATUS_MESSAGE_SHOW("Humanplayer load success!");
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F9)) {
 			auto internal_data = InternalDataRead();
 			int view = std::stoi(internal_data);
 			int cam_view = (view <= 0 || view > 5) ? 1 : view;
-			HUMAN::CAM_VIEW_SET(cam_view);
-			MISC::STATUS_MESSAGE_SHOW("Humanplayer Camera #" + std::to_string(cam_view));
+			FiberPool::Instance().RunExternal([=] {
+				HUMAN::CAM_VIEW_SET(cam_view);
+				MISC::STATUS_MESSAGE_SHOW("Humanplayer Camera #" + std::to_string(cam_view));
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F10)) {
-			GAME::INPUT_ENABLE();
+			FiberPool::Instance().RunExternal([] {
+				GAME::INPUT_ENABLE();
+			}, 3);
 			g_PlayerEnabled = true;
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F11)) {
-			GAME::INPUT_DISABLE();
+			FiberPool::Instance().RunExternal([] {
+				GAME::INPUT_DISABLE();
+			}, 3);
 			g_PlayerEnabled = false;
 		}
 
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F12)) {
-			GAME::INPUT_DISABLE();
+			FiberPool::Instance().RunExternal([] {
+				GAME::INPUT_DISABLE();
+				
+				Camera::Controls controls;
+				controls.UP(VK_SPACE);
+				controls.DOWN(VK_MENU);
+				controls.LEFT(VK_LEFT);
+				controls.RIGHT(VK_RIGHT);
+				controls.FORWARD(VK_UP);
+				controls.BACKWARD(VK_DOWN);
+				controls.CALIBRATE(VK_BACK);
+				controls.QUIT(VK_HOME);
+				controls.AXIS_OFF(0.5f);
+
+				g_Camera.RunFreeCamThread(controls);
+				GAME::INPUT_ENABLE();
+			}, 3);
 			g_PlayerEnabled = false;
-
-			Camera::Controls controls;
-			controls.UP(VK_SPACE);
-			controls.DOWN(VK_MENU);
-			controls.LEFT(VK_LEFT);
-			controls.RIGHT(VK_RIGHT);
-			controls.FORWARD(VK_UP);
-			controls.BACKWARD(VK_DOWN);
-			controls.CALIBRATE(VK_BACK);
-			controls.QUIT(VK_HOME);
-			controls.AXIS_OFF(0.5f);
-
-			g_Camera.RunFreeCamThread(controls);
-			GAME::INPUT_ENABLE();
 			g_PlayerEnabled = true;
 		}
 
@@ -136,39 +158,46 @@ void DllMainLoop() {
 			try {
 				string level = InternalDataRead();
 				LOG_INFO("StarLevel level '%s'", level.c_str());
-				StartLevelMain(std::stoi(level));
+				int level_num = std::stoi(level);
+				FiberPool::Instance().RunExternal([=] {
+					StartLevelMain(level_num);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
 				LOG_INFO("Exception: %s", ex.what());
 			}
-
 		}
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F2)) {
-			QuitLevelMain();
+			FiberPool::Instance().RunExternal([] {
+				QuitLevelMain();
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F3)) {
 			try {
 				string script_file = InternalDataRead();
 				LOG_INFO("Script Parsing file '%s'", script_file.c_str());
-				int status = SCRIPT::PARSE(script_file); //Status '0' success, 'Non-zero' error.
-				if (status == 0) MISC::STATUS_MESSAGE_SHOW("Script Parsing file done!");
+				FiberPool::Instance().RunExternal([=] {
+					int status = SCRIPT::PARSE(script_file); //Status '0' success, 'Non-zero' error.
+					if (status == 0) MISC::STATUS_MESSAGE_SHOW("Script Parsing file done!");
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
 				LOG_INFO("Exception: %s", ex.what());
 			}
-
 		}
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F4)) {
 			try {
 				string script_file = InternalDataRead();
 				LOG_INFO("Script Assembling file '%s'", script_file.c_str());
-				int status = SCRIPT::ASSEMBLE(script_file); //Status '0' success, 'Non-zero' error.
-				if (status == 0) MISC::STATUS_MESSAGE_SHOW("Script Assemble file done!");
+				FiberPool::Instance().RunExternal([=] {
+					int status = SCRIPT::ASSEMBLE(script_file); //Status '0' success, 'Non-zero' error.
+					if (status == 0) MISC::STATUS_MESSAGE_SHOW("Script Assemble file done!");
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -177,16 +206,20 @@ void DllMainLoop() {
 		}
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F5)) {
-			ScriptCompile();
+			FiberPool::Instance().RunExternal([] {
+				ScriptCompile();
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F6)) {
 			try {
 				string resource_file = InternalDataRead();
 				LOG_INFO("Resource Load file '%s'", resource_file.c_str());
-				auto resource_addr = RESOURCE::LOAD(resource_file);
-				string data = "Resource '" + resource_file + "' loaded at address " + HEX_ADDR_STR(resource_addr);
-				InternalDataWrite(data);
+				FiberPool::Instance().RunExternal([=] {
+					auto resource_addr = RESOURCE::LOAD(resource_file);
+					string data = "Resource '" + resource_file + "' loaded at address " + HEX_ADDR_STR(resource_addr);
+					InternalDataWrite(data);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -196,12 +229,14 @@ void DllMainLoop() {
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F7)) {
 			try {
-
 				string resource_file = InternalDataRead();
 				LOG_INFO("Resource Unload file '%s'", resource_file.c_str());
-				std::vector<string> res_list;
-				g_Utility.Tokenize(resource_file, '\n', res_list);
-				RESOURCE::UNLOAD(res_list);
+				FiberPool::Instance().RunExternal([resource_file] {
+					std::vector<string> res_list;
+					string file_copy = resource_file;
+					g_Utility.Tokenize(file_copy, '\n', res_list);
+					RESOURCE::UNLOAD(res_list);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -213,9 +248,11 @@ void DllMainLoop() {
 			try {
 				string resource_file = InternalDataRead();
 				LOG_INFO("Resource Unpack file '%s'", resource_file.c_str());
-				auto resource_addr = RESOURCE::UNPACK(resource_file);
-				string data = "Resource '" + resource_file + "' unpacked at address " + HEX_ADDR_STR(resource_addr);
-				InternalDataWrite(data);
+				FiberPool::Instance().RunExternal([=] {
+					auto resource_addr = RESOURCE::UNPACK(resource_file);
+					string data = "Resource '" + resource_file + "' unpacked at address " + HEX_ADDR_STR(resource_addr);
+					InternalDataWrite(data);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -227,10 +264,12 @@ void DllMainLoop() {
 			try {
 				string resource_file = InternalDataRead();
 				LOG_INFO("Resource Flush file '%s'", resource_file.c_str());
-				auto resource_addr = RESOURCE::FIND(resource_file);
-				RESOURCE::FLUSH(resource_addr);
-				string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
-				InternalDataWrite(data);
+				FiberPool::Instance().RunExternal([=] {
+					auto resource_addr = RESOURCE::FIND(resource_file);
+					RESOURCE::FLUSH(resource_addr);
+					string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
+					InternalDataWrite(data);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -240,11 +279,13 @@ void DllMainLoop() {
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F10)) {
 			try {
-				string resource_file = InternalDataRead(), data;
+				string resource_file = InternalDataRead();
 				LOG_INFO("Resource is loaded file '%s'", resource_file.c_str());
-				bool is_loaded = RESOURCE::IS_LOADED(resource_file);
-				if (is_loaded) data = "TRUE"; else data = "FALSE";
-				InternalDataWrite(data);
+				FiberPool::Instance().RunExternal([=] {
+					bool is_loaded = RESOURCE::IS_LOADED(resource_file);
+					string data = is_loaded ? "TRUE" : "FALSE";
+					InternalDataWrite(data);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -256,10 +297,12 @@ void DllMainLoop() {
 			try {
 				string resource_file = InternalDataRead();
 				LOG_INFO("Resource Unpack find name '%s'", resource_file.c_str());
-				auto resource_addr = RESOURCE::FIND(resource_file);
-				string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
-				LOG_INFO("'%s'", data.c_str());
-				InternalDataWrite(HEX_ADDR_STR(resource_addr));
+				FiberPool::Instance().RunExternal([=] {
+					auto resource_addr = RESOURCE::FIND(resource_file);
+					string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
+					LOG_INFO("'%s'", data.c_str());
+					InternalDataWrite(HEX_ADDR_STR(resource_addr));
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -268,17 +311,19 @@ void DllMainLoop() {
 		}
 
 		else if (GT_HotKeysPressed(VK_MENU, VK_F12)) {
-			RESOURCE::ANIMATION_INFO_SAVE("IGI_Animations.txt");
-			RESOURCE::FONT_INFO_SAVE("IGI_Fonts.txt");
-			RESOURCE::SOUND_INFO_SAVE("IGI_Sound.txt");
-			RESOURCE::MATERIAL_INFO_SAVE("IGI_Material.txt");
-			RESOURCE::LIGHTMAP_INFO_SAVE("IGI_Lightmap.txt");
-			RESOURCE::OBJECT_INFO_SAVE("IGI_Object.txt");
-			RESOURCE::RESOURCE_INFO_SAVE("IGI_Resource.txt");
-			RESOURCE::TERRAIN_INFO_SAVE("IGI_Terrain.txt");
-			RESOURCE::TEXTURE_INFO_SAVE("IGI_Texture.txt");
-			RESOURCE::GRAPHICS_2D_INFO_SAVE("IGI_2D_Graphics.txt");
-			RESOURCE::GRAPHICS_3D_INFO_SAVE("IGI_3D_Graphics.txt");
+			FiberPool::Instance().RunExternal([] {
+				RESOURCE::ANIMATION_INFO_SAVE("IGI_Animations.txt");
+				RESOURCE::FONT_INFO_SAVE("IGI_Fonts.txt");
+				RESOURCE::SOUND_INFO_SAVE("IGI_Sound.txt");
+				RESOURCE::MATERIAL_INFO_SAVE("IGI_Material.txt");
+				RESOURCE::LIGHTMAP_INFO_SAVE("IGI_Lightmap.txt");
+				RESOURCE::OBJECT_INFO_SAVE("IGI_Object.txt");
+				RESOURCE::RESOURCE_INFO_SAVE("IGI_Resource.txt");
+				RESOURCE::TERRAIN_INFO_SAVE("IGI_Terrain.txt");
+				RESOURCE::TEXTURE_INFO_SAVE("IGI_Texture.txt");
+				RESOURCE::GRAPHICS_2D_INFO_SAVE("IGI_2D_Graphics.txt");
+				RESOURCE::GRAPHICS_3D_INFO_SAVE("IGI_3D_Graphics.txt");
+			}, 3);
 		}
 
 		//Shift-Menu Controls.
@@ -286,7 +331,9 @@ void DllMainLoop() {
 			try {
 				string model = InternalDataRead();
 				LOG_INFO("MEF Model remove '%s'", model.c_str());
-				RESOURCE::MEF_REMOVE_MODEL(model);
+				FiberPool::Instance().RunExternal([=] {
+					RESOURCE::MEF_REMOVE_MODEL(model);
+				}, 3);
 			}
 			catch (const std::exception& ex)
 			{
@@ -295,11 +342,15 @@ void DllMainLoop() {
 		}
 
 		else if (GT_HotKeysPressed(VK_SHIFT, VK_F2)) {
-			RESOURCE::MEF_RESTORE_MODELS();
+			FiberPool::Instance().RunExternal([] {
+				RESOURCE::MEF_RESTORE_MODELS();
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_SHIFT, VK_F3)) {
-			RESOURCE::MEF_EXTRACT();
+			FiberPool::Instance().RunExternal([] {
+				RESOURCE::MEF_EXTRACT();
+			}, 3);
 		}
 
 		else if (GT_HotKeysPressed(VK_SHIFT, VK_F4)) {

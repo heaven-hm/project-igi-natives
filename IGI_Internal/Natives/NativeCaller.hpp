@@ -2,7 +2,7 @@
 #include "../Common.hpp"
 #include "../Utils/Logger.hpp"
 #include "../CommonConst.hpp"
-#include "Natives.hpp"
+#include "../Natives/Natives.hpp"
 
 namespace IGI {
     using NativeHash = uint32_t;
@@ -29,7 +29,7 @@ namespace IGI {
 
             if (m_hash_found) {
                 LOG_FILE("Found handler for Hash %p Symbol: %s", native_hash,
-                    ::g_Natives->FindNativeName(reinterpret_cast<NativeHash>(native_hash)).c_str());
+                    IGI::g_Natives->FindNativeName(reinterpret_cast<NativeHash>(native_hash)).c_str());
 
                 using FunctionType = ReturnType(__cdecl*)(Args...);
 				auto function = reinterpret_cast<FunctionType>(native_hash); // Like std::invoke for function pointer.

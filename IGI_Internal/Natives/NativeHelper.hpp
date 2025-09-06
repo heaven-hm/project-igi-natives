@@ -1,10 +1,10 @@
 #pragma once 
 #include "Natives.hpp" 
 #include "NativeCaller.hpp" 
-#include "Camera.hpp"
-#include "HumanSoldier.hpp"
-#include "GameResource.hpp"
-#include "Graph.hpp"
+#include "../Camera/Camera.hpp"
+#include "../Player/HumanSoldier.hpp"
+#include "../GameResources/GameResource.hpp"
+#include "../Graphs/Graph.hpp"
 
 #define NATIVE_DECL __declspec(noinline) inline 
 
@@ -72,7 +72,8 @@ namespace IGI {
 	}
 
 	namespace HUMAN {
-		NATIVE_DECL void HUMAN_PLAYER_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::HUMANPLAYER_LOAD); }
+		NATIVE_DECL void PLAYER_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::HUMANPLAYER_LOAD); }
+		NATIVE_DECL void UNLIMITED_HEALTH_SET() { GT_WriteNOP(PLAYER_XPL_HIT_ADDR, 6); }
 		NATIVE_DECL uint32_t HIT_DAMAGE_GET() { return NATIVE_INVOKE<uint32_t>((Void)HASH::HUMAN_HIT_DAMAGE); }
 		NATIVE_DECL void CAM_VIEW_SET(int cam_type) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_CAM_VIEW, (int)READ_PTR(humanplayer_ptr), cam_type); }
 		NATIVE_DECL void FIND_NEXT_CAMERA(int human_addr) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_FIND_NEXT_CAMERA, human_addr); }
@@ -99,7 +100,7 @@ namespace IGI {
 	}
 
 	namespace WEAPON {
-		NATIVE_DECL void UNLIMITED_AMMO_SET(bool enable) { *(PINT)0x56E214 = enable; }
+		NATIVE_DECL void UNLIMITED_AMMO_SET(bool enable) { *(PINT)0x0056E214 = enable; }
 		NATIVE_DECL void TYPE_OPEN() { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_TYPE_OPEN); }
 		NATIVE_DECL int TOTAL_COUNT() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
 		NATIVE_DECL void GUN_PICKUP(int weapon_id) { GUN_PICKUP_SET(weapon_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, READ_PTR(gun_pickup_ptr), GUN_PICKUP_PTR); }

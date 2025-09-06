@@ -1,7 +1,7 @@
 # Project I.G.I Internal
 
-[![Version](https://img.shields.io/badge/version-v2.1.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
-[![Build](https://img.shields.io/badge/build-832974b-green.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Version](https://img.shields.io/badge/version-v2.2.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Build](https://img.shields.io/badge/build-36e2b85-green.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/Jones-HM/project-igi-internals)
 
@@ -11,7 +11,24 @@ So don't use this project to misuse the game's identity and source of original g
 
 ## 📋 Changelog
 
-### Version 2.1.0 (Latest - September 6, 2025)
+### Version 2.2.0 (Latest - September 7, 2025)
+
+#### 🚀 New Features
+- **Editor FiberPool Integration**: Updated Features_Editor.cpp to use FiberPool for all hotkey operations
+- **Enhanced Thread Safety**: All editor hotkey calls now wrapped with FiberPool::Instance().RunExternal() for better stability
+- **Asynchronous Editor Operations**: Improved performance for resource management, script operations, and game controls in editor mode
+
+#### 🔧 Improvements
+- **Hotkey System Consistency**: Unified hotkey handling between Features.cpp and Features_Editor.cpp using FiberPool pattern
+- **Performance Optimization**: Reduced blocking operations in editor mode through asynchronous execution
+- **Code Consistency**: Standardized delay parameters (3ms) across all FiberPool operations for optimal performance
+
+#### 🛠️ Technical Changes
+- **FiberPool Header Integration**: Added Utils/FiberPool.hpp include to Features_Editor.cpp
+- **Lambda Capture Optimization**: Fixed const qualifier issues in lambda captures for resource operations
+- **Build System Validation**: Ensured x86 Debug build compatibility with all FiberPool integrations
+
+### Version 2.1.0 (September 6, 2025)
 
 #### 🚀 New Features
 - **Enhanced Game Features**: Improved hotkey handling and game controls

@@ -3,6 +3,8 @@
 /*
  Debug Helper is internal Helper file for Debugging remote or current process using StackWalk for Stack trace 
  Using dbghelp as Core lib provides all functionality fore core debugging. 
+ This file is part of IGI-Internals. 
+ Copyright Haseeb Mir@ 2021 
  */
 
 #include "../Common.hpp" 
