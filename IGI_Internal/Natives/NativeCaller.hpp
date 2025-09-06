@@ -13,17 +13,17 @@ namespace IGI {
 
     public:
         template<typename ReturnType = Void, typename... Args>
-        ReturnType Invoke(Void native_hash, Args... parameters) {
+        ReturnType Invoke(Void native_hash, Args... args) {
             const int argument_count = sizeof...(Args);
             m_hash_found = (native_hash != nullptr);
 
             // Log call details
             std::stringstream ss;
             ss << "Hash: " << native_hash;
-            int parameter_index = 0;
-            ((ss << " Param" << ++parameter_index << "="
-                << HEX_ADDR_FMT(parameters)
-                << " type=" << TYPE(parameters)), ...);
+            int index = 0;
+            ((ss << " Param" << ++index << "="
+                << HEX_ADDR_FMT(args)
+                << " type=" << TYPE(args)), ...);
             ss << " Argc=" << argument_count;
             LOG_FILE("%s(): %s", FUNC_NAME, ss.str().c_str());
 
@@ -32,13 +32,13 @@ namespace IGI {
                     ::g_Natives->FindNativeName(reinterpret_cast<NativeHash>(native_hash)).c_str());
 
                 using FunctionType = ReturnType(__cdecl*)(Args...);
-                auto function = reinterpret_cast<FunctionType>(native_hash);
+				auto function = reinterpret_cast<FunctionType>(native_hash); // Like std::invoke for function pointer.
 
                 if constexpr (std::is_void_v<ReturnType>) {
-                    function(parameters...);
+                    function(args...);
                 }
                 else {
-                    return function(parameters...);
+                    return function(args...);
                 }
             }
             else {

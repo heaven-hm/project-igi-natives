@@ -1,6 +1,7 @@
 #include "Features.hpp"
+#include "Utils/FiberPool.hpp"
 
-void RestartLevel();
+//FiberPool g_fiberPool;
 
 void DllMainLoop() {
 	g_menu_screen = READ_PTR(menu_screen_ptr);
@@ -42,20 +43,17 @@ void DllMainLoop() {
 		}
 
 		// Restart game.
-		else if (GT_HotKeysPressed(VK_CONTROL, VK_F2)) {
+		else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F2)) {
 			RestartLevel();
 		}
 
 		// Weapon pickup - AK47.
-		else if (GT_HotKeysPressed(VK_CONTROL, VK_F3)) {
+		else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F3)) {
 			try {
 				int weapon_id = GAME_WEAPON::WEAPON_ID_AK47;
-				WEAPON::WEAPON_PICKUP(weapon_id);
-				MISC::STATUS_MESSAGE_SHOW(string("WeaponPickup Id:" + std::to_string(weapon_id) + " done!"));
-
-				// show total weapons count in status message.
-				int total_weapons = WEAPON::TOTAL_COUNT();
-				MISC::STATUS_MESSAGE_SHOW(string("Total weapons in game: " + std::to_string(total_weapons)));
+				FiberPool::Instance().RunExternal([=] {
+					WEAPON::WEAPON_PICKUP(weapon_id);
+					}, 250, 100);
 			}
 			catch (const std::exception& ex)
 			{
@@ -85,7 +83,7 @@ void DllMainLoop() {
 		// Find next human camera via native (Ctrl+F6)
 		else if (GT_HotKeysPressed(VK_CONTROL, VK_F6)) {
 			try {
-				
+
 				if (READ_PTR(DEBUG_KEYS_ADDR) != 1) {
 					*DEBUG_KEYS_ADDR = 1; // Enable debug keys if not already enabled.
 				}
@@ -95,7 +93,7 @@ void DllMainLoop() {
 					MISC::STATUS_MESSAGE_SHOW("Humanplayer structure not available");
 				}
 				else {
-					
+
 					HUMAN::FIND_NEXT_CAMERA(human_addr);
 					MISC::STATUS_MESSAGE_SHOW("Invoked FindNextHumanCamera");
 				}
@@ -119,11 +117,13 @@ void DllMainLoop() {
 #pragma region Native Helper Methods
 
 void RestartLevel() {
-	QTASK::UPDATE();
-	g_AutoMsgBox->Show("", 70);
-	LEVEL::LOAD();
-	g_AutoMsgBox->Show("", 70);
+	FiberPool::Instance().RunExternal([] {
+		QTASK::HASH_INIT(1);
+		QTASK::UPDATE();
+		LEVEL::LOAD();
+		}, 750, 250); // safe with pre/post delay
 }
+
 
 void StartLevelMain(int level, bool disable_warn, bool disable_err, int hash_val) {
 

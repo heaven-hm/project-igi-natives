@@ -6,6 +6,7 @@ void StatusMsgShow();
 string InternalDataRead();
 bool InternalDataWrite(string data);
 void DllMainLoop();
+void RestartLevel();
 void StartLevelMain(int = 1, bool = true, bool = true, int = 1);
 void QuitLevelMain();
 inline bool g_DbgEnabled = true, g_PlayerEnabled = true;

@@ -39,6 +39,9 @@
       <Filter>Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Features.cpp" />
+    <ClCompile Include="Utils\FiberPool.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DllMain.hpp" />
@@ -68,9 +71,6 @@
     </ClInclude>
     <ClInclude Include="Libs\GTLibc.hpp">
       <Filter>Libs</Filter>
-    </ClInclude>
-    <ClInclude Include="Utils\Fibers.hpp">
-      <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="Utils\DbgHelper.hpp">
       <Filter>Utils</Filter>
@@ -105,6 +105,9 @@
       <Filter>Graphs</Filter>
     </ClInclude>
     <ClInclude Include="Features.hpp" />
+    <ClInclude Include="Utils\FiberPool.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Natives">

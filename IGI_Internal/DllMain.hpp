@@ -19,6 +19,8 @@
 #include "Camera.hpp"
 #include "Graph.hpp"
 
+#include "Utils/FiberPool.hpp" // add scheduler declaration for RunPending/RunExternal
+
 #ifdef USE_MINHOOK_LIB 
 #include "Hook.hpp" 
 #endif 

@@ -95,7 +95,12 @@ BOOL WINAPI  DllMain(HMODULE hmod, DWORD reason, PVOID)
 					//Main loop of DLL. 
 					while (!GT_IsKeyPressed(VK_END)) {
 						DllMainLoop();
-						std::this_thread::sleep_for(10ms);
+
+						// Execute any tasks that were dispatched to the game's main thread.
+						// This must run on the real game/render thread so engine APIs are safe to call.
+						FiberPool::Instance().RunPending();
+
+						std::this_thread::sleep_for(16ms);
 					}
 
 					native_instance.reset();
