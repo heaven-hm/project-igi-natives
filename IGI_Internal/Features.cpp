@@ -61,7 +61,7 @@ void DllMainLoop() {
                     LOG_INFO("Features: Executing weapon pickup task for id %d", weapon_id);
                     WEAPON::WEAPON_PICKUP(weapon_id);
                     LOG_INFO("Features: Weapon pickup task finished for id %d", weapon_id);
-                }, 250, 250);
+                }, 10, 10);
             }
             catch (const std::exception& ex)
             {
@@ -69,13 +69,15 @@ void DllMainLoop() {
             }
         }
 
-        // Frames setting - 60 FPS.
-        else if (GT_HotKeysPressed(VK_CONTROL, VK_F4)) {
+        // Frames setting - Random FPS.
+        else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F4)) {
             LOG_INFO("Features: Ctrl+F4 pressed, setting FPS");
             try {
-                int frames = 60;
-                MISC::FRAMES_SET(frames);
-                MISC::STATUS_MESSAGE_SHOW(string("Game frames changed to " + std::to_string(frames) + "FPS"));
+                FiberPool::Instance().RunExternal([=] {
+                    int frames = 30 + rand() % 211;
+                    MISC::FRAMES_SET(frames);
+                    LOG_INFO("Game frames changed to %d", frames);
+					}, 10, 10);
             }
             catch (const std::exception& ex)
             {
@@ -84,14 +86,14 @@ void DllMainLoop() {
         }
 
         // Humanplayer load.
-        else if (GT_HotKeysPressed(VK_CONTROL, VK_F5)) {
+        else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F5)) {
             LOG_INFO("Features: Ctrl+F5 pressed, loading humanplayer");
             HUMAN::HUMAN_PLAYER_LOAD();
             MISC::STATUS_MESSAGE_SHOW("Humanplayer load success!");
         }
 
         // Find next human camera via native (Ctrl+F6)
-        else if (GT_HotKeysPressed(VK_CONTROL, VK_F6)) {
+        else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F6)) {
             LOG_INFO("Features: Ctrl+F6 pressed, finding next human camera");
             try {
                 if (READ_PTR(DEBUG_KEYS_ADDR) != 1) {
@@ -111,6 +113,20 @@ void DllMainLoop() {
                 LOG_INFO("Exception: %s", ex.what());
             }
         }
+
+        // Start new level
+        else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F7)) {
+            LOG_INFO("Features: F7 pressed, starting new level");
+            int next_level = (g_game_level >= GAME_LEVEL_MAX) ? 1 : (g_game_level + 1);
+            StartLevelMain(next_level, true, true);
+        }
+
+        // Quit current level.
+        else if (GT_IsKeyPressed(VK_CONTROL) && GT_IsKeyToggled(VK_F8)) {
+            LOG_INFO("Features: F8 pressed, quiting new level");
+            QuitLevelMain();
+        }
+
     }
     else if (g_menu_screen == MENU_SCREEN_RESTART) {
         soldiers.clear();
@@ -146,15 +162,15 @@ bool InternalDataWrite(string data) {
 }
 
 void RestartLevel() {
-    // Step 1: Reinitialize QTASK safely
     FiberPool::Instance().RunExternal([] {
         QTASK::HASH_INIT(1);
         QTASK::UPDATE();
         LEVEL::LOAD();
-        }, 500, 100);
+        }, 10, 10);
 }
 
 void StartLevelMain(int level, bool disable_warn, bool disable_err, int hash_val) {
+    FiberPool::Instance().RunExternal([=] {
     LEVEL::SET(level);
     if (disable_warn) MISC::WARNINGS_DISABLE();
     if (disable_err) MISC::ERRORS_DISABLE();
@@ -162,27 +178,30 @@ void StartLevelMain(int level, bool disable_warn, bool disable_err, int hash_val
     QTASK::HASH_INIT(1);
     QTASK::UPDATE();
 
-    auto StartLevelCaller = (int(__cdecl*)(int))0x00416900;
-    StartLevelCaller(*(PINT)0x00567C8C);
+    auto level_caller = (int(__cdecl*)(int))0x00416900;
+    level_caller(*(PINT)0x00567C8C);
 
     QTASK::RESET();
+    }, 1000, 1000);
 }
 
 void QuitLevelMain() {
-    auto sub_416d40 = (int(__cdecl*)
-    ())0x00416D40;
-    auto data = (int**)sub_416d40();
+    FiberPool::Instance().RunExternal([=] {
 
-    auto sub_004015f0 = (int(__cdecl*)(int**))0x004015F0;
-    sub_004015f0(data);
+        auto sub_416d40 = (int(__cdecl*)())0x00416D40;
+        auto data = (int**)sub_416d40();
 
-    *(int*)(0x00567c8c + 0x28) = 3; // Main menu screen ID
+        auto sub_004015f0 = (int(__cdecl*)(int**))0x004015F0;
+        sub_004015f0(data);
 
-    auto sub_402890 = (int(__cdecl*)())0x402890;
-    int menu_data = sub_402890();
+        *(int*)(0x00567c8c + 0x28) = 3; // Main menu screen ID
 
-    auto menuManager = (int(__cdecl*)(int, const char*, char, char, int))0x00418B00;
-    menuManager(menu_data, "LOCAL:menusystem\\mainmenu.qsc", '\x1', '\x1', 1);
+        auto sub_402890 = (int(__cdecl*)())0x402890;
+        int menu_data = sub_402890();
+
+        auto menuManager = (int(__cdecl*)(int, const char*, char, char, int))0x00418B00;
+        menuManager(menu_data, "LOCAL:menusystem\\mainmenu.qsc", '\x1', '\x1', 1);
+		}, 250, 100);
 }
 
 
