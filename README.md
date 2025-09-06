@@ -1,8 +1,42 @@
 # Project I.G.I Internal
 
+[![Version](https://img.shields.io/badge/version-v2.1.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Build](https://img.shields.io/badge/build-832974b-green.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/Jones-HM/project-igi-internals)
+
 [Project I.G.I](https://en.wikipedia.org/wiki/Project_I.G.I.) Internal is Project to access internal methods of the game by using **DLL injection method** into the game and calling [IGI Natives methods](https://github.com/IGI-Research-Devs/IGI-Internals-Data/blob/main/IGI-Natives.json) to modify/alter the behaviour of the game.</br>
 This was originally intended for research project to understand the game mechanics and how developers worked hard to create them.</br>
 So don't use this project to misuse the game's identity and source of original game devs.</br>
+
+## 📋 Changelog
+
+### Version 2.1.0 (Latest - September 6, 2025)
+
+#### 🚀 New Features
+- **Enhanced Game Features**: Improved hotkey handling and game controls
+- **Level Control System**: Added Ctrl+F7 (next level) and Ctrl+F8 (quit level) functionality
+- **Random FPS Setting**: Implemented dynamic FPS control with random values (30-241 FPS range)
+- **Fiber Pool Integration**: Added asynchronous task management for better performance
+
+#### 🔧 Improvements
+- **Performance Optimization**: Updated weapon pickup timing from 250ms to 10ms for better responsiveness
+- **Hotkey System Overhaul**: Replaced `GT_HotKeysPressed` with `GT_IsKeyPressed` + `GT_IsKeyToggled` for improved key detection
+- **Thread Safety**: Wrapped level operations in fiber pool execution for better stability
+- **TextDrawUI Enhancement**: Integrated fiber pool for better UI performance
+- **Random Weapon System**: Added random weapon selection functionality
+
+#### 🛠️ Technical Changes
+- Enhanced debugging features and refactor codebase
+- Updated timing parameters across various game operations
+- Improved asynchronous task management architecture
+- Better error handling and logging systems
+
+#### 📝 Recent Commits
+- `832974b` - feat: enhance game features and improve hotkey handling
+- `d7b89c4` - Added Fiber Pool to Game Update method TextDrawUI for better performance
+- `1c81e83` - Add FiberPool for asynchronous task management
+- `e2c31bc` - Enhance debugging features and refactor codebase
 
 ## Pre-Requisite
 - **General section.**
