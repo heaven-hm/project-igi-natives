@@ -10,6 +10,7 @@
 #include "Utils/Utility.hpp"
 #include "GameResource.hpp"
 #include "Graphs/Graph.hpp"
+#include <Features.hpp>
 
 //Testing.
 bool graph_runner = false;
@@ -38,6 +39,7 @@ auto TaskTypeSet = (int(__cdecl*)(int* task_name, int task_param))0x4B8810;
 auto UnLoadResource = (int(__cdecl*)(char* res_file))0x4B6380;
 auto UpdateQTaskList = (int(__cdecl*)(int a1))0x401B20;
 auto ResourceLoad = (int* (__cdecl*)(const char*, char**))0x004B5F00;
+auto GameMainLoop = (int (__cdecl*)(HINSTANCE, uint32_t, uint32_t))0x0048F530;
 
 decltype(ParseConfig) ParseConfigOut;
 decltype(ParseWeaponConfig) ParseWeaponConfigOut;
@@ -48,6 +50,7 @@ decltype(QuitLevel) QuitLevelOut;
 decltype(LevelLoad) LevelLoadOut;
 decltype(LoadResourceFile) LoadResourceOut;
 decltype(StatusMsg) StatusMsgOut;
+decltype(GameMainLoop) GameMainLoopOut;
 
 auto CompileQVM = (void(__cdecl*)(char*))0x4B85B0;
 decltype(CompileQVM) CompileQVMOut;
@@ -603,8 +606,12 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
 	//LOG_FILE("%s called...", __FUNCTION__);
-	LOG_CONSOLE("%s param_1 : %p param_2 : '%s' param_3 : %p param_4 : %p", "TextPrint", param_1, param_2 == NULL ? "" : param_2, param_3, param_4);
+	//LOG_CONSOLE("%s param_1 : %p param_2 : '%s' param_3 : %p param_4 : %p", "TextPrint", param_1, param_2 == NULL ? "" : param_2, param_3, param_4);
 	//g_DbgHelper->StackTrace(true);
+
+	// Because it runs every frame we need to run the fiber pool to inject our arbitrary code with out blocking the main thread.
+	DllMainLoop();
+	FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
 }
 
@@ -734,4 +741,24 @@ int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 	Sleep(100);
 	//g_DbgHelper->StackTrace(true, false, true);
 	return LevelLoadOut(param1, param2, param3, param4);
+}
+
+
+int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param3)
+{
+	LOG_INFO("GameMainLoopDetour: Entered game update hook");
+	LOG_INFO("%s param1 : %s param2 : %p param3 : %p", "GameMainLoopDetour", param1, param2, param3);
+
+	// --- Run Features safely on game thread ---
+	DllMainLoop();
+	//LOG_INFO("hkFunGameUpdate: DllMainLoop finished");
+
+	// --- Execute pending tasks scheduled via FiberPool ---
+	//LOG_INFO("hkFunGameUpdate: Running pending tasks");
+	FiberPool::Instance().RunPending();
+	//LOG_INFO("hkFunGameUpdate: RunPending finished");
+
+	// --- Call original game update ---
+		return GameMainLoopOut(param1, param2, param3);
+	//LOG_INFO("hkFunGameUpdate: Exiting game update hook");
 }

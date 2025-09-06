@@ -1,5 +1,6 @@
 #pragma once 
 #include "Common.hpp" 
+#include <random>
 
 namespace IGI {
 	/*Re-Defining standard constants*/
@@ -28,7 +29,7 @@ namespace IGI {
 #define TYPEID_S(x) (TYPE(x).length() < 2 || TYPE(x).empty()) ? "UnknownType" : TYPEID(x)
 
 #define CHECK_TYPE(x,y) TYPE(x) == string(y)
-#define LINE_DEBUG LOG_FILE("[%s] LINE : %d", FUNC_NAME, LINE_NO); 
+#define LINE_DEBUG //LOG_FILE("[%s] LINE : %d", FUNC_NAME, LINE_NO); 
 
 //Player profile constants. 
 #define PLAYER_ACTIVE_MISSION_OFF  0x0020 
@@ -214,6 +215,27 @@ namespace IGI {
 	GAME_AMMO::AMMO_ID_556, //T80
 	GAME_AMMO::AMMO_ID_127, //SENTRY
 	};
+
+	// Return a random available weapon id (skips slots with AMMO_ID_NONE).
+	inline GAME_WEAPON GetRandomAvailableWeapon()
+	{
+		std::vector<int> candidates;
+		candidates.reserve(WEAPON_SIZE);
+
+		// start at 1 because slot 0 is intentionally an empty slot
+		for (int idx = 1; idx < WEAPON_SIZE; ++idx) {
+			if (weapons_ammo_list[idx] != GAME_AMMO::AMMO_ID_NONE) {
+				candidates.push_back(idx);
+			}
+		}
+
+		if (candidates.empty()) return GAME_WEAPON::WEAPON_ID_GLOCK;
+
+		thread_local std::mt19937 rng{ std::random_device{}() };
+		std::uniform_int_distribution<size_t> dist(0, candidates.size() - 1);
+		int chosenSlot = candidates[dist(rng)];
+		return static_cast<GAME_WEAPON>(chosenSlot);
+	}
 
 	//Defining Material type.
 	enum GAME_MATERIAL {

@@ -25,126 +25,103 @@
 #error This project supports only x86 (32-Bit) builds. 
 #endif 
 
+// Move these to file scope so they are accessible everywhere
+std::unique_ptr<Console> console_instance;
+std::unique_ptr<Log> logger_instance;
+std::unique_ptr<Natives> native_instance;
+std::unique_ptr<Memory> memory_instance;
+std::unique_ptr<AutoMsgBox> auto_msg_box;
+std::unique_ptr<GameResource> game_resources_ptr;
+#ifdef USE_MINHOOK_LIB
+std::unique_ptr<Hook> hook_instance;
+#endif
+#if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
+std::unique_ptr<DbgHelper> dbg_instance;
+#endif
 
-BOOL WINAPI  DllMain(HMODULE hmod, DWORD reason, PVOID)
+BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID)
 {
-	if (reason == DLL_PROCESS_ATTACH)
-	{
-		DisableThreadLibraryCalls(hmod);
-		g_Utility.SetModuleHandle(hmod);
-		g_Hmodule = hmod;
+    if (dwReason == DLL_PROCESS_ATTACH)
+    {
+        DisableThreadLibraryCalls(hModule);
+        g_Hmodule = hModule;
+        g_Utility.SetModuleHandle(hModule);
 
-		g_Main_Thread = CreateThread(nullptr, 0, [](PVOID)->DWORD
-			{
-				auto console_instance = std::make_unique<Console>();
-				auto logger_instance = std::make_unique<Log>();
-				try {
-#ifdef _DEBUG 
-					g_Console->Allocate();
-					g_Console->Clear();
-					GT_InitTrainerWindowEx(PROJECT_NAME, 50, 50, 1200, 700, BG_GREEN, FG_CYAN);
-#endif 
-					auto game_font = LR"(
-╔═══╦═══╦═══╗ ╔╦═══╦═══╦════╗  ╔══╦═══╦══╗                 
-║╔═╗║╔═╗║╔═╗║░║║╔══╣╔═╗║╔╗╔╗║░░╚╣╠╣╔═╗╠╣╠╝	▄▌			▄ 
-║╚═╝║╚═╝║║░║║░║║╚══╣║░╚╩╝║║╚╝░░░║║║║░╚╝║║	▓▓▓▓▓▓▓▓▓▓▓▓▄
-║╔══╣╔╗╔╣║░║╠╗║║╔══╣║░╔╗░║║░╔══╗║║║║╔═╗║║	▓▓▓▓▓▓▓▓▓▓▓▓▄ 
-║║░░║║║╚╣╚═╝║╚╝║╚══╣╚═╝║░║║░╚══╬╣╠╣╚╩═╠╣╠╬			▀▐▓▓▓▓
-╚╝  ╚╝╚═╩═══╩══╩═══╩═══╝ ╚╝    ╚══╩═══╩══╝ 			   ▐▓▓▌
+        try
+        {
+#ifdef _DEBUG
+            console_instance = std::make_unique<Console>();
+            console_instance->Allocate();
+            console_instance->Clear();
+#endif
+            // Initialize Logger and Core Systems
+            logger_instance = std::make_unique<Log>();
+            auto game_font = LR"(
+╔═══╦═══╦═══╗ ╔╦═══╦═══╦════╗  ╔══╦═══╦══╗
+║╔═╗║╔═╗║╔═╗║░║║╔══╣╔═╗║╔╗╔╗║░░╚╣╠╣╔═╗╠╣╠╝
+║╚═╝║╚═╝║║░║║░║║╚══╣║░╚╩╝║║╚╝░░░║║║║░╚╝║║
+║╔══╣╔╗╔╣║░║╠╗║║╔══╣║░╔╗░║║░╔══╗║║║║╔═╗║║
+║║░░║║║╚╣╚═╝║╚╝║╚══╣╚═╝║░║║░╚══╬╣╠╣╚╩═╠╣╠╬
+╚╝  ╚╝╚═╩═══╩══╩═══╩═══╝ ╚╝    ╚══╩═══╩══╝
 )";
+            LOG_RAW(game_font);
+            LOG_WARNING("Logger initialized.");
 
-					LOG_RAW(game_font);
-					LOG_WARNING("Logger initialized.");
+            native_instance = std::make_unique<Natives>();
+            LOG_WARNING("Natives initialized.");
 
-					auto native_instance = std::make_unique<Natives>();
-					LOG_WARNING("Natives initialized.");
+            memory_instance = std::make_unique<Memory>(true);
+            LOG_WARNING("Memory initialized.");
 
-					auto memory_instance = std::make_unique<Memory>(true);
-					LOG_WARNING("Memory initialized.");
+            auto_msg_box = std::make_unique<AutoMsgBox>();
+            LOG_WARNING("AutoMsgBox initialized.");
 
-					auto auto_msg_box = std::make_unique<AutoMsgBox>();
-					LOG_WARNING("AutoMsgBox initialized.");
+            game_resources_ptr = std::make_unique<GameResource>();
+            LOG_WARNING("GameResources initialized.");
 
-					auto game_resources = std::make_unique<GameResource>();
-					LOG_WARNING("GameResources initialized.");
-
-#ifdef  USE_MINHOOK_LIB 
-					// Initialize Hooking. 
-					auto hook_instance = std::make_unique<Hook>(true);
-					LOG_WARNING("Hook initialized.");
-#endif //USE_MINHOOK_LIB 
-
-#if  defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
-					auto dbg_instance = std::make_unique<DbgHelper>(true);
-					LOG_WARNING("DbgHelper initialized.");
-#endif//USE_STACKTRACE_LIB 
-
-					//Invincible-Jones.
-#ifdef DBG_x86
-					GT_WriteNOP(PLAYER_XPL_HIT_ADDR, 6);
-					WEAPON::UNLIMITED_AMMO_SET(true);
-					MISC::STATUS_MESSAGE_SHOW((PROJECT_NAME + string(" v1.1 Attached")).c_str());
-#else
-					MISC::STATUS_MESSAGE_SHOW((PROJECT_NAME + string(" v1.1 Attached")).c_str());
-#endif
-					//Set Game handle for both Debug and Release builds.
-					HANDLE g_handle = GT_GetGameHandle4mHWND(GT_FindGameWindow(GAME_NAME));
-					LOG_INFO("Game handle 0x%p", g_handle);
-					g_Utility.SetHandle(g_handle);
-
-					//Main loop of DLL. 
-					while (!GT_IsKeyPressed(VK_END)) {
-						DllMainLoop();
-
-						// Execute any tasks that were dispatched to the game's main thread.
-						// This must run on the real game/render thread so engine APIs are safe to call.
-						FiberPool::Instance().RunPending();
-
-						std::this_thread::sleep_for(16ms);
-					}
-
-					native_instance.reset();
-					LOG_WARNING("Natives uninitialized.");
-
-					memory_instance.reset();
-					LOG_WARNING("Memory uninitialized.");
-
-					auto_msg_box.reset();
-					LOG_WARNING("AutoMsgBox uninitialized.");
-
-					game_resources.reset();
-					LOG_WARNING("GameResources uninitialized.");
-#ifdef  USE_MINHOOK_LIB
-					hook_instance.reset();
-					LOG_WARNING("Hook uninitialized.");
-#endif
-#if  defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
-					dbg_instance.reset();
-					LOG_WARNING("DbgHelper uninitialized.");
+#ifdef USE_MINHOOK_LIB
+            hook_instance = std::make_unique<Hook>(true);
+            LOG_WARNING("Hook initialized.");
 #endif
 
-#ifdef _DEBUG 
-					if (g_Console->IsAllocated()) {
-						g_Console->DeAllocate();
-					}
-#endif 
-				}
-				catch (std::exception const& ex) {
-					GT_ShowError(ex.what());
-#if  defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
-					g_DbgHelper->StackTrace(true);
+#if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
+            dbg_instance = std::make_unique<DbgHelper>(true);
+            LOG_WARNING("DbgHelper initialized.");
 #endif
-				}
 
-				LOG_WARNING("Console uninitialized.");
-				console_instance.reset();
+            // Set Game Handle
+            HANDLE g_handle = reinterpret_cast<HANDLE>(GetModuleHandle(NULL));
+            if(g_handle == NULL || g_handle == INVALID_HANDLE_VALUE)
+				throw std::runtime_error("Failed to get game handle. Is the game running?");
 
-				LOG_WARNING("Logger uninitialized.");
-				logger_instance.reset();
+            g_Utility.SetHandle(g_handle);
+			LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-				CloseHandle(g_Main_Thread);
-				FreeLibraryAndExitThread(g_Hmodule, 0);
-			}, nullptr, 0, &g_Main_Thread_Id);
-	}
-	return true;
+            MISC::STATUS_MESSAGE_SHOW((PROJECT_NAME + std::string(" v1.1 Attached")).c_str());
+        }
+        catch (const std::exception& ex)
+        {
+            GT_ShowError(ex.what());
+#if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
+            if (dbg_instance)
+                dbg_instance->StackTrace(true);
+#endif
+        }
+    }
+    else if (dwReason == DLL_PROCESS_DETACH)
+    {
+#ifdef USE_MINHOOK_LIB
+        MH_DisableHook(MH_ALL_HOOKS);
+        MH_Uninitialize();
+#endif
+#if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
+        if (dbg_instance)
+            dbg_instance.reset();
+#endif
+#ifdef _DEBUG
+        if (console_instance && console_instance->IsAllocated())
+            console_instance->DeAllocate();
+#endif
+    }
+    return TRUE;
 }

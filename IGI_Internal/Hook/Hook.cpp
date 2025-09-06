@@ -47,7 +47,7 @@ MH_STATUS Hook::CreateHooks() {
 	mh_status = MH_OK;//CreateHook(CameraUpdate, &CameraUpdateDetour, &CameraUpdateOut);
 	if (mh_status != MH_OK)LOG_ERROR("CameraUpdate Hooking error : %s", MH_StatusToString(mh_status));
 
-	mh_status = CreateHook(QTaskListCheck, &QTaskListChecktDetour, &QTaskListCheckOut);
+	mh_status = MH_OK;//CreateHook(QTaskListCheck, &QTaskListChecktDetour, &QTaskListCheckOut);
 	if (mh_status != MH_OK)LOG_ERROR("QTaskListCheck Hooking error : %s", MH_StatusToString(mh_status));
 
 	mh_status = MH_OK;// CreateHook(ParseConfig, &ParseConfigDetour, &ParseConfigOut);
@@ -104,7 +104,7 @@ MH_STATUS Hook::CreateHooks() {
 	mh_status = MH_OK;//CreateHook(SetGameDataSymbol, &SetGameDataSymbolDetour, &SetGameDataSymbolOut);
 	if (mh_status != MH_OK)LOG_ERROR("SetGameDataSymbol Hooking error : %s", MH_StatusToString(mh_status));
 
-	mh_status = MH_OK;//CreateHook(TextPrint, &TextPrintDetour, &TextPrintOut);
+	mh_status = CreateHook(TextPrint, &TextPrintDetour, &TextPrintOut);
 	if (mh_status != MH_OK)LOG_ERROR("TextPrint Hooking error : %s", MH_StatusToString(mh_status));
 
 	mh_status = MH_OK;//CreateHook(GameTextPrint, &GamePrintTextDetour, &GameTextPrintOut);
@@ -211,6 +211,9 @@ MH_STATUS Hook::CreateHooks() {
 
 	mh_status = MH_OK;//CreateHook(WeaponTypeOpen, &WeaponTypeOpenDetour, &WeaponTypeOpenOut);
 	if (mh_status != MH_OK)LOG_ERROR("WeaponTypeOpen Createhook error : %s", MH_StatusToString(mh_status));
+
+	//mh_status = CreateHook(GameMainLoop, &GameMainLoopDetour, &GameMainLoopOut);
+	//if (mh_status != MH_OK) LOG_ERROR("GameMainLoop Createhook error : %s", MH_StatusToString(mh_status));
 
 	return mh_status;
 }
