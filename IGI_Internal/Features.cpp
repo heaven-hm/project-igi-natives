@@ -1,5 +1,6 @@
 #include "Features.hpp"
 #include "CommonConst.hpp"
+#include "Libs/GTLibc.hpp"
 #include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
 #include "Utils/Utility.hpp"
@@ -48,45 +49,33 @@ void DllMainLoop() {
     }
 #endif
 
-    // Enable Debug mode.
+    // Enable Debug mode (matches IGI debug key LCtrl+LShift+F10)
     if (g_Utility.IsKeyPressed(VK_F1)) {
-
       LOG_INFO("F1: toggling debug mode");
-      FiberPool::Instance().RunExternal(
-          [=] {
-            DEBUG::INIT(GAME_FONT_BIG);
-            DEBUG::ENABLE(g_DbgEnabled);
-            string dbg_msg =
-                "Debug mode " +
-                std::string((g_DbgEnabled) ? "Enabled" : "Disabled");
-            LOG_INFO("Features: %s", dbg_msg.c_str());
-          },
-          3);
-      g_DbgEnabled = !g_DbgEnabled;
+      // Simulate LCtrl+LShift+F10 combination
+      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, VK_F10};
+      g_Utility.DoKeyCombo(keys);
     }
 
-    // Restart game.
+    // Cycle to next camera (matches IGI debug key LCtrl+LShift+Q)
     else if (g_Utility.IsKeyPressed(VK_F2)) {
-      LOG_INFO("F2: Finding next human camera");
-      FiberPool::Instance().RunExternal(
-          [=] {
-            if (READ_PTR(DEBUG_KEYS_ADDR) != 1) {
-              *DEBUG_KEYS_ADDR = 1; // Enable debug keys if not already enabled.
-            }
-            int human_addr = (int)READ_PTR(humanplayer_ptr);
-            if (human_addr == 0) {
-              MISC::STATUS_MESSAGE_SHOW("Humanplayer structure not available");
-            } else {
-              HUMAN::FIND_NEXT_CAMERA(human_addr);
-              LOG_INFO("Humanplayer structure not available");
-            }
-          },
-          3);
+      LOG_INFO("F2: Cycle to next camera");
+      // Simulate LCtrl+LShift+Q combination
+      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, 'Q'};
+      g_Utility.DoKeyCombo(keys);
+    }
+
+    // Cycle to previous camera (matches IGI debug key LCtrl+LShift+E)
+    else if (g_Utility.IsKeyPressed(VK_F3)) {
+      LOG_INFO("F3: Cycle to previous camera");
+      // Simulate LCtrl+LShift+E combination
+      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, 'E'};
+      g_Utility.DoKeyCombo(keys);
     }
 
     // Weapon pickup - (Random available weapon).
-    else if (g_Utility.IsKeyPressed(VK_F3)) {
-      LOG_INFO("F3: Weapon pickup");
+    else if (g_Utility.IsKeyPressed(VK_F4)) {
+      LOG_INFO("F4: Weapon pickup");
       try {
         int weapon_id = static_cast<int>(IGI::GetRandomAvailableWeapon());
 
@@ -103,8 +92,8 @@ void DllMainLoop() {
     }
 
     // Frames setting - Random FPS.
-    else if (g_Utility.IsKeyPressed(VK_F4)) {
-      LOG_INFO("F4: setting FPS");
+    else if (g_Utility.IsKeyPressed(VK_F5)) {
+      LOG_INFO("F5: setting FPS");
 
       try {
         int frames = 30 + rand() % 211;
@@ -121,8 +110,8 @@ void DllMainLoop() {
     }
 
     // Humanplayer load.
-    else if (g_Utility.IsKeyPressed(VK_F5)) {
-      LOG_INFO("F5: loading humanplayer");
+    else if (g_Utility.IsKeyPressed(VK_F10)) {
+      LOG_INFO("F10: loading humanplayer");
 
       FiberPool::Instance().RunExternal(
           [=] {
@@ -132,29 +121,20 @@ void DllMainLoop() {
           3);
     }
 
-    // Find next human camera via native (Ctrl+F6)
+    // Restart mission (matches IGI debug key LCtrl+LShift+R)
     else if (g_Utility.IsKeyPressed(VK_F6)) {
       LOG_INFO("F6: Restarting level");
-      try {
-        FiberPool::Instance().RunExternal([=] { LEVEL::RESTART(); }, 3);
-      } catch (const std::exception &ex) {
-        LOG_INFO("Exception: %s", ex.what());
-      }
+      // Simulate LCtrl+LShift+R combination
+      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, 'R'};
+      g_Utility.DoKeyCombo(keys);
     }
 
     // Start new level
     else if (g_Utility.IsKeyPressed(VK_F7)) {
       LOG_INFO("F7: starting new level");
-      int next_level =
-          (g_game_level >= GAME_LEVEL_MAX) ? 1 : (g_game_level + 1);
-      //   StartLevelMain(next_level, true, true);
-	  LEVEL::SET(next_level);
-      FiberPool::Instance().RunExternal(
-          [=] {
-            LEVEL::RESTART();
-          },
-          5);
-
+      // Simulate LCtrl+LShift+F12 combination
+      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, VK_F12};
+      g_Utility.DoKeyCombo(keys);
     }
 
     // Quit current level.
@@ -174,28 +154,6 @@ void DllMainLoop() {
     if (!g_PlayerEnabled)
       GAME::INPUT_DISABLE();
   }
-}
-
-void StartLevelMain(int level, bool disable_warn, bool disable_err,
-                    int hash_val) {
-  FiberPool::Instance().RunExternal(
-      [=] {
-        LEVEL::SET(level);
-        if (disable_warn)
-          MISC::WARNINGS_DISABLE();
-        if (disable_err)
-          MISC::ERRORS_DISABLE();
-
-        QTASK::HASH_INIT(1);
-        QTASK::UPDATE();
-        QTASK::RESET();
-
-        // new methods way Ghidra.
-        int level_ptr = (int)0x101B7744;
-        auto level_start = (int(__cdecl *)(int, int, int, int))0x00415B30;
-        level_start(level_ptr, 0, 0x00000, READ_PTR(level_ptr));
-      },
-      20 * 10);
 }
 
 void QuitLevelMain() {

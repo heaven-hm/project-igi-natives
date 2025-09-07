@@ -42,6 +42,7 @@ namespace IGI {
 		void LogAllHotkeys(const string& file_path);
 		string InternalDataRead();
 		bool InternalDataWrite(string data);
+		void DoKeyCombo(const std::vector<DWORD>& keys);
 	};
 	inline Utility g_Utility;
 }

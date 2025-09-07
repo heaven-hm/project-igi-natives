@@ -417,6 +417,38 @@ BOOL Utility::IsKeyCombinationPressed(CONST INT modifier, CONST INT key) {
 	return FALSE; // held down or idle, no new press
 }
 
+void Utility::DoKeyCombo(const std::vector<DWORD>& keys)
+{
+    if (keys.empty()) return;
+
+    std::vector<INPUT> inputs;
+    inputs.reserve(keys.size() * 2);
+
+    // Press all keys (no fix needed for key-down)
+    for (size_t i = 0; i < keys.size(); ++i) {
+        INPUT in = {};
+        in.type = INPUT_KEYBOARD;
+        in.ki.wVk = keys[i];
+        in.ki.wScan = 0;
+        in.ki.dwFlags = 0;
+        inputs.push_back(in);
+    }
+
+    // Release all keys (FIX: add KEYEVENTF_SCANCODE for key-up)
+    for (size_t i = keys.size(); i-- > 0;) {
+        INPUT in = {};
+        in.type = INPUT_KEYBOARD;
+        in.ki.wVk = keys[i];
+        in.ki.wScan = 0;
+        in.ki.dwFlags = KEYEVENTF_KEYUP | KEYEVENTF_SCANCODE; // CRITICAL FIX
+        inputs.push_back(in);
+    }
+
+    SendInput((UINT)inputs.size(), inputs.data(), sizeof(INPUT));
+}
+
+
+
 #pragma region Native Helper Methods
 string Utility::InternalDataRead() {
   string data;

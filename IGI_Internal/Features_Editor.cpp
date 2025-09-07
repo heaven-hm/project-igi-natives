@@ -185,7 +185,7 @@ void DllMainLoopEditor() {
 				LOG_INFO("StarLevel level '%s'", level.c_str());
 				int level_num = std::stoi(level);
 				FiberPool::Instance().RunExternal([=] {
-					StartLevelMain(level_num);
+					// StartLevelMain(level_num);
 				}, 3);
 			}
 			catch (const std::exception& ex)
