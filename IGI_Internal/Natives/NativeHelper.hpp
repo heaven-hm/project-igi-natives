@@ -56,6 +56,8 @@ namespace IGI {
 		NATIVE_DECL void INIT() { *(int*)0x0056DF94 = 1; *(int*)0x00A5EA75 = (int)0x005C8BF4; }
 		NATIVE_DECL void INIT(const char* font_type) { *(int*)0x00A5EA75 = (int)0x005C8BF4; strcpy((char*)0x0054D958, font_type); }
 		NATIVE_DECL void ENABLE(bool state) { *(uint8_t*)0x005BDC1C = state; }
+		NATIVE_DECL void KEYS_ENABLE(bool state) { *(uint8_t*)0x0057B194 = state; }
+		NATIVE_DECL void TEXT_ENABLE(bool state) { *(uint8_t*)0x00A5EA75 = state; }
 	}
 
 	namespace GAME {
@@ -65,7 +67,7 @@ namespace IGI {
 	}
 
 	namespace LEVEL {
-		NATIVE_DECL void RESTART() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_RESTART); }
+		NATIVE_DECL void RESTART() { auto cleanup = (int(__cdecl *)(int))0x00402820; NATIVE_INVOKE<Void>((Void)HASH::LEVEL_RESTART); cleanup(0x1E); *(int*)(0x00567C8C + 0x28) = 4;}
 		NATIVE_DECL void LOAD() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_LOAD, 0x0057B568, 35); }
 		NATIVE_DECL int GET() { return READ_PTR(0x00539560); }
 		NATIVE_DECL void SET(int level) { *(PINT)0x00539560 = (level < 1 || level > GAME_LEVEL_MAX) ? 1 : level; }

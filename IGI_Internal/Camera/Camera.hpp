@@ -26,7 +26,7 @@ namespace IGI {
 			//Ctors/Dtors
 			Angle() = default;
 			~Angle() = default;
-			Angle(Angle& angle) { this->pitch = angle.pitch; this->roll = angle.roll; this->yaw = angle.yaw; this->fov = angle.fov; }
+			Angle(const Angle& angle) { this->pitch = angle.pitch; this->roll = angle.roll; this->yaw = angle.yaw; this->fov = angle.fov; }
 			Angle(float pitch, float roll, float yaw, float fov) { this->pitch = pitch; this->roll = roll; this->yaw = yaw; this->fov = fov; }
 
 			//Getters.
@@ -54,7 +54,7 @@ namespace IGI {
 			//Ctors/Dtors
 			Position() = default;
 			~Position() = default;
-			Position(Position& pos) { this->x = pos.x; this->y = pos.y; this->z = pos.z; }
+			Position(const Position& pos) { this->x = pos.x; this->y = pos.y; this->z = pos.z; }
 			Position(double x, double y, double z) { this->x = x; this->y = y; this->z = z; };
 
 			//Getters.
@@ -85,7 +85,7 @@ namespace IGI {
 			//Ctor/Dtor
 			Controls() = default;
 			~Controls() = default;
-			Controls(Controls& ctrl) { this->up = ctrl.up; this->down = ctrl.down; this->left = ctrl.left; this->right = ctrl.right; this->forward = ctrl.forward; this->backward = ctrl.backward; this->calibrate = ctrl.calibrate; this->quit = ctrl.quit; this->axis_off = ctrl.axis_off;}
+			Controls(const Controls& ctrl) { this->up = ctrl.up; this->down = ctrl.down; this->left = ctrl.left; this->right = ctrl.right; this->forward = ctrl.forward; this->backward = ctrl.backward; this->calibrate = ctrl.calibrate; this->quit = ctrl.quit; this->axis_off = ctrl.axis_off;}
 			Controls(key_t up, key_t down, key_t left, key_t right, key_t forward, key_t backward, key_t calibrate, key_t quit, float axis_off) { this->up = up; this->down = down; this->left = left; this->right = right; this->forward = forward; this->backward = backward; this->calibrate = calibrate; this->quit = quit; this->axis_off = axis_off; };
 		
 			//Getters.

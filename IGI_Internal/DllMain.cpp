@@ -88,6 +88,11 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       WEAPON::UNLIMITED_AMMO_SET(true);
 #endif
 
+
+	  // Enable Debug Keys and Debug mode.
+	  DEBUG::KEYS_ENABLE(true);
+	  DEBUG::TEXT_ENABLE(true);
+
       // Set Game Handle
       HANDLE g_handle = reinterpret_cast<HANDLE>(GetModuleHandle(NULL));
       if (g_handle == NULL || g_handle == INVALID_HANDLE_VALUE)
@@ -96,7 +101,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v1.1 Attached"));
+      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v2.3.0 Attached"));
     } catch (const std::exception &ex) {
       GT_ShowError(ex.what());
 #if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)

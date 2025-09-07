@@ -1,5 +1,4 @@
 #pragma once
-#include "DllMain.hpp"
 #include <cstring>
 #define SOLDIER_DATA_ALL
 #include "Common.hpp"
@@ -13,6 +12,7 @@
 #include "GameResources/GameResource.hpp"
 #include "Graphs/Graph.hpp"
 #include "Features.hpp"
+// #include "Features_Editor.hpp"
 
 //Testing.
 bool graph_runner = false;
@@ -35,7 +35,7 @@ auto RemoveSymbol = (char* (__cdecl*)(int* a1, char symbol))0x4C0460;
 auto ScriptInit = (char(__cdecl*)(int a1, char a2, int a3, char a4))0x4F0E50;
 auto Script_SetSymbolContext = (int(__cdecl*)(char symbol_name, int symbol_buf))0x4B8930;
 auto SetFramesVar = (void(__cdecl*)(int frame_count))0x402820;
-auto StartLevel = (int(__cdecl*)(int, int, int, int))0x415B30;
+auto StartLevel = (int(__cdecl*)(int, int, int, int))0x00415B30;
 auto StatusMsg = (int(__cdecl*)(int send_status, const char* buffer, const char* msg_sprite, const char* status_byte_addr))0x00485970;
 auto TaskTypeSet = (int(__cdecl*)(int* task_name, int task_param))0x4B8810;
 auto UnLoadResource = (int(__cdecl*)(char* res_file))0x4B6380;
@@ -666,8 +666,8 @@ void __cdecl SetFramesDetour(int frames) {
 }
 
 int __cdecl  StartLevelDetour(int param1, int param2, int param3, int param4) {
-	//LOG_FILE("%s param1 : %p param2 : %p param3 : %p param4 : %p", FUNC_NAME, param1, param2, param3, param4);
-	//g_DbgHelper->StackTrace(true, false, true);
+	LOG_FILE("%s param1 : %p param2 : %p param3 : %p param4 : %p", FUNC_NAME, param1, param2, param3, param4);
+	g_DbgHelper->StackTrace(true, false, true);
 	return StartLevelOut(param1, param2, param3, param4);
 }
 
@@ -754,7 +754,7 @@ int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param
 
 	// --- Execute pending tasks scheduled via FiberPool ---
 	//LOG_INFO("hkFunGameUpdate: Running pending tasks");
-	FiberPool::Instance().RunPending();
+	// FiberPool::Instance().RunPending();
 	//LOG_INFO("hkFunGameUpdate: RunPending finished");
 
 	// --- Call original game update ---

@@ -39,6 +39,9 @@ namespace IGI {
 		string GetAppdataPath();
 		BOOL IsKeyPressed(CONST INT key);
 		BOOL IsKeyCombinationPressed(CONST INT modifier, CONST INT key);
+		void LogAllHotkeys(const string& file_path);
+		string InternalDataRead();
+		bool InternalDataWrite(string data);
 	};
 	inline Utility g_Utility;
 }

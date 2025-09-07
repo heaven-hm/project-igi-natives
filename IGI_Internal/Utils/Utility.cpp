@@ -1,7 +1,10 @@
 #include "Utility.hpp" 
-#include "GTLibc.hpp"
+#include "../Libs/GTLibc.hpp"
 #include "Logger.hpp"
 #include <map>
+#include <regex>
+#include <sstream>
+#include <fstream>
 
 inline HMODULE g_Module;
 inline HANDLE g_Handle;
@@ -333,6 +336,57 @@ BOOL Utility::IsKeyPressed(CONST INT key) {
 	return FALSE; // held down or idle, no new press
 }
 
+// Function to log all hotkeys from provided file path
+void Utility::LogAllHotkeys(const string& file_path) {
+	LOG_INFO("=== IGI Internal Mod Hotkeys ===");
+	
+	// Log the file path being scanned
+	LOG_INFO("Scanning file: %s", file_path.c_str());
+	
+	std::ifstream file(file_path);
+	if (!file.is_open()) {
+		LOG_INFO("Could not read file: %s", file_path.c_str());
+		LOG_INFO("=== End Hotkeys List ===");
+		return;
+	}
+		
+	std::stringstream buffer;
+	buffer << file.rdbuf();
+	std::string source = buffer.str();
+	file.close();
+	
+	// Extract filename for logging
+	size_t lastSlash = file_path.find_last_of("\\");
+	string filename = (lastSlash != string::npos) ? file_path.substr(lastSlash + 1) : file_path;
+	
+	LOG_CONSOLE("--- Hotkeys from %s ---", filename.c_str());
+	
+	// Regex to match LOG_INFO lines that contain hotkey descriptions
+	std::regex hotkey_regex("LOG_INFO\\s*\\(\\s*\"([^\"]*(?:Ctrl\\+|Shift\\+|Alt\\+|F[0-9]+)[^\"]*?)\"");
+
+
+	std::sregex_iterator begin(source.begin(), source.end(), hotkey_regex);
+	std::sregex_iterator end;
+	
+	bool found_hotkeys = false;
+	for (auto it = begin; it != end; ++it) {
+		std::string hotkey_line = (*it)[1].str();
+		// Skip header lines and exception messages
+		if (hotkey_line.find("information:") == std::string::npos && 
+			hotkey_line.find("Exception:") == std::string::npos &&
+			hotkey_line.find("pressed,") == std::string::npos) {
+				LOG_CONSOLE("  %s", hotkey_line.c_str());
+			found_hotkeys = true;
+		}
+	}
+	
+	if (!found_hotkeys) {
+		LOG_CONSOLE("  No hotkeys found in this file");
+	}
+	
+	LOG_CONSOLE("=== End Hotkeys List ===");
+}
+
 // Function to detect key combination press events (modifier + key)
 BOOL Utility::IsKeyCombinationPressed(CONST INT modifier, CONST INT key) {
 	// Check if modifier is currently held down
@@ -361,4 +415,36 @@ BOOL Utility::IsKeyCombinationPressed(CONST INT modifier, CONST INT key) {
 	}
 
 	return FALSE; // held down or idle, no new press
+}
+
+#pragma region Native Helper Methods
+string Utility::InternalDataRead() {
+  string data;
+  try {
+    string internal_data_file =
+        GetModuleFolder() + "\\" + PROJECT_NAME + "-data.txt";
+    
+    // Use centralized ReadFile method
+    auto file_data = ReadFile(internal_data_file, ASCII_FILE);
+    string full_content = std::get<1>(file_data); // Get string content
+    
+    // Extract only the first line (original behavior)
+    if (!full_content.empty()) {
+      size_t first_newline = full_content.find('\n');
+      data = (first_newline != string::npos) ? 
+             full_content.substr(0, first_newline) : 
+             full_content;
+    }
+  } catch (const std::exception &ex) {
+    LOG_INFO("Exception: %s", ex.what());
+  }
+  return data;
+}
+
+bool Utility::InternalDataWrite(string data) {
+  string internal_data_file =
+      GetModuleFolder() + "\\" + PROJECT_NAME + "-data.txt";
+  bool status = WriteFileType(internal_data_file,
+                              binary_t(data.begin(), data.end()), BINARY_FILE);
+  return status;
 }

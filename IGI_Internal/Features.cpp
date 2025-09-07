@@ -1,4 +1,6 @@
 #include "Features.hpp"
+#include "CommonConst.hpp"
+#include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
 #include "Utils/Utility.hpp"
 
@@ -40,22 +42,16 @@ void DllMainLoop() {
 
   else if (g_menu_screen == MENU_SCREEN_INGAME) {
 
+#ifdef _DEBUG
     if (g_Utility.IsKeyPressed(VK_SPACE)) {
-      LOG_INFO("Mod Hotkeys information: Features_DLL");
-      LOG_INFO("F1: Toggle Debug Mode");
-      LOG_INFO("F2: Find Next Human Camera");
-      LOG_INFO("F3: Dispatch Weapon Pickup");
-      LOG_INFO("F4: Set Random FPS");
-      LOG_INFO("F5: Load Humanplayer");
-      LOG_INFO("F6: Restart Level");
-      LOG_INFO("F7: Start New Level");
-      LOG_INFO("F8: Quit Current Level");
+      g_Utility.LogAllHotkeys(__FILE__);
     }
+#endif
 
     // Enable Debug mode.
     if (g_Utility.IsKeyPressed(VK_F1)) {
 
-      LOG_INFO("F1 pressed, toggling debug mode");
+      LOG_INFO("F1: toggling debug mode");
       FiberPool::Instance().RunExternal(
           [=] {
             DEBUG::INIT(GAME_FONT_BIG);
@@ -71,7 +67,7 @@ void DllMainLoop() {
 
     // Restart game.
     else if (g_Utility.IsKeyPressed(VK_F2)) {
-      LOG_INFO("F2 pressed, Finding next human camera");
+      LOG_INFO("F2: Finding next human camera");
       FiberPool::Instance().RunExternal(
           [=] {
             if (READ_PTR(DEBUG_KEYS_ADDR) != 1) {
@@ -90,7 +86,7 @@ void DllMainLoop() {
 
     // Weapon pickup - (Random available weapon).
     else if (g_Utility.IsKeyPressed(VK_F3)) {
-      LOG_INFO("F3 pressed, dispatching weapon pickup");
+      LOG_INFO("F3: Weapon pickup");
       try {
         int weapon_id = static_cast<int>(IGI::GetRandomAvailableWeapon());
 
@@ -108,11 +104,13 @@ void DllMainLoop() {
 
     // Frames setting - Random FPS.
     else if (g_Utility.IsKeyPressed(VK_F4)) {
-      LOG_INFO("F4 pressed, setting FPS");
+      LOG_INFO("F4: setting FPS");
+
       try {
+        int frames = 30 + rand() % 211;
+
         FiberPool::Instance().RunExternal(
             [=] {
-              int frames = 30 + rand() % 211;
               MISC::FRAMES_SET(frames);
               LOG_INFO("Game frames changed to %d", frames);
             },
@@ -124,7 +122,7 @@ void DllMainLoop() {
 
     // Humanplayer load.
     else if (g_Utility.IsKeyPressed(VK_F5)) {
-      LOG_INFO("F5 pressed, loading humanplayer");
+      LOG_INFO("F5: loading humanplayer");
 
       FiberPool::Instance().RunExternal(
           [=] {
@@ -136,9 +134,9 @@ void DllMainLoop() {
 
     // Find next human camera via native (Ctrl+F6)
     else if (g_Utility.IsKeyPressed(VK_F6)) {
-      LOG_INFO("F6 pressed, Restarting level");
+      LOG_INFO("F6: Restarting level");
       try {
-        RestartLevel();
+        FiberPool::Instance().RunExternal([=] { LEVEL::RESTART(); }, 3);
       } catch (const std::exception &ex) {
         LOG_INFO("Exception: %s", ex.what());
       }
@@ -146,16 +144,29 @@ void DllMainLoop() {
 
     // Start new level
     else if (g_Utility.IsKeyPressed(VK_F7)) {
-      LOG_INFO("F7 pressed, starting new level");
+      LOG_INFO("F7: starting new level");
       int next_level =
           (g_game_level >= GAME_LEVEL_MAX) ? 1 : (g_game_level + 1);
-      StartLevelMain(next_level, true, true);
+      //   StartLevelMain(next_level, true, true);
+	  LEVEL::SET(next_level);
+      FiberPool::Instance().RunExternal(
+          [=] {
+            LEVEL::RESTART();
+          },
+          5);
+
     }
 
     // Quit current level.
     else if (g_Utility.IsKeyPressed(VK_F8)) {
-      LOG_INFO("F8 pressed, quiting new level");
+      LOG_INFO("F8: quiting new level");
       QuitLevelMain();
+    }
+
+    // Show status message.
+    else if (g_Utility.IsKeyPressed(VK_F9)) {
+      LOG_INFO("F9: showing status message");
+      StatusMsgShow();
     }
 
   } else if (g_menu_screen == MENU_SCREEN_RESTART) {
@@ -163,44 +174,6 @@ void DllMainLoop() {
     if (!g_PlayerEnabled)
       GAME::INPUT_DISABLE();
   }
-}
-
-#pragma region Native Helper Methods
-string InternalDataRead() {
-  string data;
-  try {
-    string internal_data_file =
-        g_Utility.GetModuleFolder() + "\\" + PROJECT_NAME + "-data.txt";
-    std::ifstream in_stream(internal_data_file);
-
-    if (in_stream.good()) {
-      std::getline(in_stream, data);
-    } else {
-      throw std::runtime_error(
-          "Internal data file doesn't exist in current directory");
-    }
-  } catch (const std::exception &ex) {
-    LOG_INFO("Exception: %s", ex.what());
-  }
-  return data;
-}
-
-bool InternalDataWrite(string data) {
-  string internal_data_file =
-      g_Utility.GetModuleFolder() + "\\" + PROJECT_NAME + "-data.txt";
-  auto status = WriteFileType(internal_data_file,
-                              binary_t(data.begin(), data.end()), BINARY_FILE);
-  return status;
-}
-
-void RestartLevel() {
-  FiberPool::Instance().RunExternal(
-      [] {
-        QTASK::HASH_INIT(1);
-        QTASK::UPDATE();
-        LEVEL::LOAD();
-      },
-      20 * 10);
 }
 
 void StartLevelMain(int level, bool disable_warn, bool disable_err,
@@ -215,11 +188,12 @@ void StartLevelMain(int level, bool disable_warn, bool disable_err,
 
         QTASK::HASH_INIT(1);
         QTASK::UPDATE();
-
-        auto level_caller = (int(__cdecl *)(int))0x00416900;
-        level_caller(*(PINT)0x00567C8C);
-
         QTASK::RESET();
+
+        // new methods way Ghidra.
+        int level_ptr = (int)0x101B7744;
+        auto level_start = (int(__cdecl *)(int, int, int, int))0x00415B30;
+        level_start(level_ptr, 0, 0x00000, READ_PTR(level_ptr));
       },
       20 * 10);
 }
@@ -248,8 +222,12 @@ void QuitLevelMain() {
 
 void StatusMsgShow() {
   try {
-    string data = InternalDataRead();
-    MISC::STATUS_MESSAGE_SHOW(data);
+    string data = g_Utility.InternalDataRead();
+
+    FiberPool::Instance().RunExternal([=] { MISC::STATUS_MESSAGE_SHOW(data); },
+                                      10);
+    LOG_INFO("Status message shown: %s", data.c_str());
+
   } catch (const std::exception &ex) {
     LOG_INFO("Exception: %s", ex.what());
   }
@@ -257,7 +235,7 @@ void StatusMsgShow() {
 
 void ScriptCompile() {
   try {
-    string script_file = InternalDataRead();
+    string script_file = g_Utility.InternalDataRead();
     SCRIPT::COMPILE(script_file);
     LOG_INFO("Script Compile file '%s' done!", script_file.c_str());
   } catch (const std::exception &ex) {
