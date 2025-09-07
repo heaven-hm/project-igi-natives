@@ -1,7 +1,7 @@
 # Project I.G.I Internal
 
-[![Version](https://img.shields.io/badge/version-v2.3.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
-[![Build](https://img.shields.io/badge/build-1017bf8-green.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Version](https://img.shields.io/badge/version-v2.4.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Build](https://img.shields.io/badge/build-f0f30e5-green.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/Jones-HM/project-igi-internals)
 
@@ -11,7 +11,27 @@ So don't use this project to misuse the game's identity and source of original g
 
 ## 📋 Changelog
 
-### Version 2.3.0 (Latest - September 7, 2025)
+### Version 2.4.0 (Latest - September 8, 2025)
+
+#### 🔧 Code Refactoring & Improvements
+- **Centralized Utility Functions**: Moved `LogAllHotkeys` function to centralized `Utility` class for better code organization
+- **Enhanced Regex Pattern**: Fixed hotkey detection regex to correctly match standalone function keys (e.g., "F8 pressed, quiting new level")
+- **Resolved Linker Errors**: Fixed all `InternalDataRead()` and `InternalDataWrite()` linker errors throughout the codebase
+- **Unified Function Calls**: Updated all function calls to use `g_Utility` instance for consistent access patterns
+
+#### 🛠️ Technical Changes
+- **Centralized File Operations**: Refactored `InternalDataRead` to use centralized `ReadFile` method while preserving original behavior
+- **Improved Error Handling**: Enhanced file operations with better error handling and logging
+- **Code Cleanup**: Removed duplicate code and improved overall code structure
+- **Build System**: Successfully builds with Debug configuration on x86 platform with resolved linker issues
+
+#### 📝 Files Modified
+- `Utils/Utility.hpp` - Added centralized method declarations
+- `Utils/Utility.cpp` - Implemented centralized methods with improved regex
+- `Features.cpp` - Updated all function calls to use `g_Utility` instance
+- `Features_Editor.cpp` - Updated all function calls and removed duplicate code
+
+### Version 2.3.0 (September 7, 2025)
 
 #### 🚀 New Features
 - **Enhanced Hotkey Help System**: Comprehensive hotkey documentation now displays when pressing SPACE in-game
