@@ -1,4 +1,6 @@
 #pragma once
+#include "DllMain.hpp"
+#include <cstring>
 #define SOLDIER_DATA_ALL
 #include "Common.hpp"
 #include "Utils/Logger.hpp"
@@ -605,11 +607,8 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 }
 
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
-	//LOG_FILE("%s called...", __FUNCTION__);
-	//LOG_CONSOLE("%s param_1 : %p param_2 : '%s' param_3 : %p param_4 : %p", "TextPrint", param_1, param_2 == NULL ? "" : param_2, param_3, param_4);
-	//g_DbgHelper->StackTrace(true);
-
-	// Because it runs every frame we need to run the fiber pool to inject our arbitrary code with out blocking the main thread.
+	// Because it runs every frame we need to run the fiber pool to inject our arbitrary code without blocking the main thread.
+	// DllMainLoopEditor();
 	DllMainLoop();
 	FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
@@ -750,7 +749,7 @@ int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param
 	LOG_INFO("%s param1 : %s param2 : %p param3 : %p", "GameMainLoopDetour", param1, param2, param3);
 
 	// --- Run Features safely on game thread ---
-	DllMainLoop();
+	// DllMainLoopEditor();
 	//LOG_INFO("hkFunGameUpdate: DllMainLoop finished");
 
 	// --- Execute pending tasks scheduled via FiberPool ---

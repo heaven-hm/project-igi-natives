@@ -5,7 +5,7 @@ void ScriptCompile();
 void StatusMsgShow();
 string InternalDataRead();
 bool InternalDataWrite(string data);
-void DllMainLoop();
+void DllMainLoopEditor();
 void RestartLevel();
 void StartLevelMain(int = 1, bool = true, bool = true, int = 1);
 void QuitLevelMain();

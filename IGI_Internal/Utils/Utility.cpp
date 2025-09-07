@@ -1,11 +1,14 @@
 #include "Utility.hpp" 
 #include "GTLibc.hpp"
 #include "Logger.hpp"
+#include <map>
 
 inline HMODULE g_Module;
 inline HANDLE g_Handle;
 using namespace IGI;
 
+// Key press debouncing system
+static std::map<int, bool> g_key_states;
 
 const string Utility::GetExecutableFolder() {
 
@@ -310,4 +313,52 @@ std::string Utility::Trim(const std::string& str, const std::string& whitespace)
 string Utility::GetAppdataPath() {
 	char* appdata = getenv("APPDATA");
 	return string(appdata);
+}
+
+// Function to detect single key press events for 30 FPS.
+BOOL Utility::IsKeyPressed(CONST INT key) {
+	SHORT key_state = GetAsyncKeyState(key);
+	bool is_down = (key_state & 0x8000) != 0;
+	bool &was_down = g_key_states[key]; // persistent state per key
+
+	if (is_down && !was_down) {
+		was_down = true; // mark as pressed
+		return TRUE;     // fires once when going UP → DOWN
+	}
+
+	if (!is_down && was_down) {
+		was_down = false; // reset when released
+	}
+
+	return FALSE; // held down or idle, no new press
+}
+
+// Function to detect key combination press events (modifier + key)
+BOOL Utility::IsKeyCombinationPressed(CONST INT modifier, CONST INT key) {
+	// Check if modifier is currently held down
+	SHORT modifier_state = GetAsyncKeyState(modifier);
+	bool modifier_down = (modifier_state & 0x8000) != 0;
+	
+	if (!modifier_down) {
+		return FALSE; // Modifier not held, no combination possible
+	}
+	
+	// Use the single key press detection for the main key while modifier is held
+	SHORT key_state = GetAsyncKeyState(key);
+	bool is_down = (key_state & 0x8000) != 0;
+	
+	// Create a unique combination key for debouncing
+	int combo_key = (modifier << 16) | key;
+	bool &was_down = g_key_states[combo_key];
+
+	if (is_down && !was_down) {
+		was_down = true; // mark as pressed
+		return TRUE;     // fires once when going UP → DOWN
+	}
+
+	if (!is_down && was_down) {
+		was_down = false; // reset when released
+	}
+
+	return FALSE; // held down or idle, no new press
 }

@@ -37,6 +37,8 @@ namespace IGI {
 		int ShellExec(string shell_cmd);
 		string Trim(const string& str, const string& whitespace = " ");
 		string GetAppdataPath();
+		BOOL IsKeyPressed(CONST INT key);
+		BOOL IsKeyCombinationPressed(CONST INT modifier, CONST INT key);
 	};
 	inline Utility g_Utility;
 }

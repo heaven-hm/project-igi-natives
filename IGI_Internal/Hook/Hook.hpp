@@ -1,7 +1,5 @@
 #pragma once
-#include "../Common.hpp"
 #include "MinHook.hpp"
-#include "../Utils/Logger.hpp"
 
 namespace IGI {
 	class Hook {

@@ -1,7 +1,7 @@
 # Project I.G.I Internal
 
-[![Version](https://img.shields.io/badge/version-v2.2.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
-[![Build](https://img.shields.io/badge/build-36e2b85-green.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Version](https://img.shields.io/badge/version-v2.3.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Build](https://img.shields.io/badge/build-1017bf8-green.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/Jones-HM/project-igi-internals)
 
@@ -11,7 +11,33 @@ So don't use this project to misuse the game's identity and source of original g
 
 ## 📋 Changelog
 
-### Version 2.2.0 (Latest - September 7, 2025)
+### Version 2.3.0 (Latest - September 7, 2025)
+
+#### 🚀 New Features
+- **Enhanced Hotkey Help System**: Comprehensive hotkey documentation now displays when pressing SPACE in-game
+- **Complete Editor Integration**: Switched from Features.cpp to Features_Editor.cpp for full editor functionality
+- **Improved Hook Architecture**: Streamlined hook system with better DllMain integration
+- **Enhanced Key Detection**: Updated utility functions for better key press handling
+
+#### 🔧 Improvements
+- **Comprehensive Hotkey Display**: Added complete list of all Ctrl/Shift/Alt F-keys and Ctrl+Numpad combinations
+- **Code Organization**: Better separation between game and editor features
+- **Hook System Optimization**: Cleaner hook detours with proper include structure
+- **Status Message Cleanup**: Removed redundant status messages for cleaner output
+
+#### 🛠️ Technical Changes
+- **Hook Integration**: Updated HookDetours.hpp to use DllMainLoop() instead of DllMainLoopEditor()
+- **Include Path Updates**: Added proper DllMain.hpp include and switched to Features.hpp
+- **Project Structure**: Added Features_Editor.hpp as new untracked file for better modularity
+- **Build System**: Updated IGI_Internal.vcxproj with new file references and improved utility functions
+
+#### 📝 Hotkey Documentation Added
+- **Ctrl + F1-F12**: Debug mode, level operations, weapon/FPS controls, config management, camera controls
+- **Shift + F1-F12**: MEF model operations, QVM management, audio controls, graphics settings
+- **Alt + F1-F12**: Level control, script operations, resource management
+- **Ctrl + Numpad/Special**: Player/mission management, object loading, console operations
+
+### Version 2.2.0 (September 7, 2025)
 
 #### 🚀 New Features
 - **Editor FiberPool Integration**: Updated Features_Editor.cpp to use FiberPool for all hotkey operations

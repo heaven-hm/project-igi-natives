@@ -1,27 +1,6 @@
 #include "Features.hpp"
 #include "Utils/FiberPool.hpp"
-#include <map>
-
-// Key press debouncing system
-static std::map<int, bool> g_key_states;
-
-// Function to detect single key press events for 30 FPS.
-BOOL IsKeyPressed(CONST INT key) {
-  SHORT key_state = GetAsyncKeyState(key);
-  bool is_down = (key_state & 0x8000) != 0;
-  bool &was_down = g_key_states[key]; // persistent state per key
-
-  if (is_down && !was_down) {
-    was_down = true; // mark as pressed
-    return TRUE;     // fires once when going UP → DOWN
-  }
-
-  if (!is_down && was_down) {
-    was_down = false; // reset when released
-  }
-
-  return FALSE; // held down or idle, no new press
-}
+#include "Utils/Utility.hpp"
 
 // Main loop for DLL Internals.
 void DllMainLoop() {
@@ -61,8 +40,8 @@ void DllMainLoop() {
 
   else if (g_menu_screen == MENU_SCREEN_INGAME) {
 
-    if (IsKeyPressed(VK_SPACE)) {
-      LOG_INFO("Mod Hotkeys information");
+    if (g_Utility.IsKeyPressed(VK_SPACE)) {
+      LOG_INFO("Mod Hotkeys information: Features_DLL");
       LOG_INFO("F1: Toggle Debug Mode");
       LOG_INFO("F2: Find Next Human Camera");
       LOG_INFO("F3: Dispatch Weapon Pickup");
@@ -74,7 +53,7 @@ void DllMainLoop() {
     }
 
     // Enable Debug mode.
-    if (IsKeyPressed(VK_F1)) {
+    if (g_Utility.IsKeyPressed(VK_F1)) {
 
       LOG_INFO("F1 pressed, toggling debug mode");
       FiberPool::Instance().RunExternal(
@@ -91,7 +70,7 @@ void DllMainLoop() {
     }
 
     // Restart game.
-    else if (IsKeyPressed(VK_F2)) {
+    else if (g_Utility.IsKeyPressed(VK_F2)) {
       LOG_INFO("F2 pressed, Finding next human camera");
       FiberPool::Instance().RunExternal(
           [=] {
@@ -110,7 +89,7 @@ void DllMainLoop() {
     }
 
     // Weapon pickup - (Random available weapon).
-    else if (IsKeyPressed(VK_F3)) {
+    else if (g_Utility.IsKeyPressed(VK_F3)) {
       LOG_INFO("F3 pressed, dispatching weapon pickup");
       try {
         int weapon_id = static_cast<int>(IGI::GetRandomAvailableWeapon());
@@ -128,7 +107,7 @@ void DllMainLoop() {
     }
 
     // Frames setting - Random FPS.
-    else if (IsKeyPressed(VK_F4)) {
+    else if (g_Utility.IsKeyPressed(VK_F4)) {
       LOG_INFO("F4 pressed, setting FPS");
       try {
         FiberPool::Instance().RunExternal(
@@ -144,7 +123,7 @@ void DllMainLoop() {
     }
 
     // Humanplayer load.
-    else if (IsKeyPressed(VK_F5)) {
+    else if (g_Utility.IsKeyPressed(VK_F5)) {
       LOG_INFO("F5 pressed, loading humanplayer");
 
       FiberPool::Instance().RunExternal(
@@ -156,7 +135,7 @@ void DllMainLoop() {
     }
 
     // Find next human camera via native (Ctrl+F6)
-    else if (IsKeyPressed(VK_F6)) {
+    else if (g_Utility.IsKeyPressed(VK_F6)) {
       LOG_INFO("F6 pressed, Restarting level");
       try {
         RestartLevel();
@@ -166,7 +145,7 @@ void DllMainLoop() {
     }
 
     // Start new level
-    else if (IsKeyPressed(VK_F7)) {
+    else if (g_Utility.IsKeyPressed(VK_F7)) {
       LOG_INFO("F7 pressed, starting new level");
       int next_level =
           (g_game_level >= GAME_LEVEL_MAX) ? 1 : (g_game_level + 1);
@@ -174,7 +153,7 @@ void DllMainLoop() {
     }
 
     // Quit current level.
-    else if (IsKeyPressed(VK_F8)) {
+    else if (g_Utility.IsKeyPressed(VK_F8)) {
       LOG_INFO("F8 pressed, quiting new level");
       QuitLevelMain();
     }
