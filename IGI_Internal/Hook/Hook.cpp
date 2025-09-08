@@ -250,10 +250,18 @@ MH_STATUS Hook::EnableHooks() {
 }
 
 MH_STATUS Hook::DisableHooks() {
+	// Check if MinHook has already been cleaned up
+	extern std::atomic<bool> g_minHookCleaned;
+	if (g_minHookCleaned) {
+		LOG_INFO("MinHook already cleaned up, skipping hook disable");
+		return MH_OK;
+	}
+	
 	MH_STATUS status = MH_DisableHook(MH_ALL_HOOKS);
 	if (status != MH_OK)
 		LOG_ERROR("Error disabling hooks.");
 	else
-		LOG_WARNING("All hooks disabled.");
+		LOG_INFO("All hooks disabled successfully.");
+
 	return status;
 }

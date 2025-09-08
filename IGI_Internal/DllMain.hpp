@@ -40,6 +40,7 @@ using namespace IGI;
 
 BOOL __stdcall DllMain(HINSTANCE, DWORD, LPVOID);
 void DllMainLoop();
+void CleanUpAndExitThread(HMODULE hModule);
 
 // Global thread control variables
 extern std::atomic<bool> g_running;

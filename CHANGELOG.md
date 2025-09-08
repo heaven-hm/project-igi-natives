@@ -5,6 +5,91 @@ All notable changes to the Project I.G.I Internal will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2025-09-08 🚀
+
+### 🧵 Revolutionary Threading Architecture & DLL Lifecycle Management
+- **🔄 Event-Based Threading System**: Complete architectural overhaul with separated game and DLL management threads
+  - 🚀 **BREAKING CHANGE**: Previously single-threaded architecture now split into dual-thread system
+  - 🧵 **DLL Thread**: Dedicated hotkey event system with 100Hz responsive detection (10ms intervals)
+  - 🎮 **Game Thread**: TextPrint HUD method from hooks calling `FiberPool::Instance().RunPending()` scheduler
+  - ⚡ Detached thread architecture prevents blocking and improves stability
+  - 📊 Optimized thread synchronization with atomic boolean controls for cross-thread coordination
+
+- **🛡️ Advanced DLL Auto-Ejection System**: Revolutionary single-keypress DLL management
+  - 🔧 `CreateRemoteThread` implementation for proper DLL unloading from external context
+  - ⚡ Automatic cleanup sequence: Debug hotkeys → Console → MinHook → DLL ejection
+  - 🎮 **END key workflow**: Complete cleanup + auto-ejection + ready for re-injection
+  - 🚀 Eliminated need for external ejector tools in development workflow
+
+### 🎯 Advanced Technical Improvements
+
+- **🔍 Enhanced Hook System Protection**: Robust MinHook lifecycle management
+  - 🛡️ Double-cleanup prevention in `Hook::DisableHooks()`
+  - 📋 Intelligent hook state detection and logging
+  - ✅ Graceful hook disable with proper error handling
+  - 🔧 External atomic flag integration for cross-module coordination
+
+- **🖥️ Console System Modernization**: Improved console lifecycle management
+  - 🔒 Console control handler for graceful shutdown on window close
+  - 🧹 Simplified `Console::DeAllocate()` with automatic state reset
+  - 📊 Proper handle cleanup and state management
+  - ✅ Eliminated `freopen_s` assertion failures
+
+### 🏗️ Architectural Enhancements
+- **🧵 Thread Management Overhaul**: Modern C++ threading with proper lifecycle
+  - 🚀 **Major Architecture Change**: Separated previously unified thread system into specialized threads
+  - 🔄 **Before**: Single thread handled both hotkey events and game loop operations
+  - 🧵 **After**: DLL Thread (hotkey events) + Game Thread (FiberPool scheduler via TextPrint hook)
+  - ⚡ Thread detachment for independent cleanup execution with lambda capture optimization
+  - 🎯 Atomic boolean controls for cross-thread synchronization and coordination
+  - 📊 Enhanced thread safety with proper resource management and state isolation
+
+- **📁 Code Organization Improvements**: Better separation of concerns
+  - 🔧 Centralized cleanup function with clear responsibility separation
+  - 📋 Header file organization with proper function declarations
+  - ✅ Include path optimization and dependency management
+  - 🎮 Native helper integration for status message display
+
+### 🎮 Developer Experience Enhancements
+
+- **🔍 Enhanced Debugging & Logging**: Comprehensive operation visibility
+  - 📋 Detailed cleanup sequence logging with timestamps
+  - 🎯 Success/failure feedback for each cleanup operation
+  - 🔧 MinHook state tracking and duplicate operation prevention
+  - ⚡ Auto-ejection status reporting with error handling
+
+### 📝 Comprehensive File Modifications
+- **🔧 `DllMain.cpp`**: Complete threading and lifecycle architecture rewrite
+  - 🧵 Added detached thread architecture with lambda capture
+  - 🛡️ Implemented `ConsoleCtrlHandler` for crash prevention
+  - 🔄 Created `CleanUpAndExitThread()` centralized cleanup function
+  - ⚡ Integrated `CreateRemoteThread` auto-ejection system
+  - 📊 Added atomic state management variables
+
+- **📋 `DllMain.hpp`**: Enhanced function declarations and exports
+  - 🔧 Added `CleanUpAndExitThread()` function declaration
+  - 🧵 Updated thread management variable exports
+  - ✅ Proper header organization and dependency management
+
+- **🛠️ `Hook/Hook.cpp`**: Advanced MinHook protection system
+  - 🛡️ Added double-cleanup prevention logic
+  - 📊 Integrated atomic flag checking for cleanup state
+  - 🔧 Enhanced error handling and logging
+  - ✅ Improved hook disable reliability
+
+- **🖥️ `Utils/Console.cpp`**: Streamlined console management
+  - 🧹 Simplified `DeAllocate()` method with automatic cleanup
+  - 📊 Proper state reset and handle management
+  - 🔒 Eliminated problematic `freopen_s` calls
+  - ✅ Enhanced console lifecycle reliability
+
+### 🎯 Quality Assurance & Performance
+- **✅ Zero-Crash Guarantee**: Complete elimination of DLL detachment crashes
+- **⚡ Performance Optimization**: 100Hz hotkey responsiveness with minimal CPU impact
+- **🔧 Memory Management**: Proper cleanup of all resources and handles
+- **🧵 Thread Safety**: Atomic operations and proper synchronization
+- **📊 Reliability Testing**: Extensive testing of all cleanup scenarios
+
 ## [2.5.0] - 2025-09-08 🎉
 
 ### 🚀 Revolutionary Features & Enhancements

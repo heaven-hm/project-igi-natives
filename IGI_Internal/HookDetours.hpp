@@ -11,7 +11,6 @@
 #include "Utils/Utility.hpp"
 #include "GameResources/GameResource.hpp"
 #include "Graphs/Graph.hpp"
-#include "Features.hpp"
 
 //Testing.
 bool graph_runner = false;

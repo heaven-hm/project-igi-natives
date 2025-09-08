@@ -1,4 +1,5 @@
 // ich liebe es zu programmieren und Deustchland <3
+#include "Natives/NativeHelper.hpp"
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
@@ -25,6 +26,20 @@
 #error This project supports only x86 (32-Bit) builds.
 #endif
 
+// Console control handler to prevent crashes when console X is clicked
+BOOL WINAPI ConsoleCtrlHandler(DWORD dwCtrlType) {
+  switch (dwCtrlType) {
+  case CTRL_CLOSE_EVENT:
+  case CTRL_C_EVENT:
+  case CTRL_BREAK_EVENT:
+    // Gracefully stop the main loop instead of terminating
+    g_running = false;
+    return TRUE; // Prevent default handler
+  default:
+    return FALSE;
+  }
+}
+
 // Move these to file scope so they are accessible everywhere
 std::unique_ptr<Console> console_instance;
 std::unique_ptr<Log> logger_instance;
@@ -40,6 +55,8 @@ std::unique_ptr<DbgHelper> dbg_instance;
 
 // Global thread control variables
 std::atomic<bool> g_running{false};
+std::atomic<bool> g_cleanupDone{false};
+std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
 
 BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
@@ -108,13 +125,14 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 
       // Start DllMainLoop in separate thread with 30 FPS timing
       g_running = true;
-      g_mainLoopThread = std::thread([]() {
+      g_mainLoopThread = std::thread([hModule]() {
         LOG_WARNING("DllMainLoop thread started");
         while (g_running) {
           DllMainLoop();
 
           if (GT_IsKeyPressed(VK_END)) {
-            g_running = false;
+            LOG_INFO("END key pressed - starting cleanup");
+            CleanUpAndExitThread(hModule);
             break;
           }
 
@@ -122,7 +140,12 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
               std::chrono::milliseconds(10)); // 100 Hz for responsive hotkeys
         }
         LOG_WARNING("DllMainLoop thread stopped");
+        MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME +
+                                  std::string(" v2.5.0 Detached"));
       });
+
+      // Detach thread so it can run independently and clean itself up
+      g_mainLoopThread.detach();
     } catch (const std::exception &ex) {
       GT_ShowError(ex.what());
 #if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
@@ -130,27 +153,58 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
         dbg_instance->StackTrace(true);
 #endif
     }
-  } else if (dwReason == DLL_PROCESS_DETACH) {
-    // Stop the main loop thread gracefully
-    if (g_running) {
-      g_running = false;
-      if (g_mainLoopThread.joinable()) {
-        g_mainLoopThread.join();
-      }
-    }
+  }
 
-#ifdef USE_MINHOOK_LIB
+  return TRUE;
+}
+
+// Cleanup and exit thread after DLL detach.
+void CleanUpAndExitThread(HMODULE hModule) {
+  g_cleanupDone = true;
+
+  // Disable debug hotkeys
+  DEBUG::KEYS_ENABLE(false);
+  DEBUG::TEXT_ENABLE(false);
+  LOG_INFO("Debug Hotkeys disabled");
+
+  // Console cleanup
+  if (console_instance && console_instance->IsAllocated()) {
+    LOG_INFO("Console cleanup started");
+    console_instance->DeAllocate();
+    LOG_INFO("Console cleanup finished");
+  }
+
+  // MinHook cleanup
+  if (!g_minHookCleaned) {
+    LOG_INFO("MinHook cleanup started");
     MH_DisableHook(MH_ALL_HOOKS);
     MH_Uninitialize();
-#endif
-#if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
-    if (dbg_instance)
-      dbg_instance.reset();
-#endif
-#ifdef _DEBUG
-    if (console_instance && console_instance->IsAllocated())
-      console_instance->DeAllocate();
-#endif
+    g_minHookCleaned = true;
+    LOG_INFO("MinHook cleanup finished");
+  } else {
+    LOG_INFO("MinHook already cleaned up, skipping");
   }
-  return TRUE;
+
+  LOG_INFO("Cleanup completed - stopping main loop");
+  g_running = false;
+
+  // Create a remote thread to eject the DLL from outside its context
+  std::thread ejectThread([hModule]() {
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    LOG_INFO("Auto-ejecting DLL...");
+
+    HANDLE hProcess = GetCurrentProcess();
+    HANDLE hThread = CreateRemoteThread(hProcess, nullptr, 0,
+                                        (LPTHREAD_START_ROUTINE)FreeLibrary,
+                                        hModule, 0, nullptr);
+
+    if (hThread) {
+      WaitForSingleObject(hThread, INFINITE);
+      CloseHandle(hThread);
+      LOG_INFO("DLL ejection completed");
+    } else {
+      LOG_ERROR("Failed to create ejection thread");
+    }
+  });
+  ejectThread.detach();
 }

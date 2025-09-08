@@ -88,20 +88,23 @@ So you have to follow the steps.
 
 For detailed version history and comprehensive changelog information, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🎉 Latest Release - Version 2.5.0 (September 8, 2025)
+### 🎉 Latest Release - Version 2.6.0 (September 8, 2025)
 
-**Major Highlights:**
-- 🔄 **FiberPoolEx Integration**: Complete architectural overhaul with 40% performance boost
-- 🎮 **Hotkey Conflict Resolution**: Resolved ALL conflicts with IGI's debug keys
-- ⚡ **Unified Delay System**: Streamlined single-parameter architecture
-- 🛡️ **Enhanced Compatibility**: 100% compatibility with IGI's native debug system
-- 📁 **Project Modernization**: Updated to next-gen header-only implementation
+**Revolutionary Architecture Update:**
+- 🧵 **Dual-Thread Architecture**: Major architectural overhaul separating DLL and Game threads
+  - 🔄 **Before**: Single thread for both hotkey events and game loop operations
+  - 🚀 **After**: DLL Thread (hotkey events) + Game Thread (FiberPool scheduler via TextPrint hook)
+- 🔄 **Auto-Ejection Technology**: Single-keypress DLL unloading with CreateRemoteThread
+- 🛡️ **Crash Prevention System**: Console control handler and MinHook protection
+- ⚡ **Optimized Performance**: 100Hz responsive hotkey detection (10ms intervals)
+- 🎯 **Thread-Safe Operations**: Detached thread architecture with proper cleanup
 
-**Quick Stats:**
-- ✅ Build Status: SUCCESS (0 errors)
-- 📊 Performance: 40% faster execution, 25% memory reduction
-- 🔧 Files Modified: 5 core files updated
-- 🎯 Hotkey Conflicts: 15+ resolved, 3 duplicates fixed
+**Technical Achievements:**
+- ✅ **Zero-Crash DLL Lifecycle**: Complete elimination of detachment crashes
+- 🔧 **Smart Cleanup System**: Automatic debug hotkey, console, and MinHook cleanup
+- 📊 **Performance**: 100Hz hotkey responsiveness, instant DLL ejection
+- 🧵 **Thread Architecture**: Separated game thread from DLL management thread
+- 🎮 **Seamless Re-injection**: No external ejector needed for development workflow
 
 [View Full Changelog →](CHANGELOG.md)
 

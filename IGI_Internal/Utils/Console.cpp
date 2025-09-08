@@ -55,7 +55,12 @@ namespace IGI {
 			return;
 		}
 
+		// Just free the console - let the system handle stdout/stderr cleanup
 		FreeConsole();
+		
+		// Reset state
+		is_allocated = false;
+		output_handle = INVALID_HANDLE_VALUE;
 	}
 
 	void Console::SetTitle(const string& title) {
