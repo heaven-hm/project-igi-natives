@@ -605,16 +605,15 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 	GameTextPrintOut(param_1, param_2);
 }
 
+// Run pending tasks scheduled via FiberPool - This game method runs every frame printing text HUD messages, 
+// so we can use this as GameLoop for now, but we need to find a better way to do this. :)
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
-	// Because it runs every frame we need to run the fiber pool to inject our arbitrary code without blocking the main thread.
-	DllMainLoop();
 	FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
 }
 
 int __cdecl SetGameDataSymbolDetour(char* symbol_file) {
 	LOG_FILE("%s : symbol_file : %s", "SetGameDataSymbol", symbol_file);
-	Sleep(100);
 	int ret_val = SetGameDataSymbolOut(symbol_file);
 	g_DbgHelper->StackTrace(true);
 	return ret_val;
@@ -636,7 +635,6 @@ int __cdecl  StatusMsgDetour(int send_status, const char* buffer, const char* ms
 
 int __cdecl ParseConfigDetour(char* q_file) {
 	LOG_FILE("%s : q_file : %s", FUNC_NAME, q_file);
-	Sleep(100);
 	int ret_val = ParseConfigOut(q_file);
 	//g_DbgHelper->StackTrace(true, false, true);
 	return ret_val;
@@ -644,7 +642,6 @@ int __cdecl ParseConfigDetour(char* q_file) {
 
 int __cdecl CreateConfigDetour(char* q_file) {
 	LOG_FILE("%s : q_file : %s", FUNC_NAME, q_file);
-	Sleep(100);
 	int ret_val = CreateConfigOut(q_file);
 
 	//g_DbgHelper->StackTrace(true, false, false);
@@ -653,13 +650,11 @@ int __cdecl CreateConfigDetour(char* q_file) {
 
 int __cdecl ParseWeaponConfigDetour(int index, char* cfg_file) {
 	LOG_FILE("%s index : %d cfg_file : %s", FUNC_NAME, index, cfg_file);
-	Sleep(100);
 	return ParseWeaponConfigOut(index, cfg_file);
 }
 
 void __cdecl SetFramesDetour(int frames) {
 	LOG_FILE("%s : Frames : %d", FUNC_NAME, frames);
-	Sleep(100);
 	return SetFramesVarOut(frames);
 }
 
@@ -672,7 +667,6 @@ int __cdecl  StartLevelDetour(int param1, int param2, int param3, int param4) {
 
 int __cdecl  QuitLvlDetour(int param1, int param2, int param3, int param4) {
 	LOG_FILE("%s param1 : %p param2 : %p param3 : %p param4 : %p", FUNC_NAME, param1, param2, param3, param4);
-	Sleep(100);
 	return QuitLevelOut(param1);
 }
 
@@ -736,7 +730,6 @@ int* __cdecl GameOpenQFileDetour(char* file_name, char* file_mode) {
 
 int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 	LOG_INFO("%s param1 : %s param2 : %p param3 : %p  param4 : %p", "LevelLoad", param1, param2, param3, param4);
-	Sleep(100);
 	//g_DbgHelper->StackTrace(true, false, true);
 	return LevelLoadOut(param1, param2, param3, param4);
 }

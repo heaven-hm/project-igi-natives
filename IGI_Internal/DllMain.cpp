@@ -38,6 +38,10 @@ std::unique_ptr<Hook> hook_instance;
 std::unique_ptr<DbgHelper> dbg_instance;
 #endif
 
+// Global thread control variables
+std::atomic<bool> g_running{false};
+std::thread g_mainLoopThread;
+
 BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
   if (dwReason == DLL_PROCESS_ATTACH) {
     DisableThreadLibraryCalls(hModule);
@@ -88,9 +92,9 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       WEAPON::UNLIMITED_AMMO_SET(true);
 #endif
 
-	  // Enable Debug Hotkeys. (Read IGIDebug.md for more info)
-	  DEBUG::KEYS_ENABLE(true);
-	  DEBUG::TEXT_ENABLE(true);
+      // Enable Debug Hotkeys. (Read IGIDebug.md for more info)
+      DEBUG::KEYS_ENABLE(true);
+      DEBUG::TEXT_ENABLE(true);
 
       // Set Game Handle
       HANDLE g_handle = reinterpret_cast<HANDLE>(GetModuleHandle(NULL));
@@ -101,6 +105,24 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
       MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v2.5.0 Attached"));
+
+      // Start DllMainLoop in separate thread with 30 FPS timing
+      g_running = true;
+      g_mainLoopThread = std::thread([]() {
+        LOG_WARNING("DllMainLoop thread started");
+        while (g_running) {
+          DllMainLoop();
+
+          if (GT_IsKeyPressed(VK_END)) {
+            g_running = false;
+            break;
+          }
+
+          std::this_thread::sleep_for(
+              std::chrono::milliseconds(10)); // 100 Hz for responsive hotkeys
+        }
+        LOG_WARNING("DllMainLoop thread stopped");
+      });
     } catch (const std::exception &ex) {
       GT_ShowError(ex.what());
 #if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
@@ -109,6 +131,14 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 #endif
     }
   } else if (dwReason == DLL_PROCESS_DETACH) {
+    // Stop the main loop thread gracefully
+    if (g_running) {
+      g_running = false;
+      if (g_mainLoopThread.joinable()) {
+        g_mainLoopThread.join();
+      }
+    }
+
 #ifdef USE_MINHOOK_LIB
     MH_DisableHook(MH_ALL_HOOKS);
     MH_Uninitialize();

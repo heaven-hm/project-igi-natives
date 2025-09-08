@@ -19,6 +19,8 @@
 #include "Graphs/Graph.hpp"
 
 #include "Utils/FiberPool.hpp" // add scheduler declaration for RunPending/RunExternal
+#include <thread>
+#include <atomic>
 
 #ifdef USE_MINHOOK_LIB 
 #include "Hook/Hook.hpp" 
@@ -38,3 +40,7 @@ using namespace IGI;
 
 BOOL __stdcall DllMain(HINSTANCE, DWORD, LPVOID);
 void DllMainLoop();
+
+// Global thread control variables
+extern std::atomic<bool> g_running;
+extern std::thread g_mainLoopThread;
