@@ -38,7 +38,7 @@ void DllMainLoopEditor() {
 
 		
 #ifdef _DEBUG
-		if (g_Utility.IsKeyPressed(VK_SPACE)) {
+		if (g_Utility.IsKeyPressed(VK_HOME)) {
 			g_Utility.LogAllHotkeys(__FILE__);
 		}
 #endif

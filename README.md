@@ -1,6 +1,6 @@
 # Project I.G.I Internal
 
-[![Version](https://img.shields.io/badge/version-v2.5.0-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Version](https://img.shields.io/badge/version-v2.6.1-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![Build](https://img.shields.io/badge/build-f0f30e5-green.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/Jones-HM/project-igi-internals)
 [![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/Jones-HM/project-igi-internals)
@@ -106,7 +106,7 @@ The DLL provides the following implemented features accessible via hotkeys durin
 - **Ctrl+F6**: Write config - Saves current game configuration
 
 ### 🛠️ **Debug Features**:
-- **Space** (Debug builds only): Display all available hotkeys in console
+- **Home** (Debug builds only): Display all available hotkeys in console
 
 ## Modifying this project.
 You can modify the project by focusing on the **Features.cpp** file located in the _DllMainLoop()_ method under the _MENU_SCREEN_INGAME_ section. Add your logic for Adding/Removing Buildings/Weapons/A.I etc into the game using the FiberPool task scheduler for thread-safe execution.
@@ -135,12 +135,16 @@ So you have to follow the steps.
 
 For detailed version history and comprehensive changelog information, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🎉 Latest Release - Version 2.6.0 (September 8, 2025)
+### 🎉 Latest Release - Version 2.6.1 (September 8, 2025)
 
-**Revolutionary Architecture Update:**
+**Debug Hotkey Improvement:**
+- 🔧 **Hotkey Update**: Changed debug hotkey logging from `Space` to `Home` key
+  - 🎯 **Reason**: Prevents conflicts with game controls and provides dedicated debug access
+  - 📋 **Scope**: Updated in both `Features.cpp` and `Features_Editor.cpp`
+  - 🛠️ **Function**: `LogAllHotkeys()` now triggered by Home key in debug builds
+
+**Previous Architecture Updates (v2.6.0):**
 - 🧵 **Dual-Thread Architecture**: Major architectural overhaul separating DLL and Game threads
-  - 🔄 **Before**: Single thread for both hotkey events and game loop operations
-  - 🚀 **After**: DLL Thread (hotkey events) + Game Thread (FiberPool scheduler via TextPrint hook)
 - 🔄 **Auto-Ejection Technology**: Single-keypress DLL unloading with CreateRemoteThread
 - 🛡️ **Crash Prevention System**: Console control handler and MinHook protection
 - ⚡ **Optimized Performance**: 100Hz responsive hotkey detection (10ms intervals)
