@@ -79,15 +79,23 @@ This DLL seamlessly integrates with IGI's built-in debug functionality while add
 The project could be build for [IGI Editor](https://github.com/IGI-Research-Devs/IGI1Editor) the only thing we need to change is **Features.cpp** file we have to update with **Features file for Editor** which could be found here [Features_Editor.cpp](https://github.com/IGI-Research-Devs/IGI_Internal/blob/master/IGI_Internal/Features_Editor.cpp)
 
 
-## Modifying this project.
-You can modify the project the only file you need to focus on is **Features file** which could be found here [Features.cpp](https://github.com/IGI-Research-Devs/IGI_Internal/blob/master/IGI_Internal/Features.cpp) in _DllMainLoop()_ method go to _MENU_SCREEN_INGAME_ section add you logic for Adding/Removing Buildings/Weapons/A.I etc into the game.</br>
+## 🎮 Current Features & Hotkeys
 
-There are shown 5 examples into _Features.cpp_ file.
-- Enable Debug mode.
-- Restart game.
-- Weapon pickup.
-- Frames setting
-- Humanplayer load.
+The DLL provides the following implemented features accessible via hotkeys during gameplay:
+
+### 🔧 **Active Hotkeys** (Ctrl + F1-F6):
+- **Ctrl+F1**: Random weapon pickup - Equips a random available weapon
+- **Ctrl+F2**: Random FPS setting - Sets game framerate to random value (30-241 FPS)
+- **Ctrl+F3**: Load humanplayer - Loads/reloads the human player character
+- **Ctrl+F4**: Quit current level - Exits the current game level
+- **Ctrl+F5**: Show status message - Displays game status information
+- **Ctrl+F6**: Write config - Saves current game configuration
+
+### 🛠️ **Debug Features**:
+- **Space** (Debug builds only): Display all available hotkeys in console
+
+## Modifying this project.
+You can modify the project by focusing on the **Features.cpp** file located in the _DllMainLoop()_ method under the _MENU_SCREEN_INGAME_ section. Add your logic for Adding/Removing Buildings/Weapons/A.I etc into the game using the FiberPool task scheduler for thread-safe execution.
 
 ## Adding new hashes for Natives.
 Lets say you found new hash for Native now how to add them into project and use them.

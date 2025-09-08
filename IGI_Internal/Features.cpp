@@ -68,7 +68,7 @@ void DllMainLoop() {
 
     // Frames setting - Random FPS.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F2)) {
-      LOG_INFO("Ctrl+F2: setting FPS");
+      LOG_INFO("Ctrl+F2: Setting FPS");
 
       try {
         int frames = 30 + rand() % 211;
@@ -86,7 +86,7 @@ void DllMainLoop() {
 
     // Humanplayer load.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F3)) {
-      LOG_INFO("Ctrl+F3: loading humanplayer");
+      LOG_INFO("Ctrl+F3: Load humanplayer");
 
       FiberPool::Instance().RunExternal(
           [=] {
@@ -98,14 +98,20 @@ void DllMainLoop() {
 
     // Quit current level.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
-      LOG_INFO("Ctrl+F4: quiting new level");
+      LOG_INFO("Ctrl+F4: Quit new level");
       QuitLevelMain();
     }
 
     // Show status message.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F5)) {
-      LOG_INFO("Ctrl+F5: showing status message");
+      LOG_INFO("Ctrl+F5: Show status message");
       StatusMsgShow();
+    }
+
+    // Script compile.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F6)) {
+      LOG_INFO("Ctrl+F6: Write config");
+      CONFIG::WRITE();
     }
 
   } else if (g_menu_screen == MENU_SCREEN_RESTART) {
