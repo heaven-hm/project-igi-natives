@@ -11,8 +11,7 @@
 #include "Utils/Utility.hpp"
 #include "GameResources/GameResource.hpp"
 #include "Graphs/Graph.hpp"
-// #include "Features.hpp"
-#include "Features_Editor.hpp"
+#include "Features.hpp"
 
 //Testing.
 bool graph_runner = false;
@@ -608,8 +607,7 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
 	// Because it runs every frame we need to run the fiber pool to inject our arbitrary code without blocking the main thread.
-	DllMainLoopEditor();
-	// DllMainLoop();
+	DllMainLoop();
 	FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
 }

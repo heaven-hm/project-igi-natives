@@ -33,16 +33,14 @@ This DLL seamlessly integrates with IGI's built-in debug functionality while add
 
 ### 🚀 **Core Features:**
 - 🔓 **Mission Unlock** - Access all missions instantly without progression
-- ⚔️ **Weapon Arsenal** - Unlock complete weapon collection
+- ⚔️ **Weapon Unlock** - Unlock complete weapon collection
 - 🛡️ **Invincible Mode** - Unlimited health and damage immunity
-- ✈️ **Fly Mode** - Soar through levels with unrestricted movement
+- ✈️ **Fly Mode** - Fly through levels with unrestricted movement
 - 👁️ **3rd Person Mode** - Enhanced perspective for better gameplay
-- 🎯 **Debug Integration** - Zero conflicts with IGI's native debug system
 
 ### 🔥 **Advanced Capabilities:**
 - 📷 **Free Camera Controls** - Professional camera manipulation
 - 🏗️ **Level Management** - Instant level loading and restart functionality
-- 🔫 **Weapon Systems** - Complete weapon configuration and management
 - 💾 **Memory Operations** - Real-time game state modification
 - 🎮 **Enhanced Debugging** - Native IGI functionality integration
 
