@@ -96,10 +96,15 @@ void DllMainLoop() {
           3);
     }
 
-    // Quit current level.
+    // Restart current level.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
-      LOG_INFO("Ctrl+F4: Quit new level");
-      QuitLevelMain();
+      LOG_INFO("Ctrl+F4: Restart level");
+	  FiberPool::Instance().RunExternal(
+		[=] {
+		  LEVEL::RESTART();
+		  LOG_INFO("Level restarted");
+		},
+		3);
     }
 
     // Show status message.
