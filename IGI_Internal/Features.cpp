@@ -58,7 +58,8 @@ void DllMainLoop() {
         FiberPool::Instance().RunExternal(
             [=] {
               WEAPON::WEAPON_PICKUP(weapon_id);
-			  LOG_INFO("Features: Executing weapon pickup task for id %d", weapon_id);
+              LOG_INFO("Features: Executing weapon pickup task for id %d",
+                       weapon_id);
             },
             3);
       } catch (const std::exception &ex) {
@@ -96,15 +97,28 @@ void DllMainLoop() {
           3);
     }
 
-    // Restart current level.
+    // Free camera mode.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
-      LOG_INFO("Ctrl+F4: Restart level");
-	  FiberPool::Instance().RunExternal(
-		[=] {
-		  LEVEL::RESTART();
-		  LOG_INFO("Level restarted");
-		},
-		3);
+      LOG_INFO("Ctrl+F4: Free Camera Mode");
+
+      FiberPool::Instance().RunExternal([] { GAME::INPUT_DISABLE(); }, 3);
+      g_PlayerEnabled = false;
+
+      Camera::Controls controls;
+      controls.UP(VK_SPACE);
+      controls.DOWN(VK_MENU);
+      controls.LEFT(VK_LEFT);
+      controls.RIGHT(VK_RIGHT);
+      controls.FORWARD(VK_UP);
+      controls.BACKWARD(VK_DOWN);
+      controls.CALIBRATE(VK_BACK);
+      controls.QUIT(VK_HOME);
+      controls.AXIS_OFF(0.5f);
+      g_Camera.RunFreeCamFiber(controls);
+
+      FiberPool::Instance().RunExternal([] { GAME::INPUT_ENABLE(); }, 3);
+      LOG_INFO("Free camera mode activated");
+      g_PlayerEnabled = true;
     }
 
     // Show status message.

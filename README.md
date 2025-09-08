@@ -101,7 +101,7 @@ The DLL provides the following implemented features accessible via hotkeys durin
 - **Ctrl+F1**: Random weapon pickup - Equips a random available weapon
 - **Ctrl+F2**: Random FPS setting - Sets game framerate to random value
 - **Ctrl+F3**: Load humanplayer - Loads/reloads the human player character
-- **Ctrl+F4**: Restart current level - Restarts the current game level
+- **Ctrl+F4**: Free Camera Mode - Activates free camera (Arrow keys to move, Space/Alt for up/down, Home to exit) 
 - **Ctrl+F5**: Show status message - Displays game status information
 - **Ctrl+F6**: Write config - Saves current game configuration
 
