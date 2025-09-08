@@ -5,7 +5,21 @@
 #include <queue>
 #include <vector>
 
-
+/**
+ * FiberPool - IGI-Specific Task Scheduler
+ * 
+ * This is a specialized task scheduler optimized for IGI (2000) game architecture.
+ * It's designed to work with IGI's event-based Windows Message loop system rather 
+ * than modern game engine loops.
+ * 
+ * Key Features:
+ * - Frame-based delay system optimized for IGI's rendering pipeline
+ * - Thread-safe task queuing for cross-thread operations
+ * - Integration with IGI's TextPrint HUD hook for game loop execution
+ * 
+ * Usage: Called from TextPrintDetour() hook which runs every frame
+ * For modern games, use FiberPoolEx.hpp instead.
+ */
 class FiberPool {
 public:
   static FiberPool &Instance() {

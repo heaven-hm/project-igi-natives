@@ -16,6 +16,23 @@
 #include <windows.h>
 #endif
 
+/**
+ * FiberPoolEx - Generic Modern Game Engine Task Scheduler
+ * 
+ * This is a generic, high-performance fiber pool implementation designed for 
+ * modern game engines with standard game loops. It provides advanced features
+ * like multi-threading, fiber switching, and exception handling.
+ * 
+ * Key Features:
+ * - Multi-threaded task execution with worker threads
+ * - Windows fiber support for advanced task switching
+ * - SEH (Structured Exception Handling) for robust error handling
+ * - Configurable delay system with millisecond precision
+ * - Thread-safe task queuing and execution
+ * 
+ * Usage: For modern games with standard game loops
+ * For IGI (2000) specific tasks, use FiberPool.hpp instead.
+ */
 class FiberPoolEx {
 public:
 

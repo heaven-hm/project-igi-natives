@@ -25,7 +25,25 @@ form of _MEF_ (**M**esh **E**xternal **F**ile).
 - Native Invoker - Native invoker is a technology to invoke native methods from Game using their **Hash** with its **Handler**. 
 
 ## Building DLL project.
-Open this project in your favourite IDE _(Visual Studio)_ and build it and your output will be **Release/Debug** folder depends which configuration you choosed and you will find file _IGI-Internals-Release.dll_ so download your favourite DLL injector make sure its **x86(32-bit)** compatible otherwise injection wouldn't work or you can use recommended [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector) to inject DLL.
+
+### 🏗️ Platform Requirements
+**⚠️ Important**: This project supports **only x86 (32-bit) builds** because IGI (2000) is a 32-bit game. Any attempt to build or inject a 64-bit DLL will fail.
+
+### 🚀 Auto-Inject DLL with Hot Reload
+Use the `build_and_reload.bat` batch file for automated building and DLL injection with hot reload capability:
+
+```bash
+# Debug build with auto-injection
+.\build_and_reload.bat Debug x86
+
+# Release build with auto-injection  
+.\build_and_reload.bat Release x86
+```
+
+**Configuration**: Update `OUTDLL` and `INJECTOR` paths in the batch file according to your setup.
+
+### 🔧 Manual Building
+Open this project in Visual Studio and build it. Your output will be in **Release/Debug** folder depending on configuration. You'll find `IGI-Internals-Debug.dll` or `IGI-Internals-Release.dll`. Use any **x86(32-bit)** compatible DLL injector or the recommended [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector).
 
 ## 🎮 IGI Debug Keys Integration & Enhanced Features
 
@@ -43,6 +61,11 @@ This DLL seamlessly integrates with IGI's built-in debug functionality while add
 - 🏗️ **Level Management** - Instant level loading and restart functionality
 - 💾 **Memory Operations** - Real-time game state modification
 - 🎮 **Enhanced Debugging** - Native IGI functionality integration
+
+### 🧵 **Task Scheduling Architecture:**
+- **FiberPool.hpp** - IGI-specific task scheduler optimized for IGI (2000) game architecture
+- **FiberPoolEx.hpp** - Generic fiber pool implementation for modern game engines
+- **Dual-thread system** - Separated DLL management from game operations for better performance
 
 ### 🌟 **Coming Soon:**
 - More gameplay enhancement modes

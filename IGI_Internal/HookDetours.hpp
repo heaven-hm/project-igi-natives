@@ -11,6 +11,7 @@
 #include "Utils/Utility.hpp"
 #include "GameResources/GameResource.hpp"
 #include "Graphs/Graph.hpp"
+#include "Utils/FiberPool.hpp"
 
 //Testing.
 bool graph_runner = false;
