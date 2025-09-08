@@ -147,3 +147,10 @@ void Camera::RunFreeCamThread(Controls& controls) {
 	auto freeCamThread = std::thread(&Camera::FreeCam, this, std::ref(controls));
 	freeCamThread.join();
 }
+
+void Camera::RunFreeCamFiber(Controls& controls) {
+	// Use FiberPoolEx singleton instance for camera operations
+	FiberPoolEx::Instance().RunExternal([this, controls]() mutable {
+		this->FreeCam(controls);
+	}, 0);
+}

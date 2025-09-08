@@ -1,6 +1,7 @@
 #pragma once
 #include "../Common.hpp"
 #include "../Libs/GTLibc.hpp"
+#include "../Utils/FiberPoolEx.hpp"
 
 namespace IGI {
 	class Camera
@@ -134,6 +135,7 @@ namespace IGI {
 		void Deattach();
 		void FreeCam(Controls&);
 		void RunFreeCamThread(Controls&);
+		void RunFreeCamFiber(Controls&);
 	};
 	inline Camera g_Camera;
 }

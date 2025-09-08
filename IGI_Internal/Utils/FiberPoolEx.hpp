@@ -16,12 +16,18 @@
 #include <windows.h>
 #endif
 
-class FiberPool {
+class FiberPoolEx {
 public:
-   explicit FiberPool(std::size_t numThreads = std::thread::hardware_concurrency());
-   FiberPool(const FiberPool&) = delete;
-   FiberPool& operator=(const FiberPool&) = delete;
-   ~FiberPool();
+
+static FiberPoolEx &Instance() {
+    static FiberPoolEx inst;
+    return inst;
+  }
+
+   explicit FiberPoolEx(std::size_t numThreads = std::thread::hardware_concurrency());
+   FiberPoolEx(const FiberPoolEx&) = delete;
+   FiberPoolEx& operator=(const FiberPoolEx&) = delete;
+   ~FiberPoolEx();
 
    template <typename F>
    void Run(F&& f);
@@ -29,14 +35,13 @@ public:
    void run(F&& f);
 
    template <typename F>
-   void RunExternal(F&& f, unsigned preDelayMs = 2, unsigned postDelayMs = 2);
+   void RunExternal(F&& f, unsigned delayMs = 2);
 
 private:
    struct Task {
        std::function<void()> func;
        bool external{ false };
-       unsigned preDelayMs{ 0 };
-       unsigned postDelayMs{ 0 };
+       unsigned delayMs{ 0 };
 #ifdef _WIN32
        void* return_fiber{ nullptr };
 #endif
@@ -75,35 +80,33 @@ private:
    static void __stdcall FiberEntry(void* lpParameter) {
        Task* t = static_cast<Task*>(lpParameter);
        if (!t) return;
-       if (t->preDelayMs) ::Sleep(t->preDelayMs);
+       if (t->delayMs) ::Sleep(t->delayMs);
        __try {
            t->func();
        }
        __except (EXCEPTION_EXECUTE_HANDLER) {
            // swallow
        }
-       if (t->postDelayMs) ::Sleep(t->postDelayMs);
        if (t->return_fiber) {
            SwitchToFiber(t->return_fiber);
        }
    }
 
    static void RunExternalTaskSEH(Task& task) {
-       if (task.preDelayMs) ::Sleep(task.preDelayMs);
+       if (task.delayMs) ::Sleep(task.delayMs);
        __try {
            task.func();
        }
        __except (EXCEPTION_EXECUTE_HANDLER) {
            // swallow
        }
-       if (task.postDelayMs) ::Sleep(task.postDelayMs);
    }
 #endif
 };
 
 // Implementation
 
-inline FiberPool::FiberPool(std::size_t numThreads) {
+inline FiberPoolEx::FiberPoolEx(std::size_t numThreads) {
    if (numThreads == 0) {
        numThreads = 1;
    }
@@ -135,7 +138,7 @@ inline FiberPool::FiberPool(std::size_t numThreads) {
                    if (workerFiber) {
                        auto* heapTask = new Task(std::move(task));
                        heapTask->return_fiber = workerFiber;
-                       void* fiber = CreateFiber(0, &FiberPool::FiberEntry, heapTask);
+                       void* fiber = CreateFiber(0, &FiberPoolEx::FiberEntry, heapTask);
                        if (fiber) {
                            SwitchToFiber(fiber);
                            DeleteFiber(fiber);
@@ -148,10 +151,9 @@ inline FiberPool::FiberPool(std::size_t numThreads) {
                    }
                    RunExternalTaskSEH(task);
 #else
-                   if (task.preDelayMs) std::this_thread::sleep_for(std::chrono::milliseconds(task.preDelayMs));
+                   if (task.delayMs) std::this_thread::sleep_for(std::chrono::milliseconds(task.delayMs));
                    try { task.func(); }
                    catch (...) {}
-                   if (task.postDelayMs) std::this_thread::sleep_for(std::chrono::milliseconds(task.postDelayMs));
 #endif
                }
                else {
@@ -167,7 +169,7 @@ inline FiberPool::FiberPool(std::size_t numThreads) {
    }
 }
 
-inline FiberPool::~FiberPool() {
+inline FiberPoolEx::~FiberPoolEx() {
    stop_flag.store(true);
    condition.notify_all();
    for (auto& t : workers) {
@@ -178,7 +180,7 @@ inline FiberPool::~FiberPool() {
 }
 
 template <typename F>
-void FiberPool::Run(F&& f) {
+void FiberPoolEx::Run(F&& f) {
    Task t;
    t.func = std::forward<F>(f);
    t.external = false;
@@ -190,17 +192,16 @@ void FiberPool::Run(F&& f) {
 }
 
 template <typename F>
-void FiberPool::run(F&& f) {
+void FiberPoolEx::run(F&& f) {
    Run(std::forward<F>(f));
 }
 
 template <typename F>
-void FiberPool::RunExternal(F&& f, unsigned preDelayMs, unsigned postDelayMs) {
+void FiberPoolEx::RunExternal(F&& f, unsigned delayMs) {
    Task t;
    t.func = std::forward<F>(f);
    t.external = true;
-   t.preDelayMs = preDelayMs;
-   t.postDelayMs = postDelayMs;
+   t.delayMs = delayMs;
    {
        std::lock_guard<std::mutex> lock(queue_mutex);
        tasks.emplace(std::move(t));

@@ -11,8 +11,8 @@
 #include "Utils/Utility.hpp"
 #include "GameResources/GameResource.hpp"
 #include "Graphs/Graph.hpp"
-#include "Features.hpp"
-// #include "Features_Editor.hpp"
+// #include "Features.hpp"
+#include "Features_Editor.hpp"
 
 //Testing.
 bool graph_runner = false;
@@ -608,8 +608,8 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
 	// Because it runs every frame we need to run the fiber pool to inject our arbitrary code without blocking the main thread.
-	// DllMainLoopEditor();
-	DllMainLoop();
+	DllMainLoopEditor();
+	// DllMainLoop();
 	FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
 }
@@ -667,8 +667,9 @@ void __cdecl SetFramesDetour(int frames) {
 
 int __cdecl  StartLevelDetour(int param1, int param2, int param3, int param4) {
 	LOG_FILE("%s param1 : %p param2 : %p param3 : %p param4 : %p", FUNC_NAME, param1, param2, param3, param4);
-	g_DbgHelper->StackTrace(true, false, true);
-	return StartLevelOut(param1, param2, param3, param4);
+	 int ret = StartLevelOut(param1, param2, param3, param4);
+	 g_DbgHelper->StackTrace(true, true, true);
+	 return ret;
 }
 
 int __cdecl  QuitLvlDetour(int param1, int param2, int param3, int param4) {

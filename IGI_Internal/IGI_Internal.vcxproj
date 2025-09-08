@@ -215,6 +215,7 @@
     <ClInclude Include="DllMain.hpp" />
     <ClInclude Include="Utils\DbgHelper.hpp" />
     <ClInclude Include="Utils\FiberPool.hpp" />
+    <ClInclude Include="Utils\FiberPoolEx.hpp" />
     <ClInclude Include="Utils\Utility.hpp" />
     <ClInclude Include="Natives\NativeCaller.hpp" />
     <ClInclude Include="Natives\NativeHelper.hpp" />
@@ -241,7 +242,6 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\haseeb_mir\source\repos\IGI_Internal_v1\IGI_Internal\Natives;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="Utils\DbgHelper.cpp" />
-    <ClCompile Include="Utils\FiberPool.cpp" />
     <ClCompile Include="Utils\Logger.cpp" />
     <ClCompile Include="Utils\Utility.cpp" />
   </ItemGroup>

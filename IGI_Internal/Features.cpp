@@ -49,41 +49,16 @@ void DllMainLoop() {
     }
 #endif
 
-    // Enable Debug mode (matches IGI debug key LCtrl+LShift+F10)
-    if (g_Utility.IsKeyPressed(VK_F1)) {
-      LOG_INFO("F1: toggling debug mode");
-      // Simulate LCtrl+LShift+F10 combination
-      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, VK_F10};
-      g_Utility.DoKeyCombo(keys);
-    }
-
-    // Cycle to next camera (matches IGI debug key LCtrl+LShift+Q)
-    else if (g_Utility.IsKeyPressed(VK_F2)) {
-      LOG_INFO("F2: Cycle to next camera");
-      // Simulate LCtrl+LShift+Q combination
-      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, 'Q'};
-      g_Utility.DoKeyCombo(keys);
-    }
-
-    // Cycle to previous camera (matches IGI debug key LCtrl+LShift+E)
-    else if (g_Utility.IsKeyPressed(VK_F3)) {
-      LOG_INFO("F3: Cycle to previous camera");
-      // Simulate LCtrl+LShift+E combination
-      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, 'E'};
-      g_Utility.DoKeyCombo(keys);
-    }
-
     // Weapon pickup - (Random available weapon).
-    else if (g_Utility.IsKeyPressed(VK_F4)) {
-      LOG_INFO("F4: Weapon pickup");
+    if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F1)) {
+      LOG_INFO("Ctrl+F1: Weapon pickup");
       try {
         int weapon_id = static_cast<int>(IGI::GetRandomAvailableWeapon());
 
         FiberPool::Instance().RunExternal(
             [=] {
-              LOG_INFO("Features: Executing weapon pickup task for id %d",
-                       weapon_id);
               WEAPON::WEAPON_PICKUP(weapon_id);
+			  LOG_INFO("Features: Executing weapon pickup task for id %d", weapon_id);
             },
             3);
       } catch (const std::exception &ex) {
@@ -92,8 +67,8 @@ void DllMainLoop() {
     }
 
     // Frames setting - Random FPS.
-    else if (g_Utility.IsKeyPressed(VK_F5)) {
-      LOG_INFO("F5: setting FPS");
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F2)) {
+      LOG_INFO("Ctrl+F2: setting FPS");
 
       try {
         int frames = 30 + rand() % 211;
@@ -110,8 +85,8 @@ void DllMainLoop() {
     }
 
     // Humanplayer load.
-    else if (g_Utility.IsKeyPressed(VK_F10)) {
-      LOG_INFO("F10: loading humanplayer");
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F3)) {
+      LOG_INFO("Ctrl+F3: loading humanplayer");
 
       FiberPool::Instance().RunExternal(
           [=] {
@@ -121,31 +96,15 @@ void DllMainLoop() {
           3);
     }
 
-    // Restart mission (matches IGI debug key LCtrl+LShift+R)
-    else if (g_Utility.IsKeyPressed(VK_F6)) {
-      LOG_INFO("F6: Restarting level");
-      // Simulate LCtrl+LShift+R combination
-      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, 'R'};
-      g_Utility.DoKeyCombo(keys);
-    }
-
-    // Start new level
-    else if (g_Utility.IsKeyPressed(VK_F7)) {
-      LOG_INFO("F7: starting new level");
-      // Simulate LCtrl+LShift+F12 combination
-      std::vector<DWORD> keys = {VK_LCONTROL, VK_LSHIFT, VK_F12};
-      g_Utility.DoKeyCombo(keys);
-    }
-
     // Quit current level.
-    else if (g_Utility.IsKeyPressed(VK_F8)) {
-      LOG_INFO("F8: quiting new level");
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
+      LOG_INFO("Ctrl+F4: quiting new level");
       QuitLevelMain();
     }
 
     // Show status message.
-    else if (g_Utility.IsKeyPressed(VK_F9)) {
-      LOG_INFO("F9: showing status message");
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F5)) {
+      LOG_INFO("Ctrl+F5: showing status message");
       StatusMsgShow();
     }
 

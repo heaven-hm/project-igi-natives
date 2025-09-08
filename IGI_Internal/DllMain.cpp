@@ -2,6 +2,7 @@
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
+#define DBG_x86
 
 #include "DllMain.hpp"
 
@@ -88,8 +89,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       WEAPON::UNLIMITED_AMMO_SET(true);
 #endif
 
-
-	  // Enable Debug Keys and Debug mode.
+	  // Enable Debug Hotkeys. (Read IGIDebug.md for more info)
 	  DEBUG::KEYS_ENABLE(true);
 	  DEBUG::TEXT_ENABLE(true);
 
@@ -101,7 +101,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v2.3.0 Attached"));
+      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v2.5.0 Attached"));
     } catch (const std::exception &ex) {
       GT_ShowError(ex.what());
 #if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)

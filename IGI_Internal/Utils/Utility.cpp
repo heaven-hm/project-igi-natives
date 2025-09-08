@@ -364,7 +364,6 @@ void Utility::LogAllHotkeys(const string& file_path) {
 	// Regex to match LOG_INFO lines that contain hotkey descriptions
 	std::regex hotkey_regex("LOG_INFO\\s*\\(\\s*\"([^\"]*(?:Ctrl\\+|Shift\\+|Alt\\+|F[0-9]+)[^\"]*?)\"");
 
-
 	std::sregex_iterator begin(source.begin(), source.end(), hotkey_regex);
 	std::sregex_iterator end;
 	
@@ -382,6 +381,54 @@ void Utility::LogAllHotkeys(const string& file_path) {
 	
 	if (!found_hotkeys) {
 		LOG_CONSOLE("  No hotkeys found in this file");
+	}
+	
+	// Now read and display IGI Debug Keys from IGIDebug.md
+	LOG_CONSOLE("--- IGI Built-in Debug Keys (LCtrl+LShift+KEY) ---");
+	
+	// Get the directory of the current file to locate IGIDebug.md
+	size_t lastSlashPos = file_path.find_last_of("\\");
+	string base_dir = (lastSlashPos != string::npos) ? file_path.substr(0, lastSlashPos) : "";
+	string debug_file_path = base_dir + "\\IGIDebug.md";
+	
+	std::ifstream debug_file(debug_file_path);
+	if (!debug_file.is_open()) {
+		LOG_CONSOLE("  Could not read IGIDebug.md file at: %s", debug_file_path.c_str());
+	} else {
+		std::stringstream debug_buffer;
+		debug_buffer << debug_file.rdbuf();
+		std::string debug_content = debug_buffer.str();
+		debug_file.close();
+		
+		// Parse the markdown table to extract IGI debug keys
+		std::regex table_row_regex("\\|\\s*([^|]+)\\s*\\|\\s*([^|]+)\\s*\\|");
+		std::sregex_iterator debug_begin(debug_content.begin(), debug_content.end(), table_row_regex);
+		std::sregex_iterator debug_end;
+		
+		bool found_debug_keys = false;
+		for (auto it = debug_begin; it != debug_end; ++it) {
+			std::string key = (*it)[1].str();
+			std::string function = (*it)[2].str();
+			
+			// Skip header row and separator row
+			if (key.find("KEY") == std::string::npos && 
+				key.find("---") == std::string::npos &&
+				!key.empty() && !function.empty()) {
+				
+				// Trim whitespace
+				key.erase(0, key.find_first_not_of(" \t"));
+				key.erase(key.find_last_not_of(" \t") + 1);
+				function.erase(0, function.find_first_not_of(" \t"));
+				function.erase(function.find_last_not_of(" \t") + 1);
+				
+				LOG_CONSOLE(" KEY: %s: %s", key.c_str(), function.c_str());
+				found_debug_keys = true;
+			}
+		}
+		
+		if (!found_debug_keys) {
+			LOG_CONSOLE("  No IGI debug keys found in IGIDebug.md");
+		}
 	}
 	
 	LOG_CONSOLE("=== End Hotkeys List ===");

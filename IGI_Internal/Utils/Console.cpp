@@ -18,8 +18,15 @@ namespace IGI {
 
 		AllocConsole();
 
-		freopen("CONOUT$", "w", stdout);
-		freopen("CONOUT$", "w", stderr);
+		// Redirect stdout and stderr to console
+		FILE* pCout;
+		FILE* pCerr;
+		freopen_s(&pCout, "CONOUT$", "w", stdout);
+		freopen_s(&pCerr, "CONOUT$", "w", stderr);
+		
+		// Disable buffering to ensure immediate output
+		setvbuf(stdout, NULL, _IONBF, 0);
+		setvbuf(stderr, NULL, _IONBF, 0);
 
 		output_handle = GetStdHandle(STD_OUTPUT_HANDLE);
 

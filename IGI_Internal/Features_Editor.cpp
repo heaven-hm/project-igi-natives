@@ -1,6 +1,7 @@
 #include "Features_Editor.hpp"
 #include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
+#include "Utils/FiberPoolEx.hpp"
 #include "Utils/Logger.hpp"
 
 
@@ -43,40 +44,7 @@ void DllMainLoopEditor() {
 #endif
 
 		//Ctrl-Menu Controls.
-		if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F1)) {
-			LOG_INFO("Ctrl+F1: Toggle Debug Mode");
-			FiberPool::Instance().RunExternal([=] {
-				DEBUG::INIT(GAME_FONT_BIG);
-				DEBUG::ENABLE(g_DbgEnabled);
-			}, 3);
-			g_DbgEnabled = !g_DbgEnabled;
-			string dbg_msg = "Debug mode " + std::string((g_DbgEnabled) ? "Enabled" : "Disabled");
-			LOG_INFO("%s", dbg_msg.c_str());
-		}
-
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F2)) {
-			LOG_INFO("Ctrl+F2: Restart Level");
-			FiberPool::Instance().RunExternal([] {
-				LEVEL::RESTART();
-			}, 3);
-		}
-
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F3)) {
-			LOG_INFO("Ctrl+F3: Weapon Pickup (ID from data)");
-			try {
-				auto internal_data = g_Utility.InternalDataRead();
-				int weapon_id = std::stoi(internal_data);
-				FiberPool::Instance().RunExternal([=] {
-					WEAPON::WEAPON_PICKUP(weapon_id);
-				}, 3);
-			}
-			catch (const std::exception& ex)
-			{
-				LOG_INFO("Exception: %s", ex.what());
-			}
-		}
-
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
+		if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
 			LOG_INFO("Ctrl+F4: Set FPS (from data)");
 			try {
 				auto internal_data = g_Utility.InternalDataRead();
@@ -124,8 +92,8 @@ void DllMainLoopEditor() {
 			LOG_INFO("Humanplayer load success!");
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F9)) {
-			LOG_INFO("Ctrl+F9: Human Camera View Set (from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F1)) {
+			LOG_INFO("Ctrl+F1: Human Camera View Set (from data)");
 			string internal_data = g_Utility.InternalDataRead();
 			int view = std::stoi(internal_data);
 			int cam_view = (view <= 0 || view > 5) ? 1 : view;
@@ -135,8 +103,8 @@ void DllMainLoopEditor() {
 			}, 3);
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F10)) {
-			LOG_INFO("Ctrl+F10: Input Enable");
+		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F2)) {
+			LOG_INFO("Ctrl+F2: Input Enable");
 			FiberPool::Instance().RunExternal([] {
 				GAME::INPUT_ENABLE();
 			}, 3);
@@ -144,8 +112,8 @@ void DllMainLoopEditor() {
 			g_PlayerEnabled = true;
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F11)) {
-			LOG_INFO("Ctrl+F11: Input Disable");
+		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F3)) {
+			LOG_INFO("Ctrl+F3: Input Disable");
 			FiberPool::Instance().RunExternal([] {
 				GAME::INPUT_DISABLE();
 			}, 3);
@@ -153,9 +121,12 @@ void DllMainLoopEditor() {
 			g_PlayerEnabled = false;
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F12)) {
-			LOG_INFO("Ctrl+F12: Free Camera Mode");
-			GAME::INPUT_DISABLE();
+		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD0)) {
+			LOG_INFO("Ctrl+Numpad0: Free Camera Mode");
+
+			FiberPool::Instance().RunExternal([] {
+				GAME::INPUT_DISABLE();
+			}, 3);
 			g_PlayerEnabled = false;
 
 			Camera::Controls controls;
@@ -168,7 +139,7 @@ void DllMainLoopEditor() {
 			controls.CALIBRATE(VK_BACK);
 			controls.QUIT(VK_HOME);
 			controls.AXIS_OFF(0.5f);
-			g_Camera.RunFreeCamThread(controls);
+			g_Camera.RunFreeCamFiber(controls);
 			
 			FiberPool::Instance().RunExternal([] {
 				GAME::INPUT_ENABLE();
@@ -178,27 +149,11 @@ void DllMainLoopEditor() {
 		}
 
 		//Alt-Menu Controls.
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F1)) {
-			LOG_INFO("Alt+F1: Start Level (level from data)");
-			try {
-				string level = g_Utility.InternalDataRead();
-				LOG_INFO("StarLevel level '%s'", level.c_str());
-				int level_num = std::stoi(level);
-				FiberPool::Instance().RunExternal([=] {
-					// StartLevelMain(level_num);
-				}, 3);
-			}
-			catch (const std::exception& ex)
-			{
-				LOG_INFO("Exception: %s", ex.what());
-			}
-		}
-
 		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F2)) {
 			LOG_INFO("Alt+F2: Quit Level");
 			FiberPool::Instance().RunExternal([] {
 				QuitLevelMain();
-			}, 3);
+			}, 100);
 			LOG_INFO("Level quit");
 		}
 
@@ -301,8 +256,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F9)) {
-			LOG_INFO("Alt+F9: Resource Flush (name from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F1)) {
+			LOG_INFO("Alt+F1: Resource Flush (name from data)");
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource Flush file '%s'", resource_file.c_str());
@@ -321,8 +276,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F10)) {
-			LOG_INFO("Alt+F10: Resource IsLoaded? (name from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F2)) {
+			LOG_INFO("Alt+F2: Resource IsLoaded? (name from data)");
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource is loaded file '%s'", resource_file.c_str());
@@ -340,8 +295,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F11)) {
-			LOG_INFO("Alt+F11: Resource Find (name from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F3)) {
+			LOG_INFO("Alt+F3: Resource Find (name from data)");
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource Unpack find name '%s'", resource_file.c_str());
@@ -360,8 +315,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F12)) {
-			LOG_INFO("Alt+F12: Save Game Resource Info (to files)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F4)) {
+			LOG_INFO("Alt+F4: Save Game Resource Info (to files)");
 			FiberPool::Instance().RunExternal([] {
 				RESOURCE::ANIMATION_INFO_SAVE("IGI_Animations.txt");
 				RESOURCE::FONT_INFO_SAVE("IGI_Fonts.txt");
@@ -471,8 +426,8 @@ void DllMainLoopEditor() {
 			LOG_INFO("Music Disabled");
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_F9)) {
-			LOG_INFO("Shift+F9: Set Volume (from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_NUMPAD1)) {
+			LOG_INFO("Shift+Numpad1: Set Volume (from data)");
 			try {
 				string volume = g_Utility.InternalDataRead();
 				LOG_INFO("Volume set %s", volume.c_str());
@@ -487,8 +442,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_F10)) {
-			LOG_INFO("Shift+F10: Set Volume SFX (from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_NUMPAD2)) {
+			LOG_INFO("Shift+Numpad2: Set Volume SFX (from data)");
 			try {
 				string volume = g_Utility.InternalDataRead();
 				LOG_INFO("Volume SFX set %s", volume.c_str());
@@ -503,8 +458,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_F11)) {
-			LOG_INFO("Shift+F11: Update Volume");
+		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_F12)) {
+			LOG_INFO("Shift+F12: Update Volume");
 			try {
 				FiberPool::Instance().RunExternal([] {
 					SFX::VOLUME_UPDATE();
@@ -516,8 +471,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_F12)) {
-			LOG_INFO("Shift+F12: Reset Graphics");
+		else if (g_Utility.IsKeyCombinationPressed(VK_SHIFT, VK_F9)) {
+			LOG_INFO("Shift+F9: Reset Graphics");
 			try {
 				FiberPool::Instance().RunExternal([] {
 					GFX::RESET();
