@@ -67,6 +67,20 @@ This DLL seamlessly integrates with IGI's built-in debug functionality while add
 - **FiberPoolEx.hpp** - Generic fiber pool implementation for modern game engines
 - **Dual-thread system** - Separated DLL management from game operations for better performance
 
+### ⚠️ **IGI Game Loop Architecture Limitations:**
+IGI (2000) uses a **Windows Message-based event loop** rather than modern game engine loops:
+
+- **Current Implementation**: `TextPrintDetour()` hook calls `FiberPool::Instance().RunPending()`
+- **Critical Limitation**: Only executes when HUD text is being drawn (e.g., weapon names, status messages)
+- **Problem**: When player shows knife or no HUD text is displayed, the scheduler stops running
+- **Impact**: Task execution becomes inconsistent and frame-dependent on UI state
+
+**🔍 Alternative GameLoop Methods Under Investigation:**
+- **SFX Sound hooks** - May provide more consistent per-frame execution
+- **Render pipeline hooks** - Graphics calls that execute every frame
+- **Input polling hooks** - Continuous input processing methods
+- **Timer-based approaches** - Windows timer integration for consistent execution
+
 ### 🌟 **Coming Soon:**
 - More gameplay enhancement modes
 - Advanced AI manipulation
@@ -85,7 +99,7 @@ The DLL provides the following implemented features accessible via hotkeys durin
 
 ### 🔧 **Active Hotkeys** (Ctrl + F1-F6):
 - **Ctrl+F1**: Random weapon pickup - Equips a random available weapon
-- **Ctrl+F2**: Random FPS setting - Sets game framerate to random value (30-241 FPS)
+- **Ctrl+F2**: Random FPS setting - Sets game framerate to random value
 - **Ctrl+F3**: Load humanplayer - Loads/reloads the human player character
 - **Ctrl+F4**: Quit current level - Exits the current game level
 - **Ctrl+F5**: Show status message - Displays game status information
@@ -96,6 +110,8 @@ The DLL provides the following implemented features accessible via hotkeys durin
 
 ## Modifying this project.
 You can modify the project by focusing on the **Features.cpp** file located in the _DllMainLoop()_ method under the _MENU_SCREEN_INGAME_ section. Add your logic for Adding/Removing Buildings/Weapons/A.I etc into the game using the FiberPool task scheduler for thread-safe execution.
+
+**⚠️ Important Note**: Due to IGI's Windows Message-based architecture, the current FiberPool scheduler relies on `TextPrintDetour()` which only executes when HUD text is being rendered. This means task execution may be inconsistent when no UI text is displayed (e.g., when showing knife weapon). Consider this limitation when implementing time-sensitive features.
 
 ## Adding new hashes for Natives.
 Lets say you found new hash for Native now how to add them into project and use them.
