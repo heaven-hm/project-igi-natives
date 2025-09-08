@@ -27,16 +27,32 @@ form of _MEF_ (**M**esh **E**xternal **F**ile).
 ## Building DLL project.
 Open this project in your favourite IDE _(Visual Studio)_ and build it and your output will be **Release/Debug** folder depends which configuration you choosed and you will find file _IGI-Internals-Release.dll_ so download your favourite DLL injector make sure its **x86(32-bit)** compatible otherwise injection wouldn't work or you can use recommended [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector) to inject DLL.
 
-## IGI Debug Keys Integration
+## 🎮 IGI Debug Keys Integration & Enhanced Features
 
-This DLL integrates seamlessly with IGI's built-in debug functionality. See [IGIDebug.md](IGI_Internal/IGIDebug.md) for complete documentation on IGI's native debug keys and how to enable them.
+This DLL seamlessly integrates with IGI's built-in debug functionality while adding powerful enhancement features. See [IGIDebug.md](IGI_Internal/IGIDebug.md) for complete documentation on IGI's native debug keys and activation methods.
 
-**Key Benefits:**
-- No hotkey conflicts with IGI's built-in debug system
-- Access to comprehensive debug features (camera controls, level management, weapon systems)
-- Enhanced debugging capabilities through native IGI functionality
+### 🚀 **Core Features:**
+- 🔓 **Mission Unlock** - Access all missions instantly without progression
+- ⚔️ **Weapon Arsenal** - Unlock complete weapon collection
+- 🛡️ **Invincible Mode** - Unlimited health and damage immunity
+- ✈️ **Fly Mode** - Soar through levels with unrestricted movement
+- 👁️ **3rd Person Mode** - Enhanced perspective for better gameplay
+- 🎯 **Debug Integration** - Zero conflicts with IGI's native debug system
 
-Special thanks to **BlankName** for discovering and documenting IGI's debug key system.
+### 🔥 **Advanced Capabilities:**
+- 📷 **Free Camera Controls** - Professional camera manipulation
+- 🏗️ **Level Management** - Instant level loading and restart functionality
+- 🔫 **Weapon Systems** - Complete weapon configuration and management
+- 💾 **Memory Operations** - Real-time game state modification
+- 🎮 **Enhanced Debugging** - Native IGI functionality integration
+
+### 🌟 **Coming Soon:**
+- More gameplay enhancement modes
+- Advanced AI manipulation
+- Custom mission scripting
+- Enhanced visual effects
+
+**🙏 Special Recognition:** Massive thanks to **BlankName** for discovering and documenting IGI's debug key system, making this integration possible!
 
 ## Building project for IGI Editor.
 The project could be build for [IGI Editor](https://github.com/IGI-Research-Devs/IGI1Editor) the only thing we need to change is **Features.cpp** file we have to update with **Features file for Editor** which could be found here [Features_Editor.cpp](https://github.com/IGI-Research-Devs/IGI_Internal/blob/master/IGI_Internal/Features_Editor.cpp)
