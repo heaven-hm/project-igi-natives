@@ -2,7 +2,6 @@
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
-#define DBG_x86
 
 #include "DllMain.hpp"
 

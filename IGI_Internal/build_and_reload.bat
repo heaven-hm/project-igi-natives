@@ -1,13 +1,24 @@
 @echo off
 setlocal
 
+:: === Parse command line arguments ===
+set CONFIG=Debug
+set PLATFORM=x86
+
+if "%~1"=="" goto skipArgs
+set CONFIG=%~1
+if "%~2"=="" goto skipArgs
+set PLATFORM=%~2
+:skipArgs
+
 :: === Config ===
 set MSBUILD="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
 set PROJECT=IGI_Internal.vcxproj
-set CONFIG=Debug
-set PLATFORM=x86
-set OUTDLL=C:\Users\hasee\source\repos\project-igi-internals\IGI_Internal\Debug\IGI-Internals-Debug.dll
+set OUTDLL=C:\Users\hasee\source\repos\project-igi-internals\IGI_Internal\%CONFIG%\IGI-Internals-%CONFIG%.dll
 set INJECTOR=C:\Users\hasee\Downloads\Compressed\IGI-Injector-v1.0\IGI-Injector-v1.0\bin\igi-injector-cmd.exe
+
+echo [*] Using Configuration: %CONFIG%
+echo [*] Using Platform: %PLATFORM%
 
 :: === Step 1: Eject old DLL ===
 echo [*] Ejecting old DLL...
@@ -30,4 +41,3 @@ echo [*] Injecting new DLL...
 %INJECTOR% -n "igi.exe" -i "%OUTDLL%"
 
 echo [*] Done. Hot reload complete!
-
