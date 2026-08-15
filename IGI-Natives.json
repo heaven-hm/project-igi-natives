@@ -522,7 +522,6 @@
 				"note": "Open Qfile (QSC,QVM) for reading or writing, Params: Check fopen() in c."
 			}
 		},
-
 		{
 			"Native": {
 				"hash": "004C48E0",
@@ -719,6 +718,501 @@
 				"name": "SoldierExecute",
 				"signature": "void SoldierExecute(int ptr, int addr)",
 				"note": "Execute current soldier in level, Param: ptr = (addr+0x2EC) and soldier address."
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D0E0",
+				"address": 4509920,
+				"name": "AIAction_Patrol",
+				"signature": "void AIAction_Patrol(int p1, int p2, int p3);",
+				"note": "AI Action Patrol"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D160",
+				"address": 4510048,
+				"name": "AIAction_Combat",
+				"signature": "void AIAction_Combat(int p1);",
+				"note": "AI Action Combat"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D260",
+				"address": 4510304,
+				"name": "AIAction_Dead",
+				"signature": "void AIAction_Dead(int p1);",
+				"note": "AI Action Dead"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D2C0",
+				"address": 4510400,
+				"name": "AIAction_FallFlat",
+				"signature": "void AIAction_FallFlat(int p1, int p2);",
+				"note": "AI Action FallFlat"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D420",
+				"address": 4510752,
+				"name": "AIAction_Activate",
+				"signature": "void AIAction_Activate(int p1, int p2, int p3);",
+				"note": "AI Action Activate"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D4A0",
+				"address": 4510880,
+				"name": "AIAction_WalkToNode",
+				"signature": "void AIAction_WalkToNode(int p1, int p2);",
+				"note": "AI Action WalkToNode"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D510",
+				"address": 4510992,
+				"name": "AIAction_RunToNode",
+				"signature": "void AIAction_RunToNode(int p1, int p2);",
+				"note": "AI Action RunToNode"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D580",
+				"address": 4511104,
+				"name": "AIAction_FireAtNode",
+				"signature": "void AIAction_FireAtNode(int p1, int p2, int p3, int p4, int p5);",
+				"note": "AI Action FireAtNode"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D630",
+				"address": 4511280,
+				"name": "AIAction_FireAtTask",
+				"signature": "void AIAction_FireAtTask(int p1, int p2, int p3, int p4, int p5);",
+				"note": "AI Action FireAtTask"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D6E0",
+				"address": 4511456,
+				"name": "AIAction_PlayAnimation",
+				"signature": "void AIAction_PlayAnimation(int p1, int p2);",
+				"note": "AI Action PlayAnimation"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D750",
+				"address": 4511568,
+				"name": "AIAction_PlaySound",
+				"signature": "void AIAction_PlaySound(int p1, int p2, int p3);",
+				"note": "AI Action PlaySound"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D7D0",
+				"address": 4511696,
+				"name": "AIAction_MoveToEvent",
+				"signature": "void AIAction_MoveToEvent(int p1, int p2);",
+				"note": "AI Action MoveToEvent"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D870",
+				"address": 4511856,
+				"name": "AIAction_LookAtEvent",
+				"signature": "void AIAction_LookAtEvent(int p1, int p2);",
+				"note": "AI Action LookAtEvent"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D8F0",
+				"address": 4511984,
+				"name": "AIAction_Stunned",
+				"signature": "void AIAction_Stunned(int p1, int p2);",
+				"note": "AI Action Stunned"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044D960",
+				"address": 4512096,
+				"name": "AIAction_KickGrenade",
+				"signature": "void AIAction_KickGrenade(int p1);",
+				"note": "AI Action KickGrenade"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DA00",
+				"address": 4512256,
+				"name": "AIAction_RunPanicking",
+				"signature": "void AIAction_RunPanicking(int p1, int p2);",
+				"note": "AI Action RunPanicking"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DA80",
+				"address": 4512384,
+				"name": "AIAction_Idle",
+				"signature": "void AIAction_Idle(int p1);",
+				"note": "AI Action Idle"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DAE0",
+				"address": 4512480,
+				"name": "AIAction_SetCombat",
+				"signature": "void AIAction_SetCombat(int p1);",
+				"note": "AI Action SetCombat"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E060",
+				"address": 4513888,
+				"name": "AIFunction_DefaultHandler",
+				"signature": "void AIFunction_DefaultHandler();",
+				"note": "AI Function DefaultHandler"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DBC0",
+				"address": 4512704,
+				"name": "AIFunction_RemoveAlarmActions",
+				"signature": "void AIFunction_RemoveAlarmActions();",
+				"note": "AI Function RemoveAlarmActions"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DC40",
+				"address": 4512832,
+				"name": "AIFunction_SetViewLength",
+				"signature": "void AIFunction_SetViewLength(int p1);",
+				"note": "AI Function SetViewLength"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DCD0",
+				"address": 4512976,
+				"name": "AIFunction_SetAlarmViewLength",
+				"signature": "void AIFunction_SetAlarmViewLength(int p1);",
+				"note": "AI Function SetAlarmViewLength"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DD30",
+				"address": 4513072,
+				"name": "AIFunction_SetViewAlpha",
+				"signature": "void AIFunction_SetViewAlpha(int p1);",
+				"note": "AI Function SetViewAlpha"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DD90",
+				"address": 4513168,
+				"name": "AIFunction_SetViewGamma",
+				"signature": "void AIFunction_SetViewGamma(int p1);",
+				"note": "AI Function SetViewGamma"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DDF0",
+				"address": 4513264,
+				"name": "AIFunction_SetSecondaryViewLength",
+				"signature": "void AIFunction_SetSecondaryViewLength(int p1);",
+				"note": "AI Function SetSecondaryViewLength"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DE80",
+				"address": 4513408,
+				"name": "AIFunction_SetSecondaryAlarmViewLength",
+				"signature": "void AIFunction_SetSecondaryAlarmViewLength(int p1);",
+				"note": "AI Function SetSecondaryAlarmViewLength"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DEE0",
+				"address": 4513504,
+				"name": "AIFunction_SetSecondaryViewAlpha",
+				"signature": "void AIFunction_SetSecondaryViewAlpha(int p1);",
+				"note": "AI Function SetSecondaryViewAlpha"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DF40",
+				"address": 4513600,
+				"name": "AIFunction_SetSecondaryViewGamma",
+				"signature": "void AIFunction_SetSecondaryViewGamma(int p1);",
+				"note": "AI Function SetSecondaryViewGamma"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E0C0",
+				"address": 4513984,
+				"name": "AIFunction_SetEventPriority",
+				"signature": "void AIFunction_SetEventPriority(int p1);",
+				"note": "AI Function SetEventPriority"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E150",
+				"address": 4514128,
+				"name": "AIFunction_SetInvulnerability",
+				"signature": "void AIFunction_SetInvulnerability(int p1);",
+				"note": "AI Function SetInvulnerability"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E1B0",
+				"address": 4514224,
+				"name": "AIFunction_SetInstantDeath",
+				"signature": "void AIFunction_SetInstantDeath(int p1);",
+				"note": "AI Function SetInstantDeath"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E210",
+				"address": 4514320,
+				"name": "AIFunction_SetDeathAnimation",
+				"signature": "void AIFunction_SetDeathAnimation(int p1);",
+				"note": "AI Function SetDeathAnimation"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E270",
+				"address": 4514416,
+				"name": "AIFunction_SetAlarmTriggerID",
+				"signature": "void AIFunction_SetAlarmTriggerID(int p1);",
+				"note": "AI Function SetAlarmTriggerID"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E2D0",
+				"address": 4514512,
+				"name": "AIFunction_SetAlarmControlID",
+				"signature": "void AIFunction_SetAlarmControlID(int p1);",
+				"note": "AI Function SetAlarmControlID"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E330",
+				"address": 4514608,
+				"name": "AIFunction_SetAlarmAccess",
+				"signature": "void AIFunction_SetAlarmAccess(int p1);",
+				"note": "AI Function SetAlarmAccess"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E390",
+				"address": 4514704,
+				"name": "AIFunction_SetGunnerID",
+				"signature": "void AIFunction_SetGunnerID(int p1);",
+				"note": "AI Function SetGunnerID"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E6D0",
+				"address": 4515536,
+				"name": "AIFunction_SetScriptIntegerValue",
+				"signature": "void AIFunction_SetScriptIntegerValue(int p1, int p2);",
+				"note": "AI Function SetScriptIntegerValue"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E790",
+				"address": 4515728,
+				"name": "AIFunction_SetScriptRealValue",
+				"signature": "void AIFunction_SetScriptRealValue(int p1, int p2);",
+				"note": "AI Function SetScriptRealValue"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E3F0",
+				"address": 4514800,
+				"name": "AIFunction_GetAlarmTriggerID",
+				"signature": "int AIFunction_GetAlarmTriggerID();",
+				"note": "AI Function GetAlarmTriggerID"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E430",
+				"address": 4514864,
+				"name": "AIFunction_GetAlarmControlID",
+				"signature": "int AIFunction_GetAlarmControlID();",
+				"note": "AI Function GetAlarmControlID"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E470",
+				"address": 4514928,
+				"name": "AIFunction_GetAlarmAccess",
+				"signature": "int AIFunction_GetAlarmAccess();",
+				"note": "AI Function GetAlarmAccess"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E4B0",
+				"address": 4514992,
+				"name": "AIFunction_GetGunnerID",
+				"signature": "int AIFunction_GetGunnerID();",
+				"note": "AI Function GetGunnerID"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E4F0",
+				"address": 4515056,
+				"name": "AIFunction_GetAlarmControlStatus",
+				"signature": "int AIFunction_GetAlarmControlStatus();",
+				"note": "AI Function GetAlarmControlStatus"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E5E0",
+				"address": 4515296,
+				"name": "AIFunction_GetGunnerStatus",
+				"signature": "int AIFunction_GetGunnerStatus();",
+				"note": "AI Function GetGunnerStatus"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E740",
+				"address": 4515648,
+				"name": "AIFunction_GetScriptIntegerValue",
+				"signature": "int AIFunction_GetScriptIntegerValue(int p1);",
+				"note": "AI Function GetScriptIntegerValue"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044DFA0",
+				"address": 4513696,
+				"name": "AIFunction_GetCurrentEventType",
+				"signature": "int AIFunction_GetCurrentEventType();",
+				"note": "AI Function GetCurrentEventType"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E860",
+				"address": 4515936,
+				"name": "AIFunction_IsEventBehind",
+				"signature": "int AIFunction_IsEventBehind();",
+				"note": "AI Function IsEventBehind"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E800",
+				"address": 4515840,
+				"name": "AIFunction_GetScriptRealValue",
+				"signature": "float AIFunction_GetScriptRealValue(int p1);",
+				"note": "AI Function GetScriptRealValue"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E000",
+				"address": 4513792,
+				"name": "AIFunction_GetRandomValue",
+				"signature": "float AIFunction_GetRandomValue(int p1);",
+				"note": "AI Function GetRandomValue"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E930",
+				"address": 4516144,
+				"name": "AIFunction_GetEventDistance",
+				"signature": "float AIFunction_GetEventDistance();",
+				"note": "AI Function GetEventDistance"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044E9B0",
+				"address": 4516272,
+				"name": "AIFunction_GetAlarmTriggerDistance",
+				"signature": "float AIFunction_GetAlarmTriggerDistance();",
+				"note": "AI Function GetAlarmTriggerDistance"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044EAF0",
+				"address": 4516592,
+				"name": "AIFunction_SetAnimationInterval",
+				"signature": "void AIFunction_SetAnimationInterval(int p1, int p2);",
+				"note": "AI Function SetAnimationInterval"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044EBB0",
+				"address": 4516784,
+				"name": "AIFunction_AddAnimationEntry",
+				"signature": "void AIFunction_AddAnimationEntry(int p1, int p2);",
+				"note": "AI Function AddAnimationEntry"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044ECB0",
+				"address": 4517040,
+				"name": "AIFunction_GetAnimationToPlay",
+				"signature": "int AIFunction_GetAnimationToPlay();",
+				"note": "AI Function GetAnimationToPlay"
+			}
+		},
+		{
+			"Native": {
+				"hash": "0044EE40",
+				"address": 4517440,
+				"name": "AIFunction_SendResponse",
+				"signature": "void AIFunction_SendResponse();",
+				"note": "AI Function SendResponse"
 			}
 		}
 	]

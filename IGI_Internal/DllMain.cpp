@@ -109,10 +109,6 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       WEAPON::UNLIMITED_AMMO_SET(true);
 #endif
 
-      // Enable Debug Hotkeys. (Read IGIDebug.md for more info)
-      DEBUG::KEYS_ENABLE(true);
-      DEBUG::TEXT_ENABLE(true);
-
       // Set Game Handle
       HANDLE g_handle = reinterpret_cast<HANDLE>(GetModuleHandle(NULL));
       if (g_handle == NULL || g_handle == INVALID_HANDLE_VALUE)
@@ -121,7 +117,14 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + INTERNALS_DLL_VERSION + " Attached"));
+      // Enable Debug Hotkeys and show attach message via FiberPool safely
+      FiberPool::Instance().RunExternal([] {
+        try {
+          DEBUG::KEYS_ENABLE(true);
+          DEBUG::TEXT_ENABLE(true);
+          MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + INTERNALS_DLL_VERSION + " Attached"));
+        } catch (...) {}
+      }, 10);
 
       // Start DllMainLoop in separate thread with 30 FPS timing
       g_running = true;
