@@ -200,6 +200,76 @@ void DllMainLoop() {
       TestAiNatives();
     }
 
+    // ═══════════════════════════════════════════════════════════════
+    // IGI Enhancer Patch — Alt+F1..F10 hotkeys
+    // ═══════════════════════════════════════════════════════════════
+
+    // Cycle FPS: 30 → 60 → 120 → 144
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F1)) {
+      LOG_INFO("Alt+F1: Cycle FPS");
+      EnhancerCycleFPS();
+    }
+
+    // Cycle FOV: 75 → 90 → 100 → 110
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F2)) {
+      LOG_INFO("Alt+F2: Cycle FOV");
+      EnhancerCycleFOV();
+    }
+
+    // Cycle binoculars zoom: 2x → 4x → 8x → 12x → 16x
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F3)) {
+      LOG_INFO("Alt+F3: Cycle Binoculars Zoom");
+      EnhancerCycleBinoculars();
+    }
+
+    // Cycle draw distance: 5K → 10K → 20K → 50K
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F4)) {
+      LOG_INFO("Alt+F4: Cycle Draw Distance");
+      EnhancerCycleDrawDistance();
+    }
+
+    // Gamma up (+0.1)
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F5)) {
+      LOG_INFO("Alt+F5: Gamma Up");
+      EnhancerGammaUp();
+    }
+
+    // Gamma down (-0.1)
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F6)) {
+      LOG_INFO("Alt+F6: Gamma Down");
+      EnhancerGammaDown();
+    }
+
+    // Music volume up (+10%)
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F7)) {
+      LOG_INFO("Alt+F7: Music Volume Up");
+      EnhancerMusicVolumeUp();
+    }
+
+    // Music volume down (-10%)
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F8)) {
+      LOG_INFO("Alt+F8: Music Volume Down");
+      EnhancerMusicVolumeDown();
+    }
+
+    // SFX volume up (+10%)
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F9)) {
+      LOG_INFO("Alt+F9: SFX Volume Up");
+      EnhancerSfxVolumeUp();
+    }
+
+    // SFX volume down (-10%)
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F10)) {
+      LOG_INFO("Alt+F10: SFX Volume Down");
+      EnhancerSfxVolumeDown();
+    }
+
+    // Show enhancer status overlay
+    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F11)) {
+      LOG_INFO("Alt+F11: Show Enhancer Status");
+      EnhancerShowStatus();
+    }
+
   } else if (g_menu_screen == MENU_SCREEN_RESTART) {
     soldiers.clear();
     if (!g_PlayerEnabled)
@@ -350,6 +420,87 @@ void ScriptCompile() {
   } catch (const std::exception &ex) {
     LOG_INFO("Exception: %s", ex.what());
   }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// IGI Enhancer Patch — Handler implementations
+// ═══════════════════════════════════════════════════════════════════════
+
+void EnhancerCycleFPS() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_FPS();
+    LOG_INFO("EnhancerCycleFPS: FPS set to %d", ENHANCER::g_Enhancer.target_fps);
+  }, 10);
+}
+
+void EnhancerCycleFOV() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_FOV();
+    LOG_INFO("EnhancerCycleFOV: FOV set to %.0f", ENHANCER::g_Enhancer.fov_degrees);
+  }, 10);
+}
+
+void EnhancerCycleBinoculars() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_BINOCULAR_ZOOM();
+    LOG_INFO("EnhancerCycleBinoculars: Zoom set to %.0fx", ENHANCER::g_Enhancer.binocular_zoom);
+  }, 10);
+}
+
+void EnhancerCycleDrawDistance() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_DRAW_DISTANCE();
+    LOG_INFO("EnhancerCycleDrawDistance: Distance set to %.0f", ENHANCER::g_Enhancer.draw_distance);
+  }, 10);
+}
+
+void EnhancerGammaUp() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::GAMMA_UP();
+    LOG_INFO("EnhancerGammaUp: Gamma = %.1f", ENHANCER::g_Enhancer.gamma);
+  }, 10);
+}
+
+void EnhancerGammaDown() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::GAMMA_DOWN();
+    LOG_INFO("EnhancerGammaDown: Gamma = %.1f", ENHANCER::g_Enhancer.gamma);
+  }, 10);
+}
+
+void EnhancerMusicVolumeUp() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::MUSIC_VOLUME_UP();
+    LOG_INFO("EnhancerMusicVolumeUp: Vol = %.0f%%", ENHANCER::g_Enhancer.music_volume * 100.0f);
+  }, 10);
+}
+
+void EnhancerMusicVolumeDown() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::MUSIC_VOLUME_DOWN();
+    LOG_INFO("EnhancerMusicVolumeDown: Vol = %.0f%%", ENHANCER::g_Enhancer.music_volume * 100.0f);
+  }, 10);
+}
+
+void EnhancerSfxVolumeUp() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::SFX_VOLUME_UP();
+    LOG_INFO("EnhancerSfxVolumeUp: Vol = %.0f%%", ENHANCER::g_Enhancer.sfx_volume * 100.0f);
+  }, 10);
+}
+
+void EnhancerSfxVolumeDown() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::SFX_VOLUME_DOWN();
+    LOG_INFO("EnhancerSfxVolumeDown: Vol = %.0f%%", ENHANCER::g_Enhancer.sfx_volume * 100.0f);
+  }, 10);
+}
+
+void EnhancerShowStatus() {
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::SHOW_ENHANCER_STATUS();
+    LOG_INFO("EnhancerShowStatus: Status overlay displayed");
+  }, 10);
 }
 
 #pragma endregion

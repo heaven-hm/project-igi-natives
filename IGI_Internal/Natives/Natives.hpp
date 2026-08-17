@@ -155,6 +155,25 @@ namespace IGI {
 		AI_FUNCTION_ADD_ANIMATION_ENTRY = 0x0044EBB0,
 		AI_FUNCTION_GET_ANIMATION_TO_PLAY = 0x0044ECB0,
 		AI_FUNCTION_SEND_RESPONSE = 0x0044EE40,
+
+		// IGI Enhancer Patch — verified via Ghidra + Radare2 disassembly of D:\IGI1\igi.exe
+		// Frame timing & main loop
+		APP_RUN = 0x00405850,                  // int __cdecl App_Run(void*) — main engine tick loop
+		// Direct3D display mode enumeration
+		D3D_ENUM_DISPLAY_MODES = 0x0049B4B0,   // int __cdecl D3D_EnumDisplayModes(int) — resolution list builder
+		// Binoculars & HUD overlay drawing
+		BINOCULARS_DRAW = 0x00471480,          // void __cdecl Binoculars_Draw(void*) — sweep lines & detector boxes
+		// Weapon firing & bullet physics
+		GUN_FIRE = 0x00478BA0,                 // void __cdecl Gun_Fire(void*, void*) — weapon fire gate & spread
+		GUN_BULLET_TRACE = 0x0047A260,         // void __cdecl Gun_BulletTrace(void*) — raycast surface collision
+		GUN_RECOIL_APPLY = 0x0047C610,         // void __cdecl Gun_RecoilApply(void*, int) — recoil accumulation
+		// Player entity parenting (elevators/vehicles)
+		HUMAN_SET_PARENT = 0x00463310,         // void __cdecl Human_SetParent(void*, void*) — player→platform bind
+		// Weapon state machine
+		WEAPON_STATE_UPDATE = 0x00411000,       // void __cdecl WeaponState_Update(void*) — per-tick state machine
+		// Music & SFX volume (already have hashes but adding explicit enhancer aliases)
+		MUSIC_SFX_VOL_SET = 0x00495F30,        // void __cdecl Music_SfxVolSet(float) — SFX master volume
+		MUSIC_VOL_SET = 0x00495E70,            // void __cdecl Music_VolSet(float) — music master volume
 	};
 
 	class Natives {

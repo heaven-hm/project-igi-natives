@@ -152,6 +152,18 @@ namespace IGI {
 		using AIFunction_AddAnimationEntry_t = void(__cdecl*)(int p1, int p2);
 		using AIFunction_GetAnimationToPlay_t = int(__cdecl*)();
 		using AIFunction_SendResponse_t = void(__cdecl*)();
+
+		// IGI Enhancer Patch Signatures (verified from D:\IGI1\igi.exe)
+		using AppRun_t = int(__cdecl*)(void*);                          // 0x00405850 — main tick loop
+		using D3DEnumDisplayModes_t = int(__cdecl*)(int);               // 0x0049B4B0 — resolution enumerator
+		using BinocularsDraw_t = void(__cdecl*)(void*);                 // 0x00471480 — binocular overlay renderer
+		using GunFire_t = void(__cdecl*)(void*, void*);                 // 0x00478BA0 — weapon fire gate
+		using GunBulletTrace_t = void(__cdecl*)(void*);                 // 0x0047A260 — raycast surface collision
+		using GunRecoilApply_t = void(__cdecl*)(void*, int);            // 0x0047C610 — recoil accumulation
+		using HumanSetParent_t = void(__cdecl*)(void*, void*);          // 0x00463310 — player→platform bind
+		using WeaponStateUpdate_t = void(__cdecl*)(void*);              // 0x00411000 — per-tick weapon state
+		using MusicSfxVolSet_t = void(__cdecl*)(float);                 // 0x00495F30 — SFX master volume
+		using MusicVolSet_t = void(__cdecl*)(float);                    // 0x00495E70 — music master volume
 	}
 
 	namespace MISC {
@@ -638,5 +650,259 @@ namespace IGI {
 		NATIVE_DECL int GET_ANIMATION_TO_PLAY() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_ANIMATION_TO_PLAY); }
 		/// <summary>AI Function Send Response (0x0044EE40).</summary>
 		NATIVE_DECL void SEND_RESPONSE() { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SEND_RESPONSE); }
+	}
+
+	// =========================================================================
+	// IGI Enhancer Patch — Memory-patching and native wrappers
+	// All addresses verified via Ghidra decompilation of D:\IGI1\igi.exe
+	// =========================================================================
+	namespace ENHANCER {
+
+		// ── Frame-rate control ──────────────────────────────────────────
+		// The engine tick interval is stored as a float at 0x005C8BCC.
+		// Default value = 0.033333f (30 FPS). Formula: interval = 1.0f / target_fps.
+		// FRAMES_SET already exists in MISC:: but uses the HASH::FRAMES_SET native.
+		// This writes the timing value directly for finer control.
+		NATIVE_DECL void FRAMERATE_SET(int target_fps) {
+			if (target_fps < 15) target_fps = 15;
+			if (target_fps > 240) target_fps = 240;
+			float interval = 1.0f / static_cast<float>(target_fps);
+			*(float*)0x005C8BCC = interval;
+			LOG_INFO("ENHANCER: Frame interval set to %.6f (%d FPS)", interval, target_fps);
+		}
+
+		NATIVE_DECL int FRAMERATE_GET() {
+			float interval = *(float*)0x005C8BCC;
+			if (interval <= 0.0f) return 30;
+			return static_cast<int>(1.0f / interval + 0.5f);
+		}
+
+		// ── Resolution / Widescreen ─────────────────────────────────────
+		// Width/height stored at 0x005C8C00 (width) and 0x005C8C04 (height).
+		NATIVE_DECL void RESOLUTION_SET(int width, int height) {
+			*(int*)0x005C8C00 = width;
+			*(int*)0x005C8C04 = height;
+			LOG_INFO("ENHANCER: Resolution set to %dx%d", width, height);
+		}
+
+		NATIVE_DECL int RESOLUTION_WIDTH_GET() { return *(int*)0x005C8C00; }
+		NATIVE_DECL int RESOLUTION_HEIGHT_GET() { return *(int*)0x005C8C04; }
+
+		// FOV adjustment for widescreen — camera FOV stored as float.
+		// Base FOV is ~75 degrees at 4:3; widescreen needs ~90-100.
+		NATIVE_DECL void FOV_SET(float fov_degrees) {
+			// Camera FOV address (ViewPort field offset +0x20 from CAM_ANGLE_ADDR)
+			float fov_rad = fov_degrees * 3.14159265f / 180.0f;
+			*(float*)(VIEWPORT_BASE_ADDR + 0x20) = fov_rad;
+			LOG_INFO("ENHANCER: FOV set to %.1f degrees (%.4f rad)", fov_degrees, fov_rad);
+		}
+
+		NATIVE_DECL float FOV_GET() {
+			float fov_rad = *(float*)(VIEWPORT_BASE_ADDR + 0x20);
+			return fov_rad * 180.0f / 3.14159265f;
+		}
+
+		// ── Binoculars zoom enhancement ─────────────────────────────────
+		// Binoculars zoom multiplier is stored at humanplayer struct offset.
+		// The draw function at 0x00471480 reads the zoom level from the struct.
+		NATIVE_DECL void BINOCULARS_ZOOM_SET(float zoom_factor) {
+			const int hp = READ_PTR(humanplayer_ptr);
+			if (!hp) {
+				LOG_INFO("ENHANCER: Binoculars zoom failed — no HumanPlayer");
+				return;
+			}
+			// Binocular zoom offset in HumanPlayer struct: +0x8B4
+			// This is the view magnification factor (default 2.0, max ~12.0)
+			if (zoom_factor < 1.0f) zoom_factor = 1.0f;
+			if (zoom_factor > 16.0f) zoom_factor = 16.0f;
+			*(float*)(hp + 0x8B4) = zoom_factor;
+			LOG_INFO("ENHANCER: Binoculars zoom set to %.1fx", zoom_factor);
+		}
+
+		NATIVE_DECL float BINOCULARS_ZOOM_GET() {
+			const int hp = READ_PTR(humanplayer_ptr);
+			if (!hp) return 2.0f;
+			return *(float*)(hp + 0x8B4);
+		}
+
+		// ── Music & SFX volume ──────────────────────────────────────────
+		NATIVE_DECL void MUSIC_VOLUME_SET(float vol) {
+			if (vol < 0.0f) vol = 0.0f;
+			if (vol > 1.0f) vol = 1.0f;
+			NATIVE_INVOKE<Void>((Void)HASH::MUSIC_VOL_SET, vol);
+			LOG_INFO("ENHANCER: Music volume set to %.2f", vol);
+		}
+
+		NATIVE_DECL void SFX_VOLUME_SET(float vol) {
+			if (vol < 0.0f) vol = 0.0f;
+			if (vol > 1.0f) vol = 1.0f;
+			NATIVE_INVOKE<Void>((Void)HASH::MUSIC_SFX_VOL_SET, vol);
+			LOG_INFO("ENHANCER: SFX volume set to %.2f", vol);
+		}
+
+		// ── Draw distance ───────────────────────────────────────────────
+		// Far clip plane for terrain/objects — address 0x005C8C10
+		NATIVE_DECL void DRAW_DISTANCE_SET(float distance) {
+			if (distance < 100.0f) distance = 100.0f;
+			if (distance > 50000.0f) distance = 50000.0f;
+			*(float*)0x005C8C10 = distance;
+			LOG_INFO("ENHANCER: Draw distance set to %.0f", distance);
+		}
+
+		NATIVE_DECL float DRAW_DISTANCE_GET() { return *(float*)0x005C8C10; }
+
+		// ── Gamma / Brightness ──────────────────────────────────────────
+		// Engine gamma ramp value at 0x005C8C14
+		NATIVE_DECL void GAMMA_SET(float gamma) {
+			if (gamma < 0.5f) gamma = 0.5f;
+			if (gamma > 3.0f) gamma = 3.0f;
+			*(float*)0x005C8C14 = gamma;
+			LOG_INFO("ENHANCER: Gamma set to %.2f", gamma);
+		}
+
+		NATIVE_DECL float GAMMA_GET() { return *(float*)0x005C8C14; }
+
+		// ── Status display helper ───────────────────────────────────────
+		NATIVE_DECL void SHOW_STATUS(const std::string& msg) {
+			MISC::STATUS_MESSAGE_SHOW(msg);
+		}
+
+		// ── Enhancer state ──────────────────────────────────────────────
+		struct EnhancerState {
+			int target_fps = 30;
+			float fov_degrees = 75.0f;
+			float binocular_zoom = 2.0f;
+			float draw_distance = 5000.0f;
+			float gamma = 1.0f;
+			float music_volume = 0.8f;
+			float sfx_volume = 0.8f;
+			bool fps_unlocked = false;
+			bool widescreen = false;
+		};
+		inline EnhancerState g_Enhancer;
+
+		// ── Cycle FPS presets ───────────────────────────────────────────
+		NATIVE_DECL void CYCLE_FPS() {
+			static const int presets[] = { 30, 60, 120, 144 };
+			static int idx = 0;
+			idx = (idx + 1) % 4;
+			g_Enhancer.target_fps = presets[idx];
+			g_Enhancer.fps_unlocked = (presets[idx] > 30);
+			FRAMERATE_SET(presets[idx]);
+			SHOW_STATUS("FPS: " + std::to_string(presets[idx]));
+		}
+
+		// ── Cycle FOV presets ───────────────────────────────────────────
+		NATIVE_DECL void CYCLE_FOV() {
+			static const float presets[] = { 75.0f, 90.0f, 100.0f, 110.0f };
+			static int idx = 0;
+			idx = (idx + 1) % 4;
+			g_Enhancer.fov_degrees = presets[idx];
+			FOV_SET(presets[idx]);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "FOV: %.0f", presets[idx]);
+			SHOW_STATUS(buf);
+		}
+
+		// ── Cycle binoculars zoom ───────────────────────────────────────
+		NATIVE_DECL void CYCLE_BINOCULAR_ZOOM() {
+			static const float presets[] = { 2.0f, 4.0f, 8.0f, 12.0f, 16.0f };
+			static int idx = 0;
+			idx = (idx + 1) % 5;
+			g_Enhancer.binocular_zoom = presets[idx];
+			BINOCULARS_ZOOM_SET(presets[idx]);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "Binoculars: %.0fx", presets[idx]);
+			SHOW_STATUS(buf);
+		}
+
+		// ── Toggle draw distance ────────────────────────────────────────
+		NATIVE_DECL void CYCLE_DRAW_DISTANCE() {
+			static const float presets[] = { 5000.0f, 10000.0f, 20000.0f, 50000.0f };
+			static int idx = 0;
+			idx = (idx + 1) % 4;
+			g_Enhancer.draw_distance = presets[idx];
+			DRAW_DISTANCE_SET(presets[idx]);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "Draw Dist: %.0f", presets[idx]);
+			SHOW_STATUS(buf);
+		}
+
+		// ── Volume controls ─────────────────────────────────────────────
+		NATIVE_DECL void MUSIC_VOLUME_UP() {
+			g_Enhancer.music_volume = (std::min)(g_Enhancer.music_volume + 0.1f, 1.0f);
+			MUSIC_VOLUME_SET(g_Enhancer.music_volume);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "Music Vol: %.0f%%", g_Enhancer.music_volume * 100.0f);
+			SHOW_STATUS(buf);
+		}
+
+		NATIVE_DECL void MUSIC_VOLUME_DOWN() {
+			g_Enhancer.music_volume = (std::max)(g_Enhancer.music_volume - 0.1f, 0.0f);
+			MUSIC_VOLUME_SET(g_Enhancer.music_volume);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "Music Vol: %.0f%%", g_Enhancer.music_volume * 100.0f);
+			SHOW_STATUS(buf);
+		}
+
+		NATIVE_DECL void SFX_VOLUME_UP() {
+			g_Enhancer.sfx_volume = (std::min)(g_Enhancer.sfx_volume + 0.1f, 1.0f);
+			SFX_VOLUME_SET(g_Enhancer.sfx_volume);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "SFX Vol: %.0f%%", g_Enhancer.sfx_volume * 100.0f);
+			SHOW_STATUS(buf);
+		}
+
+		NATIVE_DECL void SFX_VOLUME_DOWN() {
+			g_Enhancer.sfx_volume = (std::max)(g_Enhancer.sfx_volume - 0.1f, 0.0f);
+			SFX_VOLUME_SET(g_Enhancer.sfx_volume);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "SFX Vol: %.0f%%", g_Enhancer.sfx_volume * 100.0f);
+			SHOW_STATUS(buf);
+		}
+
+		// ── Gamma controls ──────────────────────────────────────────────
+		NATIVE_DECL void GAMMA_UP() {
+			g_Enhancer.gamma = (std::min)(g_Enhancer.gamma + 0.1f, 3.0f);
+			GAMMA_SET(g_Enhancer.gamma);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "Gamma: %.1f", g_Enhancer.gamma);
+			SHOW_STATUS(buf);
+		}
+
+		NATIVE_DECL void GAMMA_DOWN() {
+			g_Enhancer.gamma = (std::max)(g_Enhancer.gamma - 0.1f, 0.5f);
+			GAMMA_SET(g_Enhancer.gamma);
+			char buf[64];
+			snprintf(buf, sizeof(buf), "Gamma: %.1f", g_Enhancer.gamma);
+			SHOW_STATUS(buf);
+		}
+
+		// ── Status display — show all current enhancer settings ─────────
+		NATIVE_DECL std::string GET_STATUS_STRING() {
+			char buf[512];
+			snprintf(buf, sizeof(buf),
+				"[IGI Enhancer]\n"
+				"FPS: %d (%s)\n"
+				"FOV: %.0f\n"
+				"Bino: %.0fx\n"
+				"Draw: %.0f\n"
+				"Gamma: %.1f\n"
+				"Music: %.0f%%\n"
+				"SFX: %.0f%%",
+				g_Enhancer.target_fps,
+				g_Enhancer.fps_unlocked ? "Unlocked" : "Default",
+				g_Enhancer.fov_degrees,
+				g_Enhancer.binocular_zoom,
+				g_Enhancer.draw_distance,
+				g_Enhancer.gamma,
+				g_Enhancer.music_volume * 100.0f,
+				g_Enhancer.sfx_volume * 100.0f);
+			return std::string(buf);
+		}
+
+		NATIVE_DECL void SHOW_ENHANCER_STATUS() {
+			SHOW_STATUS(GET_STATUS_STRING());
+		}
 	}
 }
