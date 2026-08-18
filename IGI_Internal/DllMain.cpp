@@ -98,23 +98,6 @@ DWORD WINAPI InitializeModule(LPVOID module_parameter) {
       LOG_WARNING("Hook initialized.");
 #endif
 
-      // Load and activate igipatch.dll for advanced display modes, widescreen & graphics options.
-      // This runs on the initialization worker, after the loader lock is released.
-      HMODULE hIgiPatch = LoadLibraryA("igipatch.dll");
-      if (!hIgiPatch) hIgiPatch = LoadLibraryA("D:\\IGI1\\igipatch.dll");
-      if (hIgiPatch) {
-          typedef int(__cdecl* StartPatch_t)();
-          StartPatch_t pStartPatch = (StartPatch_t)GetProcAddress(hIgiPatch, "StartPatch");
-          if (pStartPatch) {
-              const int patch_result = pStartPatch();
-              LOG_INFO("ENHANCER: igipatch.dll StartPatch() returned %d", patch_result);
-          } else {
-              LOG_WARNING("ENHANCER: StartPatch export not found in igipatch.dll");
-          }
-      } else {
-          LOG_WARNING("ENHANCER: igipatch.dll not found in game directory");
-      }
-
       LOG_INFO("==================================================");
       LOG_INFO("IGI INTERNALS - HOTKEYS & CONTROLS");
       LOG_INFO("==================================================");
