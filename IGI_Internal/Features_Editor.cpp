@@ -15,13 +15,12 @@ void DllMainLoopEditor() {
 	}
 
 	if (g_level_changed) {
-
 		if (READ_PTR(humanplayer_ptr) == NULL)
-			GT_ShowError("Humanplayer structure isn't loaded or invalid\nSome of features related to humanplayer wont work.\n");
+			LOG_WARNING("Humanplayer structure isn't loaded yet. Some in-game features will activate when entering a mission.");
 		else LOG_INFO("Humanplayer structure is loaded properly at address 0x%x", READ_PTR(humanplayer_ptr));
 
 		if (READ_PTR(gun_pickup_ptr) == NULL)
-			GT_ShowError("Weapon structure isn't loaded or invalid\nSome of features related to Weapon wont work.\n");
+			LOG_WARNING("Weapon structure isn't loaded yet. Some in-game features will activate when entering a mission.");
 		else LOG_INFO("Weapon structure is loaded properly at address 0x%x", READ_PTR(gun_pickup_ptr));
 
 		g_level_changed ^= 1;

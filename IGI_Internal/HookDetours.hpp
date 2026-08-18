@@ -565,12 +565,12 @@ uint32_t GetHumanHitDetour(void) {
 }
 
 void ShowWarningDetour(LPCSTR warn_msg) {
-	LOG_FILE("%s warn_msg: %s", "ShowWarning", warn_msg);
+	if (warn_msg) LOG_FILE("%s warn_msg: %s", "ShowWarning", warn_msg);
 	ShowWarningOut(warn_msg);
 }
 
 void ShowErrorDetour(LPCSTR err_msg) {
-	LOG_FILE("%s err_msg: %s", "ShowError", err_msg);
+	if (err_msg) LOG_FILE("%s err_msg: %s", "ShowError", err_msg);
 	ShowErrorOut(err_msg);
 }
 
@@ -627,9 +627,8 @@ int __cdecl LoadGameDataDetour(char* res_buf, const char* res_path, const char* 
 }
 
 int __cdecl  StatusMsgDetour(int send_status, const char* buffer, const char* msg_sprite, const char* status_byte_addr) {
-	//g_DbgHelper->StackTrace(true, false, true);
+	if (!buffer) return StatusMsgOut(send_status, buffer, msg_sprite, status_byte_addr);
 	string status_buf = g_Utility.Trim(string(buffer));
-	//LOG_CONSOLE("%s send_status : %p buffer : '%s' msg_sprite : %p status_byte : %p", FUNC_NAME, send_status, status_buf.c_str(), msg_sprite, status_byte_addr);
 	return StatusMsgOut(send_status, status_buf.c_str(), msg_sprite, status_byte_addr);
 }
 
@@ -729,7 +728,7 @@ int* __cdecl GameOpenQFileDetour(char* file_name, char* file_mode) {
 
 
 int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
-	LOG_INFO("%s param1 : %s param2 : %p param3 : %p  param4 : %p", "LevelLoad", param1, param2, param3, param4);
+	LOG_INFO("%s param1 : %p param2 : %p param3 : %p  param4 : %p", "LevelLoad", (void*)param1, (void*)param2, (void*)param3, (void*)param4);
 	//g_DbgHelper->StackTrace(true, false, true);
 	return LevelLoadOut(param1, param2, param3, param4);
 }
@@ -738,7 +737,7 @@ int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param3)
 {
 	LOG_INFO("GameMainLoopDetour: Entered game update hook");
-	LOG_INFO("%s param1 : %s param2 : %p param3 : %p", "GameMainLoopDetour", param1, param2, param3);
+	LOG_INFO("%s param1 : %p param2 : %p param3 : %p", "GameMainLoopDetour", (void*)param1, (void*)param2, (void*)param3);
 
 	// --- Run Features safely on game thread ---
 	// DllMainLoopEditor();

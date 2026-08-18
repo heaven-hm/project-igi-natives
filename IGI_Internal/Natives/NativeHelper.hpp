@@ -1,4 +1,5 @@
 #pragma once 
+#include <cmath>
 #include "Natives.hpp" 
 #include "NativeCaller.hpp" 
 #include "../Camera/Camera.hpp"
@@ -191,11 +192,16 @@ namespace IGI {
 		/// <summary>Clear HUD status message (0x00407760).</summary>
 		NATIVE_DECL void STATUS_MESSAGE_CLEAR() { NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_CLEAR, (const char*)local_buf); }
 		/// <summary>Show custom HUD status message (0x00424D00).</summary>
-		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg, const char* status_sprite) { NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_SHOW, *(PINT)0x00A758AC, status_msg, status_sprite, &status_byte); }
-		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg) { STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); std::this_thread::sleep_for(10s); MISC::STATUS_MESSAGE_CLEAR(); }
+		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg, const char* status_sprite) {
+			if (!status_msg) return;
+			const int* pStatus = (const int*)0x00A758AC;
+			if (!pStatus || !*pStatus) return;
+			NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_SHOW, *pStatus, status_msg, status_sprite, &status_byte);
+		}
+		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg) { if (!status_msg) return; STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(string status_msg) { STATUS_MESSAGE_SHOW(status_msg.c_str()); }
-		NATIVE_DECL void STATUS_MESSAGE_SHOW_TEXT(const char* status_msg) { STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
-		NATIVE_DECL void STATUS_MESSAGE_SHOW_MONITOR_TEXT(const char* status_msg) { STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
+		NATIVE_DECL void STATUS_MESSAGE_SHOW_TEXT(const char* status_msg) { if (!status_msg) return; STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
+		NATIVE_DECL void STATUS_MESSAGE_SHOW_MONITOR_TEXT(const char* status_msg) { if (!status_msg) return; STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
 		/// <summary>Display a warning popup dialog in engine (0x004043A0).</summary>
 		NATIVE_DECL void WARNING_SHOW(const char* warn_msg) { NATIVE_INVOKE<Void>((Void)HASH::WARNING_SHOW, warn_msg); }
 		NATIVE_DECL void WARNING_SHOW(string warn_msg) { WARNING_SHOW(warn_msg.c_str()); }
@@ -336,7 +342,7 @@ namespace IGI {
 		NATIVE_DECL HumanSoldier FIND(graph_t graph_id) { return g_Soldier.FindSoldier(graph_id); }
 		NATIVE_DECL HumanSoldier FIND(address_t address) { return g_Soldier.FindSoldier(address); }
 		NATIVE_DECL HumanSoldier FIND(string model_id) { return g_Soldier.FindSoldier(model_id); }
-		NATIVE_DECL void DEBUG_DATA(HumanSoldier& soldier) { MISC::STATUS_MESSAGE_SHOW(soldier.DebugSoldierData().c_str()); std::this_thread::sleep_for(7s); MISC::STATUS_MESSAGE_CLEAR(); }
+		NATIVE_DECL void DEBUG_DATA(HumanSoldier& soldier) { MISC::STATUS_MESSAGE_SHOW(soldier.DebugSoldierData().c_str()); }
 		NATIVE_DECL void DEBUG_DATA_LIST(HumanSoldier& soldier) { soldier.DebugSoldierDataList(); }
 		/// <summary>Execute soldier script task (0x00414A90).</summary>
 		NATIVE_DECL void EXECUTE(int soldier_ptr, int soldier_addr) { NATIVE_INVOKE<Void>((Void)HASH::SOLDIER_EXECUTE, soldier_ptr, soldier_addr); }
@@ -356,10 +362,23 @@ namespace IGI {
 		/// <summary>Get total available weapon count (0x004081B0).</summary>
 		NATIVE_DECL int TOTAL_COUNT() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
 		/// <summary>Perform gun pickup (0x00415A50).</summary>
-		NATIVE_DECL void GUN_PICKUP(int weapon_id) { GUN_PICKUP_SET(weapon_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, READ_PTR(gun_pickup_ptr), GUN_PICKUP_PTR); }
+		NATIVE_DECL void GUN_PICKUP(int weapon_id) {
+			int pickup_data[2] = { weapon_id, 1 };
+			NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, READ_PTR(gun_pickup_ptr), pickup_data);
+		}
 		/// <summary>Perform ammo pickup (0x00415A70).</summary>
-		NATIVE_DECL void AMMO_PICKUP(int ammo_id) { AMMO_PICKUP_SET(ammo_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_AMMO_PICKUP, READ_PTR(gun_pickup_ptr), AMMO_PICKUP_PTR); }
+		NATIVE_DECL void AMMO_PICKUP(int ammo_id) {
+			int pickup_data[2] = { ammo_id, 1 };
+			NATIVE_INVOKE<Void>((Void)HASH::WEAPON_AMMO_PICKUP, READ_PTR(gun_pickup_ptr), pickup_data);
+		}
 		NATIVE_DECL void WEAPON_PICKUP(int weapon_id) { int ammo_id = weapons_ammo_list.at(weapon_id); GUN_PICKUP(weapon_id); AMMO_PICKUP(ammo_id); }
+	}
+
+	namespace BINOCULARS {
+		/// <summary>Draws red box overlay on enemy when using binoculars (0x00470260).</summary>
+		NATIVE_DECL uint32_t ENEMY_DETECTOR_OVERLAY(int contextBase, int targetAddr, float sortingDistance, int configFlag, int* screenPosition, int eventParam = 0, int extraParam1 = 0, int extraParam2 = 0) {
+			return NATIVE_INVOKE<uint32_t>((Void)HASH::ENEMY_DETECTOR_OVERLAY, contextBase, targetAddr, sortingDistance, configFlag, screenPosition, eventParam, extraParam1, extraParam2);
+		}
 	}
 
 	namespace CAMERA {
@@ -687,42 +706,108 @@ namespace IGI {
 
 		NATIVE_DECL int RESOLUTION_WIDTH_GET() { return *(int*)0x005C8C00; }
 		NATIVE_DECL int RESOLUTION_HEIGHT_GET() { return *(int*)0x005C8C04; }
+		inline float g_requested_draw_distance = 5000.0f;
+		inline float g_requested_gamma = 1.0f;
 
-		// FOV adjustment for widescreen — camera FOV stored as float.
-		// Base FOV is ~75 degrees at 4:3; widescreen needs ~90-100.
+		// The retail camera stores the half-FOV globals as x87-compatible doubles.
+		// HumanTaskViewReset (0x004659E0) converts them to float tangents at
+		// HumanPlayer + 0x1E4 / 0x1E8.  IGIPatch also consumes the verified
+		// Mesh3D_avOverrideFOV[3] table at 0x00B81700 for every mesh render path.
+		NATIVE_DECL void MESH_FOV_OVERRIDE_SET(float fov_degrees) {
+			const float base_half_fov = 37.5f * 3.14159265358979323846f / 180.0f;
+			const float requested_half_fov = (fov_degrees * 0.5f) *
+				3.14159265358979323846f / 180.0f;
+			const float base_tangent = tanf(base_half_fov);
+			const float requested_tangent = tanf(requested_half_fov);
+			const float render_scale = requested_tangent / base_tangent;
+
+			// This table is initialized by Mesh3D initialization to 1.0f and is
+			// read by the retail rigid, sorted-face, lightmap, and bone renderers.
+			// Keep all three slots synchronized; the renderer indexes by mesh type.
+			__try {
+				*(float*)0x00B81700 = render_scale;
+				*(float*)0x00B81704 = render_scale;
+				*(float*)0x00B81708 = render_scale;
+			} __except (EXCEPTION_EXECUTE_HANDLER) {
+				LOG_ERROR("ENHANCER: Failed to update Mesh3D FOV override table");
+				return;
+			}
+
+			LOG_INFO("ENHANCER: Mesh3D FOV override scale set to %.5f", render_scale);
+		}
+
 		NATIVE_DECL void FOV_SET(float fov_degrees) {
-			// Camera FOV address (ViewPort field offset +0x20 from CAM_ANGLE_ADDR)
-			float fov_rad = fov_degrees * 3.14159265f / 180.0f;
-			*(float*)(VIEWPORT_BASE_ADDR + 0x20) = fov_rad;
-			LOG_INFO("ENHANCER: FOV set to %.1f degrees (%.4f rad)", fov_degrees, fov_rad);
+			if (fov_degrees < 45.0f) fov_degrees = 45.0f;
+			if (fov_degrees > 120.0f) fov_degrees = 120.0f;
+			double half_fov_h = (static_cast<double>(fov_degrees) * 0.5) * (3.141592653589793 / 180.0);
+			double half_fov_v = half_fov_h * 0.75;
+			MESH_FOV_OVERRIDE_SET(fov_degrees);
+
+			// Update global engine FOV constants (0x005335E8 & 0x005339C0)
+			__try {
+				DWORD oldProtect;
+				if (VirtualProtect((LPVOID)0x005335E8, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
+					*(double*)0x005335E8 = half_fov_h;
+					VirtualProtect((LPVOID)0x005335E8, 8, oldProtect, &oldProtect);
+				}
+				if (VirtualProtect((LPVOID)0x005339C0, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
+					*(double*)0x005339C0 = half_fov_v;
+					VirtualProtect((LPVOID)0x005339C0, 8, oldProtect, &oldProtect);
+				}
+			} __except (EXCEPTION_EXECUTE_HANDLER) {}
+
+			// Keep the active player view fields synchronized without calling into the
+			// retail routine from the DLL worker thread.  The retail routine is verified,
+			// but it is game-thread-only and calling it here races the renderer.
+			const int hp = READ_PTR(humanplayer_ptr);
+			if (hp) {
+				*(float*)(hp + 0x1E4) = tanf(static_cast<float>(half_fov_h));
+				*(float*)(hp + 0x1E8) = tanf(static_cast<float>(half_fov_v));
+			}
+			LOG_INFO("ENHANCER: FOV set to %.1f degrees (%.4f rad)", fov_degrees, static_cast<float>(half_fov_h * 2.0));
 		}
 
 		NATIVE_DECL float FOV_GET() {
-			float fov_rad = *(float*)(VIEWPORT_BASE_ADDR + 0x20);
-			return fov_rad * 180.0f / 3.14159265f;
+			double half_fov_h = *(double*)0x005335E8;
+			return static_cast<float>(half_fov_h * 2.0 * 180.0 / 3.141592653589793);
 		}
 
 		// ── Binoculars zoom enhancement ─────────────────────────────────
-		// Binoculars zoom multiplier is stored at humanplayer struct offset.
-		// The draw function at 0x00471480 reads the zoom level from the struct.
 		NATIVE_DECL void BINOCULARS_ZOOM_SET(float zoom_factor) {
-			const int hp = READ_PTR(humanplayer_ptr);
-			if (!hp) {
-				LOG_INFO("ENHANCER: Binoculars zoom failed — no HumanPlayer");
-				return;
-			}
-			// Binocular zoom offset in HumanPlayer struct: +0x8B4
-			// This is the view magnification factor (default 2.0, max ~12.0)
 			if (zoom_factor < 1.0f) zoom_factor = 1.0f;
 			if (zoom_factor > 16.0f) zoom_factor = 16.0f;
-			*(float*)(hp + 0x8B4) = zoom_factor;
+
+			double base_half_fov = (75.0 * 0.5) * (3.141592653589793 / 180.0);
+			double zoomed_half_fov = base_half_fov / static_cast<double>(zoom_factor);
+			double zoomed_vertical_half_fov = zoomed_half_fov * 0.75;
+			MESH_FOV_OVERRIDE_SET(static_cast<float>(75.0 / static_cast<double>(zoom_factor)));
+
+			DWORD oldProtect;
+			if (VirtualProtect((LPVOID)0x005335E8, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
+				*(double*)0x005335E8 = zoomed_half_fov;
+				VirtualProtect((LPVOID)0x005335E8, 8, oldProtect, &oldProtect);
+			}
+			if (VirtualProtect((LPVOID)0x005339C0, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
+				*(double*)0x005339C0 = zoomed_vertical_half_fov;
+				VirtualProtect((LPVOID)0x005339C0, 8, oldProtect, &oldProtect);
+			}
+
+			const int hp = READ_PTR(humanplayer_ptr);
+			if (hp) {
+				*(float*)(hp + 0x1E4) = tanf(static_cast<float>(zoomed_half_fov));
+				*(float*)(hp + 0x1E8) = tanf(static_cast<float>(zoomed_vertical_half_fov));
+			}
 			LOG_INFO("ENHANCER: Binoculars zoom set to %.1fx", zoom_factor);
 		}
 
 		NATIVE_DECL float BINOCULARS_ZOOM_GET() {
 			const int hp = READ_PTR(humanplayer_ptr);
 			if (!hp) return 2.0f;
-			return *(float*)(hp + 0x8B4);
+			float tanX = *(float*)(hp + 0x1E4);
+			if (tanX <= 0.0f) return 2.0f;
+			float current_half_fov = atanf(tanX);
+			float base_half_fov = (75.0f * 0.5f) * (3.14159265f / 180.0f);
+			return base_half_fov / current_half_fov;
 		}
 
 		// ── Music & SFX volume ──────────────────────────────────────────
@@ -741,30 +826,39 @@ namespace IGI {
 		}
 
 		// ── Draw distance ───────────────────────────────────────────────
-		// Far clip plane for terrain/objects — address 0x005C8C10
+		// The values previously used here (0x00BCABC8, 0x00BCABF4 and
+		// 0x005C8C10) are clipping/configuration fields, not a draw-distance
+		// setter.  r2mcp and BlankName's IGIPatch show that retail visibility is
+		// selected by the Mesh3D_*LOD routines.  Keep the requested value as
+		// enhancer state until a verified LOD code patch is installed; never write
+		// arbitrary floats into the active render context.
 		NATIVE_DECL void DRAW_DISTANCE_SET(float distance) {
 			if (distance < 100.0f) distance = 100.0f;
 			if (distance > 50000.0f) distance = 50000.0f;
-			*(float*)0x005C8C10 = distance;
-			LOG_INFO("ENHANCER: Draw distance set to %.0f", distance);
+			g_requested_draw_distance = distance;
+			LOG_WARNING("ENHANCER: Draw distance request %.0f recorded; retail LOD patch is not installed", distance);
 		}
 
-		NATIVE_DECL float DRAW_DISTANCE_GET() { return *(float*)0x005C8C10; }
+		NATIVE_DECL float DRAW_DISTANCE_GET() { return g_requested_draw_distance; }
 
 		// ── Gamma / Brightness ──────────────────────────────────────────
-		// Engine gamma ramp value at 0x005C8C14
+		// 0x005C8C14 has no retail readers in the r2mcp xref graph.  Retain the
+		// requested value for the status UI, but do not pretend it changes output.
 		NATIVE_DECL void GAMMA_SET(float gamma) {
 			if (gamma < 0.5f) gamma = 0.5f;
 			if (gamma > 3.0f) gamma = 3.0f;
-			*(float*)0x005C8C14 = gamma;
-			LOG_INFO("ENHANCER: Gamma set to %.2f", gamma);
+			g_requested_gamma = gamma;
+			LOG_WARNING("ENHANCER: Gamma request %.2f recorded; no verified retail gamma setter", gamma);
 		}
 
-		NATIVE_DECL float GAMMA_GET() { return *(float*)0x005C8C14; }
+		NATIVE_DECL float GAMMA_GET() { return g_requested_gamma; }
 
 		// ── Status display helper ───────────────────────────────────────
 		NATIVE_DECL void SHOW_STATUS(const std::string& msg) {
-			MISC::STATUS_MESSAGE_SHOW(msg);
+			// StatusMessageShow mutates a retail HUD list owned by the game thread.
+			// The enhancer loop is an external thread, so logging is the safe feedback
+			// path until a verified game-thread render hook is installed.
+			LOG_INFO("ENHANCER STATUS: %s", msg.c_str());
 		}
 
 		// ── Enhancer state ──────────────────────────────────────────────

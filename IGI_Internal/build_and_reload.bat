@@ -3,7 +3,7 @@ setlocal
 
 :: === Parse command line arguments ===
 set CONFIG=Debug
-set PLATFORM=x86
+set PLATFORM=Win32
 
 if "%~1"=="" goto skipArgs
 set CONFIG=%~1
@@ -11,11 +11,15 @@ if "%~2"=="" goto skipArgs
 set PLATFORM=%~2
 :skipArgs
 
+if /I "%PLATFORM%"=="x86" set PLATFORM=Win32
+
 :: === Config ===
 set MSBUILD="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
-set PROJECT=IGI_Internal.vcxproj
-set OUTDLL=C:\Users\hasee\source\repos\project-igi-internals\IGI_Internal\%CONFIG%\IGI-Internals-%CONFIG%.dll
-set INJECTOR=C:\Users\hasee\Downloads\Compressed\IGI-Injector-v1.0\IGI-Injector-v1.0\bin\igi-injector-cmd.exe
+set ROOT=%~dp0..
+set PROJECT=%~dp0IGI_Internal.vcxproj
+set OUTDLL=%ROOT%\%CONFIG%\IGI-Internals-%CONFIG%.dll
+if not defined IGI_INJECTOR set IGI_INJECTOR=D:\IGI-Ghidra-AI\bin\IGI-Injector.exe
+set INJECTOR=%IGI_INJECTOR%
 
 echo [*] Using Configuration: %CONFIG%
 echo [*] Using Platform: %PLATFORM%

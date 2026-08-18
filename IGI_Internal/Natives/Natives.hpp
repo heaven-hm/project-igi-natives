@@ -174,6 +174,9 @@ namespace IGI {
 		// Music & SFX volume (already have hashes but adding explicit enhancer aliases)
 		MUSIC_SFX_VOL_SET = 0x00495F30,        // void __cdecl Music_SfxVolSet(float) — SFX master volume
 		MUSIC_VOL_SET = 0x00495E70,            // void __cdecl Music_VolSet(float) — music master volume
+		ENEMY_DETECTOR_OVERLAY = 0x00470260,   // uint32_t __cdecl EnemyDetectorOverlay(...) — red target bounding box
+		SOUND_SET_PACING_LIMIT = 0x004E6030,   // void __cdecl Sound_SetPacingLimit(int) — frame pacing
+		GRAPHICS_RESET = 0x00403B70,           // void __cdecl GraphicsReset(char*) — reset graphics options
 	};
 
 	class Natives {

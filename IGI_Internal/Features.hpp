@@ -24,6 +24,7 @@ void TestAiNatives();
 void EnhancerCycleFPS();
 void EnhancerCycleFOV();
 void EnhancerCycleBinoculars();
+void EnhancerToggleImprovedBinoculars();
 void EnhancerCycleDrawDistance();
 void EnhancerGammaUp();
 void EnhancerGammaDown();
@@ -32,3 +33,10 @@ void EnhancerMusicVolumeDown();
 void EnhancerSfxVolumeUp();
 void EnhancerSfxVolumeDown();
 void EnhancerShowStatus();
+
+// New User-Requested Enhancer Graphics Features
+void EnhancerToggleHDR();
+void EnhancerToggleMotionBlur();
+void EnhancerCycleLightmaps();
+void EnhancerToggleEnhancedGraphics();
+void EnhancerToggleComputerMap();
