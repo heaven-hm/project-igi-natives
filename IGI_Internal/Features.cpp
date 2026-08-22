@@ -560,13 +560,16 @@ void EnhancerToggleHDR() {
 }
 
 void EnhancerToggleMotionBlur() {
-  g_blur_enabled = !g_blur_enabled;
+  const bool enabled = !g_blur_enabled;
+  g_blur_enabled = enabled;
   FiberPool::Instance().RunExternal([] {
     // VERIFIED: FramesSet (0x00402820) is the retail frame-rate setter
     // (argument = target FPS; retail passes 30 and 60). A real motion-blur
     // pass would need a verified post-processing hook that this engine
     // build does not expose, so this toggle only changes temporal pacing.
-    ENHANCER::FRAMERATE_SET(g_blur_enabled ? 120 : 60);
+    const int fps = enabled ? 120 : 60;
+    ENHANCER::FRAMERATE_SET(fps);
+    ENHANCER::g_Enhancer.target_fps = fps;  // keep GET_STATUS_STRING in sync
     string msg = string("Temporal pacing: ") + (g_blur_enabled ? "120 FPS" : "60 FPS") + " (motion-blur pass unavailable)";
     MISC::STATUS_MESSAGE_SHOW(msg);
   }, 3);
@@ -602,35 +605,17 @@ void EnhancerCycleLightmaps() {
   LOG_INFO("ENHANCER: Lightmaps mode changed to %d", g_lightmap_mode);
 }
 
-// Single verified accessor for the active player-profile record.
-// igi.exe fcn.00406220 returns 0xBC2388 + 0xD14 * [0xBC2384] (decompiled);
-// field layout below is confirmed by the retail defaults-reset routine
-// Config_ResetGraphicOptions (fcn.00403B70) which writes the same offsets.
-typedef void* (*GetProfileRecord_t)();
-static GetProfileRecord_t fnGetProfileRecord = (GetProfileRecord_t)0x00406220;
-
+// DISABLED (reviewer F01, CRITICAL): igi.exe fcn.00406220 returns the
+// player-PROFILE record (0xBC2388 + 0xD14*[0xBC2384]), not an engine-config
+// struct. Writing width/height/bpp/device fields through it corrupts unrelated
+// profile fields. The graphic-options record that Config_ResetGraphicOptions
+// (fcn.00403B70) resets uses a DIFFERENT base. Keep as a no-op until a verified
+// accessor for the engine-config struct exists; gamma still flows through the
+// verified GAMMA_SET profile-record path (offset +0x220, read live by the
+// lighting math at 0x0049A22D).
 void UpdateEngineGraphicsConfig(int width, int height, int bpp, int deviceIndex, bool shadows, bool filtering, bool dynamicLighting, float gamma) {
-    __try {
-        uint8_t* pConfig = (uint8_t*)fnGetProfileRecord();
-        // Layout VERIFIED against the retail defaults-reset fcn.00403B70:
-        // +0x0C width, +0x10 height, +0x14 bpp, +0x18 device index,
-        // +0x1C/0x1D/0x1E option bytes, +0x220 float gamma. Record stride is
-        // 0xD14 bytes so every offset above stays inside the record.
-        // Fault protection comes from the surrounding __try; IsBadWritePtr
-        // is obsolete and cannot detect a wrong-object pointer.
-        if (pConfig) {
-            *(int*)(pConfig + 0x0C) = width;
-            *(int*)(pConfig + 0x10) = height;
-            *(int*)(pConfig + 0x14) = bpp;
-            *(int*)(pConfig + 0x18) = deviceIndex;
-            *(uint8_t*)(pConfig + 0x1C) = shadows ? 1 : 0;
-            *(uint8_t*)(pConfig + 0x1D) = filtering ? 1 : 0;
-            *(uint8_t*)(pConfig + 0x1E) = dynamicLighting ? 1 : 0;
-            *(float*)(pConfig + 0x220) = gamma;
-            LOG_INFO("ENHANCER: Updated native engine config struct at 0x%p (%dx%d %dbpp, Dev=%d, Gamma=%.2f)", pConfig, width, height, bpp, deviceIndex, gamma);
-        }
-    } __except (EXCEPTION_EXECUTE_HANDLER) {
-    }
+    LOG_INFO("ENHANCER: graphics-profile request %dx%d %dbpp Dev=%d shadows=%d filtering=%d dynlight=%d gamma=%.2f recorded (native struct write disabled pending verified accessor)",
+             width, height, bpp, deviceIndex, shadows ? 1 : 0, filtering ? 1 : 0, dynamicLighting ? 1 : 0, gamma);
 }
 
 void EnhancerToggleEnhancedGraphics() {
@@ -672,15 +657,16 @@ void EnhancerToggleEnhancedGraphics() {
 }
 
 void EnhancerToggleImprovedBinoculars() {
-  g_improved_binoculars = !g_improved_binoculars;
-  FiberPool::Instance().RunExternal([] {
-    if (g_improved_binoculars) {
+  const bool enabled = !(g_improved_binoculars == true);
+  g_improved_binoculars = enabled;
+  FiberPool::Instance().RunExternal([enabled] {
+    if (enabled) {
       ENHANCER::BINOCULARS_ZOOM_SET(16.0f);
     } else {
       // Disabling restores the retail tangents immediately (guarded).
       ENHANCER::BINOCULARS_ZOOM_SET(1.0f);
     }
-    string msg = string("Enhanced Binoculars: ") + (g_improved_binoculars ? "ON (16x)" : "OFF");
+    string msg = string("Enhanced Binoculars: ") + (enabled ? "ON (16x)" : "OFF");
     MISC::STATUS_MESSAGE_SHOW(msg);
   }, 3);
   LOG_INFO("ENHANCER: Improved Binoculars %s (per-frame tangent zoom via Binoculars_Draw hook)", g_improved_binoculars ? "ENABLED" : "DISABLED");
