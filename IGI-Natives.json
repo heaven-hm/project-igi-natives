@@ -2084,8 +2084,8 @@
         "hash": "0044E860",
         "address": 4515936,
         "name": "AIFunction_IsEventBehind",
-        "signature": "void AIFunction_IsEventBehind();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d039 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_IsEventBehind(int event);",
+        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d039 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t). | Signature upgraded: Ghidra decompile shows 1 used param."
       }
     },
     {
@@ -2093,8 +2093,8 @@
         "hash": "0044ECB0",
         "address": 4517040,
         "name": "AIFunction_GetAnimationToPlay",
-        "signature": "void AIFunction_GetAnimationToPlay();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d0c4 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetAnimationToPlay(int entry);",
+        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d0c4 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t). | Signature upgraded: machine-verified arg1 read via mov eax,[ebp+8] @0x0044ecd4."
       }
     },
     {
@@ -2144,7 +2144,7 @@
     },
     {
       "Native": {
-        "hash": "0048f1a0",
+        "hash": "0048F1A0",
         "address": 4780448,
         "name": "AppContextSetDebugged",
         "signature": "void AppContext_SetDebugged(int8_t state);",
@@ -2153,7 +2153,7 @@
     },
     {
       "Native": {
-        "hash": "0048f1e0",
+        "hash": "0048F1E0",
         "address": 4780512,
         "name": "AppContextSetDebugtextState",
         "signature": "void AppContext_SetDebugtextState(int8_t state);",
@@ -2162,7 +2162,7 @@
     },
     {
       "Native": {
-        "hash": "0048f240",
+        "hash": "0048F240",
         "address": 4780608,
         "name": "AppContextSetLightmapsUsed",
         "signature": "void AppContext_SetLightmapsUsed(int8_t used);",
@@ -2171,7 +2171,7 @@
     },
     {
       "Native": {
-        "hash": "0048f260",
+        "hash": "0048F260",
         "address": 4780640,
         "name": "AppContextSetTerrainLightmapsUsed",
         "signature": "void AppContext_SetTerrainLightmapsUsed(int8_t used);",
@@ -2180,7 +2180,7 @@
     },
     {
       "Native": {
-        "hash": "0048f360",
+        "hash": "0048F360",
         "address": 4780896,
         "name": "AppMainParseCmdLineArgs",
         "signature": "void AppMain_ParseCmdLineArgs(/*cmdline*/);",
@@ -2198,7 +2198,7 @@
     },
     {
       "Native": {
-        "hash": "00491cf0",
+        "hash": "00491CF0",
         "address": 4791536,
         "name": "DisplayGetActiveMode",
         "signature": "void* Display_GetActiveMode();",
@@ -2207,7 +2207,7 @@
     },
     {
       "Native": {
-        "hash": "00491e70",
+        "hash": "00491E70",
         "address": 4791920,
         "name": "DisplaySetBackgroundColourFn",
         "signature": "void Display_SetBackgroundColourFn(int8_t r, int8_t g, int8_t b);",
@@ -2216,7 +2216,7 @@
     },
     {
       "Native": {
-        "hash": "00491a90",
+        "hash": "00491A90",
         "address": 4790928,
         "name": "DisplaySetMode",
         "signature": "int Display_SetMode(void* modeStruct);",
@@ -2225,7 +2225,7 @@
     },
     {
       "Native": {
-        "hash": "004b6e80",
+        "hash": "004B6E80",
         "address": 4943488,
         "name": "PictureGetHeight",
         "signature": "int Picture_GetHeight(void* picture);",
@@ -2234,7 +2234,7 @@
     },
     {
       "Native": {
-        "hash": "004b6e70",
+        "hash": "004B6E70",
         "address": 4943472,
         "name": "PictureGetWidth",
         "signature": "int Picture_GetWidth(void* picture);",
@@ -2243,7 +2243,7 @@
     },
     {
       "Native": {
-        "hash": "004b53b0",
+        "hash": "004B53B0",
         "address": 4936624,
         "name": "QspriteRegister4Az",
         "signature": "void QSprite_Register4AZ(/*14 args*/);",
@@ -2252,7 +2252,7 @@
     },
     {
       "Native": {
-        "hash": "00497e70",
+        "hash": "00497E70",
         "address": 4816496,
         "name": "TranscontextSetActiveTransContext",
         "signature": "void TransContext_SetActiveTransContext(void* ctx);",
