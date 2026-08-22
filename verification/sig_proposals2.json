@@ -1,0 +1,148 @@
+[
+ {
+  "hash": "004BB270",
+  "signature": "int QvmAssemble(char* sourcePath, char* outputPath)",
+  "note": "Assembles a QVM SCRIPT SOURCE into binary form: runs a full lexer/parser over the source (embedded regex patterns '[a-zA-Z][a-zA-Z0-9_]*:', '[ \\t\\n\\r]+', comment stripping '{.*:(.*//)*}.*'), writes intermediate 'LOCAL:qvmbin.tmp', then links via the resource system (ResourceLoad/Resource_Flush/FileReadWrite all called). Params: sourcePath = virtual path of the .qsc-style source, outputPath = target name. RETURNS result of the link step. Engine-internal - used when the game builds scripts at runtime.",
+  "rationale": "pdf: regex/lexer strings @body, calls ResourceLoad 0x4B5F00 + FileReadWrite 0x4B1510 + Resource_Flush 0x4B63D0; 2 stack args (r2 hdr arg_650h/arg_658h)"
+ },
+ {
+  "hash": "004BBCB0",
+  "signature": "int QvmParse(char* inputFile, char* outputFile)",
+  "note": "Parses a script file and GENERATES ASSEMBLY CODE (own log line: 'Parsing script and generating assembly code.'). Writes the assembly to outputFile ('Failed to open file \"%s\" for writing.' on failure). Params: inputFile = script source path, outputFile = asm output path. Stage 1 of the two-stage QscCompile pipeline.",
+  "rationale": "pdf: exact log strings in body; 16 internal parser calls (0x4BBE90..0x4BFC70); 2 args"
+ },
+ {
+  "hash": "004B85B0",
+  "signature": "int QvmCompile(char* scriptFile)",
+  "note": "Compiles a script file into a QVM program, reporting failures with 'Error in QVM program: %s' and 'An error occured in script file: %s'. Param: scriptFile = virtual path of the script to compile. RETURNS compile status.",
+  "rationale": "pdf: both error strings reference the single arg; 1 stack arg (arg_85Ch)"
+ },
+ {
+  "hash": "004B8410",
+  "signature": "int QscCompile(char* qscFile)",
+  "note": "Compiles a .QSC script source into executable QVM form - body contains the output-extension strings '.qvm' and '.qas' plus 'An error occured when compiling file: %s'. Param: qscFile = virtual path ending in .qsc. This is the driver that invokes QvmParse then QvmAssemble stages. RETURNS compile status.",
+  "rationale": "pdf: '.qvm'/'.qas'/compile-error strings in body; 1 stack arg"
+ },
+ {
+  "hash": "004F0CF0",
+  "signature": "int ConfigCompile(int context, char* cfgText, int flags)",
+  "note": "Compiles CONFIG script text into executable task form - body references 'Task_New' (the task factory it emits calls to). Params: context = compilation context, cfgText = config source text/buffer, flags = options. RETURNS compiled handle/status. Used when config.qvm-style files are built.",
+  "rationale": "pdf: str.Task_New referenced; 3 stack args matching declared signature"
+ },
+ {
+  "hash": "004C0200",
+  "signature": "void ScriptBufInit(int* buf1, int buf2, int buf, int bufSize)",
+  "note": "Initializes the four script-buffer control fields used by the script engine (pure field writer, no calls). Params: buf1/buf2 = buffer structure pointers, buf = data buffer, bufSize = its size. Call before first use of a script buffer.",
+  "rationale": "pdf header shows exactly 4 stack args (arg_4h/8h/Ch/10h); zero calls - pure initializer"
+ },
+ {
+  "hash": "004BAAC0",
+  "signature": "void QTaskHashTableSet(int** table, void* handler, int nameVal, int p4, int p5, int p6, int p7)",
+  "note": "THE CORE REGISTRAR: inserts an entry into the task/hash table binding a name-value pair to a handler callback. All 7 stack args confirmed by disassembly header (arg_18h..arg_3Ch). Every SymbolRegister* thunk (e.g. 0x4B7EE0 pushes 1,1,0,1,addr,handler,table -> this) and every GAME_DEFINE_OPTIONS registration routes here. Params: table = target hash table, handler = callback invoked for the symbol, nameVal = name/value ref, p4-p7 = type/flag slots (see SymbolRegister thunks for known values).",
+  "rationale": "pdf header lists 7 args; SymbolRegisterBool8 0x4B7EE0 calls it with constant tail (1,1,0,1)"
+ },
+ {
+  "hash": "004B5F00",
+  "signature": "int* ResourceLoad(char* resourcePath, char** outBuffer)",
+  "note": "Loads a VIRTUAL RESOURCE (path like 'LOCAL:...' or 'MISSION:...') into memory: emits 'Failed to load resource: '%s'' on miss. Params: resourcePath = virtual resource path, outBuffer = receives the loaded data pointer. RETURNS pointer to the resource-table entry (or 0). Core loader - QvmAssemble, LoadingScreenShow and every script load funnel through here.",
+  "rationale": "pdf: error string in body; 2 args (arg_Ch/arg_10h)"
+ },
+ {
+  "hash": "004B5B90",
+  "signature": "int IsResourceLoaded(char* resourcePath, int** outEntry)",
+  "note": "Checks whether a virtual resource is already loaded and optionally returns its table entry. Params: resourcePath = virtual path to test, outEntry = receives the resource-table entry if found. RETURNS non-zero when loaded. Uses the hash-lookup helpers 0x4B1020/0x4B5AF0/0x4B5B30.",
+  "rationale": "pdf: calls 0x4b1020/0x4b5af0/0x4b5b30 (hash lookups); 2 args"
+ },
+ {
+  "hash": "004B18B0",
+  "signature": "int ResourcePackUnpack(char* resFile, char** outBuffer)",
+  "note": "Unpacks a PACKED resource file (compressed/packed container format) into memory. Params: resFile = virtual path of the packed resource, outBuffer = receives unpacked data pointer. RETURNS size/handle on success. Companion to Resource_Unpack which handles raw entries.",
+  "rationale": "pdf header: 2 stack args; body performs multi-stage buffer processing (14 calls)"
+ },
+ {
+  "hash": "004B16D0",
+  "signature": "void ResourceUnpack(int* resPtr, int destAddr, int resSize)",
+  "note": "Unpacks a raw resource ENTRY previously obtained from the resource table into a destination address. Params: resPtr = resource-table entry, destAddr = destination memory address, resSize = bytes to unpack. Use after Resource_Load when you need the data at a specific address.",
+  "rationale": "pdf header: 3 args matching declared signature"
+ },
+ {
+  "hash": "0045FFC0",
+  "signature": "void Weapon_GunPickup(void* player, void* pickupEntity)",
+  "note": "Gives a GUN pickup to the player: checks the player's already-carried flag (player+0xCF5), reads the weapon id from pickupEntity+8 -> word +0x1C, validates the weapon category via 0x401CF0, hands the weapon over (0x477BF0/0x477C50) and plays the 'weaponpickup_1' sound (0x47CE00/0x4E7200). Params: player = player/Human struct ptr, pickupEntity = the picked-up world entity. Use for custom weapon pickups.",
+  "rationale": "pdf: byte[ebx+0xCF5] guard, esi=[ebx+8], word[esi+0x1C], sound strings, category call 0x401CF0"
+ },
+ {
+  "hash": "0045FF80",
+  "signature": "void Weapon_AmmoPickup(void* player, void* pickupEntity)",
+  "note": "Gives an AMMO pickup to the player (same struct conventions as Weapon_GunPickup: player carry-flags and pickup-entity fields drive the grant; plays the pickup sound). Params: player = player struct ptr, pickupEntity = ammo world entity. Use for custom ammo pickups.",
+  "rationale": "pdf header: 2 stack args (arg_4h/arg_8h); shares weaponpickup sound path"
+ },
+ {
+  "hash": "00463760",
+  "signature": "void Human_ViewCam(void* human, int camValue)",
+  "note": "Sets the human's VIEW-CAMERA selector: stores camValue into human struct offset +0x4F0 (verified: mov [ecx+0x4F0],eax; ret - 5-byte setter). Params: human = Human/soldier struct ptr, camValue = camera mode index. Use to switch a soldier's view/camera state directly.",
+  "rationale": "pd: exact 4-instruction body; name normalized to Subsystem_Action per retail convention",
+  "name": "Human_ViewCam"
+ },
+ {
+  "hash": "004659E0",
+  "signature": "void Human_TaskViewReset(void* human)",
+  "note": "Resets the human's VIEW TANGENT fields to retail defaults: computes tan() of the half-FOV globals 0x5335E8/0x5339C0 (the same globals ENHANCER::FOV_SET writes) and stores them into human+0x1E4 and human+0x1E8, clearing human+0x1EC. Param: human = Human/soldier struct ptr. This is THE retail restore path - call after custom FOV/binocular zoom to return to normal view.",
+  "rationale": "pd: fld qword [0x5335e8]; fptan; mov [eax+0x1ec],0; fstp [eax+0x1e4]/[eax+0x1e8] - matches enhancer APPLY_BINOCULARS_FRAME interplay"
+ },
+ {
+  "hash": "004828D0",
+  "signature": "void Human_FindNextCamera(void* human)",
+  "note": "DEBUG camera cycler: polls key states via 0x415020 (key codes 0x10/0x1E/0x12) and cycles the human through camera presets - shifts stored camera coords (+0x120/+0x11C -> +0x68/+0x118) or delegates to sub-handler 0x482930. Param: human = Human struct ptr. Only functional when debug keys are enabled (pairs with AppContext_SetDebugged).",
+  "rationale": "pd: three 0x415020 key-state probes with distinct key codes, camera-field shuffles"
+ },
+ {
+  "hash": "00413BB0",
+  "signature": "int Weapons_CountGet()",
+  "note": "RETURNS the number of weapons defined for the human player: reads global counter 0x57B18C (exactly `mov eax,[0x57B18C]; ret`). That counter is written by the DefineHumanPlayerWeaponCycle definition parser - so this reflects the current weapon-cycle list length. Use to bounds-check weapon indexes before Weapon_GunPickup-style calls.",
+  "rationale": "pd: 5-byte global read; counter address matches DefineHumanPlayerWeaponCycle store target 0x56DF18 family (0x57B18C = active count global)",
+  "name": "Weapons_CountGet"
+ },
+ {
+  "hash": "0048A440",
+  "signature": "void LoadingScreenShow(int picVariant)",
+  "note": "Shows the LOADING SCREEN: loads LOCAL:menusystem/loadingscreen.res then displays loading.pic - or loading_us.pic on USA country builds (pairs with LevelFlow_IsCountryUSA), wires up display-mode functions and flushes resources. Param: picVariant = loading screen selection/index. Use before long loads to give visual feedback.",
+  "rationale": "pdf: loadingscreen.res/loading.pic/loading_us.pic strings, display fn cluster 0x498370-0x498410, Resource_Flush"
+ },
+ {
+  "hash": "004A53B3",
+  "signature": "int GameDataSymbolLoad(char* symBuf, char* symPath, char* symName)",
+  "note": "Parses game-data SYMBOL DEFINITIONS from a buffer into the symbol table: tokenizes via 0x4A7720 with per-name limit 0x42 (66 bytes) and count cap 0x7FFFFFFF, null-terminates each parsed name. Params: symBuf = symbol buffer base, symPath = source path ref, symName = initial name entry. RETURNS parse status. Feeds the table that Symbol_Register*/GameData_SymbolRemove operate on.",
+  "rationale": "pd: ebp+8/ebp+C/ebp+10 args, tokenizer 0x4A7720, imm 0x42 and 0x7FFFFFFF limits visible"
+ },
+ {
+  "hash": "004B7EE0",
+  "signature": "void SymbolRegisterBool8(int** table, char* name)",
+  "note": "Registers a bool8 (byte 0/1) game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7F00) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax.",
+  "rationale": "pd: push 1,1,0,1 + handler imm + call 0x4baac0 pattern verified for Bool8; identical family layout"
+ },
+ {
+  "hash": "004B7E80",
+  "signature": "void SymbolRegisterInt16(int** table, char* name)",
+  "note": "Registers a int16 game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7F20-family) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax.",
+  "rationale": "pd: push 1,1,0,1 + handler imm + call 0x4baac0 pattern verified for Bool8; identical family layout"
+ },
+ {
+  "hash": "004B7FA0",
+  "signature": "void SymbolRegisterInt32(int** table, char* name)",
+  "note": "Registers a int32 game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7F40-family) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax.",
+  "rationale": "pd: push 1,1,0,1 + handler imm + call 0x4baac0 pattern verified for Bool8; identical family layout"
+ },
+ {
+  "hash": "004B7FC0",
+  "signature": "void SymbolRegisterReal32(int** table, char* name)",
+  "note": "Registers a real32 (float) game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7FA0-family) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax.",
+  "rationale": "pd: push 1,1,0,1 + handler imm + call 0x4baac0 pattern verified for Bool8; identical family layout"
+ },
+ {
+  "hash": "004071E0",
+  "signature": "int WeaponConfigRead(int context, char* cfgText)",
+  "note": "Reads/compiles a WEAPON CONFIG text: strlen-copies cfgText into the engine's static config buffer (0x5690F0) then hands it to ConfigCompile (0x4F0CF0) - the compiled task list drives weapon definitions (pairs with DefineHumanPlayerWeapon* natives). Params: context = compile context, cfgText = null-terminated weapon config source text. RETURNS compiled handle/status (0 on failure).",
+  "rationale": "pd: repne scasb strlen on [esp+8] string, rep movsd copy to 0x5690f0, then call 0x4f0cf0 (ConfigCompile) with args; 2 stack args"
+ }
+]

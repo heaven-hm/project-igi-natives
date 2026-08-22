@@ -23,8 +23,8 @@
         "hash": "004F0CF0",
         "address": 5180656,
         "name": "ConfigCompile",
-        "signature": "int ConfigCompile(int p1,char* cfg_file,int p3)",
-        "note": "Compile any config file, Params: Config: 'WEAPONS:weaponconfig.qsc' p1 ??, p3 ??"
+        "signature": "int ConfigCompile(int context, char* cfgText, int flags)",
+        "note": "Compiles CONFIG script text into executable task form - body references 'Task_New' (the task factory it emits calls to). Params: context = compilation context, cfgText = config source text/buffer, flags = options. RETURNS compiled handle/status. Used when config.qvm-style files are built."
       }
     },
     {
@@ -257,8 +257,8 @@
         "hash": "004B8410",
         "address": 4949008,
         "name": "QscCompile",
-        "signature": "void QscCompile(char* qsc_file)",
-        "note": "Compile QSC file to QVM, Params: QSC script file like 'LOCAL:objects.qsc'"
+        "signature": "int QscCompile(char* qscFile)",
+        "note": "Compiles a .QSC script source into executable QVM form - body contains the output-extension strings '.qvm' and '.qas' plus 'An error occured when compiling file: %s'. Param: qscFile = virtual path ending in .qsc. This is the driver that invokes QvmParse then QvmAssemble stages. RETURNS compile status."
       }
     },
     {
@@ -284,8 +284,8 @@
         "hash": "004BB270",
         "address": 4960880,
         "name": "QvmAssemble",
-        "signature": "int QvmAssemble(char *file_out,char *file_in)",
-        "note": "Assemble QAS assembler file, Params: Assemler source file like 'objects.qas'"
+        "signature": "int QvmAssemble(char* sourcePath, char* outputPath)",
+        "note": "Assembles a QVM SCRIPT SOURCE into binary form: runs a full lexer/parser over the source (embedded regex patterns '[a-zA-Z][a-zA-Z0-9_]*:', '[ \\t\\n\\r]+', comment stripping '{.*:(.*//)*}.*'), writes intermediate 'LOCAL:qvmbin.tmp', then links via the resource system (ResourceLoad/Resource_Flush/FileReadWrite all called). Params: sourcePath = virtual path of the .qsc-style source, outputPath = target name. RETURNS result of the link step. Engine-internal - used when the game builds scripts at runtime."
       }
     },
     {
@@ -293,8 +293,8 @@
         "hash": "004B85B0",
         "address": 4949424,
         "name": "QvmCompile",
-        "signature": "void QvmCompile(int file)",
-        "note": "Compile qvm file loaded in memory, Params: address of QVM file loaded from 'LoadResource' method."
+        "signature": "int QvmCompile(char* scriptFile)",
+        "note": "Compiles a script file into a QVM program, reporting failures with 'Error in QVM program: %s' and 'An error occured in script file: %s'. Param: scriptFile = virtual path of the script to compile. RETURNS compile status."
       }
     },
     {
@@ -311,8 +311,8 @@
         "hash": "004BBCB0",
         "address": 4963504,
         "name": "QvmParse",
-        "signature": "int QvmParse(char *file_name,int mem_alloc_addr)",
-        "note": "Parse Assembler source file, Params: any QAS file name and Memory allocated by Mem_Alloc(),  Returns status."
+        "signature": "int QvmParse(char* inputFile, char* outputFile)",
+        "note": "Parses a script file and GENERATES ASSEMBLY CODE (own log line: 'Parsing script and generating assembly code.'). Writes the assembly to outputFile ('Failed to open file \"%s\" for writing.' on failure). Params: inputFile = script source path, outputFile = asm output path. Stage 1 of the two-stage QscCompile pipeline."
       }
     },
     {
@@ -329,8 +329,8 @@
         "hash": "004B5F00",
         "address": 4939520,
         "name": "ResourceLoad",
-        "signature": "int* ResourceLoad(char* resource_file,char** buffer)",
-        "note": "Loads a resource file into memory. Params: resource_file = virtual resource path, buffer = receives pointer to loaded data. Returns pointer to the resource record (eax)."
+        "signature": "int* ResourceLoad(char* resourcePath, char** outBuffer)",
+        "note": "Loads a VIRTUAL RESOURCE (path like 'LOCAL:...' or 'MISSION:...') into memory: emits 'Failed to load resource: '%s'' on miss. Params: resourcePath = virtual resource path, outBuffer = receives the loaded data pointer. RETURNS pointer to the resource-table entry (or 0). Core loader - QvmAssemble, LoadingScreenShow and every script load funnel through here."
       }
     },
     {
@@ -347,8 +347,8 @@
         "hash": "004B5B90",
         "address": 4938640,
         "name": "IsResourceLoaded",
-        "signature": "int IsResourceLoaded(char *res_file,int *res_file_ptr)",
-        "note": "Check where resource is in loaded in memory, Params: resource 'sounds.qvm','AI/303.qvm' and address of res file"
+        "signature": "int IsResourceLoaded(char* resourcePath, int** outEntry)",
+        "note": "Checks whether a virtual resource is already loaded and optionally returns its table entry. Params: resourcePath = virtual path to test, outEntry = receives the resource-table entry if found. RETURNS non-zero when loaded. Uses the hash-lookup helpers 0x4B1020/0x4B5AF0/0x4B5B30."
       }
     },
     {
@@ -356,8 +356,8 @@
         "hash": "004B18B0",
         "address": 4921520,
         "name": "ResourcePackUnpack",
-        "signature": "int ResourcePackUnpack(char *res_file,char **buffer)",
-        "note": "Packs and return address or Unpacks resource file into memory depending upon resource type, Params: resource 'sounds.res','terrain.res', and buffer."
+        "signature": "int ResourcePackUnpack(char* resFile, char** outBuffer)",
+        "note": "Unpacks a PACKED resource file (compressed/packed container format) into memory. Params: resFile = virtual path of the packed resource, outBuffer = receives unpacked data pointer. RETURNS size/handle on success. Companion to Resource_Unpack which handles raw entries."
       }
     },
     {
@@ -365,8 +365,8 @@
         "hash": "004B16D0",
         "address": 4921040,
         "name": "ResourceUnpack",
-        "signature": "void ResourceUnpack(int* res_ptr, int res_addr, int res_size)",
-        "note": "Unpacks resource file into memory, Params: Resource ptr, address where to unpack (Allocate using Mem_Alloc) and size of resource."
+        "signature": "void ResourceUnpack(int* resPtr, int destAddr, int resSize)",
+        "note": "Unpacks a raw resource ENTRY previously obtained from the resource table into a destination address. Params: resPtr = resource-table entry, destAddr = destination memory address, resSize = bytes to unpack. Use after Resource_Load when you need the data at a specific address."
       }
     },
     {
@@ -437,8 +437,8 @@
         "hash": "004071E0",
         "address": 4223456,
         "name": "WeaponConfigRead",
-        "signature": "int WeaponConfigRead(int p1,char *cfg_file)",
-        "note": "Read weapon config file into memory, Params: p1 is 0, cfg_file is 'weaponconfig.qvm'"
+        "signature": "int WeaponConfigRead(int context, char* cfgText)",
+        "note": "Reads/compiles a WEAPON CONFIG text: strlen-copies cfgText into the engine's static config buffer (0x5690F0) then hands it to ConfigCompile (0x4F0CF0) - the compiled task list drives weapon definitions (pairs with DefineHumanPlayerWeapon* natives). Params: context = compile context, cfgText = null-terminated weapon config source text. RETURNS compiled handle/status (0 on failure)."
       }
     },
     {
@@ -464,8 +464,8 @@
         "hash": "004C0200",
         "address": 4981248,
         "name": "ScriptBufInit",
-        "signature": "void ScriptBufInit(int *buff_arr1,int buff_arr2,int buff,int buff_size)",
-        "note": "Init buffer for scripts, Params: buffers with last param as size."
+        "signature": "void ScriptBufInit(int* buf1, int buf2, int buf, int bufSize)",
+        "note": "Initializes the four script-buffer control fields used by the script engine (pure field writer, no calls). Params: buf1/buf2 = buffer structure pointers, buf = data buffer, bufSize = its size. Call before first use of a script buffer."
       }
     },
     {
@@ -581,8 +581,8 @@
         "hash": "004A53B3",
         "address": 4871091,
         "name": "GameDataSymbolLoad",
-        "signature": "int GameDataSymbolLoad(char* sym_buf,char* sym_path,char* sym_name)",
-        "note": "Load game data symbol to buffer for game like internal vairables,UI controls,timers etc. Params: like (buf,\"LOCAL:models/%s.mef\",\"000_02_1\")"
+        "signature": "int GameDataSymbolLoad(char* symBuf, char* symPath, char* symName)",
+        "note": "Parses game-data SYMBOL DEFINITIONS from a buffer into the symbol table: tokenizes via 0x4A7720 with per-name limit 0x42 (66 bytes) and count cap 0x7FFFFFFF, null-terminates each parsed name. Params: symBuf = symbol buffer base, symPath = source path ref, symName = initial name entry. RETURNS parse status. Feeds the table that Symbol_Register*/GameData_SymbolRemove operate on."
       }
     },
     {
@@ -599,8 +599,8 @@
         "hash": "004B7EE0",
         "address": 4947680,
         "name": "SymbolRegisterBool8",
-        "signature": "void SymbolRegisterBool8(int **sym_buf,int sym_addr)",
-        "note": "Register new symbol of type 'Boolean' for game like internal vairables,UI controls,timers etc."
+        "signature": "void SymbolRegisterBool8(int** table, char* name)",
+        "note": "Registers a bool8 (byte 0/1) game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7F00) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax."
       }
     },
     {
@@ -608,8 +608,8 @@
         "hash": "004B7E80",
         "address": 4947584,
         "name": "SymbolRegisterInt16",
-        "signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr)",
-        "note": "Register new symbol of type 'Int16' for game like internal vairables,UI controls,timers etc."
+        "signature": "void SymbolRegisterInt16(int** table, char* name)",
+        "note": "Registers a int16 game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7F20-family) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax."
       }
     },
     {
@@ -617,8 +617,8 @@
         "hash": "004B7FA0",
         "address": 4947872,
         "name": "SymbolRegisterInt32",
-        "signature": "void SymbolRegisterInt32(int **sym_buf,int sym_addr)",
-        "note": "Register new symbol of type 'Int32' for game like internal vairables,UI controls,timers etc."
+        "signature": "void SymbolRegisterInt32(int** table, char* name)",
+        "note": "Registers a int32 game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7F40-family) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax."
       }
     },
     {
@@ -626,8 +626,8 @@
         "hash": "004B7FC0",
         "address": 4947904,
         "name": "SymbolRegisterReal32",
-        "signature": "void SymbolRegisterReal32(int **sym_buf,int sym_addr)",
-        "note": "Register new symbol of type 'Real32 aka Float' for game like internal vairables,UI controls,timers etc."
+        "signature": "void SymbolRegisterReal32(int** table, char* name)",
+        "note": "Registers a real32 (float) game-data symbol: thin thunk that calls the core registrar QTaskHashTableSet (0x4BAAC0) with a fixed argument tail (1,1,0,1,handler 0x4B7FA0-family) binding 'name' to its typed getter/setter handler. Params: table = symbol table, name = symbol name string. After registration scripts can read/write the symbol through the standard script-variable syntax."
       }
     },
     {
@@ -635,8 +635,8 @@
         "hash": "0048A440",
         "address": 4760640,
         "name": "LoadingScreenShow",
-        "signature": "void LoadingScreenShow(int loading_type)",
-        "note": "Show menu loading screen before loading level."
+        "signature": "void LoadingScreenShow(int picVariant)",
+        "note": "Shows the LOADING SCREEN: loads LOCAL:menusystem/loadingscreen.res then displays loading.pic - or loading_us.pic on USA country builds (pairs with LevelFlow_IsCountryUSA), wires up display-mode functions and flushes resources. Param: picVariant = loading screen selection/index. Use before long loads to give visual feedback."
       }
     },
     {
@@ -644,8 +644,8 @@
         "hash": "004BAAC0",
         "address": 4958912,
         "name": "QTaskHashTableSet",
-        "signature": "void QTaskHashTableSet(int** symbol,int ptr_func,int symbol_val,int p4,int p5,int p6,int p7)",
-        "note": "Core registrar used by GAME_DEFINE_OPTIONS: inserts (name/address) pairs into the native-function hash table. This is the function every script-command registration site calls - do not invoke directly unless building a custom registrar."
+        "signature": "void QTaskHashTableSet(int** table, void* handler, int nameVal, int p4, int p5, int p6, int p7)",
+        "note": "THE CORE REGISTRAR: inserts an entry into the task/hash table binding a name-value pair to a handler callback. All 7 stack args confirmed by disassembly header (arg_18h..arg_3Ch). Every SymbolRegister* thunk (e.g. 0x4B7EE0 pushes 1,1,0,1,addr,handler,table -> this) and every GAME_DEFINE_OPTIONS registration routes here. Params: table = target hash table, handler = callback invoked for the symbol, nameVal = name/value ref, p4-p7 = type/flag slots (see SymbolRegister thunks for known values)."
       }
     },
     {
@@ -653,8 +653,8 @@
         "hash": "00413BB0",
         "address": 4275120,
         "name": "WeaponsCountGet",
-        "signature": "int WeaponsCountGet()",
-        "note": "RETURNS the number of weapon entries defined for the human player (cycle table count at 0x56DF18 written by DefineHumanPlayerWeaponCycle). Takes no args. Use to bounds-check weapon indexes."
+        "signature": "int Weapons_CountGet()",
+        "note": "RETURNS the number of weapons defined for the human player: reads global counter 0x57B18C (exactly `mov eax,[0x57B18C]; ret`). That counter is written by the DefineHumanPlayerWeaponCycle definition parser - so this reflects the current weapon-cycle list length. Use to bounds-check weapon indexes before Weapon_GunPickup-style calls."
       }
     },
     {
@@ -662,8 +662,8 @@
         "hash": "0045FFC0",
         "address": 4587456,
         "name": "WeaponGunPickup",
-        "signature": "void WeaponGunPickup(int param_ptr, int* type_ptr)",
-        "note": "Weapon pickup from ground, Param: param_ptr is in defined in Constants as 'gun_pickup_ptr', set Weapon Id in type_ptr like *(0x19F720) = 5"
+        "signature": "void Weapon_GunPickup(void* player, void* pickupEntity)",
+        "note": "Gives a GUN pickup to the player: checks the player's already-carried flag (player+0xCF5), reads the weapon id from pickupEntity+8 -> word +0x1C, validates the weapon category via 0x401CF0, hands the weapon over (0x477BF0/0x477C50) and plays the 'weaponpickup_1' sound (0x47CE00/0x4E7200). Params: player = player/Human struct ptr, pickupEntity = the picked-up world entity. Use for custom weapon pickups."
       }
     },
     {
@@ -671,8 +671,8 @@
         "hash": "0045FF80",
         "address": 4587392,
         "name": "WeaponAmmoPickup",
-        "signature": "void WeaponAmmoPickup(int param_ptr, int* type_ptr)",
-        "note": "Ammo pickup from ground, Param: param_ptr is in defined in Constants as 'gun_pickup_ptr', set Ammo Id in type_ptr like *(0x19F820) = 3"
+        "signature": "void Weapon_AmmoPickup(void* player, void* pickupEntity)",
+        "note": "Gives an AMMO pickup to the player (same struct conventions as Weapon_GunPickup: player carry-flags and pickup-entity fields drive the grant; plays the pickup sound). Params: player = player struct ptr, pickupEntity = ammo world entity. Use for custom ammo pickups."
       }
     },
     {
@@ -689,8 +689,8 @@
         "hash": "00463760",
         "address": 4601696,
         "name": "HumanViewCam",
-        "signature": "void HumanViewCam(int soldier_ptr,int cam_type)",
-        "note": "Camera view for Human Player/Soldier , Param: soldier_ptr is pointer to Entity you are changing and cam_type is [1-6]"
+        "signature": "void Human_ViewCam(void* human, int camValue)",
+        "note": "Sets the human's VIEW-CAMERA selector: stores camValue into human struct offset +0x4F0 (verified: mov [ecx+0x4F0],eax; ret - 5-byte setter). Params: human = Human/soldier struct ptr, camValue = camera mode index. Use to switch a soldier's view/camera state directly."
       }
     },
     {
@@ -698,8 +698,8 @@
         "hash": "004659E0",
         "address": 4610528,
         "name": "HumanTaskViewReset",
-        "signature": "void HumanTaskViewReset(int human_ptr)",
-        "note": "Reset Human view angle after changing it by Zoom (Dragunov,Binoculars). "
+        "signature": "void Human_TaskViewReset(void* human)",
+        "note": "Resets the human's VIEW TANGENT fields to retail defaults: computes tan() of the half-FOV globals 0x5335E8/0x5339C0 (the same globals ENHANCER::FOV_SET writes) and stores them into human+0x1E4 and human+0x1E8, clearing human+0x1EC. Param: human = Human/soldier struct ptr. This is THE retail restore path - call after custom FOV/binocular zoom to return to normal view."
       }
     },
     {
