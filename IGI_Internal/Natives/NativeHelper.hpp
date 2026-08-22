@@ -155,51 +155,51 @@ namespace IGI {
 	}
 
 	namespace MISC {
-		/// <summary>Set game render frame rate limit (0x00407130).</summary>
+		/// <summary>Set game render frame rate limit (0x00402820).</summary>
 		NATIVE_DECL void FRAMES_SET(int frames) { NATIVE_INVOKE<Void>((Void)HASH::FRAMES_SET, frames); }
-		/// <summary>Delete active cutscene buffer (0x00407880).</summary>
+		/// <summary>Delete active cutscene buffer (0x00415AB0).</summary>
 		NATIVE_DECL void CUTSCENE_DELETE() { NATIVE_INVOKE<Void>((Void)HASH::CUTSCENE_DELETE, (const char*)local_buf); }
-		/// <summary>Load game materials (0x00407980).</summary>
+		/// <summary>Load game materials (0x00408350).</summary>
 		NATIVE_DECL void GAMEMATERIAL_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::GAMEMATERIAL_LOAD); }
-		/// <summary>Load magic objects definition (0x004079D0).</summary>
+		/// <summary>Load magic objects definition (0x004C4930).</summary>
 		NATIVE_DECL void MAGIC_OBJECT_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::MAGIC_OBJ_LOAD, GAME_MAGIC_OBJ); }
-		/// <summary>Load animation trigger definitions (0x00407A80).</summary>
+		/// <summary>Load animation trigger definitions (0x004EC0C0).</summary>
 		NATIVE_DECL void ANIM_TRIGGER_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::ANIM_TRIGGER_LOAD, GAME_ANIM_TRIGGER); }
-		/// <summary>Parse animation triggers (0x00407AE0).</summary>
+		/// <summary>Parse animation triggers (0x004EC070).</summary>
 		NATIVE_DECL void ANIM_TRIGGER_PARSE(uint32_t* path) { NATIVE_INVOKE<Void>((Void)HASH::ANIM_TRIGGER_PARSE, path); }
-		/// <summary>Load physics objects (0x00407BC0).</summary>
+		/// <summary>Load physics objects (0x004EE030).</summary>
 		NATIVE_DECL void PHYSICS_OBJECT_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::PHYSICS_OBJ_LOAD, GAME_PHYSICS_OBJ); }
-		/// <summary>Parse physics object configuration file (0x00407C20).</summary>
+		/// <summary>Parse physics object configuration file (0x004EDFE0).</summary>
 		NATIVE_DECL void PHYSICS_OBJ_TYPE_PARSE(const char* cfg_file) { NATIVE_INVOKE<Void>((Void)HASH::PHYSICS_OBJ_TYPE_PARSE, cfg_file); }
 		NATIVE_DECL void PHYSICS_OBJ_TYPE_PARSE(string cfg_file) { PHYSICS_OBJ_TYPE_PARSE(cfg_file.c_str()); }
-		/// <summary>Read dynamic rigid cube object definition (0x00408540).</summary>
+		/// <summary>Read dynamic rigid cube object definition (0x004C48E0).</summary>
 		NATIVE_DECL void RIGID_DYNCUBE_OBJ_READ(uint32_t* cfg_file) { NATIVE_INVOKE<Void>((Void)HASH::RIGID_DYNCUBE_OBJ_READ, cfg_file); }
-		/// <summary>Add message to internal game log (0x00404C70).</summary>
+		/// <summary>Add message to internal game log (0x004BBC30).</summary>
 		NATIVE_DECL void LOG_ADD(const char* log_msg) { NATIVE_INVOKE<Void>((Void)HASH::LOG_ADD, log_msg); }
-		/// <summary>Clear HUD status message (0x00407760).</summary>
+		/// <summary>Clear HUD status message (0x00485AD0).</summary>
 		NATIVE_DECL void STATUS_MESSAGE_CLEAR() { NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_CLEAR, (const char*)local_buf); }
-		/// <summary>Show custom HUD status message (0x00424D00).</summary>
+		/// <summary>Show custom HUD status message (0x00485970).</summary>
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg, const char* status_sprite) { NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_SHOW, *(PINT)0x00A758AC, status_msg, status_sprite, &status_byte); }
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg) { STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); std::this_thread::sleep_for(10s); MISC::STATUS_MESSAGE_CLEAR(); }
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(string status_msg) { STATUS_MESSAGE_SHOW(status_msg.c_str()); }
 		NATIVE_DECL void STATUS_MESSAGE_SHOW_TEXT(const char* status_msg) { STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
 		NATIVE_DECL void STATUS_MESSAGE_SHOW_MONITOR_TEXT(const char* status_msg) { STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
-		/// <summary>Display a warning popup dialog in engine (0x004043A0).</summary>
+		/// <summary>Display a warning popup dialog in engine (0x004AF810).</summary>
 		NATIVE_DECL void WARNING_SHOW(const char* warn_msg) { NATIVE_INVOKE<Void>((Void)HASH::WARNING_SHOW, warn_msg); }
 		NATIVE_DECL void WARNING_SHOW(string warn_msg) { WARNING_SHOW(warn_msg.c_str()); }
-		/// <summary>Display an error popup dialog in engine (0x00404360).</summary>
+		/// <summary>Display an error popup dialog in engine (0x004AF7B0).</summary>
 		NATIVE_DECL void ERROR_SHOW(const char* err_msg) { NATIVE_INVOKE<Void>((Void)HASH::ERROR_SHOW, err_msg); }
 		NATIVE_DECL void ERROR_SHOW(string err_msg) { ERROR_SHOW(err_msg.c_str()); }
-		/// <summary>Show level transition loading screen (0x00407230).</summary>
+		/// <summary>Show level transition loading screen (0x0048A440).</summary>
 		NATIVE_DECL void LOADING_SCREEN_SHOW(int loading_type) { NATIVE_INVOKE<Void>((Void)HASH::LOADING_SCREEN_SHOW, loading_type); }
 		NATIVE_DECL void WARNINGS_DISABLE() { *(PINT)0x00936274 = 0; }
 		NATIVE_DECL void ERRORS_DISABLE() { *(PINT)0x00936268 = 0; }
 	}
 
 	namespace MEMORY {
-		/// <summary>Allocate game engine memory block (0x00404740).</summary>
+		/// <summary>Allocate game engine memory block (0x004B0C60).</summary>
 		NATIVE_DECL address_t ALLOC(int num, int size) { return NATIVE_INVOKE<address_t>((Void)HASH::MEMORY_ALLOC, num, size); }
-		/// <summary>Free game engine memory block (0x00404780).</summary>
+		/// <summary>Free game engine memory block (0x004B0BE0).</summary>
 		NATIVE_DECL void DEALLOC() { NATIVE_INVOKE<Void>((Void)HASH::MEMORY_DEALLOC); }
 	}
 
@@ -212,21 +212,21 @@ namespace IGI {
 		NATIVE_DECL string ACTIVE_NAME_GET() { string name = ""; std::memcpy((void*)name.data(), (void*)PLAYER_BASE_ADDR, PLAYER_NAME_SIZE); return name; }
 		NATIVE_DECL int ACTIVE_MISSION_GET() { byte mission = 1; mission = *(byte*)(PLAYER_BASE_ADDR + PLAYER_ACTIVE_MISSION_OFF); return mission; }
 		NATIVE_DECL void ACTIVE_MISSION_SET(byte mission) { { *(byte*)(PLAYER_ACTIVE_ADDR + PLAYER_ACTIVE_MISSION_OFF) = (byte)mission; } }
-		/// <summary>Check if player profile is active (0x00407F60).</summary>
+		/// <summary>Check if player profile is active (0x00406220).</summary>
 		NATIVE_DECL char* IS_PROFILE_ACTIVE() { return NATIVE_INVOKE<char*>((Void)HASH::PLAYER_PROFILE_ACTIVE); }
 	}
 
 	namespace CONFIG {
-		/// <summary>Read game configuration file (0x00406080).</summary>
+		/// <summary>Read game configuration file (0x00405850).</summary>
 		NATIVE_DECL void READ() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_READ, GAME_CONFIG_FILE); }
 		NATIVE_DECL void READ(const char* config_file) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_READ, config_file); }
-		/// <summary>Write game configuration file (0x004060C0).</summary>
+		/// <summary>Write game configuration file (0x00405BD0).</summary>
 		NATIVE_DECL void WRITE() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_WRITE, GAME_CONFIG_FILE); }
 		NATIVE_DECL void WRITE(const char* config_file) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_WRITE, config_file); }
-		/// <summary>Read weapons configuration file (0x00408160).</summary>
+		/// <summary>Read weapons configuration file (0x004071E0).</summary>
 		NATIVE_DECL void WEAPON_CONFIG_READ() { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_CONFIG_READ, 0, GAME_WEAPON_CONFIG_FILE); }
 		NATIVE_DECL void WEAPON_CONFIG_READ(const char* config_file) { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_CONFIG_READ, 0, config_file); }
-		/// <summary>Compile configuration script file (0x00407FD0).</summary>
+		/// <summary>Compile configuration script file (0x004F0CF0).</summary>
 		NATIVE_DECL int COMPILE(int p1, const char* cfg_file, int p3) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_COMPILE, p1, cfg_file, p3); }
 	}
 
@@ -239,78 +239,78 @@ namespace IGI {
 	}
 
 	namespace GAME {
-		/// <summary>Enable user input processing (0x00408220).</summary>
+		/// <summary>Enable user input processing (0x00415830).</summary>
 		NATIVE_DECL void INPUT_ENABLE() { NATIVE_INVOKE<Void>((Void)HASH::INPUT_ENABLE, (const char*)local_buf); }
-		/// <summary>Disable user input processing (0x00408250).</summary>
+		/// <summary>Disable user input processing (0x004157D0).</summary>
 		NATIVE_DECL void INPUT_DISABLE() { NATIVE_INVOKE<Void>((Void)HASH::INPUT_DISABLE, (const char*)local_buf); }
 		NATIVE_DECL void QUIT() { *(PINT)0x005C8DE8 = 0; }
 		/// <summary>Invoke menu manager and load menu script (0x00418B00).</summary>
 		NATIVE_DECL int* MENU_MANAGER(int menu_data, const char* menu_str, char p3 = '\x1', char p4 = '\x1', int p5 = 1) {
 			return NATIVE_INVOKE<int*>((Void)HASH::MENU_MANAGER, menu_data, menu_str, p3, p4, p5);
 		}
-		/// <summary>Define engine options (0x00405820).</summary>
+		/// <summary>Define engine options (0x004B8890).</summary>
 		NATIVE_DECL void DEFINE_OPTIONS(int** option_str, int option_func_addr, int opt1, int opt2) {
 			NATIVE_INVOKE<Void>((Void)HASH::GAME_DEFINE_OPTIONS, option_str, option_func_addr, opt1, opt2);
 		}
-		/// <summary>Load a data symbol (0x004052F0).</summary>
+		/// <summary>Load a data symbol (0x004A53B3).</summary>
 		NATIVE_DECL int DATA_SYMBOL_LOAD(char* sym_buf, const char* sym_path, const char* sym_name) {
 			return NATIVE_INVOKE<int>((Void)HASH::GAME_DATA_SYMBOL_LOAD, sym_buf, sym_path, sym_name);
 		}
-		/// <summary>Remove a data symbol (0x004053B0).</summary>
+		/// <summary>Remove a data symbol (0x004B80A0).</summary>
 		NATIVE_DECL void DATA_SYMBOL_REMOVE(char* sym_buf) {
 			NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REMOVE, sym_buf);
 		}
-		/// <summary>Register boolean symbol (0x004055F0).</summary>
+		/// <summary>Register boolean symbol (0x004B7EE0).</summary>
 		NATIVE_DECL void DATA_SYMBOL_REGISTER_BOOL8(int** sym_buf, int sym_addr) {
 			NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_BOOL8, sym_buf, sym_addr);
 		}
-		/// <summary>Register 16-bit integer symbol (0x00405610).</summary>
+		/// <summary>Register 16-bit integer symbol (0x004B7E80).</summary>
 		NATIVE_DECL void DATA_SYMBOL_REGISTER_INT16(int** sym_buf, int sym_addr) {
 			NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_INT16, sym_buf, sym_addr);
 		}
-		/// <summary>Register 32-bit integer symbol (0x00405630).</summary>
+		/// <summary>Register 32-bit integer symbol (0x004B7FA0).</summary>
 		NATIVE_DECL void DATA_SYMBOL_REGISTER_INT32(int** sym_buf, int sym_addr) {
 			NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_INT32, sym_buf, sym_addr);
 		}
-		/// <summary>Register 32-bit float symbol (0x00405650).</summary>
+		/// <summary>Register 32-bit float symbol (0x004B7FC0).</summary>
 		NATIVE_DECL void DATA_SYMBOL_REGISTER_REAL32(int** sym_buf, int sym_addr) {
 			NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_REAL32, sym_buf, sym_addr);
 		}
 	}
 
 	namespace LEVEL {
-		/// <summary>Restart the current level (0x00407170).</summary>
+		/// <summary>Restart the current level (0x00416FE0).</summary>
 		NATIVE_DECL void RESTART() { auto cleanup = (int(__cdecl *)(int))0x00402820; NATIVE_INVOKE<Void>((Void)HASH::LEVEL_RESTART); cleanup(0x1E); *(int*)(0x00567C8C + 0x28) = 4;}
-		/// <summary>Load a level by index (0x004073C0).</summary>
+		/// <summary>Load a level by index (0x004F0E10).</summary>
 		NATIVE_DECL void LOAD() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_LOAD, 0x0057B568, 35); }
 		NATIVE_DECL int GET() { return READ_PTR(0x00539560); }
 		NATIVE_DECL void SET(int level) { *(PINT)0x00539560 = (level < 1 || level > GAME_LEVEL_MAX) ? 1 : level; }
-		/// <summary>Start level execution (0x00407510).</summary>
+		/// <summary>Start level execution (0x00415B30).</summary>
 		NATIVE_DECL void START(int p1 = 0) { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_START, p1); }
-		/// <summary>Quit level / return to menu (0x00407720).</summary>
+		/// <summary>Quit level / return to menu (0x00416550).</summary>
 		NATIVE_DECL void QUIT_GAME() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_QUIT); }
 	}
 
 	namespace HUMAN {
-		/// <summary>Read player hit point value (0x00412850).</summary>
+		/// <summary>Read player hit point value (0x00416D80).</summary>
 		NATIVE_DECL uint32_t PLAYER_XP_HIT() {
 			const uint8_t hit_value = NATIVE_INVOKE<uint8_t>((Void)HASH::PLAYER_XP_HIT);
 			return static_cast<uint32_t>(hit_value);
 		}
-		/// <summary>Reset human player view state (0x00414430).</summary>
+		/// <summary>Reset human player view state (0x004659E0).</summary>
 		NATIVE_DECL void TASK_VIEW_RESET() {
 			const int human_player = READ_PTR(humanplayer_ptr);
 			if (human_player != 0)
 				NATIVE_INVOKE<Void>((Void)HASH::HUMAN_TASK_VIEW_RESET, human_player);
 		}
-		/// <summary>Load human player model and state (0x00408590).</summary>
+		/// <summary>Load human player model and state (0x004137A0).</summary>
 		NATIVE_DECL void PLAYER_LOAD() { NATIVE_INVOKE<Void>((Void)HASH::HUMANPLAYER_LOAD); }
 		NATIVE_DECL void UNLIMITED_HEALTH_SET() { GT_WriteNOP(PLAYER_XPL_HIT_ADDR, 6); }
-		/// <summary>Get hit damage calculation (0x00414810).</summary>
+		/// <summary>Get hit damage calculation (0x00416D80).</summary>
 		NATIVE_DECL uint32_t HIT_DAMAGE_GET() { return NATIVE_INVOKE<uint32_t>((Void)HASH::HUMAN_HIT_DAMAGE); }
-		/// <summary>Set human camera view mode (0x004153B0).</summary>
+		/// <summary>Set human camera view mode (0x00463760).</summary>
 		NATIVE_DECL void CAM_VIEW_SET(int cam_type) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_CAM_VIEW, (int)READ_PTR(humanplayer_ptr), cam_type); }
-		/// <summary>Find next camera view target (0x004153E0).</summary>
+		/// <summary>Find next camera view target (0x004828D0).</summary>
 		NATIVE_DECL void FIND_NEXT_CAMERA(int human_addr) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_FIND_NEXT_CAMERA, human_addr); }
 	}
 
@@ -326,7 +326,7 @@ namespace IGI {
 		NATIVE_DECL HumanSoldier FIND(string model_id) { return g_Soldier.FindSoldier(model_id); }
 		NATIVE_DECL void DEBUG_DATA(HumanSoldier& soldier) { MISC::STATUS_MESSAGE_SHOW(soldier.DebugSoldierData().c_str()); std::this_thread::sleep_for(7s); MISC::STATUS_MESSAGE_CLEAR(); }
 		NATIVE_DECL void DEBUG_DATA_LIST(HumanSoldier& soldier) { soldier.DebugSoldierDataList(); }
-		/// <summary>Execute soldier script task (0x00414A90).</summary>
+		/// <summary>Execute soldier script task (0x0045C440).</summary>
 		NATIVE_DECL void EXECUTE(int soldier_ptr, int soldier_addr) { NATIVE_INVOKE<Void>((Void)HASH::SOLDIER_EXECUTE, soldier_ptr, soldier_addr); }
 		NATIVE_DECL void EXECUTE(HumanSoldier& soldier) { g_Soldier.ExecuteSoldier(soldier.GetSoldierId()); }
 		NATIVE_DECL void EXECUTE(soldier_t soldier_id) { g_Soldier.ExecuteSoldier(soldier_id); }
@@ -337,15 +337,15 @@ namespace IGI {
 
 	namespace WEAPON {
 		NATIVE_DECL void UNLIMITED_AMMO_SET(bool enable) { *(PINT)0x0056E214 = enable; }
-		/// <summary>Open weapon type definition (0x00408070).</summary>
+		/// <summary>Open weapon type definition (0x00413B70).</summary>
 		NATIVE_DECL void TYPE_OPEN() { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_TYPE_OPEN); }
-		/// <summary>Open ammo type definition (0x00408100).</summary>
+		/// <summary>Open ammo type definition (0x0047CAB0).</summary>
 		NATIVE_DECL void AMMO_TYPE_OPEN() { NATIVE_INVOKE<Void>((Void)HASH::AMMO_TYPE_OPEN); }
-		/// <summary>Get total available weapon count (0x004081B0).</summary>
+		/// <summary>Get total available weapon count (0x00413BB0).</summary>
 		NATIVE_DECL int TOTAL_COUNT() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
-		/// <summary>Perform gun pickup (0x00415A50).</summary>
+		/// <summary>Perform gun pickup (0x0045FFC0).</summary>
 		NATIVE_DECL void GUN_PICKUP(int weapon_id) { GUN_PICKUP_SET(weapon_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, READ_PTR(gun_pickup_ptr), GUN_PICKUP_PTR); }
-		/// <summary>Perform ammo pickup (0x00415A70).</summary>
+		/// <summary>Perform ammo pickup (0x0045FF80).</summary>
 		NATIVE_DECL void AMMO_PICKUP(int ammo_id) { AMMO_PICKUP_SET(ammo_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_AMMO_PICKUP, READ_PTR(gun_pickup_ptr), AMMO_PICKUP_PTR); }
 		NATIVE_DECL void WEAPON_PICKUP(int weapon_id) { int ammo_id = weapons_ammo_list.at(weapon_id); GUN_PICKUP(weapon_id); AMMO_PICKUP(ammo_id); }
 	}
@@ -381,24 +381,24 @@ namespace IGI {
 		NATIVE_DECL void MATERIAL_INFO_SAVE(const char* file) { g_Resource->SaveGameResource(file, GAME_RESOURCE_MTP); }
 		NATIVE_DECL void OBJECT_INFO_SAVE(const char* file) { g_Resource->SaveGameResource(file, GAME_RESOURCE_QVM); }
 		NATIVE_DECL void MEF_EXTRACT() { g_Resource->ExtractResourceFile(GAME_RESOURCE_MEF); }
-		/// <summary>Check if resource is currently loaded (0x00405230).</summary>
+		/// <summary>Check if resource is currently loaded (0x004B5B90).</summary>
 		NATIVE_DECL bool IS_LOADED(const char* resource_file) { return NATIVE_INVOKE<bool>((Void)HASH::RESOURCE_IS_LOADED, resource_file, (int*)&resource_file); }
 		NATIVE_DECL bool IS_LOADED(string resource) { return IS_LOADED(resource.c_str()); }
 		NATIVE_DECL bool IS_LOADED(Resource& resource) { return IS_LOADED(resource.name.c_str()); }
-		/// <summary>Load resource into memory (0x004051B0).</summary>
+		/// <summary>Load resource into memory (0x004B5F00).</summary>
 		NATIVE_DECL int* LOAD(const char* resource_file, char** buffer) { return NATIVE_INVOKE<int*>((Void)HASH::RESOURCE_LOAD, resource_file, buffer); }
 		NATIVE_DECL int* LOAD(string resource_file) { return LOAD(resource_file.c_str(), NULL); }
 		template <typename T>NATIVE_DECL void LOAD(T resource_files) { for (const auto& resource : resource_files) LOAD(resource.c_str()); }
-		/// <summary>Unload resource from memory (0x004051F0).</summary>
+		/// <summary>Unload resource from memory (0x004B6380).</summary>
 		NATIVE_DECL void UNLOAD(const char* resource_file) { NATIVE_INVOKE<Void>((Void)HASH::RESOURCE_UNLOAD, resource_file); }
 		NATIVE_DECL void UNLOAD(string resource_file) { UNLOAD(resource_file.c_str()); }
 		template <typename T>NATIVE_DECL void UNLOAD(T resource_files) { for (const auto& resource : resource_files) if (IS_LOADED(resource)) UNLOAD(resource); else LOG_ERROR("Resource '%s' cannot be loaded", resource.c_str()); }
-		/// <summary>Flush resource cache (0x00405220).</summary>
+		/// <summary>Flush resource cache (0x004B63D0).</summary>
 		NATIVE_DECL void FLUSH(int resource_addr) { NATIVE_INVOKE<Void>((Void)HASH::RESOURCE_FLUSH, resource_addr); }
-		/// <summary>Unpack packed archive resource (0x00405170).</summary>
+		/// <summary>Unpack packed archive resource (0x004B18B0).</summary>
 		NATIVE_DECL int UNPACK(const char* resource_file, char** buffer) { return NATIVE_INVOKE<int>((Void)HASH::RESOURCE_PACK_UNPACK, resource_file, buffer); }
 		NATIVE_DECL int UNPACK(string resource_file) { return UNPACK(resource_file.c_str(), NULL); }
-		/// <summary>Decompress resource data (0x00404C10).</summary>
+		/// <summary>Decompress resource data (0x004B16D0).</summary>
 		NATIVE_DECL void UNPACK(int* res_ptr, int res_addr, int res_size) { NATIVE_INVOKE<Void>((Void)HASH::RESOURCE_UNPACK, res_ptr, res_addr, res_size); }
 		NATIVE_DECL address_t FIND(const char* resource_name) { return g_Resource->FindGameResource(resource_name); }
 		NATIVE_DECL address_t FIND(string resource_name) { return FIND(resource_name.c_str()); }
@@ -426,95 +426,95 @@ namespace IGI {
 		NATIVE_DECL int GET_MAX_NODES(graph_t graph_id) { return g_Graph.GetMaxNodes(graph_id); }
 		NATIVE_DECL int GET_TOTAL_NODES(graph_t graph_id) { return g_Graph.GetTotalNodes(graph_id); }
 		NATIVE_DECL void DOT_SAVE_GRAPHS(string node_shape, string node_color, bool remove_source) { g_Graph.DOT_SaveGraphs(node_shape, node_color, remove_source); }
-		/// <summary>Open navigation graph for level (0x00412490).</summary>
+		/// <summary>Open navigation graph for level (0x004F9FF0).</summary>
 		NATIVE_DECL void OPEN(uint32_t level, const char* graph_str) { NATIVE_INVOKE<Void>((Void)HASH::GRAPH_OPEN, level, graph_str); }
 	}
 
 	namespace QTASK {
-		/// <summary>Update task list (0x00405BF0).</summary>
+		/// <summary>Update task list (0x004F0E90).</summary>
 		NATIVE_DECL void UPDATE() { NATIVE_INVOKE<Void>((Void)HASH::QTASK_UPDATE); }
-		/// <summary>Update specific task array (0x00405C30).</summary>
+		/// <summary>Update specific task array (0x00401B20).</summary>
 		NATIVE_DECL void UPDATE_LIST(int* qtask_list) { NATIVE_INVOKE<Void>((Void)HASH::QTASK_UPDATE_LIST, qtask_list); }
-		/// <summary>Reset task hash table (0x00405490).</summary>
+		/// <summary>Reset task hash table (0x004B0D90).</summary>
 		NATIVE_DECL void RESET() { NATIVE_INVOKE<Void>((Void)HASH::QHASH_RESET); }
-		/// <summary>Initialize task hash (0x00405440).</summary>
+		/// <summary>Initialize task hash (0x004B0D60).</summary>
 		NATIVE_DECL void HASH_INIT(int hash_val) { NATIVE_INVOKE<Void>((Void)HASH::QHASH_INIT, hash_val); }
-		/// <summary>Set task hash value (0x00405450).</summary>
+		/// <summary>Set task hash value (0x004B0D40).</summary>
 		NATIVE_DECL void HASH_VAL_SET() { NATIVE_INVOKE<Void>((Void)HASH::QHASH_VAL_SET); }
-		/// <summary>Get task hash value (0x00405470).</summary>
+		/// <summary>Get task hash value (0x004B0DB0).</summary>
 		NATIVE_DECL int	 HASH_VAL_GET() { return NATIVE_INVOKE<int>((Void)HASH::QHASH_VAL_GET); }
-		/// <summary>Configure task hash table entry (0x00405890).</summary>
+		/// <summary>Configure task hash table entry (0x004BAAC0).</summary>
 		NATIVE_DECL void HASH_TABLE_SET(int** symbol, int ptr_func, int symbol_val, int p4, int p5, int p6, int p7) {
 			NATIVE_INVOKE<Void>((Void)HASH::QTASK_HASH_TABLE, symbol, ptr_func, symbol_val, p4, p5, p6, p7);
 		}
 	}
 
 	namespace QFILE {
-		/// <summary>Open file handle (0x00404C80).</summary>
+		/// <summary>Open file handle (0x004A5350).</summary>
 		NATIVE_DECL FILE* OPEN(const char* file, char* mode) { return NATIVE_INVOKE<FILE*>((Void)HASH::FILE_OPEN, file, mode); }
-		/// <summary>Open file handle for read/write (0x00404CE0).</summary>
+		/// <summary>Open file handle for read/write (0x004B1510).</summary>
 		NATIVE_DECL FILE* READ_WRITE(const char* file, char* mode) { return NATIVE_INVOKE<FILE*>((Void)HASH::FILE_READ_WRITE, file, mode); }
 	}
 
 	namespace QVM {
-		/// <summary>Load QVM bytecode file (0x00407E40).</summary>
+		/// <summary>Load QVM bytecode file (0x004B80B0).</summary>
 		NATIVE_DECL int* LOAD(string qvm_file) { g_Utility.Replace(qvm_file, ".qvm", ".qsc"); return NATIVE_INVOKE<int*>((Void)HASH::QVM_LOAD, qvm_file.c_str()); }
-		/// <summary>Read QVM virtual machine state (0x00407E90).</summary>
+		/// <summary>Read QVM virtual machine state (0x004B85B0).</summary>
 		NATIVE_DECL int READ(int qvm_addr) { return NATIVE_INVOKE<int>((Void)HASH::QVM_READ, qvm_addr); }
-		/// <summary>Cleanup QVM virtual machine (0x00407F10).</summary>
+		/// <summary>Cleanup QVM virtual machine (0x004B83D0).</summary>
 		NATIVE_DECL void CLEANUP(int* qvm_addr) { NATIVE_INVOKE<Void>((Void)HASH::QVM_CLEANUP, qvm_addr); }
 		NATIVE_DECL int LOAD_AND_READ(string qvm_file) { auto qvm_addr = LOAD(qvm_file); auto status = READ((int)qvm_addr); CLEANUP(qvm_addr); return status; }
 	}
 
 	namespace SCRIPT {
-		/// <summary>Compile QSC script file (0x00407E30).</summary>
+		/// <summary>Compile QSC script file (0x004B8410).</summary>
 		NATIVE_DECL void COMPILE(string qsc_file) { NATIVE_INVOKE<Void>((Void)HASH::QSCRIPT_COMPILE, qsc_file.c_str()); }
-		/// <summary>Parse QAS assembly file (0x00407DF0).</summary>
+		/// <summary>Parse QAS assembly file (0x004BBCB0).</summary>
 		NATIVE_DECL int PARSE(string qas_file, int mem_addr) { return NATIVE_INVOKE<int>((Void)HASH::QSCRIPT_PARSE, qas_file.c_str(), mem_addr); }
 		NATIVE_DECL int PARSE(string qsc_file, string qas_file) { auto mem_blk = (int*)MEMORY::ALLOC(0x94, 4); char* buff = nullptr; auto res_addr = RESOURCE::LOAD(qsc_file.c_str(), &buff); std::strcpy((char*)mem_blk, qsc_file.data()); mem_blk[0x20] = (int)res_addr; mem_blk[0x21] = (int)buff; mem_blk[0x22] = 0; return PARSE(qas_file, (int)mem_blk); }
 		NATIVE_DECL int PARSE(string qsc_file) { string qas_file = qsc_file; g_Utility.Replace(qas_file, ".qsc", ".qas"); return PARSE(qsc_file, qas_file); }
-		/// <summary>Assemble QAS script into QVM bytecode (0x00407E10).</summary>
+		/// <summary>Assemble QAS script into QVM bytecode (0x004BB270).</summary>
 		NATIVE_DECL int ASSEMBLE(string qas_file, string qvm_file) { return NATIVE_INVOKE<int>((Void)HASH::QSCRIPT_ASSEMBLE, qvm_file.c_str(), qas_file.c_str()); }
 		NATIVE_DECL int ASSEMBLE(string qas_file) { string qvm_file = qas_file; g_Utility.Replace(qas_file, ".qas", ".qvm"); return ASSEMBLE(qas_file, qvm_file); }
-		/// <summary>Cleanup script resources (0x00407E70).</summary>
+		/// <summary>Cleanup script resources (0x004B1AC0).</summary>
 		NATIVE_DECL void CLEANUP(string q_file) { NATIVE_INVOKE<Void>((Void)HASH::QSCRIPT_CLEANUP, q_file.c_str()); }
-		/// <summary>Initialize script system (0x00407DC0).</summary>
+		/// <summary>Initialize script system (0x004F0E50).</summary>
 		NATIVE_DECL void INIT(const char* file_name, int p2 = 0, int p3 = 0, int p4 = 0) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_INIT, file_name, p2, p3, p4); }
-		/// <summary>Set symbol context in script runtime (0x00405290).</summary>
+		/// <summary>Set symbol context in script runtime (0x004B8930).</summary>
 		NATIVE_DECL void SET_SYMBOL_CXT(uint8_t* symbol_name, int** symbol_buf) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_SETSYMBOL_CXT, symbol_name, symbol_buf); }
-		/// <summary>Set task type ID (0x00405860).</summary>
+		/// <summary>Set task type ID (0x004B8810).</summary>
 		NATIVE_DECL void TASK_TYPE_SET(int** task_str, int task_id) { NATIVE_INVOKE<Void>((Void)HASH::TASKTYPE_SET, task_str, task_id); }
-		/// <summary>Remove symbol from runtime (0x00405670).</summary>
+		/// <summary>Remove symbol from runtime (0x004C0460).</summary>
 		NATIVE_DECL void SYMBOL_REMOVE(int* p1, int* symbol_name) { NATIVE_INVOKE<Void>((Void)HASH::SYMBOL_REMOVE, p1, symbol_name); }
-		/// <summary>Check symbol in runtime table (0x004056E0).</summary>
+		/// <summary>Check symbol in runtime table (0x004C0560).</summary>
 		NATIVE_DECL int* SYMBOL_CHECK(int* p1, int** symbol_name, int* p3) { return NATIVE_INVOKE<int*>((Void)HASH::SYMBOL_CHECK, p1, symbol_name, p3); }
-		/// <summary>Initialize script buffer (0x004057A0).</summary>
+		/// <summary>Initialize script buffer (0x004C0200).</summary>
 		NATIVE_DECL void BUF_INIT(int* buff_arr1, int buff_arr2, int buff, int buff_size) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_BUF_INIT, buff_arr1, buff_arr2, buff, buff_size); }
 	}
 
 	namespace GFX {
-		/// <summary>Reset graphics device state (0x004060F0).</summary>
+		/// <summary>Reset graphics device state (0x00403B70).</summary>
 		NATIVE_DECL void RESET() { NATIVE_INVOKE<Void>((Void)HASH::RESET, (const char*)local_buf); }
 	}
 
 	namespace SFX {
-		/// <summary>Enable background music (0x004068C0).</summary>
+		/// <summary>Enable background music (0x00415A10).</summary>
 		NATIVE_DECL void MUSIC_ENABLE() { NATIVE_INVOKE<Void>((Void)HASH::MUSIC_ENABLE, (const char*)local_buf); }
-		/// <summary>Disable background music (0x004068E0).</summary>
+		/// <summary>Disable background music (0x00415A60).</summary>
 		NATIVE_DECL void MUSIC_DISABLE() { NATIVE_INVOKE<Void>((Void)HASH::MUSIC_DISABLE, (const char*)local_buf); }
-		/// <summary>Update audio playback volume (0x004069A0).</summary>
+		/// <summary>Update audio playback volume (0x004158E0).</summary>
 		NATIVE_DECL void VOLUME_UPDATE() { NATIVE_INVOKE<Void>((Void)HASH::MUSIC_UPDATE_VOLUME, (const char*)local_buf); }
-		/// <summary>Set music volume level (0x00406930).</summary>
+		/// <summary>Set music volume level (0x00495E70).</summary>
 		NATIVE_DECL void VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::MUSIC_VOLUME, volume, volume); }
-		/// <summary>Set SFX volume level (0x00406900).</summary>
+		/// <summary>Set SFX volume level (0x00495F30).</summary>
 		NATIVE_DECL void VOLUME_SFX_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::MUSIC_SFX_VOLUME, volume); }
-		/// <summary>Load sound bank / directory (0x004067B0).</summary>
+		/// <summary>Load sound bank / directory (0x004E68D0).</summary>
 		NATIVE_DECL void SOUND_LOAD(const char* sound_dir) { NATIVE_INVOKE<Void>((Void)HASH::SOUND_LOAD, sound_dir); }
 		NATIVE_DECL void SOUND_LOAD(string sound_dir) { SOUND_LOAD(sound_dir.c_str()); }
 	}
 
 	namespace MISSION {
-		/// <summary>Open mission file descriptor (0x00407780).</summary>
+		/// <summary>Open mission file descriptor (0x00484E60).</summary>
 		NATIVE_DECL void OPEN(char** ptr_mission) { NATIVE_INVOKE<Void>((Void)HASH::MISSION_OPEN, ptr_mission); }
 	}
 

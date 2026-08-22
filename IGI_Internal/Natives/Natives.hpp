@@ -71,6 +71,7 @@ namespace IGI {
 		WEAPON_GUN_PICKUP = 0x0045FFC0,
 		WEAPON_AMMO_PICKUP = 0x0045FF80,
 		HUMAN_HIT_DAMAGE = 0x00416D80,
+		// Alias of HUMAN_HIT_DAMAGE: igi.exe fcn.00416D80 reads byte [PlayerPtr+0xE1] and returns it.
 		PLAYER_XP_HIT = 0x00416D80,
 		HUMAN_CAM_VIEW = 0x00463760,
 		HUMAN_FIND_NEXT_CAMERA = 0x004828D0,
@@ -81,6 +82,9 @@ namespace IGI {
 		FILE_READ_WRITE = 0x004B1510,
 		PLAYER_PROFILE_ACTIVE = 0x00406220,
 		SOLDIER_EXECUTE = 0x0045C440,
+		// UNVERIFIED/INVALID (igi.exe r2+Ghidra review): 0x00041502 lies outside .text
+		// (0x401000-0x532510) - invoking it would crash. No verified replacement address
+		// found; per RE.md, unknown is preferable to fabricated. Do NOT invoke.
 		DEBUG_KEYS_ENABLE = 0x0041502,
 		HUMAN_TASK_VIEW_RESET = 0x004659E0,
 		GAME_DATA_SYMBOL_LOAD = 0x004A53B3,
@@ -91,13 +95,22 @@ namespace IGI {
 		GAME_DATA_SYMBOL_REMOVE = 0x004B80A0,
 		LOADING_SCREEN_SHOW = 0x0048A440,
 		QTASK_HASH_TABLE = 0x004BAAC0,
+		// igi.exe fcn.0047CAB0 pushes str."DefineAmmoType" + 0x47CAD0 (script registration).
 		AMMO_TYPE_OPEN = 0x0047CAB0,
+		// igi.exe fcn.004E68D0: 21-byte wrapper -> resource loader fcn.004B1420 with cb 0x4E68F0.
 		SOUND_LOAD = 0x004E68D0,
+		// igi.exe fcn.004C48E0: called from RigidDynCubeObj module (str."RigidDynCubeObj" @0x547F6C).
 		RIGID_DYNCUBE_OBJ_READ = 0x004C48E0,
+		// igi.exe script-command registrar; every AIAction_*/AIFunction_* below is pushed with its
+		// name string into this call from the table at 0x44CCA0-0x44EE50 (verified in igi.exe,
+		// independent of igi2.pdb which is IGI 2-only and used as a naming dictionary).
 		GAME_DEFINE_OPTIONS = 0x004B8890,
 		SCRIPT_BUF_INIT = 0x004C0200,
 
-		// OpenIGI AI Actions (0x44CCA0)
+		// AI Actions/Functions: all 55 addresses verified against igi.exe's own script-command
+		// registration table (0x44CCA0..0x44EE50): each address is pushed together with its exact
+		// name string ("AIAction_Patrol", "AIFunction_SetViewLength", ...) and registered via
+		// GAME_DEFINE_OPTIONS (0x004B8890). Ground truth from IGI 1 binary, not igi2.pdb.
 		AI_ACTION_PATROL = 0x0044D0E0,
 		AI_ACTION_COMBAT = 0x0044D160,
 		AI_ACTION_DEAD = 0x0044D260,
