@@ -59,8 +59,8 @@
         "hash": "004AF7B0",
         "address": 4913072,
         "name": "ErrorShow",
-        "signature": "void ErrorShow(char* err_msg,int code);",
-        "note": "Shows a FATAL ERROR box ('Fatal error:\\n\\n' prefix string at this function) and aborts. Params: err_msg = message text (printf-style content observed), code = severity/exit code observed -1 in retail calls. Do not call casually - retail uses it for unrecoverable errors."
+        "signature": "void ErrorShow(char* format, ...);",
+        "note": "Shows a fatal-error dialog: printf-style FORMAT STRING + variadic args (e.g. push \"Level_Load(): Couldn't load script: %s\"; push scriptPath; call). Param: format = printf-style string, followed by substitution args. Variadic - proven by retail call sites (add esp,8 cleanup) and vsprintf helper fcn.004A5702."
       }
     },
     {
@@ -131,8 +131,8 @@
         "hash": "004BBC30",
         "address": 4963376,
         "name": "LogAdd",
-        "signature": "void LogAdd(char* log_msg,int log_channel);",
-        "note": "Writes a line to the engine debug log. Params: log_msg = text to log, log_channel = log target/channel selector (large 0x404-byte staging buffer inside - long strings are copied safely)."
+        "signature": "void LogAdd(char* format, ...);",
+        "note": "Adds a formatted line to the engine log - printf-style variadic (function formats through vsprintf helper fcn.004A5702; r2 header args sp[0x4..0x8]). Param: format = printf-style string + substitution args."
       }
     },
     {
@@ -428,8 +428,8 @@
         "hash": "004AF810",
         "address": 4913168,
         "name": "WarningShow",
-        "signature": "void WarningShow(char* warn_msg,int code);",
-        "note": "Shows a non-fatal WARNING box. Params: warn_msg = warning text, code = warning class observed -1 in retail calls. Use for recoverable script problems instead of ErrorShow."
+        "signature": "void WarningShow(char* format, ...);",
+        "note": "Shows a warning dialog - printf-style variadic like ErrorShow (retail: push str.\"QTasktype \\\"%s\\\"...\"; push eax; call -> add esp,8). Param: format = printf-style string + substitution args."
       }
     },
     {
