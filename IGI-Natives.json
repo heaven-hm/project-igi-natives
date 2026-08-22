@@ -4,9 +4,9 @@
       "Native": {
         "hash": "004EC070",
         "address": 5161072,
-        "name": "AnimTriggerRead",
-        "signature": "void AnimTriggerRead(uint* path);",
-        "note": "Read Config of AnimTrigger, Params: Path like: 'LOCAL:Animtrigger'"
+        "name": "AnimTrigger_ParseConfigFile",
+        "signature": "void AnimTrigger_ParseConfigFile(uint* path);",
+        "note": "Name from igi.exe error string INSIDE this function: \"AnimTrigger_ParseConfigFile(): Couldn't load script: %s\" @0x54DB98. Parses an animtrigger config file into trigger entries."
       }
     },
     {
@@ -49,9 +49,9 @@
       "Native": {
         "hash": "00415AB0",
         "address": 4283056,
-        "name": "CutsceneDelete",
-        "signature": "void CutsceneDelete(char* buffer);",
-        "note": "Delete current cutscene, Params: Buffer of size 30."
+        "name": "Game_CutsceneDelete",
+        "signature": "void Game_CutsceneDelete(char* buffer);",
+        "note": "Registered by name in igi.exe (@0x415787). Deletes/ends the running cutscene and frees its resources."
       }
     },
     {
@@ -76,9 +76,9 @@
       "Native": {
         "hash": "00408350",
         "address": 4227920,
-        "name": "GameMaterialLoad",
-        "signature": "void GameMaterialLoad(void);",
-        "note": "Load game material.qvm to memory."
+        "name": "GameMaterial_LoadParameters",
+        "signature": "void GameMaterial_LoadParameters(void);",
+        "note": "Name from igi.exe error string inside function: \"GameMaterial_LoadParameters: Couldn't load script \\\"%s\\\"\". Loads game-material parameters from its script."
       }
     },
     {
@@ -103,27 +103,27 @@
       "Native": {
         "hash": "004137A0",
         "address": 4274080,
-        "name": "HumanplayerLoad",
-        "signature": "void HumanplayerLoad(void);",
-        "note": "Load Humanplayer.qvm file to memory."
+        "name": "HumanPlayer_LoadParameters",
+        "signature": "void HumanPlayer_LoadParameters(void);",
+        "note": "Name from igi.exe error string inside function: \"HumanPlayer_LoadParameters: Couldn't load script \\\"%s\\\"\". Loads humanplayer parameters (weapons/ammo/cycle definitions) from script."
       }
     },
     {
       "Native": {
         "hash": "004157D0",
         "address": 4282320,
-        "name": "InputDisable",
-        "signature": "void InputDisable(char* buffer);",
-        "note": "Disable input of player., Params: Buffer of size 30."
+        "name": "Game_DisablePlayerInput",
+        "signature": "void Game_DisablePlayerInput(char* buffer);",
+        "note": "Registered by name in igi.exe (@0x415712). Disables ALL player input (keyboard+mouse) - used by cutscenes/menus. Re-enable with Game_EnablePlayerInput."
       }
     },
     {
       "Native": {
         "hash": "00415830",
         "address": 4282416,
-        "name": "InputEnable",
-        "signature": "void InputEnable(char* buffer);",
-        "note": "Enable input of player., Params: Buffer of size 30."
+        "name": "Game_EnablePlayerInput",
+        "signature": "void Game_EnablePlayerInput(char* buffer);",
+        "note": "Registered by name in igi.exe (@0x415725). Re-enables player input after Game_DisablePlayerInput."
       }
     },
     {
@@ -184,18 +184,18 @@
       "Native": {
         "hash": "00415A60",
         "address": 4282976,
-        "name": "MusicDisable",
-        "signature": "void MusicDisable(char* buffer);",
-        "note": "Disable Game Music, Params:  Buffer of size 30."
+        "name": "Game_DisableMusic",
+        "signature": "void Game_DisableMusic(char* buffer);",
+        "note": "Registered by name in igi.exe (@0x415774). Stops the music engine."
       }
     },
     {
       "Native": {
         "hash": "00415A10",
         "address": 4282896,
-        "name": "MusicEnable",
-        "signature": "void MusicEnable(char* buffer);",
-        "note": "Enable Game Music, Params: Buffer of size 30."
+        "name": "Game_EnableMusic",
+        "signature": "void Game_EnableMusic(char* buffer);",
+        "note": "Registered by name in igi.exe (@0x415761). Starts/resumes the music engine."
       }
     },
     {
@@ -220,18 +220,18 @@
       "Native": {
         "hash": "004158E0",
         "address": 4282592,
-        "name": "MusicUpdateVolume",
-        "signature": "void MusicUpdateVolume(char* buffer);",
-        "note": "Update current music volume, Params: Buffer of size 30."
+        "name": "Game_UpdateVolume",
+        "signature": "void Game_UpdateVolume(char* buffer);",
+        "note": "igi.exe registers it BY NAME: push \"Game_UpdateVolume\"; push 0x4158E0 @0x4156FC via registrar 0x4B8890. Updates music/sfx volumes from profile settings."
       }
     },
     {
       "Native": {
         "hash": "004EDFE0",
         "address": 5169120,
-        "name": "PhysicsObjTypeRead",
-        "signature": "void PhysicsObjTypeRead(char* cfg_file);",
-        "note": "Read Physics obj config file, Params: config file."
+        "name": "PhysicsObjType_ParseConfigFile",
+        "signature": "void PhysicsObjType_ParseConfigFile(char* cfg_file);",
+        "note": "Name from igi.exe error string inside function: \"PhysicsObjType_ParseConfigFile(): Couldn't load script\" @0x54DC7C. Parses a physicsobj type config."
       }
     },
     {
@@ -319,9 +319,9 @@
       "Native": {
         "hash": "004B63D0",
         "address": 4940752,
-        "name": "ResourceFlush",
-        "signature": "void ResourceFlush(int* p1);",
-        "note": "Releases the current holding resources, Params: Params: p1 ??"
+        "name": "Resource_Flush",
+        "signature": "void Resource_Flush(int* p1);",
+        "note": "Name from igi.exe error string inside function: \"Resource_Flush() : Couldn't locate resource at %p\". Flushes/finalizes resource entries."
       }
     },
     {
@@ -337,9 +337,9 @@
       "Native": {
         "hash": "004B6380",
         "address": 4940672,
-        "name": "ResourceUnload",
-        "signature": "void ResourceUnload(int *resource_file);",
-        "note": "Unload resource loaded in memory, Params: resource file like 'sounds.qvm','AI/303.qvm'"
+        "name": "Resource_Unload",
+        "signature": "void Resource_Unload(int *resource_file);",
+        "note": "Name from igi.exe error string inside function: \"Resource_Unload() : Resource '%s' is not loaded.\" Unloads a resource by name/path."
       }
     },
     {
@@ -382,18 +382,18 @@
       "Native": {
         "hash": "004B8930",
         "address": 4950320,
-        "name": "ScriptSetsymbolCxt",
-        "signature": "void ScriptSetsymbolCxt(byte *symbol_name,int** symbol_buf);",
-        "note": "Set symbol context before loading it, Params: symbol_name like 'TaskType_Set'."
+        "name": "Script_SetSymbolContext",
+        "signature": "void Script_SetSymbolContext(byte *symbol_name,int** symbol_buf);",
+        "note": "Name from igi.exe error string inside function: \"Script_SetSymbolContext(): Symbol not found: %s\". Sets the symbol context for subsequent script operations."
       }
     },
     {
       "Native": {
         "hash": "00485AD0",
         "address": 4741840,
-        "name": "StatusMessageClear",
-        "signature": "void StatusMessageClear (char* buffer);",
-        "note": "Clear current status message from screen not from memory, Params: Buffer of size 30."
+        "name": "StatusMessageScreen_ClearMessages",
+        "signature": "void StatusMessageScreen_ClearMessages(char* buffer);",
+        "note": "Registered by name in igi.exe (@0x485AB7): push 0,0,0x485AD0,\"StatusMessageScreen_ClearMessages\" -> registrar. Clears all on-screen status messages."
       }
     },
     {
@@ -410,7 +410,7 @@
         "hash": "004C0460",
         "address": 4981856,
         "name": "SymbolRemove",
-        "signature": "void SymbolRemove(int *p1,int *symbol_name);",
+        "signature": "void SymbolRemo(int *p1,int *symbol_name);",
         "note": "Remove symbol from memory, Params: symbol_name like 'TaskType_Set', p1 pointer ??"
       }
     },
@@ -481,9 +481,9 @@
       "Native": {
         "hash": "004B0C60",
         "address": 4918368,
-        "name": "MemoryAlloc",
-        "signature": "uint MemAlloc(int num, int size);",
-        "note": "Allocate memory for game, Params: Check calloc() in c."
+        "name": "Mem_Alloc",
+        "signature": "void Mem_Alloc(int num, int size);",
+        "note": "Name from igi.exe error string inside function: \"Mem_Alloc() failed to allocate %d bytes. Total allocated by user...\" @0x546E3C. Engine heap allocator - allocates size bytes, returns ptr or 0."
       }
     },
     {
@@ -499,9 +499,9 @@
       "Native": {
         "hash": "00484E60",
         "address": 4738656,
-        "name": "MissionOpen",
-        "signature": "void MissionOpen(char **ptr_file);",
-        "note": "Open current mission file , Params: Pointer to mission file."
+        "name": "Mission_Open",
+        "signature": "void Mission_Open(char **ptr_file);",
+        "note": "Name from igi.exe error string inside function: \"Mission_Open(): Couldn't load script: %s\". Opens a mission definition script and builds its task tree."
       }
     },
     {
