@@ -160,7 +160,6 @@ namespace IGI {
 
 		// IGI Enhancer Patch — verified via Ghidra + Radare2 disassembly of D:\IGI1\igi.exe
 		// Frame timing & main loop
-		APP_RUN = 0x00405850,                  // int __cdecl App_Run(void*) — main engine tick loop
 		// Direct3D display mode enumeration
 		D3D_ENUM_DISPLAY_MODES = 0x0049B4B0,   // int __cdecl D3D_EnumDisplayModes(int) — resolution list builder
 		// Binoculars & HUD overlay drawing

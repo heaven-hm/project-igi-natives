@@ -315,10 +315,8 @@ namespace IGI {
 
 	namespace HUMAN {
 		/// <summary>Read player hit point value (0x00412850).</summary>
-		NATIVE_DECL uint32_t PLAYER_XP_HIT() {
-			const uint8_t hit_value = NATIVE_INVOKE<uint8_t>((Void)HASH::PLAYER_XP_HIT);
-			return static_cast<uint32_t>(hit_value);
-		}
+		// PLAYER_XP_HIT is an alias of HUMAN_HIT_DAMAGE (same native 0x00416D80).
+		NATIVE_DECL uint32_t PLAYER_XP_HIT() { return HIT_DAMAGE_GET(); }
 		/// <summary>Reset human player view state (0x00414430).</summary>
 		NATIVE_DECL void TASK_VIEW_RESET() {
 			const int human_player = READ_PTR(humanplayer_ptr);
