@@ -50,8 +50,8 @@
         "hash": "00415AB0",
         "address": 4283056,
         "name": "Game_CutsceneDelete",
-        "signature": "void Game_CutsceneDelete();",
-        "note": "Registered by name in igi.exe (@0x415787). Deletes/ends the running cutscene and frees its resources."
+        "signature": "void Game_CutsceneDelete(void);",
+        "note": "Deletes/ends the running cutscene and frees its resources. Takes no args."
       }
     },
     {
@@ -59,8 +59,8 @@
         "hash": "004AF7B0",
         "address": 4913072,
         "name": "ErrorShow",
-        "signature": "void ErrorShow(char* err_msg);",
-        "note": "Show error message from game, Params: Error message."
+        "signature": "void ErrorShow(char* err_msg,int code);",
+        "note": "Shows a FATAL ERROR box ('Fatal error:\\n\\n' prefix string at this function) and aborts. Params: err_msg = message text (printf-style content observed), code = severity/exit code observed -1 in retail calls. Do not call casually - retail uses it for unrecoverable errors."
       }
     },
     {
@@ -113,8 +113,8 @@
         "hash": "004157D0",
         "address": 4282320,
         "name": "Game_DisablePlayerInput",
-        "signature": "void Game_DisablePlayerInput();",
-        "note": "Registered by name in igi.exe (@0x415712). Disables ALL player input (keyboard+mouse) - used by cutscenes/menus. Re-enable with Game_EnablePlayerInput."
+        "signature": "void Game_DisablePlayerInput(void);",
+        "note": "Disables ALL player input (keyboard+mouse) - used by cutscenes/menus. Re-enable with Game_EnablePlayerInput."
       }
     },
     {
@@ -122,8 +122,8 @@
         "hash": "00415830",
         "address": 4282416,
         "name": "Game_EnablePlayerInput",
-        "signature": "void Game_EnablePlayerInput();",
-        "note": "Registered by name in igi.exe (@0x415725). Re-enables player input after Game_DisablePlayerInput."
+        "signature": "void Game_EnablePlayerInput(void);",
+        "note": "Re-enables player input after Game_DisablePlayerInput. Takes no args."
       }
     },
     {
@@ -131,8 +131,8 @@
         "hash": "004BBC30",
         "address": 4963376,
         "name": "LogAdd",
-        "signature": "void LogAdd(byte* log_msg);",
-        "note": "Add internal game log message., Params: message to log."
+        "signature": "void LogAdd(char* log_msg,int log_channel);",
+        "note": "Writes a line to the engine debug log. Params: log_msg = text to log, log_channel = log target/channel selector (large 0x404-byte staging buffer inside - long strings are copied safely)."
       }
     },
     {
@@ -185,8 +185,8 @@
         "hash": "00415A60",
         "address": 4282976,
         "name": "Game_DisableMusic",
-        "signature": "void Game_DisableMusic();",
-        "note": "Registered by name in igi.exe (@0x415774). Stops the music engine."
+        "signature": "void Game_DisableMusic(void);",
+        "note": "Stops the music engine. Takes no args."
       }
     },
     {
@@ -194,8 +194,8 @@
         "hash": "00415A10",
         "address": 4282896,
         "name": "Game_EnableMusic",
-        "signature": "void Game_EnableMusic();",
-        "note": "Registered by name in igi.exe (@0x415761). Starts/resumes the music engine."
+        "signature": "void Game_EnableMusic(void);",
+        "note": "Starts/resumes the music engine. Takes no args."
       }
     },
     {
@@ -204,7 +204,7 @@
         "address": 4808496,
         "name": "MusicSetSfxVolume",
         "signature": "void MusicSetSfxVolume(float volume);",
-        "note": "Sets sound effect volume, Params: volume range [0.0 - 1.0]"
+        "note": "Sets the SFX bus volume feeding the music/sound mix path. Param: volume = float 0.0-1.0 scaled by global factor. Use for live SFX fade."
       }
     },
     {
@@ -212,8 +212,8 @@
         "hash": "00495E70",
         "address": 4808304,
         "name": "MusicSetVolume",
-        "signature": "void MusicSetVolume(float musicVolume, float sfxVolume);",
-        "note": "Sets music volume., Params: volume range [0.0 - 1.0]"
+        "signature": "void MusicSetVolume(float volume1,float volume2);",
+        "note": "Sets BOTH music engine volumes (likely front/master pair) after scaling by the global music factor. Params: volume1, volume2 = floats 0.0-1.0 scaled against settings. Use for live music fades."
       }
     },
     {
@@ -221,8 +221,8 @@
         "hash": "004158E0",
         "address": 4282592,
         "name": "Game_UpdateVolume",
-        "signature": "void Game_UpdateVolume();",
-        "note": "igi.exe registers it BY NAME: push \"Game_UpdateVolume\"; push 0x4158E0 @0x4156FC via registrar 0x4B8890. Updates music/sfx volumes from profile settings."
+        "signature": "void Game_UpdateVolume(void);",
+        "note": "Applies current profile music/sfx volumes to the live audio engines. Takes no args."
       }
     },
     {
@@ -329,8 +329,8 @@
         "hash": "004B5F00",
         "address": 4939520,
         "name": "ResourceLoad",
-        "signature": "int * ResourceLoad(char *resource_file,char **buffer)",
-        "note": "Load resource in Memory and Returns address of file., Params: resource file like 'sounds.res','AI/303.qvm'"
+        "signature": "int* ResourceLoad(char* resource_file,char** buffer);",
+        "note": "Loads a resource file into memory. Params: resource_file = virtual resource path, buffer = receives pointer to loaded data. Returns pointer to the resource record (eax)."
       }
     },
     {
@@ -374,8 +374,8 @@
         "hash": "004F0E50",
         "address": 5181008,
         "name": "ScriptInit",
-        "signature": "void ScriptInit(char* file_name,int p2,int p3,int p4);",
-        "note": "Init script buffer for Assembler, Params: Use QvmLoad(file_name) first."
+        "signature": "void ScriptInit(char* file_name,int8_t p2,int p3,int8_t p4);",
+        "note": "Initialises the script system for a file. Params: file_name = script path, p2 = byte flag (observed), p3 = int option, p4 = byte flag. Refined types from decompiled header (two int8_t slots detected)."
       }
     },
     {
@@ -392,8 +392,8 @@
         "hash": "00485AD0",
         "address": 4741840,
         "name": "StatusMessageScreen_ClearMessages",
-        "signature": "void StatusMessageScreen_ClearMessages();",
-        "note": "Registered by name in igi.exe (@0x485AB7): push 0,0,0x485AD0,\"StatusMessageScreen_ClearMessages\" -> registrar. Clears all on-screen status messages."
+        "signature": "void StatusMessageScreen_ClearMessages(void);",
+        "note": "Clears all on-screen status messages. Takes no args."
       }
     },
     {
@@ -401,8 +401,8 @@
         "hash": "00485970",
         "address": 4741488,
         "name": "StatusMessageShow",
-        "signature": "int* StatusMessageShow(int status_timer,char* msg,char *sprite,char *status_byte);",
-        "note": "Show status message on screen, Params: msg to show, sprite of msg, status_timer 0xA758AC, status_byte &0x567C74."
+        "signature": "int StatusMessageShow(int status_timer,char* msg,char* sprite,int status_byte);",
+        "note": "Displays an on-screen STATUS MESSAGE (the HUD text that also drives FiberPool pumping!). Params: status_timer = display duration ticks, msg = text, sprite = optional icon sprite, status_byte = style/color selector. RETURNS handle/eax. Keep one visible message pumping FiberPool::RunPending in your mods."
       }
     },
     {
@@ -410,8 +410,8 @@
         "hash": "004C0460",
         "address": 4981856,
         "name": "SymbolRemove",
-        "signature": "void SymbolRemove(int *p1,int *symbol_name);",
-        "note": "Remove symbol from memory, Params: symbol_name like 'TaskType_Set', p1 pointer ??"
+        "signature": "void SymbolRemove(int* p1,int* symbol_name);",
+        "note": "Removes a symbol from the game-data symbol table. Params: p1 = symbol-table context, symbol_name = name/reference of the symbol to remove."
       }
     },
     {
@@ -428,8 +428,8 @@
         "hash": "004AF810",
         "address": 4913168,
         "name": "WarningShow",
-        "signature": "void WarningShow(char* warn_msg);",
-        "note": "Show warning message, Params: message to show."
+        "signature": "void WarningShow(char* warn_msg,int code);",
+        "note": "Shows a non-fatal WARNING box. Params: warn_msg = warning text, code = warning class observed -1 in retail calls. Use for recoverable script problems instead of ErrorShow."
       }
     },
     {
@@ -482,8 +482,8 @@
         "hash": "004B0C60",
         "address": 4918368,
         "name": "Mem_Alloc",
-        "signature": "void* Mem_Alloc(int num, int size);",
-        "note": "Name from igi.exe error string inside function: \"Mem_Alloc() failed to allocate %d bytes. Total allocated by user...\" @0x546E3C. Engine heap allocator - allocates size bytes, returns ptr or 0. RETURNS pointer to the allocated (aligned) block; failure path calls ErrorShow \"Mem_Alloc() failed to allocate %d bytes\"."
+        "signature": "void* Mem_Alloc(int numBytes,int tag);",
+        "note": "Engine heap allocator. Params: numBytes = bytes to allocate, tag = allocation bucket shown in the 'Total allocated by user' accounting. RETURNS pointer or 0 on failure (error text: 'Mem_Alloc() failed to allocate %d bytes'). Pair with MemoryDealloc/MemDealloc free path."
       }
     },
     {
@@ -644,8 +644,8 @@
         "hash": "004BAAC0",
         "address": 4958912,
         "name": "QTaskHashTableSet",
-        "signature": "void QTaskHashTableSet(int **symbol,int ptr_func,int symbol_val,int p4,int p5,int p6,int p7)",
-        "note": "Main Hash Table for QTasks types for Objects(Guns,Ammo,Scripts,Variables etc) in whole game. HashTable is 70bytes long for each QTask."
+        "signature": "void QTaskHashTableSet(int** symbol,int ptr_func,int symbol_val,int p4,int p5,int p6,int p7);",
+        "note": "Core registrar used by GAME_DEFINE_OPTIONS: inserts (name/address) pairs into the native-function hash table. This is the function every script-command registration site calls - do not invoke directly unless building a custom registrar."
       }
     },
     {
@@ -653,8 +653,8 @@
         "hash": "00413BB0",
         "address": 4275120,
         "name": "WeaponsCountGet",
-        "signature": "int WeaponsCountGet()",
-        "note": "Get total number of Weapons in game."
+        "signature": "int WeaponsCountGet();",
+        "note": "RETURNS the number of weapon entries defined for the human player (cycle table count at 0x56DF18 written by DefineHumanPlayerWeaponCycle). Takes no args. Use to bounds-check weapon indexes."
       }
     },
     {
@@ -680,8 +680,8 @@
         "hash": "00416D80",
         "address": 4287872,
         "name": "Human_HitDamage",
-        "signature": "uint PlayerXPHit()",
-        "note": "Get Player XP Hit damage for current health. Primary name Human_HitDamage (Natives.hpp HUMAN_HIT_DAMAGE); PlayerXPHit is a documented alias - fcn reads byte [PlayerPtr+0xE1] and returns it."
+        "signature": "uint Human_HitDamage(void);",
+        "note": "Reads the player XP/hit byte: returns byte [PlayerPtr+0xE1]. Takes no args. Documented alias of HUMAN_HIT_DAMAGE - same address."
       }
     },
     {
@@ -708,7 +708,7 @@
         "address": 4219424,
         "name": "Config_GetActivePlayerProfileRecord",
         "signature": "void* Config_GetActivePlayerProfileRecord();",
-        "note": "Checks if current player profle is active. NOT a boolean test: returns computed record ptr 0xBC2388 + 0xD14*[0xBC2384] (same 0xD14 stride as Config_GetActiveGraphicOptions). Old analyst name IsPlayerProfileActive was wrong."
+        "note": "RETURNS pointer to the ACTIVE PROFILE's graphic-options/config record: computed as 0xBC2388 + 0xD14*[0xBC2384] (verified against retail defaults-reset fcn.00403B70 which walks the same layout). Takes no args. Despite the historical name this returns a record pointer, not a bool. Old analyst name IsPlayerProfileActive was wrong - it returns the record pointer, not a bool."
       }
     },
     {
@@ -868,9 +868,9 @@
       "Native": {
         "hash": "00403C10",
         "address": 4209680,
-        "name": "GOContentControlPW",
+        "name": "GO_ContentControlPW",
         "signature": "int GO_ContentControlPW(char* password);",
-        "note": "Sets the content-control (parental) password. Param: password = password string as typed on the options screen. Use in config scripts. Returns 1."
+        "note": "Config-writer form (argc=1): sets the content-control password while a config file is parsed. Param: password = string. Returns 1."
       }
     },
     {
@@ -1275,7 +1275,7 @@
         "address": 4209680,
         "name": "Config_SetContentControlPassword",
         "signature": "int Config_SetContentControlPassword();",
-        "note": "Menu-script setter form of the content-control password. igi.exe registers THE SAME ADDRESS twice: as GOContentControlPW argc=1 (config writer) and as Config_SetContentControlPassword argc=0 (menu script, site 0x4034C1 pushes str @0x537C48 -> registrar 0x4B8890). Password comes from the script context, not an explicit arg."
+        "note": "Menu-script setter form (argc=0): same address registered twice by igi.exe - site 0x4034C1 pushes str \"Config_SetContentControlPassword\" -> registrar 0x4B8890. Password comes from the script context, not an explicit arg. Returns 1."
       }
     },
     {
@@ -1391,8 +1391,8 @@
         "hash": "00415950",
         "address": 4282704,
         "name": "Game_SetMusicVolume",
-        "signature": "void Game_SetMusicVolume(int volume);",
-        "note": "Live-sets the music engine volume at runtime (different storage than the profile GO_/Config_ values). Param: volume = engine volume value (0..100 style integer scale). Use for in-game sliders."
+        "signature": "void Game_SetMusicVolume(float volume);",
+        "note": "Live-sets music volume through the profile real-value setter (fcn.004B8A50): retail body constructs 1.0f (0x3FF00000) and stores via fstp. Param: volume = float 0.0-1.0. Called by ingamemenu.qvm options sliders."
       }
     },
     {
@@ -1400,8 +1400,8 @@
         "hash": "004159B0",
         "address": 4282800,
         "name": "Game_SetSFXVolume",
-        "signature": "void Game_SetSFXVolume(int volume);",
-        "note": "Live-sets the sound-effects engine volume at runtime. Param: volume = engine volume value (integer scale). Use for in-game sliders."
+        "signature": "void Game_SetSFXVolume(float volume);",
+        "note": "Live-sets sound-effects volume through the profile real-value setter (fcn.004B8A50), same 1.0f construction pattern. Param: volume = float 0.0-1.0. Called by ingamemenu.qvm options sliders."
       }
     },
     {
