@@ -114,10 +114,11 @@ patched address was re-verified against the retail IGI 1 `igi.exe` with radare2
 and Ghidra (see the evidence comments in `NativeHelper.hpp` / `Hook.cpp`).
 - **Alt+F1**: Cycle FPS (30 → 60 → 120 → 144) via the verified `FramesSet` native (`0x00402820`)
 - **Alt+F2**: Cycle FOV (75 → 90 → 100 → 110) via the live half-FOV doubles at `0x005335E8`/`0x005339C0`
-- **Alt+F3**: Cycle binoculars zoom (2x → 16x) — re-applied per frame through the `Binoculars_Draw` game-thread hook
-- **Alt+F4 / Ctrl+B**: Toggle enhanced binoculars (ESP boxes + zoom; restores retail view when disabled)
+- **Alt+F3**: Cycle binoculars zoom (2x → 4x → 8x → 12x → 16x) — re-applied per frame through the `Binoculars_Draw` game-thread hook
+- **Ctrl+B**: Toggle enhanced binoculars (ESP boxes + zoom; restores retail view when disabled)
 - **Alt+F5 / Alt+F6**: Gamma up/down via the verified profile-record gamma float (`profile+0x220`, read live by the lighting math)
-- **Alt+F7-F10**: Music/SFX volume controls
+- **Alt+F7 / Alt+F8**: Music volume up/down
+- **Alt+F9 / Alt+F10**: SFX volume up/down
 - **Alt+F11**: Show enhancer status overlay
 - **Alt+F12**: Cycle draw distance request *(state only — no verified LOD patch exists yet; degrades honestly)*
 - **Alt+1**: HDR gamma boost ON/OFF (retail gamma path; this engine build has no DX7 post-processing)

@@ -94,6 +94,8 @@ namespace IGI {
 		AMMO_TYPE_OPEN = 0x0047CAB0,
 		SOUND_LOAD = 0x004E68D0,
 		RIGID_DYNCUBE_OBJ_READ = 0x004C48E0,
+		LIGHTMAPS_OBJECT_SET = 0x0048F240,	// AppContext_SetLightmapsUsed(bool) - retail name from BlanknameES/IGIPatch; verified in igi.exe
+		LIGHTMAPS_TERRAIN_SET = 0x0048F260,	// AppContext_SetTerrainLightmapsUsed(bool)
 		GAME_DEFINE_OPTIONS = 0x004B8890,
 		SCRIPT_BUF_INIT = 0x004C0200,
 
@@ -182,9 +184,9 @@ namespace IGI {
 	class Natives {
 	private:
 		struct NativeSig {
-			uint32_t address;
-			string name;
-			string signature;
+			uint32_t address;   //Address (Hash) of native - JSON key "hash"/"address".
+			string name;        //Symbol name - JSON key "name".
+			string signature;   //Signature of native - JSON key "signature".
 			string note;
 		};
 		std::vector<NativeSig> native_sig;

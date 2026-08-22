@@ -135,26 +135,21 @@ static inline bool ProjectNativeWorld(const double* world, float* screen,
            NativeFinite(*depth) && *depth > 0.1f;
 }
 
-static int ReadNativeScreenWidth() {
+// Single accessor for both dimensions: one fnGetVideoConfig call, one
+// validation, fallbacks matching the retail defaults.
+static void ReadNativeScreenSize(int* outWidth, int* outHeight) {
+    int width = 640;
+    int height = 480;
     __try {
         int* video = fnGetVideoConfig();
         if (video && video[1] > 0 && video[2] > 0 &&
             video[1] < 16384 && video[2] < 16384) {
-            return video[1];
+            width = video[1];
+            height = video[2];
         }
     } __except (EXCEPTION_EXECUTE_HANDLER) {}
-    return 640;
-}
-
-static int ReadNativeScreenHeight() {
-    __try {
-        int* video = fnGetVideoConfig();
-        if (video && video[1] > 0 && video[2] > 0 &&
-            video[1] < 16384 && video[2] < 16384) {
-            return video[2];
-        }
-    } __except (EXCEPTION_EXECUTE_HANDLER) {}
-    return 480;
+    if (outWidth) *outWidth = width;
+    if (outHeight) *outHeight = height;
 }
 
 static void ShowRenderPathStatus(const char* text) {
@@ -349,8 +344,9 @@ static void __cdecl hkBinocularsDraw(void* pContext) {
         ShowRenderPathStatus(status);
 
         const float green = 96.0f;
-        const int width = ReadNativeScreenWidth();
-        const int height = ReadNativeScreenHeight();
+        int width = 640;
+        int height = 480;
+        ReadNativeScreenSize(&width, &height);
         const float inset = (float)(std::max)(12, width / 32);
         const float arm = (float)(std::max)(18, width / 64);
 
@@ -388,8 +384,9 @@ static DWORD g_lastMapOverlayTick = 0;
 static int RenderEnhancedComputerMap() {
     int contacts = 0;
     __try {
-        const int width = ReadNativeScreenWidth();
-        const int height = ReadNativeScreenHeight();
+        int width = 640;
+        int height = 480;
+        ReadNativeScreenSize(&width, &height);
         const float green = 64.0f;
         const float red = 128.0f;
         const float cyan = 96.0f;

@@ -143,15 +143,7 @@ void DllMainLoop() {
     // Reset the HumanPlayer_t view structure after zooming.
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F9)) {
       LOG_INFO("Ctrl+F9: HumanTaskViewReset");
-      FiberPool::Instance().RunExternal([] {
-        const int human_player = READ_PTR(humanplayer_ptr);
-        if (!human_player) {
-          LOG_INFO("Ctrl+F9: HumanPlayer_t pointer is unavailable");
-          return;
-        }
-        HUMAN::TASK_VIEW_RESET();
-        LOG_INFO("Ctrl+F9: HumanTaskViewReset invoked for HumanPlayer_t at 0x%08X", human_player);
-      }, 3);
+      FiberPool::Instance().RunExternal([] { HumanTaskViewReset(); }, 3);
     }
 
     // Read PlayerXPHit and display the returned value in the status message.
@@ -224,12 +216,6 @@ void DllMainLoop() {
       EnhancerCycleBinoculars();
     }
 
-    // Toggle clean binoculars (mask/reticle bypass): Alt+F4
-    else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F4)) {
-      LOG_INFO("Alt+F4: Toggle Clean Binoculars");
-      EnhancerToggleImprovedBinoculars();
-    }
-
     // Gamma up (+0.1)
     else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F5)) {
       LOG_INFO("Alt+F5: Gamma Up");
@@ -283,18 +269,23 @@ void DllMainLoop() {
     // ═══════════════════════════════════════════════════════════════
 
     else if (g_Utility.IsKeyCombinationPressed(VK_MENU, '1')) {
+      LOG_INFO("Alt+1: Toggle HDR Gamma Boost");
       EnhancerToggleHDR();
     }
     else if (g_Utility.IsKeyCombinationPressed(VK_MENU, '2')) {
+      LOG_INFO("Alt+2: Toggle Temporal Pacing");
       EnhancerToggleMotionBlur();
     }
     else if (g_Utility.IsKeyCombinationPressed(VK_MENU, '3')) {
+      LOG_INFO("Alt+3: Cycle Lightmaps");
       EnhancerCycleLightmaps();
     }
     else if (g_Utility.IsKeyCombinationPressed(VK_MENU, '4')) {
+      LOG_INFO("Alt+4: Cycle Enhanced Graphics Profile");
       EnhancerToggleEnhancedGraphics();
     }
     else if (g_Utility.IsKeyCombinationPressed(VK_MENU, '5')) {
+      LOG_INFO("Alt+5: Toggle Enhanced Computer Map");
       EnhancerToggleComputerMap();
     }
 
@@ -596,8 +587,8 @@ void EnhancerCycleLightmaps() {
       terrainLightmaps = false;
     }
 
-    NATIVE_INVOKE<Void>((Void)0x0048F240, static_cast<int8_t>(objectLightmaps ? 1 : 0));
-    NATIVE_INVOKE<Void>((Void)0x0048F260, static_cast<int8_t>(terrainLightmaps ? 1 : 0));
+    NATIVE_INVOKE<Void>((Void)HASH::LIGHTMAPS_OBJECT_SET, static_cast<int8_t>(objectLightmaps ? 1 : 0));
+    NATIVE_INVOKE<Void>((Void)HASH::LIGHTMAPS_TERRAIN_SET, static_cast<int8_t>(terrainLightmaps ? 1 : 0));
     string msg = "Lightmaps Mode: " + modeStr;
     MISC::STATUS_MESSAGE_SHOW(msg);
     LOG_INFO("ENHANCER: Lightmaps object=%d terrain=%d", objectLightmaps ? 1 : 0, terrainLightmaps ? 1 : 0);

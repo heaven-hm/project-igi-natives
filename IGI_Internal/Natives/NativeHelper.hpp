@@ -1,7 +1,8 @@
 #pragma once 
 #include <cmath>
 #include "Natives.hpp" 
-#include "NativeCaller.hpp" 
+#include "NativeCaller.hpp"
+#include <iterator> 
 #include "../Camera/Camera.hpp"
 #include "../Player/HumanSoldier.hpp"
 #include "../GameResources/GameResource.hpp"
@@ -194,9 +195,12 @@ namespace IGI {
 		/// <summary>Show custom HUD status message (0x00424D00).</summary>
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg, const char* status_sprite) {
 			if (!status_msg) return;
-			const int* pStatus = (const int*)0x00A758AC;
-			if (!pStatus || !*pStatus) return;
-			NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_SHOW, *pStatus, status_msg, status_sprite, &status_byte);
+			// Guarded read of the game's status value; skip silently when the
+			// address cannot be read or the value is zero.
+			int status_value = 0;
+			__try { status_value = *(int*)0x00A758AC; } __except (EXCEPTION_EXECUTE_HANDLER) { return; }
+			if (!status_value) return;
+			NATIVE_INVOKE<Void>((Void)HASH::STATUS_MESSAGE_SHOW, status_value, status_msg, status_sprite, &status_byte);
 		}
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(const char* status_msg) { if (!status_msg) return; STATUS_MESSAGE_SHOW(status_msg, GAME_STATUSSCREEN_NOTE); }
 		NATIVE_DECL void STATUS_MESSAGE_SHOW(string status_msg) { STATUS_MESSAGE_SHOW(status_msg.c_str()); }
@@ -502,7 +506,7 @@ namespace IGI {
 		NATIVE_DECL void COMPILE(string qsc_file) { NATIVE_INVOKE<Void>((Void)HASH::QSCRIPT_COMPILE, qsc_file.c_str()); }
 		/// <summary>Parse QAS assembly file (0x00407DF0).</summary>
 		NATIVE_DECL int PARSE(string qas_file, int mem_addr) { return NATIVE_INVOKE<int>((Void)HASH::QSCRIPT_PARSE, qas_file.c_str(), mem_addr); }
-		NATIVE_DECL int PARSE(string qsc_file, string qas_file) { auto mem_blk = (int*)MEMORY::ALLOC(0x94, 4); char* buff = nullptr; auto res_addr = RESOURCE::LOAD(qsc_file.c_str(), &buff); std::strcpy((char*)mem_blk, qsc_file.data()); mem_blk[0x20] = (int)res_addr; mem_blk[0x21] = (int)buff; mem_blk[0x22] = 0; return PARSE(qas_file, (int)mem_blk); }
+		NATIVE_DECL int PARSE(string qsc_file, string qas_file) { auto mem_blk = (int*)MEMORY::ALLOC(0x94, 4); char* buff = nullptr; auto res_addr = RESOURCE::LOAD(qsc_file.c_str(), &buff); { const size_t cap = 0x20; size_t len = qsc_file.size(); if (len >= cap) len = cap - 1; std::memcpy((char*)mem_blk, qsc_file.data(), len); ((char*)mem_blk)[len] = '\0'; } mem_blk[0x20] = (int)res_addr; mem_blk[0x21] = (int)buff; mem_blk[0x22] = 0; return PARSE(qas_file, (int)mem_blk); }
 		NATIVE_DECL int PARSE(string qsc_file) { string qas_file = qsc_file; g_Utility.Replace(qas_file, ".qsc", ".qas"); return PARSE(qsc_file, qas_file); }
 		/// <summary>Assemble QAS script into QVM bytecode (0x00407E10).</summary>
 		NATIVE_DECL int ASSEMBLE(string qas_file, string qvm_file) { return NATIVE_INVOKE<int>((Void)HASH::QSCRIPT_ASSEMBLE, qvm_file.c_str(), qas_file.c_str()); }
@@ -942,7 +946,7 @@ namespace IGI {
 		NATIVE_DECL void CYCLE_FPS() {
 			static const int presets[] = { 30, 60, 120, 144 };
 			static int idx = 0;
-			idx = (idx + 1) % 4;
+			idx = (idx + 1) % static_cast<int>(std::size(presets));
 			g_Enhancer.target_fps = presets[idx];
 			g_Enhancer.fps_unlocked = (presets[idx] > 30);
 			FRAMERATE_SET(presets[idx]);
@@ -953,7 +957,7 @@ namespace IGI {
 		NATIVE_DECL void CYCLE_FOV() {
 			static const float presets[] = { 75.0f, 90.0f, 100.0f, 110.0f };
 			static int idx = 0;
-			idx = (idx + 1) % 4;
+			idx = (idx + 1) % static_cast<int>(std::size(presets));
 			g_Enhancer.fov_degrees = presets[idx];
 			FOV_SET(presets[idx]);
 			char buf[64];
@@ -965,7 +969,7 @@ namespace IGI {
 		NATIVE_DECL void CYCLE_BINOCULAR_ZOOM() {
 			static const float presets[] = { 2.0f, 4.0f, 8.0f, 12.0f, 16.0f };
 			static int idx = 0;
-			idx = (idx + 1) % 5;
+			idx = (idx + 1) % static_cast<int>(std::size(presets));
 			g_Enhancer.binocular_zoom = presets[idx];
 			BINOCULARS_ZOOM_SET(presets[idx]);
 			char buf[64];
@@ -977,7 +981,7 @@ namespace IGI {
 		NATIVE_DECL void CYCLE_DRAW_DISTANCE() {
 			static const float presets[] = { 5000.0f, 10000.0f, 20000.0f, 50000.0f };
 			static int idx = 0;
-			idx = (idx + 1) % 4;
+			idx = (idx + 1) % static_cast<int>(std::size(presets));
 			g_Enhancer.draw_distance = presets[idx];
 			DRAW_DISTANCE_SET(presets[idx]);
 			char buf[64];
