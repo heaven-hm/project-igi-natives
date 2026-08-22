@@ -1,5 +1,6 @@
 #pragma once
 #include "DllMain.hpp"
+#include <atomic>
 
 void DllMainLoop();
 void QuitLevelMain();
@@ -33,6 +34,10 @@ void EnhancerMusicVolumeDown();
 void EnhancerSfxVolumeUp();
 void EnhancerSfxVolumeDown();
 void EnhancerShowStatus();
+
+// Shared enhancer state read by the render detours in Hook.cpp.
+extern std::atomic<bool> g_improved_map;
+extern std::atomic<bool> g_improved_binoculars;
 
 // New User-Requested Enhancer Graphics Features
 void EnhancerToggleHDR();

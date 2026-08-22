@@ -766,11 +766,13 @@ namespace IGI {
 			// stepper fcn.004739D0), so no manual tangent write is needed here.
 			__try {
 				DWORD oldProtect;
-				if (VirtualProtect((LPVOID)0x005335E8, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
+				// Data addresses - PAGE_READWRITE is sufficient (no execute
+				// permission needed for double writes).
+				if (VirtualProtect((LPVOID)0x005335E8, 8, PAGE_READWRITE, &oldProtect)) {
 					*(double*)0x005335E8 = half_fov_h;
 					VirtualProtect((LPVOID)0x005335E8, 8, oldProtect, &oldProtect);
 				}
-				if (VirtualProtect((LPVOID)0x005339C0, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
+				if (VirtualProtect((LPVOID)0x005339C0, 8, PAGE_READWRITE, &oldProtect)) {
 					*(double*)0x005339C0 = half_fov_v;
 					VirtualProtect((LPVOID)0x005339C0, 8, oldProtect, &oldProtect);
 				}
@@ -780,8 +782,14 @@ namespace IGI {
 		}
 
 		NATIVE_DECL float FOV_GET() {
-			double half_fov_h = *(double*)0x005335E8;
-			return static_cast<float>(half_fov_h * 2.0 * 180.0 / 3.141592653589793);
+			// Guarded: if the image were not mapped this read would fault the
+			// process. Same protection pattern as FOV_SET above.
+			__try {
+				double half_fov_h = *(double*)0x005335E8;
+				return static_cast<float>(half_fov_h * 2.0 * 180.0 / 3.141592653589793);
+			} __except (EXCEPTION_EXECUTE_HANDLER) {
+				return 75.0f;
+			}
 		}
 
 		// ── Binoculars zoom enhancement ─────────────────────────────────
@@ -882,9 +890,11 @@ namespace IGI {
 			if (gamma < 0.5f) gamma = 0.5f;
 			if (gamma > 3.0f) gamma = 3.0f;
 			g_requested_gamma = gamma;
+			// Fault protection via __try (IsBadWritePtr is obsolete and
+			// cannot detect a wrong-object pointer).
 			__try {
 				uint8_t* profile = (uint8_t*)fnGetProfileRecord();
-				if (profile && !IsBadWritePtr(profile + 0x220, 4)) {
+				if (profile) {
 					*(float*)(profile + 0x220) = gamma;
 					LOG_INFO("ENHANCER: Profile gamma set to %.2f (record @ 0x%p +0x220)", gamma, profile);
 					return;
@@ -896,9 +906,10 @@ namespace IGI {
 		}
 
 		NATIVE_DECL float GAMMA_GET() {
+			// Fault protection via __try (IsBadReadPtr is obsolete).
 			__try {
 				uint8_t* profile = (uint8_t*)fnGetProfileRecord();
-				if (profile && !IsBadReadPtr(profile + 0x220, 4)) {
+				if (profile) {
 					return *(float*)(profile + 0x220);
 				}
 			} __except (EXCEPTION_EXECUTE_HANDLER) {}

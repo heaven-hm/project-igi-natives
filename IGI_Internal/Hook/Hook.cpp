@@ -3,8 +3,9 @@
 using namespace IGI;
 using namespace std;
 
-extern bool g_improved_map;
-extern bool g_improved_binoculars;
+#include <atomic>
+extern std::atomic<bool> g_improved_map;
+extern std::atomic<bool> g_improved_binoculars;
 
 #include <ddraw.h>
 #include "../Camera/Camera.hpp"
@@ -169,13 +170,17 @@ static void ShowRenderPathStatus(const char* text) {
     *last = now;
 
     __try {
-        int* status = (int*)0x00A758AC;
-        if (status && *status) {
-            StatusMsg(*status, text, GAME_STATUSSCREEN_NOTE,
-                      // 0x00485970 copies this argument as a C string.  The
-                      // retail callers pass the global byte-string storage,
-                      // not the address of a one-byte stack local.
-                      (const char*)0x00567C74);
+        // Call the trampoline (StatusMsgOut), not the hooked entry point
+        // StatusMsg - after EnableHooks() the patched prologue redirects to
+        // StatusMsgDetour, so calling StatusMsg here would re-enter our own
+        // detour from inside other render hooks.
+        const int status = *(int*)0x00A758AC;
+        if (status && StatusMsgOut) {
+            StatusMsgOut(status, text, GAME_STATUSSCREEN_NOTE,
+                         // 0x00485970 copies this argument as a C string.  The
+                         // retail callers pass the global byte-string storage,
+                         // not the address of a one-byte stack local.
+                         (const char*)0x00567C74);
         }
     } __except (EXCEPTION_EXECUTE_HANDLER) {}
 }
@@ -295,21 +300,11 @@ typedef void(__cdecl* MeshSkinBones_t)(void* param_1);
 static MeshSkinBones_t oMeshSkinBones = nullptr;
 
 static void __cdecl hkMeshSkinBones(void* param_1) {
+    // Mesh_SkinBones runs once per SKINNED MESH, not once per frame - it
+    // cannot provide a frame boundary, so the enhanced-map overlay must NOT
+    // render here (it would redraw several times per frame and alpha-blend
+    // over itself).  The once-per-frame path lives in hkBinocularsDraw.
     if (oMeshSkinBones) oMeshSkinBones(param_1);
-
-    if (g_improved_map) {
-        static bool loggedMeshMapPath = false;
-        if (!loggedMeshMapPath) {
-            loggedMeshMapPath = true;
-            LOG_INFO("ENHANCER: enhanced tactical-map overlay using verified Mesh_SkinBones frame path");
-        }
-        const int contacts = RenderEnhancedComputerMapOnce();
-        if (contacts >= 0) {
-            char status[96]{};
-            sprintf_s(status, "ENHANCED TACTICAL MAP  //  CONTACTS %02d", contacts);
-            ShowRenderPathStatus(status);
-        }
-    }
 }
 
 static void __cdecl hkBinocularsDraw(void* pContext) {
@@ -387,9 +382,6 @@ static void __cdecl hkBinocularsDraw(void* pContext) {
         LOG_WARNING("ENHANCER: enhanced binocular render failed safely");
     }
 }
-
-typedef void(__cdecl* MapComputerRender_t)(int param_1);
-static MapComputerRender_t oMapComputerRender = nullptr;
 
 static DWORD g_lastMapOverlayTick = 0;
 
@@ -481,16 +473,11 @@ static int RenderEnhancedComputerMapOnce() {
     return RenderEnhancedComputerMap();
 }
 
-static void __cdecl hkMapComputerRender(int param_1) {
-    if (oMapComputerRender) oMapComputerRender(param_1);
-
-    static bool loggedMapPath = false;
-    if (!loggedMapPath) {
-        loggedMapPath = true;
-        LOG_INFO("ENHANCER: verified MapComputer_Render game-thread path reached");
-    }
-
-}
+// VERIFIED ADDRESS NOTE (no hook installed): MapComputer_Render entry is
+// 0x0046A330 (registered as a detour in earlier builds; removed because the
+// detour only re-entered the retail routine and logged once).  The enhanced
+// tactical-map overlay renders from hkBinocularsDraw instead, which is a
+// true once-per-frame game-thread boundary.
 
 Hook::Hook() {
 	g_Hook = this;
@@ -543,9 +530,6 @@ MH_STATUS Hook::CreateHooks() {
 
 	mh_status = CreateHook((LPVOID)0x0049F700, &hkMeshSkinBones, &oMeshSkinBones);
 	if (mh_status != MH_OK) LOG_ERROR("MeshSkinBones hook error : %s", MH_StatusToString(mh_status));
-
-	mh_status = CreateHook((LPVOID)0x0046A330, &hkMapComputerRender, &oMapComputerRender);
-	if (mh_status != MH_OK) LOG_ERROR("MapComputerRender hook error : %s", MH_StatusToString(mh_status));
 
 	// Do not detour 0x0046A2D0.  Ghidra shows that it owns a transient retail
 	// map/render object; drawing the enhancer overlay from that callback can

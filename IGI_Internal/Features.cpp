@@ -4,6 +4,7 @@
 #include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
 #include "Utils/Utility.hpp"
+#include <atomic>
 
 // Main loop for DLL Internals.
 void DllMainLoop() {
@@ -540,8 +541,8 @@ static bool g_hdr_enabled = false;
 static bool g_blur_enabled = false;
 static int g_lightmap_mode = 0; // 0 = Baked, 1 = Dynamic, 2 = Hybrid
 static int g_gfx_profile = 0;   // 0 = Standard, 1 = High, 2 = Ultra dgVoodoo
-bool g_improved_map = false;
-bool g_improved_binoculars = false;
+std::atomic<bool> g_improved_map{false};
+std::atomic<bool> g_improved_binoculars{false};
 
 void EnhancerToggleHDR() {
   g_hdr_enabled = !g_hdr_enabled;
@@ -601,17 +602,23 @@ void EnhancerCycleLightmaps() {
   LOG_INFO("ENHANCER: Lightmaps mode changed to %d", g_lightmap_mode);
 }
 
-typedef void* (*GetEngineConfigPtr_t)();
-static GetEngineConfigPtr_t fnGetEngineConfig = (GetEngineConfigPtr_t)0x00406220;
+// Single verified accessor for the active player-profile record.
+// igi.exe fcn.00406220 returns 0xBC2388 + 0xD14 * [0xBC2384] (decompiled);
+// field layout below is confirmed by the retail defaults-reset routine
+// Config_ResetGraphicOptions (fcn.00403B70) which writes the same offsets.
+typedef void* (*GetProfileRecord_t)();
+static GetProfileRecord_t fnGetProfileRecord = (GetProfileRecord_t)0x00406220;
 
 void UpdateEngineGraphicsConfig(int width, int height, int bpp, int deviceIndex, bool shadows, bool filtering, bool dynamicLighting, float gamma) {
     __try {
-        uint8_t* pConfig = (uint8_t*)fnGetEngineConfig();
+        uint8_t* pConfig = (uint8_t*)fnGetProfileRecord();
         // Layout VERIFIED against the retail defaults-reset fcn.00403B70:
         // +0x0C width, +0x10 height, +0x14 bpp, +0x18 device index,
         // +0x1C/0x1D/0x1E option bytes, +0x220 float gamma. Record stride is
         // 0xD14 bytes so every offset above stays inside the record.
-        if (pConfig && !IsBadWritePtr(pConfig, 0x224)) {
+        // Fault protection comes from the surrounding __try; IsBadWritePtr
+        // is obsolete and cannot detect a wrong-object pointer.
+        if (pConfig) {
             *(int*)(pConfig + 0x0C) = width;
             *(int*)(pConfig + 0x10) = height;
             *(int*)(pConfig + 0x14) = bpp;
