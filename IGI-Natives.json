@@ -85,9 +85,9 @@
       "Native": {
         "hash": "00403B70",
         "address": 4209520,
-        "name": "GraphicsReset",
-        "signature": "void GraphicsReset(char* buffer);",
-        "note": "Reset Graphics options in settings, Params: Buffer of size 30."
+        "name": "Config_ResetGraphicOptions",
+        "signature": "void Config_ResetGraphicOptions();",
+        "note": "Resets the ACTIVE PROFILE's graphic options to defaults (display mode, gamma, transparency, performance flags). Takes no script args (registrar argc=0 at site 0x40352B; machine code also touches [esp+4], likely unused/context). Registered by name in igi.exe: push 0x403B70 with str \"Config_ResetGraphicOptions\" -> registrar 0x4B8890. Called by retail MAINMENU.QVM video-options screen."
       }
     },
     {

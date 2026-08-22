@@ -19,7 +19,7 @@ namespace IGI {
 		ERROR_SHOW = 0x004AF7B0,
 		FRAMES_SET = 0x00402820,
 		GAMEMATERIAL_LOAD = 0x00408350,
-		RESET = 0x00403B70,
+		RESET = 0x00403B70,	// retail name: Config_ResetGraphicOptions (registered @0x40352B)
 		GRAPH_OPEN = 0x004F9FF0,
 		HUMANPLAYER_LOAD = 0x004137A0,
 		INPUT_DISABLE = 0x004157D0, | retail name: Game_DisablePlayerInput
