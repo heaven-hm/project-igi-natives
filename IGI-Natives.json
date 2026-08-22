@@ -2285,6 +2285,33 @@
         "signature": "void DEBUG_KEYS_ENABLE_INVALID()",
         "note": "TOMBSTONE - DO NOT INVOKE. The retail debug-keys native address is UNKNOWN. The old value 0x0041502 lies outside .text (0x401000-0x532510) and would crash on invoke; no verified replacement found in igi.exe (unknown > fabricated per RE.md). This entry exists only so JSON consumers see the warning instead of silently missing the key."
       }
+    },
+    {
+      "Native": {
+        "hash": "004B1AC0",
+        "address": 4922048,
+        "name": "QScript_Cleanup",
+        "signature": "void QScript_Cleanup(int* script)",
+        "note": "Cleans up/frees a parsed .qsc script structure (pass1: 5 calls, valid exit). Param: script = pointer to the loaded script object. Call when done with a script loaded via the Qvm/Qsc loaders to release its memory."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004828D0",
+        "address": 4729040,
+        "name": "Human_FindNextCamera",
+        "signature": "void Human_FindNextCamera(void* human)",
+        "note": "Debug camera cycler: advances to the next camera/view target attached to the human player (decompiled body polls input keys). Param: human = human-player pointer. Pass1-verified function start; restored - it existed only in the Natives.hpp enum and was never serialized to JSON."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00041502",
+        "address": 267522,
+        "name": "DEBUG_KEYS_ENABLE_INVALID",
+        "signature": "void DEBUG_KEYS_ENABLE_INVALID()",
+        "note": "TOMBSTONE - DO NOT INVOKE. Address 0x41502 lies OUTSIDE .text (0x401000-0x532510); invoking would crash. No verified retail replacement found (unknown > fabricated per RE.md). Kept as warning record matching the Natives.hpp quarantine."
+      }
     }
   ]
 }
