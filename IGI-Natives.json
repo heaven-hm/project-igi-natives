@@ -139,27 +139,27 @@
       "Native": {
         "hash": "004F0E10",
         "address": 5180944,
-        "name": "LevelLoad",
-        "signature": "void LevelLoad(int level_path,int level_len);",
-        "note": "Load current level from level_path,Params: path: 0057B568, len: 0x1E."
+        "name": "Level_LoadObjects",
+        "signature": "void Level_LoadObjects(int level_path,int level_len);",
+        "note": "Loads all OBJECTS for the level: reads the level object set and instantiates each object entity in the world. Takes the level/path argument from the calling load script. Use during level-load flow before Level_Start. [Name corrected per retail analysis: was LevelLoad/LevelQuit/LevelRestart.]"
       }
     },
     {
       "Native": {
         "hash": "00416550",
         "address": 4285776,
-        "name": "LevelQuit",
-        "signature": "void LevelQuit(void);",
-        "note": "Quit current level to mainmenu."
+        "name": "Game_DeleteHandler",
+        "signature": "void Game_DeleteHandler(void);",
+        "note": "The game's DELETE handler - runs when a level/game session is torn down (quit path), releasing entities and session state. Takes no args. Engine-internal teardown; do not call to 'quit' - it is the cleanup callback. [Name corrected per retail analysis: was LevelLoad/LevelQuit/LevelRestart.]"
       }
     },
     {
       "Native": {
         "hash": "00416FE0",
         "address": 4288480,
-        "name": "LevelRestart",
-        "signature": "void LevelRestart(void);",
-        "note": "Restarts current level."
+        "name": "Game_Restart",
+        "signature": "void Game_Restart(void);",
+        "note": "Restarts the CURRENT LEVEL/session: tears down and reloads the running game state (the Ctrl+F4-style restart path). Takes no args. Use to reset the mission without going back to menus. [Name corrected per retail analysis: was LevelLoad/LevelQuit/LevelRestart.]"
       }
     },
     {

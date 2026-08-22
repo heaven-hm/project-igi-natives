@@ -25,9 +25,9 @@ namespace IGI {
 		INPUT_DISABLE = 0x004157D0,
 		INPUT_ENABLE = 0x00415830,
 		LOG_ADD = 0x004BBC30,
-		LEVEL_LOAD = 0x004F0E10,
-		LEVEL_QUIT = 0x00416550,
-		LEVEL_RESTART = 0x00416FE0,
+		LEVEL_LOAD_OBJECTS = 0x004F0E10,	// corrected proc name: loads level objects
+		GAME_DELETE_HANDLER = 0x00416550,	// corrected proc name: game-session delete/teardown handler
+		GAME_RESTART = 0x00416FE0,	// corrected proc name: restart current level/session
 		LEVEL_START = 0x00415B30,
 		MAGIC_OBJ_LOAD = 0x004C4930,
 		MENU_MANAGER = 0x00418B00,
