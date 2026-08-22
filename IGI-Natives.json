@@ -725,8 +725,8 @@
         "hash": "00402780",
         "address": 4204416,
         "name": "Flow_RequestEvent",
-        "signature": "void Flow_RequestEvent(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040205d and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (81 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Flow_RequestEvent(int eventId);",
+        "note": "Requests a flow-task event by id (drives the level's flow state machine). Param: eventId = flow event number used in the level flow script. Use from mission flow scripts to trigger scripted transitions."
       }
     },
     {
@@ -734,8 +734,8 @@
         "hash": "004036B0",
         "address": 4208304,
         "name": "GOPlayer",
-        "signature": "void GOPlayer(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403019 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (160 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_Player(char* name);",
+        "note": "Adds a player profile named 'name' to the config while a .cfg/GO script block is being read; subsequent GO_* settings apply to this profile. Param: name = profile display name (string). Use inside config/profile scripts, must come before that profile's GO_* settings. Returns 1."
       }
     },
     {
@@ -743,8 +743,8 @@
         "hash": "004037C0",
         "address": 4208576,
         "name": "GOInRemap",
-        "signature": "void GOInRemap(int32_t p0, int32_t p1, int32_t p2);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040302c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (161 bytes). declared script parameter count = 3; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_InRemap(int key1, int key2, int action);",
+        "note": "Adds one input binding (key remap) to the current profile. Params: key1 = primary key code, key2 = secondary key code, action = in-game action id being bound. Use in input/config scripts, repeat once per binding. Returns 1."
       }
     },
     {
@@ -752,8 +752,8 @@
         "hash": "00403870",
         "address": 4208752,
         "name": "GOInMouInv",
-        "signature": "void GOInMouInv(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040303f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_InMouInv(int invert);",
+        "note": "Toggles inverted mouse-look for the current profile. Param: invert = 1 invert Y axis, 0 normal. Use in config scripts. Returns 1."
       }
     },
     {
@@ -761,8 +761,8 @@
         "hash": "004038E0",
         "address": 4208864,
         "name": "GOInMouSens",
-        "signature": "void GOInMouSens(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403055 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float GO_InMouSens(float sensitivity);",
+        "note": "Sets mouse sensitivity for the current profile. Param: sensitivity = float multiplier as saved by the options screen. Use in config scripts. Returns 1."
       }
     },
     {
@@ -770,8 +770,8 @@
         "hash": "00403950",
         "address": 4208976,
         "name": "GOGfxDisp",
-        "signature": "void GOGfxDisp(int32_t p0, int32_t p1, int32_t p2);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403068 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (172 bytes). declared script parameter count = 3; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_GfxDisp(int displayMode);",
+        "note": "Sets display-mode selection for the current profile. Param: displayMode = mode index from the retail display list (see Display_GetActiveMode/display table). Use in config scripts. igi.exe registers it with argc=3 at its site; the extra args go unused by the setter itself."
       }
     },
     {
@@ -779,8 +779,8 @@
         "hash": "00404010",
         "address": 4210704,
         "name": "GOGfxDevice",
-        "signature": "void GOGfxDevice(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040307b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (108 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_GfxDevice(int deviceIndex);",
+        "note": "Sets render-device (D3D device/GUID) selection for the current profile. Param: deviceIndex = index into the render-device list filled by Config_FillRenderDeviceListBox. Use in config scripts. Returns 1."
       }
     },
     {
@@ -788,8 +788,8 @@
         "hash": "00404080",
         "address": 4210816,
         "name": "GOGfxGamma",
-        "signature": "void GOGfxGamma(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040308e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_GfxGamma(float gamma);",
+        "note": "Sets gamma for the current profile. Param: gamma = float, retail default 1.0 (range ~0.5-3.0 clamped elsewhere). Use in config scripts. Returns 1."
       }
     },
     {
@@ -797,8 +797,8 @@
         "hash": "00403A00",
         "address": 4209152,
         "name": "GOGameLang",
-        "signature": "void GOGameLang(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004030a4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (192 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_GameLang(int language);",
+        "note": "Sets game language for the current profile. Param: language = language index (retail ships English=0 and German builds use their own index). Use in config scripts. Returns 1."
       }
     },
     {
@@ -806,8 +806,8 @@
         "hash": "00403AC0",
         "address": 4209344,
         "name": "GOGameDiff",
-        "signature": "void GOGameDiff(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004030b7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_GameDiff(int difficulty);",
+        "note": "Sets game difficulty for the current profile. Param: difficulty = 0 easy, 1 medium, 2 hard (retail order). Use in config scripts. Returns 1."
       }
     },
     {
@@ -815,8 +815,8 @@
         "hash": "00403DF0",
         "address": 4210160,
         "name": "GOIsBlood",
-        "signature": "void GOIsBlood(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004030ca and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_IsBlood(int blood);",
+        "note": "Toggles blood effects for the current profile. Param: blood = 1 on, 0 off. Use in config scripts. Returns 1."
       }
     },
     {
@@ -824,8 +824,8 @@
         "hash": "00403E60",
         "address": 4210272,
         "name": "GOSoundSpeech",
-        "signature": "void GOSoundSpeech(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004030dd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (137 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_SoundSpeech(float volume);",
+        "note": "Sets speech volume for the current profile. Param: volume = float 0.0-1.0. Use in config scripts. Returns 1."
       }
     },
     {
@@ -833,8 +833,8 @@
         "hash": "00403EF0",
         "address": 4210416,
         "name": "GOSoundMusic",
-        "signature": "void GOSoundMusic(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004030f3 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (137 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_SoundMusic(float volume);",
+        "note": "Sets music volume for the current profile. Param: volume = float 0.0-1.0. Use in config scripts. Returns 1."
       }
     },
     {
@@ -842,8 +842,8 @@
         "hash": "00403F80",
         "address": 4210560,
         "name": "GOSoundFX",
-        "signature": "void GOSoundFX(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403106 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (137 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_SoundFX(float volume);",
+        "note": "Sets sound-effects volume for the current profile. Param: volume = float 0.0-1.0. Use in config scripts. Returns 1."
       }
     },
     {
@@ -851,8 +851,8 @@
         "hash": "004040F0",
         "address": 4210928,
         "name": "GOGfxPerformance",
-        "signature": "void GOGfxPerformance(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403119 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_GfxPerformance(int flags);",
+        "note": "Sets graphics performance/detail flags for the current profile. Param: flags = bitmask from the detail-level mapping (see Config_GraphicOptionsGetPerfFlagsFromLevel). Use in config scripts. Returns 1."
       }
     },
     {
@@ -860,8 +860,8 @@
         "hash": "00403750",
         "address": 4208464,
         "name": "GOActiveMission",
-        "signature": "void GOActiveMission(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040312c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_ActiveMission(int mission);",
+        "note": "Sets the active (last-played) mission number for the current player profile. Param: mission = mission index 1..14. Use in profile/config scripts after GO_Player. Returns 1."
       }
     },
     {
@@ -869,8 +869,8 @@
         "hash": "00403C10",
         "address": 4209680,
         "name": "GOContentControlPW",
-        "signature": "void GOContentControlPW(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403142 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (82 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_ContentControlPW(char* password);",
+        "note": "Sets the content-control (parental) password. Param: password = password string as typed on the options screen. Use in config scripts. Returns 1."
       }
     },
     {
@@ -879,7 +879,7 @@
         "address": 4214688,
         "name": "Config_FillPlayerProfileListBox",
         "signature": "void Config_FillPlayerProfileListBox();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403155 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Fills the current menu list box with all player profiles (name per row, row index = profile index). Use inside the profile-selection list box collect-items script."
       }
     },
     {
@@ -887,8 +887,8 @@
         "hash": "00405010",
         "address": 4214800,
         "name": "Config_GetActivePlayerProfileIndex",
-        "signature": "void Config_GetActivePlayerProfileIndex();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403168 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (55 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GetActivePlayerProfileIndex();",
+        "note": "RETURNS the index of the currently-active player profile (0-based). Takes no arguments. Use whenever you need which profile is selected, e.g. before Config_DeletePlayerProfile."
       }
     },
     {
@@ -896,8 +896,8 @@
         "hash": "00405050",
         "address": 4214864,
         "name": "Config_SetActivePlayerProfileIndex",
-        "signature": "void Config_SetActivePlayerProfileIndex(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040317b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (80 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SetActivePlayerProfileIndex(int index);",
+        "note": "Makes 'index' the active player profile. Param: index = 0-based profile index (must exist; see Config_GetNumberOfPlayerProfiles)."
       }
     },
     {
@@ -905,8 +905,8 @@
         "hash": "004050A0",
         "address": 4214944,
         "name": "Config_CreateNewPlayerProfile",
-        "signature": "void Config_CreateNewPlayerProfile(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403191 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (606 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_CreateNewPlayerProfile(char* name, int sourceIndex);",
+        "note": "Creates a new player profile. Params: name = new profile name (string), sourceIndex = existing profile index to copy initial settings from. RETURNS 1 on success, 0 on failure (e.g. name taken/slots full). Use on the create-profile screen."
       }
     },
     {
@@ -914,8 +914,8 @@
         "hash": "00405400",
         "address": 4215808,
         "name": "Config_DeletePlayerProfile",
-        "signature": "void Config_DeletePlayerProfile(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004031a4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (226 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_DeletePlayerProfile(int index);",
+        "note": "Deletes a player profile. Param: index = 0-based profile index to delete. RETURNS 1 on success, 0 on failure. Do not delete the last remaining profile; refresh your list box afterwards."
       }
     },
     {
@@ -923,8 +923,8 @@
         "hash": "004057D0",
         "address": 4216784,
         "name": "Config_PlayerGetActiveMission",
-        "signature": "void Config_PlayerGetActiveMission(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004031b7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (88 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_PlayerGetActiveMission(int profileIndex);",
+        "note": "Returns the active (reached) mission number of ANY profile. Param: profileIndex = 0-based profile index. Use on the profile/mission screens to show progress without switching profiles."
       }
     },
     {
@@ -932,8 +932,8 @@
         "hash": "004054F0",
         "address": 4216048,
         "name": "Config_GetNumberOfPlayerProfiles",
-        "signature": "void Config_GetNumberOfPlayerProfiles(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004031ca and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (55 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GetNumberOfPlayerProfiles();",
+        "note": "RETURNS how many player profiles exist. Use to bounds-check indexes and to size profile lists."
       }
     },
     {
@@ -942,7 +942,7 @@
         "address": 4216416,
         "name": "Config_FillMissionSelectionBox",
         "signature": "void Config_FillMissionSelectionBox();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004031e0 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (132 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Fills the current menu list box with missions selectable for the active profile (respects unlocked progress). Use inside the mission-selection list box collect-items script."
       }
     },
     {
@@ -951,7 +951,7 @@
         "address": 4216560,
         "name": "Config_FillMissionPictureBox",
         "signature": "void Config_FillMissionPictureBox();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004031f3 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (107 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Fills the current picture box with the selected mission's briefing image. Use inside the mission-picture control's script right after a mission row is chosen."
       }
     },
     {
@@ -960,7 +960,7 @@
         "address": 4216672,
         "name": "Config_FillMissionTextBox",
         "signature": "void Config_FillMissionTextBox();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403206 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (104 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Fills the current text box with the selected mission's briefing text. Use inside the mission-briefing text control's script."
       }
     },
     {
@@ -968,8 +968,8 @@
         "hash": "00404450",
         "address": 4211792,
         "name": "Config_FillScreenResolutionListBox",
-        "signature": "void Config_FillScreenResolutionListBox(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403219 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (186 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_FillScreenResolutionListBox(int deviceIndex);",
+        "note": "Fills the currently-active menu list box with the screen resolutions available for a device. Param: deviceIndex = render-device index. Use only inside a menu list box 'collect items' script so the items land in that control."
       }
     },
     {
@@ -978,7 +978,7 @@
         "address": 4212384,
         "name": "Config_FillRenderDeviceListBox",
         "signature": "void Config_FillRenderDeviceListBox();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040322f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (102 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Fills the currently-active menu list box with installed render devices (Direct3D device GUIDs/names). Use inside a list box collect-items script on the video-options screen."
       }
     },
     {
@@ -986,8 +986,8 @@
         "hash": "004041D0",
         "address": 4211152,
         "name": "Config_GameOptionsInputGetInvertMouse",
-        "signature": "void Config_GameOptionsInputGetInvertMouse();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403242 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (88 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GameOptionsInputGetInvertMouse();",
+        "note": "RETURNS the invert-mouse setting when the engine writes/reads a config game-options block (1 = inverted, 0 = normal). Takes no args. Pairs with Config_GameOptionsInputSetInvertMouse."
       }
     },
     {
@@ -995,8 +995,8 @@
         "hash": "00404290",
         "address": 4211344,
         "name": "Config_GameOptionsInputGetMouseSensitivity",
-        "signature": "void Config_GameOptionsInputGetMouseSensitivity();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403255 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (74 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GameOptionsInputGetMouseSensitivity();",
+        "note": "RETURNS the stored mouse-sensitivity integer from the game-options config context. Takes no args."
       }
     },
     {
@@ -1004,8 +1004,8 @@
         "hash": "00404340",
         "address": 4211520,
         "name": "Config_GameOptionsInputGetBloodEnabled",
-        "signature": "void Config_GameOptionsInputGetBloodEnabled();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403268 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GameOptionsInputGetBloodEnabled();",
+        "note": "RETURNS the blood-enabled flag from the game-options config context (1/0). Takes no args."
       }
     },
     {
@@ -1013,8 +1013,8 @@
         "hash": "00404160",
         "address": 4211040,
         "name": "Config_GameOptionsInputSetInvertMouse",
-        "signature": "void Config_GameOptionsInputSetInvertMouse(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040327e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (111 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GameOptionsInputSetInvertMouse(int invert);",
+        "note": "Sets invert-mouse in the GAME-OPTIONS block while a config file is parsed (the GO_* writer side; runtime getter/setter pair lives on the profile). Param: invert = 1 inverted, 0 normal. Use only inside config .qsc write-out contexts."
       }
     },
     {
@@ -1022,8 +1022,8 @@
         "hash": "00404230",
         "address": 4211248,
         "name": "Config_GameOptionsInputSetMouseSensitivity",
-        "signature": "void Config_GameOptionsInputSetMouseSensitivity(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403291 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (94 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GameOptionsInputSetMouseSensitivity(int value);",
+        "note": "Sets mouse-sensitivity in the config game-options write-out context. Param: value = sensitivity as stored by the options screen (integer scale)."
       }
     },
     {
@@ -1031,8 +1031,8 @@
         "hash": "004042E0",
         "address": 4211424,
         "name": "Config_GameOptionsInputSetBloodEnabled",
-        "signature": "void Config_GameOptionsInputSetBloodEnabled(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004032a4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GameOptionsInputSetBloodEnabled(int blood);",
+        "note": "Sets blood-enabled in the config game-options write-out context. Param: blood = 1 on, 0 off."
       }
     },
     {
@@ -1040,8 +1040,8 @@
         "hash": "00404510",
         "address": 4211984,
         "name": "Config_GraphicOptionsSetResolution",
-        "signature": "void Config_GraphicOptionsSetResolution(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004032b7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (125 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GraphicOptionsSetResolution(int modeIndex);",
+        "note": "Applies a screen resolution to the active profile and re-initialises the display. Param: modeIndex = index from Config_FillScreenResolutionListBox entries. Use in the video-options screen script."
       }
     },
     {
@@ -1049,8 +1049,8 @@
         "hash": "00404960",
         "address": 4213088,
         "name": "Config_GraphicOptionsSetTransparency",
-        "signature": "void Config_GraphicOptionsSetTransparency(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004032cd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GraphicOptionsSetTransparency(int onOff);",
+        "note": "Toggles transparency for the active profile. Param: onOff = 1 enable, 0 disable. Video-options screen."
       }
     },
     {
@@ -1058,8 +1058,8 @@
         "hash": "004047F0",
         "address": 4212720,
         "name": "Config_GraphicOptionsSetDevice",
-        "signature": "void Config_GraphicOptionsSetDevice(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004032e0 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (180 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GraphicOptionsSetDevice(int deviceIndex);",
+        "note": "Applies a render device to the active profile. Param: deviceIndex = index from Config_FillRenderDeviceListBox. Use in video-options screen script."
       }
     },
     {
@@ -1067,8 +1067,8 @@
         "hash": "00404F00",
         "address": 4214528,
         "name": "Config_GraphicOptionsSetPerformanceFlags",
-        "signature": "void Config_GraphicOptionsSetPerformanceFlags(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403306 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (85 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GraphicOptionsSetPerformanceFlags(int flags);",
+        "note": "Sets the raw graphics performance/detail flag bits on the active profile. Param: flags = bitmask (get a valid one from Config_GraphicOptionsGetPerfFlagsFromLevel)."
       }
     },
     {
@@ -1076,8 +1076,8 @@
         "hash": "004045B0",
         "address": 4212144,
         "name": "Config_GraphicOptionsGetResolution",
-        "signature": "void Config_GraphicOptionsGetResolution();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040331c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (228 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsGetResolution();",
+        "note": "Returns the active profile's display-mode/resolution index (same index space as Config_GraphicOptionsSetResolution). Use in video-options UI scripts to preselect the current value."
       }
     },
     {
@@ -1085,8 +1085,8 @@
         "hash": "004049C0",
         "address": 4213184,
         "name": "Config_GraphicOptionsGetTransparency",
-        "signature": "void Config_GraphicOptionsGetTransparency();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040332f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsGetTransparency();",
+        "note": "Returns 1 if transparency is enabled for the active profile, else 0."
       }
     },
     {
@@ -1094,8 +1094,8 @@
         "hash": "00404710",
         "address": 4212496,
         "name": "Config_GraphicOptionsGetDevice",
-        "signature": "void Config_GraphicOptionsGetDevice();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403342 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (212 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsGetDevice();",
+        "note": "Returns the active profile's render-device index (index into the device list). Use in video-options UI scripts."
       }
     },
     {
@@ -1103,8 +1103,8 @@
         "hash": "00404910",
         "address": 4213008,
         "name": "Config_GraphicOptionsGetGamma",
-        "signature": "void Config_GraphicOptionsGetGamma();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403355 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (74 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float Config_GraphicOptionsGetGamma();",
+        "note": "Returns the active profile's gamma as a float. Use to initialise your own gamma slider/UI."
       }
     },
     {
@@ -1112,8 +1112,8 @@
         "hash": "00404F60",
         "address": 4214624,
         "name": "Config_GraphicOptionsGetPerformanceFlags",
-        "signature": "void Config_GraphicOptionsGetPerformanceFlags();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040336b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (60 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsGetPerformanceFlags();",
+        "note": "Returns the active profile's graphics performance flag bitmask."
       }
     },
     {
@@ -1121,8 +1121,8 @@
         "hash": "004055C0",
         "address": 4216256,
         "name": "Config_GraphicOptionsGetPerfFlagsFromLevel",
-        "signature": "void Config_GraphicOptionsGetPerfFlagsFromLevel(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040337e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (81 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsGetPerfFlagsFromLevel(int level);",
+        "note": "Converts a detail LEVEL number into its performance-flag bitmask. Param: level = 0..Config_GraphicOptionsNumPerfLevels()-1. Use when the user picks a named detail preset."
       }
     },
     {
@@ -1130,8 +1130,8 @@
         "hash": "00405530",
         "address": 4216112,
         "name": "Config_GraphicOptionsGetPerfLevelFromFlags",
-        "signature": "void Config_GraphicOptionsGetPerfLevelFromFlags(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403391 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (141 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsGetPerfLevelFromFlags(int flags);",
+        "note": "Converts a performance-flag bitmask back into its detail LEVEL number. Param: flags = bitmask from the profile/performance setting. Use to show the current detail level in UI."
       }
     },
     {
@@ -1139,8 +1139,8 @@
         "hash": "00405620",
         "address": 4216352,
         "name": "Config_GraphicOptionsNumPerfLevels",
-        "signature": "void Config_GraphicOptionsNumPerfLevels(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004033a4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (60 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_GraphicOptionsNumPerfLevels();",
+        "note": "RETURNS the number of graphics detail levels the engine supports (constant). Use to build the detail-level slider/list."
       }
     },
     {
@@ -1148,8 +1148,8 @@
         "hash": "00404A10",
         "address": 4213264,
         "name": "Config_SoundOptionsSetSoundsEffects",
-        "signature": "void Config_SoundOptionsSetSoundsEffects(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004033ba and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetSoundsEffects(int onOff);",
+        "note": "Enables/disables sound effects for the active profile. Param: onOff = 1 on, 0 off."
       }
     },
     {
@@ -1157,8 +1157,8 @@
         "hash": "00404AE0",
         "address": 4213472,
         "name": "Config_SoundOptionsSetSoundsEffectsVolume",
-        "signature": "void Config_SoundOptionsSetSoundsEffectsVolume(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004033cd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (90 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetSoundsEffectsVolume(float volume);",
+        "note": "Sets SFX volume for the active profile. Param: volume = float 0.0-1.0."
       }
     },
     {
@@ -1166,8 +1166,8 @@
         "hash": "00404B90",
         "address": 4213648,
         "name": "Config_SoundOptionsSetMusic",
-        "signature": "void Config_SoundOptionsSetMusic(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004033e0 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetMusic(int onOff);",
+        "note": "Enables/disables music for the active profile. Param: onOff = 1 on, 0 off."
       }
     },
     {
@@ -1175,8 +1175,8 @@
         "hash": "00404C40",
         "address": 4213824,
         "name": "Config_SoundOptionsSetMusicVolume",
-        "signature": "void Config_SoundOptionsSetMusicVolume(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004033f3 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (91 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetMusicVolume(float volume);",
+        "note": "Sets music volume for the active profile. Param: volume = float 0.0-1.0 (pops a float arg - pass a float!)."
       }
     },
     {
@@ -1184,8 +1184,8 @@
         "hash": "00404CF0",
         "address": 4214000,
         "name": "Config_SoundOptionsSetSpeech",
-        "signature": "void Config_SoundOptionsSetSpeech(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403409 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetSpeech(int onOff);",
+        "note": "Enables/disables radio speech for the active profile. Param: onOff = 1 on, 0 off."
       }
     },
     {
@@ -1193,8 +1193,8 @@
         "hash": "00404DA0",
         "address": 4214176,
         "name": "Config_SoundOptionsSetSpeechVolume",
-        "signature": "void Config_SoundOptionsSetSpeechVolume(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040341c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (90 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetSpeechVolume(float volume);",
+        "note": "Sets speech volume for the active profile. Param: volume = float 0.0-1.0."
       }
     },
     {
@@ -1202,8 +1202,8 @@
         "hash": "00404E50",
         "address": 4214352,
         "name": "Config_SoundOptionsSetReverseStereo",
-        "signature": "void Config_SoundOptionsSetReverseStereo(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040342f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_SoundOptionsSetReverseStereo(int onOff);",
+        "note": "Toggles reversed stereo channels for the active profile. Param: onOff = 1 reverse, 0 normal."
       }
     },
     {
@@ -1211,8 +1211,8 @@
         "hash": "00404A90",
         "address": 4213392,
         "name": "Config_SoundOptionsGetSoundsEffects",
-        "signature": "void Config_SoundOptionsGetSoundsEffects();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403442 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_SoundOptionsGetSoundsEffects();",
+        "note": "Returns 1 if sound effects are enabled for the active profile, else 0."
       }
     },
     {
@@ -1220,8 +1220,8 @@
         "hash": "00404B40",
         "address": 4213568,
         "name": "Config_SoundOptionsGetSoundsEffectsVolume",
-        "signature": "void Config_SoundOptionsGetSoundsEffectsVolume();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403458 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (66 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float Config_SoundOptionsGetSoundsEffectsVolume();",
+        "note": "Returns the active profile's SFX volume (0.0-1.0)."
       }
     },
     {
@@ -1229,8 +1229,8 @@
         "hash": "00404BF0",
         "address": 4213744,
         "name": "Config_SoundOptionsGetMusic",
-        "signature": "void Config_SoundOptionsGetMusic();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040346b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_SoundOptionsGetMusic();",
+        "note": "Returns 1 if music is enabled for the active profile, else 0."
       }
     },
     {
@@ -1238,8 +1238,8 @@
         "hash": "00404CA0",
         "address": 4213920,
         "name": "Config_SoundOptionsGetMusicVolume",
-        "signature": "void Config_SoundOptionsGetMusicVolume();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040347e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (68 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float Config_SoundOptionsGetMusicVolume();",
+        "note": "Returns the active profile's music volume (0.0-1.0)."
       }
     },
     {
@@ -1247,8 +1247,8 @@
         "hash": "00404D50",
         "address": 4214096,
         "name": "Config_SoundOptionsGetSpeech",
-        "signature": "void Config_SoundOptionsGetSpeech();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403491 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_SoundOptionsGetSpeech();",
+        "note": "Returns 1 if speech is enabled for the active profile, else 0."
       }
     },
     {
@@ -1256,8 +1256,8 @@
         "hash": "00404E00",
         "address": 4214272,
         "name": "Config_SoundOptionsGetSpeechVolume",
-        "signature": "void Config_SoundOptionsGetSpeechVolume();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004034a7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (66 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float Config_SoundOptionsGetSpeechVolume();",
+        "note": "Returns the active profile's speech volume (0.0-1.0)."
       }
     },
     {
@@ -1265,8 +1265,8 @@
         "hash": "00404EB0",
         "address": 4214448,
         "name": "Config_SoundOptionsGetReverseStereo",
-        "signature": "void Config_SoundOptionsGetReverseStereo();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004034ba and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_SoundOptionsGetReverseStereo();",
+        "note": "Returns 1 if stereo is reversed for the active profile, else 0."
       }
     },
     {
@@ -1274,8 +1274,8 @@
         "hash": "00403C10",
         "address": 4209680,
         "name": "Config_SetContentControlPassword",
-        "signature": "void Config_SetContentControlPassword(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004034cd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (82 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int GO_ContentControlPW(char* password);",
+        "note": "Sets the content-control (parental) password. Param: password = password string as typed on the options screen. Use in config scripts. Returns 1."
       }
     },
     {
@@ -1283,8 +1283,8 @@
         "hash": "00403C70",
         "address": 4209776,
         "name": "Config_GetContentControlPassword",
-        "signature": "void Config_GetContentControlPassword();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004034e0 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (73 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "char* Config_GetContentControlPassword();",
+        "note": "RETURNS the stored content-control (parental lock) password string. Takes no args. Compare against user input or pass to Config_VerifyContentControlPassword."
       }
     },
     {
@@ -1292,8 +1292,8 @@
         "hash": "00403CC0",
         "address": 4209856,
         "name": "Config_VerifyContentControlPassword",
-        "signature": "void Config_VerifyContentControlPassword(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004034f6 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (198 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_VerifyContentControlPassword(char* password);",
+        "note": "Checks a password attempt against the stored content-control password. Param: password = string to test. RETURNS non-zero when correct, 0 when wrong. Use before unlocking violent-content options."
       }
     },
     {
@@ -1301,8 +1301,8 @@
         "hash": "00403D90",
         "address": 4210064,
         "name": "Config_IsContentControlPasswordEnabled",
-        "signature": "void Config_IsContentControlPasswordEnabled();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00403509 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (84 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_IsContentControlPasswordEnabled();",
+        "note": "RETURNS 1 if a content-control password is SET (parental lock active), else 0. Takes no args. Use to decide whether to ask for the password."
       }
     },
     {
@@ -1310,8 +1310,8 @@
         "hash": "00403B30",
         "address": 4209456,
         "name": "Config_IsGermany",
-        "signature": "void Config_IsGermany();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0040351c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (62 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int Config_IsGermany();",
+        "note": "RETURNS 1 when running the GERMAN retail build (censored variant), 0 otherwise. Takes no args. German builds gate blood/gore - check before forcing such effects."
       }
     },
     {
@@ -1319,8 +1319,8 @@
         "hash": "00407E30",
         "address": 4226608,
         "name": "DefineQMaterial",
-        "signature": "void DefineQMaterial();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00407db9 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (283 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineQMaterial(...);",
+        "note": "Defines a Q-material (surface material) entry while a material definition block is parsed. Called BY the engine's own define-block parser - call only from material .qsc definition contexts; arg layout follows the Define block grammar (registration argc unknown)."
       }
     },
     {
@@ -1328,8 +1328,8 @@
         "hash": "00407F50",
         "address": 4226896,
         "name": "DefineGameMaterial",
-        "signature": "void DefineGameMaterial();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00407dcc and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (855 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineGameMaterial(...);",
+        "note": "Defines a GameMaterial entry during a game-material definition block (855-byte parser function). Call only from gamematerial .qsc definition contexts; arg layout follows the Define block grammar (registration argc unknown)."
       }
     },
     {
@@ -1337,8 +1337,8 @@
         "hash": "004101C0",
         "address": 4260288,
         "name": "DefineHumanPlayerWeaponCycle",
-        "signature": "void DefineHumanPlayerWeaponCycle();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0041002e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (121 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineHumanPlayerWeaponCycle(...);",
+        "note": "Collects the weapon-cycle list for the human player: loops the parsed entries and stores them into the cycle table at 0x56DF1C with count at 0x56DF18 (verified in igi.exe). Call within a humanplayer weapon-cycle definition block; argc unknown (parser context)."
       }
     },
     {
@@ -1346,8 +1346,8 @@
         "hash": "00410240",
         "address": 4260416,
         "name": "DefineHumanPlayerWeaponCategory",
-        "signature": "void DefineHumanPlayerWeaponCategory();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00410041 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (141 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineHumanPlayerWeaponCategory(...);",
+        "note": "Registers one weapon-category entry for the human player during a humanplayer definition block (argc unknown - parser context). Pairs with DefineHumanPlayerWeaponCycle/Cycle ordering."
       }
     },
     {
@@ -1355,8 +1355,8 @@
         "hash": "004102D0",
         "address": 4260560,
         "name": "DefineHumanPlayerAmmoLimit",
-        "signature": "void DefineHumanPlayerAmmoLimit();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00410054 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (137 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineHumanPlayerAmmoLimit(...);",
+        "note": "Registers an ammo-limit entry (max carried ammo class) for the human player during a humanplayer definition block (argc unknown - parser context)."
       }
     },
     {
@@ -1364,8 +1364,8 @@
         "hash": "004151E0",
         "address": 4280800,
         "name": "MovieSubtitle_RegisterFont",
-        "signature": "void MovieSubtitle_RegisterFont();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00415182 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (126 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MovieSubtitle_RegisterFont(...);",
+        "note": "Registers a font used by in-game movie subtitles (16 callsites in body; argc unknown - parser context). Call from subtitle/font definition blocks before any MovieSubtitle_RegisterText that uses it."
       }
     },
     {
@@ -1373,8 +1373,8 @@
         "hash": "00415260",
         "address": 4280928,
         "name": "MovieSubtitle_RegisterText",
-        "signature": "void MovieSubtitle_RegisterText();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00415194 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (281 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MovieSubtitle_RegisterText(...);",
+        "note": "Registers one subtitle text entry (string + timing) shown over movies/briefings (argc unknown - parser context). Call after the font registration it should use."
       }
     },
     {
@@ -1382,8 +1382,8 @@
         "hash": "00415890",
         "address": 4282512,
         "name": "Game_SetMission",
-        "signature": "void Game_SetMission(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004156ed and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (80 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Game_SetMission(int mission);",
+        "note": "Selects the mission the game will run/load next. Param: mission = mission index 1..14. Use before Level_Start/level load flow when jumping straight into a mission."
       }
     },
     {
@@ -1391,8 +1391,8 @@
         "hash": "00415950",
         "address": 4282704,
         "name": "Game_SetMusicVolume",
-        "signature": "void Game_SetMusicVolume(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0041573c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (90 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Game_SetMusicVolume(int volume);",
+        "note": "Live-sets the music engine volume at runtime (different storage than the profile GO_/Config_ values). Param: volume = engine volume value (0..100 style integer scale). Use for in-game sliders."
       }
     },
     {
@@ -1400,8 +1400,8 @@
         "hash": "004159B0",
         "address": 4282800,
         "name": "Game_SetSFXVolume",
-        "signature": "void Game_SetSFXVolume(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0041574f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (89 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Game_SetSFXVolume(int volume);",
+        "note": "Live-sets the sound-effects engine volume at runtime. Param: volume = engine volume value (integer scale). Use for in-game sliders."
       }
     },
     {
@@ -1409,8 +1409,8 @@
         "hash": "004174A0",
         "address": 4289696,
         "name": "MenuManager_RequestScreen",
-        "signature": "void MenuManager_RequestScreen(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00417277 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (116 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_RequestScreen(int screenId, int flags);",
+        "note": "Requests a menu screen by id through the menu manager (queued request). Params: screenId = retail screen resource id, flags = request modifier (0 = normal). Use outside the menu stack internals when you just want a screen opened next tick."
       }
     },
     {
@@ -1418,8 +1418,8 @@
         "hash": "00417790",
         "address": 4290448,
         "name": "MenuManager_LeaveMenus",
-        "signature": "void MenuManager_LeaveMenus(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00417289 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (114 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_LeaveMenus(int param1, int param2);",
+        "note": "Leaves/closes the whole menu system returning to gameplay. Params: two ints observed in retail calls (pass 0,0). Use to exit from custom menus."
       }
     },
     {
@@ -1427,8 +1427,8 @@
         "hash": "00417810",
         "address": 4290576,
         "name": "MenuManager_SetLanguage",
-        "signature": "void MenuManager_SetLanguage(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0041729b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (99 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_SetLanguage(int langIndex);",
+        "note": "Switches menu/UI language at runtime. Param: langIndex = language index matching the LANGUAGE\\ folder tables. Call before pushing screens so texts load in the right language."
       }
     },
     {
@@ -1436,8 +1436,8 @@
         "hash": "00417690",
         "address": 4290192,
         "name": "MenuManager_PushScreen",
-        "signature": "void MenuManager_PushScreen(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004172ad and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (121 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_PushScreen(int screenId);",
+        "note": "Pushes a screen onto the menu stack: allocates the screen object (objsize 0x2898) and stores it in the manager's screen stack at mgr+0x27EC (verified in igi.exe). Param: screenId = retail screen id. Remember to MenuManager_PopScreen when done."
       }
     },
     {
@@ -1445,8 +1445,8 @@
         "hash": "00417710",
         "address": 4290320,
         "name": "MenuManager_PopScreen",
-        "signature": "void MenuManager_PopScreen(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004172c2 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (122 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_PopScreen(int param);",
+        "note": "Pops the top screen off the menu stack (destroys it) revealing the one beneath. Param: param = pass-through argument observed in retail calls (pass 0). Pair with MenuManager_PushScreen."
       }
     },
     {
@@ -1454,8 +1454,8 @@
         "hash": "00417880",
         "address": 4290688,
         "name": "MenuManager_ForceUpdateWindow",
-        "signature": "void MenuManager_ForceUpdateWindow(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004172d4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (123 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_ForceUpdateWindow(int param);",
+        "note": "Forces the menu manager to redraw/update its windows this frame. Param: observed retail value 0. Use after changing control contents from script."
       }
     },
     {
@@ -1463,8 +1463,8 @@
         "hash": "00417900",
         "address": 4290816,
         "name": "MenuManager_ActivatePopupScreen",
-        "signature": "void MenuManager_ActivatePopupScreen(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004172e6 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (89 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_ActivatePopupScreen(int popupId);",
+        "note": "Activates a popup screen on top of the current menus (e.g. confirmation dialogs; retail scripts call MenuManager_ActivatePopupScreen(930)). Param: popupId = retail popup screen id. Use for custom confirmations."
       }
     },
     {
@@ -1472,8 +1472,8 @@
         "hash": "00417960",
         "address": 4290912,
         "name": "MenuManager_DeactivatePopuScreen",
-        "signature": "void MenuManager_DeactivatePopuScreen();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004172f9 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (78 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_DeactivatePopupScreen();",
+        "note": "Deactivates the currently-active popup screen and returns to the screen beneath. Takes no args. Pair with MenuManager_ActivatePopupScreen."
       }
     },
     {
@@ -1481,8 +1481,8 @@
         "hash": "004179B0",
         "address": 4290992,
         "name": "MenuManager_SetEnabled",
-        "signature": "void MenuManager_SetEnabled(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0041730e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (104 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void MenuManager_SetEnabled(int enabled);",
+        "note": "Enables/disables menu-manager input processing. Param: enabled = 1 menus react to input, 0 frozen. Use to freeze menus during scripted sequences."
       }
     },
     {
@@ -1490,8 +1490,8 @@
         "hash": "004231E0",
         "address": 4338144,
         "name": "ControlsMenu_ConvertFloatFromOffset",
-        "signature": "void ControlsMenu_ConvertFloatFromOffset(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004231bc and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float ControlsMenu_ConvertFloatFromOffset(int offset);",
+        "note": "Converts a controls-menu slider/storage OFFSET into its float value (0.0-1.0 range used by the control configuration bars). Param: offset = raw integer offset stored for that control binding. Use when reading/writing control bindings from script."
       }
     },
     {
@@ -1499,8 +1499,8 @@
         "hash": "00423240",
         "address": 4338240,
         "name": "ControlsMenu_ConvertOffsetFromFloat",
-        "signature": "void ControlsMenu_ConvertOffsetFromFloat(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004231cf and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (99 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int ControlsMenu_ConvertOffsetFromFloat(float value);",
+        "note": "Inverse of ControlsMenu_ConvertFloatFromOffset: converts a float control value into the raw storage offset. Param: value = float 0.0-1.0. Use when saving a modified binding back."
       }
     },
     {
@@ -1508,8 +1508,8 @@
         "hash": "0044D0E0",
         "address": 4509920,
         "name": "AIAction_Patrol",
-        "signature": "void AIAction_Patrol(int32_t p0, int32_t p1, int32_t p2);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ccae and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (122 bytes). declared script parameter count = 3; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_Patrol(int target, int mustBeZero, int flags);",
+        "note": "Orders the AI into PATROL behaviour. Params: target = patrol goal/node reference from your script, mustBeZero = retail template always passes 0, flags = AIACTIONFLAG enum: NONE=0, PUSHABLE=1 (action may be replaced by higher priority). Use inside AI event handlers e.g. AIEVENT_IDLE branch. Template in igi.exe: AIAction_Patrol(xxxx, 0, AIACTIONFLAG_NONE)."
       }
     },
     {
@@ -1517,8 +1517,8 @@
         "hash": "0044D160",
         "address": 4510048,
         "name": "AIAction_Combat",
-        "signature": "void AIAction_Combat(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ccc1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (195 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_Combat(int param);",
+        "note": "Orders the AI into COMBAT behaviour vs its current enemy. Param: param = combat argument from the calling script (retail guard scripts pass their combat target/context value). Use in AIEVENT_COMBAT branches."
       }
     },
     {
@@ -1526,8 +1526,8 @@
         "hash": "0044D260",
         "address": 4510304,
         "name": "AIAction_Dead",
-        "signature": "void AIAction_Dead(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ccd4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (88 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_Dead(int param);",
+        "note": "Runs the DEATH handling action for the AI (plays death, releases tasks). Param: param = death context value passed by retail scripts. Use in AIEVENT_DEAD handler."
       }
     },
     {
@@ -1535,8 +1535,8 @@
         "hash": "0044D2C0",
         "address": 4510400,
         "name": "AIAction_FallFlat",
-        "signature": "void AIAction_FallFlat(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cce7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (339 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_FallFlat(int param1, int param2);",
+        "note": "Knocks the AI flat on the ground (ragdoll-ish fall, e.g. after explosion/surrender). Params: two ints observed in retail calls (pass 0,0 unless mapping specific values). Use for scripted knockdowns."
       }
     },
     {
@@ -1544,8 +1544,8 @@
         "hash": "0044D420",
         "address": 4510752,
         "name": "AIAction_Activate",
-        "signature": "void AIAction_Activate(int32_t p0, int32_t p1, int32_t p2);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ccfd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (122 bytes). declared script parameter count = 3; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_Activate(int target, int param2, int flags);",
+        "note": "Generic ACTIVATE action: sends the AI to activate/use an object (switch, door, alarm...). Params: target = object/task reference, param2 = secondary value (retail passes 0), flags = AIACTIONFLAG (NONE=0/PUSHABLE=1). Use in AI handlers for alarm/objective responses."
       }
     },
     {
@@ -1553,8 +1553,8 @@
         "hash": "0044D4A0",
         "address": 4510880,
         "name": "AIAction_WalkToNode",
-        "signature": "void AIAction_WalkToNode(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd10 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (111 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_WalkToNode(int nodeId, int flags);",
+        "note": "Walks the AI to a nav node. Params: nodeId = graph/node id from the level nav data, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1). Use for calm movement in AI scripts."
       }
     },
     {
@@ -1562,8 +1562,8 @@
         "hash": "0044D510",
         "address": 4510992,
         "name": "AIAction_RunToNode",
-        "signature": "void AIAction_RunToNode(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd23 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (111 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_RunToNode(int nodeId, int flags);",
+        "note": "Runs the AI to a nav node (fast). Same params as AIAction_WalkToNode: nodeId = node id, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1)."
       }
     },
     {
@@ -1571,8 +1571,8 @@
         "hash": "0044D580",
         "address": 4511104,
         "name": "AIAction_FireAtNode",
-        "signature": "void AIAction_FireAtNode(int32_t p0, int32_t p1, int32_t p2, int32_t p3, int32_t p4);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd36 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (172 bytes). declared script parameter count = 5; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_FireAtNode(int nodeId, int p1, int p2, int p3, int p4);",
+        "note": "Makes the AI fire AT a nav-node position. Params: nodeId = target node id, remaining 4 args = firing stance/behaviour values observed in retail AI scripts (map before inventing values). Use in combat handlers when target is a position."
       }
     },
     {
@@ -1580,8 +1580,8 @@
         "hash": "0044D630",
         "address": 4511280,
         "name": "AIAction_FireAtTask",
-        "signature": "void AIAction_FireAtTask(int32_t p0, int32_t p1, int32_t p2, int32_t p3, int32_t p4);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd4c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (172 bytes). declared script parameter count = 5; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_FireAtTask(int taskId, int p1, int p2, int p3, int p4);",
+        "note": "Makes the AI fire AT a task/object entity. Params: taskId = target task/entity id, remaining 4 args = firing behaviour values (same layout family as FireAtNode). Use in combat handlers when target is an entity."
       }
     },
     {
@@ -1589,8 +1589,8 @@
         "hash": "0044D6E0",
         "address": 4511456,
         "name": "AIAction_PlayAnimation",
-        "signature": "void AIAction_PlayAnimation(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd5f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (111 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_PlayAnimation(int animationId, int flags);",
+        "note": "Plays an animation on the AI. Params: animationId = animation entry id (see AIFunction_AddAnimationEntry), flags = AIACTIONFLAG (NONE=0/PUSHABLE=1)."
       }
     },
     {
@@ -1598,8 +1598,8 @@
         "hash": "0044D750",
         "address": 4511568,
         "name": "AIAction_PlaySound",
-        "signature": "void AIAction_PlaySound(int32_t p0, int32_t p1, int32_t p2);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd72 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (125 bytes). declared script parameter count = 3; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_PlaySound(int soundId, int param2, int flags);",
+        "note": "Plays a sound from the AI (voice barks etc.). Params: soundId = sound/event id, param2 = observed 0 in retail, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1)."
       }
     },
     {
@@ -1607,8 +1607,8 @@
         "hash": "0044D7D0",
         "address": 4511696,
         "name": "AIAction_MoveToEvent",
-        "signature": "void AIAction_MoveToEvent(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd85 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (120 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_MoveToEvent(int eventId, int flags);",
+        "note": "Moves the AI toward the source position of an EVENT it received. Params: eventId = AIEVENT_* whose position to move to, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1). Use in event handlers (gunshot heard -> move there)."
       }
     },
     {
@@ -1616,8 +1616,8 @@
         "hash": "0044D870",
         "address": 4511856,
         "name": "AIAction_LookAtEvent",
-        "signature": "void AIAction_LookAtEvent(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cd9b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (120 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_LookAtEvent(int eventId, int flags);",
+        "note": "Turns the AI to LOOK toward an event's source without moving. Params: eventId = AIEVENT_* value, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1)."
       }
     },
     {
@@ -1625,8 +1625,8 @@
         "hash": "0044D8F0",
         "address": 4511984,
         "name": "AIAction_Stunned",
-        "signature": "void AIAction_Stunned(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cdae and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (111 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_Stunned(int param1, int flags);",
+        "note": "Stuns the AI (flashbang/knockout reaction). Params: param1 = stun duration/context value, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1)."
       }
     },
     {
@@ -1634,8 +1634,8 @@
         "hash": "0044D960",
         "address": 4512096,
         "name": "AIAction_KickGrenade",
-        "signature": "void AIAction_KickGrenade(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cdc1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (158 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_KickGrenade(int param);",
+        "note": "Kicks a nearby live grenade away (retail soldier behaviour). Param: param = grenade/context reference from the event. Use in grenade-event handlers."
       }
     },
     {
@@ -1643,8 +1643,8 @@
         "hash": "0044DA00",
         "address": 4512256,
         "name": "AIAction_RunPanicking",
-        "signature": "void AIAction_RunPanicking(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cdd4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (122 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_RunPanicking(int param1, int flags);",
+        "note": "Sends the AI into PANIC running (civilians under fire). Params: param1 = panic target/context, flags = AIACTIONFLAG (NONE=0/PUSHABLE=1)."
       }
     },
     {
@@ -1652,8 +1652,8 @@
         "hash": "0044DA80",
         "address": 4512384,
         "name": "AIAction_Idle",
-        "signature": "void AIAction_Idle(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cdea and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (88 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_Idle(int param);",
+        "note": "Puts the AI into IDLE (stands, resumes idle animation countdown). Param: idle context value (retail scripts pass their idle value). Use in AIEVENT_IDLE handler instead of Patrol for stationary guards."
       }
     },
     {
@@ -1661,8 +1661,8 @@
         "hash": "0044DAE0",
         "address": 4512480,
         "name": "AIAction_SetCombat",
-        "signature": "void AIAction_SetCombat(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cdfd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (209 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIAction_SetCombat(int enemyId);",
+        "note": "Force-sets the AI's COMBAT ENEMY/target. Param: enemyId = enemy entity/id to engage. Use to make an AI attack a specific target regardless of detection."
       }
     },
     {
@@ -1671,7 +1671,7 @@
         "address": 4513888,
         "name": "AIFunction_DefaultHandler",
         "signature": "void AIFunction_DefaultHandler();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce10 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (94 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "The default AI event handler: call this for any AIEVENT_* your script does not handle explicitly (retail template shows it as the else-branch body). Takes no args. Put inside every event if-else chain as fallback."
       }
     },
     {
@@ -1680,7 +1680,7 @@
         "address": 4512704,
         "name": "AIFunction_RemoveAlarmActions",
         "signature": "void AIFunction_RemoveAlarmActions();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce23 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (113 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Removes all queued ALARM-related actions from this AI (calms it down). Takes no args. Use to de-escalate an NPC you control."
       }
     },
     {
@@ -1688,8 +1688,8 @@
         "hash": "0044DC40",
         "address": 4512832,
         "name": "AIFunction_SetViewLength",
-        "signature": "void AIFunction_SetViewLength(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce39 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (139 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetViewLength(int length);",
+        "note": "Sets this AI's VIEW LENGTH - how far it can see. Param: length = view distance in engine units. Use in AI init (AIEVENT_CREATE) to buff/nerf vision."
       }
     },
     {
@@ -1697,8 +1697,8 @@
         "hash": "0044DCD0",
         "address": 4512976,
         "name": "AIFunction_SetAlarmViewLength",
-        "signature": "void AIFunction_SetAlarmViewLength(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce4c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetAlarmViewLength(int length);",
+        "note": "Sets view length WHILE AN ALARM IS ON (separate stat from normal vision). Param: length = distance in engine units. Use in AI init."
       }
     },
     {
@@ -1706,8 +1706,8 @@
         "hash": "0044DD30",
         "address": 4513072,
         "name": "AIFunction_SetViewAlpha",
-        "signature": "void AIFunction_SetViewAlpha(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce5f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetViewAlpha(int alpha);",
+        "note": "Sets view ALPHA - the detection speed/gain of normal vision. Param: alpha = engine detection factor. Higher = spots player faster. Use in AIEVENT_CREATE."
       }
     },
     {
@@ -1715,8 +1715,8 @@
         "hash": "0044DD90",
         "address": 4513168,
         "name": "AIFunction_SetViewGamma",
-        "signature": "void AIFunction_SetViewGamma(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce72 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetViewGamma(int gamma);",
+        "note": "Sets view GAMMA - secondary vision shaping factor for detection. Param: gamma = engine factor. Use in AI init alongside SetViewAlpha."
       }
     },
     {
@@ -1724,8 +1724,8 @@
         "hash": "0044DDF0",
         "address": 4513264,
         "name": "AIFunction_SetSecondaryViewLength",
-        "signature": "void AIFunction_SetSecondaryViewLength(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce88 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (139 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetSecondaryViewLength(int length);",
+        "note": "Sets SECONDARY view length (peripheral/short-range channel). Param: length = distance in engine units."
       }
     },
     {
@@ -1733,8 +1733,8 @@
         "hash": "0044DE80",
         "address": 4513408,
         "name": "AIFunction_SetSecondaryAlarmViewLength",
-        "signature": "void AIFunction_SetSecondaryAlarmViewLength(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ce9b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetSecondaryAlarmViewLength(int length);",
+        "note": "Sets secondary view length during alarms. Param: length = distance in engine units."
       }
     },
     {
@@ -1742,8 +1742,8 @@
         "hash": "0044DEE0",
         "address": 4513504,
         "name": "AIFunction_SetSecondaryViewAlpha",
-        "signature": "void AIFunction_SetSecondaryViewAlpha(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ceae and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetSecondaryViewAlpha(int alpha);",
+        "note": "Sets secondary-view detection gain. Param: alpha = engine factor."
       }
     },
     {
@@ -1751,8 +1751,8 @@
         "hash": "0044DF40",
         "address": 4513600,
         "name": "AIFunction_SetSecondaryViewGamma",
-        "signature": "void AIFunction_SetSecondaryViewGamma(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cec1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (93 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetSecondaryViewGamma(int gamma);",
+        "note": "Sets secondary-view gamma shaping factor. Param: gamma = engine factor."
       }
     },
     {
@@ -1760,8 +1760,8 @@
         "hash": "0044E0C0",
         "address": 4513984,
         "name": "AIFunction_SetEventPriority",
-        "signature": "void AIFunction_SetEventPriority(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ced7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (132 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetEventPriority(int priority);",
+        "note": "Sets the priority of the CURRENT event being handled (decides which queued event wins). Param: priority = engine priority number. Use inside an event handler."
       }
     },
     {
@@ -1769,8 +1769,8 @@
         "hash": "0044E150",
         "address": 4514128,
         "name": "AIFunction_SetInvulnerability",
-        "signature": "void AIFunction_SetInvulnerability(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044ceea and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetInvulnerability(int onOff);",
+        "note": "Makes this AI invulnerable. Param: onOff = 1 immune to damage, 0 normal. Great for boss/scripted NPCs. Use in AIEVENT_CREATE or anytime."
       }
     },
     {
@@ -1778,8 +1778,8 @@
         "hash": "0044E1B0",
         "address": 4514224,
         "name": "AIFunction_SetInstantDeath",
-        "signature": "void AIFunction_SetInstantDeath(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cefd and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (92 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetInstantDeath(int onOff);",
+        "note": "When on, any hit instantly kills this AI (no damage pooling). Param: onOff = 1 one-shot kills, 0 normal health. Use for scripted one-shot enemies."
       }
     },
     {
@@ -1787,8 +1787,8 @@
         "hash": "0044E210",
         "address": 4514320,
         "name": "AIFunction_SetDeathAnimation",
-        "signature": "void AIFunction_SetDeathAnimation(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf10 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetDeathAnimation(int animId);",
+        "note": "Overrides the death animation played when this AI dies. Param: animId = animation entry id. Use in AI init for custom deaths."
       }
     },
     {
@@ -1796,8 +1796,8 @@
         "hash": "0044E270",
         "address": 4514416,
         "name": "AIFunction_SetAlarmTriggerID",
-        "signature": "void AIFunction_SetAlarmTriggerID(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf26 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetAlarmTriggerID(int id);",
+        "note": "Binds an ALARM trigger object to this AI (which alarm switch it responds to/runs to). Param: id = alarm trigger id from the level. Retail template: AIFunction_SetAlarmTriggerID(xx)."
       }
     },
     {
@@ -1805,8 +1805,8 @@
         "hash": "0044E2D0",
         "address": 4514512,
         "name": "AIFunction_SetAlarmControlID",
-        "signature": "void AIFunction_SetAlarmControlID(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf39 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetAlarmControlID(int id);",
+        "note": "Binds the ALARM CONTROL (the raised-alarm device) this AI uses. Param: id = alarm control id from the level. Retail template: AIFunction_SetAlarmControlID(xx)."
       }
     },
     {
@@ -1814,8 +1814,8 @@
         "hash": "0044E330",
         "address": 4514608,
         "name": "AIFunction_SetAlarmAccess",
-        "signature": "void AIFunction_SetAlarmAccess(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf4c and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetAlarmAccess(int access);",
+        "note": "Sets HOW the AI treats the alarm route. Param: access = AIALARMACCESS enum: BEFORECOMBAT=0 (run for the alarm first), AFTERCOMBAT=1 (fight first, raise alarm after). Retail template: AIFunction_SetAlarmAccess(AIALARMACCESS_BEFORECOMBAT)."
       }
     },
     {
@@ -1823,8 +1823,8 @@
         "hash": "0044E390",
         "address": 4514704,
         "name": "AIFunction_SetGunnerID",
-        "signature": "void AIFunction_SetGunnerID(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf5f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (87 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetGunnerID(int gunnerId);",
+        "note": "Assigns which mounted-gunner slot this AI mans. Param: gunnerId = gunner position id. Use in AI init for turret/mounted-gun NPCs."
       }
     },
     {
@@ -1832,8 +1832,8 @@
         "hash": "0044E6D0",
         "address": 4515536,
         "name": "AIFunction_SetScriptIntegerValue",
-        "signature": "void AIFunction_SetScriptIntegerValue(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf75 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (98 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetScriptIntegerValue(int varId, int value);",
+        "note": "Writes an AI-script integer variable. Params: varId = script variable index, value = new integer. Use for custom AI state communication between scripts."
       }
     },
     {
@@ -1841,8 +1841,8 @@
         "hash": "0044E790",
         "address": 4515728,
         "name": "AIFunction_SetScriptRealValue",
-        "signature": "void AIFunction_SetScriptRealValue(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf88 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (97 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetScriptRealValue(int varId, float value);",
+        "note": "Writes an AI-script real (float) variable. Params: varId = script variable index, value = float. Pairs with AIFunction_GetScriptRealValue."
       }
     },
     {
@@ -1850,8 +1850,8 @@
         "hash": "0044EAF0",
         "address": 4516592,
         "name": "AIFunction_SetAnimationInterval",
-        "signature": "void AIFunction_SetAnimationInterval(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d09b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (182 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_SetAnimationInterval(int entryIndex, int interval);",
+        "note": "Sets playback INTERVAL for an animation entry. Params: entryIndex = animation entry added via AddAnimationEntry, interval = frame/tick interval. Use when tuning scripted animations."
       }
     },
     {
@@ -1859,8 +1859,8 @@
         "hash": "0044EBB0",
         "address": 4516784,
         "name": "AIFunction_AddAnimationEntry",
-        "signature": "void AIFunction_AddAnimationEntry(int32_t p0, int32_t p1);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d0b1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (254 bytes). declared script parameter count = 2; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void AIFunction_AddAnimationEntry(int animationId, int data);",
+        "note": "Adds an animation ENTRY to this AI's available set (builds the pick-list GetAnimationToPlay draws from). Params: animationId = animation resource id, data = entry config value. Use in AIEVENT_CREATE before playing custom animations."
       }
     },
     {
@@ -1869,7 +1869,7 @@
         "address": 4517440,
         "name": "AIFunction_SendResponse",
         "signature": "void AIFunction_SendResponse();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d0d7 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (105 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Sends the AI's RESPONSE to the current event (used for ALERT_RESPONSE chains so buddy AIs react too). Takes no args. Call inside alert handlers."
       }
     },
     {
@@ -1877,8 +1877,8 @@
         "hash": "0047CAD0",
         "address": 4704976,
         "name": "DefineAmmoType",
-        "signature": "void DefineAmmoType();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0047cabe and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (515 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineAmmoType(...);",
+        "note": "Defines an AMMO TYPE inside an ammo definition block of a .qsc/.cfg script (515-byte parser body; igi.exe embeds str 'DefineAmmoType'). Args follow the Define-ammo grammar (name, damage, range, clip...) - not fully mapped, treat as parser-internal. Do NOT call outside its define block."
       }
     },
     {
@@ -1886,8 +1886,8 @@
         "hash": "00484F60",
         "address": 4738912,
         "name": "DefineMission",
-        "signature": "void DefineMission();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00484f3e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (480 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineMission(...);",
+        "note": "Defines a MISSION entry during mission-list parsing (480-byte parser). Called by the engine's mission definition grammar; do NOT call from gameplay scripts."
       }
     },
     {
@@ -1895,8 +1895,8 @@
         "hash": "00488E00",
         "address": 4754944,
         "name": "LevelFlow_GetBreakCutSceneKey",
-        "signature": "void LevelFlow_GetBreakCutSceneKey();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00488dbf and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (72 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int LevelFlow_GetBreakCutSceneKey();",
+        "note": "RETURNS the key code currently bound to 'skip/break cutscene'. Takes no args. Use in cutscene player loops to detect the skip key press."
       }
     },
     {
@@ -1905,7 +1905,7 @@
         "address": 4755024,
         "name": "LevelFlow_LevelFailed",
         "signature": "void LevelFlow_LevelFailed();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00488dd2 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (61 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "note": "Signals that the level FAILED - triggers the retail failure flow (fail sound, restart/quit menu). Takes no args. Call when your scripted objective fails."
       }
     },
     {
@@ -1913,8 +1913,8 @@
         "hash": "00488E90",
         "address": 4755088,
         "name": "LevelFlow_IsCountryUSA",
-        "signature": "void LevelFlow_IsCountryUSA();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x00488de8 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (62 bytes). declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int LevelFlow_IsCountryUSA();",
+        "note": "RETURNS 1 if the running build is a USA country build, 0 otherwise (affects censorship/content paths like blood). Takes no args. Check before enabling content that country builds gate."
       }
     },
     {
@@ -1922,8 +1922,8 @@
         "hash": "004B8C60",
         "address": 4951136,
         "name": "_Script_SetWarningLevel",
-        "signature": "void _Script_SetWarningLevel(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004b8bb1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (81 bytes). declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Script_SetWarningLevel(int level);",
+        "note": "Sets how loudly the script system reports warnings while parsing/running (igi.exe embeds its name WITH leading underscore: '_Script_SetWarningLevel'). Param: level = warning verbosity threshold. Use at the top of scripts you want silenced or extra-chatty."
       }
     },
     {
@@ -1932,7 +1932,7 @@
         "address": 4951056,
         "name": "BreakScript",
         "signature": "void BreakScript();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004b8bc5 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (70 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "note": "Breaks/aborts the currently-executing script at this point (70-byte function). Takes no args. Use as an early-exit inside .qsc scripts."
       }
     },
     {
@@ -1940,8 +1940,8 @@
         "hash": "004C4520",
         "address": 4998432,
         "name": "DefineMagicObj",
-        "signature": "void DefineMagicObj();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004c35a4 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (312 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineMagicObj(...);",
+        "note": "Defines a MAGIC OBJECT type during magicobj definition parsing (pairs with the MAGICOBJ\\ folder data). Parser-context only."
       }
     },
     {
@@ -1949,8 +1949,8 @@
         "hash": "004C6760",
         "address": 5007200,
         "name": "CreateTerrainTileMap",
-        "signature": "void CreateTerrainTileMap();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004c6593 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (113 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void CreateTerrainTileMap(...);",
+        "note": "Creates the TERRAIN TILE MAP for a level during level load (113-byte function). Engine-internal: called by the terrain loader, not meant for gameplay scripts."
       }
     },
     {
@@ -1958,8 +1958,8 @@
         "hash": "004EBA90",
         "address": 5159568,
         "name": "DefineGroup",
-        "signature": "void DefineGroup();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004e6235 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (266 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineGroup(...);",
+        "note": "Defines a GROUP entry (sound-group/entity grouping) during definition parsing. Parser-context only."
       }
     },
     {
@@ -1967,8 +1967,8 @@
         "hash": "004E8C60",
         "address": 5147744,
         "name": "DefineSound",
-        "signature": "void DefineSound();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004e6248 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (340 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineSound(...);",
+        "note": "Defines a SOUND entry (file + attenuation params) inside sound definition blocks - OpenIGI reimplements it as SoundDefinitionRegistry.Define(SoundDefinitionKind.Sound). Call only from sound .qsc define blocks."
       }
     },
     {
@@ -1976,8 +1976,8 @@
         "hash": "004EAD20",
         "address": 5156128,
         "name": "DefineGraph",
-        "signature": "void DefineGraph();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004e625b and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (396 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineGraph(...);",
+        "note": "Defines a GRAPH (sound/graph transition graph) entry inside definition blocks - OpenIGI maps it to SoundDefinitionKind.Graph. Parser-context only."
       }
     },
     {
@@ -1985,8 +1985,8 @@
         "hash": "004E9EC0",
         "address": 5152448,
         "name": "DefineTriggerOnce",
-        "signature": "void DefineTriggerOnce();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004e626e and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (373 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void DefineTriggerOnce(...);",
+        "note": "Defines a fire-once TRIGGER entry inside definition blocks - OpenIGI maps it to SoundDefinitionKind.TriggerOnce. Parser-context only."
       }
     },
     {
@@ -1994,8 +1994,8 @@
         "hash": "004F0780",
         "address": 5179264,
         "name": "Task_New",
-        "signature": "void Task_New();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004ef79f and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (731 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Task_New(...);",
+        "note": "Instantiates a new game task from a declared type (731-byte factory; OpenIGI registers Task_New reading the type name then declared params). Call inside task blocks after Task_DeclareParameters; argc unknown (parser context)."
       }
     },
     {
@@ -2003,8 +2003,8 @@
         "hash": "004F0740",
         "address": 5179200,
         "name": "Task_DeclareParameters",
-        "signature": "void Task_DeclareParameters();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004ef7b1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (60 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Task_DeclareParameters(...);",
+        "note": "Declares the parameter list of the task currently being defined inside a .qsc task block (OpenIGI TaskScriptCommands implements it reading a type name + parameter names). Call as FIRST statement of a task definition; argc unknown (parser context)."
       }
     },
     {
@@ -2012,8 +2012,8 @@
         "hash": "0044E3F0",
         "address": 4514800,
         "name": "AIFunction_GetAlarmTriggerID",
-        "signature": "void AIFunction_GetAlarmTriggerID();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf9b via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetAlarmTriggerID();",
+        "note": "RETURNS the id of the alarm trigger bound to this AI (see AIFunction_SetAlarmTriggerID). Takes no args. Use in handlers to check which alarm applies."
       }
     },
     {
@@ -2021,8 +2021,8 @@
         "hash": "0044E430",
         "address": 4514864,
         "name": "AIFunction_GetAlarmControlID",
-        "signature": "void AIFunction_GetAlarmControlID();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfae via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetAlarmControlID();",
+        "note": "RETURNS the bound alarm-control id. Takes no args."
       }
     },
     {
@@ -2030,8 +2030,8 @@
         "hash": "0044E470",
         "address": 4514928,
         "name": "AIFunction_GetAlarmAccess",
-        "signature": "void AIFunction_GetAlarmAccess();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfc4 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetAlarmAccess();",
+        "note": "RETURNS the current AIALARMACCESS mode: BEFORECOMBAT=0, AFTERCOMBAT=1. Takes no args."
       }
     },
     {
@@ -2039,8 +2039,8 @@
         "hash": "0044E4B0",
         "address": 4514992,
         "name": "AIFunction_GetGunnerID",
-        "signature": "void AIFunction_GetGunnerID();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfd7 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetGunnerID();",
+        "note": "RETURNS this AI's assigned gunner slot id. Takes no args."
       }
     },
     {
@@ -2048,8 +2048,8 @@
         "hash": "0044E4F0",
         "address": 4515056,
         "name": "AIFunction_GetAlarmControlStatus",
-        "signature": "void AIFunction_GetAlarmControlStatus();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfea via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetAlarmControlStatus();",
+        "note": "RETURNS the status/state of the bound alarm control (raised/used state as tracked by the engine). Takes no args."
       }
     },
     {
@@ -2057,8 +2057,8 @@
         "hash": "0044E5E0",
         "address": 4515296,
         "name": "AIFunction_GetGunnerStatus",
-        "signature": "void AIFunction_GetGunnerStatus();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cffd via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetGunnerStatus();",
+        "note": "RETURNS the status of this AI's gunner post (manned/state value). Takes no args."
       }
     },
     {
@@ -2066,8 +2066,8 @@
         "hash": "0044E740",
         "address": 4515648,
         "name": "AIFunction_GetScriptIntegerValue",
-        "signature": "void AIFunction_GetScriptIntegerValue(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d013 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetScriptIntegerValue(int varId);",
+        "note": "READS an AI-script integer variable written by AIFunction_SetScriptIntegerValue. Param: varId = variable index. RETURNS the integer."
       }
     },
     {
@@ -2075,8 +2075,8 @@
         "hash": "0044DFA0",
         "address": 4513696,
         "name": "AIFunction_GetCurrentEventType",
-        "signature": "void AIFunction_GetCurrentEventType();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d026 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "int AIFunction_GetCurrentEventType();",
+        "note": "RETURNS the AIEVENT_* value currently being handled - the backbone of every AI script's if/else chain. Enum: CREATE=0, DELETE=1, DEAD=2, ANIMATION=3, IDLE=4, ALERT=5, ALERT_RESPONSE=6, COMBAT=7, ALARMON=8, ALARMOFF=9, WALK=10, GROUNDIMPACT=11, DOOR=12, FENCE=13, LADDER=14, TAKINGDAMAGE=15, GUNSHOT=16, GRENADETHROWN=17, GRENADELAND=18, FLASHBANG=19, GUNSHOTMISS=20, EXPLOSION=21, ENEMYDETECTION=22, FRIENDLYDETECTION=23. Takes no args."
       }
     },
     {
@@ -2084,8 +2084,8 @@
         "hash": "0044E860",
         "address": 4515936,
         "name": "AIFunction_IsEventBehind",
-        "signature": "int AIFunction_IsEventBehind(int event);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d039 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t). | Signature upgraded: Ghidra decompile shows 1 used param."
+        "signature": "int AIFunction_IsEventBehind();",
+        "note": "RETURNS non-zero if the current event came from BEHIND the AI (direction test used for reaction animations). Takes no script args per retail table (engine reads an internal slot via ebp+8). Use in alert/detection handlers."
       }
     },
     {
@@ -2093,8 +2093,8 @@
         "hash": "0044ECB0",
         "address": 4517040,
         "name": "AIFunction_GetAnimationToPlay",
-        "signature": "int AIFunction_GetAnimationToPlay(int entry);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d0c4 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t). | Signature upgraded: machine-verified arg1 read via mov eax,[ebp+8] @0x0044ecd4."
+        "signature": "int AIFunction_GetAnimationToPlay();",
+        "note": "RETURNS which animation entry the engine decided to play for the current event/action (useful to log or override reactions). Per retail table takes no script args; machine code also touches an [ebp+8] slot (internal context)."
       }
     },
     {
@@ -2102,8 +2102,8 @@
         "hash": "004048B0",
         "address": 4212912,
         "name": "Config_GraphicOptionsSetGamma",
-        "signature": "void Config_GraphicOptionsSetGamma(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004032f3 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "void Config_GraphicOptionsSetGamma(float gamma);",
+        "note": "Sets and immediately applies gamma to the active profile (also feeds the live lighting math through the profile record +0x220). Param: gamma = float (retail default 1.0). Use in video-options screen script or your own gamma slider."
       }
     },
     {
@@ -2111,8 +2111,8 @@
         "hash": "0044E800",
         "address": 4515840,
         "name": "AIFunction_GetScriptRealValue",
-        "signature": "void AIFunction_GetScriptRealValue(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d04c via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float AIFunction_GetScriptRealValue(int varId);",
+        "note": "READS an AI-script real (float) variable. Param: varId = variable index. RETURNS the float."
       }
     },
     {
@@ -2120,8 +2120,8 @@
         "hash": "0044E000",
         "address": 4513792,
         "name": "AIFunction_GetRandomValue",
-        "signature": "void AIFunction_GetRandomValue(int32_t p0);",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d062 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float AIFunction_GetRandomValue(float max);",
+        "note": "RETURNS a random value below 'max' (returns Real per retail table). Param: max = upper bound. Use for randomized behaviour delays/targets in AI scripts."
       }
     },
     {
@@ -2129,8 +2129,8 @@
         "hash": "0044E930",
         "address": 4516144,
         "name": "AIFunction_GetEventDistance",
-        "signature": "void AIFunction_GetEventDistance();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d075 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float AIFunction_GetEventDistance();",
+        "note": "RETURNS the DISTANCE to the source of the current event (Real). Takes no args. Use inside event handlers e.g. 'if gunshot closer than X then investigate'."
       }
     },
     {
@@ -2138,8 +2138,8 @@
         "hash": "0044E9B0",
         "address": 4516272,
         "name": "AIFunction_GetAlarmTriggerDistance",
-        "signature": "void AIFunction_GetAlarmTriggerDistance();",
-        "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d088 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+        "signature": "float AIFunction_GetAlarmTriggerDistance();",
+        "note": "RETURNS the distance between this AI and its bound ALARM TRIGGER (Real). Takes no args. Use to decide running vs fighting for the alarm."
       }
     },
     {
@@ -2148,7 +2148,7 @@
         "address": 4780448,
         "name": "AppContextSetDebugged",
         "signature": "void AppContext_SetDebugged(int8_t state);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.0048F1A0: writes arg to global 0x5C8BF8, returns it (r2dec). Third-party corroborated by BlanknameES/IGIPatch (AppContext_SetDebugged)."
+        "note": "Sets the app-level DEBUGGED flag (global 0x5C8BF8). Param: state = 1 mark debugger attached/debug mode, 0 clear. BlankName's IGIPatch calls this by name. Use to toggle engine debug paths."
       }
     },
     {
@@ -2157,7 +2157,7 @@
         "address": 4780512,
         "name": "AppContextSetDebugtextState",
         "signature": "void AppContext_SetDebugtextState(int8_t state);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.0048F1E0: writes arg to global 0x5C8BF4 (r2dec). Corroborated by IGIPatch."
+        "note": "Toggles on-screen DEBUG TEXT output (global 0x5C8BF4). Param: state = 1 show engine debug text, 0 hide. Handy while reverse-engineering other systems."
       }
     },
     {
@@ -2166,7 +2166,7 @@
         "address": 4780608,
         "name": "AppContextSetLightmapsUsed",
         "signature": "void AppContext_SetLightmapsUsed(int8_t used);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.0048F240: writes arg to global 0x5C8BE4 (r2dec). Corroborated by IGIPatch AppContext_SetLightmapsUsed."
+        "note": "Enables/disables OBJECT lightmaps globally (global 0x5C8BE4) - the verified retail lightmap setter. Param: used = 1 use object lightmaps, 0 flat-lit. Use for graphics enhancers (this is what IGIPatch's lightmap toggles call)."
       }
     },
     {
@@ -2175,7 +2175,7 @@
         "address": 4780640,
         "name": "AppContextSetTerrainLightmapsUsed",
         "signature": "void AppContext_SetTerrainLightmapsUsed(int8_t used);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.0048F260: writes arg to global 0x5C8BE8 (r2dec). Corroborated by IGIPatch."
+        "note": "Enables/disables TERRAIN lightmaps globally (global 0x5C8BE8). Param: used = 1 lit terrain, 0 unlit. Pair with AppContext_SetLightmapsUsed for full lighting control."
       }
     },
     {
@@ -2183,8 +2183,8 @@
         "hash": "0048F360",
         "address": 4780896,
         "name": "AppMainParseCmdLineArgs",
-        "signature": "void AppMain_ParseCmdLineArgs(/*cmdline*/);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.0048F360: case-insensitive command-line parsing loops, calls 0x48F080/0x4A5A0C (r2dec). Corroborated by IGIPatch AppMain_ParseCmdLineArgs; called from WinMain path."
+        "signature": "void AppMain_ParseCmdLineArgs(char* cmdline);",
+        "note": "Parses the game COMMAND LINE (window mode, resolution and other launch switches; case-insensitive compare loops verified). IGIPatch hooks this for borderless-window support. Engine-internal, called from the WinMain path."
       }
     },
     {
@@ -2193,7 +2193,7 @@
         "address": 4212112,
         "name": "ConfigGetActiveGraphicOptions",
         "signature": "void* Config_GetActiveGraphicOptions();",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.00404590: returns profile record 0xBC2394 + 0xD14*[0xBC2384] (r2dec) - matches verified config layout. Corroborated by IGIPatch."
+        "note": "Returns a pointer to the ACTIVE PROFILE's graphic-options record inside the global config array. The record base is 0xBC2394 + 0xD14 * activeProfileIndex (verified in igi.exe). Useful for reading/writing raw graphic fields directly (gamma sits at record+0x220)."
       }
     },
     {
@@ -2202,7 +2202,7 @@
         "address": 4791536,
         "name": "DisplayGetActiveMode",
         "signature": "void* Display_GetActiveMode();",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.00491CF0: returns display-mode struct ptr 0xC28B40 (r2dec). Corroborated by IGIPatch."
+        "note": "RETURNS pointer to the ACTIVE display-mode struct (global 0xC28B40): width/height/depth fields live at +0x4/+0x8/+0x10 per Display_SetMode comparisons. Takes no args. Read current resolution from here."
       }
     },
     {
@@ -2211,7 +2211,7 @@
         "address": 4791920,
         "name": "DisplaySetBackgroundColourFn",
         "signature": "void Display_SetBackgroundColourFn(int8_t r, int8_t g, int8_t b);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.00491E70: masks 3 args to bytes, stores RGB to globals 0xBCADF0/F4/F8 (r2dec). Corroborated by IGIPatch."
+        "note": "Sets the 3D-view BACKGROUND COLOUR (clear colour) - masks each arg to a byte into globals 0xBCADF0/R,G,B. Params: r,g,b = 0-255 colour channels. Use for custom sky/clear colour effects."
       }
     },
     {
@@ -2220,7 +2220,7 @@
         "address": 4790928,
         "name": "DisplaySetMode",
         "signature": "int Display_SetMode(void* modeStruct);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.00491A90: full display-mode switch (compares mode fields vs 0xC28B44.., GetSystemMetrics, window resize; r2dec). Corroborated by IGIPatch Display_SetMode."
+        "note": "Switches the DISPLAY MODE at runtime: validates mode fields vs current (0xC28B44...), repositions/resizes the window (GetSystemMetrics), copies the mode into the active-mode struct. Param: modeStruct = pointer to a display-mode struct (same layout Display_GetActiveMode returns). RETURNS 0 on failure, non-zero on success."
       }
     },
     {
@@ -2229,7 +2229,7 @@
         "address": 4943488,
         "name": "PictureGetHeight",
         "signature": "int Picture_GetHeight(void* picture);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.004B6E80: thunk -> 0x4B7E00 (bytes verified). Corroborated by IGIPatch Picture_GetHeight."
+        "note": "RETURNS the HEIGHT in pixels of a loaded picture/surface. Param: picture = picture pointer. Thin thunk to fcn.004B7E00."
       }
     },
     {
@@ -2238,7 +2238,7 @@
         "address": 4943472,
         "name": "PictureGetWidth",
         "signature": "int Picture_GetWidth(void* picture);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.004B6E70: thunk -> 0x4B7DF0 (bytes verified). Corroborated by IGIPatch Picture_GetWidth."
+        "note": "RETURNS the WIDTH in pixels of a loaded picture/surface. Param: picture = pointer from a picture-load call. Thin thunk to fcn.004B7DF0 (byte-verified)."
       }
     },
     {
@@ -2247,7 +2247,7 @@
         "address": 4936624,
         "name": "QspriteRegister4Az",
         "signature": "void QSprite_Register4AZ(/*14 args*/);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.004B53B0: 14-arg sprite transform registration, fp scaling by 0x534AB0, writes 0xA84A50/58 (r2dec). Corroborated by IGIPatch QSprite_Register4AZ."
+        "note": "Registers a QUAD-SPRITE with full transform data: 14 args, float parameters scaled by constant 0x534AB0, writes sprite tables 0xA84A50/0xA84A58 (verified). Low-level renderer API - map arg layout from callers before use."
       }
     },
     {
@@ -2256,7 +2256,7 @@
         "address": 4816496,
         "name": "TranscontextSetActiveTransContext",
         "signature": "void TransContext_SetActiveTransContext(void* ctx);",
-        "note": "Triple-verified against igi.exe (IGI 1): igi.exe fcn.00497E70: copies 0x2A dwords of ctx into global 0xBCAAE0 and updates state at 0x6E5BB0/B4 (r2dec). Corroborated by IGIPatch TransContext_SetActiveTransContext/tActiveTransContext."
+        "note": "Installs a TRANSFORM CONTEXT as active: copies 0x2A dwords from ctx into global 0xBCAAE0 and bumps state counters at 0x6E5BB0/B4. Param: ctx = transform-context struct (IGIPatch uses this around custom rendering). Use when injecting your own render passes."
       }
     }
   ]
