@@ -1,0 +1,52 @@
+af @ 0x0048f1a0
+afi @ 0x0048f1a0 ~size
+?e ===MARK:AppContext_SetDebugged:0x0048F1A0===
+pdd @ 0x0048f1a0
+af @ 0x0048f1e0
+afi @ 0x0048f1e0 ~size
+?e ===MARK:AppContext_SetDebugtextState:0x0048F1E0===
+pdd @ 0x0048f1e0
+af @ 0x0048f240
+afi @ 0x0048f240 ~size
+?e ===MARK:AppContext_SetLightmapsUsed:0x0048F240===
+pdd @ 0x0048f240
+af @ 0x0048f260
+afi @ 0x0048f260 ~size
+?e ===MARK:AppContext_SetTerrainLightmapsUsed:0x0048F260===
+pdd @ 0x0048f260
+af @ 0x0048f360
+afi @ 0x0048f360 ~size
+?e ===MARK:AppMain_ParseCmdLineArgs:0x0048F360===
+pdd @ 0x0048f360
+af @ 0x00404590
+afi @ 0x00404590 ~size
+?e ===MARK:Config_GetActiveGraphicOptions:0x00404590===
+pdd @ 0x00404590
+af @ 0x00491cf0
+afi @ 0x00491cf0 ~size
+?e ===MARK:Display_GetActiveMode:0x00491CF0===
+pdd @ 0x00491cf0
+af @ 0x00491e70
+afi @ 0x00491e70 ~size
+?e ===MARK:Display_SetBackgroundColourFn:0x00491E70===
+pdd @ 0x00491e70
+af @ 0x00491a90
+afi @ 0x00491a90 ~size
+?e ===MARK:Display_SetMode:0x00491A90===
+pdd @ 0x00491a90
+af @ 0x004b6e80
+afi @ 0x004b6e80 ~size
+?e ===MARK:Picture_GetHeight:0x004B6E80===
+pdd @ 0x004b6e80
+af @ 0x004b6e70
+afi @ 0x004b6e70 ~size
+?e ===MARK:Picture_GetWidth:0x004B6E70===
+pdd @ 0x004b6e70
+af @ 0x004b53b0
+afi @ 0x004b53b0 ~size
+?e ===MARK:QSprite_Register4AZ:0x004B53B0===
+pdd @ 0x004b53b0
+af @ 0x00497e70
+afi @ 0x00497e70 ~size
+?e ===MARK:TransContext_SetActiveTransContext:0x00497E70===
+pdd @ 0x00497e70

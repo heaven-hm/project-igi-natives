@@ -1,0 +1,1977 @@
+[
+ {
+  "enum": "ANIM_TRIGGER_PARSE",
+  "bin_name": "AnimTriggerRead",
+  "address": "0x004ec070",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "ANIM_TRIGGER_LOAD",
+  "bin_name": "AnimTriggerLoad",
+  "address": "0x004ec0c0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "CONFIG_COMPILE",
+  "bin_name": "ConfigCompile",
+  "address": "0x004f0cf0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "CONFIG_READ",
+  "bin_name": "ConfigRead",
+  "address": "0x00405850",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "CONFIG_WRITE",
+  "bin_name": "ConfigWrite",
+  "address": "0x00405bd0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "CUTSCENE_DELETE",
+  "bin_name": "CutsceneDelete",
+  "address": "0x00415ab0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "ERROR_SHOW",
+  "bin_name": "ErrorShow",
+  "address": "0x004af7b0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "FRAMES_SET",
+  "bin_name": "FramesSet",
+  "address": "0x00402820",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAMEMATERIAL_LOAD",
+  "bin_name": "GameMaterialLoad",
+  "address": "0x00408350",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESET",
+  "bin_name": "GraphicsReset",
+  "address": "0x00403b70",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GRAPH_OPEN",
+  "bin_name": "GraphOpen",
+  "address": "0x004f9ff0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "HUMANPLAYER_LOAD",
+  "bin_name": "HumanplayerLoad",
+  "address": "0x004137a0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "INPUT_DISABLE",
+  "bin_name": "InputDisable",
+  "address": "0x004157d0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "INPUT_ENABLE",
+  "bin_name": "InputEnable",
+  "address": "0x00415830",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "LOG_ADD",
+  "bin_name": "LogAdd",
+  "address": "0x004bbc30",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "LEVEL_LOAD",
+  "bin_name": "LevelLoad",
+  "address": "0x004f0e10",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "LEVEL_QUIT",
+  "bin_name": "LevelQuit",
+  "address": "0x00416550",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "LEVEL_RESTART",
+  "bin_name": "LevelRestart",
+  "address": "0x00416fe0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "LEVEL_START",
+  "bin_name": "LevelStart",
+  "address": "0x00415b30",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MAGIC_OBJ_LOAD",
+  "bin_name": "MagicObjLoad",
+  "address": "0x004c4930",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MENU_MANAGER",
+  "bin_name": "MenuManager",
+  "address": "0x00418b00",
+  "string_va": "0x53982c",
+  "bound_sites": []
+ },
+ {
+  "enum": "MUSIC_DISABLE",
+  "bin_name": "MusicDisable",
+  "address": "0x00415a60",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MUSIC_ENABLE",
+  "bin_name": "MusicEnable",
+  "address": "0x00415a10",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MUSIC_SFX_VOLUME",
+  "bin_name": "MusicSetSfxVolume",
+  "address": "0x00495f30",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MUSIC_VOLUME",
+  "bin_name": "MusicSetVolume",
+  "address": "0x00495e70",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MUSIC_UPDATE_VOLUME",
+  "bin_name": "MusicUpdateVolume",
+  "address": "0x004158e0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "PHYSICS_OBJ_TYPE_PARSE",
+  "bin_name": "PhysicsObjTypeRead",
+  "address": "0x004edfe0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "PHYSICS_OBJ_LOAD",
+  "bin_name": "PhysicsObjLoad",
+  "address": "0x004ee030",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QHASH_INIT",
+  "bin_name": "QhashInit",
+  "address": "0x004b0d60",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QHASH_VAL_SET",
+  "bin_name": "QHASH_VAL_SET",
+  "address": "0x004b0d40",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QHASH_VAL_GET",
+  "bin_name": "QHASH_VAL_GET",
+  "address": "0x004b0db0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QHASH_RESET",
+  "bin_name": "QhashReset",
+  "address": "0x004b0d90",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QSCRIPT_COMPILE",
+  "bin_name": "QscCompile",
+  "address": "0x004b8410",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QTASK_UPDATE",
+  "bin_name": "QtaskUpdate",
+  "address": "0x004f0e90",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QTASK_UPDATE_LIST",
+  "bin_name": "QtaskUpdateList",
+  "address": "0x00401b20",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QSCRIPT_ASSEMBLE",
+  "bin_name": "QvmAssemble",
+  "address": "0x004bb270",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QSCRIPT_PARSE",
+  "bin_name": "QvmParse",
+  "address": "0x004bbcb0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QSCRIPT_CLEANUP",
+  "bin_name": "QSCRIPT_CLEANUP",
+  "address": "0x004b1ac0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QVM_READ",
+  "bin_name": "QvmCompile",
+  "address": "0x004b85b0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QVM_CLEANUP",
+  "bin_name": "CompilerCleanup",
+  "address": "0x004b83d0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QVM_LOAD",
+  "bin_name": "QvmLoad",
+  "address": "0x004b80b0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESOURCE_FLUSH",
+  "bin_name": "ResourceFlush",
+  "address": "0x004b63d0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESOURCE_LOAD",
+  "bin_name": "ResourceLoad",
+  "address": "0x004b5f00",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESOURCE_UNLOAD",
+  "bin_name": "ResourceUnload",
+  "address": "0x004b6380",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESOURCE_PACK_UNPACK",
+  "bin_name": "ResourcePackUnpack",
+  "address": "0x004b18b0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESOURCE_UNPACK",
+  "bin_name": "ResourceUnpack",
+  "address": "0x004b16d0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "RESOURCE_IS_LOADED",
+  "bin_name": "IsResourceLoaded",
+  "address": "0x004b5b90",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "SCRIPT_INIT",
+  "bin_name": "ScriptInit",
+  "address": "0x004f0e50",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "SCRIPT_SETSYMBOL_CXT",
+  "bin_name": "ScriptSetsymbolCxt",
+  "address": "0x004b8930",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "STATUS_MESSAGE_CLEAR",
+  "bin_name": "StatusMessageClear",
+  "address": "0x00485ad0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "STATUS_MESSAGE_SHOW",
+  "bin_name": "StatusMessageShow",
+  "address": "0x00485970",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "SYMBOL_REMOVE",
+  "bin_name": "SymbolRemove",
+  "address": "0x004c0460",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "SYMBOL_CHECK",
+  "bin_name": "SymbolCheck",
+  "address": "0x004c0560",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "TASKTYPE_SET",
+  "bin_name": "TasktypeSet",
+  "address": "0x004b8810",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "WARNING_SHOW",
+  "bin_name": "WarningShow",
+  "address": "0x004af810",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "WEAPON_CONFIG_READ",
+  "bin_name": "WeaponConfigRead",
+  "address": "0x004071e0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "WEAPON_TYPE_OPEN",
+  "bin_name": "WeaponTypeOpen",
+  "address": "0x00413b70",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "WEAPON_TOTAL",
+  "bin_name": "WeaponsCountGet",
+  "address": "0x00413bb0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "WEAPON_GUN_PICKUP",
+  "bin_name": "WeaponGunPickup",
+  "address": "0x0045ffc0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "WEAPON_AMMO_PICKUP",
+  "bin_name": "WeaponAmmoPickup",
+  "address": "0x0045ff80",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "HUMAN_HIT_DAMAGE",
+  "bin_name": "PlayerXPHit",
+  "address": "0x00416d80",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "HUMAN_CAM_VIEW",
+  "bin_name": "HumanViewCam",
+  "address": "0x00463760",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "HUMAN_FIND_NEXT_CAMERA",
+  "bin_name": "HUMAN_FIND_NEXT_CAMERA",
+  "address": "0x004828d0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MEMORY_ALLOC",
+  "bin_name": "MemoryAlloc",
+  "address": "0x004b0c60",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MEMORY_DEALLOC",
+  "bin_name": "MemoryDealloc",
+  "address": "0x004b0be0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "MISSION_OPEN",
+  "bin_name": "MissionOpen",
+  "address": "0x00484e60",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "FILE_OPEN",
+  "bin_name": "FileOpen",
+  "address": "0x004a5350",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "FILE_READ_WRITE",
+  "bin_name": "QFileOpen",
+  "address": "0x004b1510",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "PLAYER_PROFILE_ACTIVE",
+  "bin_name": "IsPlayerProfileActive",
+  "address": "0x00406220",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "SOLDIER_EXECUTE",
+  "bin_name": "SoldierExecute",
+  "address": "0x0045c440",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "HUMAN_TASK_VIEW_RESET",
+  "bin_name": "HumanTaskViewReset",
+  "address": "0x004659e0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_LOAD",
+  "bin_name": "GameDataSymbolLoad",
+  "address": "0x004a53b3",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_BOOL8",
+  "bin_name": "SymbolRegisterBool8",
+  "address": "0x004b7ee0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_INT16",
+  "bin_name": "SymbolRegisterInt16",
+  "address": "0x004b7e80",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_INT32",
+  "bin_name": "SymbolRegisterInt32",
+  "address": "0x004b7fa0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_REAL32",
+  "bin_name": "SymbolRegisterReal32",
+  "address": "0x004b7fc0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REMOVE",
+  "bin_name": "GameDataSymbolRemove",
+  "address": "0x004b80a0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "LOADING_SCREEN_SHOW",
+  "bin_name": "LoadingScreenShow",
+  "address": "0x0048a440",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "QTASK_HASH_TABLE",
+  "bin_name": "QTaskHashTableSet",
+  "address": "0x004baac0",
+  "string_va": null,
+  "bound_sites": []
+ },
+ {
+  "enum": "AI_ACTION_ACTIVATE",
+  "bin_name": "AIAction_Activate",
+  "address": "0x0044d420",
+  "string_va": "0x53d994",
+  "bound_sites": [
+   "0x44ccf9"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_COMBAT",
+  "bin_name": "AIAction_Combat",
+  "address": "0x0044d160",
+  "string_va": "0x53d9cc",
+  "bound_sites": [
+   "0x44ccbd"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_DEAD",
+  "bin_name": "AIAction_Dead",
+  "address": "0x0044d260",
+  "string_va": "0x53d9bc",
+  "bound_sites": [
+   "0x44ccd0"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_FALL_FLAT",
+  "bin_name": "AIAction_FallFlat",
+  "address": "0x0044d2c0",
+  "string_va": "0x53d9a8",
+  "bound_sites": [
+   "0x44cce3"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_FIRE_AT_NODE",
+  "bin_name": "AIAction_FireAtNode",
+  "address": "0x0044d580",
+  "string_va": "0x53d958",
+  "bound_sites": [
+   "0x44cd32"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_FIRE_AT_TASK",
+  "bin_name": "AIAction_FireAtTask",
+  "address": "0x0044d630",
+  "string_va": "0x53d944",
+  "bound_sites": [
+   "0x44cd48"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_IDLE",
+  "bin_name": "AIAction_Idle",
+  "address": "0x0044da80",
+  "string_va": "0x53d894",
+  "bound_sites": [
+   "0x44cde6"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_KICK_GRENADE",
+  "bin_name": "AIAction_KickGrenade",
+  "address": "0x0044d960",
+  "string_va": "0x53d8bc",
+  "bound_sites": [
+   "0x44cdbd"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_LOOK_AT_EVENT",
+  "bin_name": "AIAction_LookAtEvent",
+  "address": "0x0044d870",
+  "string_va": "0x53d8e8",
+  "bound_sites": [
+   "0x44cd97"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_MOVE_TO_EVENT",
+  "bin_name": "AIAction_MoveToEvent",
+  "address": "0x0044d7d0",
+  "string_va": "0x53d900",
+  "bound_sites": [
+   "0x44cd81"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_PATROL",
+  "bin_name": "AIAction_Patrol",
+  "address": "0x0044d0e0",
+  "string_va": "0x53d9dc",
+  "bound_sites": [
+   "0x44ccaa"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_PLAY_ANIMATION",
+  "bin_name": "AIAction_PlayAnimation",
+  "address": "0x0044d6e0",
+  "string_va": "0x53d92c",
+  "bound_sites": [
+   "0x44cd5b"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_PLAY_SOUND",
+  "bin_name": "AIAction_PlaySound",
+  "address": "0x0044d750",
+  "string_va": "0x53d918",
+  "bound_sites": [
+   "0x44cd6e"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_RUN_PANICKING",
+  "bin_name": "AIAction_RunPanicking",
+  "address": "0x0044da00",
+  "string_va": "0x53d8a4",
+  "bound_sites": [
+   "0x44cdd0"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_RUN_TO_NODE",
+  "bin_name": "AIAction_RunToNode",
+  "address": "0x0044d510",
+  "string_va": "0x53d96c",
+  "bound_sites": [
+   "0x44cd1f"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_SET_COMBAT",
+  "bin_name": "AIAction_SetCombat",
+  "address": "0x0044dae0",
+  "string_va": "0x53d880",
+  "bound_sites": [
+   "0x44cdf9"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_STUNNED",
+  "bin_name": "AIAction_Stunned",
+  "address": "0x0044d8f0",
+  "string_va": "0x53d8d4",
+  "bound_sites": [
+   "0x44cdaa"
+  ]
+ },
+ {
+  "enum": "AI_ACTION_WALK_TO_NODE",
+  "bin_name": "AIAction_WalkToNode",
+  "address": "0x0044d4a0",
+  "string_va": "0x53d980",
+  "bound_sites": [
+   "0x44cd0c"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_ADD_ANIMATION_ENTRY",
+  "bin_name": "AIFunction_AddAnimationEntry",
+  "address": "0x0044ebb0",
+  "string_va": "0x53d444",
+  "bound_sites": [
+   "0x44d0ad"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_DEFAULT_HANDLER",
+  "bin_name": "AIFunction_DefaultHandler",
+  "address": "0x0044e060",
+  "string_va": "0x53d864",
+  "bound_sites": [
+   "0x44ce0c"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_REMOVE_ALARM_ACTIONS",
+  "bin_name": "AIFunction_RemoveAlarmActions",
+  "address": "0x0044dbc0",
+  "string_va": "0x53d844",
+  "bound_sites": [
+   "0x44ce1f"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SEND_RESPONSE",
+  "bin_name": "AIFunction_SendResponse",
+  "address": "0x0044ee40",
+  "string_va": "0x53d40c",
+  "bound_sites": [
+   "0x44d0d3"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_ACCESS",
+  "bin_name": "AIFunction_SetAlarmAccess",
+  "address": "0x0044e330",
+  "string_va": "0x53d670",
+  "bound_sites": [
+   "0x44cf48"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_CONTROL_ID",
+  "bin_name": "AIFunction_SetAlarmControlID",
+  "address": "0x0044e2d0",
+  "string_va": "0x53d68c",
+  "bound_sites": [
+   "0x44cf35"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_TRIGGER_ID",
+  "bin_name": "AIFunction_SetAlarmTriggerID",
+  "address": "0x0044e270",
+  "string_va": "0x53d6ac",
+  "bound_sites": [
+   "0x44cf22"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetAlarmViewLength",
+  "address": "0x0044dcd0",
+  "string_va": "0x53d808",
+  "bound_sites": [
+   "0x44ce48"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ANIMATION_INTERVAL",
+  "bin_name": "AIFunction_SetAnimationInterval",
+  "address": "0x0044eaf0",
+  "string_va": "0x53d464",
+  "bound_sites": [
+   "0x44d097"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_DEATH_ANIMATION",
+  "bin_name": "AIFunction_SetDeathAnimation",
+  "address": "0x0044e210",
+  "string_va": "0x53d6cc",
+  "bound_sites": [
+   "0x44cf0c"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_EVENT_PRIORITY",
+  "bin_name": "AIFunction_SetEventPriority",
+  "address": "0x0044e0c0",
+  "string_va": "0x53d728",
+  "bound_sites": [
+   "0x44ced3"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_GUNNER_ID",
+  "bin_name": "AIFunction_SetGunnerID",
+  "address": "0x0044e390",
+  "string_va": "0x53d658",
+  "bound_sites": [
+   "0x44cf5b"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_INSTANT_DEATH",
+  "bin_name": "AIFunction_SetInstantDeath",
+  "address": "0x0044e1b0",
+  "string_va": "0x53d6ec",
+  "bound_sites": [
+   "0x44cef9"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_INVULNERABILITY",
+  "bin_name": "AIFunction_SetInvulnerability",
+  "address": "0x0044e150",
+  "string_va": "0x53d708",
+  "bound_sites": [
+   "0x44cee6"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE",
+  "bin_name": "AIFunction_SetScriptIntegerValue",
+  "address": "0x0044e6d0",
+  "string_va": "0x53d634",
+  "bound_sites": [
+   "0x44cf71"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SCRIPT_REAL_VALUE",
+  "bin_name": "AIFunction_SetScriptRealValue",
+  "address": "0x0044e790",
+  "string_va": "0x53d614",
+  "bound_sites": [
+   "0x44cf84"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetSecondaryAlarmViewLength",
+  "address": "0x0044de80",
+  "string_va": "0x53d78c",
+  "bound_sites": [
+   "0x44ce97"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA",
+  "bin_name": "AIFunction_SetSecondaryViewAlpha",
+  "address": "0x0044dee0",
+  "string_va": "0x53d768",
+  "bound_sites": [
+   "0x44ceaa"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA",
+  "bin_name": "AIFunction_SetSecondaryViewGamma",
+  "address": "0x0044df40",
+  "string_va": "0x53d744",
+  "bound_sites": [
+   "0x44cebd"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetSecondaryViewLength",
+  "address": "0x0044ddf0",
+  "string_va": "0x53d7b4",
+  "bound_sites": [
+   "0x44ce84"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_VIEW_ALPHA",
+  "bin_name": "AIFunction_SetViewAlpha",
+  "address": "0x0044dd30",
+  "string_va": "0x53d7f0",
+  "bound_sites": [
+   "0x44ce5b"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_VIEW_GAMMA",
+  "bin_name": "AIFunction_SetViewGamma",
+  "address": "0x0044dd90",
+  "string_va": "0x53d7d8",
+  "bound_sites": [
+   "0x44ce6e"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_SET_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetViewLength",
+  "address": "0x0044dc40",
+  "string_va": "0x53d828",
+  "bound_sites": [
+   "0x44ce35"
+  ]
+ },
+ {
+  "enum": "CREATE_TERRAIN_TILE_MAP",
+  "bin_name": "CreateTerrainTileMap",
+  "address": "0x004c6760",
+  "string_va": "0x54819c",
+  "bound_sites": [
+   "0x4c658f"
+  ]
+ },
+ {
+  "enum": "DEFINE_AMMO_TYPE",
+  "bin_name": "DefineAmmoType",
+  "address": "0x0047cad0",
+  "string_va": "0x5408d0",
+  "bound_sites": [
+   "0x47caba"
+  ]
+ },
+ {
+  "enum": "DEFINE_GAME_MATERIAL",
+  "bin_name": "DefineGameMaterial",
+  "address": "0x00407f50",
+  "string_va": "0x538520",
+  "bound_sites": [
+   "0x407dc8"
+  ]
+ },
+ {
+  "enum": "DEFINE_GRAPH",
+  "bin_name": "DefineGraph",
+  "address": "0x004ead20",
+  "string_va": "0x548840",
+  "bound_sites": [
+   "0x4e6257"
+  ]
+ },
+ {
+  "enum": "DEFINE_GROUP",
+  "bin_name": "DefineGroup",
+  "address": "0x004eba90",
+  "string_va": "0x548858",
+  "bound_sites": [
+   "0x4e6231"
+  ]
+ },
+ {
+  "enum": "DEFINE_HUMAN_PLAYER_AMMO_LIMIT",
+  "bin_name": "DefineHumanPlayerAmmoLimit",
+  "address": "0x004102d0",
+  "string_va": "0x538e84",
+  "bound_sites": [
+   "0x410050"
+  ]
+ },
+ {
+  "enum": "DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY",
+  "bin_name": "DefineHumanPlayerWeaponCategory",
+  "address": "0x00410240",
+  "string_va": "0x538ea0",
+  "bound_sites": [
+   "0x41003d"
+  ]
+ },
+ {
+  "enum": "DEFINE_HUMAN_PLAYER_WEAPON_CYCLE",
+  "bin_name": "DefineHumanPlayerWeaponCycle",
+  "address": "0x004101c0",
+  "string_va": "0x538ec0",
+  "bound_sites": [
+   "0x41002a"
+  ]
+ },
+ {
+  "enum": "DEFINE_MAGIC_OBJ",
+  "bin_name": "DefineMagicObj",
+  "address": "0x004c4520",
+  "string_va": "0x547f5c",
+  "bound_sites": [
+   "0x4c35a0"
+  ]
+ },
+ {
+  "enum": "DEFINE_MISSION",
+  "bin_name": "DefineMission",
+  "address": "0x00484f60",
+  "string_va": "0x540a44",
+  "bound_sites": [
+   "0x484f3a"
+  ]
+ },
+ {
+  "enum": "DEFINE_Q_MATERIAL",
+  "bin_name": "DefineQMaterial",
+  "address": "0x00407e30",
+  "string_va": "0x538534",
+  "bound_sites": [
+   "0x407db5"
+  ]
+ },
+ {
+  "enum": "DEFINE_SOUND",
+  "bin_name": "DefineSound",
+  "address": "0x004e8c60",
+  "string_va": "0x54884c",
+  "bound_sites": [
+   "0x4e6244"
+  ]
+ },
+ {
+  "enum": "DEFINE_TRIGGER_ONCE",
+  "bin_name": "DefineTriggerOnce",
+  "address": "0x004e9ec0",
+  "string_va": "0x54882c",
+  "bound_sites": [
+   "0x4e626a"
+  ]
+ },
+ {
+  "enum": "CONFIG_CREATE_NEW_PLAYER_PROFILE",
+  "bin_name": "Config_CreateNewPlayerProfile",
+  "address": "0x004050a0",
+  "string_va": "0x538240",
+  "bound_sites": [
+   "0x40318d"
+  ]
+ },
+ {
+  "enum": "CONFIG_DELETE_PLAYER_PROFILE",
+  "bin_name": "Config_DeletePlayerProfile",
+  "address": "0x00405400",
+  "string_va": "0x538224",
+  "bound_sites": [
+   "0x4031a0"
+  ]
+ },
+ {
+  "enum": "CONFIG_FILL_MISSION_PICTURE_BOX",
+  "bin_name": "Config_FillMissionPictureBox",
+  "address": "0x004056f0",
+  "string_va": "0x5381a0",
+  "bound_sites": [
+   "0x4031ef"
+  ]
+ },
+ {
+  "enum": "CONFIG_FILL_MISSION_SELECTION_BOX",
+  "bin_name": "Config_FillMissionSelectionBox",
+  "address": "0x00405660",
+  "string_va": "0x5381c0",
+  "bound_sites": [
+   "0x4031dc"
+  ]
+ },
+ {
+  "enum": "CONFIG_FILL_MISSION_TEXT_BOX",
+  "bin_name": "Config_FillMissionTextBox",
+  "address": "0x00405760",
+  "string_va": "0x538184",
+  "bound_sites": [
+   "0x403202"
+  ]
+ },
+ {
+  "enum": "CONFIG_FILL_PLAYER_PROFILE_LIST_BOX",
+  "bin_name": "Config_FillPlayerProfileListBox",
+  "address": "0x00404fa0",
+  "string_va": "0x5382a8",
+  "bound_sites": [
+   "0x403151"
+  ]
+ },
+ {
+  "enum": "CONFIG_FILL_RENDER_DEVICE_LIST_BOX",
+  "bin_name": "Config_FillRenderDeviceListBox",
+  "address": "0x004046a0",
+  "string_va": "0x538140",
+  "bound_sites": [
+   "0x40322b"
+  ]
+ },
+ {
+  "enum": "CONFIG_FILL_SCREEN_RESOLUTION_LIST_BOX",
+  "bin_name": "Config_FillScreenResolutionListBox",
+  "address": "0x00404450",
+  "string_va": "0x538160",
+  "bound_sites": [
+   "0x403215"
+  ]
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_GET_BLOOD_ENABLED",
+  "bin_name": "Config_GameOptionsInputGetBloodEnabled",
+  "address": "0x00404340",
+  "string_va": "0x5380c4",
+  "bound_sites": [
+   "0x403264"
+  ]
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_GET_INVERT_MOUSE",
+  "bin_name": "Config_GameOptionsInputGetInvertMouse",
+  "address": "0x004041d0",
+  "string_va": "0x538118",
+  "bound_sites": [
+   "0x40323e"
+  ]
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_GET_MOUSE_SENSITIVITY",
+  "bin_name": "Config_GameOptionsInputGetMouseSensitivity",
+  "address": "0x00404290",
+  "string_va": "0x5380ec",
+  "bound_sites": [
+   "0x403251"
+  ]
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_SET_BLOOD_ENABLED",
+  "bin_name": "Config_GameOptionsInputSetBloodEnabled",
+  "address": "0x004042e0",
+  "string_va": "0x538048",
+  "bound_sites": [
+   "0x4032a0"
+  ]
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_SET_INVERT_MOUSE",
+  "bin_name": "Config_GameOptionsInputSetInvertMouse",
+  "address": "0x00404160",
+  "string_va": "0x53809c",
+  "bound_sites": [
+   "0x40327a"
+  ]
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_SET_MOUSE_SENSITIVITY",
+  "bin_name": "Config_GameOptionsInputSetMouseSensitivity",
+  "address": "0x00404230",
+  "string_va": "0x538070",
+  "bound_sites": [
+   "0x40328d"
+  ]
+ },
+ {
+  "enum": "CONFIG_GET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "bin_name": "Config_GetActivePlayerProfileIndex",
+  "address": "0x00405010",
+  "string_va": "0x538284",
+  "bound_sites": [
+   "0x403164"
+  ]
+ },
+ {
+  "enum": "CONFIG_GET_CONTENT_CONTROL_PASSWORD",
+  "bin_name": "Config_GetContentControlPassword",
+  "address": "0x00403c70",
+  "string_va": "0x537c24",
+  "bound_sites": [
+   "0x4034dc"
+  ]
+ },
+ {
+  "enum": "CONFIG_GET_NUMBER_OF_PLAYER_PROFILES",
+  "bin_name": "Config_GetNumberOfPlayerProfiles",
+  "address": "0x004054f0",
+  "string_va": "0x5381e0",
+  "bound_sites": [
+   "0x4031c6"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_DEVICE",
+  "bin_name": "Config_GraphicOptionsGetDevice",
+  "address": "0x00404710",
+  "string_va": "0x537f24",
+  "bound_sites": [
+   "0x40333e"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_GAMMA",
+  "bin_name": "Config_GraphicOptionsGetGamma",
+  "address": "0x00404910",
+  "string_va": "0x537f04",
+  "bound_sites": [
+   "0x403351"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_PERFORMANCE_FLAGS",
+  "bin_name": "Config_GraphicOptionsGetPerformanceFlags",
+  "address": "0x00404f60",
+  "string_va": "0x537ed8",
+  "bound_sites": [
+   "0x403367"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_FLAGS_FROM_LEVEL",
+  "bin_name": "Config_GraphicOptionsGetPerfFlagsFromLevel",
+  "address": "0x004055c0",
+  "string_va": "0x537eac",
+  "bound_sites": [
+   "0x40337a"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_LEVEL_FROM_FLAGS",
+  "bin_name": "Config_GraphicOptionsGetPerfLevelFromFlags",
+  "address": "0x00405530",
+  "string_va": "0x537e80",
+  "bound_sites": [
+   "0x40338d"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_RESOLUTION",
+  "bin_name": "Config_GraphicOptionsGetResolution",
+  "address": "0x004045b0",
+  "string_va": "0x537f6c",
+  "bound_sites": [
+   "0x403318"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_TRANSPARENCY",
+  "bin_name": "Config_GraphicOptionsGetTransparency",
+  "address": "0x004049c0",
+  "string_va": "0x537f44",
+  "bound_sites": [
+   "0x40332b"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_NUM_PERF_LEVELS",
+  "bin_name": "Config_GraphicOptionsNumPerfLevels",
+  "address": "0x00405620",
+  "string_va": "0x537e5c",
+  "bound_sites": [
+   "0x4033a0"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_DEVICE",
+  "bin_name": "Config_GraphicOptionsSetDevice",
+  "address": "0x004047f0",
+  "string_va": "0x537fdc",
+  "bound_sites": [
+   "0x4032dc"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_PERFORMANCE_FLAGS",
+  "bin_name": "Config_GraphicOptionsSetPerformanceFlags",
+  "address": "0x00404f00",
+  "string_va": "0x537f90",
+  "bound_sites": [
+   "0x403302"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_RESOLUTION",
+  "bin_name": "Config_GraphicOptionsSetResolution",
+  "address": "0x00404510",
+  "string_va": "0x538024",
+  "bound_sites": [
+   "0x4032b3"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_TRANSPARENCY",
+  "bin_name": "Config_GraphicOptionsSetTransparency",
+  "address": "0x00404960",
+  "string_va": "0x537ffc",
+  "bound_sites": [
+   "0x4032c9"
+  ]
+ },
+ {
+  "enum": "CONFIG_IS_CONTENT_CONTROL_PASSWORD_ENABLED",
+  "bin_name": "Config_IsContentControlPasswordEnabled",
+  "address": "0x00403d90",
+  "string_va": "0x537bd8",
+  "bound_sites": [
+   "0x403505"
+  ]
+ },
+ {
+  "enum": "CONFIG_IS_GERMANY",
+  "bin_name": "Config_IsGermany",
+  "address": "0x00403b30",
+  "string_va": "0x537bc4",
+  "bound_sites": [
+   "0x403518"
+  ]
+ },
+ {
+  "enum": "CONFIG_PLAYER_GET_ACTIVE_MISSION",
+  "bin_name": "Config_PlayerGetActiveMission",
+  "address": "0x004057d0",
+  "string_va": "0x538204",
+  "bound_sites": [
+   "0x4031b3"
+  ]
+ },
+ {
+  "enum": "CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "bin_name": "Config_SetActivePlayerProfileIndex",
+  "address": "0x00405050",
+  "string_va": "0x538260",
+  "bound_sites": [
+   "0x403177"
+  ]
+ },
+ {
+  "enum": "CONFIG_SET_CONTENT_CONTROL_PASSWORD",
+  "bin_name": "Config_SetContentControlPassword",
+  "address": "0x00403c10",
+  "string_va": "0x537c48",
+  "bound_sites": [
+   "0x4034c9"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_MUSIC",
+  "bin_name": "Config_SoundOptionsGetMusic",
+  "address": "0x00404bf0",
+  "string_va": "0x537cf8",
+  "bound_sites": [
+   "0x403467"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_MUSIC_VOLUME",
+  "bin_name": "Config_SoundOptionsGetMusicVolume",
+  "address": "0x00404ca0",
+  "string_va": "0x537cd4",
+  "bound_sites": [
+   "0x40347a"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_REVERSE_STEREO",
+  "bin_name": "Config_SoundOptionsGetReverseStereo",
+  "address": "0x00404eb0",
+  "string_va": "0x537c6c",
+  "bound_sites": [
+   "0x4034b6"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS",
+  "bin_name": "Config_SoundOptionsGetSoundsEffects",
+  "address": "0x00404a90",
+  "string_va": "0x537d40",
+  "bound_sites": [
+   "0x40343e"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS_VOLUME",
+  "bin_name": "Config_SoundOptionsGetSoundsEffectsVolume",
+  "address": "0x00404b40",
+  "string_va": "0x537d14",
+  "bound_sites": [
+   "0x403454"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SPEECH",
+  "bin_name": "Config_SoundOptionsGetSpeech",
+  "address": "0x00404d50",
+  "string_va": "0x537cb4",
+  "bound_sites": [
+   "0x40348d"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SPEECH_VOLUME",
+  "bin_name": "Config_SoundOptionsGetSpeechVolume",
+  "address": "0x00404e00",
+  "string_va": "0x537c90",
+  "bound_sites": [
+   "0x4034a3"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_MUSIC",
+  "bin_name": "Config_SoundOptionsSetMusic",
+  "address": "0x00404b90",
+  "string_va": "0x537df0",
+  "bound_sites": [
+   "0x4033dc"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_MUSIC_VOLUME",
+  "bin_name": "Config_SoundOptionsSetMusicVolume",
+  "address": "0x00404c40",
+  "string_va": "0x537dcc",
+  "bound_sites": [
+   "0x4033ef"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_REVERSE_STEREO",
+  "bin_name": "Config_SoundOptionsSetReverseStereo",
+  "address": "0x00404e50",
+  "string_va": "0x537d64",
+  "bound_sites": [
+   "0x40342b"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS",
+  "bin_name": "Config_SoundOptionsSetSoundsEffects",
+  "address": "0x00404a10",
+  "string_va": "0x537e38",
+  "bound_sites": [
+   "0x4033b6"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS_VOLUME",
+  "bin_name": "Config_SoundOptionsSetSoundsEffectsVolume",
+  "address": "0x00404ae0",
+  "string_va": "0x537e0c",
+  "bound_sites": [
+   "0x4033c9"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SPEECH",
+  "bin_name": "Config_SoundOptionsSetSpeech",
+  "address": "0x00404cf0",
+  "string_va": "0x537dac",
+  "bound_sites": [
+   "0x403405"
+  ]
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SPEECH_VOLUME",
+  "bin_name": "Config_SoundOptionsSetSpeechVolume",
+  "address": "0x00404da0",
+  "string_va": "0x537d88",
+  "bound_sites": [
+   "0x403418"
+  ]
+ },
+ {
+  "enum": "CONFIG_VERIFY_CONTENT_CONTROL_PASSWORD",
+  "bin_name": "Config_VerifyContentControlPassword",
+  "address": "0x00403cc0",
+  "string_va": "0x537c00",
+  "bound_sites": [
+   "0x4034f2"
+  ]
+ },
+ {
+  "enum": "GO_ACTIVE_MISSION",
+  "bin_name": "GOActiveMission",
+  "address": "0x00403750",
+  "string_va": "0x5332f8",
+  "bound_sites": [
+   "0x403128"
+  ]
+ },
+ {
+  "enum": "GO_CONTENT_CONTROL_PW",
+  "bin_name": "Config_SetContentControlPassword",
+  "address": "0x00403c10",
+  "string_va": "0x537c48",
+  "bound_sites": [
+   "0x4034c9"
+  ]
+ },
+ {
+  "enum": "GO_GAME_DIFF",
+  "bin_name": "GOGameDiff",
+  "address": "0x00403ac0",
+  "string_va": "0x5332b4",
+  "bound_sites": [
+   "0x4030b3"
+  ]
+ },
+ {
+  "enum": "GO_GAME_LANG",
+  "bin_name": "GOGameLang",
+  "address": "0x00403a00",
+  "string_va": "0x5332a8",
+  "bound_sites": [
+   "0x4030a0"
+  ]
+ },
+ {
+  "enum": "GO_GFX_DEVICE",
+  "bin_name": "GOGfxDevice",
+  "address": "0x00404010",
+  "string_va": "0x53327c",
+  "bound_sites": [
+   "0x403077"
+  ]
+ },
+ {
+  "enum": "GO_GFX_DISP",
+  "bin_name": "GOGfxDisp",
+  "address": "0x00403950",
+  "string_va": "0x533270",
+  "bound_sites": [
+   "0x403064"
+  ]
+ },
+ {
+  "enum": "GO_GFX_GAMMA",
+  "bin_name": "GOGfxGamma",
+  "address": "0x00404080",
+  "string_va": "0x533288",
+  "bound_sites": [
+   "0x40308a"
+  ]
+ },
+ {
+  "enum": "GO_GFX_PERFORMANCE",
+  "bin_name": "GOGfxPerformance",
+  "address": "0x004040f0",
+  "string_va": "0x533294",
+  "bound_sites": [
+   "0x403115"
+  ]
+ },
+ {
+  "enum": "GO_IN_MOU_INV",
+  "bin_name": "GOInMouInv",
+  "address": "0x00403870",
+  "string_va": "0x533258",
+  "bound_sites": [
+   "0x40303b"
+  ]
+ },
+ {
+  "enum": "GO_IN_MOU_SENS",
+  "bin_name": "GOInMouSens",
+  "address": "0x004038e0",
+  "string_va": "0x533264",
+  "bound_sites": [
+   "0x403051"
+  ]
+ },
+ {
+  "enum": "GO_IN_REMAP",
+  "bin_name": "GOInRemap",
+  "address": "0x004037c0",
+  "string_va": "0x53324c",
+  "bound_sites": [
+   "0x403028"
+  ]
+ },
+ {
+  "enum": "GO_IS_BLOOD",
+  "bin_name": "GOIsBlood",
+  "address": "0x00403df0",
+  "string_va": "0x5332c0",
+  "bound_sites": [
+   "0x4030c6"
+  ]
+ },
+ {
+  "enum": "GO_PLAYER",
+  "bin_name": "GOPlayer",
+  "address": "0x004036b0",
+  "string_va": "0x533240",
+  "bound_sites": [
+   "0x403015"
+  ]
+ },
+ {
+  "enum": "GO_SOUND_FX",
+  "bin_name": "GOSoundFX",
+  "address": "0x00403f80",
+  "string_va": "0x5332ec",
+  "bound_sites": [
+   "0x403102"
+  ]
+ },
+ {
+  "enum": "GO_SOUND_MUSIC",
+  "bin_name": "GOSoundMusic",
+  "address": "0x00403ef0",
+  "string_va": "0x5332dc",
+  "bound_sites": [
+   "0x4030ef"
+  ]
+ },
+ {
+  "enum": "GO_SOUND_SPEECH",
+  "bin_name": "GOSoundSpeech",
+  "address": "0x00403e60",
+  "string_va": "0x5332cc",
+  "bound_sites": [
+   "0x4030d9"
+  ]
+ },
+ {
+  "enum": "GAME_SET_MISSION",
+  "bin_name": "Game_SetMission",
+  "address": "0x00415890",
+  "string_va": "0x53964c",
+  "bound_sites": [
+   "0x4156e9"
+  ]
+ },
+ {
+  "enum": "GAME_SET_MUSIC_VOLUME",
+  "bin_name": "Game_SetMusicVolume",
+  "address": "0x00415950",
+  "string_va": "0x5395f4",
+  "bound_sites": [
+   "0x415738"
+  ]
+ },
+ {
+  "enum": "GAME_SET_SFX_VOLUME",
+  "bin_name": "Game_SetSFXVolume",
+  "address": "0x004159b0",
+  "string_va": "0x5395e0",
+  "bound_sites": [
+   "0x41574b"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_ACTIVATE_POPUP_SCREEN",
+  "bin_name": "MenuManager_ActivatePopupScreen",
+  "address": "0x00417900",
+  "string_va": "0x53990c",
+  "bound_sites": [
+   "0x4172e2"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_DEACTIVATE_POPU_SCREEN",
+  "bin_name": "MenuManager_DeactivatePopuScreen",
+  "address": "0x00417960",
+  "string_va": "0x5398e8",
+  "bound_sites": [
+   "0x4172f5"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_FORCE_UPDATE_WINDOW",
+  "bin_name": "MenuManager_ForceUpdateWindow",
+  "address": "0x00417880",
+  "string_va": "0x53992c",
+  "bound_sites": [
+   "0x4172d0"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_LEAVE_MENUS",
+  "bin_name": "MenuManager_LeaveMenus",
+  "address": "0x00417790",
+  "string_va": "0x539994",
+  "bound_sites": [
+   "0x417285"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_POP_SCREEN",
+  "bin_name": "MenuManager_PopScreen",
+  "address": "0x00417710",
+  "string_va": "0x53994c",
+  "bound_sites": [
+   "0x4172be"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_PUSH_SCREEN",
+  "bin_name": "MenuManager_PushScreen",
+  "address": "0x00417690",
+  "string_va": "0x539964",
+  "bound_sites": [
+   "0x4172a9"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_REQUEST_SCREEN",
+  "bin_name": "MenuManager_RequestScreen",
+  "address": "0x004174a0",
+  "string_va": "0x5399ac",
+  "bound_sites": [
+   "0x417273"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_SET_ENABLED",
+  "bin_name": "MenuManager_SetEnabled",
+  "address": "0x004179b0",
+  "string_va": "0x5398d0",
+  "bound_sites": [
+   "0x41730a"
+  ]
+ },
+ {
+  "enum": "MENU_MANAGER_SET_LANGUAGE",
+  "bin_name": "MenuManager_SetLanguage",
+  "address": "0x00417810",
+  "string_va": "0x53997c",
+  "bound_sites": [
+   "0x417297"
+  ]
+ },
+ {
+  "enum": "LEVEL_FLOW_GET_BREAK_CUT_SCENE_KEY",
+  "bin_name": "LevelFlow_GetBreakCutSceneKey",
+  "address": "0x00488e00",
+  "string_va": "0x541114",
+  "bound_sites": [
+   "0x488dbb"
+  ]
+ },
+ {
+  "enum": "LEVEL_FLOW_IS_COUNTRY_USA",
+  "bin_name": "LevelFlow_IsCountryUSA",
+  "address": "0x00488e90",
+  "string_va": "0x5410e4",
+  "bound_sites": [
+   "0x488de4"
+  ]
+ },
+ {
+  "enum": "LEVEL_FLOW_LEVEL_FAILED",
+  "bin_name": "LevelFlow_LevelFailed",
+  "address": "0x00488e50",
+  "string_va": "0x5410fc",
+  "bound_sites": [
+   "0x488dce"
+  ]
+ },
+ {
+  "enum": "MOVIE_SUBTITLE_REGISTER_FONT",
+  "bin_name": "MovieSubtitle_RegisterFont",
+  "address": "0x004151e0",
+  "string_va": "0x539508",
+  "bound_sites": [
+   "0x41517e"
+  ]
+ },
+ {
+  "enum": "MOVIE_SUBTITLE_REGISTER_TEXT",
+  "bin_name": "MovieSubtitle_RegisterText",
+  "address": "0x00415260",
+  "string_va": "0x5394ec",
+  "bound_sites": [
+   "0x415190"
+  ]
+ },
+ {
+  "enum": "CONTROLS_MENU_CONVERT_FLOAT_FROM_OFFSET",
+  "bin_name": "ControlsMenu_ConvertFloatFromOffset",
+  "address": "0x004231e0",
+  "string_va": "0x53b89c",
+  "bound_sites": [
+   "0x4231b8"
+  ]
+ },
+ {
+  "enum": "CONTROLS_MENU_CONVERT_OFFSET_FROM_FLOAT",
+  "bin_name": "ControlsMenu_ConvertOffsetFromFloat",
+  "address": "0x00423240",
+  "string_va": "0x53b878",
+  "bound_sites": [
+   "0x4231cb"
+  ]
+ },
+ {
+  "enum": "TASK_DECLARE_PARAMETERS",
+  "bin_name": "Task_DeclareParameters",
+  "address": "0x004f0740",
+  "string_va": "0x54dec0",
+  "bound_sites": [
+   "0x4ef7ad"
+  ]
+ },
+ {
+  "enum": "TASK_NEW",
+  "bin_name": "Task_New",
+  "address": "0x004f0780",
+  "string_va": "0x539abc",
+  "bound_sites": [
+   "0x4ef79b"
+  ]
+ },
+ {
+  "enum": "BREAK_SCRIPT",
+  "bin_name": "BreakScript",
+  "address": "0x004b8c10",
+  "string_va": "0x547340",
+  "bound_sites": [
+   "0x4b8bc1"
+  ]
+ },
+ {
+  "enum": "FLOW_REQUEST_EVENT",
+  "bin_name": "Flow_RequestEvent",
+  "address": "0x00402780",
+  "string_va": "0x536200",
+  "bound_sites": [
+   "0x402059"
+  ]
+ },
+ {
+  "enum": "SCRIPT_SET_WARNING_LEVEL",
+  "bin_name": "_Script_SetWarningLevel",
+  "address": "0x004b8c60",
+  "string_va": "0x54734c",
+  "bound_sites": [
+   "0x4b8bad"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_TRIGGER_ID",
+  "bin_name": "AIFunction_GetAlarmTriggerID",
+  "address": "0x0044e3f0",
+  "string_va": "0x53d5f4",
+  "bound_sites": [
+   "0x44cf97"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_CONTROL_ID",
+  "bin_name": "AIFunction_GetAlarmControlID",
+  "address": "0x0044e430",
+  "string_va": "0x53d5d4",
+  "bound_sites": [
+   "0x44cfaa"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_ACCESS",
+  "bin_name": "AIFunction_GetAlarmAccess",
+  "address": "0x0044e470",
+  "string_va": "0x53d5b8",
+  "bound_sites": [
+   "0x44cfc0"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_GUNNER_ID",
+  "bin_name": "AIFunction_GetGunnerID",
+  "address": "0x0044e4b0",
+  "string_va": "0x53d5a0",
+  "bound_sites": [
+   "0x44cfd3"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_CONTROL_STATUS",
+  "bin_name": "AIFunction_GetAlarmControlStatus",
+  "address": "0x0044e4f0",
+  "string_va": "0x53d57c",
+  "bound_sites": [
+   "0x44cfe6"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_GUNNER_STATUS",
+  "bin_name": "AIFunction_GetGunnerStatus",
+  "address": "0x0044e5e0",
+  "string_va": "0x53d560",
+  "bound_sites": [
+   "0x44cff9"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE",
+  "bin_name": "AIFunction_GetScriptIntegerValue",
+  "address": "0x0044e740",
+  "string_va": "0x53d53c",
+  "bound_sites": [
+   "0x44d00f"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_CURRENT_EVENT_TYPE",
+  "bin_name": "AIFunction_GetCurrentEventType",
+  "address": "0x0044dfa0",
+  "string_va": "0x53d51c",
+  "bound_sites": [
+   "0x44d022"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_IS_EVENT_BEHIND",
+  "bin_name": "AIFunction_IsEventBehind",
+  "address": "0x0044e860",
+  "string_va": "0x53d500",
+  "bound_sites": [
+   "0x44d035"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ANIMATION_TO_PLAY",
+  "bin_name": "AIFunction_GetAnimationToPlay",
+  "address": "0x0044ecb0",
+  "string_va": "0x53d424",
+  "bound_sites": [
+   "0x44d0c0"
+  ]
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_GAMMA",
+  "bin_name": "Config_GraphicOptionsSetGamma",
+  "address": "0x004048b0",
+  "string_va": "0x537fbc",
+  "bound_sites": [
+   "0x4032ef"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_SCRIPT_REAL_VALUE",
+  "bin_name": "AIFunction_GetScriptRealValue",
+  "address": "0x0044e800",
+  "string_va": "0x53d4e0",
+  "bound_sites": [
+   "0x44d048"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_RANDOM_VALUE",
+  "bin_name": "AIFunction_GetRandomValue",
+  "address": "0x0044e000",
+  "string_va": "0x53d4c4",
+  "bound_sites": [
+   "0x44d05e"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_EVENT_DISTANCE",
+  "bin_name": "AIFunction_GetEventDistance",
+  "address": "0x0044e930",
+  "string_va": "0x53d4a8",
+  "bound_sites": [
+   "0x44d071"
+  ]
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE",
+  "bin_name": "AIFunction_GetAlarmTriggerDistance",
+  "address": "0x0044e9b0",
+  "string_va": "0x53d484",
+  "bound_sites": [
+   "0x44d084"
+  ]
+ }
+]

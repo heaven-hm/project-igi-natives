@@ -1,0 +1,954 @@
+[
+ {
+  "name": "ANIM_TRIGGER_PARSE",
+  "address": "0x004EC070"
+ },
+ {
+  "name": "ANIM_TRIGGER_LOAD",
+  "address": "0x004EC0C0"
+ },
+ {
+  "name": "CONFIG_COMPILE",
+  "address": "0x004F0CF0"
+ },
+ {
+  "name": "CONFIG_READ",
+  "address": "0x00405850"
+ },
+ {
+  "name": "CONFIG_WRITE",
+  "address": "0x00405BD0"
+ },
+ {
+  "name": "CUTSCENE_DELETE",
+  "address": "0x00415AB0"
+ },
+ {
+  "name": "ERROR_SHOW",
+  "address": "0x004AF7B0"
+ },
+ {
+  "name": "FRAMES_SET",
+  "address": "0x00402820"
+ },
+ {
+  "name": "GAMEMATERIAL_LOAD",
+  "address": "0x00408350"
+ },
+ {
+  "name": "RESET",
+  "address": "0x00403B70"
+ },
+ {
+  "name": "GRAPH_OPEN",
+  "address": "0x004F9FF0"
+ },
+ {
+  "name": "HUMANPLAYER_LOAD",
+  "address": "0x004137A0"
+ },
+ {
+  "name": "INPUT_DISABLE",
+  "address": "0x004157D0"
+ },
+ {
+  "name": "INPUT_ENABLE",
+  "address": "0x00415830"
+ },
+ {
+  "name": "LOG_ADD",
+  "address": "0x004BBC30"
+ },
+ {
+  "name": "LEVEL_LOAD",
+  "address": "0x004F0E10"
+ },
+ {
+  "name": "LEVEL_QUIT",
+  "address": "0x00416550"
+ },
+ {
+  "name": "LEVEL_RESTART",
+  "address": "0x00416FE0"
+ },
+ {
+  "name": "LEVEL_START",
+  "address": "0x00415B30"
+ },
+ {
+  "name": "MAGIC_OBJ_LOAD",
+  "address": "0x004C4930"
+ },
+ {
+  "name": "MENU_MANAGER",
+  "address": "0x00418B00"
+ },
+ {
+  "name": "MUSIC_DISABLE",
+  "address": "0x00415A60"
+ },
+ {
+  "name": "MUSIC_ENABLE",
+  "address": "0x00415A10"
+ },
+ {
+  "name": "MUSIC_SFX_VOLUME",
+  "address": "0x00495F30"
+ },
+ {
+  "name": "MUSIC_VOLUME",
+  "address": "0x00495E70"
+ },
+ {
+  "name": "MUSIC_UPDATE_VOLUME",
+  "address": "0x004158E0"
+ },
+ {
+  "name": "PHYSICS_OBJ_TYPE_PARSE",
+  "address": "0x004EDFE0"
+ },
+ {
+  "name": "PHYSICS_OBJ_LOAD",
+  "address": "0x004EE030"
+ },
+ {
+  "name": "QHASH_INIT",
+  "address": "0x004B0D60"
+ },
+ {
+  "name": "QHASH_VAL_SET",
+  "address": "0x004B0D40"
+ },
+ {
+  "name": "QHASH_VAL_GET",
+  "address": "0x004B0DB0"
+ },
+ {
+  "name": "QHASH_RESET",
+  "address": "0x004B0D90"
+ },
+ {
+  "name": "QSCRIPT_COMPILE",
+  "address": "0x004B8410"
+ },
+ {
+  "name": "QTASK_UPDATE",
+  "address": "0x004F0E90"
+ },
+ {
+  "name": "QTASK_UPDATE_LIST",
+  "address": "0x00401B20"
+ },
+ {
+  "name": "QSCRIPT_ASSEMBLE",
+  "address": "0x004BB270"
+ },
+ {
+  "name": "QSCRIPT_PARSE",
+  "address": "0x004BBCB0"
+ },
+ {
+  "name": "QSCRIPT_CLEANUP",
+  "address": "0x004B1AC0"
+ },
+ {
+  "name": "QVM_READ",
+  "address": "0x004B85B0"
+ },
+ {
+  "name": "QVM_CLEANUP",
+  "address": "0x004B83D0"
+ },
+ {
+  "name": "QVM_LOAD",
+  "address": "0x004B80B0"
+ },
+ {
+  "name": "RESOURCE_FLUSH",
+  "address": "0x004B63D0"
+ },
+ {
+  "name": "RESOURCE_LOAD",
+  "address": "0x004B5F00"
+ },
+ {
+  "name": "RESOURCE_UNLOAD",
+  "address": "0x004B6380"
+ },
+ {
+  "name": "RESOURCE_PACK_UNPACK",
+  "address": "0x004B18B0"
+ },
+ {
+  "name": "RESOURCE_UNPACK",
+  "address": "0x004B16D0"
+ },
+ {
+  "name": "RESOURCE_IS_LOADED",
+  "address": "0x004B5B90"
+ },
+ {
+  "name": "SCRIPT_INIT",
+  "address": "0x004F0E50"
+ },
+ {
+  "name": "SCRIPT_SETSYMBOL_CXT",
+  "address": "0x004B8930"
+ },
+ {
+  "name": "STATUS_MESSAGE_CLEAR",
+  "address": "0x00485AD0"
+ },
+ {
+  "name": "STATUS_MESSAGE_SHOW",
+  "address": "0x00485970"
+ },
+ {
+  "name": "SYMBOL_REMOVE",
+  "address": "0x004C0460"
+ },
+ {
+  "name": "SYMBOL_CHECK",
+  "address": "0x004C0560"
+ },
+ {
+  "name": "TASKTYPE_SET",
+  "address": "0x004B8810"
+ },
+ {
+  "name": "WARNING_SHOW",
+  "address": "0x004AF810"
+ },
+ {
+  "name": "WEAPON_CONFIG_READ",
+  "address": "0x004071E0"
+ },
+ {
+  "name": "WEAPON_TYPE_OPEN",
+  "address": "0x00413B70"
+ },
+ {
+  "name": "WEAPON_TOTAL",
+  "address": "0x00413BB0"
+ },
+ {
+  "name": "WEAPON_GUN_PICKUP",
+  "address": "0x0045FFC0"
+ },
+ {
+  "name": "WEAPON_AMMO_PICKUP",
+  "address": "0x0045FF80"
+ },
+ {
+  "name": "HUMAN_HIT_DAMAGE",
+  "address": "0x00416D80"
+ },
+ {
+  "name": "HUMAN_CAM_VIEW",
+  "address": "0x00463760"
+ },
+ {
+  "name": "HUMAN_FIND_NEXT_CAMERA",
+  "address": "0x004828D0"
+ },
+ {
+  "name": "MEMORY_ALLOC",
+  "address": "0x004B0C60"
+ },
+ {
+  "name": "MEMORY_DEALLOC",
+  "address": "0x004B0BE0"
+ },
+ {
+  "name": "MISSION_OPEN",
+  "address": "0x00484E60"
+ },
+ {
+  "name": "FILE_OPEN",
+  "address": "0x004A5350"
+ },
+ {
+  "name": "FILE_READ_WRITE",
+  "address": "0x004B1510"
+ },
+ {
+  "name": "PLAYER_PROFILE_ACTIVE",
+  "address": "0x00406220"
+ },
+ {
+  "name": "SOLDIER_EXECUTE",
+  "address": "0x0045C440"
+ },
+ {
+  "name": "DEBUG_KEYS_ENABLE",
+  "address": "0x00041502"
+ },
+ {
+  "name": "HUMAN_TASK_VIEW_RESET",
+  "address": "0x004659E0"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_LOAD",
+  "address": "0x004A53B3"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_BOOL8",
+  "address": "0x004B7EE0"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_INT16",
+  "address": "0x004B7E80"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_INT32",
+  "address": "0x004B7FA0"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_REAL32",
+  "address": "0x004B7FC0"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REMOVE",
+  "address": "0x004B80A0"
+ },
+ {
+  "name": "LOADING_SCREEN_SHOW",
+  "address": "0x0048A440"
+ },
+ {
+  "name": "QTASK_HASH_TABLE",
+  "address": "0x004BAAC0"
+ },
+ {
+  "name": "AI_ACTION_ACTIVATE",
+  "address": "0x0044D420"
+ },
+ {
+  "name": "AI_ACTION_COMBAT",
+  "address": "0x0044D160"
+ },
+ {
+  "name": "AI_ACTION_DEAD",
+  "address": "0x0044D260"
+ },
+ {
+  "name": "AI_ACTION_FALL_FLAT",
+  "address": "0x0044D2C0"
+ },
+ {
+  "name": "AI_ACTION_FIRE_AT_NODE",
+  "address": "0x0044D580"
+ },
+ {
+  "name": "AI_ACTION_FIRE_AT_TASK",
+  "address": "0x0044D630"
+ },
+ {
+  "name": "AI_ACTION_IDLE",
+  "address": "0x0044DA80"
+ },
+ {
+  "name": "AI_ACTION_KICK_GRENADE",
+  "address": "0x0044D960"
+ },
+ {
+  "name": "AI_ACTION_LOOK_AT_EVENT",
+  "address": "0x0044D870"
+ },
+ {
+  "name": "AI_ACTION_MOVE_TO_EVENT",
+  "address": "0x0044D7D0"
+ },
+ {
+  "name": "AI_ACTION_PATROL",
+  "address": "0x0044D0E0"
+ },
+ {
+  "name": "AI_ACTION_PLAY_ANIMATION",
+  "address": "0x0044D6E0"
+ },
+ {
+  "name": "AI_ACTION_PLAY_SOUND",
+  "address": "0x0044D750"
+ },
+ {
+  "name": "AI_ACTION_RUN_PANICKING",
+  "address": "0x0044DA00"
+ },
+ {
+  "name": "AI_ACTION_RUN_TO_NODE",
+  "address": "0x0044D510"
+ },
+ {
+  "name": "AI_ACTION_SET_COMBAT",
+  "address": "0x0044DAE0"
+ },
+ {
+  "name": "AI_ACTION_STUNNED",
+  "address": "0x0044D8F0"
+ },
+ {
+  "name": "AI_ACTION_WALK_TO_NODE",
+  "address": "0x0044D4A0"
+ },
+ {
+  "name": "AI_FUNCTION_ADD_ANIMATION_ENTRY",
+  "address": "0x0044EBB0"
+ },
+ {
+  "name": "AI_FUNCTION_DEFAULT_HANDLER",
+  "address": "0x0044E060"
+ },
+ {
+  "name": "AI_FUNCTION_REMOVE_ALARM_ACTIONS",
+  "address": "0x0044DBC0"
+ },
+ {
+  "name": "AI_FUNCTION_SEND_RESPONSE",
+  "address": "0x0044EE40"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_ACCESS",
+  "address": "0x0044E330"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_CONTROL_ID",
+  "address": "0x0044E2D0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_TRIGGER_ID",
+  "address": "0x0044E270"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_VIEW_LENGTH",
+  "address": "0x0044DCD0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ANIMATION_INTERVAL",
+  "address": "0x0044EAF0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_DEATH_ANIMATION",
+  "address": "0x0044E210"
+ },
+ {
+  "name": "AI_FUNCTION_SET_EVENT_PRIORITY",
+  "address": "0x0044E0C0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_GUNNER_ID",
+  "address": "0x0044E390"
+ },
+ {
+  "name": "AI_FUNCTION_SET_INSTANT_DEATH",
+  "address": "0x0044E1B0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_INVULNERABILITY",
+  "address": "0x0044E150"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE",
+  "address": "0x0044E6D0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SCRIPT_REAL_VALUE",
+  "address": "0x0044E790"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH",
+  "address": "0x0044DE80"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA",
+  "address": "0x0044DEE0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA",
+  "address": "0x0044DF40"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH",
+  "address": "0x0044DDF0"
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_ALPHA",
+  "address": "0x0044DD30"
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_GAMMA",
+  "address": "0x0044DD90"
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_LENGTH",
+  "address": "0x0044DC40"
+ },
+ {
+  "name": "CREATE_TERRAIN_TILE_MAP",
+  "address": "0x004C6760"
+ },
+ {
+  "name": "DEFINE_AMMO_TYPE",
+  "address": "0x0047CAD0"
+ },
+ {
+  "name": "DEFINE_GAME_MATERIAL",
+  "address": "0x00407F50"
+ },
+ {
+  "name": "DEFINE_GRAPH",
+  "address": "0x004EAD20"
+ },
+ {
+  "name": "DEFINE_GROUP",
+  "address": "0x004EBA90"
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_AMMO_LIMIT",
+  "address": "0x004102D0"
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY",
+  "address": "0x00410240"
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_WEAPON_CYCLE",
+  "address": "0x004101C0"
+ },
+ {
+  "name": "DEFINE_MAGIC_OBJ",
+  "address": "0x004C4520"
+ },
+ {
+  "name": "DEFINE_MISSION",
+  "address": "0x00484F60"
+ },
+ {
+  "name": "DEFINE_Q_MATERIAL",
+  "address": "0x00407E30"
+ },
+ {
+  "name": "DEFINE_SOUND",
+  "address": "0x004E8C60"
+ },
+ {
+  "name": "DEFINE_TRIGGER_ONCE",
+  "address": "0x004E9EC0"
+ },
+ {
+  "name": "CONFIG_CREATE_NEW_PLAYER_PROFILE",
+  "address": "0x004050A0"
+ },
+ {
+  "name": "CONFIG_DELETE_PLAYER_PROFILE",
+  "address": "0x00405400"
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_PICTURE_BOX",
+  "address": "0x004056F0"
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_SELECTION_BOX",
+  "address": "0x00405660"
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_TEXT_BOX",
+  "address": "0x00405760"
+ },
+ {
+  "name": "CONFIG_FILL_PLAYER_PROFILE_LIST_BOX",
+  "address": "0x00404FA0"
+ },
+ {
+  "name": "CONFIG_FILL_RENDER_DEVICE_LIST_BOX",
+  "address": "0x004046A0"
+ },
+ {
+  "name": "CONFIG_FILL_SCREEN_RESOLUTION_LIST_BOX",
+  "address": "0x00404450"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_BLOOD_ENABLED",
+  "address": "0x00404340"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_INVERT_MOUSE",
+  "address": "0x004041D0"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_MOUSE_SENSITIVITY",
+  "address": "0x00404290"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_BLOOD_ENABLED",
+  "address": "0x004042E0"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_INVERT_MOUSE",
+  "address": "0x00404160"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_MOUSE_SENSITIVITY",
+  "address": "0x00404230"
+ },
+ {
+  "name": "CONFIG_GET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "address": "0x00405010"
+ },
+ {
+  "name": "CONFIG_GET_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403C70"
+ },
+ {
+  "name": "CONFIG_GET_NUMBER_OF_PLAYER_PROFILES",
+  "address": "0x004054F0"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_DEVICE",
+  "address": "0x00404710"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_GAMMA",
+  "address": "0x00404910"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERFORMANCE_FLAGS",
+  "address": "0x00404F60"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_FLAGS_FROM_LEVEL",
+  "address": "0x004055C0"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_LEVEL_FROM_FLAGS",
+  "address": "0x00405530"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_RESOLUTION",
+  "address": "0x004045B0"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_TRANSPARENCY",
+  "address": "0x004049C0"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_NUM_PERF_LEVELS",
+  "address": "0x00405620"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_DEVICE",
+  "address": "0x004047F0"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_PERFORMANCE_FLAGS",
+  "address": "0x00404F00"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_RESOLUTION",
+  "address": "0x00404510"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_TRANSPARENCY",
+  "address": "0x00404960"
+ },
+ {
+  "name": "CONFIG_IS_CONTENT_CONTROL_PASSWORD_ENABLED",
+  "address": "0x00403D90"
+ },
+ {
+  "name": "CONFIG_IS_GERMANY",
+  "address": "0x00403B30"
+ },
+ {
+  "name": "CONFIG_PLAYER_GET_ACTIVE_MISSION",
+  "address": "0x004057D0"
+ },
+ {
+  "name": "CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "address": "0x00405050"
+ },
+ {
+  "name": "CONFIG_SET_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403C10"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_MUSIC",
+  "address": "0x00404BF0"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_MUSIC_VOLUME",
+  "address": "0x00404CA0"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_REVERSE_STEREO",
+  "address": "0x00404EB0"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS",
+  "address": "0x00404A90"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS_VOLUME",
+  "address": "0x00404B40"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SPEECH",
+  "address": "0x00404D50"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SPEECH_VOLUME",
+  "address": "0x00404E00"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_MUSIC",
+  "address": "0x00404B90"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_MUSIC_VOLUME",
+  "address": "0x00404C40"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_REVERSE_STEREO",
+  "address": "0x00404E50"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS",
+  "address": "0x00404A10"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS_VOLUME",
+  "address": "0x00404AE0"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SPEECH",
+  "address": "0x00404CF0"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SPEECH_VOLUME",
+  "address": "0x00404DA0"
+ },
+ {
+  "name": "CONFIG_VERIFY_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403CC0"
+ },
+ {
+  "name": "GO_ACTIVE_MISSION",
+  "address": "0x00403750"
+ },
+ {
+  "name": "GO_CONTENT_CONTROL_PW",
+  "address": "0x00403C10"
+ },
+ {
+  "name": "GO_GAME_DIFF",
+  "address": "0x00403AC0"
+ },
+ {
+  "name": "GO_GAME_LANG",
+  "address": "0x00403A00"
+ },
+ {
+  "name": "GO_GFX_DEVICE",
+  "address": "0x00404010"
+ },
+ {
+  "name": "GO_GFX_DISP",
+  "address": "0x00403950"
+ },
+ {
+  "name": "GO_GFX_GAMMA",
+  "address": "0x00404080"
+ },
+ {
+  "name": "GO_GFX_PERFORMANCE",
+  "address": "0x004040F0"
+ },
+ {
+  "name": "GO_IN_MOU_INV",
+  "address": "0x00403870"
+ },
+ {
+  "name": "GO_IN_MOU_SENS",
+  "address": "0x004038E0"
+ },
+ {
+  "name": "GO_IN_REMAP",
+  "address": "0x004037C0"
+ },
+ {
+  "name": "GO_IS_BLOOD",
+  "address": "0x00403DF0"
+ },
+ {
+  "name": "GO_PLAYER",
+  "address": "0x004036B0"
+ },
+ {
+  "name": "GO_SOUND_FX",
+  "address": "0x00403F80"
+ },
+ {
+  "name": "GO_SOUND_MUSIC",
+  "address": "0x00403EF0"
+ },
+ {
+  "name": "GO_SOUND_SPEECH",
+  "address": "0x00403E60"
+ },
+ {
+  "name": "GAME_SET_MISSION",
+  "address": "0x00415890"
+ },
+ {
+  "name": "GAME_SET_MUSIC_VOLUME",
+  "address": "0x00415950"
+ },
+ {
+  "name": "GAME_SET_SFX_VOLUME",
+  "address": "0x004159B0"
+ },
+ {
+  "name": "MENU_MANAGER_ACTIVATE_POPUP_SCREEN",
+  "address": "0x00417900"
+ },
+ {
+  "name": "MENU_MANAGER_DEACTIVATE_POPU_SCREEN",
+  "address": "0x00417960"
+ },
+ {
+  "name": "MENU_MANAGER_FORCE_UPDATE_WINDOW",
+  "address": "0x00417880"
+ },
+ {
+  "name": "MENU_MANAGER_LEAVE_MENUS",
+  "address": "0x00417790"
+ },
+ {
+  "name": "MENU_MANAGER_POP_SCREEN",
+  "address": "0x00417710"
+ },
+ {
+  "name": "MENU_MANAGER_PUSH_SCREEN",
+  "address": "0x00417690"
+ },
+ {
+  "name": "MENU_MANAGER_REQUEST_SCREEN",
+  "address": "0x004174A0"
+ },
+ {
+  "name": "MENU_MANAGER_SET_ENABLED",
+  "address": "0x004179B0"
+ },
+ {
+  "name": "MENU_MANAGER_SET_LANGUAGE",
+  "address": "0x00417810"
+ },
+ {
+  "name": "LEVEL_FLOW_GET_BREAK_CUT_SCENE_KEY",
+  "address": "0x00488E00"
+ },
+ {
+  "name": "LEVEL_FLOW_IS_COUNTRY_USA",
+  "address": "0x00488E90"
+ },
+ {
+  "name": "LEVEL_FLOW_LEVEL_FAILED",
+  "address": "0x00488E50"
+ },
+ {
+  "name": "MOVIE_SUBTITLE_REGISTER_FONT",
+  "address": "0x004151E0"
+ },
+ {
+  "name": "MOVIE_SUBTITLE_REGISTER_TEXT",
+  "address": "0x00415260"
+ },
+ {
+  "name": "CONTROLS_MENU_CONVERT_FLOAT_FROM_OFFSET",
+  "address": "0x004231E0"
+ },
+ {
+  "name": "CONTROLS_MENU_CONVERT_OFFSET_FROM_FLOAT",
+  "address": "0x00423240"
+ },
+ {
+  "name": "TASK_DECLARE_PARAMETERS",
+  "address": "0x004F0740"
+ },
+ {
+  "name": "TASK_NEW",
+  "address": "0x004F0780"
+ },
+ {
+  "name": "BREAK_SCRIPT",
+  "address": "0x004B8C10"
+ },
+ {
+  "name": "FLOW_REQUEST_EVENT",
+  "address": "0x00402780"
+ },
+ {
+  "name": "SCRIPT_SET_WARNING_LEVEL",
+  "address": "0x004B8C60"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_TRIGGER_ID",
+  "address": "0x0044E3F0"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_CONTROL_ID",
+  "address": "0x0044E430"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_ACCESS",
+  "address": "0x0044E470"
+ },
+ {
+  "name": "AI_FUNCTION_GET_GUNNER_ID",
+  "address": "0x0044E4B0"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_CONTROL_STATUS",
+  "address": "0x0044E4F0"
+ },
+ {
+  "name": "AI_FUNCTION_GET_GUNNER_STATUS",
+  "address": "0x0044E5E0"
+ },
+ {
+  "name": "AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE",
+  "address": "0x0044E740"
+ },
+ {
+  "name": "AI_FUNCTION_GET_CURRENT_EVENT_TYPE",
+  "address": "0x0044DFA0"
+ },
+ {
+  "name": "AI_FUNCTION_IS_EVENT_BEHIND",
+  "address": "0x0044E860"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ANIMATION_TO_PLAY",
+  "address": "0x0044ECB0"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_GAMMA",
+  "address": "0x004048B0"
+ },
+ {
+  "name": "AI_FUNCTION_GET_SCRIPT_REAL_VALUE",
+  "address": "0x0044E800"
+ },
+ {
+  "name": "AI_FUNCTION_GET_RANDOM_VALUE",
+  "address": "0x0044E000"
+ },
+ {
+  "name": "AI_FUNCTION_GET_EVENT_DISTANCE",
+  "address": "0x0044E930"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE",
+  "address": "0x0044E9B0"
+ }
+]

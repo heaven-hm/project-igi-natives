@@ -1,0 +1,2373 @@
+[
+ {
+  "enum": "ANIM_TRIGGER_PARSE",
+  "bin_name": "AnimTriggerRead",
+  "address": "0x004ec070",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 547
+ },
+ {
+  "enum": "ANIM_TRIGGER_LOAD",
+  "bin_name": "AnimTriggerLoad",
+  "address": "0x004ec0c0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 239
+ },
+ {
+  "enum": "CONFIG_COMPILE",
+  "bin_name": "ConfigCompile",
+  "address": "0x004f0cf0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 556
+ },
+ {
+  "enum": "CONFIG_READ",
+  "bin_name": "ConfigRead",
+  "address": "0x00405850",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 508
+ },
+ {
+  "enum": "CONFIG_WRITE",
+  "bin_name": "ConfigWrite",
+  "address": "0x00405bd0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 854
+ },
+ {
+  "enum": "CUTSCENE_DELETE",
+  "bin_name": "CutsceneDelete",
+  "address": "0x00415ab0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 731
+ },
+ {
+  "enum": "ERROR_SHOW",
+  "bin_name": "ErrorShow",
+  "address": "0x004af7b0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 682
+ },
+ {
+  "enum": "FRAMES_SET",
+  "bin_name": "FramesSet",
+  "address": "0x00402820",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 565
+ },
+ {
+  "enum": "GAMEMATERIAL_LOAD",
+  "bin_name": "GameMaterialLoad",
+  "address": "0x00408350",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 450
+ },
+ {
+  "enum": "RESET",
+  "bin_name": "GraphicsReset",
+  "address": "0x00403b70",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1078
+ },
+ {
+  "enum": "GRAPH_OPEN",
+  "bin_name": "GraphOpen",
+  "address": "0x004f9ff0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1862
+ },
+ {
+  "enum": "HUMANPLAYER_LOAD",
+  "bin_name": "HumanplayerLoad",
+  "address": "0x004137a0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 461
+ },
+ {
+  "enum": "INPUT_DISABLE",
+  "bin_name": "InputDisable",
+  "address": "0x004157d0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 734
+ },
+ {
+  "enum": "INPUT_ENABLE",
+  "bin_name": "InputEnable",
+  "address": "0x00415830",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 734
+ },
+ {
+  "enum": "LOG_ADD",
+  "bin_name": "LogAdd",
+  "address": "0x004bbc30",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 481
+ },
+ {
+  "enum": "LEVEL_LOAD",
+  "bin_name": "LevelLoad",
+  "address": "0x004f0e10",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 380
+ },
+ {
+  "enum": "LEVEL_QUIT",
+  "bin_name": "LevelQuit",
+  "address": "0x00416550",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1462
+ },
+ {
+  "enum": "LEVEL_RESTART",
+  "bin_name": "LevelRestart",
+  "address": "0x00416fe0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 787
+ },
+ {
+  "enum": "LEVEL_START",
+  "bin_name": "LevelStart",
+  "address": "0x00415b30",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 5958
+ },
+ {
+  "enum": "MAGIC_OBJ_LOAD",
+  "bin_name": "MagicObjLoad",
+  "address": "0x004c4930",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 239
+ },
+ {
+  "enum": "MENU_MANAGER",
+  "bin_name": "MenuManager",
+  "address": "0x00418b00",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 3954
+ },
+ {
+  "enum": "MUSIC_DISABLE",
+  "bin_name": "MusicDisable",
+  "address": "0x00415a60",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 585
+ },
+ {
+  "enum": "MUSIC_ENABLE",
+  "bin_name": "MusicEnable",
+  "address": "0x00415a10",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 601
+ },
+ {
+  "enum": "MUSIC_SFX_VOLUME",
+  "bin_name": "MusicSetSfxVolume",
+  "address": "0x00495f30",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 225
+ },
+ {
+  "enum": "MUSIC_VOLUME",
+  "bin_name": "MusicSetVolume",
+  "address": "0x00495e70",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1582
+ },
+ {
+  "enum": "MUSIC_UPDATE_VOLUME",
+  "bin_name": "MusicUpdateVolume",
+  "address": "0x004158e0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 806
+ },
+ {
+  "enum": "PHYSICS_OBJ_TYPE_PARSE",
+  "bin_name": "PhysicsObjTypeRead",
+  "address": "0x004edfe0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 550
+ },
+ {
+  "enum": "PHYSICS_OBJ_LOAD",
+  "bin_name": "PhysicsObjLoad",
+  "address": "0x004ee030",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 239
+ },
+ {
+  "enum": "QHASH_INIT",
+  "bin_name": "QhashInit",
+  "address": "0x004b0d60",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 331
+ },
+ {
+  "enum": "QHASH_VAL_SET",
+  "bin_name": "QHASH_VAL_SET",
+  "address": "0x004b0d40",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 170
+ },
+ {
+  "enum": "QHASH_VAL_GET",
+  "bin_name": "QHASH_VAL_GET",
+  "address": "0x004b0db0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 188
+ },
+ {
+  "enum": "QHASH_RESET",
+  "bin_name": "QhashReset",
+  "address": "0x004b0d90",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 277
+ },
+ {
+  "enum": "QSCRIPT_COMPILE",
+  "bin_name": "QscCompile",
+  "address": "0x004b8410",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 2585
+ },
+ {
+  "enum": "QTASK_UPDATE",
+  "bin_name": "QtaskUpdate",
+  "address": "0x004f0e90",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 462
+ },
+ {
+  "enum": "QTASK_UPDATE_LIST",
+  "bin_name": "QtaskUpdateList",
+  "address": "0x00401b20",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 817
+ },
+ {
+  "enum": "QSCRIPT_ASSEMBLE",
+  "bin_name": "QvmAssemble",
+  "address": "0x004bb270",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 15455
+ },
+ {
+  "enum": "QSCRIPT_PARSE",
+  "bin_name": "QvmParse",
+  "address": "0x004bbcb0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 2863
+ },
+ {
+  "enum": "QSCRIPT_CLEANUP",
+  "bin_name": "QSCRIPT_CLEANUP",
+  "address": "0x004b1ac0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1400
+ },
+ {
+  "enum": "QVM_READ",
+  "bin_name": "QvmCompile",
+  "address": "0x004b85b0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1711
+ },
+ {
+  "enum": "QVM_CLEANUP",
+  "bin_name": "CompilerCleanup",
+  "address": "0x004b83d0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 379
+ },
+ {
+  "enum": "QVM_LOAD",
+  "bin_name": "QvmLoad",
+  "address": "0x004b80b0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 4980
+ },
+ {
+  "enum": "RESOURCE_FLUSH",
+  "bin_name": "ResourceFlush",
+  "address": "0x004b63d0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 685
+ },
+ {
+  "enum": "RESOURCE_LOAD",
+  "bin_name": "ResourceLoad",
+  "address": "0x004b5f00",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 898
+ },
+ {
+  "enum": "RESOURCE_UNLOAD",
+  "bin_name": "ResourceUnload",
+  "address": "0x004b6380",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 569
+ },
+ {
+  "enum": "RESOURCE_PACK_UNPACK",
+  "bin_name": "ResourcePackUnpack",
+  "address": "0x004b18b0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1836
+ },
+ {
+  "enum": "RESOURCE_UNPACK",
+  "bin_name": "ResourceUnpack",
+  "address": "0x004b16d0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 468
+ },
+ {
+  "enum": "RESOURCE_IS_LOADED",
+  "bin_name": "IsResourceLoaded",
+  "address": "0x004b5b90",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1924
+ },
+ {
+  "enum": "SCRIPT_INIT",
+  "bin_name": "ScriptInit",
+  "address": "0x004f0e50",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 435
+ },
+ {
+  "enum": "SCRIPT_SETSYMBOL_CXT",
+  "bin_name": "ScriptSetsymbolCxt",
+  "address": "0x004b8930",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 467
+ },
+ {
+  "enum": "STATUS_MESSAGE_CLEAR",
+  "bin_name": "StatusMessageClear",
+  "address": "0x00485ad0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 639
+ },
+ {
+  "enum": "STATUS_MESSAGE_SHOW",
+  "bin_name": "StatusMessageShow",
+  "address": "0x00485970",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1846
+ },
+ {
+  "enum": "SYMBOL_REMOVE",
+  "bin_name": "SymbolRemove",
+  "address": "0x004c0460",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 541
+ },
+ {
+  "enum": "SYMBOL_CHECK",
+  "bin_name": "SymbolCheck",
+  "address": "0x004c0560",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1570
+ },
+ {
+  "enum": "TASKTYPE_SET",
+  "bin_name": "TasktypeSet",
+  "address": "0x004b8810",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 293
+ },
+ {
+  "enum": "WARNING_SHOW",
+  "bin_name": "WarningShow",
+  "address": "0x004af810",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 603
+ },
+ {
+  "enum": "WEAPON_CONFIG_READ",
+  "bin_name": "WeaponConfigRead",
+  "address": "0x004071e0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1546
+ },
+ {
+  "enum": "WEAPON_TYPE_OPEN",
+  "bin_name": "WeaponTypeOpen",
+  "address": "0x00413b70",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 219
+ },
+ {
+  "enum": "WEAPON_TOTAL",
+  "bin_name": "WeaponsCountGet",
+  "address": "0x00413bb0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 191
+ },
+ {
+  "enum": "WEAPON_GUN_PICKUP",
+  "bin_name": "WeaponGunPickup",
+  "address": "0x0045ffc0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1489
+ },
+ {
+  "enum": "WEAPON_AMMO_PICKUP",
+  "bin_name": "WeaponAmmoPickup",
+  "address": "0x0045ff80",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 455
+ },
+ {
+  "enum": "HUMAN_HIT_DAMAGE",
+  "bin_name": "PlayerXPHit",
+  "address": "0x00416d80",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 217
+ },
+ {
+  "enum": "HUMAN_CAM_VIEW",
+  "bin_name": "HumanViewCam",
+  "address": "0x00463760",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 270
+ },
+ {
+  "enum": "HUMAN_FIND_NEXT_CAMERA",
+  "bin_name": "HUMAN_FIND_NEXT_CAMERA",
+  "address": "0x004828d0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 657
+ },
+ {
+  "enum": "MEMORY_ALLOC",
+  "bin_name": "MemoryAlloc",
+  "address": "0x004b0c60",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1289
+ },
+ {
+  "enum": "MEMORY_DEALLOC",
+  "bin_name": "MemoryDealloc",
+  "address": "0x004b0be0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 814
+ },
+ {
+  "enum": "MISSION_OPEN",
+  "bin_name": "MissionOpen",
+  "address": "0x00484e60",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1388
+ },
+ {
+  "enum": "FILE_OPEN",
+  "bin_name": "FileOpen",
+  "address": "0x004a5350",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 234
+ },
+ {
+  "enum": "FILE_READ_WRITE",
+  "bin_name": "QFileOpen",
+  "address": "0x004b1510",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 1971
+ },
+ {
+  "enum": "PLAYER_PROFILE_ACTIVE",
+  "bin_name": "IsPlayerProfileActive",
+  "address": "0x00406220",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 298
+ },
+ {
+  "enum": "SOLDIER_EXECUTE",
+  "bin_name": "SoldierExecute",
+  "address": "0x0045c440",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 2259
+ },
+ {
+  "enum": "HUMAN_TASK_VIEW_RESET",
+  "bin_name": "HumanTaskViewReset",
+  "address": "0x004659e0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 552
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_LOAD",
+  "bin_name": "GameDataSymbolLoad",
+  "address": "0x004a53b3",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 804
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_BOOL8",
+  "bin_name": "SymbolRegisterBool8",
+  "address": "0x004b7ee0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 293
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_INT16",
+  "bin_name": "SymbolRegisterInt16",
+  "address": "0x004b7e80",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 293
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_INT32",
+  "bin_name": "SymbolRegisterInt32",
+  "address": "0x004b7fa0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 293
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REGISTER_REAL32",
+  "bin_name": "SymbolRegisterReal32",
+  "address": "0x004b7fc0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 293
+ },
+ {
+  "enum": "GAME_DATA_SYMBOL_REMOVE",
+  "bin_name": "GameDataSymbolRemove",
+  "address": "0x004b80a0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 226
+ },
+ {
+  "enum": "LOADING_SCREEN_SHOW",
+  "bin_name": "LoadingScreenShow",
+  "address": "0x0048a440",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 2527
+ },
+ {
+  "enum": "QTASK_HASH_TABLE",
+  "bin_name": "QTaskHashTableSet",
+  "address": "0x004baac0",
+  "registration_confirmed": false,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "WEAK",
+  "declen": 868
+ },
+ {
+  "enum": "AI_ACTION_ACTIVATE",
+  "bin_name": "AIAction_Activate",
+  "address": "0x0044d420",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 867
+ },
+ {
+  "enum": "AI_ACTION_COMBAT",
+  "bin_name": "AIAction_Combat",
+  "address": "0x0044d160",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1358
+ },
+ {
+  "enum": "AI_ACTION_DEAD",
+  "bin_name": "AIAction_Dead",
+  "address": "0x0044d260",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 682
+ },
+ {
+  "enum": "AI_ACTION_FALL_FLAT",
+  "bin_name": "AIAction_FallFlat",
+  "address": "0x0044d2c0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 2226
+ },
+ {
+  "enum": "AI_ACTION_FIRE_AT_NODE",
+  "bin_name": "AIAction_FireAtNode",
+  "address": "0x0044d580",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1218
+ },
+ {
+  "enum": "AI_ACTION_FIRE_AT_TASK",
+  "bin_name": "AIAction_FireAtTask",
+  "address": "0x0044d630",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1218
+ },
+ {
+  "enum": "AI_ACTION_IDLE",
+  "bin_name": "AIAction_Idle",
+  "address": "0x0044da80",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 682
+ },
+ {
+  "enum": "AI_ACTION_KICK_GRENADE",
+  "bin_name": "AIAction_KickGrenade",
+  "address": "0x0044d960",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1146
+ },
+ {
+  "enum": "AI_ACTION_LOOK_AT_EVENT",
+  "bin_name": "AIAction_LookAtEvent",
+  "address": "0x0044d870",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 858
+ },
+ {
+  "enum": "AI_ACTION_MOVE_TO_EVENT",
+  "bin_name": "AIAction_MoveToEvent",
+  "address": "0x0044d7d0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 838
+ },
+ {
+  "enum": "AI_ACTION_PATROL",
+  "bin_name": "AIAction_Patrol",
+  "address": "0x0044d0e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 868
+ },
+ {
+  "enum": "AI_ACTION_PLAY_ANIMATION",
+  "bin_name": "AIAction_PlayAnimation",
+  "address": "0x0044d6e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 809
+ },
+ {
+  "enum": "AI_ACTION_PLAY_SOUND",
+  "bin_name": "AIAction_PlaySound",
+  "address": "0x0044d750",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 852
+ },
+ {
+  "enum": "AI_ACTION_RUN_PANICKING",
+  "bin_name": "AIAction_RunPanicking",
+  "address": "0x0044da00",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 888
+ },
+ {
+  "enum": "AI_ACTION_RUN_TO_NODE",
+  "bin_name": "AIAction_RunToNode",
+  "address": "0x0044d510",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 809
+ },
+ {
+  "enum": "AI_ACTION_SET_COMBAT",
+  "bin_name": "AIAction_SetCombat",
+  "address": "0x0044dae0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1632
+ },
+ {
+  "enum": "AI_ACTION_STUNNED",
+  "bin_name": "AIAction_Stunned",
+  "address": "0x0044d8f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 827
+ },
+ {
+  "enum": "AI_ACTION_WALK_TO_NODE",
+  "bin_name": "AIAction_WalkToNode",
+  "address": "0x0044d4a0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 809
+ },
+ {
+  "enum": "AI_FUNCTION_ADD_ANIMATION_ENTRY",
+  "bin_name": "AIFunction_AddAnimationEntry",
+  "address": "0x0044ebb0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1549
+ },
+ {
+  "enum": "AI_FUNCTION_DEFAULT_HANDLER",
+  "bin_name": "AIFunction_DefaultHandler",
+  "address": "0x0044e060",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 708
+ },
+ {
+  "enum": "AI_FUNCTION_REMOVE_ALARM_ACTIONS",
+  "bin_name": "AIFunction_RemoveAlarmActions",
+  "address": "0x0044dbc0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 880
+ },
+ {
+  "enum": "AI_FUNCTION_SEND_RESPONSE",
+  "bin_name": "AIFunction_SendResponse",
+  "address": "0x0044ee40",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 782
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_ACCESS",
+  "bin_name": "AIFunction_SetAlarmAccess",
+  "address": "0x0044e330",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 701
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_CONTROL_ID",
+  "bin_name": "AIFunction_SetAlarmControlID",
+  "address": "0x0044e2d0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 701
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_TRIGGER_ID",
+  "bin_name": "AIFunction_SetAlarmTriggerID",
+  "address": "0x0044e270",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 701
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ALARM_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetAlarmViewLength",
+  "address": "0x0044dcd0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "AI_FUNCTION_SET_ANIMATION_INTERVAL",
+  "bin_name": "AIFunction_SetAnimationInterval",
+  "address": "0x0044eaf0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1231
+ },
+ {
+  "enum": "AI_FUNCTION_SET_DEATH_ANIMATION",
+  "bin_name": "AIFunction_SetDeathAnimation",
+  "address": "0x0044e210",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 701
+ },
+ {
+  "enum": "AI_FUNCTION_SET_EVENT_PRIORITY",
+  "bin_name": "AIFunction_SetEventPriority",
+  "address": "0x0044e0c0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 930
+ },
+ {
+  "enum": "AI_FUNCTION_SET_GUNNER_ID",
+  "bin_name": "AIFunction_SetGunnerID",
+  "address": "0x0044e390",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 701
+ },
+ {
+  "enum": "AI_FUNCTION_SET_INSTANT_DEATH",
+  "bin_name": "AIFunction_SetInstantDeath",
+  "address": "0x0044e1b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 721
+ },
+ {
+  "enum": "AI_FUNCTION_SET_INVULNERABILITY",
+  "bin_name": "AIFunction_SetInvulnerability",
+  "address": "0x0044e150",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 699
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE",
+  "bin_name": "AIFunction_SetScriptIntegerValue",
+  "address": "0x0044e6d0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 756
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SCRIPT_REAL_VALUE",
+  "bin_name": "AIFunction_SetScriptRealValue",
+  "address": "0x0044e790",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 774
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetSecondaryAlarmViewLength",
+  "address": "0x0044de80",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA",
+  "bin_name": "AIFunction_SetSecondaryViewAlpha",
+  "address": "0x0044dee0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA",
+  "bin_name": "AIFunction_SetSecondaryViewGamma",
+  "address": "0x0044df40",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetSecondaryViewLength",
+  "address": "0x0044ddf0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1071
+ },
+ {
+  "enum": "AI_FUNCTION_SET_VIEW_ALPHA",
+  "bin_name": "AIFunction_SetViewAlpha",
+  "address": "0x0044dd30",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "AI_FUNCTION_SET_VIEW_GAMMA",
+  "bin_name": "AIFunction_SetViewGamma",
+  "address": "0x0044dd90",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "AI_FUNCTION_SET_VIEW_LENGTH",
+  "bin_name": "AIFunction_SetViewLength",
+  "address": "0x0044dc40",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1071
+ },
+ {
+  "enum": "CREATE_TERRAIN_TILE_MAP",
+  "bin_name": "CreateTerrainTileMap",
+  "address": "0x004c6760",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 770
+ },
+ {
+  "enum": "DEFINE_AMMO_TYPE",
+  "bin_name": "DefineAmmoType",
+  "address": "0x0047cad0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 2497
+ },
+ {
+  "enum": "DEFINE_GAME_MATERIAL",
+  "bin_name": "DefineGameMaterial",
+  "address": "0x00407f50",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 4742
+ },
+ {
+  "enum": "DEFINE_GRAPH",
+  "bin_name": "DefineGraph",
+  "address": "0x004ead20",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 2285
+ },
+ {
+  "enum": "DEFINE_GROUP",
+  "bin_name": "DefineGroup",
+  "address": "0x004eba90",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1495
+ },
+ {
+  "enum": "DEFINE_HUMAN_PLAYER_AMMO_LIMIT",
+  "bin_name": "DefineHumanPlayerAmmoLimit",
+  "address": "0x004102d0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1037
+ },
+ {
+  "enum": "DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY",
+  "bin_name": "DefineHumanPlayerWeaponCategory",
+  "address": "0x00410240",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1101
+ },
+ {
+  "enum": "DEFINE_HUMAN_PLAYER_WEAPON_CYCLE",
+  "bin_name": "DefineHumanPlayerWeaponCycle",
+  "address": "0x004101c0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 919,
+  "manual_note": "Heuristic false positive (calls>=3 rule): r2dec shows loop over weapon list collecting entries into cycle array 0x56DF1C w/ counter 0x56DF18 - matches DefineHumanPlayerWeaponCycle."
+ },
+ {
+  "enum": "DEFINE_MAGIC_OBJ",
+  "bin_name": "DefineMagicObj",
+  "address": "0x004c4520",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1741
+ },
+ {
+  "enum": "DEFINE_MISSION",
+  "bin_name": "DefineMission",
+  "address": "0x00484f60",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 2473
+ },
+ {
+  "enum": "DEFINE_Q_MATERIAL",
+  "bin_name": "DefineQMaterial",
+  "address": "0x00407e30",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1962
+ },
+ {
+  "enum": "DEFINE_SOUND",
+  "bin_name": "DefineSound",
+  "address": "0x004e8c60",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1886
+ },
+ {
+  "enum": "DEFINE_TRIGGER_ONCE",
+  "bin_name": "DefineTriggerOnce",
+  "address": "0x004e9ec0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 2004
+ },
+ {
+  "enum": "CONFIG_CREATE_NEW_PLAYER_PROFILE",
+  "bin_name": "Config_CreateNewPlayerProfile",
+  "address": "0x004050a0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 3849
+ },
+ {
+  "enum": "CONFIG_DELETE_PLAYER_PROFILE",
+  "bin_name": "Config_DeletePlayerProfile",
+  "address": "0x00405400",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1515
+ },
+ {
+  "enum": "CONFIG_FILL_MISSION_PICTURE_BOX",
+  "bin_name": "Config_FillMissionPictureBox",
+  "address": "0x004056f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 837
+ },
+ {
+  "enum": "CONFIG_FILL_MISSION_SELECTION_BOX",
+  "bin_name": "Config_FillMissionSelectionBox",
+  "address": "0x00405660",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1041
+ },
+ {
+  "enum": "CONFIG_FILL_MISSION_TEXT_BOX",
+  "bin_name": "Config_FillMissionTextBox",
+  "address": "0x00405760",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 836
+ },
+ {
+  "enum": "CONFIG_FILL_PLAYER_PROFILE_LIST_BOX",
+  "bin_name": "Config_FillPlayerProfileListBox",
+  "address": "0x00404fa0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 774
+ },
+ {
+  "enum": "CONFIG_FILL_RENDER_DEVICE_LIST_BOX",
+  "bin_name": "Config_FillRenderDeviceListBox",
+  "address": "0x004046a0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 774
+ },
+ {
+  "enum": "CONFIG_FILL_SCREEN_RESOLUTION_LIST_BOX",
+  "bin_name": "Config_FillScreenResolutionListBox",
+  "address": "0x00404450",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1292
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_GET_BLOOD_ENABLED",
+  "bin_name": "Config_GameOptionsInputGetBloodEnabled",
+  "address": "0x00404340",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 688
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_GET_INVERT_MOUSE",
+  "bin_name": "Config_GameOptionsInputGetInvertMouse",
+  "address": "0x004041d0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 780
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_GET_MOUSE_SENSITIVITY",
+  "bin_name": "Config_GameOptionsInputGetMouseSensitivity",
+  "address": "0x00404290",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 733
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_SET_BLOOD_ENABLED",
+  "bin_name": "Config_GameOptionsInputSetBloodEnabled",
+  "address": "0x004042e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 776
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_SET_INVERT_MOUSE",
+  "bin_name": "Config_GameOptionsInputSetInvertMouse",
+  "address": "0x00404160",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 873
+ },
+ {
+  "enum": "CONFIG_GAME_OPTIONS_INPUT_SET_MOUSE_SENSITIVITY",
+  "bin_name": "Config_GameOptionsInputSetMouseSensitivity",
+  "address": "0x00404230",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 755
+ },
+ {
+  "enum": "CONFIG_GET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "bin_name": "Config_GetActivePlayerProfileIndex",
+  "address": "0x00405010",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 572
+ },
+ {
+  "enum": "CONFIG_GET_CONTENT_CONTROL_PASSWORD",
+  "bin_name": "Config_GetContentControlPassword",
+  "address": "0x00403c70",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 586
+ },
+ {
+  "enum": "CONFIG_GET_NUMBER_OF_PLAYER_PROFILES",
+  "bin_name": "Config_GetNumberOfPlayerProfiles",
+  "address": "0x004054f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 572
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_DEVICE",
+  "bin_name": "Config_GraphicOptionsGetDevice",
+  "address": "0x00404710",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1745
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_GAMMA",
+  "bin_name": "Config_GraphicOptionsGetGamma",
+  "address": "0x00404910",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 733
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_PERFORMANCE_FLAGS",
+  "bin_name": "Config_GraphicOptionsGetPerformanceFlags",
+  "address": "0x00404f60",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 620
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_FLAGS_FROM_LEVEL",
+  "bin_name": "Config_GraphicOptionsGetPerfFlagsFromLevel",
+  "address": "0x004055c0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 669
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_LEVEL_FROM_FLAGS",
+  "bin_name": "Config_GraphicOptionsGetPerfLevelFromFlags",
+  "address": "0x00405530",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1109
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_RESOLUTION",
+  "bin_name": "Config_GraphicOptionsGetResolution",
+  "address": "0x004045b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1960
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_GET_TRANSPARENCY",
+  "bin_name": "Config_GraphicOptionsGetTransparency",
+  "address": "0x004049c0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 694
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_NUM_PERF_LEVELS",
+  "bin_name": "Config_GraphicOptionsNumPerfLevels",
+  "address": "0x00405620",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 564
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_DEVICE",
+  "bin_name": "Config_GraphicOptionsSetDevice",
+  "address": "0x004047f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1557
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_PERFORMANCE_FLAGS",
+  "bin_name": "Config_GraphicOptionsSetPerformanceFlags",
+  "address": "0x00404f00",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 705
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_RESOLUTION",
+  "bin_name": "Config_GraphicOptionsSetResolution",
+  "address": "0x00404510",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 898
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_TRANSPARENCY",
+  "bin_name": "Config_GraphicOptionsSetTransparency",
+  "address": "0x00404960",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 698
+ },
+ {
+  "enum": "CONFIG_IS_CONTENT_CONTROL_PASSWORD_ENABLED",
+  "bin_name": "Config_IsContentControlPasswordEnabled",
+  "address": "0x00403d90",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 890
+ },
+ {
+  "enum": "CONFIG_IS_GERMANY",
+  "bin_name": "Config_IsGermany",
+  "address": "0x00403b30",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 653
+ },
+ {
+  "enum": "CONFIG_PLAYER_GET_ACTIVE_MISSION",
+  "bin_name": "Config_PlayerGetActiveMission",
+  "address": "0x004057d0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 792
+ },
+ {
+  "enum": "CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "bin_name": "Config_SetActivePlayerProfileIndex",
+  "address": "0x00405050",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 670
+ },
+ {
+  "enum": "CONFIG_SET_CONTENT_CONTROL_PASSWORD",
+  "bin_name": "Config_SetContentControlPassword",
+  "address": "0x00403c10",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 648
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_MUSIC",
+  "bin_name": "Config_SoundOptionsGetMusic",
+  "address": "0x00404bf0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 692
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_MUSIC_VOLUME",
+  "bin_name": "Config_SoundOptionsGetMusicVolume",
+  "address": "0x00404ca0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 725
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_REVERSE_STEREO",
+  "bin_name": "Config_SoundOptionsGetReverseStereo",
+  "address": "0x00404eb0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 692
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS",
+  "bin_name": "Config_SoundOptionsGetSoundsEffects",
+  "address": "0x00404a90",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 692
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS_VOLUME",
+  "bin_name": "Config_SoundOptionsGetSoundsEffectsVolume",
+  "address": "0x00404b40",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 726
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SPEECH",
+  "bin_name": "Config_SoundOptionsGetSpeech",
+  "address": "0x00404d50",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 692
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_GET_SPEECH_VOLUME",
+  "bin_name": "Config_SoundOptionsGetSpeechVolume",
+  "address": "0x00404e00",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 726
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_MUSIC",
+  "bin_name": "Config_SoundOptionsSetMusic",
+  "address": "0x00404b90",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 697
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_MUSIC_VOLUME",
+  "bin_name": "Config_SoundOptionsSetMusicVolume",
+  "address": "0x00404c40",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 751
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_REVERSE_STEREO",
+  "bin_name": "Config_SoundOptionsSetReverseStereo",
+  "address": "0x00404e50",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 697
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS",
+  "bin_name": "Config_SoundOptionsSetSoundsEffects",
+  "address": "0x00404a10",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 697
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS_VOLUME",
+  "bin_name": "Config_SoundOptionsSetSoundsEffectsVolume",
+  "address": "0x00404ae0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 745
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SPEECH",
+  "bin_name": "Config_SoundOptionsSetSpeech",
+  "address": "0x00404cf0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 697
+ },
+ {
+  "enum": "CONFIG_SOUND_OPTIONS_SET_SPEECH_VOLUME",
+  "bin_name": "Config_SoundOptionsSetSpeechVolume",
+  "address": "0x00404da0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 745
+ },
+ {
+  "enum": "CONFIG_VERIFY_CONTENT_CONTROL_PASSWORD",
+  "bin_name": "Config_VerifyContentControlPassword",
+  "address": "0x00403cc0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1775
+ },
+ {
+  "enum": "GO_ACTIVE_MISSION",
+  "bin_name": "GOActiveMission",
+  "address": "0x00403750",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 768
+ },
+ {
+  "enum": "GO_CONTENT_CONTROL_PW",
+  "bin_name": "Config_SetContentControlPassword",
+  "address": "0x00403c10",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 648
+ },
+ {
+  "enum": "GO_GAME_DIFF",
+  "bin_name": "GOGameDiff",
+  "address": "0x00403ac0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 768
+ },
+ {
+  "enum": "GO_GAME_LANG",
+  "bin_name": "GOGameLang",
+  "address": "0x00403a00",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1396
+ },
+ {
+  "enum": "GO_GFX_DEVICE",
+  "bin_name": "GOGfxDevice",
+  "address": "0x00404010",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 775
+ },
+ {
+  "enum": "GO_GFX_DISP",
+  "bin_name": "GOGfxDisp",
+  "address": "0x00403950",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1106
+ },
+ {
+  "enum": "GO_GFX_GAMMA",
+  "bin_name": "GOGfxGamma",
+  "address": "0x00404080",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 803
+ },
+ {
+  "enum": "GO_GFX_PERFORMANCE",
+  "bin_name": "GOGfxPerformance",
+  "address": "0x004040f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 768
+ },
+ {
+  "enum": "GO_IN_MOU_INV",
+  "bin_name": "GOInMouInv",
+  "address": "0x00403870",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 768
+ },
+ {
+  "enum": "GO_IN_MOU_SENS",
+  "bin_name": "GOInMouSens",
+  "address": "0x004038e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 803
+ },
+ {
+  "enum": "GO_IN_REMAP",
+  "bin_name": "GOInRemap",
+  "address": "0x004037c0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1087
+ },
+ {
+  "enum": "GO_IS_BLOOD",
+  "bin_name": "GOIsBlood",
+  "address": "0x00403df0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 766
+ },
+ {
+  "enum": "GO_PLAYER",
+  "bin_name": "GOPlayer",
+  "address": "0x004036b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1116
+ },
+ {
+  "enum": "GO_SOUND_FX",
+  "bin_name": "GOSoundFX",
+  "address": "0x00403f80",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 950
+ },
+ {
+  "enum": "GO_SOUND_MUSIC",
+  "bin_name": "GOSoundMusic",
+  "address": "0x00403ef0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 950
+ },
+ {
+  "enum": "GO_SOUND_SPEECH",
+  "bin_name": "GOSoundSpeech",
+  "address": "0x00403e60",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 950
+ },
+ {
+  "enum": "GAME_SET_MISSION",
+  "bin_name": "Game_SetMission",
+  "address": "0x00415890",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 670
+ },
+ {
+  "enum": "GAME_SET_MUSIC_VOLUME",
+  "bin_name": "Game_SetMusicVolume",
+  "address": "0x00415950",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 748
+ },
+ {
+  "enum": "GAME_SET_SFX_VOLUME",
+  "bin_name": "Game_SetSFXVolume",
+  "address": "0x004159b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 743
+ },
+ {
+  "enum": "MENU_MANAGER_ACTIVATE_POPUP_SCREEN",
+  "bin_name": "MenuManager_ActivatePopupScreen",
+  "address": "0x00417900",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 747
+ },
+ {
+  "enum": "MENU_MANAGER_DEACTIVATE_POPU_SCREEN",
+  "bin_name": "MenuManager_DeactivatePopuScreen",
+  "address": "0x00417960",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 660
+ },
+ {
+  "enum": "MENU_MANAGER_FORCE_UPDATE_WINDOW",
+  "bin_name": "MenuManager_ForceUpdateWindow",
+  "address": "0x00417880",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 987
+ },
+ {
+  "enum": "MENU_MANAGER_LEAVE_MENUS",
+  "bin_name": "MenuManager_LeaveMenus",
+  "address": "0x00417790",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 958
+ },
+ {
+  "enum": "MENU_MANAGER_POP_SCREEN",
+  "bin_name": "MenuManager_PopScreen",
+  "address": "0x00417710",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 939
+ },
+ {
+  "enum": "MENU_MANAGER_PUSH_SCREEN",
+  "bin_name": "MenuManager_PushScreen",
+  "address": "0x00417690",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 932
+ },
+ {
+  "enum": "MENU_MANAGER_REQUEST_SCREEN",
+  "bin_name": "MenuManager_RequestScreen",
+  "address": "0x004174a0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 860
+ },
+ {
+  "enum": "MENU_MANAGER_SET_ENABLED",
+  "bin_name": "MenuManager_SetEnabled",
+  "address": "0x004179b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 821
+ },
+ {
+  "enum": "MENU_MANAGER_SET_LANGUAGE",
+  "bin_name": "MenuManager_SetLanguage",
+  "address": "0x00417810",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 772
+ },
+ {
+  "enum": "LEVEL_FLOW_GET_BREAK_CUT_SCENE_KEY",
+  "bin_name": "LevelFlow_GetBreakCutSceneKey",
+  "address": "0x00488e00",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 683
+ },
+ {
+  "enum": "LEVEL_FLOW_IS_COUNTRY_USA",
+  "bin_name": "LevelFlow_IsCountryUSA",
+  "address": "0x00488e90",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 653
+ },
+ {
+  "enum": "LEVEL_FLOW_LEVEL_FAILED",
+  "bin_name": "LevelFlow_LevelFailed",
+  "address": "0x00488e50",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 648
+ },
+ {
+  "enum": "MOVIE_SUBTITLE_REGISTER_FONT",
+  "bin_name": "MovieSubtitle_RegisterFont",
+  "address": "0x004151e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 834
+ },
+ {
+  "enum": "MOVIE_SUBTITLE_REGISTER_TEXT",
+  "bin_name": "MovieSubtitle_RegisterText",
+  "address": "0x00415260",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 1711
+ },
+ {
+  "enum": "CONTROLS_MENU_CONVERT_FLOAT_FROM_OFFSET",
+  "bin_name": "ControlsMenu_ConvertFloatFromOffset",
+  "address": "0x004231e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 904
+ },
+ {
+  "enum": "CONTROLS_MENU_CONVERT_OFFSET_FROM_FLOAT",
+  "bin_name": "ControlsMenu_ConvertOffsetFromFloat",
+  "address": "0x00423240",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 951
+ },
+ {
+  "enum": "TASK_DECLARE_PARAMETERS",
+  "bin_name": "Task_DeclareParameters",
+  "address": "0x004f0740",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 555
+ },
+ {
+  "enum": "TASK_NEW",
+  "bin_name": "Task_New",
+  "address": "0x004f0780",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 4495
+ },
+ {
+  "enum": "BREAK_SCRIPT",
+  "bin_name": "BreakScript",
+  "address": "0x004b8c10",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 576
+ },
+ {
+  "enum": "FLOW_REQUEST_EVENT",
+  "bin_name": "Flow_RequestEvent",
+  "address": "0x00402780",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 671
+ },
+ {
+  "enum": "SCRIPT_SET_WARNING_LEVEL",
+  "bin_name": "_Script_SetWarningLevel",
+  "address": "0x004b8c60",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": false,
+  "verdict": "MATCH",
+  "declen": 662
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_TRIGGER_ID",
+  "bin_name": "AIFunction_GetAlarmTriggerID",
+  "address": "0x0044e3f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 650
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_CONTROL_ID",
+  "bin_name": "AIFunction_GetAlarmControlID",
+  "address": "0x0044e430",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 650
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_ACCESS",
+  "bin_name": "AIFunction_GetAlarmAccess",
+  "address": "0x0044e470",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 650
+ },
+ {
+  "enum": "AI_FUNCTION_GET_GUNNER_ID",
+  "bin_name": "AIFunction_GetGunnerID",
+  "address": "0x0044e4b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 650
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_CONTROL_STATUS",
+  "bin_name": "AIFunction_GetAlarmControlStatus",
+  "address": "0x0044e4f0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1660
+ },
+ {
+  "enum": "AI_FUNCTION_GET_GUNNER_STATUS",
+  "bin_name": "AIFunction_GetGunnerStatus",
+  "address": "0x0044e5e0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1661
+ },
+ {
+  "enum": "AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE",
+  "bin_name": "AIFunction_GetScriptIntegerValue",
+  "address": "0x0044e740",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 729
+ },
+ {
+  "enum": "AI_FUNCTION_GET_CURRENT_EVENT_TYPE",
+  "bin_name": "AIFunction_GetCurrentEventType",
+  "address": "0x0044dfa0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 760
+ },
+ {
+  "enum": "AI_FUNCTION_IS_EVENT_BEHIND",
+  "bin_name": "AIFunction_IsEventBehind",
+  "address": "0x0044e860",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 1838
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ANIMATION_TO_PLAY",
+  "bin_name": "AIFunction_GetAnimationToPlay",
+  "address": "0x0044ecb0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 3040
+ },
+ {
+  "enum": "CONFIG_GRAPHIC_OPTIONS_SET_GAMMA",
+  "bin_name": "Config_GraphicOptionsSetGamma",
+  "address": "0x004048b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 755
+ },
+ {
+  "enum": "AI_FUNCTION_GET_SCRIPT_REAL_VALUE",
+  "bin_name": "AIFunction_GetScriptRealValue",
+  "address": "0x0044e800",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 805
+ },
+ {
+  "enum": "AI_FUNCTION_GET_RANDOM_VALUE",
+  "bin_name": "AIFunction_GetRandomValue",
+  "address": "0x0044e000",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 857
+ },
+ {
+  "enum": "AI_FUNCTION_GET_EVENT_DISTANCE",
+  "bin_name": "AIFunction_GetEventDistance",
+  "address": "0x0044e930",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 880
+ },
+ {
+  "enum": "AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE",
+  "bin_name": "AIFunction_GetAlarmTriggerDistance",
+  "address": "0x0044e9b0",
+  "registration_confirmed": true,
+  "struct_ok": true,
+  "corroborated": true,
+  "verdict": "STRONG",
+  "declen": 2182
+ }
+]
