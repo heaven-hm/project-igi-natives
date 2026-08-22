@@ -282,8 +282,8 @@ namespace IGI {
 		AI_FUNCTION_GET_GUNNER_STATUS = 0x0044E5E0,			// igi.exe pushes str."AIFunction_GetGunnerStatus" @ site 0x0044cffd via registrar 0x4b88c0; argc=0
 		AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE = 0x0044E740,			// igi.exe pushes str."AIFunction_GetScriptIntegerValue" @ site 0x0044d013 via registrar 0x4b88c0; argc=1
 		AI_FUNCTION_GET_CURRENT_EVENT_TYPE = 0x0044DFA0,			// igi.exe pushes str."AIFunction_GetCurrentEventType" @ site 0x0044d026 via registrar 0x4b88c0; argc=0
-		AI_FUNCTION_IS_EVENT_BEHIND = 0x0044E860,			// igi.exe pushes str."AIFunction_IsEventBehind" @ site 0x0044d039 via registrar 0x4b88c0; argc=0
-		AI_FUNCTION_GET_ANIMATION_TO_PLAY = 0x0044ECB0,			// igi.exe pushes str."AIFunction_GetAnimationToPlay" @ site 0x0044d0c4 via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_IS_EVENT_BEHIND = 0x0044E860,			// igi.exe pushes str."AIFunction_IsEventBehind" @ site 0x0044d039 via registrar 0x4b88c0; argc=0 (registrar), Ghidra decompile shows 1 used param -> signature int AIFunction_IsEventBehind(int);
+		AI_FUNCTION_GET_ANIMATION_TO_PLAY = 0x0044ECB0,		// igi.exe pushes str."AIFunction_GetAnimationToPlay" @ site 0x0044d0c4 via registrar 0x4b88c0; argc=0 (registrar); MACHINE-VERIFIED: reads arg1 via mov eax,[ebp+8] @0x0044ecd4 -> signature int AIFunction_GetAnimationToPlay(int);
 		CONFIG_GRAPHIC_OPTIONS_SET_GAMMA = 0x004048B0,			// igi.exe pushes str."Config_GraphicOptionsSetGamma" @ site 0x004032f3 via registrar 0x4b88f0; argc=1
 		AI_FUNCTION_GET_SCRIPT_REAL_VALUE = 0x0044E800,			// igi.exe pushes str."AIFunction_GetScriptRealValue" @ site 0x0044d04c via registrar 0x4b88f0; argc=1
 		AI_FUNCTION_GET_RANDOM_VALUE = 0x0044E000,			// igi.exe pushes str."AIFunction_GetRandomValue" @ site 0x0044d062 via registrar 0x4b88f0; argc=1
