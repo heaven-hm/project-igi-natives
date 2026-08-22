@@ -50,7 +50,7 @@
         "hash": "00415AB0",
         "address": 4283056,
         "name": "Game_CutsceneDelete",
-        "signature": "void Game_CutsceneDelete(char* buffer);",
+        "signature": "void Game_CutsceneDelete();",
         "note": "Registered by name in igi.exe (@0x415787). Deletes/ends the running cutscene and frees its resources."
       }
     },
@@ -113,7 +113,7 @@
         "hash": "004157D0",
         "address": 4282320,
         "name": "Game_DisablePlayerInput",
-        "signature": "void Game_DisablePlayerInput(char* buffer);",
+        "signature": "void Game_DisablePlayerInput();",
         "note": "Registered by name in igi.exe (@0x415712). Disables ALL player input (keyboard+mouse) - used by cutscenes/menus. Re-enable with Game_EnablePlayerInput."
       }
     },
@@ -122,7 +122,7 @@
         "hash": "00415830",
         "address": 4282416,
         "name": "Game_EnablePlayerInput",
-        "signature": "void Game_EnablePlayerInput(char* buffer);",
+        "signature": "void Game_EnablePlayerInput();",
         "note": "Registered by name in igi.exe (@0x415725). Re-enables player input after Game_DisablePlayerInput."
       }
     },
@@ -185,7 +185,7 @@
         "hash": "00415A60",
         "address": 4282976,
         "name": "Game_DisableMusic",
-        "signature": "void Game_DisableMusic(char* buffer);",
+        "signature": "void Game_DisableMusic();",
         "note": "Registered by name in igi.exe (@0x415774). Stops the music engine."
       }
     },
@@ -194,7 +194,7 @@
         "hash": "00415A10",
         "address": 4282896,
         "name": "Game_EnableMusic",
-        "signature": "void Game_EnableMusic(char* buffer);",
+        "signature": "void Game_EnableMusic();",
         "note": "Registered by name in igi.exe (@0x415761). Starts/resumes the music engine."
       }
     },
@@ -212,7 +212,7 @@
         "hash": "00495E70",
         "address": 4808304,
         "name": "MusicSetVolume",
-        "signature": "void MusicSetVolume(float volume,float volume);",
+        "signature": "void MusicSetVolume(float musicVolume, float sfxVolume);",
         "note": "Sets music volume., Params: volume range [0.0 - 1.0]"
       }
     },
@@ -221,7 +221,7 @@
         "hash": "004158E0",
         "address": 4282592,
         "name": "Game_UpdateVolume",
-        "signature": "void Game_UpdateVolume(char* buffer);",
+        "signature": "void Game_UpdateVolume();",
         "note": "igi.exe registers it BY NAME: push \"Game_UpdateVolume\"; push 0x4158E0 @0x4156FC via registrar 0x4B8890. Updates music/sfx volumes from profile settings."
       }
     },
@@ -392,7 +392,7 @@
         "hash": "00485AD0",
         "address": 4741840,
         "name": "StatusMessageScreen_ClearMessages",
-        "signature": "void StatusMessageScreen_ClearMessages(char* buffer);",
+        "signature": "void StatusMessageScreen_ClearMessages();",
         "note": "Registered by name in igi.exe (@0x485AB7): push 0,0,0x485AD0,\"StatusMessageScreen_ClearMessages\" -> registrar. Clears all on-screen status messages."
       }
     },
@@ -410,7 +410,7 @@
         "hash": "004C0460",
         "address": 4981856,
         "name": "SymbolRemove",
-        "signature": "void SymbolRemo(int *p1,int *symbol_name);",
+        "signature": "void SymbolRemove(int *p1,int *symbol_name);",
         "note": "Remove symbol from memory, Params: symbol_name like 'TaskType_Set', p1 pointer ??"
       }
     },
@@ -482,17 +482,17 @@
         "hash": "004B0C60",
         "address": 4918368,
         "name": "Mem_Alloc",
-        "signature": "void Mem_Alloc(int num, int size);",
-        "note": "Name from igi.exe error string inside function: \"Mem_Alloc() failed to allocate %d bytes. Total allocated by user...\" @0x546E3C. Engine heap allocator - allocates size bytes, returns ptr or 0."
+        "signature": "void* Mem_Alloc(int num, int size);",
+        "note": "Name from igi.exe error string inside function: \"Mem_Alloc() failed to allocate %d bytes. Total allocated by user...\" @0x546E3C. Engine heap allocator - allocates size bytes, returns ptr or 0. RETURNS pointer to the allocated (aligned) block; failure path calls ErrorShow \"Mem_Alloc() failed to allocate %d bytes\"."
       }
     },
     {
       "Native": {
         "hash": "004B0BE0",
         "address": 4918240,
-        "name": "MemoryDealloc",
-        "signature": "uint MemDealloc(void);",
-        "note": "Deallocate allocated memory."
+        "name": "MemDeallocAll",
+        "signature": "void MemDeallocAll(void);",
+        "note": "Deallocate allocated memory. Frees EVERY tracked heap block (walks allocation list via 0x4B0D10), then warns \"%d block(s) of memory have not been deallocated.\" Takes no args - NOT a single-pointer free."
       }
     },
     {
@@ -617,7 +617,7 @@
         "hash": "004B7FA0",
         "address": 4947872,
         "name": "SymbolRegisterInt32",
-        "signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr);",
+        "signature": "void SymbolRegisterInt32(int **sym_buf,int sym_addr);",
         "note": "Register new symbol of type 'Int32' for game like internal vairables,UI controls,timers etc."
       }
     },
@@ -679,9 +679,9 @@
       "Native": {
         "hash": "00416D80",
         "address": 4287872,
-        "name": "PlayerXPHit",
+        "name": "Human_HitDamage",
         "signature": "uint PlayerXPHit()",
-        "note": "Get Player XP Hit damage for current health."
+        "note": "Get Player XP Hit damage for current health. Primary name Human_HitDamage (Natives.hpp HUMAN_HIT_DAMAGE); PlayerXPHit is a documented alias - fcn reads byte [PlayerPtr+0xE1] and returns it."
       }
     },
     {
@@ -706,9 +706,9 @@
       "Native": {
         "hash": "00406220",
         "address": 4219424,
-        "name": "IsPlayerProfileActive",
-        "signature": "char* IsPlayerProfileActive()",
-        "note": "Checks if current player profle is active."
+        "name": "Config_GetActivePlayerProfileRecord",
+        "signature": "void* Config_GetActivePlayerProfileRecord();",
+        "note": "Checks if current player profle is active. NOT a boolean test: returns computed record ptr 0xBC2388 + 0xD14*[0xBC2384] (same 0xD14 stride as Config_GetActiveGraphicOptions). Old analyst name IsPlayerProfileActive was wrong."
       }
     },
     {
@@ -726,7 +726,7 @@
         "address": 4204416,
         "name": "Flow_RequestEvent",
         "signature": "void Flow_RequestEvent(int eventId);",
-        "note": "Requests a flow-task event by id (drives the level's flow state machine). Param: eventId = flow event number used in the level flow script. Use from mission flow scripts to trigger scripted transitions."
+        "note": "Requests a flow-task event by id (drives the level's flow state machine). Param: eventId = flow event number used in the level flow script. Use from mission flow scripts to trigger scripted transitions. FLOW_EVENT enum: None=0, QUIT=1, INTRO=2, MAINMENU=3, GAME=4, RESTART_GAME=5 (events 6-8 exist internally but have no registered constants)."
       }
     },
     {
@@ -1274,8 +1274,8 @@
         "hash": "00403C10",
         "address": 4209680,
         "name": "Config_SetContentControlPassword",
-        "signature": "int GO_ContentControlPW(char* password);",
-        "note": "Sets the content-control (parental) password. Param: password = password string as typed on the options screen. Use in config scripts. Returns 1."
+        "signature": "int Config_SetContentControlPassword();",
+        "note": "Menu-script setter form of the content-control password. igi.exe registers THE SAME ADDRESS twice: as GOContentControlPW argc=1 (config writer) and as Config_SetContentControlPassword argc=0 (menu script, site 0x4034C1 pushes str @0x537C48 -> registrar 0x4B8890). Password comes from the script context, not an explicit arg."
       }
     },
     {
@@ -1473,7 +1473,7 @@
         "address": 4290912,
         "name": "MenuManager_DeactivatePopuScreen",
         "signature": "void MenuManager_DeactivatePopupScreen();",
-        "note": "Deactivates the currently-active popup screen and returns to the screen beneath. Takes no args. Pair with MenuManager_ActivatePopupScreen."
+        "note": "Deactivates the currently-active popup screen and returns to the screen beneath. Takes no args. Pair with MenuManager_ActivatePopupScreen. NOTE: name mirrors the retail registration string exactly, including its \"Popu\" typo - do not \"fix\" it against the binary."
       }
     },
     {
@@ -2257,6 +2257,33 @@
         "name": "TranscontextSetActiveTransContext",
         "signature": "void TransContext_SetActiveTransContext(void* ctx);",
         "note": "Installs a TRANSFORM CONTEXT as active: copies 0x2A dwords from ctx into global 0xBCAAE0 and bumps state counters at 0x6E5BB0/B4. Param: ctx = transform-context struct (IGIPatch uses this around custom rendering). Use when injecting your own render passes."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004B0D40",
+        "address": 4918592,
+        "name": "QHash_ValueSet",
+        "signature": "void QHash_ValueSet(int* table, char* key, int value);",
+        "note": "Sets a value in a QHash hash-table (8-byte thunk into the hash engine at 0x4B0D90 family). Pass the table ptr, key string and integer value. Restored after accidental loss during batch rewrite - address pass1-verified."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004B0DB0",
+        "address": 4918704,
+        "name": "QHash_ValueGet",
+        "signature": "int QHash_ValueGet(int* table, char* key);",
+        "note": "Gets a value from a QHash hash-table (6-byte getter thunk). Pass table ptr + key string, RETURNS the stored integer. Restored after accidental loss - address pass1-verified."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00415020",
+        "address": 4280352,
+        "name": "DEBUG_KEYS_ENABLE_TOMBSTONE",
+        "signature": "// DO NOT INVOKE",
+        "note": "TOMBSTONE: DEBUG_KEYS_ENABLE was listed as 0x0041502 (malformed) / 0x00415020 - BOTH outside verified evidence. The 0x0041502 variant lies outside .text and would crash on invoke. Kept only as this warning record in Natives.hpp; no valid address known (unknown > fabricated)."
       }
     }
   ]
