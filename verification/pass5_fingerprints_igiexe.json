@@ -1,0 +1,1187 @@
+[
+ {
+  "name": "ANIM_TRIGGER_PARSE",
+  "address": "0x004ec070",
+  "igi_exe_first32_sha256": "595f825ea1317493e7ebab66f061b272aae016964d4ebc9f2c8e3d9b44eb3a1c"
+ },
+ {
+  "name": "ANIM_TRIGGER_LOAD",
+  "address": "0x004ec0c0",
+  "igi_exe_first32_sha256": "93c18916904cacc37ad7e058d0d3532706b6c7a5f9d8e17c7f9ddfbe1c7b07df"
+ },
+ {
+  "name": "CONFIG_COMPILE",
+  "address": "0x004f0cf0",
+  "igi_exe_first32_sha256": "063995d7468d833076c2958a3d8aacbc8284e21e4173d8f3ccca80de59693612"
+ },
+ {
+  "name": "CONFIG_READ",
+  "address": "0x00405850",
+  "igi_exe_first32_sha256": "8f3d95955488e726e2cce9213cd9591ce95e7a57d923147bcf3e14447337029a"
+ },
+ {
+  "name": "CONFIG_WRITE",
+  "address": "0x00405bd0",
+  "igi_exe_first32_sha256": "cacaef90f5860941855ccfdffe0f9ab14aef043ce0d5bbb5ca1cf44fbc0987f2"
+ },
+ {
+  "name": "CUTSCENE_DELETE",
+  "address": "0x00415ab0",
+  "igi_exe_first32_sha256": "be613277bfeabe091bdfed8da642a20536fb19674ea8da2b008f1e5bedbc9dbc"
+ },
+ {
+  "name": "ERROR_SHOW",
+  "address": "0x004af7b0",
+  "igi_exe_first32_sha256": "7b5de49026c263c75f72878ababa60b216e731bdb6e22678143c846bbb45655e"
+ },
+ {
+  "name": "FRAMES_SET",
+  "address": "0x00402820",
+  "igi_exe_first32_sha256": "0e6c9237a7367e2e826e40b0bcc4b93225f0367204e72d0361a6f1fdf3364294"
+ },
+ {
+  "name": "GAMEMATERIAL_LOAD",
+  "address": "0x00408350",
+  "igi_exe_first32_sha256": "588358a61ef8ab91564981e784dded958f39bfbca4d1eeab78f417ec8b7d99b7"
+ },
+ {
+  "name": "RESET",
+  "address": "0x00403b70",
+  "igi_exe_first32_sha256": "a1e9ed38c6282ad6802c71ce8b9d90f53db543f5a0006dac41d6bc286041b36e"
+ },
+ {
+  "name": "GRAPH_OPEN",
+  "address": "0x004f9ff0",
+  "igi_exe_first32_sha256": "893f334c1b7af9b11cad240d50f918ca684de3ddd43950d96b2e6edb1a605eea"
+ },
+ {
+  "name": "HUMANPLAYER_LOAD",
+  "address": "0x004137a0",
+  "igi_exe_first32_sha256": "8e36efb41b58a68860ef80dc4569c5600058c24c3bb469513ab0ee6c31978d25"
+ },
+ {
+  "name": "INPUT_DISABLE",
+  "address": "0x004157d0",
+  "igi_exe_first32_sha256": "e9c84729415ac03b5fedc060fe2548267c0848d8b4992786941445dad69cea83"
+ },
+ {
+  "name": "INPUT_ENABLE",
+  "address": "0x00415830",
+  "igi_exe_first32_sha256": "b94747b3dabaa58c65cbfe39d707158b0ab8c61386b9a22add21f586ec5fb4a6"
+ },
+ {
+  "name": "LOG_ADD",
+  "address": "0x004bbc30",
+  "igi_exe_first32_sha256": "27a1da58543efbfae21ea667adfa71d477b46afbf0acad1398569a50413a18aa"
+ },
+ {
+  "name": "LEVEL_LOAD",
+  "address": "0x004f0e10",
+  "igi_exe_first32_sha256": "1fa6e0b1721a7373d61afbd29836014a3574d59afa615904b3d874e6b1310a5c"
+ },
+ {
+  "name": "LEVEL_QUIT",
+  "address": "0x00416550",
+  "igi_exe_first32_sha256": "3f018aec203e7da9755e58171b5ef6df2c39899f83425619b34f2bc01006eeff"
+ },
+ {
+  "name": "LEVEL_RESTART",
+  "address": "0x00416fe0",
+  "igi_exe_first32_sha256": "693a439d2653da1c4559cdb8fb454f42f07c8c80b137cf9c2edd189a8956c2a0"
+ },
+ {
+  "name": "LEVEL_START",
+  "address": "0x00415b30",
+  "igi_exe_first32_sha256": "c74eeafe07f1d53a398c42670dfb9bbe04521501ccaa30dc718ac0835de501cc"
+ },
+ {
+  "name": "MAGIC_OBJ_LOAD",
+  "address": "0x004c4930",
+  "igi_exe_first32_sha256": "36b514a5d69d7800932dd7b9c85590ce60723edfea12624bcb84a21a3409eab7"
+ },
+ {
+  "name": "MENU_MANAGER",
+  "address": "0x00418b00",
+  "igi_exe_first32_sha256": "b2e1ababc08839cc00efdf8627127f17f660107f250d52112f676bd05992f12e"
+ },
+ {
+  "name": "MUSIC_DISABLE",
+  "address": "0x00415a60",
+  "igi_exe_first32_sha256": "eb65c8982a9d548388def1194c96e7ad9c2103441aeb7c6fb5c0a6cd49b2315a"
+ },
+ {
+  "name": "MUSIC_ENABLE",
+  "address": "0x00415a10",
+  "igi_exe_first32_sha256": "f0db3ed375500680fa0e445e8825e5904479ee5b6d6b985967ba503edf41664d"
+ },
+ {
+  "name": "MUSIC_SFX_VOLUME",
+  "address": "0x00495f30",
+  "igi_exe_first32_sha256": "9a0ad5a843909b7aa9e22955bc472127267146bcac94b884811fb5767453190c"
+ },
+ {
+  "name": "MUSIC_VOLUME",
+  "address": "0x00495e70",
+  "igi_exe_first32_sha256": "d922152b4354c42ff05fb4a941879274d240f5d224350a2ad9ba8401cac0f96d"
+ },
+ {
+  "name": "MUSIC_UPDATE_VOLUME",
+  "address": "0x004158e0",
+  "igi_exe_first32_sha256": "fd4161dda0b2f7e8f38a56a02917bbccf7aafd353240e555bf8f4570c5f90a26"
+ },
+ {
+  "name": "PHYSICS_OBJ_TYPE_PARSE",
+  "address": "0x004edfe0",
+  "igi_exe_first32_sha256": "027924e2e6db2137e6686fd7ed39f3ebfc9d6b27a4a5a80a8ad21b44ce51bef9"
+ },
+ {
+  "name": "PHYSICS_OBJ_LOAD",
+  "address": "0x004ee030",
+  "igi_exe_first32_sha256": "3961a24ed18623f2d79b2b4aad16f4506940a8162ad146fcc5bc4c51bf393146"
+ },
+ {
+  "name": "QHASH_INIT",
+  "address": "0x004b0d60",
+  "igi_exe_first32_sha256": "ef5365a28b30f7590c62b64b4b8cfb203184819e321f341115b9bd239f2ef8dd"
+ },
+ {
+  "name": "QHASH_VAL_SET",
+  "address": "0x004b0d40",
+  "igi_exe_first32_sha256": "e9d3f7565cfca809f6d33c93b62cb26e678f27020884dd052ebb79814aeda790"
+ },
+ {
+  "name": "QHASH_VAL_GET",
+  "address": "0x004b0db0",
+  "igi_exe_first32_sha256": "160731ecc82a718c78b51d040c51848424380053331217d77e222dce7c0a35c8"
+ },
+ {
+  "name": "QHASH_RESET",
+  "address": "0x004b0d90",
+  "igi_exe_first32_sha256": "7ae7b49245eb42d73e72954f40074a7b64a5d6df286b8eef6438bb04b20407f0"
+ },
+ {
+  "name": "QSCRIPT_COMPILE",
+  "address": "0x004b8410",
+  "igi_exe_first32_sha256": "18918c987e42f0e70df5d357dd601a871e2e697e39bdaa9eb118014893c75b47"
+ },
+ {
+  "name": "QTASK_UPDATE",
+  "address": "0x004f0e90",
+  "igi_exe_first32_sha256": "bc618699046a45063b470b620f998bc675d8a53317ba19a29222c3519f023123"
+ },
+ {
+  "name": "QTASK_UPDATE_LIST",
+  "address": "0x00401b20",
+  "igi_exe_first32_sha256": "5c2a042c6a4d1fd82bd0c0248cb26441d835b1a20a57b93d0e8417c2a8ff5b39"
+ },
+ {
+  "name": "QSCRIPT_ASSEMBLE",
+  "address": "0x004bb270",
+  "igi_exe_first32_sha256": "0307cf2a103562835963b2ffcf5638b848b1e94a21ef81d04a73123d1b7ffee9"
+ },
+ {
+  "name": "QSCRIPT_PARSE",
+  "address": "0x004bbcb0",
+  "igi_exe_first32_sha256": "c7fc1cac1d1bb4c43acbd035c23db5c35cbe4a408e18dd9999793ac555f85dd4"
+ },
+ {
+  "name": "QSCRIPT_CLEANUP",
+  "address": "0x004b1ac0",
+  "igi_exe_first32_sha256": "11e130d64d021e9abeabcaa460a7124220b4bb9b3e751ec0661e757aadaaff5e"
+ },
+ {
+  "name": "QVM_READ",
+  "address": "0x004b85b0",
+  "igi_exe_first32_sha256": "74b1e34f21381f44a5da425a1d5046cb49b65c4afdb1ccc80c587dd144ca818f"
+ },
+ {
+  "name": "QVM_CLEANUP",
+  "address": "0x004b83d0",
+  "igi_exe_first32_sha256": "6c437a058abcb09873f744b0e526a98a39f61d3b60bdd3660b00c395aa1d9c26"
+ },
+ {
+  "name": "QVM_LOAD",
+  "address": "0x004b80b0",
+  "igi_exe_first32_sha256": "06298d02ea983b299bfe0bb1921b49c5f4cbe45bda0b19e2d1e07d1b48758c2f"
+ },
+ {
+  "name": "RESOURCE_FLUSH",
+  "address": "0x004b63d0",
+  "igi_exe_first32_sha256": "2fc65d458eea70880631a8e357e7ab507b22e1c64a5ac34a138ba01fa4265682"
+ },
+ {
+  "name": "RESOURCE_LOAD",
+  "address": "0x004b5f00",
+  "igi_exe_first32_sha256": "c1418739cbd943ce48952cc4feaccf6d75d65386ea95c16d5fb3cd2253843ddf"
+ },
+ {
+  "name": "RESOURCE_UNLOAD",
+  "address": "0x004b6380",
+  "igi_exe_first32_sha256": "7cb1c7a91e95bf47337c92452e85b435fa49fe1d4c1fdb31ad915d534b75ba12"
+ },
+ {
+  "name": "RESOURCE_PACK_UNPACK",
+  "address": "0x004b18b0",
+  "igi_exe_first32_sha256": "faef570f40dd60d4681ffe58b1c821a8a8596ff5897dedacc3b213553f396daa"
+ },
+ {
+  "name": "RESOURCE_UNPACK",
+  "address": "0x004b16d0",
+  "igi_exe_first32_sha256": "c65cf75927549b4866d9963b6b2d8810f17f3ad39dc5983e1c81a0448b2d9841"
+ },
+ {
+  "name": "RESOURCE_IS_LOADED",
+  "address": "0x004b5b90",
+  "igi_exe_first32_sha256": "863c7e8adef80410a86a5626df2645a9afa6ce3c4b0586a8c76d6d12000b972e"
+ },
+ {
+  "name": "SCRIPT_INIT",
+  "address": "0x004f0e50",
+  "igi_exe_first32_sha256": "04d0db6da56719b7f30bbe373db5ed205fefea2074ea71106c7d989998f37e88"
+ },
+ {
+  "name": "SCRIPT_SETSYMBOL_CXT",
+  "address": "0x004b8930",
+  "igi_exe_first32_sha256": "467f78e4face4568d83733337dcf8d4c46f7a38b16f4fa8efdd95b1222131c07"
+ },
+ {
+  "name": "STATUS_MESSAGE_CLEAR",
+  "address": "0x00485ad0",
+  "igi_exe_first32_sha256": "f492a8ea3e5c6b7240660d9b7b99356aac403eb0354f71a09d1a1fffe9c31f19"
+ },
+ {
+  "name": "STATUS_MESSAGE_SHOW",
+  "address": "0x00485970",
+  "igi_exe_first32_sha256": "592012166b76abdc7bc7d71ce0f520e7c769244f31d8e89c5d12c25b0684cd29"
+ },
+ {
+  "name": "SYMBOL_REMOVE",
+  "address": "0x004c0460",
+  "igi_exe_first32_sha256": "645927b47e42067f27f95d7c408a0de2faede360006c4da55eb570d37654e542"
+ },
+ {
+  "name": "SYMBOL_CHECK",
+  "address": "0x004c0560",
+  "igi_exe_first32_sha256": "123dcf7d3bc03c4c0798621b48bf690a03941f0e71ccc7b48a650096ea46cd2a"
+ },
+ {
+  "name": "TASKTYPE_SET",
+  "address": "0x004b8810",
+  "igi_exe_first32_sha256": "bb2ace5b916c12909012963d8ebb8a11fcdc8912d826de880dcf64186455b547"
+ },
+ {
+  "name": "WARNING_SHOW",
+  "address": "0x004af810",
+  "igi_exe_first32_sha256": "778608f35324c9ed9d46ffac70f6391a151137900f47b049c88cbb3084ff3e8f"
+ },
+ {
+  "name": "WEAPON_CONFIG_READ",
+  "address": "0x004071e0",
+  "igi_exe_first32_sha256": "f4958c35ca10c6106242b1fbbf7e4b106ecedeeb0716ee3270600da62b515306"
+ },
+ {
+  "name": "WEAPON_TYPE_OPEN",
+  "address": "0x00413b70",
+  "igi_exe_first32_sha256": "ef6a1fa61e864c769f89477933d43cb176ba341f6a49f15ac76aea0837fec1ef"
+ },
+ {
+  "name": "WEAPON_TOTAL",
+  "address": "0x00413bb0",
+  "igi_exe_first32_sha256": "13eaf77c035f7ccc962bd660026a8a68c5c1f117faaee543071a52719532570f"
+ },
+ {
+  "name": "WEAPON_GUN_PICKUP",
+  "address": "0x0045ffc0",
+  "igi_exe_first32_sha256": "80630f4cfaf1fa1e54be4bc24d1c376335775150fb1811e12ee253a4f3b11379"
+ },
+ {
+  "name": "WEAPON_AMMO_PICKUP",
+  "address": "0x0045ff80",
+  "igi_exe_first32_sha256": "c2e90b70a288cacdf28d99cef18853b3a5da0d2ab1a6b19c2dc4fe35230b2b08"
+ },
+ {
+  "name": "HUMAN_HIT_DAMAGE",
+  "address": "0x00416d80",
+  "igi_exe_first32_sha256": "a7b6ca543666af13340a34a5e2cb8e5f9cdd8c67084de2a30502aced3c5f87dc"
+ },
+ {
+  "name": "HUMAN_CAM_VIEW",
+  "address": "0x00463760",
+  "igi_exe_first32_sha256": "ef344c07323efa3c13e1c0783d73ea90bea6579fc6d7834a771804f265f6f692"
+ },
+ {
+  "name": "HUMAN_FIND_NEXT_CAMERA",
+  "address": "0x004828d0",
+  "igi_exe_first32_sha256": "b391b2388d3224a90220be520584cf5f41b8a7039c14887d5bdff5a38ea2209e"
+ },
+ {
+  "name": "MEMORY_ALLOC",
+  "address": "0x004b0c60",
+  "igi_exe_first32_sha256": "73199d0ffeec7bb0098e623f38ad5d378fa08e05cb95770f56b46f31fa1b2fe6"
+ },
+ {
+  "name": "MEMORY_DEALLOC",
+  "address": "0x004b0be0",
+  "igi_exe_first32_sha256": "7ded1f22d3b76e5f76a0a9efa51f140b8ac6ecd035ed040bf93bd3fe6918993a"
+ },
+ {
+  "name": "MISSION_OPEN",
+  "address": "0x00484e60",
+  "igi_exe_first32_sha256": "d69af688738cbdd707ef801f87a86d8d4f9c622f76c80505b34284fd47ddec3b"
+ },
+ {
+  "name": "FILE_OPEN",
+  "address": "0x004a5350",
+  "igi_exe_first32_sha256": "cd1bea2d392eba3cd1f7af94eca34d7b37f487261778f934797a948adf153d36"
+ },
+ {
+  "name": "FILE_READ_WRITE",
+  "address": "0x004b1510",
+  "igi_exe_first32_sha256": "84f390c4369fe84aa0b1067463ad6ae0f007b714e913ecfc301b50a2b260c9f9"
+ },
+ {
+  "name": "PLAYER_PROFILE_ACTIVE",
+  "address": "0x00406220",
+  "igi_exe_first32_sha256": "fb0ca98ab54e7089dd752346ff4a8935033186d3cb261c19ea7cc59d5a79bd89"
+ },
+ {
+  "name": "SOLDIER_EXECUTE",
+  "address": "0x0045c440",
+  "igi_exe_first32_sha256": "28e5836b1b72050a8a3465bb1ee2ef4bb3f9700f6830dd2628774f30bcd2fc75"
+ },
+ {
+  "name": "HUMAN_TASK_VIEW_RESET",
+  "address": "0x004659e0",
+  "igi_exe_first32_sha256": "fc6058de6cdbcdd7eaa8b8a35f94d2621e775d996b614508ec9985085f7089cb"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_LOAD",
+  "address": "0x004a53b3",
+  "igi_exe_first32_sha256": "4857c7a8a1a506b89564d32c3ec6f34af59ea0a96bc18522566e689f4be200c2"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_BOOL8",
+  "address": "0x004b7ee0",
+  "igi_exe_first32_sha256": "9ed10848d98e0342e640b2671bd4a419547b6180ec099194a9578dbaf83066be"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_INT16",
+  "address": "0x004b7e80",
+  "igi_exe_first32_sha256": "692cefedeb3c9dd9c1158ba214f0a64721e86777eb8137d88a039bd447f1ba2f"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_INT32",
+  "address": "0x004b7fa0",
+  "igi_exe_first32_sha256": "ed9b32b970486bb497101b985c0e71c4bcd6ac7d356c0218ad08054c2008237f"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_REAL32",
+  "address": "0x004b7fc0",
+  "igi_exe_first32_sha256": "b516c75317b4d6797ecd94fa6b44d191e61f4f7070f458f7112d08c368f4319e"
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REMOVE",
+  "address": "0x004b80a0",
+  "igi_exe_first32_sha256": "654e77a5840a95ece023622f5cde7c9d082deff4c81fd44d39e10bfa7541e291"
+ },
+ {
+  "name": "LOADING_SCREEN_SHOW",
+  "address": "0x0048a440",
+  "igi_exe_first32_sha256": "26db18c6fbfe5384ac6c17182d613fa45a28d4b3d1a112a0d3528ac445248dd6"
+ },
+ {
+  "name": "QTASK_HASH_TABLE",
+  "address": "0x004baac0",
+  "igi_exe_first32_sha256": "4fa18408c3c1479de80004b71836fcd993d327a37626d2c56ac837069f20087b"
+ },
+ {
+  "name": "AI_ACTION_ACTIVATE",
+  "address": "0x0044d420",
+  "igi_exe_first32_sha256": "64003288686609c5c27f8987580f7a26d1add860320d662dc0506911a8d2d195"
+ },
+ {
+  "name": "AI_ACTION_COMBAT",
+  "address": "0x0044d160",
+  "igi_exe_first32_sha256": "90cb6fb5d72bb328cf30d8ec04d3b25148fa94aea7c47ec4991193434ba21214"
+ },
+ {
+  "name": "AI_ACTION_DEAD",
+  "address": "0x0044d260",
+  "igi_exe_first32_sha256": "dc7cfd7ba7aaf902f6e0c3dc363482e788fa31f05a0643d79aa27bc067bf30b6"
+ },
+ {
+  "name": "AI_ACTION_FALL_FLAT",
+  "address": "0x0044d2c0",
+  "igi_exe_first32_sha256": "9f88ac1bb67b7c6770d92a4c3dfe11699bfdc8090c098da8e33286ab1cdc12a9"
+ },
+ {
+  "name": "AI_ACTION_FIRE_AT_NODE",
+  "address": "0x0044d580",
+  "igi_exe_first32_sha256": "38d5b68d50a244f2a93d36dbc36311866de5d5499907b97500eb5b7234e0c60a"
+ },
+ {
+  "name": "AI_ACTION_FIRE_AT_TASK",
+  "address": "0x0044d630",
+  "igi_exe_first32_sha256": "4cb5024d5e4f7f10e3f2a91e8a1da7ecee68e7db5a9b627d3f0403ed3b90a50a"
+ },
+ {
+  "name": "AI_ACTION_IDLE",
+  "address": "0x0044da80",
+  "igi_exe_first32_sha256": "0485be9d1d060b670f22b0c7a0c843375ea4e083c1451029037e797618b9adff"
+ },
+ {
+  "name": "AI_ACTION_KICK_GRENADE",
+  "address": "0x0044d960",
+  "igi_exe_first32_sha256": "53ab45b1e8eb8478b15b5f22fe5bd62723a84d1b71dde26b2909e0929aa0d3fa"
+ },
+ {
+  "name": "AI_ACTION_LOOK_AT_EVENT",
+  "address": "0x0044d870",
+  "igi_exe_first32_sha256": "f82795da3f4b0dcfb9573942ed027fbd255f12c82c180ff78f789ced835e1dbe"
+ },
+ {
+  "name": "AI_ACTION_MOVE_TO_EVENT",
+  "address": "0x0044d7d0",
+  "igi_exe_first32_sha256": "2c44ab647eb645d6c824b823443988d41a241f2e6e819e2065d72a0d2b31cd56"
+ },
+ {
+  "name": "AI_ACTION_PATROL",
+  "address": "0x0044d0e0",
+  "igi_exe_first32_sha256": "d7834a1cb52e0e68825184ae7b9d7e8d877543fb30e7426915f9eeef64c9e49b"
+ },
+ {
+  "name": "AI_ACTION_PLAY_ANIMATION",
+  "address": "0x0044d6e0",
+  "igi_exe_first32_sha256": "88c9080ae8a6694014fc4a0fd0ba4f6f4772f9a02d40938c8b84fe9b0d47bb28"
+ },
+ {
+  "name": "AI_ACTION_PLAY_SOUND",
+  "address": "0x0044d750",
+  "igi_exe_first32_sha256": "0e5519512a43ef152e383485153c9dd7656098d4000b3eee30eafb294a3d0261"
+ },
+ {
+  "name": "AI_ACTION_RUN_PANICKING",
+  "address": "0x0044da00",
+  "igi_exe_first32_sha256": "fe996df44a70c1a8377e13692cc20d862d76156c1f72934ee6d45042b9dc9d36"
+ },
+ {
+  "name": "AI_ACTION_RUN_TO_NODE",
+  "address": "0x0044d510",
+  "igi_exe_first32_sha256": "404276458aa0be8dba3a32ea77ff98b41466f3b0da287a4e638c5cbd7f3e1060"
+ },
+ {
+  "name": "AI_ACTION_SET_COMBAT",
+  "address": "0x0044dae0",
+  "igi_exe_first32_sha256": "1f02d966d66b55577df3538b802290983289fe4185e32cad51e4c1e201d85522"
+ },
+ {
+  "name": "AI_ACTION_STUNNED",
+  "address": "0x0044d8f0",
+  "igi_exe_first32_sha256": "de0186f52b132d51aab34b8124d2ff3af235a06983fd7448475b84a0764a05a5"
+ },
+ {
+  "name": "AI_ACTION_WALK_TO_NODE",
+  "address": "0x0044d4a0",
+  "igi_exe_first32_sha256": "2fc1e5e25bd8c81cfed2fbfbf966e3ec1fa4f969f12e01d421624b72ed74c430"
+ },
+ {
+  "name": "AI_FUNCTION_ADD_ANIMATION_ENTRY",
+  "address": "0x0044ebb0",
+  "igi_exe_first32_sha256": "e306175fd7f1311cee1e53a33f58f4903db9653adf542c13224c618bc895e384"
+ },
+ {
+  "name": "AI_FUNCTION_DEFAULT_HANDLER",
+  "address": "0x0044e060",
+  "igi_exe_first32_sha256": "55292205f0a9a864a62aeda542c9751acae17ffe3928ef07521fdc7a2ed92418"
+ },
+ {
+  "name": "AI_FUNCTION_REMOVE_ALARM_ACTIONS",
+  "address": "0x0044dbc0",
+  "igi_exe_first32_sha256": "cb3a86abeff074a7f279c73896aabc1d091642d4f94ae888271f887c44c5f638"
+ },
+ {
+  "name": "AI_FUNCTION_SEND_RESPONSE",
+  "address": "0x0044ee40",
+  "igi_exe_first32_sha256": "55c252b8a90df171c329577b9c51542b1f18e95f0baa17c87ec8197455f6a084"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_ACCESS",
+  "address": "0x0044e330",
+  "igi_exe_first32_sha256": "9c224346ecbc7c4608be982c77fbc79dcb1a679a6c6c49f15b45d711c20dc51e"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_CONTROL_ID",
+  "address": "0x0044e2d0",
+  "igi_exe_first32_sha256": "624dec374d3345920256e5381b5a19b0dd32e39903621695646bb55561ae1472"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_TRIGGER_ID",
+  "address": "0x0044e270",
+  "igi_exe_first32_sha256": "0ad6b7c5ef0c91303ac36359e8ad23bffa512e11cfc1f030a21ec8bb4407f92a"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_VIEW_LENGTH",
+  "address": "0x0044dcd0",
+  "igi_exe_first32_sha256": "7a3d00d97db826d30dab1d49663d78747aea7a1a292664f72b9c6c34058de017"
+ },
+ {
+  "name": "AI_FUNCTION_SET_ANIMATION_INTERVAL",
+  "address": "0x0044eaf0",
+  "igi_exe_first32_sha256": "4bc48a902c4dbb7d67bbd0b10dde3293d4716033a79d509c66673884e496e413"
+ },
+ {
+  "name": "AI_FUNCTION_SET_DEATH_ANIMATION",
+  "address": "0x0044e210",
+  "igi_exe_first32_sha256": "8aae18a92f72ed2014d7455892bdc408f70ecd3d012f2c76f99984bceae2fbf2"
+ },
+ {
+  "name": "AI_FUNCTION_SET_EVENT_PRIORITY",
+  "address": "0x0044e0c0",
+  "igi_exe_first32_sha256": "6ac5984c10bf8e837d9a601223fc2b33567e81bb4d069f6c1f08734b20915896"
+ },
+ {
+  "name": "AI_FUNCTION_SET_GUNNER_ID",
+  "address": "0x0044e390",
+  "igi_exe_first32_sha256": "d58e413b0e485eaba668dce63b34ac9f8b6382189828aaaf9e60582309c93a7f"
+ },
+ {
+  "name": "AI_FUNCTION_SET_INSTANT_DEATH",
+  "address": "0x0044e1b0",
+  "igi_exe_first32_sha256": "31b40b77e58d897991df13cd9d615cdff439e94aca4d0d36569a2800408b985c"
+ },
+ {
+  "name": "AI_FUNCTION_SET_INVULNERABILITY",
+  "address": "0x0044e150",
+  "igi_exe_first32_sha256": "c99912ace86830d5b4931b93f11913bc45f5ce314dbef5e91f18345408215fd2"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE",
+  "address": "0x0044e6d0",
+  "igi_exe_first32_sha256": "b1ee4bc680a363e88ac05437c542f2e2f8492947484ca990da44e2362a1469ca"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SCRIPT_REAL_VALUE",
+  "address": "0x0044e790",
+  "igi_exe_first32_sha256": "e3d4c28e155a1bb3afe985ccaa4b67710ed7e17bc0005ec731b2902126afc936"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH",
+  "address": "0x0044de80",
+  "igi_exe_first32_sha256": "157be6c3016ffcd1693de54195840dcfaa07ff2724eb6d4fbc7cc1c92cb2282e"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA",
+  "address": "0x0044dee0",
+  "igi_exe_first32_sha256": "f7be14fa5a0a0a54822a0b260e8c03953c7ff96acdcb4a3a585c259978ad3eb9"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA",
+  "address": "0x0044df40",
+  "igi_exe_first32_sha256": "b12c72ab037323b20e91053c1a04b93c8da73915e824e847d544157fd8322d69"
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH",
+  "address": "0x0044ddf0",
+  "igi_exe_first32_sha256": "a6c5ff7757041923e35830e7e854e5248094e00ee108d18500e0da71568c038c"
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_ALPHA",
+  "address": "0x0044dd30",
+  "igi_exe_first32_sha256": "447a96328fb01ca77f7645aa40fb5e35e85b1cad6baf67007f944b06298e1d63"
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_GAMMA",
+  "address": "0x0044dd90",
+  "igi_exe_first32_sha256": "0dcd6d621e07916a656fc7b625a5693f469f2ed19a4e99e61e73458143894b72"
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_LENGTH",
+  "address": "0x0044dc40",
+  "igi_exe_first32_sha256": "f9efa3d559c86e737b65e3523e8514d402ec2a4e11cdea00b0f88b0935832aeb"
+ },
+ {
+  "name": "CREATE_TERRAIN_TILE_MAP",
+  "address": "0x004c6760",
+  "igi_exe_first32_sha256": "07bb275f02e60b086acfd391c89190bb38298129395120d46580dcbdd9f10c74"
+ },
+ {
+  "name": "DEFINE_AMMO_TYPE",
+  "address": "0x0047cad0",
+  "igi_exe_first32_sha256": "8da07fbbb1b8bffc8bf3bc94f5652fb0d6a1cebd41f3a6cea90f8859086ccf56"
+ },
+ {
+  "name": "DEFINE_GAME_MATERIAL",
+  "address": "0x00407f50",
+  "igi_exe_first32_sha256": "5c3c2b61d503283dee132568764cb705cbfe610a056597328355ff174f3db4cd"
+ },
+ {
+  "name": "DEFINE_GRAPH",
+  "address": "0x004ead20",
+  "igi_exe_first32_sha256": "fb80793b1cd0c9d48596afd546efae64e7abb9451df4c8da30ec59b961c90202"
+ },
+ {
+  "name": "DEFINE_GROUP",
+  "address": "0x004eba90",
+  "igi_exe_first32_sha256": "211976e206fc2c05f0f6e4f914e085186517dcbf336c4417a3d4855c045b8436"
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_AMMO_LIMIT",
+  "address": "0x004102d0",
+  "igi_exe_first32_sha256": "9c8496604fbc25f47a06f7fecbe9fac4ebce49c9f85d31a84bdaf0b00b7c6f19"
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY",
+  "address": "0x00410240",
+  "igi_exe_first32_sha256": "705e6248bfe7df40fbd299341c0647210e05dfb91784be981f8b2349f827e31f"
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_WEAPON_CYCLE",
+  "address": "0x004101c0",
+  "igi_exe_first32_sha256": "44741a2bca7cfe21f977b68d8b4e6966b808308b9a19956ead0135b5e1458f12"
+ },
+ {
+  "name": "DEFINE_MAGIC_OBJ",
+  "address": "0x004c4520",
+  "igi_exe_first32_sha256": "1d5f90af0945c6f01a84c4ce1d89646c937bf512c9059fd4ea72e281f09c44f7"
+ },
+ {
+  "name": "DEFINE_MISSION",
+  "address": "0x00484f60",
+  "igi_exe_first32_sha256": "2f5eed4cb470b441de79d5e55344e701315daadc06e35815b4e1284996923e78"
+ },
+ {
+  "name": "DEFINE_Q_MATERIAL",
+  "address": "0x00407e30",
+  "igi_exe_first32_sha256": "70c7a51da86f69ed1080bfe9c1d470e1fd72d15427db6f75c7db3bd7f4270b10"
+ },
+ {
+  "name": "DEFINE_SOUND",
+  "address": "0x004e8c60",
+  "igi_exe_first32_sha256": "daec90e874078626334db499c1da8d21618600cdc5588226e0fbd368506de9de"
+ },
+ {
+  "name": "DEFINE_TRIGGER_ONCE",
+  "address": "0x004e9ec0",
+  "igi_exe_first32_sha256": "8e1074cdbf1534f755bb0ef761a0091c699f51fe59fb923dc785b5a7afdec8da"
+ },
+ {
+  "name": "CONFIG_CREATE_NEW_PLAYER_PROFILE",
+  "address": "0x004050a0",
+  "igi_exe_first32_sha256": "0dd5e3c2bbd299cfc8eb04b009e42a01943233d7ae0eb46ac9e7fef3bc9b79d3"
+ },
+ {
+  "name": "CONFIG_DELETE_PLAYER_PROFILE",
+  "address": "0x00405400",
+  "igi_exe_first32_sha256": "bb536745efdbb1f716e2ac9ae20da1f9343b85a9e30e32362e414299cc3fcd2e"
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_PICTURE_BOX",
+  "address": "0x004056f0",
+  "igi_exe_first32_sha256": "c38965a305edeb5e2f849fccc6deb0084d60e97bd69bd7547d4919227e75ff99"
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_SELECTION_BOX",
+  "address": "0x00405660",
+  "igi_exe_first32_sha256": "c9fc11d845f83c65c7820705246b0001e1b70b3c39a1e30857a98ee9dcda2de2"
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_TEXT_BOX",
+  "address": "0x00405760",
+  "igi_exe_first32_sha256": "5698918da6ef28de1556b5e26e6637bd685a28bf3c4ea8ef4a8260529aa7691a"
+ },
+ {
+  "name": "CONFIG_FILL_PLAYER_PROFILE_LIST_BOX",
+  "address": "0x00404fa0",
+  "igi_exe_first32_sha256": "dd1cc50423acd37db6a0bc5caaf43854cdd8f2f5b777f19bd9ced53eeaba8a5d"
+ },
+ {
+  "name": "CONFIG_FILL_RENDER_DEVICE_LIST_BOX",
+  "address": "0x004046a0",
+  "igi_exe_first32_sha256": "2e5c347ffbba3d24a33d849adf4c904aeef135b0f595063b63a9c29cca35d7b4"
+ },
+ {
+  "name": "CONFIG_FILL_SCREEN_RESOLUTION_LIST_BOX",
+  "address": "0x00404450",
+  "igi_exe_first32_sha256": "93f8f4304343f209b0e1716d51a0eacab1c82519f780c4ffc188218ee20b8f4f"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_BLOOD_ENABLED",
+  "address": "0x00404340",
+  "igi_exe_first32_sha256": "1b8da1dceddd63b32fad993186ccf374044b2635a5f7af505c249f490b0bf6ad"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_INVERT_MOUSE",
+  "address": "0x004041d0",
+  "igi_exe_first32_sha256": "e783ad32e98749b9684652e61f8c6beed2ec0bb5ed169ff932829b0bd08babc5"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_MOUSE_SENSITIVITY",
+  "address": "0x00404290",
+  "igi_exe_first32_sha256": "7b1a47f25d2cd4b60f6fc225834ee000bd64967c44dacf9d0409a7101a37ac7d"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_BLOOD_ENABLED",
+  "address": "0x004042e0",
+  "igi_exe_first32_sha256": "5c1916d68445d13646955a49b7e709d7b2b0312856d336422e5422c7608de374"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_INVERT_MOUSE",
+  "address": "0x00404160",
+  "igi_exe_first32_sha256": "e1932e72f1987bbf881399061db4be365b27c86628721922729bd5eb82f8e01e"
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_MOUSE_SENSITIVITY",
+  "address": "0x00404230",
+  "igi_exe_first32_sha256": "aac3a40a83a1e564db12cbe90216b3727cc18d6bdadf133d2ef1d6deea380a40"
+ },
+ {
+  "name": "CONFIG_GET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "address": "0x00405010",
+  "igi_exe_first32_sha256": "eb1e3da3b09677e4cc565ac8e4af2cc45b78818de66e4993f7a5c199050b218d"
+ },
+ {
+  "name": "CONFIG_GET_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403c70",
+  "igi_exe_first32_sha256": "ef683d54c93479445b4639ad52d79b101851e5705854c3b9202be964a0a955ee"
+ },
+ {
+  "name": "CONFIG_GET_NUMBER_OF_PLAYER_PROFILES",
+  "address": "0x004054f0",
+  "igi_exe_first32_sha256": "e17ccec6562c3583c70104180d1633ca5512d153967486ba9194e75012384e4b"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_DEVICE",
+  "address": "0x00404710",
+  "igi_exe_first32_sha256": "f181309924e14d34c26d4e19d71709c812089e391423a9c83ecd231314cfa5c5"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_GAMMA",
+  "address": "0x00404910",
+  "igi_exe_first32_sha256": "21d55083a5240d910ee2ab02b4b6f53f0f33d62fdfda3c5194a2ad66da0876a3"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERFORMANCE_FLAGS",
+  "address": "0x00404f60",
+  "igi_exe_first32_sha256": "b6e1a656e53ac8fc2dc00a86782bfb482bbac25a920dd50704b205962a62cd6b"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_FLAGS_FROM_LEVEL",
+  "address": "0x004055c0",
+  "igi_exe_first32_sha256": "8a17a22495ca7cdf63d1dc6df6972f9bb418749445033783971f6fe47ecd2c72"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_LEVEL_FROM_FLAGS",
+  "address": "0x00405530",
+  "igi_exe_first32_sha256": "bbcf34969f99db3181f03e7697ef10110409eacd14ebef9e214767a954e9b75f"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_RESOLUTION",
+  "address": "0x004045b0",
+  "igi_exe_first32_sha256": "baca2a14e856d047947bf440a0017c24c7e3967a5880401ac157e2f41838e6aa"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_TRANSPARENCY",
+  "address": "0x004049c0",
+  "igi_exe_first32_sha256": "4f7cd8c77db5ae3aa8520d89fedb5921a5a27de6ba1d5bfdbba72364d6dbbdca"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_NUM_PERF_LEVELS",
+  "address": "0x00405620",
+  "igi_exe_first32_sha256": "4430ef95a5689c3029217c0a9c9397969316ed55534c0e14f973a0de7cfe3ea2"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_DEVICE",
+  "address": "0x004047f0",
+  "igi_exe_first32_sha256": "abcfa124dfb281f04c07090cd1ecfdb56f1d6aa7ac87a2f0726d8e871a1a20fe"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_PERFORMANCE_FLAGS",
+  "address": "0x00404f00",
+  "igi_exe_first32_sha256": "02506f5713ddb88f52148921daa3482ecb9fa040bb1e29c1bb487909408c6334"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_RESOLUTION",
+  "address": "0x00404510",
+  "igi_exe_first32_sha256": "3ec8889784e08d9c2012f156f0dcb17224e489655c8acf90cd4254d8ad055e78"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_TRANSPARENCY",
+  "address": "0x00404960",
+  "igi_exe_first32_sha256": "ae481ac05262168156aab8f1b0e1e3d64ce052ce5940843aa0251bca41b5af24"
+ },
+ {
+  "name": "CONFIG_IS_CONTENT_CONTROL_PASSWORD_ENABLED",
+  "address": "0x00403d90",
+  "igi_exe_first32_sha256": "1bb6df22c975b59af107049ba372d62fdf12a3a0dc8ee6bee91d44feb0012037"
+ },
+ {
+  "name": "CONFIG_IS_GERMANY",
+  "address": "0x00403b30",
+  "igi_exe_first32_sha256": "16d36d7c07ef17be03b0423a46cc305440b9fe63de59d3c32a877807d32d0cfa"
+ },
+ {
+  "name": "CONFIG_PLAYER_GET_ACTIVE_MISSION",
+  "address": "0x004057d0",
+  "igi_exe_first32_sha256": "47a76c4ed7bb533daf74b613caf19e061f31d3801ea259549c1768428be8222a"
+ },
+ {
+  "name": "CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "address": "0x00405050",
+  "igi_exe_first32_sha256": "38fa3914ec2acf0f9b8f32967d7ac7e51a24ffa96b1b8f07413c44f1a5ddce9f"
+ },
+ {
+  "name": "CONFIG_SET_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403c10",
+  "igi_exe_first32_sha256": "c201aa40341bcb226965214af626123619fe3bf0c57faa15acd1f95e7c739c17"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_MUSIC",
+  "address": "0x00404bf0",
+  "igi_exe_first32_sha256": "d970bd29b0f1e1502c6de3135bba8f61704e42f56ec2cc2ab13adf020d2818d0"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_MUSIC_VOLUME",
+  "address": "0x00404ca0",
+  "igi_exe_first32_sha256": "eafeff5294bd10aeeceea592d88d3324f2a8f32bb480ad6182bd2bda2b01a6b6"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_REVERSE_STEREO",
+  "address": "0x00404eb0",
+  "igi_exe_first32_sha256": "08d0db90472d19e0767d8dc68eef5c48e3f77157a5e86fb762f49d188418b5fd"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS",
+  "address": "0x00404a90",
+  "igi_exe_first32_sha256": "9d264ddbd12f3000806884d71141459b7ed001a9055f0e92d3f0614e9611a161"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS_VOLUME",
+  "address": "0x00404b40",
+  "igi_exe_first32_sha256": "f67b062472dc54e45624c98b41204c09bff9da81b43c9559233272f4fd543ff9"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SPEECH",
+  "address": "0x00404d50",
+  "igi_exe_first32_sha256": "29f204341180e558d4ed824ce37c3ffd49c82959ab5bc88af330e66609001986"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SPEECH_VOLUME",
+  "address": "0x00404e00",
+  "igi_exe_first32_sha256": "e4128be6a9bd17276800290fa4386885903036b69691c202575313cde1b3a880"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_MUSIC",
+  "address": "0x00404b90",
+  "igi_exe_first32_sha256": "214a778899a1258dd1f6004357638e2d5395fe62b37be64d3bd505427ab4c135"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_MUSIC_VOLUME",
+  "address": "0x00404c40",
+  "igi_exe_first32_sha256": "68ba5d7959f48e2091ed379ac0c5609057eca43c6f6c7cdaf6f36e110d467577"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_REVERSE_STEREO",
+  "address": "0x00404e50",
+  "igi_exe_first32_sha256": "a4dd466aefe3d349e6aaa7f4c3a326b8f507a7f4880769f5be229f964132cf81"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS",
+  "address": "0x00404a10",
+  "igi_exe_first32_sha256": "3bb2d688a7a355ecdabdcdd6d20d781ada81f04440315345cbe4ec0868ede217"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS_VOLUME",
+  "address": "0x00404ae0",
+  "igi_exe_first32_sha256": "810de2d91785e6c648a0b9bab8dd57acae300b0c84790787cec26d6abf6b449a"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SPEECH",
+  "address": "0x00404cf0",
+  "igi_exe_first32_sha256": "d965cdbae45509fb2c2af1e409f1f9064e4674f6f9a0223fd7bee7a627d3cc73"
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SPEECH_VOLUME",
+  "address": "0x00404da0",
+  "igi_exe_first32_sha256": "1c3b61d298e9c5d19914ebc26ab944b0e22d3e2c47fb1a1b2256750ee46e027f"
+ },
+ {
+  "name": "CONFIG_VERIFY_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403cc0",
+  "igi_exe_first32_sha256": "ce8b0a149491d1639c560f858a850e145df6d7907830ab6424fc09ad643f8fa9"
+ },
+ {
+  "name": "GO_ACTIVE_MISSION",
+  "address": "0x00403750",
+  "igi_exe_first32_sha256": "b565fe1e4b2c98091edd5352fd1200151d2cc000fdf1a712cd7ae030a893a77c"
+ },
+ {
+  "name": "GO_CONTENT_CONTROL_PW",
+  "address": "0x00403c10",
+  "igi_exe_first32_sha256": "c201aa40341bcb226965214af626123619fe3bf0c57faa15acd1f95e7c739c17"
+ },
+ {
+  "name": "GO_GAME_DIFF",
+  "address": "0x00403ac0",
+  "igi_exe_first32_sha256": "fd6e6acdd78e70e985e98586925866fe05dcfb4f7fa7ba346a6291341939c140"
+ },
+ {
+  "name": "GO_GAME_LANG",
+  "address": "0x00403a00",
+  "igi_exe_first32_sha256": "29fa76d8ed56c5f880113457a03dbcfd6939f2e51b6989e64f26a240779229ee"
+ },
+ {
+  "name": "GO_GFX_DEVICE",
+  "address": "0x00404010",
+  "igi_exe_first32_sha256": "afa04d380c228f2ae9866c13fe320a8b34282767051e58f83ce860c94797c2bc"
+ },
+ {
+  "name": "GO_GFX_DISP",
+  "address": "0x00403950",
+  "igi_exe_first32_sha256": "79496a7331efb588b8faad169bdcb34d94d00563b32697f34a7782f9ed00001f"
+ },
+ {
+  "name": "GO_GFX_GAMMA",
+  "address": "0x00404080",
+  "igi_exe_first32_sha256": "23a685d508f26df8dbe1798bff1706edfcb2c88911a121787eeab26cd836bdf7"
+ },
+ {
+  "name": "GO_GFX_PERFORMANCE",
+  "address": "0x004040f0",
+  "igi_exe_first32_sha256": "b46e58354acb392cae63335ad87ab64ab74f98dbc69b4706d193e5e4d456ac59"
+ },
+ {
+  "name": "GO_IN_MOU_INV",
+  "address": "0x00403870",
+  "igi_exe_first32_sha256": "c43059f368d1ee90165e82e6901fd268c0d8370c93db30061d827c4ac5457010"
+ },
+ {
+  "name": "GO_IN_MOU_SENS",
+  "address": "0x004038e0",
+  "igi_exe_first32_sha256": "d06dfc17b389674ffc7e1b585c00fc509d5002f917903e7be85be2bf7c9e37f5"
+ },
+ {
+  "name": "GO_IN_REMAP",
+  "address": "0x004037c0",
+  "igi_exe_first32_sha256": "231f419bab919f42b0e482e4c2f6d48502189527971c72ae31e2bbd4f11261ef"
+ },
+ {
+  "name": "GO_IS_BLOOD",
+  "address": "0x00403df0",
+  "igi_exe_first32_sha256": "df7965d456c673e96d88f3efd71edd3235c45eee238536dfea437384683fa22d"
+ },
+ {
+  "name": "GO_PLAYER",
+  "address": "0x004036b0",
+  "igi_exe_first32_sha256": "b28c2775e9d5aaf88905e990470191823f54ee92099d988c20502c58a4e7655c"
+ },
+ {
+  "name": "GO_SOUND_FX",
+  "address": "0x00403f80",
+  "igi_exe_first32_sha256": "d60d4ba516e12b4ed80fe0c87cd7cb52f8297e272fd99e18ecd9d2deb94b1647"
+ },
+ {
+  "name": "GO_SOUND_MUSIC",
+  "address": "0x00403ef0",
+  "igi_exe_first32_sha256": "ed1900b3d26e68756c489c51762c6faf985f7b938b4aac005dd8b2b1790ae478"
+ },
+ {
+  "name": "GO_SOUND_SPEECH",
+  "address": "0x00403e60",
+  "igi_exe_first32_sha256": "0ab7e6a5e61ac749854043ea85c37ee27b57c00dd9f3b4f458e388a8d9264595"
+ },
+ {
+  "name": "GAME_SET_MISSION",
+  "address": "0x00415890",
+  "igi_exe_first32_sha256": "704c19a1157fe0d5e5493c520bc74fd7df7eb5ec453bd213551e88bcd41347c8"
+ },
+ {
+  "name": "GAME_SET_MUSIC_VOLUME",
+  "address": "0x00415950",
+  "igi_exe_first32_sha256": "c76398e20f656ebdb9791ad9507c4f28d4393b67a0a5c2bd0dac60ff2a05cb1d"
+ },
+ {
+  "name": "GAME_SET_SFX_VOLUME",
+  "address": "0x004159b0",
+  "igi_exe_first32_sha256": "f602e5dff7cebc734d3e5e61e91fc65fc0bf72207f9588305770ea024f9c5c9f"
+ },
+ {
+  "name": "MENU_MANAGER_ACTIVATE_POPUP_SCREEN",
+  "address": "0x00417900",
+  "igi_exe_first32_sha256": "6929bca4d2740b2da73ee8043b64d72eb607cfb0842bd973c616c2a5f8230e86"
+ },
+ {
+  "name": "MENU_MANAGER_DEACTIVATE_POPU_SCREEN",
+  "address": "0x00417960",
+  "igi_exe_first32_sha256": "53b558a37b0d5536dbc8d6c193bff0bd450ffca34f82e7f8782558a7cb1f10c6"
+ },
+ {
+  "name": "MENU_MANAGER_FORCE_UPDATE_WINDOW",
+  "address": "0x00417880",
+  "igi_exe_first32_sha256": "fdb75d49afba614c68fac1502e6a6a742b58b857805dd37dab6c77fda1ef182a"
+ },
+ {
+  "name": "MENU_MANAGER_LEAVE_MENUS",
+  "address": "0x00417790",
+  "igi_exe_first32_sha256": "073f3d26622298ff47edcbc9d7c59b6fef6600e5f4c25362fe46e2ad1c26b537"
+ },
+ {
+  "name": "MENU_MANAGER_POP_SCREEN",
+  "address": "0x00417710",
+  "igi_exe_first32_sha256": "f08bd3a070497a10f82f38737e540df3925cc3b2d6d8273336eb554c3dac3306"
+ },
+ {
+  "name": "MENU_MANAGER_PUSH_SCREEN",
+  "address": "0x00417690",
+  "igi_exe_first32_sha256": "673fdf2ae231a9191bec826a07799f9bade139ef2272414f8809f6dd9d7a3162"
+ },
+ {
+  "name": "MENU_MANAGER_REQUEST_SCREEN",
+  "address": "0x004174a0",
+  "igi_exe_first32_sha256": "4298af76e0f424a27e0e6854ddcfb04639def7a5212c25006db235a2acdde800"
+ },
+ {
+  "name": "MENU_MANAGER_SET_ENABLED",
+  "address": "0x004179b0",
+  "igi_exe_first32_sha256": "e9efa884e02b19b24e9e7ab37d9bcb020c5749401f30bee2980fb2d74c4bc056"
+ },
+ {
+  "name": "MENU_MANAGER_SET_LANGUAGE",
+  "address": "0x00417810",
+  "igi_exe_first32_sha256": "611b6185a6c4a5226aaaca6d29b6711a25268893d5ab0b82894e3cf030761116"
+ },
+ {
+  "name": "LEVEL_FLOW_GET_BREAK_CUT_SCENE_KEY",
+  "address": "0x00488e00",
+  "igi_exe_first32_sha256": "3b9e2de137cf02bb1f43344caa97e2187c1988f6e1c2deaadda80fcf2ec1a1c1"
+ },
+ {
+  "name": "LEVEL_FLOW_IS_COUNTRY_USA",
+  "address": "0x00488e90",
+  "igi_exe_first32_sha256": "52356f2533d71531a4a467d01d5a0c5488d1e28bfd7f47f1a20748077288b683"
+ },
+ {
+  "name": "LEVEL_FLOW_LEVEL_FAILED",
+  "address": "0x00488e50",
+  "igi_exe_first32_sha256": "a9f80f9fd86998dcde4aac1ee1857c550438877b3e65490e0c2c4cfc35efe138"
+ },
+ {
+  "name": "MOVIE_SUBTITLE_REGISTER_FONT",
+  "address": "0x004151e0",
+  "igi_exe_first32_sha256": "f5fd18e1b90c194a14eb61916027d5f78b2376ef66fb8a5f989ff8f97d281278"
+ },
+ {
+  "name": "MOVIE_SUBTITLE_REGISTER_TEXT",
+  "address": "0x00415260",
+  "igi_exe_first32_sha256": "e587e98604876fb3a12e655f5590da0362cd26aca7e36ad4a77194ac16c2f2c8"
+ },
+ {
+  "name": "CONTROLS_MENU_CONVERT_FLOAT_FROM_OFFSET",
+  "address": "0x004231e0",
+  "igi_exe_first32_sha256": "c1490a06c0ef2b174e62a9326abe806c12206057a2d980519348fb399c3f8370"
+ },
+ {
+  "name": "CONTROLS_MENU_CONVERT_OFFSET_FROM_FLOAT",
+  "address": "0x00423240",
+  "igi_exe_first32_sha256": "c37ff27894d117b867317f52c7f6aed1e2c9dc94f9fe5ce84afad6645bd72372"
+ },
+ {
+  "name": "TASK_DECLARE_PARAMETERS",
+  "address": "0x004f0740",
+  "igi_exe_first32_sha256": "aaad8697bab747a874ec35436c63b41d6765b993aa370b5b568f8e38487a0faa"
+ },
+ {
+  "name": "TASK_NEW",
+  "address": "0x004f0780",
+  "igi_exe_first32_sha256": "f1dc5d7269c3ea014fad8d1b11dfba5190acb625dc6c2fb2d9b2e6e4d145326a"
+ },
+ {
+  "name": "BREAK_SCRIPT",
+  "address": "0x004b8c10",
+  "igi_exe_first32_sha256": "30fea0248858e130fcda2902c843fe3d891f2618188cc125214825eb4e69b6c2"
+ },
+ {
+  "name": "FLOW_REQUEST_EVENT",
+  "address": "0x00402780",
+  "igi_exe_first32_sha256": "d5f22750eada08edbe39f91645df647bb16362b8c990af657ea5203fafc1860f"
+ },
+ {
+  "name": "SCRIPT_SET_WARNING_LEVEL",
+  "address": "0x004b8c60",
+  "igi_exe_first32_sha256": "a683906c53a84cf090c3e3a458ebb06da8115f0635f2c68cc7993937f985ed62"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_TRIGGER_ID",
+  "address": "0x0044e3f0",
+  "igi_exe_first32_sha256": "4555bcb60ba3d0796329734f811fe03f3668e2dc1df3f97932b4e303a4b1b1ea"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_CONTROL_ID",
+  "address": "0x0044e430",
+  "igi_exe_first32_sha256": "d230eeceaefb769549e4774744b1f0e7652cbceac63f47211062fc2980777f49"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_ACCESS",
+  "address": "0x0044e470",
+  "igi_exe_first32_sha256": "70f6dfc2b5e66b4e58f76be085802f961ac8db597c43b63b53053ed753d9b276"
+ },
+ {
+  "name": "AI_FUNCTION_GET_GUNNER_ID",
+  "address": "0x0044e4b0",
+  "igi_exe_first32_sha256": "3333c65d7f074ecad982271c02afd8e6734de258c921b7a555300b9778514496"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_CONTROL_STATUS",
+  "address": "0x0044e4f0",
+  "igi_exe_first32_sha256": "40c682acf28e825835ffe12d557de7148b3e77e8f7bb1b2bae2f08584899d542"
+ },
+ {
+  "name": "AI_FUNCTION_GET_GUNNER_STATUS",
+  "address": "0x0044e5e0",
+  "igi_exe_first32_sha256": "6241455a86b24cbea809846a6352a70b832c7b7b6b8d181eb620af369356106c"
+ },
+ {
+  "name": "AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE",
+  "address": "0x0044e740",
+  "igi_exe_first32_sha256": "50436b2def49584050d4c8b8f7a5d68fbe050d73a72e9fee1ecec120fb76f9d3"
+ },
+ {
+  "name": "AI_FUNCTION_GET_CURRENT_EVENT_TYPE",
+  "address": "0x0044dfa0",
+  "igi_exe_first32_sha256": "2d521c73b10c91f199357bbcb05b1058b488646fc1ffbc81b4f678abec208f24"
+ },
+ {
+  "name": "AI_FUNCTION_IS_EVENT_BEHIND",
+  "address": "0x0044e860",
+  "igi_exe_first32_sha256": "ee1efd4adda03fa5d53b310fbe04cfe4ec146f9fec7575833f9c3163c222007a"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ANIMATION_TO_PLAY",
+  "address": "0x0044ecb0",
+  "igi_exe_first32_sha256": "547e10dbb8ab23899557a3f7412f32c96ac01d01ce75cd7e0692da9d212d2ada"
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_GAMMA",
+  "address": "0x004048b0",
+  "igi_exe_first32_sha256": "f280ddbc6877134db2a3437ac76084079c513df4608fac4a1cb0a0467c050b60"
+ },
+ {
+  "name": "AI_FUNCTION_GET_SCRIPT_REAL_VALUE",
+  "address": "0x0044e800",
+  "igi_exe_first32_sha256": "4a3bdfbc1aa64661d17504bc5cc070b8c2aca16f8011ca26a45e0f80ed1405b6"
+ },
+ {
+  "name": "AI_FUNCTION_GET_RANDOM_VALUE",
+  "address": "0x0044e000",
+  "igi_exe_first32_sha256": "81625c68ec66317e317ab4f56776e5c77965dddbf6a68cdc189071dcd812e901"
+ },
+ {
+  "name": "AI_FUNCTION_GET_EVENT_DISTANCE",
+  "address": "0x0044e930",
+  "igi_exe_first32_sha256": "f8a7df39a526abbf1d235b94933e1724d005f4404508cb31b51b705610e0f39d"
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE",
+  "address": "0x0044e9b0",
+  "igi_exe_first32_sha256": "5fbe3e5b051101aabc7fd1943e18c4fd81bffb4525d770c119a2c4e895a0ea1c"
+ }
+]

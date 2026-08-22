@@ -1,0 +1,2178 @@
+[
+ {
+  "name": "QTASK_UPDATE_LIST",
+  "address": "0x00401b20",
+  "call_jmp_sites": 90,
+  "push_sites": 0,
+  "first_sites": [
+   "0x410850",
+   "0x4108a5"
+  ]
+ },
+ {
+  "name": "FLOW_REQUEST_EVENT",
+  "address": "0x00402780",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x402053"
+  ]
+ },
+ {
+  "name": "FRAMES_SET",
+  "address": "0x00402820",
+  "call_jmp_sites": 6,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020a5",
+   "0x4026ab"
+  ]
+ },
+ {
+  "name": "GO_PLAYER",
+  "address": "0x004036b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40300f"
+  ]
+ },
+ {
+  "name": "GO_ACTIVE_MISSION",
+  "address": "0x00403750",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403122"
+  ]
+ },
+ {
+  "name": "GO_IN_REMAP",
+  "address": "0x004037c0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403022"
+  ]
+ },
+ {
+  "name": "GO_IN_MOU_INV",
+  "address": "0x00403870",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403035"
+  ]
+ },
+ {
+  "name": "GO_IN_MOU_SENS",
+  "address": "0x004038e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40304b"
+  ]
+ },
+ {
+  "name": "GO_GFX_DISP",
+  "address": "0x00403950",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40305e"
+  ]
+ },
+ {
+  "name": "GO_GAME_LANG",
+  "address": "0x00403a00",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40309a"
+  ]
+ },
+ {
+  "name": "GO_GAME_DIFF",
+  "address": "0x00403ac0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4030ad"
+  ]
+ },
+ {
+  "name": "CONFIG_IS_GERMANY",
+  "address": "0x00403b30",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403512"
+  ]
+ },
+ {
+  "name": "RESET",
+  "address": "0x00403b70",
+  "call_jmp_sites": 1,
+  "push_sites": 1,
+  "first_sites": [
+   "0x405387",
+   "0x403525"
+  ]
+ },
+ {
+  "name": "GO_CONTENT_CONTROL_PW",
+  "address": "0x00403c10",
+  "call_jmp_sites": 0,
+  "push_sites": 2,
+  "first_sites": [
+   "0x403138",
+   "0x4034c3"
+  ]
+ },
+ {
+  "name": "CONFIG_GET_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403c70",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4034d6"
+  ]
+ },
+ {
+  "name": "CONFIG_VERIFY_CONTENT_CONTROL_PASSWORD",
+  "address": "0x00403cc0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4034ec"
+  ]
+ },
+ {
+  "name": "CONFIG_IS_CONTENT_CONTROL_PASSWORD_ENABLED",
+  "address": "0x00403d90",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4034ff"
+  ]
+ },
+ {
+  "name": "GO_IS_BLOOD",
+  "address": "0x00403df0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4030c0"
+  ]
+ },
+ {
+  "name": "GO_SOUND_SPEECH",
+  "address": "0x00403e60",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4030d3"
+  ]
+ },
+ {
+  "name": "GO_SOUND_MUSIC",
+  "address": "0x00403ef0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4030e9"
+  ]
+ },
+ {
+  "name": "GO_SOUND_FX",
+  "address": "0x00403f80",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4030fc"
+  ]
+ },
+ {
+  "name": "GO_GFX_DEVICE",
+  "address": "0x00404010",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403071"
+  ]
+ },
+ {
+  "name": "GO_GFX_GAMMA",
+  "address": "0x00404080",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403084"
+  ]
+ },
+ {
+  "name": "GO_GFX_PERFORMANCE",
+  "address": "0x004040f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40310f"
+  ]
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_INVERT_MOUSE",
+  "address": "0x00404160",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403274"
+  ]
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_INVERT_MOUSE",
+  "address": "0x004041d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403238"
+  ]
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_MOUSE_SENSITIVITY",
+  "address": "0x00404230",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403287"
+  ]
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_MOUSE_SENSITIVITY",
+  "address": "0x00404290",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40324b"
+  ]
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_SET_BLOOD_ENABLED",
+  "address": "0x004042e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40329a"
+  ]
+ },
+ {
+  "name": "CONFIG_GAME_OPTIONS_INPUT_GET_BLOOD_ENABLED",
+  "address": "0x00404340",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40325e"
+  ]
+ },
+ {
+  "name": "CONFIG_FILL_SCREEN_RESOLUTION_LIST_BOX",
+  "address": "0x00404450",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40320f"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_RESOLUTION",
+  "address": "0x00404510",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4032ad"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_RESOLUTION",
+  "address": "0x004045b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403312"
+  ]
+ },
+ {
+  "name": "CONFIG_FILL_RENDER_DEVICE_LIST_BOX",
+  "address": "0x004046a0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403225"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_DEVICE",
+  "address": "0x00404710",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403338"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_DEVICE",
+  "address": "0x004047f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4032d6"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_GAMMA",
+  "address": "0x004048b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4032e9"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_GAMMA",
+  "address": "0x00404910",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40334b"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_TRANSPARENCY",
+  "address": "0x00404960",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4032c3"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_TRANSPARENCY",
+  "address": "0x004049c0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403325"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS",
+  "address": "0x00404a10",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4033b0"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS",
+  "address": "0x00404a90",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403438"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS_VOLUME",
+  "address": "0x00404ae0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4033c3"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS_VOLUME",
+  "address": "0x00404b40",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40344e"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_MUSIC",
+  "address": "0x00404b90",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4033d6"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_MUSIC",
+  "address": "0x00404bf0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403461"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_MUSIC_VOLUME",
+  "address": "0x00404c40",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4033e9"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_MUSIC_VOLUME",
+  "address": "0x00404ca0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403474"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SPEECH",
+  "address": "0x00404cf0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4033ff"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SPEECH",
+  "address": "0x00404d50",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403487"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_SPEECH_VOLUME",
+  "address": "0x00404da0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403412"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_SPEECH_VOLUME",
+  "address": "0x00404e00",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40349d"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_SET_REVERSE_STEREO",
+  "address": "0x00404e50",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403425"
+  ]
+ },
+ {
+  "name": "CONFIG_SOUND_OPTIONS_GET_REVERSE_STEREO",
+  "address": "0x00404eb0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4034b0"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_SET_PERFORMANCE_FLAGS",
+  "address": "0x00404f00",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4032fc"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERFORMANCE_FLAGS",
+  "address": "0x00404f60",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403361"
+  ]
+ },
+ {
+  "name": "CONFIG_FILL_PLAYER_PROFILE_LIST_BOX",
+  "address": "0x00404fa0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40314b"
+  ]
+ },
+ {
+  "name": "CONFIG_GET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "address": "0x00405010",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40315e"
+  ]
+ },
+ {
+  "name": "CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX",
+  "address": "0x00405050",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403171"
+  ]
+ },
+ {
+  "name": "CONFIG_CREATE_NEW_PLAYER_PROFILE",
+  "address": "0x004050a0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403187"
+  ]
+ },
+ {
+  "name": "CONFIG_DELETE_PLAYER_PROFILE",
+  "address": "0x00405400",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40319a"
+  ]
+ },
+ {
+  "name": "CONFIG_GET_NUMBER_OF_PLAYER_PROFILES",
+  "address": "0x004054f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4031c0"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_LEVEL_FROM_FLAGS",
+  "address": "0x00405530",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403387"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_GET_PERF_FLAGS_FROM_LEVEL",
+  "address": "0x004055c0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x403374"
+  ]
+ },
+ {
+  "name": "CONFIG_GRAPHIC_OPTIONS_NUM_PERF_LEVELS",
+  "address": "0x00405620",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x40339a"
+  ]
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_SELECTION_BOX",
+  "address": "0x00405660",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4031d6"
+  ]
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_PICTURE_BOX",
+  "address": "0x004056f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4031e9"
+  ]
+ },
+ {
+  "name": "CONFIG_FILL_MISSION_TEXT_BOX",
+  "address": "0x00405760",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4031fc"
+  ]
+ },
+ {
+  "name": "CONFIG_PLAYER_GET_ACTIVE_MISSION",
+  "address": "0x004057d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4031ad"
+  ]
+ },
+ {
+  "name": "CONFIG_READ",
+  "address": "0x00405850",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020c9"
+  ]
+ },
+ {
+  "name": "CONFIG_WRITE",
+  "address": "0x00405bd0",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x40274e",
+   "0x416315"
+  ]
+ },
+ {
+  "name": "PLAYER_PROFILE_ACTIVE",
+  "address": "0x00406220",
+  "call_jmp_sites": 45,
+  "push_sites": 0,
+  "first_sites": [
+   "0x402706",
+   "0x403b76"
+  ]
+ },
+ {
+  "name": "WEAPON_CONFIG_READ",
+  "address": "0x004071e0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x402101"
+  ]
+ },
+ {
+  "name": "DEFINE_Q_MATERIAL",
+  "address": "0x00407e30",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x407daf"
+  ]
+ },
+ {
+  "name": "DEFINE_GAME_MATERIAL",
+  "address": "0x00407f50",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x407dc2"
+  ]
+ },
+ {
+  "name": "GAMEMATERIAL_LOAD",
+  "address": "0x00408350",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020d8"
+  ]
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_WEAPON_CYCLE",
+  "address": "0x004101c0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x410024"
+  ]
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY",
+  "address": "0x00410240",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x410037"
+  ]
+ },
+ {
+  "name": "DEFINE_HUMAN_PLAYER_AMMO_LIMIT",
+  "address": "0x004102d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41004a"
+  ]
+ },
+ {
+  "name": "HUMANPLAYER_LOAD",
+  "address": "0x004137a0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020d3"
+  ]
+ },
+ {
+  "name": "WEAPON_TYPE_OPEN",
+  "address": "0x00413b70",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020ce"
+  ]
+ },
+ {
+  "name": "WEAPON_TOTAL",
+  "address": "0x00413bb0",
+  "call_jmp_sites": 4,
+  "push_sites": 0,
+  "first_sites": [
+   "0x413bd3",
+   "0x413c05"
+  ]
+ },
+ {
+  "name": "MOVIE_SUBTITLE_REGISTER_FONT",
+  "address": "0x004151e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x415178"
+  ]
+ },
+ {
+  "name": "MOVIE_SUBTITLE_REGISTER_TEXT",
+  "address": "0x00415260",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41518a"
+  ]
+ },
+ {
+  "name": "INPUT_DISABLE",
+  "address": "0x004157d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41570c"
+  ]
+ },
+ {
+  "name": "INPUT_ENABLE",
+  "address": "0x00415830",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41571f"
+  ]
+ },
+ {
+  "name": "GAME_SET_MISSION",
+  "address": "0x00415890",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4156e3"
+  ]
+ },
+ {
+  "name": "MUSIC_UPDATE_VOLUME",
+  "address": "0x004158e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4156f6"
+  ]
+ },
+ {
+  "name": "GAME_SET_MUSIC_VOLUME",
+  "address": "0x00415950",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x415732"
+  ]
+ },
+ {
+  "name": "GAME_SET_SFX_VOLUME",
+  "address": "0x004159b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x415745"
+  ]
+ },
+ {
+  "name": "MUSIC_ENABLE",
+  "address": "0x00415a10",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41575b"
+  ]
+ },
+ {
+  "name": "MUSIC_DISABLE",
+  "address": "0x00415a60",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41576e"
+  ]
+ },
+ {
+  "name": "CUTSCENE_DELETE",
+  "address": "0x00415ab0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x415781"
+  ]
+ },
+ {
+  "name": "LEVEL_START",
+  "address": "0x00415b30",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41561e"
+  ]
+ },
+ {
+  "name": "LEVEL_QUIT",
+  "address": "0x00416550",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x415646"
+  ]
+ },
+ {
+  "name": "HUMAN_HIT_DAMAGE",
+  "address": "0x00416d80",
+  "call_jmp_sites": 9,
+  "push_sites": 0,
+  "first_sites": [
+   "0x408438",
+   "0x408635"
+  ]
+ },
+ {
+  "name": "LEVEL_RESTART",
+  "address": "0x00416fe0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4026b5"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_REQUEST_SCREEN",
+  "address": "0x004174a0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41726d"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_PUSH_SCREEN",
+  "address": "0x00417690",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4172a3"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_POP_SCREEN",
+  "address": "0x00417710",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4172b8"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_LEAVE_MENUS",
+  "address": "0x00417790",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x41727f"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_SET_LANGUAGE",
+  "address": "0x00417810",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x417291"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_FORCE_UPDATE_WINDOW",
+  "address": "0x00417880",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4172ca"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_ACTIVATE_POPUP_SCREEN",
+  "address": "0x00417900",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4172dc"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_DEACTIVATE_POPU_SCREEN",
+  "address": "0x00417960",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4172ef"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER_SET_ENABLED",
+  "address": "0x004179b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x417304"
+  ]
+ },
+ {
+  "name": "MENU_MANAGER",
+  "address": "0x00418b00",
+  "call_jmp_sites": 3,
+  "push_sites": 0,
+  "first_sites": [
+   "0x402699",
+   "0x419254"
+  ]
+ },
+ {
+  "name": "CONTROLS_MENU_CONVERT_FLOAT_FROM_OFFSET",
+  "address": "0x004231e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4231b2"
+  ]
+ },
+ {
+  "name": "CONTROLS_MENU_CONVERT_OFFSET_FROM_FLOAT",
+  "address": "0x00423240",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4231c5"
+  ]
+ },
+ {
+  "name": "AI_ACTION_PATROL",
+  "address": "0x0044d0e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cca4"
+  ]
+ },
+ {
+  "name": "AI_ACTION_COMBAT",
+  "address": "0x0044d160",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ccb7"
+  ]
+ },
+ {
+  "name": "AI_ACTION_DEAD",
+  "address": "0x0044d260",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ccca"
+  ]
+ },
+ {
+  "name": "AI_ACTION_FALL_FLAT",
+  "address": "0x0044d2c0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ccdd"
+  ]
+ },
+ {
+  "name": "AI_ACTION_ACTIVATE",
+  "address": "0x0044d420",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ccf3"
+  ]
+ },
+ {
+  "name": "AI_ACTION_WALK_TO_NODE",
+  "address": "0x0044d4a0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd06"
+  ]
+ },
+ {
+  "name": "AI_ACTION_RUN_TO_NODE",
+  "address": "0x0044d510",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd19"
+  ]
+ },
+ {
+  "name": "AI_ACTION_FIRE_AT_NODE",
+  "address": "0x0044d580",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd2c"
+  ]
+ },
+ {
+  "name": "AI_ACTION_FIRE_AT_TASK",
+  "address": "0x0044d630",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd42"
+  ]
+ },
+ {
+  "name": "AI_ACTION_PLAY_ANIMATION",
+  "address": "0x0044d6e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd55"
+  ]
+ },
+ {
+  "name": "AI_ACTION_PLAY_SOUND",
+  "address": "0x0044d750",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd68"
+  ]
+ },
+ {
+  "name": "AI_ACTION_MOVE_TO_EVENT",
+  "address": "0x0044d7d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd7b"
+  ]
+ },
+ {
+  "name": "AI_ACTION_LOOK_AT_EVENT",
+  "address": "0x0044d870",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cd91"
+  ]
+ },
+ {
+  "name": "AI_ACTION_STUNNED",
+  "address": "0x0044d8f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cda4"
+  ]
+ },
+ {
+  "name": "AI_ACTION_KICK_GRENADE",
+  "address": "0x0044d960",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cdb7"
+  ]
+ },
+ {
+  "name": "AI_ACTION_RUN_PANICKING",
+  "address": "0x0044da00",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cdca"
+  ]
+ },
+ {
+  "name": "AI_ACTION_IDLE",
+  "address": "0x0044da80",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cde0"
+  ]
+ },
+ {
+  "name": "AI_ACTION_SET_COMBAT",
+  "address": "0x0044dae0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cdf3"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_REMOVE_ALARM_ACTIONS",
+  "address": "0x0044dbc0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce19"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_LENGTH",
+  "address": "0x0044dc40",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce2f"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_VIEW_LENGTH",
+  "address": "0x0044dcd0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce42"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_ALPHA",
+  "address": "0x0044dd30",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce55"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_VIEW_GAMMA",
+  "address": "0x0044dd90",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce68"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH",
+  "address": "0x0044ddf0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce7e"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH",
+  "address": "0x0044de80",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce91"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA",
+  "address": "0x0044dee0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cea4"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA",
+  "address": "0x0044df40",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ceb7"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_CURRENT_EVENT_TYPE",
+  "address": "0x0044dfa0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d01c"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_RANDOM_VALUE",
+  "address": "0x0044e000",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d058"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_DEFAULT_HANDLER",
+  "address": "0x0044e060",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44ce06"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_EVENT_PRIORITY",
+  "address": "0x0044e0c0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cecd"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_INVULNERABILITY",
+  "address": "0x0044e150",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cee0"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_INSTANT_DEATH",
+  "address": "0x0044e1b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cef3"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_DEATH_ANIMATION",
+  "address": "0x0044e210",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf06"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_TRIGGER_ID",
+  "address": "0x0044e270",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf1c"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_CONTROL_ID",
+  "address": "0x0044e2d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf2f"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_ALARM_ACCESS",
+  "address": "0x0044e330",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf42"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_GUNNER_ID",
+  "address": "0x0044e390",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf55"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_TRIGGER_ID",
+  "address": "0x0044e3f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf91"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_CONTROL_ID",
+  "address": "0x0044e430",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cfa4"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_ACCESS",
+  "address": "0x0044e470",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cfba"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_GUNNER_ID",
+  "address": "0x0044e4b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cfcd"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_CONTROL_STATUS",
+  "address": "0x0044e4f0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cfe0"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_GUNNER_STATUS",
+  "address": "0x0044e5e0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cff3"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE",
+  "address": "0x0044e6d0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf6b"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE",
+  "address": "0x0044e740",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d009"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_SCRIPT_REAL_VALUE",
+  "address": "0x0044e790",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44cf7e"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_SCRIPT_REAL_VALUE",
+  "address": "0x0044e800",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d042"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_IS_EVENT_BEHIND",
+  "address": "0x0044e860",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d02f"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_EVENT_DISTANCE",
+  "address": "0x0044e930",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d06b"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE",
+  "address": "0x0044e9b0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d07e"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SET_ANIMATION_INTERVAL",
+  "address": "0x0044eaf0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d091"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_ADD_ANIMATION_ENTRY",
+  "address": "0x0044ebb0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d0a7"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_GET_ANIMATION_TO_PLAY",
+  "address": "0x0044ecb0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d0ba"
+  ]
+ },
+ {
+  "name": "AI_FUNCTION_SEND_RESPONSE",
+  "address": "0x0044ee40",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x44d0cd"
+  ]
+ },
+ {
+  "name": "SOLDIER_EXECUTE",
+  "address": "0x0045c440",
+  "call_jmp_sites": 0,
+  "push_sites": 0,
+  "first_sites": []
+ },
+ {
+  "name": "WEAPON_AMMO_PICKUP",
+  "address": "0x0045ff80",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x45e6f0"
+  ]
+ },
+ {
+  "name": "WEAPON_GUN_PICKUP",
+  "address": "0x0045ffc0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x45e70b"
+  ]
+ },
+ {
+  "name": "HUMAN_CAM_VIEW",
+  "address": "0x00463760",
+  "call_jmp_sites": 28,
+  "push_sites": 0,
+  "first_sites": [
+   "0x40c0de",
+   "0x40c227"
+  ]
+ },
+ {
+  "name": "HUMAN_TASK_VIEW_RESET",
+  "address": "0x004659e0",
+  "call_jmp_sites": 8,
+  "push_sites": 0,
+  "first_sites": [
+   "0x40ea18",
+   "0x40ed7e"
+  ]
+ },
+ {
+  "name": "DEFINE_AMMO_TYPE",
+  "address": "0x0047cad0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x47cab4"
+  ]
+ },
+ {
+  "name": "HUMAN_FIND_NEXT_CAMERA",
+  "address": "0x004828d0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x482821"
+  ]
+ },
+ {
+  "name": "MISSION_OPEN",
+  "address": "0x00484e60",
+  "call_jmp_sites": 0,
+  "push_sites": 2,
+  "first_sites": [
+   "0x484f16",
+   "0x485152"
+  ]
+ },
+ {
+  "name": "DEFINE_MISSION",
+  "address": "0x00484f60",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x484f34"
+  ]
+ },
+ {
+  "name": "STATUS_MESSAGE_SHOW",
+  "address": "0x00485970",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x46d3ca",
+   "0x46dafc"
+  ]
+ },
+ {
+  "name": "STATUS_MESSAGE_CLEAR",
+  "address": "0x00485ad0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x485ab2"
+  ]
+ },
+ {
+  "name": "LEVEL_FLOW_GET_BREAK_CUT_SCENE_KEY",
+  "address": "0x00488e00",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x488db5"
+  ]
+ },
+ {
+  "name": "LEVEL_FLOW_LEVEL_FAILED",
+  "address": "0x00488e50",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x488dc8"
+  ]
+ },
+ {
+  "name": "LEVEL_FLOW_IS_COUNTRY_USA",
+  "address": "0x00488e90",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x488dde"
+  ]
+ },
+ {
+  "name": "LOADING_SCREEN_SHOW",
+  "address": "0x0048a440",
+  "call_jmp_sites": 3,
+  "push_sites": 0,
+  "first_sites": [
+   "0x415bc0",
+   "0x41628c"
+  ]
+ },
+ {
+  "name": "MUSIC_VOLUME",
+  "address": "0x00495e70",
+  "call_jmp_sites": 4,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405bab",
+   "0x4158f7"
+  ]
+ },
+ {
+  "name": "MUSIC_SFX_VOLUME",
+  "address": "0x00495f30",
+  "call_jmp_sites": 4,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405bbc",
+   "0x415908"
+  ]
+ },
+ {
+  "name": "FILE_OPEN",
+  "address": "0x004a5350",
+  "call_jmp_sites": 6,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4021f1",
+   "0x402f98"
+  ]
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_LOAD",
+  "address": "0x004a53b3",
+  "call_jmp_sites": 482,
+  "push_sites": 0,
+  "first_sites": [
+   "0x404499",
+   "0x405b7b"
+  ]
+ },
+ {
+  "name": "ERROR_SHOW",
+  "address": "0x004af7b0",
+  "call_jmp_sites": 274,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4017e0",
+   "0x401830"
+  ]
+ },
+ {
+  "name": "WARNING_SHOW",
+  "address": "0x004af810",
+  "call_jmp_sites": 78,
+  "push_sites": 0,
+  "first_sites": [
+   "0x40124a",
+   "0x401280"
+  ]
+ },
+ {
+  "name": "MEMORY_DEALLOC",
+  "address": "0x004b0be0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x5324ea"
+  ]
+ },
+ {
+  "name": "MEMORY_ALLOC",
+  "address": "0x004b0c60",
+  "call_jmp_sites": 184,
+  "push_sites": 0,
+  "first_sites": [
+   "0x401372",
+   "0x40815e"
+  ]
+ },
+ {
+  "name": "QHASH_VAL_SET",
+  "address": "0x004b0d40",
+  "call_jmp_sites": 30,
+  "push_sites": 0,
+  "first_sites": [
+   "0x416559",
+   "0x416fe7"
+  ]
+ },
+ {
+  "name": "QHASH_INIT",
+  "address": "0x004b0d60",
+  "call_jmp_sites": 43,
+  "push_sites": 0,
+  "first_sites": [
+   "0x401364",
+   "0x416285"
+  ]
+ },
+ {
+  "name": "QHASH_RESET",
+  "address": "0x004b0d90",
+  "call_jmp_sites": 44,
+  "push_sites": 0,
+  "first_sites": [
+   "0x40137c",
+   "0x416293"
+  ]
+ },
+ {
+  "name": "QHASH_VAL_GET",
+  "address": "0x004b0db0",
+  "call_jmp_sites": 28,
+  "push_sites": 0,
+  "first_sites": [
+   "0x416550",
+   "0x429a3c"
+  ]
+ },
+ {
+  "name": "FILE_READ_WRITE",
+  "address": "0x004b1510",
+  "call_jmp_sites": 14,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405bdc",
+   "0x41ca31"
+  ]
+ },
+ {
+  "name": "RESOURCE_UNPACK",
+  "address": "0x004b16d0",
+  "call_jmp_sites": 21,
+  "push_sites": 0,
+  "first_sites": [
+   "0x41ca6f",
+   "0x495d21"
+  ]
+ },
+ {
+  "name": "RESOURCE_PACK_UNPACK",
+  "address": "0x004b18b0",
+  "call_jmp_sites": 3,
+  "push_sites": 0,
+  "first_sites": [
+   "0x45dff9",
+   "0x4b5f40"
+  ]
+ },
+ {
+  "name": "QSCRIPT_CLEANUP",
+  "address": "0x004b1ac0",
+  "call_jmp_sites": 9,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405c43",
+   "0x4b82a8"
+  ]
+ },
+ {
+  "name": "RESOURCE_IS_LOADED",
+  "address": "0x004b5b90",
+  "call_jmp_sites": 8,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4b5b68",
+   "0x4b5d95"
+  ]
+ },
+ {
+  "name": "RESOURCE_LOAD",
+  "address": "0x004b5f00",
+  "call_jmp_sites": 58,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4150f9",
+   "0x415d4a"
+  ]
+ },
+ {
+  "name": "RESOURCE_UNLOAD",
+  "address": "0x004b6380",
+  "call_jmp_sites": 23,
+  "push_sites": 0,
+  "first_sites": [
+   "0x495fb7",
+   "0x496009"
+  ]
+ },
+ {
+  "name": "RESOURCE_FLUSH",
+  "address": "0x004b63d0",
+  "call_jmp_sites": 26,
+  "push_sites": 0,
+  "first_sites": [
+   "0x41545d",
+   "0x4165af"
+  ]
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_INT16",
+  "address": "0x004b7e80",
+  "call_jmp_sites": 13,
+  "push_sites": 0,
+  "first_sites": [
+   "0x41e5ea",
+   "0x43b779"
+  ]
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_BOOL8",
+  "address": "0x004b7ee0",
+  "call_jmp_sites": 75,
+  "push_sites": 0,
+  "first_sites": [
+   "0x423d18",
+   "0x42540e"
+  ]
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_INT32",
+  "address": "0x004b7fa0",
+  "call_jmp_sites": 12,
+  "push_sites": 0,
+  "first_sites": [
+   "0x41c5ea",
+   "0x41f22a"
+  ]
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REGISTER_REAL32",
+  "address": "0x004b7fc0",
+  "call_jmp_sites": 8,
+  "push_sites": 0,
+  "first_sites": [
+   "0x42010a",
+   "0x437ce4"
+  ]
+ },
+ {
+  "name": "GAME_DATA_SYMBOL_REMOVE",
+  "address": "0x004b80a0",
+  "call_jmp_sites": 93,
+  "push_sites": 0,
+  "first_sites": [
+   "0x41c63c",
+   "0x41dbcc"
+  ]
+ },
+ {
+  "name": "QVM_LOAD",
+  "address": "0x004b80b0",
+  "call_jmp_sites": 19,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405856",
+   "0x408356"
+  ]
+ },
+ {
+  "name": "QVM_CLEANUP",
+  "address": "0x004b83d0",
+  "call_jmp_sites": 24,
+  "push_sites": 0,
+  "first_sites": [
+   "0x40586b",
+   "0x40836b"
+  ]
+ },
+ {
+  "name": "QSCRIPT_COMPILE",
+  "address": "0x004b8410",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405c3d"
+  ]
+ },
+ {
+  "name": "QVM_READ",
+  "address": "0x004b85b0",
+  "call_jmp_sites": 19,
+  "push_sites": 0,
+  "first_sites": [
+   "0x405865",
+   "0x408365"
+  ]
+ },
+ {
+  "name": "TASKTYPE_SET",
+  "address": "0x004b8810",
+  "call_jmp_sites": 184,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4011a5",
+   "0x402017"
+  ]
+ },
+ {
+  "name": "SCRIPT_SETSYMBOL_CXT",
+  "address": "0x004b8930",
+  "call_jmp_sites": 19,
+  "push_sites": 0,
+  "first_sites": [
+   "0x418c1b",
+   "0x4887c6"
+  ]
+ },
+ {
+  "name": "BREAK_SCRIPT",
+  "address": "0x004b8c10",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4b8bbb"
+  ]
+ },
+ {
+  "name": "SCRIPT_SET_WARNING_LEVEL",
+  "address": "0x004b8c60",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4b8ba7"
+  ]
+ },
+ {
+  "name": "QTASK_HASH_TABLE",
+  "address": "0x004baac0",
+  "call_jmp_sites": 11,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4b7e97",
+   "0x4b7ef7"
+  ]
+ },
+ {
+  "name": "QSCRIPT_ASSEMBLE",
+  "address": "0x004bb270",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4b82e0",
+   "0x4b854b"
+  ]
+ },
+ {
+  "name": "LOG_ADD",
+  "address": "0x004bbc30",
+  "call_jmp_sites": 4,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4bb34b",
+   "0x4bb5a6"
+  ]
+ },
+ {
+  "name": "QSCRIPT_PARSE",
+  "address": "0x004bbcb0",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4b82c3",
+   "0x4b8530"
+  ]
+ },
+ {
+  "name": "SYMBOL_REMOVE",
+  "address": "0x004c0460",
+  "call_jmp_sites": 3,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4bab4f",
+   "0x4bb812"
+  ]
+ },
+ {
+  "name": "SYMBOL_CHECK",
+  "address": "0x004c0560",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4baaec",
+   "0x4baec4"
+  ]
+ },
+ {
+  "name": "DEFINE_MAGIC_OBJ",
+  "address": "0x004c4520",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4c359a"
+  ]
+ },
+ {
+  "name": "MAGIC_OBJ_LOAD",
+  "address": "0x004c4930",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020e2"
+  ]
+ },
+ {
+  "name": "CREATE_TERRAIN_TILE_MAP",
+  "address": "0x004c6760",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4c6589"
+  ]
+ },
+ {
+  "name": "DEFINE_SOUND",
+  "address": "0x004e8c60",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4e623e"
+  ]
+ },
+ {
+  "name": "DEFINE_TRIGGER_ONCE",
+  "address": "0x004e9ec0",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4e6264"
+  ]
+ },
+ {
+  "name": "DEFINE_GRAPH",
+  "address": "0x004ead20",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4e6251"
+  ]
+ },
+ {
+  "name": "DEFINE_GROUP",
+  "address": "0x004eba90",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4e622b"
+  ]
+ },
+ {
+  "name": "ANIM_TRIGGER_PARSE",
+  "address": "0x004ec070",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4ebe5c"
+  ]
+ },
+ {
+  "name": "ANIM_TRIGGER_LOAD",
+  "address": "0x004ec0c0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020ec"
+  ]
+ },
+ {
+  "name": "PHYSICS_OBJ_TYPE_PARSE",
+  "address": "0x004edfe0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4ee0bc"
+  ]
+ },
+ {
+  "name": "PHYSICS_OBJ_LOAD",
+  "address": "0x004ee030",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4020f6",
+   "0x4ee0cb"
+  ]
+ },
+ {
+  "name": "TASK_DECLARE_PARAMETERS",
+  "address": "0x004f0740",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4ef7a7"
+  ]
+ },
+ {
+  "name": "TASK_NEW",
+  "address": "0x004f0780",
+  "call_jmp_sites": 0,
+  "push_sites": 1,
+  "first_sites": [
+   "0x4ef795"
+  ]
+ },
+ {
+  "name": "CONFIG_COMPILE",
+  "address": "0x004f0cf0",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x406e42",
+   "0x407210"
+  ]
+ },
+ {
+  "name": "LEVEL_LOAD",
+  "address": "0x004f0e10",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x415f1a",
+   "0x41703e"
+  ]
+ },
+ {
+  "name": "SCRIPT_INIT",
+  "address": "0x004f0e50",
+  "call_jmp_sites": 4,
+  "push_sites": 0,
+  "first_sites": [
+   "0x418c09",
+   "0x4edc33"
+  ]
+ },
+ {
+  "name": "QTASK_UPDATE",
+  "address": "0x004f0e90",
+  "call_jmp_sites": 2,
+  "push_sites": 0,
+  "first_sites": [
+   "0x416563",
+   "0x417025"
+  ]
+ },
+ {
+  "name": "GRAPH_OPEN",
+  "address": "0x004f9ff0",
+  "call_jmp_sites": 1,
+  "push_sites": 0,
+  "first_sites": [
+   "0x4faebc"
+  ]
+ }
+]
