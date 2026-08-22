@@ -2006,6 +2006,141 @@
     "signature": "void Task_DeclareParameters();",
     "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004ef7b1 and registered via GAME_DEFINE_OPTIONS (0x004B8890 -> 0x004BAAC0). r2-verified function prologue (60 bytes). declared parameter count NOT determinable from registration (push -1/unknown); signature shown as void() pending runtime/type recovery; parameter types not recovered (placeholders are int32_t)."
    }
+  },
+  {
+   "Native": {
+    "hash": "0044E3F0",
+    "address": 4514800,
+    "name": "AIFunction_GetAlarmTriggerID",
+    "signature": "void AIFunction_GetAlarmTriggerID();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cf9b via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E430",
+    "address": 4514864,
+    "name": "AIFunction_GetAlarmControlID",
+    "signature": "void AIFunction_GetAlarmControlID();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfae via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E470",
+    "address": 4514928,
+    "name": "AIFunction_GetAlarmAccess",
+    "signature": "void AIFunction_GetAlarmAccess();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfc4 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E4B0",
+    "address": 4514992,
+    "name": "AIFunction_GetGunnerID",
+    "signature": "void AIFunction_GetGunnerID();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfd7 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E4F0",
+    "address": 4515056,
+    "name": "AIFunction_GetAlarmControlStatus",
+    "signature": "void AIFunction_GetAlarmControlStatus();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cfea via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E5E0",
+    "address": 4515296,
+    "name": "AIFunction_GetGunnerStatus",
+    "signature": "void AIFunction_GetGunnerStatus();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044cffd via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E740",
+    "address": 4515648,
+    "name": "AIFunction_GetScriptIntegerValue",
+    "signature": "void AIFunction_GetScriptIntegerValue(int32_t p0);",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d013 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044DFA0",
+    "address": 4513696,
+    "name": "AIFunction_GetCurrentEventType",
+    "signature": "void AIFunction_GetCurrentEventType();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d026 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E860",
+    "address": 4515936,
+    "name": "AIFunction_IsEventBehind",
+    "signature": "void AIFunction_IsEventBehind();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d039 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044ECB0",
+    "address": 4517040,
+    "name": "AIFunction_GetAnimationToPlay",
+    "signature": "void AIFunction_GetAnimationToPlay();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d0c4 via secondary registrar 0x4b88c0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "004048B0",
+    "address": 4212912,
+    "name": "Config_GraphicOptionsSetGamma",
+    "signature": "void Config_GraphicOptionsSetGamma(int32_t p0);",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x004032f3 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E800",
+    "address": 4515840,
+    "name": "AIFunction_GetScriptRealValue",
+    "signature": "void AIFunction_GetScriptRealValue(int32_t p0);",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d04c via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E000",
+    "address": 4513792,
+    "name": "AIFunction_GetRandomValue",
+    "signature": "void AIFunction_GetRandomValue(int32_t p0);",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d062 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 1; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E930",
+    "address": 4516144,
+    "name": "AIFunction_GetEventDistance",
+    "signature": "void AIFunction_GetEventDistance();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d075 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
+  },
+  {
+   "Native": {
+    "hash": "0044E9B0",
+    "address": 4516272,
+    "name": "AIFunction_GetAlarmTriggerDistance",
+    "signature": "void AIFunction_GetAlarmTriggerDistance();",
+    "note": "Verified from igi.exe (IGI 1) machine code: address pushed together with its exact name string at registration site 0x0044d088 via secondary registrar 0x4b88f0 (same registration core as GAME_DEFINE_OPTIONS 0x004B8890). r2-verified function prologue. declared script parameter count = 0; parameter types not recovered (placeholders are int32_t)."
+   }
   }
  ]
 }

@@ -255,6 +255,26 @@ namespace IGI {
 		BREAK_SCRIPT = 0x004B8C10,														// igi.exe pushes str."BreakScript" @ site 0x004B8BC5; argc=None
 		FLOW_REQUEST_EVENT = 0x00402780,														// igi.exe pushes str."Flow_RequestEvent" @ site 0x0040205D; argc=1
 		SCRIPT_SET_WARNING_LEVEL = 0x004B8C60,														// igi.exe pushes str."_Script_SetWarningLevel" @ site 0x004B8BB1; argc=1
+		// ─── SECOND-PASS DISCOVERIES (registrars 0x004B88C0 / 0x004B88F0) ───
+		// Same evidence standard as above: igi.exe pushes each address with its
+		// exact name string into secondary script-command registrars 0x004B88C0
+		// (AI getter functions) and 0x004B88F0 (mixed), both thin wrappers over
+		// the same registration core as GAME_DEFINE_OPTIONS. r2-verified prologues.
+		AI_FUNCTION_GET_ALARM_TRIGGER_ID = 0x0044E3F0,			// igi.exe pushes str."AIFunction_GetAlarmTriggerID" @ site 0x0044cf9b via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_ALARM_CONTROL_ID = 0x0044E430,			// igi.exe pushes str."AIFunction_GetAlarmControlID" @ site 0x0044cfae via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_ALARM_ACCESS = 0x0044E470,			// igi.exe pushes str."AIFunction_GetAlarmAccess" @ site 0x0044cfc4 via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_GUNNER_ID = 0x0044E4B0,			// igi.exe pushes str."AIFunction_GetGunnerID" @ site 0x0044cfd7 via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_ALARM_CONTROL_STATUS = 0x0044E4F0,			// igi.exe pushes str."AIFunction_GetAlarmControlStatus" @ site 0x0044cfea via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_GUNNER_STATUS = 0x0044E5E0,			// igi.exe pushes str."AIFunction_GetGunnerStatus" @ site 0x0044cffd via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE = 0x0044E740,			// igi.exe pushes str."AIFunction_GetScriptIntegerValue" @ site 0x0044d013 via registrar 0x4b88c0; argc=1
+		AI_FUNCTION_GET_CURRENT_EVENT_TYPE = 0x0044DFA0,			// igi.exe pushes str."AIFunction_GetCurrentEventType" @ site 0x0044d026 via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_IS_EVENT_BEHIND = 0x0044E860,			// igi.exe pushes str."AIFunction_IsEventBehind" @ site 0x0044d039 via registrar 0x4b88c0; argc=0
+		AI_FUNCTION_GET_ANIMATION_TO_PLAY = 0x0044ECB0,			// igi.exe pushes str."AIFunction_GetAnimationToPlay" @ site 0x0044d0c4 via registrar 0x4b88c0; argc=0
+		CONFIG_GRAPHIC_OPTIONS_SET_GAMMA = 0x004048B0,			// igi.exe pushes str."Config_GraphicOptionsSetGamma" @ site 0x004032f3 via registrar 0x4b88f0; argc=1
+		AI_FUNCTION_GET_SCRIPT_REAL_VALUE = 0x0044E800,			// igi.exe pushes str."AIFunction_GetScriptRealValue" @ site 0x0044d04c via registrar 0x4b88f0; argc=1
+		AI_FUNCTION_GET_RANDOM_VALUE = 0x0044E000,			// igi.exe pushes str."AIFunction_GetRandomValue" @ site 0x0044d062 via registrar 0x4b88f0; argc=1
+		AI_FUNCTION_GET_EVENT_DISTANCE = 0x0044E930,			// igi.exe pushes str."AIFunction_GetEventDistance" @ site 0x0044d075 via registrar 0x4b88f0; argc=0
+		AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE = 0x0044E9B0,			// igi.exe pushes str."AIFunction_GetAlarmTriggerDistance" @ site 0x0044d088 via registrar 0x4b88f0; argc=0
 	};
 
 	class Natives {
