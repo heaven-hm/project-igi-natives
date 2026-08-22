@@ -1,5 +1,4 @@
 #include "Hook.hpp"
-#include "DX7Hook.hpp"
 #include "../HookDetours.hpp"
 using namespace IGI;
 using namespace std;
@@ -322,6 +321,13 @@ static void __cdecl hkBinocularsDraw(void* pContext) {
         LOG_INFO("ENHANCER: verified Binoculars_Draw game-thread path reached");
     }
 
+    // Per-frame enhanced zoom. The retail engine rebuilds the projection
+    // from HumanPlayer+0x1E4/+0x1E8 every frame (and its own zoom stepper
+    // fcn.004739D0 rewrites those tangents), so the enhancer zoom must be
+    // re-applied here on the game thread, after the retail view update and
+    // while the binoculars are actually open. Guarded inside.
+    ENHANCER::APPLY_BINOCULARS_FRAME(g_improved_binoculars);
+
     // Some retail missions leave HumanPlayerInput's map-expression empty,
     // so the ComputerMap task is registered but never entered.  The
     // binocular/HUD routine is a verified game-thread presentation boundary;
@@ -380,25 +386,6 @@ static void __cdecl hkBinocularsDraw(void* pContext) {
     } __except (EXCEPTION_EXECUTE_HANDLER) {
         LOG_WARNING("ENHANCER: enhanced binocular render failed safely");
     }
-}
-
-typedef void(__cdecl* HumanMovementIntegrator_t)(int human);
-static HumanMovementIntegrator_t oHumanMovementIntegrator = nullptr;
-
-static void __cdecl hkHumanMovementIntegrator(int human) {
-    if (oHumanMovementIntegrator) oHumanMovementIntegrator(human);
-
-    __try {
-        const int hp = READ_PTR(humanplayer_ptr);
-        if (human && hp && human == hp) {
-            float half_fov_h = *(float*)0x005335E8;
-            float half_fov_v = *(float*)0x005339C0;
-            if (half_fov_h > 0.1f && half_fov_v > 0.1f) {
-                *(float*)(hp + 0x1E4) = tanf(half_fov_h);
-                *(float*)(hp + 0x1E8) = tanf(half_fov_v);
-            }
-        }
-    } __except (EXCEPTION_EXECUTE_HANDLER) {}
 }
 
 typedef void(__cdecl* MapComputerRender_t)(int param_1);

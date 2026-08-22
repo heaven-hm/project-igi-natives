@@ -673,41 +673,55 @@ namespace IGI {
 
 	// =========================================================================
 	// IGI Enhancer Patch — Memory-patching and native wrappers
-	// All addresses verified via Ghidra decompilation of D:\IGI1\igi.exe
+	// Every address below was re-verified against the retail IGI 1 executable
+	// (igi.exe, PE32, base 0x400000) with radare2 + Ghidra decompilation.
+	// igi2.pdb symbols were used ONLY as a semantic dictionary, never as an
+	// address source (see RE.md trust model). Fabricated addresses that were
+	// proven wrong by the binary have been removed.
 	// =========================================================================
 	namespace ENHANCER {
 
 		// ── Frame-rate control ──────────────────────────────────────────
-		// The engine tick interval is stored as a float at 0x005C8BCC.
-		// Default value = 0.033333f (30 FPS). Formula: interval = 1.0f / target_fps.
-		// FRAMES_SET already exists in MISC:: but uses the HASH::FRAMES_SET native.
-		// This writes the timing value directly for finer control.
+		// VERIFIED: HASH::FRAMES_SET == fcn.00402820. It resets the QPC timing
+		// accumulators of the loop-state object at [0x567C8C] (+0x30/+0x34/
+		// +0x38/+0x50), stores the argument at +0x3C, sets the +0x44 flag and
+		// refreshes the media timer (fcn.004E6030). Retail callers pass 30
+		// (push 0x1E @ 0x00415B39) and 60 (push 0x3C @ 0x00418CC6), so the
+		// argument is the target FPS.
+		// The previous implementation wrote a float into 0x005C8BCC, but r2
+		// proves main calls fcn.0048F0F0("filesys.cfg") which stores that
+		// string POINTER into 0x005C8BCC. Writing float bits there corrupted
+		// the config-filename pointer and could crash the game on reload.
+		inline int g_active_fps = 30;
+
 		NATIVE_DECL void FRAMERATE_SET(int target_fps) {
 			if (target_fps < 15) target_fps = 15;
 			if (target_fps > 240) target_fps = 240;
-			float interval = 1.0f / static_cast<float>(target_fps);
-			*(float*)0x005C8BCC = interval;
-			LOG_INFO("ENHANCER: Frame interval set to %.6f (%d FPS)", interval, target_fps);
+			g_active_fps = target_fps;
+			NATIVE_INVOKE<Void>((Void)HASH::FRAMES_SET, target_fps);
+			LOG_INFO("ENHANCER: Frame rate set to %d FPS via verified FramesSet", target_fps);
 		}
 
-		NATIVE_DECL int FRAMERATE_GET() {
-			float interval = *(float*)0x005C8BCC;
-			if (interval <= 0.0f) return 30;
-			return static_cast<int>(1.0f / interval + 0.5f);
-		}
+		NATIVE_DECL int FRAMERATE_GET() { return g_active_fps; }
 
-		// ── Resolution / Widescreen ─────────────────────────────────────
-		// Width/height stored at 0x005C8C00 (width) and 0x005C8C04 (height).
-		NATIVE_DECL void RESOLUTION_SET(int width, int height) {
-			*(int*)0x005C8C00 = width;
-			*(int*)0x005C8C04 = height;
-			LOG_INFO("ENHANCER: Resolution set to %dx%d", width, height);
-		}
-
-		NATIVE_DECL int RESOLUTION_WIDTH_GET() { return *(int*)0x005C8C00; }
-		NATIVE_DECL int RESOLUTION_HEIGHT_GET() { return *(int*)0x005C8C04; }
 		inline float g_requested_draw_distance = 5000.0f;
 		inline float g_requested_gamma = 1.0f;
+		inline float g_requested_binocular_zoom = 2.0f;
+
+		// ── Verified global facts used by the FOV/binocular paths ───────
+		// 0x005335E8 : double, horizontal half-FOV in radians (default pi/4).
+		// 0x005339C0 : double, vertical   half-FOV in radians (default pi/6).
+		//   Read live by 13+ engine sites via `fld qword`/`fptan` (0x00422D72,
+		//   0x004612CD, 0x004659E0, 0x00473BE1 ...). The binary contains NO
+		//   runtime writer for either double, so DLL writes persist.
+		// HumanPlayer + 0x1E4 / + 0x1E8 : float tan(half-FOV) fields written by
+		//   HumanTaskViewReset (0x004659E0: fptan -> fstp dword [eax+0x1E4])
+		//   and by the retail zoom stepper fcn.004739D0 (x1.25 per step). The
+		//   projection is rebuilt from these tangents, not from the globals.
+		// 0x00B81700..08 : Mesh3D_avOverrideFOV[3] float table. Initialized to
+		//   1.0 by fcn.004D0B30, read as dword [reg*4+0xB81700] by the rigid,
+		//   sorted-face, lightmap and bone mesh renderers (0x0049E04E,
+		//   0x0049F7AB, ...) and scaled by fstp at 0x00482862.
 
 		// The retail camera stores the half-FOV globals as x87-compatible doubles.
 		// HumanTaskViewReset (0x004659E0) converts them to float tangents at
@@ -743,7 +757,13 @@ namespace IGI {
 			double half_fov_v = half_fov_h * 0.75;
 			MESH_FOV_OVERRIDE_SET(fov_degrees);
 
-			// Update global engine FOV constants (0x005335E8 & 0x005339C0)
+			// Update global engine FOV constants (0x005335E8 & 0x005339C0).
+			// VERIFIED: both are doubles (0x3FE921FB60000000 = pi/4 and
+			// 0x3FE0C15240000000 = pi/6 in the retail image) and have no runtime
+			// writer, so this write persists until changed again. The engine
+			// re-derives the HumanPlayer +0x1E4/+0x1E8 tangents from these
+			// globals on its own (HumanTaskViewReset 0x004659E0 and the zoom
+			// stepper fcn.004739D0), so no manual tangent write is needed here.
 			__try {
 				DWORD oldProtect;
 				if (VirtualProtect((LPVOID)0x005335E8, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
@@ -756,14 +776,6 @@ namespace IGI {
 				}
 			} __except (EXCEPTION_EXECUTE_HANDLER) {}
 
-			// Keep the active player view fields synchronized without calling into the
-			// retail routine from the DLL worker thread.  The retail routine is verified,
-			// but it is game-thread-only and calling it here races the renderer.
-			const int hp = READ_PTR(humanplayer_ptr);
-			if (hp) {
-				*(float*)(hp + 0x1E4) = tanf(static_cast<float>(half_fov_h));
-				*(float*)(hp + 0x1E8) = tanf(static_cast<float>(half_fov_v));
-			}
 			LOG_INFO("ENHANCER: FOV set to %.1f degrees (%.4f rad)", fov_degrees, static_cast<float>(half_fov_h * 2.0));
 		}
 
@@ -773,41 +785,51 @@ namespace IGI {
 		}
 
 		// ── Binoculars zoom enhancement ─────────────────────────────────
+		// VERIFIED mechanism: the retail binocular zoom (fcn.004739D0) never
+		// writes the FOV doubles; it scales the per-human tangent fields
+		// HumanPlayer+0x1E4/+0x1E8 (x1.25 per step) and the projection is
+		// rebuilt from those tangents every frame. A one-shot tangent write
+		// from the hotkey thread was being clobbered by the engine's own view
+		// update, which is why the old implementation appeared dead. The
+		// requested zoom is now stored and re-applied EVERY frame by
+		// APPLY_BINOCULARS_FRAME() from the verified Binoculars_Draw hook
+		// (Hook.cpp @ 0x00471480), which runs on the game thread while the
+		// binoculars are open.
+		NATIVE_DECL void APPLY_BINOCULARS_FRAME(bool enhanced_active);
 		NATIVE_DECL void BINOCULARS_ZOOM_SET(float zoom_factor) {
 			if (zoom_factor < 1.0f) zoom_factor = 1.0f;
 			if (zoom_factor > 16.0f) zoom_factor = 16.0f;
-
-			double base_half_fov = (75.0 * 0.5) * (3.141592653589793 / 180.0);
-			double zoomed_half_fov = base_half_fov / static_cast<double>(zoom_factor);
-			double zoomed_vertical_half_fov = zoomed_half_fov * 0.75;
-			MESH_FOV_OVERRIDE_SET(static_cast<float>(75.0 / static_cast<double>(zoom_factor)));
-
-			DWORD oldProtect;
-			if (VirtualProtect((LPVOID)0x005335E8, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
-				*(double*)0x005335E8 = zoomed_half_fov;
-				VirtualProtect((LPVOID)0x005335E8, 8, oldProtect, &oldProtect);
+			g_requested_binocular_zoom = zoom_factor;
+			if (zoom_factor <= 1.0f) {
+				// Zoom disabled: restore the retail tangents derived from the
+				// FOV globals immediately so no zoom leaks into normal play.
+				APPLY_BINOCULARS_FRAME(false);
 			}
-			if (VirtualProtect((LPVOID)0x005339C0, 8, PAGE_EXECUTE_READWRITE, &oldProtect)) {
-				*(double*)0x005339C0 = zoomed_vertical_half_fov;
-				VirtualProtect((LPVOID)0x005339C0, 8, oldProtect, &oldProtect);
-			}
-
-			const int hp = READ_PTR(humanplayer_ptr);
-			if (hp) {
-				*(float*)(hp + 0x1E4) = tanf(static_cast<float>(zoomed_half_fov));
-				*(float*)(hp + 0x1E8) = tanf(static_cast<float>(zoomed_vertical_half_fov));
-			}
-			LOG_INFO("ENHANCER: Binoculars zoom set to %.1fx", zoom_factor);
+			LOG_INFO("ENHANCER: Binoculars zoom request %.1fx stored", zoom_factor);
 		}
 
-		NATIVE_DECL float BINOCULARS_ZOOM_GET() {
+		NATIVE_DECL float BINOCULARS_ZOOM_GET() { return g_requested_binocular_zoom; }
+
+		// Game-thread per-frame hook body. enhanced=true re-applies the enhancer
+		// zoom to the live player tangent fields; enhanced=false restores the
+		// retail tangents computed from the FOV globals (same math as
+		// HumanTaskViewReset 0x004659E0). All dereferences are guarded.
+		NATIVE_DECL void APPLY_BINOCULARS_FRAME(bool enhanced_active) {
 			const int hp = READ_PTR(humanplayer_ptr);
-			if (!hp) return 2.0f;
-			float tanX = *(float*)(hp + 0x1E4);
-			if (tanX <= 0.0f) return 2.0f;
-			float current_half_fov = atanf(tanX);
-			float base_half_fov = (75.0f * 0.5f) * (3.14159265f / 180.0f);
-			return base_half_fov / current_half_fov;
+			if (!hp) return;
+			__try {
+				double half_fov_h = *(double*)0x005335E8;
+				double half_fov_v = *(double*)0x005339C0;
+				float tan_h = tanf(static_cast<float>(half_fov_h));
+				float tan_v = tanf(static_cast<float>(half_fov_v));
+				if (enhanced_active && g_requested_binocular_zoom > 1.0f && tan_h > 0.0f) {
+					// Tangent scaling matches the retail zoom stepper (x1.25 steps).
+					tan_h /= g_requested_binocular_zoom;
+					tan_v /= g_requested_binocular_zoom;
+				}
+				*(float*)(hp + 0x1E4) = tan_h;
+				*(float*)(hp + 0x1E8) = tan_v;
+			} __except (EXCEPTION_EXECUTE_HANDLER) {}
 		}
 
 		// ── Music & SFX volume ──────────────────────────────────────────
@@ -826,32 +848,62 @@ namespace IGI {
 		}
 
 		// ── Draw distance ───────────────────────────────────────────────
-		// The values previously used here (0x00BCABC8, 0x00BCABF4 and
-		// 0x005C8C10) are clipping/configuration fields, not a draw-distance
-		// setter.  r2mcp and BlankName's IGIPatch show that retail visibility is
-		// selected by the Mesh3D_*LOD routines.  Keep the requested value as
-		// enhancer state until a verified LOD code patch is installed; never write
-		// arbitrary floats into the active render context.
+		// NOT IMPLEMENTABLE YET (honest degradation): r2 verification found no
+		// runtime writer or single scalar that controls world draw distance.
+		// The previously cited addresses are proven unrelated — 0xBCABC8 is a
+		// divisor constant used by fcn.004D03D0, and main stores config values
+		// through byte/int setters around fcn.0048F120..0048F2A0. Retail
+		// visibility is selected per-mesh by the Mesh3D_*LOD routines. Until
+		// those LOD thresholds are mapped, keep the requested value as enhancer
+		// state and never write arbitrary floats into the active render context.
 		NATIVE_DECL void DRAW_DISTANCE_SET(float distance) {
 			if (distance < 100.0f) distance = 100.0f;
 			if (distance > 50000.0f) distance = 50000.0f;
 			g_requested_draw_distance = distance;
-			LOG_WARNING("ENHANCER: Draw distance request %.0f recorded; retail LOD patch is not installed", distance);
+			LOG_WARNING("ENHANCER: Draw distance request %.0f recorded; no verified retail LOD patch exists yet", distance);
 		}
 
 		NATIVE_DECL float DRAW_DISTANCE_GET() { return g_requested_draw_distance; }
 
 		// ── Gamma / Brightness ──────────────────────────────────────────
-		// 0x005C8C14 has no retail readers in the r2mcp xref graph.  Retain the
-		// requested value for the status UI, but do not pretend it changes output.
+		// VERIFIED: fcn.00406220 returns the active player-profile record:
+		//   eax = 0xBC2388 + 0xD14 * dword[0xBC2384]  (profile index * stride).
+		// The record layout was confirmed from the retail defaults-reset
+		// routine fcn.00403B70: +0x0C int width, +0x10 int height,
+		// +0x14 int bpp, +0x18 int device index, +0x1C/0x1D/0x1E bytes
+		// (shadows/filtering/dynamic lighting), +0x220 float gamma (reset to
+		// 1.0f = 0x3F800000). The gamma field is read LIVE by the material/
+		// vertex lighting math (fld dword [eax+0x220] at 0x0049A22D and nine
+		// other render sites), so writing it changes brightness immediately.
+		typedef void* (__cdecl* GetProfileRecord_t)();
+		static GetProfileRecord_t fnGetProfileRecord = (GetProfileRecord_t)0x00406220;
+
 		NATIVE_DECL void GAMMA_SET(float gamma) {
 			if (gamma < 0.5f) gamma = 0.5f;
 			if (gamma > 3.0f) gamma = 3.0f;
 			g_requested_gamma = gamma;
-			LOG_WARNING("ENHANCER: Gamma request %.2f recorded; no verified retail gamma setter", gamma);
+			__try {
+				uint8_t* profile = (uint8_t*)fnGetProfileRecord();
+				if (profile && !IsBadWritePtr(profile + 0x220, 4)) {
+					*(float*)(profile + 0x220) = gamma;
+					LOG_INFO("ENHANCER: Profile gamma set to %.2f (record @ 0x%p +0x220)", gamma, profile);
+					return;
+				}
+				LOG_WARNING("ENHANCER: profile record unavailable; gamma request %.2f kept as state only", gamma);
+			} __except (EXCEPTION_EXECUTE_HANDLER) {
+				LOG_ERROR("ENHANCER: failed to write profile gamma");
+			}
 		}
 
-		NATIVE_DECL float GAMMA_GET() { return g_requested_gamma; }
+		NATIVE_DECL float GAMMA_GET() {
+			__try {
+				uint8_t* profile = (uint8_t*)fnGetProfileRecord();
+				if (profile && !IsBadReadPtr(profile + 0x220, 4)) {
+					return *(float*)(profile + 0x220);
+				}
+			} __except (EXCEPTION_EXECUTE_HANDLER) {}
+			return g_requested_gamma;
+		}
 
 		// ── Status display helper ───────────────────────────────────────
 		NATIVE_DECL void SHOW_STATUS(const std::string& msg) {

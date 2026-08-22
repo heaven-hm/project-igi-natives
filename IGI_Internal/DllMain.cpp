@@ -115,7 +115,7 @@ DWORD WINAPI InitializeModule(LPVOID module_parameter) {
       LOG_INFO("[Alt+F10] SFX Volume Down (-10 percent)");
       LOG_INFO("[Alt+F11] Show Enhancer Status Overlay");
       LOG_INFO("[Alt+F12] Cycle Draw Distance (5K -> 10K -> 20K -> 50K)");
-      LOG_INFO("[Alt+1] Toggle HDR Mode");
+      LOG_INFO("[Alt+1] Toggle HDR Gamma Boost (verified profile gamma path)");
       LOG_INFO("[Alt+2] Toggle Motion Blur");
       LOG_INFO("[Alt+3] Cycle Lightmaps Mode");
       LOG_INFO("[Alt+4] Toggle Enhanced Graphics");

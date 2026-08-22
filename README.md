@@ -108,6 +108,24 @@ The DLL provides the following implemented features accessible via hotkeys durin
 ### 🛠️ **Debug Features**:
 - **Home** (Debug builds only): Display all available hotkeys in console
 
+### 🚀 **IGI Enhancer Patch Hotkeys** (Alt + F1-F12 / Alt + 1-5):
+All enhancer mutations execute on the game thread via the FiberPool, and every
+patched address was re-verified against the retail IGI 1 `igi.exe` with radare2
+and Ghidra (see the evidence comments in `NativeHelper.hpp` / `Hook.cpp`).
+- **Alt+F1**: Cycle FPS (30 → 60 → 120 → 144) via the verified `FramesSet` native (`0x00402820`)
+- **Alt+F2**: Cycle FOV (75 → 90 → 100 → 110) via the live half-FOV doubles at `0x005335E8`/`0x005339C0`
+- **Alt+F3**: Cycle binoculars zoom (2x → 16x) — re-applied per frame through the `Binoculars_Draw` game-thread hook
+- **Alt+F4 / Ctrl+B**: Toggle enhanced binoculars (ESP boxes + zoom; restores retail view when disabled)
+- **Alt+F5 / Alt+F6**: Gamma up/down via the verified profile-record gamma float (`profile+0x220`, read live by the lighting math)
+- **Alt+F7-F10**: Music/SFX volume controls
+- **Alt+F11**: Show enhancer status overlay
+- **Alt+F12**: Cycle draw distance request *(state only — no verified LOD patch exists yet; degrades honestly)*
+- **Alt+1**: HDR gamma boost ON/OFF (retail gamma path; this engine build has no DX7 post-processing)
+- **Alt+2**: Temporal pacing toggle (120/60 FPS; no motion-blur pass exists in the engine)
+- **Alt+3**: Cycle lightmap modes via the verified byte setters `0x0048F240`/`0x0048F260`
+- **Alt+4**: Cycle graphics profiles (STANDARD/HIGH/ULTRA)
+- **Alt+5**: Enhanced computer map — tactical vector overlay drawn from the verified render hooks
+
 ## Modifying this project.
 You can modify the project by focusing on the **Features.cpp** file located in the _DllMainLoop()_ method under the _MENU_SCREEN_INGAME_ section. Add your logic for Adding/Removing Buildings/Weapons/A.I etc into the game using the FiberPool task scheduler for thread-safe execution.
 

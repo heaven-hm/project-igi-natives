@@ -451,24 +451,34 @@ void ScriptCompile() {
 // IGI Enhancer Patch — Handler implementations
 // ═══════════════════════════════════════════════════════════════════════
 
+// All enhancer mutations run on the game thread via the FiberPool so native
+// calls (FramesSet) and retail-state writes never race the main loop.
 void EnhancerCycleFPS() {
-  ENHANCER::CYCLE_FPS();
-  LOG_INFO("EnhancerCycleFPS: FPS set to %d", ENHANCER::g_Enhancer.target_fps);
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_FPS();
+    LOG_INFO("EnhancerCycleFPS: FPS set to %d", ENHANCER::g_Enhancer.target_fps);
+  }, 3);
 }
 
 void EnhancerCycleFOV() {
-  ENHANCER::CYCLE_FOV();
-  LOG_INFO("EnhancerCycleFOV: FOV set to %.0f", ENHANCER::g_Enhancer.fov_degrees);
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_FOV();
+    LOG_INFO("EnhancerCycleFOV: FOV set to %.0f", ENHANCER::g_Enhancer.fov_degrees);
+  }, 3);
 }
 
 void EnhancerCycleBinoculars() {
-  ENHANCER::CYCLE_BINOCULAR_ZOOM();
-  LOG_INFO("EnhancerCycleBinoculars: Zoom set to %.0fx", ENHANCER::g_Enhancer.binocular_zoom);
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_BINOCULAR_ZOOM();
+    LOG_INFO("EnhancerCycleBinoculars: Zoom set to %.0fx", ENHANCER::g_Enhancer.binocular_zoom);
+  }, 3);
 }
 
 void EnhancerCycleDrawDistance() {
-  ENHANCER::CYCLE_DRAW_DISTANCE();
-  LOG_INFO("EnhancerCycleDrawDistance: Distance set to %.0f", ENHANCER::g_Enhancer.draw_distance);
+  FiberPool::Instance().RunExternal([] {
+    ENHANCER::CYCLE_DRAW_DISTANCE();
+    LOG_INFO("EnhancerCycleDrawDistance: Distance set to %.0f (state only; no verified LOD patch)", ENHANCER::g_Enhancer.draw_distance);
+  }, 3);
 }
 
 void EnhancerGammaUp() {
@@ -536,26 +546,30 @@ bool g_improved_binoculars = false;
 void EnhancerToggleHDR() {
   g_hdr_enabled = !g_hdr_enabled;
   FiberPool::Instance().RunExternal([] {
-    float gammaVal = g_hdr_enabled ? 1.3f : 1.0f;
-    ENHANCER::GAMMA_SET(gammaVal);
-    string msg = string("HDR request: ") + (g_hdr_enabled ? "ON (no verified DX7 HDR path)" : "OFF");
+    // VERIFIED live path: the profile record gamma float (+0x220 of the
+    // record returned by fcn.00406220) is consumed by the material/vertex
+    // lighting math every frame. True DX7 post-processing does not exist in
+    // this engine build, so HDR mode is an honest gamma/brightness boost
+    // through the retail's own verified field instead of a fake shader.
+    ENHANCER::GAMMA_SET(g_hdr_enabled ? 1.3f : 1.0f);
+    string msg = string("HDR Gamma Boost: ") + (g_hdr_enabled ? "ON" : "OFF");
     MISC::STATUS_MESSAGE_SHOW(msg);
   }, 3);
-  LOG_WARNING("ENHANCER: HDR request toggled to %s; no verified DX7 HDR path is installed", g_hdr_enabled ? "ON" : "OFF");
+  LOG_INFO("ENHANCER: HDR gamma boost %s (verified profile +0x220 path; no DX7 post-processing in this engine)", g_hdr_enabled ? "ON" : "OFF");
 }
 
 void EnhancerToggleMotionBlur() {
   g_blur_enabled = !g_blur_enabled;
   FiberPool::Instance().RunExternal([] {
-    if (g_blur_enabled) {
-      ENHANCER::FRAMERATE_SET(120);
-    } else {
-      ENHANCER::FRAMERATE_SET(60);
-    }
+    // VERIFIED: FramesSet (0x00402820) is the retail frame-rate setter
+    // (argument = target FPS; retail passes 30 and 60). A real motion-blur
+    // pass would need a verified post-processing hook that this engine
+    // build does not expose, so this toggle only changes temporal pacing.
+    ENHANCER::FRAMERATE_SET(g_blur_enabled ? 120 : 60);
     string msg = string("Temporal pacing: ") + (g_blur_enabled ? "120 FPS" : "60 FPS") + " (motion-blur pass unavailable)";
     MISC::STATUS_MESSAGE_SHOW(msg);
   }, 3);
-  LOG_WARNING("ENHANCER: Temporal pacing changed to %s; motion-blur pass is not installed", g_blur_enabled ? "120 FPS" : "60 FPS");
+  LOG_INFO("ENHANCER: Temporal pacing changed to %s via verified FramesSet", g_blur_enabled ? "120 FPS" : "60 FPS");
 }
 
 void EnhancerCycleLightmaps() {
@@ -593,6 +607,10 @@ static GetEngineConfigPtr_t fnGetEngineConfig = (GetEngineConfigPtr_t)0x00406220
 void UpdateEngineGraphicsConfig(int width, int height, int bpp, int deviceIndex, bool shadows, bool filtering, bool dynamicLighting, float gamma) {
     __try {
         uint8_t* pConfig = (uint8_t*)fnGetEngineConfig();
+        // Layout VERIFIED against the retail defaults-reset fcn.00403B70:
+        // +0x0C width, +0x10 height, +0x14 bpp, +0x18 device index,
+        // +0x1C/0x1D/0x1E option bytes, +0x220 float gamma. Record stride is
+        // 0xD14 bytes so every offset above stays inside the record.
         if (pConfig && !IsBadWritePtr(pConfig, 0x224)) {
             *(int*)(pConfig + 0x0C) = width;
             *(int*)(pConfig + 0x10) = height;
@@ -614,8 +632,8 @@ void EnhancerToggleEnhancedGraphics() {
   string profileName;
   if (g_gfx_profile == 0) {
     profileName = "STANDARD native profile (30 FPS, 75 FOV)";
-    UpdateEngineGraphicsConfig(640, 480, 16, 0, false, false, false, 1.0f);
     FiberPool::Instance().RunExternal([] {
+      UpdateEngineGraphicsConfig(640, 480, 16, 0, false, false, false, 1.0f);
       ENHANCER::FRAMERATE_SET(30);
       ENHANCER::FOV_SET(75.0f);
       ENHANCER::DRAW_DISTANCE_SET(5000.0f);
@@ -624,23 +642,23 @@ void EnhancerToggleEnhancedGraphics() {
     }, 3);
   } else if (g_gfx_profile == 1) {
     profileName = "HIGH native profile (60 FPS, 90 FOV)";
-    UpdateEngineGraphicsConfig(1280, 720, 32, 0, true, true, true, 1.1f);
     FiberPool::Instance().RunExternal([] {
+      UpdateEngineGraphicsConfig(1280, 720, 32, 0, true, true, true, 1.1f);
       ENHANCER::FRAMERATE_SET(60);
       ENHANCER::FOV_SET(90.0f);
       ENHANCER::DRAW_DISTANCE_SET(15000.0f);
       ENHANCER::GAMMA_SET(1.1f);
-      MISC::STATUS_MESSAGE_SHOW("Graphics Profile: HIGH (60 FPS, 90 FOV, 15K Dist)");
+      MISC::STATUS_MESSAGE_SHOW("Graphics Profile: HIGH (60 FPS, 90 FOV)");
     }, 3);
   } else {
-    profileName = "ULTRA native profile (144 FPS, 100 FOV; no dgVoodoo wrapper installed)";
-    UpdateEngineGraphicsConfig(1920, 1080, 32, 0, true, true, true, 1.25f);
+    profileName = "ULTRA native profile (144 FPS, 100 FOV)";
     FiberPool::Instance().RunExternal([] {
+      UpdateEngineGraphicsConfig(1920, 1080, 32, 0, true, true, true, 1.25f);
       ENHANCER::FRAMERATE_SET(144);
       ENHANCER::FOV_SET(100.0f);
       ENHANCER::DRAW_DISTANCE_SET(50000.0f);
       ENHANCER::GAMMA_SET(1.25f);
-      MISC::STATUS_MESSAGE_SHOW("Graphics Profile: ULTRA native (144 FPS, 100 FOV; wrapper unavailable)");
+      MISC::STATUS_MESSAGE_SHOW("Graphics Profile: ULTRA native (144 FPS, 100 FOV)");
     }, 3);
   }
   LOG_INFO("ENHANCER: Switched Graphics Profile to %s", profileName.c_str());
@@ -648,34 +666,35 @@ void EnhancerToggleEnhancedGraphics() {
 
 void EnhancerToggleImprovedBinoculars() {
   g_improved_binoculars = !g_improved_binoculars;
-  if (g_improved_binoculars) {
-    ENHANCER::BINOCULARS_ZOOM_SET(16.0f);
-    ENHANCER::DRAW_DISTANCE_SET(50000.0f);
-  } else {
-    ENHANCER::BINOCULARS_ZOOM_SET(2.0f);
-    ENHANCER::DRAW_DISTANCE_SET(5000.0f);
-  }
-  LOG_INFO("ENHANCER: Improved Binoculars %s", g_improved_binoculars ? "ENABLED" : "DISABLED");
+  FiberPool::Instance().RunExternal([] {
+    if (g_improved_binoculars) {
+      ENHANCER::BINOCULARS_ZOOM_SET(16.0f);
+    } else {
+      // Disabling restores the retail tangents immediately (guarded).
+      ENHANCER::BINOCULARS_ZOOM_SET(1.0f);
+    }
+    string msg = string("Enhanced Binoculars: ") + (g_improved_binoculars ? "ON (16x)" : "OFF");
+    MISC::STATUS_MESSAGE_SHOW(msg);
+  }, 3);
+  LOG_INFO("ENHANCER: Improved Binoculars %s (per-frame tangent zoom via Binoculars_Draw hook)", g_improved_binoculars ? "ENABLED" : "DISABLED");
 }
 
 void EnhancerToggleComputerMap() {
   g_improved_map = !g_improved_map;
-  if (g_improved_map) {
-    // FUN_0046B040 returns the live HumanPlayerInput object and
-    // FUN_0046A330 reads its +0x34 action word.  OpenIGI identifies the
-    // MapComputer action as bit 0x20000.  Set only that edge on the game
-    // thread so the retail task can perform its normal open transition;
-    // do not call the map task from this worker thread.
-    FiberPool::Instance().RunExternal([] {
-      __try {
-        uint32_t* inputFlags = reinterpret_cast<uint32_t*>(0x005BE2B0 + 0x34);
-        *inputFlags |= 0x00020000u;
-      } __except (EXCEPTION_EXECUTE_HANDLER) {
-        LOG_WARNING("ENHANCER: unable to request the retail computer-map input edge");
-      }
-    }, 3);
-    LOG_INFO("ENHANCER: Enhanced Computer Map enabled; open the retail computer to draw the vector map overlay");
-  } else {
-    LOG_INFO("ENHANCER: Enhanced Computer Map disabled");
-  }
+  // The previous implementation wrote bit 0x20000 into dword[0x005BE2B0]+0x34,
+  // but r2 proves 0x005BE2B0 is the POINTER VARIABLE holding the
+  // HumanPlayerInput object (getter fcn.0046B040: mov eax, [0x5BE2B0]), so
+  // the old code corrupted the adjacent global at 0x005BE2E4 instead of
+  // setting an input flag. Bit 0x20000 also does not exist anywhere in the
+  // IGI 1 binary (the MapComputer task tests bits 0x10/0x20 of input+0x34
+  // for mouse clicks inside the open computer). The enhanced map is now
+  // purely the verified overlay drawn from the game-thread render hooks
+  // (Mesh_SkinBones @ 0x0049F700 and Binoculars_Draw @ 0x00471480), so the
+  // toggle only flips that flag — no blind input writes, no crash risk.
+  FiberPool::Instance().RunExternal([enabled = g_improved_map] {
+    string msg = enabled ? "Enhanced Computer Map: ON (tactical overlay active)"
+                         : "Enhanced Computer Map: OFF";
+    MISC::STATUS_MESSAGE_SHOW(msg);
+  }, 3);
+  LOG_INFO("ENHANCER: Enhanced Computer Map %s (verified hook overlay; retail input flags untouched)", g_improved_map ? "enabled" : "disabled");
 }

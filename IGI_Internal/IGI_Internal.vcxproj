@@ -216,7 +216,6 @@
     <ClInclude Include="Graphs\Graph.hpp" />
     <ClInclude Include="HookDetours.hpp" />
     <ClInclude Include="Hook\Hook.hpp" />
-    <ClInclude Include="Hook\DX7Hook.hpp" />
     <ClInclude Include="Hook\MinHook.hpp" />
     <ClInclude Include="Libs\GTConsole.hpp" />
     <ClInclude Include="Libs\GTLibc.hpp" />
@@ -246,7 +245,6 @@
     <ClCompile Include="GameResources\GameResource.cpp" />
     <ClCompile Include="Graphs\Graph.cpp" />
     <ClCompile Include="Hook\Hook.cpp" />
-    <ClCompile Include="Hook\DX7Hook.cpp" />
     <ClCompile Include="Memory\Memory.cpp" />
     <ClCompile Include="Natives\Natives.cpp" />
     <ClCompile Include="Player\HumanSoldier.cpp" />
