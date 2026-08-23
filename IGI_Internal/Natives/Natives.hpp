@@ -90,6 +90,10 @@ namespace IGI {
 		GAME_DATA_SYMBOL_REMOVE = 0x004B80A0,//Unimplemented Hash.
 		LOADING_SCREEN_SHOW = 0x0048A440,//Unimplemented Hash.
 		QTASK_HASH_TABLE = 0x004BAAC0,//Unimplemented Hash.
+		AMMO_TYPE_OPEN = 0x0047CAB0,
+		SOUND_LOAD = 0x004E68D0,
+		SCRIPT_BUF_INIT = 0x004C0200,
+		RIGID_DYNCUBE_OBJ_READ = 0x004C48E0,
 
 		// ─═══ DISCOVERED NATIVES (feature/natives-discovery) ─══════════════════
 		// All 143 entries below were extracted from igi.exe's own script-command

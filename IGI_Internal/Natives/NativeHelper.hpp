@@ -67,8 +67,8 @@ namespace IGI {
 	}
 
 	namespace LEVEL {
-		NATIVE_DECL void RESTART() { auto cleanup = (int(__cdecl *)(int))0x00402820; NATIVE_INVOKE<Void>((Void)HASH::LEVEL_RESTART); cleanup(0x1E); *(int*)(0x00567C8C + 0x28) = 4;}
-		NATIVE_DECL void LOAD() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_LOAD, 0x0057B568, 35); }
+		NATIVE_DECL void RESTART() { auto cleanup = (int(__cdecl *)(int))0x00402820; NATIVE_INVOKE<Void>((Void)HASH::GAME_RESTART); cleanup(0x1E); *(int*)(0x00567C8C + 0x28) = 4;}
+		NATIVE_DECL void LOAD() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_LOAD_OBJECTS, 0x0057B568, 35); }
 		NATIVE_DECL int GET() { return READ_PTR(0x00539560); }
 		NATIVE_DECL void SET(int level) { *(PINT)0x00539560 = (level < 1 || level > GAME_LEVEL_MAX) ? 1 : level; }
 	}
@@ -228,4 +228,340 @@ namespace IGI {
 	namespace MISSION {
 		NATIVE_DECL void OPEN(char** ptr_mission) { NATIVE_INVOKE<Void>((Void)HASH::MISSION_OPEN, ptr_mission); }
 	}
+	// ═══════════════════════════════════════════════════════════════
+	// AI - soldier AI actions/functions (registered at 0x44CCA0).
+	// Call from AI event-handler scripts context or via FiberPool tasks.
+	// Enums: AIEVENT_* 0-23, AIALARMACCESS BEFORECOMBAT=0/AFTERCOMBAT=1,
+	//        AIACTIONFLAG NONE=0/PUSHABLE=1 (see IGI-Natives.json notes).
+	// ═══════════════════════════════════════════════════════════════
+	namespace AI {
+		// -- actions: order the AI to do something --
+		NATIVE_DECL void PATROL(int target, int mustBeZero, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_PATROL, target, mustBeZero, flags); }
+		NATIVE_DECL void COMBAT(int param) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_COMBAT, param); }
+		NATIVE_DECL void DEAD(int param) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_DEAD, param); }
+		NATIVE_DECL void FALL_FLAT(int p1, int p2) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_FALL_FLAT, p1, p2); }
+		NATIVE_DECL void ACTIVATE(int target, int param2, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_ACTIVATE, target, param2, flags); }
+		NATIVE_DECL void WALK_TO_NODE(int nodeId, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_WALK_TO_NODE, nodeId, flags); }
+		NATIVE_DECL void RUN_TO_NODE(int nodeId, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_RUN_TO_NODE, nodeId, flags); }
+		NATIVE_DECL void FIRE_AT_NODE(int nodeId, int p1, int p2, int p3, int p4) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_FIRE_AT_NODE, nodeId, p1, p2, p3, p4); }
+		NATIVE_DECL void FIRE_AT_TASK(int taskId, int p1, int p2, int p3, int p4) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_FIRE_AT_TASK, taskId, p1, p2, p3, p4); }
+		NATIVE_DECL void PLAY_ANIMATION(int animId, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_PLAY_ANIMATION, animId, flags); }
+		NATIVE_DECL void PLAY_SOUND(int soundId, int param2, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_PLAY_SOUND, soundId, param2, flags); }
+		NATIVE_DECL void MOVE_TO_EVENT(int eventId, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_MOVE_TO_EVENT, eventId, flags); }
+		NATIVE_DECL void LOOK_AT_EVENT(int eventId, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_LOOK_AT_EVENT, eventId, flags); }
+		NATIVE_DECL void STUNNED(int p1, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_STUNNED, p1, flags); }
+		NATIVE_DECL void KICK_GRENADE(int param) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_KICK_GRENADE, param); }
+		NATIVE_DECL void RUN_PANICKING(int p1, int flags) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_RUN_PANICKING, p1, flags); }
+		NATIVE_DECL void IDLE(int param) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_IDLE, param); }
+		NATIVE_DECL void SET_COMBAT(int enemyId) { NATIVE_INVOKE<Void>((Void)HASH::AI_ACTION_SET_COMBAT, enemyId); }
+		// -- functions: query/configure the AI --
+		NATIVE_DECL void DEFAULT_HANDLER() { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_DEFAULT_HANDLER); }
+		NATIVE_DECL void REMOVE_ALARM_ACTIONS() { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_REMOVE_ALARM_ACTIONS); }
+		NATIVE_DECL void SEND_RESPONSE() { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SEND_RESPONSE); }
+		NATIVE_DECL void SET_VIEW_LENGTH(int length) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_VIEW_LENGTH, length); }
+		NATIVE_DECL void SET_ALARM_VIEW_LENGTH(int length) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_ALARM_VIEW_LENGTH, length); }
+		NATIVE_DECL void SET_VIEW_ALPHA(int alpha) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_VIEW_ALPHA, alpha); }
+		NATIVE_DECL void SET_VIEW_GAMMA(int gamma) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_VIEW_GAMMA, gamma); }
+		NATIVE_DECL void SET_SECONDARY_VIEW_LENGTH(int length) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH, length); }
+		NATIVE_DECL void SET_SECONDARY_ALARM_VIEW_LENGTH(int length) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH, length); }
+		NATIVE_DECL void SET_SECONDARY_VIEW_ALPHA(int alpha) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA, alpha); }
+		NATIVE_DECL void SET_SECONDARY_VIEW_GAMMA(int gamma) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA, gamma); }
+		NATIVE_DECL void SET_EVENT_PRIORITY(int priority) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_EVENT_PRIORITY, priority); }
+		NATIVE_DECL void SET_INVULNERABILITY(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_INVULNERABILITY, onOff); }
+		NATIVE_DECL void SET_INSTANT_DEATH(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_INSTANT_DEATH, onOff); }
+		NATIVE_DECL void SET_DEATH_ANIMATION(int animId) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_DEATH_ANIMATION, animId); }
+		NATIVE_DECL void SET_ALARM_TRIGGER_ID(int id) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_ALARM_TRIGGER_ID, id); }
+		NATIVE_DECL void SET_ALARM_CONTROL_ID(int id) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_ALARM_CONTROL_ID, id); }
+		NATIVE_DECL void SET_ALARM_ACCESS(int access) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_ALARM_ACCESS, access); }
+		NATIVE_DECL void SET_GUNNER_ID(int id) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_GUNNER_ID, id); }
+		NATIVE_DECL void SET_SCRIPT_INTEGER(int varId, int value) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE, varId, value); }
+		NATIVE_DECL void SET_SCRIPT_REAL(int varId, float value) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_SCRIPT_REAL_VALUE, varId, value); }
+		NATIVE_DECL void SET_ANIMATION_INTERVAL(int entry, int interval) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_SET_ANIMATION_INTERVAL, entry, interval); }
+		NATIVE_DECL void ADD_ANIMATION_ENTRY(int animId, int data) { NATIVE_INVOKE<Void>((Void)HASH::AI_FUNCTION_ADD_ANIMATION_ENTRY, animId, data); }
+		NATIVE_DECL int GET_ALARM_TRIGGER_ID() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_ALARM_TRIGGER_ID); }
+		NATIVE_DECL int GET_ALARM_CONTROL_ID() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_ALARM_CONTROL_ID); }
+		NATIVE_DECL int GET_ALARM_ACCESS() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_ALARM_ACCESS); }
+		NATIVE_DECL int GET_GUNNER_ID() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_GUNNER_ID); }
+		NATIVE_DECL int GET_ALARM_CONTROL_STATUS() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_ALARM_CONTROL_STATUS); }
+		NATIVE_DECL int GET_GUNNER_STATUS() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_GUNNER_STATUS); }
+		NATIVE_DECL int GET_SCRIPT_INTEGER(int varId) { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE, varId); }
+		NATIVE_DECL float GET_SCRIPT_REAL(int varId) { return NATIVE_INVOKE<float>((Void)HASH::AI_FUNCTION_GET_SCRIPT_REAL_VALUE, varId); }
+		NATIVE_DECL int GET_CURRENT_EVENT_TYPE() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_CURRENT_EVENT_TYPE); }
+		NATIVE_DECL int IS_EVENT_BEHIND() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_IS_EVENT_BEHIND); }
+		NATIVE_DECL int GET_ANIMATION_TO_PLAY() { return NATIVE_INVOKE<int>((Void)HASH::AI_FUNCTION_GET_ANIMATION_TO_PLAY); }
+		NATIVE_DECL float GET_RANDOM_VALUE(float max) { return NATIVE_INVOKE<float>((Void)HASH::AI_FUNCTION_GET_RANDOM_VALUE, max); }
+		NATIVE_DECL float GET_EVENT_DISTANCE() { return NATIVE_INVOKE<float>((Void)HASH::AI_FUNCTION_GET_EVENT_DISTANCE); }
+		NATIVE_DECL float GET_ALARM_TRIGGER_DISTANCE() { return NATIVE_INVOKE<float>((Void)HASH::AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE); }
+	}
+	// ═══════════════════════════════════════════════════════════════
+	// CONFIGMENU - the Config_* natives the retail menu scripts call,
+	// plus the GO_* config-writer forms. All verified against igi.exe
+	// registration table + MAINMENU.QVM/ingamemenu.qvm callers.
+	// ═══════════════════════════════════════════════════════════════
+	namespace CONFIGMENU {
+		// -- player profiles --
+		NATIVE_DECL int PROFILES_COUNT_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GET_NUMBER_OF_PLAYER_PROFILES); }
+		NATIVE_DECL int ACTIVE_PROFILE_INDEX_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GET_ACTIVE_PLAYER_PROFILE_INDEX); }
+		NATIVE_DECL void ACTIVE_PROFILE_INDEX_SET(int index) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX, index); }
+		NATIVE_DECL int PROFILE_CREATE(const char* name, int sourceIndex) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_CREATE_NEW_PLAYER_PROFILE, name, sourceIndex); }
+		NATIVE_DECL int PROFILE_DELETE(int index) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_DELETE_PLAYER_PROFILE, index); }
+		NATIVE_DECL int PROFILE_ACTIVE_MISSION_GET(int profileIndex) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_PLAYER_GET_ACTIVE_MISSION, profileIndex); }
+		NATIVE_DECL void PROFILE_LIST_FILL() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_PLAYER_PROFILE_LIST_BOX); }
+		// -- graphics --
+		NATIVE_DECL void RENDER_DEVICE_LIST_FILL() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_RENDER_DEVICE_LIST_BOX); }
+		NATIVE_DECL void RESOLUTION_LIST_FILL(int deviceIndex) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_SCREEN_RESOLUTION_LIST_BOX, deviceIndex); }
+		NATIVE_DECL int GFX_DEVICE_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_DEVICE); }
+		NATIVE_DECL void GFX_DEVICE_SET(int deviceIndex) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_SET_DEVICE, deviceIndex); }
+		NATIVE_DECL int GFX_RESOLUTION_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_RESOLUTION); }
+		NATIVE_DECL void GFX_RESOLUTION_SET(int modeIndex) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_SET_RESOLUTION, modeIndex); }
+		NATIVE_DECL float GFX_GAMMA_GET() { return NATIVE_INVOKE<float>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_GAMMA); }
+		NATIVE_DECL void GFX_GAMMA_SET(float gamma) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_SET_GAMMA, gamma); }
+		NATIVE_DECL int GFX_TRANSPARENCY_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_TRANSPARENCY); }
+		NATIVE_DECL void GFX_TRANSPARENCY_SET(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_SET_TRANSPARENCY, onOff); }
+		NATIVE_DECL int GFX_PERF_FLAGS_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_PERFORMANCE_FLAGS); }
+		NATIVE_DECL void GFX_PERF_FLAGS_SET(int flags) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_SET_PERFORMANCE_FLAGS, flags); }
+		NATIVE_DECL int GFX_PERF_FLAGS_FROM_LEVEL(int level) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_PERF_FLAGS_FROM_LEVEL, level); }
+		NATIVE_DECL int GFX_PERF_LEVEL_FROM_FLAGS(int flags) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_GET_PERF_LEVEL_FROM_FLAGS, flags); }
+		NATIVE_DECL int GFX_PERF_LEVELS_COUNT() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GRAPHIC_OPTIONS_NUM_PERF_LEVELS); }
+		NATIVE_DECL void GFX_RESET() { NATIVE_INVOKE<Void>((Void)HASH::RESET); }
+		// -- sound --
+		NATIVE_DECL int SFX_ENABLED_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS); }
+		NATIVE_DECL void SFX_ENABLED_SET(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS, onOff); }
+		NATIVE_DECL float SFX_VOLUME_GET() { return NATIVE_INVOKE<float>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_SOUNDS_EFFECTS_VOLUME); }
+		NATIVE_DECL void SFX_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_SOUNDS_EFFECTS_VOLUME, volume); }
+		NATIVE_DECL int MUSIC_ENABLED_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_MUSIC); }
+		NATIVE_DECL void MUSIC_ENABLED_SET(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_MUSIC, onOff); }
+		NATIVE_DECL float MUSIC_VOLUME_GET() { return NATIVE_INVOKE<float>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_MUSIC_VOLUME); }
+		NATIVE_DECL void MUSIC_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_MUSIC_VOLUME, volume); }
+		NATIVE_DECL int SPEECH_ENABLED_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_SPEECH); }
+		NATIVE_DECL void SPEECH_ENABLED_SET(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_SPEECH, onOff); }
+		NATIVE_DECL float SPEECH_VOLUME_GET() { return NATIVE_INVOKE<float>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_SPEECH_VOLUME); }
+		NATIVE_DECL void SPEECH_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_SPEECH_VOLUME, volume); }
+		NATIVE_DECL int REVERSE_STEREO_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_SOUND_OPTIONS_GET_REVERSE_STEREO); }
+		NATIVE_DECL void REVERSE_STEREO_SET(int onOff) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SOUND_OPTIONS_SET_REVERSE_STEREO, onOff); }
+		// -- input --
+		NATIVE_DECL int INVERT_MOUSE_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GAME_OPTIONS_INPUT_GET_INVERT_MOUSE); }
+		NATIVE_DECL void INVERT_MOUSE_SET(int invert) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GAME_OPTIONS_INPUT_SET_INVERT_MOUSE, invert); }
+		NATIVE_DECL int MOUSE_SENSITIVITY_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GAME_OPTIONS_INPUT_GET_MOUSE_SENSITIVITY); }
+		NATIVE_DECL void MOUSE_SENSITIVITY_SET(int value) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GAME_OPTIONS_INPUT_SET_MOUSE_SENSITIVITY, value); }
+		NATIVE_DECL int BLOOD_ENABLED_GET() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_GAME_OPTIONS_INPUT_GET_BLOOD_ENABLED); }
+		NATIVE_DECL void BLOOD_ENABLED_SET(int blood) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_GAME_OPTIONS_INPUT_SET_BLOOD_ENABLED, blood); }
+		// -- content control --
+		NATIVE_DECL const char* CONTENT_PASSWORD_GET() { return NATIVE_INVOKE<const char*>((Void)HASH::CONFIG_GET_CONTENT_CONTROL_PASSWORD); }
+		NATIVE_DECL int CONTENT_PASSWORD_VERIFY(const char* password) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_VERIFY_CONTENT_CONTROL_PASSWORD, password); }
+		NATIVE_DECL int CONTENT_PASSWORD_ENABLED() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_IS_CONTENT_CONTROL_PASSWORD_ENABLED); }
+		NATIVE_DECL void CONTENT_PASSWORD_SET() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SET_CONTENT_CONTROL_PASSWORD); }
+		// -- misc --
+		NATIVE_DECL int IS_GERMANY() { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_IS_GERMANY); }
+		NATIVE_DECL void MISSION_SELECTION_FILL() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_MISSION_SELECTION_BOX); }
+		NATIVE_DECL void MISSION_PICTURE_FILL() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_MISSION_PICTURE_BOX); }
+		NATIVE_DECL void MISSION_TEXT_FILL() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_MISSION_TEXT_BOX); }
+		NATIVE_DECL void COMPILE(int context, const char* cfgText, int flags) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_COMPILE, context, cfgText, flags); }
+		// -- GO_* config writers (used while a .cfg/GO script block is parsed) --
+		NATIVE_DECL void GO_PLAYER(const char* name) { NATIVE_INVOKE<Void>((Void)HASH::GO_PLAYER, name); }
+		NATIVE_DECL void GO_ACTIVE_MISSION(int mission) { NATIVE_INVOKE<Void>((Void)HASH::GO_ACTIVE_MISSION, mission); }
+		NATIVE_DECL void GO_IN_REMAP(int key1, int key2, int action) { NATIVE_INVOKE<Void>((Void)HASH::GO_IN_REMAP, key1, key2, action); }
+		NATIVE_DECL void GO_IN_MOU_INV(int invert) { NATIVE_INVOKE<Void>((Void)HASH::GO_IN_MOU_INV, invert); }
+		NATIVE_DECL void GO_IN_MOU_SENS(float sensitivity) { NATIVE_INVOKE<Void>((Void)HASH::GO_IN_MOU_SENS, sensitivity); }
+		NATIVE_DECL void GO_GFX_DISP(int displayMode) { NATIVE_INVOKE<Void>((Void)HASH::GO_GFX_DISP, displayMode); }
+		NATIVE_DECL void GO_GFX_DEVICE(int deviceIndex) { NATIVE_INVOKE<Void>((Void)HASH::GO_GFX_DEVICE, deviceIndex); }
+		NATIVE_DECL void GO_GFX_GAMMA(float gamma) { NATIVE_INVOKE<Void>((Void)HASH::GO_GFX_GAMMA, gamma); }
+		NATIVE_DECL void GO_GFX_PERFORMANCE(int flags) { NATIVE_INVOKE<Void>((Void)HASH::GO_GFX_PERFORMANCE, flags); }
+		NATIVE_DECL void GO_GAME_LANG(int language) { NATIVE_INVOKE<Void>((Void)HASH::GO_GAME_LANG, language); }
+		NATIVE_DECL void GO_GAME_DIFF(int difficulty) { NATIVE_INVOKE<Void>((Void)HASH::GO_GAME_DIFF, difficulty); }
+		NATIVE_DECL void GO_IS_BLOOD(int blood) { NATIVE_INVOKE<Void>((Void)HASH::GO_IS_BLOOD, blood); }
+		NATIVE_DECL void GO_SOUND_SPEECH(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GO_SOUND_SPEECH, volume); }
+		NATIVE_DECL void GO_SOUND_MUSIC(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GO_SOUND_MUSIC, volume); }
+		NATIVE_DECL void GO_SOUND_FX(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GO_SOUND_FX, volume); }
+		NATIVE_DECL void GO_CONTENT_PW(const char* password) { NATIVE_INVOKE<Void>((Void)HASH::GO_CONTENT_CONTROL_PW, password); }
+	}
+	// ═══════════════════════════════════════════════════════════════
+	// MENU - MenuManager screen-stack control (all verified vs igi.exe).
+	// ═══════════════════════════════════════════════════════════════
+	namespace MENU {
+		NATIVE_DECL void REQUEST_SCREEN(int screenId, int flags) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_REQUEST_SCREEN, screenId, flags); }
+		NATIVE_DECL void PUSH_SCREEN(int screenId) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_PUSH_SCREEN, screenId); }
+		NATIVE_DECL void POP_SCREEN(int param) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_POP_SCREEN, param); }
+		NATIVE_DECL void LEAVE_MENUS(int p1, int p2) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_LEAVE_MENUS, p1, p2); }
+		NATIVE_DECL void SET_LANGUAGE(int langIndex) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_SET_LANGUAGE, langIndex); }
+		NATIVE_DECL void FORCE_UPDATE_WINDOW(int param) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_FORCE_UPDATE_WINDOW, param); }
+		NATIVE_DECL void ACTIVATE_POPUP(int popupId) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_ACTIVATE_POPUP_SCREEN, popupId); }
+		NATIVE_DECL void DEACTIVATE_POPUP() { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_DEACTIVATE_POPU_SCREEN); }
+		NATIVE_DECL void SET_ENABLED(int enabled) { NATIVE_INVOKE<Void>((Void)HASH::MENU_MANAGER_SET_ENABLED, enabled); }
+		NATIVE_DECL int* OPEN(int p1, const char* menu_str, char p3, char p4, int p5) { return NATIVE_INVOKE<int*>((Void)HASH::MENU_MANAGER, p1, menu_str, p3, p4, p5); }
+	}
+	// ═══════════════════════════════════════════════════════════════
+	// LEVELFLOW - level flow state helpers.
+	// ═══════════════════════════════════════════════════════════════
+	namespace LEVELFLOW {
+		NATIVE_DECL int BREAK_CUTSCENE_KEY_GET() { return NATIVE_INVOKE<int>((Void)HASH::LEVEL_FLOW_GET_BREAK_CUT_SCENE_KEY); }
+		NATIVE_DECL int IS_COUNTRY_USA() { return NATIVE_INVOKE<int>((Void)HASH::LEVEL_FLOW_IS_COUNTRY_USA); }
+		NATIVE_DECL void LEVEL_FAILED() { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_FLOW_LEVEL_FAILED); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// MOVIE - movie subtitle registration (parser context).
+	// ═══════════════════════════════════════════════════════════════
+	namespace MOVIE {
+		NATIVE_DECL void SUBTITLE_REGISTER_FONT() { NATIVE_INVOKE<Void>((Void)HASH::MOVIE_SUBTITLE_REGISTER_FONT); }
+		NATIVE_DECL void SUBTITLE_REGISTER_TEXT() { NATIVE_INVOKE<Void>((Void)HASH::MOVIE_SUBTITLE_REGISTER_TEXT); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// CONTROLS - controls-menu slider conversion helpers.
+	// ═══════════════════════════════════════════════════════════════
+	namespace CONTROLS {
+		NATIVE_DECL float FLOAT_FROM_OFFSET(int offset) { return NATIVE_INVOKE<float>((Void)HASH::CONTROLS_MENU_CONVERT_FLOAT_FROM_OFFSET, offset); }
+		NATIVE_DECL int OFFSET_FROM_FLOAT(float value) { return NATIVE_INVOKE<int>((Void)HASH::CONTROLS_MENU_CONVERT_OFFSET_FROM_FLOAT, value); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// TASK - task definition helpers (parser context).
+	// ═══════════════════════════════════════════════════════════════
+	namespace TASK {
+		NATIVE_DECL void NEW() { NATIVE_INVOKE<Void>((Void)HASH::TASK_NEW); }
+		NATIVE_DECL void DECLARE_PARAMETERS() { NATIVE_INVOKE<Void>((Void)HASH::TASK_DECLARE_PARAMETERS); }
+		NATIVE_DECL void TYPE_SET(int** task_str, int taskId) { NATIVE_INVOKE<Void>((Void)HASH::TASKTYPE_SET, task_str, taskId); }
+		NATIVE_DECL void BREAK_SCRIPT() { NATIVE_INVOKE<Void>((Void)HASH::BREAK_SCRIPT); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// FLOW - game flow state machine requests.
+	// FLOW_EVENT: QUIT=1, INTRO=2, MAINMENU=3, GAME=4, RESTART_GAME=5.
+	// ═══════════════════════════════════════════════════════════════
+	namespace FLOW {
+		NATIVE_DECL void REQUEST_EVENT(int eventId) { NATIVE_INVOKE<Void>((Void)HASH::FLOW_REQUEST_EVENT, eventId); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// SYMBOL - game-data symbol table management.
+	// ═══════════════════════════════════════════════════════════════
+	namespace SYMBOL {
+		NATIVE_DECL int DATA_LOAD(char* sym_buf, char* sym_path, char* sym_name) { return NATIVE_INVOKE<int>((Void)HASH::GAME_DATA_SYMBOL_LOAD, sym_buf, sym_path, sym_name); }
+		NATIVE_DECL void DATA_REMOVE(char* sym_buf) { NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REMOVE, sym_buf); }
+		NATIVE_DECL void REGISTER_BOOL8(int** sym_buf, int sym_addr) { NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_BOOL8, sym_buf, sym_addr); }
+		NATIVE_DECL void REGISTER_INT16(int** sym_buf, int sym_addr) { NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_INT16, sym_buf, sym_addr); }
+		NATIVE_DECL void REGISTER_INT32(int** sym_buf, int sym_addr) { NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_INT32, sym_buf, sym_addr); }
+		NATIVE_DECL void REGISTER_REAL32(int** sym_buf, int sym_addr) { NATIVE_INVOKE<Void>((Void)HASH::GAME_DATA_SYMBOL_REGISTER_REAL32, sym_buf, sym_addr); }
+		NATIVE_DECL void REMOVE(int* p1, int* symbol_name) { NATIVE_INVOKE<Void>((Void)HASH::SYMBOL_REMOVE, p1, symbol_name); }
+		NATIVE_DECL int* CHECK(int* p1, int** symbol_name, int* p3) { return NATIVE_INVOKE<int*>((Void)HASH::SYMBOL_CHECK, p1, symbol_name, p3); }
+		NATIVE_DECL void CONTEXT_SET(int* p1, int* p2, int p3) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_SETSYMBOL_CXT, p1, p2, p3); }
+		NATIVE_DECL void BUF_INIT(int* buff_arr1, int buff_arr2, int buff, int buff_size) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_BUF_INIT, buff_arr1, buff_arr2, buff, buff_size); }
+		NATIVE_DECL void WARNING_LEVEL_SET(int level) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_SET_WARNING_LEVEL, level); }
+		NATIVE_DECL void INIT(const char* file_name, int p2, int p3, int p4) { NATIVE_INVOKE<Void>((Void)HASH::SCRIPT_INIT, file_name, p2, p3, p4); }
+	}
+	// ═══════════════════════════════════════════════════════════════
+	// DISPLAY - display-mode control (verified vs igi.exe + IGIPatch).
+	// ═══════════════════════════════════════════════════════════════
+	namespace DISPLAY {
+		NATIVE_DECL int SET_MODE(void* modeStruct) { return NATIVE_INVOKE<int>((Void)HASH::DISPLAY_SET_MODE, modeStruct); }
+		NATIVE_DECL void* GET_ACTIVE_MODE() { return NATIVE_INVOKE<void*>((Void)HASH::DISPLAY_GET_ACTIVE_MODE); }
+		NATIVE_DECL void BACKGROUND_COLOUR_SET(int r, int g, int b) { NATIVE_INVOKE<Void>((Void)HASH::DISPLAY_SET_BACKGROUND_COLOUR_FN, r, g, b); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// APPCONTEXT - app-context engine flags (IGIPatch-corroborated).
+	// ═══════════════════════════════════════════════════════════════
+	namespace APPCONTEXT {
+		NATIVE_DECL void DEBUGGED_SET(int state) { NATIVE_INVOKE<Void>((Void)HASH::APP_CONTEXT_SET_DEBUGGED, state); }
+		NATIVE_DECL void DEBUGTEXT_SET(int state) { NATIVE_INVOKE<Void>((Void)HASH::APP_CONTEXT_SET_DEBUGTEXT_STATE, state); }
+		NATIVE_DECL void LIGHTMAPS_SET(int used) { NATIVE_INVOKE<Void>((Void)HASH::APP_CONTEXT_SET_LIGHTMAPS_USED, used); }
+		NATIVE_DECL void TERRAIN_LIGHTMAPS_SET(int used) { NATIVE_INVOKE<Void>((Void)HASH::APP_CONTEXT_SET_TERRAIN_LIGHTMAPS_USED, used); }
+	}
+
+	// ═══════════════════════════════════════════════════════════════
+	// PICTURE / SPRITE / TRANSCONTEXT - low-level render helpers.
+	// ═══════════════════════════════════════════════════════════════
+	namespace PICTURE {
+		NATIVE_DECL int WIDTH_GET(void* picture) { return NATIVE_INVOKE<int>((Void)HASH::PICTURE_GET_WIDTH, picture); }
+		NATIVE_DECL int HEIGHT_GET(void* picture) { return NATIVE_INVOKE<int>((Void)HASH::PICTURE_GET_HEIGHT, picture); }
+	}
+
+	namespace SPRITE {
+		// 14-arg quad-sprite registration; arg layout not fully mapped.
+		NATIVE_DECL void REGISTER_4AZ(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14) { NATIVE_INVOKE<Void>((Void)HASH::QSPRITE_REGISTER_4AZ, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14); }
+	}
+
+	namespace TRANSCONTEXT {
+		NATIVE_DECL void SET_ACTIVE(void* ctx) { NATIVE_INVOKE<Void>((Void)HASH::TRANSCONTEXT_SET_ACTIVE_TRANS_CONTEXT, ctx); }
+	}
+	// ═══════════════════════════════════════════════════════════════
+	// SDK coverage extensions - wrappers for remaining verified natives.
+	// ═══════════════════════════════════════════════════════════════
+	namespace MISC {
+		// printf-style variadic (proven: call-site add esp,8 + vsprintf helper 0x4A5702).
+		NATIVE_DECL void ERROR_SHOW(const char* format) { NATIVE_INVOKE<Void>((Void)HASH::ERROR_SHOW, format); }
+		NATIVE_DECL void ERROR_SHOW(const char* format, const void* arg) { NATIVE_INVOKE<Void>((Void)HASH::ERROR_SHOW, format, arg); }
+		NATIVE_DECL void WARNING_SHOW(const char* format) { NATIVE_INVOKE<Void>((Void)HASH::WARNING_SHOW, format); }
+		NATIVE_DECL void WARNING_SHOW(const char* format, const void* arg) { NATIVE_INVOKE<Void>((Void)HASH::WARNING_SHOW, format, arg); }
+		NATIVE_DECL void LOADING_SCREEN_SHOW(int loading_type) { NATIVE_INVOKE<Void>((Void)HASH::LOADING_SCREEN_SHOW, loading_type); }
+	}
+
+	namespace LEVEL {
+		NATIVE_DECL void START(int param) { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_START, param); }
+	}
+
+	namespace GAME {
+		NATIVE_DECL void MISSION_SET(int mission) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_MISSION, mission); }
+		NATIVE_DECL void DELETE_HANDLER() { NATIVE_INVOKE<Void>((Void)HASH::GAME_DELETE_HANDLER); }
+	}
+
+	namespace SFX {
+		NATIVE_DECL void RUNTIME_MUSIC_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_MUSIC_VOLUME, volume); }
+		NATIVE_DECL void RUNTIME_SFX_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_SFX_VOLUME, volume); }
+		NATIVE_DECL void SOUND_LOAD(const char* sound_dir) { NATIVE_INVOKE<Void>((Void)HASH::SOUND_LOAD, sound_dir); }
+	}
+
+ namespace WEAPON {
+		NATIVE_DECL void AMMO_TYPE_OPEN() { NATIVE_INVOKE<Void>((Void)HASH::AMMO_TYPE_OPEN); }
+		NATIVE_DECL int COUNT_GET() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
+		NATIVE_DECL void GUN_PICKUP(void* player, void* pickupEntity) { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, player, pickupEntity); }
+		NATIVE_DECL void AMMO_PICKUP(void* player, void* pickupEntity) { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_AMMO_PICKUP, player, pickupEntity); }
+	}
+
+	namespace HUMAN {
+		NATIVE_DECL void TASK_VIEW_RESET(void* human) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_TASK_VIEW_RESET, human); }
+	}
+
+	namespace GRAPH {
+		NATIVE_DECL void OPEN(unsigned int level, const char* graph_str) { NATIVE_INVOKE<Void>((Void)HASH::GRAPH_OPEN, level, graph_str); }
+	}
+
+ namespace SCRIPT {
+		NATIVE_DECL void PARSE_CONFIG(const char* cfg_path) { NATIVE_INVOKE<Void>((Void)HASH::ANIM_TRIGGER_PARSE, cfg_path); }
+ }
+
+	// ═══════════════════════════════════════════════════════════════
+	// PARSER - Define-block natives. Call ONLY from within their own
+	// .qsc definition-block context (the engine's parser drives them).
+	// ═══════════════════════════════════════════════════════════════
+	namespace PARSER {
+		NATIVE_DECL void DEFINE_AMMO_TYPE() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_AMMO_TYPE); }
+		NATIVE_DECL void DEFINE_GAME_MATERIAL() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_GAME_MATERIAL); }
+		NATIVE_DECL void DEFINE_GRAPH() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_GRAPH); }
+		NATIVE_DECL void DEFINE_GROUP() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_GROUP); }
+		NATIVE_DECL void DEFINE_HUMAN_PLAYER_AMMO_LIMIT() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_HUMAN_PLAYER_AMMO_LIMIT); }
+		NATIVE_DECL void DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_HUMAN_PLAYER_WEAPON_CATEGORY); }
+		NATIVE_DECL void DEFINE_HUMAN_PLAYER_WEAPON_CYCLE() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_HUMAN_PLAYER_WEAPON_CYCLE); }
+		NATIVE_DECL void DEFINE_MAGIC_OBJ() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_MAGIC_OBJ); }
+		NATIVE_DECL void DEFINE_MISSION() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_MISSION); }
+		NATIVE_DECL void DEFINE_Q_MATERIAL() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_Q_MATERIAL); }
+		NATIVE_DECL void DEFINE_SOUND() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_SOUND); }
+		NATIVE_DECL void DEFINE_TRIGGER_ONCE() { NATIVE_INVOKE<Void>((Void)HASH::DEFINE_TRIGGER_ONCE); }
+		NATIVE_DECL void CREATE_TERRAIN_TILE_MAP() { NATIVE_INVOKE<Void>((Void)HASH::CREATE_TERRAIN_TILE_MAP); }
+		NATIVE_DECL void RIGID_DYNCUBE_OBJ_READ(uint32_t* cfg_file) { NATIVE_INVOKE<Void>((Void)HASH::RIGID_DYNCUBE_OBJ_READ, cfg_file); }
+	}
+
+	namespace CONFIG {
+		NATIVE_DECL void* GET_ACTIVE_GRAPHIC_OPTIONS() { return NATIVE_INVOKE<void*>((Void)HASH::CONFIG_GET_ACTIVE_GRAPHIC_OPTIONS); }
+	}
+
+ namespace QTASK {
+		NATIVE_DECL void HASH_TABLE_SET(int** symbol, void* handler, int nameVal, int p4, int p5, int p6, int p7) { NATIVE_INVOKE<Void>((Void)HASH::QTASK_HASH_TABLE, symbol, handler, nameVal, p4, p5, p6, p7); }
+	}
+
+ namespace PHYSICS {
+		NATIVE_DECL void TYPE_PARSE_CONFIG(const char* cfg_path) { NATIVE_INVOKE<Void>((Void)HASH::PHYSICS_OBJ_TYPE_PARSE, cfg_path); }
+	}
+
 }

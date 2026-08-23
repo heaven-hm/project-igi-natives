@@ -113,6 +113,52 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 
 **⚠️ Important Note**: Due to IGI's Windows Message-based architecture, the current FiberPool scheduler relies on `TextPrintDetour()` which only executes when HUD text is being rendered. This means task execution may be inconsistent when no UI text is displayed (e.g., when showing knife weapon). Consider this limitation when implementing time-sensitive features.
 
+## 🧩 Natives SDK (programming guide)
+
+The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
+wrapper forwards through `NativeCaller::Invoke` to the verified address in `IGI-Natives.json`
+(all 250+ addresses machine-verified against retail `igi.exe`; igi2.pdb used only as a naming
+dictionary). Struct layouts recovered from the binary live in [`IGI_Structures.hpp`](IGI_Structures.hpp).
+
+### How to call a native
+
+All wrappers live under `IGI::` in [`IGI_Internal/Natives/NativeHelper.hpp`](IGI_Internal/Natives/NativeHelper.hpp).
+Call them from any hotkey branch in `Features.cpp`, ideally scheduled on the game thread via the FiberPool:
+
+```cpp
+// inside Features.cpp hotkey dispatch
+FiberPool::Instance().RunExternal([] {
+    IGI::AI::SET_INVULNERABILITY(1);              // make current AI immortal
+    IGI::CONFIGMENU::GFX_GAMMA_SET(1.25f);        // apply gamma
+    IGI::MISC::STATUS_MESSAGE_SHOW("Done!");
+}, 3);
+```
+
+### New natives added by this branch (by subsystem)
+
+| Namespace | Natives | Highlights |
+|---|---|---|
+| `AI::` | 55 | `AIAction_*` + `AIFunction_*`: `PATROL(target,0,AIACTIONFLAG_NONE)`, `SET_INVULNERABILITY(onOff)`, `GET_CURRENT_EVENT_TYPE()` returns `AIEVENT_*` 0-23, `SET_ALARM_ACCESS(AIALARMACCESS_BEFORECOMBAT=0/AFTERCOMBAT=1)` |
+| `CONFIGMENU::` | 45 | Retail menu-script natives: `GFX_GAMMA_GET/SET(float)`, `ACTIVE_PROFILE_INDEX_GET()`, `PROFILE_CREATE(name,source)`, plus `GO_*` config writers (`GO_PLAYER`, `GO_GFX_GAMMA`, ...) |
+| `MENU::` | 10 | MenuManager screen stack: `PUSH_SCREEN(id)`, `POP_SCREEN(0)`, `ACTIVATE_POPUP(popupId)`, `LEAVE_MENUS(0,0)` |
+| `SYMBOL::` | 11 | Game-data symbol table: `DATA_LOAD(buf,path,name)`, `REGISTER_INT32(table,addr)`, `WARNING_LEVEL_SET(lvl)` |
+| `DISPLAY::` | 3 | `SET_MODE(modeStruct)`, `GET_ACTIVE_MODE()`, `BACKGROUND_COLOUR_SET(r,g,b)` |
+| `APPCONTEXT::` | 4 | Engine flags (IGIPatch-corroborated): `LIGHTMAPS_SET(used)`, `TERRAIN_LIGHTMAPS_SET(used)`, `DEBUGGED_SET(state)` |
+| `LEVELFLOW::` | 3 | `LEVEL_FAILED()`, `IS_COUNTRY_USA()`, `BREAK_CUTSCENE_KEY_GET()` |
+| `FLOW::` | 1 | `REQUEST_EVENT(FLOW_EVENT_GAME=4)` drives the flow state machine |
+| `PICTURE::` / `SPRITE::` / `TRANSCONTEXT::` | 4 | `WIDTH_GET/HEIGHT_GET`, quad-sprite registration, transform-context install |
+| `PARSER::` | 14 | Define-block natives — call ONLY from their own `.qsc` definition context |
+| Extensions | ~15 | `WEAPON::TYPE_OPEN/COUNT_GET/GUN_PICKUP`, `HUMAN::TASK_VIEW_RESET(human)` (retail FOV restore), `SFX::RUNTIME_MUSIC/SFX_VOLUME_SET(float)`, `GAME::MISSION_SET(m)`, `MISC::ERROR_SHOW(fmt,...)` variadic |
+
+Full signatures + per-native evidence notes: [`IGI-Natives.json`](IGI-Natives.json)
+(`{hash, address, name, signature, note}` per entry; notes include param meaning and enum values).
+
+### Enum quick reference
+
+- `AIEVENT_*`: CREATE=0 DELETE=1 DEAD=2 ANIMATION=3 IDLE=4 ALERT=5 ALERT_RESPONSE=6 COMBAT=7 ALARMON=8 ALARMOFF=9 WALK=10 GROUNDIMPACT=11 DOOR=12 FENCE=13 LADDER=14 TAKINGDAMAGE=15 GUNSHOT=16 GRENADETHROWN=17 GRENADELAND=18 FLASHBANG=19 GUNSHOTMISS=20 EXPLOSION=21 ENEMYDETECTION=22 FRIENDLYDETECTION=23
+- `AIALARMACCESS_*`: BEFORECOMBAT=0, AFTERCOMBAT=1 · `AIACTIONFLAG_*`: NONE=0, PUSHABLE=1
+- `FLOW_EVENT_*`: QUIT=1, INTRO=2, MAINMENU=3, GAME=4, RESTART_GAME=5
+
 ## Adding new hashes for Natives.
 Lets say you found new hash for Native now how to add them into project and use them.
 So you have to follow the steps.
