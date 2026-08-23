@@ -2294,6 +2294,96 @@
         "signature": "void Human_FindNextCamera(void* human)",
         "note": "Debug camera cycler: advances to the next camera/view target attached to the human player (decompiled body polls input keys). Param: human = human-player pointer. Pass1-verified function start; restored - it existed only in the Natives.hpp enum and was never serialized to JSON."
       }
+    },
+    {
+      "Native": {
+        "hash": "004F4B00",
+        "address": 5196544,
+        "name": "CutScene_TaskCreate",
+        "signature": "void* CutScene_TaskCreate(void)",
+        "note": "CREATES the CutScene task during level load: allocates 632-byte \"CutScene\" object via class factory 0x401900, attaches vtable 0x4F4EE0 + update cb 0x4F51D0, registers TASKTYPE_CUTSCENE (@0x4F4EB8). TO DELETE CUTSCENES: early-return from this function so no CutScene task is ever instantiated - flow continues without them. Verified: prologue sub esp,0x278; string refs \"1721_01_1\",\"CutScene\"; corroborated by IGI-MP plugin."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004F51D0",
+        "address": 5198288,
+        "name": "CutScene_TaskUpdate",
+        "signature": "int CutScene_TaskUpdate(void* cutsceneTask)",
+        "note": "Per-frame UPDATE of the running CutScene task. Alternative cutscene-kill point: force an immediate completion return here and any created cutscene ends on frame one. Verified: referenced as update cb inside CutScene_TaskCreate 0x4F4B00."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004109A0",
+        "address": 4262304,
+        "name": "Human_RunUpdate",
+        "signature": "void Human_RunUpdate(void* human)",
+        "note": "Main HUMAN PLAYER RUN/MOVEMENT UPDATE - large handler; reads human struct field +0x2EC (lea edi,[esi+0x2ec], matching the documented param-ptr slot) and drives movement state. Hooked by IGI-MP as HumanPlayer_RunUpdate."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00412440",
+        "address": 4269120,
+        "name": "Human_DamageApply",
+        "signature": "void Human_DamageApply(void* human)",
+        "note": "Applies DAMAGE/knockback to the human player: reads enable flag byte +0xCF6 and patrol sub-struct +0x254 of the human struct. IGI-MP disables bullet knockback here. Prologue-verified."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00478900",
+        "address": 4688128,
+        "name": "Weapon_FireUpdate",
+        "signature": "void Weapon_FireUpdate(void* weaponCtx)",
+        "note": "Weapon FIRE update - processes firing state using config byte 0x5407B9 and weapon-table entry ([ctx+0x14] -> +0x1C). IGI-MP hooks this as gunhook."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004779E0",
+        "address": 4684256,
+        "name": "Weapon_FlameUpdate",
+        "signature": "void Weapon_FlameUpdate(void* weaponCtx)",
+        "note": "FLAME-weapon effect update: resolves effect object via [ctx+0x14]+0x20 then updates through 0x477C10. IGI-MP hooks this as flamehook."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00479990",
+        "address": 4692368,
+        "name": "Weapon_ReloadStart",
+        "signature": "void Weapon_ReloadStart(void* soldierCtx)",
+        "note": "Starts weapon RELOAD: uses soldier object ref +0x4C4 with spawner 0x4F2060 (arg 0x4C3). IGI-MP hooks this as reloadhook."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00477040",
+        "address": 4681792,
+        "name": "Throwable_Create",
+        "signature": "void Throwable_Create(void)",
+        "note": "Creates a GRENADE/THROWABLE projectile: checks+registers it in the hash table via QHash_ValueGet(0x4B0DB0)/QHash_ValueSet(0x4B0D40). IGI-MP hooks for network throwable sync."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00476040",
+        "address": 4677696,
+        "name": "Mine_ProximityCreate",
+        "signature": "void Mine_ProximityCreate(void)",
+        "note": "Creates a PROXIMITY MINE entity: initializes hash state via QHash_Init(0x4B0D60), reads mine id word 0x5BE3A0. IGI-MP hooks for network mine sync."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004D9870",
+        "address": 5085296,
+        "name": "Camera_SubmitFrame",
+        "signature": "void Camera_SubmitFrame(void* camCtx)",
+        "note": "Submits/presents the camera frame: increments frame counters at camCtx+0x50 against limit at +0x4C. IGI-MP hooks this as Camera_Submit for the lobby camera."
+      }
     }
   ]
 }
