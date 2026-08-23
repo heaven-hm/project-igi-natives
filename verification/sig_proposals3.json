@@ -1,0 +1,198 @@
+[
+ {
+  "hash": "004B80B0",
+  "name": "Qvm_Load",
+  "signature": "int* Qvm_Load(char* qvmPath)",
+  "note": "Loads a COMPILED .qvm script binary from the virtual filesystem (appends/selects \".qvm\"; big 0x130 stack frame builds the script object). Param: qvmPath = path like \"LOCAL:common/ai/guard.qvm\". RETURNS pointer to the loaded QVM object, 0 on failure (calls engine debug-state check 0x48F1D0 first). Use before executing/attaching scripts.",
+  "rationale": "r2dec: \".qvm\" string, fcn_0048F1D0 gate, object build; arg_130h"
+ },
+ {
+  "hash": "004B85B0",
+  "name": "Qvm_Execute",
+  "signature": "int Qvm_Execute(void* qvm)",
+  "note": "EXECUTES a loaded QVM script program (the interpreter entry - despite the old analyst label QvmRead). On runtime failure reports \"Error in QVM program: %s\" / \"An error occured in script file: %s\". Param: qvm = pointer from Qvm_Load. RETURNS script result value.",
+  "rationale": "r2dec strings \"Error in QVM program: %s\" + \"An error occured in script file: %s\"; reads qvm+0x8C"
+ },
+ {
+  "hash": "004B83D0",
+  "name": "Qvm_Cleanup",
+  "signature": "void Qvm_Cleanup(void* qvm)",
+  "note": "Frees a loaded QVM script object: reads qvm+0x8C and releases the program block when non-zero. Param: qvm = pointer from Qvm_Load. Pair with Qvm_Load to avoid leaks.",
+  "rationale": "r2dec: esi=[esp+8]; eax=[esi+0x8C]; conditional release"
+ },
+ {
+  "hash": "004B8410",
+  "name": "Qsc_Compile",
+  "signature": "int Qsc_Compile(char* qscPath)",
+  "note": "Compiles a .qsc SCRIPT SOURCE into a .qvm binary: resolves the path (fcn_004B5B60), pulls the source through ResourceLoad (0x4B5F00), allocates a 0x94-byte compiler context via Mem_Alloc, emits \".qvm\" output. Param: qscPath = script source path. RETURNS result object/flag.",
+  "rationale": "r2dec: \".qvm\" x3, calls 0x4B5B60 -> 0x4B5F00 -> Mem_Alloc(0x94,4)"
+ },
+ {
+  "hash": "004BB270",
+  "name": "QScript_Assemble",
+  "signature": "int QScript_Assemble(char* srcText, int srcLen2)",
+  "note": "ASSEMBLER stage of the script pipeline: strips comments via regex \"{.*:(.*//)*}.*\", initialises the parser (\"Initialising parser.\"), generates assembly code and WRITES IT TO \"LOCAL:qvmbin.tmp\" (also referenced as /0qvmbin.tmp). Params: srcText = script source buffer, srcLen2 = secondary length/context arg. Returns assembly result.",
+  "rationale": "r2dec strings: regex literal, \"Initialising parser.\\n\", LOCAL:qvmbin.tmp; args at +0x650/+0x658"
+ },
+ {
+  "hash": "004BBCB0",
+  "name": "QScript_ParseAndAssemble",
+  "signature": "int QScript_ParseAndAssemble(char* srcText, int options)",
+  "note": "PARSE+CODEGEN driver: logs \"Parsing script and generating assembly code.\", runs parser state globals (0xA442D0..), writes output (\"Failed to open file '%s' for writing.\"). Params: srcText = script source, options = parser option word. Part of the QscCompile pipeline feeding QScript_Assemble.",
+  "rationale": "r2dec strings both present; two args (+0x870,+0x88C)"
+ },
+ {
+  "hash": "004F0CF0",
+  "name": "ConfigCompile",
+  "signature": "int ConfigCompile(int context, char* cfgName, int flags)",
+  "note": "Compiles a CONFIG script: validates context, then loads its compiled QVM via QvmLoad (0x4B80B0); references the Task_New name during task-table wiring. Params: context = config context id, cfgName = config path/name, flags = compile flags. Use when (re)loading game configuration programmatically.",
+  "rationale": "r2dec: \"Task_New\" string ref, call fcn_004B80B0 on [esp+0x18]; three stack args"
+ },
+ {
+  "hash": "004B5F00",
+  "name": "Resource_Load",
+  "signature": "int* Resource_Load(char* resourcePath, char** outBuffer)",
+  "note": "Loads a resource into memory WITH CACHE CHECK: first asks IsResourceLoaded (0x4B5B90); if cached returns the existing entry, otherwise loads and registers it. Params: resourcePath = virtual resource path, outBuffer = receives the data pointer. RETURNS resource entry pointer.",
+  "rationale": "r2dec: immediate call fcn_004B5B90 then branch on result; two args"
+ },
+ {
+  "hash": "004B16D0",
+  "name": "Resource_Unpack",
+  "signature": "int Resource_Unpack(int* resPtr, int destAddr, int resSize)",
+  "note": "Unpacks a loaded resource blob to a destination address. Params: resPtr = packed resource pointer, destAddr = destination memory address, resSize = bytes to unpack. RETURNS unpacked size/status.",
+  "rationale": "r2dec three stack args +0x4/+0x10(+0xC dup); plain copy/decode body"
+ },
+ {
+  "hash": "004B18B0",
+  "name": "Resource_PackUnpack",
+  "signature": "int Resource_PackUnpack(char* resFile, char** outBuffer)",
+  "note": "Opens a PACKED resource file via QFile_ReadWrite (0x4B1510, mode string at 0x53B604) and unpacks its contents through the pack table at 0x9436E8. Params: resFile = packed resource path, outBuffer = receives unpacked data. RETURNS entry/result pointer.",
+  "rationale": "r2dec: call fcn_004B1510(edi, 0x53B604) then index table 0x9436E8"
+ },
+ {
+  "hash": "004B5B90",
+  "name": "IsResourceLoaded",
+  "signature": "int IsResourceLoaded(char* resourcePath, char** outEntry)",
+  "note": "Checks whether a resource path is ALREADY LOADED in the resource manager (walks path handling backslash 0x5C segments against the registry). Params: resourcePath = virtual path, outEntry = receives matching entry. RETURNS non-zero + fills outEntry when found. Resource_Load calls this first - use it to avoid double-loading.",
+  "rationale": "r2dec: backslash-compare loop (cl==0x5C), 6-arg helper 0x4B1020; args +0x118/+0x11C"
+ },
+ {
+  "hash": "004B63D0",
+  "name": "Resource_Flush",
+  "signature": "void Resource_Flush(void* resEntry)",
+  "note": "Flushes/finalizes ONE resource entry: walks the global resource list (0x943E38), matches entry+0x34 against the argument, errors \"Resource_Flush() : Couldn't locate resource at %p.\" when absent. Param: resEntry = resource pointer/address to flush.",
+  "rationale": "r2dec error string inside function; compare [ecx+0x34]==edx"
+ },
+ {
+  "hash": "004A5350",
+  "name": "FileOpen",
+  "signature": "void* FileOpen(char* path, char* mode)",
+  "note": "Low-level CRT-style file open used across the engine. Params: path = file path, mode = fopen-style mode string (\"r\",\"w\",\"rb\"...). RETURNS FILE* handle or 0. Prefer QFile_ReadWrite/QResource APIs unless you need raw stdio.",
+  "rationale": "r2dec two stack args; thin wrapper family around CRT fopen"
+ },
+ {
+  "hash": "004B1510",
+  "name": "QFile_ReadWrite",
+  "signature": "void* QFile_ReadWrite(char* vpath, char* mode)",
+  "note": "VIRTUAL-filesystem open: parses the device prefix from vpath (errors \"Illegal device name in path: \\\" and \"Device not present: %s\"), routes to the device handler chain (0x4B1620/0x4B1020/0x4B11A0) and returns a Q-file handle. Params: vpath = virtual path WITH device prefix (e.g. \"LOCAL:...\", \"MENU:\"), mode = access mode. RETURNS handle or 0. This is the correct opener for LOCAL:/MISSION: paths.",
+  "rationale": "r2dec strings \"Illegal device name in path: \\\" + \"Device not present: %s\"; handler chain calls"
+ },
+ {
+  "hash": "00485970",
+  "name": "StatusMessage_ShowFull",
+  "signature": "void StatusMessage_ShowFull(int timer, char* message, char* sprite, int styleByte)",
+  "note": "Full-parameter status message: queues an on-screen HUD message with icon and styling (allocates via Mem_Alloc, reads current status word 0x540A8C). Params: timer = display duration, message = text, sprite = HUD sprite/icon ptr, styleByte = display style byte. Use MISC::STATUS_MESSAGE_SHOW wrapper for simple cases.",
+  "rationale": "r2dec four stack args +0x14/+0x24/+0x30/+0x34; Mem_Alloc call; word 0x540A8C read"
+ },
+ {
+  "hash": "004C0460",
+  "name": "Symbol_Remove",
+  "signature": "int Symbol_Remove(int* symTable, char* symName)",
+  "note": "Removes a symbol from the game-data symbol hash table; warns \"Unable to remove symbol \\\"%s\\\" (not registered)\" when absent. Params: symTable = symbol table, symName = symbol name string. RETURNS non-zero on success. Call after dynamically registered symbols are no longer needed.",
+  "rationale": "r2dec error strings \"Unable to remove symbol \" + \" (not registered)\""
+ },
+ {
+  "hash": "004C0560",
+  "name": "Symbol_CheckRegister",
+  "signature": "void* Symbol_CheckRegister(int* symTable, char* symName, int extra)",
+  "note": "Checks a symbol and registers it if new - ERRORS via ErrorShow(\"Symbol \\\"%s\\\" already registered in hash table\") if the name ALREADY exists, so it doubles as duplicate protection. Params: symTable, symName, extra = registration payload/flags. RETURNS symbol entry or triggers the error dialog.",
+  "rationale": "r2dec: \"Symbol \\\" already registered in hash table\" fed straight to ErrorShow 0x4AF7B0"
+ },
+ {
+  "hash": "004B8810",
+  "name": "TaskType_Set",
+  "signature": "void TaskType_Set(int** taskDef, int taskTypeId)",
+  "note": "Stores the TYPE ID onto a task definition structure (simple field write, verified 2-arg store). Params: taskDef = task definition object, taskTypeId = TASKTYPE_* enum value (TASKTYPE_GUN, TASKTYPE_BUILDING, etc. - full enum embedded in igi.exe .data).",
+  "rationale": "r2dec: reads [esp+8] and [esp+4], stores; TASKTYPE_* enum strings in binary"
+ },
+ {
+  "hash": "004C0200",
+  "name": "Script_BufInit",
+  "signature": "void ScriptBufInit(int* outBuf1, int buf2, int buf3, int bufSize)",
+  "note": "Initialises the four header fields of a SCRIPT BUFFER structure (verified field-by-field stores: *out=buf2, then buf3, bufSize...). Params: outBuf1 = buffer struct to init, buf2/buf3 = buffer pointers/ids, bufSize = size field. Call before handing a buffer to the QVM assembler/parsers.",
+  "rationale": "r2dec: sequential dword stores from all four stack args"
+ },
+ {
+  "hash": "004B80A0",
+  "name": "GameDataSymbolRemoveThunk",
+  "signature": "void* GameDataSymbolRemove(char* symBuf)",
+  "note": "Thin remover for the game-data symbol table: forwards its single argument down the removal chain (verified pure thunk returning eax). Param: symBuf = symbol/buffer to unregister. Prefer this over direct internal calls.",
+  "rationale": "r2dec: mov eax,[esp+4]; ... return eax - pure pass-through thunk"
+ },
+ {
+  "hash": "004B7EE0",
+  "name": "SymbolRegister_Bool8",
+  "signature": "void* SymbolRegister_Bool8(int* table, char* name)",
+  "note": "Registers a BOOL8-TYPED script variable slot in the game-data symbol table (2-arg typed thunk family; each sibling hardcodes its type size). Params: table = symbol table, name = variable name. RETURNS the registered symbol entry. Script code can then read/write it as a bool.",
+  "rationale": "r2dec: identical 2-arg thunk bodies across the Bool8/Int16/Int32/Real32 siblings"
+ },
+ {
+  "hash": "004B7E80",
+  "name": "SymbolRegister_Int16",
+  "signature": "void* SymbolRegister_Int16(int* table, char* name)",
+  "note": "Registers an INT16-typed script variable slot. Params: table, name. RETURNS symbol entry. Sibling of SymbolRegister_Bool8/Int32/Real32 - same thunk shape, different type tag.",
+  "rationale": "same evidence pattern as Bool8 sibling"
+ },
+ {
+  "hash": "004B7FA0",
+  "name": "SymbolRegister_Int32",
+  "signature": "void* SymbolRegister_Int32(int* table, char* name)",
+  "note": "Registers an INT32-typed script variable slot. Params: table, name. RETURNS symbol entry. This is the common integer script-variable registration used by AI/game scripts.",
+  "rationale": "same evidence pattern as Bool8 sibling"
+ },
+ {
+  "hash": "004B7FC0",
+  "name": "SymbolRegister_Real32",
+  "signature": "void* SymbolRegister_Real32(int* table, char* name)",
+  "note": "Registers a REAL32 (float)-typed script variable slot. Params: table, name. RETURNS symbol entry. Pairs with AIFunction_Set/GetScriptRealValue for float storage.",
+  "rationale": "same evidence pattern as Bool8 sibling"
+ },
+ {
+  "hash": "0048A440",
+  "name": "LoadingScreen_Show",
+  "signature": "void LoadingScreen_Show(int picVariant)",
+  "note": "Shows the LOADING SCREEN: allocates a 0x1C-byte screen object, queries the active display mode (0x491CF0), and loads \"LOCAL:menusystem/loadingscreen.res\" with picture \"LOCAL:menusystem/loading.pic\" - or \"loading_us.pic\" for USA country builds. Param: picVariant = loading-screen type selector. Call before long loads so the player sees feedback.",
+  "rationale": "r2dec strings loadingscreen.res + loading.pic/loading_us.pic; Display_GetActiveMode call; Mem_Alloc(0x1C,4)"
+ },
+ {
+  "hash": "004071E0",
+  "name": "Weapon_ConfigRead",
+  "signature": "int Weapon_ConfigRead(int context, char* cfgText)",
+  "note": "Reads weapon configuration entries from parsed config text: repeated repne-scasb string scans + block copies populate weapon structures. Params: context = weapon system context, cfgText = config text buffer. Use within weapon definition parsing flows.",
+  "rationale": "r2dec: repne scasb scan loops + es:edi block copies; args +0x14/+0x8"
+ },
+ {
+  "hash": "00403B70",
+  "name": "Config_ResetGraphicOptions",
+  "signature": "void Config_ResetGraphicOptions()",
+  "note": "Resets graphic options to FACTORY DEFAULTS - machine-verified field writes: width=0x280 (640), height=0x1E0 (480), plus clearing adjacent flag bytes on the profile record. Takes no script args. Registered by igi.exe as \"Config_ResetGraphicOptions\" (site 0x40352B) and called by retail MAINMENU.QVM. Use to restore 640x480 defaults programmatically.",
+  "rationale": "r2dec: *(rec+0x10)=0x1E0; *(rec+0xC)=0x280; flag byte clears"
+ },
+ {
+  "hash": "004BBC30",
+  "name": "Log_Add",
+  "signature": "void Log_Add(char* format, ...)",
+  "note": "Appends a formatted line to the engine log (variadic printf-style, giant 0x400 format buffer at esp+0x404). Only logs when log-enabled globals 0xA43EC8/0xA43ED4 are set. Param: format = printf-style string + substitution args. Gate your spammy logs behind the enable flags.",
+  "rationale": "r2dec: 0xA43EC8/0xA43ED4 enable checks; variadic buffer arg_404h"
+ }
+]
