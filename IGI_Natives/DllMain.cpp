@@ -3,7 +3,7 @@
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
-#define INTERNALS_DLL_VERSION std::string("2.6.0")
+#define NATIVES_DLL_VERSION std::string("2.6.0")
 #include "DllMain.hpp"
 
 // Include all static libraries for project.
@@ -121,7 +121,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + INTERNALS_DLL_VERSION + " Attached"));
+      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + NATIVES_DLL_VERSION + " Attached"));
 
       // Start DllMainLoop in separate thread with 30 FPS timing
       g_running = true;
@@ -141,7 +141,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
         }
         LOG_WARNING("DllMainLoop thread stopped");
         MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME +
-                                  std::string(" v" + INTERNALS_DLL_VERSION + " Detached"));
+                                  std::string(" v" + NATIVES_DLL_VERSION + " Detached"));
       });
 
       // Detach thread so it can run independently and clean itself up

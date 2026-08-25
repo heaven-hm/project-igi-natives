@@ -338,7 +338,7 @@ BOOL Utility::IsKeyPressed(CONST INT key) {
 
 // Function to log all hotkeys from provided file path
 void Utility::LogAllHotkeys(const string& file_path) {
-	LOG_INFO("=== IGI Internal Mod Hotkeys ===");
+	LOG_INFO("=== IGI Natives Mod Hotkeys ===");
 	
 	// Log the file path being scanned
 	LOG_INFO("Scanning file: %s", file_path.c_str());

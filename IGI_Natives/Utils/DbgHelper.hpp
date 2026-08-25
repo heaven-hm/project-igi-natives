@@ -1,19 +1,19 @@
-#pragma once 
+#pragma once
 #define USE_STACKTRACE_LIB
 /*
- Debug Helper is internal Helper file for Debugging remote or current process using StackWalk for Stack trace 
- Using dbghelp as Core lib provides all functionality fore core debugging. 
- This file is part of IGI-Internals. 
- Copyright Haseeb Mir@ 2021 
+ Debug Helper is internal Helper file for Debugging remote or current process using StackWalk for Stack trace
+ Using dbghelp as Core lib provides all functionality fore core debugging.
+ This file is part of IGI-Natives.
+ Copyright Haseeb Mir@ 2021
  */
 
-#include "../Common.hpp" 
-#include "Logger.hpp" 
-#include "Utility.hpp" 
+#include "../Common.hpp"
+#include "Logger.hpp"
+#include "Utility.hpp"
 #include "../Libs/GTLibc.hpp"
-#include <dbghelp.h> 
+#include <dbghelp.h>
 
-#define FRAME_SIZE 0x64 
+#define FRAME_SIZE 0x64
 #pragma comment(lib, "dbghelp.lib")
 
 #define DBG_TRACE(MSG, ...)  DbgHelper::trace(MSG, __VA_ARGS__)
@@ -27,17 +27,17 @@ namespace IGI {
 		bool init_status;
 		HANDLE m_Handle;
 		std::size_t const SYMBOL_NAME_MAXLEN = 1024;
-		//StackFrame to hold all stack information. 
+		//StackFrame to hold all stack information.
 	 struct StackFrame
 		{
-			uint32_t symbol_address; //Method address. 
-			string symbol_name; //Method name. 
-			string module_name; //Module name 
-			uint32_t line_no; //Line number. 
-			string file_name; //File path of module. 
-			uint32_t frame_no; //Frame number. 
-			std::array<uint32_t, 4> params; //Method parameters. 
-			CONTEXT context; //Stack Context. 
+			uint32_t symbol_address; //Method address.
+			string symbol_name; //Method name.
+			string module_name; //Module name
+			uint32_t line_no; //Line number.
+			string file_name; //File path of module.
+			uint32_t frame_no; //Frame number.
+			std::array<uint32_t, 4> params; //Method parameters.
+			CONTEXT context; //Stack Context.
 		};
 
 		inline void trace(const char* msg, ...);

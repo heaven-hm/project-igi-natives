@@ -1,11 +1,11 @@
-# Project I.G.I Internal
+# Project I.G.I Natives
 
-[![Version](https://img.shields.io/badge/version-v2.6.1-blue.svg)](https://github.com/Jones-HM/project-igi-internals)
-[![Build](https://img.shields.io/badge/build-f0f30e5-green.svg)](https://github.com/Jones-HM/project-igi-internals)
-[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/Jones-HM/project-igi-internals)
-[![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/Jones-HM/project-igi-internals)
+[![Version](https://img.shields.io/badge/version-v2.6.1-blue.svg)](https://github.com/heaven-hm/project-igi-natives)
+[![Build](https://img.shields.io/badge/build-f0f30e5-green.svg)](https://github.com/heaven-hm/project-igi-natives)
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/heaven-hm/project-igi-natives)
+[![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/heaven-hm/project-igi-natives)
 
-[Project I.G.I](https://en.wikipedia.org/wiki/Project_I.G.I.) Internal is Project to access internal methods of the game by using **DLL injection method** into the game and calling [IGI Natives methods](https://github.com/IGI-Research-Devs/IGI-Internals-Data/blob/main/IGI-Natives.json) to modify/alter the behaviour of the game.</br>
+[Project I.G.I](https://en.wikipedia.org/wiki/Project_I.G.I.) Natives is Project to access native methods of the game by using **DLL injection method** into the game and calling [IGI Natives methods](https://github.com/IGI-Research-Devs/IGI-Internals-Data/blob/main/IGI-Natives.json) to modify/alter the behaviour of the game.</br>
 This was originally intended for research project to understand the game mechanics and how developers worked hard to create them.</br>
 So don't use this project to misuse the game's identity and source of original game devs.</br>
 
@@ -43,11 +43,11 @@ Use the `build_and_reload.bat` batch file for automated building and DLL injecti
 **Configuration**: Update `OUTDLL` and `INJECTOR` paths in the batch file according to your setup.
 
 ### 🔧 Manual Building
-Open this project in Visual Studio and build it. Your output will be in **Release/Debug** folder depending on configuration. You'll find `IGI-Internals-Debug.dll` or `IGI-Internals-Release.dll`. Use any **x86(32-bit)** compatible DLL injector or the recommended [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector).
+Open this project in Visual Studio and build it. Your output will be in **Release/Debug** folder depending on configuration. You'll find `IGI-Natives-Debug.dll` or `IGI-Natives-Release.dll`. Use any **x86(32-bit)** compatible DLL injector or the recommended [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector).
 
 ## 🎮 IGI Debug Keys Integration & Enhanced Features
 
-This DLL seamlessly integrates with IGI's built-in debug functionality while adding powerful enhancement features. See [IGIDebug.md](IGI_Internal/IGIDebug.md) for complete documentation on IGI's native debug keys and activation methods.
+This DLL seamlessly integrates with IGI's built-in debug functionality while adding powerful enhancement features. See [IGIDebug.md](IGI_Natives/IGIDebug.md) for complete documentation on IGI's native debug keys and activation methods.
 
 ### 🚀 **Core Features:**
 - 🔓 **Mission Unlock** - Access all missions instantly without progression
@@ -90,7 +90,7 @@ IGI (2000) uses a **Windows Message-based event loop** rather than modern game e
 **🙏 Special Recognition:** Massive thanks to **BlankName** for discovering and documenting IGI's debug key system, making this integration possible!
 
 ## Building project for IGI Editor.
-The project could be build for [IGI Editor](https://github.com/IGI-Research-Devs/IGI1Editor) the only thing we need to change is **Features.cpp** file we have to update with **Features file for Editor** which could be found here [Features_Editor.cpp](https://github.com/IGI-Research-Devs/IGI_Internal/blob/master/IGI_Internal/Features_Editor.cpp)
+The project could be build for [IGI Editor](https://github.com/IGI-Research-Devs/IGI1Editor) the only thing we need to change is **Features.cpp** file we have to update with **Features file for Editor** which could be found here [Features_Editor.cpp](https://github.com/heaven-hm/project-igi-natives/blob/develop/IGI_Natives/Features_Editor.cpp)
 
 
 ## 🎮 Current Features & Hotkeys

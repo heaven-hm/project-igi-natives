@@ -13,8 +13,8 @@ set PLATFORM=%~2
 
 :: === Config ===
 set MSBUILD="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
-set PROJECT=IGI_Internal.vcxproj
-set OUTDLL=C:\Users\hasee\source\repos\project-igi-internals\IGI_Internal\%CONFIG%\IGI-Internals-%CONFIG%.dll
+set PROJECT=IGI_Natives.vcxproj
+set OUTDLL=%~dp0%CONFIG%\IGI-Natives-%CONFIG%.dll
 set INJECTOR=C:\Users\hasee\Downloads\Compressed\IGI-Injector-v1.0\IGI-Injector-v1.0\bin\igi-injector-cmd.exe
 
 echo [*] Using Configuration: %CONFIG%

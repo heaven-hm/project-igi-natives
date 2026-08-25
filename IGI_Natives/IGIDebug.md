@@ -34,7 +34,7 @@ In-game, use the key combination **LCtrl + LShift + KEY** to activate any of the
 | Numpad 4 | Decrease 3rd person camera yaw |
 | Numpad 6 | Increase 3rd person camera yaw |
 
-## Integration with IGI-Internals DLL
+## Integration with IGI-Natives DLL
 
 This DLL has been designed to avoid conflicts with IGI's built-in debug keys. All duplicate functionality has been removed from our custom hotkey implementations to ensure seamless integration.
 
