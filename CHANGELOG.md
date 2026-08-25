@@ -19,11 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### IGI1 native export and parameter-context discovery
 
-- Added the `IGI1_Native_Exports/` bundle with the 273-entry `IGI1-Natives.json`, linker-style `IGI1-Natives.map`, generated `igi.pdb`, and per-entry `IGI1-Native-Name-Evidence.json` audit manifest.
-- Added eight previously undiscovered helpers after live Ghidra Headless MCP and r2 MCP (Radare2 MCP) analysis: frame-limit/context getters, flow-state setter, update/task counters, and nested timing begin/end methods. Existing native entries were not renamed or replaced.
+- Consolidated the native artifacts into `igi_natives_discovery/`. `IGINatives.json` is now the single branch catalog; its generated `IGINatives.map`, x86 `igi.pdb`, audit manifest, CSV, IDC, and Ghidra importer live beside it. The duplicate root `IGI-Natives.json` and duplicate compatibility MAP were removed.
+- Added 11 previously undiscovered dispatch, camera-reset, and MagicObj helpers after strict live Ghidra Headless MCP and independent radare2/r2 CFG analysis. Ghidra/r2 boundaries, basic-block counts, edges, cdecl stack behavior, and return behavior agree for the accepted methods; existing native entries were not renamed or replaced.
 - Documented the stack behavior around `0x00402890`: it is a no-argument script-context getter; the `mainmenu.qsc` path and three flag values are arguments to the following `Menu_Manager` call.
 - Recorded provenance: 80 natives were completed by Heaven as human reverse-engineering work; the remaining catalog analysis was AI-assisted with Ghidra MCP and r2 MCP. Retail string names remain preferred, and behavior-derived names are marked explicitly in the evidence manifest.
 - Added precise file descriptions and the PDB limitation. `igi.pdb` is the official project IGI PDB export artifact and is address-compatible with retail `igi.exe`, but the retail PE has no CodeView/RSDS debug directory, so it cannot be an exact vendor-PDB match in Ghidra.
+- Corrected `Weapon_FireUpdate` and `Weapon_FlameUpdate` to two-argument signatures after resolving the registrar stack pattern. `004D9850` is documented as the no-argument `Qtask_GetEventId` getter; the callback pushed before it belongs to the following registrar call.
+- Copied the governing reverse-engineering guide to the repository root as [`RE.md`](RE.md) and recorded the unresolved `0x004D9FC0` helper instead of assigning it an unsupported name.
 
 ## [2.6.0] - 2025-09-08 🚀
 

@@ -116,9 +116,10 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 ## 🧩 Natives SDK (programming guide)
 
 The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
-wrapper forwards through `NativeCaller::Invoke` to the verified address in `IGI-Natives.json`
-(all 283 catalog addresses are machine-verified or statically validated against retail `igi.exe`; the branch export bundle includes the
+wrapper forwards through `NativeCaller::Invoke` to the verified address in `igi_natives_discovery/IGINatives.json`
+(all 284 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
 address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
+For runtime signature loading, deploy the `igi_natives_discovery` folder beside the DLL; the loader reads its single `IGINatives.json` from that relative path.
 Struct layouts recovered from the binary live in [`IGI_Structures.hpp`](IGI_Structures.hpp).
 
 ### How to call a native
@@ -151,32 +152,16 @@ FiberPool::Instance().RunExternal([] {
 | `PARSER::` | 14 | Define-block natives — call ONLY from their own `.qsc` definition context |
 | Extensions | ~15 | `WEAPON::TYPE_OPEN/COUNT_GET/GUN_PICKUP`, `HUMAN::TASK_VIEW_RESET(human)` (retail FOV restore), `SFX::RUNTIME_MUSIC/SFX_VOLUME_SET(float)`, `GAME::MISSION_SET(m)`, `MISC::ERROR_SHOW(fmt,...)` variadic |
 
-Full signatures + per-native evidence notes: [`IGI-Natives.json`](IGI-Natives.json)
+Full signatures + per-native evidence notes: [`igi_natives_discovery/IGINatives.json`](igi_natives_discovery/IGINatives.json)
 (`{hash, address, name, signature, note}` per entry; notes include param meaning and enum values).
 
 ### IGI1 native export bundle
 
-The branch's official project export bundle is [`IGI1_Native_Exports/`](IGI1_Native_Exports/). It contains the structured 283-entry JSON catalog, address/name MAP, generated x86 `igi.pdb`, and the per-symbol evidence manifest. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
+The branch's official project export bundle is [`igi_natives_discovery/`](igi_natives_discovery/). It contains the single structured `IGINatives.json` catalog, address/name MAP, generated x86 `igi.pdb`, audit manifest, and generated Ghidra/IDA/CSV exports. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
 
-The earlier eight parameter/context entries remain in the catalog. This update adds ten more static CFG-validated functions: task-type registration/inheritance, weapon entity creation and firing-state access, sound event dispatch, QFile alias/device helpers, profile value setting, and the bounded va_list formatter. Each passed the Ghidra/r2 CFG gate; the formatter is catalogued without a generic wrapper because its va_list ABI needs direct handling.
+All future reverse-engineering work on this branch follows the local [`RE.md`](RE.md) gates, including independent r2 CFG/boundary checks and rejection of unsupported semantic names.
 
-### Reverse-engineering workflow and provenance
-
-| Tool | Use in this branch |
-|---|---|
-| Ghidra Headless MCP | Function identity, decompilation, callers/callees, data references, CFG blocks/edges, and structure offset proofs against the original `IGI.EXE`. |
-| r2 MCP / Radare2 | Independent `aaa` analysis, function boundaries, cdecl/prototype hints, imports, disassembly, basic blocks, edges, and semantic cross-checks. |
-| `IGI.EXE` retail binary | Ground truth for the PE32 image base `0x00400000`, code/data addresses, strings, callers, and field accesses. |
-| `llvm-pdbutil` | Rebuilt the address-compatible CodeView public-symbol PDB on this macOS worktree. Windows MSVC MASM/link remains supported by the legacy generator. |
-| `tools/generate_native_assets.py` | Regenerates JSON, MAP, CSV, IDC, Ghidra importer, PDB, evidence manifest, and per-entry Markdown from the root catalog. |
-
-The branch's provenance summary is deliberately split: 80 discoveries were completed by Heaven as human reverse-engineering work; the remainder were AI-assisted. The per-symbol evidence manifest records the exact source classification, while the new ten records additionally carry Ghidra/r2 CFG evidence.
-
-### Structures and readable assets
-
-[`IGI_Structures.hpp`](IGI_Structures.hpp) contains only offsets, strides, and sizes proven from retail machine code. It now covers profile, graphics, sound, soldier, human, display, transform-context, task-type, weapon-entity, QFile record, and sound-event payload views. Unknown bytes remain reserved or opaque. The evidence log is [`verification/structures_evidence.md`](verification/structures_evidence.md), and the per-structure readable records are in [`assets/structures/`](assets/structures/).
-
-Every catalog native has a readable Markdown record under [`assets/natives/`](assets/natives/), with address, signature, behavior, provenance, and usage boundary. These files are generated views; [`IGI-Natives.json`](IGI-Natives.json) remains authoritative.
+The 11 new dispatch, camera-reset, and MagicObj entries are included in the 294-entry catalog. They were added only after live Ghidra and r2 CFG analysis of previously undiscovered methods; existing entries were preserved, and the Weapon update signatures were corrected to their two-argument forms. The catalog is maintained only at `igi_natives_discovery/IGINatives.json`; no duplicate root catalog is kept.
 
 ### Enum quick reference
 
@@ -249,3 +234,7 @@ For comprehensive resource management documentation including Resource operation
 ## 📄 License & Credits
 
 Original Author: _HeavenHM@2022_
+
+### Generated research assets
+
+The canonical native catalog contains 294 entries after merging the remote dispatch/camera/MagicObj discoveries with the ten locally CFG-validated helpers. Readable per-native records are generated under [`assets/natives/`](assets/natives/), and proven structure views are under [`assets/structures/`](assets/structures/). The source catalog remains [`igi_natives_discovery/IGINatives.json`](igi_natives_discovery/IGINatives.json); `tools/generate_native_assets.py` regenerates the canonical JSON-derived export files, address-compatible PDB, evidence manifest, and Markdown views.

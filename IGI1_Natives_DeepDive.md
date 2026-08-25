@@ -1,7 +1,7 @@
 # Project I.G.I 1 — Native Function Deep-Dive Report
 
 **Target:** `igi.exe` retail (PE32, image base `0x400000`, `.text` = `0x401000`–`0x532510`)  
-**Branch:** `feature/natives-discovery` · **Catalog:** `IGI-Natives.json` (273 natives)
+**Branch:** `feature/natives-discovery` · **Catalog:** `igi_natives_discovery/IGINatives.json` (284 natives)
 **Verification:** radare2 + Ghidra MCP + OpenIGI cross-reference + game-script mining
 
 ---
@@ -15,7 +15,7 @@ verification. Every address in the catalog was proven to originate **exclusively
 
 | Metric | Value |
 |---|---|
-| Natives cataloged | 273 |
+| Natives cataloged | 284 |
 | With igi.exe registration-binding evidence | 158 |
 | With third-party corroboration (OpenIGI / IGIPatch) | 136+15 |
 | Address-provenance pass coverage | 100% |
@@ -905,18 +905,17 @@ Every accepted fact traces to igi.exe machine code; unknown is preferred over fa
 
 ## 5. Tool-Ready Symbol Exports
 
-The source formats are generated from the verified catalog (`exports/` directory). The consolidated three-format bundle is in `IGI1_Native_Exports/`:
+The source formats are generated from the single verified catalog in `igi_natives_discovery/`. All native export artifacts are kept in that bundle:
 
 | File | Target tool | Contents |
 |---|---|---|
-| `exports/igi1_natives.map` | Linker-map consumers, crash analyzers | Current 273-symbol segment-style map |
-| `exports/igi1_natives.idc` | IDA Pro | MakeName + repeatable comments per native |
-| `exports/ghidra_apply_igi1_natives.py` | Ghidra Script Manager | creates functions, labels, PRE comments |
-| `exports/igi1_natives.csv` | Spreadsheets / scripts | full catalog incl. signatures |
-| `IGI1_Native_Exports/IGI1-Natives.json` | Catalog consumers | Current 273-entry JSON catalog |
-| `IGI1_Native_Exports/IGI1-Natives.map` | Linker-map consumers, crash analyzers | Current 273-entry segment-style map |
-| `IGI1_Native_Exports/igi.pdb` | Windows debuggers | Address-compatible generated CodeView/MSF symbols; retail `igi.exe` has no CodeView identity to match |
-| `IGI1_Native_Exports/IGI1-Native-Name-Evidence.json` | Audit / review | 176 retail-derived names, 89 syntax fallbacks, and 8 parameter/context inferences |
+| `igi_natives_discovery/IGINatives.json` | Catalog consumers | The single current 284-entry JSON catalog |
+| `igi_natives_discovery/IGINatives.map` | Linker-map consumers, crash analyzers | Current 284-symbol segment-style map |
+| `igi_natives_discovery/igi.pdb` | Windows debuggers | Address-compatible generated CodeView/MSF symbols; retail `igi.exe` has no CodeView identity to match |
+| `igi_natives_discovery/iginatives.csv` | Spreadsheets / scripts | Full catalog including signatures |
+| `igi_natives_discovery/iginatives.idc` | IDA Pro | MakeName + repeatable comments per native |
+| `igi_natives_discovery/ghidra_apply_iginatives.py` | Ghidra Script Manager | Creates functions, labels, and PRE comments |
+| `igi_natives_discovery/IGI1-Native-Name-Evidence.json` | Audit / review | 178 retail-derived names, 88 syntax fallbacks, and 18 parameter/context inferences, including Ghidra/r2 CFG metrics |
 
 ## 6. SDK Programming Guide
 
@@ -926,7 +925,7 @@ subsystem namespace). Wrappers are cdecl calls executed on the game thread via F
 ## 7. Known Limitations (RE.md honesty policy)
 
 - Fine-grained parameter TYPES beyond decompiler-visible float/int/char* remain best-effort.
-- 89 internal engine functions have no recoverable name occurrence in the retail string/context evidence and therefore use only the mechanical `Function_Action` fallback recorded in `IGI1-Native-Name-Evidence.json`; the eight new context helpers are separately marked as parameter/context inference.
+- 88 internal engine functions have no recoverable name occurrence in the retail string/context evidence and therefore use only the mechanical `Function_Action` fallback recorded in `IGI1-Native-Name-Evidence.json`; the accepted dispatch/camera/MagicObj helpers are separately marked as parameter/context inference. `0x004D9FC0` remains intentionally unpromoted because its semantic owner is unresolved even though its Ghidra/r2 CFG agrees.
 - DEBUG_KEYS_ENABLE has no verified address; it exists only as a do-not-invoke quarantine in Natives.hpp.
 
 ## 8. Evidence Index

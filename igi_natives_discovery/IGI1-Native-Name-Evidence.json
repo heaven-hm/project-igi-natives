@@ -4,10 +4,10 @@
   "definedStringCount": 2447,
   "policy": "Use exact/underscore-insensitive/current-name occurrences from IGI.exe strings first; otherwise use a mechanically normalized Function_Action fallback or a behavior-derived parameter/context name only when live Ghidra and r2 evidence agrees. New behavior-derived entries require independent Ghidra and r2 CFG agreement.",
   "counts": {
-    "parameter-context-inference": 18,
+    "parameter-context-inference": 28,
     "retail-string": 168,
-    "retail-string-context": 8,
-    "syntax-fallback": 89
+    "retail-string-context": 10,
+    "syntax-fallback": 88
   },
   "duplicates": [],
   "Natives": [
@@ -2701,7 +2701,18 @@
       "canonicalName": "Weapon_FireUpdate",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [
+        "Ghidra signature: void Weapon_FireUpdate(int param_1, int* param_2); param_1 reads weaponCtx+0x14 and param_2 is read then passed by address to the selected weapon callback.",
+        "r2 prototype/disassembly: two cdecl stack arguments at 0x00478900; exact 0x00478900-0x0047896C body and callback table lookup through 0x00A96AE0.",
+        "Registration stack review: the callback pointer pushed at 0x00477ED2 remains for the following FUN_00401400 registrar call; it is not a third argument to Weapon_FireUpdate."
+      ],
+      "validation": {
+        "ghidra_cfg_edges": 4,
+        "r2_cfg_edges": 4,
+        "cfg_similarity": 1,
+        "calling_convention": "cdecl",
+        "state": "VALIDATED_STATIC"
+      }
     },
     {
       "hash": "004779E0",
@@ -2710,7 +2721,18 @@
       "canonicalName": "Weapon_FlameUpdate",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [
+        "Ghidra signature: void Weapon_FlameUpdate(int param_1, int* param_2); param_1 resolves the flame effect through [weaponCtx+0x14]+0x20 and param_2 is passed by address to the selected effect callback.",
+        "r2 prototype/disassembly: two cdecl stack arguments at 0x004779E0; exact 0x004779E0-0x00477A6A body and callback table lookup through 0x00A96AE0.",
+        "Registration stack review: the callback pointer pushed at 0x004772FB remains for the following registrar call; it is not an argument to Weapon_FlameUpdate."
+      ],
+      "validation": {
+        "ghidra_cfg_edges": 4,
+        "r2_cfg_edges": 4,
+        "cfg_similarity": 1,
+        "calling_convention": "cdecl",
+        "state": "VALIDATED_STATIC"
+      }
     },
     {
       "hash": "00479990",
@@ -2744,9 +2766,20 @@
       "address": 5085296,
       "catalogName": "Camera_SubmitFrame",
       "canonicalName": "Camera_SubmitFrame",
-      "source": "syntax-fallback",
+      "source": "parameter-context-inference",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [
+        "Ghidra: updates camCtx+0x50/+0x4C, copies the accepted frame vectors and values, then dispatches each entry in the Qtask list through Qtask_GetList/Qtask_GetEventId.",
+        "r2 afij: exact 220-byte cdecl body at 0x004D9870, 9 basic blocks, 12 CFG edges, 10 stack arguments; branch targets and loop/exit shape match Ghidra graph_cfg_edges.",
+        "Camera_ResetFrameCounters at 0x004D9950 clears the same +0x4C/+0x50 fields and Level_Start calls that reset on the camera context."
+      ],
+      "validation": {
+        "ghidra_cfg_edges": 12,
+        "r2_cfg_edges": 12,
+        "cfg_similarity": 1,
+        "calling_convention": "cdecl",
+        "state": "VALIDATED_STATIC"
+      }
     },
     {
       "hash": "00402870",
@@ -2851,6 +2884,248 @@
         "r2 confirms the nested depth decrement and elapsed-time accumulation.",
         "Ghidra callers Level_Start and Game_Restart pair it with Game_TimingBegin."
       ]
+    },
+    {
+      "hash": "004D97F0",
+      "address": 5085168,
+      "catalogName": "Qtask_SetCallbackData",
+      "canonicalName": "Qtask_SetCallbackData",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: stores the second parameter at task+0x48.",
+        "Ghidra caller 0x004C7760 supplies zero while initializing task objects; Qtask_UpdateList 0x004D27F0 retrieves the same field before invoking both callback tables.",
+        "r2 afij: cdecl, 2 args, size 12, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.99,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9800",
+      "address": 5085184,
+      "catalogName": "Qtask_GetCallbackData",
+      "canonicalName": "Qtask_GetCallbackData",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: returns *(unsigned int*)(task+0x48).",
+        "Ghidra caller Qtask_UpdateList 0x004D27F0 uses the result as the callback's second argument.",
+        "r2 afij: cdecl, 1 arg, size 8, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.99,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9810",
+      "address": 5085200,
+      "catalogName": "Qtask_Initialize",
+      "canonicalName": "Qtask_Initialize",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: assigns DAT_00548644 = FUN_004017C0(0) and DAT_00A54690 = FUN_004C1800(0x100).",
+        "Ghidra caller 0x00531DD0 invokes this immediately after the neighboring task/event setup function; Qtask_GetEventId and Qtask_GetList read these globals.",
+        "r2 afij: cdecl, 0 args, size 31, 1 basic block, 0 CFG edges; the eight instructions match Ghidra including the 0x100 allocation argument."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.99,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9830",
+      "address": 5085232,
+      "catalogName": "Qtask_Shutdown",
+      "canonicalName": "Qtask_Shutdown",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: calls FUN_004018C0(DAT_00548644) and FUN_004C1830(DAT_00A54690).",
+        "Ghidra caller 0x00531DF0 invokes this during the matching subsystem teardown after the task-specific shutdown helpers.",
+        "r2 afij: cdecl, 0 args, size 27, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.99,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9850",
+      "address": 5085264,
+      "catalogName": "Qtask_GetEventId",
+      "canonicalName": "Qtask_GetEventId",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra/r2: returns the byte at DAT_00548644 and takes no arguments.",
+        "The return is masked and multiplied into the first dimension of DAT_00A96AE0 in Camera_SubmitFrame; registration sites use the getter result for the following FUN_00401400 call.",
+        "r2 afij: cdecl, 0 args, size 6, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges. Stack attribution was checked at 0x00477220 and 0x00477E30."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.99,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9860",
+      "address": 5085280,
+      "catalogName": "Qtask_GetList",
+      "canonicalName": "Qtask_GetList",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra/r2: returns DAT_00A54690 with no arguments.",
+        "Callers 0x00477600, 0x00478840, and Camera_SubmitFrame read the returned list's count and walk task entries whose +0x1C field selects callback-table rows.",
+        "r2 afij: cdecl, 0 args, size 6, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.99,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9950",
+      "address": 5085520,
+      "catalogName": "Camera_ResetFrameCounters",
+      "canonicalName": "Camera_ResetFrameCounters",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra/r2: stores -1 at camCtx+0x4C and 0 at camCtx+0x50.",
+        "Camera_SubmitFrame 0x004D9870 reads/writes the same two fields; Level_Start calls this function on DAT_0057BABC+0x60 and other camera setup callers use the same reset.",
+        "r2 afij: cdecl, 1 arg, size 19, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.98,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9A00",
+      "address": 5085696,
+      "catalogName": "MagicObj_Initialize",
+      "canonicalName": "MagicObj_Initialize",
+      "source": "retail-string-context",
+      "retailName": "MagicObj",
+      "retailEvidence": [
+        "Ghidra and r2 string references inside the function include the exact retail string MagicObj at 0x00548660 and TASKTYPE_MAGICOBJ at 0x0054864C.",
+        "The function creates a 0x138-byte task type, allocates the type/event IDs, registers handlers, and calls TaskType_Set; startup caller is 0x00531540.",
+        "r2 afij: cdecl, 0 args, size 257, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.98,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9F60",
+      "address": 5087072,
+      "catalogName": "MagicObj_Shutdown",
+      "canonicalName": "MagicObj_Shutdown",
+      "source": "retail-string-context",
+      "retailName": "MagicObj",
+      "retailEvidence": [
+        "Ghidra/r2 show the function releases the type ID at 0x00548648 and both event slots at 0x0054864A/0x0054864B, restoring sentinels.",
+        "The paired teardown caller is 0x005315B0, immediately after the MagicObj subsystem work initialized at 0x00531540; the neighboring initializer contains MagicObj/TASKTYPE_MAGICOBJ strings.",
+        "r2 afij: cdecl, 0 args, size 63, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.98,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9FA0",
+      "address": 5087136,
+      "catalogName": "MagicObj_GetTypeId",
+      "canonicalName": "MagicObj_GetTypeId",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra/r2: returns the 16-bit global DAT_00548648 with no arguments.",
+        "MagicObj_Initialize writes this global from the MagicObj type factory and MagicObj_Shutdown resets it; 29 callers use the getter in task/object registration and dispatch paths.",
+        "r2 afij: cdecl, 0 args, size 7, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.98,
+        "state": "VALIDATED_STATIC"
+      }
+    },
+    {
+      "hash": "004D9FB0",
+      "address": 5087152,
+      "catalogName": "MagicObj_GetEventId",
+      "canonicalName": "MagicObj_GetEventId",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra/r2: returns the byte global DAT_0054864A with no arguments.",
+        "MagicObj_Initialize allocates this event slot through FUN_004017C0(0) and MagicObj_Shutdown releases it through FUN_004018C0; 25 callers use the getter in task registration/dispatch paths.",
+        "r2 afij: cdecl, 0 args, size 6, 1 basic block, 0 CFG edges; Ghidra graph_cfg_edges also reports 0 edges."
+      ],
+      "validation": {
+        "ghidra_blocks": 1,
+        "r2_blocks": 1,
+        "ghidra_cfg_edges": 0,
+        "r2_cfg_edges": 0,
+        "cfg_similarity": 1,
+        "identity_score": 0.98,
+        "state": "VALIDATED_STATIC"
+      }
     },
     {
       "hash": "00401900",

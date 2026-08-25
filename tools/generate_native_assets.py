@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate synchronized IGI native assets from the root JSON catalog.
 
-The root IGI-Natives.json is authoritative. This generator updates the export
+The root igi_natives_discovery/IGINatives.json is authoritative. This generator updates the export
 JSON/MAP/CSV/IDC/Ghidra importer, merges new evidence, emits a CodeView PDB
 using clang/lld on non-Windows hosts, and writes one readable Markdown record
 per native and per recovered structure.
@@ -35,8 +35,8 @@ def md_cell(value: object) -> str:
 
 
 def load_inputs(root: Path) -> tuple[dict, dict, dict, dict]:
-    catalog = json.loads((root / "IGI-Natives.json").read_text(encoding="utf-8"))
-    evidence_path = root / "IGI1_Native_Exports" / "IGI1-Native-Name-Evidence.json"
+    catalog = json.loads((root / "igi_natives_discovery" / "IGINatives.json").read_text(encoding="utf-8"))
+    evidence_path = root / "igi_natives_discovery" / "IGI1-Native-Name-Evidence.json"
     evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
     cfg_path = root / "verification" / "natives_discovery_2026-08-26.json"
     cfg = json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {"accepted": []}
@@ -75,12 +75,12 @@ def merge_evidence(root: Path, catalog: dict, evidence: dict, cfg: dict) -> dict
     if suffix not in policy:
         policy = f"{policy} {suffix}".strip()
     evidence["policy"] = policy
-    dump_json(root / "IGI1_Native_Exports" / "IGI1-Native-Name-Evidence.json", evidence)
+    dump_json(root / "igi_natives_discovery" / "IGI1-Native-Name-Evidence.json", evidence)
     return evidence
 
 
 def write_csv(root: Path, entries: list[dict]) -> None:
-    path = root / "exports" / "igi1_natives.csv"
+    path = root / "igi_natives_discovery" / "iginatives.csv"
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, quoting=csv.QUOTE_ALL, lineterminator="\n")
@@ -95,7 +95,7 @@ def write_map(root: Path, entries: list[dict]) -> None:
     text_length = max(KNOWN_TEXT_LENGTH, max_address - IMAGE_BASE + 0x100)
     lines = [
         " IGI1 Native Symbols - Project I.G.I (igi.exe) verified native addresses",
-        f" Generated from IGI-Natives.json ({len(entries)} catalog entries; duplicate-address aliases retained)",
+        f" Generated from igi_natives_discovery/IGINatives.json ({len(entries)} catalog entries; duplicate-address aliases retained)",
         " Preferred load address is 00400000",
         "",
         " Start         Length     Name                   Class",
@@ -110,13 +110,13 @@ def write_map(root: Path, entries: list[dict]) -> None:
             raise ValueError(f"native below linked .text RVA: {entry['hash']}")
         lines.append(f" 0001:{offset:08X}  _{entry['name']:<40} {entry['address']:08X} f   igi1natives.obj")
     text = "\n".join(lines) + "\n"
-    for path in (root / "IGI1_Native_Exports" / "IGI1-Natives.map", root / "exports" / "igi1_natives.map"):
+    for path in (root / "igi_natives_discovery" / "IGINatives.map",):
         path.write_text(text, encoding="ascii")
 
 
 def write_idc(root: Path, entries: list[dict]) -> None:
     lines = [
-        "// Auto-generated from IGI-Natives.json by tools/generate_native_assets.py",
+        "// Auto-generated from igi_natives_discovery/IGINatives.json by tools/generate_native_assets.py",
         "#include <idc.idc>",
         "static main() {",
         "  SetBatch(1);",
@@ -126,12 +126,12 @@ def write_idc(root: Path, entries: list[dict]) -> None:
         lines.append(f"  MakeNameEx({address}, {json.dumps(entry['name'])}, SN_NOWARN);")
         lines.append(f"  SetFunctionCmt({address}, {json.dumps(entry['note'])}, 1);")
     lines += ["  SetBatch(0);", "}", ""]
-    (root / "exports" / "igi1_natives.idc").write_text("\n".join(lines), encoding="utf-8")
+    (root / "igi_natives_discovery" / "iginatives.idc").write_text("\n".join(lines), encoding="utf-8")
 
 
 def write_ghidra_importer(root: Path, entries: list[dict]) -> None:
     lines = [
-        "# Auto-generated from IGI-Natives.json by tools/generate_native_assets.py",
+        "# Auto-generated from igi_natives_discovery/IGINatives.json by tools/generate_native_assets.py",
         "from ghidra.program.model.symbol import SourceType",
         "",
         "NATIVES = [",
@@ -139,7 +139,7 @@ def write_ghidra_importer(root: Path, entries: list[dict]) -> None:
     for entry in entries:
         lines.append(f"    (0x{entry['address']:08X}, {entry['name']!r}, {entry['note']!r}),")
     lines += ["]", "", "def run():", "    for address, name, note in NATIVES:", "        addr = toAddr(address)", "        createLabel(addr, name, SourceType.USER_DEFINED)", "        function = getFunctionAt(addr)", "        if function is not None:", "            function.setComment(note)", "    print('Applied %d IGI native labels' % len(NATIVES))", "", "run()", ""]
-    (root / "exports" / "ghidra_apply_igi1_natives.py").write_text("\n".join(lines), encoding="utf-8")
+    (root / "igi_natives_discovery" / "ghidra_apply_iginatives.py").write_text("\n".join(lines), encoding="utf-8")
 
 
 def coff_name(name: str, address: int, used: set[str]) -> str:
@@ -160,7 +160,7 @@ def write_pdb(root: Path, entries: list[dict]) -> str:
                 pdbutil = candidate
                 break
     ordered = sorted(entries, key=lambda item: (item["address"], item["name"]))
-    output = root / "IGI1_Native_Exports" / "igi.pdb"
+    output = root / "igi_natives_discovery" / "igi.pdb"
     if clang and lld:
         used: set[str] = set()
         symbols = [(entry["address"] - IMAGE_BASE - TEXT_RVA, coff_name(entry["name"], entry["address"], used)) for entry in ordered]
@@ -182,9 +182,9 @@ def write_pdb(root: Path, entries: list[dict]) -> str:
             assembly.append(f".space {target_length - cursor}, 0")
         with tempfile.TemporaryDirectory(prefix="igi1-native-pdb-") as temp:
             temp_path = Path(temp)
-            asm = temp_path / "igi1_natives.s"
-            obj = temp_path / "igi1_natives.obj"
-            exe = temp_path / "igi1_natives.exe"
+            asm = temp_path / "iginatives.s"
+            obj = temp_path / "iginatives.obj"
+            exe = temp_path / "iginatives.exe"
             asm.write_text("\n".join(assembly) + "\n", encoding="ascii")
             subprocess.run([clang, "-target", "i686-pc-windows-msvc", "-c", "-x", "assembler", str(asm), "-o", str(obj)], check=True)
             subprocess.run([lld, "/nologo", "/machine:x86", "/subsystem:console", "/entry:_start", "/base:0x400000", "/fixed", "/debug", f"/pdb:{output}", f"/out:{exe}", str(obj)], check=True)
@@ -204,7 +204,7 @@ def write_pdb(root: Path, entries: list[dict]) -> str:
             f"        Name:            {entry['name']}",
         ]
     with tempfile.TemporaryDirectory(prefix="igi1-native-pdb-yaml-") as temp:
-        yaml_path = Path(temp) / "igi1_natives.yaml"
+        yaml_path = Path(temp) / "iginatives.yaml"
         yaml_path.write_text(prefix + "\n".join(records) + "\n...\n", encoding="utf-8")
         subprocess.run([pdbutil, "yaml2pdb", str(yaml_path), f"-pdb={output}"], check=True)
     return "llvm-pdbutil yaml2pdb (CodeView publics)"
@@ -217,11 +217,11 @@ def write_native_docs(root: Path, entries: list[dict], evidence: dict, cfg: dict
     rows = [
         "# IGI native catalog",
         "",
-        f"This directory contains one readable record for each of the {len(entries)} catalog entries. The root `IGI-Natives.json` is authoritative; these Markdown files are generated views.",
+        f"This directory contains one readable record for each of the {len(entries)} catalog entries. The root `igi_natives_discovery/IGINatives.json` is authoritative; these Markdown files are generated views.",
         "",
         "## Provenance",
         "",
-        "The branch records 80 discoveries as human reverse-engineering work by Heaven. The remaining catalog work is AI-assisted and is classified per symbol in `IGI1_Native_Exports/IGI1-Native-Name-Evidence.json`. Retail string/context names are preferred; behavior-derived names require the Ghidra/r2 evidence gate.",
+        "The branch records 80 discoveries as human reverse-engineering work by Heaven. The remaining catalog work is AI-assisted and is classified per symbol in `igi_natives_discovery/IGI1-Native-Name-Evidence.json`. Retail string/context names are preferred; behavior-derived names require the Ghidra/r2 evidence gate.",
         "",
         "| Address | Name | Signature | Source |",
         "|---|---|---|---|",
@@ -279,7 +279,7 @@ def write_structure_docs(root: Path, structures: dict) -> None:
 def write_assets_readme(root: Path, count: int, pdb_toolchain: str) -> None:
     text = f"""# IGI reverse-engineering assets
 
-The root `IGI-Natives.json` is the authoritative native catalog. This folder contains generated, human-readable views rather than a second source of truth.
+The root `igi_natives_discovery/IGINatives.json` is the authoritative native catalog. This folder contains generated, human-readable views rather than a second source of truth.
 
 | Folder/file | Purpose |
 |---|---|
@@ -302,7 +302,7 @@ def main() -> None:
     catalog, evidence, cfg, structures = load_inputs(root)
     entries = [wrapper["Native"] for wrapper in catalog["Natives"]]
     evidence = merge_evidence(root, catalog, evidence, cfg)
-    dump_json(root / "IGI1_Native_Exports" / "IGI1-Natives.json", catalog)
+    dump_json(root / "igi_natives_discovery" / "IGINatives.json", catalog)
     write_csv(root, entries)
     write_map(root, entries)
     write_idc(root, entries)
@@ -312,19 +312,19 @@ def main() -> None:
     write_structure_docs(root, structures)
     write_assets_readme(root, len(entries), pdb_toolchain)
     dump_json(root / "verification" / "native_asset_generation.json", {
-        "catalog": "IGI-Natives.json",
+        "catalog": "igi_natives_discovery/IGINatives.json",
         "entry_count": len(entries),
         "image_base": "0x00400000",
         "pdb_toolchain": pdb_toolchain,
         "outputs": [
-            "IGI1_Native_Exports/IGI1-Natives.json",
-            "IGI1_Native_Exports/IGI1-Natives.map",
-            "IGI1_Native_Exports/igi.pdb",
-            "IGI1_Native_Exports/IGI1-Native-Name-Evidence.json",
-            "exports/igi1_natives.csv",
-            "exports/igi1_natives.map",
-            "exports/igi1_natives.idc",
-            "exports/ghidra_apply_igi1_natives.py",
+            "igi_natives_discovery/IGINatives.json",
+            "igi_natives_discovery/IGINatives.map",
+            "igi_natives_discovery/igi.pdb",
+            "igi_natives_discovery/IGI1-Native-Name-Evidence.json",
+            "igi_natives_discovery/iginatives.csv",
+            "igi_natives_discovery/iginatives.map",
+            "igi_natives_discovery/iginatives.idc",
+            "exports/ghidra_apply_iginatives.py",
             "assets/natives/",
             "assets/structures/"
         ]

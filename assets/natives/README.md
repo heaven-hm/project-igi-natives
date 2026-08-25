@@ -1,10 +1,10 @@
 # IGI native catalog
 
-This directory contains one readable record for each of the 283 catalog entries. The root `IGI-Natives.json` is authoritative; these Markdown files are generated views.
+This directory contains one readable record for each of the 294 catalog entries. The root `igi_natives_discovery/IGINatives.json` is authoritative; these Markdown files are generated views.
 
 ## Provenance
 
-The branch records 80 discoveries as human reverse-engineering work by Heaven. The remaining catalog work is AI-assisted and is classified per symbol in `IGI1_Native_Exports/IGI1-Native-Name-Evidence.json`. Retail string/context names are preferred; behavior-derived names require the Ghidra/r2 evidence gate.
+The branch records 80 discoveries as human reverse-engineering work by Heaven. The remaining catalog work is AI-assisted and is classified per symbol in `igi_natives_discovery/IGI1-Native-Name-Evidence.json`. Retail string/context names are preferred; behavior-derived names require the Ghidra/r2 evidence gate.
 
 | Address | Name | Signature | Source |
 |---|---|---|---|
@@ -267,12 +267,12 @@ The branch records 80 discoveries as human reverse-engineering work by Heaven. T
 | `0x004F51D0` | [`CutScene_TaskUpdate`](004F51D0-CutScene_TaskUpdate.md) | `int CutScene_TaskUpdate(void* cutsceneTask)` | `syntax-fallback` |
 | `0x004109A0` | [`Human_RunUpdate`](004109A0-Human_RunUpdate.md) | `void Human_RunUpdate(void* human)` | `syntax-fallback` |
 | `0x00412440` | [`Human_DamageApply`](00412440-Human_DamageApply.md) | `void Human_DamageApply(void* human)` | `syntax-fallback` |
-| `0x00478900` | [`Weapon_FireUpdate`](00478900-Weapon_FireUpdate.md) | `void Weapon_FireUpdate(void* weaponCtx)` | `syntax-fallback` |
-| `0x004779E0` | [`Weapon_FlameUpdate`](004779E0-Weapon_FlameUpdate.md) | `void Weapon_FlameUpdate(void* weaponCtx)` | `syntax-fallback` |
+| `0x00478900` | [`Weapon_FireUpdate`](00478900-Weapon_FireUpdate.md) | `void Weapon_FireUpdate(void* weaponCtx, int* state)` | `syntax-fallback` |
+| `0x004779E0` | [`Weapon_FlameUpdate`](004779E0-Weapon_FlameUpdate.md) | `void Weapon_FlameUpdate(void* weaponCtx, int* state)` | `syntax-fallback` |
 | `0x00479990` | [`Weapon_ReloadStart`](00479990-Weapon_ReloadStart.md) | `void Weapon_ReloadStart(void* soldierCtx)` | `syntax-fallback` |
 | `0x00477040` | [`Throwable_Create`](00477040-Throwable_Create.md) | `void Throwable_Create(void)` | `syntax-fallback` |
 | `0x00476040` | [`Mine_ProximityCreate`](00476040-Mine_ProximityCreate.md) | `void Mine_ProximityCreate(void)` | `syntax-fallback` |
-| `0x004D9870` | [`Camera_SubmitFrame`](004D9870-Camera_SubmitFrame.md) | `void Camera_SubmitFrame(void* camCtx)` | `syntax-fallback` |
+| `0x004D9870` | [`Camera_SubmitFrame`](004D9870-Camera_SubmitFrame.md) | `void Camera_SubmitFrame(void* camCtx)` | `parameter-context-inference` |
 | `0x00402870` | [`Frames_Get`](00402870-Frames_Get.md) | `int Frames_Get(void)` | `parameter-context-inference` |
 | `0x00402880` | [`Game_GetContext`](00402880-Game_GetContext.md) | `void* Game_GetContext(void)` | `parameter-context-inference` |
 | `0x00402890` | [`Game_GetScriptContext`](00402890-Game_GetScriptContext.md) | `void* Game_GetScriptContext(void)` | `parameter-context-inference` |
@@ -281,6 +281,17 @@ The branch records 80 discoveries as human reverse-engineering work by Heaven. T
 | `0x004028C0` | [`Frames_GetTaskCounter`](004028C0-Frames_GetTaskCounter.md) | `int Frames_GetTaskCounter(void)` | `parameter-context-inference` |
 | `0x004028D0` | [`Game_TimingBegin`](004028D0-Game_TimingBegin.md) | `void Game_TimingBegin(void)` | `parameter-context-inference` |
 | `0x004028F0` | [`Game_TimingEnd`](004028F0-Game_TimingEnd.md) | `void Game_TimingEnd(void)` | `parameter-context-inference` |
+| `0x004D97F0` | [`Qtask_SetCallbackData`](004D97F0-Qtask_SetCallbackData.md) | `void Qtask_SetCallbackData(void* task, unsigned int callbackData)` | `parameter-context-inference` |
+| `0x004D9800` | [`Qtask_GetCallbackData`](004D9800-Qtask_GetCallbackData.md) | `unsigned int Qtask_GetCallbackData(void* task)` | `parameter-context-inference` |
+| `0x004D9810` | [`Qtask_Initialize`](004D9810-Qtask_Initialize.md) | `void Qtask_Initialize(void)` | `parameter-context-inference` |
+| `0x004D9830` | [`Qtask_Shutdown`](004D9830-Qtask_Shutdown.md) | `void Qtask_Shutdown(void)` | `parameter-context-inference` |
+| `0x004D9850` | [`Qtask_GetEventId`](004D9850-Qtask_GetEventId.md) | `unsigned char Qtask_GetEventId(void)` | `parameter-context-inference` |
+| `0x004D9860` | [`Qtask_GetList`](004D9860-Qtask_GetList.md) | `void* Qtask_GetList(void)` | `parameter-context-inference` |
+| `0x004D9950` | [`Camera_ResetFrameCounters`](004D9950-Camera_ResetFrameCounters.md) | `void Camera_ResetFrameCounters(void* camCtx)` | `parameter-context-inference` |
+| `0x004D9A00` | [`MagicObj_Initialize`](004D9A00-MagicObj_Initialize.md) | `void MagicObj_Initialize(void)` | `retail-string-context` |
+| `0x004D9F60` | [`MagicObj_Shutdown`](004D9F60-MagicObj_Shutdown.md) | `void MagicObj_Shutdown(void)` | `retail-string-context` |
+| `0x004D9FA0` | [`MagicObj_GetTypeId`](004D9FA0-MagicObj_GetTypeId.md) | `unsigned short MagicObj_GetTypeId(void)` | `parameter-context-inference` |
+| `0x004D9FB0` | [`MagicObj_GetEventId`](004D9FB0-MagicObj_GetEventId.md) | `unsigned char MagicObj_GetEventId(void)` | `parameter-context-inference` |
 | `0x00401900` | [`TaskType_Register`](00401900-TaskType_Register.md) | `uint16_t TaskType_Register(uint32_t p1, uint32_t p2, uint16_t parentType, uint32_t p4)` | `parameter-context-inference` |
 | `0x00401CF0` | [`TaskType_IsDerivedFrom`](00401CF0-TaskType_IsDerivedFrom.md) | `bool TaskType_IsDerivedFrom(uint16_t typeId, uint16_t baseTypeId)` | `parameter-context-inference` |
 | `0x00477C50` | [`Weapon_EntityCreate`](00477C50-Weapon_EntityCreate.md) | `void* Weapon_EntityCreate(uint32_t p1, uint16_t objectType, uint32_t weaponType, uint32_t p4, uint8_t p5)` | `parameter-context-inference` |

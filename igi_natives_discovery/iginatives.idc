@@ -1,4 +1,4 @@
-// Auto-generated from IGI-Natives.json by tools/generate_native_assets.py
+// Auto-generated from igi_natives_discovery/IGINatives.json by tools/generate_native_assets.py
 #include <idc.idc>
 static main() {
   SetBatch(1);
@@ -521,9 +521,9 @@ static main() {
   MakeNameEx(0x00412440, "Human_DamageApply", SN_NOWARN);
   SetFunctionCmt(0x00412440, "Applies DAMAGE/knockback to the human player: reads enable flag byte +0xCF6 and patrol sub-struct +0x254 of the human struct. IGI-MP disables bullet knockback here. Prologue-verified.", 1);
   MakeNameEx(0x00478900, "Weapon_FireUpdate", SN_NOWARN);
-  SetFunctionCmt(0x00478900, "Weapon FIRE update - processes firing state using config byte 0x5407B9 and weapon-table entry ([ctx+0x14] -> +0x1C). IGI-MP hooks this as gunhook.", 1);
+  SetFunctionCmt(0x00478900, "Weapon FIRE update - processes firing state using config byte 0x5407B9 and weapon-table entry ([ctx+0x14] -> +0x1C). Param state is read, passed by address to the selected weapon callback, and used to update weaponCtx+0xEC. Ghidra and r2 agree on two cdecl stack arguments; the registration site pushes this callback before the following registrar call.", 1);
   MakeNameEx(0x004779E0, "Weapon_FlameUpdate", SN_NOWARN);
-  SetFunctionCmt(0x004779E0, "FLAME-weapon effect update: resolves effect object via [ctx+0x14]+0x20 then updates through 0x477C10. IGI-MP hooks this as flamehook.", 1);
+  SetFunctionCmt(0x004779E0, "FLAME-weapon effect update: resolves effect object via [ctx+0x14]+0x20 then updates through 0x477C10. Param state is read, passed by address to the selected effect callback, and used to update weaponCtx+0xEC. Ghidra and r2 agree on two cdecl stack arguments.", 1);
   MakeNameEx(0x00479990, "Weapon_ReloadStart", SN_NOWARN);
   SetFunctionCmt(0x00479990, "Starts weapon RELOAD: uses soldier object ref +0x4C4 with spawner 0x4F2060 (arg 0x4C3). IGI-MP hooks this as reloadhook.", 1);
   MakeNameEx(0x00477040, "Throwable_Create", SN_NOWARN);
@@ -548,6 +548,28 @@ static main() {
   SetFunctionCmt(0x004028D0, "Begins a nested timing interval: starts the retail timer when the timing depth is zero, then increments the depth counter. Level_Start and Game_Restart bracket their load work with this helper and Game_TimingEnd.", 1);
   MakeNameEx(0x004028F0, "Game_TimingEnd", SN_NOWARN);
   SetFunctionCmt(0x004028F0, "Ends a nested timing interval: decrements the depth counter and, at zero, adds elapsed timer ticks to game-context field +0x50 and clears the interval start timestamp.", 1);
+  MakeNameEx(0x004D97F0, "Qtask_SetCallbackData", SN_NOWARN);
+  SetFunctionCmt(0x004D97F0, "Stores the raw 32-bit callback payload at task+0x48. Qtask_UpdateList (0x004D27F0) retrieves this field and passes it as the second argument to each registered per-task-type callback. Ghidra/r2: exact 0x004D97F0-0x004D97FB boundary, 1 basic block, 0 CFG edges, cdecl 2-argument store.", 1);
+  MakeNameEx(0x004D9800, "Qtask_GetCallbackData", SN_NOWARN);
+  SetFunctionCmt(0x004D9800, "Returns the raw 32-bit callback payload from task+0x48. Qtask_UpdateList (0x004D27F0) calls it immediately before invoking both callback tables. Ghidra/r2: exact 0x004D9800-0x004D9807 boundary, 1 basic block, 0 CFG edges, cdecl 1-argument load.", 1);
+  MakeNameEx(0x004D9810, "Qtask_Initialize", SN_NOWARN);
+  SetFunctionCmt(0x004D9810, "Initializes the Qtask runtime: allocates an event slot through FUN_004017C0(0), creates the 0x100-entry Qtask list through FUN_004C1800(0x100), and stores the event/list globals at 0x00548644 and 0x00A54690. Called by the subsystem startup at 0x00531DD0. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument function.", 1);
+  MakeNameEx(0x004D9830, "Qtask_Shutdown", SN_NOWARN);
+  SetFunctionCmt(0x004D9830, "Shuts down the Qtask runtime: releases the event slot at 0x00548644 through FUN_004018C0 and releases the list at 0x00A54690 through FUN_004C1830. Called by the subsystem shutdown at 0x00531DF0. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument function.", 1);
+  MakeNameEx(0x004D9850, "Qtask_GetEventId", SN_NOWARN);
+  SetFunctionCmt(0x004D9850, "Returns the Qtask event-slot byte stored at 0x00548644. The result selects the first dimension of the task callback table at 0x00A96AE0. Ghidra/r2: exact 0x004D9850-0x004D9855 boundary, 1 basic block, 0 CFG edges, cdecl no-argument byte getter. At the Gun/GunFlame registration sites, any callback pushed before this call belongs to the following FUN_00401400 registrar call; it is not an argument to this getter.", 1);
+  MakeNameEx(0x004D9860, "Qtask_GetList", SN_NOWARN);
+  SetFunctionCmt(0x004D9860, "Returns the Qtask list allocated by Qtask_Initialize at 0x00A54690. Retail callers read the first dword as the current count and walk entries from list+0x08, using each entry's +0x1C task-type field. Ghidra/r2: exact 0x004D9860-0x004D9865 boundary, 1 basic block, 0 CFG edges, cdecl no-argument pointer getter.", 1);
+  MakeNameEx(0x004D9950, "Camera_ResetFrameCounters", SN_NOWARN);
+  SetFunctionCmt(0x004D9950, "Resets the camera frame-selection fields camCtx+0x4C to -1 and camCtx+0x50 to 0. Camera_SubmitFrame (0x004D9870) increments and consumes these same fields; Level_Start calls this reset on the global camera context. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl 1-argument store.", 1);
+  MakeNameEx(0x004D9A00, "MagicObj_Initialize", SN_NOWARN);
+  SetFunctionCmt(0x004D9A00, "Initializes the MagicObj task subsystem. The function contains the retail strings MagicObj and TASKTYPE_MAGICOBJ, creates the 0x138-byte type, allocates its task/event IDs, registers update/delete/render handlers, and calls TaskType_Set. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument function.", 1);
+  MakeNameEx(0x004D9F60, "MagicObj_Shutdown", SN_NOWARN);
+  SetFunctionCmt(0x004D9F60, "Shuts down MagicObj: releases the registered type ID and both event slots allocated by MagicObj_Initialize, then restores their sentinel values. Called by the matching subsystem teardown at 0x005315B0. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument function.", 1);
+  MakeNameEx(0x004D9FA0, "MagicObj_GetTypeId", SN_NOWARN);
+  SetFunctionCmt(0x004D9FA0, "Returns the 16-bit MagicObj task-type ID stored at 0x00548648, allocated by MagicObj_Initialize and reset by MagicObj_Shutdown. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument getter.", 1);
+  MakeNameEx(0x004D9FB0, "MagicObj_GetEventId", SN_NOWARN);
+  SetFunctionCmt(0x004D9FB0, "Returns the MagicObj event-slot byte stored at 0x0054864A, allocated by MagicObj_Initialize and released by MagicObj_Shutdown. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument getter.", 1);
   MakeNameEx(0x00401900, "TaskType_Register", SN_NOWARN);
   SetFunctionCmt(0x00401900, "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see verification/natives_discovery_2026-08-26.json.", 1);
   MakeNameEx(0x00401CF0, "TaskType_IsDerivedFrom", SN_NOWARN);

@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
-    [string]$CatalogPath = (Join-Path $PSScriptRoot "..\IGI-Natives.json"),
-    [string]$OutputDirectory = (Join-Path $PSScriptRoot "..\IGI1_Native_Exports")
+    [string]$CatalogPath = (Join-Path $PSScriptRoot "..\igi_natives_discovery\IGINatives.json"),
+    [string]$OutputDirectory = (Join-Path $PSScriptRoot "..\igi_natives_discovery")
 )
 
 $ErrorActionPreference = "Stop"
@@ -39,10 +39,12 @@ foreach ($entry in $orderedEntries) {
 }
 
 New-Item -ItemType Directory -Force -Path $outputDirectory | Out-Null
-$outputCatalog = Join-Path $outputDirectory "IGI1-Natives.json"
-$outputMap = Join-Path $outputDirectory "IGI1-Natives.map"
+$outputCatalog = Join-Path $outputDirectory "IGINatives.json"
+$outputMap = Join-Path $outputDirectory "IGINatives.map"
 $outputPdb = Join-Path $outputDirectory "igi.pdb"
-Copy-Item -LiteralPath $catalogFile -Destination $outputCatalog -Force
+if ([System.IO.Path]::GetFullPath($catalogFile) -ne [System.IO.Path]::GetFullPath($outputCatalog)) {
+    Copy-Item -LiteralPath $catalogFile -Destination $outputCatalog -Force
+}
 
 $mapBuilder = [System.Text.StringBuilder]::new()
 [void]$mapBuilder.AppendLine(" IGI1 Native Symbols - Project I.G.I (igi.exe) verified native addresses")
@@ -63,9 +65,6 @@ foreach ($group in @($orderedEntries | Group-Object -Property address)) {
     }
 }
 Set-Content -LiteralPath $outputMap -Value $mapBuilder.ToString() -Encoding ascii -NoNewline
-$legacyMap = Join-Path $PSScriptRoot "..\exports\igi1_natives.map"
-Set-Content -LiteralPath $legacyMap -Value $mapBuilder.ToString() -Encoding ascii -NoNewline
-
 $msvcRoot = "D:\Software\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC"
 $msvcVersion = Get-ChildItem -LiteralPath $msvcRoot -Directory | Sort-Object Name -Descending | Select-Object -First 1
 if ($null -eq $msvcVersion) {
@@ -150,4 +149,3 @@ Write-Output ("Generated {0} native symbols in {1}" -f $entries.Count, $outputDi
 Write-Output ("JSON: {0}" -f $outputCatalog)
 Write-Output ("MAP:  {0}" -f $outputMap)
 Write-Output ("PDB:  {0}" -f $outputPdb)
-Write-Output ("Legacy MAP: {0}" -f $legacyMap)

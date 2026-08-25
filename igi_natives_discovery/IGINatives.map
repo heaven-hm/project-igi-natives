@@ -1,5 +1,5 @@
  IGI1 Native Symbols - Project I.G.I (igi.exe) verified native addresses
- Generated from IGI-Natives.json (283 catalog entries; duplicate-address aliases retained)
+ Generated from igi_natives_discovery/IGINatives.json (294 catalog entries; duplicate-address aliases retained)
  Preferred load address is 00400000
 
  Start         Length     Name                   Class
@@ -270,7 +270,18 @@
  0001:000C38E0  _Rigid_DyncubeObjRead                     004C48E0 f   igi1natives.obj
  0001:000C3930  _Magic_ObjLoad                            004C4930 f   igi1natives.obj
  0001:000C5760  _Create_TerrainTileMap                    004C6760 f   igi1natives.obj
+ 0001:000D87F0  _Qtask_SetCallbackData                    004D97F0 f   igi1natives.obj
+ 0001:000D8800  _Qtask_GetCallbackData                    004D9800 f   igi1natives.obj
+ 0001:000D8810  _Qtask_Initialize                         004D9810 f   igi1natives.obj
+ 0001:000D8830  _Qtask_Shutdown                           004D9830 f   igi1natives.obj
+ 0001:000D8850  _Qtask_GetEventId                         004D9850 f   igi1natives.obj
+ 0001:000D8860  _Qtask_GetList                            004D9860 f   igi1natives.obj
  0001:000D8870  _Camera_SubmitFrame                       004D9870 f   igi1natives.obj
+ 0001:000D8950  _Camera_ResetFrameCounters                004D9950 f   igi1natives.obj
+ 0001:000D8A00  _MagicObj_Initialize                      004D9A00 f   igi1natives.obj
+ 0001:000D8F60  _MagicObj_Shutdown                        004D9F60 f   igi1natives.obj
+ 0001:000D8FA0  _MagicObj_GetTypeId                       004D9FA0 f   igi1natives.obj
+ 0001:000D8FB0  _MagicObj_GetEventId                      004D9FB0 f   igi1natives.obj
  0001:000E58D0  _Sound_Load                               004E68D0 f   igi1natives.obj
  0001:000E6200  _Sound_EventTrigger                       004E7200 f   igi1natives.obj
  0001:000E7C60  _Define_Sound                             004E8C60 f   igi1natives.obj
