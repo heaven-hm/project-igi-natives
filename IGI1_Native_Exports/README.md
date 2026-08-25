@@ -1,6 +1,6 @@
 # IGI1 Native Exports
 
-This is the branch's official Project I.G.I. 1 native-export bundle, generated from the live retail `D:\IGI1\igi.exe` analysis on `feature/natives-discovery`. It contains 273 address-compatible native symbols, including the newly analyzed context, flow, frame-counter, and timing helpers that were not in the previous catalog.
+This is the branch's official Project I.G.I. 1 native-export bundle, generated from the live retail `D:\IGI1\igi.exe` analysis on `feature/natives-discovery`. It contains 283 address-compatible native symbols, including the context/flow/timing helpers and ten additional Ghidra/r2 CFG-validated functions added in this update.
 
 ## Files
 
@@ -14,7 +14,7 @@ This is the branch's official Project I.G.I. 1 native-export bundle, generated f
 
 ## Discovery provenance
 
-Heaven completed 80 native discoveries and labels as human reverse-engineering work. The remaining entries were AI-assisted using the live Ghidra Headless MCP and r2 MCP (Radare2 MCP), with names retained from `igi.exe` strings whenever available and behavior-derived names used only where the Ghidra/r2 evidence supported them. The eight new entries in this update are recorded as `parameter-context-inference` in the audit manifest.
+Heaven completed 80 native discoveries and labels as human reverse-engineering work. The remaining entries were AI-assisted using the live Ghidra Headless MCP and r2 MCP (Radare2 MCP), with names retained from `igi.exe` strings whenever available and behavior-derived names used only where the Ghidra/r2 evidence supported them. The ten new entries in this update are recorded as `parameter-context-inference` in the audit manifest and have address-specific CFG evidence in `verification/natives_discovery_2026-08-26.json`.
 
 The bundle is an official project export, but `igi.pdb` is not the original vendor-supplied IGI 1 PDB. Retail `igi.exe` was verified with `dumpbin /headers` to have `Debug Directory RVA 0, size 0`; it contains no CodeView/RSDS GUID and age for an exact PDB identity match. Renaming the file cannot make Ghidra report an exact match. The generated PDB is address-compatible with the PE image base `0x00400000`; use the explicit Ghidra importer for reliable analysis labels.
 
@@ -24,11 +24,17 @@ Open the retail `D:\IGI1\igi.exe` in Ghidra and run [`exports/ghidra_apply_igi1_
 
 ## Regeneration
 
-From the repository root:
+From the repository root, the portable generator is authoritative:
+
+```bash
+python3 tools/generate_native_assets.py
+```
+
+On Windows, the legacy PowerShell pipeline remains available:
 
 ```powershell
 pwsh -File .\tools\Apply-IGI1NativeNameEvidence.ps1 -SkipLegacyCatalog
 pwsh -File .\tools\Generate-IGI1NativeExports.ps1
 ```
 
-The first command regenerates the CSV, IDC, and Ghidra importer from the branch catalog. The second regenerates this folder's JSON/MAP/PDB bundle and the compatibility map under `exports\`. The PDB is produced with the installed MSVC x86 MASM/linker toolchain.
+The Python command regenerates the 283-entry export JSON/MAP/PDB, CSV, IDC, Ghidra importer, evidence manifest, and readable Markdown assets from `IGI-Natives.json`. The PowerShell commands regenerate the CSV/IDC/importer and the Windows MSVC x86 MASM/linker PDB pipeline. Both workflows preserve the retail image base and duplicate-address aliases.

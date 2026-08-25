@@ -2,13 +2,12 @@
   "binary": "D:\\IGI1\\igi.exe",
   "ghidraSession": "5d2616e2b1114166a4015070b0ccb68c",
   "definedStringCount": 2447,
-  "policy": "Use exact/underscore-insensitive/current-name occurrences from IGI.exe strings first; otherwise use a mechanically normalized Function_Action fallback or a behavior-derived parameter/context name only when live Ghidra and r2 evidence agrees.",
+  "policy": "Use exact/underscore-insensitive/current-name occurrences from IGI.exe strings first; otherwise use a mechanically normalized Function_Action fallback or a behavior-derived parameter/context name only when live Ghidra and r2 evidence agrees. New behavior-derived entries require independent Ghidra and r2 CFG agreement.",
   "counts": {
+    "parameter-context-inference": 18,
+    "retail-string": 168,
     "retail-string-context": 8,
-    "syntax-fallback": 89,
-    "retail-string": 167,
-    "retail-string-underscore-insensitive": 1,
-    "parameter-context-inference": 8
+    "syntax-fallback": 89
   },
   "duplicates": [],
   "Natives": [
@@ -945,12 +944,12 @@
     {
       "hash": "00403C10",
       "address": 4209680,
-      "catalogName": "GO_ContentControlPW",
-      "canonicalName": "GO_ContentControlPW",
-      "source": "retail-string-underscore-insensitive",
-      "retailName": "GOContentControlPW",
+      "catalogName": "Config_SetContentControlPassword",
+      "canonicalName": "Config_SetContentControlPassword",
+      "source": "retail-string",
+      "retailName": "Config_SetContentControlPassword",
       "retailEvidence": [
-        "GOContentControlPW"
+        "Config_SetContentControlPassword"
       ]
     },
     {
@@ -2852,6 +2851,316 @@
         "r2 confirms the nested depth decrement and elapsed-time accumulation.",
         "Ghidra callers Level_Start and Game_Restart pair it with Game_TimingBegin."
       ]
+    },
+    {
+      "hash": "00401900",
+      "address": 4200704,
+      "catalogName": "TaskType_Register",
+      "canonicalName": "TaskType_Register",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x00401900",
+        "name": "TaskType_Register",
+        "ghidra": {
+          "end": "0x00401A10",
+          "basic_blocks": 18,
+          "edges": 23
+        },
+        "r2": {
+          "end": "0x00401A10",
+          "basic_blocks": 18,
+          "edges": 23,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "00401CF0",
+      "address": 4201712,
+      "catalogName": "TaskType_IsDerivedFrom",
+      "canonicalName": "TaskType_IsDerivedFrom",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x00401CF0",
+        "name": "TaskType_IsDerivedFrom",
+        "ghidra": {
+          "end": "0x00401D20",
+          "basic_blocks": 5,
+          "edges": 6
+        },
+        "r2": {
+          "end": "0x00401D20",
+          "basic_blocks": 5,
+          "edges": 6,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Checks equality and walks the task-type parent chain until the sentinel type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "00477C50",
+      "address": 4684880,
+      "catalogName": "Weapon_EntityCreate",
+      "canonicalName": "Weapon_EntityCreate",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x00477C50",
+        "name": "Weapon_EntityCreate",
+        "ghidra": {
+          "end": "0x00477D08",
+          "basic_blocks": 6,
+          "edges": 7
+        },
+        "r2": {
+          "end": "0x00477D08",
+          "basic_blocks": 6,
+          "edges": 7,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Validates the weapon type, allocates/configures the weapon entity, initializes object fields, and dispatches the type handler. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "00477C10",
+      "address": 4684816,
+      "catalogName": "Weapon_FiringStateGet",
+      "canonicalName": "Weapon_FiringStateGet",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x00477C10",
+        "name": "Weapon_FiringStateGet",
+        "ghidra": {
+          "end": "0x00477C15",
+          "basic_blocks": 1,
+          "edges": 0
+        },
+        "r2": {
+          "end": "0x00477C15",
+          "basic_blocks": 1,
+          "edges": 0,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Returns the byte at the retail weapon firing-state configuration global 0x005407B9. Ghidra/r2 CFG agreement: 1 basic block and 0 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "004E7200",
+      "address": 5140992,
+      "catalogName": "Sound_EventTrigger",
+      "canonicalName": "Sound_EventTrigger",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x004E7200",
+        "name": "Sound_EventTrigger",
+        "ghidra": {
+          "end": "0x004E732C",
+          "basic_blocks": 15,
+          "edges": 24
+        },
+        "r2": {
+          "end": "0x004E732C",
+          "basic_blocks": 15,
+          "edges": 24,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Dispatches a named sound/event through active object handlers and queues the resulting event. Ghidra/r2 CFG agreement: 15 basic blocks and 24 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "004A5702",
+      "address": 4871938,
+      "catalogName": "String_VFormat",
+      "canonicalName": "String_VFormat",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x004A5702",
+        "name": "String_VFormat",
+        "ghidra": {
+          "end": "0x004A5752",
+          "basic_blocks": 4,
+          "edges": 4
+        },
+        "r2": {
+          "end": "0x004A5752",
+          "basic_blocks": 4,
+          "edges": 4,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Bounded printf-style va_list formatter wrapper around the parser core at 0x004A7720. Catalogued for direct ABI-aware use; no generic NativeHelper wrapper is emitted. Ghidra/r2 CFG agreement: 4 basic blocks and 4 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "004B1020",
+      "address": 4919328,
+      "catalogName": "QFile_AliasResolve",
+      "canonicalName": "QFile_AliasResolve",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x004B1020",
+        "name": "QFile_AliasResolve",
+        "ghidra": {
+          "end": "0x004B117E",
+          "basic_blocks": 17,
+          "edges": 25
+        },
+        "r2": {
+          "end": "0x004B117E",
+          "basic_blocks": 17,
+          "edges": 25,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Resolves semicolon-separated QFile path aliases, copies the resolved path, and returns the alias depth. Ghidra/r2 CFG agreement: 17 basic blocks and 25 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "004B11A0",
+      "address": 4919712,
+      "catalogName": "QFile_DeviceIndex",
+      "canonicalName": "QFile_DeviceIndex",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x004B11A0",
+        "name": "QFile_DeviceIndex",
+        "ghidra": {
+          "end": "0x004B11F0",
+          "basic_blocks": 6,
+          "edges": 7
+        },
+        "r2": {
+          "end": "0x004B11F0",
+          "basic_blocks": 6,
+          "edges": 7,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Scans the retail QFile device table and returns its 1-based matching device index, or zero. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "004B1620",
+      "address": 4920864,
+      "catalogName": "QFile_DeviceHandlerLookup",
+      "canonicalName": "QFile_DeviceHandlerLookup",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x004B1620",
+        "name": "QFile_DeviceHandlerLookup",
+        "ghidra": {
+          "end": "0x004B1685",
+          "basic_blocks": 13,
+          "edges": 18
+        },
+        "r2": {
+          "end": "0x004B1685",
+          "basic_blocks": 13,
+          "edges": 18,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Matches a device name against the retail handler-name table and returns the corresponding handler value. Ghidra/r2 CFG agreement: 13 basic blocks and 18 edges; see verification/natives_discovery_2026-08-26.json."
+    },
+    {
+      "hash": "004B8A50",
+      "address": 4950608,
+      "catalogName": "Profile_ValueSet",
+      "canonicalName": "Profile_ValueSet",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [],
+      "analysisEvidence": [
+        "Ghidra function boundary and CFG",
+        "r2 function boundary, cdecl signature, and CFG",
+        "Independent semantic/decompiler review of the retail IGI.EXE body"
+      ],
+      "cfg": {
+        "address": "0x004B8A50",
+        "name": "Profile_ValueSet",
+        "ghidra": {
+          "end": "0x004B8A7B",
+          "basic_blocks": 3,
+          "edges": 2
+        },
+        "r2": {
+          "end": "0x004B8A7B",
+          "basic_blocks": 3,
+          "edges": 2,
+          "calltype": "cdecl"
+        },
+        "result": "pass"
+      },
+      "note": "Sets a profile value through the profile object/value-table path used by the retail music and sound-effects option setters. Ghidra/r2 CFG agreement: 3 basic blocks and 2 edges; see verification/natives_discovery_2026-08-26.json."
     }
   ]
 }

@@ -1,5 +1,5 @@
  IGI1 Native Symbols - Project I.G.I (igi.exe) verified native addresses
- Generated from IGI-Natives.json (273 catalog entries; duplicate-address aliases retained)
+ Generated from IGI-Natives.json (283 catalog entries; duplicate-address aliases retained)
  Preferred load address is 00400000
 
  Start         Length     Name                   Class
@@ -7,7 +7,9 @@
 
  Exports by module 'igi1natives'
 
+ 0001:00000900  _TaskType_Register                        00401900 f   igi1natives.obj
  0001:00000B20  _Qtask_UpdateList                         00401B20 f   igi1natives.obj
+ 0001:00000CF0  _TaskType_IsDerivedFrom                   00401CF0 f   igi1natives.obj
  0001:00001780  _Flow_RequestEvent                        00402780 f   igi1natives.obj
  0001:00001820  _Frames_Set                               00402820 f   igi1natives.obj
  0001:00001870  _Frames_Get                               00402870 f   igi1natives.obj
@@ -192,6 +194,8 @@
  0001:00075040  _Mine_ProximityCreate                     00476040 f   igi1natives.obj
  0001:00076040  _Throwable_Create                         00477040 f   igi1natives.obj
  0001:000769E0  _Weapon_FlameUpdate                       004779E0 f   igi1natives.obj
+ 0001:00076C10  _Weapon_FiringStateGet                    00477C10 f   igi1natives.obj
+ 0001:00076C50  _Weapon_EntityCreate                      00477C50 f   igi1natives.obj
  0001:00077900  _Weapon_FireUpdate                        00478900 f   igi1natives.obj
  0001:00078990  _Weapon_ReloadStart                       00479990 f   igi1natives.obj
  0001:0007BAB0  _Ammo_TypeOpen                            0047CAB0 f   igi1natives.obj
@@ -217,6 +221,7 @@
  0001:00096E70  _Transcontext_SetActiveTransContext       00497E70 f   igi1natives.obj
  0001:000A4350  _File_Open                                004A5350 f   igi1natives.obj
  0001:000A43B3  _Game_DataSymbolLoad                      004A53B3 f   igi1natives.obj
+ 0001:000A4702  _String_VFormat                           004A5702 f   igi1natives.obj
  0001:000AE7B0  _Error_Show                               004AF7B0 f   igi1natives.obj
  0001:000AE810  _Warning_Show                             004AF810 f   igi1natives.obj
  0001:000AFBE0  _Mem_DeallocAll                           004B0BE0 f   igi1natives.obj
@@ -225,7 +230,10 @@
  0001:000AFD60  _Qhash_Init                               004B0D60 f   igi1natives.obj
  0001:000AFD90  _Qhash_Reset                              004B0D90 f   igi1natives.obj
  0001:000AFDB0  _QHash_ValueGet                           004B0DB0 f   igi1natives.obj
+ 0001:000B0020  _QFile_AliasResolve                       004B1020 f   igi1natives.obj
+ 0001:000B01A0  _QFile_DeviceIndex                        004B11A0 f   igi1natives.obj
  0001:000B0510  _QFile_ReadWrite                          004B1510 f   igi1natives.obj
+ 0001:000B0620  _QFile_DeviceHandlerLookup                004B1620 f   igi1natives.obj
  0001:000B06D0  _Resource_Unpack                          004B16D0 f   igi1natives.obj
  0001:000B08B0  _Resource_PackUnpack                      004B18B0 f   igi1natives.obj
  0001:000B0AC0  _QScript_Cleanup                          004B1AC0 f   igi1natives.obj
@@ -248,6 +256,7 @@
  0001:000B7810  _TaskType_Set                             004B8810 f   igi1natives.obj
  0001:000B7890  _Game_DefineOptions                       004B8890 f   igi1natives.obj
  0001:000B7930  _Script_SetSymbolContext                  004B8930 f   igi1natives.obj
+ 0001:000B7A50  _Profile_ValueSet                         004B8A50 f   igi1natives.obj
  0001:000B7C10  _Break_Script                             004B8C10 f   igi1natives.obj
  0001:000B7C60  _Script_SetWarningLevel                   004B8C60 f   igi1natives.obj
  0001:000B9AC0  _Q_TaskHashTableSet                       004BAAC0 f   igi1natives.obj
@@ -263,6 +272,7 @@
  0001:000C5760  _Create_TerrainTileMap                    004C6760 f   igi1natives.obj
  0001:000D8870  _Camera_SubmitFrame                       004D9870 f   igi1natives.obj
  0001:000E58D0  _Sound_Load                               004E68D0 f   igi1natives.obj
+ 0001:000E6200  _Sound_EventTrigger                       004E7200 f   igi1natives.obj
  0001:000E7C60  _Define_Sound                             004E8C60 f   igi1natives.obj
  0001:000E8EC0  _Define_TriggerOnce                       004E9EC0 f   igi1natives.obj
  0001:000E9D20  _Define_Graph                             004EAD20 f   igi1natives.obj

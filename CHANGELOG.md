@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - 2026-08-26
 
+### Static CFG-validated natives, structures, and synchronized assets
+
+- Fast-forwarded `feature/natives-discovery` to remote commit `a83f745` before extending the catalog; the remote 273-entry work was preserved.
+- Added ten researched natives to the canonical catalog, enum, and safe wrappers: `TaskType_Register`, `TaskType_IsDerivedFrom`, `Weapon_EntityCreate`, `Weapon_FiringStateGet`, `Sound_EventTrigger`, `String_VFormat`, `QFile_AliasResolve`, `QFile_DeviceIndex`, `QFile_DeviceHandlerLookup`, and `Profile_ValueSet`.
+- Accepted the ten entries only after Ghidra and r2 agreed on function boundary, CFG basic-block count, edge count, and cdecl behavior. Rejected generic helpers, duplicate picture thunks, the non-function `0x0045C700`, and all data/global addresses from the candidate list.
+- Expanded `IGI_Structures.hpp` and `verification/structures_evidence.md` with task-type records, weapon-entity proven fields, QFile alias/device record strides, and the eight-word sound-event payload. Unknown bytes remain opaque or reserved.
+- Added `tools/generate_native_assets.py` as a reproducible source-driven generator. It synchronized the 283-entry export JSON, both MAP files, CSV, IDC, Ghidra importer, evidence manifest, and address-compatible CodeView PDB.
+- Added `assets/natives/` with one Markdown record per native and `assets/structures/` with one Markdown record per recovered structure. The generated records include address, signature, behavior, provenance, evidence, and usage boundaries.
+- Documented the tool workflow precisely: Heaven completed 80 natives as human reverse-engineering work; remaining entries were AI-assisted with Ghidra Headless MCP and r2 MCP/Radare2, with `llvm-pdbutil` used for the portable PDB rebuild in this worktree.
+
 ### IGI1 native export and parameter-context discovery
 
 - Added the `IGI1_Native_Exports/` bundle with the 273-entry `IGI1-Natives.json`, linker-style `IGI1-Natives.map`, generated `igi.pdb`, and per-entry `IGI1-Native-Name-Evidence.json` audit manifest.

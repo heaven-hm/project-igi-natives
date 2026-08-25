@@ -2456,6 +2456,96 @@
         "signature": "void Game_TimingEnd(void)",
         "note": "Ends a nested timing interval: decrements the depth counter and, at zero, adds elapsed timer ticks to game-context field +0x50 and clears the interval start timestamp."
       }
+    },
+    {
+      "Native": {
+        "hash": "00401900",
+        "address": 4200704,
+        "name": "TaskType_Register",
+        "signature": "uint16_t TaskType_Register(uint32_t p1, uint32_t p2, uint16_t parentType, uint32_t p4)",
+        "note": "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00401CF0",
+        "address": 4201712,
+        "name": "TaskType_IsDerivedFrom",
+        "signature": "bool TaskType_IsDerivedFrom(uint16_t typeId, uint16_t baseTypeId)",
+        "note": "Checks equality and walks the task-type parent chain until the sentinel type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00477C50",
+        "address": 4684880,
+        "name": "Weapon_EntityCreate",
+        "signature": "void* Weapon_EntityCreate(uint32_t p1, uint16_t objectType, uint32_t weaponType, uint32_t p4, uint8_t p5)",
+        "note": "Validates the weapon type, allocates/configures the weapon entity, initializes object fields, and dispatches the type handler. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "00477C10",
+        "address": 4684816,
+        "name": "Weapon_FiringStateGet",
+        "signature": "uint8_t Weapon_FiringStateGet(void)",
+        "note": "Returns the byte at the retail weapon firing-state configuration global 0x005407B9. Ghidra/r2 CFG agreement: 1 basic block and 0 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004E7200",
+        "address": 5140992,
+        "name": "Sound_EventTrigger",
+        "signature": "void Sound_EventTrigger(const char* eventName, uint32_t eventId, const uint32_t* params)",
+        "note": "Dispatches a named sound/event through active object handlers and queues the resulting event. Ghidra/r2 CFG agreement: 15 basic blocks and 24 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004A5702",
+        "address": 4871938,
+        "name": "String_VFormat",
+        "signature": "int String_VFormat(char* buffer, const char* format, va_list args)",
+        "note": "Bounded printf-style va_list formatter wrapper around the parser core at 0x004A7720. Catalogued for direct ABI-aware use; no generic NativeHelper wrapper is emitted. Ghidra/r2 CFG agreement: 4 basic blocks and 4 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004B1020",
+        "address": 4919328,
+        "name": "QFile_AliasResolve",
+        "signature": "int QFile_AliasResolve(char* outputPath, const char* inputPath, int maxDepth)",
+        "note": "Resolves semicolon-separated QFile path aliases, copies the resolved path, and returns the alias depth. Ghidra/r2 CFG agreement: 17 basic blocks and 25 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004B11A0",
+        "address": 4919712,
+        "name": "QFile_DeviceIndex",
+        "signature": "int QFile_DeviceIndex(const char* path)",
+        "note": "Scans the retail QFile device table and returns its 1-based matching device index, or zero. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004B1620",
+        "address": 4920864,
+        "name": "QFile_DeviceHandlerLookup",
+        "signature": "uint32_t QFile_DeviceHandlerLookup(const char* deviceName)",
+        "note": "Matches a device name against the retail handler-name table and returns the corresponding handler value. Ghidra/r2 CFG agreement: 13 basic blocks and 18 edges; see verification/natives_discovery_2026-08-26.json."
+      }
+    },
+    {
+      "Native": {
+        "hash": "004B8A50",
+        "address": 4950608,
+        "name": "Profile_ValueSet",
+        "signature": "void Profile_ValueSet(void* profile, int index)",
+        "note": "Sets a profile value through the profile object/value-table path used by the retail music and sound-effects option setters. Ghidra/r2 CFG agreement: 3 basic blocks and 2 edges; see verification/natives_discovery_2026-08-26.json."
+      }
     }
   ]
 }

@@ -253,6 +253,61 @@ struct DisplayMode {
 };
 
 // ============================================================================
+// TASK TYPE RECORD  (partial record at table root 0xAF5EE8)
+// ============================================================================
+// TaskType_IsDerivedFrom 0x401CF0 indexes records with a 0x18-byte stride and
+// reads the parent type id at the record base. TaskType_Register 0x401900
+// populates the same table; the remaining bytes are intentionally opaque.
+struct TaskTypeRecord {
+    uint16_t parentType;             // 0x000  parent id used by 0x401CF0
+    uint8_t  _opaque_02[0x16];       // 0x002..0x017  not individually proven
+
+    static constexpr uint32_t kStride = 0x18;
+};
+static_assert(sizeof(TaskTypeRecord) == 0x18, "Task type record stride proven by 0x401CF0");
+
+// ============================================================================
+// WEAPON ENTITY VIEW  (partial fields initialized by 0x477C50)
+// ============================================================================
+// The constructor writes +0xF1, formats the weapon type into storage beginning
+// at +0x104, writes +0x124, and stores a context/handler value at +0x144. The
+// formatted storage extent is unknown and remains inside opaque bytes.
+struct WeaponEntityView {
+    uint8_t  _opaque_00[0xF1];       // 0x000..0x0F0
+    uint8_t  state_F1;               // 0x0F1  initialized by 0x477C50
+    uint8_t  _opaque_F2[0x32];       // 0x0F2..0x123; includes field at +0x104
+    uint16_t objectType_124;         // 0x124  initialized by 0x477C50
+    uint8_t  _opaque_126[0x1E];      // 0x126..0x143
+    uint32_t handlerContext_144;     // 0x144  stored by 0x477C50
+};
+static_assert(sizeof(WeaponEntityView) == 0x148, "Weapon entity offsets proven by 0x477C50");
+
+// ============================================================================
+// QFILE TABLE RECORDS  (opaque records with machine-proven strides)
+// ============================================================================
+// QFile_AliasResolve 0x4B1020 scans 0x94-byte records rooted at 0x942330.
+// QFile_DeviceIndex 0x4B11A0 scans 0x8C-byte records rooted at 0x9437B8.
+struct QFileAliasRecord {
+    uint8_t bytes[0x94];
+};
+static_assert(sizeof(QFileAliasRecord) == 0x94, "QFile alias record stride proven by 0x4B1020");
+
+struct QFileDeviceRecord {
+    uint8_t bytes[0x8C];
+};
+static_assert(sizeof(QFileDeviceRecord) == 0x8C, "QFile device record stride proven by 0x4B11A0");
+
+// ============================================================================
+// SOUND EVENT PARAMETERS  (third parameter to Sound_EventTrigger 0x4E7200)
+// ============================================================================
+// The dispatcher reads/copies eight dwords before queuing the event. Meanings
+// remain event-specific and are not generalized here.
+struct SoundEventParams {
+    uint32_t words[8];              // 0x00..0x1F  event-specific payload
+};
+static_assert(sizeof(SoundEventParams) == 0x20, "Sound event payload size proven by 0x4E7200");
+
+// ============================================================================
 // TRANS CONTEXT  (active transform context, global copy at 0xBCAAE0)
 // ============================================================================
 struct TransContext {

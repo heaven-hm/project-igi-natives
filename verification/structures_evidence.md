@@ -94,3 +94,38 @@ Individual field semantics unmapped → declared as `uint32_t words[42]` with a
   semantic labels like "objectRef"/"paramPtr" are inferred from usage context).
 - **Open questions**: speech-volume exact offset in SoundOptionsRecord; meanings
   of ProfileRecord +0x1D/+0x1E/+0x1F/+0x11F flags; Soldier +0x68 string extent.
+
+## 7. TaskTypeRecord - 0x18-byte records rooted at 0xAF5EE8
+
+`TaskType_IsDerivedFrom` at `0x00401CF0` scales the queried type id by
+`0x18`, reads the parent id at the record base, and repeats until the retail
+sentinel. `TaskType_Register` at `0x00401900` allocates and populates the same
+task-type table. Only the parent field and stride are typed in C++; the rest is
+opaque because the registration body writes several handler/config fields whose
+individual meanings are not needed by the native wrapper.
+
+## 8. WeaponEntityView - proven constructor offsets
+
+`Weapon_EntityCreate` at `0x00477C50` validates a weapon type, allocates an
+entity, initializes a byte at `+0xF1`, formats the weapon type into storage
+beginning at `+0x104`, writes a word at `+0x124`, and stores a handler/context
+value at `+0x144`. The formatted storage extent is not proven, so the C++ view
+uses an opaque span and exposes only the byte, word, and dword with proven
+offsets.
+
+## 9. QFileAliasRecord and QFileDeviceRecord
+
+`QFile_AliasResolve` at `0x004B1020` walks the alias table rooted at
+`0x00942330` in `0x94`-byte records and resolves semicolon-separated aliases.
+`QFile_DeviceIndex` at `0x004B11A0` walks the device table rooted at
+`0x009437B8` in `0x8C`-byte records. The record sizes are proven by the index
+arithmetic; field names are deliberately omitted until direct field uses are
+mapped.
+
+## 10. SoundEventParams - eight-word event payload
+
+`Sound_EventTrigger` at `0x004E7200` receives a string, an event id/value, and a
+pointer to an eight-dword parameter block. The dispatcher reads/copies this
+payload while routing the event through active object handlers. The payload is
+therefore represented as `SoundEventParams::words[8]`; per-event semantics are
+not generalized.

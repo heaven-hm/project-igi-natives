@@ -1,0 +1,18 @@
+{
+  "catalog": "IGI-Natives.json",
+  "entry_count": 283,
+  "image_base": "0x00400000",
+  "pdb_toolchain": "llvm-pdbutil yaml2pdb (CodeView publics)",
+  "outputs": [
+    "IGI1_Native_Exports/IGI1-Natives.json",
+    "IGI1_Native_Exports/IGI1-Natives.map",
+    "IGI1_Native_Exports/igi.pdb",
+    "IGI1_Native_Exports/IGI1-Native-Name-Evidence.json",
+    "exports/igi1_natives.csv",
+    "exports/igi1_natives.map",
+    "exports/igi1_natives.idc",
+    "exports/ghidra_apply_igi1_natives.py",
+    "assets/natives/",
+    "assets/structures/"
+  ]
+}

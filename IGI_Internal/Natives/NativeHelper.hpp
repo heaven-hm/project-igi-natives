@@ -194,6 +194,9 @@ namespace IGI {
 	namespace QFILE {
 		NATIVE_DECL FILE* OPEN(const char* file, char* mode) { return NATIVE_INVOKE<FILE*>((Void)HASH::FILE_OPEN, file, mode); }
 		NATIVE_DECL FILE* READ_WRITE(const char* file, char* mode) { return NATIVE_INVOKE<FILE*>((Void)HASH::FILE_READ_WRITE, file, mode); }
+		NATIVE_DECL int ALIAS_RESOLVE(char* output_path, const char* input_path, int max_depth) { return NATIVE_INVOKE<int>((Void)HASH::QFILE_ALIAS_RESOLVE, output_path, input_path, max_depth); }
+		NATIVE_DECL int DEVICE_INDEX(const char* path) { return NATIVE_INVOKE<int>((Void)HASH::QFILE_DEVICE_INDEX, path); }
+		NATIVE_DECL uint32_t DEVICE_HANDLER_LOOKUP(const char* device_name) { return NATIVE_INVOKE<uint32_t>((Void)HASH::QFILE_DEVICE_HANDLER_LOOKUP, device_name); }
 	}
 
 	namespace QVM {
@@ -305,6 +308,7 @@ namespace IGI {
 		NATIVE_DECL void ACTIVE_PROFILE_INDEX_SET(int index) { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_SET_ACTIVE_PLAYER_PROFILE_INDEX, index); }
 		NATIVE_DECL int PROFILE_CREATE(const char* name, int sourceIndex) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_CREATE_NEW_PLAYER_PROFILE, name, sourceIndex); }
 		NATIVE_DECL int PROFILE_DELETE(int index) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_DELETE_PLAYER_PROFILE, index); }
+		NATIVE_DECL void PROFILE_VALUE_SET(void* profile, int index) { NATIVE_INVOKE<Void>((Void)HASH::PROFILE_VALUE_SET, profile, index); }
 		NATIVE_DECL int PROFILE_ACTIVE_MISSION_GET(int profileIndex) { return NATIVE_INVOKE<int>((Void)HASH::CONFIG_PLAYER_GET_ACTIVE_MISSION, profileIndex); }
 		NATIVE_DECL void PROFILE_LIST_FILL() { NATIVE_INVOKE<Void>((Void)HASH::CONFIG_FILL_PLAYER_PROFILE_LIST_BOX); }
 		// -- graphics --
@@ -422,6 +426,8 @@ namespace IGI {
 		NATIVE_DECL void NEW() { NATIVE_INVOKE<Void>((Void)HASH::TASK_NEW); }
 		NATIVE_DECL void DECLARE_PARAMETERS() { NATIVE_INVOKE<Void>((Void)HASH::TASK_DECLARE_PARAMETERS); }
 		NATIVE_DECL void TYPE_SET(int** task_str, int taskId) { NATIVE_INVOKE<Void>((Void)HASH::TASKTYPE_SET, task_str, taskId); }
+		NATIVE_DECL uint16_t TYPE_REGISTER(uint32_t p1, uint32_t p2, uint16_t parent_type, uint32_t p4) { return NATIVE_INVOKE<uint16_t>((Void)HASH::TASKTYPE_REGISTER, p1, p2, parent_type, p4); }
+		NATIVE_DECL bool TYPE_IS_DERIVED_FROM(uint16_t type_id, uint16_t base_type_id) { return NATIVE_INVOKE<bool>((Void)HASH::TASKTYPE_IS_DERIVED_FROM, type_id, base_type_id); }
 		NATIVE_DECL void BREAK_SCRIPT() { NATIVE_INVOKE<Void>((Void)HASH::BREAK_SCRIPT); }
 	}
 
@@ -510,11 +516,14 @@ namespace IGI {
 		NATIVE_DECL void RUNTIME_MUSIC_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_MUSIC_VOLUME, volume); }
 		NATIVE_DECL void RUNTIME_SFX_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_SFX_VOLUME, volume); }
 		NATIVE_DECL void SOUND_LOAD(const char* sound_dir) { NATIVE_INVOKE<Void>((Void)HASH::SOUND_LOAD, sound_dir); }
+		NATIVE_DECL void EVENT_TRIGGER(const char* event_name, uint32_t event_id, const uint32_t* params) { NATIVE_INVOKE<Void>((Void)HASH::SOUND_EVENT_TRIGGER, event_name, event_id, params); }
 	}
 
  namespace WEAPON {
 		NATIVE_DECL void AMMO_TYPE_OPEN() { NATIVE_INVOKE<Void>((Void)HASH::AMMO_TYPE_OPEN); }
 		NATIVE_DECL int COUNT_GET() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
+		NATIVE_DECL void* ENTITY_CREATE(uint32_t p1, uint16_t object_type, uint32_t weapon_type, uint32_t p4, uint8_t p5) { return NATIVE_INVOKE<void*>((Void)HASH::WEAPON_ENTITY_CREATE, p1, object_type, weapon_type, p4, p5); }
+		NATIVE_DECL uint8_t FIRING_STATE_GET() { return NATIVE_INVOKE<uint8_t>((Void)HASH::WEAPON_FIRING_STATE_GET); }
 		NATIVE_DECL void GUN_PICKUP(void* player, void* pickupEntity) { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, player, pickupEntity); }
 		NATIVE_DECL void AMMO_PICKUP(void* player, void* pickupEntity) { NATIVE_INVOKE<Void>((Void)HASH::WEAPON_AMMO_PICKUP, player, pickupEntity); }
 	}

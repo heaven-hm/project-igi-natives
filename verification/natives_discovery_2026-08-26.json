@@ -1,0 +1,61 @@
+{
+  "source_commit": "a83f745",
+  "binary": {
+    "name": "IGI.EXE",
+    "architecture": "x86 PE32",
+    "image_base": "0x00400000",
+    "runtime_status": "VALIDATED_STATIC"
+  },
+  "criteria": {
+    "identity_min": 0.85,
+    "address_min": 0.90,
+    "semantic_min": 0.85,
+    "calling_convention_min": 0.90,
+    "prototype_min": 0.90,
+    "cfg_gate": "Ghidra and r2 function start, inclusive end, basic-block count, and edge topology agree without a major disagreement",
+    "runtime_verification": false
+  },
+  "current_recheck": {
+    "ghidra_headless_mcp": {
+      "binary": "IGI.EXE",
+      "image_base": "0x00400000",
+      "function_at_checked": 10,
+      "status": "pass",
+      "note": "All ten addresses returned non-external functions with the recorded body boundaries. An optional MicrosoftCodeAnalyzer analyzer emitted a NullPointerException after analysis; it did not affect the function queries."
+    },
+    "r2": {
+      "analysis": "aaa",
+      "function_info_checked": 10,
+      "status": "pass",
+      "note": "All ten addresses returned cdecl functions with the recorded sizes, basic-block counts, and edge counts."
+    }
+  },
+  "accepted": [
+    {"address":"0x00401900","name":"TaskType_Register","ghidra":{"end":"0x00401A10","basic_blocks":18,"edges":23},"r2":{"end":"0x00401A10","basic_blocks":18,"edges":23,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x00401CF0","name":"TaskType_IsDerivedFrom","ghidra":{"end":"0x00401D20","basic_blocks":5,"edges":6},"r2":{"end":"0x00401D20","basic_blocks":5,"edges":6,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x00477C50","name":"Weapon_EntityCreate","ghidra":{"end":"0x00477D08","basic_blocks":6,"edges":7},"r2":{"end":"0x00477D08","basic_blocks":6,"edges":7,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x00477C10","name":"Weapon_FiringStateGet","ghidra":{"end":"0x00477C15","basic_blocks":1,"edges":0},"r2":{"end":"0x00477C15","basic_blocks":1,"edges":0,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x004E7200","name":"Sound_EventTrigger","ghidra":{"end":"0x004E732C","basic_blocks":15,"edges":24},"r2":{"end":"0x004E732C","basic_blocks":15,"edges":24,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x004A5702","name":"String_VFormat","ghidra":{"end":"0x004A5752","basic_blocks":4,"edges":4},"r2":{"end":"0x004A5752","basic_blocks":4,"edges":4,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x004B1020","name":"QFile_AliasResolve","ghidra":{"end":"0x004B117E","basic_blocks":17,"edges":25},"r2":{"end":"0x004B117E","basic_blocks":17,"edges":25,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x004B11A0","name":"QFile_DeviceIndex","ghidra":{"end":"0x004B11F0","basic_blocks":6,"edges":7},"r2":{"end":"0x004B11F0","basic_blocks":6,"edges":7,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x004B1620","name":"QFile_DeviceHandlerLookup","ghidra":{"end":"0x004B1685","basic_blocks":13,"edges":18},"r2":{"end":"0x004B1685","basic_blocks":13,"edges":18,"calltype":"cdecl"},"result":"pass"},
+    {"address":"0x004B8A50","name":"Profile_ValueSet","ghidra":{"end":"0x004B8A7B","basic_blocks":3,"edges":2},"r2":{"end":"0x004B8A7B","basic_blocks":3,"edges":2,"calltype":"cdecl"},"result":"pass"}
+  ],
+  "excluded_code": [
+    {"address":"0x0045C700","reason":"Neither Ghidra nor r2 identified a clean function start; bytes are embedded/referenced code or data."},
+    {"address":"0x004F2060","reason":"CFG passes, but semantics are only a generic indexed dword load; object-table identity is unproven."},
+    {"address":"0x0048A330","reason":"CFG passes, but body is a one-byte field clear; AI callback identity is unproven."},
+    {"address":"0x00477BF0","reason":"Returns the global at 0x005BE3C6; weapon handover identity is unproven."},
+    {"address":"0x0047CE00","reason":"CFG passes, but body is a three-word table add/update helper, not a confirmed audio trigger."},
+    {"address":"0x0048F1D0","reason":"Returns the global at 0x005C8BEC; debug-state validator identity is unproven."},
+    {"address":"0x004A7720","reason":"CFG is structurally close but not identical (Ghidra 184/286 vs r2 184/278); formatter-core semantics are known, but its standalone return/prototype is not safe to expose."},
+    {"address":"0x004B5B60","reason":"Path/resource helper behavior is not specific enough to name as a production native."},
+    {"address":"0x004B0D10","reason":"Cleanup/deallocation helper, not a confirmed heap-list walker."},
+    {"address":"0x004B7DF0","reason":"Internal picture-width thunk already exposed by Picture_GetWidth at 0x004B6E70."},
+    {"address":"0x004B7E00","reason":"Internal picture-height thunk already exposed by Picture_GetHeight at 0x004B6E80."}
+  ],
+  "excluded_data": [
+    "0x005BDC24","0x0056E210","0x0053EC90","0x0057BABC","0x0057B18C","0x0056DF18","0x0056DF1C","0x005335E8","0x005339C0","0x005407B9","0x00540A8C","0x0053B604","0x00534AB0","0x005BE3A0","0x005C8BF8","0x005C8BF4","0x005C8BE4","0x005C8BE8","0x006E5BB0","0x006E5BB4","0x009436E8","0x00943E38","0x00A43EC8","0x00A43ED4","0x00A442D0","0x00A84A50","0x00A84A58","0x00BC2384","0x00BC2388","0x00BC2394","0x00BCAAE0","0x00BCADF0","0x00C28B40"
+  ]
+}

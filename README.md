@@ -117,7 +117,7 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 
 The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
 wrapper forwards through `NativeCaller::Invoke` to the verified address in `IGI-Natives.json`
-(all 273 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
+(all 283 catalog addresses are machine-verified or statically validated against retail `igi.exe`; the branch export bundle includes the
 address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
 Struct layouts recovered from the binary live in [`IGI_Structures.hpp`](IGI_Structures.hpp).
 
@@ -156,9 +156,27 @@ Full signatures + per-native evidence notes: [`IGI-Natives.json`](IGI-Natives.js
 
 ### IGI1 native export bundle
 
-The branch's official project export bundle is [`IGI1_Native_Exports/`](IGI1_Native_Exports/). It contains the structured JSON catalog, address/name MAP, generated x86 `igi.pdb`, and the per-symbol evidence manifest. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
+The branch's official project export bundle is [`IGI1_Native_Exports/`](IGI1_Native_Exports/). It contains the structured 283-entry JSON catalog, address/name MAP, generated x86 `igi.pdb`, and the per-symbol evidence manifest. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
 
-The eight new parameter/context entries are included in the 273-entry catalog. They were added only after live Ghidra and r2 analysis of previously undiscovered methods; existing entries were preserved.
+The earlier eight parameter/context entries remain in the catalog. This update adds ten more static CFG-validated functions: task-type registration/inheritance, weapon entity creation and firing-state access, sound event dispatch, QFile alias/device helpers, profile value setting, and the bounded va_list formatter. Each passed the Ghidra/r2 CFG gate; the formatter is catalogued without a generic wrapper because its va_list ABI needs direct handling.
+
+### Reverse-engineering workflow and provenance
+
+| Tool | Use in this branch |
+|---|---|
+| Ghidra Headless MCP | Function identity, decompilation, callers/callees, data references, CFG blocks/edges, and structure offset proofs against the original `IGI.EXE`. |
+| r2 MCP / Radare2 | Independent `aaa` analysis, function boundaries, cdecl/prototype hints, imports, disassembly, basic blocks, edges, and semantic cross-checks. |
+| `IGI.EXE` retail binary | Ground truth for the PE32 image base `0x00400000`, code/data addresses, strings, callers, and field accesses. |
+| `llvm-pdbutil` | Rebuilt the address-compatible CodeView public-symbol PDB on this macOS worktree. Windows MSVC MASM/link remains supported by the legacy generator. |
+| `tools/generate_native_assets.py` | Regenerates JSON, MAP, CSV, IDC, Ghidra importer, PDB, evidence manifest, and per-entry Markdown from the root catalog. |
+
+The branch's provenance summary is deliberately split: 80 discoveries were completed by Heaven as human reverse-engineering work; the remainder were AI-assisted. The per-symbol evidence manifest records the exact source classification, while the new ten records additionally carry Ghidra/r2 CFG evidence.
+
+### Structures and readable assets
+
+[`IGI_Structures.hpp`](IGI_Structures.hpp) contains only offsets, strides, and sizes proven from retail machine code. It now covers profile, graphics, sound, soldier, human, display, transform-context, task-type, weapon-entity, QFile record, and sound-event payload views. Unknown bytes remain reserved or opaque. The evidence log is [`verification/structures_evidence.md`](verification/structures_evidence.md), and the per-structure readable records are in [`assets/structures/`](assets/structures/).
+
+Every catalog native has a readable Markdown record under [`assets/natives/`](assets/natives/), with address, signature, behavior, provenance, and usage boundary. These files are generated views; [`IGI-Natives.json`](IGI-Natives.json) remains authoritative.
 
 ### Enum quick reference
 
