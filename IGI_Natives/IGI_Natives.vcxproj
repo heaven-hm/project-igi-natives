@@ -75,30 +75,32 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SolutionDir)$(SolutionName)\Libs\;$(SolutionDir)$(SolutionName)\Natives\;$(SolutionDir)$(SolutionName)\Utils\;$(SolutionDir)$(SolutionName)\Hook\;$(SolutionDir)$(SolutionName)\Memory\;$(SolutionDir)$(SolutionName)\Player\;$(SolutionDir)$(SolutionName)\Camera\;$(SolutionDir)$(SolutionName)\GameResources;$(SolutionDir)$(SolutionName)\Graphs</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)$(SolutionName)\src;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
+    <ExternalIncludePath>$(ProjectDir)\src;$(ExternalIncludePath)</ExternalIncludePath>
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SolutionDir)$(SolutionName)\Libs\;$(SolutionDir)$(SolutionName)\Natives\;$(SolutionDir)$(SolutionName)\Utils\;$(SolutionDir)$(SolutionName)\Hook\;$(SolutionDir)$(SolutionName)\Memory\;$(SolutionDir)$(SolutionName)\Player\;$(SolutionDir)$(SolutionName)\Camera\;$(SolutionDir)$(SolutionName)\GameResources;$(SolutionDir)$(SolutionName)\Graphs</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)$(SolutionName)\src;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
+    <ExternalIncludePath>$(ProjectDir)\src;$(ExternalIncludePath)</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SolutionDir)$(SolutionName)\Libs\;$(SolutionDir)$(SolutionName)\Natives\;$(SolutionDir)$(SolutionName)\Utils\;$(SolutionDir)$(SolutionName)\Hook\;$(SolutionDir)$(SolutionName)\Camera\;SolutionDir)$(SolutionName)\Player\;SolutionDir)$(SolutionName)\</IncludePath>
+    <IncludePath>$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
     <ExternalIncludePath>
     </ExternalIncludePath>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>$(SolutionDir)$(SolutionName)\Libs\;$(SolutionDir)$(SolutionName)\Natives\;$(SolutionDir)$(SolutionName)\Utils\;$(SolutionDir)$(SolutionName)\Hook\</IncludePath>
-    <ExternalIncludePath>$(SolutionDir)include;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
+    <ExternalIncludePath>$(ProjectDir)include;$(ExternalIncludePath)</ExternalIncludePath>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -111,7 +113,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,7 +121,7 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>LinkVerboseLib</ShowProgress>
-      <AdditionalLibraryDirectories>$(SolutionDir)$(SolutionName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateMapFile>false</GenerateMapFile>
       <MapExports>false</MapExports>
@@ -138,7 +140,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +151,7 @@
       <ShowProgress>NotSet</ShowProgress>
       <LinkStatus>false</LinkStatus>
       <ProgramDatabaseFile />
-      <AdditionalLibraryDirectories>$(SolutionDir)$(SolutionName)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\$(Configuration)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrtd.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
@@ -162,7 +164,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
@@ -170,7 +172,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>;$(SolutionDir)$(SolutionName)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>;$(ProjectDir)\$(Configuration)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -184,7 +186,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -193,7 +195,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>;$(SolutionDir)$(SolutionName)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>;$(ProjectDir)\$(Configuration)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -240,7 +242,7 @@
     <ClCompile Include="Player\HumanSoldier.cpp" />
     <ClCompile Include="Utils\Console.cpp" />
     <ClCompile Include="DllMain.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(SolutionName)\Natives;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\Natives;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="Utils\DbgHelper.cpp" />
     <ClCompile Include="Utils\Logger.cpp" />

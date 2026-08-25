@@ -5,7 +5,7 @@
 #include "Utils/FiberPool.hpp"
 #include "Utils/Utility.hpp"
 
-// Main loop for DLL Internals.
+// Main loop for DLL Natives.
 void DllMainLoop() {
   g_menu_screen = READ_PTR(menu_screen_ptr);
   g_game_level = LEVEL::GET();

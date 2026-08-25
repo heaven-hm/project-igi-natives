@@ -8,9 +8,6 @@
     <ClCompile Include="Utils\DbgHelper.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="Utils\FiberPool.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
     <ClCompile Include="Natives\Natives.cpp">
       <Filter>Natives</Filter>
     </ClCompile>
@@ -33,6 +30,13 @@
       <Filter>Graphs</Filter>
     </ClCompile>
     <ClCompile Include="Features.cpp" />
+    <ClCompile Include="Features_Editor.cpp" />
+    <ClCompile Include="Utils\Console.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Logger.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DllMain.hpp" />
@@ -90,7 +94,14 @@
       <Filter>Graphs</Filter>
     </ClInclude>
     <ClInclude Include="Features.hpp" />
+    <ClInclude Include="Features_Editor.hpp" />
+    <ClInclude Include="Utils\Console.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
     <ClInclude Include="Utils\FiberPool.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\FiberPoolEx.hpp">
       <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
