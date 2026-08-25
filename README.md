@@ -34,10 +34,10 @@ Use the `build_and_reload.bat` batch file for automated building and DLL injecti
 
 ```bash
 # Debug build with auto-injection
-.\build_and_reload.bat Debug x86
+.\IGI_Natives\build_and_reload.bat Debug Win32
 
 # Release build with auto-injection  
-.\build_and_reload.bat Release x86
+.\IGI_Natives\build_and_reload.bat Release Win32
 ```
 
 **Configuration**: Update `OUTDLL` and `INJECTOR` paths in the batch file according to your setup.

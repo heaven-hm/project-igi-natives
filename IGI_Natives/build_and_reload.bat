@@ -3,12 +3,13 @@ setlocal
 
 :: === Parse command line arguments ===
 set CONFIG=Debug
-set PLATFORM=x86
+set PLATFORM=Win32
 
 if "%~1"=="" goto skipArgs
 set CONFIG=%~1
 if "%~2"=="" goto skipArgs
 set PLATFORM=%~2
+if /I "%PLATFORM%"=="x86" set PLATFORM=Win32
 :skipArgs
 
 :: === Config ===
