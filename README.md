@@ -117,8 +117,9 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 
 The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
 wrapper forwards through `NativeCaller::Invoke` to the verified address in `IGI-Natives.json`
-(all 250+ addresses machine-verified against retail `igi.exe`; igi2.pdb used only as a naming
-dictionary). Struct layouts recovered from the binary live in [`IGI_Structures.hpp`](IGI_Structures.hpp).
+(all 273 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
+address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
+Struct layouts recovered from the binary live in [`IGI_Structures.hpp`](IGI_Structures.hpp).
 
 ### How to call a native
 
@@ -152,6 +153,12 @@ FiberPool::Instance().RunExternal([] {
 
 Full signatures + per-native evidence notes: [`IGI-Natives.json`](IGI-Natives.json)
 (`{hash, address, name, signature, note}` per entry; notes include param meaning and enum values).
+
+### IGI1 native export bundle
+
+The branch's official project export bundle is [`IGI1_Native_Exports/`](IGI1_Native_Exports/). It contains the structured JSON catalog, address/name MAP, generated x86 `igi.pdb`, and the per-symbol evidence manifest. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
+
+The eight new parameter/context entries are included in the 273-entry catalog. They were added only after live Ghidra and r2 analysis of previously undiscovered methods; existing entries were preserved.
 
 ### Enum quick reference
 

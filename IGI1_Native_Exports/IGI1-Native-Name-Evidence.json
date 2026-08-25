@@ -1,0 +1,2857 @@
+{
+  "binary": "D:\\IGI1\\igi.exe",
+  "ghidraSession": "5d2616e2b1114166a4015070b0ccb68c",
+  "definedStringCount": 2447,
+  "policy": "Use exact/underscore-insensitive/current-name occurrences from IGI.exe strings first; otherwise use a mechanically normalized Function_Action fallback or a behavior-derived parameter/context name only when live Ghidra and r2 evidence agrees.",
+  "counts": {
+    "retail-string-context": 8,
+    "syntax-fallback": 89,
+    "retail-string": 167,
+    "retail-string-underscore-insensitive": 1,
+    "parameter-context-inference": 8
+  },
+  "duplicates": [],
+  "Natives": [
+    {
+      "hash": "004EC070",
+      "address": 5161072,
+      "catalogName": "AnimTrigger_ParseConfigFile",
+      "canonicalName": "AnimTrigger_ParseConfigFile",
+      "source": "retail-string-context",
+      "retailName": "AnimTrigger_ParseConfigFile",
+      "retailEvidence": [
+        "AnimTrigger_ParseConfigFile(): Couldn't load script: %s"
+      ]
+    },
+    {
+      "hash": "004B83D0",
+      "address": 4948944,
+      "catalogName": "Qvm_Cleanup",
+      "canonicalName": "Qvm_Cleanup",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004F0CF0",
+      "address": 5180656,
+      "catalogName": "ConfigCompile",
+      "canonicalName": "Config_Compile",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00405850",
+      "address": 4216912,
+      "catalogName": "ConfigRead",
+      "canonicalName": "Config_Read",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00405BD0",
+      "address": 4217808,
+      "catalogName": "ConfigWrite",
+      "canonicalName": "Config_Write",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00415AB0",
+      "address": 4283056,
+      "catalogName": "Game_CutsceneDelete",
+      "canonicalName": "Game_CutsceneDelete",
+      "source": "retail-string",
+      "retailName": "Game_CutsceneDelete",
+      "retailEvidence": [
+        "Game_CutsceneDelete"
+      ]
+    },
+    {
+      "hash": "004AF7B0",
+      "address": 4913072,
+      "catalogName": "ErrorShow",
+      "canonicalName": "Error_Show",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00402820",
+      "address": 4204576,
+      "catalogName": "FramesSet",
+      "canonicalName": "Frames_Set",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00408350",
+      "address": 4227920,
+      "catalogName": "GameMaterial_LoadParameters",
+      "canonicalName": "GameMaterial_LoadParameters",
+      "source": "retail-string-context",
+      "retailName": "GameMaterial_LoadParameters",
+      "retailEvidence": [
+        "GameMaterial_LoadParameters: Couldn't load script \"%s\""
+      ]
+    },
+    {
+      "hash": "00403B70",
+      "address": 4209520,
+      "catalogName": "Config_ResetGraphicOptions",
+      "canonicalName": "Config_ResetGraphicOptions",
+      "source": "retail-string",
+      "retailName": "Config_ResetGraphicOptions",
+      "retailEvidence": [
+        "Config_ResetGraphicOptions"
+      ]
+    },
+    {
+      "hash": "004F9FF0",
+      "address": 5218288,
+      "catalogName": "GraphOpen",
+      "canonicalName": "Graph_Open",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004137A0",
+      "address": 4274080,
+      "catalogName": "HumanPlayer_LoadParameters",
+      "canonicalName": "HumanPlayer_LoadParameters",
+      "source": "retail-string-context",
+      "retailName": "HumanPlayer_LoadParameters",
+      "retailEvidence": [
+        "HumanPlayer_LoadParameters: Couldn't load script \"%s\""
+      ]
+    },
+    {
+      "hash": "004157D0",
+      "address": 4282320,
+      "catalogName": "Game_DisablePlayerInput",
+      "canonicalName": "Game_DisablePlayerInput",
+      "source": "retail-string",
+      "retailName": "Game_DisablePlayerInput",
+      "retailEvidence": [
+        "Game_DisablePlayerInput"
+      ]
+    },
+    {
+      "hash": "00415830",
+      "address": 4282416,
+      "catalogName": "Game_EnablePlayerInput",
+      "canonicalName": "Game_EnablePlayerInput",
+      "source": "retail-string",
+      "retailName": "Game_EnablePlayerInput",
+      "retailEvidence": [
+        "Game_EnablePlayerInput"
+      ]
+    },
+    {
+      "hash": "004BBC30",
+      "address": 4963376,
+      "catalogName": "Log_Add",
+      "canonicalName": "Log_Add",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004F0E10",
+      "address": 5180944,
+      "catalogName": "Level_LoadObjects",
+      "canonicalName": "Level_LoadObjects",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00416550",
+      "address": 4285776,
+      "catalogName": "Game_DeleteHandler",
+      "canonicalName": "Game_DeleteHandler",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00416FE0",
+      "address": 4288480,
+      "catalogName": "Game_Restart",
+      "canonicalName": "Game_Restart",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00415B30",
+      "address": 4283184,
+      "catalogName": "LevelStart",
+      "canonicalName": "Level_Start",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00418B00",
+      "address": 4295424,
+      "catalogName": "MenuManager",
+      "canonicalName": "Menu_Manager",
+      "source": "retail-string",
+      "retailName": "MenuManager",
+      "retailEvidence": [
+        "MenuManager"
+      ]
+    },
+    {
+      "hash": "00415A60",
+      "address": 4282976,
+      "catalogName": "Game_DisableMusic",
+      "canonicalName": "Game_DisableMusic",
+      "source": "retail-string",
+      "retailName": "Game_DisableMusic",
+      "retailEvidence": [
+        "Game_DisableMusic"
+      ]
+    },
+    {
+      "hash": "00415A10",
+      "address": 4282896,
+      "catalogName": "Game_EnableMusic",
+      "canonicalName": "Game_EnableMusic",
+      "source": "retail-string",
+      "retailName": "Game_EnableMusic",
+      "retailEvidence": [
+        "Game_EnableMusic"
+      ]
+    },
+    {
+      "hash": "00495F30",
+      "address": 4808496,
+      "catalogName": "MusicSetSfxVolume",
+      "canonicalName": "Music_SetSfxVolume",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00495E70",
+      "address": 4808304,
+      "catalogName": "MusicSetVolume",
+      "canonicalName": "Music_SetVolume",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004158E0",
+      "address": 4282592,
+      "catalogName": "Game_UpdateVolume",
+      "canonicalName": "Game_UpdateVolume",
+      "source": "retail-string",
+      "retailName": "Game_UpdateVolume",
+      "retailEvidence": [
+        "Game_UpdateVolume"
+      ]
+    },
+    {
+      "hash": "004EDFE0",
+      "address": 5169120,
+      "catalogName": "PhysicsObjType_ParseConfigFile",
+      "canonicalName": "PhysicsObjType_ParseConfigFile",
+      "source": "retail-string-context",
+      "retailName": "PhysicsObjType_ParseConfigFile",
+      "retailEvidence": [
+        "PhysicsObjType_ParseConfigFile(): Couldn't load script: %s"
+      ]
+    },
+    {
+      "hash": "004B0D60",
+      "address": 4918624,
+      "catalogName": "QhashInit",
+      "canonicalName": "Qhash_Init",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B0D90",
+      "address": 4918672,
+      "catalogName": "QhashReset",
+      "canonicalName": "Qhash_Reset",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B8410",
+      "address": 4949008,
+      "catalogName": "Qsc_Compile",
+      "canonicalName": "Qsc_Compile",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004F0E90",
+      "address": 5181072,
+      "catalogName": "QtaskUpdate",
+      "canonicalName": "Qtask_Update",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00401B20",
+      "address": 4201248,
+      "catalogName": "QtaskUpdateList",
+      "canonicalName": "Qtask_UpdateList",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004BB270",
+      "address": 4960880,
+      "catalogName": "QScript_Assemble",
+      "canonicalName": "QScript_Assemble",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B85B0",
+      "address": 4949424,
+      "catalogName": "Qvm_Execute",
+      "canonicalName": "Qvm_Execute",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B80B0",
+      "address": 4948144,
+      "catalogName": "Qvm_Load",
+      "canonicalName": "Qvm_Load",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004BBCB0",
+      "address": 4963504,
+      "catalogName": "QScript_ParseAndAssemble",
+      "canonicalName": "QScript_ParseAndAssemble",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B63D0",
+      "address": 4940752,
+      "catalogName": "Resource_Flush",
+      "canonicalName": "Resource_Flush",
+      "source": "retail-string-context",
+      "retailName": "Resource_Flush",
+      "retailEvidence": [
+        "Resource_Flush() : Couldn't locate resource at %p."
+      ]
+    },
+    {
+      "hash": "004B5F00",
+      "address": 4939520,
+      "catalogName": "Resource_Load",
+      "canonicalName": "Resource_Load",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B6380",
+      "address": 4940672,
+      "catalogName": "Resource_Unload",
+      "canonicalName": "Resource_Unload",
+      "source": "retail-string-context",
+      "retailName": "Resource_Unload",
+      "retailEvidence": [
+        "Resource_Unload() : Resource '%s' is not loaded."
+      ]
+    },
+    {
+      "hash": "004B5B90",
+      "address": 4938640,
+      "catalogName": "IsResourceLoaded",
+      "canonicalName": "Is_ResourceLoaded",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B18B0",
+      "address": 4921520,
+      "catalogName": "Resource_PackUnpack",
+      "canonicalName": "Resource_PackUnpack",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B16D0",
+      "address": 4921040,
+      "catalogName": "Resource_Unpack",
+      "canonicalName": "Resource_Unpack",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004F0E50",
+      "address": 5181008,
+      "catalogName": "ScriptInit",
+      "canonicalName": "Script_Init",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B8930",
+      "address": 4950320,
+      "catalogName": "Script_SetSymbolContext",
+      "canonicalName": "Script_SetSymbolContext",
+      "source": "retail-string-context",
+      "retailName": "Script_SetSymbolContext",
+      "retailEvidence": [
+        "Script_SetSymbolContext(): Symbol not found: %s"
+      ]
+    },
+    {
+      "hash": "00485AD0",
+      "address": 4741840,
+      "catalogName": "StatusMessageScreen_ClearMessages",
+      "canonicalName": "StatusMessageScreen_ClearMessages",
+      "source": "retail-string",
+      "retailName": "StatusMessageScreen_ClearMessages",
+      "retailEvidence": [
+        "StatusMessageScreen_ClearMessages"
+      ]
+    },
+    {
+      "hash": "00485970",
+      "address": 4741488,
+      "catalogName": "StatusMessage_ShowFull",
+      "canonicalName": "StatusMessage_ShowFull",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004C0460",
+      "address": 4981856,
+      "catalogName": "Symbol_Remove",
+      "canonicalName": "Symbol_Remove",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B8810",
+      "address": 4950032,
+      "catalogName": "TaskType_Set",
+      "canonicalName": "TaskType_Set",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004AF810",
+      "address": 4913168,
+      "catalogName": "WarningShow",
+      "canonicalName": "Warning_Show",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004071E0",
+      "address": 4223456,
+      "catalogName": "Weapon_ConfigRead",
+      "canonicalName": "Weapon_ConfigRead",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004C0560",
+      "address": 4982112,
+      "catalogName": "Symbol_CheckRegister",
+      "canonicalName": "Symbol_CheckRegister",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B8890",
+      "address": 4950160,
+      "catalogName": "GameDefineOptions",
+      "canonicalName": "Game_DefineOptions",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004C0200",
+      "address": 4981248,
+      "catalogName": "Script_BufInit",
+      "canonicalName": "Script_BufInit",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004E68D0",
+      "address": 5138640,
+      "catalogName": "SoundLoad",
+      "canonicalName": "Sound_Load",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B0C60",
+      "address": 4918368,
+      "catalogName": "Mem_Alloc",
+      "canonicalName": "Mem_Alloc",
+      "source": "retail-string-context",
+      "retailName": "Mem_Alloc",
+      "retailEvidence": [
+        "Mem_Alloc() failed to allocate %d bytes.  Total allocated by user: %d.  Total by Mem_Alloc():%d."
+      ]
+    },
+    {
+      "hash": "004B0BE0",
+      "address": 4918240,
+      "catalogName": "MemDeallocAll",
+      "canonicalName": "Mem_DeallocAll",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00484E60",
+      "address": 4738656,
+      "catalogName": "Mission_Open",
+      "canonicalName": "Mission_Open",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004A5350",
+      "address": 4870992,
+      "catalogName": "FileOpen",
+      "canonicalName": "File_Open",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B1510",
+      "address": 4920592,
+      "catalogName": "QFile_ReadWrite",
+      "canonicalName": "QFile_ReadWrite",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004C48E0",
+      "address": 4999392,
+      "catalogName": "RigidDyncubeObjRead",
+      "canonicalName": "Rigid_DyncubeObjRead",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004C4930",
+      "address": 4999472,
+      "catalogName": "MagicObjLoad",
+      "canonicalName": "Magic_ObjLoad",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004EC0C0",
+      "address": 5161152,
+      "catalogName": "AnimTriggerLoad",
+      "canonicalName": "Anim_TriggerLoad",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004EE030",
+      "address": 5169200,
+      "catalogName": "PhysicsObjLoad",
+      "canonicalName": "Physics_ObjLoad",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0047CAB0",
+      "address": 4704944,
+      "catalogName": "AmmoTypeOpen",
+      "canonicalName": "Ammo_TypeOpen",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00413B70",
+      "address": 4275056,
+      "catalogName": "WeaponTypeOpen",
+      "canonicalName": "Weapon_TypeOpen",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004A53B3",
+      "address": 4871091,
+      "catalogName": "GameDataSymbolLoad",
+      "canonicalName": "Game_DataSymbolLoad",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B80A0",
+      "address": 4948128,
+      "catalogName": "GameDataSymbolRemoveThunk",
+      "canonicalName": "Game_DataSymbolRemoveThunk",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B7EE0",
+      "address": 4947680,
+      "catalogName": "SymbolRegister_Bool8",
+      "canonicalName": "SymbolRegister_Bool8",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B7E80",
+      "address": 4947584,
+      "catalogName": "SymbolRegister_Int16",
+      "canonicalName": "SymbolRegister_Int16",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B7FA0",
+      "address": 4947872,
+      "catalogName": "SymbolRegister_Int32",
+      "canonicalName": "SymbolRegister_Int32",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B7FC0",
+      "address": 4947904,
+      "catalogName": "SymbolRegister_Real32",
+      "canonicalName": "SymbolRegister_Real32",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0048A440",
+      "address": 4760640,
+      "catalogName": "LoadingScreen_Show",
+      "canonicalName": "LoadingScreen_Show",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004BAAC0",
+      "address": 4958912,
+      "catalogName": "QTaskHashTableSet",
+      "canonicalName": "Q_TaskHashTableSet",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00413BB0",
+      "address": 4275120,
+      "catalogName": "WeaponsCountGet",
+      "canonicalName": "Weapons_CountGet",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0045FFC0",
+      "address": 4587456,
+      "catalogName": "WeaponGunPickup",
+      "canonicalName": "Weapon_GunPickup",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0045FF80",
+      "address": 4587392,
+      "catalogName": "WeaponAmmoPickup",
+      "canonicalName": "Weapon_AmmoPickup",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00416D80",
+      "address": 4287872,
+      "catalogName": "Human_HitDamage",
+      "canonicalName": "Human_HitDamage",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00463760",
+      "address": 4601696,
+      "catalogName": "HumanViewCam",
+      "canonicalName": "Human_ViewCam",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004659E0",
+      "address": 4610528,
+      "catalogName": "HumanTaskViewReset",
+      "canonicalName": "Human_TaskViewReset",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00406220",
+      "address": 4219424,
+      "catalogName": "Config_GetActivePlayerProfileRecord",
+      "canonicalName": "Config_GetActivePlayerProfileRecord",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0045C440",
+      "address": 4572224,
+      "catalogName": "SoldierExecute",
+      "canonicalName": "Soldier_Execute",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00402780",
+      "address": 4204416,
+      "catalogName": "Flow_RequestEvent",
+      "canonicalName": "Flow_RequestEvent",
+      "source": "retail-string",
+      "retailName": "Flow_RequestEvent",
+      "retailEvidence": [
+        "Flow_RequestEvent"
+      ]
+    },
+    {
+      "hash": "004036B0",
+      "address": 4208304,
+      "catalogName": "GOPlayer",
+      "canonicalName": "GO_Player",
+      "source": "retail-string",
+      "retailName": "GOPlayer",
+      "retailEvidence": [
+        "GOPlayer"
+      ]
+    },
+    {
+      "hash": "004037C0",
+      "address": 4208576,
+      "catalogName": "GOInRemap",
+      "canonicalName": "GO_InRemap",
+      "source": "retail-string",
+      "retailName": "GOInRemap",
+      "retailEvidence": [
+        "GOInRemap"
+      ]
+    },
+    {
+      "hash": "00403870",
+      "address": 4208752,
+      "catalogName": "GOInMouInv",
+      "canonicalName": "GO_InMouInv",
+      "source": "retail-string",
+      "retailName": "GOInMouInv",
+      "retailEvidence": [
+        "GOInMouInv"
+      ]
+    },
+    {
+      "hash": "004038E0",
+      "address": 4208864,
+      "catalogName": "GOInMouSens",
+      "canonicalName": "GO_InMouSens",
+      "source": "retail-string",
+      "retailName": "GOInMouSens",
+      "retailEvidence": [
+        "GOInMouSens"
+      ]
+    },
+    {
+      "hash": "00403950",
+      "address": 4208976,
+      "catalogName": "GOGfxDisp",
+      "canonicalName": "GO_GfxDisp",
+      "source": "retail-string",
+      "retailName": "GOGfxDisp",
+      "retailEvidence": [
+        "GOGfxDisp"
+      ]
+    },
+    {
+      "hash": "00404010",
+      "address": 4210704,
+      "catalogName": "GOGfxDevice",
+      "canonicalName": "GO_GfxDevice",
+      "source": "retail-string",
+      "retailName": "GOGfxDevice",
+      "retailEvidence": [
+        "GOGfxDevice"
+      ]
+    },
+    {
+      "hash": "00404080",
+      "address": 4210816,
+      "catalogName": "GOGfxGamma",
+      "canonicalName": "GO_GfxGamma",
+      "source": "retail-string",
+      "retailName": "GOGfxGamma",
+      "retailEvidence": [
+        "GOGfxGamma"
+      ]
+    },
+    {
+      "hash": "00403A00",
+      "address": 4209152,
+      "catalogName": "GOGameLang",
+      "canonicalName": "GO_GameLang",
+      "source": "retail-string",
+      "retailName": "GOGameLang",
+      "retailEvidence": [
+        "GOGameLang"
+      ]
+    },
+    {
+      "hash": "00403AC0",
+      "address": 4209344,
+      "catalogName": "GOGameDiff",
+      "canonicalName": "GO_GameDiff",
+      "source": "retail-string",
+      "retailName": "GOGameDiff",
+      "retailEvidence": [
+        "GOGameDiff"
+      ]
+    },
+    {
+      "hash": "00403DF0",
+      "address": 4210160,
+      "catalogName": "GOIsBlood",
+      "canonicalName": "GO_IsBlood",
+      "source": "retail-string",
+      "retailName": "GOIsBlood",
+      "retailEvidence": [
+        "GOIsBlood"
+      ]
+    },
+    {
+      "hash": "00403E60",
+      "address": 4210272,
+      "catalogName": "GOSoundSpeech",
+      "canonicalName": "GO_SoundSpeech",
+      "source": "retail-string",
+      "retailName": "GOSoundSpeech",
+      "retailEvidence": [
+        "GOSoundSpeech"
+      ]
+    },
+    {
+      "hash": "00403EF0",
+      "address": 4210416,
+      "catalogName": "GOSoundMusic",
+      "canonicalName": "GO_SoundMusic",
+      "source": "retail-string",
+      "retailName": "GOSoundMusic",
+      "retailEvidence": [
+        "GOSoundMusic"
+      ]
+    },
+    {
+      "hash": "00403F80",
+      "address": 4210560,
+      "catalogName": "GOSoundFX",
+      "canonicalName": "GO_SoundFX",
+      "source": "retail-string",
+      "retailName": "GOSoundFX",
+      "retailEvidence": [
+        "GOSoundFX"
+      ]
+    },
+    {
+      "hash": "004040F0",
+      "address": 4210928,
+      "catalogName": "GOGfxPerformance",
+      "canonicalName": "GO_GfxPerformance",
+      "source": "retail-string",
+      "retailName": "GOGfxPerformance",
+      "retailEvidence": [
+        "GOGfxPerformance"
+      ]
+    },
+    {
+      "hash": "00403750",
+      "address": 4208464,
+      "catalogName": "GOActiveMission",
+      "canonicalName": "GO_ActiveMission",
+      "source": "retail-string",
+      "retailName": "GOActiveMission",
+      "retailEvidence": [
+        "GOActiveMission"
+      ]
+    },
+    {
+      "hash": "00403C10",
+      "address": 4209680,
+      "catalogName": "GO_ContentControlPW",
+      "canonicalName": "GO_ContentControlPW",
+      "source": "retail-string-underscore-insensitive",
+      "retailName": "GOContentControlPW",
+      "retailEvidence": [
+        "GOContentControlPW"
+      ]
+    },
+    {
+      "hash": "00404FA0",
+      "address": 4214688,
+      "catalogName": "Config_FillPlayerProfileListBox",
+      "canonicalName": "Config_FillPlayerProfileListBox",
+      "source": "retail-string",
+      "retailName": "Config_FillPlayerProfileListBox",
+      "retailEvidence": [
+        "Config_FillPlayerProfileListBox"
+      ]
+    },
+    {
+      "hash": "00405010",
+      "address": 4214800,
+      "catalogName": "Config_GetActivePlayerProfileIndex",
+      "canonicalName": "Config_GetActivePlayerProfileIndex",
+      "source": "retail-string",
+      "retailName": "Config_GetActivePlayerProfileIndex",
+      "retailEvidence": [
+        "Config_GetActivePlayerProfileIndex"
+      ]
+    },
+    {
+      "hash": "00405050",
+      "address": 4214864,
+      "catalogName": "Config_SetActivePlayerProfileIndex",
+      "canonicalName": "Config_SetActivePlayerProfileIndex",
+      "source": "retail-string",
+      "retailName": "Config_SetActivePlayerProfileIndex",
+      "retailEvidence": [
+        "Config_SetActivePlayerProfileIndex"
+      ]
+    },
+    {
+      "hash": "004050A0",
+      "address": 4214944,
+      "catalogName": "Config_CreateNewPlayerProfile",
+      "canonicalName": "Config_CreateNewPlayerProfile",
+      "source": "retail-string",
+      "retailName": "Config_CreateNewPlayerProfile",
+      "retailEvidence": [
+        "Config_CreateNewPlayerProfile"
+      ]
+    },
+    {
+      "hash": "00405400",
+      "address": 4215808,
+      "catalogName": "Config_DeletePlayerProfile",
+      "canonicalName": "Config_DeletePlayerProfile",
+      "source": "retail-string",
+      "retailName": "Config_DeletePlayerProfile",
+      "retailEvidence": [
+        "Config_DeletePlayerProfile"
+      ]
+    },
+    {
+      "hash": "004057D0",
+      "address": 4216784,
+      "catalogName": "Config_PlayerGetActiveMission",
+      "canonicalName": "Config_PlayerGetActiveMission",
+      "source": "retail-string",
+      "retailName": "Config_PlayerGetActiveMission",
+      "retailEvidence": [
+        "Config_PlayerGetActiveMission"
+      ]
+    },
+    {
+      "hash": "004054F0",
+      "address": 4216048,
+      "catalogName": "Config_GetNumberOfPlayerProfiles",
+      "canonicalName": "Config_GetNumberOfPlayerProfiles",
+      "source": "retail-string",
+      "retailName": "Config_GetNumberOfPlayerProfiles",
+      "retailEvidence": [
+        "Config_GetNumberOfPlayerProfiles"
+      ]
+    },
+    {
+      "hash": "00405660",
+      "address": 4216416,
+      "catalogName": "Config_FillMissionSelectionBox",
+      "canonicalName": "Config_FillMissionSelectionBox",
+      "source": "retail-string",
+      "retailName": "Config_FillMissionSelectionBox",
+      "retailEvidence": [
+        "Config_FillMissionSelectionBox"
+      ]
+    },
+    {
+      "hash": "004056F0",
+      "address": 4216560,
+      "catalogName": "Config_FillMissionPictureBox",
+      "canonicalName": "Config_FillMissionPictureBox",
+      "source": "retail-string",
+      "retailName": "Config_FillMissionPictureBox",
+      "retailEvidence": [
+        "Config_FillMissionPictureBox"
+      ]
+    },
+    {
+      "hash": "00405760",
+      "address": 4216672,
+      "catalogName": "Config_FillMissionTextBox",
+      "canonicalName": "Config_FillMissionTextBox",
+      "source": "retail-string",
+      "retailName": "Config_FillMissionTextBox",
+      "retailEvidence": [
+        "Config_FillMissionTextBox"
+      ]
+    },
+    {
+      "hash": "00404450",
+      "address": 4211792,
+      "catalogName": "Config_FillScreenResolutionListBox",
+      "canonicalName": "Config_FillScreenResolutionListBox",
+      "source": "retail-string",
+      "retailName": "Config_FillScreenResolutionListBox",
+      "retailEvidence": [
+        "Config_FillScreenResolutionListBox"
+      ]
+    },
+    {
+      "hash": "004046A0",
+      "address": 4212384,
+      "catalogName": "Config_FillRenderDeviceListBox",
+      "canonicalName": "Config_FillRenderDeviceListBox",
+      "source": "retail-string",
+      "retailName": "Config_FillRenderDeviceListBox",
+      "retailEvidence": [
+        "Config_FillRenderDeviceListBox"
+      ]
+    },
+    {
+      "hash": "004041D0",
+      "address": 4211152,
+      "catalogName": "Config_GameOptionsInputGetInvertMouse",
+      "canonicalName": "Config_GameOptionsInputGetInvertMouse",
+      "source": "retail-string",
+      "retailName": "Config_GameOptionsInputGetInvertMouse",
+      "retailEvidence": [
+        "Config_GameOptionsInputGetInvertMouse"
+      ]
+    },
+    {
+      "hash": "00404290",
+      "address": 4211344,
+      "catalogName": "Config_GameOptionsInputGetMouseSensitivity",
+      "canonicalName": "Config_GameOptionsInputGetMouseSensitivity",
+      "source": "retail-string",
+      "retailName": "Config_GameOptionsInputGetMouseSensitivity",
+      "retailEvidence": [
+        "Config_GameOptionsInputGetMouseSensitivity"
+      ]
+    },
+    {
+      "hash": "00404340",
+      "address": 4211520,
+      "catalogName": "Config_GameOptionsInputGetBloodEnabled",
+      "canonicalName": "Config_GameOptionsInputGetBloodEnabled",
+      "source": "retail-string",
+      "retailName": "Config_GameOptionsInputGetBloodEnabled",
+      "retailEvidence": [
+        "Config_GameOptionsInputGetBloodEnabled"
+      ]
+    },
+    {
+      "hash": "00404160",
+      "address": 4211040,
+      "catalogName": "Config_GameOptionsInputSetInvertMouse",
+      "canonicalName": "Config_GameOptionsInputSetInvertMouse",
+      "source": "retail-string",
+      "retailName": "Config_GameOptionsInputSetInvertMouse",
+      "retailEvidence": [
+        "Config_GameOptionsInputSetInvertMouse"
+      ]
+    },
+    {
+      "hash": "00404230",
+      "address": 4211248,
+      "catalogName": "Config_GameOptionsInputSetMouseSensitivity",
+      "canonicalName": "Config_GameOptionsInputSetMouseSensitivity",
+      "source": "retail-string",
+      "retailName": "Config_GameOptionsInputSetMouseSensitivity",
+      "retailEvidence": [
+        "Config_GameOptionsInputSetMouseSensitivity"
+      ]
+    },
+    {
+      "hash": "004042E0",
+      "address": 4211424,
+      "catalogName": "Config_GameOptionsInputSetBloodEnabled",
+      "canonicalName": "Config_GameOptionsInputSetBloodEnabled",
+      "source": "retail-string",
+      "retailName": "Config_GameOptionsInputSetBloodEnabled",
+      "retailEvidence": [
+        "Config_GameOptionsInputSetBloodEnabled"
+      ]
+    },
+    {
+      "hash": "00404510",
+      "address": 4211984,
+      "catalogName": "Config_GraphicOptionsSetResolution",
+      "canonicalName": "Config_GraphicOptionsSetResolution",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsSetResolution",
+      "retailEvidence": [
+        "Config_GraphicOptionsSetResolution"
+      ]
+    },
+    {
+      "hash": "00404960",
+      "address": 4213088,
+      "catalogName": "Config_GraphicOptionsSetTransparency",
+      "canonicalName": "Config_GraphicOptionsSetTransparency",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsSetTransparency",
+      "retailEvidence": [
+        "Config_GraphicOptionsSetTransparency"
+      ]
+    },
+    {
+      "hash": "004047F0",
+      "address": 4212720,
+      "catalogName": "Config_GraphicOptionsSetDevice",
+      "canonicalName": "Config_GraphicOptionsSetDevice",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsSetDevice",
+      "retailEvidence": [
+        "Config_GraphicOptionsSetDevice"
+      ]
+    },
+    {
+      "hash": "00404F00",
+      "address": 4214528,
+      "catalogName": "Config_GraphicOptionsSetPerformanceFlags",
+      "canonicalName": "Config_GraphicOptionsSetPerformanceFlags",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsSetPerformanceFlags",
+      "retailEvidence": [
+        "Config_GraphicOptionsSetPerformanceFlags"
+      ]
+    },
+    {
+      "hash": "004045B0",
+      "address": 4212144,
+      "catalogName": "Config_GraphicOptionsGetResolution",
+      "canonicalName": "Config_GraphicOptionsGetResolution",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetResolution",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetResolution"
+      ]
+    },
+    {
+      "hash": "004049C0",
+      "address": 4213184,
+      "catalogName": "Config_GraphicOptionsGetTransparency",
+      "canonicalName": "Config_GraphicOptionsGetTransparency",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetTransparency",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetTransparency"
+      ]
+    },
+    {
+      "hash": "00404710",
+      "address": 4212496,
+      "catalogName": "Config_GraphicOptionsGetDevice",
+      "canonicalName": "Config_GraphicOptionsGetDevice",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetDevice",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetDevice"
+      ]
+    },
+    {
+      "hash": "00404910",
+      "address": 4213008,
+      "catalogName": "Config_GraphicOptionsGetGamma",
+      "canonicalName": "Config_GraphicOptionsGetGamma",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetGamma",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetGamma"
+      ]
+    },
+    {
+      "hash": "00404F60",
+      "address": 4214624,
+      "catalogName": "Config_GraphicOptionsGetPerformanceFlags",
+      "canonicalName": "Config_GraphicOptionsGetPerformanceFlags",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetPerformanceFlags",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetPerformanceFlags"
+      ]
+    },
+    {
+      "hash": "004055C0",
+      "address": 4216256,
+      "catalogName": "Config_GraphicOptionsGetPerfFlagsFromLevel",
+      "canonicalName": "Config_GraphicOptionsGetPerfFlagsFromLevel",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetPerfFlagsFromLevel",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetPerfFlagsFromLevel"
+      ]
+    },
+    {
+      "hash": "00405530",
+      "address": 4216112,
+      "catalogName": "Config_GraphicOptionsGetPerfLevelFromFlags",
+      "canonicalName": "Config_GraphicOptionsGetPerfLevelFromFlags",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsGetPerfLevelFromFlags",
+      "retailEvidence": [
+        "Config_GraphicOptionsGetPerfLevelFromFlags"
+      ]
+    },
+    {
+      "hash": "00405620",
+      "address": 4216352,
+      "catalogName": "Config_GraphicOptionsNumPerfLevels",
+      "canonicalName": "Config_GraphicOptionsNumPerfLevels",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsNumPerfLevels",
+      "retailEvidence": [
+        "Config_GraphicOptionsNumPerfLevels"
+      ]
+    },
+    {
+      "hash": "00404A10",
+      "address": 4213264,
+      "catalogName": "Config_SoundOptionsSetSoundsEffects",
+      "canonicalName": "Config_SoundOptionsSetSoundsEffects",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetSoundsEffects",
+      "retailEvidence": [
+        "Config_SoundOptionsSetSoundsEffects"
+      ]
+    },
+    {
+      "hash": "00404AE0",
+      "address": 4213472,
+      "catalogName": "Config_SoundOptionsSetSoundsEffectsVolume",
+      "canonicalName": "Config_SoundOptionsSetSoundsEffectsVolume",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetSoundsEffectsVolume",
+      "retailEvidence": [
+        "Config_SoundOptionsSetSoundsEffectsVolume"
+      ]
+    },
+    {
+      "hash": "00404B90",
+      "address": 4213648,
+      "catalogName": "Config_SoundOptionsSetMusic",
+      "canonicalName": "Config_SoundOptionsSetMusic",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetMusic",
+      "retailEvidence": [
+        "Config_SoundOptionsSetMusic"
+      ]
+    },
+    {
+      "hash": "00404C40",
+      "address": 4213824,
+      "catalogName": "Config_SoundOptionsSetMusicVolume",
+      "canonicalName": "Config_SoundOptionsSetMusicVolume",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetMusicVolume",
+      "retailEvidence": [
+        "Config_SoundOptionsSetMusicVolume"
+      ]
+    },
+    {
+      "hash": "00404CF0",
+      "address": 4214000,
+      "catalogName": "Config_SoundOptionsSetSpeech",
+      "canonicalName": "Config_SoundOptionsSetSpeech",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetSpeech",
+      "retailEvidence": [
+        "Config_SoundOptionsSetSpeech"
+      ]
+    },
+    {
+      "hash": "00404DA0",
+      "address": 4214176,
+      "catalogName": "Config_SoundOptionsSetSpeechVolume",
+      "canonicalName": "Config_SoundOptionsSetSpeechVolume",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetSpeechVolume",
+      "retailEvidence": [
+        "Config_SoundOptionsSetSpeechVolume"
+      ]
+    },
+    {
+      "hash": "00404E50",
+      "address": 4214352,
+      "catalogName": "Config_SoundOptionsSetReverseStereo",
+      "canonicalName": "Config_SoundOptionsSetReverseStereo",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsSetReverseStereo",
+      "retailEvidence": [
+        "Config_SoundOptionsSetReverseStereo"
+      ]
+    },
+    {
+      "hash": "00404A90",
+      "address": 4213392,
+      "catalogName": "Config_SoundOptionsGetSoundsEffects",
+      "canonicalName": "Config_SoundOptionsGetSoundsEffects",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetSoundsEffects",
+      "retailEvidence": [
+        "Config_SoundOptionsGetSoundsEffects"
+      ]
+    },
+    {
+      "hash": "00404B40",
+      "address": 4213568,
+      "catalogName": "Config_SoundOptionsGetSoundsEffectsVolume",
+      "canonicalName": "Config_SoundOptionsGetSoundsEffectsVolume",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetSoundsEffectsVolume",
+      "retailEvidence": [
+        "Config_SoundOptionsGetSoundsEffectsVolume"
+      ]
+    },
+    {
+      "hash": "00404BF0",
+      "address": 4213744,
+      "catalogName": "Config_SoundOptionsGetMusic",
+      "canonicalName": "Config_SoundOptionsGetMusic",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetMusic",
+      "retailEvidence": [
+        "Config_SoundOptionsGetMusic"
+      ]
+    },
+    {
+      "hash": "00404CA0",
+      "address": 4213920,
+      "catalogName": "Config_SoundOptionsGetMusicVolume",
+      "canonicalName": "Config_SoundOptionsGetMusicVolume",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetMusicVolume",
+      "retailEvidence": [
+        "Config_SoundOptionsGetMusicVolume"
+      ]
+    },
+    {
+      "hash": "00404D50",
+      "address": 4214096,
+      "catalogName": "Config_SoundOptionsGetSpeech",
+      "canonicalName": "Config_SoundOptionsGetSpeech",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetSpeech",
+      "retailEvidence": [
+        "Config_SoundOptionsGetSpeech"
+      ]
+    },
+    {
+      "hash": "00404E00",
+      "address": 4214272,
+      "catalogName": "Config_SoundOptionsGetSpeechVolume",
+      "canonicalName": "Config_SoundOptionsGetSpeechVolume",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetSpeechVolume",
+      "retailEvidence": [
+        "Config_SoundOptionsGetSpeechVolume"
+      ]
+    },
+    {
+      "hash": "00404EB0",
+      "address": 4214448,
+      "catalogName": "Config_SoundOptionsGetReverseStereo",
+      "canonicalName": "Config_SoundOptionsGetReverseStereo",
+      "source": "retail-string",
+      "retailName": "Config_SoundOptionsGetReverseStereo",
+      "retailEvidence": [
+        "Config_SoundOptionsGetReverseStereo"
+      ]
+    },
+    {
+      "hash": "00403C10",
+      "address": 4209680,
+      "catalogName": "Config_SetContentControlPassword",
+      "canonicalName": "Config_SetContentControlPassword",
+      "source": "retail-string",
+      "retailName": "Config_SetContentControlPassword",
+      "retailEvidence": [
+        "Config_SetContentControlPassword"
+      ]
+    },
+    {
+      "hash": "00403C70",
+      "address": 4209776,
+      "catalogName": "Config_GetContentControlPassword",
+      "canonicalName": "Config_GetContentControlPassword",
+      "source": "retail-string",
+      "retailName": "Config_GetContentControlPassword",
+      "retailEvidence": [
+        "Config_GetContentControlPassword"
+      ]
+    },
+    {
+      "hash": "00403CC0",
+      "address": 4209856,
+      "catalogName": "Config_VerifyContentControlPassword",
+      "canonicalName": "Config_VerifyContentControlPassword",
+      "source": "retail-string",
+      "retailName": "Config_VerifyContentControlPassword",
+      "retailEvidence": [
+        "Config_VerifyContentControlPassword"
+      ]
+    },
+    {
+      "hash": "00403D90",
+      "address": 4210064,
+      "catalogName": "Config_IsContentControlPasswordEnabled",
+      "canonicalName": "Config_IsContentControlPasswordEnabled",
+      "source": "retail-string",
+      "retailName": "Config_IsContentControlPasswordEnabled",
+      "retailEvidence": [
+        "Config_IsContentControlPasswordEnabled"
+      ]
+    },
+    {
+      "hash": "00403B30",
+      "address": 4209456,
+      "catalogName": "Config_IsGermany",
+      "canonicalName": "Config_IsGermany",
+      "source": "retail-string",
+      "retailName": "Config_IsGermany",
+      "retailEvidence": [
+        "Config_IsGermany"
+      ]
+    },
+    {
+      "hash": "00407E30",
+      "address": 4226608,
+      "catalogName": "DefineQMaterial",
+      "canonicalName": "DefineQ_Material",
+      "source": "retail-string",
+      "retailName": "DefineQMaterial",
+      "retailEvidence": [
+        "DefineQMaterial"
+      ]
+    },
+    {
+      "hash": "00407F50",
+      "address": 4226896,
+      "catalogName": "DefineGameMaterial",
+      "canonicalName": "Define_GameMaterial",
+      "source": "retail-string",
+      "retailName": "DefineGameMaterial",
+      "retailEvidence": [
+        "DefineGameMaterial"
+      ]
+    },
+    {
+      "hash": "004101C0",
+      "address": 4260288,
+      "catalogName": "DefineHumanPlayerWeaponCycle",
+      "canonicalName": "Define_HumanPlayerWeaponCycle",
+      "source": "retail-string",
+      "retailName": "DefineHumanPlayerWeaponCycle",
+      "retailEvidence": [
+        "DefineHumanPlayerWeaponCycle"
+      ]
+    },
+    {
+      "hash": "00410240",
+      "address": 4260416,
+      "catalogName": "DefineHumanPlayerWeaponCategory",
+      "canonicalName": "Define_HumanPlayerWeaponCategory",
+      "source": "retail-string",
+      "retailName": "DefineHumanPlayerWeaponCategory",
+      "retailEvidence": [
+        "DefineHumanPlayerWeaponCategory"
+      ]
+    },
+    {
+      "hash": "004102D0",
+      "address": 4260560,
+      "catalogName": "DefineHumanPlayerAmmoLimit",
+      "canonicalName": "Define_HumanPlayerAmmoLimit",
+      "source": "retail-string",
+      "retailName": "DefineHumanPlayerAmmoLimit",
+      "retailEvidence": [
+        "DefineHumanPlayerAmmoLimit"
+      ]
+    },
+    {
+      "hash": "004151E0",
+      "address": 4280800,
+      "catalogName": "MovieSubtitle_RegisterFont",
+      "canonicalName": "MovieSubtitle_RegisterFont",
+      "source": "retail-string",
+      "retailName": "MovieSubtitle_RegisterFont",
+      "retailEvidence": [
+        "MovieSubtitle_RegisterFont"
+      ]
+    },
+    {
+      "hash": "00415260",
+      "address": 4280928,
+      "catalogName": "MovieSubtitle_RegisterText",
+      "canonicalName": "MovieSubtitle_RegisterText",
+      "source": "retail-string",
+      "retailName": "MovieSubtitle_RegisterText",
+      "retailEvidence": [
+        "MovieSubtitle_RegisterText"
+      ]
+    },
+    {
+      "hash": "00415890",
+      "address": 4282512,
+      "catalogName": "Game_SetMission",
+      "canonicalName": "Game_SetMission",
+      "source": "retail-string",
+      "retailName": "Game_SetMission",
+      "retailEvidence": [
+        "Game_SetMission"
+      ]
+    },
+    {
+      "hash": "00415950",
+      "address": 4282704,
+      "catalogName": "Game_SetMusicVolume",
+      "canonicalName": "Game_SetMusicVolume",
+      "source": "retail-string",
+      "retailName": "Game_SetMusicVolume",
+      "retailEvidence": [
+        "Game_SetMusicVolume"
+      ]
+    },
+    {
+      "hash": "004159B0",
+      "address": 4282800,
+      "catalogName": "Game_SetSFXVolume",
+      "canonicalName": "Game_SetSFXVolume",
+      "source": "retail-string",
+      "retailName": "Game_SetSFXVolume",
+      "retailEvidence": [
+        "Game_SetSFXVolume"
+      ]
+    },
+    {
+      "hash": "004174A0",
+      "address": 4289696,
+      "catalogName": "MenuManager_RequestScreen",
+      "canonicalName": "MenuManager_RequestScreen",
+      "source": "retail-string",
+      "retailName": "MenuManager_RequestScreen",
+      "retailEvidence": [
+        "MenuManager_RequestScreen"
+      ]
+    },
+    {
+      "hash": "00417790",
+      "address": 4290448,
+      "catalogName": "MenuManager_LeaveMenus",
+      "canonicalName": "MenuManager_LeaveMenus",
+      "source": "retail-string",
+      "retailName": "MenuManager_LeaveMenus",
+      "retailEvidence": [
+        "MenuManager_LeaveMenus"
+      ]
+    },
+    {
+      "hash": "00417810",
+      "address": 4290576,
+      "catalogName": "MenuManager_SetLanguage",
+      "canonicalName": "MenuManager_SetLanguage",
+      "source": "retail-string",
+      "retailName": "MenuManager_SetLanguage",
+      "retailEvidence": [
+        "MenuManager_SetLanguage"
+      ]
+    },
+    {
+      "hash": "00417690",
+      "address": 4290192,
+      "catalogName": "MenuManager_PushScreen",
+      "canonicalName": "MenuManager_PushScreen",
+      "source": "retail-string",
+      "retailName": "MenuManager_PushScreen",
+      "retailEvidence": [
+        "MenuManager_PushScreen"
+      ]
+    },
+    {
+      "hash": "00417710",
+      "address": 4290320,
+      "catalogName": "MenuManager_PopScreen",
+      "canonicalName": "MenuManager_PopScreen",
+      "source": "retail-string",
+      "retailName": "MenuManager_PopScreen",
+      "retailEvidence": [
+        "MenuManager_PopScreen"
+      ]
+    },
+    {
+      "hash": "00417880",
+      "address": 4290688,
+      "catalogName": "MenuManager_ForceUpdateWindow",
+      "canonicalName": "MenuManager_ForceUpdateWindow",
+      "source": "retail-string",
+      "retailName": "MenuManager_ForceUpdateWindow",
+      "retailEvidence": [
+        "MenuManager_ForceUpdateWindow"
+      ]
+    },
+    {
+      "hash": "00417900",
+      "address": 4290816,
+      "catalogName": "MenuManager_ActivatePopupScreen",
+      "canonicalName": "MenuManager_ActivatePopupScreen",
+      "source": "retail-string",
+      "retailName": "MenuManager_ActivatePopupScreen",
+      "retailEvidence": [
+        "MenuManager_ActivatePopupScreen"
+      ]
+    },
+    {
+      "hash": "00417960",
+      "address": 4290912,
+      "catalogName": "MenuManager_DeactivatePopuScreen",
+      "canonicalName": "MenuManager_DeactivatePopuScreen",
+      "source": "retail-string",
+      "retailName": "MenuManager_DeactivatePopuScreen",
+      "retailEvidence": [
+        "MenuManager_DeactivatePopuScreen"
+      ]
+    },
+    {
+      "hash": "004179B0",
+      "address": 4290992,
+      "catalogName": "MenuManager_SetEnabled",
+      "canonicalName": "MenuManager_SetEnabled",
+      "source": "retail-string",
+      "retailName": "MenuManager_SetEnabled",
+      "retailEvidence": [
+        "MenuManager_SetEnabled"
+      ]
+    },
+    {
+      "hash": "004231E0",
+      "address": 4338144,
+      "catalogName": "ControlsMenu_ConvertFloatFromOffset",
+      "canonicalName": "ControlsMenu_ConvertFloatFromOffset",
+      "source": "retail-string",
+      "retailName": "ControlsMenu_ConvertFloatFromOffset",
+      "retailEvidence": [
+        "ControlsMenu_ConvertFloatFromOffset"
+      ]
+    },
+    {
+      "hash": "00423240",
+      "address": 4338240,
+      "catalogName": "ControlsMenu_ConvertOffsetFromFloat",
+      "canonicalName": "ControlsMenu_ConvertOffsetFromFloat",
+      "source": "retail-string",
+      "retailName": "ControlsMenu_ConvertOffsetFromFloat",
+      "retailEvidence": [
+        "ControlsMenu_ConvertOffsetFromFloat"
+      ]
+    },
+    {
+      "hash": "0044D0E0",
+      "address": 4509920,
+      "catalogName": "AIAction_Patrol",
+      "canonicalName": "AIAction_Patrol",
+      "source": "retail-string",
+      "retailName": "AIAction_Patrol",
+      "retailEvidence": [
+        "AIAction_Patrol"
+      ]
+    },
+    {
+      "hash": "0044D160",
+      "address": 4510048,
+      "catalogName": "AIAction_Combat",
+      "canonicalName": "AIAction_Combat",
+      "source": "retail-string",
+      "retailName": "AIAction_Combat",
+      "retailEvidence": [
+        "AIAction_Combat"
+      ]
+    },
+    {
+      "hash": "0044D260",
+      "address": 4510304,
+      "catalogName": "AIAction_Dead",
+      "canonicalName": "AIAction_Dead",
+      "source": "retail-string",
+      "retailName": "AIAction_Dead",
+      "retailEvidence": [
+        "AIAction_Dead"
+      ]
+    },
+    {
+      "hash": "0044D2C0",
+      "address": 4510400,
+      "catalogName": "AIAction_FallFlat",
+      "canonicalName": "AIAction_FallFlat",
+      "source": "retail-string",
+      "retailName": "AIAction_FallFlat",
+      "retailEvidence": [
+        "AIAction_FallFlat"
+      ]
+    },
+    {
+      "hash": "0044D420",
+      "address": 4510752,
+      "catalogName": "AIAction_Activate",
+      "canonicalName": "AIAction_Activate",
+      "source": "retail-string",
+      "retailName": "AIAction_Activate",
+      "retailEvidence": [
+        "AIAction_Activate"
+      ]
+    },
+    {
+      "hash": "0044D4A0",
+      "address": 4510880,
+      "catalogName": "AIAction_WalkToNode",
+      "canonicalName": "AIAction_WalkToNode",
+      "source": "retail-string",
+      "retailName": "AIAction_WalkToNode",
+      "retailEvidence": [
+        "AIAction_WalkToNode"
+      ]
+    },
+    {
+      "hash": "0044D510",
+      "address": 4510992,
+      "catalogName": "AIAction_RunToNode",
+      "canonicalName": "AIAction_RunToNode",
+      "source": "retail-string",
+      "retailName": "AIAction_RunToNode",
+      "retailEvidence": [
+        "AIAction_RunToNode"
+      ]
+    },
+    {
+      "hash": "0044D580",
+      "address": 4511104,
+      "catalogName": "AIAction_FireAtNode",
+      "canonicalName": "AIAction_FireAtNode",
+      "source": "retail-string",
+      "retailName": "AIAction_FireAtNode",
+      "retailEvidence": [
+        "AIAction_FireAtNode"
+      ]
+    },
+    {
+      "hash": "0044D630",
+      "address": 4511280,
+      "catalogName": "AIAction_FireAtTask",
+      "canonicalName": "AIAction_FireAtTask",
+      "source": "retail-string",
+      "retailName": "AIAction_FireAtTask",
+      "retailEvidence": [
+        "AIAction_FireAtTask"
+      ]
+    },
+    {
+      "hash": "0044D6E0",
+      "address": 4511456,
+      "catalogName": "AIAction_PlayAnimation",
+      "canonicalName": "AIAction_PlayAnimation",
+      "source": "retail-string",
+      "retailName": "AIAction_PlayAnimation",
+      "retailEvidence": [
+        "AIAction_PlayAnimation"
+      ]
+    },
+    {
+      "hash": "0044D750",
+      "address": 4511568,
+      "catalogName": "AIAction_PlaySound",
+      "canonicalName": "AIAction_PlaySound",
+      "source": "retail-string",
+      "retailName": "AIAction_PlaySound",
+      "retailEvidence": [
+        "AIAction_PlaySound"
+      ]
+    },
+    {
+      "hash": "0044D7D0",
+      "address": 4511696,
+      "catalogName": "AIAction_MoveToEvent",
+      "canonicalName": "AIAction_MoveToEvent",
+      "source": "retail-string",
+      "retailName": "AIAction_MoveToEvent",
+      "retailEvidence": [
+        "AIAction_MoveToEvent"
+      ]
+    },
+    {
+      "hash": "0044D870",
+      "address": 4511856,
+      "catalogName": "AIAction_LookAtEvent",
+      "canonicalName": "AIAction_LookAtEvent",
+      "source": "retail-string",
+      "retailName": "AIAction_LookAtEvent",
+      "retailEvidence": [
+        "AIAction_LookAtEvent"
+      ]
+    },
+    {
+      "hash": "0044D8F0",
+      "address": 4511984,
+      "catalogName": "AIAction_Stunned",
+      "canonicalName": "AIAction_Stunned",
+      "source": "retail-string",
+      "retailName": "AIAction_Stunned",
+      "retailEvidence": [
+        "AIAction_Stunned"
+      ]
+    },
+    {
+      "hash": "0044D960",
+      "address": 4512096,
+      "catalogName": "AIAction_KickGrenade",
+      "canonicalName": "AIAction_KickGrenade",
+      "source": "retail-string",
+      "retailName": "AIAction_KickGrenade",
+      "retailEvidence": [
+        "AIAction_KickGrenade"
+      ]
+    },
+    {
+      "hash": "0044DA00",
+      "address": 4512256,
+      "catalogName": "AIAction_RunPanicking",
+      "canonicalName": "AIAction_RunPanicking",
+      "source": "retail-string",
+      "retailName": "AIAction_RunPanicking",
+      "retailEvidence": [
+        "AIAction_RunPanicking"
+      ]
+    },
+    {
+      "hash": "0044DA80",
+      "address": 4512384,
+      "catalogName": "AIAction_Idle",
+      "canonicalName": "AIAction_Idle",
+      "source": "retail-string",
+      "retailName": "AIAction_Idle",
+      "retailEvidence": [
+        "AIAction_Idle"
+      ]
+    },
+    {
+      "hash": "0044DAE0",
+      "address": 4512480,
+      "catalogName": "AIAction_SetCombat",
+      "canonicalName": "AIAction_SetCombat",
+      "source": "retail-string",
+      "retailName": "AIAction_SetCombat",
+      "retailEvidence": [
+        "AIAction_SetCombat"
+      ]
+    },
+    {
+      "hash": "0044E060",
+      "address": 4513888,
+      "catalogName": "AIFunction_DefaultHandler",
+      "canonicalName": "AIFunction_DefaultHandler",
+      "source": "retail-string",
+      "retailName": "AIFunction_DefaultHandler",
+      "retailEvidence": [
+        "AIFunction_DefaultHandler"
+      ]
+    },
+    {
+      "hash": "0044DBC0",
+      "address": 4512704,
+      "catalogName": "AIFunction_RemoveAlarmActions",
+      "canonicalName": "AIFunction_RemoveAlarmActions",
+      "source": "retail-string",
+      "retailName": "AIFunction_RemoveAlarmActions",
+      "retailEvidence": [
+        "AIFunction_RemoveAlarmActions"
+      ]
+    },
+    {
+      "hash": "0044DC40",
+      "address": 4512832,
+      "catalogName": "AIFunction_SetViewLength",
+      "canonicalName": "AIFunction_SetViewLength",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetViewLength",
+      "retailEvidence": [
+        "AIFunction_SetViewLength"
+      ]
+    },
+    {
+      "hash": "0044DCD0",
+      "address": 4512976,
+      "catalogName": "AIFunction_SetAlarmViewLength",
+      "canonicalName": "AIFunction_SetAlarmViewLength",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetAlarmViewLength",
+      "retailEvidence": [
+        "AIFunction_SetAlarmViewLength"
+      ]
+    },
+    {
+      "hash": "0044DD30",
+      "address": 4513072,
+      "catalogName": "AIFunction_SetViewAlpha",
+      "canonicalName": "AIFunction_SetViewAlpha",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetViewAlpha",
+      "retailEvidence": [
+        "AIFunction_SetViewAlpha"
+      ]
+    },
+    {
+      "hash": "0044DD90",
+      "address": 4513168,
+      "catalogName": "AIFunction_SetViewGamma",
+      "canonicalName": "AIFunction_SetViewGamma",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetViewGamma",
+      "retailEvidence": [
+        "AIFunction_SetViewGamma"
+      ]
+    },
+    {
+      "hash": "0044DDF0",
+      "address": 4513264,
+      "catalogName": "AIFunction_SetSecondaryViewLength",
+      "canonicalName": "AIFunction_SetSecondaryViewLength",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetSecondaryViewLength",
+      "retailEvidence": [
+        "AIFunction_SetSecondaryViewLength"
+      ]
+    },
+    {
+      "hash": "0044DE80",
+      "address": 4513408,
+      "catalogName": "AIFunction_SetSecondaryAlarmViewLength",
+      "canonicalName": "AIFunction_SetSecondaryAlarmViewLength",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetSecondaryAlarmViewLength",
+      "retailEvidence": [
+        "AIFunction_SetSecondaryAlarmViewLength"
+      ]
+    },
+    {
+      "hash": "0044DEE0",
+      "address": 4513504,
+      "catalogName": "AIFunction_SetSecondaryViewAlpha",
+      "canonicalName": "AIFunction_SetSecondaryViewAlpha",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetSecondaryViewAlpha",
+      "retailEvidence": [
+        "AIFunction_SetSecondaryViewAlpha"
+      ]
+    },
+    {
+      "hash": "0044DF40",
+      "address": 4513600,
+      "catalogName": "AIFunction_SetSecondaryViewGamma",
+      "canonicalName": "AIFunction_SetSecondaryViewGamma",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetSecondaryViewGamma",
+      "retailEvidence": [
+        "AIFunction_SetSecondaryViewGamma"
+      ]
+    },
+    {
+      "hash": "0044E0C0",
+      "address": 4513984,
+      "catalogName": "AIFunction_SetEventPriority",
+      "canonicalName": "AIFunction_SetEventPriority",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetEventPriority",
+      "retailEvidence": [
+        "AIFunction_SetEventPriority"
+      ]
+    },
+    {
+      "hash": "0044E150",
+      "address": 4514128,
+      "catalogName": "AIFunction_SetInvulnerability",
+      "canonicalName": "AIFunction_SetInvulnerability",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetInvulnerability",
+      "retailEvidence": [
+        "AIFunction_SetInvulnerability"
+      ]
+    },
+    {
+      "hash": "0044E1B0",
+      "address": 4514224,
+      "catalogName": "AIFunction_SetInstantDeath",
+      "canonicalName": "AIFunction_SetInstantDeath",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetInstantDeath",
+      "retailEvidence": [
+        "AIFunction_SetInstantDeath"
+      ]
+    },
+    {
+      "hash": "0044E210",
+      "address": 4514320,
+      "catalogName": "AIFunction_SetDeathAnimation",
+      "canonicalName": "AIFunction_SetDeathAnimation",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetDeathAnimation",
+      "retailEvidence": [
+        "AIFunction_SetDeathAnimation"
+      ]
+    },
+    {
+      "hash": "0044E270",
+      "address": 4514416,
+      "catalogName": "AIFunction_SetAlarmTriggerID",
+      "canonicalName": "AIFunction_SetAlarmTriggerID",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetAlarmTriggerID",
+      "retailEvidence": [
+        "AIFunction_SetAlarmTriggerID"
+      ]
+    },
+    {
+      "hash": "0044E2D0",
+      "address": 4514512,
+      "catalogName": "AIFunction_SetAlarmControlID",
+      "canonicalName": "AIFunction_SetAlarmControlID",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetAlarmControlID",
+      "retailEvidence": [
+        "AIFunction_SetAlarmControlID"
+      ]
+    },
+    {
+      "hash": "0044E330",
+      "address": 4514608,
+      "catalogName": "AIFunction_SetAlarmAccess",
+      "canonicalName": "AIFunction_SetAlarmAccess",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetAlarmAccess",
+      "retailEvidence": [
+        "AIFunction_SetAlarmAccess"
+      ]
+    },
+    {
+      "hash": "0044E390",
+      "address": 4514704,
+      "catalogName": "AIFunction_SetGunnerID",
+      "canonicalName": "AIFunction_SetGunnerID",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetGunnerID",
+      "retailEvidence": [
+        "AIFunction_SetGunnerID"
+      ]
+    },
+    {
+      "hash": "0044E6D0",
+      "address": 4515536,
+      "catalogName": "AIFunction_SetScriptIntegerValue",
+      "canonicalName": "AIFunction_SetScriptIntegerValue",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetScriptIntegerValue",
+      "retailEvidence": [
+        "AIFunction_SetScriptIntegerValue"
+      ]
+    },
+    {
+      "hash": "0044E790",
+      "address": 4515728,
+      "catalogName": "AIFunction_SetScriptRealValue",
+      "canonicalName": "AIFunction_SetScriptRealValue",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetScriptRealValue",
+      "retailEvidence": [
+        "AIFunction_SetScriptRealValue"
+      ]
+    },
+    {
+      "hash": "0044EAF0",
+      "address": 4516592,
+      "catalogName": "AIFunction_SetAnimationInterval",
+      "canonicalName": "AIFunction_SetAnimationInterval",
+      "source": "retail-string",
+      "retailName": "AIFunction_SetAnimationInterval",
+      "retailEvidence": [
+        "AIFunction_SetAnimationInterval"
+      ]
+    },
+    {
+      "hash": "0044EBB0",
+      "address": 4516784,
+      "catalogName": "AIFunction_AddAnimationEntry",
+      "canonicalName": "AIFunction_AddAnimationEntry",
+      "source": "retail-string",
+      "retailName": "AIFunction_AddAnimationEntry",
+      "retailEvidence": [
+        "AIFunction_AddAnimationEntry"
+      ]
+    },
+    {
+      "hash": "0044EE40",
+      "address": 4517440,
+      "catalogName": "AIFunction_SendResponse",
+      "canonicalName": "AIFunction_SendResponse",
+      "source": "retail-string",
+      "retailName": "AIFunction_SendResponse",
+      "retailEvidence": [
+        "AIFunction_SendResponse"
+      ]
+    },
+    {
+      "hash": "0047CAD0",
+      "address": 4704976,
+      "catalogName": "DefineAmmoType",
+      "canonicalName": "Define_AmmoType",
+      "source": "retail-string",
+      "retailName": "DefineAmmoType",
+      "retailEvidence": [
+        "DefineAmmoType"
+      ]
+    },
+    {
+      "hash": "00484F60",
+      "address": 4738912,
+      "catalogName": "DefineMission",
+      "canonicalName": "Define_Mission",
+      "source": "retail-string",
+      "retailName": "DefineMission",
+      "retailEvidence": [
+        "DefineMission"
+      ]
+    },
+    {
+      "hash": "00488E00",
+      "address": 4754944,
+      "catalogName": "LevelFlow_GetBreakCutSceneKey",
+      "canonicalName": "LevelFlow_GetBreakCutSceneKey",
+      "source": "retail-string",
+      "retailName": "LevelFlow_GetBreakCutSceneKey",
+      "retailEvidence": [
+        "LevelFlow_GetBreakCutSceneKey"
+      ]
+    },
+    {
+      "hash": "00488E50",
+      "address": 4755024,
+      "catalogName": "LevelFlow_LevelFailed",
+      "canonicalName": "LevelFlow_LevelFailed",
+      "source": "retail-string",
+      "retailName": "LevelFlow_LevelFailed",
+      "retailEvidence": [
+        "LevelFlow_LevelFailed"
+      ]
+    },
+    {
+      "hash": "00488E90",
+      "address": 4755088,
+      "catalogName": "LevelFlow_IsCountryUSA",
+      "canonicalName": "LevelFlow_IsCountryUSA",
+      "source": "retail-string",
+      "retailName": "LevelFlow_IsCountryUSA",
+      "retailEvidence": [
+        "LevelFlow_IsCountryUSA"
+      ]
+    },
+    {
+      "hash": "004B8C60",
+      "address": 4951136,
+      "catalogName": "_Script_SetWarningLevel",
+      "canonicalName": "Script_SetWarningLevel",
+      "source": "retail-string",
+      "retailName": "_Script_SetWarningLevel",
+      "retailEvidence": [
+        "_Script_SetWarningLevel"
+      ]
+    },
+    {
+      "hash": "004B8C10",
+      "address": 4951056,
+      "catalogName": "BreakScript",
+      "canonicalName": "Break_Script",
+      "source": "retail-string",
+      "retailName": "BreakScript",
+      "retailEvidence": [
+        "BreakScript"
+      ]
+    },
+    {
+      "hash": "004C4520",
+      "address": 4998432,
+      "catalogName": "DefineMagicObj",
+      "canonicalName": "Define_MagicObj",
+      "source": "retail-string",
+      "retailName": "DefineMagicObj",
+      "retailEvidence": [
+        "DefineMagicObj"
+      ]
+    },
+    {
+      "hash": "004C6760",
+      "address": 5007200,
+      "catalogName": "CreateTerrainTileMap",
+      "canonicalName": "Create_TerrainTileMap",
+      "source": "retail-string",
+      "retailName": "CreateTerrainTileMap",
+      "retailEvidence": [
+        "CreateTerrainTileMap"
+      ]
+    },
+    {
+      "hash": "004EBA90",
+      "address": 5159568,
+      "catalogName": "DefineGroup",
+      "canonicalName": "Define_Group",
+      "source": "retail-string",
+      "retailName": "DefineGroup",
+      "retailEvidence": [
+        "DefineGroup"
+      ]
+    },
+    {
+      "hash": "004E8C60",
+      "address": 5147744,
+      "catalogName": "DefineSound",
+      "canonicalName": "Define_Sound",
+      "source": "retail-string",
+      "retailName": "DefineSound",
+      "retailEvidence": [
+        "DefineSound"
+      ]
+    },
+    {
+      "hash": "004EAD20",
+      "address": 5156128,
+      "catalogName": "DefineGraph",
+      "canonicalName": "Define_Graph",
+      "source": "retail-string",
+      "retailName": "DefineGraph",
+      "retailEvidence": [
+        "DefineGraph"
+      ]
+    },
+    {
+      "hash": "004E9EC0",
+      "address": 5152448,
+      "catalogName": "DefineTriggerOnce",
+      "canonicalName": "Define_TriggerOnce",
+      "source": "retail-string",
+      "retailName": "DefineTriggerOnce",
+      "retailEvidence": [
+        "DefineTriggerOnce"
+      ]
+    },
+    {
+      "hash": "004F0780",
+      "address": 5179264,
+      "catalogName": "Task_New",
+      "canonicalName": "Task_New",
+      "source": "retail-string",
+      "retailName": "Task_New",
+      "retailEvidence": [
+        "Task_New"
+      ]
+    },
+    {
+      "hash": "004F0740",
+      "address": 5179200,
+      "catalogName": "Task_DeclareParameters",
+      "canonicalName": "Task_DeclareParameters",
+      "source": "retail-string",
+      "retailName": "Task_DeclareParameters",
+      "retailEvidence": [
+        "Task_DeclareParameters"
+      ]
+    },
+    {
+      "hash": "0044E3F0",
+      "address": 4514800,
+      "catalogName": "AIFunction_GetAlarmTriggerID",
+      "canonicalName": "AIFunction_GetAlarmTriggerID",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetAlarmTriggerID",
+      "retailEvidence": [
+        "AIFunction_GetAlarmTriggerID"
+      ]
+    },
+    {
+      "hash": "0044E430",
+      "address": 4514864,
+      "catalogName": "AIFunction_GetAlarmControlID",
+      "canonicalName": "AIFunction_GetAlarmControlID",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetAlarmControlID",
+      "retailEvidence": [
+        "AIFunction_GetAlarmControlID"
+      ]
+    },
+    {
+      "hash": "0044E470",
+      "address": 4514928,
+      "catalogName": "AIFunction_GetAlarmAccess",
+      "canonicalName": "AIFunction_GetAlarmAccess",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetAlarmAccess",
+      "retailEvidence": [
+        "AIFunction_GetAlarmAccess"
+      ]
+    },
+    {
+      "hash": "0044E4B0",
+      "address": 4514992,
+      "catalogName": "AIFunction_GetGunnerID",
+      "canonicalName": "AIFunction_GetGunnerID",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetGunnerID",
+      "retailEvidence": [
+        "AIFunction_GetGunnerID"
+      ]
+    },
+    {
+      "hash": "0044E4F0",
+      "address": 4515056,
+      "catalogName": "AIFunction_GetAlarmControlStatus",
+      "canonicalName": "AIFunction_GetAlarmControlStatus",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetAlarmControlStatus",
+      "retailEvidence": [
+        "AIFunction_GetAlarmControlStatus"
+      ]
+    },
+    {
+      "hash": "0044E5E0",
+      "address": 4515296,
+      "catalogName": "AIFunction_GetGunnerStatus",
+      "canonicalName": "AIFunction_GetGunnerStatus",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetGunnerStatus",
+      "retailEvidence": [
+        "AIFunction_GetGunnerStatus"
+      ]
+    },
+    {
+      "hash": "0044E740",
+      "address": 4515648,
+      "catalogName": "AIFunction_GetScriptIntegerValue",
+      "canonicalName": "AIFunction_GetScriptIntegerValue",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetScriptIntegerValue",
+      "retailEvidence": [
+        "AIFunction_GetScriptIntegerValue"
+      ]
+    },
+    {
+      "hash": "0044DFA0",
+      "address": 4513696,
+      "catalogName": "AIFunction_GetCurrentEventType",
+      "canonicalName": "AIFunction_GetCurrentEventType",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetCurrentEventType",
+      "retailEvidence": [
+        "AIFunction_GetCurrentEventType"
+      ]
+    },
+    {
+      "hash": "0044E860",
+      "address": 4515936,
+      "catalogName": "AIFunction_IsEventBehind",
+      "canonicalName": "AIFunction_IsEventBehind",
+      "source": "retail-string",
+      "retailName": "AIFunction_IsEventBehind",
+      "retailEvidence": [
+        "AIFunction_IsEventBehind"
+      ]
+    },
+    {
+      "hash": "0044ECB0",
+      "address": 4517040,
+      "catalogName": "AIFunction_GetAnimationToPlay",
+      "canonicalName": "AIFunction_GetAnimationToPlay",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetAnimationToPlay",
+      "retailEvidence": [
+        "AIFunction_GetAnimationToPlay"
+      ]
+    },
+    {
+      "hash": "004048B0",
+      "address": 4212912,
+      "catalogName": "Config_GraphicOptionsSetGamma",
+      "canonicalName": "Config_GraphicOptionsSetGamma",
+      "source": "retail-string",
+      "retailName": "Config_GraphicOptionsSetGamma",
+      "retailEvidence": [
+        "Config_GraphicOptionsSetGamma"
+      ]
+    },
+    {
+      "hash": "0044E800",
+      "address": 4515840,
+      "catalogName": "AIFunction_GetScriptRealValue",
+      "canonicalName": "AIFunction_GetScriptRealValue",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetScriptRealValue",
+      "retailEvidence": [
+        "AIFunction_GetScriptRealValue"
+      ]
+    },
+    {
+      "hash": "0044E000",
+      "address": 4513792,
+      "catalogName": "AIFunction_GetRandomValue",
+      "canonicalName": "AIFunction_GetRandomValue",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetRandomValue",
+      "retailEvidence": [
+        "AIFunction_GetRandomValue"
+      ]
+    },
+    {
+      "hash": "0044E930",
+      "address": 4516144,
+      "catalogName": "AIFunction_GetEventDistance",
+      "canonicalName": "AIFunction_GetEventDistance",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetEventDistance",
+      "retailEvidence": [
+        "AIFunction_GetEventDistance"
+      ]
+    },
+    {
+      "hash": "0044E9B0",
+      "address": 4516272,
+      "catalogName": "AIFunction_GetAlarmTriggerDistance",
+      "canonicalName": "AIFunction_GetAlarmTriggerDistance",
+      "source": "retail-string",
+      "retailName": "AIFunction_GetAlarmTriggerDistance",
+      "retailEvidence": [
+        "AIFunction_GetAlarmTriggerDistance"
+      ]
+    },
+    {
+      "hash": "0048F1A0",
+      "address": 4780448,
+      "catalogName": "AppContextSetDebugged",
+      "canonicalName": "App_ContextSetDebugged",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0048F1E0",
+      "address": 4780512,
+      "catalogName": "AppContextSetDebugtextState",
+      "canonicalName": "App_ContextSetDebugtextState",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0048F240",
+      "address": 4780608,
+      "catalogName": "AppContextSetLightmapsUsed",
+      "canonicalName": "App_ContextSetLightmapsUsed",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "0048F260",
+      "address": 4780640,
+      "catalogName": "AppContextSetTerrainLightmapsUsed",
+      "canonicalName": "App_ContextSetTerrainLightmapsUsed",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00404590",
+      "address": 4212112,
+      "catalogName": "ConfigGetActiveGraphicOptions",
+      "canonicalName": "Config_GetActiveGraphicOptions",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00491CF0",
+      "address": 4791536,
+      "catalogName": "DisplayGetActiveMode",
+      "canonicalName": "Display_GetActiveMode",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00491E70",
+      "address": 4791920,
+      "catalogName": "DisplaySetBackgroundColourFn",
+      "canonicalName": "Display_SetBackgroundColourFn",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00491A90",
+      "address": 4790928,
+      "catalogName": "DisplaySetMode",
+      "canonicalName": "Display_SetMode",
+      "source": "retail-string",
+      "retailName": "DisplaySetMode",
+      "retailEvidence": [
+        "DisplaySetMode"
+      ]
+    },
+    {
+      "hash": "004B6E80",
+      "address": 4943488,
+      "catalogName": "PictureGetHeight",
+      "canonicalName": "Picture_GetHeight",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B6E70",
+      "address": 4943472,
+      "catalogName": "PictureGetWidth",
+      "canonicalName": "Picture_GetWidth",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B53B0",
+      "address": 4936624,
+      "catalogName": "QspriteRegister4Az",
+      "canonicalName": "Qsprite_Register4Az",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00497E70",
+      "address": 4816496,
+      "catalogName": "TranscontextSetActiveTransContext",
+      "canonicalName": "Transcontext_SetActiveTransContext",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B0D40",
+      "address": 4918592,
+      "catalogName": "QHash_ValueSet",
+      "canonicalName": "QHash_ValueSet",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B0DB0",
+      "address": 4918704,
+      "catalogName": "QHash_ValueGet",
+      "canonicalName": "QHash_ValueGet",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00415020",
+      "address": 4280352,
+      "catalogName": "DEBUG_KEYS_ENABLE_INVALID",
+      "canonicalName": "DEBUG_KEYSENABLEINVALID",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004B1AC0",
+      "address": 4922048,
+      "catalogName": "QScript_Cleanup",
+      "canonicalName": "QScript_Cleanup",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004828D0",
+      "address": 4729040,
+      "catalogName": "Human_FindNextCamera",
+      "canonicalName": "Human_FindNextCamera",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004F4B00",
+      "address": 5196544,
+      "catalogName": "CutScene_TaskCreate",
+      "canonicalName": "CutScene_TaskCreate",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004F51D0",
+      "address": 5198288,
+      "catalogName": "CutScene_TaskUpdate",
+      "canonicalName": "CutScene_TaskUpdate",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004109A0",
+      "address": 4262304,
+      "catalogName": "Human_RunUpdate",
+      "canonicalName": "Human_RunUpdate",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00412440",
+      "address": 4269120,
+      "catalogName": "Human_DamageApply",
+      "canonicalName": "Human_DamageApply",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00478900",
+      "address": 4688128,
+      "catalogName": "Weapon_FireUpdate",
+      "canonicalName": "Weapon_FireUpdate",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004779E0",
+      "address": 4684256,
+      "catalogName": "Weapon_FlameUpdate",
+      "canonicalName": "Weapon_FlameUpdate",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00479990",
+      "address": 4692368,
+      "catalogName": "Weapon_ReloadStart",
+      "canonicalName": "Weapon_ReloadStart",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00477040",
+      "address": 4681792,
+      "catalogName": "Throwable_Create",
+      "canonicalName": "Throwable_Create",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00476040",
+      "address": 4677696,
+      "catalogName": "Mine_ProximityCreate",
+      "canonicalName": "Mine_ProximityCreate",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "004D9870",
+      "address": 5085296,
+      "catalogName": "Camera_SubmitFrame",
+      "canonicalName": "Camera_SubmitFrame",
+      "source": "syntax-fallback",
+      "retailName": null,
+      "retailEvidence": []
+    },
+    {
+      "hash": "00402870",
+      "address": 4204656,
+      "catalogName": "Frames_Get",
+      "canonicalName": "Frames_Get",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x3C), the field written by Frames_Set(0x00402820).",
+        "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x3C]; ret.",
+        "Ghidra callers: Menu_Manager stores the return value as its frame-rate limit; FUN_00489470 uses it as the frame divisor."
+      ]
+    },
+    {
+      "hash": "00402880",
+      "address": 4204672,
+      "catalogName": "Game_GetContext",
+      "canonicalName": "Game_GetContext",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: returns DAT_00567C8C, the global game-context pointer initialized by the startup path.",
+        "r2: mov eax,[0x00567C8C]; ret.",
+        "Ghidra callers pass the result to context callback dispatch and FUN_004015F0."
+      ]
+    },
+    {
+      "hash": "00402890",
+      "address": 4204688,
+      "catalogName": "Game_GetScriptContext",
+      "canonicalName": "Game_GetScriptContext",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x20), initialized during startup through the 0x004E7580 wrapper.",
+        "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x20]; ret.",
+        "Ghidra Level_Start calls it with no arguments; r2 shows the main-menu site calling it, then pushing EAX as Menu_Manager's first argument. Menu_Manager uses that parameter in Script_SetSymbolContext(\"Task_New\", param_1)."
+      ]
+    },
+    {
+      "hash": "004028A0",
+      "address": 4204704,
+      "catalogName": "Flow_SetState",
+      "canonicalName": "Flow_SetState",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: writes its one parameter to DAT_00567C8C+0x2C.",
+        "r2: fcn.004028A0(int32_t arg_4h) stores [global+0x2C] = arg_4h.",
+        "Main-loop r2 disassembly consumes +0x2C, copies it to +0x28, clears +0x2C, and dispatches state IDs; Flow_RequestEvent calls this helper after converting its event ID."
+      ]
+    },
+    {
+      "hash": "004028B0",
+      "address": 4204720,
+      "catalogName": "Frames_GetUpdateCounter",
+      "canonicalName": "Frames_GetUpdateCounter",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x34), reset by Frames_Set.",
+        "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x34]; ret.",
+        "Main-loop r2 disassembly increments +0x34 once per simulation/update pass; Ghidra callers use the return value for gameplay timeout and update scheduling comparisons."
+      ]
+    },
+    {
+      "hash": "004028C0",
+      "address": 4204736,
+      "catalogName": "Frames_GetTaskCounter",
+      "canonicalName": "Frames_GetTaskCounter",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x38), reset by Frames_Set.",
+        "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x38]; ret.",
+        "Main-loop r2 disassembly increments +0x38 during the second task/processing pass; FUN_00460C80 compares the getter result to detect counter changes."
+      ]
+    },
+    {
+      "hash": "004028D0",
+      "address": 4204752,
+      "catalogName": "Game_TimingBegin",
+      "canonicalName": "Game_TimingBegin",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: if DAT_00567C80 is zero, stores FUN_00490370() in DAT_00567C78; then increments DAT_00567C80.",
+        "r2 confirms the zero-depth timer start and nested depth increment.",
+        "Ghidra callers Level_Start and Game_Restart bracket load work with this helper and Game_TimingEnd."
+      ]
+    },
+    {
+      "hash": "004028F0",
+      "address": 4204784,
+      "catalogName": "Game_TimingEnd",
+      "canonicalName": "Game_TimingEnd",
+      "source": "parameter-context-inference",
+      "retailName": null,
+      "retailEvidence": [
+        "Ghidra: decrements DAT_00567C80; at zero, adds FUN_00490370()-DAT_00567C78 to DAT_00567C8C+0x50 and clears DAT_00567C78.",
+        "r2 confirms the nested depth decrement and elapsed-time accumulation.",
+        "Ghidra callers Level_Start and Game_Restart pair it with Game_TimingBegin."
+      ]
+    }
+  ]
+}

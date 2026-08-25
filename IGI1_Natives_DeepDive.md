@@ -1,7 +1,7 @@
 # Project I.G.I 1 — Native Function Deep-Dive Report
 
 **Target:** `igi.exe` retail (PE32, image base `0x400000`, `.text` = `0x401000`–`0x532510`)  
-**Branch:** `feature/natives-discovery` · **Catalog:** `IGI-Natives.json` (255 natives)  
+**Branch:** `feature/natives-discovery` · **Catalog:** `IGI-Natives.json` (273 natives)
 **Verification:** radare2 + Ghidra MCP + OpenIGI cross-reference + game-script mining
 
 ---
@@ -15,7 +15,7 @@ verification. Every address in the catalog was proven to originate **exclusively
 
 | Metric | Value |
 |---|---|
-| Natives cataloged | 255 |
+| Natives cataloged | 273 |
 | With igi.exe registration-binding evidence | 158 |
 | With third-party corroboration (OpenIGI / IGIPatch) | 136+15 |
 | Address-provenance pass coverage | 100% |
@@ -91,12 +91,20 @@ Every accepted fact traces to igi.exe machine code; unknown is preferred over fa
 
 ## 4. Native Catalog by Subsystem
 
-### Core / Other (51)
+### Core / Other (59)
 
 | Address | Name | Signature |
 |---|---|---|
 | 0x00401B20 | QtaskUpdateList | `void QtaskUpdateList(int* p1)` |
 | 0x00402820 | FramesSet | `void FramesSet(int frames)` |
+| 0x00402870 | Frames_Get | `int Frames_Get(void)` |
+| 0x00402880 | Game_GetContext | `void* Game_GetContext(void)` |
+| 0x00402890 | Game_GetScriptContext | `void* Game_GetScriptContext(void)` |
+| 0x004028A0 | Flow_SetState | `void Flow_SetState(int stateId)` |
+| 0x004028B0 | Frames_GetUpdateCounter | `int Frames_GetUpdateCounter(void)` |
+| 0x004028C0 | Frames_GetTaskCounter | `int Frames_GetTaskCounter(void)` |
+| 0x004028D0 | Game_TimingBegin | `void Game_TimingBegin(void)` |
+| 0x004028F0 | Game_TimingEnd | `void Game_TimingEnd(void)` |
 | 0x00404590 | ConfigGetActiveGraphicOptions | `void* Config_GetActiveGraphicOptions()` |
 | 0x00405850 | ConfigRead | `int ConfigRead(char* cfg_file)` |
 | 0x00405BD0 | ConfigWrite | `void ConfigWrite(char* cfg_file)` |
@@ -888,19 +896,27 @@ Every accepted fact traces to igi.exe machine code; unknown is preferred over fa
 
 - **QHash_ValueSet** — Sets a value in a QHash hash-table (8-byte thunk into the hash engine at 0x4B0D90 family). Pass the table ptr, key string and integer value. Restored after accidental loss during batch rewrite - address pass1-verified.
 - **QHash_ValueGet** — Gets a value from a QHash hash-table (6-byte getter thunk). Pass table ptr + key string, RETURNS the stored integer. Restored after accidental loss - address pass1-verified.
+- **Game_GetScriptContext** — Returns the script/task context at `Game_GetContext()+0x20`; `Menu_Manager` receives it as its first argument for `Script_SetSymbolContext("Task_New", ...)`. The nearby `mainmenu.qsc` string and three `1` values belong to `Menu_Manager`, not this no-argument getter.
+- **Flow_SetState** — Stores a pending flow state at game-context `+0x2C`; the retail main loop promotes it to `+0x28` and dispatches the corresponding flow transition.
+- **Frames_GetUpdateCounter / Frames_GetTaskCounter** — Read the two counters reset by `Frames_Set`; the retail main loop increments them in its update and task-processing passes.
+- **Game_TimingBegin / Game_TimingEnd** — Paired nested timing helpers used by level start/restart. At the outermost end, elapsed ticks are accumulated into game-context `+0x50`.
 
 </details>
 
 ## 5. Tool-Ready Symbol Exports
 
-All formats generated from the verified catalog (`exports/` directory):
+The source formats are generated from the verified catalog (`exports/` directory). The consolidated three-format bundle is in `IGI1_Native_Exports/`:
 
 | File | Target tool | Contents |
 |---|---|---|
-| `exports/igi1_natives.map` | Linker-map consumers, crash analyzers | 255 symbols, segment-style |
+| `exports/igi1_natives.map` | Linker-map consumers, crash analyzers | Current 273-symbol segment-style map |
 | `exports/igi1_natives.idc` | IDA Pro | MakeName + repeatable comments per native |
 | `exports/ghidra_apply_igi1_natives.py` | Ghidra Script Manager | creates functions, labels, PRE comments |
 | `exports/igi1_natives.csv` | Spreadsheets / scripts | full catalog incl. signatures |
+| `IGI1_Native_Exports/IGI1-Natives.json` | Catalog consumers | Current 273-entry JSON catalog |
+| `IGI1_Native_Exports/IGI1-Natives.map` | Linker-map consumers, crash analyzers | Current 273-entry segment-style map |
+| `IGI1_Native_Exports/igi.pdb` | Windows debuggers | Address-compatible generated CodeView/MSF symbols; retail `igi.exe` has no CodeView identity to match |
+| `IGI1_Native_Exports/IGI1-Native-Name-Evidence.json` | Audit / review | 176 retail-derived names, 89 syntax fallbacks, and 8 parameter/context inferences |
 
 ## 6. SDK Programming Guide
 
@@ -910,7 +926,7 @@ subsystem namespace). Wrappers are cdecl calls executed on the game thread via F
 ## 7. Known Limitations (RE.md honesty policy)
 
 - Fine-grained parameter TYPES beyond decompiler-visible float/int/char* remain best-effort.
-- ~48 internal engine functions keep analyst labels where no name string exists anywhere.
+- 89 internal engine functions have no recoverable name occurrence in the retail string/context evidence and therefore use only the mechanical `Function_Action` fallback recorded in `IGI1-Native-Name-Evidence.json`; the eight new context helpers are separately marked as parameter/context inference.
 - DEBUG_KEYS_ENABLE has no verified address; it exists only as a do-not-invoke quarantine in Natives.hpp.
 
 ## 8. Evidence Index

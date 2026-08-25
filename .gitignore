@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# IGI 1 verified native export bundle. Keep the generated PDB alongside JSON/MAP.
+!IGI1_Native_Exports/
+!IGI1_Native_Exports/*.json
+!IGI1_Native_Exports/*.map
+!IGI1_Native_Exports/*.pdb
+!IGI1_Native_Exports/README.md

@@ -4,8 +4,8 @@
 			"Native": {
 				"hash": "004EC070",
 				"address": 5161072,
-				"name": "AnimTriggerRead",
-				"signature": "void AnimTriggerRead(uint* path);",
+				"name": "AnimTrigger_ParseConfigFile",
+				"signature": "void AnimTrigger_ParseConfigFile(uint* path);",
 				"note": "Read Config of AnimTrigger, Params: Path like: 'LOCAL:Animtrigger'"
 			}
 		},
@@ -13,8 +13,8 @@
 			"Native": {
 				"hash": "004B83D0",
 				"address": 4948944,
-				"name": "CompilerCleanup",
-				"signature": "void CompileCleanUp(int* file);",
+				"name": "Qvm_Cleanup",
+				"signature": "void Qvm_Cleanup(int* file);",
 				"note": "Cleanup files after compiling, Params: File passed to CompileQVM"
 			}
 		},
@@ -22,8 +22,8 @@
 			"Native": {
 				"hash": "004F0CF0",
 				"address": 5180656,
-				"name": "ConfigCompile",
-				"signature": "int ConfigCompile(int p1,char* cfg_file,int p3);",
+				"name": "Config_Compile",
+				"signature": "int Config_Compile(int p1,char* cfg_file,int p3);",
 				"note": "Compile any config file, Params: Config: 'WEAPONS:weaponconfig.qsc' p1 ??, p3 ??"
 			}
 		},
@@ -31,8 +31,8 @@
 			"Native": {
 				"hash": "00405850",
 				"address": 4216912,
-				"name": "ConfigRead",
-				"signature": "int ConfigRead(char* cfg_file);",
+				"name": "Config_Read",
+				"signature": "int Config_Read(char* cfg_file);",
 				"note": "Read game config file, Params:  File: 'LOCAL:config.qsc'"
 			}
 		},
@@ -40,8 +40,8 @@
 			"Native": {
 				"hash": "00405BD0",
 				"address": 4217808,
-				"name": "ConfigWrite",
-				"signature": "void ConfigWrite(char* cfg_file);",
+				"name": "Config_Write",
+				"signature": "void Config_Write(char* cfg_file);",
 				"note": "Write game config file, Params: File: 'LOCAL:config.qsc'"
 			}
 		},
@@ -49,8 +49,8 @@
 			"Native": {
 				"hash": "00415AB0",
 				"address": 4283056,
-				"name": "CutsceneDelete",
-				"signature": "void CutsceneDelete(char* buffer);",
+				"name": "Game_CutsceneDelete",
+				"signature": "void Game_CutsceneDelete(char* buffer);",
 				"note": "Delete current cutscene, Params: Buffer of size 30."
 			}
 		},
@@ -58,8 +58,8 @@
 			"Native": {
 				"hash": "004AF7B0",
 				"address": 4913072,
-				"name": "ErrorShow",
-				"signature": "void ErrorShow(char* err_msg);",
+				"name": "Error_Show",
+				"signature": "void Error_Show(char* err_msg);",
 				"note": "Show error message from game, Params: Error message."
 			}
 		},
@@ -67,8 +67,8 @@
 			"Native": {
 				"hash": "00402820",
 				"address": 4204576,
-				"name": "FramesSet",
-				"signature": "void FramesSet(int frames);",
+				"name": "Frames_Set",
+				"signature": "void Frames_Set(int frames);",
 				"note": "Set game frames, Params: 30,60 max 240FPS."
 			}
 		},
@@ -76,8 +76,8 @@
 			"Native": {
 				"hash": "00408350",
 				"address": 4227920,
-				"name": "GameMaterialLoad",
-				"signature": "void GameMaterialLoad(void);",
+				"name": "GameMaterial_LoadParameters",
+				"signature": "void GameMaterial_LoadParameters(void);",
 				"note": "Load game material.qvm to memory."
 			}
 		},
@@ -85,8 +85,8 @@
 			"Native": {
 				"hash": "00403B70",
 				"address": 4209520,
-				"name": "GraphicsReset",
-				"signature": "void GraphicsReset(char* buffer);",
+				"name": "Config_ResetGraphicOptions",
+				"signature": "void Config_ResetGraphicOptions(char* buffer);",
 				"note": "Reset Graphics options in settings, Params: Buffer of size 30."
 			}
 		},
@@ -94,8 +94,8 @@
 			"Native": {
 				"hash": "004F9FF0",
 				"address": 5218288,
-				"name": "GraphOpen",
-				"signature": "void GraphOpen(uint level,char* graph_str);",
+				"name": "Graph_Open",
+				"signature": "void Graph_Open(uint level,char* graph_str);",
 				"note": "Open graph of level,Params: with str 'Graph4019.dat'"
 			}
 		},
@@ -103,8 +103,8 @@
 			"Native": {
 				"hash": "004137A0",
 				"address": 4274080,
-				"name": "HumanplayerLoad",
-				"signature": "void HumanplayerLoad(void);",
+				"name": "HumanPlayer_LoadParameters",
+				"signature": "void HumanPlayer_LoadParameters(void);",
 				"note": "Load Humanplayer.qvm file to memory."
 			}
 		},
@@ -112,8 +112,8 @@
 			"Native": {
 				"hash": "004157D0",
 				"address": 4282320,
-				"name": "InputDisable",
-				"signature": "void InputDisable(char* buffer);",
+				"name": "Game_DisablePlayerInput",
+				"signature": "void Game_DisablePlayerInput(char* buffer);",
 				"note": "Disable input of player., Params: Buffer of size 30."
 			}
 		},
@@ -121,8 +121,8 @@
 			"Native": {
 				"hash": "00415830",
 				"address": 4282416,
-				"name": "InputEnable",
-				"signature": "void InputEnable(char* buffer);",
+				"name": "Game_EnablePlayerInput",
+				"signature": "void Game_EnablePlayerInput(char* buffer);",
 				"note": "Enable input of player., Params: Buffer of size 30."
 			}
 		},
@@ -130,8 +130,8 @@
 			"Native": {
 				"hash": "004BBC30",
 				"address": 4963376,
-				"name": "LogAdd",
-				"signature": "void LogAdd(byte* log_msg);",
+				"name": "Log_Add",
+				"signature": "void Log_Add(byte* log_msg);",
 				"note": "Add internal game log message., Params: message to log."
 			}
 		},
@@ -139,8 +139,8 @@
 			"Native": {
 				"hash": "004F0E10",
 				"address": 5180944,
-				"name": "LevelLoad",
-				"signature": "void LevelLoad(int level_path,int level_len);",
+				"name": "Level_LoadObjects",
+				"signature": "void Level_LoadObjects(int level_path,int level_len);",
 				"note": "Load current level from level_path,Params: path: 0057B568, len: 0x1E."
 			}
 		},
@@ -148,8 +148,8 @@
 			"Native": {
 				"hash": "00416550",
 				"address": 4285776,
-				"name": "LevelQuit",
-				"signature": "void LevelQuit(void);",
+				"name": "Game_DeleteHandler",
+				"signature": "void Game_DeleteHandler(void);",
 				"note": "Quit current level to mainmenu."
 			}
 		},
@@ -157,8 +157,8 @@
 			"Native": {
 				"hash": "00416FE0",
 				"address": 4288480,
-				"name": "LevelRestart",
-				"signature": "void LevelRestart(void);",
+				"name": "Game_Restart",
+				"signature": "void Game_Restart(void);",
 				"note": "Restarts current level."
 			}
 		},
@@ -166,8 +166,8 @@
 			"Native": {
 				"hash": "00415B30",
 				"address": 4283184,
-				"name": "LevelStart",
-				"signature": "void LevelStart(int p1);",
+				"name": "Level_Start",
+				"signature": "void Level_Start(int p1);",
 				"note": "Start new level, Params:  p1: 0057BABC"
 			}
 		},
@@ -175,8 +175,8 @@
 			"Native": {
 				"hash": "00418B00",
 				"address": 4295424,
-				"name": "MenuManager",
-				"signature": "int* MenuManager(int p1,char *menu_str,char p3,char p4,int p5);",
+				"name": "Menu_Manager",
+				"signature": "int* Menu_Manager(int p1,char *menu_str,char p3,char p4,int p5);",
 				"note": "MenuManager load for inagame or Mainmenu,Params:  p1: 0057BABC ,p3,p4,p5: 0."
 			}
 		},
@@ -184,8 +184,8 @@
 			"Native": {
 				"hash": "00415A60",
 				"address": 4282976,
-				"name": "MusicDisable",
-				"signature": "void MusicDisable(char* buffer);",
+				"name": "Game_DisableMusic",
+				"signature": "void Game_DisableMusic(char* buffer);",
 				"note": "Disable Game Music, Params:  Buffer of size 30."
 			}
 		},
@@ -193,8 +193,8 @@
 			"Native": {
 				"hash": "00415A10",
 				"address": 4282896,
-				"name": "MusicEnable",
-				"signature": "void MusicEnable(char* buffer);",
+				"name": "Game_EnableMusic",
+				"signature": "void Game_EnableMusic(char* buffer);",
 				"note": "Enable Game Music, Params: Buffer of size 30."
 			}
 		},
@@ -202,8 +202,8 @@
 			"Native": {
 				"hash": "00495F30",
 				"address": 4808496,
-				"name": "MusicSetSfxVolume",
-				"signature": "void MusicSetSfxVolume(float volume);",
+				"name": "Music_SetSfxVolume",
+				"signature": "void Music_SetSfxVolume(float volume);",
 				"note": "Sets sound effect volume, Params: volume range [0.0 - 1.0]"
 			}
 		},
@@ -211,8 +211,8 @@
 			"Native": {
 				"hash": "00495E70",
 				"address": 4808304,
-				"name": "MusicSetVolume",
-				"signature": "void MusicSetVolume(float volume,float volume);",
+				"name": "Music_SetVolume",
+				"signature": "void Music_SetVolume(float volume,float volume);",
 				"note": "Sets music volume., Params: volume range [0.0 - 1.0]"
 			}
 		},
@@ -220,8 +220,8 @@
 			"Native": {
 				"hash": "004158E0",
 				"address": 4282592,
-				"name": "MusicUpdateVolume",
-				"signature": "void MusicUpdateVolume(char* buffer);",
+				"name": "Game_UpdateVolume",
+				"signature": "void Game_UpdateVolume(char* buffer);",
 				"note": "Update current music volume, Params: Buffer of size 30."
 			}
 		},
@@ -229,8 +229,8 @@
 			"Native": {
 				"hash": "004EDFE0",
 				"address": 5169120,
-				"name": "PhysicsObjTypeRead",
-				"signature": "void PhysicsObjTypeRead(char* cfg_file);",
+				"name": "PhysicsObjType_ParseConfigFile",
+				"signature": "void PhysicsObjType_ParseConfigFile(char* cfg_file);",
 				"note": "Read Physics obj config file, Params: config file."
 			}
 		},
@@ -238,8 +238,8 @@
 			"Native": {
 				"hash": "004B0D60",
 				"address": 4918624,
-				"name": "QhashInit",
-				"signature": "void QHashInit(char hash_val);",
+				"name": "Qhash_Init",
+				"signature": "void Qhash_Init(char hash_val);",
 				"note": "Init hash table value, Params: hash value 0 or 1."
 			}
 		},
@@ -247,8 +247,8 @@
 			"Native": {
 				"hash": "004B0D90",
 				"address": 4918672,
-				"name": "QhashReset",
-				"signature": "void QHashReset(void);",
+				"name": "Qhash_Reset",
+				"signature": "void Qhash_Reset(void);",
 				"note": "Reset QTask type hash table."
 			}
 		},
@@ -256,8 +256,8 @@
 			"Native": {
 				"hash": "004B8410",
 				"address": 4949008,
-				"name": "QscCompile",
-				"signature": "void QscCompile(char* qsc_file);",
+				"name": "Qsc_Compile",
+				"signature": "void Qsc_Compile(char* qsc_file);",
 				"note": "Compile QSC file to QVM, Params: QSC script file like 'objects.qsc'"
 			}
 		},
@@ -265,8 +265,8 @@
 			"Native": {
 				"hash": "004F0E90",
 				"address": 5181072,
-				"name": "QtaskUpdate",
-				"signature": "void QtaskUpdate(void);",
+				"name": "Qtask_Update",
+				"signature": "void Qtask_Update(void);",
 				"note": "Update QTask hash table call before loading level."
 			}
 		},
@@ -274,8 +274,8 @@
 			"Native": {
 				"hash": "00401B20",
 				"address": 4201248,
-				"name": "QtaskUpdateList",
-				"signature": "void QtaskUpdateList(int* p1);",
+				"name": "Qtask_UpdateList",
+				"signature": "void Qtask_UpdateList(int* p1);",
 				"note": "Update all QTask list, Params: p1 ??"
 			}
 		},
@@ -283,8 +283,8 @@
 			"Native": {
 				"hash": "004BB270",
 				"address": 4960880,
-				"name": "QvmAssemble",
-				"signature": "int QvmAssemble(char *file_out,char *file_in);",
+				"name": "QScript_Assemble",
+				"signature": "int QScript_Assemble(char *file_out,char *file_in);",
 				"note": "Assemble QAS assembler file, Params: Assemler source file like 'objects.qas'"
 			}
 		},
@@ -292,8 +292,8 @@
 			"Native": {
 				"hash": "004B85B0",
 				"address": 4949424,
-				"name": "QvmCompile",
-				"signature": "void QvmCompile(int file);",
+				"name": "Qvm_Execute",
+				"signature": "void Qvm_Execute(int file);",
 				"note": "Compile qvm file loaded in memory, Params: address of QVM file loaded from 'LoadResource' method."
 			}
 		},
@@ -301,8 +301,8 @@
 			"Native": {
 				"hash": "004B80B0",
 				"address": 4948144,
-				"name": "QvmLoad",
-				"signature": "int * QvmLoad(char *file_name);",
+				"name": "Qvm_Load",
+				"signature": "int * Qvm_Load(char *file_name);",
 				"note": "Compiles and Load any .qvm file into memory, Params: any qvm file name,  Returns filename loaded."
 			}
 		},
@@ -310,8 +310,8 @@
 			"Native": {
 				"hash": "004B63D0",
 				"address": 4940752,
-				"name": "ResourceFlush",
-				"signature": "void ResourceFlush(int* p1);",
+				"name": "Resource_Flush",
+				"signature": "void Resource_Flush(int* p1);",
 				"note": "Releases the current holding resources, Params: Params: p1 ??"
 			}
 		},
@@ -319,8 +319,8 @@
 			"Native": {
 				"hash": "004B5F00",
 				"address": 4939520,
-				"name": "ResourceLoad",
-				"signature": "int * ResourceLoad(char *resource_file,char **buffer)",
+				"name": "Resource_Load",
+				"signature": "int * Resource_Load(char *resource_file,char **buffer)",
 				"note": "Load resource in Memory and Returns address of file., Params: resource file like 'sounds.res','AI/303.qvm'"
 			}
 		},
@@ -328,8 +328,8 @@
 			"Native": {
 				"hash": "004B6380",
 				"address": 4940672,
-				"name": "ResourceUnload",
-				"signature": "void ResourceUnload(int *resource_file);",
+				"name": "Resource_Unload",
+				"signature": "void Resource_Unload(int *resource_file);",
 				"note": "Unload resource loaded in memory, Params: resource file like 'sounds.qvm','AI/303.qvm'"
 			}
 		},
@@ -337,8 +337,8 @@
 			"Native": {
 				"hash": "004B5B90",
 				"address": 4938640,
-				"name": "IsResourceLoaded",
-				"signature": "int IsResourceLoaded(char *res_file,int *res_file_ptr);",
+				"name": "Is_ResourceLoaded",
+				"signature": "int Is_ResourceLoaded(char *res_file,int *res_file_ptr);",
 				"note": "Check where resource is in loaded in memory, Params: resource 'sounds.qvm','AI/303.qvm' and address of res file"
 			}
 		},
@@ -346,8 +346,8 @@
 			"Native": {
 				"hash": "004B18B0",
 				"address": 4921520,
-				"name": "ResourcePackUnpack",
-				"signature": "int ResourcePackUnpack(char *res_file,char **buffer);",
+				"name": "Resource_PackUnpack",
+				"signature": "int Resource_PackUnpack(char *res_file,char **buffer);",
 				"note": "Packs and return address or Unpacks resource file into memory depending upon resource type, Params: resource 'sounds.res','terrain.res', and buffer."
 			}
 		},
@@ -355,8 +355,8 @@
 			"Native": {
 				"hash": "004B16D0",
 				"address": 4921040,
-				"name": "ResourceUnpack",
-				"signature": "void ResourceUnpack(int* res_ptr, int res_addr, int res_size);",
+				"name": "Resource_Unpack",
+				"signature": "void Resource_Unpack(int* res_ptr, int res_addr, int res_size);",
 				"note": "Unpacks resource file into memory, Params: Resource ptr, address where to unpack (Allocate using Mem_Alloc) and size of resource."
 			}
 		},
@@ -364,8 +364,8 @@
 			"Native": {
 				"hash": "004F0E50",
 				"address": 5181008,
-				"name": "ScriptInit",
-				"signature": "void ScriptInit(char* file_name,int p2,int p3,int p4);",
+				"name": "Script_Init",
+				"signature": "void Script_Init(char* file_name,int p2,int p3,int p4);",
 				"note": "Init script buffer for Assembler, Params: Use QvmLoad(file_name) first."
 			}
 		},
@@ -373,8 +373,8 @@
 			"Native": {
 				"hash": "004B8930",
 				"address": 4950320,
-				"name": "ScriptSetsymbolCxt",
-				"signature": "void ScriptSetsymbolCxt(byte *symbol_name,int** symbol_buf);",
+				"name": "Script_SetSymbolContext",
+				"signature": "void Script_SetSymbolContext(byte *symbol_name,int** symbol_buf);",
 				"note": "Set symbol context before loading it, Params: symbol_name like 'TaskType_Set'."
 			}
 		},
@@ -382,8 +382,8 @@
 			"Native": {
 				"hash": "00485AD0",
 				"address": 4741840,
-				"name": "StatusMessageClear",
-				"signature": "void StatusMessageClear (char* buffer);",
+				"name": "StatusMessageScreen_ClearMessages",
+				"signature": "void StatusMessageScreen_ClearMessages (char* buffer);",
 				"note": "Clear current status message from screen not from memory, Params: Buffer of size 30."
 			}
 		},
@@ -391,8 +391,8 @@
 			"Native": {
 				"hash": "00485970",
 				"address": 4741488,
-				"name": "StatusMessageShow",
-				"signature": "int* StatusMessageShow(int status_timer,char* msg,char *sprite,char *status_byte);",
+				"name": "StatusMessage_ShowFull",
+				"signature": "int* StatusMessage_ShowFull(int status_timer,char* msg,char *sprite,char *status_byte);",
 				"note": "Show status message on screen, Params: msg to show, sprite of msg, status_timer 0xA758AC, status_byte &0x567C74."
 			}
 		},
@@ -400,8 +400,8 @@
 			"Native": {
 				"hash": "004C0460",
 				"address": 4981856,
-				"name": "SymbolRemove",
-				"signature": "void SymbolRemove(int *p1,int *symbol_name);",
+				"name": "Symbol_Remove",
+				"signature": "void Symbol_Remove(int *p1,int *symbol_name);",
 				"note": "Remove symbol from memory, Params: symbol_name like 'TaskType_Set', p1 pointer ??"
 			}
 		},
@@ -409,8 +409,8 @@
 			"Native": {
 				"hash": "004B8810",
 				"address": 4950032,
-				"name": "TasktypeSet",
-				"signature": "void TasktypeSet(int** task_str,int task_id);",
+				"name": "TaskType_Set",
+				"signature": "void TaskType_Set(int** task_str,int task_id);",
 				"note": "Defines new constants for game and scripts ,Params: task_str (int**)WEAPONTYPE_PISTOL, task_id"
 			}
 		},
@@ -418,8 +418,8 @@
 			"Native": {
 				"hash": "004AF810",
 				"address": 4913168,
-				"name": "WarningShow",
-				"signature": "void WarningShow(char* warn_msg);",
+				"name": "Warning_Show",
+				"signature": "void Warning_Show(char* warn_msg);",
 				"note": "Show warning message, Params: message to show."
 			}
 		},
@@ -427,8 +427,8 @@
 			"Native": {
 				"hash": "004071E0",
 				"address": 4223456,
-				"name": "WeaponConfigRead",
-				"signature": "int WeaponConfigRead(int p1,char *cfg_file);",
+				"name": "Weapon_ConfigRead",
+				"signature": "int Weapon_ConfigRead(int p1,char *cfg_file);",
 				"note": "Read weapon config file into memory, Params: p1 is 0, cfg_file is 'weaponconfig.qvm'"
 			}
 		},
@@ -436,8 +436,8 @@
 			"Native": {
 				"hash": "004C0560",
 				"address": 4982112,
-				"name": "SymbolCheck",
-				"signature": "int * SymbolCheck(int *p1,int **symbol_name,int* p3);",
+				"name": "Symbol_CheckRegister",
+				"signature": "int * Symbol_CheckRegister(int *p1,int **symbol_name,int* p3);",
 				"note": "Check symbol in QTask list if already loaded, Params: symbol_name like 'TaskType_Set', p1,p3 ??"
 			}
 		},
@@ -445,8 +445,8 @@
 			"Native": {
 				"hash": "004B8890",
 				"address": 4950160,
-				"name": "GameDefineOptions",
-				"signature": "void GameDefineOptions(int **option_str,int option_func_addr,int opt1,int opt2);",
+				"name": "Game_DefineOptions",
+				"signature": "void Game_DefineOptions(int **option_str,int option_func_addr,int opt1,int opt2);",
 				"note": "Define game options constants , Params: opt_str (int**)'DefineAmmoType'"
 			}
 		},
@@ -454,8 +454,8 @@
 			"Native": {
 				"hash": "004C0200",
 				"address": 4981248,
-				"name": "ScriptBufInit",
-				"signature": "void ScriptBufInit(int *buff_arr1,int buff_arr2,int buff,int buff_size);",
+				"name": "Script_BufInit",
+				"signature": "void Script_BufInit(int *buff_arr1,int buff_arr2,int buff,int buff_size);",
 				"note": "Init buffer for scripts, Params: buffers with last param as size."
 			}
 		},
@@ -463,8 +463,8 @@
 			"Native": {
 				"hash": "004E68D0",
 				"address": 5138640,
-				"name": "SoundLoad",
-				"signature": "void SoundLoad(char *sound_dir);",
+				"name": "Sound_Load",
+				"signature": "void Sound_Load(char *sound_dir);",
 				"note": "Load all level sounds from path , Params: Path of sound like 'MISSION:sounds'"
 			}
 		},
@@ -472,8 +472,8 @@
 			"Native": {
 				"hash": "004B0C60",
 				"address": 4918368,
-				"name": "MemoryAlloc",
-				"signature": "uint MemAlloc(int num, int size);",
+				"name": "Mem_Alloc",
+				"signature": "uint Mem_Alloc(int num, int size);",
 				"note": "Allocate memory for game, Params: Check calloc() in c."
 			}
 		},
@@ -481,8 +481,8 @@
 			"Native": {
 				"hash": "004B0BE0",
 				"address": 4918240,
-				"name": "MemoryDealloc",
-				"signature": "uint MemDealloc(void);",
+				"name": "Mem_DeallocAll",
+				"signature": "uint Mem_DeallocAll(void);",
 				"note": "Deallocate allocated memory."
 			}
 		},
@@ -490,8 +490,8 @@
 			"Native": {
 				"hash": "00484E60",
 				"address": 4738656,
-				"name": "MissionOpen",
-				"signature": "void MissionOpen(char **ptr_file);",
+				"name": "Mission_Open",
+				"signature": "void Mission_Open(char **ptr_file);",
 				"note": "Open current mission file , Params: Pointer to mission file."
 			}
 		},
@@ -499,8 +499,8 @@
 			"Native": {
 				"hash": "004A5350",
 				"address": 4870992,
-				"name": "FileOpen",
-				"signature": "void* FileOpen(const char* file,char *mode);",
+				"name": "File_Open",
+				"signature": "void* File_Open(const char* file,char *mode);",
 				"note": "Open file for reading or writing, Params: Check fopen() in c."
 			}
 		},
@@ -508,8 +508,8 @@
 			"Native": {
 				"hash": "004C48E0",
 				"address": 4999392,
-				"name": "RigidDyncubeObjRead",
-				"signature": "void RigidDynCubeObjRead(uint *cfg_file);",
+				"name": "Rigid_DyncubeObjRead",
+				"signature": "void Rigid_DyncubeObjRead(uint *cfg_file);",
 				"note": "Read rigid dynCube config file , Params: config file of rigid dynCube."
 			}
 		},
@@ -517,8 +517,8 @@
 			"Native": {
 				"hash": "004C4930",
 				"address": 4999472,
-				"name": "MagicObjLoad",
-				"signature": "void MagicObjLoad(char *path);",
+				"name": "Magic_ObjLoad",
+				"signature": "void Magic_ObjLoad(char *path);",
 				"note": "Loads magic objects from path, Params: Path 'LOCAL:magicobj'"
 			}
 		},
@@ -526,8 +526,8 @@
 			"Native": {
 				"hash": "004EC0C0",
 				"address": 5161152,
-				"name": "AnimTriggerLoad",
-				"signature": "void AnimTriggerLoad(char *path);",
+				"name": "Anim_TriggerLoad",
+				"signature": "void Anim_TriggerLoad(char *path);",
 				"note": "Loads anim trigger objects from path, Params: Path 'LOCAL:animtrigger'"
 			}
 		},
@@ -535,8 +535,8 @@
 			"Native": {
 				"hash": "004EE030",
 				"address": 5169200,
-				"name": "PhysicsObjLoad",
-				"signature": "void PhysicsObjLoad(char *path);",
+				"name": "Physics_ObjLoad",
+				"signature": "void Physics_ObjLoad(char *path);",
 				"note": "Loads physics objects from path, Params: Path 'LOCAL:physicsobj'"
 			}
 		},
@@ -544,8 +544,8 @@
 			"Native": {
 				"hash": "0047CAB0",
 				"address": 4704944,
-				"name": "AmmoTypeOpen",
-				"signature": "void AmmoTypeOpen(void);",
+				"name": "Ammo_TypeOpen",
+				"signature": "void Ammo_TypeOpen(void);",
 				"note": "Open ammo qvm file to memory for all weapons loaded."
 			}
 		},
@@ -553,8 +553,8 @@
 			"Native": {
 				"hash": "00413B70",
 				"address": 4275056,
-				"name": "WeaponTypeOpen",
-				"signature": "void WeaponTypeOpen(void);",
+				"name": "Weapon_TypeOpen",
+				"signature": "void Weapon_TypeOpen(void);",
 				"note": "Open all weapons defined in .qsc file for Humanplayer."
 			}
 		},
@@ -562,8 +562,8 @@
 			"Native": {
 				"hash": "004A53B3",
 				"address": 4871091,
-				"name": "GameDataSymbolLoad",
-				"signature": "int GameDataSymbolLoad(char* sym_buf,char* sym_path,char* sym_name);",
+				"name": "Game_DataSymbolLoad",
+				"signature": "int Game_DataSymbolLoad(char* sym_buf,char* sym_path,char* sym_name);",
 				"note": "Load game data symbol to buffer for game like internal vairables,UI controls,timers etc. Params: like (buf,\"LOCAL:models/%s.mef\",\"000_02_1\")"
 			}
 		},
@@ -571,8 +571,8 @@
 			"Native": {
 				"hash": "004B80A0",
 				"address": 4948128,
-				"name": "GameDataSymbolRemove",
-				"signature": "void GameDataSymbolRemove(char* sym_buf);",
+				"name": "Game_DataSymbolRemoveThunk",
+				"signature": "void Game_DataSymbolRemoveThunk(char* sym_buf);",
 				"note": "Removes game data symbol for game like internal vairables,UI controls,timers etc."
 			}
 		},
@@ -580,8 +580,8 @@
 			"Native": {
 				"hash": "004B7EE0",
 				"address": 4947680,
-				"name": "SymbolRegisterBool8",
-				"signature": "void SymbolRegisterBool8(int **sym_buf,int sym_addr);",
+				"name": "SymbolRegister_Bool8",
+				"signature": "void SymbolRegister_Bool8(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Boolean' for game like internal vairables,UI controls,timers etc."
 			}
 		},
@@ -589,8 +589,8 @@
 			"Native": {
 				"hash": "004B7E80",
 				"address": 4947584,
-				"name": "SymbolRegisterInt16",
-				"signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr);",
+				"name": "SymbolRegister_Int16",
+				"signature": "void SymbolRegister_Int16(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Int16' for game like internal vairables,UI controls,timers etc."
 			}
 		},
@@ -598,8 +598,8 @@
 			"Native": {
 				"hash": "004B7FA0",
 				"address": 4947872,
-				"name": "SymbolRegisterInt32",
-				"signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr);",
+				"name": "SymbolRegister_Int32",
+				"signature": "void SymbolRegister_Int32(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Int32' for game like internal vairables,UI controls,timers etc."
 			}
 		},
@@ -607,8 +607,8 @@
 			"Native": {
 				"hash": "004B7FC0",
 				"address": 4947904,
-				"name": "SymbolRegisterReal32",
-				"signature": "void SymbolRegisterReal32(int **sym_buf,int sym_addr);",
+				"name": "SymbolRegister_Real32",
+				"signature": "void SymbolRegister_Real32(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Real32 aka Float' for game like internal vairables,UI controls,timers etc."
 			}
 		},
@@ -616,8 +616,8 @@
 			"Native": {
 				"hash": "0048A440",
 				"address": 4760640,
-				"name": "LoadingScreenShow",
-				"signature": "void LoadingScreenShow(int loading_type);",
+				"name": "LoadingScreen_Show",
+				"signature": "void LoadingScreen_Show(int loading_type);",
 				"note": "Show menu loading screen before loading level."
 			}
 		},
@@ -625,8 +625,8 @@
 			"Native": {
 				"hash": "004BAAC0",
 				"address": 4958912,
-				"name": "QTaskHashTableSet",
-				"signature": "void QTaskHashTableSet(int **symbol,int ptr_func,int symbol_val,int p4,int p5,int p6,int p7)",
+				"name": "Q_TaskHashTableSet",
+				"signature": "void Q_TaskHashTableSet(int **symbol,int ptr_func,int symbol_val,int p4,int p5,int p6,int p7)",
 				"note": "Main Hash Table for QTasks types for Objects(Guns,Ammo,Scripts,Variables etc) in whole game. HashTable is 70bytes long for each QTask."
 			}
 		},
@@ -634,8 +634,8 @@
 			"Native": {
 				"hash": "00413BB0",
 				"address": 4275120,
-				"name": "WeaponsCountGet",
-				"signature": "int WeaponsCountGet()",
+				"name": "Weapons_CountGet",
+				"signature": "int Weapons_CountGet()",
 				"note": "Get total number of Weapons in game."
 			}
 		},
@@ -643,8 +643,8 @@
 			"Native": {
 				"hash": "0045FFC0",
 				"address": 4587456,
-				"name": "WeaponGunPickup",
-				"signature": "void WeaponGunPickup(int param_ptr, int* type_ptr)",
+				"name": "Weapon_GunPickup",
+				"signature": "void Weapon_GunPickup(int param_ptr, int* type_ptr)",
 				"note": "Weapon pickup from ground, Param: param_ptr is in defined in Constants as 'gun_pickup_ptr', set Weapon Id in type_ptr like *(0x19F720) = 5"
 			}
 		},
@@ -652,8 +652,8 @@
 			"Native": {
 				"hash": "0045FF80",
 				"address": 4587392,
-				"name": "WeaponAmmoPickup",
-				"signature": "void WeaponAmmoPickup(int param_ptr, int* type_ptr)",
+				"name": "Weapon_AmmoPickup",
+				"signature": "void Weapon_AmmoPickup(int param_ptr, int* type_ptr)",
 				"note": "Ammo pickup from ground, Param: param_ptr is in defined in Constants as 'gun_pickup_ptr', set Ammo Id in type_ptr like *(0x19F820) = 3"
 			}
 		},
@@ -661,8 +661,8 @@
 			"Native": {
 				"hash": "00416D80",
 				"address": 4287872,
-				"name": "PlayerXPHit",
-				"signature": "uint PlayerXPHit()",
+				"name": "Human_HitDamage",
+				"signature": "uint Human_HitDamage()",
 				"note": "Get Player XP Hit damage for current health."
 			}
 		},
@@ -670,8 +670,8 @@
 			"Native": {
 				"hash": "00463760",
 				"address": 4601696,
-				"name": "HumanViewCam",
-				"signature": "void HumanViewCam(int soldier_ptr,int cam_type)",
+				"name": "Human_ViewCam",
+				"signature": "void Human_ViewCam(int soldier_ptr,int cam_type)",
 				"note": "Camera view for Human Player/Soldier , Param: soldier_ptr is pointer to Entity you are changing and cam_type is [1-6]"
 			}
 		},
@@ -679,8 +679,8 @@
 			"Native": {
 				"hash": "004659E0",
 				"address": 4610528,
-				"name": "HumanTaskViewReset",
-				"signature": "void HumanTaskViewReset(int human_ptr)",
+				"name": "Human_TaskViewReset",
+				"signature": "void Human_TaskViewReset(int human_ptr)",
 				"note": "Reset Human view angle after changing it by Zoom (Dragunov,Binoculars). "
 			}
 		},
@@ -688,8 +688,8 @@
 			"Native": {
 				"hash": "00406220",
 				"address": 4219424,
-				"name": "IsPlayerProfileActive",
-				"signature": "char* IsPlayerProfileActive()",
+				"name": "Config_GetActivePlayerProfileRecord",
+				"signature": "char* Config_GetActivePlayerProfileRecord()",
 				"note": "Checks if current player profle is active."
 			}
 		},
@@ -697,8 +697,8 @@
 			"Native": {
 				"hash": "00416D80",
 				"address": 4287872,
-				"name": "EnablePlayerHit",
-				"signature": "int EnablePlayerHit()",
+				"name": "Human_HitDamage",
+				"signature": "int Human_HitDamage()",
 				"note": "Set (0057BABC + 0xE1) value to 0 for Enable, 1 for Disable"
 			}
 		},
@@ -706,8 +706,8 @@
 			"Native": {
 				"hash": "0045C440",
 				"address": 4572224,
-				"name": "SoldierExecute",
-				"signature": "void SoldierExecute(int ptr, int addr)",
+				"name": "Soldier_Execute",
+				"signature": "void Soldier_Execute(int ptr, int addr)",
 				"note": "Execute current soldier in level, Param: ptr = (addr+0x2EC) and soldier address."
 			}
 		}
