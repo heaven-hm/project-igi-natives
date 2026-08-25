@@ -116,9 +116,10 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 ## 🧩 Natives SDK (programming guide)
 
 The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
-wrapper forwards through `NativeCaller::Invoke` to the verified address in `IGI-Natives.json`
-(all 273 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
+wrapper forwards through `NativeCaller::Invoke` to the verified address in `igi_natives_discovery/IGINatives.json`
+(all 284 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
 address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
+For runtime signature loading, deploy the `igi_natives_discovery` folder beside the DLL; the loader reads its single `IGINatives.json` from that relative path.
 Struct layouts recovered from the binary live in [`IGI_Structures.hpp`](IGI_Structures.hpp).
 
 ### How to call a native
@@ -151,14 +152,16 @@ FiberPool::Instance().RunExternal([] {
 | `PARSER::` | 14 | Define-block natives — call ONLY from their own `.qsc` definition context |
 | Extensions | ~15 | `WEAPON::TYPE_OPEN/COUNT_GET/GUN_PICKUP`, `HUMAN::TASK_VIEW_RESET(human)` (retail FOV restore), `SFX::RUNTIME_MUSIC/SFX_VOLUME_SET(float)`, `GAME::MISSION_SET(m)`, `MISC::ERROR_SHOW(fmt,...)` variadic |
 
-Full signatures + per-native evidence notes: [`IGI-Natives.json`](IGI-Natives.json)
+Full signatures + per-native evidence notes: [`igi_natives_discovery/IGINatives.json`](igi_natives_discovery/IGINatives.json)
 (`{hash, address, name, signature, note}` per entry; notes include param meaning and enum values).
 
 ### IGI1 native export bundle
 
-The branch's official project export bundle is [`IGI1_Native_Exports/`](IGI1_Native_Exports/). It contains the structured JSON catalog, address/name MAP, generated x86 `igi.pdb`, and the per-symbol evidence manifest. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
+The branch's official project export bundle is [`igi_natives_discovery/`](igi_natives_discovery/). It contains the single structured `IGINatives.json` catalog, address/name MAP, generated x86 `igi.pdb`, audit manifest, and generated Ghidra/IDA/CSV exports. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
 
-The eight new parameter/context entries are included in the 273-entry catalog. They were added only after live Ghidra and r2 analysis of previously undiscovered methods; existing entries were preserved.
+All future reverse-engineering work on this branch follows the local [`RE.md`](RE.md) gates, including independent r2 CFG/boundary checks and rejection of unsupported semantic names.
+
+The 11 new dispatch, camera-reset, and MagicObj entries are included in the 284-entry catalog. They were added only after live Ghidra and r2 CFG analysis of previously undiscovered methods; existing entries were preserved, and the Weapon update signatures were corrected to their two-argument forms. The catalog is maintained only at `igi_natives_discovery/IGINatives.json`; no duplicate root catalog is kept.
 
 ### Enum quick reference
 

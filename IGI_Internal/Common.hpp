@@ -41,7 +41,7 @@ inline int g_game_level = 1, g_curr_level = 1, g_menu_screen = 0;
 inline bool	g_level_changed = false;
 
 #define LOGGER_FILE string(PROJECT_NAME) + ".log"
-#define NATIVES_FILE "IGINatives.json"
+#define NATIVES_FILE "igi_natives_discovery\\IGINatives.json"
 #define MEF_MODELS_FILE "IGIModels.txt";
 
 #define HEX_ADDR_FMT(addr) std::setw(8) << std::setfill('0') << std::uppercase << std::hex << addr 

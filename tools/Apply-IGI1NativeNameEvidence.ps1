@@ -1,9 +1,7 @@
 [CmdletBinding()]
 param(
-    [string]$CatalogPath = (Join-Path $PSScriptRoot "..\IGI-Natives.json"),
-    [string]$EvidencePath = (Join-Path $PSScriptRoot "..\IGI1_Native_Exports\IGI1-Native-Name-Evidence.json"),
-    [string]$LegacyCatalogPath = (Join-Path $PSScriptRoot "..\IGI_Internal\IGI-Natives.json"),
-    [switch]$SkipLegacyCatalog
+    [string]$CatalogPath = (Join-Path $PSScriptRoot "..\igi_natives_discovery\IGINatives.json"),
+    [string]$EvidencePath = (Join-Path $PSScriptRoot "..\igi_natives_discovery\IGI1-Native-Name-Evidence.json")
 )
 
 $ErrorActionPreference = "Stop"
@@ -82,7 +80,7 @@ function Write-IdaScript([object[]]$Entries, [string]$Path) {
 
 function Write-GhidraScript([object[]]$Entries, [string]$Path) {
     $lines = [System.Collections.Generic.List[string]]::new()
-    $lines.Add('# Auto-generated from IGI-Natives.json after live IGI.exe/Ghidra evidence review.')
+    $lines.Add('# Auto-generated from igi_natives_discovery/IGINatives.json after live IGI.exe/Ghidra evidence review.')
     $lines.Add('# Run in Ghidra Script Manager with the retail D:\\IGI1\\igi.exe open.')
     $lines.Add('from ghidra.program.model.symbol import SourceType')
     $lines.Add('from ghidra.program.model.listing import CodeUnit')
@@ -129,25 +127,12 @@ $null = Apply-CanonicalNames $catalog $evidenceMap $nameByHash
 $catalogJson = $catalog | ConvertTo-Json -Depth 10
 Set-Content -LiteralPath $catalogFile -Value $catalogJson -Encoding utf8NoBOM
 
-if ((-not $SkipLegacyCatalog) -and (Test-Path -LiteralPath $LegacyCatalogPath)) {
-    $legacyFile = (Resolve-Path -LiteralPath $LegacyCatalogPath).Path
-    $legacy = Get-Content -Raw -LiteralPath $legacyFile | ConvertFrom-Json
-    foreach ($wrapper in @($legacy.Natives)) {
-        $native = $wrapper.Native
-        $hash = [string]$native.hash
-        if ($nameByHash.ContainsKey($hash)) {
-            $native.name = $nameByHash[$hash]
-            $native.signature = Update-SignatureName ([string]$native.signature) $native.name
-        }
-    }
-    Set-Content -LiteralPath $legacyFile -Value ($legacy | ConvertTo-Json -Depth 10) -Encoding utf8NoBOM
-}
-
 $entries = @($catalog.Natives | ForEach-Object { $_.Native })
-$csvPath = Join-Path $PSScriptRoot "..\exports\igi1_natives.csv"
+$exportDirectory = Join-Path $PSScriptRoot "..\igi_natives_discovery"
+$csvPath = Join-Path $exportDirectory "iginatives.csv"
 $entries | Select-Object hash, name, signature, note | ConvertTo-Csv -NoTypeInformation | Set-Content -LiteralPath $csvPath -Encoding utf8NoBOM
-Write-IdaScript $entries (Join-Path $PSScriptRoot "..\exports\igi1_natives.idc")
-Write-GhidraScript $entries (Join-Path $PSScriptRoot "..\exports\ghidra_apply_igi1_natives.py")
+Write-IdaScript $entries (Join-Path $exportDirectory "iginatives.idc")
+Write-GhidraScript $entries (Join-Path $exportDirectory "ghidra_apply_iginatives.py")
 
 $retailCount = $evidence.counts.'retail-string' + $evidence.counts.'retail-string-context' + $evidence.counts.'retail-string-underscore-insensitive'
 $fallbackCount = $evidence.counts.'syntax-fallback'
