@@ -1,13 +1,24 @@
-# IGI reverse-engineering assets
+# Project I.G.I native assets
 
-The root `igi_natives_discovery/IGINatives.json` is the authoritative native catalog. This folder contains generated, human-readable views rather than a second source of truth.
+This is the only committed artifact directory for the natives-discovery branch.
 
-| Folder/file | Purpose |
+## Catalog and exports
+
+| File | Purpose |
 |---|---|
-| `natives/` | One Markdown record and one index table for every catalog native. |
-| `structures/` | One Markdown record and an index for each recovered structure or opaque record view. |
-| `../verification/` | Ghidra/r2 CFG evidence, structure evidence, provenance manifests, and generation metadata. |
+| IGINatives.json | Single source catalog with 294 natives, typed prototypes, DataTypes, offsets, and native-to-type references. |
+| IGI1-Native-Name-Evidence.json | Per-native evidence classification and static validation metadata. |
+| IGINatives.map | x86 linker-style address/name map. |
+| igi.pdb | Address-compatible x86 CodeView symbol database. |
+| iginatives.csv | Flat catalog export. |
+| iginatives.idc | IDA naming/comment script. |
+| ghidra_apply_iginatives.py | Ghidra naming/comment script. |
+| IGI_Structures.hpp | C++ typed views matching the JSON DataTypes. |
+| IGI1_Natives_DeepDive.md | Human-readable research summary. |
 
-Current catalog size: **294** entries.
+## Readable views
 
-The PDB is generated as an address-compatible CodeView symbol database with `llvm-pdbutil yaml2pdb (CodeView publics)` in this worktree. It is not a vendor PDB: retail `IGI.EXE` has no embedded CodeView/RSDS identity to match.
+- natives/ contains one Markdown record per native.
+- structures/ contains one Markdown record per typed data structure.
+
+Unknown fields and opaque pointer types are explicitly marked; no unsupported layout is implied. Research-only material remains local and ignored by Git.

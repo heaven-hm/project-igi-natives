@@ -1,18 +1,24 @@
 # ProfileRecord
 
-**Kind:** `partial`  
-**Size:** `0xD14`  
-**Root:** `0x00BC2388 + 0xD14 * activeIndex`
-
-## What is proven
+Kind: partial
+Size: 0xD14
+Root: 0x00BC2388 + 0xD14 * activeIndex
+C++ type: IGI::ProfileRecord
+Status: PROVEN_STATIC
 
 Per-profile record with verified graphics fields and gamma storage.
 
-## Evidence
+## Proven fields
 
-- Retail IGI.EXE address `0x00406220`
-- Retail IGI.EXE address `0x00403B70`
-- Retail IGI.EXE address `0x00404590`
-- Retail IGI.EXE address `0x004048B0`
+| Field | Offset | Type | Evidence |
+|---|---|---|---|
+| width | 0x00C | uint32_t | 0x00403B70, 0x004045B0 |
+| height | 0x010 | uint32_t | 0x00403B70, 0x004045B0 |
+| bpp | 0x014 | uint32_t | 0x00403B70, 0x004510 |
+| performanceFlags | 0x018 | uint32_t | 0x00403B70, 0x00404F00 |
+| transparency | 0x01C | uint8_t | 0x00403B70, 0x00404960 |
+| gamma | 0x220 | float | 0x00403B70 |
 
-The C++ declaration is intentionally partial where the binary did not prove field semantics. Unknown regions remain opaque or reserved.
+## Native references
+
+0x00403950, 0x00403B70, 0x00403E60, 0x00403EF0, 0x00403F80, 0x00404010, 0x00404080, 0x004040F0, 0x00404510, 0x00404590, 0x004045B0, 0x00404710, 0x004047F0, 0x004048B0, 0x00404910, 0x00404960, 0x004049C0, 0x00404A10, 0x00404A90, 0x00404AE0, 0x00404B40, 0x00404B90, 0x00404BF0, 0x00404C40, 0x00404CA0, 0x00404CF0, 0x00404D50, 0x00404DA0, 0x00404E00, 0x00404E50, 0x00404EB0, 0x00404F00, 0x00404F60, 0x00404FA0, 0x00405010, 0x00405050, 0x004050A0, 0x00405400, 0x004054F0, 0x00405530, 0x004055C0, 0x00405620, 0x00406220, 0x004B8A50

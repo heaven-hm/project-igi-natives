@@ -1,21 +1,15 @@
 # MovieSubtitle_RegisterFont
 
-| Field | Value |
-|---|---|
-| Address/hash | `0x004151E0` |
-| Signature | `void MovieSubtitle_RegisterFont(...)` |
-| Catalog source | `retail-string` |
-| Runtime state | `VALIDATED_STATIC` unless separately marked in the evidence manifest |
+Address: 0x004151E0
+Signature: void MovieSubtitle_RegisterFont(...)
+Data types: scalar/opaque ABI only
 
 ## Recovered behavior
 
 Registers a font used by in-game movie subtitles (16 callsites in body; argc unknown - parser context). Call from subtitle/font definition blocks before any MovieSubtitle_RegisterText that uses it.
 
-## How it was found
+## Evidence classification
 
-Retail evidence: MovieSubtitle_RegisterFont.
-See the per-symbol audit manifest for the exact retail-string, syntax, or context evidence classification.
+retail-string
 
-## Usage boundary
-
-Use the exact x86 address and the catalogued prototype. Do not infer undocumented fields or call parser-context functions outside their retail script context.
+Use only the typed fields and prototypes proven in assets/IGINatives.json. Unknown regions remain opaque.

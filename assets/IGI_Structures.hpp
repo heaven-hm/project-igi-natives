@@ -23,7 +23,7 @@
 //                         Display_SetMode 0x491A90 field comparisons
 //   TransContext ........ TransContext_SetActiveTransContext 0x497E70
 //
-// Companion evidence log: verification/structures_evidence.md
+// Companion evidence log: assets/IGINatives.json DataTypes
 // ============================================================================
 
 #pragma once

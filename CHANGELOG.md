@@ -12,20 +12,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fast-forwarded `feature/natives-discovery` to remote commit `a83f745` before extending the catalog; the remote 273-entry work was preserved.
 - Added ten researched natives to the canonical catalog, enum, and safe wrappers: `TaskType_Register`, `TaskType_IsDerivedFrom`, `Weapon_EntityCreate`, `Weapon_FiringStateGet`, `Sound_EventTrigger`, `String_VFormat`, `QFile_AliasResolve`, `QFile_DeviceIndex`, `QFile_DeviceHandlerLookup`, and `Profile_ValueSet`.
 - Accepted the ten entries only after Ghidra and r2 agreed on function boundary, CFG basic-block count, edge count, and cdecl behavior. Rejected generic helpers, duplicate picture thunks, the non-function `0x0045C700`, and all data/global addresses from the candidate list.
-- Expanded `IGI_Structures.hpp` and `verification/structures_evidence.md` with task-type records, weapon-entity proven fields, QFile alias/device record strides, and the eight-word sound-event payload. Unknown bytes remain opaque or reserved.
-- Added `tools/generate_native_assets.py` as a reproducible source-driven generator. It synchronized the 283-entry export JSON, both MAP files, CSV, IDC, Ghidra importer, evidence manifest, and address-compatible CodeView PDB.
+- Expanded `assets/assets/IGI_Structures.hpp` and `assets/IGINatives.json DataTypes` with task-type records, weapon-entity proven fields, QFile alias/device record strides, and the eight-word sound-event payload. Unknown bytes remain opaque or reserved.
+- Generated the synchronized 294-entry export bundle from the canonical catalog; generation scripts remain local-only.
 - Added `assets/natives/` with one Markdown record per native and `assets/structures/` with one Markdown record per recovered structure. The generated records include address, signature, behavior, provenance, evidence, and usage boundaries.
 - Documented the tool workflow precisely: Heaven completed 80 natives as human reverse-engineering work; remaining entries were AI-assisted with Ghidra Headless MCP and r2 MCP/Radare2, with `llvm-pdbutil` used for the portable PDB rebuild in this worktree.
 
 ### IGI1 native export and parameter-context discovery
 
-- Consolidated the native artifacts into `igi_natives_discovery/`. `IGINatives.json` is now the single branch catalog; its generated `IGINatives.map`, x86 `igi.pdb`, audit manifest, CSV, IDC, and Ghidra importer live beside it. The duplicate root `IGI-Natives.json` and duplicate compatibility MAP were removed.
+- Consolidated the native artifacts into `assets/`. `IGINatives.json` is now the single branch catalog; its generated `IGINatives.map`, x86 `igi.pdb`, audit manifest, CSV, IDC, and Ghidra importer live beside it. The duplicate root `IGI-Natives.json` and duplicate compatibility MAP were removed.
 - Added 11 previously undiscovered dispatch, camera-reset, and MagicObj helpers after strict live Ghidra Headless MCP and independent radare2/r2 CFG analysis. Ghidra/r2 boundaries, basic-block counts, edges, cdecl stack behavior, and return behavior agree for the accepted methods; existing native entries were not renamed or replaced.
 - Documented the stack behavior around `0x00402890`: it is a no-argument script-context getter; the `mainmenu.qsc` path and three flag values are arguments to the following `Menu_Manager` call.
 - Recorded provenance: 80 natives were completed by Heaven as human reverse-engineering work; the remaining catalog analysis was AI-assisted with Ghidra MCP and r2 MCP. Retail string names remain preferred, and behavior-derived names are marked explicitly in the evidence manifest.
 - Added precise file descriptions and the PDB limitation. `igi.pdb` is the official project IGI PDB export artifact and is address-compatible with retail `igi.exe`, but the retail PE has no CodeView/RSDS debug directory, so it cannot be an exact vendor-PDB match in Ghidra.
 - Corrected `Weapon_FireUpdate` and `Weapon_FlameUpdate` to two-argument signatures after resolving the registrar stack pattern. `004D9850` is documented as the no-argument `Qtask_GetEventId` getter; the callback pushed before it belongs to the following registrar call.
-- Copied the governing reverse-engineering guide to the repository root as [`RE.md`](RE.md) and recorded the unresolved `0x004D9FC0` helper instead of assigning it an unsupported name.
+- The reverse-engineering guide is local-only and ignored; committed assets contain the resulting catalog and evidence outputs.
 
 ## [2.6.0] - 2025-09-08 🚀
 

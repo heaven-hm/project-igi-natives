@@ -1,4 +1,0 @@
-[UNRESOLVED]
-Address: 0x004D9FC0
-Candidate: FUN_004D9FC0
-Reason: Ghidra and r2 agree on the 8-argument cdecl body, 4 basic blocks, 4 CFG edges, and the midpoint/scene-object writes, but the only discovered caller is the EditHazinglayer callback at 0x0052B1D0. No reliable retail method-name occurrence or subsystem owner is established. Do not invent a Function_Action name; keep the address out of IGINatives.json until the owner is proven.

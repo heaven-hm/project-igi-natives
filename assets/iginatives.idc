@@ -1,4 +1,4 @@
-// Auto-generated from igi_natives_discovery/IGINatives.json by tools/generate_native_assets.py
+// Auto-generated from assets/IGINatives.json
 #include <idc.idc>
 static main() {
   SetBatch(1);
@@ -507,7 +507,7 @@ static main() {
   MakeNameEx(0x004B0DB0, "QHash_ValueGet", SN_NOWARN);
   SetFunctionCmt(0x004B0DB0, "Gets a value from a QHash hash-table (6-byte getter thunk). Pass table ptr + key string, RETURNS the stored integer. Restored after accidental loss - address pass1-verified.", 1);
   MakeNameEx(0x00415020, "DEBUG_KEYSENABLEINVALID", SN_NOWARN);
-  SetFunctionCmt(0x00415020, "TOMBSTONE - DO NOT INVOKE. The retail debug-keys native address is UNKNOWN. The old value 0x0041502 lies outside .text (0x401000-0x532510) and would crash on invoke; no verified replacement found in igi.exe (unknown > fabricated per RE.md). This entry exists only so JSON consumers see the warning instead of silently missing the key.", 1);
+  SetFunctionCmt(0x00415020, "TOMBSTONE - DO NOT INVOKE. The retail debug-keys native address is UNKNOWN. The old value 0x0041502 lies outside .text (0x401000-0x532510) and would crash on invoke; no verified replacement found in igi.exe (unknown > fabricated per the local reverse-engineering acceptance policy). This entry exists only so JSON consumers see the warning instead of silently missing the key.", 1);
   MakeNameEx(0x004B1AC0, "QScript_Cleanup", SN_NOWARN);
   SetFunctionCmt(0x004B1AC0, "Cleans up/frees a parsed .qsc script structure (pass1: 5 calls, valid exit). Param: script = pointer to the loaded script object. Call when done with a script loaded via the Qvm/Qsc loaders to release its memory.", 1);
   MakeNameEx(0x004828D0, "Human_FindNextCamera", SN_NOWARN);
@@ -571,24 +571,24 @@ static main() {
   MakeNameEx(0x004D9FB0, "MagicObj_GetEventId", SN_NOWARN);
   SetFunctionCmt(0x004D9FB0, "Returns the MagicObj event-slot byte stored at 0x0054864A, allocated by MagicObj_Initialize and released by MagicObj_Shutdown. Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl no-argument getter.", 1);
   MakeNameEx(0x00401900, "TaskType_Register", SN_NOWARN);
-  SetFunctionCmt(0x00401900, "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x00401900, "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x00401CF0, "TaskType_IsDerivedFrom", SN_NOWARN);
-  SetFunctionCmt(0x00401CF0, "Checks equality and walks the task-type parent chain until the sentinel type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x00401CF0, "Checks equality and walks the task-type parent chain until the sentinel type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x00477C50, "Weapon_EntityCreate", SN_NOWARN);
-  SetFunctionCmt(0x00477C50, "Validates the weapon type, allocates/configures the weapon entity, initializes object fields, and dispatches the type handler. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x00477C50, "Validates the weapon type, allocates/configures the weapon entity, initializes object fields, and dispatches the type handler. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x00477C10, "Weapon_FiringStateGet", SN_NOWARN);
-  SetFunctionCmt(0x00477C10, "Returns the byte at the retail weapon firing-state configuration global 0x005407B9. Ghidra/r2 CFG agreement: 1 basic block and 0 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x00477C10, "Returns the byte at the retail weapon firing-state configuration global 0x005407B9. Ghidra/r2 CFG agreement: 1 basic block and 0 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x004E7200, "Sound_EventTrigger", SN_NOWARN);
-  SetFunctionCmt(0x004E7200, "Dispatches a named sound/event through active object handlers and queues the resulting event. Ghidra/r2 CFG agreement: 15 basic blocks and 24 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x004E7200, "Dispatches a named sound/event through active object handlers and queues the resulting event. Ghidra/r2 CFG agreement: 15 basic blocks and 24 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x004A5702, "String_VFormat", SN_NOWARN);
-  SetFunctionCmt(0x004A5702, "Bounded printf-style va_list formatter wrapper around the parser core at 0x004A7720. Catalogued for direct ABI-aware use; no generic NativeHelper wrapper is emitted. Ghidra/r2 CFG agreement: 4 basic blocks and 4 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x004A5702, "Bounded printf-style va_list formatter wrapper around the parser core at 0x004A7720. Catalogued for direct ABI-aware use; no generic NativeHelper wrapper is emitted. Ghidra/r2 CFG agreement: 4 basic blocks and 4 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x004B1020, "QFile_AliasResolve", SN_NOWARN);
-  SetFunctionCmt(0x004B1020, "Resolves semicolon-separated QFile path aliases, copies the resolved path, and returns the alias depth. Ghidra/r2 CFG agreement: 17 basic blocks and 25 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x004B1020, "Resolves semicolon-separated QFile path aliases, copies the resolved path, and returns the alias depth. Ghidra/r2 CFG agreement: 17 basic blocks and 25 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x004B11A0, "QFile_DeviceIndex", SN_NOWARN);
-  SetFunctionCmt(0x004B11A0, "Scans the retail QFile device table and returns its 1-based matching device index, or zero. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x004B11A0, "Scans the retail QFile device table and returns its 1-based matching device index, or zero. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x004B1620, "QFile_DeviceHandlerLookup", SN_NOWARN);
-  SetFunctionCmt(0x004B1620, "Matches a device name against the retail handler-name table and returns the corresponding handler value. Ghidra/r2 CFG agreement: 13 basic blocks and 18 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x004B1620, "Matches a device name against the retail handler-name table and returns the corresponding handler value. Ghidra/r2 CFG agreement: 13 basic blocks and 18 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   MakeNameEx(0x004B8A50, "Profile_ValueSet", SN_NOWARN);
-  SetFunctionCmt(0x004B8A50, "Sets a profile value through the profile object/value-table path used by the retail music and sound-effects option setters. Ghidra/r2 CFG agreement: 3 basic blocks and 2 edges; see verification/natives_discovery_2026-08-26.json.", 1);
+  SetFunctionCmt(0x004B8A50, "Sets a profile value through the profile object/value-table path used by the retail music and sound-effects option setters. Ghidra/r2 CFG agreement: 3 basic blocks and 2 edges; see assets/IGI1-Native-Name-Evidence.json.", 1);
   SetBatch(0);
 }

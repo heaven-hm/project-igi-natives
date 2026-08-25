@@ -1,17 +1,19 @@
 # TransContext
 
-**Kind:** `raw-copy`  
-**Size:** `0xA8`  
-**Root:** `0x00BCAAE0`
-
-## What is proven
+Kind: raw-copy
+Size: 0xA8
+Root: 0x00BCAAE0
+C++ type: IGI::TransContext
+Status: PROVEN_STATIC
 
 Exactly 42 dwords copied by the active-context installer.
 
-## Evidence
+## Proven fields
 
-- Retail IGI.EXE address `0x00497E70`
-- Retail IGI.EXE address `0x006E5BB0`
-- Retail IGI.EXE address `0x006E5BB4`
+| Field | Offset | Type | Evidence |
+|---|---|---|---|
+| dwords | 0x000 | uint32_t[42] | 0x00497E70 |
 
-The C++ declaration is intentionally partial where the binary did not prove field semantics. Unknown regions remain opaque or reserved.
+## Native references
+
+0x00497E70

@@ -20,7 +20,8 @@
       "retailName": "AnimTrigger_ParseConfigFile",
       "retailEvidence": [
         "AnimTrigger_ParseConfigFile(): Couldn't load script: %s"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B83D0",
@@ -29,7 +30,8 @@
       "canonicalName": "Qvm_Cleanup",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004F0CF0",
@@ -38,7 +40,8 @@
       "canonicalName": "Config_Compile",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00405850",
@@ -47,7 +50,8 @@
       "canonicalName": "Config_Read",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00405BD0",
@@ -56,7 +60,8 @@
       "canonicalName": "Config_Write",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415AB0",
@@ -67,7 +72,8 @@
       "retailName": "Game_CutsceneDelete",
       "retailEvidence": [
         "Game_CutsceneDelete"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004AF7B0",
@@ -76,7 +82,8 @@
       "canonicalName": "Error_Show",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00402820",
@@ -85,7 +92,8 @@
       "canonicalName": "Frames_Set",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00408350",
@@ -96,7 +104,8 @@
       "retailName": "GameMaterial_LoadParameters",
       "retailEvidence": [
         "GameMaterial_LoadParameters: Couldn't load script \"%s\""
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403B70",
@@ -107,6 +116,10 @@
       "retailName": "Config_ResetGraphicOptions",
       "retailEvidence": [
         "Config_ResetGraphicOptions"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -116,7 +129,8 @@
       "canonicalName": "Graph_Open",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004137A0",
@@ -127,6 +141,9 @@
       "retailName": "HumanPlayer_LoadParameters",
       "retailEvidence": [
         "HumanPlayer_LoadParameters: Couldn't load script \"%s\""
+      ],
+      "dataTypeRefs": [
+        "HumanPlayer"
       ]
     },
     {
@@ -138,7 +155,8 @@
       "retailName": "Game_DisablePlayerInput",
       "retailEvidence": [
         "Game_DisablePlayerInput"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415830",
@@ -149,7 +167,8 @@
       "retailName": "Game_EnablePlayerInput",
       "retailEvidence": [
         "Game_EnablePlayerInput"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004BBC30",
@@ -158,7 +177,8 @@
       "canonicalName": "Log_Add",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004F0E10",
@@ -167,7 +187,8 @@
       "canonicalName": "Level_LoadObjects",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00416550",
@@ -176,7 +197,8 @@
       "canonicalName": "Game_DeleteHandler",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00416FE0",
@@ -185,7 +207,8 @@
       "canonicalName": "Game_Restart",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415B30",
@@ -194,7 +217,8 @@
       "canonicalName": "Level_Start",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00418B00",
@@ -205,7 +229,8 @@
       "retailName": "MenuManager",
       "retailEvidence": [
         "MenuManager"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415A60",
@@ -216,7 +241,8 @@
       "retailName": "Game_DisableMusic",
       "retailEvidence": [
         "Game_DisableMusic"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415A10",
@@ -227,7 +253,8 @@
       "retailName": "Game_EnableMusic",
       "retailEvidence": [
         "Game_EnableMusic"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00495F30",
@@ -236,7 +263,8 @@
       "canonicalName": "Music_SetSfxVolume",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00495E70",
@@ -245,7 +273,8 @@
       "canonicalName": "Music_SetVolume",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004158E0",
@@ -256,7 +285,8 @@
       "retailName": "Game_UpdateVolume",
       "retailEvidence": [
         "Game_UpdateVolume"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004EDFE0",
@@ -267,7 +297,8 @@
       "retailName": "PhysicsObjType_ParseConfigFile",
       "retailEvidence": [
         "PhysicsObjType_ParseConfigFile(): Couldn't load script: %s"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B0D60",
@@ -276,7 +307,8 @@
       "canonicalName": "Qhash_Init",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B0D90",
@@ -285,7 +317,8 @@
       "canonicalName": "Qhash_Reset",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B8410",
@@ -294,7 +327,8 @@
       "canonicalName": "Qsc_Compile",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004F0E90",
@@ -303,7 +337,10 @@
       "canonicalName": "Qtask_Update",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "00401B20",
@@ -312,7 +349,10 @@
       "canonicalName": "Qtask_UpdateList",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004BB270",
@@ -321,7 +361,8 @@
       "canonicalName": "QScript_Assemble",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B85B0",
@@ -330,7 +371,8 @@
       "canonicalName": "Qvm_Execute",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B80B0",
@@ -339,7 +381,8 @@
       "canonicalName": "Qvm_Load",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004BBCB0",
@@ -348,7 +391,8 @@
       "canonicalName": "QScript_ParseAndAssemble",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B63D0",
@@ -359,7 +403,8 @@
       "retailName": "Resource_Flush",
       "retailEvidence": [
         "Resource_Flush() : Couldn't locate resource at %p."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B5F00",
@@ -368,7 +413,8 @@
       "canonicalName": "Resource_Load",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B6380",
@@ -379,7 +425,8 @@
       "retailName": "Resource_Unload",
       "retailEvidence": [
         "Resource_Unload() : Resource '%s' is not loaded."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B5B90",
@@ -388,7 +435,8 @@
       "canonicalName": "Is_ResourceLoaded",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B18B0",
@@ -397,7 +445,8 @@
       "canonicalName": "Resource_PackUnpack",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B16D0",
@@ -406,7 +455,8 @@
       "canonicalName": "Resource_Unpack",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004F0E50",
@@ -415,7 +465,8 @@
       "canonicalName": "Script_Init",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B8930",
@@ -426,7 +477,8 @@
       "retailName": "Script_SetSymbolContext",
       "retailEvidence": [
         "Script_SetSymbolContext(): Symbol not found: %s"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00485AD0",
@@ -437,7 +489,8 @@
       "retailName": "StatusMessageScreen_ClearMessages",
       "retailEvidence": [
         "StatusMessageScreen_ClearMessages"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00485970",
@@ -446,7 +499,8 @@
       "canonicalName": "StatusMessage_ShowFull",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004C0460",
@@ -455,7 +509,8 @@
       "canonicalName": "Symbol_Remove",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B8810",
@@ -464,7 +519,10 @@
       "canonicalName": "TaskType_Set",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004AF810",
@@ -473,7 +531,8 @@
       "canonicalName": "Warning_Show",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004071E0",
@@ -482,7 +541,10 @@
       "canonicalName": "Weapon_ConfigRead",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "WeaponContext"
+      ]
     },
     {
       "hash": "004C0560",
@@ -491,7 +553,8 @@
       "canonicalName": "Symbol_CheckRegister",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B8890",
@@ -500,7 +563,8 @@
       "canonicalName": "Game_DefineOptions",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004C0200",
@@ -509,7 +573,8 @@
       "canonicalName": "Script_BufInit",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004E68D0",
@@ -518,7 +583,8 @@
       "canonicalName": "Sound_Load",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B0C60",
@@ -529,7 +595,8 @@
       "retailName": "Mem_Alloc",
       "retailEvidence": [
         "Mem_Alloc() failed to allocate %d bytes.  Total allocated by user: %d.  Total by Mem_Alloc():%d."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B0BE0",
@@ -538,7 +605,8 @@
       "canonicalName": "Mem_DeallocAll",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00484E60",
@@ -547,7 +615,8 @@
       "canonicalName": "Mission_Open",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004A5350",
@@ -556,7 +625,8 @@
       "canonicalName": "File_Open",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B1510",
@@ -565,7 +635,11 @@
       "canonicalName": "QFile_ReadWrite",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "QFileAliasRecord",
+        "QFileDeviceRecord"
+      ]
     },
     {
       "hash": "004C48E0",
@@ -574,7 +648,8 @@
       "canonicalName": "Rigid_DyncubeObjRead",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004C4930",
@@ -583,7 +658,8 @@
       "canonicalName": "Magic_ObjLoad",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004EC0C0",
@@ -592,7 +668,8 @@
       "canonicalName": "Anim_TriggerLoad",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004EE030",
@@ -601,7 +678,8 @@
       "canonicalName": "Physics_ObjLoad",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "0047CAB0",
@@ -610,7 +688,8 @@
       "canonicalName": "Ammo_TypeOpen",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00413B70",
@@ -619,7 +698,10 @@
       "canonicalName": "Weapon_TypeOpen",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "WeaponContext"
+      ]
     },
     {
       "hash": "004A53B3",
@@ -628,7 +710,8 @@
       "canonicalName": "Game_DataSymbolLoad",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B80A0",
@@ -637,7 +720,8 @@
       "canonicalName": "Game_DataSymbolRemoveThunk",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B7EE0",
@@ -646,7 +730,8 @@
       "canonicalName": "SymbolRegister_Bool8",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B7E80",
@@ -655,7 +740,8 @@
       "canonicalName": "SymbolRegister_Int16",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B7FA0",
@@ -664,7 +750,8 @@
       "canonicalName": "SymbolRegister_Int32",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B7FC0",
@@ -673,7 +760,8 @@
       "canonicalName": "SymbolRegister_Real32",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "0048A440",
@@ -682,7 +770,8 @@
       "canonicalName": "LoadingScreen_Show",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004BAAC0",
@@ -691,7 +780,8 @@
       "canonicalName": "Q_TaskHashTableSet",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00413BB0",
@@ -700,7 +790,10 @@
       "canonicalName": "Weapons_CountGet",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "WeaponContext"
+      ]
     },
     {
       "hash": "0045FFC0",
@@ -709,7 +802,12 @@
       "canonicalName": "Weapon_GunPickup",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer",
+        "WeaponContext",
+        "WeaponEntityView"
+      ]
     },
     {
       "hash": "0045FF80",
@@ -718,7 +816,12 @@
       "canonicalName": "Weapon_AmmoPickup",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer",
+        "WeaponContext",
+        "WeaponEntityView"
+      ]
     },
     {
       "hash": "00416D80",
@@ -727,7 +830,10 @@
       "canonicalName": "Human_HitDamage",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer"
+      ]
     },
     {
       "hash": "00463760",
@@ -736,7 +842,10 @@
       "canonicalName": "Human_ViewCam",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer"
+      ]
     },
     {
       "hash": "004659E0",
@@ -745,7 +854,10 @@
       "canonicalName": "Human_TaskViewReset",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer"
+      ]
     },
     {
       "hash": "00406220",
@@ -754,7 +866,10 @@
       "canonicalName": "Config_GetActivePlayerProfileRecord",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "ProfileRecord"
+      ]
     },
     {
       "hash": "0045C440",
@@ -763,7 +878,11 @@
       "canonicalName": "Soldier_Execute",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "AIContext",
+        "Soldier"
+      ]
     },
     {
       "hash": "00402780",
@@ -774,7 +893,8 @@
       "retailName": "Flow_RequestEvent",
       "retailEvidence": [
         "Flow_RequestEvent"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004036B0",
@@ -785,7 +905,8 @@
       "retailName": "GOPlayer",
       "retailEvidence": [
         "GOPlayer"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004037C0",
@@ -796,7 +917,8 @@
       "retailName": "GOInRemap",
       "retailEvidence": [
         "GOInRemap"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403870",
@@ -807,7 +929,8 @@
       "retailName": "GOInMouInv",
       "retailEvidence": [
         "GOInMouInv"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004038E0",
@@ -818,7 +941,8 @@
       "retailName": "GOInMouSens",
       "retailEvidence": [
         "GOInMouSens"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403950",
@@ -829,6 +953,10 @@
       "retailName": "GOGfxDisp",
       "retailEvidence": [
         "GOGfxDisp"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -840,6 +968,10 @@
       "retailName": "GOGfxDevice",
       "retailEvidence": [
         "GOGfxDevice"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -851,6 +983,10 @@
       "retailName": "GOGfxGamma",
       "retailEvidence": [
         "GOGfxGamma"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -862,7 +998,8 @@
       "retailName": "GOGameLang",
       "retailEvidence": [
         "GOGameLang"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403AC0",
@@ -873,7 +1010,8 @@
       "retailName": "GOGameDiff",
       "retailEvidence": [
         "GOGameDiff"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403DF0",
@@ -884,7 +1022,8 @@
       "retailName": "GOIsBlood",
       "retailEvidence": [
         "GOIsBlood"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403E60",
@@ -895,6 +1034,10 @@
       "retailName": "GOSoundSpeech",
       "retailEvidence": [
         "GOSoundSpeech"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -906,6 +1049,10 @@
       "retailName": "GOSoundMusic",
       "retailEvidence": [
         "GOSoundMusic"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -917,6 +1064,10 @@
       "retailName": "GOSoundFX",
       "retailEvidence": [
         "GOSoundFX"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -928,6 +1079,10 @@
       "retailName": "GOGfxPerformance",
       "retailEvidence": [
         "GOGfxPerformance"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -939,7 +1094,8 @@
       "retailName": "GOActiveMission",
       "retailEvidence": [
         "GOActiveMission"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403C10",
@@ -961,6 +1117,9 @@
       "retailName": "Config_FillPlayerProfileListBox",
       "retailEvidence": [
         "Config_FillPlayerProfileListBox"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord"
       ]
     },
     {
@@ -972,6 +1131,9 @@
       "retailName": "Config_GetActivePlayerProfileIndex",
       "retailEvidence": [
         "Config_GetActivePlayerProfileIndex"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord"
       ]
     },
     {
@@ -983,6 +1145,9 @@
       "retailName": "Config_SetActivePlayerProfileIndex",
       "retailEvidence": [
         "Config_SetActivePlayerProfileIndex"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord"
       ]
     },
     {
@@ -994,6 +1159,9 @@
       "retailName": "Config_CreateNewPlayerProfile",
       "retailEvidence": [
         "Config_CreateNewPlayerProfile"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord"
       ]
     },
     {
@@ -1005,6 +1173,9 @@
       "retailName": "Config_DeletePlayerProfile",
       "retailEvidence": [
         "Config_DeletePlayerProfile"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord"
       ]
     },
     {
@@ -1016,7 +1187,8 @@
       "retailName": "Config_PlayerGetActiveMission",
       "retailEvidence": [
         "Config_PlayerGetActiveMission"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004054F0",
@@ -1027,6 +1199,9 @@
       "retailName": "Config_GetNumberOfPlayerProfiles",
       "retailEvidence": [
         "Config_GetNumberOfPlayerProfiles"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord"
       ]
     },
     {
@@ -1038,7 +1213,8 @@
       "retailName": "Config_FillMissionSelectionBox",
       "retailEvidence": [
         "Config_FillMissionSelectionBox"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004056F0",
@@ -1049,7 +1225,8 @@
       "retailName": "Config_FillMissionPictureBox",
       "retailEvidence": [
         "Config_FillMissionPictureBox"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00405760",
@@ -1060,7 +1237,8 @@
       "retailName": "Config_FillMissionTextBox",
       "retailEvidence": [
         "Config_FillMissionTextBox"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404450",
@@ -1071,7 +1249,8 @@
       "retailName": "Config_FillScreenResolutionListBox",
       "retailEvidence": [
         "Config_FillScreenResolutionListBox"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004046A0",
@@ -1082,7 +1261,8 @@
       "retailName": "Config_FillRenderDeviceListBox",
       "retailEvidence": [
         "Config_FillRenderDeviceListBox"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004041D0",
@@ -1093,7 +1273,8 @@
       "retailName": "Config_GameOptionsInputGetInvertMouse",
       "retailEvidence": [
         "Config_GameOptionsInputGetInvertMouse"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404290",
@@ -1104,7 +1285,8 @@
       "retailName": "Config_GameOptionsInputGetMouseSensitivity",
       "retailEvidence": [
         "Config_GameOptionsInputGetMouseSensitivity"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404340",
@@ -1115,7 +1297,8 @@
       "retailName": "Config_GameOptionsInputGetBloodEnabled",
       "retailEvidence": [
         "Config_GameOptionsInputGetBloodEnabled"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404160",
@@ -1126,7 +1309,8 @@
       "retailName": "Config_GameOptionsInputSetInvertMouse",
       "retailEvidence": [
         "Config_GameOptionsInputSetInvertMouse"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404230",
@@ -1137,7 +1321,8 @@
       "retailName": "Config_GameOptionsInputSetMouseSensitivity",
       "retailEvidence": [
         "Config_GameOptionsInputSetMouseSensitivity"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004042E0",
@@ -1148,7 +1333,8 @@
       "retailName": "Config_GameOptionsInputSetBloodEnabled",
       "retailEvidence": [
         "Config_GameOptionsInputSetBloodEnabled"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404510",
@@ -1159,6 +1345,10 @@
       "retailName": "Config_GraphicOptionsSetResolution",
       "retailEvidence": [
         "Config_GraphicOptionsSetResolution"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1170,6 +1360,10 @@
       "retailName": "Config_GraphicOptionsSetTransparency",
       "retailEvidence": [
         "Config_GraphicOptionsSetTransparency"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1181,6 +1375,10 @@
       "retailName": "Config_GraphicOptionsSetDevice",
       "retailEvidence": [
         "Config_GraphicOptionsSetDevice"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1192,6 +1390,10 @@
       "retailName": "Config_GraphicOptionsSetPerformanceFlags",
       "retailEvidence": [
         "Config_GraphicOptionsSetPerformanceFlags"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1203,6 +1405,10 @@
       "retailName": "Config_GraphicOptionsGetResolution",
       "retailEvidence": [
         "Config_GraphicOptionsGetResolution"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1214,6 +1420,10 @@
       "retailName": "Config_GraphicOptionsGetTransparency",
       "retailEvidence": [
         "Config_GraphicOptionsGetTransparency"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1225,6 +1435,10 @@
       "retailName": "Config_GraphicOptionsGetDevice",
       "retailEvidence": [
         "Config_GraphicOptionsGetDevice"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1236,6 +1450,10 @@
       "retailName": "Config_GraphicOptionsGetGamma",
       "retailEvidence": [
         "Config_GraphicOptionsGetGamma"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1247,6 +1465,10 @@
       "retailName": "Config_GraphicOptionsGetPerformanceFlags",
       "retailEvidence": [
         "Config_GraphicOptionsGetPerformanceFlags"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1258,6 +1480,10 @@
       "retailName": "Config_GraphicOptionsGetPerfFlagsFromLevel",
       "retailEvidence": [
         "Config_GraphicOptionsGetPerfFlagsFromLevel"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1269,6 +1495,10 @@
       "retailName": "Config_GraphicOptionsGetPerfLevelFromFlags",
       "retailEvidence": [
         "Config_GraphicOptionsGetPerfLevelFromFlags"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1280,6 +1510,10 @@
       "retailName": "Config_GraphicOptionsNumPerfLevels",
       "retailEvidence": [
         "Config_GraphicOptionsNumPerfLevels"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -1291,6 +1525,10 @@
       "retailName": "Config_SoundOptionsSetSoundsEffects",
       "retailEvidence": [
         "Config_SoundOptionsSetSoundsEffects"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1302,6 +1540,10 @@
       "retailName": "Config_SoundOptionsSetSoundsEffectsVolume",
       "retailEvidence": [
         "Config_SoundOptionsSetSoundsEffectsVolume"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1313,6 +1555,10 @@
       "retailName": "Config_SoundOptionsSetMusic",
       "retailEvidence": [
         "Config_SoundOptionsSetMusic"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1324,6 +1570,10 @@
       "retailName": "Config_SoundOptionsSetMusicVolume",
       "retailEvidence": [
         "Config_SoundOptionsSetMusicVolume"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1335,6 +1585,10 @@
       "retailName": "Config_SoundOptionsSetSpeech",
       "retailEvidence": [
         "Config_SoundOptionsSetSpeech"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1346,6 +1600,10 @@
       "retailName": "Config_SoundOptionsSetSpeechVolume",
       "retailEvidence": [
         "Config_SoundOptionsSetSpeechVolume"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1357,6 +1615,10 @@
       "retailName": "Config_SoundOptionsSetReverseStereo",
       "retailEvidence": [
         "Config_SoundOptionsSetReverseStereo"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1368,6 +1630,10 @@
       "retailName": "Config_SoundOptionsGetSoundsEffects",
       "retailEvidence": [
         "Config_SoundOptionsGetSoundsEffects"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1379,6 +1645,10 @@
       "retailName": "Config_SoundOptionsGetSoundsEffectsVolume",
       "retailEvidence": [
         "Config_SoundOptionsGetSoundsEffectsVolume"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1390,6 +1660,10 @@
       "retailName": "Config_SoundOptionsGetMusic",
       "retailEvidence": [
         "Config_SoundOptionsGetMusic"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1401,6 +1675,10 @@
       "retailName": "Config_SoundOptionsGetMusicVolume",
       "retailEvidence": [
         "Config_SoundOptionsGetMusicVolume"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1412,6 +1690,10 @@
       "retailName": "Config_SoundOptionsGetSpeech",
       "retailEvidence": [
         "Config_SoundOptionsGetSpeech"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1423,6 +1705,10 @@
       "retailName": "Config_SoundOptionsGetSpeechVolume",
       "retailEvidence": [
         "Config_SoundOptionsGetSpeechVolume"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1434,6 +1720,10 @@
       "retailName": "Config_SoundOptionsGetReverseStereo",
       "retailEvidence": [
         "Config_SoundOptionsGetReverseStereo"
+      ],
+      "dataTypeRefs": [
+        "ProfileRecord",
+        "SoundOptionsRecord"
       ]
     },
     {
@@ -1445,7 +1735,8 @@
       "retailName": "Config_SetContentControlPassword",
       "retailEvidence": [
         "Config_SetContentControlPassword"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403C70",
@@ -1456,7 +1747,8 @@
       "retailName": "Config_GetContentControlPassword",
       "retailEvidence": [
         "Config_GetContentControlPassword"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403CC0",
@@ -1467,7 +1759,8 @@
       "retailName": "Config_VerifyContentControlPassword",
       "retailEvidence": [
         "Config_VerifyContentControlPassword"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403D90",
@@ -1478,7 +1771,8 @@
       "retailName": "Config_IsContentControlPasswordEnabled",
       "retailEvidence": [
         "Config_IsContentControlPasswordEnabled"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00403B30",
@@ -1489,7 +1783,8 @@
       "retailName": "Config_IsGermany",
       "retailEvidence": [
         "Config_IsGermany"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00407E30",
@@ -1500,7 +1795,8 @@
       "retailName": "DefineQMaterial",
       "retailEvidence": [
         "DefineQMaterial"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00407F50",
@@ -1511,7 +1807,8 @@
       "retailName": "DefineGameMaterial",
       "retailEvidence": [
         "DefineGameMaterial"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004101C0",
@@ -1522,6 +1819,9 @@
       "retailName": "DefineHumanPlayerWeaponCycle",
       "retailEvidence": [
         "DefineHumanPlayerWeaponCycle"
+      ],
+      "dataTypeRefs": [
+        "WeaponContext"
       ]
     },
     {
@@ -1533,6 +1833,9 @@
       "retailName": "DefineHumanPlayerWeaponCategory",
       "retailEvidence": [
         "DefineHumanPlayerWeaponCategory"
+      ],
+      "dataTypeRefs": [
+        "WeaponContext"
       ]
     },
     {
@@ -1544,7 +1847,8 @@
       "retailName": "DefineHumanPlayerAmmoLimit",
       "retailEvidence": [
         "DefineHumanPlayerAmmoLimit"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004151E0",
@@ -1555,7 +1859,8 @@
       "retailName": "MovieSubtitle_RegisterFont",
       "retailEvidence": [
         "MovieSubtitle_RegisterFont"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415260",
@@ -1566,7 +1871,8 @@
       "retailName": "MovieSubtitle_RegisterText",
       "retailEvidence": [
         "MovieSubtitle_RegisterText"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415890",
@@ -1577,7 +1883,8 @@
       "retailName": "Game_SetMission",
       "retailEvidence": [
         "Game_SetMission"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415950",
@@ -1588,7 +1895,8 @@
       "retailName": "Game_SetMusicVolume",
       "retailEvidence": [
         "Game_SetMusicVolume"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004159B0",
@@ -1599,7 +1907,8 @@
       "retailName": "Game_SetSFXVolume",
       "retailEvidence": [
         "Game_SetSFXVolume"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004174A0",
@@ -1610,7 +1919,8 @@
       "retailName": "MenuManager_RequestScreen",
       "retailEvidence": [
         "MenuManager_RequestScreen"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417790",
@@ -1621,7 +1931,8 @@
       "retailName": "MenuManager_LeaveMenus",
       "retailEvidence": [
         "MenuManager_LeaveMenus"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417810",
@@ -1632,7 +1943,8 @@
       "retailName": "MenuManager_SetLanguage",
       "retailEvidence": [
         "MenuManager_SetLanguage"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417690",
@@ -1643,7 +1955,8 @@
       "retailName": "MenuManager_PushScreen",
       "retailEvidence": [
         "MenuManager_PushScreen"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417710",
@@ -1654,7 +1967,8 @@
       "retailName": "MenuManager_PopScreen",
       "retailEvidence": [
         "MenuManager_PopScreen"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417880",
@@ -1665,7 +1979,8 @@
       "retailName": "MenuManager_ForceUpdateWindow",
       "retailEvidence": [
         "MenuManager_ForceUpdateWindow"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417900",
@@ -1676,7 +1991,8 @@
       "retailName": "MenuManager_ActivatePopupScreen",
       "retailEvidence": [
         "MenuManager_ActivatePopupScreen"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00417960",
@@ -1687,7 +2003,8 @@
       "retailName": "MenuManager_DeactivatePopuScreen",
       "retailEvidence": [
         "MenuManager_DeactivatePopuScreen"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004179B0",
@@ -1698,7 +2015,8 @@
       "retailName": "MenuManager_SetEnabled",
       "retailEvidence": [
         "MenuManager_SetEnabled"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004231E0",
@@ -1709,7 +2027,8 @@
       "retailName": "ControlsMenu_ConvertFloatFromOffset",
       "retailEvidence": [
         "ControlsMenu_ConvertFloatFromOffset"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00423240",
@@ -1720,7 +2039,8 @@
       "retailName": "ControlsMenu_ConvertOffsetFromFloat",
       "retailEvidence": [
         "ControlsMenu_ConvertOffsetFromFloat"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "0044D0E0",
@@ -1731,6 +2051,9 @@
       "retailName": "AIAction_Patrol",
       "retailEvidence": [
         "AIAction_Patrol"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1742,6 +2065,9 @@
       "retailName": "AIAction_Combat",
       "retailEvidence": [
         "AIAction_Combat"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1753,6 +2079,9 @@
       "retailName": "AIAction_Dead",
       "retailEvidence": [
         "AIAction_Dead"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1764,6 +2093,9 @@
       "retailName": "AIAction_FallFlat",
       "retailEvidence": [
         "AIAction_FallFlat"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1775,6 +2107,9 @@
       "retailName": "AIAction_Activate",
       "retailEvidence": [
         "AIAction_Activate"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1786,6 +2121,9 @@
       "retailName": "AIAction_WalkToNode",
       "retailEvidence": [
         "AIAction_WalkToNode"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1797,6 +2135,9 @@
       "retailName": "AIAction_RunToNode",
       "retailEvidence": [
         "AIAction_RunToNode"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1808,6 +2149,9 @@
       "retailName": "AIAction_FireAtNode",
       "retailEvidence": [
         "AIAction_FireAtNode"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1819,6 +2163,9 @@
       "retailName": "AIAction_FireAtTask",
       "retailEvidence": [
         "AIAction_FireAtTask"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1830,6 +2177,9 @@
       "retailName": "AIAction_PlayAnimation",
       "retailEvidence": [
         "AIAction_PlayAnimation"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1841,6 +2191,9 @@
       "retailName": "AIAction_PlaySound",
       "retailEvidence": [
         "AIAction_PlaySound"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1852,6 +2205,9 @@
       "retailName": "AIAction_MoveToEvent",
       "retailEvidence": [
         "AIAction_MoveToEvent"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1863,6 +2219,9 @@
       "retailName": "AIAction_LookAtEvent",
       "retailEvidence": [
         "AIAction_LookAtEvent"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1874,6 +2233,9 @@
       "retailName": "AIAction_Stunned",
       "retailEvidence": [
         "AIAction_Stunned"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1885,6 +2247,9 @@
       "retailName": "AIAction_KickGrenade",
       "retailEvidence": [
         "AIAction_KickGrenade"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1896,6 +2261,9 @@
       "retailName": "AIAction_RunPanicking",
       "retailEvidence": [
         "AIAction_RunPanicking"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1907,6 +2275,9 @@
       "retailName": "AIAction_Idle",
       "retailEvidence": [
         "AIAction_Idle"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1918,6 +2289,9 @@
       "retailName": "AIAction_SetCombat",
       "retailEvidence": [
         "AIAction_SetCombat"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1929,6 +2303,9 @@
       "retailName": "AIFunction_DefaultHandler",
       "retailEvidence": [
         "AIFunction_DefaultHandler"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1940,6 +2317,9 @@
       "retailName": "AIFunction_RemoveAlarmActions",
       "retailEvidence": [
         "AIFunction_RemoveAlarmActions"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1951,6 +2331,9 @@
       "retailName": "AIFunction_SetViewLength",
       "retailEvidence": [
         "AIFunction_SetViewLength"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1962,6 +2345,9 @@
       "retailName": "AIFunction_SetAlarmViewLength",
       "retailEvidence": [
         "AIFunction_SetAlarmViewLength"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1973,6 +2359,9 @@
       "retailName": "AIFunction_SetViewAlpha",
       "retailEvidence": [
         "AIFunction_SetViewAlpha"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1984,6 +2373,9 @@
       "retailName": "AIFunction_SetViewGamma",
       "retailEvidence": [
         "AIFunction_SetViewGamma"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -1995,6 +2387,9 @@
       "retailName": "AIFunction_SetSecondaryViewLength",
       "retailEvidence": [
         "AIFunction_SetSecondaryViewLength"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2006,6 +2401,9 @@
       "retailName": "AIFunction_SetSecondaryAlarmViewLength",
       "retailEvidence": [
         "AIFunction_SetSecondaryAlarmViewLength"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2017,6 +2415,9 @@
       "retailName": "AIFunction_SetSecondaryViewAlpha",
       "retailEvidence": [
         "AIFunction_SetSecondaryViewAlpha"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2028,6 +2429,9 @@
       "retailName": "AIFunction_SetSecondaryViewGamma",
       "retailEvidence": [
         "AIFunction_SetSecondaryViewGamma"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2039,6 +2443,9 @@
       "retailName": "AIFunction_SetEventPriority",
       "retailEvidence": [
         "AIFunction_SetEventPriority"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2050,6 +2457,9 @@
       "retailName": "AIFunction_SetInvulnerability",
       "retailEvidence": [
         "AIFunction_SetInvulnerability"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2061,6 +2471,9 @@
       "retailName": "AIFunction_SetInstantDeath",
       "retailEvidence": [
         "AIFunction_SetInstantDeath"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2072,6 +2485,9 @@
       "retailName": "AIFunction_SetDeathAnimation",
       "retailEvidence": [
         "AIFunction_SetDeathAnimation"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2083,6 +2499,9 @@
       "retailName": "AIFunction_SetAlarmTriggerID",
       "retailEvidence": [
         "AIFunction_SetAlarmTriggerID"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2094,6 +2513,9 @@
       "retailName": "AIFunction_SetAlarmControlID",
       "retailEvidence": [
         "AIFunction_SetAlarmControlID"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2105,6 +2527,9 @@
       "retailName": "AIFunction_SetAlarmAccess",
       "retailEvidence": [
         "AIFunction_SetAlarmAccess"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2116,6 +2541,9 @@
       "retailName": "AIFunction_SetGunnerID",
       "retailEvidence": [
         "AIFunction_SetGunnerID"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2127,6 +2555,9 @@
       "retailName": "AIFunction_SetScriptIntegerValue",
       "retailEvidence": [
         "AIFunction_SetScriptIntegerValue"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2138,6 +2569,9 @@
       "retailName": "AIFunction_SetScriptRealValue",
       "retailEvidence": [
         "AIFunction_SetScriptRealValue"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2149,6 +2583,9 @@
       "retailName": "AIFunction_SetAnimationInterval",
       "retailEvidence": [
         "AIFunction_SetAnimationInterval"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2160,6 +2597,9 @@
       "retailName": "AIFunction_AddAnimationEntry",
       "retailEvidence": [
         "AIFunction_AddAnimationEntry"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2171,6 +2611,9 @@
       "retailName": "AIFunction_SendResponse",
       "retailEvidence": [
         "AIFunction_SendResponse"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2182,7 +2625,8 @@
       "retailName": "DefineAmmoType",
       "retailEvidence": [
         "DefineAmmoType"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00484F60",
@@ -2193,7 +2637,8 @@
       "retailName": "DefineMission",
       "retailEvidence": [
         "DefineMission"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00488E00",
@@ -2204,7 +2649,8 @@
       "retailName": "LevelFlow_GetBreakCutSceneKey",
       "retailEvidence": [
         "LevelFlow_GetBreakCutSceneKey"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00488E50",
@@ -2215,7 +2661,8 @@
       "retailName": "LevelFlow_LevelFailed",
       "retailEvidence": [
         "LevelFlow_LevelFailed"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00488E90",
@@ -2226,7 +2673,8 @@
       "retailName": "LevelFlow_IsCountryUSA",
       "retailEvidence": [
         "LevelFlow_IsCountryUSA"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B8C60",
@@ -2237,7 +2685,8 @@
       "retailName": "_Script_SetWarningLevel",
       "retailEvidence": [
         "_Script_SetWarningLevel"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B8C10",
@@ -2248,7 +2697,8 @@
       "retailName": "BreakScript",
       "retailEvidence": [
         "BreakScript"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004C4520",
@@ -2259,7 +2709,8 @@
       "retailName": "DefineMagicObj",
       "retailEvidence": [
         "DefineMagicObj"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004C6760",
@@ -2270,7 +2721,8 @@
       "retailName": "CreateTerrainTileMap",
       "retailEvidence": [
         "CreateTerrainTileMap"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004EBA90",
@@ -2281,7 +2733,8 @@
       "retailName": "DefineGroup",
       "retailEvidence": [
         "DefineGroup"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004E8C60",
@@ -2292,7 +2745,8 @@
       "retailName": "DefineSound",
       "retailEvidence": [
         "DefineSound"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004EAD20",
@@ -2303,7 +2757,8 @@
       "retailName": "DefineGraph",
       "retailEvidence": [
         "DefineGraph"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004E9EC0",
@@ -2314,7 +2769,8 @@
       "retailName": "DefineTriggerOnce",
       "retailEvidence": [
         "DefineTriggerOnce"
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004F0780",
@@ -2325,6 +2781,9 @@
       "retailName": "Task_New",
       "retailEvidence": [
         "Task_New"
+      ],
+      "dataTypeRefs": [
+        "TaskTypeRecord"
       ]
     },
     {
@@ -2336,6 +2795,9 @@
       "retailName": "Task_DeclareParameters",
       "retailEvidence": [
         "Task_DeclareParameters"
+      ],
+      "dataTypeRefs": [
+        "TaskTypeRecord"
       ]
     },
     {
@@ -2347,6 +2809,9 @@
       "retailName": "AIFunction_GetAlarmTriggerID",
       "retailEvidence": [
         "AIFunction_GetAlarmTriggerID"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2358,6 +2823,9 @@
       "retailName": "AIFunction_GetAlarmControlID",
       "retailEvidence": [
         "AIFunction_GetAlarmControlID"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2369,6 +2837,9 @@
       "retailName": "AIFunction_GetAlarmAccess",
       "retailEvidence": [
         "AIFunction_GetAlarmAccess"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2380,6 +2851,9 @@
       "retailName": "AIFunction_GetGunnerID",
       "retailEvidence": [
         "AIFunction_GetGunnerID"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2391,6 +2865,9 @@
       "retailName": "AIFunction_GetAlarmControlStatus",
       "retailEvidence": [
         "AIFunction_GetAlarmControlStatus"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2402,6 +2879,9 @@
       "retailName": "AIFunction_GetGunnerStatus",
       "retailEvidence": [
         "AIFunction_GetGunnerStatus"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2413,6 +2893,9 @@
       "retailName": "AIFunction_GetScriptIntegerValue",
       "retailEvidence": [
         "AIFunction_GetScriptIntegerValue"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2424,6 +2907,9 @@
       "retailName": "AIFunction_GetCurrentEventType",
       "retailEvidence": [
         "AIFunction_GetCurrentEventType"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2435,6 +2921,9 @@
       "retailName": "AIFunction_IsEventBehind",
       "retailEvidence": [
         "AIFunction_IsEventBehind"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2446,6 +2935,9 @@
       "retailName": "AIFunction_GetAnimationToPlay",
       "retailEvidence": [
         "AIFunction_GetAnimationToPlay"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2457,6 +2949,10 @@
       "retailName": "Config_GraphicOptionsSetGamma",
       "retailEvidence": [
         "Config_GraphicOptionsSetGamma"
+      ],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
       ]
     },
     {
@@ -2468,6 +2964,9 @@
       "retailName": "AIFunction_GetScriptRealValue",
       "retailEvidence": [
         "AIFunction_GetScriptRealValue"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2479,6 +2978,9 @@
       "retailName": "AIFunction_GetRandomValue",
       "retailEvidence": [
         "AIFunction_GetRandomValue"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2490,6 +2992,9 @@
       "retailName": "AIFunction_GetEventDistance",
       "retailEvidence": [
         "AIFunction_GetEventDistance"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2501,6 +3006,9 @@
       "retailName": "AIFunction_GetAlarmTriggerDistance",
       "retailEvidence": [
         "AIFunction_GetAlarmTriggerDistance"
+      ],
+      "dataTypeRefs": [
+        "AIContext"
       ]
     },
     {
@@ -2510,7 +3018,8 @@
       "canonicalName": "App_ContextSetDebugged",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "0048F1E0",
@@ -2519,7 +3028,8 @@
       "canonicalName": "App_ContextSetDebugtextState",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "0048F240",
@@ -2528,7 +3038,8 @@
       "canonicalName": "App_ContextSetLightmapsUsed",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "0048F260",
@@ -2537,7 +3048,8 @@
       "canonicalName": "App_ContextSetTerrainLightmapsUsed",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00404590",
@@ -2546,7 +3058,11 @@
       "canonicalName": "Config_GetActiveGraphicOptions",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "GraphicOptions",
+        "ProfileRecord"
+      ]
     },
     {
       "hash": "00491CF0",
@@ -2555,7 +3071,10 @@
       "canonicalName": "Display_GetActiveMode",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "DisplayMode"
+      ]
     },
     {
       "hash": "00491E70",
@@ -2564,7 +3083,10 @@
       "canonicalName": "Display_SetBackgroundColourFn",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "DisplayMode"
+      ]
     },
     {
       "hash": "00491A90",
@@ -2575,6 +3097,9 @@
       "retailName": "DisplaySetMode",
       "retailEvidence": [
         "DisplaySetMode"
+      ],
+      "dataTypeRefs": [
+        "DisplayMode"
       ]
     },
     {
@@ -2584,7 +3109,8 @@
       "canonicalName": "Picture_GetHeight",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B6E70",
@@ -2593,7 +3119,8 @@
       "canonicalName": "Picture_GetWidth",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B53B0",
@@ -2602,7 +3129,8 @@
       "canonicalName": "Qsprite_Register4Az",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00497E70",
@@ -2611,7 +3139,10 @@
       "canonicalName": "Transcontext_SetActiveTransContext",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "TransContext"
+      ]
     },
     {
       "hash": "004B0D40",
@@ -2620,7 +3151,8 @@
       "canonicalName": "QHash_ValueSet",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B0DB0",
@@ -2629,7 +3161,8 @@
       "canonicalName": "QHash_ValueGet",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00415020",
@@ -2638,7 +3171,8 @@
       "canonicalName": "DEBUG_KEYSENABLEINVALID",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004B1AC0",
@@ -2647,7 +3181,8 @@
       "canonicalName": "QScript_Cleanup",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004828D0",
@@ -2656,7 +3191,11 @@
       "canonicalName": "Human_FindNextCamera",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "CameraContext",
+        "HumanPlayer"
+      ]
     },
     {
       "hash": "004F4B00",
@@ -2665,7 +3204,10 @@
       "canonicalName": "CutScene_TaskCreate",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "CutsceneTask"
+      ]
     },
     {
       "hash": "004F51D0",
@@ -2674,7 +3216,10 @@
       "canonicalName": "CutScene_TaskUpdate",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "CutsceneTask"
+      ]
     },
     {
       "hash": "004109A0",
@@ -2683,7 +3228,10 @@
       "canonicalName": "Human_RunUpdate",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer"
+      ]
     },
     {
       "hash": "00412440",
@@ -2692,7 +3240,10 @@
       "canonicalName": "Human_DamageApply",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "HumanPlayer"
+      ]
     },
     {
       "hash": "00478900",
@@ -2712,7 +3263,10 @@
         "cfg_similarity": 1,
         "calling_convention": "cdecl",
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "WeaponContext"
+      ]
     },
     {
       "hash": "004779E0",
@@ -2732,7 +3286,10 @@
         "cfg_similarity": 1,
         "calling_convention": "cdecl",
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "WeaponContext"
+      ]
     },
     {
       "hash": "00479990",
@@ -2741,7 +3298,11 @@
       "canonicalName": "Weapon_ReloadStart",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": [
+        "Soldier",
+        "WeaponContext"
+      ]
     },
     {
       "hash": "00477040",
@@ -2750,7 +3311,8 @@
       "canonicalName": "Throwable_Create",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "00476040",
@@ -2759,7 +3321,8 @@
       "canonicalName": "Mine_ProximityCreate",
       "source": "syntax-fallback",
       "retailName": null,
-      "retailEvidence": []
+      "retailEvidence": [],
+      "dataTypeRefs": []
     },
     {
       "hash": "004D9870",
@@ -2779,7 +3342,10 @@
         "cfg_similarity": 1,
         "calling_convention": "cdecl",
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "CameraContext"
+      ]
     },
     {
       "hash": "00402870",
@@ -2792,7 +3358,8 @@
         "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x3C), the field written by Frames_Set(0x00402820).",
         "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x3C]; ret.",
         "Ghidra callers: Menu_Manager stores the return value as its frame-rate limit; FUN_00489470 uses it as the frame divisor."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "00402880",
@@ -2805,6 +3372,9 @@
         "Ghidra: returns DAT_00567C8C, the global game-context pointer initialized by the startup path.",
         "r2: mov eax,[0x00567C8C]; ret.",
         "Ghidra callers pass the result to context callback dispatch and FUN_004015F0."
+      ],
+      "dataTypeRefs": [
+        "GameContext"
       ]
     },
     {
@@ -2818,6 +3388,9 @@
         "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x20), initialized during startup through the 0x004E7580 wrapper.",
         "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x20]; ret.",
         "Ghidra Level_Start calls it with no arguments; r2 shows the main-menu site calling it, then pushing EAX as Menu_Manager's first argument. Menu_Manager uses that parameter in Script_SetSymbolContext(\"Task_New\", param_1)."
+      ],
+      "dataTypeRefs": [
+        "ScriptContext"
       ]
     },
     {
@@ -2831,7 +3404,8 @@
         "Ghidra: writes its one parameter to DAT_00567C8C+0x2C.",
         "r2: fcn.004028A0(int32_t arg_4h) stores [global+0x2C] = arg_4h.",
         "Main-loop r2 disassembly consumes +0x2C, copies it to +0x28, clears +0x2C, and dispatches state IDs; Flow_RequestEvent calls this helper after converting its event ID."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004028B0",
@@ -2844,7 +3418,8 @@
         "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x34), reset by Frames_Set.",
         "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x34]; ret.",
         "Main-loop r2 disassembly increments +0x34 once per simulation/update pass; Ghidra callers use the return value for gameplay timeout and update scheduling comparisons."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004028C0",
@@ -2857,7 +3432,8 @@
         "Ghidra: returns *(undefined4 *)(DAT_00567C8C + 0x38), reset by Frames_Set.",
         "r2: mov eax,[0x00567C8C]; mov eax,[eax+0x38]; ret.",
         "Main-loop r2 disassembly increments +0x38 during the second task/processing pass; FUN_00460C80 compares the getter result to detect counter changes."
-      ]
+      ],
+      "dataTypeRefs": []
     },
     {
       "hash": "004028D0",
@@ -2870,6 +3446,9 @@
         "Ghidra: if DAT_00567C80 is zero, stores FUN_00490370() in DAT_00567C78; then increments DAT_00567C80.",
         "r2 confirms the zero-depth timer start and nested depth increment.",
         "Ghidra callers Level_Start and Game_Restart bracket load work with this helper and Game_TimingEnd."
+      ],
+      "dataTypeRefs": [
+        "GameContext"
       ]
     },
     {
@@ -2883,6 +3462,9 @@
         "Ghidra: decrements DAT_00567C80; at zero, adds FUN_00490370()-DAT_00567C78 to DAT_00567C8C+0x50 and clears DAT_00567C78.",
         "r2 confirms the nested depth decrement and elapsed-time accumulation.",
         "Ghidra callers Level_Start and Game_Restart pair it with Game_TimingBegin."
+      ],
+      "dataTypeRefs": [
+        "GameContext"
       ]
     },
     {
@@ -2905,7 +3487,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.99,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004D9800",
@@ -2927,7 +3512,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.99,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004D9810",
@@ -2949,7 +3537,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.99,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004D9830",
@@ -2971,7 +3562,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.99,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004D9850",
@@ -2993,7 +3587,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.99,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004D9860",
@@ -3015,7 +3612,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.99,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "004D9950",
@@ -3037,7 +3637,10 @@
         "cfg_similarity": 1,
         "identity_score": 0.98,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": [
+        "CameraContext"
+      ]
     },
     {
       "hash": "004D9A00",
@@ -3059,7 +3662,8 @@
         "cfg_similarity": 1,
         "identity_score": 0.98,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": []
     },
     {
       "hash": "004D9F60",
@@ -3081,7 +3685,8 @@
         "cfg_similarity": 1,
         "identity_score": 0.98,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": []
     },
     {
       "hash": "004D9FA0",
@@ -3103,7 +3708,8 @@
         "cfg_similarity": 1,
         "identity_score": 0.98,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": []
     },
     {
       "hash": "004D9FB0",
@@ -3125,7 +3731,8 @@
         "cfg_similarity": 1,
         "identity_score": 0.98,
         "state": "VALIDATED_STATIC"
-      }
+      },
+      "dataTypeRefs": []
     },
     {
       "hash": "00401900",
@@ -3156,7 +3763,10 @@
         },
         "result": "pass"
       },
-      "note": "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Registers and allocates a task type, copies the task handler table, and returns the allocated 16-bit type id. Ghidra/r2 CFG agreement: 18 basic blocks and 23 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "00401CF0",
@@ -3187,7 +3797,10 @@
         },
         "result": "pass"
       },
-      "note": "Checks equality and walks the task-type parent chain until the sentinel type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Checks equality and walks the task-type parent chain until the sentinel type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "TaskTypeRecord"
+      ]
     },
     {
       "hash": "00477C50",
@@ -3218,7 +3831,11 @@
         },
         "result": "pass"
       },
-      "note": "Validates the weapon type, allocates/configures the weapon entity, initializes object fields, and dispatches the type handler. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Validates the weapon type, allocates/configures the weapon entity, initializes object fields, and dispatches the type handler. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "WeaponContext",
+        "WeaponEntityView"
+      ]
     },
     {
       "hash": "00477C10",
@@ -3249,7 +3866,10 @@
         },
         "result": "pass"
       },
-      "note": "Returns the byte at the retail weapon firing-state configuration global 0x005407B9. Ghidra/r2 CFG agreement: 1 basic block and 0 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Returns the byte at the retail weapon firing-state configuration global 0x005407B9. Ghidra/r2 CFG agreement: 1 basic block and 0 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "WeaponContext"
+      ]
     },
     {
       "hash": "004E7200",
@@ -3280,7 +3900,10 @@
         },
         "result": "pass"
       },
-      "note": "Dispatches a named sound/event through active object handlers and queues the resulting event. Ghidra/r2 CFG agreement: 15 basic blocks and 24 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Dispatches a named sound/event through active object handlers and queues the resulting event. Ghidra/r2 CFG agreement: 15 basic blocks and 24 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "SoundEventParams"
+      ]
     },
     {
       "hash": "004A5702",
@@ -3311,7 +3934,8 @@
         },
         "result": "pass"
       },
-      "note": "Bounded printf-style va_list formatter wrapper around the parser core at 0x004A7720. Catalogued for direct ABI-aware use; no generic NativeHelper wrapper is emitted. Ghidra/r2 CFG agreement: 4 basic blocks and 4 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Bounded printf-style va_list formatter wrapper around the parser core at 0x004A7720. Catalogued for direct ABI-aware use; no generic NativeHelper wrapper is emitted. Ghidra/r2 CFG agreement: 4 basic blocks and 4 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": []
     },
     {
       "hash": "004B1020",
@@ -3342,7 +3966,11 @@
         },
         "result": "pass"
       },
-      "note": "Resolves semicolon-separated QFile path aliases, copies the resolved path, and returns the alias depth. Ghidra/r2 CFG agreement: 17 basic blocks and 25 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Resolves semicolon-separated QFile path aliases, copies the resolved path, and returns the alias depth. Ghidra/r2 CFG agreement: 17 basic blocks and 25 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "QFileAliasRecord",
+        "QFileDeviceRecord"
+      ]
     },
     {
       "hash": "004B11A0",
@@ -3373,7 +4001,11 @@
         },
         "result": "pass"
       },
-      "note": "Scans the retail QFile device table and returns its 1-based matching device index, or zero. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Scans the retail QFile device table and returns its 1-based matching device index, or zero. Ghidra/r2 CFG agreement: 6 basic blocks and 7 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "QFileAliasRecord",
+        "QFileDeviceRecord"
+      ]
     },
     {
       "hash": "004B1620",
@@ -3404,7 +4036,11 @@
         },
         "result": "pass"
       },
-      "note": "Matches a device name against the retail handler-name table and returns the corresponding handler value. Ghidra/r2 CFG agreement: 13 basic blocks and 18 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Matches a device name against the retail handler-name table and returns the corresponding handler value. Ghidra/r2 CFG agreement: 13 basic blocks and 18 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "QFileAliasRecord",
+        "QFileDeviceRecord"
+      ]
     },
     {
       "hash": "004B8A50",
@@ -3435,7 +4071,11 @@
         },
         "result": "pass"
       },
-      "note": "Sets a profile value through the profile object/value-table path used by the retail music and sound-effects option setters. Ghidra/r2 CFG agreement: 3 basic blocks and 2 edges; see verification/natives_discovery_2026-08-26.json."
+      "note": "Sets a profile value through the profile object/value-table path used by the retail music and sound-effects option setters. Ghidra/r2 CFG agreement: 3 basic blocks and 2 edges; see assets/IGI1-Native-Name-Evidence.json.",
+      "dataTypeRefs": [
+        "ProfileRecord"
+      ]
     }
-  ]
+  ],
+  "catalog": "assets/IGINatives.json"
 }

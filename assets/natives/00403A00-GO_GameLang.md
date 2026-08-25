@@ -1,21 +1,15 @@
 # GO_GameLang
 
-| Field | Value |
-|---|---|
-| Address/hash | `0x00403A00` |
-| Signature | `int GO_GameLang(int language)` |
-| Catalog source | `retail-string` |
-| Runtime state | `VALIDATED_STATIC` unless separately marked in the evidence manifest |
+Address: 0x00403A00
+Signature: int GO_GameLang(int language)
+Data types: scalar/opaque ABI only
 
 ## Recovered behavior
 
 Sets game language for the current profile. Param: language = language index (retail ships English=0 and German builds use their own index). Use in config scripts. Returns 1.
 
-## How it was found
+## Evidence classification
 
-Retail evidence: GOGameLang.
-See the per-symbol audit manifest for the exact retail-string, syntax, or context evidence classification.
+retail-string
 
-## Usage boundary
-
-Use the exact x86 address and the catalogued prototype. Do not infer undocumented fields or call parser-context functions outside their retail script context.
+Use only the typed fields and prototypes proven in assets/IGINatives.json. Unknown regions remain opaque.

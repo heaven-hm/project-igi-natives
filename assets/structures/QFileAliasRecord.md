@@ -1,15 +1,19 @@
 # QFileAliasRecord
 
-**Kind:** `opaque-stride`  
-**Size:** `0x94`  
-**Root:** `0x00942330`
-
-## What is proven
+Kind: opaque-stride
+Size: 0x94
+Root: 0x00942330
+C++ type: IGI::QFileAliasRecord
+Status: PROVEN_STATIC
 
 Alias record with proven table stride and unresolved field semantics.
 
-## Evidence
+## Proven fields
 
-- Retail IGI.EXE address `0x004B1020`
+| Field | Offset | Type | Evidence |
+|---|---|---|---|
+| bytes | 0x000 | uint8_t[0x94] | 0x004B1020 |
 
-The C++ declaration is intentionally partial where the binary did not prove field semantics. Unknown regions remain opaque or reserved.
+## Native references
+
+0x004B1020, 0x004B11A0, 0x004B1510, 0x004B1620

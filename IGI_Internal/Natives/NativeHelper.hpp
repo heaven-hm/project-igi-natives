@@ -235,7 +235,7 @@ namespace IGI {
 	// AI - soldier AI actions/functions (registered at 0x44CCA0).
 	// Call from AI event-handler scripts context or via FiberPool tasks.
 	// Enums: AIEVENT_* 0-23, AIALARMACCESS BEFORECOMBAT=0/AFTERCOMBAT=1,
-	//        AIACTIONFLAG NONE=0/PUSHABLE=1 (see igi_natives_discovery/IGINatives.json notes).
+	//        AIACTIONFLAG NONE=0/PUSHABLE=1 (see assets/IGINatives.json notes).
 	// ═══════════════════════════════════════════════════════════════
 	namespace AI {
 		// -- actions: order the AI to do something --

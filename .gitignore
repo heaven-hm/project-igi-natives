@@ -372,3 +372,12 @@ FodyWeavers.xsd
 !igi_natives_discovery/*.idc
 !igi_natives_discovery/*.py
 !igi_natives_discovery/README.md
+
+# Local-only reverse-engineering guides, scripts, evidence, and scratch output
+/RE.md
+/tools/
+/verification/
+/scratch/
+/exports/
+/igi_natives_discovery/
+/IGI1_Native_Exports/

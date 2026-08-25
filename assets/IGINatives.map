@@ -1,5 +1,5 @@
  IGI1 Native Symbols - Project I.G.I (igi.exe) verified native addresses
- Generated from igi_natives_discovery/IGINatives.json (294 catalog entries; duplicate-address aliases retained)
+ Generated from assets/IGINatives.json (294 catalog entries; duplicate-address aliases retained)
  Preferred load address is 00400000
 
  Start         Length     Name                   Class

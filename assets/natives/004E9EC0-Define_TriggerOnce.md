@@ -1,21 +1,15 @@
 # Define_TriggerOnce
 
-| Field | Value |
-|---|---|
-| Address/hash | `0x004E9EC0` |
-| Signature | `void Define_TriggerOnce(...)` |
-| Catalog source | `retail-string` |
-| Runtime state | `VALIDATED_STATIC` unless separately marked in the evidence manifest |
+Address: 0x004E9EC0
+Signature: void Define_TriggerOnce(...)
+Data types: scalar/opaque ABI only
 
 ## Recovered behavior
 
 Defines a fire-once TRIGGER entry inside definition blocks - OpenIGI maps it to SoundDefinitionKind.TriggerOnce. Parser-context only.
 
-## How it was found
+## Evidence classification
 
-Retail evidence: DefineTriggerOnce.
-See the per-symbol audit manifest for the exact retail-string, syntax, or context evidence classification.
+retail-string
 
-## Usage boundary
-
-Use the exact x86 address and the catalogued prototype. Do not infer undocumented fields or call parser-context functions outside their retail script context.
+Use only the typed fields and prototypes proven in assets/IGINatives.json. Unknown regions remain opaque.
