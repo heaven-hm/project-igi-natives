@@ -209,7 +209,7 @@ namespace IGI {
 		NATIVE_DECL void INDEX_MISSION_SET(int index, byte mission) { *(byte*)(PLAYER_INDEX_ADDR(index + 1) + PLAYER_ACTIVE_MISSION_OFF) = (byte)mission; }
 		NATIVE_DECL void ACTIVE_NAME_SET(const char* name) { char* destination = (char*)PLAYER_ACTIVE_ADDR; std::memset(destination, 0, PLAYER_NAME_SIZE); std::strncpy(destination, name, PLAYER_NAME_SIZE - 1); }
 		NATIVE_DECL void ACTIVE_NAME_SET(string name) { ACTIVE_NAME_SET(name.c_str()); }
-		NATIVE_DECL string ACTIVE_NAME_GET() { string name(PLAYER_NAME_SIZE, '\0'); std::memcpy(name.data(), (void*)PLAYER_ACTIVE_ADDR, PLAYER_NAME_SIZE); name.resize(strnlen_s(name.c_str(), PLAYER_NAME_SIZE)); return name; }
+		NATIVE_DECL string ACTIVE_NAME_GET() { string name(PLAYER_NAME_SIZE, '\0'); std::memcpy(name.data(), reinterpret_cast<const void*>(static_cast<DWORD>(PLAYER_ACTIVE_ADDR)), PLAYER_NAME_SIZE); name.resize(strnlen_s(name.c_str(), PLAYER_NAME_SIZE)); return name; }
 		NATIVE_DECL int ACTIVE_MISSION_GET() { return *(byte*)(PLAYER_ACTIVE_ADDR + PLAYER_ACTIVE_MISSION_OFF); }
 		NATIVE_DECL void ACTIVE_MISSION_SET(byte mission) { { *(byte*)(PLAYER_ACTIVE_ADDR + PLAYER_ACTIVE_MISSION_OFF) = (byte)mission; } }
 		/// <summary>Check if player profile is active (0x00406220).</summary>

@@ -15,5 +15,3 @@ void TestLoadingScreenShow();
 void TestAiNatives();
 void DllMainLoop();
 void QuitLevelMain();
- inline bool g_DbgEnabled = true, g_PlayerEnabled = true;
- const int delay_ms = 2500;

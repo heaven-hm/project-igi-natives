@@ -216,7 +216,7 @@ void DllMainLoop() {
 
   } else if (g_menu_screen == MENU_SCREEN_RESTART) {
     soldiers.clear();
-    if (!g_PlayerEnabled)
+    if (!g_PlayerEnabled.load(std::memory_order_acquire))
       GAME::INPUT_DISABLE();
   }
 }
