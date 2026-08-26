@@ -1,6 +1,6 @@
-# 📚 IGI-Internals Resource Documentation
+# 📚 IGI-Natives Resource Documentation
 
-This document contains comprehensive documentation for resource management operations in the IGI-Internals project.
+This document contains comprehensive documentation for resource management operations in the IGI-Natives project.
 
 ## 📋 Table of Contents
 
@@ -362,7 +362,7 @@ CONFIG::WEAPON_CONFIG_READ("my_weapon_config.cfg");
 
 - [Main Project Documentation](README.md)
 - [Changelog](CHANGELOG.md)
-- [IGI Debug Keys Documentation](IGI_Internal/IGIDebug.md)
+- [IGI Debug Keys Documentation](IGI_Natives/IGIDebug.md)
 - [IGI Natives Data](https://github.com/IGI-Research-Devs/IGI-Internals-Data/blob/main/IGI-Natives.json)
 
 ---

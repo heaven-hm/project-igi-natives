@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="Utils\Utility.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\DbgHelper.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Natives\Natives.cpp">
+      <Filter>Natives</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\Memory.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Hook\Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\HumanSoldier.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResources\GameResource.cpp">
+      <Filter>GameResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs\Graph.cpp">
+      <Filter>Graphs</Filter>
+    </ClCompile>
+    <ClCompile Include="Features.cpp" />
+    <ClCompile Include="Features_Editor.cpp" />
+    <ClCompile Include="Utils\Console.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Logger.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DllMain.hpp" />
+    <ClInclude Include="Natives\NativeHelper.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Natives\Natives.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utility.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\GTConsole.hpp">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Natives\NativeCaller.hpp">
+      <Filter>Natives</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Logger.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\GTLibc.hpp">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\DbgHelper.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\Memory.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\json.hpp">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook\MinHook.hpp">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook\Hook.hpp">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="HookDetours.hpp" />
+    <ClInclude Include="Player\HumanSoldier.hpp">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonConst.hpp" />
+    <ClInclude Include="Camera\Camera.hpp">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResources\GameResource.hpp">
+      <Filter>GameResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs\Graph.hpp">
+      <Filter>Graphs</Filter>
+    </ClInclude>
+    <ClInclude Include="Features.hpp" />
+    <ClInclude Include="Features_Editor.hpp" />
+    <ClInclude Include="Utils\Console.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\FiberPool.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\FiberPoolEx.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Natives">
+      <UniqueIdentifier>{c3a87330-69df-49d8-aa61-c9cd84643307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{047b8ece-52aa-4dca-804e-9fc173941b10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{204da0d2-3e73-47e7-8a5a-81c307f83fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{9c4d3362-be65-4f5a-9be0-6ede398c7f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook">
+      <UniqueIdentifier>{e6c4f622-def7-44e6-bf54-037752f6cf69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{f1171834-1e8f-4815-bd3b-b4fa3cff02a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{8ff3d951-fd0f-4ea7-80d3-d36ef8fb9eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameResource">
+      <UniqueIdentifier>{9c1d0c8b-d9ef-443e-ad94-15861733c09b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphs">
+      <UniqueIdentifier>{8ae76e56-f91d-4db2-a159-a4b97fff101a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

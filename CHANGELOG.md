@@ -1,6 +1,6 @@
 # 📋 Changelog
 
-All notable changes to the Project I.G.I Internal will be documented in this file.
+All notable changes to the Project I.G.I Natives will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -154,7 +154,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **✅ Build System Excellence**: Zero-error compilation achievement
   - 🎯 **Build Status**: ✅ SUCCESS (0 errors, 6 minor warnings)
   - 🏗️ **Platform**: Visual Studio 2022, x86 Debug configuration
-  - 📦 **Output**: `IGI-Internals-Debug.dll` generated successfully
+  - 📦 **Output**: `IGI-Natives-Debug.dll` generated successfully
   - ⚡ **Performance**: 4.68s build time with optimized linking
 
 ### 📝 Comprehensive File Modifications
@@ -175,7 +175,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 📋 Updated all conflicting key combinations to safe alternatives
   - ✅ Validated all new hotkey assignments for uniqueness
 
-- **📁 `IGI_Internal.vcxproj`**: Project structure modernization
+- **📁 `IGI_Natives.vcxproj`**: Project structure modernization
   - ➕ Added FiberPoolEx.hpp include reference
   - 🗑️ Removed obsolete FiberPool.cpp compilation target
   - 🔧 Updated build dependencies and linking order
@@ -229,7 +229,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Hook Integration**: Updated HookDetours.hpp to use DllMainLoop() instead of DllMainLoopEditor()
 - **Include Path Updates**: Added proper DllMain.hpp include and switched to Features.hpp
 - **Project Structure**: Added Features_Editor.hpp as new untracked file for better modularity
-- **Build System**: Updated IGI_Internal.vcxproj with new file references and improved utility functions
+- **Build System**: Updated IGI_Natives.vcxproj with new file references and improved utility functions
 
 ### 📝 Hotkey Documentation Added
 - **Ctrl + F1-F12**: Debug mode, level operations, weapon/FPS controls, config management, camera controls
@@ -301,6 +301,6 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ## 🔗 Links
 
-- [Project Repository](https://github.com/Jones-HM/project-igi-internals)
-- [IGI Debug Documentation](IGI_Internal/IGIDebug.md)
+- [Project Repository](https://github.com/heaven-hm/project-igi-natives)
+- [IGI Debug Documentation](IGI_Natives/IGIDebug.md)
 - [IGI Natives Data](https://github.com/IGI-Research-Devs/IGI-Internals-Data/blob/main/IGI-Natives.json)
