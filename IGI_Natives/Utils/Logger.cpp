@@ -33,13 +33,14 @@ namespace IGI {
 	}
 
 	void Log::WriteA(bool log_console, bool log_file, ELOG_TYPE log_type, const char* fmt, ...) {
-
+		if (!fmt) return;
 		char fmt_buff[4096] = { NULL };
 		va_list va_alist;
 
 		va_start(va_alist, fmt);
-		vsprintf_s(fmt_buff, fmt, va_alist);
+		vsnprintf(fmt_buff, sizeof(fmt_buff) - 1, fmt, va_alist);
 		va_end(va_alist);
+		fmt_buff[sizeof(fmt_buff) - 1] = '\0';
 
 		if (g_Console) g_Console->SetTextColor(g_Log_Color[log_type]);
 		char log_buff[4096] = { NULL };

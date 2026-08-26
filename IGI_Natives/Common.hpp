@@ -92,7 +92,7 @@ inline bool	g_level_changed = false;
 
 #define LOGGER_FILE string(PROJECT_NAME) + ".log"
 #define NATIVES_FILE "IGI-Natives.json"
-#define MEF_MODELS_FILE "IGIModels.txt";
+#define MEF_MODELS_FILE "IGIModels.json"
 
 #define HEX_ADDR_FMT(addr) std::setw(8) << std::setfill('0') << std::uppercase << std::hex << addr 
 #define HEX_ADDR_STR(addr) (static_cast<std::stringstream const&>(std::stringstream() << HEX_ADDR_FMT(addr))).str()

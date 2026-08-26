@@ -10,7 +10,7 @@ typedef uint32_t NativeHash;
 namespace IGI {
 	enum class HASH
 	{
-		ANIM_TRIGGER_PARSE = 0x0004EC070,
+		ANIM_TRIGGER_PARSE = 0x004EC070,
 		ANIM_TRIGGER_LOAD = 0x004EC0C0,
 		CONFIG_COMPILE = 0x004F0CF0,
 		CONFIG_READ = 0x00405850,
@@ -71,6 +71,7 @@ namespace IGI {
 		WEAPON_GUN_PICKUP = 0x0045FFC0,
 		WEAPON_AMMO_PICKUP = 0x0045FF80,
 		HUMAN_HIT_DAMAGE = 0x00416D80,
+		PLAYER_XP_HIT = 0x00416D80,
 		HUMAN_CAM_VIEW = 0x00463760,
 		HUMAN_FIND_NEXT_CAMERA = 0x004828D0,
 		MEMORY_ALLOC = 0x004B0C60,
@@ -81,27 +82,112 @@ namespace IGI {
 		PLAYER_PROFILE_ACTIVE = 0x00406220,
 		SOLDIER_EXECUTE = 0x0045C440,
 		DEBUG_KEYS_ENABLE = 0x0041502,
-		HUMAN_TASK_VIEW_RESET = 0x004659E0,//Unimplemented Hash.
-		GAME_DATA_SYMBOL_LOAD = 0x004A53B3,//Unimplemented Hash.
-		GAME_DATA_SYMBOL_REGISTER_BOOL8 = 0x004B7EE0,//Unimplemented Hash.
-		GAME_DATA_SYMBOL_REGISTER_INT16 = 0x004B7E80,//Unimplemented Hash.
-		GAME_DATA_SYMBOL_REGISTER_INT32 = 0x004B7FA0,//Unimplemented Hash.
-		GAME_DATA_SYMBOL_REGISTER_REAL32 = 0x004B7FC0,//Unimplemented Hash.
-		GAME_DATA_SYMBOL_REMOVE = 0x004B80A0,//Unimplemented Hash.
-		LOADING_SCREEN_SHOW = 0x0048A440,//Unimplemented Hash.
-		QTASK_HASH_TABLE = 0x004BAAC0,//Unimplemented Hash.
+		HUMAN_TASK_VIEW_RESET = 0x004659E0,
+		GAME_DATA_SYMBOL_LOAD = 0x004A53B3,
+		GAME_DATA_SYMBOL_REGISTER_BOOL8 = 0x004B7EE0,
+		GAME_DATA_SYMBOL_REGISTER_INT16 = 0x004B7E80,
+		GAME_DATA_SYMBOL_REGISTER_INT32 = 0x004B7FA0,
+		GAME_DATA_SYMBOL_REGISTER_REAL32 = 0x004B7FC0,
+		GAME_DATA_SYMBOL_REMOVE = 0x004B80A0,
+		LOADING_SCREEN_SHOW = 0x0048A440,
+		QTASK_HASH_TABLE = 0x004BAAC0,
+		AMMO_TYPE_OPEN = 0x0047CAB0,
+		SOUND_LOAD = 0x004E68D0,
+		RIGID_DYNCUBE_OBJ_READ = 0x004C48E0,
+		LIGHTMAPS_OBJECT_SET = 0x0048F240,	// AppContext_SetLightmapsUsed(bool) - retail name from BlanknameES/IGIPatch; verified in igi.exe
+		LIGHTMAPS_TERRAIN_SET = 0x0048F260,	// AppContext_SetTerrainLightmapsUsed(bool)
+		GAME_DEFINE_OPTIONS = 0x004B8890,
+		SCRIPT_BUF_INIT = 0x004C0200,
+
+		// OpenIGI AI Actions (0x44CCA0)
+		AI_ACTION_PATROL = 0x0044D0E0,
+		AI_ACTION_COMBAT = 0x0044D160,
+		AI_ACTION_DEAD = 0x0044D260,
+		AI_ACTION_FALL_FLAT = 0x0044D2C0,
+		AI_ACTION_ACTIVATE = 0x0044D420,
+		AI_ACTION_WALK_TO_NODE = 0x0044D4A0,
+		AI_ACTION_RUN_TO_NODE = 0x0044D510,
+		AI_ACTION_FIRE_AT_NODE = 0x0044D580,
+		AI_ACTION_FIRE_AT_TASK = 0x0044D630,
+		AI_ACTION_PLAY_ANIMATION = 0x0044D6E0,
+		AI_ACTION_PLAY_SOUND = 0x0044D750,
+		AI_ACTION_MOVE_TO_EVENT = 0x0044D7D0,
+		AI_ACTION_LOOK_AT_EVENT = 0x0044D870,
+		AI_ACTION_STUNNED = 0x0044D8F0,
+		AI_ACTION_KICK_GRENADE = 0x0044D960,
+		AI_ACTION_RUN_PANICKING = 0x0044DA00,
+		AI_ACTION_IDLE = 0x0044DA80,
+		AI_ACTION_SET_COMBAT = 0x0044DAE0,
+
+		// OpenIGI AI Functions
+		AI_FUNCTION_DEFAULT_HANDLER = 0x0044E060,
+		AI_FUNCTION_REMOVE_ALARM_ACTIONS = 0x0044DBC0,
+		AI_FUNCTION_SET_VIEW_LENGTH = 0x0044DC40,
+		AI_FUNCTION_SET_ALARM_VIEW_LENGTH = 0x0044DCD0,
+		AI_FUNCTION_SET_VIEW_ALPHA = 0x0044DD30,
+		AI_FUNCTION_SET_VIEW_GAMMA = 0x0044DD90,
+		AI_FUNCTION_SET_SECONDARY_VIEW_LENGTH = 0x0044DDF0,
+		AI_FUNCTION_SET_SECONDARY_ALARM_VIEW_LENGTH = 0x0044DE80,
+		AI_FUNCTION_SET_SECONDARY_VIEW_ALPHA = 0x0044DEE0,
+		AI_FUNCTION_SET_SECONDARY_VIEW_GAMMA = 0x0044DF40,
+		AI_FUNCTION_SET_EVENT_PRIORITY = 0x0044E0C0,
+		AI_FUNCTION_SET_INVULNERABILITY = 0x0044E150,
+		AI_FUNCTION_SET_INSTANT_DEATH = 0x0044E1B0,
+		AI_FUNCTION_SET_DEATH_ANIMATION = 0x0044E210,
+		AI_FUNCTION_SET_ALARM_TRIGGER_ID = 0x0044E270,
+		AI_FUNCTION_SET_ALARM_CONTROL_ID = 0x0044E2D0,
+		AI_FUNCTION_SET_ALARM_ACCESS = 0x0044E330,
+		AI_FUNCTION_SET_GUNNER_ID = 0x0044E390,
+		AI_FUNCTION_SET_SCRIPT_INTEGER_VALUE = 0x0044E6D0,
+		AI_FUNCTION_SET_SCRIPT_REAL_VALUE = 0x0044E790,
+		AI_FUNCTION_GET_ALARM_TRIGGER_ID = 0x0044E3F0,
+		AI_FUNCTION_GET_ALARM_CONTROL_ID = 0x0044E430,
+		AI_FUNCTION_GET_ALARM_ACCESS = 0x0044E470,
+		AI_FUNCTION_GET_GUNNER_ID = 0x0044E4B0,
+		AI_FUNCTION_GET_ALARM_CONTROL_STATUS = 0x0044E4F0,
+		AI_FUNCTION_GET_GUNNER_STATUS = 0x0044E5E0,
+		AI_FUNCTION_GET_SCRIPT_INTEGER_VALUE = 0x0044E740,
+		AI_FUNCTION_GET_CURRENT_EVENT_TYPE = 0x0044DFA0,
+		AI_FUNCTION_IS_EVENT_BEHIND = 0x0044E860,
+		AI_FUNCTION_GET_SCRIPT_REAL_VALUE = 0x0044E800,
+		AI_FUNCTION_GET_RANDOM_VALUE = 0x0044E000,
+		AI_FUNCTION_GET_EVENT_DISTANCE = 0x0044E930,
+		AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE = 0x0044E9B0,
+		AI_FUNCTION_SET_ANIMATION_INTERVAL = 0x0044EAF0,
+		AI_FUNCTION_ADD_ANIMATION_ENTRY = 0x0044EBB0,
+		AI_FUNCTION_GET_ANIMATION_TO_PLAY = 0x0044ECB0,
+		AI_FUNCTION_SEND_RESPONSE = 0x0044EE40,
+
+		// IGI Enhancer Patch — verified via Ghidra + Radare2 disassembly of D:\IGI1\igi.exe
+		// Frame timing & main loop
+		// Direct3D display mode enumeration
+		D3D_ENUM_DISPLAY_MODES = 0x0049B4B0,   // int __cdecl D3D_EnumDisplayModes(int) — resolution list builder
+		// Binoculars & HUD overlay drawing
+		BINOCULARS_DRAW = 0x00471480,          // void __cdecl Binoculars_Draw(void*) — sweep lines & detector boxes
+		// Weapon firing & bullet physics
+		GUN_FIRE = 0x00478BA0,                 // void __cdecl Gun_Fire(void*, void*) — weapon fire gate & spread
+		GUN_BULLET_TRACE = 0x0047A260,         // void __cdecl Gun_BulletTrace(void*) — raycast surface collision
+		GUN_RECOIL_APPLY = 0x0047C610,         // void __cdecl Gun_RecoilApply(void*, int) — recoil accumulation
+		// Player entity parenting (elevators/vehicles)
+		HUMAN_SET_PARENT = 0x00463310,         // void __cdecl Human_SetParent(void*, void*) — player→platform bind
+		// Weapon state machine
+		WEAPON_STATE_UPDATE = 0x00411000,       // void __cdecl WeaponState_Update(void*) — per-tick state machine
+		// Music & SFX volume (already have hashes but adding explicit enhancer aliases)
+		MUSIC_SFX_VOL_SET = 0x00495F30,        // void __cdecl Music_SfxVolSet(float) — SFX master volume
+		MUSIC_VOL_SET = 0x00495E70,            // void __cdecl Music_VolSet(float) — music master volume
+		ENEMY_DETECTOR_OVERLAY = 0x00470260,   // uint32_t __cdecl EnemyDetectorOverlay(...) — red target bounding box
+		SOUND_SET_PACING_LIMIT = 0x004E6030,   // void __cdecl Sound_SetPacingLimit(int) — frame pacing
+		GRAPHICS_RESET = 0x00403B70,           // void __cdecl GraphicsReset(char*) — reset graphics options
 	};
 
 	class Natives {
 	private:
-		//Structure to hold Native info. 
 		struct NativeSig {
-			uint32_t address;//Address (Hash) of native. 
-			string name; //Name (Symbol) of native. 
-			string signature; //Signature of native. 
-			string note; //Note (Comment) for method.
+			uint32_t address;   //Address (Hash) of native - JSON key "hash"/"address".
+			string name;        //Symbol name - JSON key "name".
+			string signature;   //Signature of native - JSON key "signature".
+			string note;
 		};
-		//Natives sig list.
 		std::vector<NativeSig> native_sig;
 
 		friend bool LoadNativesFile(string);

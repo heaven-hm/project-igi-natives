@@ -1,6 +1,7 @@
 #include "GameResource.hpp"
 #include "Logger.hpp"
 #include "NativeHelper.hpp"
+#include "../Libs/json.hpp"
 
 using namespace IGI;
 
@@ -14,8 +15,25 @@ GameResource::~GameResource() {
 }
 
 void GameResource::InitGameResource() {
-	string mef_models = g_Utility.GetAppdataPath() + "\\QEditor\\" + MEF_MODELS_FILE;
-	models_data = ReadFileType(mef_models, ASCII_FILE);
+	const string mef_models = g_Utility.GetModuleFolder() + "\\" + MEF_MODELS_FILE;
+	std::ifstream input(mef_models);
+	if (!input.good()) {
+		LOG_ERROR("Model metadata file not found: %s", mef_models.c_str());
+		return;
+	}
+
+	try {
+		const auto model_json = nlohmann::json::parse(input);
+		for (const auto& model : model_json) {
+			if (model.contains("ModelName") && model.contains("ModelId") &&
+				model["ModelName"].is_string() && model["ModelId"].is_string()) {
+				models_data += model["ModelName"].get<string>() + " = " +
+					model["ModelId"].get<string>() + "\n";
+			}
+		}
+	} catch (const nlohmann::json::exception& ex) {
+		LOG_ERROR("Failed to parse model metadata '%s': %s", mef_models.c_str(), ex.what());
+	}
 }
 
 void GameResource::SaveGameResource(string file, string resource_type) {

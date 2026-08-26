@@ -47,16 +47,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(MSBuildProjectDirectory)\..\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\..\obj\$(Configuration)\$(Platform)\</IntDir>
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
-    <ExternalIncludePath>$(ProjectDir)\src;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
+    <ExternalIncludePath>$(ProjectDir);$(ProjectDir)\src;$(ExternalIncludePath)</ExternalIncludePath>
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <OutDir>$(MSBuildProjectDirectory)\..\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\..\obj\$(Configuration)\$(Platform)\</IntDir>
     <LibraryPath>$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
-    <ExternalIncludePath>$(ProjectDir)\src;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\Libs\;$(ProjectDir)\Natives\;$(ProjectDir)\Utils\;$(ProjectDir)\Hook\;$(ProjectDir)\Memory\;$(ProjectDir)\Player\;$(ProjectDir)\Camera\;$(ProjectDir)\GameResources;$(ProjectDir)\Graphs</IncludePath>
+    <ExternalIncludePath>$(ProjectDir);$(ProjectDir)\src;$(ExternalIncludePath)</ExternalIncludePath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
@@ -79,7 +84,7 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>LinkVerboseLib</ShowProgress>
-      <AdditionalLibraryDirectories>$(ProjectDir)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir);$(ProjectDir)\Hook;$(ProjectDir)\Libs;$(ProjectDir)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateMapFile>false</GenerateMapFile>
       <MapExports>false</MapExports>
@@ -109,7 +114,7 @@
       <ShowProgress>NotSet</ShowProgress>
       <LinkStatus>false</LinkStatus>
       <ProgramDatabaseFile />
-      <AdditionalLibraryDirectories>$(ProjectDir)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir);$(ProjectDir)\Hook;$(ProjectDir)\Libs;$(ProjectDir)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrtd.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
