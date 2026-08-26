@@ -113,6 +113,62 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 
 **⚠️ Important Note**: Due to IGI's Windows Message-based architecture, the current FiberPool scheduler relies on `TextPrintDetour()` which only executes when HUD text is being rendered. This means task execution may be inconsistent when no UI text is displayed (e.g., when showing knife weapon). Consider this limitation when implementing time-sensitive features.
 
+## 🧩 Natives SDK (programming guide)
+
+The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
+wrapper forwards through `NativeCaller::Invoke` to the verified address in `assets/IGINatives.json`
+(all 284 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
+address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
+For runtime signature loading, deploy the `assets` folder beside the DLL; the loader reads its single `IGINatives.json` from that relative path.
+Struct layouts recovered from the binary live in [`assets/assets/IGI_Structures.hpp`](assets/assets/IGI_Structures.hpp).
+
+### How to call a native
+
+All wrappers live under `IGI::` in [`IGI_Internal/Natives/NativeHelper.hpp`](IGI_Internal/Natives/NativeHelper.hpp).
+Call them from any hotkey branch in `Features.cpp`, ideally scheduled on the game thread via the FiberPool:
+
+```cpp
+// inside Features.cpp hotkey dispatch
+FiberPool::Instance().RunExternal([] {
+    IGI::AI::SET_INVULNERABILITY(1);              // make current AI immortal
+    IGI::CONFIGMENU::GFX_GAMMA_SET(1.25f);        // apply gamma
+    IGI::MISC::STATUS_MESSAGE_SHOW("Done!");
+}, 3);
+```
+
+### New natives added by this branch (by subsystem)
+
+| Namespace | Natives | Highlights |
+|---|---|---|
+| `AI::` | 55 | `AIAction_*` + `AIFunction_*`: `PATROL(target,0,AIACTIONFLAG_NONE)`, `SET_INVULNERABILITY(onOff)`, `GET_CURRENT_EVENT_TYPE()` returns `AIEVENT_*` 0-23, `SET_ALARM_ACCESS(AIALARMACCESS_BEFORECOMBAT=0/AFTERCOMBAT=1)` |
+| `CONFIGMENU::` | 45 | Retail menu-script natives: `GFX_GAMMA_GET/SET(float)`, `ACTIVE_PROFILE_INDEX_GET()`, `PROFILE_CREATE(name,source)`, plus `GO_*` config writers (`GO_PLAYER`, `GO_GFX_GAMMA`, ...) |
+| `MENU::` | 10 | MenuManager screen stack: `PUSH_SCREEN(id)`, `POP_SCREEN(0)`, `ACTIVATE_POPUP(popupId)`, `LEAVE_MENUS(0,0)` |
+| `SYMBOL::` | 11 | Game-data symbol table: `DATA_LOAD(buf,path,name)`, `REGISTER_INT32(table,addr)`, `WARNING_LEVEL_SET(lvl)` |
+| `DISPLAY::` | 3 | `SET_MODE(modeStruct)`, `GET_ACTIVE_MODE()`, `BACKGROUND_COLOUR_SET(r,g,b)` |
+| `APPCONTEXT::` | 4 | Engine flags (IGIPatch-corroborated): `LIGHTMAPS_SET(used)`, `TERRAIN_LIGHTMAPS_SET(used)`, `DEBUGGED_SET(state)` |
+| `LEVELFLOW::` | 3 | `LEVEL_FAILED()`, `IS_COUNTRY_USA()`, `BREAK_CUTSCENE_KEY_GET()` |
+| `FLOW::` | 1 | `REQUEST_EVENT(FLOW_EVENT_GAME=4)` drives the flow state machine |
+| `PICTURE::` / `SPRITE::` / `TRANSCONTEXT::` | 4 | `WIDTH_GET/HEIGHT_GET`, quad-sprite registration, transform-context install |
+| `PARSER::` | 14 | Define-block natives — call ONLY from their own `.qsc` definition context |
+| Extensions | ~15 | `WEAPON::TYPE_OPEN/COUNT_GET/GUN_PICKUP`, `HUMAN::TASK_VIEW_RESET(human)` (retail FOV restore), `SFX::RUNTIME_MUSIC/SFX_VOLUME_SET(float)`, `GAME::MISSION_SET(m)`, `MISC::ERROR_SHOW(fmt,...)` variadic |
+
+Full signatures + per-native evidence notes: [`assets/IGINatives.json`](assets/IGINatives.json)
+(`{hash, address, name, signature, note}` per entry; notes include param meaning and enum values).
+
+### IGI1 native export bundle
+
+The branch's official project export bundle is [`assets/`](assets/). It contains the single structured `IGINatives.json` catalog, address/name MAP, generated x86 `igi.pdb`, audit manifest, and generated Ghidra/IDA/CSV exports. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
+
+All future reverse-engineering work on this branch follows the acceptance policy recorded in the native evidence manifest.
+
+The 11 new dispatch, camera-reset, and MagicObj entries are included in the 294-entry catalog. They were added only after live Ghidra and r2 CFG analysis of previously undiscovered methods; existing entries were preserved, and the Weapon update signatures were corrected to their two-argument forms. The catalog is maintained only at `assets/IGINatives.json`; no duplicate root catalog is kept.
+
+### Enum quick reference
+
+- `AIEVENT_*`: CREATE=0 DELETE=1 DEAD=2 ANIMATION=3 IDLE=4 ALERT=5 ALERT_RESPONSE=6 COMBAT=7 ALARMON=8 ALARMOFF=9 WALK=10 GROUNDIMPACT=11 DOOR=12 FENCE=13 LADDER=14 TAKINGDAMAGE=15 GUNSHOT=16 GRENADETHROWN=17 GRENADELAND=18 FLASHBANG=19 GUNSHOTMISS=20 EXPLOSION=21 ENEMYDETECTION=22 FRIENDLYDETECTION=23
+- `AIALARMACCESS_*`: BEFORECOMBAT=0, AFTERCOMBAT=1 · `AIACTIONFLAG_*`: NONE=0, PUSHABLE=1
+- `FLOW_EVENT_*`: QUIT=1, INTRO=2, MAINMENU=3, GAME=4, RESTART_GAME=5
+
 ## Adding new hashes for Natives.
 Lets say you found new hash for Native now how to add them into project and use them.
 So you have to follow the steps.
@@ -178,3 +234,5 @@ For comprehensive resource management documentation including Resource operation
 ## 📄 License & Credits
 
 Original Author: _HeavenHM@2022_
+
+### Generated research assets

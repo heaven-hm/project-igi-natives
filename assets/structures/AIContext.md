@@ -1,0 +1,17 @@
+# AIContext
+
+Kind: opaque-pointer
+Size: unknown
+Root: AI task/action context associated with the soldier task family
+C++ type: IGI::AIContext
+Status: TYPE_BOUNDARY_ONLY
+
+AIAction_* and AIFunction_* expose script-facing scalar parameters. This entry records the runtime association only; no unsupported AI object layout is claimed.
+
+## Proven fields
+
+No object fields are claimed; this is an opaque ABI-boundary type.
+
+## Native references
+
+0x0044D0E0, 0x0044D160, 0x0044D260, 0x0044D2C0, 0x0044D420, 0x0044D4A0, 0x0044D510, 0x0044D580, 0x0044D630, 0x0044D6E0, 0x0044D750, 0x0044D7D0, 0x0044D870, 0x0044D8F0, 0x0044D960, 0x0044DA00, 0x0044DA80, 0x0044DAE0, 0x0044DBC0, 0x0044DC40, 0x0044DCD0, 0x0044DD30, 0x0044DD90, 0x0044DDF0, 0x0044DE80, 0x0044DEE0, 0x0044DF40, 0x0044DFA0, 0x0044E000, 0x0044E060, 0x0044E0C0, 0x0044E150, 0x0044E1B0, 0x0044E210, 0x0044E270, 0x0044E2D0, 0x0044E330, 0x0044E390, 0x0044E3F0, 0x0044E430, 0x0044E470, 0x0044E4B0, 0x0044E4F0, 0x0044E5E0, 0x0044E6D0, 0x0044E740, 0x0044E790, 0x0044E800, 0x0044E860, 0x0044E930, 0x0044E9B0, 0x0044EAF0, 0x0044EBB0, 0x0044ECB0, 0x0044EE40, 0x0045C440

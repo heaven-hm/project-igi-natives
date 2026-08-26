@@ -361,3 +361,23 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# IGI 1 verified native export bundle. Keep the single catalog and generated
+# PDB/MAP/audit/tool exports together.
+!igi_natives_discovery/
+!igi_natives_discovery/*.json
+!igi_natives_discovery/*.map
+!igi_natives_discovery/*.pdb
+!igi_natives_discovery/*.csv
+!igi_natives_discovery/*.idc
+!igi_natives_discovery/*.py
+!igi_natives_discovery/README.md
+
+# Local-only reverse-engineering guides, scripts, evidence, and scratch output
+/RE.md
+/tools/
+/verification/
+/scratch/
+/exports/
+/igi_natives_discovery/
+/IGI1_Native_Exports/
