@@ -199,11 +199,8 @@ void CleanUpAndExitThread(HMODULE hModule) {
   g_cleanupDone.store(true);
   g_hookCallbacksClosing.store(true);
 
-  // Flush callbacks that entered the detours just before shutdown began.
-  {
-    std::lock_guard<std::mutex> lock(g_hookCallbackStartMutex);
-  }
-
+	// Stop new detours before waiting for every entered detour to return.
+	if (!g_minHookCleaned) MH_DisableHook(MH_ALL_HOOKS);
 	std::unique_lock<std::mutex> hook_callback_lock(g_hookCallbackStartMutex);
   g_hookCallbackCv.wait(hook_callback_lock, [] {
     return g_gameHookCallbacks.load() == 0;
@@ -214,7 +211,6 @@ void CleanUpAndExitThread(HMODULE hModule) {
   // MinHook cleanup
   if (!g_minHookCleaned) {
     LOG_INFO("MinHook cleanup started");
-    MH_DisableHook(MH_ALL_HOOKS);
     MH_Uninitialize();
     g_minHookCleaned = true;
     LOG_INFO("MinHook cleanup finished");

@@ -43,15 +43,12 @@ extern std::condition_variable g_hookCallbackCv;
 class HookCallbackGuard {
 public:
 	HookCallbackGuard() {
-		if (g_hookCallbacksClosing.load()) return;
-		std::lock_guard<std::mutex> lock(g_hookCallbackStartMutex);
-		if (g_hookCallbacksClosing.load()) return;
 		g_gameHookCallbacks.fetch_add(1);
-		m_active = true;
+		m_active = !g_hookCallbacksClosing.load();
 	}
 
 	~HookCallbackGuard() {
-		if (!m_active) return;
+		if (!m_counted) return;
 		g_gameHookCallbacks.fetch_sub(1);
 		g_hookCallbackCv.notify_all();
 	}
@@ -59,6 +56,7 @@ public:
 	bool Active() const { return m_active; }
 
 private:
+	bool m_counted{true};
 	bool m_active{false};
 };
 
