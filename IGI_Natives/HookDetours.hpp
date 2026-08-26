@@ -377,7 +377,6 @@ void ResourceUnpackDetour(int* res_ptr, int res_addr, int res_size) {
 		ResourceUnpackOut(res_ptr, res_addr, res_size);
 		return;
 	}
-	ResourceUnpackOut(res_ptr, res_addr, res_size);
 	void* res_name_addr = (void*)0x00A7B658;
 	//LOG_INFO("ResourceUnpack ptr: %p, %s addr: %p size : %p", res_ptr, res_name_addr,res_addr, res_size);
 	const char* resource_name = (const char*)res_name_addr;
