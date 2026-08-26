@@ -138,8 +138,10 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 
           if (GT_IsKeyPressed(VK_END)) {
             LOG_INFO("END key pressed - starting cleanup");
-            CleanUpAndExitThread(hModule);
-            return;
+            if (CleanUpAndExitThread(hModule)) {
+              if (g_mainLoopThread.joinable()) g_mainLoopThread.detach();
+              return;
+            }
           }
 
           std::this_thread::sleep_for(
@@ -163,20 +165,13 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 }
 
 // Cleanup and exit thread after DLL detach.
-void CleanUpAndExitThread(HMODULE hModule) {
+bool CleanUpAndExitThread(HMODULE hModule) {
   (void)hModule;
   g_running = false;
 
   // Disable debug hotkeys
   DEBUG::KEYS_ENABLE(false);
   LOG_INFO("Debug Hotkeys disabled");
-
-  // Console cleanup
-  if (console_instance && console_instance->IsAllocated()) {
-    LOG_INFO("Console cleanup started");
-    console_instance->DeAllocate();
-    LOG_INFO("Console cleanup finished");
-  }
 
   if (g_Camera.IsFreeCamRunning() || !g_PlayerEnabled.load()) {
     g_CleanupCameraDone.store(false);
@@ -191,8 +186,17 @@ void CleanUpAndExitThread(HMODULE hModule) {
     }
     if (!g_CleanupCameraDone.load()) {
       LOG_ERROR("Game-thread camera cleanup did not complete; keeping hooks and DLL loaded");
-      return;
+      g_running.store(true);
+      DEBUG::KEYS_ENABLE(true);
+      return false;
     }
+  }
+
+  // Console cleanup
+  if (console_instance && console_instance->IsAllocated()) {
+    LOG_INFO("Console cleanup started");
+    console_instance->DeAllocate();
+    LOG_INFO("Console cleanup finished");
   }
   g_Camera.StopFreeCam();
   FiberPool::Instance().Shutdown();
@@ -220,4 +224,5 @@ void CleanUpAndExitThread(HMODULE hModule) {
   }
 
   LOG_INFO("Cleanup completed - hooks disabled; DLL remains loaded until process exit");
+  return true;
 }

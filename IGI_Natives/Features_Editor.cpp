@@ -12,6 +12,14 @@ void DllMainLoopEditor() {
 	if (g_curr_level != g_game_level) {
 		g_curr_level = g_game_level;
 		g_level_changed = true;
+		{
+			std::lock_guard<std::mutex> lock(game_resources_mutex);
+			game_resources.clear();
+		}
+		{
+			std::lock_guard<std::mutex> lock(game_resources_set_mutex);
+			game_resources_set.clear();
+		}
 	}
 
 	if (g_level_changed) {

@@ -766,8 +766,6 @@ int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param
 	HookCallbackGuard callback_guard;
 	if (!callback_guard.Active()) return 0;
 	if (!g_cleanupDone.load()) FiberPool::Instance().RunPending();
-	LOG_INFO("GameMainLoopDetour: Entered game update hook");
-	LOG_INFO("%s param1 : %p param2 : %u param3 : %u", "GameMainLoopDetour", (void*)param1, param2, param3);
 
 	// --- Run Features safely on game thread ---
 	// DllMainLoopEditor();

@@ -4,7 +4,7 @@
 
 using namespace IGI;
 
-HumanSoldier::HumanSoldier() : HumanSoldier("", 0, 0, "", true, 0, 0) {}
+HumanSoldier::HumanSoldier() : HumanSoldier("", 0, 0, "", true, -1, 0) {}
 HumanSoldier::HumanSoldier(string model_id, int soldier_id, int graph_id, string weapon, bool is_dead, int e_team, uint32_t address)
 {
 	this->model_id = model_id; this->soldier_id = soldier_id; this->graph_id = graph_id; this->weapon = weapon; this->is_dead = is_dead; this->e_team = e_team; this->address = address, init = false;

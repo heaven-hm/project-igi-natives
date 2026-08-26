@@ -111,7 +111,7 @@ inline bool QueueFreeCamStep() {
 
 BOOL __stdcall DllMain(HINSTANCE, DWORD, LPVOID);
 void DllMainLoop();
-void CleanUpAndExitThread(HMODULE hModule);
+bool CleanUpAndExitThread(HMODULE hModule);
 
 // Global thread control variables
 extern std::atomic<bool> g_running;
