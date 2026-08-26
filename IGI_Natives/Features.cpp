@@ -102,7 +102,7 @@ void DllMainLoop() {
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
       LOG_INFO("Ctrl+F4: Free Camera Mode");
 
-      FiberPool::Instance().RunExternal([] { GAME::INPUT_DISABLE(); }, 3);
+      FiberPool::Instance().RunExternal([] { GAME::INPUT_DISABLE(); }, 0);
       g_PlayerEnabled = false;
 
       Camera::Controls controls;

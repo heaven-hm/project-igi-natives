@@ -131,7 +131,7 @@ void DllMainLoopEditor() {
 
 			FiberPool::Instance().RunExternal([] {
 				GAME::INPUT_DISABLE();
-			}, 3);
+			}, 0);
 			g_PlayerEnabled = false;
 
 			Camera::Controls controls;
@@ -525,6 +525,10 @@ void DllMainLoopEditor() {
 				string mission = g_Utility.InternalDataRead();
 				LOG_INFO("Player Active mission set %s", mission.c_str());
 				int mission_id = std::stoi(mission);
+				if (mission_id < 1 || mission_id > 14) {
+					LOG_INFO("Invalid mission id: %d", mission_id);
+					return;
+				}
 				FiberPool::Instance().RunExternal([=] {
 					PLAYER::ACTIVE_MISSION_SET(mission_id);
 				}, 3);

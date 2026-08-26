@@ -117,7 +117,6 @@ HumanSoldier HumanSoldier::FindSoldier(graph_t graph_id) {
 string HumanSoldier::DebugSoldierDataList() {
 	std::stringstream ss;
 	std::stringstream all_data;
-	bool executed = false;
 	for (auto& soldier : soldiers) {
 		if (soldier.ValidateSoldier()) {
 			ss << "Model: " << soldier.model_id << "\tSoldierId: " << std::dec << soldier.soldier_id << "\tAIType: " << soldier.ai_type << "\tGraphId: " << std::dec << soldier.graph_id << "\tWeapon: " << soldier.weapon << "\tAddress: " << HEX_ADDR_FMT(soldier.address);
@@ -158,8 +157,9 @@ void HumanSoldier::ExecuteSoldier(soldier_t soldier_id) {
 }
 
 void HumanSoldier::ExecuteSoldiers(soldier_t sol_id)
-{
+	{
 	auto SoldierExecute = (void(__cdecl*)(int, int))0x0045C440;
+	bool executed = false;
 
 	for (auto& soldier : soldiers) {
 		address_t soldier_addr = soldier.GetAddress();

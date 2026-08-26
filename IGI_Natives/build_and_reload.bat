@@ -15,8 +15,8 @@ if /I "%PLATFORM%"=="x86" set PLATFORM=Win32
 :: === Config ===
 set MSBUILD="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
 set "PROJECT=%~dp0IGI_Natives.vcxproj"
-set "OUTDIR=%~dp0%CONFIG%\"
-set "OUTDLL=%OUTDIR%IGI-Natives-%CONFIG%.dll"
+set "OUTDIR=%~dp0%CONFIG%"
+set "OUTDLL=%OUTDIR%\IGI-Natives-%CONFIG%.dll"
 set INJECTOR=C:\Users\hasee\Downloads\Compressed\IGI-Injector-v1.0\IGI-Injector-v1.0\bin\igi-injector-cmd.exe
 
 echo [*] Using Configuration: %CONFIG%
@@ -30,7 +30,7 @@ timeout /t 3 /nobreak >nul
 
 :: === Step 2: Build DLL ===
 echo [*] Building %PROJECT% ...
-%MSBUILD% "%PROJECT%" /p:Configuration=%CONFIG% /p:Platform=%PLATFORM% /p:OutDir="%OUTDIR%"
+%MSBUILD% "%PROJECT%" /p:Configuration=%CONFIG% /p:Platform=%PLATFORM% "/p:OutDir=%OUTDIR%\\"
 if errorlevel 1 (
     echo [!] Build failed!
     exit /b 1

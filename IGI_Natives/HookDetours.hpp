@@ -489,7 +489,7 @@ void WeaponDropDetour(int** param_1) {
 	//}
 
 	const auto param_bytes = reinterpret_cast<const unsigned char*>(param_1);
-	if (*(const double*)(param_bytes + 0x40) < *(const double*)(param_bytes + 0x46)) entity_dead = 1;
+	if (*(const double*)(param_bytes + 0x100) < *(const double*)(param_bytes + 0x118)) entity_dead = 1;
 
 	if (entity_dead)
 	{

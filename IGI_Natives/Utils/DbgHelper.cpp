@@ -121,7 +121,9 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 		//Walk untill all Stacks are traversed - Get info for ThreadId,Frame,Context of Stack. 
 		while (StackWalk(machine, process, thread, &frame, &context, NULL, SymFunctionTableAccess, SymGetModuleBase, NULL))
 		{
-			if (index >= stack_count || index >= FRAME_SIZE) break; // Do not index beyond captured frames.
+			if (index >= FRAME_SIZE) break; // Do not exceed the stack trace buffer.
+			if (!full_stack && index >= stack_count) break;
+			const DWORD64 stack_address = index < stack_count ? (DWORD64)stack_trace[index] : frame.AddrPC.Offset;
 
 			frames_skip = (frames_skip == 0) ? 2 : frames_skip; //Exclude current methods always. 
 
@@ -132,7 +134,7 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 			}
 
 			//Load Symbol information from Stack Address. 
-			SymFromAddr(process, (DWORD64)(stack_trace[index]), 0, symbol_info);
+			SymFromAddr(process, stack_address, 0, symbol_info);
 
 			StackFrame sf = {}; //Holds Current stack frame. 
 
