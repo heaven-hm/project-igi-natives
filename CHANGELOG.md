@@ -26,6 +26,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added precise file descriptions and the PDB limitation. `igi.pdb` is the official project IGI PDB export artifact and is address-compatible with retail `igi.exe`, but the retail PE has no CodeView/RSDS debug directory, so it cannot be an exact vendor-PDB match in Ghidra.
 - Corrected `Weapon_FireUpdate` and `Weapon_FlameUpdate` to two-argument signatures after resolving the registrar stack pattern. `004D9850` is documented as the no-argument `Qtask_GetEventId` getter; the callback pushed before it belongs to the following registrar call.
 - The reverse-engineering guide is local-only and ignored; committed assets contain the resulting catalog and evidence outputs.
+## [2.7.1] - 2026-08-27
+
+### Fixed
+- Corrected SDK expansion declarations and typed address handling so the Win32 Debug and Release builds compile cleanly.
+- Fixed atomic player-state access in the feature loop.
+
+## [2.7.0] - 2026-08-27
+
+### Added
+- Expanded the native SDK catalog with OpenIGI AI and engine definitions.
+- Added typed function-pointer signatures and documentation for the expanded native surface.
+- Verified the expanded native definitions against the IGI 1 executable ground truth.
+
+### Changed
+- Updated the SDK branch to the current develop lifecycle and safe DLL hot-reload behavior.
+- Added a Windows release workflow that builds and publishes both Win32 Debug and Release DLLs.
 
 ## [2.6.0] - 2025-09-08 🚀
 

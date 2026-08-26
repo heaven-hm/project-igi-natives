@@ -3,7 +3,7 @@
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
-#define NATIVES_DLL_VERSION std::string("2.6.0")
+#define NATIVES_DLL_VERSION std::string("2.7.1")
 #include "DllMain.hpp"
 
 // Include all static libraries for project.
@@ -139,10 +139,6 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       WEAPON::UNLIMITED_AMMO_SET(true);
 #endif
 
-      // Enable Debug Hotkeys. (Read IGIDebug.md for more info)
-      DEBUG::KEYS_ENABLE(true);
-      DEBUG::TEXT_ENABLE(true);
-
       // Set Game Handle
       HANDLE g_handle = reinterpret_cast<HANDLE>(GetModuleHandle(NULL));
       if (g_handle == NULL || g_handle == INVALID_HANDLE_VALUE)
@@ -151,6 +147,13 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
+      // Enable Debug Hotkeys via FiberPool safely
+      FiberPool::Instance().RunExternal([] {
+        try {
+          DEBUG::KEYS_ENABLE(true);
+          DEBUG::TEXT_ENABLE(true);
+        } catch (...) {}
+      }, 10);
       MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + NATIVES_DLL_VERSION + " Attached"));
 
       // Start DllMainLoop in separate thread with 30 FPS timing

@@ -145,9 +145,78 @@ void DllMainLoop() {
       CONFIG::WRITE();
     }
 
+    // Show the data-file text through the Ghidra-identified normal status method.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F7)) {
+      LOG_INFO("Ctrl+F7: StatusMessage_ShowText");
+      StatusMsgShowText();
+    }
+
+    // Show the data-file text through the Ghidra-identified monitor method.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F8)) {
+      LOG_INFO("Ctrl+F8: StatusMessage_ShowMonitorText");
+      StatusMsgShowMonitorText();
+    }
+
+    // Reset the HumanPlayer_t view structure after zooming.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F9)) {
+      LOG_INFO("Ctrl+F9: HumanTaskViewReset");
+      FiberPool::Instance().RunExternal([] {
+        const int human_player = READ_PTR(humanplayer_ptr);
+        if (!human_player) {
+          LOG_INFO("Ctrl+F9: HumanPlayer_t pointer is unavailable");
+          return;
+        }
+        HUMAN::TASK_VIEW_RESET();
+        LOG_INFO("Ctrl+F9: HumanTaskViewReset invoked for HumanPlayer_t at 0x%08X",
+                 human_player);
+      }, 10);
+    }
+
+    // Read PlayerXPHit and display the returned value in the status message.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F10)) {
+      LOG_INFO("Ctrl+F10: PlayerXPHit");
+      PlayerXPHitShow();
+    }
+
+    // Test WarningShow native.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F11)) {
+      LOG_INFO("Ctrl+F11: TestWarningShow");
+      TestWarningShow();
+    }
+
+    // Test ErrorShow native.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F12)) {
+      LOG_INFO("Ctrl+F12: TestErrorShow");
+      TestErrorShow();
+    }
+
+    // Test AmmoTypeOpen native.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, '1')) {
+      LOG_INFO("Ctrl+1: TestAmmoTypeOpen");
+      TestAmmoTypeOpen();
+    }
+
+    // Test SoundLoad native.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, '2')) {
+      LOG_INFO("Ctrl+2: TestSoundLoad");
+      TestSoundLoad();
+    }
+
+    // Test LoadingScreenShow native.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, '3')) {
+      LOG_INFO("Ctrl+3: TestLoadingScreenShow");
+      TestLoadingScreenShow();
+    }
+
+    // Test AI Natives.
+    else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, '4')) {
+      LOG_INFO("Ctrl+4: TestAiNatives");
+      TestAiNatives();
+    }
+
   } else if (g_menu_screen == MENU_SCREEN_RESTART) {
     soldiers.clear();
-    if (!g_PlayerEnabled)
+    if (!g_PlayerEnabled.load(std::memory_order_acquire))
       GAME::INPUT_DISABLE();
   }
 }
@@ -185,6 +254,106 @@ void StatusMsgShow() {
   } catch (const std::exception &ex) {
     LOG_INFO("Exception: %s", ex.what());
   }
+}
+
+void StatusMsgShowText() {
+  try {
+    const string data = g_Utility.InternalDataRead();
+    if (data.empty()) {
+      LOG_INFO("Ctrl+F7: IGI-Internals-data.txt is empty or unavailable");
+      return;
+    }
+    FiberPool::Instance().RunExternal([data] {
+      MISC::STATUS_MESSAGE_SHOW_TEXT(data.c_str());
+    }, 10);
+  } catch (const std::exception &ex) {
+    LOG_INFO("Ctrl+F7 exception: %s", ex.what());
+  }
+}
+
+void StatusMsgShowMonitorText() {
+  try {
+    const string data = g_Utility.InternalDataRead();
+    if (data.empty()) {
+      LOG_INFO("Ctrl+F8: IGI-Internals-data.txt is empty or unavailable");
+      return;
+    }
+    FiberPool::Instance().RunExternal([data] {
+      MISC::STATUS_MESSAGE_SHOW_MONITOR_TEXT(data.c_str());
+    }, 10);
+  } catch (const std::exception &ex) {
+    LOG_INFO("Ctrl+F8 exception: %s", ex.what());
+  }
+}
+
+void HumanTaskViewReset() {
+  const int human_player = READ_PTR(humanplayer_ptr);
+  if (!human_player) {
+    LOG_INFO("Ctrl+F9: HumanPlayer_t pointer is unavailable");
+    return;
+  }
+  HUMAN::TASK_VIEW_RESET();
+  LOG_INFO("Ctrl+F9: HumanTaskViewReset invoked for HumanPlayer_t at 0x%08X",
+           human_player);
+}
+
+void PlayerXPHitShow() {
+  FiberPool::Instance().RunExternal([] {
+    const uint32_t hit_value = HUMAN::PLAYER_XP_HIT();
+    const string message = "Player Hit: " + std::to_string(hit_value);
+    LOG_INFO("Ctrl+F10: %s", message.c_str());
+    MISC::STATUS_MESSAGE_SHOW(message);
+  }, 10);
+}
+
+void TestWarningShow() {
+  FiberPool::Instance().RunExternal([] {
+    MISC::WARNING_SHOW("Native Warning: Test WarningShow API successful!");
+    MISC::STATUS_MESSAGE_SHOW("WarningShow native verified!");
+    LOG_INFO("Ctrl+F11: WarningShow native executed successfully");
+  }, 10);
+}
+
+void TestErrorShow() {
+  FiberPool::Instance().RunExternal([] {
+    MISC::ERROR_SHOW("Native Error: Test ErrorShow API successful!");
+    MISC::STATUS_MESSAGE_SHOW("ErrorShow native verified!");
+    LOG_INFO("Ctrl+F12: ErrorShow native executed successfully");
+  }, 10);
+}
+
+void TestAmmoTypeOpen() {
+  FiberPool::Instance().RunExternal([] {
+    WEAPON::AMMO_TYPE_OPEN();
+    MISC::STATUS_MESSAGE_SHOW("AmmoTypeOpen native verified!");
+    LOG_INFO("Ctrl+1: AmmoTypeOpen native executed successfully");
+  }, 10);
+}
+
+void TestSoundLoad() {
+  FiberPool::Instance().RunExternal([] {
+    SFX::SOUND_LOAD("LOCAL:common/sounds");
+    MISC::STATUS_MESSAGE_SHOW("SoundLoad native verified!");
+    LOG_INFO("Ctrl+2: SoundLoad native executed successfully");
+  }, 10);
+}
+
+void TestLoadingScreenShow() {
+  FiberPool::Instance().RunExternal([] {
+    MISC::LOADING_SCREEN_SHOW(1);
+    MISC::STATUS_MESSAGE_SHOW("LoadingScreenShow native verified!");
+    LOG_INFO("Ctrl+3: LoadingScreenShow native executed successfully");
+  }, 10);
+}
+
+void TestAiNatives() {
+  FiberPool::Instance().RunExternal([] {
+    const int event_type = AI::GET_CURRENT_EVENT_TYPE();
+    const float rnd = AI::GET_RANDOM_VALUE(100.0f);
+    const string msg = "AI Event: " + std::to_string(event_type) + ", Rnd: " + std::to_string(rnd);
+    MISC::STATUS_MESSAGE_SHOW(msg);
+    LOG_INFO("Ctrl+4: AI Natives executed successfully: %s", msg.c_str());
+  }, 10);
 }
 
 void ScriptCompile() {

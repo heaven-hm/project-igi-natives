@@ -1,0 +1,73 @@
+name: SDK Expansion Release
+
+on:
+  push:
+    tags:
+      - "v*-sdk-expansion"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build and publish SDK expansion DLLs
+    runs-on: windows-latest
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v4
+
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build Debug DLL
+        shell: pwsh
+        run: |
+          $outDir = Join-Path $env:GITHUB_WORKSPACE "artifacts\Debug\"
+          New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+          msbuild .\IGI_Natives\IGI_Natives.vcxproj /m /p:Configuration=Debug /p:Platform=Win32 "/p:OutDir=$outDir"
+
+      - name: Build Release DLL
+        shell: pwsh
+        run: |
+          $outDir = Join-Path $env:GITHUB_WORKSPACE "artifacts\Release\"
+          New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+          msbuild .\IGI_Natives\IGI_Natives.vcxproj /m /p:Configuration=Release /p:Platform=Win32 "/p:OutDir=$outDir"
+
+      - name: Verify release assets
+        shell: pwsh
+        run: |
+          $assets = @(
+            "artifacts\Debug\IGI-Natives-Debug.dll",
+            "artifacts\Release\IGI-Natives-Release.dll"
+          )
+          foreach ($asset in $assets) {
+            if (!(Test-Path $asset -PathType Leaf)) {
+              throw "Required release asset was not produced: $asset"
+            }
+          }
+
+      - name: Create GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $title = "Project IGI Natives $env:GITHUB_REF_NAME"
+          $notes = @"
+          ## Project IGI Natives SDK Expansion $env:GITHUB_REF_NAME
+
+          This release contains the verified native SDK expansion from `feature/natives-sdk-expansion`.
+
+          ### Included
+          - Expanded OpenIGI AI and engine native definitions.
+          - Typed function-pointer signatures and documentation.
+          - Native definitions verified against the IGI 1 executable ground truth.
+          - Current develop lifecycle and safe DLL hot-reload behavior.
+          - Win32 Debug and Release DLL builds.
+          "@
+          Set-Content -Path release-notes.md -Value $notes -Encoding utf8
+          gh release create $env:GITHUB_REF_NAME `
+            --repo $env:GITHUB_REPOSITORY `
+            --title $title `
+            --notes-file release-notes.md `
+            artifacts\Debug\IGI-Natives-Debug.dll `
+            artifacts\Release\IGI-Natives-Release.dll
