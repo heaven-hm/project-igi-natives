@@ -129,9 +129,8 @@ void DllMainLoopEditor() {
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD0)) {
 			LOG_INFO("Ctrl+Numpad0: Free Camera Mode");
 
-			FiberPool::Instance().RunExternal([] {
-				GAME::INPUT_DISABLE();
-			}, 0);
+			const int camera_level = g_game_level;
+			const int camera_menu = g_menu_screen;
 			g_PlayerEnabled = false;
 
 			Camera::Controls controls;
@@ -144,12 +143,19 @@ void DllMainLoopEditor() {
 			controls.CALIBRATE(VK_BACK);
 			controls.QUIT(VK_HOME);
 			controls.AXIS_OFF(0.5f);
-			FiberPoolEx::Instance().RunExternal([controls]() mutable {
-				g_Camera.FreeCam(controls);
-				FiberPool::Instance().RunExternal([] {
-					GAME::INPUT_ENABLE();
-					g_PlayerEnabled = true;
-					LOG_INFO("Free camera mode activated");
+			FiberPool::Instance().RunExternal([controls, camera_level, camera_menu]() mutable {
+				if (g_game_level != camera_level || g_menu_screen != camera_menu) return;
+				GAME::INPUT_DISABLE();
+				FiberPoolEx::Instance().RunExternal([controls, camera_level, camera_menu]() mutable {
+					if (g_game_level != camera_level || g_menu_screen != camera_menu) return;
+					g_Camera.FreeCam(controls);
+					FiberPool::Instance().RunExternal([camera_level, camera_menu] {
+						if (g_game_level == camera_level && g_menu_screen == camera_menu) {
+							GAME::INPUT_ENABLE();
+							g_PlayerEnabled = true;
+							LOG_INFO("Free camera mode activated");
+						}
+					}, 0);
 				}, 0);
 			}, 0);
 		}
