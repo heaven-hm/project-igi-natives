@@ -164,6 +164,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 
 // Cleanup and exit thread after DLL detach.
 void CleanUpAndExitThread(HMODULE hModule) {
+  (void)hModule;
   g_running = false;
 
   // Disable debug hotkeys
@@ -218,19 +219,5 @@ void CleanUpAndExitThread(HMODULE hModule) {
     LOG_INFO("MinHook already cleaned up, skipping");
   }
 
-  LOG_INFO("Cleanup completed - stopping main loop");
-
-  // Create a remote thread to eject the DLL from outside its context
-  std::thread ejectThread([hModule]() {
-    if (g_mainLoopThread.joinable() &&
-        g_mainLoopThread.get_id() != std::this_thread::get_id()) {
-      g_mainLoopThread.join();
-    }
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
-    LOG_INFO("Auto-ejecting DLL...");
-
-    // This API terminates the current thread without returning into DLL code.
-    FreeLibraryAndExitThread(hModule, 0);
-  });
-  ejectThread.detach();
+  LOG_INFO("Cleanup completed - hooks disabled; DLL remains loaded until process exit");
 }
