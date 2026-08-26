@@ -32,8 +32,14 @@ void DllMainLoopEditor() {
 
 	if (g_menu_screen == MENU_SCREEN_MAINMENU) {
 
-		std::lock_guard<std::mutex> lock(game_resources_mutex);
-		game_resources.clear();
+		{
+			std::lock_guard<std::mutex> lock(game_resources_mutex);
+			game_resources.clear();
+		}
+		{
+			std::lock_guard<std::mutex> lock(game_resources_set_mutex);
+			game_resources_set.clear();
+		}
 		g_level_graphs.clear();
 	}
 

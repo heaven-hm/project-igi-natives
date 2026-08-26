@@ -13,8 +13,9 @@ Hook::Hook(bool createOnInit) {
 	Hook::Initialize();
 	if (createOnInit) {
 		if (hook_status == MH_OK) {
-			if (CreateHooks() == MH_OK) {
-				EnableHooks();
+			hook_status = CreateHooks();
+			if (hook_status == MH_OK) {
+				hook_status = EnableHooks();
 			}
 			else
 				LOG_ERROR("Error occurred while creating hooks.");

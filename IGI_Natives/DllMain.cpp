@@ -57,6 +57,7 @@ std::unique_ptr<DbgHelper> dbg_instance;
 std::atomic<bool> g_running{false};
 std::atomic<bool> g_cleanupDone{false};
 std::atomic<int> g_gameHookCallbacks{0};
+std::atomic<bool> g_hookCallbacksClosing{false};
 std::mutex g_hookCallbackStartMutex;
 std::condition_variable g_hookCallbackCv;
 std::atomic<bool> g_minHookCleaned{false};
@@ -98,6 +99,8 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 
 #ifdef USE_MINHOOK_LIB
       hook_instance = std::make_unique<Hook>(true);
+      if (!hook_instance->IsReady())
+        throw std::runtime_error("Hook initialization failed");
       LOG_WARNING("Hook initialized.");
 #endif
 
@@ -194,8 +197,14 @@ void CleanUpAndExitThread(HMODULE hModule) {
   FiberPool::Instance().Shutdown();
   FiberPoolEx::Instance().Shutdown();
   g_cleanupDone.store(true);
+  g_hookCallbacksClosing.store(true);
 
-  std::unique_lock<std::mutex> hook_callback_lock(g_hookCallbackStartMutex);
+  // Flush callbacks that entered the detours just before shutdown began.
+  {
+    std::lock_guard<std::mutex> lock(g_hookCallbackStartMutex);
+  }
+
+	std::unique_lock<std::mutex> hook_callback_lock(g_hookCallbackStartMutex);
   g_hookCallbackCv.wait(hook_callback_lock, [] {
     return g_gameHookCallbacks.load() == 0;
   });

@@ -36,20 +36,30 @@ inline DWORD g_Main_Thread_Id{};
 
 extern std::atomic<bool> g_cleanupDone;
 extern std::atomic<int> g_gameHookCallbacks;
+extern std::atomic<bool> g_hookCallbacksClosing;
 extern std::mutex g_hookCallbackStartMutex;
 extern std::condition_variable g_hookCallbackCv;
 
 class HookCallbackGuard {
 public:
 	HookCallbackGuard() {
+		if (g_hookCallbacksClosing.load()) return;
 		std::lock_guard<std::mutex> lock(g_hookCallbackStartMutex);
+		if (g_hookCallbacksClosing.load()) return;
 		g_gameHookCallbacks.fetch_add(1);
+		m_active = true;
 	}
 
 	~HookCallbackGuard() {
+		if (!m_active) return;
 		g_gameHookCallbacks.fetch_sub(1);
 		g_hookCallbackCv.notify_all();
 	}
+
+	bool Active() const { return m_active; }
+
+private:
+	bool m_active{false};
 };
 
 inline char local_buf[0x1E] = { NULL }; // Local buffer to store value from different methods. 

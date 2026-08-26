@@ -15,6 +15,7 @@ namespace IGI {
 		inline MH_STATUS EnableHooks();
 		inline MH_STATUS DisableHook(LPVOID);
 		inline MH_STATUS DisableHooks();
+		bool IsReady() const { return hook_status == MH_OK; }
 
 		template <typename T>
 		inline MH_STATUS CreateHook(LPVOID p_target, LPVOID p_detour, T** pp_original)
