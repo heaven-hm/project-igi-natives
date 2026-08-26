@@ -5,6 +5,17 @@ All notable changes to the Project I.G.I Natives will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2026-08-27
+
+### Added
+- Expanded the native SDK catalog with OpenIGI AI and engine definitions.
+- Added typed function-pointer signatures and documentation for the expanded native surface.
+- Verified the expanded native definitions against the IGI 1 executable ground truth.
+
+### Changed
+- Updated the SDK branch to the current develop lifecycle and safe DLL hot-reload behavior.
+- Added a Windows release workflow that builds and publishes both Win32 Debug and Release DLLs.
+
 ## [2.6.0] - 2025-09-08 🚀
 
 ### 🧵 Revolutionary Threading Architecture & DLL Lifecycle Management

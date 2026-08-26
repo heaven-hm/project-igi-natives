@@ -3,7 +3,7 @@
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
-#define NATIVES_DLL_VERSION std::string("2.6.0")
+#define NATIVES_DLL_VERSION std::string("2.7.0")
 #include "DllMain.hpp"
 
 // Include all static libraries for project.
