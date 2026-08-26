@@ -30,8 +30,8 @@ namespace IGI {
 			double Z() { return z; }
 
 			void X(double x) { this->x = x; }
-			void Y(double y) { this->x = y; }
-			void Z(double x) { this->x = z; }
+				void Y(double y) { this->y = y; }
+				void Z(double z) { this->z = z; }
 		};
 
 		//Class to hold  Graph Nodes information.
@@ -151,7 +151,7 @@ namespace IGI {
 		//Setters/Getters For Link.
 		Link& GetLink() { return link; }
 		std::vector<Link> GetLinks() { return m_nodes_link; }
-		void SetLink(Link& node) { this->link = link; }
+			void SetLink(Link& node) { this->link = node; }
 
 		graph_t GraphId() { return graph_id; }
 		void GraphId(graph_t graph_id) { this->graph_id = graph_id; }

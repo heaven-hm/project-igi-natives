@@ -116,6 +116,8 @@ HumanSoldier HumanSoldier::FindSoldier(graph_t graph_id) {
 
 string HumanSoldier::DebugSoldierDataList() {
 	std::stringstream ss;
+	std::stringstream all_data;
+	bool executed = false;
 	for (auto& soldier : soldiers) {
 		if (soldier.ValidateSoldier()) {
 			ss << "Model: " << soldier.model_id << "\tSoldierId: " << std::dec << soldier.soldier_id << "\tAIType: " << soldier.ai_type << "\tGraphId: " << std::dec << soldier.graph_id << "\tWeapon: " << soldier.weapon << "\tAddress: " << HEX_ADDR_FMT(soldier.address);
@@ -123,12 +125,14 @@ string HumanSoldier::DebugSoldierDataList() {
 #ifdef SOLDIER_DATA_ALL
 			ss << "\tAi_id: " << std::dec << soldier.ai_id << "\nAI_TYPE: " << soldier.ai_type << "\tGraphId: " << soldier.graph_id;
 #endif
-			LOG_FILE("SoldierData: %s", ss.str().c_str());
-			ss.str(std::string());
-		}
+				LOG_FILE("SoldierData: %s", ss.str().c_str());
+				all_data << ss.str();
+				ss.clear();
+				ss.str(std::string());
+			}
 		else LOG_CONSOLE("Soldier data invalid for Id: %d", soldier.GetSoldierId());
 	}
-	return ss.str();
+	return all_data.str();
 }
 
 string HumanSoldier::DebugSoldierData(bool dbg_print) {
@@ -172,11 +176,19 @@ void HumanSoldier::ExecuteSoldiers(soldier_t sol_id)
 			}
 
 			int soldier_ptr = (soldier_addr + 0x2EC);
-			LOG_FILE("HumanSoldier_%d Executed!", soldier_id);
-			SoldierExecute(soldier_ptr, soldier_addr);
+				LOG_FILE("HumanSoldier_%d Executed!", soldier_id);
+				SoldierExecute(soldier_ptr, soldier_addr);
+				executed = true;
 		}
 		else
 			LOG_ERROR("Soldier address is invalid");
 	}
-	soldiers.clear();
+	if (sol_id == (soldier_t)AI_ID_INVALID) {
+		soldiers.clear();
+	}
+	else if (executed) {
+		soldiers.erase(std::remove_if(soldiers.begin(), soldiers.end(), [&](HumanSoldier& soldier) {
+		return soldier.GetSoldierId() == sol_id;
+	}), soldiers.end());
+	}
 }

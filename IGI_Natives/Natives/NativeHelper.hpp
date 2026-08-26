@@ -32,13 +32,13 @@ namespace IGI {
 	}
 
 	namespace PLAYER {
-		NATIVE_DECL void INDEX_NAME_SET(int index, const char* name) { std::memcpy((char*)PLAYER_INDEX_ADDR(index + 1), name, PLAYER_NAME_SIZE); }
+		NATIVE_DECL void INDEX_NAME_SET(int index, const char* name) { char* destination = (char*)PLAYER_INDEX_ADDR(index + 1); std::memset(destination, 0, PLAYER_NAME_SIZE); std::strncpy(destination, name, PLAYER_NAME_SIZE - 1); }
 		NATIVE_DECL void INDEX_NAME_SET(int index, string name) { INDEX_NAME_SET(index, name.c_str()); }
 		NATIVE_DECL void INDEX_MISSION_SET(int index, byte mission) { *(byte*)(PLAYER_INDEX_ADDR(index + 1) + PLAYER_ACTIVE_MISSION_OFF) = (byte)mission; }
-		NATIVE_DECL void ACTIVE_NAME_SET(const char* name) { std::memcpy((char*)PLAYER_ACTIVE_ADDR, name, PLAYER_NAME_SIZE); }
+		NATIVE_DECL void ACTIVE_NAME_SET(const char* name) { char* destination = (char*)PLAYER_ACTIVE_ADDR; std::memset(destination, 0, PLAYER_NAME_SIZE); std::strncpy(destination, name, PLAYER_NAME_SIZE - 1); }
 		NATIVE_DECL void ACTIVE_NAME_SET(string name) { ACTIVE_NAME_SET(name.c_str()); }
-		NATIVE_DECL string ACTIVE_NAME_GET() { string name = ""; std::memcpy((void*)name.data(), (void*)PLAYER_BASE_ADDR, PLAYER_NAME_SIZE); return name; }
-		NATIVE_DECL int ACTIVE_MISSION_GET() { byte mission = 1; mission = *(byte*)(PLAYER_BASE_ADDR + PLAYER_ACTIVE_MISSION_OFF); return mission; }
+		NATIVE_DECL string ACTIVE_NAME_GET() { string name(PLAYER_NAME_SIZE, '\0'); std::memcpy(name.data(), (void*)PLAYER_ACTIVE_ADDR, PLAYER_NAME_SIZE); name.resize(strnlen_s(name.c_str(), PLAYER_NAME_SIZE)); return name; }
+		NATIVE_DECL int ACTIVE_MISSION_GET() { return *(byte*)(PLAYER_ACTIVE_ADDR + PLAYER_ACTIVE_MISSION_OFF); }
 		NATIVE_DECL void ACTIVE_MISSION_SET(byte mission) { { *(byte*)(PLAYER_ACTIVE_ADDR + PLAYER_ACTIVE_MISSION_OFF) = (byte)mission; } }
 		NATIVE_DECL char* IS_PROFILE_ACTIVE() { return NATIVE_INVOKE<char*>((Void)HASH::PLAYER_PROFILE_ACTIVE); }
 	}
@@ -54,7 +54,7 @@ namespace IGI {
 
 	namespace DEBUG {
 		NATIVE_DECL void INIT() { *(int*)0x0056DF94 = 1; *(int*)0x00A5EA75 = (int)0x005C8BF4; }
-		NATIVE_DECL void INIT(const char* font_type) { *(int*)0x00A5EA75 = (int)0x005C8BF4; strcpy((char*)0x0054D958, font_type); }
+		NATIVE_DECL void INIT(const char* font_type) { *(int*)0x00A5EA75 = (int)0x005C8BF4; char* destination = (char*)0x0054D958; std::memset(destination, 0, PLAYER_NAME_SIZE); std::strncpy(destination, font_type, PLAYER_NAME_SIZE - 1); }
 		NATIVE_DECL void ENABLE(bool state) { *(uint8_t*)0x005BDC1C = state; }
 		NATIVE_DECL void KEYS_ENABLE(bool state) { *(uint8_t*)0x0057B194 = state; }
 		NATIVE_DECL void TEXT_ENABLE(bool state) { *(uint8_t*)0x00A5EA75 = state; }
@@ -107,7 +107,7 @@ namespace IGI {
 		NATIVE_DECL int TOTAL_COUNT() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
 		NATIVE_DECL void GUN_PICKUP(int weapon_id) { GUN_PICKUP_SET(weapon_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_GUN_PICKUP, READ_PTR(gun_pickup_ptr), GUN_PICKUP_PTR); }
 		NATIVE_DECL void AMMO_PICKUP(int ammo_id) { AMMO_PICKUP_SET(ammo_id); NATIVE_INVOKE<Void>((Void)HASH::WEAPON_AMMO_PICKUP, READ_PTR(gun_pickup_ptr), AMMO_PICKUP_PTR); }
-		NATIVE_DECL void WEAPON_PICKUP(int weapon_id) { int ammo_id = weapons_ammo_list.at(weapon_id); GUN_PICKUP(weapon_id); AMMO_PICKUP(ammo_id); }
+		NATIVE_DECL void WEAPON_PICKUP(int weapon_id) { if (weapon_id < 0 || static_cast<size_t>(weapon_id) >= weapons_ammo_list.size()) { LOG_ERROR("Invalid weapon id: %d", weapon_id); return; } int ammo_id = weapons_ammo_list.at(weapon_id); GUN_PICKUP(weapon_id); AMMO_PICKUP(ammo_id); }
 	}
 
 	namespace CAMERA {
@@ -206,7 +206,7 @@ namespace IGI {
 	namespace SCRIPT {
 		NATIVE_DECL void COMPILE(string qsc_file) { NATIVE_INVOKE<Void>((Void)HASH::QSCRIPT_COMPILE, qsc_file.c_str()); }
 		NATIVE_DECL int PARSE(string qas_file, int mem_addr) { return NATIVE_INVOKE<int>((Void)HASH::QSCRIPT_PARSE, qas_file.c_str(), mem_addr); }
-		NATIVE_DECL int PARSE(string qsc_file, string qas_file) { auto mem_blk = (int*)MEMORY::ALLOC(0x94, 4); char* buff = nullptr; auto res_addr = RESOURCE::LOAD(qsc_file.c_str(), &buff); std::strcpy((char*)mem_blk, qsc_file.data()); mem_blk[0x20] = (int)res_addr; mem_blk[0x21] = (int)buff; mem_blk[0x22] = 0; return PARSE(qas_file, (int)mem_blk); }
+		NATIVE_DECL int PARSE(string qsc_file, string qas_file) { auto mem_blk = (int*)MEMORY::ALLOC(0x94, 4); char* buff = nullptr; auto res_addr = RESOURCE::LOAD(qsc_file.c_str(), &buff); constexpr size_t qsc_file_capacity = 0x20 * sizeof(int); std::strncpy((char*)mem_blk, qsc_file.c_str(), qsc_file_capacity - 1); ((char*)mem_blk)[qsc_file_capacity - 1] = '\0'; mem_blk[0x20] = (int)res_addr; mem_blk[0x21] = (int)buff; mem_blk[0x22] = 0; return PARSE(qas_file, (int)mem_blk); }
 		NATIVE_DECL int PARSE(string qsc_file) { string qas_file = qsc_file; g_Utility.Replace(qas_file, ".qsc", ".qas"); return PARSE(qsc_file, qas_file); }
 		NATIVE_DECL int ASSEMBLE(string qas_file, string qvm_file) { return NATIVE_INVOKE<int>((Void)HASH::QSCRIPT_ASSEMBLE, qvm_file.c_str(), qas_file.c_str()); }
 		NATIVE_DECL int ASSEMBLE(string qas_file) { string qvm_file = qas_file; g_Utility.Replace(qvm_file, ".qas", ".qvm"); return ASSEMBLE(qas_file, qvm_file); }

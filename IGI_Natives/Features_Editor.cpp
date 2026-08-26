@@ -6,6 +6,7 @@
 
 
 void DllMainLoopEditor() {
+	FiberPool::Instance().RunPending();
 	static bool model_bool = false;
 	g_menu_screen = READ_PTR(menu_screen_ptr);
 	g_game_level = LEVEL::GET();
@@ -94,13 +95,18 @@ void DllMainLoopEditor() {
 
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F1)) {
 			LOG_INFO("Ctrl+F1: Human Camera View Set (from data)");
-			string internal_data = g_Utility.InternalDataRead();
-			int view = std::stoi(internal_data);
-			int cam_view = (view <= 0 || view > 5) ? 1 : view;
-			FiberPool::Instance().RunExternal([=] {
-				HUMAN::CAM_VIEW_SET(cam_view);
-				LOG_INFO("Humanplayer Camera #%d", cam_view);
-			}, 3);
+			try {
+				string internal_data = g_Utility.InternalDataRead();
+				int view = std::stoi(internal_data);
+				int cam_view = (view <= 0 || view > 5) ? 1 : view;
+				FiberPool::Instance().RunExternal([=] {
+					HUMAN::CAM_VIEW_SET(cam_view);
+					LOG_INFO("Humanplayer Camera #%d", cam_view);
+				}, 3);
+			}
+			catch (const std::exception& ex) {
+				LOG_INFO("Invalid camera view: %s", ex.what());
+			}
 		}
 
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F2)) {
@@ -139,13 +145,14 @@ void DllMainLoopEditor() {
 			controls.CALIBRATE(VK_BACK);
 			controls.QUIT(VK_HOME);
 			controls.AXIS_OFF(0.5f);
-			g_Camera.RunFreeCamFiber(controls);
-			
-			FiberPool::Instance().RunExternal([] {
-				GAME::INPUT_ENABLE();
-			}, 3);
-			LOG_INFO("Free camera mode activated");
-			g_PlayerEnabled = true;
+			FiberPoolEx::Instance().RunExternal([controls]() mutable {
+				g_Camera.FreeCam(controls);
+				FiberPool::Instance().RunExternal([] {
+					GAME::INPUT_ENABLE();
+					g_PlayerEnabled = true;
+					LOG_INFO("Free camera mode activated");
+				}, 0);
+			}, 0);
 		}
 
 		//Alt-Menu Controls.
@@ -204,13 +211,12 @@ void DllMainLoopEditor() {
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource Load file '%s'", resource_file.c_str());
-				auto resource_addr = (address_t)0;
-				FiberPool::Instance().RunExternal([=, &resource_addr] {
-					resource_addr = (address_t)(intptr_t)RESOURCE::LOAD(resource_file);
+				FiberPool::Instance().RunExternal([resource_file] {
+					auto resource_addr = (address_t)(intptr_t)RESOURCE::LOAD(resource_file);
+					LOG_INFO("Resource loaded at 0x%X", resource_addr);
+					string data = "Resource '" + resource_file + "' loaded at address " + HEX_ADDR_STR(resource_addr);
+					g_Utility.InternalDataWrite(data);
 				}, 3);
-				LOG_INFO("Resource loaded at 0x%X", resource_addr);
-				string data = "Resource '" + resource_file + "' loaded at address " + HEX_ADDR_STR(resource_addr);
-				g_Utility.InternalDataWrite(data);
 			}
 			catch (const std::exception& ex)
 			{
@@ -242,13 +248,12 @@ void DllMainLoopEditor() {
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource Unpack file '%s'", resource_file.c_str());
-				auto resource_addr = (address_t)0;
-				FiberPool::Instance().RunExternal([=, &resource_addr] {
-					resource_addr = (address_t)(intptr_t)RESOURCE::UNPACK(resource_file);
+				FiberPool::Instance().RunExternal([resource_file] {
+					auto resource_addr = (address_t)(intptr_t)RESOURCE::UNPACK(resource_file);
+					LOG_INFO("Resource unpacked at 0x%X", resource_addr);
+					string data = "Resource '" + resource_file + "' unpacked at address " + HEX_ADDR_STR(resource_addr);
+					g_Utility.InternalDataWrite(data);
 				}, 3);
-				LOG_INFO("Resource unpacked at 0x%X", resource_addr);
-				string data = "Resource '" + resource_file + "' unpacked at address " + HEX_ADDR_STR(resource_addr);
-				g_Utility.InternalDataWrite(data);
 			}
 			catch (const std::exception& ex)
 			{
@@ -261,13 +266,12 @@ void DllMainLoopEditor() {
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource Flush file '%s'", resource_file.c_str());
-				auto resource_addr = (address_t)0;
-				FiberPool::Instance().RunExternal([=, &resource_addr] {
-					resource_addr = RESOURCE::FIND(resource_file);
+				FiberPool::Instance().RunExternal([resource_file] {
+					auto resource_addr = RESOURCE::FIND(resource_file);
 					RESOURCE::FLUSH(resource_addr);
+					string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
+					g_Utility.InternalDataWrite(data);
 				}, 3);
-				string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
-				g_Utility.InternalDataWrite(data);
 				LOG_INFO("Resource flushed");
 			}
 			catch (const std::exception& ex)
@@ -276,18 +280,17 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F2)) {
-			LOG_INFO("Alt+F2: Resource IsLoaded? (name from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F9)) {
+			LOG_INFO("Alt+F9: Resource IsLoaded? (name from data)");
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource is loaded file '%s'", resource_file.c_str());
-				bool is_loaded = false;
-				FiberPool::Instance().RunExternal([=, &is_loaded] {
-					is_loaded = RESOURCE::IS_LOADED(resource_file);
+				FiberPool::Instance().RunExternal([resource_file] {
+					const bool is_loaded = RESOURCE::IS_LOADED(resource_file);
+					string data = is_loaded ? "TRUE" : "FALSE";
+					g_Utility.InternalDataWrite(data);
+					LOG_INFO("Resource loaded status: %s", data.c_str());
 				}, 3);
-				string data = is_loaded ? "TRUE" : "FALSE";
-				g_Utility.InternalDataWrite(data);
-				LOG_INFO("Resource loaded status: %s", data.c_str());
 			}
 			catch (const std::exception& ex)
 			{
@@ -295,18 +298,17 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F3)) {
-			LOG_INFO("Alt+F3: Resource Find (name from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F10)) {
+			LOG_INFO("Alt+F10: Resource Find (name from data)");
 			try {
 				string resource_file = g_Utility.InternalDataRead();
 				LOG_INFO("Resource Unpack find name '%s'", resource_file.c_str());
-				auto resource_addr = (address_t)0;
-				FiberPool::Instance().RunExternal([=, &resource_addr] {
-					resource_addr = RESOURCE::FIND(resource_file);
+				FiberPool::Instance().RunExternal([resource_file] {
+					auto resource_addr = RESOURCE::FIND(resource_file);
+					string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
+					LOG_INFO("'%s'", data.c_str());
+					g_Utility.InternalDataWrite(HEX_ADDR_STR(resource_addr));
 				}, 3);
-				string data = "Resource '" + resource_file + "' found at address " + HEX_ADDR_STR(resource_addr);
-				LOG_INFO("'%s'", data.c_str());
-				g_Utility.InternalDataWrite(HEX_ADDR_STR(resource_addr));
 				LOG_INFO("Resource found");
 			}
 			catch (const std::exception& ex)
@@ -315,8 +317,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F4)) {
-			LOG_INFO("Alt+F4: Save Game Resource Info (to files)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_MENU, VK_F11)) {
+			LOG_INFO("Alt+F11: Save Game Resource Info (to files)");
 			FiberPool::Instance().RunExternal([] {
 				RESOURCE::ANIMATION_INFO_SAVE("IGI_Animations.txt");
 				RESOURCE::FONT_INFO_SAVE("IGI_Fonts.txt");
@@ -397,12 +399,11 @@ void DllMainLoopEditor() {
 				LOG_INFO("Shift+F6: Cleanup QVM (from data)");
 				string qvm_file = g_Utility.InternalDataRead();
 				LOG_INFO("QVM cleanup file '%s'", qvm_file.c_str());
-				int* qvm_addr = nullptr;
-				int status = 0;
-				FiberPool::Instance().RunExternal([=, &qvm_addr, &status] {
-					qvm_addr = QVM::LOAD(qvm_file);
-					status = QVM::READ((int)(intptr_t)qvm_addr);
+				FiberPool::Instance().RunExternal([qvm_file] {
+					int* qvm_addr = QVM::LOAD(qvm_file);
+					const int status = QVM::READ((int)(intptr_t)qvm_addr);
 					if (status == 0) QVM::CLEANUP(qvm_addr);
+					LOG_INFO("QVM cleanup status: %d", status);
 				}, 3);
 			}
 			catch (const std::exception& ex)
@@ -521,12 +522,17 @@ void DllMainLoopEditor() {
 
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD0)) {
 			LOG_INFO("Ctrl+Numpad 0: Set Player Active Mission (from data)");
-			string mission = g_Utility.InternalDataRead();
-			LOG_INFO("Player Active mission set %s", mission.c_str());
-			int mission_id = std::stoi(mission);
-			FiberPool::Instance().RunExternal([=] {
-				PLAYER::ACTIVE_MISSION_SET(mission_id);
-			}, 3);
+			try {
+				string mission = g_Utility.InternalDataRead();
+				LOG_INFO("Player Active mission set %s", mission.c_str());
+				int mission_id = std::stoi(mission);
+				FiberPool::Instance().RunExternal([=] {
+					PLAYER::ACTIVE_MISSION_SET(mission_id);
+				}, 3);
+			}
+			catch (const std::exception& ex) {
+				LOG_INFO("Invalid mission id: %s", ex.what());
+			}
 		}
 
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD1)) {
@@ -544,15 +550,18 @@ void DllMainLoopEditor() {
 			std::vector<string> vec;
 			g_Utility.Tokenize(data, '\n', vec);
 
-			int index = 0;
-			byte mission = 1;
-			index = std::stoi(vec.at(0));
-			mission = std::stoi(vec.at(1));
-
-			FiberPool::Instance().RunExternal([=] {
-				PLAYER::INDEX_MISSION_SET(index, mission);
-			}, 3);
-			LOG_INFO("Player index mission set mission %d\tIndex: %d", mission, index);
+			try {
+				if (vec.size() < 2) throw std::invalid_argument("expected index and mission");
+				int index = std::stoi(vec.at(0));
+				byte mission = (byte)std::stoi(vec.at(1));
+				FiberPool::Instance().RunExternal([=] {
+					PLAYER::INDEX_MISSION_SET(index, mission);
+				}, 3);
+				LOG_INFO("Player index mission set mission %d\tIndex: %d", mission, index);
+			}
+			catch (const std::exception& ex) {
+				LOG_INFO("Invalid indexed mission data: %s", ex.what());
+			}
 		}
 
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD3)) {
@@ -561,15 +570,18 @@ void DllMainLoopEditor() {
 			std::vector<string> vec;
 			g_Utility.Tokenize(data, '\n', vec);
 
-			int index = 0;
-			string name = "Jones";
-			index = std::stoi(vec.at(0));
-			name = std::stoi(vec.at(1));
-
-			FiberPool::Instance().RunExternal([=] {
-				PLAYER::INDEX_NAME_SET(index, name);
-			}, 3);
-			LOG_INFO("Player index name set name %s\tIndex: %d", name.c_str(), index);
+			try {
+				if (vec.size() < 2) throw std::invalid_argument("expected index and name");
+				int index = std::stoi(vec.at(0));
+				string name = vec.at(1);
+				FiberPool::Instance().RunExternal([=] {
+					PLAYER::INDEX_NAME_SET(index, name);
+				}, 3);
+				LOG_INFO("Player index name set name %s\tIndex: %d", name.c_str(), index);
+			}
+			catch (const std::exception& ex) {
+				LOG_INFO("Invalid indexed player name data: %s", ex.what());
+			}
 		}
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD4)) {
 			LOG_INFO("Ctrl+Numpad 4: Load Game Material");
@@ -622,12 +634,11 @@ void DllMainLoopEditor() {
 			{
 				auto data = g_Utility.InternalDataRead();
 				int graph_id = std::stoi(data);
-				string node_links;
-				FiberPool::Instance().RunExternal([=, &node_links] {
-					node_links = GRAPH::GET_NODE_LINKS(graph_id);
+				FiberPool::Instance().RunExternal([graph_id] {
+					string node_links = GRAPH::GET_NODE_LINKS(graph_id);
+					g_Utility.InternalDataWrite(node_links);
+					LOG_INFO("Node links retrieved for graph ID: %d", graph_id);
 				}, 3);
-				g_Utility.InternalDataWrite(node_links);
-				LOG_INFO("Node links retrieved for graph ID: %d", graph_id);
 			}
 			catch (const std::exception& ex)
 			{
@@ -636,7 +647,7 @@ void DllMainLoopEditor() {
 		}
 
 		else if (GT_IsKeyToggled(VK_SNAPSHOT)) {
-			g_Console->Clear();
+			if (g_Console) g_Console->Clear();
 		}
 	}
 

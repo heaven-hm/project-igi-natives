@@ -22,6 +22,10 @@
 #include <thread>
 #include <atomic>
 
+inline bool g_DbgEnabled = true;
+inline bool g_PlayerEnabled = true;
+inline constexpr int delay_ms = 2500;
+
 #ifdef USE_MINHOOK_LIB 
 #include "Hook/Hook.hpp" 
 #endif 

@@ -8,20 +8,20 @@ namespace IGI {
 	private:
 		bool init = false;
 		struct {
-			string model_id;//Model id of soldier - Like 001_01_1 -> Jones.
-			soldier_t soldier_id; //HumanSoldier id - Like Id '2206' For Detection,Alive status,team etc, Expression: 'HumanAI_2206.isDetection'.
-			ai_t ai_id; //A.I Id of soldier - Like Id '503' and File = 'AI/503.qvm'
-			string ai_type; //AI Type Sniper,Patrol,Guard or Security Expression: 'AITYPE_PATROL_AK'.
-			graph_t graph_id; //Graph Id of sodlier - Like 4019 and File: 'graphs/4019.dat'
-			string weapon; //Weapon currently holding. - Not primary Weapon.
-			bool is_dead; //Is Soldier dead ? Expression: 'HumanSoldier_XXXX.isDead'
-			int8_t e_team; //Soldier team type , 0 = Friendly, 1 = Enemy. Expression: 'HumanSoldier_XXXX.eTeam'
-			address_t address; //Address pointer of soldier.
+				string model_id;//Model id of soldier - Like 001_01_1 -> Jones.
+				soldier_t soldier_id = (soldier_t)AI_ID_INVALID; //HumanSoldier id - Like Id '2206' For Detection,Alive status,team etc, Expression: 'HumanAI_2206.isDetection'.
+				ai_t ai_id = (ai_t)AI_ID_INVALID; //A.I Id of soldier - Like Id '503' and File = 'AI/503.qvm'
+				string ai_type; //AI Type Sniper,Patrol,Guard or Security Expression: 'AITYPE_PATROL_AK'.
+				graph_t graph_id = (graph_t)AI_ID_INVALID; //Graph Id of sodlier - Like 4019 and File: 'graphs/4019.dat'
+				string weapon; //Weapon currently holding. - Not primary Weapon.
+				bool is_dead = false; //Is Soldier dead ? Expression: 'HumanSoldier_XXXX.isDead'
+				int8_t e_team = -1; //Soldier team type , 0 = Friendly, 1 = Enemy. Expression: 'HumanSoldier_XXXX.eTeam'
+				address_t address = 0; //Address pointer of soldier.
 		};
 	public:
 		//Ctors/Dtors
 		HumanSoldier();
-		HumanSoldier(string model_id, int ai_id, int graph_id, string weapon, bool is_dead, int e_team, uint32_t address);
+			HumanSoldier(string model_id, int soldier_id, int graph_id, string weapon, bool is_dead, int e_team, uint32_t address);
 		~HumanSoldier() = default;
 
 		//Soldier Methods.
@@ -49,7 +49,7 @@ namespace IGI {
 		string GetWeapon() { return (!weapon.empty()) ? weapon : string(""); }
 		bool IsDead() { return is_dead; }
 		void IsDead(bool value) { is_dead = value; }
-		int8_t GetTeam() { return (e_team > 0 && e_team < 2) ? e_team : (int8_t)AI_ID_INVALID; }
+			int8_t GetTeam() { return (e_team == 0 || e_team == 1) ? e_team : (int8_t)AI_ID_INVALID; }
 		address_t GetAddress() { return (address > 0 && address < UINT32_MAX) ? address : (uint32_t)AI_ID_INVALID; }
 	};
 	inline HumanSoldier g_Soldier;

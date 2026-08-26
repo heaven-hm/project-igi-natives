@@ -67,15 +67,21 @@ void GameResource::ExtractResourceFile(string resource_type) {
 void GameResource::ExtractResource(Resource resource, string res_dir) {
 
 	try {
-		const bool resource_exist = game_resources_set.find(resource.name) != game_resources_set.end();
+		if (resource.size == 0 || resource.address == 0) {
+			LOG_ERROR("Cannot extract empty resource '%s'", resource.name.c_str());
+			return;
+		}
+		const string resource_id = resource.name;
+		const bool resource_exist = game_resources_set.find(resource_id) != game_resources_set.end();
 		if (resource_exist) return;
 
 		binary_t mef_buf(resource.size, '\0');
-		std::memcpy(mef_buf.data(), (void*)resource.address, mef_buf.capacity());
+		std::memcpy(mef_buf.data(), (void*)resource.address, mef_buf.size());
 
 		resource.name = resource.name.substr(resource.name.find_last_of("/") + 1);
 		string mesh_file = res_dir + "\\" + resource.name;
 		WriteFileType(mesh_file, mef_buf, BINARY_FILE);
+		game_resources_set.insert(resource_id);
 		LOG_INFO("Resource File %s saved successfully!", mesh_file.c_str());
 	}
 	catch (const std::exception& ex) {
@@ -129,6 +135,7 @@ void GameResource::MEF_RemoveModel(string model) {
 	try {
 		for (const auto& resource : game_resources) {
 			if (resource.name.find(GAME_RESOURCE_MEF) != string::npos) {
+				if (resource.size == 0) continue;
 
 				address_t model_addr;
 				string model_id, model_name;
@@ -158,19 +165,20 @@ void GameResource::MEF_RemoveModel(string model) {
 
 				//If model Id/Name matches.
 				if (model_match) {
-					binary_t model_data(500000, '\0');//500kb MEF
-					std::memcpy(model_data.data(), (void*)model_addr, model_data.capacity());
+						binary_t model_data(resource.size, '\0');
+						std::memcpy(model_data.data(), (void*)model_addr, model_data.size());
 
 					//Find end point of MEF and resize buffer.
 					binary_t mef_end{ 'N', 'A', 'M', 'E' };
 					auto it = std::search(model_data.begin(), model_data.end(), mef_end.begin(), mef_end.end());
-					size_t model_size = (it - model_data.begin());
+						if (it == model_data.end()) continue;
+						size_t model_size = (it - model_data.begin());
 					model_data.resize(model_size);
 
 					//Add MEF Resource to list.
-					ResourceMEF mef(model_name, model_id, model_data, model_addr, model_size);
-					mef_resources.push_back(mef);
-					LOG_INFO("MEF: Name: '%s' Id: %s Addr: %p Size: %d", model_name.c_str(), model_id.c_str(), model_addr, 0);
+						ResourceMEF mef(model_name, model_id, model_data, model_addr, model_size);
+						mef_resources.push_back(mef);
+						LOG_INFO("MEF: Name: '%s' Id: %s Addr: %p Size: %zu", model_name.c_str(), model_id.c_str(), model_addr, model_size);
 
 					//Remove current MEF from Memory.
 					std::memset((void*)model_addr, 0, model_size);

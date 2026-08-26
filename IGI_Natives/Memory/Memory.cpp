@@ -16,9 +16,15 @@ Memory::Memory(bool scanOnInit) {
 
 	//Init Signature patterns. 
 	string sig_err_reason;
-	bool init_sigs = true;// g_Memory->SignatureScan(sig_err_reason);
-	if (init_sigs)
+	bool init_sigs = true;
+	if (scanOnInit)
+		init_sigs = SignatureScan(sig_err_reason);
+
+	if (!scanOnInit || init_sigs)
+	{
+		if (scanOnInit)
 		LOG_INFO("Signatures Scanning done.");
+	}
 	else {
 		auto sig_error = "Game Signatures not found!\nReason: " + sig_err_reason;
 		LOG_ERROR(sig_error.c_str());
@@ -115,9 +121,15 @@ bool Memory::WriteMemory(LPVOID address, std::vector<byte>& v_bytes)
 	DWORD old_protection = NULL;
 	const SIZE_T write_len = v_bytes.size() * sizeof(byte);
 
-	VirtualProtect(address, write_len, PAGE_EXECUTE_READWRITE, &old_protection);
+	if (!VirtualProtect(address, write_len, PAGE_EXECUTE_READWRITE, &old_protection)) {
+		LOG_ERROR("VirtualProtect failed before memory write: %lu", GetLastError());
+		return false;
+	}
 	std::memcpy(address, &v_bytes[0], write_len);
-	VirtualProtect(address, write_len, old_protection, &old_protection);
+	if (!VirtualProtect(address, write_len, old_protection, &old_protection)) {
+		LOG_ERROR("VirtualProtect failed while restoring memory protection: %lu", GetLastError());
+		return false;
+	}
 
 	return true;
 };

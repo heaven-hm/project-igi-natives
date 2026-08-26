@@ -91,7 +91,7 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 	RtlCaptureContext(&context);
 
 	WORD stack_count = CaptureStackBackTrace(0, FRAME_SIZE, stack_trace, NULL);
-	auto symbol_info = (SYMBOL_INFO*)calloc(sizeof(SYMBOL_INFO) + 256 * sizeof(char), 1);
+	auto symbol_info = (SYMBOL_INFO*)calloc(sizeof(SYMBOL_INFO) + SYMBOL_NAME_MAXLEN * sizeof(char), 1);
 	if (symbol_info) {
 		symbol_info->MaxNameLen = SYMBOL_NAME_MAXLEN;
 		symbol_info->SizeOfStruct = sizeof(SYMBOL_INFO);
@@ -121,7 +121,7 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 		//Walk untill all Stacks are traversed - Get info for ThreadId,Frame,Context of Stack. 
 		while (StackWalk(machine, process, thread, &frame, &context, NULL, SymFunctionTableAccess, SymGetModuleBase, NULL))
 		{
-			if (!full_stack) if (index > stack_count) break; //Break if not full stack (Stack:Modules Only). 
+			if (index >= stack_count || index >= FRAME_SIZE) break; // Do not index beyond captured frames.
 
 			frames_skip = (frames_skip == 0) ? 2 : frames_skip; //Exclude current methods always. 
 
@@ -135,7 +135,6 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 			SymFromAddr(process, (DWORD64)(stack_trace[index]), 0, symbol_info);
 
 			StackFrame sf = {}; //Holds Current stack frame. 
-			memset(&sf, 0, sizeof(sf));
 
 			//Capture Address and Frame no. 
 			sf.symbol_address = frame.AddrPC.Offset;
@@ -206,6 +205,7 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 		}
 	}
 
+	free(symbol_info);
 	return frames;
 }
 
@@ -216,7 +216,7 @@ std::vector<DbgHelper::StackFrame> DbgHelper::StackTraceWalk(bool file_info, boo
 */
 
 HANDLE DbgHelper::InitStackTrace() {
-	SymSetOptions(SYMOPT_LOAD_LINES | SYMOPT_DEFERRED_LOADS | SYMOPT_LOAD_ANYTHING || SYMOPT_UNDNAME);
+	SymSetOptions(SYMOPT_LOAD_LINES | SYMOPT_DEFERRED_LOADS | SYMOPT_LOAD_ANYTHING | SYMOPT_UNDNAME);
 	m_Handle = GT_GetGameHandle4mHWND(GT_FindGameWindow(GAME_NAME));
 	g_Utility.SetHandle(m_Handle);
 
@@ -285,17 +285,17 @@ void DbgHelper::StackTracePrint(std::vector<StackFrame> stack_trace, bool file_i
 		if (capture_cxt) {
 #if _WIN64 
 			fout << "\n\tGENERAL-PURPOSE-REGISTERS\n"
-				<< "\tRAX: " << HexFmtAddr(st.context.Rax)
-				<< "\tRBX: " << HexFmtAddr(st.context.Rbx)
-				<< "\tRCX: " << HexFmtAddr(st.context.Rcx)
-				<< "\tRDX: " << HexFmtAddr(st.context.Rdx)
+				<< "\tRAX: " << HEX_ADDR_FMT(st.context.Rax)
+				<< "\tRBX: " << HEX_ADDR_FMT(st.context.Rbx)
+				<< "\tRCX: " << HEX_ADDR_FMT(st.context.Rcx)
+				<< "\tRDX: " << HEX_ADDR_FMT(st.context.Rdx)
 
 				<< "\n\tSPECIAL-PURPOSE-REGISTERS\n"
-				<< "\tRSI: " << HexFmtAddr(st.context.Rsi)
-				<< "\tRDI: " << HexFmtAddr(st.context.Rdi)
-				<< "\tRBP: " << HexFmtAddr(st.context.Rbp)
-				<< "\tRSP: " << HexFmtAddr(st.context.Rsp)
-				<< "\tRIP: " << HexFmtAddr(st.context.Rip)
+				<< "\tRSI: " << HEX_ADDR_FMT(st.context.Rsi)
+				<< "\tRDI: " << HEX_ADDR_FMT(st.context.Rdi)
+				<< "\tRBP: " << HEX_ADDR_FMT(st.context.Rbp)
+				<< "\tRSP: " << HEX_ADDR_FMT(st.context.Rsp)
+				<< "\tRIP: " << HEX_ADDR_FMT(st.context.Rip)
 				<< std::endl;
 #else 
 			fout << "\n\tGENERAL-PURPOSE-REGISTERS\n"

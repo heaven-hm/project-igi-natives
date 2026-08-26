@@ -110,7 +110,8 @@ int Graph::GetMaxNodes(graph_t graph_id) {
 }
 
 int Graph::GetTotalNodes(graph_t graph_id) {
-	return g_level_graphs.size();
+	auto graph = GetGraph4mId(graph_id);
+	return graph.GetNodes().size();
 }
 
 

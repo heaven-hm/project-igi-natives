@@ -212,7 +212,7 @@
 				"hash": "00495E70",
 				"address": 4808304,
 				"name": "MusicSetVolume",
-				"signature": "void MusicSetVolume(float volume,float volume);",
+				"signature": "void MusicSetVolume(float volume,float music_volume);",
 				"note": "Sets music volume., Params: volume range [0.0 - 1.0]"
 			}
 		},
@@ -320,7 +320,7 @@
 				"hash": "004B5F00",
 				"address": 4939520,
 				"name": "ResourceLoad",
-				"signature": "int * ResourceLoad(char *resource_file,char **buffer)",
+				"signature": "int * ResourceLoad(char *resource_file,char **buffer);",
 				"note": "Load resource in Memory and Returns address of file., Params: resource file like 'sounds.res','AI/303.qvm'"
 			}
 		},
@@ -590,7 +590,7 @@
 				"hash": "004B7E80",
 				"address": 4947584,
 				"name": "SymbolRegisterInt16",
-				"signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr);",
+				"signature": "void SymbolRegisterInt32(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Int16' for game like internal vairables,UI controls,timers etc."
 			}
 		},

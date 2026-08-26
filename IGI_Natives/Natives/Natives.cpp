@@ -82,7 +82,7 @@ uint32_t Natives::FindNativeAddress(string native_name) {
 			return native.address;
 		}
 	}
-	LOG_ERROR("%s() : Native address couldn't be found for '%s'", FUNC_NAME, native_name);
+	LOG_ERROR("%s() : Native address couldn't be found for '%s'", FUNC_NAME, native_name.c_str());
 	return 0;
 }
 
@@ -158,14 +158,15 @@ void Natives::WriteJSON(string json_file, json json_obj) {
 }
 
 void Natives::GenerateNativesFile(string natives_file) {
-	string natives_json = "{\n\t\"Natives\": [\n";
-
-	for (const auto& native_sig : native_sig) {
-		natives_json += "{\n\t\t\"Native\":{\n\t\t\t\"address\": " + std::to_string(native_sig.address) + ",";
-		natives_json += "\n\t\t\t\"name\": \"" + native_sig.name + "\",";
-		natives_json += "\n\t\t\t\"signature\": \"" + native_sig.signature + "\",";
-		natives_json += "\n\t\t\t\"note\": \"" + native_sig.note + "\"}\n\t\t\t\t},";
+	json natives_json = json::object();
+	natives_json["Natives"] = json::array();
+	for (const auto& native : native_sig) {
+		natives_json["Natives"].push_back({{"Native", {
+			{"address", native.address},
+			{"name", native.name},
+			{"signature", native.signature},
+			{"note", native.note}
+		}}});
 	}
-	natives_json += "]\n}";
-	WriteFileType(natives_file,binary_t(natives_json.begin(),natives_json.end()),ASCII_FILE);
+	WriteJSON(natives_file, natives_json);
 }

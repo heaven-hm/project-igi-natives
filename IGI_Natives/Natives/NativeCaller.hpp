@@ -14,9 +14,10 @@ namespace IGI {
     public:
         template<typename ReturnType = Void, typename... Args>
         ReturnType Invoke(Void native_hash, Args... args) {
-            const int argument_count = sizeof...(Args);
-            m_hash_found = (native_hash != nullptr);
+			m_hash_found = (native_hash != nullptr);
 
+#ifdef NATIVE_TRACE
+			const int argument_count = sizeof...(Args);
             // Log call details
             std::stringstream ss;
             ss << "Hash: " << native_hash;
@@ -26,6 +27,7 @@ namespace IGI {
                 << " type=" << TYPE(args)), ...);
             ss << " Argc=" << argument_count;
             LOG_FILE("%s(): %s", FUNC_NAME, ss.str().c_str());
+#endif
 
             if (m_hash_found) {
                 LOG_FILE("Found handler for Hash %p Symbol: %s", native_hash,

@@ -115,16 +115,14 @@ namespace IGI {
 	}
 
 	void Log::LogFileW(const wchar_t* buff) {
-		int result = setmode(fileno(stdout), O_U16TEXT);
+		if (setmode(fileno(stdout), O_U16TEXT) == -1) perror("Cannot set mode");
 
 		const string file_name = g_Utility.GetModuleFolder() + "\\" + LOGGER_FILE;
 		const std::locale utf8_locale = std::locale(std::locale(), new std::codecvt_utf8_utf16<wchar_t>());
-		if (result != -1) {
-			std::wofstream wf(file_name, std::ios_base::app);
-			wf.imbue(utf8_locale);
-			wf << buff << std::endl;
-			wf.close();
-		}
+		std::wofstream wf(file_name, std::ios_base::app);
+		wf.imbue(utf8_locale);
+		wf << buff << std::endl;
+		wf.close();
 		if (setmode(fileno(stdout), O_TEXT) == -1) perror("Cannot set mode");
 	}
 

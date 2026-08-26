@@ -13,22 +13,22 @@ namespace IGI {
 		struct Angle
 		{
 		private:
-			float length_x;//X-Axis length of plane.
-			float length_y;//Y-Axis length of plane.
-			float pitch_length;//Pitch angle length.
-			float pitch;//Pitch angle within plane.
-			float roll;//Roll angle within plane.
-			float length_z;//Z-Axis length of plane.
-			float yaw;//Yaw angle within plane.
-			float fov;//FOV (Field Of View) of ViewPort.
-			float roll_length;//Roll angle length.
+				float length_x = 0.0f;//X-Axis length of plane.
+				float length_y = 0.0f;//Y-Axis length of plane.
+				float pitch_length = 0.0f;//Pitch angle length.
+				float pitch = 0.0f;//Pitch angle within plane.
+				float roll = 0.0f;//Roll angle within plane.
+				float length_z = 0.0f;//Z-Axis length of plane.
+				float yaw = 0.0f;//Yaw angle within plane.
+				float fov = 0.0f;//FOV (Field Of View) of ViewPort.
+				float roll_length = 0.0f;//Roll angle length.
 
 		public:
 			//Ctors/Dtors
 			Angle() = default;
 			~Angle() = default;
-			Angle(const Angle& angle) { this->pitch = angle.pitch; this->roll = angle.roll; this->yaw = angle.yaw; this->fov = angle.fov; }
-			Angle(float pitch, float roll, float yaw, float fov) { this->pitch = pitch; this->roll = roll; this->yaw = yaw; this->fov = fov; }
+				Angle(const Angle& angle) = default;
+				Angle(float pitch, float roll, float yaw, float fov) : pitch(pitch), roll(roll), yaw(yaw), fov(fov) {}
 
 			//Getters.
 			float Pitch() { return pitch; }

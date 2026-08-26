@@ -374,8 +374,8 @@ int IsResourceLoadedDetour(char* param_1, int* param_2) {
 void ResourceUnpackDetour(int* res_ptr, int res_addr, int res_size) {
 	void* res_name_addr = (void*)0x00A7B658;
 	//LOG_INFO("ResourceUnpack ptr: %p, %s addr: %p size : %p", res_ptr, res_name_addr,res_addr, res_size);
-	string res_name(0x64, '\0');
-	std::strcpy(res_name.data(), (const char*)res_name_addr);
+	const char* resource_name = (const char*)res_name_addr;
+	string res_name(resource_name, strnlen_s(resource_name, 0x64));
 	//Resource resource(res_name, res_addr, (res_size + 0x1C + 4));
 	//game_resources.push_back(resource);
 	ResourceUnpackOut(res_ptr, res_addr, res_size);
@@ -465,7 +465,7 @@ void DebugSoldierDataDetour(int soldier_addr, char* event_type) {
 		void* ai_addr = reinterpret_cast<void*>(soldier_addr + 0x100);
 
 		HumanSoldier soldier;
-		std::memcpy(ai_data.data(), ai_addr, ai_data.capacity());
+		std::memcpy(ai_data.data(), ai_addr, ai_data.size());
 		//Add soldier data information.
 		soldier.AddSoldierData(soldier_addr, ai_data);
 		new_addr = soldier_addr;
@@ -488,12 +488,13 @@ void WeaponDropDetour(int** param_1) {
 	//	mov entity_dead, 1
 	//}
 
-	if (*(double*)(param_1 + 0x40) < *(double*)(param_1 + 0x46)) entity_dead = 1;
+	const auto param_bytes = reinterpret_cast<const unsigned char*>(param_1);
+	if (*(const double*)(param_bytes + 0x40) < *(const double*)(param_bytes + 0x46)) entity_dead = 1;
 
 	if (entity_dead)
 	{
 		LOG_CONSOLE("%s param_1: %p", "WeaponDrop", param_1);
-		LOG_CONSOLE("%s p_100: %f p_118: %f p_120 : %f", "WeaponDrop", *(double*)(param_1 + 0x100), *(double*)(param_1 + 0x118), *(double*)(param_1 + 0x120));
+		LOG_CONSOLE("%s p_100: %f p_118: %f p_120 : %f", "WeaponDrop", *(const double*)(param_bytes + 0x100), *(const double*)(param_bytes + 0x118), *(const double*)(param_bytes + 0x120));
 	}
 	WeaponDropOut(param_1);
 }
@@ -511,7 +512,7 @@ void AddSoldierDataHit(int address, bool is_dead) {
 	string ai_data_info;
 
 	std::thread th{ [&]() {
-		std::memcpy(ai_data.data(), ai_address, ai_data.capacity());
+		std::memcpy(ai_data.data(), ai_address, ai_data.size());
 		std::string soldier_data(ai_data.begin(), ai_data.end());
 		//Add soldier data information.
 	soldier.AddSoldierData(address,ai_data);
@@ -576,7 +577,7 @@ void ShowErrorDetour(LPCSTR err_msg) {
 
 void GenericPickupDetour(int* param_1) {
 	if ((*(char*)(param_1 + 0x119) != '\0') && (*(char*)(param_1 + 0x11a) != '\0'))
-		LOG_FILE("%s param_1: %p *param_1: %p param_1_handler: '%s'", "GenericPickup", param_1, *param_1, *(param_1 + 0x1A0));
+		LOG_FILE("%s param_1: %p *param_1: %p param_1_handler: %p", "GenericPickup", (void*)param_1, (void*)(uintptr_t)*param_1, (void*)(uintptr_t)*(param_1 + 0x1A0));
 	GenericPickupOut(param_1);
 }
 
@@ -600,7 +601,7 @@ void StatusMessageShowDetour(int param_1, int** param_2, int* param_3, int param
 }
 
 void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
-	LOG_CONSOLE("%s p1 : %p *p1 : %p **p1 : '%s' p2: '%s'", "Print", param_1, *param_1, READ_PTR(param_1 + 0x180), param_2);
+	LOG_CONSOLE("%s p1 : %p *p1 : %p **p1 : %d p2: '%s'", "Print", (void*)param_1, (void*)*param_1, READ_PTR(param_1 + 0x180), param_2);
 	//g_DbgHelper->StackTrace(true);
 	GameTextPrintOut(param_1, param_2);
 }
@@ -621,7 +622,7 @@ int __cdecl SetGameDataSymbolDetour(char* symbol_file) {
 
 int __cdecl LoadGameDataDetour(char* res_buf, const char* res_path, const char* res_name, int res_ptr) {
 	auto ret_val = LoadGameDataOut(res_buf, res_path, res_name, res_ptr);
-	LOG_FILE("%s res_buf: '%s' res_path: '%s' res_name: '%s' res_ptr: %p, ret_val: %p", "LoadGameData", res_buf, res_path, res_name, res_ptr, ret_val);
+	LOG_FILE("%s res_buf: '%s' res_path: '%s' res_name: '%s' res_ptr: %d, ret_val: %d", "LoadGameData", res_buf, res_path, res_name, res_ptr, ret_val);
 	//ReadWholeFile(res_buf);
 	return ret_val;
 }
@@ -688,7 +689,7 @@ int __cdecl AssembleQVMDetour(char* file_out, char* file_in) {
 
 int __cdecl ParseQVMDetour(char* file_in, int mem_blk) {
 	int qvm_ret = ParseQVMOut(file_in, mem_blk);
-	LOG_INFO("%s file_in : '%s' mem_blk : %p mem_blk: '%s' Status : %d", "ParseQVM", file_in, mem_blk, mem_blk, qvm_ret);
+	LOG_INFO("%s file_in : '%s' mem_blk : %p Status : %d", "ParseQVM", file_in, (void*)(uintptr_t)mem_blk, qvm_ret);
 	return qvm_ret;
 }
 
@@ -729,7 +730,7 @@ int* __cdecl GameOpenQFileDetour(char* file_name, char* file_mode) {
 
 
 int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
-	LOG_INFO("%s param1 : %s param2 : %p param3 : %p  param4 : %p", "LevelLoad", param1, param2, param3, param4);
+	LOG_INFO("%s param1 : %d param2 : %d param3 : %d param4 : %d", "LevelLoad", param1, param2, param3, param4);
 	//g_DbgHelper->StackTrace(true, false, true);
 	return LevelLoadOut(param1, param2, param3, param4);
 }
@@ -737,8 +738,9 @@ int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 
 int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param3)
 {
+	FiberPool::Instance().RunPending();
 	LOG_INFO("GameMainLoopDetour: Entered game update hook");
-	LOG_INFO("%s param1 : %s param2 : %p param3 : %p", "GameMainLoopDetour", param1, param2, param3);
+	LOG_INFO("%s param1 : %p param2 : %u param3 : %u", "GameMainLoopDetour", (void*)param1, param2, param3);
 
 	// --- Run Features safely on game thread ---
 	// DllMainLoopEditor();

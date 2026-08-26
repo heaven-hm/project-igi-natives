@@ -3,10 +3,12 @@
 #include "Libs/GTLibc.hpp"
 #include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
+#include "Utils/FiberPoolEx.hpp"
 #include "Utils/Utility.hpp"
 
 // Main loop for DLL Natives.
 void DllMainLoop() {
+  FiberPool::Instance().RunPending();
   g_menu_screen = READ_PTR(menu_screen_ptr);
   g_game_level = LEVEL::GET();
   // LOG_INFO("Features: Menu Screen = %d, Game Level = %d", g_menu_screen,
@@ -114,11 +116,14 @@ void DllMainLoop() {
       controls.CALIBRATE(VK_BACK);
       controls.QUIT(VK_HOME);
       controls.AXIS_OFF(0.5f);
-      g_Camera.RunFreeCamFiber(controls);
-
-      FiberPool::Instance().RunExternal([] { GAME::INPUT_ENABLE(); }, 3);
-      LOG_INFO("Free camera mode activated");
-      g_PlayerEnabled = true;
+      FiberPoolEx::Instance().RunExternal([controls]() mutable {
+        g_Camera.FreeCam(controls);
+        FiberPool::Instance().RunExternal([] {
+          GAME::INPUT_ENABLE();
+          g_PlayerEnabled = true;
+          LOG_INFO("Free camera mode activated");
+        }, 0);
+      }, 0);
     }
 
     // Show status message.
