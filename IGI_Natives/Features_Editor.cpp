@@ -6,7 +6,6 @@
 
 
 void DllMainLoopEditor() {
-	FiberPool::Instance().RunPending();
 	static bool model_bool = false;
 	g_menu_screen = READ_PTR(menu_screen_ptr);
 	g_game_level = LEVEL::GET();

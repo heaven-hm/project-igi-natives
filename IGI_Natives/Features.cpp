@@ -8,7 +8,6 @@
 
 // Main loop for DLL Natives.
 void DllMainLoop() {
-  FiberPool::Instance().RunPending();
   g_menu_screen = READ_PTR(menu_screen_ptr);
   g_game_level = LEVEL::GET();
   // LOG_INFO("Features: Menu Screen = %d, Game Level = %d", g_menu_screen,

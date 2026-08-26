@@ -104,7 +104,7 @@ bool Memory::SignatureScan(std::string& sig_error_reason) {
 		status = false;
 	}
 
-	if (game_running_sig_addr != nullptr) {
+	if (game_running_sig_addr == nullptr) {
 		sig_error_reason = "\nGame Running couldn't be verified!";
 		status = false;
 	}

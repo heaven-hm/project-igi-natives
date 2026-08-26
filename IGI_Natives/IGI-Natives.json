@@ -590,7 +590,7 @@
 				"hash": "004B7E80",
 				"address": 4947584,
 				"name": "SymbolRegisterInt16",
-				"signature": "void SymbolRegisterInt32(int **sym_buf,int sym_addr);",
+				"signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Int16' for game like internal vairables,UI controls,timers etc."
 			}
 		},
@@ -599,7 +599,7 @@
 				"hash": "004B7FA0",
 				"address": 4947872,
 				"name": "SymbolRegisterInt32",
-				"signature": "void SymbolRegisterInt16(int **sym_buf,int sym_addr);",
+				"signature": "void SymbolRegisterInt32(int **sym_buf,int sym_addr);",
 				"note": "Register new symbol of type 'Int32' for game like internal vairables,UI controls,timers etc."
 			}
 		},

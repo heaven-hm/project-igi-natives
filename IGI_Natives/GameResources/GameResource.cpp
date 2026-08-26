@@ -135,8 +135,6 @@ void GameResource::MEF_RemoveModel(string model) {
 	try {
 		for (const auto& resource : game_resources) {
 			if (resource.name.find(GAME_RESOURCE_MEF) != string::npos) {
-				if (resource.size == 0) continue;
-
 				address_t model_addr;
 				string model_id, model_name;
 				bool model_match = false;
@@ -163,9 +161,10 @@ void GameResource::MEF_RemoveModel(string model) {
 					}
 				}
 
-				//If model Id/Name matches.
-				if (model_match) {
-						binary_t model_data(resource.size, '\0');
+			//If model Id/Name matches.
+			if (model_match) {
+					const size_t scan_size = resource.size != 0 ? resource.size : 500000;
+					binary_t model_data(scan_size, '\0');
 						std::memcpy(model_data.data(), (void*)model_addr, model_data.size());
 
 					//Find end point of MEF and resize buffer.
