@@ -22,6 +22,8 @@
 #include <tuple>
 #include <set>
 #include <atomic>
+#include <mutex>
+#include <condition_variable>
 #include "CommonConst.hpp"
 
 using std::string;
@@ -31,6 +33,24 @@ using namespace std::chrono_literals;
 inline HMODULE g_Hmodule{};
 inline HANDLE g_Main_Thread{};
 inline DWORD g_Main_Thread_Id{};
+
+extern std::atomic<bool> g_cleanupDone;
+extern std::atomic<int> g_gameHookCallbacks;
+extern std::mutex g_hookCallbackStartMutex;
+extern std::condition_variable g_hookCallbackCv;
+
+class HookCallbackGuard {
+public:
+	HookCallbackGuard() {
+		std::lock_guard<std::mutex> lock(g_hookCallbackStartMutex);
+		g_gameHookCallbacks.fetch_add(1);
+	}
+
+	~HookCallbackGuard() {
+		g_gameHookCallbacks.fetch_sub(1);
+		g_hookCallbackCv.notify_all();
+	}
+};
 
 inline char local_buf[0x1E] = { NULL }; // Local buffer to store value from different methods. 
 inline void* status_byte_addr = (void*)0x00567C74;

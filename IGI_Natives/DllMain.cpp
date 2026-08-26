@@ -57,6 +57,8 @@ std::unique_ptr<DbgHelper> dbg_instance;
 std::atomic<bool> g_running{false};
 std::atomic<bool> g_cleanupDone{false};
 std::atomic<int> g_gameHookCallbacks{0};
+std::mutex g_hookCallbackStartMutex;
+std::condition_variable g_hookCallbackCv;
 std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
 
@@ -134,7 +136,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
           if (GT_IsKeyPressed(VK_END)) {
             LOG_INFO("END key pressed - starting cleanup");
             CleanUpAndExitThread(hModule);
-            break;
+            return;
           }
 
           std::this_thread::sleep_for(
@@ -145,8 +147,6 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
                                   std::string(" v" + NATIVES_DLL_VERSION + " Detached"));
       });
 
-      // Detach thread so it can run independently and clean itself up
-      g_mainLoopThread.detach();
     } catch (const std::exception &ex) {
       GT_ShowError(ex.what());
 #if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
@@ -195,13 +195,10 @@ void CleanUpAndExitThread(HMODULE hModule) {
   FiberPoolEx::Instance().Shutdown();
   g_cleanupDone.store(true);
 
-  for (int attempt = 0; attempt < 200 && g_gameHookCallbacks.load() != 0; ++attempt) {
-    std::this_thread::sleep_for(std::chrono::milliseconds(10));
-  }
-  if (g_gameHookCallbacks.load() != 0) {
-    LOG_ERROR("Game hook callback is still active; keeping hooks and DLL loaded");
-    return;
-  }
+  std::unique_lock<std::mutex> hook_callback_lock(g_hookCallbackStartMutex);
+  g_hookCallbackCv.wait(hook_callback_lock, [] {
+    return g_gameHookCallbacks.load() == 0;
+  });
 
   DEBUG::TEXT_ENABLE(false);
 
@@ -220,6 +217,10 @@ void CleanUpAndExitThread(HMODULE hModule) {
 
   // Create a remote thread to eject the DLL from outside its context
   std::thread ejectThread([hModule]() {
+    if (g_mainLoopThread.joinable() &&
+        g_mainLoopThread.get_id() != std::this_thread::get_id()) {
+      g_mainLoopThread.join();
+    }
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     LOG_INFO("Auto-ejecting DLL...");
 
