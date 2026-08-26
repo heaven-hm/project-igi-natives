@@ -120,7 +120,7 @@ wrapper forwards through `NativeCaller::Invoke` to the verified address in `asse
 (all 284 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
 address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
 For runtime signature loading, deploy the `assets` folder beside the DLL; the loader reads its single `IGINatives.json` from that relative path.
-Struct layouts recovered from the binary live in [`assets/assets/IGI_Structures.hpp`](assets/assets/IGI_Structures.hpp).
+Struct layouts recovered from the binary live in [`assets/IGI_Structures.hpp`](assets/IGI_Structures.hpp).
 
 ### How to call a native
 

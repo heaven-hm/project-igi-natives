@@ -1,7 +1,7 @@
 # Project I.G.I 1 — Native Function Deep-Dive Report
 
-**Target:** `igi.exe` retail (PE32, image base `0x400000`, `.text` = `0x401000`–`0x532510`)  
-**Branch:** `feature/natives-discovery` · **Catalog:** `assets/IGINatives.json` (294 natives)
+**Target:** `igi.exe` retail (PE32, image base `0x400000`, `.text` = `0x401000`–`0x532510`)
+**Branch:** `feature/natives-unified` · **Catalog:** `assets/IGINatives.json` (294 natives)
 **Verification:** radare2 + Ghidra MCP + OpenIGI cross-reference + game-script mining
 
 ---

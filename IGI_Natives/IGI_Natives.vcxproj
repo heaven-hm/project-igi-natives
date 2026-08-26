@@ -144,7 +144,8 @@
     <ClInclude Include="Utils\Logger.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="IGI-Natives.json">
+    <None Include="..\assets\IGINatives.json">
+      <Link>assets\IGINatives.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
