@@ -96,61 +96,48 @@ void Camera::CalibrateView() {
 	*(float*)angle_v = 3.095987082f;
 }
 
-void  Camera::FreeCam(Camera::Controls& ctrl) {
-
-	if (sizeof(ctrl) == 0) return;
-
-	//De-Attach ViewPort of camera and Set View.
+void Camera::BeginFreeCam(const Controls& controls) {
+	if (free_cam_run.exchange(true)) return;
+	free_cam_controls = controls;
 	Deattach();
-	HUMAN::CAM_VIEW_SET(3);//To make Player Visible in free Cam.
+	HUMAN::CAM_VIEW_SET(3);
+}
 
-	//Main loop of FreeCam.
-	while (!GT_IsKeyPressed(ctrl.QUIT())) {
-		auto pos = ReadPosition();
-		auto angle = ReadAngle();
+bool Camera::FreeCamStep() {
+	if (!free_cam_run.load()) return false;
 
-		//This allows us to Move,Rotate,Zoom around FreeRoam camera.
-		std::memcpy(CAM_ANGLE_ADDR, CAM_CONTROL_ADDR, (VIEWPORT_SIZE * FLOAT_SIZE));
-
-		//Key event for X-Axis.
-		if (GT_IsKeyPressed(ctrl.RIGHT())) pos.X(pos.X() - ctrl.AXIS_OFF());
-		if (GT_IsKeyPressed(ctrl.LEFT())) pos.X(pos.X() + ctrl.AXIS_OFF());
-
-		//Key event for Y-Axis.
-		if (GT_IsKeyPressed(ctrl.FORWARD())) pos.Y(pos.Y() - ctrl.AXIS_OFF());
-		if (GT_IsKeyPressed(ctrl.BACKWARD())) pos.Y(pos.Y() + ctrl.AXIS_OFF());
-
-		//Key event for Z-Axis.
-		if (GT_IsKeyPressed(ctrl.UP())) pos.Z(pos.Z() + ctrl.AXIS_OFF());
-		if (GT_IsKeyPressed(ctrl.DOWN())) pos.Z(pos.Z() - ctrl.AXIS_OFF());
-
-		//Key event for Calibrate view.
-		if (GT_IsKeyPressed(ctrl.CALIBRATE())) CalibrateView();
-
-		//Exceptions case - Compile and status msg.
-		if (GT_HotKeysPressed(VK_MENU, VK_F5)) ScriptCompile();
-		if (GT_HotKeysPressed(VK_CONTROL, VK_INSERT)) StatusMsgShow();
-		if (GT_IsKeyPressed(VK_END)) break;
-
-		//Update camera position.
-		WritePosition(pos);
+	Controls& ctrl = free_cam_controls;
+	if (GT_IsKeyPressed(ctrl.QUIT()) || GT_IsKeyPressed(VK_END)) {
+		EndFreeCam();
+		return false;
 	}
 
-	//Attach ViewPort of camera and Reset View.
+	auto pos = ReadPosition();
+	ReadAngle();
+
+	std::memcpy(CAM_ANGLE_ADDR, CAM_CONTROL_ADDR, (VIEWPORT_SIZE * FLOAT_SIZE));
+
+	if (GT_IsKeyPressed(ctrl.RIGHT())) pos.X(pos.X() - ctrl.AXIS_OFF());
+	if (GT_IsKeyPressed(ctrl.LEFT())) pos.X(pos.X() + ctrl.AXIS_OFF());
+	if (GT_IsKeyPressed(ctrl.FORWARD())) pos.Y(pos.Y() - ctrl.AXIS_OFF());
+	if (GT_IsKeyPressed(ctrl.BACKWARD())) pos.Y(pos.Y() + ctrl.AXIS_OFF());
+	if (GT_IsKeyPressed(ctrl.UP())) pos.Z(pos.Z() + ctrl.AXIS_OFF());
+	if (GT_IsKeyPressed(ctrl.DOWN())) pos.Z(pos.Z() - ctrl.AXIS_OFF());
+	if (GT_IsKeyPressed(ctrl.CALIBRATE())) CalibrateView();
+	if (GT_HotKeysPressed(VK_MENU, VK_F5)) ScriptCompile();
+	if (GT_HotKeysPressed(VK_CONTROL, VK_INSERT)) StatusMsgShow();
+
+	WritePosition(pos);
+	return true;
+}
+
+void Camera::EndFreeCam() {
+	if (!free_cam_run.exchange(false)) return;
 	HUMAN::CAM_VIEW_SET(1);
 	Attach();
 }
 
-
-void Camera::RunFreeCamThread(Controls& controls) {
-
-	auto freeCamThread = std::thread(&Camera::FreeCam, this, std::ref(controls));
-	freeCamThread.join();
-}
-
-void Camera::RunFreeCamFiber(Controls& controls) {
-	// Use FiberPoolEx singleton instance for camera operations
-	FiberPoolEx::Instance().RunExternal([this, controls]() mutable {
-		this->FreeCam(controls);
-	}, 0);
+void Camera::FreeCam(Camera::Controls& ctrl) {
+	BeginFreeCam(ctrl);
+	while (free_cam_run.load()) FreeCamStep();
 }

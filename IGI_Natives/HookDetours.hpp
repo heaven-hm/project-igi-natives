@@ -376,9 +376,20 @@ void ResourceUnpackDetour(int* res_ptr, int res_addr, int res_size) {
 	//LOG_INFO("ResourceUnpack ptr: %p, %s addr: %p size : %p", res_ptr, res_name_addr,res_addr, res_size);
 	const char* resource_name = (const char*)res_name_addr;
 	string res_name(resource_name, strnlen_s(resource_name, 0x64));
-	//Resource resource(res_name, res_addr, (res_size + 0x1C + 4));
-	//game_resources.push_back(resource);
 	ResourceUnpackOut(res_ptr, res_addr, res_size);
+
+	if (!res_name.empty() && res_addr != 0 && res_size > 0) {
+		const size_t resource_size = static_cast<size_t>(res_size) + 0x1C + 4;
+		bool updated = false;
+		for (auto& resource : game_resources) {
+			if (resource.name == res_name && resource.address == (address_t)res_addr) {
+				resource.size = resource_size;
+				updated = true;
+				break;
+			}
+		}
+		if (!updated) game_resources.emplace_back(res_name, (address_t)res_addr, resource_size);
+	}
 }
 
 int* __cdecl LoadResourceDetour(char* res_name, char** res_buf) {
@@ -386,8 +397,9 @@ int* __cdecl LoadResourceDetour(char* res_name, char** res_buf) {
 	//LOG_INFO("%s '%s' : %p\tAddress: %p", "LoadResource", res_name, res_name, res_addr);
 
 	//Adding resources to game resources list.
-	Resource resource(string(res_name), (address_t)res_addr, 0);
-	game_resources.push_back(resource);
+	if (res_name && *res_name && res_addr) {
+		game_resources.emplace_back(string(res_name), (address_t)res_addr, 0);
+	}
 
 	return res_addr;
 }

@@ -149,7 +149,7 @@ MH_STATUS Hook::CreateHooks() {
 	if (mh_status != MH_OK && first_error == MH_OK) first_error = mh_status;
 	if (mh_status != MH_OK)LOG_ERROR("LoadResourceFile Createhook error : %s", MH_StatusToString(mh_status));
 
-	mh_status = MH_OK;//CreateHook(ResourceUnpack, &ResourceUnpackDetour, &ResourceUnpackOut);
+	mh_status = CreateHook(ResourceUnpack, &ResourceUnpackDetour, &ResourceUnpackOut);
 	if (mh_status != MH_OK && first_error == MH_OK) first_error = mh_status;
 	if (mh_status != MH_OK)LOG_ERROR("ResourceUnpack Createhook error : %s", MH_StatusToString(mh_status));
 

@@ -3,7 +3,6 @@
 #include "Libs/GTLibc.hpp"
 #include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
-#include "Utils/FiberPoolEx.hpp"
 #include "Utils/Utility.hpp"
 
 // Main loop for DLL Natives.
@@ -35,6 +34,9 @@ void DllMainLoop() {
 
     g_level_changed ^= 1;
   }
+
+  if (QueueFreeCamStep()) return;
+  if (g_FreeCamStepQueued.load()) return;
 
   // Menu handling
   if (g_menu_screen == MENU_SCREEN_MAINMENU) {
@@ -102,10 +104,6 @@ void DllMainLoop() {
     else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F4)) {
       LOG_INFO("Ctrl+F4: Free Camera Mode");
 
-      const int camera_level = g_game_level;
-      const int camera_menu = g_menu_screen;
-      g_PlayerEnabled = false;
-
       Camera::Controls controls;
       controls.UP(VK_SPACE);
       controls.DOWN(VK_MENU);
@@ -116,21 +114,7 @@ void DllMainLoop() {
       controls.CALIBRATE(VK_BACK);
       controls.QUIT(VK_HOME);
       controls.AXIS_OFF(0.5f);
-      FiberPool::Instance().RunExternal([controls, camera_level, camera_menu]() mutable {
-        if (g_game_level != camera_level || g_menu_screen != camera_menu) return;
-        GAME::INPUT_DISABLE();
-        FiberPoolEx::Instance().RunExternal([controls, camera_level, camera_menu]() mutable {
-          if (g_game_level != camera_level || g_menu_screen != camera_menu) return;
-          g_Camera.FreeCam(controls);
-          FiberPool::Instance().RunExternal([camera_level, camera_menu] {
-            if (g_game_level == camera_level && g_menu_screen == camera_menu) {
-              GAME::INPUT_ENABLE();
-              g_PlayerEnabled = true;
-              LOG_INFO("Free camera mode activated");
-            }
-          }, 0);
-        }, 0);
-      }, 0);
+      QueueFreeCamRequest(controls, g_game_level, g_menu_screen);
     }
 
     // Show status message.

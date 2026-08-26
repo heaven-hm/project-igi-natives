@@ -54,6 +54,8 @@ static FiberPoolEx &Instance() {
    template <typename F>
    void RunExternal(F&& f, unsigned delayMs = 2);
 
+   void Shutdown();
+
 private:
    struct Task {
        std::function<void()> func;
@@ -187,22 +189,32 @@ inline FiberPoolEx::FiberPoolEx(std::size_t numThreads) {
 }
 
 inline FiberPoolEx::~FiberPoolEx() {
+   Shutdown();
+}
+
+inline void FiberPoolEx::Shutdown() {
    stop_flag.store(true);
+   {
+       std::lock_guard<std::mutex> lock(queue_mutex);
+       std::queue<Task> empty;
+       tasks.swap(empty);
+   }
    condition.notify_all();
    for (auto& t : workers) {
-       if (t.joinable()) {
-           t.join();
-       }
+       if (t.joinable()) t.join();
    }
+   workers.clear();
 }
 
 template <typename F>
 void FiberPoolEx::Run(F&& f) {
+   if (stop_flag.load()) return;
    Task t;
    t.func = std::forward<F>(f);
    t.external = false;
    {
        std::lock_guard<std::mutex> lock(queue_mutex);
+       if (stop_flag.load()) return;
        tasks.emplace(std::move(t));
    }
    condition.notify_one();
@@ -215,12 +227,14 @@ void FiberPoolEx::run(F&& f) {
 
 template <typename F>
 void FiberPoolEx::RunExternal(F&& f, unsigned delayMs) {
+   if (stop_flag.load()) return;
    Task t;
    t.func = std::forward<F>(f);
    t.external = true;
    t.delayMs = delayMs;
    {
        std::lock_guard<std::mutex> lock(queue_mutex);
+       if (stop_flag.load()) return;
        tasks.emplace(std::move(t));
    }
    condition.notify_one();

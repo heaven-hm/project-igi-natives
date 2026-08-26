@@ -174,6 +174,21 @@ void CleanUpAndExitThread(HMODULE hModule) {
     LOG_INFO("Console cleanup finished");
   }
 
+  if (g_Camera.IsFreeCamRunning() || !g_PlayerEnabled.load()) {
+    g_CleanupCameraDone.store(false);
+    FiberPool::Instance().RunExternal([] {
+      g_Camera.EndFreeCam();
+      RestoreFreeCamInput();
+      g_CleanupCameraDone.store(true);
+    }, 0);
+
+    for (int attempt = 0; attempt < 200 && !g_CleanupCameraDone.load(); ++attempt) {
+      std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+  }
+  g_Camera.StopFreeCam();
+  FiberPoolEx::Instance().Shutdown();
+
   // MinHook cleanup
   if (!g_minHookCleaned) {
     LOG_INFO("MinHook cleanup started");

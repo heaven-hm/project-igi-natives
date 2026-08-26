@@ -54,7 +54,7 @@ void GameResource::ExtractResourceFile(string resource_type) {
 	LOG_INFO("res_count: %d", res_count);
 
 	for (const auto& resource : game_resources) {
-		if (resource.name.find(resource_type) != std::string::npos) {
+		if (resource.name.find(resource_type) != std::string::npos && resource.size != 0 && resource.address != 0) {
 			//int res_count = std::count_if(game_resources.begin(), game_resources.end(), [&](Resource x) {return resource.address == x.address; });
 			//if (res_count > 1)
 			//	game_resources_set.insert(resource.name);
@@ -135,6 +135,7 @@ void GameResource::MEF_RemoveModel(string model) {
 	try {
 		for (const auto& resource : game_resources) {
 			if (resource.name.find(GAME_RESOURCE_MEF) != string::npos) {
+				if (resource.size == 0 || resource.address == 0) continue;
 				address_t model_addr;
 				string model_id, model_name;
 				bool model_match = false;
@@ -163,8 +164,7 @@ void GameResource::MEF_RemoveModel(string model) {
 
 			//If model Id/Name matches.
 			if (model_match) {
-					const size_t scan_size = resource.size != 0 ? resource.size : 500000;
-					binary_t model_data(scan_size, '\0');
+					binary_t model_data(resource.size, '\0');
 						std::memcpy(model_data.data(), (void*)model_addr, model_data.size());
 
 					//Find end point of MEF and resize buffer.

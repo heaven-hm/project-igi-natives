@@ -1,7 +1,6 @@
 #include "Features_Editor.hpp"
 #include "Natives/NativeHelper.hpp"
 #include "Utils/FiberPool.hpp"
-#include "Utils/FiberPoolEx.hpp"
 #include "Utils/Logger.hpp"
 
 
@@ -26,6 +25,9 @@ void DllMainLoopEditor() {
 
 		g_level_changed ^= 1;
 	}
+
+	if (QueueFreeCamStep()) return;
+	if (g_FreeCamStepQueued.load()) return;
 
 	if (g_menu_screen == MENU_SCREEN_MAINMENU) {
 
@@ -129,10 +131,6 @@ void DllMainLoopEditor() {
 		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD0)) {
 			LOG_INFO("Ctrl+Numpad0: Free Camera Mode");
 
-			const int camera_level = g_game_level;
-			const int camera_menu = g_menu_screen;
-			g_PlayerEnabled = false;
-
 			Camera::Controls controls;
 			controls.UP(VK_SPACE);
 			controls.DOWN(VK_MENU);
@@ -143,21 +141,7 @@ void DllMainLoopEditor() {
 			controls.CALIBRATE(VK_BACK);
 			controls.QUIT(VK_HOME);
 			controls.AXIS_OFF(0.5f);
-			FiberPool::Instance().RunExternal([controls, camera_level, camera_menu]() mutable {
-				if (g_game_level != camera_level || g_menu_screen != camera_menu) return;
-				GAME::INPUT_DISABLE();
-				FiberPoolEx::Instance().RunExternal([controls, camera_level, camera_menu]() mutable {
-					if (g_game_level != camera_level || g_menu_screen != camera_menu) return;
-					g_Camera.FreeCam(controls);
-					FiberPool::Instance().RunExternal([camera_level, camera_menu] {
-						if (g_game_level == camera_level && g_menu_screen == camera_menu) {
-							GAME::INPUT_ENABLE();
-							g_PlayerEnabled = true;
-							LOG_INFO("Free camera mode activated");
-						}
-					}, 0);
-				}, 0);
-			}, 0);
+			QueueFreeCamRequest(controls, g_game_level, g_menu_screen);
 		}
 
 		//Alt-Menu Controls.
@@ -525,8 +509,8 @@ void DllMainLoopEditor() {
 			}
 		}
 
-		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD0)) {
-			LOG_INFO("Ctrl+Numpad 0: Set Player Active Mission (from data)");
+		else if (g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_NUMPAD9)) {
+			LOG_INFO("Ctrl+Numpad 9: Set Player Active Mission (from data)");
 			try {
 				string mission = g_Utility.InternalDataRead();
 				LOG_INFO("Player Active mission set %s", mission.c_str());
@@ -562,7 +546,11 @@ void DllMainLoopEditor() {
 			try {
 				if (vec.size() < 2) throw std::invalid_argument("expected index and mission");
 				int index = std::stoi(vec.at(0));
-				byte mission = (byte)std::stoi(vec.at(1));
+				int mission_id = std::stoi(vec.at(1));
+				if (mission_id < 1 || mission_id > 14) {
+					throw std::invalid_argument("mission must be between 1 and 14");
+				}
+				byte mission = static_cast<byte>(mission_id);
 				FiberPool::Instance().RunExternal([=] {
 					PLAYER::INDEX_MISSION_SET(index, mission);
 				}, 3);

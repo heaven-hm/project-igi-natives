@@ -1,13 +1,12 @@
 #pragma once
 #include "../Common.hpp"
 #include "../Libs/GTLibc.hpp"
-#include "../Utils/FiberPoolEx.hpp"
+#include <atomic>
 
 namespace IGI {
 	class Camera
 	{
 	private:
-		bool free_cam_run = false;
 	public:
 		//Struct to store angle of camera.
 		struct Angle
@@ -112,6 +111,11 @@ namespace IGI {
 			void AXIS_OFF(float axis_off) { this->axis_off = axis_off; }
 		};
 
+	private:
+		std::atomic_bool free_cam_run{false};
+		Controls free_cam_controls;
+
+	public:
 		//Camera Section.
 
 		//Camera Default Ctors/Dtors.
@@ -133,9 +137,12 @@ namespace IGI {
 		void CalibrateView();
 		void Attach();
 		void Deattach();
+		void BeginFreeCam(const Controls&);
+		bool FreeCamStep();
+		void EndFreeCam();
+		bool IsFreeCamRunning() const { return free_cam_run.load(); }
+		void StopFreeCam() { free_cam_run.store(false); }
 		void FreeCam(Controls&);
-		void RunFreeCamThread(Controls&);
-		void RunFreeCamFiber(Controls&);
 	};
 	inline Camera g_Camera;
 }

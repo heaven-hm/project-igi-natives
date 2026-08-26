@@ -54,7 +54,7 @@ namespace IGI {
 
 	namespace DEBUG {
 		NATIVE_DECL void INIT() { *(int*)0x0056DF94 = 1; *(int*)0x00A5EA75 = (int)0x005C8BF4; }
-		NATIVE_DECL void INIT(const char* font_type) { *(int*)0x00A5EA75 = (int)0x005C8BF4; char* destination = (char*)0x0054D958; std::memset(destination, 0, PLAYER_NAME_SIZE); std::strncpy(destination, font_type, PLAYER_NAME_SIZE - 1); }
+		NATIVE_DECL void INIT(const char* font_type) { constexpr size_t DEBUG_FONT_PATH_SIZE = 0x20; *(int*)0x00A5EA75 = (int)0x005C8BF4; char* destination = (char*)0x0054D958; if (!font_type) font_type = GAME_FONT_DEBUG; std::memset(destination, 0, DEBUG_FONT_PATH_SIZE); std::strncpy(destination, font_type, DEBUG_FONT_PATH_SIZE - 1); }
 		NATIVE_DECL void ENABLE(bool state) { *(uint8_t*)0x005BDC1C = state; }
 		NATIVE_DECL void KEYS_ENABLE(bool state) { *(uint8_t*)0x0057B194 = state; }
 		NATIVE_DECL void TEXT_ENABLE(bool state) { *(uint8_t*)0x00A5EA75 = state; }
