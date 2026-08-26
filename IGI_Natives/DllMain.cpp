@@ -56,10 +56,7 @@ std::unique_ptr<DbgHelper> dbg_instance;
 // Global thread control variables
 std::atomic<bool> g_running{false};
 std::atomic<bool> g_cleanupDone{false};
-std::atomic<int> g_gameHookCallbacks{0};
 std::atomic<bool> g_hookCallbacksClosing{false};
-std::mutex g_hookCallbackStartMutex;
-std::condition_variable g_hookCallbackCv;
 std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
 
@@ -204,25 +201,8 @@ bool CleanUpAndExitThread(HMODULE hModule) {
   g_cleanupDone.store(true);
   g_hookCallbacksClosing.store(true);
 
-	// Stop new detours before waiting for every entered detour to return.
-	if (!g_minHookCleaned) MH_DisableHook(MH_ALL_HOOKS);
-	std::unique_lock<std::mutex> hook_callback_lock(g_hookCallbackStartMutex);
-  g_hookCallbackCv.wait(hook_callback_lock, [] {
-    return g_gameHookCallbacks.load() == 0;
-  });
-
   DEBUG::TEXT_ENABLE(false);
 
-  // MinHook cleanup
-  if (!g_minHookCleaned) {
-    LOG_INFO("MinHook cleanup started");
-    MH_Uninitialize();
-    g_minHookCleaned = true;
-    LOG_INFO("MinHook cleanup finished");
-  } else {
-    LOG_INFO("MinHook already cleaned up, skipping");
-  }
-
-  LOG_INFO("Cleanup completed - hooks disabled; DLL remains loaded until process exit");
+  LOG_INFO("Cleanup completed; hooks remain installed in pass-through mode until process exit");
   return true;
 }

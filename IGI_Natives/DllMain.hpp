@@ -117,4 +117,3 @@ bool CleanUpAndExitThread(HMODULE hModule);
 extern std::atomic<bool> g_running;
 extern std::thread g_mainLoopThread;
 extern std::atomic<bool> g_cleanupDone;
-extern std::atomic<int> g_gameHookCallbacks;

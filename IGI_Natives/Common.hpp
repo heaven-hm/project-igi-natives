@@ -35,28 +35,15 @@ inline HANDLE g_Main_Thread{};
 inline DWORD g_Main_Thread_Id{};
 
 extern std::atomic<bool> g_cleanupDone;
-extern std::atomic<int> g_gameHookCallbacks;
 extern std::atomic<bool> g_hookCallbacksClosing;
-extern std::mutex g_hookCallbackStartMutex;
-extern std::condition_variable g_hookCallbackCv;
 
 class HookCallbackGuard {
 public:
-	HookCallbackGuard() {
-		g_gameHookCallbacks.fetch_add(1);
-		m_active = !g_hookCallbacksClosing.load();
-	}
-
-	~HookCallbackGuard() {
-		if (!m_counted) return;
-		g_gameHookCallbacks.fetch_sub(1);
-		g_hookCallbackCv.notify_all();
-	}
+	HookCallbackGuard() : m_active(!g_hookCallbacksClosing.load()) {}
 
 	bool Active() const { return m_active; }
 
 private:
-	bool m_counted{true};
 	bool m_active{false};
 };
 

@@ -373,7 +373,10 @@ int IsResourceLoadedDetour(char* param_1, int* param_2) {
 
 void ResourceUnpackDetour(int* res_ptr, int res_addr, int res_size) {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return;
+	if (!callback_guard.Active()) {
+		ResourceUnpackOut(res_ptr, res_addr, res_size);
+		return;
+	}
 	void* res_name_addr = (void*)0x00A7B658;
 	//LOG_INFO("ResourceUnpack ptr: %p, %s addr: %p size : %p", res_ptr, res_name_addr,res_addr, res_size);
 	const char* resource_name = (const char*)res_name_addr;
@@ -397,7 +400,7 @@ void ResourceUnpackDetour(int* res_ptr, int res_addr, int res_size) {
 
 int* __cdecl LoadResourceDetour(char* res_name, char** res_buf) {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return nullptr;
+	if (!callback_guard.Active()) return LoadResourceOut(res_name, res_buf);
 	auto res_addr = LoadResourceOut(res_name, res_buf);
 	//LOG_INFO("%s '%s' : %p\tAddress: %p", "LoadResource", res_name, res_name, res_addr);
 
@@ -585,14 +588,20 @@ uint32_t GetHumanHitDetour(void) {
 
 void ShowWarningDetour(LPCSTR warn_msg) {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return;
+	if (!callback_guard.Active()) {
+		ShowWarningOut(warn_msg);
+		return;
+	}
 	LOG_FILE("%s warn_msg: %s", "ShowWarning", warn_msg);
 	ShowWarningOut(warn_msg);
 }
 
 void ShowErrorDetour(LPCSTR err_msg) {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return;
+	if (!callback_guard.Active()) {
+		ShowErrorOut(err_msg);
+		return;
+	}
 	LOG_FILE("%s err_msg: %s", "ShowError", err_msg);
 	ShowErrorOut(err_msg);
 }
@@ -632,7 +641,10 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 // so we can use this as GameLoop for now, but we need to find a better way to do this. :)
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return;
+	if (!callback_guard.Active()) {
+		TextPrintOut(param_1, param_2, param_3, param_4);
+		return;
+	}
 	TextPrintOut(param_1, param_2, param_3, param_4);
 }
 
@@ -652,7 +664,7 @@ int __cdecl LoadGameDataDetour(char* res_buf, const char* res_path, const char* 
 
 int __cdecl  StatusMsgDetour(int send_status, const char* buffer, const char* msg_sprite, const char* status_byte_addr) {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return 0;
+	if (!callback_guard.Active()) return StatusMsgOut(send_status, buffer, msg_sprite, status_byte_addr);
 	//g_DbgHelper->StackTrace(true, false, true);
 	string status_buf = g_Utility.Trim(string(buffer));
 	//LOG_CONSOLE("%s send_status : %p buffer : '%s' msg_sprite : %p status_byte : %p", FUNC_NAME, send_status, status_buf.c_str(), msg_sprite, status_byte_addr);
@@ -764,7 +776,7 @@ int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param3)
 {
 	HookCallbackGuard callback_guard;
-	if (!callback_guard.Active()) return 0;
+	if (!callback_guard.Active()) return GameMainLoopOut(param1, param2, param3);
 	if (!g_cleanupDone.load()) FiberPool::Instance().RunPending();
 
 	// --- Run Features safely on game thread ---
