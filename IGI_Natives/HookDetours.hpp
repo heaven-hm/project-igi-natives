@@ -13,6 +13,9 @@
 #include "Graphs/Graph.hpp"
 #include "Utils/FiberPool.hpp"
 
+extern std::atomic<bool> g_cleanupDone;
+extern std::atomic<int> g_gameHookCallbacks;
+
 //Testing.
 bool graph_runner = false;
 
@@ -381,6 +384,7 @@ void ResourceUnpackDetour(int* res_ptr, int res_addr, int res_size) {
 	if (!res_name.empty() && res_addr != 0 && res_size > 0) {
 		const size_t resource_size = static_cast<size_t>(res_size) + 0x1C + 4;
 		bool updated = false;
+		std::lock_guard<std::mutex> lock(game_resources_mutex);
 		for (auto& resource : game_resources) {
 			if (resource.name == res_name && resource.address == (address_t)res_addr) {
 				resource.size = resource_size;
@@ -398,6 +402,7 @@ int* __cdecl LoadResourceDetour(char* res_name, char** res_buf) {
 
 	//Adding resources to game resources list.
 	if (res_name && *res_name && res_addr) {
+		std::lock_guard<std::mutex> lock(game_resources_mutex);
 		game_resources.emplace_back(string(res_name), (address_t)res_addr, 0);
 	}
 
@@ -621,8 +626,10 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 // Run pending tasks scheduled via FiberPool - This game method runs every frame printing text HUD messages, 
 // so we can use this as GameLoop for now, but we need to find a better way to do this. :)
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
-	FiberPool::Instance().RunPending();
+	g_gameHookCallbacks.fetch_add(1);
+	if (!g_cleanupDone.load()) FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
+	g_gameHookCallbacks.fetch_sub(1);
 }
 
 int __cdecl SetGameDataSymbolDetour(char* symbol_file) {
@@ -750,7 +757,8 @@ int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 
 int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param3)
 {
-	FiberPool::Instance().RunPending();
+	g_gameHookCallbacks.fetch_add(1);
+	if (!g_cleanupDone.load()) FiberPool::Instance().RunPending();
 	LOG_INFO("GameMainLoopDetour: Entered game update hook");
 	LOG_INFO("%s param1 : %p param2 : %u param3 : %u", "GameMainLoopDetour", (void*)param1, param2, param3);
 
@@ -764,6 +772,8 @@ int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param
 	//LOG_INFO("hkFunGameUpdate: RunPending finished");
 
 	// --- Call original game update ---
-		return GameMainLoopOut(param1, param2, param3);
+		int result = GameMainLoopOut(param1, param2, param3);
+		g_gameHookCallbacks.fetch_sub(1);
+		return result;
 	//LOG_INFO("hkFunGameUpdate: Exiting game update hook");
 }

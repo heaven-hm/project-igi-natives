@@ -56,6 +56,7 @@ std::unique_ptr<DbgHelper> dbg_instance;
 // Global thread control variables
 std::atomic<bool> g_running{false};
 std::atomic<bool> g_cleanupDone{false};
+std::atomic<int> g_gameHookCallbacks{0};
 std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
 
@@ -160,7 +161,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 
 // Cleanup and exit thread after DLL detach.
 void CleanUpAndExitThread(HMODULE hModule) {
-  g_cleanupDone = true;
+  g_running = false;
 
   // Disable debug hotkeys
   DEBUG::KEYS_ENABLE(false);
@@ -185,9 +186,23 @@ void CleanUpAndExitThread(HMODULE hModule) {
     for (int attempt = 0; attempt < 200 && !g_CleanupCameraDone.load(); ++attempt) {
       std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
+    if (!g_CleanupCameraDone.load()) {
+      LOG_ERROR("Game-thread camera cleanup did not complete; keeping hooks and DLL loaded");
+      return;
+    }
   }
   g_Camera.StopFreeCam();
+  FiberPool::Instance().Shutdown();
   FiberPoolEx::Instance().Shutdown();
+  g_cleanupDone.store(true);
+
+  for (int attempt = 0; attempt < 200 && g_gameHookCallbacks.load() != 0; ++attempt) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+  }
+  if (g_gameHookCallbacks.load() != 0) {
+    LOG_ERROR("Game hook callback is still active; keeping hooks and DLL loaded");
+    return;
+  }
 
   // MinHook cleanup
   if (!g_minHookCleaned) {
@@ -201,7 +216,6 @@ void CleanUpAndExitThread(HMODULE hModule) {
   }
 
   LOG_INFO("Cleanup completed - stopping main loop");
-  g_running = false;
 
   // Create a remote thread to eject the DLL from outside its context
   std::thread ejectThread([hModule]() {

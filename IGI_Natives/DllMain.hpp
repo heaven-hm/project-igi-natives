@@ -28,6 +28,9 @@ inline std::atomic_bool g_PlayerEnabled{true};
 inline std::atomic_bool g_FreeCamStepQueued{false};
 inline std::atomic_int g_FreeCamLevel{-1};
 inline std::atomic_int g_FreeCamMenu{-1};
+inline std::atomic_uint64_t g_FreeCamGeneration{0};
+inline std::atomic_int g_FreeCamObservedLevel{-1};
+inline std::atomic_int g_FreeCamObservedMenu{-1};
 inline std::atomic_bool g_CleanupCameraDone{false};
 inline constexpr int delay_ms = 2500;
 
@@ -52,15 +55,26 @@ inline void RestoreFreeCamInput() {
   g_PlayerEnabled.store(true);
 }
 
+inline void ObserveFreeCamContext(int level, int menu) {
+  const int previous_level = g_FreeCamObservedLevel.exchange(level);
+  const int previous_menu = g_FreeCamObservedMenu.exchange(menu);
+  if ((previous_level >= 0 && previous_level != level) ||
+      (previous_menu >= 0 && previous_menu != menu)) {
+    g_FreeCamGeneration.fetch_add(1);
+  }
+}
+
 inline void QueueFreeCamRequest(const Camera::Controls& controls, int level,
                                 int menu) {
   if (g_FreeCamStepQueued.exchange(true)) return;
 
   g_FreeCamLevel.store(level);
   g_FreeCamMenu.store(menu);
+  const uint64_t generation = g_FreeCamGeneration.fetch_add(1) + 1;
   g_PlayerEnabled.store(false);
-  FiberPool::Instance().RunExternal([controls, level, menu]() mutable {
-    if (g_game_level != level || g_menu_screen != menu) {
+  FiberPool::Instance().RunExternal([controls, level, menu, generation]() mutable {
+    if (g_FreeCamGeneration.load() != generation || g_game_level.load() != level ||
+        g_menu_screen.load() != menu) {
       RestoreFreeCamInput();
       g_FreeCamStepQueued.store(false);
       return;
@@ -81,8 +95,10 @@ inline bool QueueFreeCamStep() {
 
   const int level = g_FreeCamLevel.load();
   const int menu = g_FreeCamMenu.load();
-  FiberPool::Instance().RunExternal([level, menu] {
-    if (g_game_level != level || g_menu_screen != menu) {
+  const uint64_t generation = g_FreeCamGeneration.load();
+  FiberPool::Instance().RunExternal([level, menu, generation] {
+    if (g_FreeCamGeneration.load() != generation || g_game_level.load() != level ||
+        g_menu_screen.load() != menu) {
       g_Camera.EndFreeCam();
       RestoreFreeCamInput();
     } else if (!g_Camera.FreeCamStep()) {
@@ -100,3 +116,5 @@ void CleanUpAndExitThread(HMODULE hModule);
 // Global thread control variables
 extern std::atomic<bool> g_running;
 extern std::thread g_mainLoopThread;
+extern std::atomic<bool> g_cleanupDone;
+extern std::atomic<int> g_gameHookCallbacks;

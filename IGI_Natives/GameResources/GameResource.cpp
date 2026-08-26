@@ -25,7 +25,12 @@ void GameResource::SaveGameResource(string file, string resource_type) {
 
 	std::ofstream fout(res_file, std::ios_base::app);
 	if (fout.good()) {
-		for (auto& resource : game_resources) {
+		std::vector<Resource> resources;
+		{
+			std::lock_guard<std::mutex> lock(game_resources_mutex);
+			resources = game_resources;
+		}
+		for (const auto& resource : resources) {
 			if (resource.name.find(resource_type) != std::string::npos) {
 				fout << "Resource: '" << resource.name << "'\tAddress: " << HEX_ADDR_STR(resource.address) << std::endl;
 			}
@@ -36,6 +41,7 @@ void GameResource::SaveGameResource(string file, string resource_type) {
 }
 
 address_t GameResource::FindGameResource(string resource_name) {
+	std::lock_guard<std::mutex> lock(game_resources_mutex);
 	for (const auto& resource : game_resources) {
 		if (resource.name.find(resource_name) != std::string::npos) {
 			return resource.address;
@@ -49,11 +55,16 @@ void GameResource::ExtractResourceFile(string resource_type) {
 	string res_dir = "level" + std::to_string(g_curr_level) + "_" + resource_type;
 	fs::create_directory(res_dir);
 
-	int res_count = std::count_if(game_resources.begin(), game_resources.end(), [&](Resource x) {return (int)x.name.find(resource_type) != std::string::npos; });
+	std::vector<Resource> resources;
+	{
+		std::lock_guard<std::mutex> lock(game_resources_mutex);
+		resources = game_resources;
+	}
+	int res_count = std::count_if(resources.begin(), resources.end(), [&](const Resource& x) {return (int)x.name.find(resource_type) != std::string::npos; });
 	//mef_count /= 2;
 	LOG_INFO("res_count: %d", res_count);
 
-	for (const auto& resource : game_resources) {
+	for (const auto& resource : resources) {
 		if (resource.name.find(resource_type) != std::string::npos && resource.size != 0 && resource.address != 0) {
 			//int res_count = std::count_if(game_resources.begin(), game_resources.end(), [&](Resource x) {return resource.address == x.address; });
 			//if (res_count > 1)
@@ -72,6 +83,7 @@ void GameResource::ExtractResource(Resource resource, string res_dir) {
 			return;
 		}
 		const string resource_id = resource.name;
+		std::lock_guard<std::mutex> set_lock(game_resources_set_mutex);
 		const bool resource_exist = game_resources_set.find(resource_id) != game_resources_set.end();
 		if (resource_exist) return;
 
@@ -133,7 +145,12 @@ string GameResource::MEF_FindModelId(string model_id, bool full_id)
 void GameResource::MEF_RemoveModel(string model) {
 
 	try {
-		for (const auto& resource : game_resources) {
+		std::vector<Resource> resources;
+		{
+			std::lock_guard<std::mutex> lock(game_resources_mutex);
+			resources = game_resources;
+		}
+		for (const auto& resource : resources) {
 			if (resource.name.find(GAME_RESOURCE_MEF) != string::npos) {
 				if (resource.size == 0 || resource.address == 0) continue;
 				address_t model_addr;

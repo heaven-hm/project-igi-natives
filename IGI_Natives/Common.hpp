@@ -21,6 +21,7 @@
 #include <regex>
 #include <tuple>
 #include <set>
+#include <atomic>
 #include "CommonConst.hpp"
 
 using std::string;
@@ -37,7 +38,9 @@ inline byte status_byte = *(byte*)status_byte_addr;
 inline int gun_pickup_ptr = READ_STATIC_PTR_OFF2(0x005BDC6C, 0x1B0, 0xCB4);
 inline int humanplayer_ptr = READ_STATIC_PTR_OFF2(0x0056E210, 0x40, 0x24);
 inline int menu_screen_ptr = READ_STATIC_PTR_OFF(0x00567C8C, 0x28);
-inline int g_game_level = 1, g_curr_level = 1, g_menu_screen = 0;
+inline std::atomic_int g_game_level{1};
+inline int g_curr_level = 1;
+inline std::atomic_int g_menu_screen{0};
 inline bool	g_level_changed = false;
 
 #define LOGGER_FILE string(PROJECT_NAME) + ".log"

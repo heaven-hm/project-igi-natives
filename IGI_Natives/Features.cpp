@@ -9,6 +9,7 @@
 void DllMainLoop() {
   g_menu_screen = READ_PTR(menu_screen_ptr);
   g_game_level = LEVEL::GET();
+  ObserveFreeCamContext(g_game_level.load(), g_menu_screen.load());
   // LOG_INFO("Features: Menu Screen = %d, Game Level = %d", g_menu_screen,
   // g_game_level);
 
@@ -40,6 +41,7 @@ void DllMainLoop() {
 
   // Menu handling
   if (g_menu_screen == MENU_SCREEN_MAINMENU) {
+    std::lock_guard<std::mutex> lock(game_resources_mutex);
     game_resources.clear();
     g_level_graphs.clear();
   }
@@ -114,7 +116,7 @@ void DllMainLoop() {
       controls.CALIBRATE(VK_BACK);
       controls.QUIT(VK_HOME);
       controls.AXIS_OFF(0.5f);
-      QueueFreeCamRequest(controls, g_game_level, g_menu_screen);
+      QueueFreeCamRequest(controls, g_game_level.load(), g_menu_screen.load());
     }
 
     // Show status message.

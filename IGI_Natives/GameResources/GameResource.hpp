@@ -2,6 +2,7 @@
 #include "../Common.hpp"
 #include "../CommonConst.hpp"
 #include "../Utils/Utility.hpp"
+#include <mutex>
 
 namespace IGI {
 	//Struct to hold internal resource properties.
@@ -60,6 +61,8 @@ namespace IGI {
 
 	inline GameResource* g_Resource{};
 	inline std::vector<Resource> game_resources;
+	inline std::mutex game_resources_mutex;
 	inline std::vector<ResourceMEF> mef_resources;
 	inline std::set<string> game_resources_set;
+	inline std::mutex game_resources_set_mutex;
 }

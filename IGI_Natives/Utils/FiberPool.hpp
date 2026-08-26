@@ -4,6 +4,8 @@
 #include <mutex>
 #include <queue>
 #include <vector>
+#include <atomic>
+#include <condition_variable>
 
 /**
  * FiberPool - IGI-Specific Task Scheduler
@@ -30,8 +32,22 @@ public:
   // Schedule a function to execute on the main thread
   // pre_delay_frames = frames to wait before execution
   void RunExternal(std::function<void()> fn, int pre_delay_frames = 0) {
+    if (!m_accepting.load()) return;
     std::lock_guard<std::mutex> lock(m_mutex);
+    if (!m_accepting.load()) return;
     m_queue.push({std::move(fn), pre_delay_frames});
+  }
+
+  void Shutdown() {
+    {
+      std::lock_guard<std::mutex> lock(m_mutex);
+      m_accepting.store(false);
+      std::queue<Task> empty;
+      m_queue.swap(empty);
+    }
+    m_state_cv.notify_all();
+    std::unique_lock<std::mutex> lock(m_mutex);
+    m_state_cv.wait(lock, [this] { return !m_running_pending; });
   }
 
   // Run pending tasks on the main thread; call this every frame
@@ -40,6 +56,8 @@ public:
 
     {
       std::lock_guard<std::mutex> lock(m_mutex);
+      if (!m_accepting.load()) return;
+      m_running_pending = true;
       std::queue<Task> new_queue;
 
       while (!m_queue.empty()) {
@@ -68,8 +86,16 @@ public:
         task.fn();
       } catch (const std::exception &ex) {
         IGI::LOG_INFO("Exception in game task: %s", ex.what());
+      } catch (...) {
+        IGI::LOG_INFO("Unknown exception in game task");
       }
     }
+
+    {
+      std::lock_guard<std::mutex> lock(m_mutex);
+      m_running_pending = false;
+    }
+    m_state_cv.notify_all();
   }
 
 private:
@@ -80,4 +106,7 @@ private:
 
   std::queue<Task> m_queue;
   std::mutex m_mutex;
+  std::condition_variable m_state_cv;
+  std::atomic_bool m_accepting{true};
+  bool m_running_pending{false};
 };

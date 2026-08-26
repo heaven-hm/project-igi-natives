@@ -8,6 +8,7 @@ void DllMainLoopEditor() {
 	static bool model_bool = false;
 	g_menu_screen = READ_PTR(menu_screen_ptr);
 	g_game_level = LEVEL::GET();
+	ObserveFreeCamContext(g_game_level.load(), g_menu_screen.load());
 	if (g_curr_level != g_game_level) {
 		g_curr_level = g_game_level;
 		g_level_changed = true;
@@ -31,6 +32,7 @@ void DllMainLoopEditor() {
 
 	if (g_menu_screen == MENU_SCREEN_MAINMENU) {
 
+		std::lock_guard<std::mutex> lock(game_resources_mutex);
 		game_resources.clear();
 		g_level_graphs.clear();
 	}
@@ -141,7 +143,7 @@ void DllMainLoopEditor() {
 			controls.CALIBRATE(VK_BACK);
 			controls.QUIT(VK_HOME);
 			controls.AXIS_OFF(0.5f);
-			QueueFreeCamRequest(controls, g_game_level, g_menu_screen);
+			QueueFreeCamRequest(controls, g_game_level.load(), g_menu_screen.load());
 		}
 
 		//Alt-Menu Controls.
@@ -546,6 +548,9 @@ void DllMainLoopEditor() {
 			try {
 				if (vec.size() < 2) throw std::invalid_argument("expected index and mission");
 				int index = std::stoi(vec.at(0));
+				if (index < 0 || index >= 16) {
+					throw std::invalid_argument("profile index must be between 0 and 15");
+				}
 				int mission_id = std::stoi(vec.at(1));
 				if (mission_id < 1 || mission_id > 14) {
 					throw std::invalid_argument("mission must be between 1 and 14");
@@ -570,6 +575,9 @@ void DllMainLoopEditor() {
 			try {
 				if (vec.size() < 2) throw std::invalid_argument("expected index and name");
 				int index = std::stoi(vec.at(0));
+				if (index < 0 || index >= 16) {
+					throw std::invalid_argument("profile index must be between 0 and 15");
+				}
 				string name = vec.at(1);
 				FiberPool::Instance().RunExternal([=] {
 					PLAYER::INDEX_NAME_SET(index, name);
