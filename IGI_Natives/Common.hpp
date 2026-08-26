@@ -36,12 +36,38 @@ inline DWORD g_Main_Thread_Id{};
 
 extern std::atomic<bool> g_cleanupDone;
 extern std::atomic<bool> g_hookCallbacksClosing;
+extern std::atomic<unsigned int> g_hookCallbacksInFlight;
+extern std::mutex g_hookCallbacksMutex;
+extern std::condition_variable g_hookCallbacksDrained;
 
 class HookCallbackGuard {
 public:
-	HookCallbackGuard() : m_active(!g_hookCallbacksClosing.load()) {}
+	HookCallbackGuard() {
+		std::lock_guard<std::mutex> lock(g_hookCallbacksMutex);
+		if (g_hookCallbacksClosing.load(std::memory_order_acquire)) return;
+		g_hookCallbacksInFlight.fetch_add(1, std::memory_order_acq_rel);
+		m_active = true;
+	}
+
+	~HookCallbackGuard() {
+		if (!m_active) return;
+		if (g_hookCallbacksInFlight.fetch_sub(1, std::memory_order_acq_rel) == 1)
+			g_hookCallbacksDrained.notify_all();
+	}
 
 	bool Active() const { return m_active; }
+
+	static void CloseAndDrain() {
+		{
+			std::lock_guard<std::mutex> lock(g_hookCallbacksMutex);
+			g_hookCallbacksClosing.store(true, std::memory_order_release);
+		}
+
+		std::unique_lock<std::mutex> lock(g_hookCallbacksMutex);
+		g_hookCallbacksDrained.wait(lock, [] {
+			return g_hookCallbacksInFlight.load(std::memory_order_acquire) == 0;
+		});
+	}
 
 private:
 	bool m_active{false};

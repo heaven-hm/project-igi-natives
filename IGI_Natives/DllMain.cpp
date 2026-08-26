@@ -57,6 +57,9 @@ std::unique_ptr<DbgHelper> dbg_instance;
 std::atomic<bool> g_running{false};
 std::atomic<bool> g_cleanupDone{false};
 std::atomic<bool> g_hookCallbacksClosing{false};
+std::atomic<unsigned int> g_hookCallbacksInFlight{0};
+std::mutex g_hookCallbacksMutex;
+std::condition_variable g_hookCallbacksDrained;
 std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
 
@@ -164,12 +167,6 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 // Cleanup and exit thread after DLL detach.
 bool CleanUpAndExitThread(HMODULE hModule) {
   (void)hModule;
-  g_running = false;
-
-  // Disable debug hotkeys
-  DEBUG::KEYS_ENABLE(false);
-  LOG_INFO("Debug Hotkeys disabled");
-
   if (g_Camera.IsFreeCamRunning() || !g_PlayerEnabled.load()) {
     g_CleanupCameraDone.store(false);
     FiberPool::Instance().RunExternal([] {
@@ -188,6 +185,13 @@ bool CleanUpAndExitThread(HMODULE hModule) {
       return false;
     }
   }
+
+  HookCallbackGuard::CloseAndDrain();
+  g_running.store(false);
+
+  // Disable debug hotkeys only after game-thread camera cleanup succeeds.
+  DEBUG::KEYS_ENABLE(false);
+  LOG_INFO("Debug Hotkeys disabled");
 
   // Console cleanup
   if (console_instance && console_instance->IsAllocated()) {
