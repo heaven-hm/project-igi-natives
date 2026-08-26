@@ -10,6 +10,7 @@ namespace IGI {
 		Hook(bool);
 		~Hook();
 		bool Initialize();
+		MH_STATUS Uninitialize();
 		inline MH_STATUS CreateHooks();
 		inline MH_STATUS EnableHook(LPVOID);
 		inline MH_STATUS EnableHooks();

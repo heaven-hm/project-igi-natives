@@ -40,6 +40,23 @@ bool Hook::Initialize() {
 	return true;
 }
 
+MH_STATUS Hook::Uninitialize() {
+	// DisableHooks() must run before this method and all detour frames must
+	// already be drained before MinHook releases its hook state.
+	extern std::atomic<bool> g_minHookCleaned;
+	if (g_minHookCleaned.load(std::memory_order_acquire)) return MH_OK;
+
+	MH_STATUS status = MH_Uninitialize();
+	if (status == MH_OK) {
+		g_minHookCleaned.store(true, std::memory_order_release);
+		LOG_INFO("Minhook uninitialized");
+	}
+	else {
+		LOG_ERROR("Minhook uninitialize error : %s", MH_StatusToString(status));
+	}
+	return status;
+}
+
 MH_STATUS Hook::CreateHooks() {
 
 	if (hook_status != MH_OK) return MH_ERROR_NOT_INITIALIZED;

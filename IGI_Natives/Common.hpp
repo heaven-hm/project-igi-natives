@@ -44,9 +44,8 @@ class HookCallbackGuard {
 public:
 	HookCallbackGuard() {
 		std::lock_guard<std::mutex> lock(g_hookCallbacksMutex);
-		if (g_hookCallbacksClosing.load(std::memory_order_acquire)) return;
 		g_hookCallbacksInFlight.fetch_add(1, std::memory_order_acq_rel);
-		m_active = true;
+		m_active = !g_hookCallbacksClosing.load(std::memory_order_acquire);
 	}
 
 	~HookCallbackGuard() {
@@ -57,12 +56,19 @@ public:
 
 	bool Active() const { return m_active; }
 
-	static void CloseAndDrain() {
+	static void BeginClosing() {
 		{
 			std::lock_guard<std::mutex> lock(g_hookCallbacksMutex);
 			g_hookCallbacksClosing.store(true, std::memory_order_release);
 		}
+	}
 
+	static void Reopen() {
+		std::lock_guard<std::mutex> lock(g_hookCallbacksMutex);
+		g_hookCallbacksClosing.store(false, std::memory_order_release);
+	}
+
+	static void WaitForDrain() {
 		std::unique_lock<std::mutex> lock(g_hookCallbacksMutex);
 		g_hookCallbacksDrained.wait(lock, [] {
 			return g_hookCallbacksInFlight.load(std::memory_order_acquire) == 0;

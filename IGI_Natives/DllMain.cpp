@@ -62,8 +62,26 @@ std::mutex g_hookCallbacksMutex;
 std::condition_variable g_hookCallbacksDrained;
 std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
+namespace {
+constexpr char kShutdownRequestEventName[] = "Local\\IGI_Natives_ShutdownRequest";
+constexpr char kShutdownCompleteEventName[] = "Local\\IGI_Natives_ShutdownComplete";
+}
+HANDLE g_shutdownRequestEvent{};
+HANDLE g_shutdownCompleteEvent{};
 
 BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
+  if (dwReason == DLL_PROCESS_DETACH) {
+    if (g_shutdownRequestEvent) {
+      CloseHandle(g_shutdownRequestEvent);
+      g_shutdownRequestEvent = nullptr;
+    }
+    if (g_shutdownCompleteEvent) {
+      CloseHandle(g_shutdownCompleteEvent);
+      g_shutdownCompleteEvent = nullptr;
+    }
+    return TRUE;
+  }
+
   if (dwReason == DLL_PROCESS_ATTACH) {
     DisableThreadLibraryCalls(hModule);
     g_Hmodule = hModule;
@@ -77,6 +95,12 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
 #endif
       // Initialize Logger and Core Systems
       logger_instance = std::make_unique<Log>();
+      g_shutdownRequestEvent = CreateEventA(nullptr, TRUE, FALSE, kShutdownRequestEventName);
+      g_shutdownCompleteEvent = CreateEventA(nullptr, TRUE, FALSE, kShutdownCompleteEventName);
+      if (!g_shutdownRequestEvent || !g_shutdownCompleteEvent)
+        throw std::runtime_error("Failed to create shutdown events");
+      ResetEvent(g_shutdownRequestEvent);
+      ResetEvent(g_shutdownCompleteEvent);
       auto game_font = LR"(
 ╔═══╦═══╦═══╗ ╔╦═══╦═══╦════╗  ╔══╦═══╦══╗                 
 ║╔═╗║╔═╗║╔═╗║░║║╔══╣╔═╗║╔╗╔╗║░░╚╣╠╣╔═╗╠╣╠╝	▄▌			▄ 
@@ -136,10 +160,15 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
         while (g_running) {
           DllMainLoop();
 
-          if (GT_IsKeyPressed(VK_END)) {
+          const bool shutdownRequested =
+              g_shutdownRequestEvent &&
+              WaitForSingleObject(g_shutdownRequestEvent, 0) == WAIT_OBJECT_0;
+          if (shutdownRequested || GT_IsKeyPressed(VK_END)) {
             LOG_INFO("END key pressed - starting cleanup");
             if (CleanUpAndExitThread(hModule)) {
               if (g_mainLoopThread.joinable()) g_mainLoopThread.detach();
+              if (g_shutdownCompleteEvent) SetEvent(g_shutdownCompleteEvent);
+              FreeLibraryAndExitThread(hModule, 0);
               return;
             }
           }
@@ -186,7 +215,18 @@ bool CleanUpAndExitThread(HMODULE hModule) {
     }
   }
 
-  HookCallbackGuard::CloseAndDrain();
+  HookCallbackGuard::BeginClosing();
+#ifdef USE_MINHOOK_LIB
+  if (hook_instance && hook_instance->DisableHooks() != MH_OK) {
+    LOG_ERROR("Unable to disable hooks for DLL unload; keeping DLL loaded");
+    HookCallbackGuard::Reopen();
+    return false;
+  }
+#endif
+  HookCallbackGuard::WaitForDrain();
+#ifdef USE_MINHOOK_LIB
+  if (hook_instance) hook_instance->Uninitialize();
+#endif
   g_running.store(false);
 
   // Disable debug hotkeys only after game-thread camera cleanup succeeds.
@@ -203,7 +243,6 @@ bool CleanUpAndExitThread(HMODULE hModule) {
   FiberPool::Instance().Shutdown();
   FiberPoolEx::Instance().Shutdown();
   g_cleanupDone.store(true);
-  g_hookCallbacksClosing.store(true);
 
   DEBUG::TEXT_ENABLE(false);
 

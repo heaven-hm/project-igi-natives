@@ -40,10 +40,20 @@ if not exist "%INJECTOR%" (
 echo [*] Using Configuration: %CONFIG%
 echo [*] Using Platform: %PLATFORM%
 
-:: === Step 1: Eject old DLL ===
-echo [*] Ejecting old DLL...
-"%INJECTOR%" -n "igi.exe" -e "%OUTDLL%"
-echo [*] Waiting 3 seconds after ejection...
+:: === Step 1: Gracefully unload old DLL ===
+echo [*] Requesting graceful shutdown of old DLL...
+powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "$event = [System.Threading.EventWaitHandle]::OpenExisting('Local\IGI_Natives_ShutdownRequest'); if (-not $event.Set()) { exit 1 }; $event.Dispose()"
+if errorlevel 1 (
+    echo [!] Old DLL does not expose the graceful shutdown protocol. Refusing unsafe ejection.
+    exit /b 1
+)
+echo [*] Waiting for old DLL cleanup and unload...
+powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "$event = [System.Threading.EventWaitHandle]::OpenExisting('Local\IGI_Natives_ShutdownComplete'); if (-not $event.WaitOne(15000)) { exit 1 }; $event.Dispose()"
+if errorlevel 1 (
+    echo [!] Old DLL did not complete graceful shutdown. Refusing unsafe ejection.
+    exit /b 1
+)
+echo [*] Old DLL shutdown completed. Waiting 3 seconds before rebuild...
 timeout /t 3 /nobreak >nul
 
 :: === Step 2: Build DLL ===
