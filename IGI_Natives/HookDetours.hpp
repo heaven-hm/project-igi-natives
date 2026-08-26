@@ -627,7 +627,6 @@ void __cdecl GamePrintTextDetour(int** param_1, char* param_2) {
 // so we can use this as GameLoop for now, but we need to find a better way to do this. :)
 void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param_4) {
 	g_gameHookCallbacks.fetch_add(1);
-	if (!g_cleanupDone.load()) FiberPool::Instance().RunPending();
 	TextPrintOut(param_1, param_2, param_3, param_4);
 	g_gameHookCallbacks.fetch_sub(1);
 }

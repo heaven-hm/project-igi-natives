@@ -255,8 +255,8 @@ MH_STATUS Hook::CreateHooks() {
 	if (mh_status != MH_OK && first_error == MH_OK) first_error = mh_status;
 	if (mh_status != MH_OK)LOG_ERROR("WeaponTypeOpen Createhook error : %s", MH_StatusToString(mh_status));
 
-	//mh_status = CreateHook(GameMainLoop, &GameMainLoopDetour, &GameMainLoopOut);
-	//if (mh_status != MH_OK) LOG_ERROR("GameMainLoop Createhook error : %s", MH_StatusToString(mh_status));
+	mh_status = CreateHook(GameMainLoop, &GameMainLoopDetour, &GameMainLoopOut);
+	if (mh_status != MH_OK) LOG_ERROR("GameMainLoop Createhook error : %s", MH_StatusToString(mh_status));
 
 	return first_error;
 }

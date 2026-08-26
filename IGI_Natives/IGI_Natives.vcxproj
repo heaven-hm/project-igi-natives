@@ -144,6 +144,11 @@
     <ClInclude Include="Utils\Logger.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="IGI-Natives.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Camera\Camera.cpp" />
     <ClCompile Include="Features.cpp" />
     <ClCompile Include="Features_Editor.cpp" />

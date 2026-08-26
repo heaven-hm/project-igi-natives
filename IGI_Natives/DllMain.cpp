@@ -165,7 +165,6 @@ void CleanUpAndExitThread(HMODULE hModule) {
 
   // Disable debug hotkeys
   DEBUG::KEYS_ENABLE(false);
-  DEBUG::TEXT_ENABLE(false);
   LOG_INFO("Debug Hotkeys disabled");
 
   // Console cleanup
@@ -203,6 +202,8 @@ void CleanUpAndExitThread(HMODULE hModule) {
     LOG_ERROR("Game hook callback is still active; keeping hooks and DLL loaded");
     return;
   }
+
+  DEBUG::TEXT_ENABLE(false);
 
   // MinHook cleanup
   if (!g_minHookCleaned) {
