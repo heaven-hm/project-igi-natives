@@ -51,8 +51,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $notes = @'
-          ## Project IGI Natives 2.7.0 SDK Expansion
+          $title = "Project IGI Natives $env:GITHUB_REF_NAME"
+          $notes = @"
+          ## Project IGI Natives SDK Expansion $env:GITHUB_REF_NAME
 
           This release contains the verified native SDK expansion from `feature/natives-sdk-expansion`.
 
@@ -62,11 +63,11 @@ jobs:
           - Native definitions verified against the IGI 1 executable ground truth.
           - Current develop lifecycle and safe DLL hot-reload behavior.
           - Win32 Debug and Release DLL builds.
-          '@
+          "@
           Set-Content -Path release-notes.md -Value $notes -Encoding utf8
           gh release create $env:GITHUB_REF_NAME `
             --repo $env:GITHUB_REPOSITORY `
-            --title "Project IGI Natives $env:GITHUB_REF_NAME" `
+            --title $title `
             --notes-file release-notes.md `
             artifacts\Debug\IGI-Natives-Debug.dll `
             artifacts\Release\IGI-Natives-Release.dll
