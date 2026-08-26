@@ -582,11 +582,13 @@ uint32_t GetHumanHitDetour(void) {
 }
 
 void ShowWarningDetour(LPCSTR warn_msg) {
+	HookCallbackGuard callback_guard;
 	LOG_FILE("%s warn_msg: %s", "ShowWarning", warn_msg);
 	ShowWarningOut(warn_msg);
 }
 
 void ShowErrorDetour(LPCSTR err_msg) {
+	HookCallbackGuard callback_guard;
 	LOG_FILE("%s err_msg: %s", "ShowError", err_msg);
 	ShowErrorOut(err_msg);
 }
@@ -644,6 +646,7 @@ int __cdecl LoadGameDataDetour(char* res_buf, const char* res_path, const char* 
 }
 
 int __cdecl  StatusMsgDetour(int send_status, const char* buffer, const char* msg_sprite, const char* status_byte_addr) {
+	HookCallbackGuard callback_guard;
 	//g_DbgHelper->StackTrace(true, false, true);
 	string status_buf = g_Utility.Trim(string(buffer));
 	//LOG_CONSOLE("%s send_status : %p buffer : '%s' msg_sprite : %p status_byte : %p", FUNC_NAME, send_status, status_buf.c_str(), msg_sprite, status_byte_addr);

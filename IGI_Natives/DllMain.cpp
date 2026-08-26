@@ -224,18 +224,8 @@ void CleanUpAndExitThread(HMODULE hModule) {
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     LOG_INFO("Auto-ejecting DLL...");
 
-    HANDLE hProcess = GetCurrentProcess();
-    HANDLE hThread = CreateRemoteThread(hProcess, nullptr, 0,
-                                        (LPTHREAD_START_ROUTINE)FreeLibrary,
-                                        hModule, 0, nullptr);
-
-    if (hThread) {
-      WaitForSingleObject(hThread, INFINITE);
-      CloseHandle(hThread);
-      LOG_INFO("DLL ejection completed");
-    } else {
-      LOG_ERROR("Failed to create ejection thread");
-    }
+    // This API terminates the current thread without returning into DLL code.
+    FreeLibraryAndExitThread(hModule, 0);
   });
   ejectThread.detach();
 }
