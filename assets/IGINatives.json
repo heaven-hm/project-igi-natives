@@ -6276,6 +6276,170 @@
           }
         ]
       }
+    },
+    {
+      "Native": {
+        "hash": "00403660",
+        "address": 4208224,
+        "name": "GOStart",
+        "signature": "unknown GOStart(unknown param1, unknown* out_buffer)",
+        "note": "Registered at 0x403006 via registrar 0x4B8890 (push 0x403660 + name string 'GOStart'). Init counterpart of cataloged GOPlayer @0x4036B0: zeroes global 0xBC2380 and stores fcn.004B8A20 result to 0xBC2384; GOPlayer reads/increments 0xBC2380. Copies 6 dwords (24 bytes) into second param buffer, embedding pointer 0x567C74.  Verified: r2 forced-analysis confirmed exact start (size 75); P3 byte-level name<->address binding at registrar callsite 0x403006 via 0x4B8890; P6 SHA-256(first 32 code bytes)=6a2c07b5ab39d7b6373c45d2561127acfc24cfe9792a2d232bb848aef92d9a6a; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "out_buffer",
+            "type": "unknown*"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "00407DE0",
+        "address": 4226528,
+        "name": "SetActiveMaterial",
+        "signature": "unknown SetActiveMaterial(unknown param1, unknown param2)",
+        "note": "Registered at 0x407DA6 via registrar 0x4B8890 (push 0x407DE0 + 'SetActiveMaterial'), argc bounds push pair (0, -1) observed. Sets active material: reads param, calls fcn.004017C0-family init and stores through globals near 0x538518-0x53851A region.  Verified: r2 forced-analysis confirmed exact start (size 80); P3 byte-level name<->address binding at registrar callsite 0x407DA6 via 0x4B8890; P6 SHA-256(first 32 code bytes)=3864a4bd701c54dbda08164ffcb568244d07b4261f187408ffaf2e6694b65e70; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "param2",
+            "type": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "00410070",
+        "address": 4259952,
+        "name": "DefineHumanPlayerGeneral",
+        "signature": "unknown DefineHumanPlayerGeneral(unknown param1, unknown param2)",
+        "note": "Registered at 0x41001B via registrar 0x4B8890 (push 0x410070 + 'DefineHumanPlayerGeneral'), argc bounds (0, -1). Config-style Define* parser (326 bytes), same family as cataloged Define* / *ParseConfigFile natives.  Verified: r2 forced-analysis confirmed exact start (size 326); P3 byte-level name<->address binding at registrar callsite 0x41001B via 0x4B8890; P6 SHA-256(first 32 code bytes)=cea3d514b310551a5dcdc448e743fdd14a408a521345a0e885cddac78040f965; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "param2",
+            "type": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "00413F90",
+        "address": 4276112,
+        "name": "DefineWeaponType",
+        "signature": "unknown DefineWeaponType(unknown param1, unknown param2)",
+        "note": "Registered at 0x413E52 via registrar 0x4B8890 (push 0x413F90 + 'DefineWeaponType'), argc bounds (0, -1). Large (2165-byte) config parser; name corroborated by semantics consistent with cataloged WeaponType_Open / *ParseConfigFile family.  Verified: r2 forced-analysis confirmed exact start (size 2165); P3 byte-level name<->address binding at registrar callsite 0x413E52 via 0x4B8890; P6 SHA-256(first 32 code bytes)=55f13a150373436d3a68f7b8756852c048244c7749999f8ba7bfdccdb9cef313; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "param2",
+            "type": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "0045EAE0",
+        "address": 4582112,
+        "name": "Human_GetCutSceneDeltaTime",
+        "signature": "float (probable) Human_GetCutSceneDeltaTime(unknown param1)",
+        "note": "Registered at 0x45EA44 via registrar 0x4B8890 (push 0x45EAE0 + 'Human_GetCutSceneDeltaTime'). Getter: calls fcn.004F1030 then fld dword [eax+0x1B0] \u2014 returns float field +0x1B0 of the entity/time object. Semantics match name.  Verified: r2 forced-analysis confirmed exact start (size 76); P3 byte-level name<->address binding at registrar callsite 0x45EA44 via 0x4B8890; P6 SHA-256(first 32 code bytes)=de84a925c808fb88a1e592188af8c387bd82ca68b7338238665b3945930c0b22; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "float (probable)",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "004C6670",
+        "address": 5006960,
+        "name": "CreateTerrainMaterial",
+        "signature": "unknown CreateTerrainMaterial(unknown param1, unknown param2)",
+        "note": "Registered at 0x4C6580 via registrar 0x4B8890 (push 0x4C6670 + 'CreateTerrainMaterial'). Pushes interleaved with inline strlen/rep-movs string setup; site also pushes 0x4C6670 at 0x4C655C.  Verified: r2 forced-analysis confirmed exact start (size 230); P3 byte-level name<->address binding at registrar callsite 0x4C6580 via 0x4B8890; P6 SHA-256(first 32 code bytes)=bd85673e252f99c903e7b8b25e1da01901ce82a84299e100833a25fef1c175b1; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "param2",
+            "type": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "004EBEB0",
+        "address": 5160624,
+        "name": "DefineAnimTrigger",
+        "signature": "unknown DefineAnimTrigger(unknown param1, unknown param2)",
+        "note": "Registered at 0x4EBEA2 via registrar 0x4B8890 (push 0x4EBEB0 + 'DefineAnimTrigger'), argc bounds (0, -1). Config parser; corroborates cataloged AnimTrigger_ParseConfigFile family.  Verified: r2 forced-analysis confirmed exact start (size 264); P3 byte-level name<->address binding at registrar callsite 0x4EBEA2 via 0x4B8890; P6 SHA-256(first 32 code bytes)=8d8596b3b0925dc5ff62e61171fc68c6e9c092c1c519e972629a790081ddd636; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "param2",
+            "type": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "Native": {
+        "hash": "004EDD20",
+        "address": 5168416,
+        "name": "DefinePhysicsObjType",
+        "signature": "unknown DefinePhysicsObjType(unknown param1, unknown param2)",
+        "note": "Registered at 0x4EDD12 via registrar 0x4B8890 (push 0x4EDD20 + 'DefinePhysicsObjType'), argc bounds (0, -1). 650-byte config parser; corroborates cataloged PhysicsObjType_ParseConfigFile family.  Verified: r2 forced-analysis confirmed exact start (size 650); P3 byte-level name<->address binding at registrar callsite 0x4EDD12 via 0x4B8890; P6 SHA-256(first 32 code bytes)=c298e1324dd1157dbf5b49ad4260d4bb6c30a4cb60914356f3078e69e56aa94f; re-agent reverser/checker loop ran on this native (C decompilation pending ARM64 native port).",
+        "dataTypeRefs": [],
+        "returnType": "unknown",
+        "parameters": [
+          {
+            "name": "param1",
+            "type": "unknown"
+          },
+          {
+            "name": "param2",
+            "type": "unknown"
+          }
+        ]
+      }
     }
   ]
 }
