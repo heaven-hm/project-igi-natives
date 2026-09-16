@@ -115,8 +115,16 @@ void RuntimeLogHotkeyLoop() {
 HANDLE g_shutdownRequestEvent{};
 HANDLE g_shutdownCompleteEvent{};
 
-BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
+BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID reserved) {
   if (dwReason == DLL_PROCESS_DETACH) {
+    // During process termination Windows will stop the worker threads itself.
+    // Detach the std::thread objects first so their destructors cannot call
+    // terminate()/abort() while the CRT is being torn down.
+    g_running.store(false, std::memory_order_release);
+    if (g_runtimeLogHotkeyThread.joinable())
+      g_runtimeLogHotkeyThread.detach();
+    if (g_mainLoopThread.joinable())
+      g_mainLoopThread.detach();
     if (g_shutdownRequestEvent) {
       CloseHandle(g_shutdownRequestEvent);
       g_shutdownRequestEvent = nullptr;
@@ -287,7 +295,10 @@ bool CleanUpAndExitThread(HMODULE hModule) {
   if (hook_instance) hook_instance->Uninitialize();
 #endif
   g_running.store(false);
-
+  // CleanUpAndExitThread is called by the main-loop worker, so the hotkey
+  // worker can be joined safely before the logger and DLL are unloaded.
+  if (g_runtimeLogHotkeyThread.joinable())
+    g_runtimeLogHotkeyThread.join();
   // Disable debug hotkeys only after game-thread camera cleanup succeeds.
   DEBUG::KEYS_ENABLE(false);
   LOG_INFO("Debug Hotkeys disabled");

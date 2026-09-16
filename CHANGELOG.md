@@ -29,6 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Both sessions created `igi.log` and `IGI-Natives.log`, remained responsive, and recorded Ctrl+F1/Ctrl+F2 transitions.
 ## [Unreleased] - 2026-08-26
 
+### Fixed
+
+- Fixed the exit-time MSVC abort by stopping and detaching/joining DLL worker threads during teardown.
+
+
 ### Static CFG-validated natives, structures, and synchronized assets
 
 - Fast-forwarded `feature/natives-discovery` to remote commit `a83f745` before extending the catalog; the remote 273-entry work was preserved.
