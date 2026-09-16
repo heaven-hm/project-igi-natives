@@ -2,6 +2,7 @@
 #include "CommonConst.hpp"
 #include "Libs/GTLibc.hpp"
 #include "Natives/NativeHelper.hpp"
+#include "NativeTesting/NativeTestDispatcher.hpp"
 #include "Utils/FiberPool.hpp"
 #include "Utils/Utility.hpp"
 
@@ -62,8 +63,16 @@ void DllMainLoop() {
 
   else if (g_menu_screen == MENU_SCREEN_INGAME) {
 
+    // The controller writes one catalog-whitelisted command and sends this
+    // scalable automation chord. Keep it before the existing Ctrl+F12 action.
+    if ((GetAsyncKeyState(VK_SHIFT) & 0x8000) &&
+        g_Utility.IsKeyCombinationPressed(VK_CONTROL, VK_F12)) {
+      LOG_INFO("Ctrl+Shift+F12: Queue native test command");
+      IGI::NativeTesting::QueueCommandFromFile();
+    }
+
 #ifdef _DEBUG
-    if (g_Utility.IsKeyPressed(VK_HOME)) {
+    else if (g_Utility.IsKeyPressed(VK_HOME)) {
       g_Utility.LogAllHotkeys(__FILE__);
     }
 #endif

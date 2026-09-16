@@ -128,6 +128,7 @@
     <ClInclude Include="Libs\GTLibc.hpp" />
     <ClInclude Include="Libs\json.hpp" />
     <ClInclude Include="Memory\Memory.hpp" />
+    <ClInclude Include="NativeTesting\NativeTestDispatcher.hpp" />
     <ClInclude Include="Player\HumanSoldier.hpp" />
     <ClInclude Include="Utils\Console.hpp" />
     <ClInclude Include="DllMain.hpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="Graphs\Graph.cpp" />
     <ClCompile Include="Hook\Hook.cpp" />
     <ClCompile Include="Memory\Memory.cpp" />
+    <ClCompile Include="NativeTesting\NativeTestDispatcher.cpp" />
     <ClCompile Include="Natives\Natives.cpp" />
     <ClCompile Include="Player\HumanSoldier.cpp" />
     <ClCompile Include="Utils\Console.cpp" />

@@ -14,6 +14,9 @@
     <ClCompile Include="Memory\Memory.cpp">
       <Filter>Memory</Filter>
     </ClCompile>
+    <ClCompile Include="NativeTesting\NativeTestDispatcher.cpp">
+      <Filter>NativeTesting</Filter>
+    </ClCompile>
     <ClCompile Include="Hook\Hook.cpp">
       <Filter>Hook</Filter>
     </ClCompile>
@@ -69,6 +72,9 @@
     </ClInclude>
     <ClInclude Include="Memory\Memory.hpp">
       <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeTesting\NativeTestDispatcher.hpp">
+      <Filter>NativeTesting</Filter>
     </ClInclude>
     <ClInclude Include="Libs\json.hpp">
       <Filter>Libs</Filter>
@@ -132,6 +138,9 @@
     </Filter>
     <Filter Include="Graphs">
       <UniqueIdentifier>{8ae76e56-f91d-4db2-a159-a4b97fff101a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NativeTesting">
+      <UniqueIdentifier>{dbfb41b9-ad2e-4df1-a86f-8cc281350d5c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
