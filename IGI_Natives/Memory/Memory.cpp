@@ -26,9 +26,12 @@ Memory::Memory(bool scanOnInit) {
 		LOG_INFO("Signatures Scanning done.");
 	}
 	else {
+		// These signatures are advisory only: no consumer uses the resolved
+		// addresses, so a stale pattern must not prevent the DLL from loading.
+		// (Throwing here used to surface a modal MessageBox inside
+		// DLL_PROCESS_ATTACH, hanging every programmatic injection.)
 		auto sig_error = "Game Signatures not found!\nReason: " + sig_err_reason;
 		LOG_ERROR(sig_error.c_str());
-		throw std::exception(sig_error.c_str());
 	}
 }
 

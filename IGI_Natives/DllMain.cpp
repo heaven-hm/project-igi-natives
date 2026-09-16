@@ -115,7 +115,9 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       native_instance = std::make_unique<Natives>();
       LOG_WARNING("Natives initialized.");
 
-      memory_instance = std::make_unique<Memory>(true);
+      // Native campaign uses catalog addresses directly; signature scanning is
+      // unrelated and stale signatures must not gate deterministic execution.
+      memory_instance = std::make_unique<Memory>(false);
       LOG_WARNING("Memory initialized.");
 
       game_resources_ptr = std::make_unique<GameResource>();
@@ -154,7 +156,8 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
           DEBUG::TEXT_ENABLE(true);
         } catch (...) {}
       }, 10);
-      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + NATIVES_DLL_VERSION + " Attached"));
+      // Never invoke a game native while Windows holds the loader lock.
+      LOG_INFO("%s v%s Attached", PROJECT_NAME, NATIVES_DLL_VERSION.c_str());
 
       // Start DllMainLoop in separate thread with 30 FPS timing
       g_running = true;

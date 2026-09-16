@@ -301,8 +301,6 @@ namespace IGI {
 		AI_FUNCTION_GET_RANDOM_VALUE = 0x0044E000,			// igi.exe pushes str."AIFunction_GetRandomValue" @ site 0x0044d062 via registrar 0x4b88f0; argc=1
 		AI_FUNCTION_GET_EVENT_DISTANCE = 0x0044E930,			// igi.exe pushes str."AIFunction_GetEventDistance" @ site 0x0044d075 via registrar 0x4b88f0; argc=0
 		AI_FUNCTION_GET_ALARM_TRIGGER_DISTANCE = 0x0044E9B0,			// igi.exe pushes str."AIFunction_GetAlarmTriggerDistance" @ site 0x0044d088 via registrar 0x4b88f0; argc=0
-	};
-
 		// --- STATIC CFG-VALIDATED INTERNAL NATIVES ---
 		TASKTYPE_REGISTER = 0x00401900,
 		TASKTYPE_IS_DERIVED_FROM = 0x00401CF0,

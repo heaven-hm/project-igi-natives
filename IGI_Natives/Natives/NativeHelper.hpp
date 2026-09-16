@@ -752,15 +752,8 @@ namespace IGI {
 	// ═══════════════════════════════════════════════════════════════
 	namespace MISC {
 		// printf-style variadic (proven: call-site add esp,8 + vsprintf helper 0x4A5702).
-		NATIVE_DECL void ERROR_SHOW(const char* format) { NATIVE_INVOKE<Void>((Void)HASH::ERROR_SHOW, format); }
 		NATIVE_DECL void ERROR_SHOW(const char* format, const void* arg) { NATIVE_INVOKE<Void>((Void)HASH::ERROR_SHOW, format, arg); }
-		NATIVE_DECL void WARNING_SHOW(const char* format) { NATIVE_INVOKE<Void>((Void)HASH::WARNING_SHOW, format); }
 		NATIVE_DECL void WARNING_SHOW(const char* format, const void* arg) { NATIVE_INVOKE<Void>((Void)HASH::WARNING_SHOW, format, arg); }
-		NATIVE_DECL void LOADING_SCREEN_SHOW(int loading_type) { NATIVE_INVOKE<Void>((Void)HASH::LOADING_SCREEN_SHOW, loading_type); }
-	}
-
-	namespace LEVEL {
-		NATIVE_DECL void START(int param) { NATIVE_INVOKE<Void>((Void)HASH::LEVEL_START, param); }
 	}
 
 	namespace GAME {
@@ -771,12 +764,10 @@ namespace IGI {
 	namespace SFX {
 		NATIVE_DECL void RUNTIME_MUSIC_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_MUSIC_VOLUME, volume); }
 		NATIVE_DECL void RUNTIME_SFX_VOLUME_SET(float volume) { NATIVE_INVOKE<Void>((Void)HASH::GAME_SET_SFX_VOLUME, volume); }
-		NATIVE_DECL void SOUND_LOAD(const char* sound_dir) { NATIVE_INVOKE<Void>((Void)HASH::SOUND_LOAD, sound_dir); }
 		NATIVE_DECL void EVENT_TRIGGER(const char* event_name, uint32_t event_id, const uint32_t* params) { NATIVE_INVOKE<Void>((Void)HASH::SOUND_EVENT_TRIGGER, event_name, event_id, params); }
 	}
 
  namespace WEAPON {
-		NATIVE_DECL void AMMO_TYPE_OPEN() { NATIVE_INVOKE<Void>((Void)HASH::AMMO_TYPE_OPEN); }
 		NATIVE_DECL int COUNT_GET() { return NATIVE_INVOKE<int>((Void)HASH::WEAPON_TOTAL); }
 		NATIVE_DECL void* ENTITY_CREATE(uint32_t p1, uint16_t object_type, uint32_t weapon_type, uint32_t p4, uint8_t p5) { return NATIVE_INVOKE<void*>((Void)HASH::WEAPON_ENTITY_CREATE, p1, object_type, weapon_type, p4, p5); }
 		NATIVE_DECL uint8_t FIRING_STATE_GET() { return NATIVE_INVOKE<uint8_t>((Void)HASH::WEAPON_FIRING_STATE_GET); }
@@ -786,10 +777,6 @@ namespace IGI {
 
 	namespace HUMAN {
 		NATIVE_DECL void TASK_VIEW_RESET(void* human) { NATIVE_INVOKE<Void>((Void)HASH::HUMAN_TASK_VIEW_RESET, human); }
-	}
-
-	namespace GRAPH {
-		NATIVE_DECL void OPEN(unsigned int level, const char* graph_str) { NATIVE_INVOKE<Void>((Void)HASH::GRAPH_OPEN, level, graph_str); }
 	}
 
  namespace SCRIPT {
