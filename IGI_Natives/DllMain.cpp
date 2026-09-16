@@ -72,17 +72,16 @@ void ShowRuntimeLogHotkeyFeedback(const string& message) {
   LOG_INFO("%s", message.c_str());
 #ifdef _DEBUG
   LOG_CONSOLE("[Runtime Log] %s", message.c_str());
+#else
+  // The retail game provides a lightweight status-text overlay. Hotkey
+  // feedback runs only after injection, when the game is fully initialized.
+  try {
+    MISC::STATUS_MESSAGE_SHOW_TEXT(message.c_str());
+  } catch (...) {
+    LOG_ERROR("Unable to show runtime-log hotkey status in game");
+  }
 #endif
   RuntimeLogRecord("[Hotkey] " + message);
-  // Game natives must execute on the game thread. Calling the HUD method
-  // synchronously here blocks keyboard polling and loses subsequent presses.
-  FiberPool::Instance().RunExternal([message] {
-    try {
-      MISC::STATUS_MESSAGE_SHOW(message);
-    } catch (...) {
-      LOG_ERROR("Unable to show runtime-log hotkey status in game");
-    }
-  }, 0);
 }
 
 void RuntimeLogHotkeyLoop() {
@@ -142,6 +141,11 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID reserved) {
     g_Utility.SetModuleHandle(hModule);
 
     try {
+#ifdef _DEBUG
+      console_instance = std::make_unique<Console>();
+      console_instance->Allocate();
+      console_instance->Clear();
+#endif
       // Initialize Logger and Core Systems
       logger_instance = std::make_unique<Log>();
       g_shutdownRequestEvent = CreateEventA(nullptr, TRUE, FALSE, kShutdownRequestEventName);
@@ -193,6 +197,9 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID reserved) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
+      const string injected_message =
+          PROJECT_NAME + std::string(" v" + NATIVES_DLL_VERSION + " Injected");
+      MISC::STATUS_MESSAGE_SHOW_TEXT(injected_message.c_str());
       LOG_WARNING("IGI Retail logging DLL attached; see igi.log");
 
       // Poll logging controls independently of game pointers and natives.
