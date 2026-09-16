@@ -376,6 +376,13 @@ FodyWeavers.xsd
 # Local-only reverse-engineering guides, scripts, evidence, and scratch output
 /RE.md
 /tools/
+!/tools/
+/tools/*
+!/tools/native_test_harness/
+!/tools/native_test_harness/README.md
+!/tools/native_test_harness/.gitignore
+!/tools/native_test_cli/
+!/tools/native_test_cli/**
 /verification/
 /scratch/
 /exports/
