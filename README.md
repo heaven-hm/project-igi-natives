@@ -76,7 +76,7 @@ The game HUD shows the current action, and transitions are recorded in `igi.log`
 
 ### Installation
 
-1. Use the matching **x86/Win32** DLL: `IGI-Natives-Release.dll` for normal use or `IGI-Natives-Debug.dll` for console diagnostics.
+1. Use the matching **x86/Win32** DLL: `IGI-Natives-Release.dll` for normal use or `IGI-Natives-Debug.dll` for extra DLL diagnostics in `IGI-Natives.log`.
 2. Keep the required `assets\IGINatives.json` beside the DLL.
 3. Start the original retail `igi.exe`.
 4. Inject exactly one DLL into the running game.

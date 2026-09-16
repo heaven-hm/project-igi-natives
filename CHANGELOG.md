@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Removed the DLL-owned feature loop and Debug-only game mutations/attach HUD call to prevent exit-time IGI crashes.
 - Fixed the exit-time MSVC abort by stopping and detaching/joining DLL worker threads during teardown.
 
 

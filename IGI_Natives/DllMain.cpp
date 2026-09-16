@@ -142,11 +142,6 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID reserved) {
     g_Utility.SetModuleHandle(hModule);
 
     try {
-#ifdef _DEBUG
-      console_instance = std::make_unique<Console>();
-      console_instance->Allocate();
-      console_instance->Clear();
-#endif
       // Initialize Logger and Core Systems
       logger_instance = std::make_unique<Log>();
       g_shutdownRequestEvent = CreateEventA(nullptr, TRUE, FALSE, kShutdownRequestEventName);
@@ -188,16 +183,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID reserved) {
       LOG_WARNING("Hook initialized.");
 #endif
 
-#if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
-      dbg_instance = std::make_unique<DbgHelper>(true);
-      LOG_WARNING("DbgHelper initialized.");
-#endif
 
-#if defined(DBG_x86)
-      // Invincible-Jones.
-      HUMAN::UNLIMITED_HEALTH_SET();
-      WEAPON::UNLIMITED_AMMO_SET(true);
-#endif
 
       // Set Game Handle
       HANDLE g_handle = reinterpret_cast<HANDLE>(GetModuleHandle(NULL));
@@ -207,47 +193,15 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID reserved) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-      // Keep IGI's built-in debug hotkeys disabled. This DLL intentionally
-      // owns exactly two controls: Ctrl+F1 and Ctrl+F2.
-      FiberPool::Instance().RunExternal([] {
-        try {
-          DEBUG::KEYS_ENABLE(false);
-          DEBUG::TEXT_ENABLE(true);
-        } catch (...) {}
-      }, 10);
-      MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + NATIVES_DLL_VERSION + " Attached"));
+      LOG_WARNING("IGI Retail logging DLL attached; see igi.log");
 
       // Poll logging controls independently of game pointers and natives.
       g_running = true;
       g_runtimeLogHotkeyThread = std::thread(RuntimeLogHotkeyLoop);
 
-      // Start DllMainLoop in a separate worker.
-      g_mainLoopThread = std::thread([hModule]() {
-        LOG_WARNING("DllMainLoop thread started");
-        while (g_running) {
-          DllMainLoop();
-
-          const bool shutdownRequested =
-              g_shutdownRequestEvent &&
-              WaitForSingleObject(g_shutdownRequestEvent, 0) == WAIT_OBJECT_0;
-          if (shutdownRequested) {
-            LOG_INFO("Shutdown request received - starting cleanup");
-            if (CleanUpAndExitThread(hModule)) {
-              if (g_mainLoopThread.joinable()) g_mainLoopThread.detach();
-              if (g_shutdownCompleteEvent) SetEvent(g_shutdownCompleteEvent);
-              FreeLibraryAndExitThread(hModule, 0);
-              return;
-            }
-          }
-
-          std::this_thread::sleep_for(
-              std::chrono::milliseconds(10)); // 100 Hz for responsive hotkeys
-        }
-        LOG_WARNING("DllMainLoop thread stopped");
-        MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME +
-                                  std::string(" v" + NATIVES_DLL_VERSION + " Detached"));
-      });
-
+      // The retail logging build has no DLL-owned feature loop. Game methods
+      // are observed by the installed detours, and the hotkey worker is kept
+      // independent so shutdown cannot race game-pointer reads.
     } catch (const std::exception &ex) {
       GT_ShowError(ex.what());
 #if defined(USE_STACKTRACE_LIB) && defined(DBG_x86)
