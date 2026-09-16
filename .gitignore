@@ -381,3 +381,6 @@ FodyWeavers.xsd
 /exports/
 /igi_natives_discovery/
 /IGI1_Native_Exports/
+
+# Release binaries belong on GitHub Releases, not in source control.
+/IGI-Natives-Retail-Logging-*.zip
