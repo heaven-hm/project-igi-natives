@@ -104,31 +104,8 @@ void Camera::BeginFreeCam(const Controls& controls) {
 }
 
 bool Camera::FreeCamStep() {
-	if (!free_cam_run.load()) return false;
-
-	Controls& ctrl = free_cam_controls;
-	if (GT_IsKeyPressed(ctrl.QUIT()) || GT_IsKeyPressed(VK_END)) {
-		EndFreeCam();
-		return false;
-	}
-
-	auto pos = ReadPosition();
-	ReadAngle();
-
-	std::memcpy(CAM_ANGLE_ADDR, CAM_CONTROL_ADDR, (VIEWPORT_SIZE * FLOAT_SIZE));
-
-	if (GT_IsKeyPressed(ctrl.RIGHT())) pos.X(pos.X() - ctrl.AXIS_OFF());
-	if (GT_IsKeyPressed(ctrl.LEFT())) pos.X(pos.X() + ctrl.AXIS_OFF());
-	if (GT_IsKeyPressed(ctrl.FORWARD())) pos.Y(pos.Y() - ctrl.AXIS_OFF());
-	if (GT_IsKeyPressed(ctrl.BACKWARD())) pos.Y(pos.Y() + ctrl.AXIS_OFF());
-	if (GT_IsKeyPressed(ctrl.UP())) pos.Z(pos.Z() + ctrl.AXIS_OFF());
-	if (GT_IsKeyPressed(ctrl.DOWN())) pos.Z(pos.Z() - ctrl.AXIS_OFF());
-	if (GT_IsKeyPressed(ctrl.CALIBRATE())) CalibrateView();
-	if (GT_HotKeysPressed(VK_MENU, VK_F5)) ScriptCompile();
-	if (GT_HotKeysPressed(VK_CONTROL, VK_INSERT)) StatusMsgShow();
-
-	WritePosition(pos);
-	return true;
+	if (free_cam_run.load()) EndFreeCam();
+	return false;
 }
 
 void Camera::EndFreeCam() {

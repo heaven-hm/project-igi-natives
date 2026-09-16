@@ -1,6 +1,6 @@
 # Project I.G.I Natives
 
-[![Version](https://img.shields.io/badge/version-v2.6.1-blue.svg)](https://github.com/heaven-hm/project-igi-natives)
+[![Version](https://img.shields.io/badge/version-v2.8.0-blue.svg)](https://github.com/heaven-hm/project-igi-natives)
 [![Build](https://img.shields.io/badge/build-f0f30e5-green.svg)](https://github.com/heaven-hm/project-igi-natives)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/heaven-hm/project-igi-natives)
 [![License](https://img.shields.io/badge/license-Research-orange.svg)](https://github.com/heaven-hm/project-igi-natives)
@@ -45,44 +45,44 @@ Use the `build_and_reload.bat` batch file for automated building and DLL injecti
 ### 🔧 Manual Building
 Open this project in Visual Studio and build it. Your output will be in **Release/Debug** folder depending on configuration. You'll find `IGI-Natives-Debug.dll` or `IGI-Natives-Release.dll`. Use any **x86(32-bit)** compatible DLL injector or the recommended [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector).
 
-## 📄 Retail Runtime Logging (IGI.EXE I/O + debug output capture)
+## 📄 IGI Retail Runtime Logging — v2.8.0
 
-IGI (2000) does not ship its own logging facility. The retail `IGI.EXE` statically links the
-MSVC CRT (no `msvcrt.dll` import table) and its only debug outlets are a handful of Win32
-imports plus the static CRT output path. This feature hooks those exact surfaces so everything
-the retail executable writes at runtime is captured to a trace file.
+This Heaven-HM release enables logging that already exists inside the original retail `IGI.EXE` runtime. The DLL captures the game's own CRT output, debug strings, file opens, script reads, and file writes without adding trainer features.
 
-| Hook | Retail address | Captures |
-|---|---|---|
-| Static CRT `_write` | `0x004ABEC7` | `printf`/`puts`/`Runtime Error!` output (the game's `printf` path) |
-| `GameOpenFile` | `0x004A5350` | every `fopen`-style file the game opens, with mode |
-| `GameOpenQFile` | `0x004B1510` | every `.qsc`/`.qvm`/script file the game reads |
-| `OutputDebugStringA` | Win32 import | per-process debug strings (any module) |
-| `CreateFileA` | Win32 import | every file handle created, with path + access flags |
-| `WriteFile` | Win32 import | every byte stream written, attributed back to its file path |
+The runtime trace is written live beside the game executable:
 
-### Usage
-1. Build or download `IGI-Natives-Debug.dll` / `IGI-Natives-Release.dll` (see the CI workflow
-   `runtime-logging-build.yml`, or `msbuild .\IGI_Natives\IGI_Natives.vcxproj /p:Configuration=Debug /p:Platform=Win32`).
-2. Inject the DLL into retail `IGI.EXE` with any x86 injector (e.g. [IGI-Injector](https://github.com/IGI-Research-Devs/IGI-Injector)).
-3. Watch **`<IGI game folder>\IGI-Natives-runtime.log`** — the file is created next to
-   `IGI.EXE` (the folder the DLL is injected into) the first time anything is captured.
-   Every file open, script read, CRT write, debug string and file write made by the game
-   is appended live.
+`D:\IGI1\igi.log`
 
-### Hotkey
-- **`Ctrl+L`** — toggles retail-log capture ON/OFF at any time (works at the main menu and
-  in-game). The game HUD shows `Runtime Log ON/OFF`, the transition is recorded in the
-  trace file (`=== capture ENABLED/DISABLED (hotkey) ===`), and the full log path is
-  printed to the console/`IGI-Natives.log`. Capture starts enabled on injection.
+The DLL's own diagnostics are written separately to:
 
-### Environment toggles
-- `IGI_RUNTIME_LOG=0` – start with capture disabled (Ctrl+L can re-enable it).
-- `IGI_RUNTIME_LOG_VERBOSE=1` – add text/hex previews for CRT-write and WriteFile traffic.
+`D:\IGI1\IGI-Natives.log`
 
-The logger is guarded against capturing its own activity (thread-local `RuntimeLogGuard`), and
-the trace stream is rate-limited at 200 lines/second with suppressed-line summaries.
+### Hotkeys
 
+Only these two DLL hotkeys exist:
+
+- **Ctrl+F1** — toggle retail game logging ON/OFF.
+- **Ctrl+F2** — switch NORMAL/VERBOSE logging. VERBOSE includes text/hex previews for captured CRT and file-write data.
+
+The game HUD shows the current action, and transitions are recorded in `igi.log`. IGI's built-in debug hotkeys and the previous trainer/editor hotkeys are disabled by this logging build.
+
+### Captured runtime surfaces
+
+- Retail static CRT `_write` at `0x004ABEC7`.
+- `GameOpenFile` at `0x004A5350`.
+- `GameOpenQFile` at `0x004B1510`.
+- `OutputDebugStringA`, `CreateFileA`, and `WriteFile` through the Win32 API.
+- Additional verified game status, error, warning, text, resource, and main-loop detours.
+
+### Installation
+
+1. Use the matching **x86/Win32** DLL: `IGI-Natives-Release.dll` for normal use or `IGI-Natives-Debug.dll` for console diagnostics.
+2. Keep the required `assets\IGINatives.json` beside the DLL.
+3. Start the original retail `igi.exe`.
+4. Inject exactly one DLL into the running game.
+5. Check `igi.log` beside `igi.exe`.
+
+Capture starts enabled when the DLL is injected. Optional environment variables are `IGI_RUNTIME_LOG=0` and `IGI_RUNTIME_LOG_VERBOSE=1`.
 ## 🎮 IGI Debug Keys Integration & Enhanced Features
 
 This DLL seamlessly integrates with IGI's built-in debug functionality while adding powerful enhancement features. See [IGIDebug.md](IGI_Natives/IGIDebug.md) for complete documentation on IGI's native debug keys and activation methods.
@@ -133,19 +133,12 @@ The project could be build for [IGI Editor](https://github.com/IGI-Research-Devs
 
 ## 🎮 Current Features & Hotkeys
 
-The DLL provides the following implemented features accessible via hotkeys during gameplay:
+This retail-runtime-logging build exposes only two DLL hotkeys:
 
-### 🔧 **Active Hotkeys** (Ctrl + F1-F6):
-- **Ctrl+F1**: Random weapon pickup - Equips a random available weapon
-- **Ctrl+F2**: Random FPS setting - Sets game framerate to random value
-- **Ctrl+F3**: Load humanplayer - Loads/reloads the human player character
-- **Ctrl+F4**: Free Camera Mode - Activates free camera (Arrow keys to move, Space/Alt for up/down, Home to exit) 
-- **Ctrl+F5**: Show status message - Displays game status information
-- **Ctrl+F6**: Write config - Saves current game configuration
+- **Ctrl+F1**: toggle `igi.log` capture ON/OFF.
+- **Ctrl+F2**: switch `igi.log` capture between NORMAL and VERBOSE.
 
-### 🛠️ **Debug Features**:
-- **Home** (Debug builds only): Display all available hotkeys in console
-
+No other trainer, editor, camera, debug, function-key, Insert, Home, End, or numpad hotkeys are enabled by this DLL.
 ## Modifying this project.
 You can modify the project by focusing on the **Features.cpp** file located in the _DllMainLoop()_ method under the _MENU_SCREEN_INGAME_ section. Add your logic for Adding/Removing Buildings/Weapons/A.I etc into the game using the FiberPool task scheduler for thread-safe execution.
 

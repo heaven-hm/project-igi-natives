@@ -17,8 +17,7 @@ Memory::Memory(bool scanOnInit) {
 	//Init Signature patterns. 
 	string sig_err_reason;
 	bool init_sigs = true;
-	if (scanOnInit)
-		init_sigs = SignatureScan(sig_err_reason);
+	// Signature scanning is intentionally disabled for runtime-logging startup.
 
 	if (!scanOnInit || init_sigs)
 	{

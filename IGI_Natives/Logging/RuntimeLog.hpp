@@ -81,11 +81,16 @@ BOOL WINAPI WriteFileDetour(HANDLE hFile, LPCVOID lpBuffer,
 void RuntimeLogReadConfig();
 // Flush + close the trace stream (safe to call repeatedly).
 void RuntimeLogShutdown();
-// Full path of the trace file (<game folder>\IGI-Natives-runtime.log).
+// Full path of the trace file (<game folder>\igi.log).
 const string RuntimeLogFilePath();
+// Record a verified game-level event in the runtime trace.
+void RuntimeLogRecord(const string& line);
 // Enable/disable capture at runtime (hotkey-friendly). Records the transition
 // into the trace file itself and returns the new state.
 bool RuntimeLogSetEnabled(bool enable);
+// Select concise normal capture (false) or high-frequency verbose capture (true).
+// The selected mode is recorded in igi.log.
+bool RuntimeLogSetVerbose(bool enable);
 // Install CRT-write + Win32 API hooks. Returns the combined first_error value
 // in the repo's hook-registration style; individual failures are LOG_ERROR'd.
 MH_STATUS InstallRuntimeLogHooks(Hook* hook);

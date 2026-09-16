@@ -648,6 +648,7 @@ void __cdecl TextPrintDetour(int* param_1, char* param_2, int param_3, int param
 		TextPrintOut(param_1, param_2, param_3, param_4);
 		return;
 	}
+	if (g_RuntimeLogVerbose.load(std::memory_order_relaxed)) RuntimeLogRecord("[TextPrint] text='" + string(param_2 ? param_2 : "") + "' a3=" + std::to_string(param_3) + " a4=" + std::to_string(param_4));
 	TextPrintOut(param_1, param_2, param_3, param_4);
 }
 
@@ -669,7 +670,9 @@ int __cdecl  StatusMsgDetour(int send_status, const char* buffer, const char* ms
 	HookCallbackGuard callback_guard;
 	if (!callback_guard.Active()) return StatusMsgOut(send_status, buffer, msg_sprite, status_byte_addr);
 	//g_DbgHelper->StackTrace(true, false, true);
-	string status_buf = g_Utility.Trim(string(buffer));
+	const char* raw_status = buffer ? buffer : "";
+	string status_buf = g_Utility.Trim(string(raw_status));
+	RuntimeLogRecord("[StatusMsg] send=" + std::to_string(send_status) + " text='" + status_buf + "'");
 	//LOG_CONSOLE("%s send_status : %p buffer : '%s' msg_sprite : %p status_byte : %p", FUNC_NAME, send_status, status_buf.c_str(), msg_sprite, status_byte_addr);
 	return StatusMsgOut(send_status, status_buf.c_str(), msg_sprite, status_byte_addr);
 }
@@ -754,18 +757,22 @@ int* __cdecl LoadQVMDetour(LPCSTR file_name) {
 }
 
 FILE* __cdecl GameOpenFileDetour(char* file_name, char* file_mode) {
-	RuntimeLogGuard runtime_guard; // keep the retail I/O hooks from capturing our own logger
-	LOG_FILE("%s File : '%s' Mode : '%s'", "OpenFile", file_name, file_mode);
-	return GameOpenFileOut(file_name, file_mode);
+	RuntimeLogGuard runtime_guard;
+	auto result = GameOpenFileOut(file_name, file_mode);
+	RuntimeLogRecord("[GameOpenFile] path='" + string(file_name ? file_name : "<null>") +
+		"' mode='" + string(file_mode ? file_mode : "<null>") + "' result=" +
+		(result ? "open" : "FAILED"));
+	return result;
 }
 
 int* __cdecl GameOpenQFileDetour(char* file_name, char* file_mode) {
 	RuntimeLogGuard runtime_guard;
-	LOG_FILE("%s File : '%s' Mode : '%s'", "OpenQFile", file_name, file_mode);
-	return GameOpenQFileOut(file_name, file_mode);
+	auto result = GameOpenQFileOut(file_name, file_mode);
+	RuntimeLogRecord("[GameOpenQFile] path='" + string(file_name ? file_name : "<null>") +
+		"' mode='" + string(file_mode ? file_mode : "<null>") + "' result=" +
+		(result ? "open" : "FAILED"));
+	return result;
 }
-
-
 int __cdecl LevelLoadDetour(int param1, int param2, int param3, int param4) {
 	LOG_INFO("%s param1 : %d param2 : %d param3 : %d param4 : %d", "LevelLoad", param1, param2, param3, param4);
 	//g_DbgHelper->StackTrace(true, false, true);
@@ -778,6 +785,7 @@ int __cdecl GameMainLoopDetour(HINSTANCE param1, uint32_t param2, uint32_t param
 	HookCallbackGuard callback_guard;
 	if (!callback_guard.Active()) return GameMainLoopOut(param1, param2, param3);
 	if (!g_cleanupDone.load()) FiberPool::Instance().RunPending();
+	RuntimeLogRecord("[GameMainLoop] entered");
 
 	// --- Run Features safely on game thread ---
 	// DllMainLoopEditor();

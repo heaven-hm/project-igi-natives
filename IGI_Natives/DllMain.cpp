@@ -3,7 +3,7 @@
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
-#define NATIVES_DLL_VERSION std::string("2.7.1")
+#define NATIVES_DLL_VERSION std::string("2.8.0")
 #include "DllMain.hpp"
 #include "Logging/RuntimeLog.hpp"
 
@@ -63,9 +63,54 @@ std::mutex g_hookCallbacksMutex;
 std::condition_variable g_hookCallbacksDrained;
 std::atomic<bool> g_minHookCleaned{false};
 std::thread g_mainLoopThread;
+std::thread g_runtimeLogHotkeyThread;
 namespace {
 constexpr char kShutdownRequestEventName[] = "Local\\IGI_Natives_ShutdownRequest";
 constexpr char kShutdownCompleteEventName[] = "Local\\IGI_Natives_ShutdownComplete";
+
+void ShowRuntimeLogHotkeyFeedback(const string& message) {
+  LOG_INFO("%s", message.c_str());
+#ifdef _DEBUG
+  LOG_CONSOLE("[Runtime Log] %s", message.c_str());
+#endif
+  RuntimeLogRecord("[Hotkey] " + message);
+  // Game natives must execute on the game thread. Calling the HUD method
+  // synchronously here blocks keyboard polling and loses subsequent presses.
+  FiberPool::Instance().RunExternal([message] {
+    try {
+      MISC::STATUS_MESSAGE_SHOW(message);
+    } catch (...) {
+      LOG_ERROR("Unable to show runtime-log hotkey status in game");
+    }
+  }, 0);
+}
+
+void RuntimeLogHotkeyLoop() {
+  bool f1WasDown = false;
+  bool f2WasDown = false;
+  LOG_WARNING("Runtime logging hotkey thread started (Ctrl+F1, Ctrl+F2)");
+  while (g_running.load(std::memory_order_acquire)) {
+    const bool ctrlDown = (GetAsyncKeyState(VK_CONTROL) & 0x8000) != 0;
+    const bool f1Down = ctrlDown && (GetAsyncKeyState(VK_F1) & 0x8000) != 0;
+    const bool f2Down = ctrlDown && (GetAsyncKeyState(VK_F2) & 0x8000) != 0;
+    if (f1Down && !f1WasDown) {
+      const bool enabled = RuntimeLogSetEnabled(
+          !g_RuntimeLogEnabled.load(std::memory_order_relaxed));
+      ShowRuntimeLogHotkeyFeedback(enabled ? "Runtime Log: ON"
+                                           : "Runtime Log: OFF");
+    }
+    if (f2Down && !f2WasDown) {
+      const bool verbose = RuntimeLogSetVerbose(
+          !g_RuntimeLogVerbose.load(std::memory_order_relaxed));
+      ShowRuntimeLogHotkeyFeedback(verbose ? "Runtime Log: VERBOSE"
+                                           : "Runtime Log: NORMAL");
+    }
+    f1WasDown = f1Down;
+    f2WasDown = f2Down;
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+  }
+  LOG_WARNING("Runtime logging hotkey thread stopped");
+}
 }
 HANDLE g_shutdownRequestEvent{};
 HANDLE g_shutdownCompleteEvent{};
@@ -154,17 +199,21 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       g_Utility.SetHandle(g_handle);
       LOG_WARNING("Game handle set to 0x%x", g_handle);
 
-      // Enable Debug Hotkeys via FiberPool safely
+      // Keep IGI's built-in debug hotkeys disabled. This DLL intentionally
+      // owns exactly two controls: Ctrl+F1 and Ctrl+F2.
       FiberPool::Instance().RunExternal([] {
         try {
-          DEBUG::KEYS_ENABLE(true);
+          DEBUG::KEYS_ENABLE(false);
           DEBUG::TEXT_ENABLE(true);
         } catch (...) {}
       }, 10);
       MISC::STATUS_MESSAGE_SHOW(PROJECT_NAME + std::string(" v" + NATIVES_DLL_VERSION + " Attached"));
 
-      // Start DllMainLoop in separate thread with 30 FPS timing
+      // Poll logging controls independently of game pointers and natives.
       g_running = true;
+      g_runtimeLogHotkeyThread = std::thread(RuntimeLogHotkeyLoop);
+
+      // Start DllMainLoop in a separate worker.
       g_mainLoopThread = std::thread([hModule]() {
         LOG_WARNING("DllMainLoop thread started");
         while (g_running) {
@@ -173,8 +222,8 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
           const bool shutdownRequested =
               g_shutdownRequestEvent &&
               WaitForSingleObject(g_shutdownRequestEvent, 0) == WAIT_OBJECT_0;
-          if (shutdownRequested || GT_IsKeyPressed(VK_END)) {
-            LOG_INFO("END key pressed - starting cleanup");
+          if (shutdownRequested) {
+            LOG_INFO("Shutdown request received - starting cleanup");
             if (CleanUpAndExitThread(hModule)) {
               if (g_mainLoopThread.joinable()) g_mainLoopThread.detach();
               if (g_shutdownCompleteEvent) SetEvent(g_shutdownCompleteEvent);
@@ -220,7 +269,7 @@ bool CleanUpAndExitThread(HMODULE hModule) {
     if (!g_CleanupCameraDone.load()) {
       LOG_ERROR("Game-thread camera cleanup did not complete; keeping hooks and DLL loaded");
       g_running.store(true);
-      DEBUG::KEYS_ENABLE(true);
+      DEBUG::KEYS_ENABLE(false);
       return false;
     }
   }

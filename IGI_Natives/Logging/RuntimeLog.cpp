@@ -19,7 +19,7 @@ WriteFile_t WriteFileOut{};
 
 namespace {
 
-constexpr const char* kRuntimeLogFileName = "IGI-Natives-runtime.log";
+constexpr const char* kRuntimeLogFileName = "igi.log";
 constexpr size_t kMaxLinesPerSecond = 200;
 
 // Trace stream + rate limiter (single writer thread at a time).
@@ -62,6 +62,7 @@ void EnsureStream() {
   g_traceStream.open(path, std::ios_base::app);
   if (g_traceStream.is_open()) {
     g_traceStream << "\n=== IGI runtime-logging session started ===\n";
+    g_traceStream.flush();
   }
 }
 
@@ -129,6 +130,10 @@ void RuntimeLogReadConfig() {
   if (GetEnvironmentVariableA("IGI_RUNTIME_LOG_VERBOSE", value, sizeof(value))) {
     g_RuntimeLogVerbose.store(value[0] != '0');
   }
+
+  // Establish the game trace at DLL startup before the first captured write.
+  std::lock_guard<std::mutex> lock(g_traceMutex);
+  EnsureStream();
 }
 
 void RuntimeLogShutdown() {
@@ -144,6 +149,10 @@ const string RuntimeLogFilePath() {
   return g_Utility.GetModuleFolder() + "\\" + kRuntimeLogFileName;
 }
 
+void RuntimeLogRecord(const string& line) {
+  Emit(line, false);
+}
+
 bool RuntimeLogSetEnabled(bool enable) {
   const bool previous = g_RuntimeLogEnabled.exchange(enable);
   if (previous != enable) {
@@ -153,6 +162,14 @@ bool RuntimeLogSetEnabled(bool enable) {
   return enable;
 }
 
+bool RuntimeLogSetVerbose(bool enable) {
+  const bool previous = g_RuntimeLogVerbose.exchange(enable);
+  if (previous != enable) {
+    EmitRaw(enable ? "=== capture mode VERBOSE (hotkey) ==="
+                   : "=== capture mode NORMAL (hotkey) ===");
+  }
+  return enable;
+}
 // ---------------------------------------------------------------------------
 // Retail native hook: static CRT _write (printf-family output)
 // ---------------------------------------------------------------------------

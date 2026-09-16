@@ -5,6 +5,28 @@ All notable changes to the Project I.G.I Natives will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.0] - 2026-09-16
+
+### Added
+
+- Enabled Heaven-HM retail IGI runtime logging to `igi.log` beside the original `igi.exe`.
+- Added separate `IGI-Natives.log` diagnostics for DLL startup, hook installation, and runtime status.
+- Added `Ctrl+F1` to toggle capture and `Ctrl+F2` to switch NORMAL/VERBOSE capture.
+- Added Release and Debug Win32 DLL packaging for this feature.
+
+### Changed
+
+- Moved hotkey polling to an independent worker so game/native processing cannot block logging controls.
+- Routed HUD feedback through the game-thread scheduler.
+- Disabled IGI built-in debug keys and removed legacy trainer/editor/camera hotkeys from this logging build.
+- Disabled startup signature verification for runtime-logging startup while preserving the verified native metadata load.
+- Updated the runtime trace filename from the old `IGI-Natives-runtime.log` documentation to `igi.log`.
+
+### Verified
+
+- Release and Debug DLLs built as x86/Win32.
+- Release and Debug DLLs injected into clean retail IGI sessions.
+- Both sessions created `igi.log` and `IGI-Natives.log`, remained responsive, and recorded Ctrl+F1/Ctrl+F2 transitions.
 ## [Unreleased] - 2026-08-26
 
 ### Static CFG-validated natives, structures, and synchronized assets
