@@ -1,5 +1,6 @@
 // ich liebe es zu programmieren und Deustchland <3
 #include "Natives/NativeHelper.hpp"
+#include "NativeTesting/NativeTestDispatcher.hpp"
 #define USE_STACKTRACE_LIB
 #define USE_MINHOOK_LIB
 #define USE_GTLIBC_LIB
@@ -158,6 +159,7 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID) {
       }, 10);
       // Never invoke a game native while Windows holds the loader lock.
       LOG_INFO("%s v%s Attached", PROJECT_NAME, NATIVES_DLL_VERSION.c_str());
+      IGI::NativeTesting::StartDispatcher();
 
       // Start DllMainLoop in separate thread with 30 FPS timing
       g_running = true;
@@ -246,6 +248,7 @@ bool CleanUpAndExitThread(HMODULE hModule) {
     LOG_INFO("Console cleanup finished");
   }
   g_Camera.StopFreeCam();
+  IGI::NativeTesting::ShutdownDispatcher();
   FiberPool::Instance().Shutdown();
   FiberPoolEx::Instance().Shutdown();
   g_cleanupDone.store(true);

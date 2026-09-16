@@ -11,6 +11,11 @@ namespace {
 constexpr int kProtocolVersion = 1;
 constexpr size_t kMaximumArguments = 7;
 constexpr char kCommandFile[] = "native-test-command.json";
+constexpr UINT kInvokeMessage = WM_APP + 0x491;
+HWND g_game_window{};
+WNDPROC g_original_window_proc{};
+std::atomic_bool g_dispatcher_running{};
+std::thread g_dispatcher_thread;
 
 struct Command {
   string case_id;
@@ -45,6 +50,8 @@ Command ReadCommand() {
   const json document = json::parse(input);
   if (document.at("protocolVersion").get<int>() != kProtocolVersion)
     throw std::runtime_error("unsupported command protocol version");
+  if (document.at("callingConvention").get<string>() != "cdecl")
+    throw std::runtime_error("only explicit cdecl commands are supported");
 
   Command command;
   command.case_id = document.at("caseId").get<string>();
@@ -114,6 +121,50 @@ uintptr_t Invoke(const Command &command) {
   default: throw std::runtime_error("unsupported argument count");
   }
 }
+
+LRESULT CALLBACK DispatchWindowProc(HWND window, UINT message, WPARAM wparam,
+                                    LPARAM lparam) {
+  if (message == kInvokeMessage) {
+    std::unique_ptr<Command> command(reinterpret_cast<Command *>(lparam));
+    if (!command) return 0;
+    LOG_FILE("NATIVE_TEST CASE_BEGIN id=%s native=%s address=0x%08X argc=%u thread=%u",
+             command->case_id.c_str(), command->native_name.c_str(), command->address,
+             static_cast<unsigned int>(command->arguments.size()), GetCurrentThreadId());
+    try {
+      const uintptr_t result = Invoke(*command);
+      LOG_FILE("NATIVE_TEST CASE_END id=%s native=%s result=0x%08X thread=%u",
+               command->case_id.c_str(), command->native_name.c_str(),
+               static_cast<uint32_t>(result), GetCurrentThreadId());
+    } catch (const std::exception &error) {
+      LOG_ERROR("NATIVE_TEST CASE_EXCEPTION id=%s reason=%s",
+                command->case_id.c_str(), error.what());
+    }
+    return 0;
+  }
+  return CallWindowProcA(g_original_window_proc, window, message, wparam, lparam);
+}
+
+BOOL CALLBACK FindGameWindow(HWND window, LPARAM output) {
+  DWORD process_id{};
+  GetWindowThreadProcessId(window, &process_id);
+  if (process_id == GetCurrentProcessId() && IsWindowVisible(window)) {
+    *reinterpret_cast<HWND *>(output) = window;
+    return FALSE;
+  }
+  return TRUE;
+}
+
+void EnsureWindowDispatcher() {
+  if (g_game_window && g_original_window_proc) return;
+  EnumWindows(FindGameWindow, reinterpret_cast<LPARAM>(&g_game_window));
+  if (!g_game_window) throw std::runtime_error("visible game window is unavailable");
+  SetLastError(ERROR_SUCCESS);
+  const LONG_PTR previous = SetWindowLongPtrA(
+      g_game_window, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(DispatchWindowProc));
+  if (!previous && GetLastError() != ERROR_SUCCESS)
+    throw std::runtime_error("could not install game-window dispatcher");
+  g_original_window_proc = reinterpret_cast<WNDPROC>(previous);
+}
 } // namespace
 
 bool QueueCommandFromFile() {
@@ -131,17 +182,45 @@ bool QueueCommandFromFile() {
                command.case_id.c_str(), static_cast<unsigned int>(index),
                fixture.c_str());
     }
-    LOG_FILE("NATIVE_TEST CASE_BEGIN id=%s native=%s address=0x%08X argc=%u",
-             command.case_id.c_str(), command.native_name.c_str(), command.address,
-             static_cast<unsigned int>(command.arguments.size()));
-    const uintptr_t result = Invoke(command);
-    LOG_FILE("NATIVE_TEST CASE_END id=%s native=%s result=0x%08X",
-             command.case_id.c_str(), command.native_name.c_str(),
-             static_cast<uint32_t>(result));
+    EnsureWindowDispatcher();
+    auto *pending = new Command(command);
+    if (!PostMessageA(g_game_window, kInvokeMessage, 0,
+                      reinterpret_cast<LPARAM>(pending))) {
+      delete pending;
+      throw std::runtime_error("could not post command to game window thread");
+    }
     return true;
   } catch (const std::exception &error) {
     LOG_ERROR("NATIVE_TEST COMMAND_REJECTED reason=%s", error.what());
     return false;
   }
+}
+
+void StartDispatcher() {
+  if (g_dispatcher_running.exchange(true)) return;
+  g_dispatcher_thread = std::thread([] {
+    LOG_FILE("NATIVE_TEST DISPATCHER_READY thread=%u", GetCurrentThreadId());
+    bool f12_was_down = false;
+    while (g_dispatcher_running.load()) {
+      const bool modifiers = (GetAsyncKeyState(VK_CONTROL) & 0x8000) &&
+                             (GetAsyncKeyState(VK_SHIFT) & 0x8000);
+      const bool f12_down = (GetAsyncKeyState(VK_F12) & 0x8000) != 0;
+      if (modifiers && f12_down && !f12_was_down) QueueCommandFromFile();
+      f12_was_down = f12_down;
+      Sleep(20);
+    }
+  });
+}
+
+void ShutdownDispatcher() {
+  g_dispatcher_running.store(false);
+  if (g_dispatcher_thread.joinable() &&
+      g_dispatcher_thread.get_id() != std::this_thread::get_id())
+    g_dispatcher_thread.join();
+  if (g_game_window && g_original_window_proc && IsWindow(g_game_window))
+    SetWindowLongPtrA(g_game_window, GWLP_WNDPROC,
+                      reinterpret_cast<LONG_PTR>(g_original_window_proc));
+  g_game_window = nullptr;
+  g_original_window_proc = nullptr;
 }
 } // namespace IGI::NativeTesting

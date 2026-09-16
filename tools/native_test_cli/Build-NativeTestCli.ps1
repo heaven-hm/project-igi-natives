@@ -1,5 +1,8 @@
 [CmdletBinding()]
-param([ValidateSet('Debug','Release')][string]$Configuration = 'Debug')
+param(
+  [ValidateSet('Debug','Release')][string]$Configuration = 'Debug',
+  [switch]$DllOnly
+)
 $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'
@@ -18,5 +21,8 @@ if (-not (Test-Path -LiteralPath (Join-Path $root "IGI_Natives\libs\GTLibc-x86-$
 $savedPath = $env:Path
 Get-ChildItem Env: | Where-Object Name -ieq Path | Remove-Item
 $env:Path = $savedPath
-try { & $msbuild (Join-Path $root 'IGI_Natives.sln') /t:Build "/p:Configuration=$Configuration" /p:Platform=x86 /m:1 /v:minimal; if ($LASTEXITCODE) { throw "MSBuild failed with exit code $LASTEXITCODE" } }
+$target = if ($DllOnly) { Join-Path $root 'IGI_Natives\IGI_Natives.vcxproj' } else { Join-Path $root 'IGI_Natives.sln' }
+$platform = if ($DllOnly) { 'Win32' } else { 'x86' }
+[string[]]$outputArguments = if ($DllOnly) { "/p:OutDir=$(Join-Path $root "$Configuration\")" } else { @() }
+try { & $msbuild $target /t:Build "/p:Configuration=$Configuration" "/p:Platform=$platform" @outputArguments /m:1 /v:minimal; if ($LASTEXITCODE) { throw "MSBuild failed with exit code $LASTEXITCODE" } }
 finally { $env:Path = $savedPath }

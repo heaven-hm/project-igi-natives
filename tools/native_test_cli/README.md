@@ -9,13 +9,13 @@ tools\native_test_cli\build.cmd
 Test a native by name in a level-1 window:
 
 ```cmd
-tools\native_test_cli\run.cmd --native AnimTrigger_ParseConfigFile --level 1
+tools\native_test_cli\run.cmd --native AnimTrigger_ParseConfigFile --abi cdecl --level 1
 ```
 
 Resolve by address, build Release, and launch fullscreen:
 
 ```cmd
-tools\native_test_cli\run.cmd --address 0x004EC070 --configuration release --display fullscreen --level 5
+tools\native_test_cli\run.cmd --address 0x004EC070 --abi cdecl --configuration release --display fullscreen --level 5
 ```
 
 The runner validates x86 architecture and requires `D:\IGI1\igi.exe`,

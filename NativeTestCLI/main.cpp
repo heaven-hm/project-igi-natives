@@ -70,7 +70,10 @@ struct Options {
   bool all{};
   std::optional<std::pair<uint32_t,uint32_t>> addressRange;
   bool resume{true};
+  bool confirmCdecl{};
 };
+
+struct SignatureBlocked : std::runtime_error { using std::runtime_error::runtime_error; };
 
 std::string Narrow(const std::wstring& value) {
   if (value.empty()) return {};
@@ -164,6 +167,7 @@ Options ParseOptions(int argc, wchar_t** argv) {
     else if (key == L"--all") o.all = true;
     else if (key == L"--address-range") { uint32_t begin=ParseAddress(Narrow(value())); uint32_t end=ParseAddress(Narrow(value())); if(begin>end) throw std::invalid_argument("address range start exceeds end"); o.addressRange={{begin,end}}; }
     else if (key == L"--no-resume") o.resume = false;
+    else if (key == L"--abi") { std::string abi=Lower(Narrow(value())); if(abi!="cdecl") throw std::invalid_argument("only --abi cdecl is supported"); o.confirmCdecl=true; }
     else if (key == L"--level") o.level = std::stoi(value());
     else if (key == L"--dll") o.dll = value();
     else if (key == L"--catalog") o.catalog = value();
@@ -191,6 +195,7 @@ Options ParseOptions(int argc, wchar_t** argv) {
                    "  --first N | --last N | --all          Select a catalog batch\n"
                    "  --address-range START END             Select inclusive address range\n"
                    "  --no-resume                           Re-run completed batch cases\n"
+                   "  --abi cdecl                           Explicitly confirm the catalog ABI\n"
                    "  --catalog PATH --dll PATH --results PATH\n";
       ExitProcess(0);
     } else throw std::invalid_argument("unknown option: " + Narrow(key));
@@ -200,6 +205,7 @@ Options ParseOptions(int argc, wchar_t** argv) {
   if (!o.buildOnly && selectors != 1) throw std::invalid_argument("provide exactly one selector: --native, --address, --first, --last, --all, or --address-range");
   if ((o.firstCount || o.lastCount || o.all || o.addressRange) && !o.arguments.empty()) throw std::invalid_argument("custom --arg values are only valid for a single native");
   if (o.configuration != "debug" && o.configuration != "release" && o.configuration != "none") throw std::invalid_argument("--configuration must be debug, release, or none");
+  if (o.buildOnly && !o.build) throw std::invalid_argument("--build-only requires debug or release configuration");
   if (o.configuration == "release" && o.dll.filename() == L"IGI-Natives-Debug.dll") o.dll = root / L"Release" / L"IGI-Natives-Release.dll";
   if (o.level < 1 || o.level > 14) throw std::invalid_argument("--level must be 1..14");
   if (fs::weakly_canonical(o.game) != fs::path(kGamePath)) throw std::invalid_argument("game path must be D:\\IGI1\\igi.exe");
@@ -226,20 +232,19 @@ std::vector<wchar_t> DeduplicatedEnvironment() {
 }
 
 void BuildDll(const Options& options, Logger& log) {
-  fs::path msbuild = L"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe";
-  if (!fs::is_regular_file(msbuild)) throw std::runtime_error("MSBuild 2022 Community was not found");
   std::wstring configuration = options.configuration == "release" ? L"Release" : L"Debug";
+  fs::path script=options.repoRoot/L"tools"/L"native_test_cli"/L"Build-NativeTestCli.ps1";
+  if(!fs::is_regular_file(script)) throw std::runtime_error("shared build script is unavailable");
   fs::path buildLog = options.results / L"build.log";
   Handle output(CreateFileW(buildLog.c_str(), GENERIC_WRITE, FILE_SHARE_READ, nullptr, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr));
   if (!output) throw std::runtime_error(WinError("CreateFile(build.log)"));
-  std::wstring command = L"\"" + msbuild.wstring() + L"\" \"" + (options.repoRoot/L"IGI_Natives"/L"IGI_Natives.vcxproj").wstring() +
-      L"\" /t:Build /p:Configuration=" + configuration + L" /p:Platform=Win32 /m /v:minimal";
+  std::wstring command = L"powershell.exe -NoProfile -ExecutionPolicy Bypass -File \""+script.wstring()+L"\" -Configuration "+configuration+L" -DllOnly";
   std::vector<wchar_t> mutableCommand(command.begin(), command.end()); mutableCommand.push_back(L'\0');
   STARTUPINFOW startup{sizeof(startup)}; startup.dwFlags = STARTF_USESTDHANDLES; startup.hStdOutput=output.value; startup.hStdError=output.value; startup.hStdInput=GetStdHandle(STD_INPUT_HANDLE);
   PROCESS_INFORMATION process{};
   auto environment = DeduplicatedEnvironment();
   log.Event("build_started", {{"configuration", Narrow(configuration)}, {"log", Narrow(buildLog.wstring())}});
-  if (!CreateProcessW(nullptr, mutableCommand.data(), nullptr, nullptr, TRUE, CREATE_NO_WINDOW | CREATE_UNICODE_ENVIRONMENT, environment.data(), options.repoRoot.c_str(), &startup, &process)) throw std::runtime_error(WinError("CreateProcess(MSBuild)"));
+  if (!CreateProcessW(nullptr, mutableCommand.data(), nullptr, nullptr, TRUE, CREATE_NO_WINDOW | CREATE_UNICODE_ENVIRONMENT, environment.data(), options.repoRoot.c_str(), &startup, &process)) throw std::runtime_error(WinError("CreateProcess(build script)"));
   Handle processHandle(process.hProcess), threadHandle(process.hThread);
   WaitForSingleObject(processHandle.value, INFINITE); DWORD code{}; GetExitCodeProcess(processHandle.value, &code);
   log.Event("build_completed", {{"exitCode", code}}); if (code != 0) throw std::runtime_error("DLL build failed; see build.log");
@@ -262,6 +267,26 @@ json DefaultArgument(const std::string& type) {
   if (t.find('*') != std::string::npos) return {{"kind", "buffer"}, {"size", 4096}};
   if (t.find("float") != std::string::npos) return {{"kind", "float"}, {"value", 0.0}};
   return {{"kind", "int"}, {"value", 0}};
+}
+
+std::optional<std::string> EligibilityReason(const json& native, const Options& options) {
+  if (!options.confirmCdecl) return "calling convention is not confirmed; pass --abi cdecl after verification";
+  std::string signature=Lower(native.value("signature",""));
+  if(signature.find("...")!=std::string::npos||signature.find("unknown")!=std::string::npos||signature.find("probable")!=std::string::npos) return "uncertain or variadic signature";
+  const auto& parameters=native.at("parameters"); if(parameters.size()>7) return "more than seven x86 argument words";
+  for(const auto& parameter:parameters){ std::string type=Lower(parameter.value("type","")); if(type.empty()||type.find("unknown")!=std::string::npos||type.find("...")!=std::string::npos||type.find("probable")!=std::string::npos) return "unsupported parameter type: "+type; }
+  return std::nullopt;
+}
+
+std::string InvocationFingerprint(const Options& options, uint32_t address) {
+  auto ticks=[](const fs::path& path){ return fs::last_write_time(path).time_since_epoch().count(); };
+  std::ostringstream out; out<<std::hex<<address<<'|'<<options.level<<'|'<<options.windowed<<'|'<<options.inject<<'|'<<options.injectDelayMs<<'|'
+      <<fs::file_size(options.catalog)<<'|'<<ticks(options.catalog)<<'|'<<fs::file_size(options.dll)<<'|'<<ticks(options.dll);
+  return out.str();
+}
+
+bool Responsive(HWND hwnd) {
+  DWORD_PTR result{}; return SendMessageTimeoutW(hwnd,WM_NULL,0,0,SMTO_ABORTIFHUNG,2000,&result)!=0;
 }
 
 void RequirePe32(const fs::path& path, const char* label) {
@@ -360,7 +385,6 @@ MarkerResult WaitMarker(const fs::path& log, const std::string& marker, DWORD pi
 
 int Run(const Options& options) {
   fs::create_directories(options.results); Logger log(options.results / L"controller-cpp.jsonl");
-  GT_EnableLogs();
   json report{{"timestamp", Timestamp()}, {"status", "controller_error"}, {"level", options.level}};
   DWORD ownedPid{};
   bool ownsProcess{false};
@@ -375,15 +399,18 @@ int Run(const Options& options) {
     if (options.launch && !existing.empty()) throw std::runtime_error("refusing to launch while igi.exe already exists; use --no-launch explicitly");
     if (!options.launch && existing.size() != 1) throw std::runtime_error("--no-launch requires exactly one existing igi.exe");
     json catalog = LoadJson(options.catalog); json native = ResolveNative(catalog, options);
+    std::ostringstream hash; hash << std::uppercase << std::hex << std::setw(8) << std::setfill('0') << native.at("address").get<uint32_t>();
+    report.update({{"native",native.at("name")},{"address","0x"+hash.str()},{"signature",native.at("signature")},
+                   {"invocationFingerprint",InvocationFingerprint(options,native.at("address").get<uint32_t>())}});
+    if(auto reason=EligibilityReason(native,options)) throw SignatureBlocked(*reason);
     json arguments = options.arguments; if (arguments.empty()) for (const auto& parameter : native.at("parameters")) arguments.push_back(DefaultArgument(parameter.at("type")));
     if (arguments.size() != native.at("parameters").size()) throw std::runtime_error("argument count does not match native signature");
     fs::path deploy = fs::absolute(options.results / L"deploy"); fs::create_directories(deploy / L"assets");
     fs::path deployedDll = deploy / options.dll.filename(); fs::copy_file(options.dll, deployedDll, fs::copy_options::overwrite_existing);
     fs::copy_file(options.catalog, deploy / L"assets" / L"IGINatives.json", fs::copy_options::overwrite_existing);
     fs::copy_file(options.models, deploy / L"IGIModels.txt", fs::copy_options::overwrite_existing);
-    std::ostringstream hash; hash << std::uppercase << std::hex << std::setw(8) << std::setfill('0') << native.at("address").get<uint32_t>();
     std::string caseId = hash.str() + "-manual";
-    json command{{"protocolVersion",1},{"caseId",caseId},{"nativeName",native.at("name")},{"address","0x"+hash.str()},{"arguments",arguments}};
+    json command{{"protocolVersion",1},{"callingConvention","cdecl"},{"caseId",caseId},{"nativeName",native.at("name")},{"address","0x"+hash.str()},{"arguments",arguments}};
     AtomicWrite(deploy / L"native-test-command.json", command.dump(2) + "\n");
     fs::path dllLog = deploy / L"IGI-Natives.log"; std::error_code ec; fs::remove(dllLog, ec);
     fs::path launcher;
@@ -410,12 +437,13 @@ int Run(const Options& options) {
     SendHotkey(hwnd); log.Event("hotkey_sent", {{"keys","Ctrl+Shift+F12"}});
     std::string text; std::string begin="NATIVE_TEST CASE_BEGIN id="+caseId, end="NATIVE_TEST CASE_END id="+caseId;
     MarkerResult began = WaitMarker(dllLog, begin, pid, text);
-    if (began != MarkerResult::Found) report["status"] = began == MarkerResult::ProcessExited ? "CRASHED" : "trigger_failed";
-    else { MarkerResult ended = WaitMarker(dllLog, end, pid, text); report["status"] = ended == MarkerResult::Found && Alive(pid) ? "PASSED" : (ended == MarkerResult::ProcessExited ? "CRASHED" : "TIMED_OUT"); }
+    if (began != MarkerResult::Found) { report["status"] = began == MarkerResult::ProcessExited ? "CRASHED" : "TIMED_OUT"; report["reason"]="CASE_BEGIN marker was not observed"; }
+    else { MarkerResult ended = WaitMarker(dllLog, end, pid, text); if(ended==MarkerResult::Found){ Sleep(2000); report["status"]=Alive(pid)&&Responsive(hwnd)?"PASSED":"CRASHED"; if(report["status"]!="PASSED") report["reason"]="process exited or became unresponsive after CASE_END"; } else report["status"] = ended == MarkerResult::ProcessExited ? "CRASHED" : "TIMED_OUT"; }
     report.update({{"native",native.at("name")},{"address","0x"+hash.str()},{"signature",native.at("signature")},{"pid",pid},{"moduleVerified",true},{"logTail",text.substr(text.size()>4000?text.size()-4000:0)}});
     log.Event("case_completed", report);
     }
-  } catch (const std::exception& e) { controllerError=true; report["error"] = e.what(); log.Event("case_exception", {{"error",e.what()}}); }
+  } catch (const SignatureBlocked& e) { report["status"]="signature_blocked"; report["reason"]=e.what(); log.Event("signature_blocked",report); }
+    catch (const std::exception& e) { controllerError=true; report["error"] = e.what(); log.Event("case_exception", {{"error",e.what()}}); }
   if (ownsProcess) StopOwned(ownedPid);
   AtomicWrite(options.results / L"last-result.json", report.dump(2) + "\n");
   std::ostringstream md; md << "# IGI native test result\n\n- Time: `" << report.value("timestamp",Timestamp()) << "`\n- Status: **" << report.value("status","controller_error") << "**\n- Level: `" << options.level << "`\n";
@@ -457,17 +485,22 @@ int RunCampaign(Options options) {
     const auto& native=natives[index]; uint32_t address=native.at("address").get<uint32_t>();
     std::ostringstream hash; hash<<std::uppercase<<std::hex<<std::setw(8)<<std::setfill('0')<<address;
     fs::path caseRoot=campaignRoot/L"cases"/(std::to_string(index+1)+"-"+hash.str()); fs::path resultPath=caseRoot/L"last-result.json";
+    Options single=options; single.name.reset(); single.address=address; single.firstCount=single.lastCount=0; single.all=false; single.addressRange.reset(); single.results=caseRoot;
     json result;
     if(options.resume && fs::is_regular_file(resultPath)){
-      result=LoadJson(resultPath); logger.Event("case_resumed",{{"index",index+1},{"address","0x"+hash.str()},{"status",result.value("status","unknown")}});
-    }else{
-      Options single=options; single.name.reset(); single.address=address; single.firstCount=single.lastCount=0; single.all=false; single.addressRange.reset(); single.results=caseRoot;
+      json prior=LoadJson(resultPath); std::string status=prior.value("status","");
+      bool terminal=status=="PASSED"||status=="CRASHED"||status=="TIMED_OUT"||status=="signature_blocked"||status=="GAME_READY";
+      if(terminal&&prior.value("invocationFingerprint","")==InvocationFingerprint(single,address)){
+        result=std::move(prior); logger.Event("case_resumed",{{"index",index+1},{"address","0x"+hash.str()},{"status",result.value("status","unknown")}});
+      }
+    }
+    if(result.is_null()){
       int code=3;
       for(unsigned attempt=0;attempt<=options.retries;++attempt){ code=Run(single); if(code!=3) break; logger.Event("case_retry",{{"index",index+1},{"attempt",attempt+1},{"address","0x"+hash.str()}}); }
       result=fs::is_regular_file(resultPath)?LoadJson(resultPath):json{{"status","controller_error"},{"error","case produced no result"}};
     }
     result["selectionIndex"]=index+1; campaign["results"].push_back(result);
-    std::string status=result.value("status","controller_error"); if(status!="PASSED"&&status!="GAME_READY") ++failures;
+    std::string status=result.value("status","controller_error"); if(status!="PASSED"&&status!="GAME_READY"&&status!="signature_blocked") ++failures;
     campaign["completed"]=index+1; campaign["updatedAt"]=Timestamp(); AtomicWrite(campaignRoot/L"campaign.json",campaign.dump(2)+"\n");
     logger.Event("case_recorded",{{"index",index+1},{"total",natives.size()},{"address","0x"+hash.str()},{"status",status}});
   }
@@ -478,7 +511,7 @@ int RunCampaign(Options options) {
 } // namespace
 
 int wmain(int argc, wchar_t** argv) {
-  try { Options options=ParseOptions(argc, argv); if(IsBatch(options)) return RunCampaign(options); int code=3; for(unsigned attempt=0; attempt<=options.retries; ++attempt){ code=Run(options); if(code!=3) break; if(attempt<options.retries){ std::cerr << "infrastructure failure; retry " << (attempt+1) << '/' << options.retries << "\n"; Sleep(1000); } } return code; }
+  try { GT_EnableLogs(); Options options=ParseOptions(argc, argv); if(IsBatch(options)) return RunCampaign(options); int code=3; for(unsigned attempt=0; attempt<=options.retries; ++attempt){ code=Run(options); if(code!=3) break; if(attempt<options.retries){ std::cerr << "infrastructure failure; retry " << (attempt+1) << '/' << options.retries << "\n"; Sleep(1000); } } return code; }
   catch (const std::exception& e) { std::cerr << "fatal: " << e.what() << '\n'; return 1; }
   catch (...) { std::cerr << "fatal: unknown error\n"; return 1; }
 }
