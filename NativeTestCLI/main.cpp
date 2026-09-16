@@ -155,7 +155,9 @@ Options ParseOptions(int argc, wchar_t** argv) {
   wchar_t module[MAX_PATH]{}; GetModuleFileNameW(nullptr, module, MAX_PATH);
   fs::path root = fs::path(module).parent_path().parent_path();
   o.repoRoot = root;
-  o.dll = fs::path(module).parent_path() / L"IGI-Natives-Debug.dll";
+  const fs::path executableDirectory = fs::path(module).parent_path();
+  bool dllExplicit = false;
+  o.dll = executableDirectory / L"IGI-Natives-Debug.dll";
   o.results = root / L"tools" / L"native_test_harness" / L"results";
   for (int i = 1; i < argc; ++i) {
     std::wstring key = argv[i];
@@ -169,7 +171,7 @@ Options ParseOptions(int argc, wchar_t** argv) {
     else if (key == L"--no-resume") o.resume = false;
     else if (key == L"--abi") { std::string abi=Lower(Narrow(value())); if(abi!="cdecl") throw std::invalid_argument("only --abi cdecl is supported"); o.confirmCdecl=true; }
     else if (key == L"--level") o.level = std::stoi(value());
-    else if (key == L"--dll") o.dll = value();
+    else if (key == L"--dll") { o.dll = value(); dllExplicit = true; }
     else if (key == L"--catalog") o.catalog = value();
     else if (key == L"--results") o.results = value();
     else if (key == L"--arg") o.arguments.push_back(ParseArgument(Narrow(value())));
@@ -206,7 +208,12 @@ Options ParseOptions(int argc, wchar_t** argv) {
   if ((o.firstCount || o.lastCount || o.all || o.addressRange) && !o.arguments.empty()) throw std::invalid_argument("custom --arg values are only valid for a single native");
   if (o.configuration != "debug" && o.configuration != "release" && o.configuration != "none") throw std::invalid_argument("--configuration must be debug, release, or none");
   if (o.buildOnly && !o.build) throw std::invalid_argument("--build-only requires debug or release configuration");
-  if (o.configuration == "release" && o.dll.filename() == L"IGI-Natives-Debug.dll") o.dll = root / L"Release" / L"IGI-Natives-Release.dll";
+  if (!dllExplicit) {
+    const bool useRelease = o.configuration == "release" ||
+        (o.configuration == "none" && _wcsicmp(executableDirectory.filename().c_str(), L"Release") == 0);
+    o.dll = root / (useRelease ? L"Release" : L"Debug") /
+        (useRelease ? L"IGI-Natives-Release.dll" : L"IGI-Natives-Debug.dll");
+  }
   if (o.level < 1 || o.level > 14) throw std::invalid_argument("--level must be 1..14");
   if (fs::weakly_canonical(o.game) != fs::path(kGamePath)) throw std::invalid_argument("game path must be D:\\IGI1\\igi.exe");
   return o;
