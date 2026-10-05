@@ -1,7 +1,7 @@
 # Project I.G.I 1 — Native Function Deep-Dive Report
 
 **Target:** `igi.exe` retail (PE32, image base `0x400000`, `.text` = `0x401000`–`0x532510`)
-**Branch:** `feature/natives-unified` · **Catalog:** `assets/IGINatives.json` (294 natives)
+**Catalog:** `assets/IGINatives.json` (302 entries across 301 unique addresses)
 **Verification:** radare2 + Ghidra MCP + OpenIGI cross-reference + game-script mining
 
 ---
@@ -15,8 +15,8 @@ verification. Every address in the catalog was proven to originate **exclusively
 
 | Metric | Value |
 |---|---|
-| Natives cataloged | 284 |
-| With igi.exe registration-binding evidence | 158 |
+| Natives cataloged | 301 unique addresses (302 entries including one alias) |
+| Distinct immediate `.text` addresses in registrar-call arguments | 173 |
 | With third-party corroboration (OpenIGI / IGIPatch) | 136+15 |
 | Address-provenance pass coverage | 100% |
 | Calling convention proven cdecl | 237/237 in-range |
@@ -32,8 +32,9 @@ Every accepted fact traces to igi.exe machine code; unknown is preferred over fa
 ### 2.2 Discovery pipeline
 1. **Registration-table mining** — igi.exe pushes each script-command's address *together with* its
    exact name string into its own registrar (`GAME_DEFINE_OPTIONS`, `0x004B8890` → fcn.`0x4BAAC0`;
-   secondary registrars `0x4B88C0`/`0x4B88F0`). Full linear disassembly of `.text` yielded 160 sites
-   → 151 unique (address, name) pairs → 158 new natives after dedup against the existing SDK.
+   secondary registrars `0x4B88C0`/`0x4B88F0`). The original linear-disassembly sweep found 160 sites
+   and 151 unique (address, name) pairs; a later Ghidra headless audit found 175 direct registrar
+   callsites and 173 unique immediate handler addresses, all already present in the current catalog.
 2. **Embedded-string names** — functions whose own error messages name them
    (e.g. `"Mem_Alloc() failed to allocate %d bytes."` referenced inside the function body)
    → confirmed renames: Mem_Alloc, Mission_Open, Resource_Flush/Unload, Script_SetSymbolContext,
@@ -909,13 +910,13 @@ The source formats are generated from the single verified catalog in `assets/`. 
 
 | File | Target tool | Contents |
 |---|---|---|
-| `assets/IGINatives.json` | Catalog consumers | The single current 294-entry JSON catalog |
-| `assets/IGINatives.map` | Linker-map consumers, crash analyzers | Current 294-symbol segment-style map |
-| `assets/igi.pdb` | Windows debuggers | Address-compatible generated CodeView/MSF symbols; retail `igi.exe` has no CodeView identity to match |
-| `assets/iginatives.csv` | Spreadsheets / scripts | Full catalog including signatures |
-| `assets/iginatives.idc` | IDA Pro | MakeName + repeatable comments per native |
-| `assets/ghidra_apply_iginatives.py` | Ghidra Script Manager | Creates functions, labels, and PRE comments |
-| `assets/IGI1-Native-Name-Evidence.json` | Audit / review | 178 retail-derived names, 88 syntax fallbacks, and 18 parameter/context inferences, including Ghidra/r2 CFG metrics |
+| `assets/IGINatives.json` | Catalog consumers | The single current 302-entry JSON catalog (301 unique addresses) |
+| `assets/IGINatives.map` | Linker-map consumers, crash analyzers | Current 302-entry segment-style map |
+| `assets/igi.pdb` | Windows debuggers | Unmodified address-compatible CodeView/MSF export; it omits the eight reconciled names, and retail `igi.exe` has no CodeView identity to match |
+| `assets/iginatives.csv` | Spreadsheets / scripts | Full 302-entry catalog including signatures |
+| `assets/iginatives.idc` | IDA Pro | MakeName + repeatable comments for all 302 entries |
+| `assets/ghidra_apply_iginatives.py` | Ghidra Script Manager | Creates functions, labels, and PRE comments for all 302 entries |
+| `assets/IGI1-Native-Name-Evidence.json` | Audit / review | 186 retail-derived names, 88 syntax fallbacks, and 28 parameter/context inferences, including Ghidra/r2 CFG metrics |
 
 ## 6. SDK Programming Guide
 
@@ -928,4 +929,55 @@ subsystem namespace). Wrappers are cdecl calls executed on the game thread via F
 - 88 internal engine functions have no recoverable name occurrence in the retail string/context evidence and therefore use only the mechanical `Function_Action` fallback recorded in `IGI1-Native-Name-Evidence.json`; the accepted dispatch/camera/MagicObj helpers are separately marked as parameter/context inference. `0x004D9FC0` remains intentionally unpromoted because its semantic owner is unresolved even though its Ghidra/r2 CFG agrees.
 - DEBUG_KEYS_ENABLE has no verified address; it exists only as a do-not-invoke quarantine in Natives.hpp.
 
-## 8. Evidence Index
+## 8. October 2026 bundle reconciliation and model pilot
+
+The public branch already had eight registered functions in `IGINatives.json` that were missing
+from the evidence manifest and generated text exports. A fresh Ghidra 12.1.3 headless import of the
+retail PE confirmed each handler address and its string pointer at the registrar callsite:
+
+| Handler | Registrar callsite | Retail registration string |
+|---|---:|---|
+| `GOStart` (`0x00403660`) | `0x00403006` | `GOStart` |
+| `SetActiveMaterial` (`0x00407DE0`) | `0x00407DA6` | `SetActiveMaterial` |
+| `DefineHumanPlayerGeneral` (`0x00410070`) | `0x0041001B` | `DefineHumanPlayerGeneral` |
+| `DefineWeaponType` (`0x00413F90`) | `0x00413E52` | `DefineWeaponType` |
+| `Human_GetCutSceneDeltaTime` (`0x0045EAE0`) | `0x0045EA44` | `Human_GetCutSceneDeltaTime` |
+| `CreateTerrainMaterial` (`0x004C6670`) | `0x004C6580` | `CreateTerrainMaterial` |
+| `DefineAnimTrigger` (`0x004EBEB0`) | `0x004EBEA2` | `DefineAnimTrigger` |
+| `DefinePhysicsObjType` (`0x004EDD20`) | `0x004EDD12` | `DefinePhysicsObjType` |
+
+After reconciling them, the catalog and evidence manifest each contain 302 entries across 301
+unique addresses; the two entries at `0x00403C10` are an intentional name alias. The text exports
+were updated to include these eight entries. The existing `igi.pdb` was not rebuilt and string
+inspection confirms that it omits those names; use the current Ghidra/IDA/MAP/CSV exports for them.
+
+A bounded registrar sweep found 175 direct callsites and 173 unique immediate code addresses among
+their arguments; each address was already in the catalog. It did not yield a new native address.
+This scan does not claim that every internal engine function has been identified. A second Ghidra
+12.1.3 headless import on the Mac also completed analysis of the retail PE; it confirmed the same
+x86 target and missing embedded PDB metadata.
+
+LLM4Decompile-End-1.3B-V1.5 was run on the 74-instruction x86 function at `0x004D9FC0` as a
+semantic-assistance pilot. Its 256-token output proposed `struct vec3d` and `v3d_sub`, names not
+supported by the Ghidra pseudocode, and stopped mid-function. Ghidra's pseudocode does confirm a
+three-component interpolation using `_DAT_005335C0`, but the model's source-level type and function
+names remain unsupported. The function has no direct registrar binding in this scan and remains
+unpromoted. The model authors document a Linux x86-64/GCC evaluation scope, not IGI's Win32 x86/MSVC
+target; see the [official model card](https://huggingface.co/LLM4Binary/llm4decompile-1.3b-v1.5) and
+[project README](https://github.com/albertan017/LLM4Decompile).
+
+An Apple-Silicon run used DevQuasar-7's Q4_K_M GGUF quantization of the same V1.5 checkpoint with
+[llama.cpp b10506](https://github.com/ggml-org/llama.cpp/releases/tag/b10506). It generated an
+unrelated `im_set_pixel` stub for this function, so the quantized output was discarded; no model-
+generated name or type was promoted. See the [quantized model card](https://huggingface.co/DevQuasar-7/LLM4Binary.llm4decompile-1.3b-v1.5-GGUF).
+
+The YouTube search surfaced an [IGI editor walkthrough](https://www.youtube.com/watch?v=w4k5TRIy9eM)
+that demonstrates terrain, AI, object, script, mission, and weapon editing, but it publishes no
+function addresses or signatures. It was not used as native evidence.
+
+IDASQL was evaluated and rejected for this run. Its [official README](https://github.com/allthingsida/idasql)
+requires IDA Pro, and the cloud has no `ida`, `idal64`, or `idasql` executable. Ghidra already
+provided the retail strings, function decompilation, and registrar cross-references needed for this
+audit, so IDASQL would add an IDA Pro dependency without a distinct evidence gap to close. Revisit
+it only if a licensed IDA Pro environment or a compatible `.i64` analysis database becomes
+available for an independent Hex-Rays comparison.

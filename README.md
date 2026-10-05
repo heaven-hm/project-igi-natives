@@ -148,8 +148,9 @@ You can modify the project by focusing on the **Features.cpp** file located in t
 
 The DLL exposes the game's native functions as callable C++ wrappers. After injection, every
 wrapper forwards through `NativeCaller::Invoke` to the verified address in `assets/IGINatives.json`
-(all 284 addresses machine-verified against retail `igi.exe`; the branch export bundle includes the
-address-compatible project `igi.pdb`, while the retail executable has no embedded PDB identity).
+(301 unique addresses across 302 catalog entries, including the documented `0x00403C10` alias).
+The retail executable has no embedded PDB identity, so `assets/igi.pdb` is address-compatible rather
+than an exact-match debug file.
 For runtime signature loading, deploy the `assets` folder beside the DLL; the loader reads its single `IGINatives.json` from that relative path.
 Struct layouts recovered from the binary live in [`assets/IGI_Structures.hpp`](assets/IGI_Structures.hpp).
 
@@ -188,11 +189,11 @@ Full signatures + per-native evidence notes: [`assets/IGINatives.json`](assets/I
 
 ### IGI1 native export bundle
 
-The branch's official project export bundle is [`assets/`](assets/). It contains the single structured `IGINatives.json` catalog, address/name MAP, generated x86 `igi.pdb`, audit manifest, and generated Ghidra/IDA/CSV exports. Heaven completed 80 natives as human reverse-engineering work; the remaining discoveries were AI-assisted with live Ghidra Headless MCP and r2 MCP (Radare2 MCP). The bundle README precisely defines each file and explains why the generated PDB is address-compatible but cannot exact-match the retail executable's absent PE debug identity.
+The branch's official project export bundle is [`assets/`](assets/). It contains the single structured `IGINatives.json` catalog, address/name MAP, x86 `igi.pdb`, audit manifest, and Ghidra/IDA/CSV exports. The MAP, Ghidra, IDA, CSV, and Markdown exports now cover all 302 catalog entries. The PDB was not regenerated and does not include the eight reconciled entries; the retail executable also has no embedded PDB identity, so it cannot be an exact-match debug file. The bundle README describes the difference.
 
 All future reverse-engineering work on this branch follows the acceptance policy recorded in the native evidence manifest.
 
-The 11 new dispatch, camera-reset, and MagicObj entries are included in the 294-entry catalog. They were added only after live Ghidra and r2 CFG analysis of previously undiscovered methods; existing entries were preserved, and the Weapon update signatures were corrected to their two-argument forms. The catalog is maintained only at `assets/IGINatives.json`; no duplicate root catalog is kept.
+The 11 new dispatch, camera-reset, and MagicObj entries are included in the 302-entry catalog. They were added only after live Ghidra and r2 CFG analysis of previously undiscovered methods; existing entries were preserved, and the Weapon update signatures were corrected to their two-argument forms. The catalog is maintained only at `assets/IGINatives.json`; no duplicate root catalog is kept.
 
 ### Enum quick reference
 

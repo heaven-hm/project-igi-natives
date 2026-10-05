@@ -5,7 +5,7 @@
   "policy": "Use exact/underscore-insensitive/current-name occurrences from IGI.exe strings first; otherwise use a mechanically normalized Function_Action fallback or a behavior-derived parameter/context name only when live Ghidra and r2 evidence agrees. New behavior-derived entries require independent Ghidra and r2 CFG agreement.",
   "counts": {
     "parameter-context-inference": 28,
-    "retail-string": 168,
+    "retail-string": 176,
     "retail-string-context": 10,
     "syntax-fallback": 88
   },
@@ -4075,6 +4075,102 @@
       "dataTypeRefs": [
         "ProfileRecord"
       ]
+    },
+    {
+      "hash": "00403660",
+      "address": 4208224,
+      "catalogName": "GOStart",
+      "canonicalName": "GOStart",
+      "source": "retail-string",
+      "retailName": "GOStart",
+      "retailEvidence": [
+        "GOStart"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "00407DE0",
+      "address": 4226528,
+      "catalogName": "SetActiveMaterial",
+      "canonicalName": "SetActiveMaterial",
+      "source": "retail-string",
+      "retailName": "SetActiveMaterial",
+      "retailEvidence": [
+        "SetActiveMaterial"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "00410070",
+      "address": 4259952,
+      "catalogName": "DefineHumanPlayerGeneral",
+      "canonicalName": "DefineHumanPlayerGeneral",
+      "source": "retail-string",
+      "retailName": "DefineHumanPlayerGeneral",
+      "retailEvidence": [
+        "DefineHumanPlayerGeneral"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "00413F90",
+      "address": 4276112,
+      "catalogName": "DefineWeaponType",
+      "canonicalName": "DefineWeaponType",
+      "source": "retail-string",
+      "retailName": "DefineWeaponType",
+      "retailEvidence": [
+        "DefineWeaponType"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "0045EAE0",
+      "address": 4582112,
+      "catalogName": "Human_GetCutSceneDeltaTime",
+      "canonicalName": "Human_GetCutSceneDeltaTime",
+      "source": "retail-string",
+      "retailName": "Human_GetCutSceneDeltaTime",
+      "retailEvidence": [
+        "Human_GetCutSceneDeltaTime"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "004C6670",
+      "address": 5006960,
+      "catalogName": "CreateTerrainMaterial",
+      "canonicalName": "CreateTerrainMaterial",
+      "source": "retail-string",
+      "retailName": "CreateTerrainMaterial",
+      "retailEvidence": [
+        "CreateTerrainMaterial"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "004EBEB0",
+      "address": 5160624,
+      "catalogName": "DefineAnimTrigger",
+      "canonicalName": "DefineAnimTrigger",
+      "source": "retail-string",
+      "retailName": "DefineAnimTrigger",
+      "retailEvidence": [
+        "DefineAnimTrigger"
+      ],
+      "dataTypeRefs": []
+    },
+    {
+      "hash": "004EDD20",
+      "address": 5168416,
+      "catalogName": "DefinePhysicsObjType",
+      "canonicalName": "DefinePhysicsObjType",
+      "source": "retail-string",
+      "retailName": "DefinePhysicsObjType",
+      "retailEvidence": [
+        "DefinePhysicsObjType"
+      ],
+      "dataTypeRefs": []
     }
   ],
   "catalog": "assets/IGINatives.json"
