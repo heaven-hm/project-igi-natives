@@ -1,5 +1,5 @@
  IGI1 Native Symbols - Project I.G.I (igi.exe) verified native addresses
- Generated from assets/IGINatives.json (294 catalog entries; duplicate-address aliases retained)
+ Generated from assets/IGINatives.json (302 catalog entries; duplicate-address aliases retained)
  Preferred load address is 00400000
 
  Start         Length     Name                   Class
@@ -20,6 +20,7 @@
  0001:000018C0  _Frames_GetTaskCounter                    004028C0 f   igi1natives.obj
  0001:000018D0  _Game_TimingBegin                         004028D0 f   igi1natives.obj
  0001:000018F0  _Game_TimingEnd                           004028F0 f   igi1natives.obj
+ 0001:00002660  _GOStart                                   00403660 f   igi1natives.obj
  0001:000026B0  _GO_Player                                004036B0 f   igi1natives.obj
  0001:00002750  _GO_ActiveMission                         00403750 f   igi1natives.obj
  0001:000027C0  _GO_InRemap                               004037C0 f   igi1natives.obj
@@ -92,9 +93,11 @@
  0001:00004BD0  _Config_Write                             00405BD0 f   igi1natives.obj
  0001:00005220  _Config_GetActivePlayerProfileRecord      00406220 f   igi1natives.obj
  0001:000061E0  _Weapon_ConfigRead                        004071E0 f   igi1natives.obj
+ 0001:00006DE0  _SetActiveMaterial                         00407DE0 f   igi1natives.obj
  0001:00006E30  _DefineQ_Material                         00407E30 f   igi1natives.obj
  0001:00006F50  _Define_GameMaterial                      00407F50 f   igi1natives.obj
  0001:00007350  _GameMaterial_LoadParameters              00408350 f   igi1natives.obj
+ 0001:0000F070  _DefineHumanPlayerGeneral                  00410070 f   igi1natives.obj
  0001:0000F1C0  _Define_HumanPlayerWeaponCycle            004101C0 f   igi1natives.obj
  0001:0000F240  _Define_HumanPlayerWeaponCategory         00410240 f   igi1natives.obj
  0001:0000F2D0  _Define_HumanPlayerAmmoLimit              004102D0 f   igi1natives.obj
@@ -103,6 +106,7 @@
  0001:000127A0  _HumanPlayer_LoadParameters               004137A0 f   igi1natives.obj
  0001:00012B70  _Weapon_TypeOpen                          00413B70 f   igi1natives.obj
  0001:00012BB0  _Weapons_CountGet                         00413BB0 f   igi1natives.obj
+ 0001:00012F90  _DefineWeaponType                          00413F90 f   igi1natives.obj
  0001:00014020  _DEBUG_KEYSENABLEINVALID                  00415020 f   igi1natives.obj
  0001:000141E0  _MovieSubtitle_RegisterFont               004151E0 f   igi1natives.obj
  0001:00014260  _MovieSubtitle_RegisterText               00415260 f   igi1natives.obj
@@ -187,6 +191,7 @@
  0001:0004DCB0  _AIFunction_GetAnimationToPlay            0044ECB0 f   igi1natives.obj
  0001:0004DE40  _AIFunction_SendResponse                  0044EE40 f   igi1natives.obj
  0001:0005B440  _Soldier_Execute                          0045C440 f   igi1natives.obj
+ 0001:0005DAE0  _Human_GetCutSceneDeltaTime                0045EAE0 f   igi1natives.obj
  0001:0005EF80  _Weapon_AmmoPickup                        0045FF80 f   igi1natives.obj
  0001:0005EFC0  _Weapon_GunPickup                         0045FFC0 f   igi1natives.obj
  0001:00062760  _Human_ViewCam                            00463760 f   igi1natives.obj
@@ -269,6 +274,7 @@
  0001:000C3520  _Define_MagicObj                          004C4520 f   igi1natives.obj
  0001:000C38E0  _Rigid_DyncubeObjRead                     004C48E0 f   igi1natives.obj
  0001:000C3930  _Magic_ObjLoad                            004C4930 f   igi1natives.obj
+ 0001:000C5670  _CreateTerrainMaterial                     004C6670 f   igi1natives.obj
  0001:000C5760  _Create_TerrainTileMap                    004C6760 f   igi1natives.obj
  0001:000D87F0  _Qtask_SetCallbackData                    004D97F0 f   igi1natives.obj
  0001:000D8800  _Qtask_GetCallbackData                    004D9800 f   igi1natives.obj
@@ -288,8 +294,10 @@
  0001:000E8EC0  _Define_TriggerOnce                       004E9EC0 f   igi1natives.obj
  0001:000E9D20  _Define_Graph                             004EAD20 f   igi1natives.obj
  0001:000EAA90  _Define_Group                             004EBA90 f   igi1natives.obj
+ 0001:000EAEB0  _DefineAnimTrigger                         004EBEB0 f   igi1natives.obj
  0001:000EB070  _AnimTrigger_ParseConfigFile              004EC070 f   igi1natives.obj
  0001:000EB0C0  _Anim_TriggerLoad                         004EC0C0 f   igi1natives.obj
+ 0001:000ECD20  _DefinePhysicsObjType                      004EDD20 f   igi1natives.obj
  0001:000ECFE0  _PhysicsObjType_ParseConfigFile           004EDFE0 f   igi1natives.obj
  0001:000ED030  _Physics_ObjLoad                          004EE030 f   igi1natives.obj
  0001:000EF740  _Task_DeclareParameters                   004F0740 f   igi1natives.obj
