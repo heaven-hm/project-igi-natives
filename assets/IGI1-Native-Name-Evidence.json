@@ -1729,12 +1729,12 @@
     {
       "hash": "00403C10",
       "address": 4209680,
-      "catalogName": "Config_SetContentControlPassword",
-      "canonicalName": "Config_SetContentControlPassword",
+      "catalogName": "GO_ContentControlPW",
+      "canonicalName": "GO_ContentControlPW",
       "source": "retail-string",
-      "retailName": "Config_SetContentControlPassword",
+      "retailName": "GOContentControlPW",
       "retailEvidence": [
-        "Config_SetContentControlPassword"
+        "GOContentControlPW"
       ],
       "dataTypeRefs": []
     },
