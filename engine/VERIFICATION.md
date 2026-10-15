@@ -45,6 +45,10 @@ ported equations. Root-motion transformation is cross-checked against the
 OpenIGI source; it has not yet been independently matched to a complete REA
 instruction trace.
 
+An AddressSanitizer build of `igi_gameplay` and the same smoke harness completed
+with exit code 0 and no reported memory errors. LeakSanitizer is not supported
+by this macOS toolchain, so leak detection was not verified.
+
 The native catalog has 4,814 rows: 4,337 `PASS`, 476 `FAIL`, and one
 `CANDIDATE`. Zero rows currently have `L5_runtime=true`. Catalog size and CFG
 gates are not proof of runtime behavior.
