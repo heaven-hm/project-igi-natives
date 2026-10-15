@@ -1,4 +1,5 @@
 add_library(igi_gameplay STATIC
+    src/human_motion.cpp
     src/human_locomotion_graph.cpp
 )
 target_include_directories(igi_gameplay PUBLIC include)

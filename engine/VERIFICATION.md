@@ -27,6 +27,23 @@ Ghidra 12.1.2.
 - Evidence `ev_efe7173636efc6f5820dd959dff90d3b1fb5e848fc7b29a209f85a5b54b787a0`:
   cataloged `HumanPlayer_ApplyPhysics` at `0x408420` is a 59-byte body with four
   blocks and one direct call.
+- Evidence `ev_ca47b794e915c94e573d496819cfb0af31e173c8edb30e7882dfd60ae2cb8a92`:
+  the 694-byte, 27-block function at `0x408460` subtracts `84.74169` from
+  vertical velocity and adds movement-slot steering through the body basis.
+  Steering magnitude comes from a runtime global, so the port accepts it as an
+  argument instead of inventing a retail default.
+- Evidence `ev_cabc8c58e5b97087e2544062c195e1782eec8ab45722dbda5d9271ff3c323a07`:
+  the 175-byte, five-block ladder-slide routine at `0x40DBF0` multiplies X/Y
+  velocity by `0.99` and evaluates `(Z - 44.600887) * 0.99`, in that order.
+- Evidence `ev_178401a834b6929403a4049b09024de136b0422bd014a3605fbe8f9dfa6bf8b1`:
+  the on-disk initialized bytes for the steering global at `0x56E1F4` are zero.
+  That does not establish its runtime value after script setup.
+
+The native smoke program also checked airborne gravity and steering, ladder
+gravity/damping order, and root-motion scaling/suppression against the current
+ported equations. Root-motion transformation is cross-checked against the
+OpenIGI source; it has not yet been independently matched to a complete REA
+instruction trace.
 
 The native catalog has 4,814 rows: 4,337 `PASS`, 476 `FAIL`, and one
 `CANDIDATE`. Zero rows currently have `L5_runtime=true`. Catalog size and CFG
