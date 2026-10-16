@@ -1,5 +1,7 @@
 # Project I.G.I Natives
 
+The native C++20 gameplay prototype is in [engine/](engine/README.md). It builds a macOS `igi.app` using original external game assets, with movement, collision, an MP5, and a basic AI encounter. See [MVP verification and remaining fidelity work](engine/MVP_STATUS.md). The older DLL research project is documented below.
+
 [![Version](https://img.shields.io/badge/version-v2.8.0-blue.svg)](https://github.com/heaven-hm/project-igi-natives)
 [![Build](https://img.shields.io/badge/build-f0f30e5-green.svg)](https://github.com/heaven-hm/project-igi-natives)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/heaven-hm/project-igi-natives)

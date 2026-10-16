@@ -1,5 +1,26 @@
 # Gameplay verification notes
 
+## Current native gameplay MVP
+
+The application now loads and runs the original Level 1 scene. The current test results, runtime encounter, bundle checks, and explicit fidelity gaps are recorded in [MVP_STATUS.md](MVP_STATUS.md). The shell-only observations below are historical component checks from before that integration.
+
+## Native application loop
+
+- `igi_game` is a C++20 executable using SDL2 2.32.72 through SDL's C API. It
+  initializes, processes quit/escape events, clears a frame, and shuts down.
+- The bounded timer-only loop passed through CTest, and a three-frame SDL dummy
+  video run exercised window and software-renderer setup in this environment.
+- A normal macOS window could not be exercised from the current shell because
+  SDL reported that the video driver had no displays. This is an environment
+  limitation, not evidence of successful desktop rendering.
+- CrossOver 26.3.0 launched the retail `igi.exe` (SHA-256 recorded below) with
+  `window level1`; Wine logged the `igi.exe` process starting. The shell still
+  had no capturable display, so no scene, input, or movement was observed. The
+  task-launched process was closed after this startup check.
+- The application loop does not yet invoke player simulation, collision,
+  animation, assets, or other game systems. It is an executable shell, not a
+  playable prototype or an IGI gameplay parity result.
+
 ## Locomotion graph
 
 - CMake builds `igi_gameplay` with AppleClang in C++20 mode.
@@ -11,11 +32,43 @@
   identical. That is a source cross-check of the port, not an independent
   replay comparison against `igi.exe`.
 
+## Human movement integrator
+
+- The source translation is `assets/BinaryNinja/cproj/src/004614B0-Human_MovementIntegrator.c`.
+  REA/Ghidra pseudo-code evidence `ev_6a9564f5d84daa287a444b641a8e06fd2e967ffcc91b3b1248a482e9363ea1d4`
+  and the call sequence recorded in `assets/BinaryNinja/cproj/PLAYER_MOVEMENT_PARITY.md`
+  are the static basis for `HumanMovementIntegrator` in the C++20 gameplay library.
+- The C++ translation preserves slope-slide thresholds, the 0.9 velocity and slide
+  damping, position adjustment order, roof-contact flag clearing, wall/ground/
+  separation query order, ground-query budgets, and transform-commit ordering.
+- The source-field map is retained: world position `+0x20`, movement flags `+0x2F4`,
+  animation movement `+0x520`, base movement `+0x664`, velocity `+0x670`, slide
+  acceleration `+0x67C`, committed movement `+0x688`, collision controls
+  `+0x694..+0x698`, slope normal `+0x6D8`, slope-enable value `+0x6F8`,
+  position adjustment `+0x728`, and collision radius `+0xA0`. The interface uses
+  named fields and leaves byte-offset marshaling to the future native-state adapter.
+- `human_movement_integrator_probe` checks movement composition, collision call
+  order, and the extended query budget for slope sliding with synthetic state
+  and a recording mock world. It is a component check, not retail gameplay evidence.
+- The movement source and probe pass individual AppleClang C++20 checks with
+  `-Wall -Wextra -Wpedantic -Werror`. CTest passes both the bounded app-loop
+  check and movement probe; a separate AddressSanitizer + UndefinedBehaviorSanitizer
+  build also passes the movement probe. Leak detection was not independently verified.
+- The real mission/world query and transform providers are not implemented, and
+  `igi_game` does not invoke this component yet. Floor following, real collision,
+  and retail-versus-port movement parity remain unverified.
+
 ## Retail binary observations
 
 REA opened `/Users/haseeb-mir/Downloads/IGI/igi.exe` as PE32 x86 with SHA-256
 `dea34892d417715873ea61d7b2ba5556655f1ad65385104348146f9679915a01`, using
 Ghidra 12.1.2.
+
+The CrossOver bottle copy at
+`/Users/haseeb-mir/Library/Application Support/CrossOver/Bottles/project-igi/drive_c/IGI/igi.exe`
+was checked and had the same SHA-256. The direct CrossOver launch is only a
+process-start observation; it did not produce a movement trace or a visual
+retail-versus-port comparison.
 
 - Evidence `ev_8052e7790e7178e7660cb649098e80d5c4ac7508ed25481bcfb1c640d50a6f9f`:
   body at `0x4614B0`, 1,468 bytes, 31 basic blocks, seven direct callees.

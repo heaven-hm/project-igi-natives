@@ -384,3 +384,24 @@ FodyWeavers.xsd
 
 # Release binaries belong on GitHub Releases, not in source control.
 /IGI-Natives-Retail-Logging-*.zip
+
+# macOS metadata and local native-project build products
+.DS_Store
+/assets/BinaryNinja/cproj/build/
+/assets/BinaryNinja/cproj/cmake_build/
+/assets/BinaryNinja/cproj/CMakeFiles/
+/assets/BinaryNinja/cproj/CMakeCache.txt
+/assets/BinaryNinja/cproj/cmake_install.cmake
+/assets/BinaryNinja/cproj/igi_natives_runner
+/assets/BinaryNinja/cproj/*.o
+/assets/BinaryNinja/cproj/*.dylib
+
+# Native gameplay builds, bundles, caches, and local captures.
+/build/
+/dist/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/CTestTestfile.cmake
+/Testing/
+/engine/test-cache/
