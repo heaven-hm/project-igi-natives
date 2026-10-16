@@ -49,6 +49,16 @@ foreach(MOVEMENT_SOURCE
     endif()
 endforeach()
 
+# The native allocator was excluded from the compiler allowlist because its
+# decompiler output used the wrong host allocator signature. Its portable host
+# heap translation now replaces the weak fallback in gi_stubs.c.
+foreach(PORTED_NATIVE_SOURCE "src/004B0C60-Mem_Alloc.c")
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${PORTED_NATIVE_SOURCE}" AND
+       NOT PORTED_NATIVE_SOURCE IN_LIST LIB_SRCS)
+        list(APPEND LIB_SRCS "${PORTED_NATIVE_SOURCE}")
+    endif()
+endforeach()
+
 foreach(COLLISION_SOURCE
         "src/00461A70-Human_WallSweep.c"
         "src/00462390-Human_GroundQuery.c")
@@ -87,4 +97,22 @@ if(BUILD_TESTING)
     )
     target_include_directories(qtask_event_probe PRIVATE src)
     add_test(NAME qtask_event_table_clear COMMAND qtask_event_probe)
+
+    add_executable(sys_free_memory_guest_heap_probe
+        tests/sys_free_memory_guest_heap_probe.c
+        src/004B0B00-Sys_FreeMemory_2.c
+        src/gi_memory.c
+    )
+    target_include_directories(sys_free_memory_guest_heap_probe PRIVATE src)
+    add_test(NAME sys_free_memory_guest_heap COMMAND sys_free_memory_guest_heap_probe)
+
+    add_executable(native_heap_probe
+        tests/native_heap_probe.c
+        src/004B0C60-Mem_Alloc.c
+        src/004B0BE0-Mem_DeallocAll.c
+        src/004B0D50-Sys_DispatchOpcode_2.c
+        src/gi_memory.c
+    )
+    target_include_directories(native_heap_probe PRIVATE src)
+    add_test(NAME native_heap_lifecycle COMMAND native_heap_probe)
 endif()

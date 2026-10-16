@@ -8142,7 +8142,10 @@ int Sys_CheckHeap(char * a1, int a2, int a3, int a4);
 /* 004B0A80 Sys_AllocateMemory_2 */
 int Sys_AllocateMemory_2(int a1, int a2, char * a3, int a4);
 /* 004B0B00 Sys_FreeMemory_2 */
-int Sys_FreeMemory_2(int* a1, int a2, int a3, int a4);
+int Sys_FreeMemory_2(int* allocation_record,
+                     int entry_size_bytes,
+                     int entry_count,
+                     int requested_alignment);
 /* 004B0B70 Sys_OpenFileStream_2 */
 int Sys_OpenFileStream_2(int* a1);
 /* 004B0B90 Sys_ReadFileBlock_2 */
@@ -8152,7 +8155,7 @@ int Sys_CloseFileStream_2(void);
 /* 004B0BE0 Mem_DeallocAll */
 int Mem_DeallocAll(void);
 /* 004B0C60 Mem_Alloc */
-void * Mem_Alloc(int a1, int a2);
+void * Mem_Alloc(int allocation_size_bytes, int requested_alignment);
 /* 004B0D10 Sys_ExecuteBytecode_2 */
 int Sys_ExecuteBytecode_2(void * a1);
 /* 004B0D40 QHash_ValueSet */

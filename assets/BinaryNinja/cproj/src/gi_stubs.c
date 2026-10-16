@@ -5379,12 +5379,12 @@ __attribute__((weak)) char * Sys_PopStack(char * a1, char * a2) { return 0; }
 __attribute__((weak)) int Sys_ResolveSymbol(int* a1, int* a2, int* a3, char * a4, int a5, int a6) { return 0; }
 __attribute__((weak)) int Sys_CheckHeap(char * a1, int a2, int a3, int a4) { return 0; }
 __attribute__((weak)) int Sys_AllocateMemory_2(int a1, int a2, char * a3, int a4) { return 0; }
-__attribute__((weak)) int Sys_FreeMemory_2(int* a1, int a2, int a3, int a4) { return 0; }
+__attribute__((weak)) int Sys_FreeMemory_2(int* allocation_record, int entry_size_bytes, int entry_count, int requested_alignment) { return 0; }
 __attribute__((weak)) int Sys_OpenFileStream_2(int* a1) { return 0; }
 __attribute__((weak)) int Sys_ReadFileBlock_2(void) { return 0; }
 __attribute__((weak)) int Sys_CloseFileStream_2(void) { return 0; }
 __attribute__((weak)) int Mem_DeallocAll(void) { return 0; }
-__attribute__((weak)) void * Mem_Alloc(int a1, int a2) { return 0; }
+__attribute__((weak)) void * Mem_Alloc(int allocation_size_bytes, int requested_alignment) { return 0; }
 __attribute__((weak)) int Sys_ExecuteBytecode_2(void * a1) { return 0; }
 __attribute__((weak)) int QHash_ValueSet(void) { return 0; }
 __attribute__((weak)) int Sys_DispatchOpcode_2(void) { return 0; }
