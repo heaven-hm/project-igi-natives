@@ -38,6 +38,7 @@ MissionScene test_scene() {
     pickup.initially_owned = false;
     pickup.ammunition_identifier = "AMMO_ID_762";
     scene.weapons = {pistol, rifle, knife, pickup};
+    scene.weapon_categories = {{"WEAPON_ID_KNIFE"}, {"WEAPON_ID_GLOCK"}, {"WEAPON_ID_MP5SD"}};
     scene.weapon_pickups.push_back({{0, 0, -2}, "WEAPON_ID_AK47"});
     return scene;
 }
@@ -64,6 +65,13 @@ int main() {
         require(simulation.health() == scene.player_parameters.maximum_health, "Health must not drain without a projectile hit");
         require(simulation.inventory_size() == 3 && simulation.selected_weapon_slot() == 1, "Initial loadout must select the MP5");
         PlayerInput input;
+        input.weapon_category = 0;
+        simulation.tick(input);
+        require(simulation.weapon_parameters().melee, "Original weapon category 1 must select the knife");
+        input.weapon_category = 2;
+        simulation.tick(input);
+        require(simulation.selected_weapon_slot() == 1, "Original weapon category 3 must select the MP5");
+        input = {};
         input.firing = true;
         for (int tick_index = 0; tick_index < 100; ++tick_index) { simulation.tick(input); }
         input = {};

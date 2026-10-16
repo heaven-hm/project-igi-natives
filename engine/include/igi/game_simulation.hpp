@@ -19,6 +19,7 @@ struct PlayerInput final {
     int weapon_slot = -1;
     int weapon_cycle{};
     bool interacting{};
+    int weapon_category = -1;
 };
 
 enum class ActorBehavior { guarding, investigating, attacking, dead };

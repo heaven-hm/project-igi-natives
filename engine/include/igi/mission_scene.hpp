@@ -132,6 +132,7 @@ struct MissionScene final {
     std::vector<SceneWeapon> weapons;
     std::vector<WeaponPickup> weapon_pickups;
     int mission_number = 1;
+    std::vector<std::vector<std::string>> weapon_categories;
 };
 
 [[nodiscard]] MissionScene load_mission(const std::filesystem::path& game_directory,

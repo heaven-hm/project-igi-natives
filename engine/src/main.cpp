@@ -1,6 +1,7 @@
 #include "igi/asset_io.hpp"
 #include "igi/diagnostics.hpp"
 #include "igi/game_simulation.hpp"
+#include "igi/input_controller.hpp"
 #include "igi/scene_renderer.hpp"
 
 #include <SDL.h>
@@ -44,6 +45,7 @@ struct RuntimeOptions final {
     std::filesystem::path screenshot;
     std::filesystem::path replay;
     std::filesystem::path trace;
+    std::string profile;
 };
 
 template<class Integer>
@@ -76,6 +78,7 @@ RuntimeOptions parse_arguments(int argument_count, char** arguments) {
         else if (argument == "--screenshot") { options.screenshot = next_argument(); }
         else if (argument == "--replay") { options.replay = next_argument(); }
         else if (argument == "--trace") { options.trace = next_argument(); }
+        else if (argument == "--profile") { options.profile = next_argument(); }
         else if (argument == "--mission") { options.mission = parse_integer(next_argument(), 1, 14); }
         else if (argument == "--graphics") {
             const auto setting = next_argument();
@@ -92,8 +95,9 @@ RuntimeOptions parse_arguments(int argument_count, char** arguments) {
                          "    [--demo] [--replay inputs.csv] [--trace state.csv] [--screenshot frame.bmp]\n"
                          "    [--cache directory] [--width 1280 --height 960] [--verbose] [--benchmark]\n"
                          "    [--graphics high|low]\n"
-                         "WASD move; Shift walk; Ctrl crouch; Space jump; mouse look; left click fire;\n"
-                         "right click aim; R reload; 1-9 or wheel change weapon; E pick up;\n"
+                         "    [--profile name] (controls come from original config.qvm)\n"
+                         "Movement, jump, crouch, fire, reload and weapon bindings use config.qvm.\n"
+                         "Number-key categories use humanplayer.qvm; mouse wheel cycles weapons.\n"
                          "Enter restart; F11 fullscreen; Escape quit.\n";
             std::exit(0);
         } else { throw std::runtime_error("Unknown argument: " + std::string(argument)); }
@@ -202,6 +206,7 @@ int run(RuntimeOptions options, const char* executable) {
     const auto scene = igi::gameplay::load_mission(options.game_directory, options.cache_directory / "assets",
                                                 options.mission, options.terrain_detail);
     igi::gameplay::GameSimulation simulation(scene);
+    igi::gameplay::InputController controls(igi::gameplay::load_input_configuration(options.game_directory, options.profile));
     igi::gameplay::SceneRenderer frame(options.width, options.height);
     const auto replay = load_replay(options.replay);
     std::ofstream trace;
@@ -231,7 +236,7 @@ int run(RuntimeOptions options, const char* executable) {
         }
         if (SDL_SetRelativeMouseMode(SDL_TRUE) != 0) { log(Severity::warning, "input", SDL_GetError()); }
     }
-    log(Severity::information, "application", "Mission ready. WASD move; mouse look; Shift walk; Ctrl crouch; Space jump; fire LMB; aim RMB; reload R; restart Enter");
+    log(Severity::information, "application", "Mission ready. Controls loaded from original config.qvm; Enter restarts, F11 toggles fullscreen, Escape quits");
     bool running = true;
     std::uint64_t frame_count = 0;
     auto previous_time = Clock::now();
@@ -252,6 +257,7 @@ int run(RuntimeOptions options, const char* executable) {
                 pitch_change = 0;
                 requested_weapon_slot = -1;
                 requested_weapon_cycle = 0;
+                controls.reset();
                 if (SDL_SetRelativeMouseMode(SDL_FALSE) != 0) { log(Severity::warning, "input", SDL_GetError()); }
                 log(Severity::information, "application", "Paused while game window is inactive");
             }
@@ -267,10 +273,6 @@ int run(RuntimeOptions options, const char* executable) {
             if (event.type == SDL_KEYDOWN && event.key.repeat == 0) {
                 if (event.key.keysym.sym == SDLK_ESCAPE) { running = false; }
                 if (event.key.keysym.sym == SDLK_RETURN) { simulation.restart(); }
-                if (event.key.keysym.sym >= SDLK_1 && event.key.keysym.sym <= SDLK_9) {
-                    requested_weapon_slot = static_cast<int>(event.key.keysym.sym - SDLK_1);
-                }
-                if (event.key.keysym.sym == SDLK_q) { requested_weapon_cycle = 1; }
                 if (event.key.keysym.sym == SDLK_F11 && window) {
                     const bool fullscreen = (SDL_GetWindowFlags(window.get()) & SDL_WINDOW_FULLSCREEN_DESKTOP) != 0;
                     if (SDL_SetWindowFullscreen(window.get(), fullscreen ? 0 : SDL_WINDOW_FULLSCREEN_DESKTOP) != 0) {
@@ -279,8 +281,9 @@ int run(RuntimeOptions options, const char* executable) {
                 }
             }
             if (event.type == SDL_MOUSEMOTION) {
-                heading_change -= static_cast<float>(event.motion.xrel) * 0.0025f;
-                pitch_change -= static_cast<float>(event.motion.yrel) * 0.0025f;
+                const float sensitivity = controls.mouse_sensitivity() * 0.00625f;
+                heading_change -= static_cast<float>(event.motion.xrel) * sensitivity;
+                pitch_change += static_cast<float>(event.motion.yrel) * sensitivity * (controls.invert_mouse() ? 1 : -1);
             }
         }
         const auto now = Clock::now();
@@ -299,19 +302,12 @@ int run(RuntimeOptions options, const char* executable) {
             } else if (options.demonstration) {
                 input = demonstration_input(simulation.tick_count());
             } else if (!options.headless) {
-                const auto* keys = SDL_GetKeyboardState(nullptr);
-                input.forward = static_cast<float>(keys[SDL_SCANCODE_W]) - static_cast<float>(keys[SDL_SCANCODE_S]);
-                input.sideways = static_cast<float>(keys[SDL_SCANCODE_D]) - static_cast<float>(keys[SDL_SCANCODE_A]);
-                input.walking = keys[SDL_SCANCODE_LSHIFT] != 0;
-                input.crouching = keys[SDL_SCANCODE_LCTRL] != 0;
-                input.jumping = keys[SDL_SCANCODE_SPACE] != 0;
-                input.reloading = keys[SDL_SCANCODE_R] != 0;
-                input.interacting = keys[SDL_SCANCODE_E] != 0;
-                input.weapon_slot = requested_weapon_slot;
-                input.weapon_cycle = requested_weapon_cycle;
+                int keyboard_size = 0;
+                const auto* keys = SDL_GetKeyboardState(&keyboard_size);
                 const auto buttons = SDL_GetMouseState(nullptr, nullptr);
-                input.firing = (buttons & SDL_BUTTON_LMASK) != 0;
-                input.aiming = (buttons & SDL_BUTTON_RMASK) != 0;
+                input = controls.sample({keys, static_cast<std::size_t>(keyboard_size)}, buttons);
+                input.weapon_slot = requested_weapon_slot;
+                if (requested_weapon_cycle != 0) { input.weapon_cycle = requested_weapon_cycle; }
                 input.heading_change = heading_change;
                 input.pitch_change = pitch_change;
             }

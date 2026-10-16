@@ -141,6 +141,15 @@ void GameSimulation::tick(const PlayerInput& input) {
     damage_flash_remaining_ = std::max(0.0f, damage_flash_remaining_ - 1.0f / 30.0f);
     if (health_ > 0) {
         if (input.weapon_slot >= 0) { select_weapon(static_cast<std::size_t>(input.weapon_slot)); }
+        if (input.weapon_category >= 0 && static_cast<std::size_t>(input.weapon_category) < scene_.weapon_categories.size()) {
+            const auto& category = scene_.weapon_categories[input.weapon_category];
+            for (const auto& identifier : category) {
+                const auto item = std::find_if(inventory_.begin(), inventory_.end(), [&](const auto& candidate) {
+                    return scene_.weapons[candidate.definition_index].identifier == identifier;
+                });
+                if (item != inventory_.end()) { select_weapon(static_cast<std::size_t>(item - inventory_.begin())); break; }
+            }
+        }
         if (input.weapon_cycle != 0 && !inventory_.empty()) {
             const auto count = static_cast<int>(inventory_.size());
             const auto next = (static_cast<int>(selected_weapon_slot_) + (input.weapon_cycle > 0 ? 1 : -1) + count) % count;

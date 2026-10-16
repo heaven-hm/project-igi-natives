@@ -214,6 +214,7 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
     const auto tiles = library.terrain_textures(assets::resolve_path(mission_directory, "terrain/terrain.tex"));
     const assets::TerrainSurface terrain_surface(mission_directory, initializer.calls());
     append_terrain(scene, mission_directory, origin, tiles, terrain_surface, terrain_detail);
+    const auto enabled_tasks = assets::gameplay_task_mask(initializer.calls());
     for (const auto& call : initializer.calls()) {
         if (call.function == "Task_New" && call.arguments.size() >= 5 && call.arguments[1].text == "AddAmmo") {
             const double ammunition = call.arguments[4].number;
@@ -229,6 +230,8 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
         const auto& task_type = arguments[1].text;
         const bool soldier = task_type == "HumanSoldier";
         const bool rigid = task_type == "EditRigidObj" || task_type == "Building" || task_type == "ExplodeObject";
+        const bool enabled = enabled_tasks[static_cast<std::size_t>(&call - initializer.calls().data())];
+        if (!enabled && !soldier) { continue; }
         if (!soldier && !rigid) {
             continue;
         }
@@ -262,6 +265,19 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
     const auto parameter_bytes = assets::read_file(assets::resolve_path(game_directory, "humanplayer/humanplayer.qvm"));
     const assets::QvmInitializer parameters{assets::BinaryView(parameter_bytes)};
     for (const auto& call : parameters.calls()) {
+        if (call.function == "DefineHumanPlayerWeaponCategory") {
+            for (std::size_t argument_index = 0; argument_index < call.arguments.size();) {
+                const double count = call.arguments[argument_index++].number;
+                if (!std::isfinite(count) || count < 0 || count > 32 || count > call.arguments.size() - argument_index) {
+                    throw std::runtime_error("Original weapon category table is invalid");
+                }
+                std::vector<std::string> category;
+                for (std::size_t member_index = 0; member_index < static_cast<std::size_t>(count); ++member_index) {
+                    category.push_back(call.arguments[argument_index++].text);
+                }
+                scene.weapon_categories.push_back(std::move(category));
+            }
+        }
         if (call.function == "DefineHumanPlayerGeneral" && call.arguments.size() == 43) {
             scene.player_parameters = {static_cast<float>(call.arguments[0].number),
                 static_cast<float>(call.arguments[1].number / 3.6 / 30.0),

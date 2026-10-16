@@ -8,6 +8,7 @@ target_compile_features(igi_gameplay PUBLIC cxx_std_20)
 set_target_properties(igi_gameplay PROPERTIES CXX_EXTENSIONS OFF)
 
 find_package(SDL2 REQUIRED CONFIG)
+set(IGI_GAME_PATH "$ENV{IGI_GAME_PATH}" CACHE PATH "Original game installation for integration tests")
 
 set(CONVERTER_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/igi_converter/source")
 add_library(igi_formats STATIC
@@ -32,6 +33,7 @@ add_library(igi_assets STATIC
     src/mission_assets.cpp
     src/mission_scene.cpp
     src/mission_gameplay.cpp
+    src/input_configuration.cpp
     src/terrain_surface.cpp
 )
 target_compile_features(igi_assets PUBLIC cxx_std_20)
@@ -63,8 +65,11 @@ endif()
 add_executable(igi_game
     src/main.cpp
 )
+add_library(igi_input STATIC src/input_controller.cpp)
+target_compile_features(igi_input PUBLIC cxx_std_20)
+target_link_libraries(igi_input PUBLIC igi_runtime SDL2::SDL2)
 target_compile_features(igi_game PRIVATE cxx_std_20)
-target_link_libraries(igi_game PRIVATE igi_runtime SDL2::SDL2)
+target_link_libraries(igi_game PRIVATE igi_input)
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
     target_compile_options(igi_game PRIVATE -Wall -Wextra -Wpedantic -Werror)
 endif()
@@ -73,6 +78,11 @@ if(TARGET iginatives)
 endif()
 target_compile_definitions(igi_game PRIVATE SDL_MAIN_HANDLED)
 set_target_properties(igi_game PROPERTIES CXX_EXTENSIONS OFF)
+set_target_properties(igi_game PROPERTIES OUTPUT_NAME "igi")
+
+if(NOT APPLE)
+    install(TARGETS igi_game RUNTIME DESTINATION .)
+endif()
 
 if(APPLE)
     find_package(SDL3 QUIET CONFIG)
@@ -169,20 +179,24 @@ if(BUILD_TESTING)
     add_executable(mvp_navigation_inventory_probe tests/mvp_navigation_inventory_probe.cpp)
     target_link_libraries(mvp_navigation_inventory_probe PRIVATE igi_runtime)
     add_test(NAME mvp_navigation_inventory COMMAND mvp_navigation_inventory_probe)
+    add_executable(mvp_input_probe tests/mvp_input_probe.cpp)
+    target_link_libraries(mvp_input_probe PRIVATE igi_input)
+    add_test(NAME mvp_config_input COMMAND mvp_input_probe)
 
-    if(DEFINED ENV{IGI_GAME_PATH})
+    if(IGI_GAME_PATH)
+        add_test(NAME mvp_original_config_input COMMAND mvp_input_probe "${IGI_GAME_PATH}")
         add_executable(mvp_real_scene_probe tests/mvp_real_scene_probe.cpp)
         target_link_libraries(mvp_real_scene_probe PRIVATE igi_runtime)
         add_test(NAME mvp_original_level_gameplay COMMAND mvp_real_scene_probe
-            "$ENV{IGI_GAME_PATH}" "${CMAKE_CURRENT_BINARY_DIR}/test-cache/assets")
+            "${IGI_GAME_PATH}" "${CMAKE_CURRENT_BINARY_DIR}/test-cache/assets")
         add_test(NAME igi_game_headless_loop COMMAND igi_game --headless --frames 3
-            --game "$ENV{IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
+            --game "${IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
         add_executable(mvp_level_two_probe tests/mvp_level_two_probe.cpp)
         target_link_libraries(mvp_level_two_probe PRIVATE igi_runtime)
         add_test(NAME mvp_original_level_two COMMAND mvp_level_two_probe
-            "$ENV{IGI_GAME_PATH}" "${CMAKE_CURRENT_BINARY_DIR}/test-cache/assets")
+            "${IGI_GAME_PATH}" "${CMAKE_CURRENT_BINARY_DIR}/test-cache/assets")
         add_test(NAME igi_original_style_level_selection COMMAND igi_game window level2 --headless --frames 3
-            --game "$ENV{IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
+            --game "${IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
         add_test(NAME igi_reject_invalid_level COMMAND igi_game window level15 --headless)
         set_tests_properties(igi_reject_invalid_level PROPERTIES WILL_FAIL TRUE)
     endif()

@@ -284,7 +284,7 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
     if (simulation.weapon().reload_remaining > 0) { text(center_x - 30, center_y + 25, "RELOADING", 0xffdce1d1u); }
     text(18, 18, "LEVEL " + std::to_string(scene.mission_number), 0xffe5e7cfu, 2);
     text(18, 40, "WEAPON " + std::to_string(simulation.selected_weapon_slot() + 1) + " / " +
-         std::to_string(simulation.inventory_size()) + "   WHEEL OR 1 9   E PICK UP", 0xffe5e7cfu);
+         std::to_string(simulation.inventory_size()) + "   CONTROLS FROM CONFIG", 0xffe5e7cfu);
     if (simulation.damage_flash_remaining() > 0) {
         const int border = std::max(3, width_ / 200);
         rectangle(0, 0, width_, border, 0xffb44336u);

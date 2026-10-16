@@ -77,16 +77,29 @@ void load_graphs(gameplay::MissionScene& scene, const std::filesystem::path& mis
 
 }
 
+std::vector<bool> gameplay_task_mask(const std::vector<ScriptCall>& calls) {
+    std::vector<bool> enabled(calls.size(), true);
+    for (std::size_t remaining = calls.size(); remaining > 0; --remaining) {
+        const auto call_index = remaining - 1;
+        const auto& call = calls[call_index];
+        if (call.function == "Task_New" && call.arguments.size() > 3 &&
+            call.arguments[1].text == "ConditionalContainer" &&
+            call.arguments[3].text.find("CutScene_") != std::string::npos) {
+            enabled[call_index] = false;
+        }
+        if (enabled[call_index]) { continue; }
+        for (const auto& argument : call.arguments) {
+            if (argument.call_index < calls.size()) { enabled[argument.call_index] = false; }
+        }
+    }
+    return enabled;
+}
+
 void load_mission_gameplay(gameplay::MissionScene& scene, MissionAssets& library,
                           const std::filesystem::path& mission_directory,
                           const std::array<double, 3>& origin, const std::vector<ScriptCall>& calls) {
     load_graphs(scene, mission_directory, origin, calls);
-    std::vector<std::size_t> parent_calls(calls.size(), calls.size());
-    for (std::size_t call_index = 0; call_index < calls.size(); ++call_index) {
-        for (const auto& argument : calls[call_index].arguments) {
-            if (argument.call_index < calls.size()) { parent_calls[argument.call_index] = call_index; }
-        }
-    }
+    const auto enabled_tasks = gameplay_task_mask(calls);
     std::unordered_set<std::string> owned_weapons;
     std::unordered_map<std::string, std::uint32_t> ammunition;
     for (const auto& call : calls) {
@@ -120,15 +133,7 @@ void load_mission_gameplay(gameplay::MissionScene& scene, MissionAssets& library
                 return candidate.source_call_index == static_cast<std::size_t>(&call - calls.data());
             });
             if (actor == scene.actors.end()) { continue; }
-            for (auto ancestor_index = parent_calls[actor->source_call_index]; ancestor_index < calls.size();
-                 ancestor_index = parent_calls[ancestor_index]) {
-                const auto& ancestor = calls[ancestor_index];
-                if (ancestor.arguments.size() > 3 && ancestor.arguments[1].text == "ConditionalContainer" &&
-                    ancestor.arguments[3].text.find("CutScene_") != std::string::npos) {
-                    actor->gameplay_enabled = false;
-                    break;
-                }
-            }
+            actor->gameplay_enabled = enabled_tasks[actor->source_call_index];
             if (!actor->gameplay_enabled) {
                 diagnostics::log(diagnostics::Severity::information, "scene", "Disabled cutscene actor " + std::to_string(actor->identifier));
                 continue;
@@ -144,7 +149,7 @@ void load_mission_gameplay(gameplay::MissionScene& scene, MissionAssets& library
                 }
             }
         }
-        if (task_type == "GunPickup" && call.arguments.size() > 9) {
+        if (task_type == "GunPickup" && call.arguments.size() > 9 && enabled_tasks[static_cast<std::size_t>(&call - calls.data())]) {
             scene.weapon_pickups.push_back({{
                 static_cast<float>((call.arguments[3].number - origin[0]) / 4096.0),
                 static_cast<float>((call.arguments[4].number - origin[1]) / 4096.0),

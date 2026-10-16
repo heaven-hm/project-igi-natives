@@ -25,8 +25,13 @@ int main(int argument_count, char** arguments) {
             replay_output << std::setprecision(9);
         }
         const auto scene = load_mission(arguments[1], arguments[2]);
-        require(scene.missing_object_count == 0 && scene.loaded_object_count > 400 && scene.actors.size() >= 20,
+        require(scene.missing_object_count == 0 && scene.loaded_object_count > 300 && scene.actors.size() >= 20,
                 "Real mission must load its original models and soldiers");
+        bool disabled_cinematic_actor = false;
+        for (const auto& actor : scene.actors) {
+            if (actor.identifier == 3031) { disabled_cinematic_actor = !actor.gameplay_enabled; }
+        }
+        require(disabled_cinematic_actor, "Level 1's cinematic train actor must remain outside gameplay");
         GameSimulation movement(scene);
         const auto start = movement.player_position();
         PlayerInput input;
