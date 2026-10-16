@@ -3,6 +3,7 @@
 #include "igi/mission_scene.hpp"
 
 #include <unordered_map>
+#include <unordered_set>
 
 struct TEXImage;
 
@@ -28,6 +29,9 @@ class MissionAssets final {
     std::unordered_map<std::string, std::vector<std::string>> material_names_;
     std::unordered_map<std::string, std::uint32_t> texture_indices_;
     std::unordered_map<std::string, std::shared_ptr<gameplay::SceneMesh>> meshes_;
+    std::unordered_set<std::string> loading_models_;
+    std::unordered_set<std::string> invisible_attachment_models_;
+    std::unordered_set<std::string> muzzle_flash_models_;
 };
 
 } // namespace igi::assets

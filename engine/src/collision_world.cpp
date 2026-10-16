@@ -221,6 +221,7 @@ RayHit CollisionWorld::raycast(Vector3 origin, Vector3 direction, float maximum_
         }
         for (std::size_t offset = node.begin; offset < node.begin + node.count; ++offset) {
             const auto& triangle = triangles_[indices_[offset]];
+            if (triangle.non_solid_portal) { continue; }
             const auto normal = normalized(cross(triangle.positions[1] - triangle.positions[0],
                                                   triangle.positions[2] - triangle.positions[0]));
             if (walkable_only && std::abs(normal.z) < 0.55f) { continue; }
@@ -254,6 +255,7 @@ Vector3 CollisionWorld::move_capsule(Vector3 feet, Vector3 displacement, float h
             bool resolved_contact = false;
             for (const auto triangle_index : candidates) {
                 const auto& triangle = triangles_[triangle_index];
+                if (triangle.non_solid_portal) { continue; }
                 const auto points = closest_capsule_triangle(position + Vector3{0, 0, radius},
                     position + Vector3{0, 0, height - radius}, triangle);
                 const Vector3 difference = points.first - points.second;

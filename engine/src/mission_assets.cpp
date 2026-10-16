@@ -2,12 +2,14 @@
 
 #include "igi/asset_io.hpp"
 #include "igi/diagnostics.hpp"
+#include "igi/qvm_initializer.hpp"
 #include "mef_native.h"
 #include "mtp_parser.h"
 #include "res_parser.h"
 #include "tex_parser.h"
 
 #include <fstream>
+#include <glm/gtc/matrix_transform.hpp>
 #include <stdexcept>
 
 namespace igi::assets {
@@ -42,6 +44,19 @@ MissionAssets::MissionAssets(const std::filesystem::path& game_directory,
                              const std::filesystem::path& mission_directory,
                              const std::filesystem::path& cache_directory) {
     textures_.push_back({2, 2, {0xffa5a59bu, 0xff919188u, 0xff919188u, 0xffa5a59bu}});
+    const auto magic_bytes = read_file(resolve_path(game_directory, "magicobj/magicobj.qvm"));
+    const QvmInitializer magic_script{BinaryView(magic_bytes)};
+    for (const auto& call : magic_script.calls()) {
+        if (call.function == "DefineMagicObj" && call.arguments.size() >= 3 &&
+            call.arguments[2].text == "TASKTYPE_GUNFLAME") {
+            muzzle_flash_models_.insert(normalize_name(call.arguments[0].text));
+            muzzle_flash_models_.insert(normalize_name(call.arguments[1].text));
+        }
+        if (call.function == "DefineMagicObj" && call.arguments.size() >= 3 &&
+            call.arguments[2].text == "TASKTYPE_DEATHZONE") {
+            invisible_attachment_models_.insert(normalize_name(call.arguments[0].text));
+        }
+    }
     const auto common_directory = resolve_path(game_directory, "missions/location0/common");
     for (const auto& base_directory : {resolve_path(game_directory, "common"), common_directory, mission_directory}) {
         for (const auto& entry : std::filesystem::directory_iterator(base_directory)) {
@@ -140,6 +155,9 @@ std::vector<std::uint32_t> MissionAssets::terrain_textures(const std::filesystem
 
 std::shared_ptr<gameplay::SceneMesh> MissionAssets::model(const std::string& name) {
     const auto normalized = normalize_name(name);
+    if (loading_models_.contains(normalized) || loading_models_.size() >= 32) {
+        throw std::runtime_error("Recursive MEF attachment cycle or depth limit: " + normalized);
+    }
     if (const auto found = meshes_.find(normalized); found != meshes_.end()) {
         return found->second;
     }
@@ -149,6 +167,10 @@ std::shared_ptr<gameplay::SceneMesh> MissionAssets::model(const std::string& nam
     }
     const auto geometry = ParseMefFile(resource->second.string());
     auto mesh = std::make_shared<gameplay::SceneMesh>();
+    const auto bone_positions = ComputeBoneWorldPositions(geometry.bones);
+    for (const auto& position : bone_positions) {
+        mesh->bone_rest_positions.push_back({position.x / 4096.0f, position.y / 4096.0f, position.z / 4096.0f});
+    }
     std::vector<std::uint32_t> materials;
     if (const auto mapping = material_names_.find(normalized); mapping != material_names_.end()) {
         for (const auto& texture_name : mapping->second) {
@@ -180,12 +202,18 @@ std::shared_ptr<gameplay::SceneMesh> MissionAssets::model(const std::string& nam
                 throw std::runtime_error("Decoded MEF vertex is not finite: " + name);
             }
             triangle.vertices[corner_index] = {position, vertex.uv.x, vertex.uv.y};
+            if (vertex.boneIndex < mesh->bone_rest_positions.size()) {
+                triangle.vertices[corner_index].bone_index = vertex.boneIndex;
+                triangle.vertices[corner_index].bone_local_position = position - mesh->bone_rest_positions[vertex.boneIndex];
+            }
         }
         mesh->triangles.push_back(triangle);
     }
     for (const auto& face : geometry.ecfcFaces) {
         const std::array<std::uint16_t, 3> indices{face.a, face.b, face.c};
         gameplay::CollisionTriangle triangle;
+        triangle.non_solid_portal = face.mat < geometry.tamcRecords.size() &&
+            geometry.tamcRecords[face.mat].portal != 0xffffu;
         for (std::size_t corner_index = 0; corner_index < 3; ++corner_index) {
             if (indices[corner_index] >= geometry.xtvcVerts.size()) {
                 throw std::runtime_error("Decoded MEF collision index is invalid: " + name);
@@ -195,6 +223,55 @@ std::shared_ptr<gameplay::SceneMesh> MissionAssets::model(const std::string& nam
         }
         mesh->collision.push_back(triangle);
     }
+    loading_models_.insert(normalized);
+    try {
+        for (const auto& attachment : geometry.mefAttachments) {
+            const auto name_end = std::find(std::begin(attachment.name), std::end(attachment.name), '\0');
+            const std::string child_name(std::begin(attachment.name), name_end);
+            const auto normalized_child = normalize_name(child_name);
+            if (child_name.empty() || invisible_attachment_models_.contains(normalized_child)) { continue; }
+            if (!files_.contains(normalized_child + ".mef")) {
+                diagnostics::log(diagnostics::Severity::debug, "attachments", "Non-visual or unavailable MEF attachment: " + child_name);
+                continue;
+            }
+            const auto child = model(child_name);
+            const glm::mat4 rotation{
+                attachment.r00, attachment.r01, attachment.r02, 0,
+                attachment.r03, attachment.r04, attachment.r05, 0,
+                attachment.r06, attachment.r07, attachment.r08, 0,
+                0, 0, 0, 1};
+            const glm::vec3 offset{attachment.px / 4096.0f, attachment.py / 4096.0f, attachment.pz / 4096.0f};
+            const auto transform = [&](gameplay::Vector3 position) {
+                const auto transformed = glm::vec3(rotation * glm::vec4(position.x, position.y, position.z, 1)) + offset;
+                const gameplay::Vector3 result{transformed.x, transformed.y, transformed.z};
+                if (!gameplay::finite(result)) { throw std::runtime_error("MEF attachment transform is invalid: " + child_name); }
+                return result;
+            };
+            for (auto triangle : child->triangles) {
+                triangle.firing_only = triangle.firing_only || muzzle_flash_models_.contains(normalized_child);
+                for (auto& vertex : triangle.vertices) {
+                    vertex.position = transform(vertex.position);
+                    vertex.bone_index = static_cast<std::uint32_t>(-1);
+                    if (attachment.boneId >= 0 && static_cast<std::size_t>(attachment.boneId) < mesh->bone_rest_positions.size()) {
+                        vertex.bone_index = static_cast<std::uint32_t>(attachment.boneId);
+                        vertex.bone_local_position = vertex.position - mesh->bone_rest_positions[vertex.bone_index];
+                    }
+                }
+                mesh->triangles.push_back(triangle);
+            }
+            for (auto triangle : child->collision) {
+                if (muzzle_flash_models_.contains(normalized_child)) { continue; }
+                for (auto& position : triangle.positions) { position = transform(position); }
+                mesh->collision.push_back(triangle);
+            }
+            mesh->attachment_count += 1 + child->attachment_count;
+            mesh->maximum_attachment_depth = std::max(mesh->maximum_attachment_depth, 1 + child->maximum_attachment_depth);
+        }
+    } catch (...) {
+        loading_models_.erase(normalized);
+        throw;
+    }
+    loading_models_.erase(normalized);
     meshes_[normalized] = mesh;
     return mesh;
 }

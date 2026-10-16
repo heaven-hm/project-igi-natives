@@ -37,6 +37,15 @@ int main() {
         require(landing.z > -0.001f && landing.z < 0.01f, "Capsule must land on the mesh floor");
         const auto ceiling = world.move_capsule({0, 0, 0}, {0, 0, 2}, 1.8f);
         require(ceiling.z < 1.201f, "Standing capsule must stop at the ceiling");
+
+        auto portal_geometry = geometry;
+        portal_geometry[2].non_solid_portal = true;
+        portal_geometry[3].non_solid_portal = true;
+        const CollisionWorld doorway(portal_geometry);
+        const auto entering = doorway.move_capsule({0, 0, 0}, {4, 0, 0}, 1.8f);
+        require(entering.x > 3.99f, "A building visibility portal must not block doorway movement");
+        require(!doorway.raycast({0, 0, 1}, {1, 0, 0}, 4).hit,
+                "A generic open portal must not occlude projectiles or enemy sight");
         bool rejected_invalid_ray = false;
         try {
             static_cast<void>(world.raycast({std::numeric_limits<float>::quiet_NaN(), 0, 0}, {0, 0, -1}, 1));

@@ -24,21 +24,30 @@ struct SceneVertex final {
     Vector3 position;
     float texture_u{};
     float texture_v{};
+    std::uint32_t bone_index = static_cast<std::uint32_t>(-1);
+    Vector3 bone_local_position{};
 };
 
 struct SceneTriangle final {
     std::array<SceneVertex, 3> vertices;
     std::uint32_t texture_index{};
+    bool firing_only{};
 };
 
 struct CollisionTriangle final {
     std::array<Vector3, 3> positions;
+    bool non_solid_portal{};
 };
 
 struct SceneMesh final {
     std::vector<SceneTriangle> triangles;
     std::vector<CollisionTriangle> collision;
+    std::vector<Vector3> bone_rest_positions;
+    std::size_t attachment_count{};
+    std::size_t maximum_attachment_depth{};
 };
+
+struct SkeletalAnimationSet;
 
 struct SceneActor final {
     Vector3 position;
@@ -51,6 +60,10 @@ struct SceneActor final {
     std::string weapon_identifier = "WEAPON_ID_AK47";
     std::size_t source_call_index = static_cast<std::size_t>(-1);
     bool gameplay_enabled = true;
+    int skeleton_identifier = 1;
+    int stand_animation = 2;
+    std::shared_ptr<SkeletalAnimationSet> animations{};
+    float damage_scale = 1.0f;
 };
 
 struct NavigationNode final {
@@ -94,6 +107,10 @@ struct SceneWeapon final {
     std::uint32_t initial_reserve{};
     bool initially_owned{};
     std::string ammunition_identifier;
+    int stand_animation = 18;
+    int move_animation = 19;
+    int fire_animation = 20;
+    int reload_animation = 21;
 };
 
 struct WeaponPickup final {
@@ -133,6 +150,10 @@ struct MissionScene final {
     std::vector<WeaponPickup> weapon_pickups;
     int mission_number = 1;
     std::vector<std::vector<std::string>> weapon_categories;
+    std::size_t attached_model_count{};
+    std::size_t maximum_attachment_depth{};
+    std::shared_ptr<SceneMesh> first_person_mesh{};
+    std::shared_ptr<SkeletalAnimationSet> first_person_animations{};
 };
 
 [[nodiscard]] MissionScene load_mission(const std::filesystem::path& game_directory,
