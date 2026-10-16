@@ -49,7 +49,8 @@ Vector3 sample_translation(const RootMotionClip& clip, float time) {
 
 } // namespace
 
-GameSimulation::GameSimulation(const MissionScene& scene) : scene_(scene), world_(scene.collision_triangles) {
+GameSimulation::GameSimulation(const MissionScene& scene) : scene_(scene), world_(scene.collision_triangles),
+    movement_world_(scene.movement_collision_triangles.empty() ? scene.collision_triangles : scene.movement_collision_triangles) {
     if (!std::isfinite(scene.player_parameters.maximum_health) || scene.player_parameters.maximum_health <= 0 ||
         !std::isfinite(scene.player_parameters.root_translation_scale) || scene.player_parameters.root_translation_scale <= 0) {
         throw std::runtime_error("Original player health or root-motion scale is invalid");
@@ -59,7 +60,7 @@ GameSimulation::GameSimulation(const MissionScene& scene) : scene_(scene), world
 
 void GameSimulation::restart() {
     player_ = {};
-    const auto floor = world_.raycast({0, 0, 2.0f}, {0, 0, -1}, 40.0f, true);
+    const auto floor = movement_world_.raycast({0, 0, 2.0f}, {0, 0, -1}, 40.0f, true);
     if (!floor.hit) {
         throw std::runtime_error("Player spawn has no collision floor in the original mission geometry");
     }
@@ -104,7 +105,7 @@ void GameSimulation::restart() {
     projectiles_.clear();
     for (const auto& original_actor : scene_.actors) {
         auto position = original_actor.position;
-        const auto ground = world_.raycast(position + Vector3{0, 0, 0.5f}, {0, 0, -1}, 6.0f, true);
+        const auto ground = movement_world_.raycast(position + Vector3{0, 0, 0.5f}, {0, 0, -1}, 6.0f, true);
         if (ground.hit) { position.z = ground.position.z; }
         ActorState actor;
         actor.position = position;
@@ -198,7 +199,7 @@ Vector3 GameSimulation::animation_delta(int state) {
 }
 
 void GameSimulation::advance_player(const PlayerInput& input) {
-    if (input.crouching || !crouching_ || !world_.raycast(player_position() + Vector3{0, 0, 1.05f},
+    if (input.crouching || !crouching_ || !movement_world_.raycast(player_position() + Vector3{0, 0, 1.05f},
         {0, 0, 1}, 0.76f).hit) {
         crouching_ = input.crouching;
     }
@@ -245,15 +246,15 @@ void GameSimulation::sweep_walls(HumanMovementState& human, const WorldPosition3
                                 WorldPosition3& destination, Vector3& delta) {
     const auto requested = metres(destination) - metres(starting);
     const float height = crouching_ ? 1.1f : 1.8f;
-    auto resolved = world_.move_capsule(metres(starting), requested, height);
+    auto resolved = movement_world_.move_capsule(metres(starting), requested, height);
     const auto initial = metres(starting);
     const Vector3 horizontal{requested.x, requested.y, 0};
     const float requested_progress = length(horizontal);
     const float resolved_progress = length(Vector3{resolved.x - initial.x, resolved.y - initial.y, 0});
     if (grounded() && requested_progress > 0.001f && resolved_progress < requested_progress * 0.8f &&
-        !world_.raycast(initial + Vector3{0, 0, height}, {0, 0, 1}, 0.35f).hit) {
-        auto stepped = world_.move_capsule(initial + Vector3{0, 0, 0.35f}, horizontal, height);
-        const auto floor = world_.raycast(stepped + Vector3{0, 0, 0.02f}, {0, 0, -1}, 0.42f, true);
+        !movement_world_.raycast(initial + Vector3{0, 0, height}, {0, 0, 1}, 0.35f).hit) {
+        auto stepped = movement_world_.move_capsule(initial + Vector3{0, 0, 0.35f}, horizontal, height);
+        const auto floor = movement_world_.raycast(stepped + Vector3{0, 0, 0.02f}, {0, 0, -1}, 0.42f, true);
         const float stepped_progress = length(Vector3{stepped.x - initial.x, stepped.y - initial.y, 0});
         if (floor.hit && stepped_progress > resolved_progress + 0.001f && floor.position.z <= initial.z + 0.351f) {
             stepped.z = floor.position.z;
@@ -274,7 +275,7 @@ void GameSimulation::query_ground(HumanMovementState& human, const WorldPosition
     const float upward_budget = was_grounded ? 0.35f : 0.04f;
     const float downward_budget = was_grounded ? std::max(0.1f, query_budget / units_per_metre) :
         std::max(0.1f, from.z - target.z + 0.08f);
-    const auto ground = world_.raycast({target.x, target.y, from.z + upward_budget},
+    const auto ground = movement_world_.raycast({target.x, target.y, from.z + upward_budget},
         {0, 0, -1}, upward_budget + downward_budget, true);
     if (ground.hit && human.velocity.z <= 0 && (was_grounded || target.z <= ground.position.z + 0.04f)) {
         target.z = ground.position.z;
@@ -296,7 +297,7 @@ void GameSimulation::separate_humans(HumanMovementState&, const WorldPosition3& 
         const Vector3 difference{position.x - actor.position.x, position.y - actor.position.y, 0};
         const float distance = length(difference);
         if (distance > 0.0001f && distance < 0.62f) {
-            position = world_.move_capsule(position, difference * ((0.62f - distance) / distance), crouching_ ? 1.1f : 1.8f);
+            position = movement_world_.move_capsule(position, difference * ((0.62f - distance) / distance), crouching_ ? 1.1f : 1.8f);
         }
     }
     destination = engine_position(position);

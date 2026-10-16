@@ -183,6 +183,10 @@ void append_model(MissionScene& scene, const SceneMesh& mesh, Vector3 position, 
             scene.collision_triangles.push_back(triangle);
         }
     }
+    for (auto triangle : mesh.movement_collision) {
+        for (auto& vertex : triangle.positions) { vertex = rotate(vertex, heading) + position; }
+        scene.movement_collision_triangles.push_back(triangle);
+    }
 }
 
 } // namespace
@@ -217,6 +221,7 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
     const assets::TerrainSurface terrain_surface(mission_directory, initializer.calls());
     append_terrain(scene, mission_directory, origin, tiles, terrain_surface, terrain_detail);
     scene.terrain_triangle_count = scene.static_triangles.size();
+    scene.movement_collision_triangles = scene.collision_triangles;
     const auto enabled_tasks = assets::gameplay_task_mask(initializer.calls());
     for (const auto& call : initializer.calls()) {
         if (call.function == "Task_New" && call.arguments.size() >= 5 && call.arguments[1].text == "AddAmmo") {

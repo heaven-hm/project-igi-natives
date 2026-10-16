@@ -45,6 +45,7 @@ struct SceneMesh final {
     std::vector<Vector3> bone_rest_positions;
     std::size_t attachment_count{};
     std::size_t maximum_attachment_depth{};
+    std::vector<CollisionTriangle> movement_collision;
 };
 
 struct SkeletalAnimationSet;
@@ -155,6 +156,7 @@ struct MissionScene final {
     std::shared_ptr<SceneMesh> first_person_mesh{};
     std::shared_ptr<SkeletalAnimationSet> first_person_animations{};
     std::size_t terrain_triangle_count{};
+    std::vector<CollisionTriangle> movement_collision_triangles;
 };
 
 [[nodiscard]] MissionScene load_mission(const std::filesystem::path& game_directory,

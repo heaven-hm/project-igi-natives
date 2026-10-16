@@ -31,21 +31,44 @@ int main(int argument_count, char** arguments) {
                 "High detail must select denser original terrain without changing enemy declarations");
         GameSimulation simulation(scene);
         std::size_t portal_faces = 0;
-        bool entered_original_portal = false;
+        std::size_t grounded_crossings = 0;
         for (const auto& triangle : scene.collision_triangles) {
             if (!triangle.non_solid_portal) { continue; }
             ++portal_faces;
-            if (entered_original_portal) { continue; }
+            if (grounded_crossings >= 2) { continue; }
             const auto center = (triangle.positions[0] + triangle.positions[1] + triangle.positions[2]) * (1.0f / 3.0f);
             const auto normal = normalized(cross(triangle.positions[1] - triangle.positions[0],
                                                  triangle.positions[2] - triangle.positions[0]));
             if (std::abs(normal.z) > 0.1f) { continue; }
-            const auto starting = center - normal * 0.7f - Vector3{0, 0, 0.9f};
-            const auto destination = simulation.world().move_capsule(starting, normal * 1.4f, 1.8f);
-            entered_original_portal = dot(destination - starting, normal) > 1.3f;
+            for (const float side : {-1.0f, 1.0f}) {
+                auto starting = center - normal * (0.7f * side);
+                const auto floor = simulation.movement_world().raycast(starting, {0, 0, -1}, 8, true);
+                if (!floor.hit) { continue; }
+                starting.z = floor.position.z;
+                MissionScene entry_scene;
+                entry_scene.player_heading = std::atan2(-normal.x * side, normal.y * side);
+                entry_scene.root_motion_clips = scene.root_motion_clips;
+                entry_scene.player_parameters = scene.player_parameters;
+                entry_scene.collision_triangles = scene.collision_triangles;
+                entry_scene.movement_collision_triangles = scene.movement_collision_triangles;
+                for (auto* faces : {&entry_scene.collision_triangles, &entry_scene.movement_collision_triangles}) {
+                    for (auto& face : *faces) {
+                        for (auto& position : face.positions) { position = position - starting; }
+                    }
+                }
+                GameSimulation entering(entry_scene);
+                require(entering.grounded(), "A doorway replay must start on the original floor");
+                const auto start = entering.player_position();
+                PlayerInput walking;
+                walking.forward = 1;
+                for (int tick_index = 0; tick_index < 15; ++tick_index) { entering.tick(walking); }
+                if (entering.grounded() && dot(entering.player_position() - start, normal) * side > 1.3f) {
+                    ++grounded_crossings;
+                }
+            }
         }
-        require(portal_faces > 0 && entered_original_portal,
-                "Original Level 2 doorway portal faces must allow a capsule crossing through real scene geometry");
+        require(portal_faces > 0 && grounded_crossings >= 2,
+                "Original Level 2 portal traversal must pass through the movement loop and remain grounded in both directions");
         const auto ak47 = std::find_if(scene.weapons.begin(), scene.weapons.end(), [](const auto& weapon) {
             return weapon.identifier == "WEAPON_ID_AK47";
         });
@@ -118,7 +141,7 @@ int main(int argument_count, char** arguments) {
                   << ", patrolling_soldiers=" << moved_actors << ", terrain_and_model_triangles=" << scene.static_triangles.size()
                   << ", health=" << simulation.health() << '\n';
         std::cout << "ATTA instances=" << scene.attached_model_count << ", attachment_depth=" << scene.maximum_attachment_depth << '\n';
-        std::cout << "Non-solid portal faces=" << portal_faces << ", enemy shots=" << enemy_shots << '\n';
+        std::cout << "Non-solid portal faces=" << portal_faces << ", grounded crossings=" << grounded_crossings << ", enemy shots=" << enemy_shots << '\n';
         return 0;
     } catch (const std::exception& exception) {
         std::cerr << "Level 2 probe failed: " << exception.what() << '\n';

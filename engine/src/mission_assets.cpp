@@ -209,20 +209,24 @@ std::shared_ptr<gameplay::SceneMesh> MissionAssets::model(const std::string& nam
         }
         mesh->triangles.push_back(triangle);
     }
-    for (const auto& face : geometry.ecfcFaces) {
-        const std::array<std::uint16_t, 3> indices{face.a, face.b, face.c};
-        gameplay::CollisionTriangle triangle;
-        triangle.non_solid_portal = face.mat < geometry.tamcRecords.size() &&
-            geometry.tamcRecords[face.mat].portal != 0xffffu;
-        for (std::size_t corner_index = 0; corner_index < 3; ++corner_index) {
-            if (indices[corner_index] >= geometry.xtvcVerts.size()) {
-                throw std::runtime_error("Decoded MEF collision index is invalid: " + name);
+    const auto decode_collision = [&](const auto& faces, const auto& vertices, const auto& materials,
+                                      std::vector<gameplay::CollisionTriangle>& destination) {
+        for (const auto& face : faces) {
+            const std::array<std::uint16_t, 3> indices{face.a, face.b, face.c};
+            gameplay::CollisionTriangle triangle;
+            triangle.non_solid_portal = face.mat < materials.size() && materials[face.mat].portal != 0xffffu;
+            for (std::size_t corner_index = 0; corner_index < 3; ++corner_index) {
+                if (indices[corner_index] >= vertices.size()) {
+                    throw std::runtime_error("Decoded MEF collision index is invalid: " + name);
+                }
+                const auto& vertex = vertices[indices[corner_index]];
+                triangle.positions[corner_index] = {vertex.px / 4096.0f, vertex.py / 4096.0f, vertex.pz / 4096.0f};
             }
-            const auto& vertex = geometry.xtvcVerts[indices[corner_index]];
-            triangle.positions[corner_index] = {vertex.px / 4096.0f, vertex.py / 4096.0f, vertex.pz / 4096.0f};
+            destination.push_back(triangle);
         }
-        mesh->collision.push_back(triangle);
-    }
+    };
+    decode_collision(geometry.ecfcFaces, geometry.xtvcVerts, geometry.tamcRecords, mesh->collision);
+    decode_collision(geometry.ecfcFaces1, geometry.xtvcVerts1, geometry.tamcRecords1, mesh->movement_collision);
     loading_models_.insert(normalized);
     try {
         for (const auto& attachment : geometry.mefAttachments) {
@@ -263,6 +267,11 @@ std::shared_ptr<gameplay::SceneMesh> MissionAssets::model(const std::string& nam
                 if (muzzle_flash_models_.contains(normalized_child)) { continue; }
                 for (auto& position : triangle.positions) { position = transform(position); }
                 mesh->collision.push_back(triangle);
+            }
+            for (auto triangle : child->movement_collision) {
+                if (muzzle_flash_models_.contains(normalized_child)) { continue; }
+                for (auto& position : triangle.positions) { position = transform(position); }
+                mesh->movement_collision.push_back(triangle);
             }
             mesh->attachment_count += 1 + child->attachment_count;
             mesh->maximum_attachment_depth = std::max(mesh->maximum_attachment_depth, 1 + child->maximum_attachment_depth);

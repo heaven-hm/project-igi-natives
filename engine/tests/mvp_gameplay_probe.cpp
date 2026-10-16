@@ -59,6 +59,19 @@ int main() {
         movement.tick(input);
         require(movement.camera_position().z < ground_height + 1.0f, "Crouching must lower the camera");
 
+        auto separate_meshes = make_scene(false, true);
+        separate_meshes.movement_collision_triangles.assign(separate_meshes.collision_triangles.begin(),
+            separate_meshes.collision_triangles.begin() + 2);
+        GameSimulation walking_mesh(separate_meshes);
+        PlayerInput forward_input;
+        forward_input.forward = 1;
+        for (int tick_index = 0; tick_index < 30; ++tick_index) { walking_mesh.tick(forward_input); }
+        require(walking_mesh.player_position().y > 4 && walking_mesh.grounded(),
+                "Human movement must use mesh level one rather than the separate default trace hull");
+        require(walking_mesh.world().raycast({0, 0, -1}, {0, 1, 0}, 6).hit &&
+                !walking_mesh.movement_world().raycast({0, 0, -1}, {0, 1, 0}, 6).hit,
+                "Movement and projectile/sight geometry must remain independently queryable");
+
         const auto combat_scene = make_scene(true, false);
         GameSimulation combat(combat_scene);
         input = {};

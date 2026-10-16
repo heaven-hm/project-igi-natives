@@ -99,6 +99,7 @@ class GameSimulation final : private HumanMovementWorld {
     [[nodiscard]] const SceneWeapon* weapon_definition() const noexcept;
     [[nodiscard]] const std::vector<ActorState>& actors() const noexcept { return actors_; }
     [[nodiscard]] const CollisionWorld& world() const noexcept { return world_; }
+    [[nodiscard]] const CollisionWorld& movement_world() const noexcept { return movement_world_; }
     [[nodiscard]] std::uint64_t tick_count() const noexcept { return tick_count_; }
 
   private:
@@ -119,6 +120,7 @@ class GameSimulation final : private HumanMovementWorld {
     void commit_transform(HumanMovementState&, const WorldPosition3&, float) override;
     const MissionScene& scene_;
     CollisionWorld world_;
+    CollisionWorld movement_world_;
     HumanMovementState player_;
     HumanMovementIntegrator integrator_;
     WeaponState weapon_;

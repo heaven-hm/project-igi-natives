@@ -40,9 +40,9 @@ void GameSimulation::move_actor(std::size_t actor_index, Vector3 destination, fl
     const float remaining = length(horizontal);
     if (remaining < 0.15f) { return; }
     actor.heading = std::atan2(-horizontal.x, horizontal.y);
-    auto next_position = world_.move_capsule(actor.position,
+    auto next_position = movement_world_.move_capsule(actor.position,
         normalized(horizontal) * std::min(speed * tick_duration, remaining), 1.8f);
-    const auto floor = world_.raycast(next_position + Vector3{0, 0, 0.4f}, {0, 0, -1}, 0.9f, true);
+    const auto floor = movement_world_.raycast(next_position + Vector3{0, 0, 0.4f}, {0, 0, -1}, 0.9f, true);
     if (floor.hit) {
         next_position.z = floor.position.z;
         bool occupied = false;
