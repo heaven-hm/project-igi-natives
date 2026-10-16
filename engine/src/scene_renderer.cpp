@@ -133,7 +133,23 @@ void SceneRenderer::rasterize(const SceneTriangle& triangle, const SceneTexture&
         float second_weight = ((third.horizontal - horizontal) * (first.vertical - vertical) -
                                (third.vertical - vertical) * (first.horizontal - horizontal)) / area;
         float third_weight = 1.0f - first_weight - second_weight;
-        for (int column = left; column <= right; ++column) {
+        float first_column_offset = 0;
+        float last_column_offset = static_cast<float>(right - left);
+        const auto clip_span = [&](float weight, float step) {
+            if (step > 0.000000001f) { first_column_offset = std::max(first_column_offset, (-0.00001f - weight) / step); }
+            else if (step < -0.000000001f) { last_column_offset = std::min(last_column_offset, (-0.00001f - weight) / step); }
+            else if (weight < -0.00001f) { last_column_offset = -1; }
+        };
+        clip_span(first_weight, first_step);
+        clip_span(second_weight, second_step);
+        clip_span(third_weight, third_step);
+        if (first_column_offset > last_column_offset) { continue; }
+        const int span_start = std::max(0, static_cast<int>(std::ceil(first_column_offset)));
+        const int span_end = std::min(right - left, static_cast<int>(std::floor(last_column_offset)));
+        first_weight += first_step * static_cast<float>(span_start);
+        second_weight += second_step * static_cast<float>(span_start);
+        third_weight += third_step * static_cast<float>(span_start);
+        for (int column = left + span_start; column <= left + span_end; ++column) {
             const std::size_t pixel_index = static_cast<std::size_t>(row) * width_ + column;
             const float inverse_depth = first_weight * first.inverse_depth + second_weight * second.inverse_depth + third_weight * third.inverse_depth;
             if (first_weight >= -0.00001f && second_weight >= -0.00001f && third_weight >= -0.00001f &&
@@ -221,7 +237,7 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
     for (std::size_t actor_index = 0; actor_index < simulation.actors().size(); ++actor_index) {
         const auto& actor = simulation.actors()[actor_index];
         const auto& mesh = scene.actors[actor_index].mesh;
-        if (!mesh || length(actor.position - camera) > 450) { continue; }
+        if (!actor.active || !mesh || length(actor.position - camera) > 450) { continue; }
         const float cosine = std::cos(actor.heading);
         const float sine = std::sin(actor.heading);
         for (auto surface : mesh->triangles) {
@@ -235,10 +251,11 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
             triangle(surface, scene.textures, camera, right, up, forward, focal_length);
         }
     }
-    if (scene.weapon_mesh && simulation.health() > 0) {
+    const auto equipped_mesh = simulation.weapon_mesh();
+    if (equipped_mesh && simulation.health() > 0) {
         std::fill(depth_.begin(), depth_.end(), 0.0f);
         const float reload_drop = simulation.weapon().reload_remaining > 0 ? 0.35f : 0;
-        for (auto surface : scene.weapon_mesh->triangles) {
+        for (auto surface : equipped_mesh->triangles) {
             for (auto& vertex : surface.vertices) {
                 vertex.position = {vertex.position.x + (simulation.aiming() ? 0 : 0.22f),
                                    vertex.position.z - 0.31f - reload_drop,
@@ -261,10 +278,21 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
     rectangle(24, height_ - 29, 170, 7, 0xff384233u);
     rectangle(24, height_ - 29, static_cast<int>(170 * health_fraction), 7, 0xff9cba81u);
     rectangle(width_ - 210, height_ - 55, 196, 40, 0xff17211bu);
-    text(width_ - 197, height_ - 46, scene.weapon_parameters.name, 0xffa8bd99u);
+    text(width_ - 197, height_ - 46, simulation.weapon_parameters().name, 0xffa8bd99u);
     text(width_ - 197, height_ - 31, std::to_string(simulation.weapon().magazine) + " / " +
          std::to_string(simulation.weapon().reserve), 0xffe5e7cfu, 2);
     if (simulation.weapon().reload_remaining > 0) { text(center_x - 30, center_y + 25, "RELOADING", 0xffdce1d1u); }
+    text(18, 18, "LEVEL " + std::to_string(scene.mission_number), 0xffe5e7cfu, 2);
+    text(18, 40, "WEAPON " + std::to_string(simulation.selected_weapon_slot() + 1) + " / " +
+         std::to_string(simulation.inventory_size()) + "   WHEEL OR 1 9   E PICK UP", 0xffe5e7cfu);
+    if (simulation.damage_flash_remaining() > 0) {
+        const int border = std::max(3, width_ / 200);
+        rectangle(0, 0, width_, border, 0xffb44336u);
+        rectangle(0, height_ - border, width_, border, 0xffb44336u);
+        rectangle(0, 0, border, height_, 0xffb44336u);
+        rectangle(width_ - border, 0, border, height_, 0xffb44336u);
+        text(center_x - 48, center_y + 48, "TAKING FIRE", 0xffffb171u);
+    }
     if (simulation.health() <= 0) {
         rectangle(center_x - 180, center_y - 50, 360, 90, 0xff17211bu);
         text(center_x - 120, center_y - 27, "MISSION FAILED", 0xffdab4a2u, 3);

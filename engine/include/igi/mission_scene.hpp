@@ -12,6 +12,8 @@
 
 namespace igi::gameplay {
 
+enum class TerrainDetail { low, high };
+
 struct SceneTexture final {
     std::uint32_t width{};
     std::uint32_t height{};
@@ -44,7 +46,26 @@ struct SceneActor final {
     int identifier{};
     int team = 1;
     std::shared_ptr<SceneMesh> mesh;
+    int navigation_graph_identifier = -1;
+    int patrol_path_identifier = -1;
+    std::string weapon_identifier = "WEAPON_ID_AK47";
+    std::size_t source_call_index = static_cast<std::size_t>(-1);
+    bool gameplay_enabled = true;
 };
+
+struct NavigationNode final {
+    int identifier{};
+    Vector3 position;
+    std::vector<std::size_t> neighbors;
+};
+
+struct NavigationGraph final {
+    int identifier{};
+    std::vector<NavigationNode> nodes;
+};
+
+struct PatrolCommand final { int kind{}; int operand{}; };
+struct PatrolPath final { int identifier{}; std::vector<PatrolCommand> commands; };
 
 struct PlayerParameters final {
     float root_translation_scale = 1.75f;
@@ -61,6 +82,23 @@ struct WeaponParameters final {
     float damage = 0.15f;
     float muzzle_velocity = 400.0f;
     float reload_seconds = 2.0f;
+    float maximum_distance = 400.0f;
+    bool automatic = true;
+    bool melee{};
+};
+
+struct SceneWeapon final {
+    std::string identifier;
+    WeaponParameters parameters;
+    std::shared_ptr<SceneMesh> mesh;
+    std::uint32_t initial_reserve{};
+    bool initially_owned{};
+    std::string ammunition_identifier;
+};
+
+struct WeaponPickup final {
+    Vector3 position;
+    std::string weapon_identifier;
 };
 
 struct RootMotionKey final {
@@ -89,10 +127,15 @@ struct MissionScene final {
     std::size_t loaded_object_count{};
     std::size_t missing_object_count{};
     std::filesystem::path game_directory;
+    std::vector<NavigationGraph> navigation_graphs;
+    std::vector<PatrolPath> patrol_paths;
+    std::vector<SceneWeapon> weapons;
+    std::vector<WeaponPickup> weapon_pickups;
+    int mission_number = 1;
 };
 
 [[nodiscard]] MissionScene load_mission(const std::filesystem::path& game_directory,
                                       const std::filesystem::path& cache_directory,
-                                      int mission_number = 1);
+                                      int mission_number = 1, TerrainDetail terrain_detail = TerrainDetail::high);
 
 } // namespace igi::gameplay

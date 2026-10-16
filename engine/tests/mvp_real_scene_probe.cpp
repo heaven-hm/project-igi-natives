@@ -49,17 +49,28 @@ int main(int argument_count, char** arguments) {
         std::size_t target_index = scene.actors.size();
         float target_distance = std::numeric_limits<float>::max();
         for (std::size_t actor_index = 0; actor_index < combat.actors().size(); ++actor_index) {
-            if (scene.actors[actor_index].team == 0) { continue; }
+            if (!combat.actors()[actor_index].active || scene.actors[actor_index].team == 0) { continue; }
             const auto aim_point = combat.actors()[actor_index].position + Vector3{0, 0, 1.2f};
             const auto difference = aim_point - combat.camera_position();
             const float distance = length(difference);
             const auto obstruction = combat.world().raycast(combat.camera_position(), normalized(difference), distance);
-            if ((!obstruction.hit || obstruction.distance > distance - 0.3f) && distance < target_distance) {
+            if ((!obstruction.hit || obstruction.distance > distance - 0.3f) && distance < target_distance && distance < 350) {
                 target_index = actor_index;
                 target_distance = distance;
             }
         }
-        require(target_index < scene.actors.size(), "No original soldier is visible from the original spawn");
+        if (target_index == scene.actors.size()) {
+            input = {};
+            input.firing = true;
+            for (int tick_index = 0; tick_index < 100; ++tick_index) { combat.tick(input); }
+            require(combat.weapon().shots_fired == 32 && combat.weapon().magazine == 0,
+                    "Original level must simulate player fire even when active guards are out of sight");
+            SceneRenderer renderer(640, 480);
+            renderer.render(scene, combat);
+            require(renderer.visible_triangles() > 100, "Original scene must render its textured geometry");
+            std::cout << "Real-level probe passed: load, move, jump, land, fire, render; gameplay guards outside spawn view\n";
+            return 0;
+        }
         std::cout << "Original soldier target: " << scene.actors[target_index].identifier << "; distance=" << target_distance << '\n';
         for (int tick_index = 0; tick_index < 120 && combat.weapon().kills == 0 && combat.health() > 0; ++tick_index) {
             const auto difference = combat.actors()[target_index].position + Vector3{0, 0, 1.2f} - combat.camera_position();

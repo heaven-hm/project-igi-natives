@@ -18,6 +18,7 @@ add_library(igi_formats STATIC
     "${CONVERTER_SOURCE}/parsers/mtp_parser.cpp"
     "${CONVERTER_SOURCE}/parsers/iff_parser.cpp"
     "${CONVERTER_SOURCE}/parsers/qvm_parser.cpp"
+    "${CONVERTER_SOURCE}/parsers/graph_parser.cpp"
     src/converter_support.cpp
     src/diagnostics.cpp
 )
@@ -30,6 +31,7 @@ add_library(igi_assets STATIC
     src/qvm_initializer.cpp
     src/mission_assets.cpp
     src/mission_scene.cpp
+    src/mission_gameplay.cpp
     src/terrain_surface.cpp
 )
 target_compile_features(igi_assets PUBLIC cxx_std_20)
@@ -46,6 +48,9 @@ add_library(igi_runtime STATIC
     src/collision_world.cpp
     src/game_simulation.cpp
     src/game_combat.cpp
+    src/game_inventory.cpp
+    src/game_ai.cpp
+    src/navigation.cpp
     src/scene_renderer.cpp
 )
 target_compile_features(igi_runtime PUBLIC cxx_std_20)
@@ -60,6 +65,9 @@ add_executable(igi_game
 )
 target_compile_features(igi_game PRIVATE cxx_std_20)
 target_link_libraries(igi_game PRIVATE igi_runtime SDL2::SDL2)
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
+    target_compile_options(igi_game PRIVATE -Wall -Wextra -Wpedantic -Werror)
+endif()
 if(TARGET iginatives)
     target_link_libraries(igi_game PRIVATE iginatives)
 endif()
@@ -72,8 +80,8 @@ if(APPLE)
         MACOSX_BUNDLE TRUE
         MACOSX_BUNDLE_BUNDLE_NAME "Project I.G.I."
         MACOSX_BUNDLE_GUI_IDENTIFIER "com.heavenhm.project-igi-native"
-        MACOSX_BUNDLE_BUNDLE_VERSION "0.1.0"
-        MACOSX_BUNDLE_SHORT_VERSION_STRING "0.1.0"
+        MACOSX_BUNDLE_BUNDLE_VERSION "0.2.0"
+        MACOSX_BUNDLE_SHORT_VERSION_STRING "0.2.0"
         INSTALL_RPATH "@executable_path/../Frameworks"
         OUTPUT_NAME "igi"
     )
@@ -158,6 +166,10 @@ if(BUILD_TESTING)
     target_link_libraries(mvp_gameplay_probe PRIVATE igi_runtime)
     add_test(NAME mvp_movement_weapon_ai COMMAND mvp_gameplay_probe)
 
+    add_executable(mvp_navigation_inventory_probe tests/mvp_navigation_inventory_probe.cpp)
+    target_link_libraries(mvp_navigation_inventory_probe PRIVATE igi_runtime)
+    add_test(NAME mvp_navigation_inventory COMMAND mvp_navigation_inventory_probe)
+
     if(DEFINED ENV{IGI_GAME_PATH})
         add_executable(mvp_real_scene_probe tests/mvp_real_scene_probe.cpp)
         target_link_libraries(mvp_real_scene_probe PRIVATE igi_runtime)
@@ -165,6 +177,14 @@ if(BUILD_TESTING)
             "$ENV{IGI_GAME_PATH}" "${CMAKE_CURRENT_BINARY_DIR}/test-cache/assets")
         add_test(NAME igi_game_headless_loop COMMAND igi_game --headless --frames 3
             --game "$ENV{IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
+        add_executable(mvp_level_two_probe tests/mvp_level_two_probe.cpp)
+        target_link_libraries(mvp_level_two_probe PRIVATE igi_runtime)
+        add_test(NAME mvp_original_level_two COMMAND mvp_level_two_probe
+            "$ENV{IGI_GAME_PATH}" "${CMAKE_CURRENT_BINARY_DIR}/test-cache/assets")
+        add_test(NAME igi_original_style_level_selection COMMAND igi_game window level2 --headless --frames 3
+            --game "$ENV{IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
+        add_test(NAME igi_reject_invalid_level COMMAND igi_game window level15 --headless)
+        set_tests_properties(igi_reject_invalid_level PROPERTIES WILL_FAIL TRUE)
     endif()
 
     add_executable(human_movement_integrator_probe

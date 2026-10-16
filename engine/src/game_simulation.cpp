@@ -84,13 +84,34 @@ void GameSimulation::restart() {
     weapon_ = {};
     weapon_.magazine = scene_.weapon_parameters.magazine_capacity;
     weapon_.reserve = scene_.initial_reserve_ammunition;
+    inventory_.clear();
+    selected_weapon_slot_ = 0;
+    fire_was_pressed_ = false;
+    damage_flash_remaining_ = 0;
+    for (std::size_t definition_index = 0; definition_index < scene_.weapons.size(); ++definition_index) {
+        const auto& definition = scene_.weapons[definition_index];
+        if (!definition.initially_owned) { continue; }
+        WeaponState state;
+        state.magazine = definition.parameters.magazine_capacity;
+        state.reserve = definition.initial_reserve;
+        inventory_.push_back({definition_index, state});
+        if (definition.identifier == "WEAPON_ID_MP5SD") { selected_weapon_slot_ = inventory_.size() - 1; }
+    }
+    if (!inventory_.empty()) { weapon_ = inventory_[selected_weapon_slot_].state; }
+    pickups_collected_.assign(scene_.weapon_pickups.size(), false);
+    soldier_weapons_collected_.assign(scene_.actors.size(), false);
     actors_.clear();
     projectiles_.clear();
     for (const auto& original_actor : scene_.actors) {
         auto position = original_actor.position;
         const auto ground = world_.raycast(position + Vector3{0, 0, 0.5f}, {0, 0, -1}, 6.0f, true);
         if (ground.hit) { position.z = ground.position.z; }
-        actors_.push_back({position, position, original_actor.heading});
+        ActorState actor;
+        actor.position = position;
+        actor.last_seen_position = position;
+        actor.heading = original_actor.heading;
+        actor.active = original_actor.gameplay_enabled;
+        actors_.push_back(std::move(actor));
     }
     diagnostics::log(diagnostics::Severity::information, "gameplay", "Mission initialized; player grounded on original collision geometry");
 }
@@ -117,12 +138,21 @@ void GameSimulation::tick(const PlayerInput& input) {
     heading_ = std::remainder(heading_ + input.heading_change, 2.0f * std::numbers::pi_v<float>);
     pitch_ = std::clamp(pitch_ + input.pitch_change, -1.4f, 1.4f);
     aiming_ = input.aiming;
+    damage_flash_remaining_ = std::max(0.0f, damage_flash_remaining_ - 1.0f / 30.0f);
     if (health_ > 0) {
+        if (input.weapon_slot >= 0) { select_weapon(static_cast<std::size_t>(input.weapon_slot)); }
+        if (input.weapon_cycle != 0 && !inventory_.empty()) {
+            const auto count = static_cast<int>(inventory_.size());
+            const auto next = (static_cast<int>(selected_weapon_slot_) + (input.weapon_cycle > 0 ? 1 : -1) + count) % count;
+            select_weapon(static_cast<std::size_t>(next));
+        }
+        if (input.interacting) { collect_weapons(); }
         advance_player(input);
         advance_weapon(input);
     }
     advance_actors();
     advance_projectiles();
+    fire_was_pressed_ = input.firing;
     ++tick_count_;
     if (!finite(player_position()) || std::abs(player_position().z) > 5000) {
         throw std::runtime_error("Player simulation left the loaded world; restart the mission");
@@ -249,7 +279,7 @@ void GameSimulation::separate_humans(HumanMovementState&, const WorldPosition3& 
                                     WorldPosition3& destination, Vector3& delta) {
     auto position = metres(destination);
     for (const auto& actor : actors_) {
-        if (actor.behavior == ActorBehavior::dead || std::abs(actor.position.z - position.z) > 1.7f) { continue; }
+        if (!actor.active || actor.behavior == ActorBehavior::dead || std::abs(actor.position.z - position.z) > 1.7f) { continue; }
         const Vector3 difference{position.x - actor.position.x, position.y - actor.position.y, 0};
         const float distance = length(difference);
         if (distance > 0.0001f && distance < 0.62f) {

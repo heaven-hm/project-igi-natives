@@ -33,9 +33,11 @@ struct RuntimeOptions final {
     bool demonstration{};
     bool verbose{};
     bool benchmark{};
-    int width = 800;
-    int height = 600;
+    bool fullscreen{};
+    int width = 1280;
+    int height = 960;
     int mission = 1;
+    igi::gameplay::TerrainDetail terrain_detail = igi::gameplay::TerrainDetail::high;
     std::optional<std::uint64_t> frames;
     std::filesystem::path game_directory;
     std::filesystem::path cache_directory;
@@ -62,7 +64,10 @@ RuntimeOptions parse_arguments(int argument_count, char** arguments) {
             if (++argument_index >= argument_count) { throw std::runtime_error("Missing value for " + std::string(argument)); }
             return arguments[argument_index];
         };
-        if (argument == "--headless") { options.headless = true; }
+        if (argument == "window" || argument == "--window") { options.fullscreen = false; }
+        else if (argument == "fullscreen" || argument == "--fullscreen") { options.fullscreen = true; }
+        else if (argument.starts_with("level")) { options.mission = parse_integer(argument.substr(5), 1, 14); }
+        else if (argument == "--headless") { options.headless = true; }
         else if (argument == "--demo") { options.demonstration = true; }
         else if (argument == "--verbose") { options.verbose = true; }
         else if (argument == "--benchmark") { options.benchmark = true; }
@@ -72,15 +77,24 @@ RuntimeOptions parse_arguments(int argument_count, char** arguments) {
         else if (argument == "--replay") { options.replay = next_argument(); }
         else if (argument == "--trace") { options.trace = next_argument(); }
         else if (argument == "--mission") { options.mission = parse_integer(next_argument(), 1, 14); }
+        else if (argument == "--graphics") {
+            const auto setting = next_argument();
+            if (setting == "high") { options.terrain_detail = igi::gameplay::TerrainDetail::high; }
+            else if (setting == "low") { options.terrain_detail = igi::gameplay::TerrainDetail::low; }
+            else { throw std::runtime_error("Graphics setting must be high or low"); }
+        }
         else if (argument == "--width") { options.width = parse_integer(next_argument(), 160, 3840); }
         else if (argument == "--height") { options.height = parse_integer(next_argument(), 120, 2160); }
         else if (argument == "--frames") { options.frames = parse_integer<std::uint64_t>(next_argument(), 1, 10000000); }
         else if (argument == "--help") {
-            std::cout << "igi [--game directory] [--mission 1] [--headless --frames count]\n"
+            std::cout << "igi [window|fullscreen] [level1..level14] [--game directory]\n"
+                         "    [--mission 1] [--headless --frames count]\n"
                          "    [--demo] [--replay inputs.csv] [--trace state.csv] [--screenshot frame.bmp]\n"
-                         "    [--cache directory] [--width 800 --height 600] [--verbose] [--benchmark]\n"
+                         "    [--cache directory] [--width 1280 --height 960] [--verbose] [--benchmark]\n"
+                         "    [--graphics high|low]\n"
                          "WASD move; Shift walk; Ctrl crouch; Space jump; mouse look; left click fire;\n"
-                         "right click aim; R reload; Enter restart; F11 fullscreen; Escape quit.\n";
+                         "right click aim; R reload; 1-9 or wheel change weapon; E pick up;\n"
+                         "Enter restart; F11 fullscreen; Escape quit.\n";
             std::exit(0);
         } else { throw std::runtime_error("Unknown argument: " + std::string(argument)); }
     }
@@ -133,6 +147,12 @@ std::vector<PlayerInput> load_replay(const std::filesystem::path& path) {
             throw std::runtime_error("Invalid replay row " + std::to_string(inputs.size() + 1));
         }
         std::string trailing;
+        row >> std::ws;
+        if (!row.eof()) {
+            if (!(row >> input.weapon_slot >> input.weapon_cycle >> input.interacting)) {
+                throw std::runtime_error("Invalid optional inventory columns in replay");
+            }
+        }
         if (row >> trailing || inputs.size() >= 1000000) { throw std::runtime_error("Replay row or length exceeds the supported format"); }
         inputs.push_back(input);
     }
@@ -179,7 +199,8 @@ int run(RuntimeOptions options, const char* executable) {
     const SdlRuntime sdl(options.headless);
     log(Severity::information, "application", "Loading original mission " + std::to_string(options.mission) +
         " from " + options.game_directory.string());
-    const auto scene = igi::gameplay::load_mission(options.game_directory, options.cache_directory / "assets", options.mission);
+    const auto scene = igi::gameplay::load_mission(options.game_directory, options.cache_directory / "assets",
+                                                options.mission, options.terrain_detail);
     igi::gameplay::GameSimulation simulation(scene);
     igi::gameplay::SceneRenderer frame(options.width, options.height);
     const auto replay = load_replay(options.replay);
@@ -194,9 +215,13 @@ int run(RuntimeOptions options, const char* executable) {
     std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)> display(nullptr, SDL_DestroyRenderer);
     std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> texture(nullptr, SDL_DestroyTexture);
     if (!options.headless) {
-        window.reset(SDL_CreateWindow("Project I.G.I. - Trainyard", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+        const auto title = "Project I.G.I. - Level " + std::to_string(options.mission);
+        window.reset(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
             options.width, options.height, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE));
         if (!window) { throw std::runtime_error("Cannot create game window: " + std::string(SDL_GetError())); }
+        if (options.fullscreen && SDL_SetWindowFullscreen(window.get(), SDL_WINDOW_FULLSCREEN_DESKTOP) != 0) {
+            throw std::runtime_error("Cannot enter fullscreen: " + std::string(SDL_GetError()));
+        }
         display.reset(SDL_CreateRenderer(window.get(), -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC));
         if (!display) { display.reset(SDL_CreateRenderer(window.get(), -1, SDL_RENDERER_SOFTWARE)); }
         if (!display) { throw std::runtime_error("Cannot create display renderer: " + std::string(SDL_GetError())); }
@@ -214,13 +239,38 @@ int run(RuntimeOptions options, const char* executable) {
     double accumulator = 0;
     float heading_change = 0;
     float pitch_change = 0;
+    int requested_weapon_slot = -1;
+    int requested_weapon_cycle = 0;
+    bool paused = false;
     while (running && (!options.frames || frame_count < *options.frames)) {
         SDL_Event event{};
         while (SDL_PollEvent(&event) != 0) {
             if (event.type == SDL_QUIT) { running = false; }
+            if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_FOCUS_LOST) {
+                paused = true;
+                heading_change = 0;
+                pitch_change = 0;
+                requested_weapon_slot = -1;
+                requested_weapon_cycle = 0;
+                if (SDL_SetRelativeMouseMode(SDL_FALSE) != 0) { log(Severity::warning, "input", SDL_GetError()); }
+                log(Severity::information, "application", "Paused while game window is inactive");
+            }
+            if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_FOCUS_GAINED) {
+                paused = false;
+                previous_time = Clock::now();
+                if (SDL_SetRelativeMouseMode(SDL_TRUE) != 0) { log(Severity::warning, "input", SDL_GetError()); }
+            }
+            if (event.type == SDL_MOUSEWHEEL) {
+                const int wheel = event.wheel.direction == SDL_MOUSEWHEEL_FLIPPED ? -event.wheel.y : event.wheel.y;
+                requested_weapon_cycle = wheel > 0 ? -1 : wheel < 0 ? 1 : 0;
+            }
             if (event.type == SDL_KEYDOWN && event.key.repeat == 0) {
                 if (event.key.keysym.sym == SDLK_ESCAPE) { running = false; }
                 if (event.key.keysym.sym == SDLK_RETURN) { simulation.restart(); }
+                if (event.key.keysym.sym >= SDLK_1 && event.key.keysym.sym <= SDLK_9) {
+                    requested_weapon_slot = static_cast<int>(event.key.keysym.sym - SDLK_1);
+                }
+                if (event.key.keysym.sym == SDLK_q) { requested_weapon_cycle = 1; }
                 if (event.key.keysym.sym == SDLK_F11 && window) {
                     const bool fullscreen = (SDL_GetWindowFlags(window.get()) & SDL_WINDOW_FULLSCREEN_DESKTOP) != 0;
                     if (SDL_SetWindowFullscreen(window.get(), fullscreen ? 0 : SDL_WINDOW_FULLSCREEN_DESKTOP) != 0) {
@@ -237,6 +287,11 @@ int run(RuntimeOptions options, const char* executable) {
         accumulator += options.headless ? 1.0 / 30.0 :
             std::min(std::chrono::duration<double>(now - previous_time).count(), 0.25);
         previous_time = now;
+        if (paused && !options.headless) {
+            accumulator = 0;
+            SDL_Delay(25);
+            continue;
+        }
         while (accumulator + 0.00000001 >= 1.0 / 30.0) {
             PlayerInput input;
             if (!replay.empty()) {
@@ -251,6 +306,9 @@ int run(RuntimeOptions options, const char* executable) {
                 input.crouching = keys[SDL_SCANCODE_LCTRL] != 0;
                 input.jumping = keys[SDL_SCANCODE_SPACE] != 0;
                 input.reloading = keys[SDL_SCANCODE_R] != 0;
+                input.interacting = keys[SDL_SCANCODE_E] != 0;
+                input.weapon_slot = requested_weapon_slot;
+                input.weapon_cycle = requested_weapon_cycle;
                 const auto buttons = SDL_GetMouseState(nullptr, nullptr);
                 input.firing = (buttons & SDL_BUTTON_LMASK) != 0;
                 input.aiming = (buttons & SDL_BUTTON_RMASK) != 0;
@@ -259,6 +317,8 @@ int run(RuntimeOptions options, const char* executable) {
             }
             heading_change = 0;
             pitch_change = 0;
+            requested_weapon_slot = -1;
+            requested_weapon_cycle = 0;
             simulation.tick(input);
             if (trace.is_open()) {
                 const auto position = simulation.player_position();

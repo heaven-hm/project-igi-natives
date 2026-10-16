@@ -3,6 +3,7 @@
 #include "igi/asset_io.hpp"
 #include "igi/diagnostics.hpp"
 #include "igi/mission_assets.hpp"
+#include "igi/mission_gameplay.hpp"
 #include "igi/qvm_initializer.hpp"
 #include "igi/terrain_surface.hpp"
 #include "iff_parser.h"
@@ -40,7 +41,7 @@ std::pair<int, int> orient(int orientation, int horizontal, int vertical) {
 
 void append_terrain(MissionScene& scene, const std::filesystem::path& mission_directory,
                     const std::array<double, 3>& origin, const std::vector<std::uint32_t>& textures,
-                    const assets::TerrainSurface& surface) {
+                    const assets::TerrainSurface& surface, TerrainDetail detail) {
     const auto tree_bytes = assets::read_file(assets::resolve_path(mission_directory, "terrain/terrain.ctr"));
     const auto command_bytes = assets::read_file(assets::resolve_path(mission_directory, "terrain/terrain.cmd"));
     const assets::BinaryView tree(tree_bytes);
@@ -51,7 +52,7 @@ void append_terrain(MissionScene& scene, const std::filesystem::path& mission_di
     std::size_t visits = 0;
     std::function<void(std::size_t, int, int, std::array<double, 3>)> descend;
     descend = [&](std::size_t node_index, int depth, int orientation, std::array<double, 3> centre) {
-        if (++visits > 500000 || depth > 20 || node_index >= tree.size() / 32) {
+        if (++visits > 2000000 || depth > 20 || node_index >= tree.size() / 32) {
             throw std::runtime_error("Terrain tree exceeds bounds or traversal budget");
         }
         const double extent = std::ldexp(1073741824.0, -depth);
@@ -62,8 +63,10 @@ void append_terrain(MissionScene& scene, const std::filesystem::path& mission_di
         }
         const std::size_t node_offset = node_index * 32;
         const auto child_mask = tree.byte(node_offset + 24);
-        const int wanted_depth = distance < 180.0 * units_per_metre ? 16 :
-                                 distance < 500.0 * units_per_metre ? 14 : 11;
+        const int wanted_depth = detail == TerrainDetail::high ?
+            (distance < 80.0 * units_per_metre ? 19 : distance < 180.0 * units_per_metre ? 18 :
+             distance < 500.0 * units_per_metre ? 16 : distance < 900.0 * units_per_metre ? 14 : 12) :
+            (distance < 180.0 * units_per_metre ? 16 : distance < 500.0 * units_per_metre ? 14 : 11);
         if (child_mask != 0 && depth < wanted_depth) {
             for (int octant = 0; octant < 8; ++octant) {
                 const int child_slot = child_slots[orientation][octant];
@@ -183,11 +186,12 @@ void append_model(MissionScene& scene, const SceneMesh& mesh, Vector3 position, 
 } // namespace
 
 MissionScene load_mission(const std::filesystem::path& game_directory,
-                          const std::filesystem::path& cache_directory, int mission_number) {
+                          const std::filesystem::path& cache_directory, int mission_number, TerrainDetail terrain_detail) {
     if (mission_number < 1 || mission_number > 14) {
         throw std::runtime_error("Mission number must be between 1 and 14");
     }
     MissionScene scene;
+    scene.mission_number = mission_number;
     scene.game_directory = game_directory;
     const auto mission_directory = assets::resolve_path(game_directory,
         "missions/location0/level" + std::to_string(mission_number));
@@ -209,7 +213,7 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
     assets::MissionAssets library(game_directory, mission_directory, cache_directory);
     const auto tiles = library.terrain_textures(assets::resolve_path(mission_directory, "terrain/terrain.tex"));
     const assets::TerrainSurface terrain_surface(mission_directory, initializer.calls());
-    append_terrain(scene, mission_directory, origin, tiles, terrain_surface);
+    append_terrain(scene, mission_directory, origin, tiles, terrain_surface, terrain_detail);
     for (const auto& call : initializer.calls()) {
         if (call.function == "Task_New" && call.arguments.size() >= 5 && call.arguments[1].text == "AddAmmo") {
             const double ammunition = call.arguments[4].number;
@@ -245,6 +249,7 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
             if (soldier) {
                 const int team = arguments.size() > 8 ? static_cast<int>(arguments[8].number) : 1;
                 scene.actors.push_back({position, heading, static_cast<int>(arguments[0].number), team, mesh});
+                scene.actors.back().source_call_index = static_cast<std::size_t>(&call - initializer.calls().data());
             } else {
                 append_model(scene, *mesh, position, heading);
             }
@@ -301,6 +306,7 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
         scene.root_motion_clips[original_clip.animation_id] = std::move(clip);
     }
     scene.weapon_mesh = library.model("103_01_1");
+    assets::load_mission_gameplay(scene, library, mission_directory, origin, initializer.calls());
     scene.textures = library.take_textures();
     diagnostics::log(diagnostics::Severity::information, "scene",
         "Ready: " + std::to_string(scene.loaded_object_count) + " objects, " +

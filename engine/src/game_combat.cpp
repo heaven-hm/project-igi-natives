@@ -40,7 +40,7 @@ float capsule_intersection(Vector3 origin, Vector3 direction, Vector3 feet, floa
 } // namespace
 
 void GameSimulation::advance_weapon(const PlayerInput& input) {
-    const auto& parameters = scene_.weapon_parameters;
+    const auto& parameters = weapon_parameters();
     if (!std::isfinite(parameters.shots_per_minute) || !std::isfinite(parameters.muzzle_velocity) ||
         !std::isfinite(parameters.reload_seconds) || !std::isfinite(parameters.damage) ||
         parameters.shots_per_minute <= 0 || parameters.magazine_capacity == 0 ||
@@ -61,71 +61,21 @@ void GameSimulation::advance_weapon(const PlayerInput& input) {
         }
         return;
     }
-    if (input.reloading && weapon_.magazine < parameters.magazine_capacity && weapon_.reserve != 0) {
+    if (!parameters.melee && input.reloading && weapon_.magazine < parameters.magazine_capacity && weapon_.reserve != 0) {
         weapon_.reload_remaining = parameters.reload_seconds;
         diagnostics::log(diagnostics::Severity::information, "weapon", "Reload started");
         return;
     }
-    if (input.firing && weapon_.magazine != 0 && weapon_.cooldown <= 0) {
-        --weapon_.magazine;
+    if (input.firing && (parameters.automatic || !fire_was_pressed_) && weapon_.magazine != 0 && weapon_.cooldown <= 0) {
+        if (!parameters.melee) { --weapon_.magazine; }
         ++weapon_.shots_fired;
         weapon_.cooldown = std::max(weapon_.cooldown, -tick_duration) + 60.0f / parameters.shots_per_minute;
         weapon_.muzzle_flash_remaining = 0.055f;
-        projectiles_.push_back({camera_position(), aim_direction(), 400.0f,
-                               parameters.muzzle_velocity, parameters.damage, -1});
+        projectiles_.push_back({camera_position(), aim_direction(), parameters.maximum_distance,
+                               parameters.melee ? 1000.0f : parameters.muzzle_velocity, parameters.damage, -1});
         diagnostics::log(diagnostics::Severity::debug, "weapon", "Projectile fired; magazine=" + std::to_string(weapon_.magazine));
     } else if (!input.firing) {
         weapon_.cooldown = std::max(weapon_.cooldown, 0.0f);
-    }
-}
-
-void GameSimulation::advance_actors() {
-    const auto player_eye = camera_position();
-    for (std::size_t actor_index = 0; actor_index < actors_.size(); ++actor_index) {
-        auto& actor = actors_[actor_index];
-        if (actor.behavior == ActorBehavior::dead || scene_.actors[actor_index].team == 0 || health_ <= 0) { continue; }
-        actor.cooldown = std::max(0.0f, actor.cooldown - tick_duration);
-        const Vector3 eye = actor.position + Vector3{0, 0, 1.5f};
-        const Vector3 to_player = player_eye - eye;
-        const float distance = length(to_player);
-        if (distance < 0.1f || distance > 100.0f) { continue; }
-        const Vector3 direction = to_player * (1.0f / distance);
-        const Vector3 facing{-std::sin(actor.heading), std::cos(actor.heading), 0};
-        const bool within_view = dot(facing, direction) > 0.35f || actor.behavior != ActorBehavior::guarding;
-        const auto obstruction = world_.raycast(eye, direction, distance);
-        const bool visible = within_view && distance < 80 && (!obstruction.hit || obstruction.distance > distance - 0.4f);
-        const bool heard_shot = weapon_.muzzle_flash_remaining > 0 && distance < 18.0f;
-        if (visible || heard_shot) {
-            actor.last_seen_position = player_position();
-            actor.awareness_time = 5.0f;
-            if (actor.behavior == ActorBehavior::guarding) {
-                diagnostics::log(diagnostics::Severity::debug, "ai", "Guard " +
-                    std::to_string(scene_.actors[actor_index].identifier) + " acquired player stimulus");
-            }
-            actor.behavior = visible ? ActorBehavior::attacking : ActorBehavior::investigating;
-        } else {
-            actor.awareness_time = std::max(0.0f, actor.awareness_time - tick_duration);
-            if (actor.awareness_time == 0) { actor.behavior = ActorBehavior::guarding; }
-            else if (actor.behavior == ActorBehavior::attacking) { actor.behavior = ActorBehavior::investigating; }
-        }
-        if (actor.behavior == ActorBehavior::guarding) { continue; }
-        const Vector3 horizontal{actor.last_seen_position.x - actor.position.x,
-                                 actor.last_seen_position.y - actor.position.y, 0};
-        actor.heading = std::atan2(-horizontal.x, horizontal.y);
-        if (length(horizontal) > (visible ? 12.0f : 1.0f)) {
-            auto next_position = world_.move_capsule(actor.position,
-                normalized(horizontal) * (1.8f * tick_duration), 1.8f);
-            const auto floor = world_.raycast(next_position + Vector3{0, 0, 0.35f}, {0, 0, -1}, 0.85f, true);
-            if (floor.hit) {
-                next_position.z = floor.position.z;
-                actor.position = next_position;
-            }
-        }
-        if (visible && actor.cooldown == 0) {
-            actor.cooldown = 0.45f;
-            projectiles_.push_back({eye, direction, 100.0f, scene_.weapon_parameters.muzzle_velocity,
-                                   scene_.weapon_parameters.damage, static_cast<int>(actor_index)});
-        }
     }
 }
 
@@ -138,7 +88,7 @@ void GameSimulation::advance_projectiles() {
         bool target_player = false;
         if (projectile.owner == -1) {
             for (std::size_t actor_index = 0; actor_index < actors_.size(); ++actor_index) {
-                if (actors_[actor_index].behavior == ActorBehavior::dead) { continue; }
+                if (!actors_[actor_index].active || actors_[actor_index].behavior == ActorBehavior::dead) { continue; }
                 const auto distance = capsule_intersection(projectile.position, projectile.direction,
                     actors_[actor_index].position, 1.8f, 0.32f, hit_distance);
                 if (distance < hit_distance) {
@@ -169,7 +119,10 @@ void GameSimulation::advance_projectiles() {
         }
         if (target_player) {
             health_ = std::max(0.0f, health_ - projectile.damage);
-            diagnostics::log(diagnostics::Severity::debug, "combat", "Player hit; health=" + std::to_string(health_));
+            damage_flash_remaining_ = 0.2f;
+            diagnostics::log(diagnostics::Severity::information, "combat", "Player hit by soldier " +
+                std::to_string(scene_.actors.at(static_cast<std::size_t>(projectile.owner)).identifier) +
+                "; damage=" + std::to_string(projectile.damage) + "; health=" + std::to_string(health_));
             if (health_ <= 0) {
                 diagnostics::log(diagnostics::Severity::information, "combat", "Player died; press Enter to restart");
             }

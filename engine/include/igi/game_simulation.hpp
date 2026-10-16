@@ -16,6 +16,9 @@ struct PlayerInput final {
     bool firing{};
     bool reloading{};
     bool aiming{};
+    int weapon_slot = -1;
+    int weapon_cycle{};
+    bool interacting{};
 };
 
 enum class ActorBehavior { guarding, investigating, attacking, dead };
@@ -28,6 +31,14 @@ struct ActorState final {
     float cooldown{};
     float awareness_time{};
     ActorBehavior behavior = ActorBehavior::guarding;
+    float reaction_time{};
+    float patrol_delay{};
+    std::size_t patrol_command_index{};
+    std::vector<Vector3> route;
+    std::size_t route_index{};
+    Vector3 route_destination;
+    float route_retry_time{};
+    bool active = true;
 };
 
 struct WeaponState final {
@@ -51,6 +62,11 @@ struct Projectile final {
     int owner = -1;
 };
 
+struct InventoryWeapon final {
+    std::size_t definition_index{};
+    WeaponState state;
+};
+
 class GameSimulation final : private HumanMovementWorld {
   public:
     explicit GameSimulation(const MissionScene& scene);
@@ -67,6 +83,11 @@ class GameSimulation final : private HumanMovementWorld {
     [[nodiscard]] bool aiming() const noexcept { return aiming_; }
     [[nodiscard]] bool crouching() const noexcept { return crouching_; }
     [[nodiscard]] const WeaponState& weapon() const noexcept { return weapon_; }
+    [[nodiscard]] const WeaponParameters& weapon_parameters() const noexcept;
+    [[nodiscard]] std::shared_ptr<SceneMesh> weapon_mesh() const noexcept;
+    [[nodiscard]] std::size_t inventory_size() const noexcept { return inventory_.size(); }
+    [[nodiscard]] std::size_t selected_weapon_slot() const noexcept { return selected_weapon_slot_; }
+    [[nodiscard]] float damage_flash_remaining() const noexcept { return damage_flash_remaining_; }
     [[nodiscard]] const std::vector<ActorState>& actors() const noexcept { return actors_; }
     [[nodiscard]] const CollisionWorld& world() const noexcept { return world_; }
     [[nodiscard]] std::uint64_t tick_count() const noexcept { return tick_count_; }
@@ -76,6 +97,10 @@ class GameSimulation final : private HumanMovementWorld {
     void advance_weapon(const PlayerInput& input);
     void advance_actors();
     void advance_projectiles();
+    void select_weapon(std::size_t slot);
+    void collect_weapons();
+    void advance_patrol(std::size_t actor_index);
+    void move_actor(std::size_t actor_index, Vector3 destination, float speed);
     [[nodiscard]] Vector3 animation_delta(int state);
     void sweep_walls(HumanMovementState&, const WorldPosition3&, WorldPosition3&, Vector3&) override;
     void query_ground(HumanMovementState&, const WorldPosition3&, WorldPosition3&, Vector3&, float) override;
@@ -88,6 +113,12 @@ class GameSimulation final : private HumanMovementWorld {
     WeaponState weapon_;
     std::vector<ActorState> actors_;
     std::vector<Projectile> projectiles_;
+    std::vector<InventoryWeapon> inventory_;
+    std::vector<bool> pickups_collected_;
+    std::vector<bool> soldier_weapons_collected_;
+    std::size_t selected_weapon_slot_{};
+    bool fire_was_pressed_{};
+    float damage_flash_remaining_{};
     float heading_{};
     float pitch_{};
     float health_{};
