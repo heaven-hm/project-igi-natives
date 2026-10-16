@@ -1,6 +1,6 @@
 #include "gi_platform.h"
 #include "004010D0-QTask_Init.h"
-void* QTask_Init()
+void QTask_Init(void)
 
 {
     __builtin_memset(&g_afa6e0, 0, 0x100);
@@ -20,5 +20,6 @@ void* QTask_Init()
     QTask_ProcessQueue(QTask_OpenEvent_2(), 3);
     __builtin_memset(&g_a96ae0, 0, 0x5f400);
     Sys_FreeMemory_2(&g_567c38, 4, 0x17b0, 0);
-    return TaskType_Set("QTASK_TYPE_UNDEFINED", 0x181);
+    TaskType_Set("QTASK_TYPE_UNDEFINED", 0x181);
+    return;
 }

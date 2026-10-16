@@ -6,7 +6,7 @@ COMMON_HEADERS := src/gi_platform.h src/gi_stubs.h src/gi_memory.h src/gi_common
 # with the current macOS shim. Keep the generated/decompiler output out of the
 # target until it has been normalized and independently added to that list.
 NATIVE_SRCS := $(shell python3 -c 'import json; print(" ".join("src/" + p for p in json.load(open("clean_sources.json"))["ok"] if p not in ("main_runner.c", "gi_stubs.c")))')
-NATIVE_SRCS += src/004B0C60-Mem_Alloc.c
+NATIVE_SRCS += src/004B0C60-Mem_Alloc.c src/004B0D60-Qhash_Init.c src/004B0D90-Qhash_Reset.c
 OBJS := build/gi_stubs.o build/gi_memory.o $(patsubst src/%.c,build/%.o,$(NATIVE_SRCS))
 
 all: libiginatives.dylib igi_natives_runner

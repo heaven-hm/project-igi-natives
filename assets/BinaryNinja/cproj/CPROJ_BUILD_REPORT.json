@@ -1,0 +1,67 @@
+{
+  "sources": 4646,
+  "allowlist_entries": 2166,
+  "native_translation_units_compiled": 2174,
+  "native_translation_units_excluded": 2479,
+  "native_coverage_pct": 46.6,
+  "build": {
+    "system": "CMake",
+    "configuration": "default with project -O2 flags",
+    "architecture": "arm64",
+    "compiler": "Apple Clang 16.0.0 (clang-1600.0.26.6)",
+    "c_standard": "C11",
+    "result": "success",
+    "output": "/Users/haseeb-mir/Documents/Code/project-igi-natives/assets/BinaryNinja/cproj/cmake_build/libiginatives.dylib"
+  },
+  "runtime": {
+    "runner_result": "Diagnostic runner executed without retail game state; it reports four expected engine-state faults and one void initialization return.",
+    "representative_calls": 5,
+    "faulted_calls": 4,
+    "reason": "The isolated runner has no initialized game engine state; this is not a game runtime test."
+  },
+  "player_movement_core": {
+    "required_functions": [
+      "004614B0-Human_MovementIntegrator.c",
+      "00461A70-Human_WallSweep.c",
+      "00462390-Human_GroundQuery.c",
+      "00462BA0-Human_Separation.c"
+    ],
+    "compiled": 3,
+    "excluded": 1,
+    "compiled_outside_allowlist": [
+      "004614B0-Human_MovementIntegrator.c",
+      "00462BA0-Human_Separation.c"
+    ],
+    "controlled_component_probe": "passed: damping and position update, wall-ground-separation call order, sliding ground budget, and timestamped null-object error handling",
+    "reason": "The wall-sweep algorithm remains partial and depends on an explicit weak no-op world-trace provider; the generated World_TraceBatch translation is excluded because its fifth parameter is mis-typed as a pointer. Ground query remains a weak no-op fallback. Human separation uses an empty default candidate provider until guest-pointer and engine-state integration is implemented."
+  },
+  "latest_component_build": {
+    "system": "CMake",
+    "architecture": "arm64",
+    "compiler": "Apple Clang 16.0.0 (clang-1600.0.26.6)",
+    "c_standard": "C11",
+    "result": "success",
+    "output": "/Users/haseeb-mir/Documents/Code/project-igi-natives/assets/BinaryNinja/cproj/cmake_build/libiginatives.dylib",
+    "runner": "Diagnostic runner built and executed; four of five representative calls fault without retail engine state.",
+    "strict_syntax_check": "passed with -std=c11 -Wall -Wextra -Werror -Wno-ignored-qualifiers",
+    "controlled_probe": "passed; isolated human memory and mock world/collision callbacks only, not retail gameplay verification"
+  },
+  "notes": [
+    "Coverage counts compiler-accepted native translation units, not faithful behavior or verified game natives.",
+    "The current CMake build links 2174 C translation units; the Make build produced 2170 object files including shared support objects. These counts come from generated build outputs.",
+    "The generated 004CDB20-World_TraceBatch.c is excluded from clean_sources.json and CMake because its fifth parameter is declared as int32_t* and used in pointer arithmetic, contradicting REA Ghidra assembly evidence that it is an integer ray count.",
+    "The linked World_TraceBatch symbol is the weak provider-unavailable stub. nm -m reports it as weak external; it emits a timestamped warning once and returns no hits.",
+    "The movement probe uses synthetic memory and mocked collision/transform callbacks; the retail game was not executed.",
+    "Wall and ground query algorithms and real engine-state/transform providers remain necessary before movement can be used in a playable game."
+  ],
+  "make_build": {
+    "system": "Make",
+    "architecture": "arm64",
+    "compiler": "Apple Clang 16.0.0 (clang-1600.0.26.6)",
+    "c_standard": "C11",
+    "compiled_object_files": 2170,
+    "result": "success",
+    "output": "/Users/haseeb-mir/Documents/Code/project-igi-natives/assets/BinaryNinja/cproj/libiginatives.dylib",
+    "runner": "Built; diagnostic run faults on 4 of 5 calls without initialized engine state"
+  }
+}

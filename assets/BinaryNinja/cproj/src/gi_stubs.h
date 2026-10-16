@@ -2588,7 +2588,7 @@ int QTask_CloseEvent(void);
 /* 004010B0 QTask_DispatchEvent */
 int QTask_DispatchEvent(void);
 /* 004010D0 QTask_Init */
-void * QTask_Init(void);
+void QTask_Init(void);
 /* 004011B0 QTask_Update */
 int* QTask_Update(void);
 /* 004011D0 QTask_OnEvent */
@@ -2954,7 +2954,7 @@ int AIConfig_RegisterConfig_2(int a1);
 /* 00407D00 AIConfig_InitItem_2 */
 unsigned int AIConfig_InitItem_2(void);
 /* 00407D60 HumanPlayer_Setactivematerial */
-void * HumanPlayer_Setactivematerial(void);
+void HumanPlayer_Setactivematerial(void);
 /* 00407DE0 SetActiveMaterial */
 int SetActiveMaterial(int a1, float a2);
 /* 00407E30 DefineQ_Material */
@@ -4922,7 +4922,7 @@ int AIFunction_GetAnimationToPlay(int a1);
 /* 0044EE40 AIFunction_SendResponse */
 int AIFunction_SendResponse(int a1);
 /* 0044EEB0 AIEVENT_CREATE */
-void * AIEVENT_CREATE(void);
+void AIEVENT_CREATE(void);
 /* 0044F060 HumanAI_LoadParameters */
 int HumanAI_LoadParameters(void * a1);
 /* 0044F380 Env_ActivateEntity_12 */
@@ -6348,7 +6348,7 @@ int Weapon_CycleFireMode_6(int a1, int a2);
 /* 0047B290 Weapon_CheckAmmo_6 */
 int Weapon_CheckAmmo_6(double* a1, int a2, void * a3, double* a4);
 /* 0047B4B0 GunShot_Init */
-void * GunShot_Init(void);
+void GunShot_Init(void);
 /* 0047B560 GunShot_LoadParameters */
 void * GunShot_LoadParameters(void * a1);
 /* 0047B690 GunShot_Setup */
@@ -6674,7 +6674,7 @@ int GuardGenerator_LoadParameters(void * a1);
 /* 00487EE0 GuardGenerator_Setup */
 int* GuardGenerator_Setup(int80_t a1, void * a2);
 /* 00488000 FX_TrailUpdate_9 */
-void * FX_TrailUpdate_9(void * a1);
+void FX_TrailUpdate_9(void * a1);
 /* 00488040 FX_ExplosionSpawn_10 */
 unsigned int FX_ExplosionSpawn_10(struct status_msg* a1, void * a2);
 /* 004880F0 GuardGenerator_Process */
@@ -8163,9 +8163,9 @@ int QHash_ValueSet(void);
 /* 004B0D50 Sys_DispatchOpcode_2 */
 int Sys_DispatchOpcode_2(void);
 /* 004B0D60 Qhash_Init */
-void * Qhash_Init(char a1);
+void Qhash_Init(char hash_value);
 /* 004B0D90 Qhash_Reset */
-void * Qhash_Reset(void);
+void Qhash_Reset(void);
 /* 004B0DB0 QHash_ValueGet */
 int QHash_ValueGet(void);
 /* 004B0DC0 Sys_PushStack_2 */
@@ -11049,7 +11049,7 @@ void * AIGraph_Init(void);
 /* 005092A0 AIGraph_Cleanup */
 char * AIGraph_Cleanup(int* a1);
 /* 005092E0 Physics_SolveConstraints_7 */
-void * Physics_SolveConstraints_7(void * a1);
+void Physics_SolveConstraints_7(void * a1);
 /* 00509340 Physics_CalculateSplineLength_8 */
 int Physics_CalculateSplineLength_8(void * a1);
 /* 00509390 Physics_InterpolateWaypoint_8 */
@@ -11535,7 +11535,7 @@ int Light_SetLightColor_2(int* a1);
 /* 005237E0 Light_SampleLightmap_2 */
 int Light_SampleLightmap_2(void * a1);
 /* 00523900 Light_ComputeDirectionalLight_3 */
-void * Light_ComputeDirectionalLight_3(int* a1);
+void Light_ComputeDirectionalLight_3(int* a1);
 /* 00523930 LightmapInfo_LoadParameters */
 int LightmapInfo_LoadParameters(void * a1);
 /* 00523D40 Light_RenderLensflare_3 */
@@ -11543,13 +11543,13 @@ int* Light_RenderLensflare_3(void * a1, int a2, int a3, int a4, int a5);
 /* 005251D0 Light_CalculateAttenuation_4 */
 float* Light_CalculateAttenuation_4(float* a1, float a2, float* a3, float a4, float a5);
 /* 00525320 Light_SetLightColor_4 */
-int Light_SetLightColor_4(int* a1);
+void Light_SetLightColor_4(int* a1);
 /* 00525380 LightmapInfo_Update */
 int* LightmapInfo_Update(void * a1);
 /* 005253D0 Light_ComputeDirectionalLight_5 */
 int* Light_ComputeDirectionalLight_5(int* a1);
 /* 00525410 Light_RenderLensflare_5 */
-int Light_RenderLensflare_5(void * a1);
+void Light_RenderLensflare_5(void * a1);
 /* 00525460 LightmapInfo_Setup */
 int LightmapInfo_Setup(void * a1, int* a2);
 /* 00526150 LightmapInfo_Process */

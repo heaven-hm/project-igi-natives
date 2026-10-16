@@ -2575,7 +2575,7 @@ __attribute__((weak)) int QTask_CreateTask(void) { return 0; }
 __attribute__((weak)) int QTask_OpenEvent(int a1) { return 0; }
 __attribute__((weak)) int QTask_CloseEvent(void) { return 0; }
 __attribute__((weak)) int QTask_DispatchEvent(void) { return 0; }
-__attribute__((weak)) void * QTask_Init(void) { return 0; }
+__attribute__((weak)) void QTask_Init(void) { }
 __attribute__((weak)) int* QTask_Update(void) { return 0; }
 __attribute__((weak)) void QTask_OnEvent(void) { return; }
 __attribute__((weak)) int QTask_Process(void) { return 0; }
@@ -2758,7 +2758,7 @@ __attribute__((weak)) int AIConfig_ApplyProfile(void * a1) { return 0; }
 __attribute__((weak)) int* WeaponConfig_Setup(void * a1) { return 0; }
 __attribute__((weak)) int AIConfig_RegisterConfig_2(int a1) { return 0; }
 __attribute__((weak)) unsigned int AIConfig_InitItem_2(void) { return 0; }
-__attribute__((weak)) void * HumanPlayer_Setactivematerial(void) { return 0; }
+__attribute__((weak)) void HumanPlayer_Setactivematerial(void) { }
 __attribute__((weak)) int SetActiveMaterial(int a1, float a2) { return 0; }
 __attribute__((weak)) int DefineQ_Material(long double a1, long double a2, long double a3, int a4, int a5) { return 0; }
 __attribute__((weak)) int Define_GameMaterial(long double a1, long double a2, long double a3, long double a4, int a5, float a6) { return 0; }
@@ -3742,7 +3742,7 @@ __attribute__((weak)) int AIFunction_SetAnimationInterval(long double a1, long d
 __attribute__((weak)) int AIFunction_AddAnimationEntry(long double a1, int a2, float a3) { return 0; }
 __attribute__((weak)) int AIFunction_GetAnimationToPlay(int a1) { return 0; }
 __attribute__((weak)) int AIFunction_SendResponse(int a1) { return 0; }
-__attribute__((weak)) void * AIEVENT_CREATE(void) { return 0; }
+__attribute__((weak)) void AIEVENT_CREATE(void) { }
 __attribute__((weak)) int HumanAI_LoadParameters(void * a1) { return 0; }
 __attribute__((weak)) void * Env_ActivateEntity_12(void * a1) { return 0; }
 __attribute__((weak)) void * HumanAI_Setup(int a1) { return 0; }
@@ -4482,7 +4482,7 @@ __attribute__((weak)) int* Weapon_UpdateZoom_6(int* a1, int a2) { return 0; }
 __attribute__((weak)) int GunShot_TakeSlot(void * a1, int a2, int* a3, void * a4, int a5, int a6) { return 0; }
 __attribute__((weak)) int Weapon_CycleFireMode_6(int a1, int a2) { return 0; }
 __attribute__((weak)) int Weapon_CheckAmmo_6(double* a1, int a2, void * a3, double* a4) { return 0; }
-__attribute__((weak)) void * GunShot_Init(void) { return 0; }
+__attribute__((weak)) void GunShot_Init(void) { }
 __attribute__((weak)) void * GunShot_LoadParameters(void * a1) { return 0; }
 __attribute__((weak)) int GunShot_Setup(int* a1) { return 0; }
 __attribute__((weak)) int Gun_CastRound(void * a1) { return 0; }
@@ -4645,7 +4645,7 @@ __attribute__((weak)) int FX_DebrisSpawn_9(void) { return 0; }
 __attribute__((weak)) int* GuardGenerator_Init(void) { return 0; }
 __attribute__((weak)) int GuardGenerator_LoadParameters(void * a1) { return 0; }
 __attribute__((weak)) int* GuardGenerator_Setup(int80_t a1, void * a2) { return 0; }
-__attribute__((weak)) void * FX_TrailUpdate_9(void * a1) { return 0; }
+__attribute__((weak)) void FX_TrailUpdate_9(void * a1) { (void)a1; }
 __attribute__((weak)) unsigned int FX_ExplosionSpawn_10(struct status_msg* a1, void * a2) { return 0; }
 __attribute__((weak)) char * GuardGenerator_Process(void * a1) { return 0; }
 __attribute__((weak)) void * FX_FireBallUpdate_10(void * a1) { return 0; }
@@ -5388,8 +5388,8 @@ __attribute__((weak)) void * Mem_Alloc(int allocation_size_bytes, int requested_
 __attribute__((weak)) int Sys_ExecuteBytecode_2(void * a1) { return 0; }
 __attribute__((weak)) int QHash_ValueSet(void) { return 0; }
 __attribute__((weak)) int Sys_DispatchOpcode_2(void) { return 0; }
-__attribute__((weak)) void * Qhash_Init(char a1) { return 0; }
-__attribute__((weak)) void * Qhash_Reset(void) { return 0; }
+__attribute__((weak)) void Qhash_Init(char hash_value) { (void)hash_value; }
+__attribute__((weak)) void Qhash_Reset(void) { }
 __attribute__((weak)) int QHash_ValueGet(void) { return 0; }
 __attribute__((weak)) int Sys_PushStack_2(void) { return 0; }
 __attribute__((weak)) int Sys_RendermodeFailedToCr(int a1) { return 0; }
@@ -5626,16 +5626,16 @@ __attribute__((weak)) int Sys_ResolveSymbol_21(int* a1) { return 0; }
 __attribute__((weak)) int Sys_CheckHeap_21(int* a1) { return 0; }
 __attribute__((weak)) int Sys_AllocateMemory_22(int* a1) { return 0; }
 __attribute__((weak)) int Sys_FreeMemory_22(char * a1) { return 0; }
-__attribute__((weak)) void * SymbolRegister_Int16(int* a1, int a2) { return 0; }
+__attribute__((weak)) void * SymbolRegister_Int16(int* a1, int a2) { (void)a1; (void)a2; return 0; }
 __attribute__((weak)) int Sys_OpenFileStream_22(int a1, int* a2) { return 0; }
-__attribute__((weak)) void * SymbolRegister_Bool8(int* a1, int a2) { return 0; }
+__attribute__((weak)) void * SymbolRegister_Bool8(int* a1, int a2) { (void)a1; (void)a2; return 0; }
 __attribute__((weak)) int Sys_ReadFileBlock_22(int a1, int a2) { return 0; }
-__attribute__((weak)) void * Sys_CloseFileStream_22(int* a1, int a2) { return 0; }
+__attribute__((weak)) void * Sys_CloseFileStream_22(int* a1, int a2) { (void)a1; (void)a2; return 0; }
 __attribute__((weak)) int Sys_ExecuteBytecode_22(int a1, int a2) { return 0; }
-__attribute__((weak)) void * SymbolRegister_Int32(int* a1, int a2) { return 0; }
-__attribute__((weak)) void * SymbolRegister_Real32(int* a1, int a2) { return 0; }
+__attribute__((weak)) void * SymbolRegister_Int32(int* a1, int a2) { (void)a1; (void)a2; return 0; }
+__attribute__((weak)) void * SymbolRegister_Real32(int* a1, int a2) { (void)a1; (void)a2; return 0; }
 __attribute__((weak)) int Sys_DispatchOpcode_22(int a1, double* a2) { return 0; }
-__attribute__((weak)) void * Sys_PushStack_22(int* a1, int a2, int a3) { return 0; }
+__attribute__((weak)) void * Sys_PushStack_22(int* a1, int a2, int a3) { (void)a1; (void)a2; (void)a3; return 0; }
 __attribute__((weak)) int Sys_PopStack_22(int a1, int a2) { return 0; }
 __attribute__((weak)) int Game_DataSymbolRemoveThunk(char * a1) { return 0; }
 __attribute__((weak)) int* Qvm_Load(void * a1) { return 0; }
@@ -5644,12 +5644,12 @@ __attribute__((weak)) int Qsc_Compile(void * a1) { return 0; }
 __attribute__((weak)) int Qvm_Execute(void * a1) { return 0; }
 __attribute__((weak)) char * Sys_ResolveSymbol_22(int a1) { return 0; }
 __attribute__((weak)) int Sys_CheckHeap_22(int a1) { return 0; }
-__attribute__((weak)) void * TaskType_Set(int* a1, int a2) { return 0; }
+__attribute__((weak)) void * TaskType_Set(int* a1, int a2) { (void)a1; (void)a2; return 0; }
 __attribute__((weak)) int Sys_AllocateMemory_23(int a1, int a2) { return 0; }
-__attribute__((weak)) void * Sys_FreeMemory_23(int* a1, int a2) { return 0; }
-__attribute__((weak)) void * Game_DefineOptions(int* a1, int a2, int a3, int a4) { return 0; }
-__attribute__((weak)) void * Sys_OpenFileStream_23(int* a1, int a2, int a3, int a4) { return 0; }
-__attribute__((weak)) void * Sys_ReadFileBlock_23(int* a1, int a2, int a3, int a4) { return 0; }
+__attribute__((weak)) void * Sys_FreeMemory_23(int* a1, int a2) { (void)a1; (void)a2; return 0; }
+__attribute__((weak)) void * Game_DefineOptions(int* a1, int a2, int a3, int a4) { (void)a1; (void)a2; (void)a3; (void)a4; return 0; }
+__attribute__((weak)) void * Sys_OpenFileStream_23(int* a1, int a2, int a3, int a4) { (void)a1; (void)a2; (void)a3; (void)a4; return 0; }
+__attribute__((weak)) void * Sys_ReadFileBlock_23(int* a1, int a2, int a3, int a4) { (void)a1; (void)a2; (void)a3; (void)a4; return 0; }
 __attribute__((weak)) int Sys_CloseFileStream_23(char * a1) { return 0; }
 __attribute__((weak)) int Script_SetSymbolContext(char * a1, int a2) { return 0; }
 __attribute__((weak)) int Sys_ExecuteBytecode_23(int a1) { return 0; }
@@ -5680,7 +5680,7 @@ __attribute__((weak)) int Sys_ScriptInternalErrorU(int a1) { return 0; }
 __attribute__((weak)) int* Sys_TooManyArgumentsToFu(int* a1, void * a2) { return 0; }
 __attribute__((weak)) char * Sys_ScriptInternalErrorI(int a1, int* a2, int a3, char * a4) { return 0; }
 __attribute__((weak)) int* Sys_FreeMemory_25(int a1) { return 0; }
-__attribute__((weak)) void * Q_TaskHashTableSet(int* a1, int a2, int a3, int a4, int a5, int a6, int a7) { return 0; }
+__attribute__((weak)) void * Q_TaskHashTableSet(int* a1, int a2, int a3, int a4, int a5, int a6, int a7) { (void)a1; (void)a2; (void)a3; (void)a4; (void)a5; (void)a6; (void)a7; return 0; }
 __attribute__((weak)) int Sys_UndefinedSymbolS(char * a1) { return 0; }
 __attribute__((weak)) int Sys_ReadFileBlock_25(char * a1, int* a2) { return 0; }
 __attribute__((weak)) int Sys_CloseFileStream_25(void) { return 0; }
@@ -6868,7 +6868,7 @@ __attribute__((weak)) int Physics_ApplyImpulse_7(void) { return 0; }
 __attribute__((weak)) int Physics_UpdateForces_7(void) { return 0; }
 __attribute__((weak)) void * AIGraph_Init(void) { return 0; }
 __attribute__((weak)) char * AIGraph_Cleanup(int* a1) { return 0; }
-__attribute__((weak)) void * Physics_SolveConstraints_7(void * a1) { return 0; }
+__attribute__((weak)) void Physics_SolveConstraints_7(void * a1) { (void)a1; }
 __attribute__((weak)) int Physics_CalculateSplineLength_8(void * a1) { return 0; }
 __attribute__((weak)) int Physics_InterpolateWaypoint_8(void * a1, int a2, int a3) { return 0; }
 __attribute__((weak)) int AIGraph_Cleanup_2(void * a1, int a2) { return 0; }
@@ -7111,14 +7111,14 @@ __attribute__((weak)) int Light_UpdateGlobalLight_2(void * a1) { return 0; }
 __attribute__((weak)) int Light_CalculateAttenuation_2(void * a1) { return 0; }
 __attribute__((weak)) int Light_SetLightColor_2(int* a1) { return 0; }
 __attribute__((weak)) int Light_SampleLightmap_2(void * a1) { return 0; }
-__attribute__((weak)) void * Light_ComputeDirectionalLight_3(int* a1) { return 0; }
+__attribute__((weak)) void Light_ComputeDirectionalLight_3(int* a1) { (void)a1; }
 __attribute__((weak)) int LightmapInfo_LoadParameters(void * a1) { return 0; }
 __attribute__((weak)) int* Light_RenderLensflare_3(void * a1, int a2, int a3, int a4, int a5) { return 0; }
 __attribute__((weak)) float* Light_CalculateAttenuation_4(float* a1, float a2, float* a3, float a4, float a5) { return 0; }
-__attribute__((weak)) int Light_SetLightColor_4(int* a1) { return 0; }
+__attribute__((weak)) void Light_SetLightColor_4(int* a1) { (void)a1; }
 __attribute__((weak)) int* LightmapInfo_Update(void * a1) { return 0; }
 __attribute__((weak)) int* Light_ComputeDirectionalLight_5(int* a1) { return 0; }
-__attribute__((weak)) int Light_RenderLensflare_5(void * a1) { return 0; }
+__attribute__((weak)) void Light_RenderLensflare_5(void * a1) { (void)a1; }
 __attribute__((weak)) int LightmapInfo_Setup(void * a1, int* a2) { return 0; }
 __attribute__((weak)) int LightmapInfo_Process(void * a1, int* a2) { return 0; }
 __attribute__((weak)) int LightmapInfo_Init(void) { return 0; }

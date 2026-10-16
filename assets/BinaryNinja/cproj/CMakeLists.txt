@@ -52,7 +52,10 @@ endforeach()
 # The native allocator was excluded from the compiler allowlist because its
 # decompiler output used the wrong host allocator signature. Its portable host
 # heap translation now replaces the weak fallback in gi_stubs.c.
-foreach(PORTED_NATIVE_SOURCE "src/004B0C60-Mem_Alloc.c")
+foreach(PORTED_NATIVE_SOURCE
+        "src/004B0C60-Mem_Alloc.c"
+        "src/004B0D60-Qhash_Init.c"
+        "src/004B0D90-Qhash_Reset.c")
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${PORTED_NATIVE_SOURCE}" AND
        NOT PORTED_NATIVE_SOURCE IN_LIST LIB_SRCS)
         list(APPEND LIB_SRCS "${PORTED_NATIVE_SOURCE}")
@@ -115,4 +118,13 @@ if(BUILD_TESTING)
     )
     target_include_directories(native_heap_probe PRIVATE src)
     add_test(NAME native_heap_lifecycle COMMAND native_heap_probe)
+
+    add_executable(qhash_stack_probe
+        tests/qhash_stack_probe.c
+        src/004B0D60-Qhash_Init.c
+        src/004B0D90-Qhash_Reset.c
+        src/gi_memory.c
+    )
+    target_include_directories(qhash_stack_probe PRIVATE src)
+    add_test(NAME qhash_stack_lifecycle COMMAND qhash_stack_probe)
 endif()

@@ -9,6 +9,7 @@
 #include <setjmp.h>
 #include <ucontext.h>
 #include <dlfcn.h>
+#include <unistd.h>
 #include "gi_platform.h"
 
 /* Declarations for smoke-testing natives */
@@ -16,7 +17,7 @@ extern int32_t Particle_ResetEmitters_6(void);
 extern int32_t QTask_CreateTask(void);
 extern int32_t QTask_CloseEvent(void);
 extern int32_t QTask_DispatchEvent(void);
-extern void* QTask_Init(void);
+extern void QTask_Init(void);
 extern int* QTask_Update(void);
 extern void QTask_OnEvent(void);
 
@@ -145,9 +146,9 @@ int main(int argc, char** argv) {
     fflush(stdout);
     g_in_test = 1;
     if (sigsetjmp(g_test_jmp, 1) == 0) {
-        void* res = QTask_Init();
+        QTask_Init();
         g_in_test = 0;
-        printf("RETURNED (context: %p)\n", res);
+        printf("RETURNED (void)\n");
     } else {
         print_fault_details();
     }
