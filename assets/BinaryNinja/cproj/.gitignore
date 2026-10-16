@@ -2,3 +2,5 @@
 /cmake_build/
 /libiginatives.dylib
 /igi_natives_runner
+/qtask_event_probe
+*.o
