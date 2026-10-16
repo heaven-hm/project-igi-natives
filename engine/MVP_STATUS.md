@@ -43,6 +43,16 @@ The initializer contains 29 soldier declarations; one lies outside the prototype
 - A staged, signed bundle opened a real macOS SDL window and replayed the same encounter for **120 rendered frames**. It ended with **21 shots, 20 hits, one defeated soldier**, and player health **2.39999962 / 3**. The observed run took **3.359464 s**, about **35.7 frames/s** at 800×600. This is one local run, not a comprehensive performance benchmark.
 - The bundle includes SDL2 and SDL3 rather than depending on Homebrew installation paths. `codesign --verify --deep --strict` passed.
 
+## Delivered application
+
+Installed at `/Users/haseeb-mir/Downloads/IGI/igi.app` (approximately 3.4 MiB). It discovers the original assets beside the bundle without `--game`. A second installed-window replay completed 120 frames in 2.327814 seconds with 21 shots, 20 hits, one defeated soldier, magazine 11, reserve 49, and health 2.39999962.
+
+A clean archive of source commit `01f8cf5` built the standalone MVP and passed all seven tests without the untracked generated-native research files. The final packaging adjustment strips FinderInfo/ResourceFork metadata before signing. Deployment uses `ditto --norsrc --noextattr` so synced-folder metadata is not carried into Downloads. Strict signature verification passed again after the installed runtime test.
+
+The app also launched through macOS Launch Services with its default game and cache paths. macOS requested Downloads access for the locally built application; access was allowed for loading the specified game assets. It then completed 90 rendered frames, wrote a state trace and frame capture, and shut down cleanly. Its default log is `/Users/haseeb-mir/Library/Application Support/HeavenHM/ProjectIGI/igi.log`.
+
+Local captures, recorded input, state traces, clean-source test output, sanitizer test output, and combined research/MVP test output are under `dist/verification/`. The delivered captures include `installed-frame.png` and `spawn.png`. This directory is ignored by Git. Invalid frame counts, missing asset directories, and malformed replay rows were also checked to return failure with timestamped diagnostics.
+
 ## Fidelity evidence and limits
 
 Reference executable: `/Users/haseeb-mir/Downloads/IGI/igi.exe`, SHA-256 `dea34892d417715873ea61d7b2ba5556655f1ad65385104348146f9679915a01`.

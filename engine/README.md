@@ -20,6 +20,8 @@ cmake --install build/mvp --prefix dist
 
 On macOS the install step bundles SDL2 and SDL3 when SDL2-compat uses it, rewrites library paths, includes dependency notices, and signs `igi.app` locally. The original assets remain external. Put the app beside the game data, set `IGI_GAME_PATH`, or pass `--game`.
 
+When building inside a synced Documents folder, stage installation outside that folder, for example with `--prefix /tmp/igi-stage`, then copy the app with `ditto --norsrc --noextattr /tmp/igi-stage/igi.app /Users/haseeb-mir/Downloads/IGI/igi.app`. This avoids carrying Finder metadata that interferes with strict bundle verification.
+
 The default application does not need the native catalog JSON, the generated C translations, Windows, or CrossOver. To build the separate recovered-C research library and its probes as well, configure with `-DIGI_BUILD_RECOVERED_NATIVE_LIBRARY=ON`.
 
 ## Controls

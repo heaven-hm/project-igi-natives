@@ -20,3 +20,7 @@ Work in `/Users/haseeb-mir/Documents/Code/project-igi-natives` with C++20 and th
 5. Validate malformed assets, collision, gameplay events, capture output, and bundle startup; record remaining fidelity gaps.
 
 Menus and sound are deferred. Runtime code uses C/C++ only; Rust remains available where a specific component warrants it. Existing recovered routines are used when their interfaces and state providers are understood.
+
+## Completed prototype milestone
+
+The ordered slices above now produce the native Level 1 gameplay prototype. The app has been built from a clean source archive, tested, packaged, installed in Downloads/IGI, and run through Terminal and Launch Services. See `MVP_STATUS.md` for measurements and the remaining retail-fidelity work; full original-engine equivalence is not the completed milestone.

@@ -130,6 +130,10 @@ if(APPLE)
             execute_process(COMMAND install_name_tool -change \"\${IGI_SDL2_ORIGINAL_ID}\"
                 @loader_path/libSDL2.dylib \"\${IGI_FRAMEWORKS}/libiginatives.dylib\" COMMAND_ERROR_IS_FATAL ANY)
         endif()
+        foreach(IGI_DETRITUS_ATTRIBUTE IN ITEMS com.apple.FinderInfo com.apple.ResourceFork)
+            execute_process(COMMAND xattr -rd \"\${IGI_DETRITUS_ATTRIBUTE}\"
+                \"\${CMAKE_INSTALL_PREFIX}/igi.app\" OUTPUT_QUIET ERROR_QUIET)
+        endforeach()
         execute_process(
             COMMAND codesign --force --deep --sign - \"\${CMAKE_INSTALL_PREFIX}/igi.app\"
             COMMAND_ERROR_IS_FATAL ANY
