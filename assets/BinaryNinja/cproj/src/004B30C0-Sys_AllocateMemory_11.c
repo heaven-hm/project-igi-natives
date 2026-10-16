@@ -1,0 +1,14 @@
+#include "gi_platform.h"
+#include "004B30C0-Sys_AllocateMemory_11.h"
+int32_t Sys_AllocateMemory_11(double* a1, double a2)
+
+{
+    int32_t result;
+    long double fp0;
+    fp0 = Sys_OpenFileStream_11(a1);
+    long double x87_r7_1 = 1.0 / fp0;
+    *a1 = x87_r7_1 * *a1 * a2;
+    a1[1] = x87_r7_1 * a1[1] * a2;
+    a1[2] = x87_r7_1 * a1[2] * a2;
+    return result;
+}

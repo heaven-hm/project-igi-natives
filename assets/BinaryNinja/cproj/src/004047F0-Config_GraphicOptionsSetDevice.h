@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 004047F0 Config_GraphicOptionsSetDevice | gate FAIL | openigi False */
+int Config_GraphicOptionsSetDevice(int a1, float a2);

@@ -1,0 +1,171 @@
+#include "0045E450-Human_Init.h"
+/* 0x0045e450 Human_Init full linked: callers=1 callees=109 */
+int32_t sub_45e450()
+
+{
+    QTask_DispatchEvent_3(1);
+    int32_t var_d0c = 0;
+    int16_t eax_1 = TaskType_Register("Human", 0xcf8, sub_4d9610(), 0);
+    g_5bdaf8 = eax_1;
+    QTask_RegisterEventCallback_3(eax_1, 1);
+    g_53f316 = QTask_UnableToAllocateEven(0);
+    g_53f317 = QTask_UnableToAllocateEven(0);
+    int32_t* eax_4 = sub_4c1800(0x80);
+    g_5bdc24 = eax_4;
+    eax_4 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_4, 0, sub_45eb30);
+    QTask_TriggerEvent(g_5bdaf8, 1, sub_45eea0);
+    QTask_TriggerEvent(g_5bdaf8, 2, sub_45ef40);
+    QTask_RemoveEventCallback(g_5bdaf8, 4, sub_45f280);
+    int32_t eax_6 = sub_4d14d0();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_6, sub_45f050);
+    QTask_RemoveEventCallback(g_5bdaf8, 9, sub_45f500);
+    QTask_RemoveEventCallback(g_5bdaf8, 8, sub_45f800);
+    int32_t eax_8 = sub_4f1a60();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_8, sub_45f880);
+    int32_t eax_9 = sub_4f1a70();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_9, sub_45f890);
+    int32_t eax_10 = sub_4f1fc0();
+    int32_t var_d10_3 = eax_10;
+    eax_10 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_10, var_d10_3, sub_45f900);
+    int32_t eax_11 = sub_47cdc0();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_11, sub_45f910);
+    int32_t eax_12 = Level_StartMission_2();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_12, sub_45e3e0);
+    int32_t eax_13 = Level_LoadLevel_3();
+    int32_t var_d10_6 = eax_13;
+    eax_13 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_13, var_d10_6, sub_45f930);
+    int32_t eax_14 = Level_LoadObjects_4();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_14, sub_45f920);
+    int32_t eax_15 = sub_4fdef0();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_15, sub_45f920);
+    int32_t eax_16 = Level_InitTextures_3();
+    int32_t var_d10_9 = eax_16;
+    eax_16 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_16, var_d10_9, sub_45f9d0);
+    int32_t eax_17 = sub_466230();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_17, sub_45fa80);
+    int32_t eax_18 = Level_CheckQTaskID_3();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_18, sub_416ab0);
+    int32_t eax_19 = sub_484d30();
+    int32_t var_d10_12 = eax_19;
+    eax_19 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_19, var_d10_12, sub_45fcd0);
+    int32_t eax_20 = sub_450c80();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_20, sub_45fda0);
+    int32_t eax_21 = sub_489620();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_21, sub_45fe30);
+    int32_t eax_22 = sub_489610();
+    int32_t var_d10_15 = eax_22;
+    eax_22 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_22, var_d10_15, sub_42fc50);
+    int32_t eax_23 = sub_450cc0();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_23, sub_45fe70);
+    int32_t eax_24 = sub_46d410();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_24, Weapon_AmmoPickup);
+    int32_t eax_25 = sub_46c970();
+    int32_t var_d10_18 = eax_25;
+    eax_25 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_25, var_d10_18, Weapon_GunPickup);
+    int32_t eax_26 = sub_477c00();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_26, sub_460070);
+    int32_t eax_27 = Weapon_FiringStateGet();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_27, sub_460090);
+    int32_t eax_28 = sub_477c20();
+    int32_t var_d10_21 = eax_28;
+    eax_28 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_28, var_d10_21, sub_4600c0);
+    int32_t eax_29 = sub_477c30();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_29, sub_4601a0);
+    int32_t eax_30 = sub_477c40();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_30, sub_460210);
+    int32_t eax_31 = sub_4fc840();
+    int32_t var_d10_24 = eax_31;
+    eax_31 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_31, var_d10_24, sub_4d3710);
+    int32_t eax_32 = sub_467d90();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_32, sub_460280);
+    int32_t eax_33 = sub_487190();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_33, sub_460400);
+    int32_t eax_34 = sub_4e6610();
+    int32_t var_d10_27 = eax_34;
+    eax_34 = g_5bdaf8;
+    int32_t ecx_11 = QTask_RemoveEventCallback(eax_34, var_d10_27, sub_4606d0);
+    ecx_11 = g_53f316;
+    QTask_RemoveEventCallback(g_5bdaf8, ecx_11, sub_4606f0);
+    int32_t eax_35 = sub_477030();
+    int32_t var_d10_28 = eax_35;
+    eax_35 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_35, var_d10_28, sub_4f64e0);
+    QTask_RemoveEventCallback(g_5bdaf8, 0xc, sub_45f920);
+    int32_t eax_36 = sub_5096a0();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_36, sub_45e3d0);
+    int32_t eax_37 = sub_4f1210();
+    int32_t var_d10_30 = eax_37;
+    eax_37 = g_5bdaf8;
+    QTask_TriggerEvent(eax_37, var_d10_30, sub_460850);
+    int32_t eax_38 = sub_4f1220();
+    QTask_TriggerEvent(g_5bdaf8, eax_38, sub_4608d0);
+    int32_t eax_39 = sub_4cea10();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_39, sub_460950);
+    int32_t eax_40 = sub_4cea20();
+    int32_t var_d10_33 = eax_40;
+    eax_40 = g_5bdaf8;
+    QTask_RemoveEventCallback(eax_40, var_d10_33, sub_4609a0);
+    int32_t eax_41 = sub_46ab20();
+    QTask_RemoveEventCallback(g_5bdaf8, eax_41, sub_4609f0);
+    QTask_TriggerEvent(g_5bdaf8, 3, sub_460ac0);
+    g_5bdc18 = sub_4f1950(9);
+    int32_t eax_43 = sub_4f1010();
+    void var_cf8;
+    void var_c18;
+    sub_4f1a80(g_5bdc18, &var_cf8, &var_c18, eax_43, 7, 0);
+    int32_t eax_44 = sub_4f0f20();
+    void var_c00;
+    sub_4f1a80(g_5bdc18, &var_cf8, &var_c00, eax_44, 7, 0);
+    int32_t eax_45 = sub_4f0fd0();
+    void var_bf8;
+    sub_4f1a80(g_5bdc18, &var_cf8, &var_bf8, eax_45, 7, 0);
+    int32_t eax_46 = sub_4f0fa0();
+    void var_bfc;
+    sub_4f1a80(g_5bdc18, &var_cf8, &var_bfc, eax_46, 7, 0);
+    g_5bdb00 = sub_504a30("CRITERIA_HUMAN", sub_460a70);
+    int32_t edi = 0;
+    int32_t* ebx = &g_5bdad8;
+
+    for (int32_t* i = &g_5bdb18; i < &g_5bdc18; )
+    {
+        int32_t var_d0c_1 = edi;
+        Game_DataSymbolLoad(i, "CRITERIA_HUMAN%d");
+        *ebx = sub_504a30(i, sub_460a10);
+        i = &i[8];
+        edi += 1;
+        ebx = &ebx[1];
+    }
+
+    int32_t edi_1 = 0;
+
+    for (char (** i_1)[0x10] = &g_53f348; i_1 < "HUMAN_TEAM_BAD"; )
+    {
+        TaskType_Set(*i_1, edi_1);
+        i_1 = &i_1[1];
+        edi_1 += 1;
+    }
+
+    __builtin_memset(&g_5bdc28, 0, 0x14);
+    Game_DefineOptions("Human_GetCutSceneDeltaTime", Human_GetCutSceneDeltaTime, 0, 0);
+    g_5bdb0c = Level_LoadLevel_5("shadow1.tex");
+    g_5bdb08 = Level_LoadLevel_5("hole_blood1.tex");
+    g_5bdb10 = Level_LoadLevel_5("hole_blood2.tex");
+    g_5bdb14 = Level_LoadLevel_5("hole_blood3.tex");
+    g_5bdb04 = Level_LoadLevel_5("hole_blood4.tex");
+    g_5bdad4 = Level_LoadObjects_6("blood1.spr");
+    char* eax_56 = Level_LoadObjects_6("blood2.spr");
+    int16_t ecx_15 = g_5bdaf8;
+    g_5bdad0 = eax_56;
+    int32_t result = sub_489640(ecx_15);
+    g_5bdc3c = result;
+    return result;
+}

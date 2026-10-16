@@ -1,0 +1,8 @@
+# SoundSys_InitSoundSys_3
+
+Address: 0x004e5580
+Signature: byte SoundSys_InitSoundSys_3(int param_1, uint param_2, int param_3);
+Ninja: int32_t(void* arg1, int32_t arg2, int32_t arg3) (NINJA_CONFIRMED_100)
+Range: 0x4e5580-0x4e55af blocks=1
+
+Confirmed 100% by Binary Ninja MCP.

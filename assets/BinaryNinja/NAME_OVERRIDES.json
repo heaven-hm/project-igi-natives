@@ -1,0 +1,20 @@
+{
+ "0x00490370": "Timer_Now",
+ "0x004E6030": "Timer_SetLimit",
+ "0x00495CC0": "Timer_Commit",
+ "0x004012A0": "Object_Create",
+ "0x00485750": "StatusMessage_Enqueue",
+ "0x00487180": "StatusScreen_Get",
+ "0x004868D0": "StatusList_Clear",
+ "0x00489F00": "Collision_Reset",
+ "0x004F2060": "Table_GetAt",
+ "0x004B7030": "Heap_FreeEntry",
+ "0x004B22F0": "Struct_Clear36",
+ "0x004B12F0": "Script_RegisterNamespace",
+ "0x004E7530": "StatusScreen_GetEvent",
+ "0x004869B0": "StatusScreen_OnLoad",
+ "0x00486CD0": "StatusScreen_OnEvent1",
+ "0x00486D70": "StatusScreen_OnEvent2",
+ "0x00486F30": "StatusScreen_OnEvent3",
+ "0x004C1800": "Mem_Alloc8"
+}

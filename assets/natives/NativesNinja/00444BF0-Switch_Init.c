@@ -1,0 +1,76 @@
+#include "00444BF0-Switch_Init.h"
+/* 0x00444bf0 Switch_Init full linked: callers=1 callees=50 */
+int32_t* sub_444bf0()
+
+{
+    int32_t var_22c = 0;
+    int16_t eax_1 = TaskType_Register("Switch", 0x228, sub_4e0830(), 0);
+    g_57c1b8 = eax_1;
+    QTask_RemoveEventCallback(eax_1, 0, sub_444f20);
+    QTask_TriggerEvent(g_57c1b8, 1, sub_4450f0);
+    QTask_TriggerEvent(g_57c1b8, 2, sub_445270);
+    int32_t eax_3 = sub_4f1a60();
+    QTask_RemoveEventCallback(g_57c1b8, eax_3, sub_4452e0);
+    int32_t eax_4 = sub_4f1a70();
+    int32_t var_230_1 = eax_4;
+    eax_4 = g_57c1b8;
+    QTask_RemoveEventCallback(eax_4, var_230_1, sub_4452f0);
+    int32_t eax_5 = Level_InitTextures_2();
+    QTask_RemoveEventCallback(g_57c1b8, eax_5, sub_445730);
+    int32_t eax_6 = Level_CheckQTaskID_2();
+    QTask_RemoveEventCallback(g_57c1b8, eax_6, sub_4f01b0);
+    int32_t eax_7 = Level_InitSprites_2();
+    int32_t var_230_4 = eax_7;
+    eax_7 = g_57c1b8;
+    QTask_RemoveEventCallback(eax_7, var_230_4, sub_4d3710);
+    int32_t eax_8 = Level_SetMission_2();
+    QTask_RemoveEventCallback(g_57c1b8, eax_8, sub_445820);
+    int32_t eax_9 = Level_LoadLevel_3();
+    QTask_RemoveEventCallback(g_57c1b8, eax_9, sub_445840);
+    int32_t eax_10 = sub_4f1210();
+    int32_t var_230_7 = eax_10;
+    eax_10 = g_57c1b8;
+    QTask_TriggerEvent(eax_10, var_230_7, sub_445860);
+    int32_t eax_11 = sub_4f1220();
+    QTask_TriggerEvent(g_57c1b8, eax_11, sub_445980);
+    int32_t eax_12 = sub_4c5800();
+    QTask_RemoveEventCallback(g_57c1b8, eax_12, sub_445a80);
+    int32_t eax_13 = sub_467d90();
+    int32_t var_230_10 = eax_13;
+    eax_13 = g_57c1b8;
+    QTask_RemoveEventCallback(eax_13, var_230_10, sub_443dc0);
+    int32_t eax_14 = sub_47e6f0();
+    QTask_RemoveEventCallback(g_57c1b8, eax_14, 0);
+    g_57c1b4 = sub_4f1950(0xa);
+    int32_t eax_16 = sub_4f1010();
+    void var_228;
+    void var_138;
+    sub_4f1a80(g_57c1b4, &var_228, &var_138, eax_16, 7, 0);
+    int32_t eax_17 = sub_4f0f70();
+    void var_120;
+    sub_4f1a80(g_57c1b4, &var_228, &var_120, eax_17, 7, 0);
+    int32_t eax_18 = sub_4f0fc0();
+    void var_58;
+    sub_4f1a80(g_57c1b4, &var_228, &var_58, eax_18, 7, 0);
+    int32_t eax_19 = sub_4f1000();
+    void var_68;
+    sub_4f1a80(g_57c1b4, &var_228, &var_68, eax_19, 7, 0);
+    int32_t eax_20 = sub_4f0fd0();
+    void var_b8;
+    sub_4f1a80(g_57c1b4, &var_228, &var_b8, eax_20, 7, 0);
+    int32_t eax_21 = sub_4f0fd0();
+    void var_a8;
+    sub_4f1a80(g_57c1b4, &var_228, &var_a8, eax_21, 7, 0);
+    int32_t eax_22 = sub_4f0fd0();
+    void var_98;
+    sub_4f1a80(g_57c1b4, &var_228, &var_98, eax_22, 7, 0);
+    int32_t eax_23 = sub_4f0fd0();
+    void var_88;
+    sub_4f1a80(g_57c1b4, &var_228, &var_88, eax_23, 7, 0);
+    int32_t eax_24 = sub_4f0fd0();
+    void var_78;
+    sub_4f1a80(g_57c1b4, &var_228, &var_78, eax_24, 7, 0);
+    int32_t eax_25 = sub_4f1000();
+    void var_8;
+    return sub_4f1a80(g_57c1b4, &var_228, &var_8, eax_25, 7, 0);
+}

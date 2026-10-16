@@ -1,0 +1,23 @@
+#include "gi_platform.h"
+#include "00489B90-FX_TrailUpdate_13.h"
+int32_t* FX_TrailUpdate_13(void* a1)
+
+{
+    int32_t* i_2 = (*(int32_t*)(uintptr_t)(a1 + 0x18));
+
+    for (int32_t* i = *i_2; i; i = *i)
+    {
+        Qtask_UpdateList(i_2[2]);
+        i_2 = i;
+    }
+
+    int32_t* result = (*(int32_t*)(uintptr_t)(a1 + 0x24));
+
+    for (int32_t* i_1 = *result; i_1; i_1 = *i_1)
+    {
+        Qtask_UpdateList(result[2]);
+        result = i_1;
+    }
+
+    return result;
+}

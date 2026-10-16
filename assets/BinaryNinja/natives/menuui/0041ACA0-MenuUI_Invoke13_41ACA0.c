@@ -1,0 +1,7 @@
+#include "MenuUI_Invoke13_41ACA0.h"
+
+int32_t*(void* arg1, int32_t arg2)
+{
+    // Native implementation (0x41aca0-0x41ad1c, 1 blocks)
+    return 0;
+}

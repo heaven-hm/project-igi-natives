@@ -1,0 +1,33 @@
+#include "004B63D0-Resource_Flush.h"
+/* 0x004b63d0 Resource_Flush full linked: callers=26 callees=2 */
+int32_t Resource_Flush(int32_t a1)
+
+// Sig: void Resource_Flush(void* resEntry)
+// Note: Flushes/finalizes ONE resource entry: walks the global resource list
+// (0x943E38), matches entry+0x34 against the argument, errors "Resource_Flush()
+// : Couldn't locate resource at %p." when absent. Param: resEntry = resource
+// pointer/address to flush.
+{
+    int32_t* i_1 = g_943e38;
+
+    for (int32_t* i = *i_1; i; i = *i)
+    {
+        if (i_1[0xd] == a1)
+        {
+            int32_t result = i_1[9];
+
+            if (result != 3 && result != 1)
+                return sub_4b5c90(i_1);
+
+            return result;
+        }
+
+        i_1 = i;
+    }
+
+    int32_t var_4_1 = a1;
+    Error_Show("Resource_Flush() : Couldn't locate resource at %p.");
+
+    while (true)
+        /* nop */
+}

@@ -1,0 +1,23 @@
+{
+ "schema": "natives-ninja-new/1",
+ "new": [
+  {
+   "hash": "00413A90",
+   "address": 4274832,
+   "ninja_address": "0x00413a90",
+   "rea_name": "WeaponType_Open",
+   "rea_signature": "void * WeaponType_Open(struct weapon_ctx * ctx)",
+   "ninja_name": "WeaponType_Open",
+   "ninja_prototype": "void*(struct weapon_ctx* ctx)",
+   "ninja_status": "NINJA_NEW_STRING_NAMED",
+   "ninja_cfg": {
+    "bn_blocks": 6,
+    "bn_calls": 5,
+    "r2_blocks": 6,
+    "r2_calls": 5,
+    "score": 1.0,
+    "gate": "PASS"
+   }
+  }
+ ]
+}

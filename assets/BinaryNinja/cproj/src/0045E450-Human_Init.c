@@ -1,0 +1,171 @@
+#include "gi_platform.h"
+#include "0045E450-Human_Init.h"
+int32_t Human_Init()
+
+{
+    QTask_DispatchEvent_3(1);
+    int32_t v_d0c = 0;
+    int16_t valA1 = TaskType_Register("Human", 0xcf8, Render_DrawRigidMesh_12(), 0);
+    g_5bdaf8 = valA1;
+    QTask_RegisterEventCallback_3(valA1, 1);
+    g_53f316 = QTask_UnableToAllocateEvent(0);
+    g_53f317 = QTask_UnableToAllocateEvent(0);
+    int32_t* valA4 = Mem_Alloc8(0x80);
+    g_5bdc24 = valA4;
+    valA4 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA4, 0, sub_45eb30);
+    QTask_TriggerEvent(g_5bdaf8, 1, sub_45eea0);
+    QTask_TriggerEvent(g_5bdaf8, 2, sub_45ef40);
+    QTask_RemoveEventCallback(g_5bdaf8, 4, Human_LoadParameters);
+    int32_t valA6 = Render_DrawSplineMesh_4();
+    QTask_RemoveEventCallback(g_5bdaf8, valA6, Human_Setup);
+    QTask_RemoveEventCallback(g_5bdaf8, 9, Human_Process);
+    QTask_RemoveEventCallback(g_5bdaf8, 8, Human_Update);
+    int32_t valA8 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_5bdaf8, valA8, sub_45f880);
+    int32_t valA9 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_5bdaf8, valA9, Human_OnEvent);
+    int32_t valA10 = Script_ParseEnumInt32_11();
+    int32_t v_d10_3 = valA10;
+    valA10 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA10, v_d10_3, sub_45f900);
+    int32_t valA11 = Weapon_ReloadClip_8();
+    QTask_RemoveEventCallback(g_5bdaf8, valA11, sub_45f910);
+    int32_t valA12 = Level_StartMission_2();
+    QTask_RemoveEventCallback(g_5bdaf8, valA12, Human_Action);
+    int32_t valA13 = Level_LoadLevel_3();
+    int32_t v_d10_6 = valA13;
+    valA13 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA13, v_d10_6, Human_BaseDamage);
+    int32_t valA14 = Level_LoadObjects_4();
+    QTask_RemoveEventCallback(g_5bdaf8, valA14, sub_45f920);
+    int32_t valA15 = Script_EvaluateCondition_30();
+    QTask_RemoveEventCallback(g_5bdaf8, valA15, sub_45f920);
+    int32_t valA16 = Level_InitTextures_3();
+    int32_t v_d10_9 = valA16;
+    valA16 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA16, v_d10_9, Human_Cleanup);
+    int32_t valA17 = AI_CheckHearing_24();
+    QTask_RemoveEventCallback(g_5bdaf8, valA17, Human_Cleanup_2);
+    int32_t valA18 = Level_CheckQTaskID_3();
+    QTask_RemoveEventCallback(g_5bdaf8, valA18, sub_416ab0);
+    int32_t valA19 = FX_FragmentSimulate_5();
+    int32_t v_d10_12 = valA19;
+    valA19 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA19, v_d10_12, Human_Cleanup_3);
+    int32_t valA20 = AI_CheckHearing();
+    QTask_RemoveEventCallback(g_5bdaf8, valA20, sub_45fda0);
+    int32_t valA21 = FX_ExplosionSpawn_13();
+    QTask_RemoveEventCallback(g_5bdaf8, valA21, sub_45fe30);
+    int32_t valA22 = FX_TrailUpdate_12();
+    int32_t v_d10_15 = valA22;
+    valA22 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA22, v_d10_15, sub_42fc50);
+    int32_t valA23 = AI_MoveToNode();
+    QTask_RemoveEventCallback(g_5bdaf8, valA23, Human_Cleanup_4);
+    int32_t valA24 = AI_UpdateSensors_29();
+    QTask_RemoveEventCallback(g_5bdaf8, valA24, Weapon_AmmoPickup);
+    int32_t valA25 = AI_UpdateOrders_29();
+    int32_t v_d10_18 = valA25;
+    valA25 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA25, v_d10_18, Weapon_GunPickup);
+    int32_t valA26 = Weapon_EjectShell_5();
+    QTask_RemoveEventCallback(g_5bdaf8, valA26, sub_460070);
+    int32_t valA27 = Weapon_FiringStateGet();
+    QTask_RemoveEventCallback(g_5bdaf8, valA27, sub_460090);
+    int32_t valA28 = Weapon_UpdateRecoil_5();
+    int32_t v_d10_21 = valA28;
+    valA28 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA28, v_d10_21, sub_4600c0);
+    int32_t valA29 = Weapon_UpdateMuzzleFlash_5();
+    QTask_RemoveEventCallback(g_5bdaf8, valA29, sub_4601a0);
+    int32_t valA30 = Weapon_UpdateBarrel_5();
+    QTask_RemoveEventCallback(g_5bdaf8, valA30, sub_460210);
+    int32_t valA31 = Script_ParseEnumString_29();
+    int32_t v_d10_24 = valA31;
+    valA31 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA31, v_d10_24, AIGraph_LoadParameters);
+    int32_t valA32 = AI_CheckHearing_25();
+    QTask_RemoveEventCallback(g_5bdaf8, valA32, Human_Cleanup_5);
+    int32_t valA33 = FX_DebrisSpawn_8();
+    QTask_RemoveEventCallback(g_5bdaf8, valA33, HealthFraction);
+    int32_t valA34 = SoundSys_SetFrequency_5();
+    int32_t v_d10_27 = valA34;
+    valA34 = g_5bdaf8;
+    int32_t objC11 = QTask_RemoveEventCallback(valA34, v_d10_27, sub_4606d0);
+    objC11 = g_53f316;
+    QTask_RemoveEventCallback(g_5bdaf8, objC11, Human_Cleanup_6);
+    int32_t valA35 = Weapon_FireBullet_5();
+    int32_t v_d10_28 = valA35;
+    valA35 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA35, v_d10_28, sub_4f64e0);
+    QTask_RemoveEventCallback(g_5bdaf8, 0xc, sub_45f920);
+    int32_t valA36 = Physics_SimulateRigidBody_8();
+    QTask_RemoveEventCallback(g_5bdaf8, valA36, sub_45e3d0);
+    int32_t valA37 = Script_FormatString_5();
+    int32_t v_d10_30 = valA37;
+    valA37 = g_5bdaf8;
+    QTask_TriggerEvent(valA37, v_d10_30, Human_Cleanup_7);
+    int32_t valA38 = Script_SpawnNewTask_6();
+    QTask_TriggerEvent(g_5bdaf8, valA38, Human_Cleanup_8);
+    int32_t valA39 = DynObj_UpdateDynTree_12();
+    QTask_RemoveEventCallback(g_5bdaf8, valA39, Human_Cleanup_9);
+    int32_t valA40 = DynObj_LinkDynamicCube_12();
+    int32_t v_d10_33 = valA40;
+    valA40 = g_5bdaf8;
+    QTask_RemoveEventCallback(valA40, v_d10_33, Human_Cleanup_10);
+    int32_t valA41 = AI_AlertAllies_27();
+    QTask_RemoveEventCallback(g_5bdaf8, valA41, sub_4609f0);
+    QTask_TriggerEvent(g_5bdaf8, 3, Human_Cleanup_11);
+    g_5bdc18 = Script_EvaluateCondition_7(9);
+    int32_t valA43 = Script_ParseEnumReal32_4();
+    char v_cf8;
+    char v_c18;
+    Script_UndefinedParameterTy(g_5bdc18, &v_cf8, &v_c18, valA43, 7, 0);
+    int32_t valA44 = Script_ParseEnumString_2();
+    char v_c00;
+    Script_UndefinedParameterTy(g_5bdc18, &v_cf8, &v_c00, valA44, 7, 0);
+    int32_t valA45 = Script_EvaluateCondition_3();
+    char v_bf8;
+    Script_UndefinedParameterTy(g_5bdc18, &v_cf8, &v_bf8, valA45, 7, 0);
+    int32_t valA46 = Script_ParseEnumString_3();
+    char v_bfc;
+    Script_UndefinedParameterTy(g_5bdc18, &v_cf8, &v_bfc, valA46, 7, 0);
+    g_5bdb00 = Physics_UnableToRegisterArea("CRITERIA_HUMAN", sub_460a70);
+    int32_t dstD = 0;
+    int32_t* ctxB = &g_5bdad8;
+
+    for (int32_t* i = &g_5bdb18; i < &g_5bdc18; )
+    {
+        int32_t v_d0c_1 = dstD;
+        Game_DataSymbolLoad(i, "CRITERIA_HUMAN%d");
+        *ctxB = Physics_UnableToRegisterArea(i, sub_460a10);
+        i = &i[8];
+        dstD += 1;
+        ctxB = &ctxB[1];
+    }
+
+    int32_t dstD1 = 0;
+
+    for (char (** i_1)[0x10] = &g_53f348; i_1 < "HUMAN_TEAM_BAD"; )
+    {
+        TaskType_Set(*i_1, dstD1);
+        i_1 = &i_1[1];
+        dstD1 += 1;
+    }
+
+    __builtin_memset(&g_5bdc28, 0, 0x14);
+    Game_DefineOptions("Human_GetCutSceneDeltaTime", Human_GetCutSceneDeltaTime, 0, 0);
+    g_5bdb0c = Level_LoadLevel_5("shadow1.tex");
+    g_5bdb08 = Level_LoadLevel_5("hole_blood1.tex");
+    g_5bdb10 = Level_LoadLevel_5("hole_blood2.tex");
+    g_5bdb14 = Level_LoadLevel_5("hole_blood3.tex");
+    g_5bdb04 = Level_LoadLevel_5("hole_blood4.tex");
+    g_5bdad4 = Level_LoadObjects_6("blood1.spr");
+    char* valA56 = Level_LoadObjects_6("blood2.spr");
+    int16_t objC15 = g_5bdaf8;
+    g_5bdad0 = valA56;
+    int32_t result = FX_AidetectionQtaskMask(objC15);
+    g_5bdc3c = result;
+    return result;
+}

@@ -1,0 +1,9 @@
+#include "FX_FireBallUpdate_3.h"
+void* FX_FireBallUpdate_3(void* a1)
+
+{
+    *(a1 + 0x110) = 0x44800000;
+    *(a1 + 0x108) = 0;
+    *(a1 + 0x10c) = 0;
+    return a1;
+}

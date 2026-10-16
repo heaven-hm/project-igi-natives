@@ -5349,8 +5349,26 @@ __attribute__((weak)) HRESULT __stdcall Camera_ResetMatrix_31(struct IAVIFile* p
 __attribute__((weak)) HIC __stdcall Camera_UpdateTransform_32(unsigned int fccType, unsigned int fccHandler, BITMAPINFOHEADER* lpbiIn, BITMAPINFOHEADER* lpbiOut, unsigned short wFlags) { return 0; }
 __attribute__((weak)) unsigned int __stdcall Camera_SetFieldOfView_32(HIC hic, unsigned int dwFlags, BITMAPINFOHEADER* lpbiFormat, void * lpData, BITMAPINFOHEADER* lpbi, void * lpBits) { return 0; }
 __attribute__((weak)) HRESULT __stdcall Camera_ApplyLineFilter_32(struct IAVIStream pavi, int lStart, int lSamples, void * lpBuffer, int cbBuffer, int* plBytes, int* plSamples) { return 0; }
-__attribute__((weak)) int Error_Show(char * a1) { return 0; }
-__attribute__((weak)) int Warning_Show(char * a1) { return 0; }
+__attribute__((weak)) int Error_Show(const char* format, ...)
+{
+    if (format == NULL)
+    {
+        return 0;
+    }
+
+    fprintf(stderr, "[igi native fatal] %s\n", format);
+    return 0;
+}
+__attribute__((weak)) int Warning_Show(const char* format, ...)
+{
+    if (format == NULL)
+    {
+        return 0;
+    }
+
+    fprintf(stderr, "[igi native warning] %s\n", format);
+    return 0;
+}
 __attribute__((weak)) int Camera_ApplyBandFilter_32(int a1) { return 0; }
 __attribute__((weak)) int Camera_ApplyHandiCam_32(int a1) { return 0; }
 __attribute__((weak)) int Camera_ApplyWideScreen_32(int a1) { return 0; }
@@ -5873,7 +5891,7 @@ __attribute__((weak)) int* DynObj_RemoveSymbol_10(int a1, int* a2, double* a3, i
 __attribute__((weak)) int* DynObj_FindSymbol_11(int a1, int* a2, double* a3, double* a4, int* a5, char a6, double* a7, int a8) { return 0; }
 __attribute__((weak)) int DynObj_InsertHashItem_11(int* a1, int a2, double* a3, int a4, int a5, int a6, int a7, int a8, void * a9, void * a10, int a11, int a12) { return 0; }
 __attribute__((weak)) int DynObj_LookupHashItem_11(short* a1, double* a2, double* a3, double* a4, int a5, char a6, int* a7, int* a8, int a9, float* a10) { return 0; }
-__attribute__((weak)) int* World_TraceBatch(int world_context,
+__attribute__((weak)) void World_TraceBatch(int world_context,
                                              int* hit_records,
                                              double* ray_start_positions,
                                              double* ray_end_positions,
@@ -5913,7 +5931,6 @@ __attribute__((weak)) int* World_TraceBatch(int world_context,
                       timestamp);
     }
 
-    return 0;
 }
 __attribute__((weak)) unsigned int DynObj_CreateMagicObject_11(int a1, char a2, int a3, double* a4, int a5, int a6) { return 0; }
 __attribute__((weak)) unsigned int DynObj_ParseConfigFile_11(int a1, char a2, int a3, double* a4, int a5) { return 0; }
@@ -7408,7 +7425,7 @@ __attribute__((weak)) int Ordinal_DSOUND_1() { return 0; }
 __attribute__((weak)) int OutputDebugStringA() { return 0; }
 __attribute__((weak)) int PeekMessageA() { return 0; }
 __attribute__((weak)) int QHash_Init() { return 0; }
-__attribute__((weak)) int QTask_UnableToAllocateEvent() { return 0; }
+__attribute__((weak)) int32_t QTask_UnableToAllocateEvent(int16_t task_type) { (void)task_type; return 0; }
 __attribute__((weak)) int QvmLoad() { return 0; }
 __attribute__((weak)) int REAL32() { return 0; }
 __attribute__((weak)) int ROLB() { return 0; }

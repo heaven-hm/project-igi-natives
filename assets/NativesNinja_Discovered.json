@@ -1,0 +1,1057 @@
+{
+ "total": 175,
+ "passed": 174,
+ "failed": 1,
+ "list": [
+  {
+   "addr": "0043F900",
+   "name": "Fence",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004403E0",
+   "name": "Ladder",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00440710",
+   "name": "AlarmControl",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00440C20",
+   "name": "SCameraControl",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00440FD0",
+   "name": "SCamera",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00443680",
+   "name": "Terminal",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00443ED0",
+   "name": "Cabinet",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00444BF0",
+   "name": "Switch",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004464C0",
+   "name": "Door",
+   "score": 0.994,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00447DB0",
+   "name": "GenericTBA",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004485E0",
+   "name": "Building",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00448D30",
+   "name": "RadarDish",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00449360",
+   "name": "Siren",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00449970",
+   "name": "Glass",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00449D30",
+   "name": "GlassShatter",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0044C130",
+   "name": "AmbientArea",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0044C8D0",
+   "name": "HumanAI",
+   "score": 0.98,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004533B0",
+   "name": "PatrolPathCommand",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00453550",
+   "name": "PatrolPath",
+   "score": 0.75,
+   "gate": "FAIL"
+  },
+  {
+   "addr": "00454970",
+   "name": "HumanSoldierFemale",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00456AD0",
+   "name": "HumanSoldierRPG",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00459880",
+   "name": "HumanSoldierPistol",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0045CAB0",
+   "name": "HumanSoldier",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0045DB70",
+   "name": "HumanPlayerInput",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0045E450",
+   "name": "Human",
+   "score": 0.997,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00464260",
+   "name": "HumanView",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00465A10",
+   "name": "HumanAttach",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00465BC0",
+   "name": "DeathZone",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004663D0",
+   "name": "ComputerStartup",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00466E40",
+   "name": "DefineComputerLimit",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00466F70",
+   "name": "DefineComputerObjective",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00467700",
+   "name": "ComputerObject",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004682F0",
+   "name": "ComputerHilight",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004688B0",
+   "name": "ComputerLog",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00468E20",
+   "name": "ComputerObjectives",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004696B0",
+   "name": "ComputerMap",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046AB60",
+   "name": "ComputerMenu",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046B510",
+   "name": "ComputerButtonItem",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046B7F0",
+   "name": "ComputerTextItem",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046BA60",
+   "name": "Computer",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046C0C0",
+   "name": "GenericPickup",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046CB70",
+   "name": "GunPickup",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046D420",
+   "name": "AmmoPickup",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046DB40",
+   "name": "AddAmmo",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046DD00",
+   "name": "Gunx2",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046DF10",
+   "name": "KnifeStab",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046E370",
+   "name": "AIStationaryGunHolder",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0046F2B0",
+   "name": "AIStationaryGun",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00470410",
+   "name": "Medipack",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00470610",
+   "name": "Binocular",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00470FA0",
+   "name": "BinocularOverlay",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00472670",
+   "name": "GunCABarrel",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00472A70",
+   "name": "GunSPAS12",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00472D00",
+   "name": "GunDRAGUNOV",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004733F0",
+   "name": "GunM16A2",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004739D0",
+   "name": "GunMP5SD",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00473ED0",
+   "name": "StationaryGun",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00475380",
+   "name": "ProximityMine",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00475AC0",
+   "name": "Mine",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00476110",
+   "name": "M203",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00476730",
+   "name": "Grenade",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00477220",
+   "name": "GunFlame",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00477E30",
+   "name": "GunCasing",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0047B4B0",
+   "name": "GunShot",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0047CA40",
+   "name": "AmmoType_Open",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0047CF70",
+   "name": "BulletHole",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0047E700",
+   "name": "FlashBang",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004801B0",
+   "name": "Explosion0",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004813E0",
+   "name": "ExplodeObject",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004825C0",
+   "name": "HumanCamera",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004851B0",
+   "name": "GameScreen",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00485330",
+   "name": "StatusMessage",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00485A40",
+   "name": "StatusMessageScreen",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00486900",
+   "name": "StatusScreen",
+   "score": 0.967,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004872C0",
+   "name": "ConditionalContainer_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00487BE0",
+   "name": "GuardGenerator_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00488620",
+   "name": "SubLevel_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00488800",
+   "name": "EditVariable_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00488BB0",
+   "name": "LevelFlow_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00498AB0",
+   "name": "Rain",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0049A520",
+   "name": "PolyListDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004A2A00",
+   "name": "LineFilter",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004C3450",
+   "name": "RigidDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004D7550",
+   "name": "BoneDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004D9730",
+   "name": "QObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004DA1D0",
+   "name": "Hazinglayers",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004DCF20",
+   "name": "Sector",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E0840",
+   "name": "MagicObjContainer",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E0950",
+   "name": "Shadow",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E41B0",
+   "name": "SplineObjSegment",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E5370",
+   "name": "DynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E6070",
+   "name": "SoundSysController",
+   "score": 0.975,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E7370",
+   "name": "Screen",
+   "score": 0.958,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E7840",
+   "name": "DebugText",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E7C50",
+   "name": "CameraControlTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E7D90",
+   "name": "ViewportQTask",
+   "score": 0.963,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E82C0",
+   "name": "TerraDrawTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E8390",
+   "name": "SoundDefSound",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E92C0",
+   "name": "FadeOutStart",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E9480",
+   "name": "GlowTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004E9520",
+   "name": "SoundDefTriggerOnce",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004EA3D0",
+   "name": "SoundDefGraph",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004EB1D0",
+   "name": "SoundDefGroup",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004EBC60",
+   "name": "SoundSysMicrophone",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004ED510",
+   "name": "InputPort",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004ED6B0",
+   "name": "LODSettings",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004EE410",
+   "name": "ScreenGrab",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004EE970",
+   "name": "Level",
+   "score": 0.999,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004F0D40",
+   "name": "Level_Load",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004F2740",
+   "name": "EditRigidObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004F3440",
+   "name": "AnimTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004F4190",
+   "name": "Vehicle",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004F7360",
+   "name": "RainDynCubeObj",
+   "score": 0.992,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004F8340",
+   "name": "TerrainLightMap",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004FAA60",
+   "name": "Graph",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004FB1B0",
+   "name": "PhysicsObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004FCF50",
+   "name": "Particle2DDynCubeObjTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "004FE7C0",
+   "name": "TagItem",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00502250",
+   "name": "SplineObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005033F0",
+   "name": "EditorRigidObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005034E0",
+   "name": "SimpointObjContainer",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00503D60",
+   "name": "PhysicsMagicObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005043B0",
+   "name": "AreaActivate",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00504C50",
+   "name": "EditRigidObjAttachedToBone",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00504E10",
+   "name": "MenuItemTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00505630",
+   "name": "MenuItem",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00505AD0",
+   "name": "MenuItem_Move",
+   "score": 0.963,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00505C90",
+   "name": "Container",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00505F60",
+   "name": "TextureModifier",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00506FA0",
+   "name": "HeightMap",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00507F10",
+   "name": "EditCamera",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00508D70",
+   "name": "Sync",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00508FA0",
+   "name": "AIGraph",
+   "score": 0.992,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00518760",
+   "name": "GraphNode",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00518EF0",
+   "name": "Water",
+   "score": 0.992,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00519710",
+   "name": "GFXCapsViewer",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00519760",
+   "name": "ShadowTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00519850",
+   "name": "SplinePathNodeQTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051A1D0",
+   "name": "SplinePathDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051B140",
+   "name": "SplinePathGuideQTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051B400",
+   "name": "AnimSound",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051B960",
+   "name": "EditorMagicObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051BAC0",
+   "name": "LevelTimer",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051BFB0",
+   "name": "SoundManager",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051C2B0",
+   "name": "FlatWater",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051DDF0",
+   "name": "FlatSky",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051ECB0",
+   "name": "MipMapControl",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051EEE0",
+   "name": "SmoothQTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051F580",
+   "name": "MoveRigidObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0051FEF0",
+   "name": "NoiseQTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005207A0",
+   "name": "Origo",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00520BB0",
+   "name": "Lensflare",
+   "score": 0.982,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00526330",
+   "name": "LightmapInfo",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00526EE0",
+   "name": "Dirlight",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00527C90",
+   "name": "GlobalLight",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005284A0",
+   "name": "AnimCam",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052AAF0",
+   "name": "AnimRigidDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052AD10",
+   "name": "AnimScaleTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052B040",
+   "name": "EditHazinglayer",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052B3B0",
+   "name": "CubeModifier",
+   "score": 0.98,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052B6C0",
+   "name": "DiscardTerrainArea",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052C0C0",
+   "name": "DiscardTerrain",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052C6B0",
+   "name": "SkyTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052C820",
+   "name": "LevelScript",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052CA30",
+   "name": "SimBoneDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "0052CA70",
+   "name": "PushButton",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00530220",
+   "name": "CamTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00530A80",
+   "name": "FlashTask",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00530C80",
+   "name": "ParticleSystemDynCubeObj",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005310E0",
+   "name": "FreeCamera_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00531190",
+   "name": "SpriteParticleSystemDynCubeObj_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00531300",
+   "name": "PointlightDynCubeObj_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "005317D0",
+   "name": "BoneMagicObj_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00531EF0",
+   "name": "Sprite3D_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  },
+  {
+   "addr": "00531FA0",
+   "name": "TransparencyList_Register",
+   "score": 1.0,
+   "gate": "PASS"
+  }
+ ]
+}

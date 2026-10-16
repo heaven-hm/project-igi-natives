@@ -1,0 +1,10 @@
+#include "gi_platform.h"
+#include "0052D5E0-Light_ComputeDirectionalLight_11.h"
+int32_t Light_ComputeDirectionalLight_11(void* a1, char* a2)
+
+{
+    int32_t v_4 = (*(int32_t*)(uintptr_t)(a1 + 0x14));
+    int32_t v_8 = (*(int32_t*)(uintptr_t)(a1 + 0x10));
+    int32_t v_c = (*(int32_t*)(uintptr_t)(a1 + 0xc));
+    return Game_DataSymbolLoad(a2, "%02d-%02d-%02d");
+}

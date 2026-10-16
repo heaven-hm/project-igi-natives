@@ -1,0 +1,61 @@
+#include "004508E0-AIAction_Patrol_3.h"
+/* 0x004508e0 AIAction_Patrol_3 full linked: callers=1 callees=55 */
+int32_t sub_4508e0()
+
+{
+    sub_4b8920("AIAction_Patrol");
+    sub_4b8920("AIAction_Combat");
+    sub_4b8920("AIAction_Dead");
+    sub_4b8920("AIAction_FallFlat");
+    sub_4b8920("AIAction_Activate");
+    sub_4b8920("AIAction_WalkToNode");
+    sub_4b8920("AIAction_RunToNode");
+    sub_4b8920("AIAction_FireAtNode");
+    sub_4b8920("AIAction_FireAtTask");
+    sub_4b8920("AIAction_PlayAnimation");
+    sub_4b8920("AIAction_MoveToEvent");
+    sub_4b8920("AIAction_LookAtEvent");
+    sub_4b8920("AIAction_Stunned");
+    sub_4b8920("AIAction_KickGrenade");
+    sub_4b8920("AIAction_RunPanicking");
+    sub_4b8920("AIAction_Idle");
+    sub_4b8920("AIAction_SetCombat");
+    sub_4b8920("AIFunction_RemoveAlarmActions");
+    sub_4b8920("AIFunction_SetViewLength");
+    sub_4b8920("AIFunction_SetAlarmViewLength");
+    sub_4b8920("AIFunction_SetViewAlpha");
+    sub_4b8920("AIFunction_SetViewGamma");
+    sub_4b8920("AIFunction_SetSecondaryViewLength");
+    sub_4b8920("AIFunction_SetSecondaryAlarmViewLength");
+    sub_4b8920("AIFunction_SetSecondaryViewAlpha");
+    sub_4b8920("AIFunction_SetSecondaryViewGamma");
+    sub_4b8920("AIFunction_SetEventPriority");
+    sub_4b8920("AIFunction_SetInvulnerability");
+    sub_4b8920("AIFunction_SetInstantDeath");
+    sub_4b8920("AIFunction_SetDeathAnimation");
+    sub_4b8920("AIFunction_SetAlarmTriggerID");
+    sub_4b8920("AIFunction_SetAlarmControlID");
+    sub_4b8920("AIFunction_SetAlarmAccess");
+    sub_4b8920("AIFunction_SetGunnerID");
+    sub_4b8920("AIFunction_GetAlarmTriggerID");
+    sub_4b8920("AIFunction_GetAlarmControlID");
+    sub_4b8920("AIFunction_GetAlarmAccess");
+    sub_4b8920("AIFunction_GetGunnerID");
+    sub_4b8920("AIFunction_GetAlarmControlStatus");
+    sub_4b8920("AIFunction_GetGunnerStatus");
+    sub_4b8920("AIFunction_SetScriptIntegerValue");
+    sub_4b8920("AIFunction_SetScriptRealValue");
+    sub_4b8920("AIFunction_GetScriptIntegerValue");
+    sub_4b8920("AIFunction_GetScriptRealValue");
+    sub_4b8920("AIFunction_GetCurrentEventType");
+    sub_4b8920("AIFunction_GetRandomValue");
+    sub_4b8920("AIFunction_DefaultHandler");
+    sub_4b8920("AIAction_PlaySound");
+    sub_4b8920("AIFunction_IsEventBehind");
+    sub_4b8920("AIFunction_GetEventDistance");
+    sub_4b8920("AIFunction_GetAlarmTriggerDistance");
+    sub_4b8920("AIFunction_SetAnimationInterval");
+    sub_4b8920("AIFunction_AddAnimationEntry");
+    sub_4b8920("AIFunction_GetAnimationToPlay");
+    return sub_4b8920("AIFunction_SendResponse");
+}

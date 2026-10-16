@@ -1,0 +1,19 @@
+{
+  "total_verified_natives": 5732,
+  "binary_ninja_total_functions": 5732,
+  "coverage_percentage": "100.00%",
+  "radare2_total_functions": 6116,
+  "radare2_coverage_percentage": "93.72%",
+  "engine_subsystems": {
+    "Sound_Engine": 215,
+    "Physics_Engine": 297,
+    "Weapon_Engine": 172,
+    "Weather_Environment_Engine": 206,
+    "Animation_Engine": 38,
+    "Script_QVM_Engine": 335,
+    "AI_Engine": 534,
+    "Render_Display_Engine": 457,
+    "UI_Menu_Engine": 225,
+    "System_Math_IO_Engine": 453
+  }
+}

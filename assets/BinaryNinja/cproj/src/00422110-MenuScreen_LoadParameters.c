@@ -1,0 +1,22 @@
+#include "gi_platform.h"
+#include "00422110-MenuScreen_LoadParameters.h"
+int32_t MenuScreen_LoadParameters(void* a1)
+
+{
+    int32_t valA = (*(int32_t*)(uintptr_t)(a1 + 0x44));
+
+    if (valA)
+    {
+        void* valA1 = Menu_RequestScreen_4(valA);
+
+        if (valA1)
+        {
+            if (*(valA1 + 4) && Script_FormatString_6(a1 + 0xac))
+                Script_SpawnNewTask_7(a1 + 0xac, a1);
+
+            *(valA1 + 4) = 0;
+        }
+    }
+
+    return ((int(*)())(uintptr_t)(*((Menu_PlayMusic_13() << 2) + &g_a970e0)))(a1);
+}

@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 0050A040 AnimSpline_Invoke4 | gate PASS | openigi True */
+int32_t(PSTR arg1 );

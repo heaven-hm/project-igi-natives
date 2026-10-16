@@ -1,0 +1,8 @@
+# Light_RenderLensflare_2
+
+Address: 0x00521e40
+Signature: void Light_RenderLensflare_2(int param_1, double *param_2, float *param_3, float *param_4, float *param_5, int param_6, int param_7, float param_8, float param_9, float param_10, float param_11, float param_12, float param_13, float param_14, float param_15, float param_16, float param_17, float param_18, float param_19, int *param_20, int param_21, ushort param_22, ushort param_23, int param_24, float param_25, float param_26, float param_27, float param_28, float param_29, float param_30, short *param_31, float param_32, float param_33, float param_34, float param_35, float param_36, float param_37, float param_38, float param_39, float param_40, float param_41, float param_42, float param_43, int param_44, float param_45, float param_46, float param_47, float param_48, float param_49, float param_50, float param_51, float param_52, float param_53, float param_54, float param_55, float param_56, undefined4 param_57, int param_58, int *param_59, int *param_60, float param_61, float param_62, float param_63, float param_64, float param_65, float param_66, float param_67, float param_68, float param_69, undefined4 param_70, float param_71, float param_72);
+Ninja: uint32_t(void* arg1, double* arg2, float* arg3 @ 0x10, float* arg4, void* arg5, int32_t arg6, float arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15 @ 0xf8, float arg16, float arg17, float arg18, float arg19, float arg20, float arg21, float arg22) (NINJA_CONFIRMED_100)
+Range: 0x521e40-0x523100 blocks=121
+
+Confirmed 100% by Binary Ninja MCP.

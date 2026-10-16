@@ -1,0 +1,9 @@
+# HumanAI_GetContext_45DCB0
+
+- Address: 0045DCB0
+- Proto: `int32_t*(void* arg1)`
+- CC: cdecl
+- Range: 0x45dcb0-0x45dced blocks=1
+- CFG gate: PASS (score 1.000)
+- open-igi cited: True
+- Source: discovered-bn-r2-full

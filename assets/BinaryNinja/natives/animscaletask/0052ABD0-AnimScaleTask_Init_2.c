@@ -1,0 +1,16 @@
+#include "AnimScaleTask_Init_2.h"
+
+int32_t AnimScaleTask_Init_2(int32_t* pThis @ 0x8)
+
+{
+    int32_t result = *pThis;
+
+    if (result >= 0 && result < 0x16)
+    {
+        pThis[1] = (result << 4) + 0x54f4a0;
+        return (result << 4) + 0x54f4a0;
+    }
+
+    pThis[1] = 0;
+    return result;
+}

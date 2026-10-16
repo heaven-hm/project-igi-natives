@@ -1,0 +1,23 @@
+#include "Camera_ApplyLineFilter_14.h"
+int32_t Camera_ApplyLineFilter_14(int16_t a1 @ x87control, long double a2 @ fp0, long double a3 @ fp1) __location("fp0")
+
+{
+    int32_t saved_frame;
+    int32_t* flagP = &saved_frame;
+    int16_t x87status;
+    int16_t f0;
+    f0 = __fnstcw_memmem16(a1);
+    int16_t v_a8 = f0;
+
+    if (!g_546af0)
+    {
+        double v_8a_1 = a3;
+        double v_82_1 = a2;
+    }
+
+    int32_t objC;
+    void* tmpD;
+    __trandisp2(objC, tmpD, flagP, a2, a3);
+    g_9361d8 = 1;
+    return Camera_ApplyPostProcess_14(flagP, a2);
+}

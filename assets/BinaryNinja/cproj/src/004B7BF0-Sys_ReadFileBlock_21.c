@@ -1,0 +1,29 @@
+#include "gi_platform.h"
+#include "004B7BF0-Sys_ReadFileBlock_21.h"
+int32_t Sys_ReadFileBlock_21(void* a1)
+
+{
+    int32_t result = 0;
+    int32_t i_2 = (*(int32_t*)(uintptr_t)(a1 + 6));
+
+    if (i_2 > 0)
+    {
+        int16_t* tmpD = (*(int32_t*)(uintptr_t)(a1 + 0xc));
+        int32_t i_1 = i_2;
+        int32_t i;
+
+        do
+        {
+            int32_t result_1 = *tmpD;
+
+            if (result_1 > result)
+                result = result_1;
+
+            tmpD = &tmpD[1];
+            i = i_1;
+            i_1 -= 1;
+        } while (i != 1);
+    }
+
+    return result;
+}

@@ -1,0 +1,75 @@
+#include "gi_platform.h"
+#include "00507F10-EditCamera_Init.h"
+void* EditCamera_Init()
+
+{
+    Script_FormatString_9(0xa7b268);
+    Script_ParseEnumReal32_10(0xa7b268, "CAMERAFILTER_TYPE_.*");
+    g_a7b290 = DynObj_MtpNlodvirmodelD("1717_01_1");
+    int32_t v_ec = 0;
+    int16_t valA2 = TaskType_Register("EditCamera", 0xe8, EditorRigidObj_OnEvent(), 0);
+    g_a7b260 = valA2;
+    QTask_RemoveEventCallback(valA2, 0, sub_508290);
+    QTask_TriggerEvent(g_a7b260, 2, EditCamera_LoadParameters);
+    int32_t valA4 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_a7b260, valA4, sub_508400);
+    int32_t valA5 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_a7b260, valA5, EditCamera_OnParsed);
+    QTask_TriggerEvent(g_a7b260, 1, sub_488700);
+    QTask_RemoveEventCallback(g_a7b260, 4, 0);
+    g_a7b278 = Script_EvaluateCondition_7(0x11);
+    g_a7b280 = 0;
+    g_a7b284 = 0x3f800000;
+    g_a7b288 = 0;
+    g_a7b28c = 0x3f800000;
+    int32_t valA8 = Script_ParseEnumReal32_4();
+    char v_e8;
+    char v_c8;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_c8, valA8, 7, 0);
+    int32_t valA9 = Script_ParseEnumString_2();
+    char v_ac;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_ac, valA9, 7, 0);
+    int32_t valA10 = Script_ParseEnumString_2();
+    char v_a8;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_a8, valA10, 7, 0);
+    int32_t valA11 = Script_ParseEnumString_2();
+    char v_a4;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_a4, valA11, 7, 0);
+    int32_t valA12 = Script_EvaluateCondition_2();
+    char v_60;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_60, valA12, 7, 0);
+    int32_t valA13 = Script_EvaluateCondition_2();
+    char v_b0;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_b0, valA13, 7, 0);
+    int32_t valA14 = Script_ParseEnumString_3();
+    char v_5c;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_5c, valA14, 7, 0);
+    int32_t valA15 = Script_ParseEnumInt32_4();
+    char v_53;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_53, valA15, 7, 0);
+    int32_t valA16 = Script_ParseEnumString_3();
+    char v_58;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_58, valA16, 7, 0);
+    int32_t valA17 = Script_ParseEnumInt32_4();
+    char v_52;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_52, valA17, 7, 0);
+    int32_t valA18 = Script_ParseEnumInt32_4();
+    char v_54;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_54, valA18, 7, 0);
+    int32_t valA19 = Script_EvaluateCondition_2();
+    char v_50;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_50, valA19, 7, 0);
+    int32_t valA20 = Script_CallNativeHandler_10();
+    char v_3f;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_3f, valA20, 7, 0xa7b268);
+    int32_t valA21 = Script_EvaluateCondition_2();
+    char v_18;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_18, valA21, 7, &g_a7b280);
+    int32_t valA22 = Script_CallNativeHandler_2();
+    char v_14;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_14, valA22, 7, 0);
+    int32_t valA23 = Script_EvaluateCondition_2();
+    char v_8;
+    Script_UndefinedParameterTy(g_a7b278, &v_e8, &v_8, valA23, 7, &g_a7b288);
+    return TaskType_Set("TASKTYPE_EDITCAMERA", *g_a7b260);
+}

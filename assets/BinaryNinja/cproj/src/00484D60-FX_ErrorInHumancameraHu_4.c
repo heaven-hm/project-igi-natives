@@ -1,0 +1,29 @@
+#include "gi_platform.h"
+#include "00484D60-FX_ErrorInHumancameraHu_4.h"
+void* FX_ErrorInHumancameraHu_4(void* a1, int32_t a2)
+
+{
+    int32_t ctxB;
+    int32_t v_4 = ctxB;
+    int32_t objC = 0;
+
+    for (int32_t* i = &g_5c1188; i < 0x5c1588; )
+    {
+        if (*(i + 5) && **i == a2)
+        {
+            (*(int32_t*)(uintptr_t)(a1 + 0x68)) = *((objC << 3) + &g_5c1188);
+            (*(int32_t*)(uintptr_t)(a1 + 0x120)) = *((objC << 3) + &g_5c1188);
+            (*(int32_t*)(uintptr_t)(a1 + 0x118)) = objC;
+            (*(int32_t*)(uintptr_t)(a1 + 0x11c)) = objC;
+            return a1;
+        }
+
+        i = &i[2];
+        objC += 1;
+    }
+
+    Error_Show("ERROR IN HUMANCAMERA HUMANLIST");
+
+    while (true)
+        /* nop */
+}

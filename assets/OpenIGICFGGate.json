@@ -1,0 +1,61 @@
+{
+  "schema": "openigi-cfg-gate/1",
+  "generated": "2026-10-11T22:57:07Z",
+  "reference_binary": {
+    "path": "/Users/haseeb-mir/Downloads/IGI/igi.exe",
+    "sha256": "dea34892d417715873ea61d7b2ba5556655f1ad65385104348146f9679915a01"
+  },
+  "formula": "score = 1 - (|dBlocks|/max + |dIf|/max + |dCalls|/max)/3",
+  "threshold": 0.85,
+  "note": "Ghidra blocks approximated from decompiled branch nodes; r2 from afij nbbs. Ghidra inlines/splits, so some r2 functions have no Ghidra CFG.",
+  "results": [
+    {
+      "address": "0x00414A60",
+      "name": "WeaponType_SetCategory / launch-orientation helper",
+      "ghidra": {
+        "blocks": 7,
+        "if": 6,
+        "calls": 11
+      },
+      "r2": {
+        "blocks": 22,
+        "if": 6,
+        "calls": 11
+      },
+      "similarity": 0.7727,
+      "verdict": "FAIL(<0.85)"
+    },
+    {
+      "address": "0x00401400",
+      "name": "QTask_RemoveEventCallback / mode-table registration",
+      "ghidra": {
+        "blocks": 3,
+        "if": 2,
+        "calls": 5
+      },
+      "r2": {
+        "blocks": 7,
+        "if": 2,
+        "calls": 5
+      },
+      "similarity": 0.8095,
+      "verdict": "FAIL(<0.85)"
+    },
+    {
+      "address": "0x00473790",
+      "name": "leaf handler",
+      "ghidra": {
+        "blocks": 1,
+        "if": 0,
+        "calls": 4
+      },
+      "r2": {
+        "blocks": 1,
+        "if": 0,
+        "calls": 3
+      },
+      "similarity": 0.9167,
+      "verdict": "PASS"
+    }
+  ]
+}

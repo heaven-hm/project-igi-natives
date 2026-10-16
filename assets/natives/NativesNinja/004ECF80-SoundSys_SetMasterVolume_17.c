@@ -1,0 +1,15 @@
+#include "004ECF80-SoundSys_SetMasterVolume_17.h"
+/* 0x004ecf80 SoundSys_SetMasterVolume_17 full linked: callers=4 callees=0 */
+void* sub_4ecf80(float* a1, void* a2, float* a3)
+
+{
+    float var_8 = -((a3[2] * *(a2 + 0x48) - *(a2 + 0x50) * *a3));
+    long double x87_r7_9 = *(a2 + 0x48) * a3[1] - *a3 * *(a2 + 0x4c);
+    *a1 = a3[2] * *(a2 + 0x4c) - *(a2 + 0x50) * a3[1];
+    a1[1] = var_8;
+    a1[2] = x87_r7_9;
+    *a1 = *(a2 + 0x18) + *a1;
+    a1[1] = *(a2 + 0x1c) + a1[1];
+    a1[2] = *(a2 + 0x20) + a1[2];
+    return a2;
+}

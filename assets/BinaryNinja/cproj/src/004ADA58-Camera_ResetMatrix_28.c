@@ -1,0 +1,14 @@
+#include "gi_platform.h"
+#include "004ADA58-Camera_ResetMatrix_28.h"
+int32_t Camera_ResetMatrix_28(int32_t a1, int32_t a2, int32_t* a3)
+
+{
+    int32_t result = 0;
+    int32_t objC = a1 + a2;
+
+    if (objC < a1 || objC < a2)
+        result = 1;
+
+    *a3 = objC;
+    return result;
+}

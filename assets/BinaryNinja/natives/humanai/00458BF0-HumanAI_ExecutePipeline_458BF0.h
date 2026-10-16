@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 00458BF0 HumanAI_ExecutePipeline_458BF0 | gate PASS | openigi True */
+void*(void* arg1, int32_t arg2);

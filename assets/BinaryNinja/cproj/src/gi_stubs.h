@@ -8082,9 +8082,9 @@ unsigned int __stdcall Camera_SetFieldOfView_32(HIC hic, unsigned int dwFlags, B
 /* 004AF7A6 Camera_ApplyLineFilter_32 */
 HRESULT __stdcall Camera_ApplyLineFilter_32(struct IAVIStream pavi, int lStart, int lSamples, void * lpBuffer, int cbBuffer, int* plBytes, int* plSamples);
 /* 004AF7B0 Error_Show */
-int Error_Show(char * a1);
+int Error_Show(const char* format, ...);
 /* 004AF810 Warning_Show */
-int Warning_Show(char * a1);
+int Warning_Show(const char* format, ...);
 /* 004AF860 Camera_ApplyBandFilter_32 */
 int Camera_ApplyBandFilter_32(int a1);
 /* 004AF870 Camera_ApplyHandiCam_32 */
@@ -9133,7 +9133,7 @@ int DynObj_InsertHashItem_11(int* a1, int a2, double* a3, int a4, int a5, int a6
 /* 004CD300 DynObj_LookupHashItem_11 */
 int DynObj_LookupHashItem_11(short* a1, double* a2, double* a3, double* a4, int a5, char a6, int* a7, int* a8, int a9, float* a10);
 /* 004CDB20 World_TraceBatch */
-int* World_TraceBatch(int world_context,
+void World_TraceBatch(int world_context,
                       int* hit_records,
                       double* ray_start_positions,
                       double* ray_end_positions,
@@ -12013,7 +12013,7 @@ int Ordinal_DSOUND_1();
 int OutputDebugStringA();
 int PeekMessageA();
 int QHash_Init();
-int QTask_UnableToAllocateEvent();
+int32_t QTask_UnableToAllocateEvent(int16_t task_type);
 int QvmLoad();
 int REAL32();
 int ROLB();

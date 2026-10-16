@@ -1,0 +1,7 @@
+#include "RenderLight_GetContext_52C8F0.h"
+
+void*(void* arg1)
+{
+    // Native implementation (0x52c8f0-0x52c8fc, 1 blocks)
+    return 0;
+}

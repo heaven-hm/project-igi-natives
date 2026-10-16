@@ -1,0 +1,24 @@
+{
+ "schema": "natives-linked-discovery/1",
+ "count": 1,
+ "results": [
+  {
+   "addr": "0x004A8BDB",
+   "blocks": 1,
+   "calls": 0,
+   "verified_callers": [
+    "j_sub_4a8bdb",
+    "j_sub_4a8bdb"
+   ],
+   "layers": {
+    "L0_static": true,
+    "L1_cfg": true,
+    "L2_signature": false,
+    "L3_link_str": false,
+    "L4_memory": false,
+    "L5_runtime": false
+   },
+   "confidence": "2/6"
+  }
+ ]
+}

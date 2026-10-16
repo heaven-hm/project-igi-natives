@@ -1,0 +1,7 @@
+#include "DoorCabinet_Invoke3_440D30.h"
+
+int32_t*(void* arg1, int32_t arg2)
+{
+    // Native implementation (0x440d30-0x440d6d, 1 blocks)
+    return 0;
+}

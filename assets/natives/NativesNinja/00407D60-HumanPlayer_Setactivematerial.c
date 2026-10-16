@@ -1,0 +1,15 @@
+#include "00407D60-HumanPlayer_Setactivematerial.h"
+/* 0x00407d60 HumanPlayer_Setactivematerial full linked: callers=1 callees=6 */
+void* HumanPlayer_Setactivematerial()
+
+{
+    for (char* i = &g_569474; i < 0x56e174; i = &i[0x268])
+        *i = 0;
+
+    g_538518 = QTask_UnableToAllocateEven(0);
+    g_538519 = QTask_UnableToAllocateEven(0);
+    g_53851a = QTask_UnableToAllocateEven(0);
+    Game_DefineOptions("SetActiveMaterial", SetActiveMaterial, 0, 0xffffffff);
+    Game_DefineOptions("DefineQMaterial", DefineQ_Material, 0, 0xffffffff);
+    return Game_DefineOptions("DefineGameMaterial", Define_GameMaterial, 0, 0xffffffff);
+}

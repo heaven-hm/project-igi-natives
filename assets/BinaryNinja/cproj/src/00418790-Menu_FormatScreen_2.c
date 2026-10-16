@@ -1,0 +1,23 @@
+#include "gi_platform.h"
+#include "00418790-Menu_FormatScreen_2.h"
+int32_t Menu_FormatScreen_2(void* a1)
+
+{
+    int32_t ctxB = (*(int32_t*)(uintptr_t)(a1 + 0x27e4));
+    void* dstD = (*(int32_t*)(uintptr_t)(a1 + 0x30));
+    int32_t valA = Menu_HandleInput_13();
+    int32_t objC = 0;
+    objC = (*(int32_t*)(uintptr_t)(dstD + 0x1c));
+    int32_t valA4 = (*(int32_t*)(uintptr_t)(((valA * 0x180 + objC) << 2) + &g_a96ae0));
+
+    if (valA4)
+        valA4(dstD);
+
+    int32_t result = Config_SaveGraphicOptions_2();
+    (*(int32_t*)(uintptr_t)(a1 + 0x27e4)) = result;
+
+    if (result == ctxB)
+        return result;
+
+    return Menu_FormatScreen(a1, 1);
+}

@@ -11,7 +11,7 @@ OpenCode session: `ses_ebbf9d798ffeEGwxCaHS30sOqT`. Coordination request and exp
 
 ## Delivery boundary
 
-The last installed `/Users/haseeb-mir/Downloads/IGI/igi.app` came from this tree's `/tmp/igi-native-mvp-release` build. The other engine builds to `/Users/haseeb-mir/Documents/Code/project-open-igi-parity/build/engine/igi.app`. The owner has been asked which project is the canonical delivery source. Further shared-app replacement is pending that answer; each agent can build and test isolated candidates meanwhile.
+The last installed `/Users/haseeb-mir/Downloads/IGI/igi.app` came from this tree's `/tmp/igi-native-mvp-release` build. The other engine builds to `/Users/haseeb-mir/Documents/Code/project-open-igi-parity/build/engine/igi.app`. The owner subsequently explicitly requested rebuilding and installing this tree's current app, and then pushing this branch. That installation has completed. The parity agent must continue coordinating before replacing the shared app; this authorization does not merge the two repositories.
 
 ## Findings exchanged
 
@@ -25,4 +25,4 @@ The other agent reported 62 passing tests and local building-entry/navigation wo
 
 ## Follow-up exchange
 
-The original 63 animation and 46 first-call movement/ground observations were shared with the other agent. It acknowledged the limits and accepted the distinction between native simulation tests and retail-captured ticks. It agreed to leave portal/flame/firing/movement-collision work in this lane. Its focused next task is checking its patrol-opcode interpreter against original mission QVM; its files are `engine/src/ai_system.cpp` and its own evidence/test notes in the parity worktree. It reported 68 passing functional tests; those were not independently rerun here. The canonical delivery choice remains pending.
+The original 63 animation and 46 first-call movement/ground observations were shared with the other agent. It acknowledged the limits and accepted the distinction between native simulation tests and retail-captured ticks. It agreed to leave portal/flame/firing/movement-collision work in this lane. Its focused next task is checking its patrol-opcode interpreter against original mission QVM; its files are `engine/src/ai_system.cpp` and its own evidence/test notes in the parity worktree. It reported 68 passing functional tests; those were not independently rerun here. The owner subsequently requested installation and publication of this tree’s current working checkpoint; the separate parity implementation remains isolated.

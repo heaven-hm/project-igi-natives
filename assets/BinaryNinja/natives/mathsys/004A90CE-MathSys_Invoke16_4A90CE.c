@@ -1,0 +1,7 @@
+#include "MathSys_Invoke16_4A90CE.h"
+
+int32_t(int80_t arg1 , long double arg2 @ st5)
+{
+    // Native implementation (0x4a90ce-0x4a90e2, 1 blocks)
+    return 0;
+}

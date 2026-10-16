@@ -1,0 +1,35 @@
+#include "HumanPlayer_LoadParameters_2.h"
+uint32_t HumanPlayer_LoadParameters_2()
+
+{
+    void* valA;
+
+    for (int32_t* i = &g_569470; i < 0x56e170; i = &i[0x9a])
+    {
+        if (i[1])
+        {
+            void* valA1 = i[-2];
+
+            if (valA1)
+            {
+                Sys_ExecuteBytecode_2(valA1);
+                i[-2] = 0;
+            }
+
+            valA = *i;
+
+            if (valA)
+            {
+                valA = Sys_ExecuteBytecode_2(valA);
+                *i = 0;
+            }
+
+            i[1] = 0;
+        }
+    }
+
+    valA = g_538518;
+    QTask_InitContext(valA);
+    QTask_InitContext(g_538519);
+    return QTask_InitContext(g_53851a);
+}

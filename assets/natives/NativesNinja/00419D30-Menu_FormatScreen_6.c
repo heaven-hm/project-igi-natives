@@ -1,0 +1,115 @@
+#include "00419D30-Menu_FormatScreen_6.h"
+/* 0x00419d30 Menu_FormatScreen_6 full linked: callers=1 callees=4 */
+int32_t Menu_FormatScreen_6(void* a1, float a2)
+
+{
+    int32_t var_d8 = (g_c28b44 >> 1) - 0x140;
+    float var_e8 = var_d8 + *(a1 + 0x20);
+    int32_t var_98;
+    int32_t* eax_3 = &var_98;
+    var_d8 = (g_c28b48 >> 1) - 0xf0;
+    int32_t i_1 = 4;
+    long double x87_r7_3 = var_d8 + *(a1 + 0x24);
+    long double x87_r6_1 = *(a1 + 0x28) + var_e8;
+    long double x87_r5 = *(a1 + 0x2c);
+    g_a84a50 = 0;
+    g_a84a58 = 0;
+    float var_e4 = x87_r5 + x87_r7_3;
+    float var_d4 = x87_r7_3 + 20f;
+    long double x87_r5_6 = (x87_r6_1 + var_e8) * 0.5f;
+    float var_e0 = (var_e4 + x87_r7_3) * 0.5f;
+    float var_cc = a2 * 0.200000003f;
+    var_d8 = a2 * 0.0500000007f;
+    float var_e8_1 = (var_e8 - x87_r5_6) * a2 + x87_r5_6;
+    float var_dc = (x87_r6_1 - x87_r5_6) * a2 + x87_r5_6;
+    long double x87_r7_6 = (x87_r7_3 - var_e0) * a2 + var_e0;
+    float var_d0 = x87_r7_6;
+    float var_e4_1 = (var_e4 - var_e0) * a2 + var_e0;
+    float var_d4_1 = (var_d4 - var_e0) * a2 + var_e0;
+    int32_t i;
+
+    do
+    {
+        eax_3[-1] = 0;
+        *eax_3 = 0x3f400000;
+        eax_3[1] = 0;
+        eax_3[-2] = a2;
+        eax_3[-4] = 0;
+        eax_3[-3] = 0;
+        eax_3[-5] = 0x3f800000;
+        eax_3 = &eax_3[9];
+        i = i_1;
+        i_1 -= 1;
+    } while (i != 1);
+    float var_b0 = x87_r7_6;
+    float var_8c = x87_r7_6;
+    float var_b4 = var_e8_1;
+    float var_90 = var_dc;
+    float var_6c = var_dc;
+    float var_48 = var_e8_1;
+    float var_68 = var_e4_1;
+    float var_44 = var_e4_1;
+    int32_t edx_4 = g_a84a54;
+    void var_24;
+    memcpy(&var_24, &var_b4, 0x24);
+    int32_t var_c4 = 0x80000;
+    int32_t var_c8 = 1;
+    int32_t var_c0 = 0;
+    int32_t var_bc = 5;
+    float* var_b8 = &var_b4;
+    (*((edx_4 << 2) + &g_a94e84))(&var_c8);
+    var_b4 = var_e8_1;
+    float var_b0_1 = var_d4_1;
+    float var_90_1 = var_dc;
+    float var_8c_1 = var_d4_1;
+    int32_t var_bc_1 = 2;
+    (*((g_a84a54 << 2) + &g_a94e84))(&var_c8);
+    var_b4 = var_e8_1;
+    float var_b0_2 = var_d0;
+    float var_90_2 = var_dc;
+    float var_a0 = var_cc;
+    float var_8c_2 = var_d0;
+    float var_7c = var_cc;
+    int32_t edx_8 = var_d8;
+    float var_6c_1 = var_e8_1;
+    int32_t var_9c = 0;
+    var_98 = 0x3f800000;
+    int32_t var_94 = 0;
+    int32_t var_a8 = 0;
+    int32_t var_a4 = 0;
+    int32_t var_ac = 0x3f800000;
+    int32_t var_78 = 0;
+    int32_t var_74 = 0x3f800000;
+    int32_t var_70 = 0;
+    int32_t var_84 = 0;
+    int32_t var_80 = 0;
+    int32_t var_88 = 0x3f800000;
+    float var_68_1 = var_e4_1;
+    int32_t var_54 = 0;
+    int32_t var_50 = 0;
+    int32_t var_4c = 0;
+    int32_t var_58 = edx_8;
+    int32_t var_60 = 0;
+    int32_t var_5c = 0;
+    int32_t var_64 = 0x3f800000;
+    var_48 = var_dc;
+    float var_44_1 = var_e4_1;
+    int32_t var_30 = 0;
+    int32_t var_2c = 0;
+    int32_t var_28 = 0;
+    int32_t var_34 = edx_8;
+    int32_t edx_9 = g_a84a54;
+    int32_t var_3c = 0;
+    int32_t var_38 = 0;
+    int32_t var_40 = 0x3f800000;
+    var_c8 = 0;
+    int32_t var_c0_1 = 0;
+    int32_t var_bc_2 = 4;
+    float* var_b8_1 = &var_b4;
+    int32_t ecx_8 = (*((edx_9 << 2) + &g_a94e84))(&var_c8);
+    int32_t var_104 = ecx_8;
+    int32_t var_114 = ecx_8;
+    int32_t var_118 = ecx_8;
+    return sub_4b4af0(var_e8_1, var_d0, var_dc - var_e8_1, var_e4_1 - var_d0, 0f, 0f, 0f,
+        a2 * 0.899999976f, 0x3f800000, 0x80000, 0);
+}

@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 00518870 WeatherWaterSky_GetContext_518870 | gate PASS | openigi True */
+void*(void* arg1, int32_t* arg2);

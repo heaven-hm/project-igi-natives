@@ -1,0 +1,5 @@
+# EditVariable_Register
+
+Address: 00488800
+Proto: int32_t*()
+Gate: score=1.000 >=0.85 PASS

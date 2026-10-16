@@ -1,0 +1,56 @@
+{
+ "sources": 4646,
+ "compiled_ok": 0,
+ "coverage_pct": 0.0,
+ "error_categories": {
+  "fatal error: 'QTask_CreateTask.h' file not found": 1,
+  "fatal error: 'QTask_OpenEvent.h' file not found": 1,
+  "fatal error: 'QTask_CloseEvent.h' file not found": 1,
+  "fatal error: 'QTask_DispatchEvent.h' file not found": 1,
+  "fatal error: 'QTask_Init.h' file not found": 1,
+  "fatal error: 'QTask_Update.h' file not found": 1,
+  "fatal error: 'QTask_OnEvent.h' file not found": 1,
+  "fatal error: 'QTask_Process.h' file not found": 1,
+  "fatal error: 'QTask_Action.h' file not found": 1,
+  "fatal error: 'QTask_OnTick.h' file not found": 1,
+  "fatal error: 'QTask_HandleInput.h' file not found": 1,
+  "fatal error: 'QTask_LinkEventHandler.h' file not found": 1,
+  "fatal error: 'QTask_RegisterEventCallback.h' file not found": 1,
+  "fatal error: 'QTask_RemoveEventCallback.h' file not found": 1,
+  "fatal error: 'QTask_DeleteTask.h' file not found": 1
+ },
+ "samples": [
+  [
+   "00401000-QTask_CreateTask.c",
+   "cproj/src/00401000-QTask_CreateTask.c:2:10: fatal error: 'QTask_CreateTask.h' file not found"
+  ],
+  [
+   "00401050-QTask_OpenEvent.c",
+   "cproj/src/00401050-QTask_OpenEvent.c:2:10: fatal error: 'QTask_OpenEvent.h' file not found"
+  ],
+  [
+   "004010A0-QTask_CloseEvent.c",
+   "cproj/src/004010A0-QTask_CloseEvent.c:2:10: fatal error: 'QTask_CloseEvent.h' file not found"
+  ],
+  [
+   "004010B0-QTask_DispatchEvent.c",
+   "cproj/src/004010B0-QTask_DispatchEvent.c:2:10: fatal error: 'QTask_DispatchEvent.h' file not found"
+  ],
+  [
+   "004010D0-QTask_Init.c",
+   "cproj/src/004010D0-QTask_Init.c:2:10: fatal error: 'QTask_Init.h' file not found"
+  ],
+  [
+   "004011B0-QTask_Update.c",
+   "cproj/src/004011B0-QTask_Update.c:2:10: fatal error: 'QTask_Update.h' file not found"
+  ],
+  [
+   "004011D0-QTask_OnEvent.c",
+   "cproj/src/004011D0-QTask_OnEvent.c:2:10: fatal error: 'QTask_OnEvent.h' file not found"
+  ],
+  [
+   "004011F0-QTask_Process.c",
+   "cproj/src/004011F0-QTask_Process.c:2:10: fatal error: 'QTask_Process.h' file not found"
+  ]
+ ]
+}

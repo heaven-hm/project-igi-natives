@@ -1,0 +1,13 @@
+#include "gi_platform.h"
+#include "0051A1D0-SplinePathDynCubeObj_Init.h"
+int32_t SplinePathDynCubeObj_Init()
+
+{
+    int32_t v_4 = 0;
+    int16_t valA1 = TaskType_Register("SplinePathDynCubeObj", 0x200, g_54875c, 0);
+    g_54ed4e = valA1;
+    QTask_RemoveEventCallback(valA1, 0, sub_51a240);
+    QTask_TriggerEvent(g_54ed4e, 2, AIGraph_LoadParameters);
+    int32_t valA2 = Script_ParseEnumInt32_8();
+    return QTask_RemoveEventCallback(g_54ed4e, valA2, sub_51a230);
+}

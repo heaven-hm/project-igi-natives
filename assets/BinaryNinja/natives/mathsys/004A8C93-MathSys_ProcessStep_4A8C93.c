@@ -1,0 +1,7 @@
+#include "MathSys_ProcessStep_4A8C93.h"
+
+void __fastcall(char arg1, long double arg2 ) __pure
+{
+    // Native implementation (0x4a8c93-0x4a8c9a, 3 blocks)
+    return 0;
+}

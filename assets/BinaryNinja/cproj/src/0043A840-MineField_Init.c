@@ -1,0 +1,72 @@
+#include "gi_platform.h"
+#include "0043A840-MineField_Init.h"
+int32_t* MineField_Init()
+
+{
+    int32_t v_d4 = 0;
+    int16_t valA1 = TaskType_Register("MineField", 0xd0, EditorRigidObj_OnEvent(), 0);
+    g_53c2d0 = valA1;
+    QTask_RemoveEventCallback(valA1, 0, sub_43ab50);
+    QTask_TriggerEvent(g_53c2d0, 1, MineField_LoadParameters);
+    QTask_TriggerEvent(g_53c2d0, 2, sub_43ad20);
+    int32_t valA3 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_53c2d0, valA3, sub_43ad30);
+    int32_t valA4 = Script_ParseEnumReal32_8();
+    int32_t v_d8_1 = valA4;
+    valA4 = g_53c2d0;
+    QTask_RemoveEventCallback(valA4, v_d8_1, sub_43ad40);
+    g_57bef4 = Script_EvaluateCondition_7(0xc);
+    g_57bec0 = 0;
+    g_57bec4 = 0x42c80000;
+    g_57bee0 = 0;
+    g_57bee4 = 0x42c80000;
+    g_57bed0 = 0;
+    g_57bed4 = 0x41200000;
+    g_57bee8 = 0;
+    g_57beec = 0x42700000;
+    g_57bed8 = 0xbf800000;
+    g_57bedc = 0x461c4000;
+    g_57bec8 = 0;
+    g_57becc = 0x3e8;
+    g_57beb8 = 0;
+    g_57bebc = 0x64;
+    g_57beb0 = 0xffffffff;
+    g_57beb4 = 0x1000;
+    int32_t valA6 = Script_ParseEnumReal32_4();
+    char v_d0;
+    char v_b0;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_b0, valA6, 7, 0);
+    int32_t valA8 = Script_CallNativeHandler_3();
+    char v_98;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_98, valA8, 7, 0);
+    int32_t valA10 = Script_EvaluateCondition_2();
+    char v_48;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_48, valA10, 7, &g_57bec0);
+    int32_t valA12 = Script_EvaluateCondition_2();
+    char v_44;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_44, valA12, 7, &g_57bee0);
+    int32_t valA14 = Script_EvaluateCondition_2();
+    char v_40;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_40, valA14, 7, &g_57bed0);
+    int32_t valA16 = Script_EvaluateCondition_2();
+    char v_3c;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_3c, valA16, 7, &g_57bee8);
+    int32_t valA18 = Script_ParseEnumString_3();
+    char v_38;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_38, valA18, 7, &g_57bec8);
+    int32_t valA20 = Script_ParseEnumString_3();
+    char v_34;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_34, valA20, 7, &g_57beb8);
+    int32_t valA22 = Script_EvaluateCondition_3();
+    char v_30;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_30, valA22, 7, 0);
+    int32_t valA24 = Script_ParseEnumString_3();
+    char v_10;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_10, valA24, 7, &g_57beb0);
+    int32_t valA26 = Script_EvaluateCondition_2();
+    char v_c;
+    Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_c, valA26, 7, &g_57bed8);
+    int32_t valA28 = Script_ParseEnumInt32_4();
+    char v_8;
+    return Script_UndefinedParameterTy(g_57bef4, &v_d0, &v_8, valA28, 7, 0);
+}

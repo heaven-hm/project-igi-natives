@@ -1,0 +1,1006 @@
+{
+ "passed": 4169,
+ "failed": 476,
+ "failures": [
+  {
+   "addr": "0x004010a0",
+   "name": "QTask_CloseEvent",
+   "score": 0.3613
+  },
+  {
+   "addr": "0x004010b0",
+   "name": "QTask_DispatchEvent",
+   "score": 0.415
+  },
+  {
+   "addr": "0x004011f0",
+   "name": "QTask_Process",
+   "score": 0.7222
+  },
+  {
+   "addr": "0x00401d30",
+   "name": "QTask_CleanupTypes_2",
+   "score": 0.7222
+  },
+  {
+   "addr": "0x00401d50",
+   "name": "QTask_CleanupEvents_2",
+   "score": 0.7222
+  },
+  {
+   "addr": "0x00402930",
+   "name": "Flow_RunHandler",
+   "score": 0.8312
+  },
+  {
+   "addr": "0x00402c40",
+   "name": "Flow_DeleteHandler",
+   "score": 0.5562
+  },
+  {
+   "addr": "0x00403660",
+   "name": "GOStart",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403750",
+   "name": "GO_ActiveMission",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403870",
+   "name": "GO_InMouInv",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004038e0",
+   "name": "GO_InMouSens",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403ac0",
+   "name": "GO_GameDiff",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403c10",
+   "name": "GO_ContentControlPW",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403c70",
+   "name": "Config_GetContentControlPassword",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403cc0",
+   "name": "Config_VerifyContentControlPassword",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00403d90",
+   "name": "Config_IsContentControlPasswordEnabled",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00403df0",
+   "name": "GO_IsBlood",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00404010",
+   "name": "GO_GfxDevice",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00404080",
+   "name": "GO_GfxGamma",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004040f0",
+   "name": "GO_GfxPerformance",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004046a0",
+   "name": "Config_FillRenderDeviceListBox",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00404710",
+   "name": "Config_GraphicOptionsGetDevice",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x004047f0",
+   "name": "Config_GraphicOptionsSetDevice",
+   "score": 0.7917
+  },
+  {
+   "addr": "0x00404fa0",
+   "name": "Config_FillPlayerProfileListBox",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00405010",
+   "name": "Config_GetActivePlayerProfileIndex",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00405050",
+   "name": "Config_SetActivePlayerProfileIndex",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00405400",
+   "name": "Config_DeletePlayerProfile",
+   "score": 0.75
+  },
+  {
+   "addr": "0x004054f0",
+   "name": "Config_GetNumberOfPlayerProfiles",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00405530",
+   "name": "Config_GraphicOptionsGetPerfLevelFromFlags",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00405620",
+   "name": "Config_GraphicOptionsNumPerfLevels",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004057d0",
+   "name": "Config_PlayerGetActiveMission",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00405980",
+   "name": "Config_NoD3DDriversWithHard",
+   "score": 0.7333
+  },
+  {
+   "addr": "0x004062f0",
+   "name": "Config_SaveSoundOptions_2",
+   "score": 0.4907
+  },
+  {
+   "addr": "0x004071e0",
+   "name": "Weapon_ConfigRead",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00407bb0",
+   "name": "AIConfig_ApplyProfile",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00407de0",
+   "name": "SetActiveMaterial",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004083c0",
+   "name": "HumanPlayer_HandleInput",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0040dbf0",
+   "name": "HumanPlayer_CheckGround_6",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004101c0",
+   "name": "Define_HumanPlayerWeaponCycle",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00413d10",
+   "name": "HumanPlayer_CheckGround_11",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00415890",
+   "name": "Game_SetMission",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00415a10",
+   "name": "Game_EnableMusic",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00415a60",
+   "name": "Game_DisableMusic",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00415ab0",
+   "name": "Game_CutsceneDelete",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00416010",
+   "name": "Level_LoadObjects_2",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00416130",
+   "name": "Level_LocalCommonTextures",
+   "score": 0.7333
+  },
+  {
+   "addr": "0x004161d0",
+   "name": "Level_LocalCommonSprites",
+   "score": 0.7333
+  },
+  {
+   "addr": "0x00416930",
+   "name": "Level_LoadLevel_5",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004169d0",
+   "name": "Level_LoadObjects_6",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00416ad0",
+   "name": "Level_InitSprites_5",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00417690",
+   "name": "MenuManager_PushScreen",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00417810",
+   "name": "MenuManager_SetLanguage",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00417900",
+   "name": "MenuManager_ActivatePopupScreen",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00417960",
+   "name": "MenuManager_DeactivatePopuScreen",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004179b0",
+   "name": "MenuManager_SetEnabled",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00419330",
+   "name": "Menu_DrawWidget_5",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00419540",
+   "name": "Menu_HandleInput_5",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0041b290",
+   "name": "Menu_FormatScreen_7",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0041b870",
+   "name": "Menu_DrawWidget_7",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0041c690",
+   "name": "Menu_LeaveMenus_8",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0041dc20",
+   "name": "Menu_RequestScreen_9",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0041f2d0",
+   "name": "Menu_DrawWidget_9",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004225f0",
+   "name": "MenuFrame_Update",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00425050",
+   "name": "ConditionalSound_LoadParameters",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00426fa0",
+   "name": "HeliWheel_Process",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004274e0",
+   "name": "HeliDoor_Setup",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00428b60",
+   "name": "Menu_RequestScreen_20",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00429ef0",
+   "name": "Menu_RequestScreen_21",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0042b500",
+   "name": "Train_Process",
+   "score": 0.8
+  },
+  {
+   "addr": "0x0042b930",
+   "name": "Train_Action",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0042c630",
+   "name": "Rotor_LoadParameters",
+   "score": 0.8148
+  },
+  {
+   "addr": "0x0042fc00",
+   "name": "Car_Action",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0042fdf0",
+   "name": "Menu_FormatScreen_23",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00433580",
+   "name": "Vehicle_DeployGear_3",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00434f50",
+   "name": "Vehicle_UpdateCockpit_4",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004355a0",
+   "name": "Vehicle_InitHeli_5",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00437ad0",
+   "name": "Smoke_Action",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00438240",
+   "name": "Vehicle_DeployGear_6",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004389e0",
+   "name": "PlaceExplosiveTBA_LoadParameters",
+   "score": 0.8444
+  },
+  {
+   "addr": "0x00439b70",
+   "name": "AlarmLight_Cleanup_2",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0043c390",
+   "name": "ElevatorFloorIndicator_Action",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0043e290",
+   "name": "Elevator_Action",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00442a30",
+   "name": "SCamera_Cleanup_5",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00444590",
+   "name": "Cabinet_Setup",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00444b30",
+   "name": "Env_ActivateEntity_5",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004453e0",
+   "name": "Env_CheckAmbientArea_7",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x00445a80",
+   "name": "Switch_Cleanup_3",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00445de0",
+   "name": "Door_Cleanup",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x004474e0",
+   "name": "Env_UpdateCameraLens_8",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x00448570",
+   "name": "Env_UpdateCameraLens_10",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00448e30",
+   "name": "RadarDish_LoadParameters",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044c860",
+   "name": "Env_UpdateCameraLens_12",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044d850",
+   "name": "Env_ScanViewCone_12",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044dbc0",
+   "name": "AIFunction_RemoveAlarmActions",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044dc40",
+   "name": "AIFunction_SetViewLength",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044dcd0",
+   "name": "AIFunction_SetAlarmViewLength",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044dd30",
+   "name": "AIFunction_SetViewAlpha",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044dd90",
+   "name": "AIFunction_SetViewGamma",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044ddf0",
+   "name": "AIFunction_SetSecondaryViewLength",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044de80",
+   "name": "AIFunction_SetSecondaryAlarmViewLength",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044dee0",
+   "name": "AIFunction_SetSecondaryViewAlpha",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044df40",
+   "name": "AIFunction_SetSecondaryViewGamma",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044dfa0",
+   "name": "AIFunction_GetCurrentEventType",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e060",
+   "name": "AIFunction_DefaultHandler",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e0c0",
+   "name": "AIFunction_SetEventPriority",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e150",
+   "name": "AIFunction_SetInvulnerability",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e1b0",
+   "name": "AIFunction_SetInstantDeath",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e210",
+   "name": "AIFunction_SetDeathAnimation",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e270",
+   "name": "AIFunction_SetAlarmTriggerID",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e2d0",
+   "name": "AIFunction_SetAlarmControlID",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e330",
+   "name": "AIFunction_SetAlarmAccess",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e390",
+   "name": "AIFunction_SetGunnerID",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e3f0",
+   "name": "AIFunction_GetAlarmTriggerID",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044e430",
+   "name": "AIFunction_GetAlarmControlID",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044e470",
+   "name": "AIFunction_GetAlarmAccess",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044e4b0",
+   "name": "AIFunction_GetGunnerID",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044e740",
+   "name": "AIFunction_GetScriptIntegerValue",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e800",
+   "name": "AIFunction_GetScriptRealValue",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0044e860",
+   "name": "AIFunction_IsEventBehind",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0044f060",
+   "name": "HumanAI_LoadParameters",
+   "score": 0.8095
+  },
+  {
+   "addr": "0x004502f0",
+   "name": "AI_TestViewCones",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004520c0",
+   "name": "AI_FireWeapon_3",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00453550",
+   "name": "PatrolPath_Init",
+   "score": 0.75
+  },
+  {
+   "addr": "0x0045df50",
+   "name": "HumanPlayerInput_Process",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0045eae0",
+   "name": "Human_GetCutSceneDeltaTime",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0045ecd0",
+   "name": "AI_CombatTarget_17",
+   "score": 0.75
+  },
+  {
+   "addr": "0x0045fcd0",
+   "name": "Human_Cleanup_3",
+   "score": 0.8
+  },
+  {
+   "addr": "0x0045fe70",
+   "name": "Human_Cleanup_4",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x00463310",
+   "name": "Human_SetParent",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x004635b0",
+   "name": "AI_FireWeapon_20",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00464720",
+   "name": "AI_UpdateOrders_22",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00465800",
+   "name": "AI_FireWeapon_23",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00465820",
+   "name": "AI_MoveToNode_23",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00465880",
+   "name": "AI_TakeCover_23",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004658d0",
+   "name": "AI_AlertAllies_23",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00465920",
+   "name": "AI_UpdateSensors_23",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00469cc0",
+   "name": "AI_UpdateOrders_26",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0046ec90",
+   "name": "AI_FireWeapon_30",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00471280",
+   "name": "Weapon_EjectMagazine",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004712e0",
+   "name": "Weapon_UpdateZoom",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00472440",
+   "name": "BinocularOverlay_Update",
+   "score": 0.75
+  },
+  {
+   "addr": "0x00472630",
+   "name": "Weapon_UpdateMuzzleFlash_2",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00474ae0",
+   "name": "Weapon_UpdateRecoil_3",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x00475310",
+   "name": "Weapon_FireBullet_4",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004754c0",
+   "name": "Binocular_Process_2",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004776c0",
+   "name": "GunClip_Action",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004785f0",
+   "name": "Weapon_UpdateZoom_5",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00478900",
+   "name": "Weapon_FireUpdate",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0047b190",
+   "name": "GunShot_TakeSlot",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0047b270",
+   "name": "Weapon_CycleFireMode_6",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0047c420",
+   "name": "GunShot_Unpack",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0047c4c0",
+   "name": "Weapon_ComputeAccuracy_7",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0047c990",
+   "name": "Weapon_UpdateMuzzleFlash_7",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0047cab0",
+   "name": "Ammo_TypeOpen",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00481360",
+   "name": "FX_FireBallUpdate_2",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00482050",
+   "name": "ExplodeObject_Cleanup_2",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00482a40",
+   "name": "FX_ExplosionSpawn_3",
+   "score": 0.7222
+  },
+  {
+   "addr": "0x00482d70",
+   "name": "FX_SmokeEmit_3",
+   "score": 0.7576
+  },
+  {
+   "addr": "0x00483ec0",
+   "name": "FX_TrailUpdate_4",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004849b0",
+   "name": "FX_FireBallUpdate_5",
+   "score": 0.8205
+  },
+  {
+   "addr": "0x00484f30",
+   "name": "FX_Definemission",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00485970",
+   "name": "StatusMessage_ShowFull",
+   "score": 0.8182
+  },
+  {
+   "addr": "0x00488e00",
+   "name": "LevelFlow_GetBreakCutSceneKey",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00488e50",
+   "name": "LevelFlow_LevelFailed",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00489960",
+   "name": "AI_BuildEyeSnapshot",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x0048f300",
+   "name": "FX_TrailUpdate_26",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00490230",
+   "name": "Display_CloseDevice",
+   "score": 0.75
+  },
+  {
+   "addr": "0x00490380",
+   "name": "Display_CheckCapabilities",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x004903a0",
+   "name": "Display_SetGammaRamp",
+   "score": 0.5
+  },
+  {
+   "addr": "0x00491a30",
+   "name": "Display_CreateSurface_3",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00491cc0",
+   "name": "Display_SetDisplayMode_4",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00492230",
+   "name": "Display_SyncVSync_6",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004922b0",
+   "name": "Display_SwapBuffers_6",
+   "score": 0.7333
+  },
+  {
+   "addr": "0x00494690",
+   "name": "Display_CreateSurface_6",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00495280",
+   "name": "Display_SwapBuffers_8",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004964a0",
+   "name": "Display_SetGammaRamp_10",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00496e00",
+   "name": "Display_CloseDevice_12",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00496e60",
+   "name": "Display_SyncVSync_12",
+   "score": 0.8
+  },
+  {
+   "addr": "0x004974a0",
+   "name": "Display_SetGammaRamp_12",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00497620",
+   "name": "Display_ClearSurfaces_13",
+   "score": 0.8333
+  },
+  {
+   "addr": "0x00497830",
+   "name": "Display_SetDisplayMode_14",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00497860",
+   "name": "Display_SyncVSync_14",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00497d40",
+   "name": "Display_OpenDevice_15",
+   "score": 0.7222
+  },
+  {
+   "addr": "0x00497d70",
+   "name": "Display_CloseDevice_15",
+   "score": 0.8
+  },
+  {
+   "addr": "0x00497e70",
+   "name": "Transcontext_SetActiveTransContext",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x00498380",
+   "name": "Display_SetDisplayMode_16",
+   "score": 0.7778
+  },
+  {
+   "addr": "0x00498950",
+   "name": "Display_SetGammaRamp_16",
+   "score": 0.6333
+  },
+  {
+   "addr": "0x00499090",
+   "name": "Display_SetDisplayMode_17",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0049a430",
+   "name": "Display_ClearSurfaces_18",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0049a6e0",
+   "name": "PolyListDynCubeObj_OnEvent",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0049b4b0",
+   "name": "Display_MeshFormatNotSupport",
+   "score": 0.8095
+  },
+  {
+   "addr": "0x0049bd30",
+   "name": "Display_SetDisplayMode_19",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0049be10",
+   "name": "Display_SyncVSync_19",
+   "score": 0.8
+  },
+  {
+   "addr": "0x0049d480",
+   "name": "Display_SetGammaRamp_19",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0049db20",
+   "name": "Display_OpenDevice_20",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x0049eb50",
+   "name": "Display_SetDisplayMode_20",
+   "score": 0.6667
+  },
+  {
+   "addr": "0x004a0340",
+   "name": "Camera_SetFieldOfView",
+   "score": 0.7333
+  },
+  {
+   "addr": "0x004a1570",
+   "name": "Camera_ApplyBandFilter",
+   "score": 0.7879
+  },
+  {
+   "addr": "0x004a23d0",
+   "name": "Camera_ApplyHandiCam",
+   "score": 0.4167
+  },
+  {
+   "addr": "0x004a4300",
+   "name": "DrawHandiCamFilter",
+   "score": 0.6667
+  }
+ ]
+}

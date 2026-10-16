@@ -1,0 +1,40 @@
+#include "004ABC46-Camera_UpdateViewCone_22.h"
+/* 0x004abc46 Camera_UpdateViewCone_22 full linked: callers=6 callees=0 */
+int32_t* sub_4abc46(int32_t a1)
+
+{
+    int32_t edx = 0;
+    g_936068 = a1;
+    int32_t* i;
+
+    for (i = &g_5466d8; i < 0x546840; )
+    {
+        if (a1 == *i)
+        {
+            int32_t eax = *((edx << 3) + &g_5466dc);
+            g_936064 = eax;
+            return eax;
+        }
+
+        i = &i[2];
+        edx += 1;
+    }
+
+    if (a1 >= 0x13 && a1 <= 0x24)
+    {
+        g_936064 = 0xd;
+        return i;
+    }
+
+    if (a1 < 0xbc)
+        g_936064 = 0x16;
+    else
+    {
+        g_936064 = 8;
+
+        if (a1 > 0xca)
+            g_936064 = 0x16;
+    }
+
+    return i;
+}

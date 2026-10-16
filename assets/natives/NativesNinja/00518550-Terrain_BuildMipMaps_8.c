@@ -1,0 +1,74 @@
+#include "00518550-Terrain_BuildMipMaps_8.h"
+/* 0x00518550 Terrain_BuildMipMaps_8 full linked: callers=1 callees=73 */
+int32_t sub_518550()
+
+{
+    sub_519750();
+    sub_507d40();
+    sub_519820();
+    sub_51b3a0();
+    sub_51a260();
+    sub_519ba0();
+    sub_503bd0();
+    sub_4f8fb0();
+    sub_4f80b0();
+    sub_51b530();
+    sub_51bab0();
+    sub_51bf90();
+    sub_5085e0();
+    sub_51c290();
+    sub_51ddb0();
+    sub_51ec70();
+    sub_4ee690();
+    sub_51eec0();
+    sub_51f560();
+    sub_51fed0();
+    sub_520710();
+    sub_520b90();
+    sub_505d30();
+    sub_520ff0();
+    sub_526860();
+    sub_527480();
+    sub_528420();
+    sub_4f45b0();
+    sub_5049f0();
+    sub_52a210();
+    sub_518900();
+    sub_4fb110();
+    sub_52ad00();
+    sub_52afb0();
+    sub_4f6590();
+    sub_504d90();
+    sub_4feb80();
+    sub_4edc60();
+    sub_52b300();
+    sub_519650();
+    sub_506cb0();
+    sub_4f3360();
+    sub_4f3e40();
+    sub_5031b0();
+    sub_52b6a0();
+    sub_52bee0();
+    sub_52c5f0();
+    sub_5034c0();
+    sub_504280();
+    sub_4fb5a0();
+    sub_4edfb0();
+    sub_52c7f0();
+    sub_52ca00();
+    sub_4f1ea0();
+    sub_4f0a60();
+    sub_4f18c0();
+    sub_52ca60();
+    sub_4f1f50();
+    sub_52cb20();
+    sub_5055a0();
+    sub_5058e0();
+    sub_508f30();
+    sub_4ed5b0();
+    sub_507e80();
+    sub_530250();
+    sub_4fdec0();
+    /* tailcall */
+    return sub_5302a0();
+}

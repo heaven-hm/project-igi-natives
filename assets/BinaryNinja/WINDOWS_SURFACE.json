@@ -1,0 +1,13 @@
+{
+ "GetTickCount": 2,
+ "Sleep": 1,
+ "CreateFile": 2,
+ "DeleteFile": 1,
+ "FindFirstFile": 1,
+ "WriteFile": 3,
+ "ReadFile": 336,
+ "DirectDraw": 11,
+ "ShowCursor": 5,
+ "MessageBox": 4,
+ "OutputDebugString": 10
+}

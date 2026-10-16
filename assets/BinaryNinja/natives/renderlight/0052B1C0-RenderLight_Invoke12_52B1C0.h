@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 0052B1C0 RenderLight_Invoke12_52B1C0 | gate PASS | openigi True */
+int32_t(void* arg1);

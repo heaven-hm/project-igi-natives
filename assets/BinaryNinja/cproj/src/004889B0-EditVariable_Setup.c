@@ -1,0 +1,24 @@
+#include "gi_platform.h"
+#include "004889B0-EditVariable_Setup.h"
+int32_t* EditVariable_Setup(int80_t a1 , void* a2)
+
+{
+    if (Script_FormatString_6(a2 + 0x38))
+    {
+        Script_SpawnNewTask_7(a2 + 0x38, a2);
+        (*(int32_t*)(uintptr_t)(a2 + 0xd8)) += a1;
+    }
+
+    int32_t* result = Script_FormatString_6(a2 + 0x88);
+
+    if (result)
+    {
+        Script_SpawnNewTask_7(a2 + 0x88, a2);
+🚫🚫🚫        int32_t v_8_2 = /* int32_t v_8_2 = (unimplemented  {fistp qword [esp+0x8], fp0}).d */;
+        /* unimplemented  {fistp qword [esp+0x8], fp0} */
+        result = (*(int32_t*)(uintptr_t)(a2 + 0xd8)) - v_8_2;
+        (*(int32_t*)(uintptr_t)(a2 + 0xd8)) = result;
+    }
+
+    return result;
+}

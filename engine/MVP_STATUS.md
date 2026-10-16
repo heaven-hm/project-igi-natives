@@ -56,6 +56,6 @@ Earlier Level 1 documentation used actor **3031** as a target in a 21-shot kill.
 
 ## Delivery and remaining work
 
-The latest candidate is `/tmp/igi-native-candidate/igi.app`. The last shared Downloads installation predates these newest portal/flame/firing corrections. Further shared-app replacement is pending the owner's choice between the two active source projects. No push was performed.
+At the owner's request, source revision `3b64826` was rebuilt without source changes and installed at `/Users/haseeb-mir/Downloads/IGI/igi.app`. Staging directory: `/tmp/igi-current-delivery/igi.app`. The installed executable SHA-256 is `030e921990c3b65bf43822831fae290e5e10c4c17407ac54382a5bccd79d03c4`; strict bundle signature verification passed. The previous app was preserved as `igi-backup-20261016-163748-935908.app` beside it. This is a working experimental gameplay checkpoint; exact retail parity and stable-release acceptance remain open.
 
 Highest-priority gaps: original runtime/memory capture; full collision/query semantics and building/door coverage; correct AI task/state/burst execution; weapon recoil/spread/ballistics; full skeletal transitions and hit/death animation; general QVM execution and mission objectives; original lighting/materials and rendering. Windows/Linux remain untested targets. See [MVP_PLAN.md](MVP_PLAN.md) and [FIDELITY_REQUIREMENTS.md](FIDELITY_REQUIREMENTS.md).

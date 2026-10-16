@@ -1,0 +1,72 @@
+#include "0043A840-MineField_Init.h"
+/* 0x0043a840 MineField_Init full linked: callers=1 callees=34 */
+int32_t* MineField_Init()
+
+{
+    int32_t var_d4 = 0;
+    int16_t eax_1 = TaskType_Register("MineField", 0xd0, sub_5034d0(), 0);
+    g_53c2d0 = eax_1;
+    QTask_RemoveEventCallback(eax_1, 0, sub_43ab50);
+    QTask_TriggerEvent(g_53c2d0, 1, MineField_LoadParameters);
+    QTask_TriggerEvent(g_53c2d0, 2, sub_43ad20);
+    int32_t eax_3 = sub_4f1a60();
+    QTask_RemoveEventCallback(g_53c2d0, eax_3, sub_43ad30);
+    int32_t eax_4 = sub_4f1a70();
+    int32_t var_d8_1 = eax_4;
+    eax_4 = g_53c2d0;
+    QTask_RemoveEventCallback(eax_4, var_d8_1, sub_43ad40);
+    g_57bef4 = sub_4f1950(0xc);
+    g_57bec0 = 0;
+    g_57bec4 = 0x42c80000;
+    g_57bee0 = 0;
+    g_57bee4 = 0x42c80000;
+    g_57bed0 = 0;
+    g_57bed4 = 0x41200000;
+    g_57bee8 = 0;
+    g_57beec = 0x42700000;
+    g_57bed8 = 0xbf800000;
+    g_57bedc = 0x461c4000;
+    g_57bec8 = 0;
+    g_57becc = 0x3e8;
+    g_57beb8 = 0;
+    g_57bebc = 0x64;
+    g_57beb0 = 0xffffffff;
+    g_57beb4 = 0x1000;
+    int32_t eax_6 = sub_4f1010();
+    void var_d0;
+    void var_b0;
+    sub_4f1a80(g_57bef4, &var_d0, &var_b0, eax_6, 7, 0);
+    int32_t eax_8 = sub_4f0fc0();
+    void var_98;
+    sub_4f1a80(g_57bef4, &var_d0, &var_98, eax_8, 7, 0);
+    int32_t eax_10 = sub_4f0f50();
+    void var_48;
+    sub_4f1a80(g_57bef4, &var_d0, &var_48, eax_10, 7, &g_57bec0);
+    int32_t eax_12 = sub_4f0f50();
+    void var_44;
+    sub_4f1a80(g_57bef4, &var_d0, &var_44, eax_12, 7, &g_57bee0);
+    int32_t eax_14 = sub_4f0f50();
+    void var_40;
+    sub_4f1a80(g_57bef4, &var_d0, &var_40, eax_14, 7, &g_57bed0);
+    int32_t eax_16 = sub_4f0f50();
+    void var_3c;
+    sub_4f1a80(g_57bef4, &var_d0, &var_3c, eax_16, 7, &g_57bee8);
+    int32_t eax_18 = sub_4f0fa0();
+    void var_38;
+    sub_4f1a80(g_57bef4, &var_d0, &var_38, eax_18, 7, &g_57bec8);
+    int32_t eax_20 = sub_4f0fa0();
+    void var_34;
+    sub_4f1a80(g_57bef4, &var_d0, &var_34, eax_20, 7, &g_57beb8);
+    int32_t eax_22 = sub_4f0fd0();
+    void var_30;
+    sub_4f1a80(g_57bef4, &var_d0, &var_30, eax_22, 7, 0);
+    int32_t eax_24 = sub_4f0fa0();
+    void var_10;
+    sub_4f1a80(g_57bef4, &var_d0, &var_10, eax_24, 7, &g_57beb0);
+    int32_t eax_26 = sub_4f0f50();
+    void var_c;
+    sub_4f1a80(g_57bef4, &var_d0, &var_c, eax_26, 7, &g_57bed8);
+    int32_t eax_28 = sub_4f1000();
+    void var_8;
+    return sub_4f1a80(g_57bef4, &var_d0, &var_8, eax_28, 7, 0);
+}

@@ -8,15 +8,19 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 include_directories(src)
 
-add_compile_options(
-    -O2
-    -w
-    -Wno-everything
-    -fno-common
-)
+if(CMAKE_C_COMPILER_ID MATCHES "Clang|GNU")
+    add_compile_options(-O2 -w -fno-common)
+    if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+        add_compile_options(-Wno-everything)
+    endif()
+elseif(MSVC)
+    add_compile_options(/O2 /w)
+endif()
+
+find_package(SDL2 REQUIRED CONFIG)
 
 # Load the compiler-tested build allowlist if present
-set(LIB_SRCS "src/gi_stubs.c" "src/gi_memory.c")
+set(LIB_SRCS "src/gi_stubs.c" "src/gi_memory.c" "src/gi_clock.c")
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/clean_sources.json")
     file(READ "${CMAKE_CURRENT_SOURCE_DIR}/clean_sources.json" CLEAN_JSON)
     string(JSON OK_COUNT LENGTH "${CLEAN_JSON}" "ok")
@@ -36,9 +40,10 @@ else()
     list(FILTER LIB_SRCS EXCLUDE REGEX ".*main_runner\\.c$")
 endif()
 
-# Movement translations remain partial. The generated World_TraceBatch translation
-# is excluded because its fifth-argument type contradicts the verified x86 ABI.
-# Wall and ground collision therefore resolve to the explicit unavailable-provider stub.
+# Movement translations remain partial. The generated World_TraceBatch body is
+# excluded because its decompiler output has not been normalized against the x86
+# ABI and output-record semantics. The portable declaration is based on retail
+# call sites; wall and ground collision still use the unavailable provider.
 foreach(MOVEMENT_SOURCE
         "src/004614B0-Human_MovementIntegrator.c"
         "src/00461A70-Human_WallSweep.c"
@@ -70,29 +75,76 @@ foreach(COLLISION_SOURCE
     endif()
 endforeach()
 
-# Build macOS shared library libiginatives.dylib
+# Build the recovered C library using the target platform's shared-library format.
 add_library(iginatives SHARED ${LIB_SRCS})
-target_link_libraries(iginatives PRIVATE m)
+target_link_libraries(iginatives PRIVATE SDL2::SDL2)
+if(UNIX)
+    target_link_libraries(iginatives PRIVATE m)
+endif()
 
 set_target_properties(iginatives PROPERTIES
     PREFIX "lib"
     OUTPUT_NAME "iginatives"
-    LINK_FLAGS "-Wl,-undefined,dynamic_lookup"
-    INSTALL_NAME_DIR "@rpath"
-    BUILD_WITH_INSTALL_RPATH TRUE
 )
 
-# Build macOS native test runner
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/main_runner.c")
+if(APPLE)
+    target_link_options(iginatives PRIVATE "-Wl,-undefined,dynamic_lookup")
+    set_target_properties(iginatives PROPERTIES
+        INSTALL_NAME_DIR "@rpath"
+        BUILD_WITH_INSTALL_RPATH TRUE
+    )
+elseif(UNIX)
+    set_target_properties(iginatives PROPERTIES BUILD_RPATH "$ORIGIN")
+endif()
+
+# The diagnostic runner uses POSIX signals, ucontext, and dladdr.
+if(UNIX AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/main_runner.c")
     add_executable(igi_natives_runner src/main_runner.c)
     target_link_libraries(igi_natives_runner PRIVATE iginatives)
-    set_target_properties(igi_natives_runner PROPERTIES
-        BUILD_RPATH "@loader_path;@loader_path/."
-        INSTALL_RPATH "@loader_path;@loader_path/."
-    )
+    if(APPLE)
+        set_target_properties(igi_natives_runner PROPERTIES
+            BUILD_RPATH "@loader_path;@loader_path/."
+            INSTALL_RPATH "@loader_path;@loader_path/."
+        )
+    else()
+        set_target_properties(igi_natives_runner PROPERTIES
+            BUILD_RPATH "$ORIGIN"
+            INSTALL_RPATH "$ORIGIN"
+        )
+    endif()
 endif()
 
 if(BUILD_TESTING)
+    add_executable(cproj_human_movement_integrator_probe
+        tests/human_movement_integrator_probe.c
+        src/004614B0-Human_MovementIntegrator.c
+    )
+    target_include_directories(cproj_human_movement_integrator_probe PRIVATE src)
+    if(UNIX)
+        target_link_libraries(cproj_human_movement_integrator_probe PRIVATE m)
+    endif()
+    add_test(
+        NAME human_movement_integrator_collision_order
+        COMMAND cproj_human_movement_integrator_probe
+    )
+
+    add_executable(human_wall_sweep_probe
+        tests/human_wall_sweep_probe.c
+        src/00461A70-Human_WallSweep.c
+    )
+    target_include_directories(human_wall_sweep_probe PRIVATE src)
+    if(UNIX)
+        target_link_libraries(human_wall_sweep_probe PRIVATE m)
+    endif()
+    add_test(NAME human_wall_sweep_single_wall_response COMMAND human_wall_sweep_probe)
+
+    add_executable(world_trace_abi_probe
+        tests/world_trace_abi_probe.c
+    )
+    target_include_directories(world_trace_abi_probe PRIVATE src)
+    target_link_libraries(world_trace_abi_probe PRIVATE iginatives)
+    add_test(NAME world_trace_batch_stub_abi COMMAND world_trace_abi_probe)
+
     add_executable(qtask_event_probe
         tests/qtask_event_probe.c
         src/004011D0-QTask_OnEvent.c
@@ -100,6 +152,28 @@ if(BUILD_TESTING)
     )
     target_include_directories(qtask_event_probe PRIVATE src)
     add_test(NAME qtask_event_table_clear COMMAND qtask_event_probe)
+
+    add_executable(qtask_event_dispatch_probe
+        tests/qtask_event_dispatch_probe.c
+        src/00401400-QTask_RemoveEventCallback.c
+        src/00401530-QTask_TriggerEvent.c
+        src/004017C0-QTask_UnableToAllocateEven.c
+        src/00401810-QTask_UnableToAllocateEven_2.c
+        src/00401860-QTask_CleanupEvents.c
+        src/00401A70-QTask_QtaskTypeSNotDefined.c
+        src/00401B90-QTask_RegisterEventCallback_2.c
+        src/gi_memory.c
+    )
+    target_include_directories(qtask_event_dispatch_probe PRIVATE src)
+    add_test(NAME qtask_event_dispatch_table_and_recursion COMMAND qtask_event_dispatch_probe)
+
+    add_executable(frames_get_probe
+        tests/frames_get_probe.c
+        src/00402870-Frames_Get.c
+        src/gi_memory.c
+    )
+    target_include_directories(frames_get_probe PRIVATE src)
+    add_test(NAME frames_get_guest_context_read COMMAND frames_get_probe)
 
     add_executable(sys_free_memory_guest_heap_probe
         tests/sys_free_memory_guest_heap_probe.c

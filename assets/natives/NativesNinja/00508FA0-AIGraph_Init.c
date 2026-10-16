@@ -1,0 +1,70 @@
+#include "00508FA0-AIGraph_Init.h"
+/* 0x00508fa0 AIGraph_Init full linked: callers=1 callees=43 */
+void* sub_508fa0()
+
+{
+    int32_t var_c4 = 0;
+    int16_t eax_1 = TaskType_Register("AIGraph", 0xc0, sub_4f9210(), 0);
+    g_54e83c = eax_1;
+    QTask_RemoveEventCallback(eax_1, 0, sub_509570);
+    QTask_TriggerEvent(g_54e83c, 1, sub_4d3710);
+    QTask_TriggerEvent(g_54e83c, 2, sub_509610);
+    int32_t eax_3 = sub_4f9280();
+    QTask_RemoveEventCallback(g_54e83c, eax_3, sub_5093b0);
+    int32_t eax_4 = sub_4f9230();
+    int32_t var_c8_1 = eax_4;
+    eax_4 = g_54e83c;
+    QTask_RemoveEventCallback(eax_4, var_c8_1, sub_509520);
+    int32_t eax_5 = sub_4f9250();
+    QTask_RemoveEventCallback(g_54e83c, eax_5, sub_4d3710);
+    int32_t eax_6 = sub_4f9260();
+    QTask_RemoveEventCallback(g_54e83c, eax_6, sub_4d3710);
+    int32_t eax_7 = sub_4f9220();
+    int32_t var_c8_4 = eax_7;
+    eax_7 = g_54e83c;
+    QTask_RemoveEventCallback(eax_7, var_c8_4, sub_509450);
+    int32_t eax_8 = sub_4f9240();
+    QTask_RemoveEventCallback(g_54e83c, eax_8, sub_509480);
+    int32_t eax_9 = sub_4f1a70();
+    QTask_RemoveEventCallback(g_54e83c, eax_9, sub_5093c0);
+    int32_t eax_10 = sub_4f1a60();
+    int32_t var_c8_7 = eax_10;
+    eax_10 = g_54e83c;
+    QTask_RemoveEventCallback(eax_10, var_c8_7, sub_509440);
+    g_a7b2c0 = 0;
+    g_a7b2c4 = 0x40340000;
+    __builtin_strncpy(&g_a7b2b8, "3333", 4);
+    g_a7b2bc = 0x3fd33333;
+    g_a7b2b0 = 0;
+    g_a7b2b4 = 0x3ff00000;
+    g_a7b2a8 = 0x47ae147b;
+    g_a7b2ac = 0x3f847ae1;
+    g_a7b2cc = sub_4f1980(sub_4f9200(), 7);
+    int32_t eax_13 = sub_4f0f80();
+    void var_c0;
+    void var_40;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_40, eax_13, 7, 0);
+    int32_t eax_15 = sub_4f0f80();
+    void var_38;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_38, eax_15, 5, 0);
+    int32_t eax_17 = sub_4f0f80();
+    void var_30;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_30, eax_17, 7, 0);
+    int32_t eax_19 = sub_4f0f80();
+    void var_28;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_28, eax_19, 7, &g_a7b2b8);
+    int32_t eax_21 = sub_4f0f80();
+    void var_20;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_20, eax_21, 7, 0);
+    int32_t eax_23 = sub_4f1000();
+    void var_4;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_4, eax_23, 7, 0);
+    int32_t eax_25 = sub_4f0f80();
+    void var_18;
+    sub_4f1a80(g_a7b2cc, &var_c0, &var_18, eax_25, 7, &g_a7b2a8);
+    sub_4f9460(g_54e83c, 0x240);
+    g_a7b2d0 = sub_5186c0("NODECRITERIA_DOOR");
+    g_a7b2d4 = sub_5186c0("NODECRITERIA_VIEW");
+    g_a7b2d8 = sub_5186c0("NODECRITERIA_STAIR");
+    return sub_4f9df0("RouteTable", 0xa, sub_5092a0);
+}

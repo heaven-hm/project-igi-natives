@@ -1,0 +1,8 @@
+# Display_SetDisplayMode_5
+
+Address: 0x00491df0
+Signature: undefined4 Display_SetDisplayMode_5(void);
+Ninja: int32_t() (NINJA_CONFIRMED_100)
+Range: 0x491df0-0x491df5 blocks=1
+
+Confirmed 100% by Binary Ninja MCP.

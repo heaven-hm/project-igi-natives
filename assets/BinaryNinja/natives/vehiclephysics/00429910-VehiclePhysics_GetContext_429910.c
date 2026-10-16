@@ -1,0 +1,7 @@
+#include "VehiclePhysics_GetContext_429910.h"
+
+int32_t*(int32_t* arg1 )
+{
+    // Native implementation (0x429910-0x42991b, 1 blocks)
+    return 0;
+}

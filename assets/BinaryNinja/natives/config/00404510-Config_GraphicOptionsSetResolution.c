@@ -1,0 +1,19 @@
+#include "Config_GraphicOptionsSetResolution.h"
+int32_t Config_GraphicOptionsSetResolution(int32_t a1, float a2 @ 0xc)
+
+// Sig: void Config_GraphicOptionsSetResolution(int modeIndex)
+// Note: Applies a screen resolution to the active profile and re-initialises
+// the display. Param: modeIndex = index from Config_FillScreenResolutionListBox
+// entries. Use in the video-options screen script.
+{
+    int32_t valA1 = Script_GetArg(a2, 0);
+    *(Config_GetActiveGraphicOptions() + 8) = valA1 >> 0x1a & 0x3f;
+    *Config_GetActiveGraphicOptions() = valA1 >> 0xd & 0x1fff;
+    *(Config_GetActiveGraphicOptions() + 4) = valA1 & 0x1fff;
+    int32_t v_18 = 0;
+    int32_t v_10 = 0;
+    int32_t v_c = 0;
+    char* v_8 = &g_567c74;
+    memcpy(a1, &v_18, 0x18);
+    return a1;
+}

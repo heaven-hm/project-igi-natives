@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 005317D0 BoneMagicObj_Register | discovered via self-name string | gate PASS s=1.000 BN(b=1 c=16) r2(b=1 o=16) */
+void*()

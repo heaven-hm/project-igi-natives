@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 004754A0 WeaponGun_Invoke5_4754A0 | gate PASS | openigi True */
+int32_t(int32_t arg1);

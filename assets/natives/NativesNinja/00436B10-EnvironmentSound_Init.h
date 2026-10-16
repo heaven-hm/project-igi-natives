@@ -1,0 +1,5 @@
+#pragma once
+#include <stdint.h>
+#include <stdbool.h>
+/* 0x00436b10 EnvironmentSound_Init | CFG gate PASS score=1.000 BN(b=1,c=20) r2(b=1,c=20) */
+void EnvironmentSound_Init(void);

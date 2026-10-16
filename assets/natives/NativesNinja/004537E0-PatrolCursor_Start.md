@@ -1,0 +1,8 @@
+# PatrolCursor_Start
+
+Address: 0x004537e0
+Signature: void PatrolCursor_Start();
+Ninja: int32_t*(void** arg1, int32_t arg2, int32_t arg3) (NINJA_CONFIRMED_100)
+Range: 0x4537e0-0x453830 blocks=3
+
+Confirmed 100% by Binary Ninja MCP.

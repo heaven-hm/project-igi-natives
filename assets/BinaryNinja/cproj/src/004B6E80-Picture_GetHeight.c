@@ -1,0 +1,10 @@
+#include "gi_platform.h"
+#include "004B6E80-Picture_GetHeight.h"
+int32_t Picture_GetHeight(int32_t* a1)
+
+// Sig: int Picture_GetHeight(void* picture)
+// Note: RETURNS the HEIGHT in pixels of a loaded picture/surface. Param:
+// picture = picture pointer. Thin thunk to fcn.004B7E00.
+{
+    return Sys_AllocateMemory_22(a1);
+}

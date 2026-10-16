@@ -1,0 +1,75 @@
+#include "005183D0-Terrain_CalculateNormals_8.h"
+/* 0x005183d0 Terrain_CalculateNormals_8 full linked: callers=1 callees=74 */
+int32_t sub_5183d0()
+
+{
+    sub_530270();
+    sub_4fcf50();
+    sub_530220();
+    sub_507e70();
+    sub_4ed510();
+    sub_508d70();
+    sub_504e10();
+    sub_505630();
+    sub_52ca70();
+    sub_4f1ee0();
+    sub_52ca30();
+    sub_4f1840();
+    sub_4ee970();
+    sub_4f1e30();
+    sub_52c820();
+    sub_52c6b0();
+    sub_4edce0();
+    sub_4fb1b0();
+    sub_503d60();
+    sub_5033f0();
+    sub_52c0c0();
+    sub_52b6c0();
+    sub_52b3b0();
+    sub_4f3440();
+    sub_4fe7c0();
+    sub_502250();
+    sub_4f36c0();
+    sub_4f2740();
+    sub_505f60();
+    sub_518ef0();
+    sub_52b040();
+    sub_4ed6b0();
+    sub_504c50();
+    CutScene_TaskCreate();
+    sub_52ad10();
+    sub_52aaf0();
+    sub_4faa60();
+    sub_518760();
+    sub_5284a0();
+    sub_5043b0();
+    sub_4f4190();
+    sub_527c90();
+    sub_526ee0();
+    sub_526330();
+    sub_520bb0();
+    sub_505c90();
+    sub_5207a0();
+    sub_51fef0();
+    sub_51f580();
+    sub_51eee0();
+    sub_51ecb0();
+    sub_4ee410();
+    sub_51ddf0();
+    sub_51c2b0();
+    sub_51bfb0();
+    sub_507f10();
+    sub_51bac0();
+    sub_51b960();
+    sub_51b400();
+    sub_4f7360();
+    sub_4f8340();
+    sub_5034e0();
+    sub_519850();
+    sub_51a1d0();
+    sub_51b140();
+    sub_506fa0();
+    sub_519760();
+    /* tailcall */
+    return sub_519710();
+}

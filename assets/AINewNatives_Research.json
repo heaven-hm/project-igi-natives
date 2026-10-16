@@ -1,0 +1,59 @@
+{
+ "schema": "ai-newnatives-research/1",
+ "source": "Binary Ninja MCP 0x44cca0 AI_RegisterActions registrar + decompiles",
+ "corrected": [
+  {
+   "address": "0x44cca0",
+   "old_rea_name": "AIAction_Patrol_2",
+   "new_name": "AI_RegisterActions",
+   "prototype": "void AI_RegisterActions(void)",
+   "why": "Game_DefineOptions registrar for 51 AIAction/AIFunction entries"
+  },
+  {
+   "address": "0x44d850",
+   "old_rea_name": "Env_ScanViewCone_12",
+   "new_name": "AIFunction_GetEventData",
+   "prototype": "void AIFunction_GetEventData(void)",
+   "why": "returns **data_5bda60 event+4 as script value, sibling of GetCurrentEventType(eax[2])"
+  },
+  {
+   "address": "0x44ebb0",
+   "old_sig": "int32_t(long double @ st0, int32_t arg2, float @ 0xc)",
+   "new_name": "AIFunction_AddAnimationEntry",
+   "prototype": "void AIFunction_AddAnimationEntry(int animationId, double weight)",
+   "why": "registrar arity=2; st0=weight, stack=float animId, stack-int=script return slot"
+  }
+ ],
+ "registrar_arity": {
+  "AIAction_Patrol": 3,
+  "AIAction_Combat": 1,
+  "AIAction_Dead": 1,
+  "AIAction_FallFlat": 2,
+  "AIAction_Activate": 3,
+  "AIAction_WalkToNode": 2,
+  "AIAction_RunToNode": 2,
+  "AIAction_FireAtNode": 5,
+  "AIAction_FireAtTask": 5,
+  "AIAction_PlayAnimation": 2,
+  "AIAction_PlaySound": 3,
+  "AIAction_MoveToEvent": 2,
+  "AIAction_LookAtEvent": 2,
+  "AIAction_Stunned": 2,
+  "AIAction_KickGrenade": 1,
+  "AIAction_RunPanicking": 2,
+  "AIAction_Idle": 1,
+  "AIAction_SetCombat": 1,
+  "AIFunction_AddAnimationEntry": 2,
+  "AIFunction_SetAnimationInterval": 2,
+  "AIFunction_GetAnimationToPlay": 0,
+  "AIFunction_SendResponse": 0
+ },
+ "structs": {
+  "ai_anim_entry": "{int id; int pad; double weight}",
+  "ai_ctx": "{pad[0x3b08]; entries[5]; interval_a,b,c; anim_count}"
+ },
+ "files": [
+  "AIFunction_AddAnimationEntry_C11.h",
+  "AIFunction_AddAnimationEntry_C11.c"
+ ]
+}

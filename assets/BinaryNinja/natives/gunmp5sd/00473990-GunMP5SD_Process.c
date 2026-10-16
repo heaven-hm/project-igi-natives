@@ -1,0 +1,7 @@
+#include "GunMP5SD_Process.h"
+int32_t GunMP5SD_Process(void* a1)
+
+{
+    *(a1 + 0x1b0) = 0;
+    return (*(((Weapon_ComputeAccuracy_5() + Script_SpawnNewTask_12() * 0x180) << 2) + &g_a96ae0))(a1);
+}

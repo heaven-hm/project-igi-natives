@@ -1,0 +1,65 @@
+#include "AnimCam_Init.h"
+int32_t* AnimCam_Init()
+
+{
+    int32_t v_224 = 0;
+    int16_t valA1 = TaskType_Register("AnimCam", 0x220, CamTask_OnEvent(), 0);
+    g_54f198 = valA1;
+    QTask_TriggerEvent(valA1, 1, sub_52a180);
+    QTask_TriggerEvent(g_54f198, 2, AIGraph_LoadParameters);
+    QTask_RemoveEventCallback(g_54f198, 0, sub_528760);
+    int32_t valA3 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_54f198, valA3, sub_528cf0);
+    int32_t valA4 = Script_ParseEnumReal32_8();
+    int32_t v_228_1 = valA4;
+    valA4 = g_54f198;
+    QTask_RemoveEventCallback(valA4, v_228_1, AIGraph_LoadParameters);
+    int32_t valA5 = Script_ParseEnumReal32_15();
+    QTask_RemoveEventCallback(g_54f198, valA5, AnimCam_Process);
+    int32_t valA6 = Script_ParseEnumString_15();
+    QTask_RemoveEventCallback(g_54f198, valA6, sub_529a70);
+    int32_t valA7 = Script_EvaluateCondition_15();
+    int32_t v_228_4 = valA7;
+    valA7 = g_54f198;
+    QTask_RemoveEventCallback(valA7, v_228_4, sub_52a1c0);
+    int32_t valA8 = Script_FormatString_15();
+    QTask_RemoveEventCallback(g_54f198, valA8, sub_52a1d0);
+    int32_t valA9 = Script_SpawnNewTask_16();
+    QTask_RemoveEventCallback(g_54f198, valA9, sub_52a1f0);
+    int32_t valA10 = Script_ParseEnumInt32_16();
+    int32_t v_228_7 = valA10;
+    valA10 = g_54f198;
+    QTask_RemoveEventCallback(valA10, v_228_7, AnimCam_Update);
+    g_a84388 = Script_EvaluateCondition_7(0xa);
+    int32_t valA12 = Script_ParseEnumString_3();
+    void v_220;
+    void v_148;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_148, valA12, 7, 0);
+    int32_t valA14 = Script_ParseEnumString_3();
+    void v_144;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_144, valA14, 7, 0);
+    int32_t valA16 = Script_ParseEnumString_3();
+    void v_140;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_140, valA16, 7, 0);
+    int32_t valA18 = Script_ParseEnumString_3();
+    void v_13c;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_13c, valA18, 7, 0);
+    int32_t valA20 = Script_ParseEnumString_3();
+    void v_138;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_138, valA20, 7, 0);
+    int32_t valA22 = Script_ParseEnumString_3();
+    void v_134;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_134, valA22, 7, 0);
+    int32_t valA24 = Script_ParseEnumString_3();
+    void v_130;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_130, valA24, 7, 0);
+    int32_t valA26 = Script_ParseEnumString_3();
+    void v_12c;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_12c, valA26, 7, 0);
+    int32_t valA28 = Script_ParseEnumString_3();
+    void v_128;
+    Script_UndefinedParameterTy(g_a84388, &v_220, &v_128, valA28, 7, 0);
+    int32_t valA30 = Script_ParseEnumString_3();
+    void v_124;
+    return Script_UndefinedParameterTy(g_a84388, &v_220, &v_124, valA30, 7, 0);
+}

@@ -1,0 +1,14 @@
+#include "gi_platform.h"
+#include "004874A0-ConditionalContainer_LoadParameters.h"
+int32_t* ConditionalContainer_LoadParameters(void* a1)
+
+{
+    Script_ExecuteLevelScript_6(a1 + 0x20);
+    Script_ExecuteLevelScript_6(a1 + 0x70);
+    int32_t* result = Script_ExecuteLevelScript_6(a1 + 0xc0);
+    result = 0;
+    (*(int32_t*)(uintptr_t)(a1 + 0x110)) = 0;
+    (*(int32_t*)(uintptr_t)(a1 + 0x112)) = 1;
+    (*(int32_t*)(uintptr_t)(a1 + 0x111)) = 0;
+    return result;
+}

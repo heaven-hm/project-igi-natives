@@ -1,0 +1,70 @@
+#include "004330F0-Plane_Init.h"
+/* 0x004330f0 Plane_Init full linked: callers=1 callees=46 */
+int32_t* Plane_Init()
+
+{
+    int32_t var_88c = 0;
+    int16_t eax_1 = TaskType_Register("Plane", 0x888, sub_4f45f0(), 0);
+    g_53bee8 = eax_1;
+    QTask_RemoveEventCallback(eax_1, 0, Plane_LoadParameters);
+    QTask_TriggerEvent(g_53bee8, 1, Plane_Setup);
+    QTask_TriggerEvent(g_53bee8, 2, Plane_Process);
+    int32_t eax_3 = sub_4f1a60();
+    QTask_RemoveEventCallback(g_53bee8, eax_3, sub_4337d0);
+    int32_t eax_4 = sub_4f1a70();
+    int32_t var_890_1 = eax_4;
+    eax_4 = g_53bee8;
+    QTask_RemoveEventCallback(eax_4, var_890_1, Plane_Update);
+    int32_t eax_5 = sub_4e6610();
+    QTask_RemoveEventCallback(g_53bee8, eax_5, sub_434a30);
+    int32_t eax_6 = sub_4f40d0();
+    QTask_RemoveEventCallback(g_53bee8, eax_6, Plane_ReceiveChannels);
+    int32_t eax_7 = sub_4f40e0();
+    int32_t var_890_4 = eax_7;
+    eax_7 = g_53bee8;
+    QTask_RemoveEventCallback(eax_7, var_890_4, sub_434a50);
+    int32_t eax_8 = sub_4f4110();
+    QTask_RemoveEventCallback(g_53bee8, eax_8, sub_432bd0);
+    int32_t eax_9 = sub_4f4140();
+    QTask_RemoveEventCallback(g_53bee8, eax_9, sub_434a80);
+    int32_t eax_10 = sub_4f4130();
+    int32_t var_890_7 = eax_10;
+    eax_10 = g_53bee8;
+    QTask_RemoveEventCallback(eax_10, var_890_7, sub_434cd0);
+    int32_t eax_11 = sub_4f4120();
+    QTask_RemoveEventCallback(g_53bee8, eax_11, sub_434da0);
+    g_57bd54 = sub_4f1950(0xa);
+    int32_t eax_13 = sub_4f1010();
+    void var_888;
+    void var_720;
+    sub_4f1a80(g_57bd54, &var_888, &var_720, eax_13, 7, 0);
+    int32_t eax_14 = sub_4f0f70();
+    void var_6fc;
+    sub_4f1a80(g_57bd54, &var_888, &var_6fc, eax_14, 7, 0);
+    int32_t eax_15 = sub_4f0f50();
+    void var_148;
+    sub_4f1a80(g_57bd54, &var_888, &var_148, eax_15, 7, 0);
+    int32_t eax_16 = sub_4f0f60();
+    void var_708;
+    sub_4f1a80(g_57bd54, &var_888, &var_708, eax_16, 7, 0);
+    int32_t eax_17 = sub_4f0fd0();
+    void var_734;
+    sub_4f1a80(g_57bd54, &var_888, &var_734, eax_17, 7, 0);
+    int32_t eax_18 = sub_4f1000();
+    void var_57;
+    sub_4f1a80(g_57bd54, &var_888, &var_57, eax_18, 7, 0);
+    int32_t eax_19 = sub_4f1000();
+    void var_58;
+    sub_4f1a80(g_57bd54, &var_888, &var_58, eax_19, 7, 0);
+    int32_t eax_20 = sub_4f1000();
+    void var_1b0;
+    sub_4f1a80(g_57bd54, &var_888, &var_1b0, eax_20, 7, 0);
+    int32_t eax_21 = sub_4f1000();
+    void var_1af;
+    sub_4f1a80(g_57bd54, &var_888, &var_1af, eax_21, 7, 0);
+    int32_t eax_22 = sub_4f0fc0();
+    void var_50;
+    sub_4f1a80(g_57bd54, &var_888, &var_50, eax_22, 7, 0);
+    TaskType_Set("TASKTYPE_PLANE", *g_53bee8);
+    return sub_4b4720(0x57bd48);
+}

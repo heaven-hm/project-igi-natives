@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 004572D0 HumanSoldierRPG_Process | gate PASS | openigi False */
+int HumanSoldierRPG_Process(void * a1, int* a2);

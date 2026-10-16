@@ -1,0 +1,75 @@
+#include "00507F10-EditCamera_Init.h"
+/* 0x00507f10 EditCamera_Init full linked: callers=1 callees=48 */
+void* sub_507f10()
+
+{
+    sub_4f1cd0(0xa7b268);
+    sub_4f1db0(0xa7b268, "CAMERAFILTER_TYPE_.*");
+    g_a7b290 = sub_4ceba0("1717_01_1");
+    int32_t var_ec = 0;
+    int16_t eax_2 = TaskType_Register("EditCamera", 0xe8, sub_5034d0(), 0);
+    g_a7b260 = eax_2;
+    QTask_RemoveEventCallback(eax_2, 0, sub_508290);
+    QTask_TriggerEvent(g_a7b260, 2, sub_508350);
+    int32_t eax_4 = sub_4f1a60();
+    QTask_RemoveEventCallback(g_a7b260, eax_4, sub_508400);
+    int32_t eax_5 = sub_4f1a70();
+    QTask_RemoveEventCallback(g_a7b260, eax_5, sub_508410);
+    QTask_TriggerEvent(g_a7b260, 1, sub_488700);
+    QTask_RemoveEventCallback(g_a7b260, 4, 0);
+    g_a7b278 = sub_4f1950(0x11);
+    g_a7b280 = 0;
+    g_a7b284 = 0x3f800000;
+    g_a7b288 = 0;
+    g_a7b28c = 0x3f800000;
+    int32_t eax_8 = sub_4f1010();
+    void var_e8;
+    void var_c8;
+    sub_4f1a80(g_a7b278, &var_e8, &var_c8, eax_8, 7, 0);
+    int32_t eax_9 = sub_4f0f20();
+    void var_ac;
+    sub_4f1a80(g_a7b278, &var_e8, &var_ac, eax_9, 7, 0);
+    int32_t eax_10 = sub_4f0f20();
+    void var_a8;
+    sub_4f1a80(g_a7b278, &var_e8, &var_a8, eax_10, 7, 0);
+    int32_t eax_11 = sub_4f0f20();
+    void var_a4;
+    sub_4f1a80(g_a7b278, &var_e8, &var_a4, eax_11, 7, 0);
+    int32_t eax_12 = sub_4f0f50();
+    void var_60;
+    sub_4f1a80(g_a7b278, &var_e8, &var_60, eax_12, 7, 0);
+    int32_t eax_13 = sub_4f0f50();
+    void var_b0;
+    sub_4f1a80(g_a7b278, &var_e8, &var_b0, eax_13, 7, 0);
+    int32_t eax_14 = sub_4f0fa0();
+    void var_5c;
+    sub_4f1a80(g_a7b278, &var_e8, &var_5c, eax_14, 7, 0);
+    int32_t eax_15 = sub_4f1000();
+    void var_53;
+    sub_4f1a80(g_a7b278, &var_e8, &var_53, eax_15, 7, 0);
+    int32_t eax_16 = sub_4f0fa0();
+    void var_58;
+    sub_4f1a80(g_a7b278, &var_e8, &var_58, eax_16, 7, 0);
+    int32_t eax_17 = sub_4f1000();
+    void var_52;
+    sub_4f1a80(g_a7b278, &var_e8, &var_52, eax_17, 7, 0);
+    int32_t eax_18 = sub_4f1000();
+    void var_54;
+    sub_4f1a80(g_a7b278, &var_e8, &var_54, eax_18, 7, 0);
+    int32_t eax_19 = sub_4f0f50();
+    void var_50;
+    sub_4f1a80(g_a7b278, &var_e8, &var_50, eax_19, 7, 0);
+    int32_t eax_20 = sub_4f1e20();
+    void var_3f;
+    sub_4f1a80(g_a7b278, &var_e8, &var_3f, eax_20, 7, 0xa7b268);
+    int32_t eax_21 = sub_4f0f50();
+    void var_18;
+    sub_4f1a80(g_a7b278, &var_e8, &var_18, eax_21, 7, &g_a7b280);
+    int32_t eax_22 = sub_4f0f40();
+    void var_14;
+    sub_4f1a80(g_a7b278, &var_e8, &var_14, eax_22, 7, 0);
+    int32_t eax_23 = sub_4f0f50();
+    void var_8;
+    sub_4f1a80(g_a7b278, &var_e8, &var_8, eax_23, 7, &g_a7b288);
+    return TaskType_Set("TASKTYPE_EDITCAMERA", *g_a7b260);
+}

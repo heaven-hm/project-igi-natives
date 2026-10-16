@@ -1,0 +1,8 @@
+#include "HumanAI_PlayAnimation.h"
+
+int32_t* HumanAI_PlayAnimation(int32_t* pThis @ 0x8)
+
+{
+    *pThis = g_5bda84;
+    return pThis;
+}

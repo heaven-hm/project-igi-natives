@@ -1,0 +1,20 @@
+#include "004BAF30-Sys_FreeMemory_26.h"
+/* 0x004baf30 Sys_FreeMemory_26 full linked: callers=6 callees=2 */
+int32_t sub_4baf30(char* a1 @ 0x8)
+
+{
+    void var_400;
+    void arg_c;
+    String_VFormat(&var_400, a1, &arg_c);
+    int32_t eax = g_a43ed8;
+    g_a43ed0 += 1;
+
+    if (eax)
+        return eax(&var_400, g_a43ec0);
+
+    void* var_404_2 = &var_400;
+    Error_Show("%s");
+
+    while (true)
+        /* nop */
+}

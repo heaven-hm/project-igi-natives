@@ -1,0 +1,8 @@
+# Terrain_BuildMipMaps_7
+
+Address: 0x005181f0
+Signature: void Terrain_BuildMipMaps_7(int *param_1);
+Ninja: void*(void** arg1) (NINJA_CONFIRMED_100)
+Range: 0x5181f0-0x518222 blocks=4
+
+Confirmed 100% by Binary Ninja MCP.
