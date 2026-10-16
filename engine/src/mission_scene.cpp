@@ -159,6 +159,8 @@ void append_terrain(MissionScene& scene, const std::filesystem::path& mission_di
 }
 
 void append_model(MissionScene& scene, const SceneMesh& mesh, Vector3 position, float heading) {
+    scene.attached_model_count += mesh.attachment_count;
+    scene.maximum_attachment_depth = std::max(scene.maximum_attachment_depth, mesh.maximum_attachment_depth);
     for (auto triangle : mesh.triangles) {
         for (auto& vertex : triangle.vertices) {
             vertex.position = rotate(vertex.position, heading) + position;
@@ -214,6 +216,7 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
     const auto tiles = library.terrain_textures(assets::resolve_path(mission_directory, "terrain/terrain.tex"));
     const assets::TerrainSurface terrain_surface(mission_directory, initializer.calls());
     append_terrain(scene, mission_directory, origin, tiles, terrain_surface, terrain_detail);
+    scene.terrain_triangle_count = scene.static_triangles.size();
     const auto enabled_tasks = assets::gameplay_task_mask(initializer.calls());
     for (const auto& call : initializer.calls()) {
         if (call.function == "Task_New" && call.arguments.size() >= 5 && call.arguments[1].text == "AddAmmo") {
@@ -328,6 +331,8 @@ MissionScene load_mission(const std::filesystem::path& game_directory,
         "Ready: " + std::to_string(scene.loaded_object_count) + " objects, " +
         std::to_string(scene.actors.size()) + " soldiers, " + std::to_string(scene.textures.size()) +
         " textures, " + std::to_string(scene.root_motion_clips.size()) + " root-motion clips");
+    diagnostics::log(diagnostics::Severity::information, "attachments", "Loaded " +
+        std::to_string(scene.attached_model_count) + " visual ATTA instances; maximum depth=" + std::to_string(scene.maximum_attachment_depth));
     return scene;
 }
 

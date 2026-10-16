@@ -2,6 +2,7 @@
 
 #include "igi/diagnostics.hpp"
 #include "igi/navigation.hpp"
+#include "igi/skeletal_animation.hpp"
 
 #include <algorithm>
 
@@ -104,6 +105,7 @@ void GameSimulation::advance_actors() {
     const auto player_eye = camera_position();
     for (std::size_t actor_index = 0; actor_index < actors_.size(); ++actor_index) {
         auto& actor = actors_[actor_index];
+        actor.muzzle_flash_remaining = std::max(0.0f, actor.muzzle_flash_remaining - tick_duration);
         if (!actor.active || actor.behavior == ActorBehavior::dead || scene_.actors[actor_index].team == 0 || health_ <= 0) { continue; }
         actor.cooldown = std::max(0.0f, actor.cooldown - tick_duration);
         actor.route_retry_time = std::max(0.0f, actor.route_retry_time - tick_duration);
@@ -138,12 +140,16 @@ void GameSimulation::advance_actors() {
             } else if (actor.behavior == ActorBehavior::attacking) { actor.behavior = ActorBehavior::investigating; }
         }
         if (actor.behavior == ActorBehavior::guarding) { advance_patrol(actor_index); continue; }
-        if (!visible || distance > 35.0f) { move_actor(actor_index, actor.last_seen_position, 1.8f); }
+        if (!visible) { move_actor(actor_index, actor.last_seen_position, 1.8f); }
         else { actor.heading = std::atan2(-to_player.x, to_player.y); }
         if (!visible) { continue; }
         actor.reaction_time += tick_duration;
         if (actor.reaction_time < 0.6f || actor.cooldown > 0) { continue; }
         actor.cooldown = 0.45f;
+        actor.muzzle_flash_remaining = 0.055f;
+        ++actor.shots_fired;
+        diagnostics::log(diagnostics::Severity::debug, "ai", "Soldier " +
+            std::to_string(scene_.actors[actor_index].identifier) + " fired shot " + std::to_string(actor.shots_fired));
         const auto definition = std::find_if(scene_.weapons.begin(), scene_.weapons.end(), [&](const auto& candidate) {
             return candidate.identifier == scene_.actors[actor_index].weapon_identifier;
         });
@@ -154,7 +160,31 @@ void GameSimulation::advance_actors() {
                                 std::sin(phase * 0.9f) * distance * 0.012f};
         const auto muzzle = actor.position + Vector3{0, 0, 1.5f};
         projectiles_.push_back({muzzle, normalized(player_eye + aim_error - muzzle), 100.0f,
-                               parameters.muzzle_velocity, parameters.damage, static_cast<int>(actor_index)});
+                               parameters.muzzle_velocity, parameters.damage * scene_.actors[actor_index].damage_scale,
+                               static_cast<int>(actor_index)});
+    }
+}
+
+void GameSimulation::advance_actor_animations() {
+    for (std::size_t actor_index = 0; actor_index < actors_.size(); ++actor_index) {
+        auto& actor = actors_[actor_index];
+        const auto& definition = scene_.actors[actor_index];
+        if (!actor.active || !definition.animations || actor.behavior == ActorBehavior::dead) { continue; }
+        const float displacement = length(actor.position - actor.animation_previous_position);
+        actor.animation_previous_position = actor.position;
+        const int identifier = actor.behavior == ActorBehavior::attacking ? 56 :
+            displacement > 0.001f ? 34 : definition.stand_animation;
+        const auto found = definition.animations->clips.find(identifier);
+        if (found == definition.animations->clips.end()) { continue; }
+        if (actor.animation_identifier != identifier) { actor.animation_identifier = identifier; actor.animation_time = 0; }
+        const auto& clip = found->second;
+        float advance = 160.0f;
+        if (displacement > 0.001f && clip.root_motion.keys.size() > 1) {
+            const auto motion = clip.root_motion.keys.back().position - clip.root_motion.keys.front().position;
+            const float distance = std::sqrt(motion.x * motion.x + motion.y * motion.y) / 4096.0f;
+            if (distance > 0.001f) { advance = displacement / distance * clip.duration; }
+        }
+        actor.animation_time = clip.duration > 0 ? std::fmod(actor.animation_time + advance, clip.duration) : 0;
     }
 }
 

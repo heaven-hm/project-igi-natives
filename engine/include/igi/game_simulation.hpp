@@ -40,6 +40,11 @@ struct ActorState final {
     Vector3 route_destination;
     float route_retry_time{};
     bool active = true;
+    Vector3 animation_previous_position{};
+    float animation_time{};
+    int animation_identifier = 2;
+    float muzzle_flash_remaining{};
+    std::uint64_t shots_fired{};
 };
 
 struct WeaponState final {
@@ -52,6 +57,8 @@ struct WeaponState final {
     std::uint64_t shots_fired{};
     std::uint64_t hits{};
     std::uint64_t kills{};
+    int animation_identifier = -1;
+    float animation_time{};
 };
 
 struct Projectile final {
@@ -89,6 +96,7 @@ class GameSimulation final : private HumanMovementWorld {
     [[nodiscard]] std::size_t inventory_size() const noexcept { return inventory_.size(); }
     [[nodiscard]] std::size_t selected_weapon_slot() const noexcept { return selected_weapon_slot_; }
     [[nodiscard]] float damage_flash_remaining() const noexcept { return damage_flash_remaining_; }
+    [[nodiscard]] const SceneWeapon* weapon_definition() const noexcept;
     [[nodiscard]] const std::vector<ActorState>& actors() const noexcept { return actors_; }
     [[nodiscard]] const CollisionWorld& world() const noexcept { return world_; }
     [[nodiscard]] std::uint64_t tick_count() const noexcept { return tick_count_; }
@@ -98,6 +106,8 @@ class GameSimulation final : private HumanMovementWorld {
     void advance_weapon(const PlayerInput& input);
     void advance_actors();
     void advance_projectiles();
+    void advance_actor_animations();
+    void advance_view_animation(const PlayerInput& input);
     void select_weapon(std::size_t slot);
     void collect_weapons();
     void advance_patrol(std::size_t actor_index);

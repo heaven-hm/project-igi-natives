@@ -80,7 +80,7 @@ RuntimeOptions parse_arguments(int argument_count, char** arguments) {
         else if (argument == "--trace") { options.trace = next_argument(); }
         else if (argument == "--profile") { options.profile = next_argument(); }
         else if (argument == "--mission") { options.mission = parse_integer(next_argument(), 1, 14); }
-        else if (argument == "--graphics") {
+        else if (argument == "--graphics" || argument == "--gfx") {
             const auto setting = next_argument();
             if (setting == "high") { options.terrain_detail = igi::gameplay::TerrainDetail::high; }
             else if (setting == "low") { options.terrain_detail = igi::gameplay::TerrainDetail::low; }
@@ -205,6 +205,10 @@ int run(RuntimeOptions options, const char* executable) {
         " from " + options.game_directory.string());
     const auto scene = igi::gameplay::load_mission(options.game_directory, options.cache_directory / "assets",
                                                 options.mission, options.terrain_detail);
+    log(Severity::information, "graphics", std::string("Terrain detail=") +
+        (options.terrain_detail == igi::gameplay::TerrainDetail::high ? "high" : "low") +
+        "; original terrain triangles=" + std::to_string(scene.terrain_triangle_count) +
+        "; viewport=" + std::to_string(options.width) + "x" + std::to_string(options.height));
     igi::gameplay::GameSimulation simulation(scene);
     igi::gameplay::InputController controls(igi::gameplay::load_input_configuration(options.game_directory, options.profile));
     igi::gameplay::SceneRenderer frame(options.width, options.height);

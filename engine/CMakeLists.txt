@@ -9,6 +9,7 @@ set_target_properties(igi_gameplay PROPERTIES CXX_EXTENSIONS OFF)
 
 find_package(SDL2 REQUIRED CONFIG)
 set(IGI_GAME_PATH "$ENV{IGI_GAME_PATH}" CACHE PATH "Original game installation for integration tests")
+set(IGI_RETAIL_PARITY_DIRECTORY "" CACHE PATH "Original and port captures required for retail fidelity verification")
 
 set(CONVERTER_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/igi_converter/source")
 add_library(igi_formats STATIC
@@ -34,6 +35,7 @@ add_library(igi_assets STATIC
     src/mission_scene.cpp
     src/mission_gameplay.cpp
     src/input_configuration.cpp
+    src/skeletal_animation.cpp
     src/terrain_surface.cpp
 )
 target_compile_features(igi_assets PUBLIC cxx_std_20)
@@ -80,6 +82,15 @@ target_compile_definitions(igi_game PRIVATE SDL_MAIN_HANDLED)
 set_target_properties(igi_game PROPERTIES CXX_EXTENSIONS OFF)
 set_target_properties(igi_game PROPERTIES OUTPUT_NAME "igi")
 
+foreach(IGI_NUMERIC_TARGET IN ITEMS igi_gameplay igi_formats igi_assets igi_runtime igi_input)
+    set_target_properties(${IGI_NUMERIC_TARGET} PROPERTIES CXX_EXTENSIONS OFF)
+    if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
+        target_compile_options(${IGI_NUMERIC_TARGET} PRIVATE -fno-fast-math -ffp-contract=off)
+    elseif(MSVC)
+        target_compile_options(${IGI_NUMERIC_TARGET} PRIVATE /fp:strict)
+    endif()
+endforeach()
+
 if(NOT APPLE)
     install(TARGETS igi_game RUNTIME DESTINATION .)
 endif()
@@ -106,6 +117,11 @@ if(APPLE)
         DESTINATION "igi.app/Contents/Resources/Licenses/igi-converter")
     install(FILES third_party/igi_converter/third_party/glm-1.0.1/copying.txt
         DESTINATION "igi.app/Contents/Resources/Licenses/glm")
+    install(FILES third_party/igi_editor/LICENSE third_party/igi_editor/LICENSE_SCOPE.md
+        third_party/igi_editor/LICENSE-PRIOR third_party/igi_editor/PROVENANCE.md
+        DESTINATION "igi.app/Contents/Resources/Licenses/igi-editor")
+    install(FILES third_party/open_igi/LICENSE
+        DESTINATION "igi.app/Contents/Resources/Licenses/open-igi")
     if(TARGET SDL3::SDL3)
         get_target_property(IGI_SDL3_LOCATION SDL3::SDL3 IMPORTED_LOCATION_RELEASE)
         if(NOT IGI_SDL3_LOCATION)
@@ -161,6 +177,13 @@ if(APPLE)
 endif()
 
 if(BUILD_TESTING)
+    add_test(NAME retail_engine_bit_exact COMMAND "${CMAKE_COMMAND}"
+        "-DPARITY_DIRECTORY=${IGI_RETAIL_PARITY_DIRECTORY}"
+        -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/VerifyRetailParity.cmake")
+    set_tests_properties(retail_engine_bit_exact PROPERTIES LABELS "retail;fidelity")
+    add_custom_target(igi_verify_retail
+        COMMAND "${CMAKE_CTEST_COMMAND}" --test-dir "${CMAKE_BINARY_DIR}" -L retail --output-on-failure
+        USES_TERMINAL)
     add_executable(mvp_assets_probe tests/mvp_assets_probe.cpp)
     target_link_libraries(mvp_assets_probe PRIVATE igi_assets)
     add_test(NAME mvp_asset_boundaries COMMAND mvp_assets_probe)
@@ -182,6 +205,9 @@ if(BUILD_TESTING)
     add_executable(mvp_input_probe tests/mvp_input_probe.cpp)
     target_link_libraries(mvp_input_probe PRIVATE igi_input)
     add_test(NAME mvp_config_input COMMAND mvp_input_probe)
+    add_executable(mvp_skeletal_probe tests/mvp_skeletal_probe.cpp)
+    target_link_libraries(mvp_skeletal_probe PRIVATE igi_runtime)
+    add_test(NAME mvp_skeletal_animation COMMAND mvp_skeletal_probe)
 
     if(IGI_GAME_PATH)
         add_test(NAME mvp_original_config_input COMMAND mvp_input_probe "${IGI_GAME_PATH}")
@@ -199,6 +225,10 @@ if(BUILD_TESTING)
             --game "${IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
         add_test(NAME igi_reject_invalid_level COMMAND igi_game window level15 --headless)
         set_tests_properties(igi_reject_invalid_level PROPERTIES WILL_FAIL TRUE)
+        add_test(NAME igi_graphics_alias COMMAND igi_game window level2 --gfx high --headless --frames 1
+            --game "${IGI_GAME_PATH}" --cache "${CMAKE_CURRENT_BINARY_DIR}/test-cache")
+        add_test(NAME igi_reject_invalid_graphics COMMAND igi_game --graphics invalid --headless)
+        set_tests_properties(igi_reject_invalid_graphics PROPERTIES WILL_FAIL TRUE)
     endif()
 
     add_executable(human_movement_integrator_probe

@@ -1,6 +1,8 @@
 #include "igi/mission_gameplay.hpp"
 
 #include "igi/diagnostics.hpp"
+#include "igi/skeletal_animation.hpp"
+#include "igi/input_configuration.hpp"
 #include "graph_parser.h"
 #include "qvm_parser.h"
 
@@ -100,6 +102,21 @@ void load_mission_gameplay(gameplay::MissionScene& scene, MissionAssets& library
                           const std::array<double, 3>& origin, const std::vector<ScriptCall>& calls) {
     load_graphs(scene, mission_directory, origin, calls);
     const auto enabled_tasks = gameplay_task_mask(calls);
+    std::unordered_map<int, std::shared_ptr<gameplay::SkeletalAnimationSet>> animation_sets;
+    const auto configuration_bytes = read_file(resolve_path(scene.game_directory, "config.qvm"));
+    const QvmInitializer configuration_script{BinaryView(configuration_bytes)};
+    const auto configuration = gameplay::parse_input_configuration(configuration_script.calls());
+    const auto settings_bytes = read_file(resolve_path(scene.game_directory, "common/ai/settings.qvm"));
+    const QvmInitializer settings_script{BinaryView(settings_bytes)};
+    std::unordered_map<std::string, float> damage_scales;
+    for (const auto& call : settings_script.calls()) {
+        if (call.function == "Task_New" && call.arguments.size() > 5 && call.arguments[1].text == "HumanAIConfigItem" &&
+            call.arguments[4].text == configuration.difficulty) {
+            const float scale = static_cast<float>(call.arguments[5].number);
+            if (!std::isfinite(scale) || scale < 0 || scale > 10) { throw std::runtime_error("Original AI damage scale is invalid"); }
+            damage_scales[call.arguments[3].text] = scale;
+        }
+    }
     std::unordered_set<std::string> owned_weapons;
     std::unordered_map<std::string, std::uint32_t> ammunition;
     for (const auto& call : calls) {
@@ -138,10 +155,26 @@ void load_mission_gameplay(gameplay::MissionScene& scene, MissionAssets& library
                 diagnostics::log(diagnostics::Severity::information, "scene", "Disabled cutscene actor " + std::to_string(actor->identifier));
                 continue;
             }
+            if (call.arguments.size() > 10) {
+                actor->skeleton_identifier = static_cast<int>(call.arguments[9].number);
+                actor->stand_animation = static_cast<int>(call.arguments[10].number);
+                if (actor->stand_animation < 0) { actor->stand_animation = 2; }
+                if (actor->skeleton_identifier >= 0) {
+                    if (!animation_sets.contains(actor->skeleton_identifier)) {
+                        auto filename = std::to_string(actor->skeleton_identifier);
+                        while (filename.size() < 3) { filename.insert(filename.begin(), '0'); }
+                        animation_sets[actor->skeleton_identifier] = gameplay::load_skeletal_animations(
+                            resolve_path(scene.game_directory, "common/anims/" + filename + ".iff"));
+                    }
+                    actor->animations = animation_sets.at(actor->skeleton_identifier);
+                }
+            }
             for (const auto& argument : call.arguments) {
                 const auto* child = child_call(argument, calls);
                 if (child == nullptr || child->arguments.size() < 5) { continue; }
                 if (child->arguments[1].text == "HumanAI") {
+                    const auto scale = damage_scales.find(child->arguments[3].text);
+                    if (scale != damage_scales.end()) { actor->damage_scale = scale->second; }
                     actor->navigation_graph_identifier = static_cast<int>(child->arguments[4].number);
                     actor->patrol_path_identifier = patrol_identifier(mission_directory, static_cast<int>(child->arguments[0].number));
                 } else if (child->arguments[1].text.starts_with("Gun")) {
@@ -185,9 +218,17 @@ void load_mission_gameplay(gameplay::MissionScene& scene, MissionAssets& library
             weapon.ammunition_identifier = ammunition_key;
             weapon.initial_reserve = ammunition.contains(ammunition_key) ? ammunition.at(ammunition_key) : 0;
             weapon.mesh = library.model(arguments[29].text);
+            if (arguments.size() > 36) {
+                weapon.stand_animation = static_cast<int>(arguments[31].number);
+                weapon.move_animation = static_cast<int>(arguments[32].number);
+                weapon.fire_animation = static_cast<int>(arguments[33].number);
+                weapon.reload_animation = static_cast<int>(arguments[36].number);
+            }
             scene.weapons.push_back(std::move(weapon));
         }
     }
+    scene.first_person_mesh = library.model("005_01_1");
+    scene.first_person_animations = gameplay::load_skeletal_animations(resolve_path(scene.game_directory, "common/anims/005.iff"));
     diagnostics::log(diagnostics::Severity::information, "gameplay-data", "Loaded " +
         std::to_string(scene.patrol_paths.size()) + " patrol paths, " + std::to_string(scene.weapons.size()) +
         " weapon definitions; player owns " + std::to_string(owned_weapons.size()) + " weapons");

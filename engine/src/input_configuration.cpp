@@ -34,6 +34,8 @@ InputConfiguration parse_input_configuration(const std::vector<assets::ScriptCal
                 throw std::runtime_error("Config mouse sensitivity is invalid");
             }
             profile.mouse_sensitivity = sensitivity;
+        } else if (call.function == "GOGameDiff" && call.arguments.size() == 1) {
+            profile.difficulty = call.arguments[0].text;
         }
     }
     if (!requested_profile.empty()) {

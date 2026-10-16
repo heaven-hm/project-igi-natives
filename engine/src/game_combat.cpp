@@ -1,6 +1,7 @@
 #include "igi/game_simulation.hpp"
 
 #include "igi/diagnostics.hpp"
+#include "igi/skeletal_animation.hpp"
 
 #include <algorithm>
 #include <limits>
@@ -77,6 +78,22 @@ void GameSimulation::advance_weapon(const PlayerInput& input) {
     } else if (!input.firing) {
         weapon_.cooldown = std::max(weapon_.cooldown, 0.0f);
     }
+}
+
+void GameSimulation::advance_view_animation(const PlayerInput& input) {
+    const auto* definition = weapon_definition();
+    if (definition == nullptr || !scene_.first_person_animations) { return; }
+    const auto& clips = scene_.first_person_animations->clips;
+    const bool firing = weapon_.muzzle_flash_remaining > 0.05f;
+    int animation = input.forward != 0 || input.sideways != 0 ? definition->move_animation : definition->stand_animation;
+    if (weapon_.reload_remaining > 0) { animation = definition->reload_animation; }
+    else if (firing) { animation = definition->fire_animation; }
+    else if (weapon_.animation_identifier == definition->fire_animation && clips.contains(weapon_.animation_identifier) &&
+             weapon_.animation_time + 160 < clips.at(weapon_.animation_identifier).duration) { animation = weapon_.animation_identifier; }
+    if (!clips.contains(animation)) { return; }
+    if (weapon_.animation_identifier != animation || firing) { weapon_.animation_identifier = animation; weapon_.animation_time = 0; }
+    else { weapon_.animation_time += 160; }
+    if (clips.at(animation).duration > 0) { weapon_.animation_time = std::fmod(weapon_.animation_time, clips.at(animation).duration); }
 }
 
 void GameSimulation::advance_projectiles() {

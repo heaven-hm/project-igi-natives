@@ -13,6 +13,7 @@ struct InputConfiguration final {
     std::unordered_map<std::string, InputBinding> bindings;
     float mouse_sensitivity = 0.4f;
     bool invert_mouse{};
+    std::string difficulty = "GD_2";
 };
 
 [[nodiscard]] InputConfiguration parse_input_configuration(const std::vector<assets::ScriptCall>& calls,

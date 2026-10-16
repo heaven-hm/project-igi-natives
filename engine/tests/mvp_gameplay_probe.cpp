@@ -70,6 +70,15 @@ int main() {
                 combat.actors().front().behavior == ActorBehavior::dead,
                 "Projectiles must damage and defeat the target");
         require(combat.health() < 3, "Visible soldier must acquire and damage the player");
+        auto distant_scene = make_scene(true, false);
+        distant_scene.actors.front().position.y = 45;
+        GameSimulation distant_combat(distant_scene);
+        const auto guard_start = distant_combat.actors().front().position;
+        for (int tick_index = 0; tick_index < 75; ++tick_index) { distant_combat.tick({}); }
+        require(distant_combat.actors().front().shots_fired > 0,
+                "A visible armed guard must produce observable firing events");
+        require(length(distant_combat.actors().front().position - guard_start) < 0.01f,
+                "A guard with a clear firing line must hold its firing position rather than chase-run");
         input = {};
         input.reloading = true;
         combat.tick(input);

@@ -1,4 +1,5 @@
 #include "igi/scene_renderer.hpp"
+#include "igi/skeletal_animation.hpp"
 
 #include <algorithm>
 #include <array>
@@ -232,6 +233,7 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
     const Vector3 up = normalized(cross(right, forward));
     const float focal_length = static_cast<float>(width_) * (simulation.aiming() ? 0.85f : 0.55f);
     for (const auto& surface : scene.static_triangles) {
+        if (surface.firing_only) { continue; }
         triangle(surface, scene.textures, camera, right, up, forward, focal_length);
     }
     for (std::size_t actor_index = 0; actor_index < simulation.actors().size(); ++actor_index) {
@@ -240,9 +242,13 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
         if (!actor.active || !mesh || length(actor.position - camera) > 450) { continue; }
         const float cosine = std::cos(actor.heading);
         const float sine = std::sin(actor.heading);
+        const auto& animations = scene.actors[actor_index].animations;
+        const auto pose = animations && actor.behavior != ActorBehavior::dead ?
+            sample_bone_pose(*animations, actor.animation_identifier, actor.animation_time) : std::vector<glm::mat4>{};
         for (auto surface : mesh->triangles) {
+            if (surface.firing_only && actor.muzzle_flash_remaining <= 0) { continue; }
             for (auto& vertex : surface.vertices) {
-                auto position = vertex.position;
+                auto position = skin_vertex(vertex, pose);
                 if (actor.behavior == ActorBehavior::dead) { position = {position.x, position.z, 0.1f - position.y}; }
                 vertex.position = {position.x * cosine - position.y * sine + actor.position.x,
                                    position.x * sine + position.y * cosine + actor.position.y,
@@ -250,19 +256,61 @@ void SceneRenderer::render(const MissionScene& scene, const GameSimulation& simu
             }
             triangle(surface, scene.textures, camera, right, up, forward, focal_length);
         }
+        if (actor.behavior != ActorBehavior::dead && pose.size() > 22) {
+            const auto weapon = std::find_if(scene.weapons.begin(), scene.weapons.end(), [&](const auto& candidate) {
+                return candidate.identifier == scene.actors[actor_index].weapon_identifier;
+            });
+            if (weapon != scene.weapons.end() && weapon->mesh) {
+                for (auto surface : weapon->mesh->triangles) {
+                    if (surface.firing_only && actor.muzzle_flash_remaining <= 0) { continue; }
+                    for (auto& vertex : surface.vertices) {
+                        const auto local = pose[22] * glm::vec4(vertex.position.x, vertex.position.y, vertex.position.z, 1);
+                        vertex.position = {local.x * cosine - local.y * sine + actor.position.x,
+                                           local.x * sine + local.y * cosine + actor.position.y,
+                                           local.z + actor.position.z};
+                    }
+                    triangle(surface, scene.textures, camera, right, up, forward, focal_length);
+                }
+            }
+        }
     }
     const auto equipped_mesh = simulation.weapon_mesh();
     if (equipped_mesh && simulation.health() > 0) {
         std::fill(depth_.begin(), depth_.end(), 0.0f);
-        const float reload_drop = simulation.weapon().reload_remaining > 0 ? 0.35f : 0;
-        for (auto surface : equipped_mesh->triangles) {
-            for (auto& vertex : surface.vertices) {
-                vertex.position = {vertex.position.x + (simulation.aiming() ? 0 : 0.22f),
-                                   vertex.position.z - 0.31f - reload_drop,
-                                   vertex.position.y + 0.55f};
+        if (scene.first_person_mesh && scene.first_person_animations && simulation.weapon().animation_identifier >= 0) {
+            const auto pose = sample_bone_pose(*scene.first_person_animations,
+                simulation.weapon().animation_identifier, simulation.weapon().animation_time, true);
+            const auto offset = sample_animation_root(*scene.first_person_animations,
+                simulation.weapon().animation_identifier, simulation.weapon().animation_time);
+            const float view_focal_length = static_cast<float>(width_) / (2 * 0.57735026f);
+            for (auto surface : scene.first_person_mesh->triangles) {
+                for (auto& vertex : surface.vertices) {
+                    const auto position = skin_vertex(vertex, pose) + offset;
+                    vertex.position = {position.x, position.z, position.y};
+                }
+                triangle(surface, scene.textures, {}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1}, view_focal_length, true);
             }
-            triangle(surface, scene.textures, {}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1},
-                     static_cast<float>(width_) * 0.55f, true);
+            if (pose.size() > 3) {
+                for (auto surface : equipped_mesh->triangles) {
+                    if (surface.firing_only && simulation.weapon().muzzle_flash_remaining <= 0) { continue; }
+                    for (auto& vertex : surface.vertices) {
+                        const auto local = pose[3] * glm::vec4(vertex.position.x, vertex.position.y, vertex.position.z, 1);
+                        const auto position = Vector3{local.x, local.y, local.z} + offset;
+                        vertex.position = {position.x, position.z, position.y};
+                    }
+                    triangle(surface, scene.textures, {}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1}, view_focal_length, true);
+                }
+            }
+        } else {
+            const float reload_drop = simulation.weapon().reload_remaining > 0 ? 0.35f : 0;
+            for (auto surface : equipped_mesh->triangles) {
+                if (surface.firing_only && simulation.weapon().muzzle_flash_remaining <= 0) { continue; }
+                for (auto& vertex : surface.vertices) {
+                    vertex.position = {vertex.position.x + (simulation.aiming() ? 0 : 0.22f),
+                                       vertex.position.z - 0.31f - reload_drop, vertex.position.y + 0.55f};
+                }
+                triangle(surface, scene.textures, {}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1}, static_cast<float>(width_) * 0.55f, true);
+            }
         }
     }
     const int center_x = width_ / 2;

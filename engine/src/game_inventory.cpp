@@ -6,6 +6,10 @@
 
 namespace igi::gameplay {
 
+const SceneWeapon* GameSimulation::weapon_definition() const noexcept {
+    return inventory_.empty() ? nullptr : &scene_.weapons[inventory_[selected_weapon_slot_].definition_index];
+}
+
 const WeaponParameters& GameSimulation::weapon_parameters() const noexcept {
     return inventory_.empty() ? scene_.weapon_parameters :
         scene_.weapons[inventory_[selected_weapon_slot_].definition_index].parameters;
@@ -31,6 +35,8 @@ void GameSimulation::select_weapon(std::size_t slot) {
     weapon_.kills = previous.kills;
     weapon_.hit_marker_remaining = 0;
     weapon_.muzzle_flash_remaining = 0;
+    weapon_.animation_identifier = -1;
+    weapon_.animation_time = 0;
     diagnostics::log(diagnostics::Severity::information, "inventory", "Selected slot " +
         std::to_string(slot + 1) + ": " + weapon_parameters().name);
 }

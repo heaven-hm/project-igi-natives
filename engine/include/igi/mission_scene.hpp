@@ -154,6 +154,7 @@ struct MissionScene final {
     std::size_t maximum_attachment_depth{};
     std::shared_ptr<SceneMesh> first_person_mesh{};
     std::shared_ptr<SkeletalAnimationSet> first_person_animations{};
+    std::size_t terrain_triangle_count{};
 };
 
 [[nodiscard]] MissionScene load_mission(const std::filesystem::path& game_directory,

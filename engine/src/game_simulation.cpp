@@ -111,6 +111,8 @@ void GameSimulation::restart() {
         actor.last_seen_position = position;
         actor.heading = original_actor.heading;
         actor.active = original_actor.gameplay_enabled;
+        actor.animation_previous_position = position;
+        actor.animation_identifier = original_actor.stand_animation;
         actors_.push_back(std::move(actor));
     }
     diagnostics::log(diagnostics::Severity::information, "gameplay", "Mission initialized; player grounded on original collision geometry");
@@ -158,8 +160,10 @@ void GameSimulation::tick(const PlayerInput& input) {
         if (input.interacting) { collect_weapons(); }
         advance_player(input);
         advance_weapon(input);
+        advance_view_animation(input);
     }
     advance_actors();
+    advance_actor_animations();
     advance_projectiles();
     fire_was_pressed_ = input.firing;
     ++tick_count_;
