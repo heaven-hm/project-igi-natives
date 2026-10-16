@@ -1,0 +1,4 @@
+/build/
+/cmake_build/
+/libiginatives.dylib
+/igi_natives_runner
