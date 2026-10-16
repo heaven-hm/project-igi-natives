@@ -1,71 +1,61 @@
-# Native gameplay MVP status
+# Experimental gameplay status
 
-Measured on 2026-10-16 in `/Users/haseeb-mir/Documents/Code/project-igi-natives`.
+Updated 2026-10-16. Actual source tree: `/Users/haseeb-mir/Documents/Code/project-igi-natives`, branch `feature/native-gameplay-mvp`. The other active agent uses a separate repository/worktree; see [AGENT_COORDINATION.md](AGENT_COORDINATION.md).
 
-## Implemented prototype
+## Acceptance status
 
-- Native macOS arm64 application, CMake packaging, local code signing, SDL window/input/presentation, and a 30 Hz simulation loop.
-- Direct reuse of the converter's complete parser directory: 52 source/header files copied unchanged, with SHA-256 manifest and license notices. The runtime builds the MEF, TEX, RES, DAT, MTP, IFF, and QVM parser units it needs. Other copied parser units are available for later integration.
-- Level 1 `OBJECTS.QVM` initializer evaluation, original player spawn, resource archives, MTP material mappings, terrain CTR/CMD geometry, BIT material masks, HMP displacement, terrain QVM material bands and tile maps, original MEF geometry/collision, and original TEX pixels.
-- Original mode-2 ARGB1555 color and transparency decoding, perspective texturing, depth testing, near-plane clipping, bilinear sampling, and SDL frame presentation. Rendering is currently on the CPU.
-- Original player root-motion clips, Hermite sampling, loop seam handling, root-motion scale, jump parameters, airborne gravity, and the existing C++ translation of the movement integrator.
-- Triangle BVH queries, capsule collision, wall sliding, ground contact, steps, jumping, crouching, and player/actor separation.
-- MP5 script parameters, magazine/reserve ammunition, fire timing, finite-speed swept projectiles, occlusion, damage, reload, death, and restart.
-- Basic guards with vision, line-of-sight, shot investigation, movement, combat, and death. This is a provisional AI implementation.
-- Timestamped diagnostics, verbose logging, bounded execution, replay input, CSV state output, and BMP frame capture.
+Original gameplay equivalence is **NOT VERIFIED**. Sound, menus, exact text drawing, and cutscenes are deferred by the owner. Other gameplay requirements remain active. Functional regressions passing does not establish matching original behavior.
 
-## Measured Level 1 content
+## Implemented and checked
 
-| Item | Count |
+- Original converter parsers: 52 files copied unchanged, with the existing SHA manifest and notices. No proprietary assets are committed or embedded.
+- Native macOS C++20 loop, original mission selection, config.qvm input profiles, timestamped logs, replay, state trace, screenshot, and bounded execution.
+- Original terrain/models/textures, original movement parameters/root tracks, capsule world collision, jump/crouch, several original weapons, shared ammunition, pickups, simplified projectiles/health/combat.
+- Original navigation graphs and authored patrol commands; basic perception and combat. AI scheduling and combat policy remain provisional.
+- Recursive visual MEF ATTA transforms, a 32-level/cycle guard, invisible death-zone suppression, and firing-only GUNFLAME classification from original magicobj.qvm.
+- Original body and first-person hand rigs, hierarchical skinning and quaternion/tangent sampling, script-selected idle/move/fire/reload view clips, bone attachments. Exact animation transitions, aiming, hit/death sequences and weapon-part motion remain incomplete.
+- Cinematic branches are suppressed during gameplay-only startup. Level 2 Jones actor 333 is inactive. This suppression is not a complete original conditional interpreter or intro/outro lifecycle.
+
+## Latest bug corrections
+
+1. Building openings: preserve TAMC portal metadata and skip non-solid portals for capsule movement and generic sight/projectile casts. The movement adapter now uses original collision mesh level 1, keeping sight/projectile geometry separate at level 0. A stronger integration replay walks through an original Level 2 opening in both directions for 15 simulation ticks and stays grounded; it uses the full translated collision scene with combat isolated. A bare capsule-plane crossing was insufficient and has been replaced. This does not verify every building, dynamic doors, the full native query dispatch, ladders, or elevators.
+2. Muzzle effects: gun-flame attachments are hidden while idle, shown during a shot, then hidden again. They contribute no solid collision. Synthetic rendered checks and original AK47 attachment classification pass.
+3. Enemy firing: shots and damage already occurred, but only idle/walk poses were displayed. Firing events now have counters, debug logs, muzzle visibility and soldier firing pose 56 from the original state table. Clear-sight combat holds position rather than applying the previous chase movement above 35 metres. Full original tactical/burst behavior remains unverified.
+4. Graphics controls: accept both `--graphics high` and `--gfx high` after macOS `open --args`. Log actual terrain detail, triangle count and viewport. High/low original terrain density differs in regression tests. Retail lightmaps, material blending, sky, shadows and lighting remain incomplete; this setting does not fix all visual differences.
+
+## Measured original Level 2
+
+| Item | Measurement |
 | --- | ---: |
-| Indexed original resources | 1,237 |
-| Model material mappings | 730 |
-| Loaded nearby objects including soldiers | 439 |
-| Loaded soldiers | 28 |
-| Loaded textures including fallback | 245 |
-| Player root-motion clips | 122 |
-| Terrain triangles | 28,614 |
-| Total render triangles | 51,946 |
-| Total collision triangles | 54,601 |
-| Missing model errors | 0 |
+| Soldier declarations / active gameplay guards | 25 / 22 |
+| Navigation graphs / nodes / patrol paths | 14 / 465 / 22 |
+| Initial supported weapons | 3 |
+| Body rig bones / clips | 33 / 95 |
+| First-person hand rig bones / clips | 56 / 78 |
+| Visual recursive ATTA instances / maximum depth | 98 / 2 |
+| High-detail terrain triangles | 351,509 |
+| Total static render triangles in current probe | 375,034 |
+| Non-solid portal faces / grounded traversal directions checked | 148 / 2 |
+| Guards moving more than 0.5 metres in 300 ticks | 6 |
+| Enemy shots in that 300-tick scenario | 21 |
+| Ending player health in that scenario | 2.85 / 3 |
 
-The initializer contains 29 soldier declarations; one lies outside the prototype's loaded area. The scene deliberately loads a bounded area around the original spawn.
+The count and health results describe this deterministic prototype scenario, not an original-game trace. No passive damage occurs in a 600-tick enemy-free regression. Actual enemy fire can still reduce health.
 
-## Verification
+## Current verification
 
-- Release build: Apple Clang 16.0.0, C++20, arm64 macOS 15.3.1. Individual authored translation units were compiled with strict warnings during implementation.
-- Standalone CTest: 7/7 passed. Optional recovered-C configuration: 16/16 passed.
-- AddressSanitizer and UndefinedBehaviorSanitizer: 5/5 MVP probes passed, including the original-level integration scenario. Leak detection was disabled; it is not a leak audit.
-- Static analyzer: authored asset readers, scene adapters, terrain surface, collision, player simulation, combat, and renderer checked with Apple Clang. One unused combat assignment was removed after the analyzer reported it.
-- Negative checks cover truncated formats, invalid bounds, unsafe paths, unsupported QVM opcodes, recursive initializer limits, invalid texture data/indices, and non-finite collision input.
-- Component checks cover root-motion scaling and looping, jumping/landing, crouch height, floor/wall/ceiling collision, thin-wall tunneling, wall sliding, magazine limits, reload timing, AI stimulus/combat, projectile occlusion, damage/death, restart, and deterministic simulation.
-- The original-level probe moved, jumped, landed, aimed at original soldier **3031** at **59.1427 m**, and defeated him with **21 shots / 20 hits**. This verifies the prototype's integrated loop using original assets.
-- A staged, signed bundle opened a real macOS SDL window and replayed the same encounter for **120 rendered frames**. It ended with **21 shots, 20 hits, one defeated soldier**, and player health **2.39999962 / 3**. The observed run took **3.359464 s**, about **35.7 frames/s** at 800×600. This is one local run, not a comprehensive performance benchmark.
-- The bundle includes SDL2 and SDL3 rather than depending on Homebrew installation paths. `codesign --verify --deep --strict` passed.
+- Clean committed-source archive and working-tree Release functional suite: **16/16 passed** after portal, muzzle, firing-presentation and graphics-option changes.
+- AddressSanitizer + UndefinedBehaviorSanitizer: **10/10 MVP probes passed**, including original Levels 1 and 2. Leak detection disabled; this is not a leak audit.
+- Clang static analyzer: **13 authored translation units checked**, no diagnostics reported.
+- Focused doorway, idle/fire/flame expiry and clear-line guard tests failed before their fixes and passed afterward.
+- Original executable runtime capture: eight IGIProbe hooks armed with no SKIP records; 63 animation-state and 46 first-call movement/ground observations recorded. A separate controlled-input attempt armed nine hooks and logged ten accepted input edges, but yielded only one player-update and one player-integrator snapshot. No controlled trajectory, combat event, phase alignment, or matching port trace was established. Details and limitations are in [VERIFICATION.md](VERIFICATION.md).
+- Required retail CTest gate: **FAILED**, because original/port matching capture evidence is missing. Full CTest is not green; functional-only `-LE retail` deliberately excludes this gate.
+- Strict signature verification passed for the clean installed bundle and the isolated latest candidate. The corrected candidate completed a 300-tick headless run and a 60-frame direct-executable GUI run (90 simulation ticks) cleanly. LaunchServices startup of the newly signed candidate stalled in an OS file-open request; it was sampled and cleaned up, not counted as a passing launch. macOS TCC logged an access request for that candidate. The direct launch succeeded without changing OS permissions.
 
-## Delivered application
+Earlier Level 1 documentation used actor **3031** as a target in a 21-shot kill. That actor is cinematic. The earlier result is invalid as evidence of an ordinary gameplay encounter; the current integration test requires 3031 to remain disabled and selects only active gameplay guards.
 
-Installed at `/Users/haseeb-mir/Downloads/IGI/igi.app` (approximately 3.4 MiB). It discovers the original assets beside the bundle without `--game`. A second installed-window replay completed 120 frames in 2.327814 seconds with 21 shots, 20 hits, one defeated soldier, magazine 11, reserve 49, and health 2.39999962.
+## Delivery and remaining work
 
-A clean archive of source commit `01f8cf5` built the standalone MVP and passed all seven tests without the untracked generated-native research files. The final packaging adjustment strips FinderInfo/ResourceFork metadata before signing. Deployment uses `ditto --norsrc --noextattr` so synced-folder metadata is not carried into Downloads. Strict signature verification passed again after the installed runtime test.
+The latest candidate is `/tmp/igi-native-candidate/igi.app`. The last shared Downloads installation predates these newest portal/flame/firing corrections. Further shared-app replacement is pending the owner's choice between the two active source projects. No push was performed.
 
-The app also launched through macOS Launch Services with its default game and cache paths. macOS requested Downloads access for the locally built application; access was allowed for loading the specified game assets. It then completed 90 rendered frames, wrote a state trace and frame capture, and shut down cleanly. Its default log is `/Users/haseeb-mir/Library/Application Support/HeavenHM/ProjectIGI/igi.log`.
-
-Local captures, recorded input, state traces, clean-source test output, sanitizer test output, and combined research/MVP test output are under `dist/verification/`. The delivered captures include `installed-frame.png` and `spawn.png`. This directory is ignored by Git. Invalid frame counts, missing asset directories, and malformed replay rows were also checked to return failure with timestamped diagnostics.
-
-## Fidelity evidence and limits
-
-Reference executable: `/Users/haseeb-mir/Downloads/IGI/igi.exe`, SHA-256 `dea34892d417715873ea61d7b2ba5556655f1ad65385104348146f9679915a01`.
-
-The existing movement translation and its REA evidence are described in [VERIFICATION.md](VERIFICATION.md). The MVP samples original player and weapon QVM values and original IFF root tracks rather than assigning walking speeds. An independent radare2 check at `0x00410070` identified a 326-byte, five-block parameter routine and the original conversion constants at `0x005334A4` and `0x005334A0`. The live REA session was on the matching executable but did not expose a procedure at that address; a new dual-provider verification gate was therefore not established for that routine.
-
-This release does **not** establish 70% or 100% behavioral parity. No retail-versus-port runtime trace comparison was completed in this session. Remaining work includes:
-
-- Matching the capsule, step, camera, slope, roof, and separation behavior to complete retail wall/ground-query and movement-state traces. The current collision provider is authored C++ over real geometry.
-- Retail weapon spread, recoil, damage details, projectile gravity, inventory, weapon switching, and animation event timing. The MVP uses straight swept projectiles and simplified damage application.
-- Retail AI task execution, authored patrols, navigation graphs, cover, perception constants, and full combat behavior. Current AI thresholds and movement are provisional.
-- Skeletal character/weapon animation, full orientation and hierarchy handling, dynamic doors, vehicles, ladders, interactions, mission objectives, and general QVM runtime execution. The QVM reader currently evaluates initialization declarations.
-- Original lighting/lightmaps, terrain material blending and LOD morphing, mip selection, sky, and complete DX7 rendering equivalence.
-- Sound, menus, other mission verification, Windows/Linux builds, and broad hardware/performance testing.
-
-Sound and menus remain deferred under the gameplay-first scope. The prototype is playable; full engine equivalence remains unfinished.
+Highest-priority gaps: original runtime/memory capture; full collision/query semantics and building/door coverage; correct AI task/state/burst execution; weapon recoil/spread/ballistics; full skeletal transitions and hit/death animation; general QVM execution and mission objectives; original lighting/materials and rendering. Windows/Linux remain untested targets. See [MVP_PLAN.md](MVP_PLAN.md) and [FIDELITY_REQUIREMENTS.md](FIDELITY_REQUIREMENTS.md).

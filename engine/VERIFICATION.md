@@ -2,7 +2,7 @@
 
 ## Current native gameplay MVP
 
-The application now loads and runs the original Level 1 scene. The current test results, runtime encounter, bundle checks, and explicit fidelity gaps are recorded in [MVP_STATUS.md](MVP_STATUS.md). The shell-only observations below are historical component checks from before that integration.
+The current application loads original Levels 1 and 2, including recursive attachments and skeletal hand/body rigs. Current results, bug corrections, known limits and the failed retail gate are in [MVP_STATUS.md](MVP_STATUS.md). The active scope and acceptance contract are [MVP_PLAN.md](MVP_PLAN.md) and [FIDELITY_REQUIREMENTS.md](FIDELITY_REQUIREMENTS.md). The sections below are historical component checks; statements that the app is only a shell or lacks world providers describe that earlier revision. They are not current status. No historical startup or synthetic check establishes original-versus-port parity.
 
 ## Native application loop
 
@@ -117,3 +117,50 @@ not provide gameplay runtime evidence.
 
 CrossOver replay of the original remains necessary before movement, weapon,
 collision, animation, or sound behavior can be called runtime-verified.
+
+## Gameplay update: attachments, animation, portals and firing
+
+Reference hash was rechecked on 2026-10-16 and still matches the SHA-256 above. This update uses C++20 in the native engine; references to the separate OpenIGI C# implementation are cross-checks, not a new runtime dependency.
+
+- Recursive ATTA transforms and rest-bone skinning were adapted from the editor and OpenIGI references listed in `third_party/igi_editor/PROVENANCE.md`; converter parser copies were preserved unchanged.
+- Original `magicobj/magicobj.qvm` declares `TASKTYPE_GUNFLAME` for models `1000_01_1`, `1005_01_1`, `1007_01_1`, `1008_01_1`, and `1010_01_1`. These attachments retain firing-only visibility and no longer contribute collision. The renderer regression checks idle, shot and expiry states. The timing remains provisional until aligned original captures exist.
+- Original TAMC materials retain `portal != 0xffff` non-solid metadata. The previous adapter ignored it and treated every ECFC face as a wall. Capsule and generic ray queries now skip those openings. A failing synthetic crossing test passes after the change; the original Level 2 integration probe crosses at least one portal in the full scene and counts 148 such faces. This is an asset/integration result, not complete original movement verification. A follow-up correction loads original movement collision mesh level 1 separately from level 0 sight/projectile geometry. Dynamic doors, complete native query dispatch and special portal visibility rules still need verification.
+- Original soldier table `0x0053ed10` entry 6 contains animation 56, mode 1, independently read with radare2. The renderer now selects that clip for attacking guards and exposes shot/muzzle events instead of showing only stand/walk. Ghidra has no procedure at `0x0045b060`; REA returned an explicit error. radare2 identifies a 289-byte, 14-block candidate there. No dual-provider translation of that handler or complete combat-state equivalence is claimed.
+- Quaternion blend `0x004d4500`: REA evidence `ev_33955caea00f4397dd4d7933d75461a1f515a22287aa1276a5b39c27f3a98e67`. radare2 reports 391 bytes / 13 blocks. Rotation sampler `0x004d5180`: Binary Ninja and radare2 both report 1,394 bytes / 53 blocks; Ghidra has no procedure at that address. That missing-provider limitation remains open. Tangent direction, quaternion sign, short-angle path and loop cases have synthetic tests; bit-exact poses do not yet have matched retail captures.
+- Input registrar evidence: `ev_d231cf4ffcaa1d0c797c2f365c91618d1fcc80e9f55bfa36ccdc84d1cea9aebd`, containing function `0x00402ff0`; GOInRemap string `0x0053324c` and xrefs are preserved in earlier local evidence. Numeric keyboard/mouse bindings are read from original config data.
+- Weapon cycling research only: REA/Ghidra identifies `0x0040f760`, 451 bytes / 37 blocks, dossier `ev_e20fcff877d48d2e50c82089bae9e0bb62121571716862f48f5c6097755cfb66`, pseudocode `ev_09a00b71a702c9dd7892a504c9f89deddd8a16560bf4bd12f7b5c2703226f49e`. radare2 independently reports the same boundary/size/block count (count score 1.0, not semantic proof). It cycles the original global weapon list and skips unowned/unselectable records. This investigation has not yet replaced the prototype inventory-order cycling.
+
+REA's original CrossOver process-capture attempt failed process-ownership cleanup validation and produced no accepted retail capture. Reported PIDs were checked as pre-existing Chrome processes; none was terminated. The available host Frida autonomy workflow is arm64 Mach-O only and cannot establish original PE32-under-Wine gameplay behavior. Existing IGIProbe HOOK startup lines prove setup only. The retail gate consequently remains failed.
+
+Functional, sanitizer, analyzer and failing-retail logs are retained locally under ignored `dist/verification/gameplay-bugs/`. Current counts are in [MVP_STATUS.md](MVP_STATUS.md). Sound/cutscene/menu/text work is explicitly deferred; the gate requires 17 gameplay scenarios and accepts no synthetic replacement for original traces.
+
+### Grounded building-entry follow-up
+
+A stricter floor-aware portal test initially failed. Projecting an isolated capsule through a portal plane did not reproduce the full movement loop's step/ground behavior. The corrected test uses original root tracks, the complete translated scene, and 15 forward-input ticks in each direction; both directions finish across the opening and grounded. It does not teleport the live application or substitute a fabricated doorway.
+
+Original wall-query assembly at `0x00461a70` records `PUSH 1` at `0x00461d3d` before dispatch to `0x004cdb20` at `0x00461d71`; REA assembly evidence `ev_169b6ae80e97eb4a42b6eb2ed048dada0bf768fda9e2f2343a4bb7d3c248099e`, pseudocode `ev_db777e56eb27416e6d076dcf16534daac1152765101d622a664dc663f04290c2`. radare2 independently decodes the containing function and same call sequence. The dispatcher has nine arguments and preserves its final argument in the collision query state: REA `ev_a7fe91b77f871e9aafedf10495012009c25d2aa246d454dbebf2132065266621`. The separate reference implementation identifies this slot as the movement mesh level. The helper at `0x00416850` is only a six-byte global-byte getter in both providers; nested-looking pseudocode arguments are not evidence that helper consumes the pre-pushed dispatcher arguments.
+
+The engine now keeps original ECFC/XTVC/TAMC level 1 movement geometry separate from level 0 generic traces. A synthetic regression also checks that a default trace hull can remain opaque while the movement mesh allows traversal. This preserves query separation; it is not a translation or runtime verification of the full original dispatcher.
+
+### Original executable runtime observations, 2026-10-16
+
+A subsequent direct Windows x86 IGIProbe capture succeeded where the earlier REA process wrapper had failed ownership validation. This is a local original-executable observation, not an accepted original-versus-port comparison and not a replacement REA evidence ID.
+
+- Staging: `/tmp/igi-retail-gameplay-capture-full/`; retained logs, source and manifest: ignored `dist/verification/gameplay-bugs/original-runtime/`.
+- The staged `igi.exe` hash equals the unchanged original reference hash. The original Downloads executable and its pre-existing `igi-probe.log` hashes were checked again and remained unchanged. Existing probe-log SHA-256: `f975c7eeb74ba8aa0a03b0ef273643b2b2f9fe7e30894c5e59b8b15638a09982`.
+- Existing OpenIGI x86 probe sources were staged and built with installed `i686-w64-mingw32-g++`, C++20, static compiler runtimes. The injector was adapted to retain the process handle, explicitly set the hook selection and sample rate, use the original asset working directory, wait 30 seconds and terminate only that created game process. Both resulting tools were verified PE32/x86.
+- Launch: CrossOver bottle `project-igi`, staged executable, arguments `window level2`. No synthetic keyboard/mouse inputs were injected.
+- Eight expected hooks armed, zero SKIP records, sample rate one. The file contains **63 animation-state observations** and **46 first-call movement/ground observations**. Named gameplay guards including 2000, 2001, 2003, 2005, 2007, 2008, 2011, 2012, 2014, 2015, 2017, 2019 and 2020 enter state 3 / animation 57 / mode 1. This differs from the prototype's current moving-guard clip 34 choice, but the task/input/phase contexts are not yet aligned for a differential claim.
+- Runtime compatibility difference: the existing probe patches joystick enumeration at `0x005099c6` in memory to avoid its acquisition failure. Original disk bytes are untouched. The probe uses its fallback file log directly; no ring tailer comparison or overrun audit was performed.
+- **Unobserved:** requested player task-0 per-tick snapshots (zero rows), combat events, round events, controlled building entry, and a validated cutscene-to-gameplay boundary. The movement/ground handlers mostly log their first call per human. These observations therefore do not prove player trajectories or enemy-fire behavior.
+- The launcher reports its owned process closed at the 30-second boundary. That closure is deliberate capture cleanup, not natural mission completion. Concurrent development work and instrumentation affect timing; this is not a native-Windows performance oracle.
+
+The manifest retains file hashes, tool/source hashes, command line, hook/sample settings, raw event counts and limitations. Next: establish the gameplay boundary, capture controlled original inputs and corresponding per-tick state, then align a native replay and identify the first divergence. The 17-scenario retail gate stays failed until genuine matching captures and reviewed provenance exist.
+
+### Controlled original-input attempt
+
+A second owned 30-second capture added a player-update hook at `0x004109a0`, verified as a 1,480-byte entry by radare2. REA/Ghidra pseudocode evidence: `ev_da3795453a2b6965f86a10ea60c2209bfec2024cc3147338e77adcad94ac90c0`. Its first argument is the human instance; this hook observes state at entry, before that tick's movement.
+
+The launcher sent ten logged key/mouse edges for Escape, W, E, left mouse and F, only after verifying its own Windows process was foreground. Win32 SendInput reported acceptance for all ten. Nine expected hooks armed, no SKIP. The capture produced only **one player-update snapshot and one player-integrator snapshot**, showing task 0, position `(126131752, -37800692, 175432800)`, zero velocity, flags zero, state zero, accumulated damage zero and maximum-health field 3. No combat or round observations followed.
+
+This attempt does **not** verify walking, jumping, firing or reload: API acceptance does not prove input consumption during gameplay, and the cutscene/menu/focus or instrumentation stall has not been resolved. Preserve this as an incomplete experiment, not a passing end-to-end scenario. Raw logs, staged observer/launcher source and manifest are under ignored `dist/verification/gameplay-bugs/original-controlled-attempt/`. The original executable and earlier probe log remain untouched.

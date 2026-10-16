@@ -1,63 +1,86 @@
-# Native gameplay MVP
+# Native gameplay engine
 
-The C++20 application loads the original Level 1 terrain, models, textures, player spawn, soldiers, player parameters, and MP5 parameters. Walking uses the original animation root tracks and the existing recovered movement integrator. Real triangle collision, jumping, crouching, projectiles, reloading, basic guard combat, death, and restart run in the same loop.
+Experimental C++20 gameplay using original IGI assets. Player movement, collision, weapons, graph-based patrols, skeletal body/hand animation, and recursive MEF attachments run in the native game loop. Exact retail behavior remains unverified. [Plan](MVP_PLAN.md), [status](MVP_STATUS.md), [required evidence](FIDELITY_REQUIREMENTS.md), and [agent coordination](AGENT_COORDINATION.md).
 
-macOS arm64 is tested. SDL's C interface and portable C++ keep the core suitable for later Windows and Linux builds; those builds have not been verified. The runtime contains no C#, Swift, Objective-C++, or Python code.
+macOS arm64 is tested. Runtime code uses C/C++ and SDL's C interface. Windows/Linux remain intended targets and require separate verification. Original proprietary assets stay external. Sound, menus, exact text rendering, and cutscenes are deferred.
 
-This is a gameplay prototype. See [MVP_STATUS.md](MVP_STATUS.md) for measured results and the remaining differences from the original engine.
+## Launch on macOS
 
-## Build and run
-
-Install a stable C++20 compiler, CMake 3.20 or later, and SDL2 development files. The converter parsers and GLM headers are included in the repository.
+From Downloads:
 
 ```sh
-IGI_GAME_PATH=/Users/haseeb-mir/Downloads/IGI cmake -S . -B build/mvp -DCMAKE_BUILD_TYPE=Release
-cmake --build build/mvp --parallel 4
-ctest --test-dir build/mvp --output-on-failure
-cmake --install build/mvp --prefix dist
-./dist/igi.app/Contents/MacOS/igi --game /Users/haseeb-mir/Downloads/IGI
+open -n IGI/igi.app --args window level2 --graphics high
 ```
 
-On macOS the install step bundles SDL2 and SDL3 when SDL2-compat uses it, rewrites library paths, includes dependency notices, and signs `igi.app` locally. The original assets remain external. Put the app beside the game data, set `IGI_GAME_PATH`, or pass `--game`.
+All game arguments follow `--args`; otherwise macOS `open` interprets them. `--gfx high` is also accepted by current source builds. Replace `level2` with `level1` through `level14`; level availability is not a claim that every mission works. Most integration coverage is currently Levels 1 and 2. Use `fullscreen` instead of `window` if desired; native fullscreen is independent of CrossOver's DX7 fullscreen issues.
 
-When building inside a synced Documents folder, stage installation outside that folder, for example with `--prefix /tmp/igi-stage`, then copy the app with `ditto --norsrc --noextattr /tmp/igi-stage/igi.app /Users/haseeb-mir/Downloads/IGI/igi.app`. This avoids carrying Finder metadata that interferes with strict bundle verification.
+A newly signed local bundle may request macOS Downloads access again. A candidate LaunchServices test was observed waiting on that request; the direct-executable GUI test succeeded. An app bundle is a directory. To launch directly:
 
-The default application does not need the native catalog JSON, the generated C translations, Windows, or CrossOver. To build the separate recovered-C research library and its probes as well, configure with `-DIGI_BUILD_RECOVERED_NATIVE_LIBRARY=ON`.
+```sh
+IGI/igi.app/Contents/MacOS/igi window level2 --graphics high
+```
+
+Default viewport: 1280 by 960. `--width` and `--height` select another size. `high` currently selects denser original terrain; it does not implement missing retail lightmaps, lighting, or the complete original graphics quality system. Both modes use the original models and textures. Startup logs state the selected detail and terrain triangle count.
 
 ## Controls
 
+Controls come from the selected profile in the original `config.qvm`; `--profile name` overrides the active profile. The current Heaven profile contains:
+
 | Input | Action |
 | --- | --- |
-| W, A, S, D | Move |
-| Shift | Walk |
-| Ctrl | Crouch |
-| Space | Jump |
-| Mouse | Look |
-| Left mouse | Fire MP5 |
-| Right mouse | Aim |
-| R | Reload |
-| Enter | Restart |
-| F11 | Toggle fullscreen |
-| Escape | Quit |
+| W/A/S/D, mouse | Move and look |
+| E | Jump |
+| C | Crouch |
+| Shift | Toggle walking/running |
+| Left mouse | Fire |
+| F | Reload |
+| Right mouse / O | Next / previous weapon |
+| 1 through 9 | Original weapon categories |
+| Q | Activate; prototype currently supports nearby gun pickups |
+| Backspace | Alternate-fire binding; currently a provisional aim action |
+| Enter / F11 / Escape | Restart / fullscreen / quit |
 
-The default view is 800×600. Use `--width` and `--height` to change it. Simulation advances at 30 ticks per second independently of rendering.
+Weapon cycle order and category subcycling still need retail corrections. Explosives, binoculars, and several other original actions are unfinished. Dynamic doors and full runtime QVM interaction are unfinished; non-solid building portal faces no longer act as walls.
 
-## Replay and diagnostics
+## Build and checks
+
+Use a stable C++20 compiler, CMake 3.20 or later, and SDL2 development files. Converter parsers and GLM headers are included.
 
 ```sh
-./dist/igi.app/Contents/MacOS/igi --headless --frames 360 --demo \
-  --game /Users/haseeb-mir/Downloads/IGI --cache /tmp/igi-mvp \
-  --trace /tmp/igi-state.csv --screenshot /tmp/igi-frame.bmp
+cmake -S . -B build/mvp -DCMAKE_BUILD_TYPE=Release \
+  -DIGI_GAME_PATH=/Users/haseeb-mir/Downloads/IGI
+cmake --build build/mvp --parallel 4
+ctest --test-dir build/mvp -LE retail --output-on-failure
+cmake --install build/mvp --prefix /tmp/igi-stage
+codesign --verify --deep --strict /tmp/igi-stage/igi.app
 ```
 
-`--replay inputs.csv` consumes one input row per simulation tick. Each row contains:
+These are functional checks. The separate mandatory retail gate is:
+
+```sh
+ctest --test-dir build/mvp -L retail --output-on-failure
+```
+
+It currently fails because genuine original-versus-port capture pairs are absent. A full CTest run therefore does not pass. To supply reviewed captures, configure `IGI_RETAIL_PARITY_DIRECTORY` according to [FIDELITY_REQUIREMENTS.md](FIDELITY_REQUIREMENTS.md). Never replace missing retail captures with prototype output.
+
+macOS install bundles native SDL dependencies and license notices, rewrites library paths, and signs locally. Assets are discovered beside the app, via `IGI_GAME_PATH`, or with `--game`. The game does not require the native catalog JSON, Windows, or CrossOver; those are research inputs. Optional recovered-C research targets use `-DIGI_BUILD_RECOVERED_NATIVE_LIBRARY=ON`.
+
+Stage outside synced Documents folders to avoid Finder metadata in signed bundles. Preserve an existing app before replacement and copy the clean bundle with `ditto --norsrc --noextattr`. Two agents are active: do not replace the shared Downloads app from both projects; see the coordination record.
+
+## Diagnostics and replay
+
+```sh
+/tmp/igi-stage/igi.app/Contents/MacOS/igi window level2 --graphics high \
+  --headless --frames 300 --trace /tmp/igi-state.csv \
+  --screenshot /tmp/igi-frame.bmp --cache /tmp/igi-cache
+```
+
+`--replay inputs.csv` consumes one row per simulation tick:
 
 ```text
 forward,sideways,heading_change,pitch_change,walking,crouching,jumping,firing,reloading,aiming
 ```
 
-Angles are radians and boolean values are `0` or `1`. Lines beginning with `#` are comments. `--demo` provides a fixed movement/jump/fire/reload sequence. `--benchmark` renders every headless frame. `--verbose` enables detailed state and parser diagnostics.
+Optional trailing columns: `weapon_slot,weapon_cycle,interacting`. Angles are radians, booleans are 0/1, and `#` starts a comment. `--demo` provides a synthetic scenario; it is not a recorded retail replay. `--benchmark` renders every headless frame. `--verbose` enables detailed parser/state logs, including enemy shot events.
 
-Logs include UTC timestamps, severity, and subsystem. They go to stderr and `igi.log` in the selected cache directory. Without `--cache`, SDL chooses the per-user application directory. Fatal interactive errors also show a dialog. Asset caches contain local copies of original resources and must not be distributed with the source or app.
-
-The inspector tools are `igi_inspect_mission <OBJECTS.QVM>` and `igi_inspect_scene <game-directory> <cache-directory>`. With `IGI_GAME_PATH` set at configure time, CTest also enables the original-level integration probe. It loads the actual level, exercises movement, aims at an original soldier, fires, verifies damage and death, and renders the scene.
+Logs have UTC timestamps, severity, and subsystem. They go to stderr and `igi.log` in the chosen cache directory; SDL selects the default per-user application directory. Interactive fatal errors also show a dialog. Asset caches contain original resources and must not be distributed.
