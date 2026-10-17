@@ -1,4 +1,4 @@
-// IDA Pro import: 5732 validated IGI1 natives
+// IDA Pro import: 5735 validated IGI1 natives
 #include <idc.idc>
 static main(void){
   MakeName(0x00401000, "QTask_CreateTask");
@@ -6611,6 +6611,12 @@ static main(void){
   MakeFunction(0x004A9CE5, BADADDR);
   MakeName(0x004A9D28, "Camera_ApplyBandFilter_18");
   MakeFunction(0x004A9D28, BADADDR);
+  MakeName(0x004A9D3E, "MathSys_RestoreFpuCw");
+  MakeFunction(0x004A9D3E, BADADDR);
+  MakeName(0x004A9D4B, "MathSys_MathExit");
+  MakeFunction(0x004A9D4B, BADADDR);
+  MakeName(0x004A9D89, "MathSys_HandleFpuException");
+  MakeFunction(0x004A9D89, BADADDR);
   MakeName(0x004A9E2C, "Camera_ResetMatrix_18");
   MakeFunction(0x004A9E2C, BADADDR);
   MakeName(0x004A9F5C, "Camera_UpdateTransform_19");
@@ -11465,5 +11471,6 @@ static main(void){
   MakeFunction(0x00532400, BADADDR);
   MakeName(0x00532490, "Particle_ResetEmitters_6");
   MakeFunction(0x00532490, BADADDR);
-  Message("IGINatives IDA import completed\n");
+  Message("Successfully imported IGI1 natives.
+");
 }

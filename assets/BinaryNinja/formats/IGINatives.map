@@ -1,4 +1,4 @@
- IGI1 verified natives -> igi.exe (image base 0x400000)
+ IGI1 verified natives -> igi.exe (image base 0x400000, 5735 entries)
  Start         Length     Name
  0400:00401000       QTask_CreateTask
  0400:00401050       QTask_OpenEvent
@@ -3305,6 +3305,9 @@
  0400:004A9CCC       Camera_SetFieldOfView_18
  0400:004A9CE5       Camera_ApplyLineFilter_18
  0400:004A9D28       Camera_ApplyBandFilter_18
+ 0400:004A9D3E       MathSys_RestoreFpuCw
+ 0400:004A9D4B       MathSys_MathExit
+ 0400:004A9D89       MathSys_HandleFpuException
  0400:004A9E2C       Camera_ResetMatrix_18
  0400:004A9F5C       Camera_UpdateTransform_19
  0400:004A9FC1       Camera_SetFieldOfView_19
