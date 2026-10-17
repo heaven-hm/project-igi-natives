@@ -1,0 +1,201 @@
+// IGI native provenance: ComputerStartup_Update - 0x00466480 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00466480-ComputerStartup_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "ComputerStartup_Update.h"
+int32_t ComputerStartup_Update(void* context)
+
+{
+    int32_t* data_val = g_5ca114;
+    void item_40;
+    (*(*data_val + 0x30))(data_val, 3, &item_40);
+    float item_90 = 1.0f / (g_bcabec * *(context + 0x58));
+    float item_18;
+    long double fpu_val_7_8 =
+        (1.0f - g_bcada0 * item_90) * item_18 * (g_bcad8c - g_bcadb4) + g_bcadb4;
+    *(g_bcade8 + 4) = 0xffffffff;
+    *(g_bcad7c + 4) = 0xffffffff;
+    float item_94 = fpu_val_7_8;
+    *(g_bcadac + 4) = 0xffffffff;
+    *(g_bcadc4 + 4) = 0xffffffff;
+    int32_t* data_1 = g_5ca114;
+    (*(*data_1 + 0x50))(data_1, 0x2f, 0);
+    int32_t* data_2 = g_5ca114;
+    (*(*data_2 + 0x50))(data_2, 0x1c, 0);
+    int32_t* data_3 = g_5ca114;
+    (*(*data_3 + 0x50))(data_3, 0x1d, 0);
+    int32_t* data_4 = g_5ca114;
+    (*(*data_4 + 0x50))(data_4, 0x16, 1);
+    int32_t* data_5 = g_5ca114;
+    (*(*data_5 + 0x50))(data_5, 0x89, 0);
+    int32_t* data_6 = g_5ca114;
+    (*(*data_6 + 0x50))(data_6, 0x1a, 1);
+    int32_t* data_7 = g_5ca114;
+    (*(*data_7 + 0x50))(data_7, 0xf, 0);
+    int32_t* data_8 = g_5ca114;
+    (*(*data_8 + 0x50))(data_8, 0x17, 4);
+    int32_t* data_9 = g_5ca114;
+    (*(*data_9 + 0x50))(data_9, 7, 1);
+    int32_t* data_10 = g_5ca114;
+    (*(*data_10 + 0x50))(data_10, 0xe, 0);
+    int32_t* data_11 = g_5ca114;
+    (*(*data_11 + 0x94))(data_11, 0, 4, 3);
+    int32_t* data_12 = g_5ca114;
+    (*(*data_12 + 0x94))(data_12, 0, 5, 2);
+    int32_t* data_13 = g_5ca114;
+    (*(*data_13 + 0x94))(data_13, 0, 6, 0);
+    int32_t* data_14 = g_5ca114;
+    (*(*data_14 + 0x94))(data_14, 0, 1, 3);
+    int32_t* data_15 = g_5ca114;
+    (*(*data_15 + 0x94))(data_15, 0, 2, 2);
+    int32_t* data_16 = g_5ca114;
+    (*(*data_16 + 0x94))(data_16, 0, 3, 0);
+    int32_t* data_17 = g_5ca114;
+    (*(*data_17 + 0x94))(data_17, 1, 1, 1);
+    int32_t* data_18 = g_5ca114;
+    (*(*data_18 + 0x8c))(data_18, 0, 0);
+    int32_t* data_19 = g_5ca114;
+    (*(*data_19 + 0x50))(data_19, 0x1b, 1);
+    int32_t* data_20 = g_5ca114;
+    (*(*data_20 + 0x50))(data_20, 0x13, 5);
+    int32_t* data_21 = g_5ca114;
+    (*(*data_21 + 0x50))(data_21, 0x14, 6);
+    float* item_b4;
+    void item_84;
+
+    if (!*(context + 0x20))
+    {
+        int32_t* data_23 = *(context + 0x88);
+        (*(*data_23 + 0xc))(data_23, 0x2021, &item_b4, &item_84);
+        *item_b4 = g_bcabb8;
+        item_b4[1] = g_bcabbc;
+        item_b4[2] = item_94;
+        item_b4[3] = item_90;
+        item_b4[4] = 0xff000000;
+        float* data_27 = &item_b4[5];
+        int32_t item_b0_3 = g_bcabb8;
+        item_b4 = data_27;
+        *data_27 = item_b0_3;
+        item_b4[1] = g_bcabc4 + g_bcabbc;
+        item_b4[2] = item_94;
+        item_b4[3] = item_90;
+        item_b4[4] = 0xff000000;
+        float* data_32 = &item_b4[5];
+        int32_t item_b0_6 = g_bcabc0;
+        item_b4 = data_32;
+        *data_32 = item_b0_6 + g_bcabb8;
+        item_b4[1] = g_bcabbc;
+        item_b4[2] = item_94;
+        item_b4[3] = item_90;
+        item_b4[4] = 0xff000000;
+        float* data_37 = &item_b4[5];
+        int32_t item_b0_9 = g_bcabc0;
+        item_b4 = data_37;
+        *data_37 = item_b0_9 + g_bcabb8;
+        item_b4[1] = g_bcabc4 + g_bcabbc;
+        item_b4[2] = item_94;
+        item_b4[3] = item_90;
+        item_b4[4] = 0xff000000;
+        item_b4 = &item_b4[5];
+        int32_t* data_43 = *(context + 0x88);
+        (*(*data_43 + 0x10))(data_43);
+        int32_t* data_44 = g_5ca114;
+        (*(*data_44 + 0x7c))(data_44, 5, *(context + 0x88), 0, 4, 0);
+    }
+
+    int32_t* data_45 = *(context + 0x88);
+    (*(*data_45 + 0xc))(data_45, 0x2021, &item_b4, &item_84);
+    int32_t item_b0_13 = g_bcabc4;
+    int32_t item_80 = 0;
+    int32_t item_7c = 0;
+    int32_t item_78 = 0x3f800000;
+    int32_t item_74 = 0x3f800000;
+    int32_t item_60 = 0;
+    int32_t item_5c = 0;
+    int32_t item_58 = 0x3f800000;
+    int32_t item_54 = 0x3f800000;
+    long double fpu_val_7_38 = item_b0_13;
+    int32_t item_50 = 0x3f800000;
+    int32_t item_4c = 0;
+    int32_t item_48 = 0;
+    int32_t item_44 = 0x3f800000;
+    int32_t item_70 = 0;
+    int32_t item_6c = 0x3f800000;
+    int32_t item_68 = 0x3f800000;
+    int32_t item_64 = 0;
+    float item_a8 = fpu_val_7_38 * 0.0250000004f;
+    long double fpu_val_6_9 = g_bcabc0;
+    float item_88 = fpu_val_6_9 * 0.5f;
+    float item_a0 = fpu_val_6_9 * 0.150000006f;
+    float item_a4 = fpu_val_7_38 * 0.649999976f;
+    int32_t entity_23 = (((*(context + 0x34) * 255.0f) | 0xffffff00) << 8 | (*(context + 0x38) * 255.0f)) << 8
+        | (*(context + 0x3c) * 255.0f);
+    long double fpu_val_7_47 = item_88;
+    int32_t i = 0;
+    long double fpu_val_6_12 = item_a8;
+
+    do
+    {
+        long double fpu_val_5_3 = fpu_val_7_47 * *(&item_80 + i);
+        i += 4;
+        *item_b4 = fpu_val_5_3 + item_a0;
+        item_b4[1] = fpu_val_6_12 * *(&item_64 + i) + item_a4;
+        item_b4[2] = item_94;
+        item_b4[3] = item_90;
+        long double fpu_val_5_11 = fpu_val_7_47 * *(&item_54 + i);
+        item_b4[4] = entity_23;
+        float* temp_40 = &item_b4[5];
+        item_b4 = temp_40;
+        *temp_40 = fpu_val_5_11 + item_a0;
+        item_b4[1] = fpu_val_6_12 * *(&item_74 + i) + item_a4;
+        item_b4[2] = item_94;
+        item_b4[3] = item_90;
+        item_b4[4] = entity_23;
+        item_b4 = &item_b4[5];
+    } while (i < 0x10);
+
+    int32_t* data_49 = *(context + 0x88);
+    (*(*data_49 + 0x10))(data_49);
+    int32_t* data_50 = g_5ca114;
+    (*(*data_50 + 0x7c))(data_50, 2, *(context + 0x88), 0, 8, 0);
+    int32_t* data_51 = *(context + 0x88);
+    (*(*data_51 + 0xc))(data_51, 0x2021, &item_b4, &item_84);
+    int32_t data_57 = (((*(context + 0x28) * 255.0f) | 0xffffff00) << 8 | (*(context + 0x2c) * 255.0f)) << 8
+        | (*(context + 0x30) * 255.0f);
+    long double fpu_val_7_56 = *(context + 0x40) / *(context + (*(context + 0x20) << 2) + 0x44);
+    long double fpu_val_6_15 = item_a0 + 1.0f;
+    *item_b4 = fpu_val_6_15;
+    long double fpu_val_5_20 = item_a4 + 1.0f;
+    int32_t item_b0_22 = fpu_val_5_20;
+    item_b4[1] = fpu_val_5_20;
+    item_b4[2] = item_94;
+    item_b4[3] = item_90;
+    item_b4[4] = data_57;
+    float* entity_31 = &item_b4[5];
+    item_b4 = entity_31;
+    *entity_31 = fpu_val_6_15;
+    long double fpu_val_6_18 = item_a4 + item_a8 - 0.5f;
+    float item_a8_1 = fpu_val_6_18;
+    item_b4[1] = fpu_val_6_18;
+    item_b4[2] = item_94;
+    item_b4[3] = item_90;
+    item_b4[4] = data_57;
+    float* entity_35 = &item_b4[5];
+    item_b4 = entity_35;
+    long double fpu_val_7_59 = fpu_val_7_56 * (item_88 - 1.0f) + item_a0 + 0.5f;
+    *entity_35 = fpu_val_7_59;
+    item_b4[1] = item_b0_22;
+    item_b4[2] = item_94;
+    item_b4[3] = item_90;
+    item_b4[4] = data_57;
+    float* entity_39 = &item_b4[5];
+    item_b4 = entity_39;
+    *entity_39 = fpu_val_7_59;
+    item_b4[1] = item_a8_1;
+    item_b4[2] = item_94;
+    item_b4[3] = item_90;
+    item_b4[4] = data_57;
+    item_b4 = &item_b4[5];
+    int32_t* data_60 = *(context + 0x88);
+    (*(*data_60 + 0x10))(data_60);
+    int32_t* data_61 = g_5ca114;
+    return (*(*data_61 + 0x7c))(data_61, 5, *(context + 0x88), 0, 4, 0);
+}

@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 0045B7C0 AI_CheckHearing_14 | gate PASS | openigi False */
+int AI_CheckHearing_14(void * context, void * param_2);

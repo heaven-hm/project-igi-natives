@@ -1,0 +1,82 @@
+// IGI native provenance: Train_Init - 0x0042ACC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042ACC0-Train_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Train_Init.h"
+int32_t* Train_Init()
+
+{
+    int32_t item_8e4 = 0;
+    int16_t data_1 = TaskType_Register("Train", 0x8e0, Script_ExecuteLevelScript_16(), 0);
+    g_57bcb8 = data_1;
+    QTask_RemoveEventCallback(data_1, 0, sub_429f80);
+    QTask_TriggerEvent(g_57bcb8, 2, Train_LoadParameters);
+    int32_t data_3 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_57bcb8, data_3, Train_Setup);
+    int32_t data_4 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_57bcb8, data_4, sub_42b030);
+    QTask_RemoveEventCallback(g_57bcb8, 7, Train_Process);
+    QTask_TriggerEvent(g_57bcb8, 1, Train_Update);
+    int32_t data_6 = SoundSys_SetFrequency_5();
+    QTask_RemoveEventCallback(g_57bcb8, data_6, sub_42b220);
+    int32_t data_7 = Script_ParseEnumReal32_15();
+    int32_t item_8e8_3 = data_7;
+    data_7 = g_57bcb8;
+    QTask_RemoveEventCallback(data_7, item_8e8_3, Train_ReceiveChannels);
+    int32_t data_8 = Script_ParseEnumString_15();
+    QTask_RemoveEventCallback(g_57bcb8, data_8, sub_42b2c0);
+    int32_t data_9 = Script_EvaluateCondition_15();
+    QTask_RemoveEventCallback(g_57bcb8, data_9, sub_4eff20);
+    int32_t data_10 = Script_FormatString_15();
+    int32_t item_8e8_6 = data_10;
+    data_10 = g_57bcb8;
+    QTask_RemoveEventCallback(data_10, item_8e8_6, sub_42b240);
+    int32_t data_11 = Script_SpawnNewTask_16();
+    QTask_RemoveEventCallback(g_57bcb8, data_11, sub_42b280);
+    int32_t data_12 = Script_ParseEnumInt32_16();
+    QTask_RemoveEventCallback(g_57bcb8, data_12, sub_42b2f0);
+    int32_t data_13 = Level_SetMission_3();
+    int32_t item_8e8_9 = data_13;
+    data_13 = g_57bcb8;
+    QTask_RemoveEventCallback(data_13, item_8e8_9, Train_Action);
+    int32_t data_14 = DynObj_CreateMagicObject_6();
+    QTask_RemoveEventCallback(g_57bcb8, data_14, Train_Cleanup);
+    int32_t data_15 = DynObj_LinkDynamicCube_12();
+    QTask_RemoveEventCallback(g_57bcb8, data_15, sub_42bba0);
+    int32_t data_16 = DynObj_UpdateDynTree_12();
+    int32_t item_8e8_12 = data_16;
+    data_16 = g_57bcb8;
+    QTask_RemoveEventCallback(data_16, item_8e8_12, sub_42bb60);
+    g_57bcbc = Script_EvaluateCondition_7(0xa);
+    g_57bce8 = 0xc0a00000;
+    g_57bcec = 0x40a00000;
+    int32_t data_18 = Script_EvaluateCondition_2();
+    void item_8e0;
+    void item_174;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_174, data_18, 7, 0);
+    int32_t data_20 = Script_EvaluateCondition_2();
+    void item_188;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_188, data_20, 7, 0);
+    int32_t data_22 = Script_ParseEnumString_3();
+    void item_164;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_164, data_22, 7, 0);
+    int32_t data_24 = Script_SpawnNewTask_4();
+    void item_160;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_160, data_24, 7, 0);
+    int32_t data_26 = Script_EvaluateCondition_2();
+    void item_190;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_190, data_26, 7, 0);
+    int32_t data_28 = Script_EvaluateCondition_2();
+    void item_18c;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_18c, data_28, 7, 0);
+    int32_t data_30 = Script_ParseEnumInt32_4();
+    void item_60;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_60, data_30, 7, 0);
+    int32_t data_32 = Script_EvaluateCondition_2();
+    void item_170;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_170, data_32, 7, &g_57bce8);
+    int32_t data_34 = Script_EvaluateCondition_2();
+    void item_16c;
+    Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_16c, data_34, 7, &g_57bce8);
+    int32_t data_36 = Script_CallNativeHandler_3();
+    void item_50;
+    return Script_UndefinedParameterTy(g_57bcbc, &item_8e0, &item_50, data_36, 7, 0);
+}

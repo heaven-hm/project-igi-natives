@@ -1,0 +1,73 @@
+// IGI native provenance: MineField_Init - 0x0043A840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043A840-MineField_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "MineField_Init.h"
+int32_t* MineField_Init()
+
+{
+    int32_t item_d4 = 0;
+    int16_t data_1 = TaskType_Register("MineField", 0xd0, EditorRigidObj_OnEvent(), 0);
+    g_53c2d0 = data_1;
+    QTask_RemoveEventCallback(data_1, 0, sub_43ab50);
+    QTask_TriggerEvent(g_53c2d0, 1, MineField_LoadParameters);
+    QTask_TriggerEvent(g_53c2d0, 2, sub_43ad20);
+    int32_t data_3 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_53c2d0, data_3, sub_43ad30);
+    int32_t data_4 = Script_ParseEnumReal32_8();
+    int32_t item_d8_1 = data_4;
+    data_4 = g_53c2d0;
+    QTask_RemoveEventCallback(data_4, item_d8_1, sub_43ad40);
+    g_57bef4 = Script_EvaluateCondition_7(0xc);
+    g_57bec0 = 0;
+    g_57bec4 = 0x42c80000;
+    g_57bee0 = 0;
+    g_57bee4 = 0x42c80000;
+    g_57bed0 = 0;
+    g_57bed4 = 0x41200000;
+    g_57bee8 = 0;
+    g_57beec = 0x42700000;
+    g_57bed8 = 0xbf800000;
+    g_57bedc = 0x461c4000;
+    g_57bec8 = 0;
+    g_57becc = 0x3e8;
+    g_57beb8 = 0;
+    g_57bebc = 0x64;
+    g_57beb0 = 0xffffffff;
+    g_57beb4 = 0x1000;
+    int32_t data_6 = Script_ParseEnumReal32_4();
+    void item_d0;
+    void item_b0;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_b0, data_6, 7, 0);
+    int32_t data_8 = Script_CallNativeHandler_3();
+    void item_98;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_98, data_8, 7, 0);
+    int32_t data_10 = Script_EvaluateCondition_2();
+    void item_48;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_48, data_10, 7, &g_57bec0);
+    int32_t data_12 = Script_EvaluateCondition_2();
+    void item_44;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_44, data_12, 7, &g_57bee0);
+    int32_t data_14 = Script_EvaluateCondition_2();
+    void item_40;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_40, data_14, 7, &g_57bed0);
+    int32_t data_16 = Script_EvaluateCondition_2();
+    void item_3c;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_3c, data_16, 7, &g_57bee8);
+    int32_t data_18 = Script_ParseEnumString_3();
+    void item_38;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_38, data_18, 7, &g_57bec8);
+    int32_t data_20 = Script_ParseEnumString_3();
+    void item_34;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_34, data_20, 7, &g_57beb8);
+    int32_t data_22 = Script_EvaluateCondition_3();
+    void item_30;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_30, data_22, 7, 0);
+    int32_t data_24 = Script_ParseEnumString_3();
+    void item_10;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_10, data_24, 7, &g_57beb0);
+    int32_t data_26 = Script_EvaluateCondition_2();
+    void item_c;
+    Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_c, data_26, 7, &g_57bed8);
+    int32_t data_28 = Script_ParseEnumInt32_4();
+    void item_8;
+    return Script_UndefinedParameterTy(g_57bef4, &item_d0, &item_8, data_28, 7, 0);
+}

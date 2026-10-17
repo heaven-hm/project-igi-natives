@@ -1,0 +1,72 @@
+// IGI native provenance: AI_ComputerComputerRes - 0x0046B070 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B070-AI_ComputerComputerRes.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "AI_ComputerComputerRes.h"
+int32_t* AI_ComputerComputerRes()
+
+{
+    char* item_14 = "COMPUTER:computer.res";
+    int32_t* data_val;
+    void* entity_val;
+    void* entity_1;
+    int32_t temp_val;
+    int32_t temp_1;
+    data_val = Resource_Load(&g_5bddb0, temp_val, entity_val, nullptr);
+    char* item_1c = "LANGUAGE:computer.res";
+    g_5bddb0 = data_val;
+    int32_t* data_1;
+    void* entity_2;
+    int32_t temp_2;
+    data_1 = Resource_Load(data_val, temp_1, entity_1, nullptr);
+    char* item_24 = "LANGUAGE:objectives.res";
+    g_5bddb4 = data_1;
+    g_5bddb8 = Resource_Load(data_1, temp_2, entity_2, nullptr);
+    g_5bddbc = Sys_DispatchOpcode_18("LOCAL:computer/font1.fnt");
+    g_5bddc0 = Sys_DispatchOpcode_18("LOCAL:computer/font3.fnt");
+    g_5bddc4 = Sys_DispatchOpcode_18("LOCAL:computer/font4.fnt");
+    Sys_IlfFileCorruptS(0x5bddc8, "COMPUTER:pointer.spr");
+    Sys_IlfFileCorruptS(0x5bdde0, "COMPUTER:arrow1_1.spr");
+    Sys_IlfFileCorruptS(&g_5bddf8, "COMPUTER:arrow1_2.spr");
+    Sys_IlfFileCorruptS(0x5bde10, "COMPUTER:arrow1_3.spr");
+    Sys_IlfFileCorruptS(0x5bde28, "COMPUTER:arrow2_1.spr");
+    Sys_IlfFileCorruptS(&g_5bde40, "COMPUTER:arrow2_2.spr");
+    Sys_IlfFileCorruptS(0x5bde58, "COMPUTER:arrow2_3.spr");
+    Sys_IlfFileCorruptS(0x5bde70, "COMPUTER:arrow3_1.spr");
+    Sys_IlfFileCorruptS(0x5bde88, "COMPUTER:arrow3_2.spr");
+    Sys_IlfFileCorruptS(&g_5bdea0, "COMPUTER:arrow3_3.spr");
+    Sys_IlfFileCorruptS(&g_5bdeb8, "COMPUTER:arrow4_1.spr");
+    Sys_IlfFileCorruptS(0x5bded0, "COMPUTER:arrow4_2.spr");
+    Sys_IlfFileCorruptS(0x5bdee8, "COMPUTER:arrow4_3.spr");
+    Sys_IlfFileCorruptS(0x5bdf00, "COMPUTER:arrowup_1.spr");
+    Sys_IlfFileCorruptS(&g_5bdf18, "COMPUTER:arrowup_2.spr");
+    Sys_IlfFileCorruptS(0x5bdf30, "COMPUTER:arrowup_3.spr");
+    Sys_IlfFileCorruptS(0x5bdf48, "COMPUTER:arrowdown_1.spr");
+    Sys_IlfFileCorruptS(&g_5bdf60, "COMPUTER:arrowdown_2.spr");
+    Sys_IlfFileCorruptS(0x5bdf78, "COMPUTER:arrowdown_3.spr");
+    Sys_IlfFileCorruptS(0x5bdf90, "COMPUTER:plus_1.spr");
+    Sys_IlfFileCorruptS(0x5bdfa8, "COMPUTER:plus_2.spr");
+    Sys_IlfFileCorruptS(0x5bdfc0, "COMPUTER:plus_3.spr");
+    Sys_IlfFileCorruptS(&g_5bdfd8, "COMPUTER:minus_1.spr");
+    Sys_IlfFileCorruptS(0x5bdff0, "COMPUTER:minus_2.spr");
+    Sys_IlfFileCorruptS(0x5be008, "COMPUTER:minus_3.spr");
+    Sys_IlfFileCorruptS(0x5be020, "COMPUTER:sphere_1.spr");
+    Sys_IlfFileCorruptS(&g_5be038, "COMPUTER:sphere_2.spr");
+    Sys_IlfFileCorruptS(0x5be050, "COMPUTER:sphere_3.spr");
+    Sys_IlfFileCorruptS(0x5be068, "COMPUTER:objective_1.spr");
+    Sys_IlfFileCorruptS(0x5be080, "COMPUTER:objective_2.spr");
+    char (** context_val)[0x16] = &g_5be260;
+    char (** i)[0x16] = &g_53f800;
+    int32_t* source_val = &g_5be098;
+    int32_t* result;
+
+    do
+    {
+        result = Sys_IlfFileCorruptS(source_val, *i);
+        char (* entity_3)[0x16] = *i;
+        i = &i[1];
+        *context_val = entity_3;
+        source_val = &source_val[6];
+        context_val = &context_val[1];
+    } while (i < "COMPUTER:h_scamera2.spr");
+
+    return result;
+}

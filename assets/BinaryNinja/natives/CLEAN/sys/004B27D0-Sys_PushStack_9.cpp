@@ -1,0 +1,27 @@
+// IGI native provenance: Sys_PushStack_9 - 0x004B27D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B27D0-Sys_PushStack_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Sys_PushStack_9.h"
+int32_t Sys_PushStack_9(float context) {
+    long double fpu7 = context;
+    long double f0 = -1.0;
+    fpu7 - f0;
+    double item_8 = fpu7;
+    bool c1 = /* bool c1 = unknown  {fst qword [stack_ptr], fp0} */;
+
+    if (*(&((fpu7 < f0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9
+            | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa | (fpu7 == f0 ? 1 : 0) << 0xe | 0x3800) + 1)
+            & 1)
+        return Terrain_CalculateNormals_3(-1.0);
+
+    long double f1 = 1.0;
+    fpu7 - f1;
+
+    if (!(*(&((fpu7 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f1) ? 1 : 0) << 0xa
+        | (fpu7 == f1 ? 1 : 0) << 0xe) + 1) & 0x41))
+    {
+        item_8 = 0;
+        *(&item_8 + 4) = 0x3ff00000;
+    }
+
+    return Terrain_CalculateNormals_3(item_8);
+}

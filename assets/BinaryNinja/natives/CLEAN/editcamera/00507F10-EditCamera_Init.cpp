@@ -1,0 +1,76 @@
+// IGI native provenance: EditCamera_Init - 0x00507F10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00507F10-EditCamera_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "EditCamera_Init.h"
+void* EditCamera_Init()
+
+{
+    Script_FormatString_9(0xa7b268);
+    Script_ParseEnumReal32_10(0xa7b268, "CAMERAFILTER_TYPE_.*");
+    g_a7b290 = DynObj_MtpNlodvirmodelD("1717_01_1");
+    int32_t item_ec = 0;
+    int16_t data_2 = TaskType_Register("EditCamera", 0xe8, EditorRigidObj_OnEvent(), 0);
+    g_a7b260 = data_2;
+    QTask_RemoveEventCallback(data_2, 0, sub_508290);
+    QTask_TriggerEvent(g_a7b260, 2, EditCamera_LoadParameters);
+    int32_t data_4 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_a7b260, data_4, sub_508400);
+    int32_t data_5 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_a7b260, data_5, EditCamera_OnParsed);
+    QTask_TriggerEvent(g_a7b260, 1, sub_488700);
+    QTask_RemoveEventCallback(g_a7b260, 4, 0);
+    g_a7b278 = Script_EvaluateCondition_7(0x11);
+    g_a7b280 = 0;
+    g_a7b284 = 0x3f800000;
+    g_a7b288 = 0;
+    g_a7b28c = 0x3f800000;
+    int32_t data_8 = Script_ParseEnumReal32_4();
+    void item_e8;
+    void item_c8;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_c8, data_8, 7, 0);
+    int32_t data_9 = Script_ParseEnumString_2();
+    void item_ac;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_ac, data_9, 7, 0);
+    int32_t data_10 = Script_ParseEnumString_2();
+    void item_a8;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_a8, data_10, 7, 0);
+    int32_t data_11 = Script_ParseEnumString_2();
+    void item_a4;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_a4, data_11, 7, 0);
+    int32_t data_12 = Script_EvaluateCondition_2();
+    void item_60;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_60, data_12, 7, 0);
+    int32_t data_13 = Script_EvaluateCondition_2();
+    void item_b0;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_b0, data_13, 7, 0);
+    int32_t data_14 = Script_ParseEnumString_3();
+    void item_5c;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_5c, data_14, 7, 0);
+    int32_t data_15 = Script_ParseEnumInt32_4();
+    void item_53;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_53, data_15, 7, 0);
+    int32_t data_16 = Script_ParseEnumString_3();
+    void item_58;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_58, data_16, 7, 0);
+    int32_t data_17 = Script_ParseEnumInt32_4();
+    void item_52;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_52, data_17, 7, 0);
+    int32_t data_18 = Script_ParseEnumInt32_4();
+    void item_54;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_54, data_18, 7, 0);
+    int32_t data_19 = Script_EvaluateCondition_2();
+    void item_50;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_50, data_19, 7, 0);
+    int32_t data_20 = Script_CallNativeHandler_10();
+    void item_3f;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_3f, data_20, 7, 0xa7b268);
+    int32_t data_21 = Script_EvaluateCondition_2();
+    void item_18;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_18, data_21, 7, &g_a7b280);
+    int32_t data_22 = Script_CallNativeHandler_2();
+    void item_14;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_14, data_22, 7, 0);
+    int32_t data_23 = Script_EvaluateCondition_2();
+    void item_8;
+    Script_UndefinedParameterTy(g_a7b278, &item_e8, &item_8, data_23, 7, &g_a7b288);
+    return TaskType_Set("TASKTYPE_EDITCAMERA", *g_a7b260);
+}

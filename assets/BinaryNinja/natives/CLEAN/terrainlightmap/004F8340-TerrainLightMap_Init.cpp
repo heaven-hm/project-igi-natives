@@ -1,0 +1,80 @@
+// IGI native provenance: TerrainLightMap_Init - 0x004F8340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F8340-TerrainLightMap_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "TerrainLightMap_Init.h"
+int32_t* TerrainLightMap_Init()
+
+{
+    Sys_ResolveSymbol_13(0xa76cd0);
+    Sys_OpenFileStream_14(0xa76cd0, 0x19111911);
+    int32_t item_120 = 0;
+    int16_t data_1 = TaskType_Register("TerrainLightMap", 0x110, g_54875c, 0);
+    g_a76cdc = data_1;
+    QTask_RemoveEventCallback(data_1, 0, sub_4f8190);
+    QTask_RemoveEventCallback(g_a76cdc, 0x10, sub_4f8320);
+    QTask_TriggerEvent(g_a76cdc, 2, TerrainLightMap_LoadParameters);
+    int32_t data_2 = Script_ParseEnumInt32_8();
+    int32_t item_118 = data_2;
+    data_2 = g_a76cdc;
+    QTask_RemoveEventCallback(data_2, item_118, sub_4f8770);
+    int32_t data_3 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_a76cdc, data_3, TerrainLightMap_Setup);
+    QTask_RemoveEventCallback(g_a76cdc, 0xa, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 0xb, 0);
+    int32_t data_5 = Render_DrawSplineMesh_4();
+    QTask_RemoveEventCallback(g_a76cdc, data_5, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 9, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 0xc, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 8, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 4, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 5, 0);
+    QTask_RemoveEventCallback(g_a76cdc, 0xf, sub_4f82b0);
+    g_a76d04 = Script_EvaluateCondition_7(0xf);
+    int32_t data_9 = Script_ParseEnumReal32_4();
+    void item_110;
+    void item_a0;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_a0, data_9, 7, 0);
+    int32_t data_10 = Script_ParseEnumString_3();
+    void item_58;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_58, data_10, 7, 0);
+    int32_t data_11 = Script_ParseEnumString_3();
+    void item_3c;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_3c, data_11, 7, 0);
+    int32_t data_12 = Script_SpawnNewTask_2();
+    void item_4b;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_4b, data_12, 6, 0);
+    int32_t data_13 = Script_ParseEnumInt32_4();
+    void item_4c;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_4c, data_13, 6, 0);
+    int32_t data_14 = Script_ParseEnumInt32_4();
+    void item_4a;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_4a, data_14, 6, 0);
+    int32_t data_15 = Script_ParseEnumInt32_4();
+    void item_4d;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_4d, data_15, 6, 0);
+    int32_t data_16 = Script_SpawnNewTask_2();
+    void item_50;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_50, data_16, 6, 0);
+    int32_t data_17 = Script_SpawnNewTask_2();
+    void item_4e;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_4e, data_17, 6, 0);
+    int32_t data_18 = Script_SpawnNewTask_2();
+    void item_4f;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_4f, data_18, 6, 0);
+    int32_t data_19 = Script_ParseEnumString_3();
+    void item_34;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_34, data_19, 1, 0);
+    int32_t data_20 = Script_ParseEnumInt32_4();
+    void item_48;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_48, data_20, 1, 0);
+    int32_t data_21 = Script_SpawnNewTask_2();
+    void item_47;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_47, data_21, 6, 0);
+    int32_t data_22 = Script_ParseEnumInt32_4();
+    void item_45;
+    Script_UndefinedParameterTy(g_a76d04, &item_110, &item_45, data_22, 6, 0);
+    int32_t data_23 = Script_ParseEnumInt32_4();
+    void item_44;
+    int32_t* result = Script_UndefinedParameterTy(g_a76d04, &item_110, &item_44, data_23, 6, 0);
+    g_b97d24 = 0;
+    return result;
+}

@@ -1,0 +1,18 @@
+// IGI native provenance: Config_GraphicOptionsSetPerformanceFlags - 0x00404F00 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404F00-Config_GraphicOptionsSetPerformanceFlags.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Config_GraphicOptionsSetPerformanceFlags.h"
+int32_t Config_GraphicOptionsSetPerformanceFlags(int32_t context, float param_2 )
+
+// Sig: void Config_GraphicOptionsSetPerformanceFlags(int flags)
+// Note: Sets the raw graphics performance/detail flag bits on the active
+// profile. Param: flags = bitmask (get a valid one from
+// Config_GraphicOptionsGetPerfFlagsFromLevel).
+{
+    *(Config_GetActiveGraphicOptions() + 0xc) = Script_GetArg(param_2, 0);
+    int32_t item_18 = 1;
+    int32_t item_10 = 0;
+    int32_t item_c = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
+}

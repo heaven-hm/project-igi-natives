@@ -1,0 +1,81 @@
+// IGI native provenance: ExplodeObject_Init - 0x004813E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004813E0-ExplodeObject_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "ExplodeObject_Init.h"
+int32_t* ExplodeObject_Init()
+
+{
+    int32_t item_23c = 0;
+    int16_t data_1 = TaskType_Register("ExplodeObject", 0x238, SoundSys_Update3DPosition(), 0);
+    g_54097c = data_1;
+    QTask_RemoveEventCallback(data_1, 0, ExplodeObject_LoadParameters);
+    QTask_TriggerEvent(g_54097c, 1, ExplodeObject_Setup);
+    QTask_TriggerEvent(g_54097c, 2, ExplodeObject_Process);
+    int32_t data_3 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_54097c, data_3, sub_481c30);
+    int32_t data_4 = Script_ParseEnumReal32_8();
+    int32_t item_240_1 = data_4;
+    data_4 = g_54097c;
+    QTask_RemoveEventCallback(data_4, item_240_1, ExplodeObject_Update);
+    int32_t data_5 = Level_LoadLevel_3();
+    QTask_RemoveEventCallback(g_54097c, data_5, sub_481e60);
+    int32_t data_6 = Level_InitTextures_3();
+    QTask_RemoveEventCallback(g_54097c, data_6, ExplodeObject_OnEvent);
+    int32_t data_7 = Script_FormatString_5();
+    int32_t item_240_4 = data_7;
+    data_7 = g_54097c;
+    QTask_TriggerEvent(data_7, item_240_4, ExplodeObject_Action);
+    int32_t data_8 = Script_SpawnNewTask_6();
+    QTask_TriggerEvent(g_54097c, data_8, ExplodeObject_Cleanup);
+    int32_t data_9 = DynObj_CreateMagicObject_6();
+    QTask_RemoveEventCallback(g_54097c, data_9, ExplodeObject_Cleanup_2);
+    QTask_RemoveEventCallback(g_54097c, 6, AIGraph_LoadParameters);
+    int32_t data_11 = DynObj_LinkDynamicCube_12();
+    QTask_RemoveEventCallback(g_54097c, data_11, ExplodeObject_Cleanup_4);
+    int32_t data_12 = DynObj_UpdateDynTree_12();
+    QTask_RemoveEventCallback(g_54097c, data_12, ExplodeObject_Cleanup_3);
+    g_5c1170 = 0;
+    g_5c1174 = 0x42c80000;
+    g_5c1178 = 0;
+    g_5c117c = 0x3e8;
+    g_5c1184 = Script_EvaluateCondition_7(0xd);
+    int32_t data_14 = Script_ParseEnumReal32_4();
+    void item_238;
+    void item_148;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_148, data_14, 7, 0);
+    int32_t data_15 = Script_SpawnNewTask_3();
+    void item_130;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_130, data_15, 7, 0);
+    int32_t data_16 = Script_EvaluateCondition_3();
+    void item_c8;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_c8, data_16, 7, 0);
+    int32_t data_17 = Script_EvaluateCondition_3();
+    void item_b8;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_b8, data_17, 7, 0);
+    int32_t data_18 = Script_EvaluateCondition_2();
+    void item_48;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_48, data_18, 7, &g_5c1170);
+    int32_t data_19 = Script_EvaluateCondition_2();
+    void item_40;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_40, data_19, 7, &g_5c1170);
+    int32_t data_20 = Script_EvaluateCondition_2();
+    void item_3c;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_3c, data_20, 7, &g_5c1170);
+    int32_t data_21 = Script_EvaluateCondition_2();
+    void item_34;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_34, data_21, 7, &g_5c1170);
+    int32_t data_22 = Script_EvaluateCondition_2();
+    void item_30;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_30, data_22, 7, &g_5c1170);
+    int32_t data_23 = Script_ParseEnumString_3();
+    void item_2c;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_2c, data_23, 7, &g_5c1178);
+    int32_t data_24 = Script_ParseEnumString_3();
+    void item_28;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_28, data_24, 7, &g_5c1178);
+    int32_t data_25 = Script_CallNativeHandler_3();
+    void item_a4;
+    Script_UndefinedParameterTy(g_5c1184, &item_238, &item_a4, data_25, 7, 0);
+    int32_t data_26 = Script_EvaluateCondition_3();
+    void item_24;
+    return Script_UndefinedParameterTy(g_5c1184, &item_238, &item_24, data_26, 7, 0);
+}

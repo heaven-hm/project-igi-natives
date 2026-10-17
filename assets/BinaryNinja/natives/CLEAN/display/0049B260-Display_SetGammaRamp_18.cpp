@@ -1,0 +1,15 @@
+// IGI native provenance: Display_SetGammaRamp_18 - 0x0049B260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049B260-Display_SetGammaRamp_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Display_SetGammaRamp_18.h"
+int32_t Display_SetGammaRamp_18()
+
+{
+    Sys_PushStack_19(g_bcade8, g_72057c);
+    Sys_PushStack_19(g_bcad7c, g_7205a4);
+    int32_t temp_1 = g_bcadac;
+    Sys_PushStack_19(temp_1, g_7205a8);
+    Sys_PushStack_19(g_bcadc4, g_7205a0);
+    temp_1 = g_543c64;
+    QTask_CloseEvent_2(temp_1);
+    return Display_CheckCapabilities_14(g_c311bc);
+}

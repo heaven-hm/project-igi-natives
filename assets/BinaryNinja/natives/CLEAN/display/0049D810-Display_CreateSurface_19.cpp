@@ -1,0 +1,39 @@
+// IGI native provenance: Display_CreateSurface_19 - 0x0049D810 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049D810-Display_CreateSurface_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Display_CreateSurface_19.h"
+int32_t Display_CreateSurface_19()
+
+{
+    int32_t data_val = g_b46d04;
+    int32_t* data_1 = g_5ca114;
+    (*(*data_1 + 0x50))(data_1, 0x22,
+        g_b818f4 * 255.0f - ((((g_b818ec * -255.0f) << 8) + g_b818f0 * -255.0f) << 8));
+    int32_t* data_2 = g_5ca114;
+    (*(*data_2 + 0x50))(data_2, 0x26, data_val);
+    int32_t* data_3 = g_5ca114;
+    (*(*data_3 + 0x50))(data_3, 0x23, 0);
+    int32_t* data_4 = g_5ca114;
+    (*(*data_4 + 0x50))(data_4, 0x8c, 3);
+    int32_t* data_5 = g_5ca114;
+    (*(*data_5 + 0x50))(data_5, 0x1c, g_5470b4);
+    int32_t* data_6 = g_5ca114;
+    (*(*data_6 + 0x50))(data_6, 0x2f, 3);
+    int32_t* data_7 = g_5ca114;
+    (*(*data_7 + 0x50))(data_7, 0x1d, 0);
+    int32_t* data_8 = g_5ca114;
+    (*(*data_8 + 0x50))(data_8, 0x16, 3);
+    int32_t* data_9 = g_5ca114;
+    (*(*data_9 + 0x50))(data_9, 0x89, 0);
+    int32_t* data_10 = g_5ca114;
+    (*(*data_10 + 0x50))(data_10, 0x8d, 0);
+    int32_t* data_11 = g_5ca114;
+    (*(*data_11 + 0x50))(data_11, 0x1a, 1);
+    int32_t* data_12 = g_5ca114;
+    (*(*data_12 + 0x50))(data_12, 0xf, 0);
+    int32_t* data_13 = g_5ca114;
+    (*(*data_13 + 0x50))(data_13, 7, g_bcad78);
+    int32_t* data_14 = g_5ca114;
+    (*(*data_14 + 0x50))(data_14, 0xe, 1);
+    int32_t* data_15 = g_5ca114;
+    return (*(*data_15 + 0x50))(data_15, 0x17, 4);
+}

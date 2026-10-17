@@ -1,0 +1,20 @@
+// IGI native provenance: DynObj_Initmodels - 0x004CEEB0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CEEB0-DynObj_Initmodels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "DynObj_Initmodels.h"
+int32_t DynObj_Initmodels()
+
+{
+    memset(&g_a443a0, 0, 0xa8c0);
+    g_a4ec60 = &g_a4ec64;
+    g_a4ec68 = &g_a4ec60;
+    g_a4ec64 = 0;
+    g_a4ed6c = 0;
+    g_a4edec = 0;
+    g_a4edf0 = 0;
+    g_548200 = Sys_RendermodeFailedToCr_2("InitModels");
+    g_548204 = Sys_RendermodeFailedToCr_2("DeinitModels");
+    g_548208 = Sys_RendermodeFailedToCr_2("LoadModel");
+    int32_t result = Sys_RendermodeFailedToCr_2("UnloadModel");
+    g_54820c = result;
+    return result;
+}

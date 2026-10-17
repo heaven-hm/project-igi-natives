@@ -1,0 +1,82 @@
+// IGI native provenance: LODSettings_Init - 0x004ED6B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ED6B0-LODSettings_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "LODSettings_Init.h"
+int32_t* LODSettings_Init()
+
+{
+    g_a5efa8 = 0;
+    g_a5efac = 0x447a0000;
+    g_a5efc0 = 0;
+    int32_t item_88 = 0;
+    g_a5efc4 = 0x44bb8000;
+    g_a5efb8 = 0;
+    g_a5efbc = 0x461c4000;
+    g_a5efb0 = 0;
+    g_a5efb4 = 0x3f800000;
+    g_54dbdc = TaskType_Register("LODSettings", 0x40, QTask_OpenEvent_2(), 0);
+    int32_t item_88_1 = 0;
+    g_54dbde = TaskType_Register("ModelLODSettings", 0x44, QTask_OpenEvent_2(), 0);
+    int32_t item_88_2 = 0;
+    g_54dbe0 = TaskType_Register("ModelLODSettingsContainer", 0x20, QTask_OpenEvent_2(), 0);
+    QTask_RemoveEventCallback(g_54dbdc, 0, sub_4eda70);
+    int32_t data_6 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_54dbdc, data_6, sub_4edaa0);
+    int32_t data_7 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_54dbdc, data_7, sub_4edb20);
+    QTask_RemoveEventCallback(g_54dbde, 0, sub_4edb30);
+    QTask_TriggerEvent(g_54dbde, 2, sub_4edbd0);
+    int32_t data_9 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_54dbde, data_9, LODSettings_LoadParameters);
+    int32_t data_10 = Script_ParseEnumInt32_8();
+    int32_t item_8c_3 = data_10;
+    data_10 = g_54dbde;
+    QTask_RemoveEventCallback(data_10, item_8c_3, sub_4edbf0);
+    QTask_RemoveEventCallback(g_54dbe0, 0, sub_4edc00);
+    QTask_TriggerEvent(g_54dbe0, 3, sub_4edc50);
+    g_a5efc8 = Script_EvaluateCondition_7(8);
+    g_a5efcc = Script_EvaluateCondition_7(6);
+    int32_t data_13 = Script_EvaluateCondition_2();
+    void item_84;
+    void item_64;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_64, data_13, 7, &g_a5efc0);
+    int32_t data_14 = Script_EvaluateCondition_2();
+    void item_60;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_60, data_14, 7, &g_a5efc0);
+    int32_t data_15 = Script_EvaluateCondition_2();
+    void item_5c;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_5c, data_15, 7, &g_a5efc0);
+    int32_t data_16 = Script_EvaluateCondition_2();
+    void item_58;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_58, data_16, 7, &g_a5efb8);
+    int32_t data_17 = Script_EvaluateCondition_2();
+    void item_54;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_54, data_17, 7, &g_a5efb8);
+    int32_t data_18 = Script_EvaluateCondition_2();
+    void item_50;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_50, data_18, 7, &g_a5efb8);
+    int32_t data_19 = Script_EvaluateCondition_2();
+    void item_4c;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_4c, data_19, 7, &g_a5efb0);
+    int32_t data_20 = Script_EvaluateCondition_2();
+    void item_48;
+    Script_UndefinedParameterTy(g_a5efc8, &item_84, &item_48, data_20, 7, 0);
+    int32_t data_21 = Script_EvaluateCondition_3();
+    void item_44;
+    void item_24;
+    Script_UndefinedParameterTy(g_a5efcc, &item_44, &item_24, data_21, 7, 0);
+    int32_t data_22 = Script_EvaluateCondition_2();
+    void item_14;
+    Script_UndefinedParameterTy(g_a5efcc, &item_44, &item_14, data_22, 7, &g_a5efa8);
+    int32_t data_23 = Script_EvaluateCondition_2();
+    void item_10;
+    Script_UndefinedParameterTy(g_a5efcc, &item_44, &item_10, data_23, 7, &g_a5efa8);
+    int32_t data_24 = Script_EvaluateCondition_2();
+    void item_c;
+    Script_UndefinedParameterTy(g_a5efcc, &item_44, &item_c, data_24, 7, &g_a5efa8);
+    int32_t data_25 = Script_EvaluateCondition_2();
+    void item_8;
+    Script_UndefinedParameterTy(g_a5efcc, &item_44, &item_8, data_25, 7, &g_a5efa8);
+    int32_t data_26 = Script_EvaluateCondition_2();
+    void item_4;
+    return Script_UndefinedParameterTy(g_a5efcc, &item_44, &item_4, data_26, 7, &g_a5efa8);
+}

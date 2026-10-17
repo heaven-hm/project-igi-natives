@@ -1,0 +1,53 @@
+// IGI native provenance: RainDynCubeObj_LoadParameters - 0x004F6C00 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F6C00-RainDynCubeObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "RainDynCubeObj_LoadParameters.h"
+int32_t* RainDynCubeObj_LoadParameters(void* context)
+
+{
+    *(context + 0x2c40) = 0;
+    *(context + 0x2c3c) = 0x407f4000;
+    *(context + 0x2c44) = 0x407f4000;
+    *(context + 0x2ca8) = 0;
+    memset(context + 0x2c08, 0, 0x34);
+    *(context + 0x2c84) = 0;
+    *(context + 0x2cb0) = 0;
+    *(context + 0x2cac) = 0;
+    *(context + 0x2c74) = 0;
+    *(context + 0x2c78) = 0;
+    *(context + 0x2c54) = 0;
+    *(context + 0x2c58) = 0;
+    *(context + 0x2c5c) = 0;
+    *(context + 0x2c98) = 0x41700000;
+    *(context + 0x2c9c) = 0x3e800000;
+    *(context + 0x2ca0) = 0x3f000000;
+    *(context + 0x2c6c) = 0xbe4ccccd;
+    *(context + 0x2c70) = 0x3dcccccd;
+    *(context + 0x2ca4) = 0x3f800000;
+    *(context + 0x2cb4) = 1;
+    *(context + 0x2ba8) = 0;
+    *(context + 0x2bac) = 0x10;
+    *(context + 0x2bb0) = 0x3f800000;
+    *(context + 0x2bb4) = 0x3f800000;
+    *(context + 0x2bb8) = 0;
+    *(context + 0x2ba0) = Display_CheckCapabilities_12("gen_32");
+    *(context + 0x2ba4) = Display_RestoreDevice_12("gen_32");
+    *(context + 0x2d0c) = 0;
+    Script_ExecuteLevelScript_6(context + 0x2cb8);
+    *(context + 0x4288) = 0;
+    int32_t entity_val = 0;
+    int32_t* i;
+
+    for (i = &g_a76ca4; i < &g_a76cc4; )
+    {
+        if (!*i)
+        {
+            *((entity_val << 2) + &g_a76ca4) = context;
+            return i;
+        }
+
+        i = &i[1];
+        entity_val += 1;
+    }
+
+    return i;
+}

@@ -1,0 +1,23 @@
+// IGI native provenance: Menu_UpdateLanguage_9 - 0x0041E990 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041E990-Menu_UpdateLanguage_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Menu_UpdateLanguage_9.h"
+int32_t* Menu_UpdateLanguage_9(void* context)
+
+{
+    int32_t i_1 = 0x40;
+    int32_t* result = context + 0xe0;
+    int32_t i;
+
+    do
+    {
+        result[1] = 0;
+        *result = 0;
+        result = &result[0xb];
+        i = i_1;
+        i_1 -= 1;
+    } while (i != 1);
+    *(context + 0xbe0) = 0;
+    *(context + 0xbe4) = 0;
+    *(context + 0xbe8) = 0;
+    return result;
+}

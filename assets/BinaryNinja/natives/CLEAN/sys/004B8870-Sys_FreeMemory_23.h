@@ -1,0 +1,4 @@
+#pragma once
+#include <stdint.h>
+/* 004B8870 Sys_FreeMemory_23 | gate PASS | openigi False */
+void * Sys_FreeMemory_23(int* context, int param_2);

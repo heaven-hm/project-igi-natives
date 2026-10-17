@@ -1,0 +1,32 @@
+// IGI native provenance: Game_CutsceneDelete - 0x00415AB0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00415AB0-Game_CutsceneDelete.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Game_CutsceneDelete.h"
+int32_t Game_CutsceneDelete(int32_t context)
+
+// Sig: void Game_CutsceneDelete(void)
+// Note: Deletes/ends the running cutscene and frees its resources. Takes no
+// args. | OUTRO USAGE: each level OBJECTS.QVM ends with a ConditionalContainer
+// Task_New named "Outro cutscene" (condition e.g. "AreaActivate_156.nActive &&
+// !HumanPlayer_0.isDead") that calls
+// MenuManager_SetEnabled(FALSE)+Game_DisableMusic()+THIS FUNCTION before
+// playing the exit CutScene (e.g. CutScene_2222 heli escape), then restores
+// menus/music on finish. TO REMOVE OUTROS: either patch that container
+// condition to FALSE per OBJECTS.QVM, or hook CutScene_TaskUpdate 0x4F51D0 to
+// complete instantly (generic - kills intro+outro in all levels). LEVEL4
+// example verified via OpenIGI QvmDisasm.
+{
+    int32_t* data_1 = g_57bab0;
+
+    while (*data_1)
+    {
+        QTask_FindType(data_1[2]);
+        data_1 = g_57bab0;
+    }
+
+    int32_t item_18 = 1;
+    int32_t item_10 = 0;
+    int32_t item_c = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
+}

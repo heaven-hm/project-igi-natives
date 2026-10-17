@@ -1,0 +1,77 @@
+// IGI native provenance: Switch_Init - 0x00444BF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00444BF0-Switch_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Switch_Init.h"
+int32_t* Switch_Init()
+
+{
+    int32_t item_22c = 0;
+    int16_t data_1 = TaskType_Register("Switch", 0x228, SoundSys_Update3DPosition(), 0);
+    g_57c1b8 = data_1;
+    QTask_RemoveEventCallback(data_1, 0, Switch_LoadParameters);
+    QTask_TriggerEvent(g_57c1b8, 1, Switch_Setup);
+    QTask_TriggerEvent(g_57c1b8, 2, Switch_Process);
+    int32_t data_3 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_57c1b8, data_3, sub_4452e0);
+    int32_t data_4 = Script_ParseEnumReal32_8();
+    int32_t item_230_1 = data_4;
+    data_4 = g_57c1b8;
+    QTask_RemoveEventCallback(data_4, item_230_1, Switch_Update);
+    int32_t data_5 = Level_InitTextures_2();
+    QTask_RemoveEventCallback(g_57c1b8, data_5, Switch_OnEvent);
+    int32_t data_6 = Level_CheckQTaskID_2();
+    QTask_RemoveEventCallback(g_57c1b8, data_6, sub_4f01b0);
+    int32_t data_7 = Level_InitSprites_2();
+    int32_t item_230_4 = data_7;
+    data_7 = g_57c1b8;
+    QTask_RemoveEventCallback(data_7, item_230_4, AIGraph_LoadParameters);
+    int32_t data_8 = Level_SetMission_2();
+    QTask_RemoveEventCallback(g_57c1b8, data_8, sub_445820);
+    int32_t data_9 = Level_LoadLevel_3();
+    QTask_RemoveEventCallback(g_57c1b8, data_9, sub_445840);
+    int32_t data_10 = Script_FormatString_5();
+    int32_t item_230_7 = data_10;
+    data_10 = g_57c1b8;
+    QTask_TriggerEvent(data_10, item_230_7, Switch_Cleanup);
+    int32_t data_11 = Script_SpawnNewTask_6();
+    QTask_TriggerEvent(g_57c1b8, data_11, Switch_Cleanup_2);
+    int32_t data_12 = DynObj_CreateMagicObject_6();
+    QTask_RemoveEventCallback(g_57c1b8, data_12, Switch_Cleanup_3);
+    int32_t data_13 = AI_CheckHearing_25();
+    int32_t item_230_10 = data_13;
+    data_13 = g_57c1b8;
+    QTask_RemoveEventCallback(data_13, item_230_10, sub_443dc0);
+    int32_t data_14 = Weapon_CheckAmmo_8();
+    QTask_RemoveEventCallback(g_57c1b8, data_14, 0);
+    g_57c1b4 = Script_EvaluateCondition_7(0xa);
+    int32_t data_16 = Script_ParseEnumReal32_4();
+    void item_228;
+    void item_138;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_138, data_16, 7, 0);
+    int32_t data_17 = Script_SpawnNewTask_3();
+    void item_120;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_120, data_17, 7, 0);
+    int32_t data_18 = Script_CallNativeHandler_3();
+    void item_58;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_58, data_18, 7, 0);
+    int32_t data_19 = Script_ParseEnumInt32_4();
+    void item_68;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_68, data_19, 7, 0);
+    int32_t data_20 = Script_EvaluateCondition_3();
+    void item_b8;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_b8, data_20, 7, 0);
+    int32_t data_21 = Script_EvaluateCondition_3();
+    void item_a8;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_a8, data_21, 7, 0);
+    int32_t data_22 = Script_EvaluateCondition_3();
+    void item_98;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_98, data_22, 7, 0);
+    int32_t data_23 = Script_EvaluateCondition_3();
+    void item_88;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_88, data_23, 7, 0);
+    int32_t data_24 = Script_EvaluateCondition_3();
+    void item_78;
+    Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_78, data_24, 7, 0);
+    int32_t data_25 = Script_ParseEnumInt32_4();
+    void item_8;
+    return Script_UndefinedParameterTy(g_57c1b4, &item_228, &item_8, data_25, 7, 0);
+}

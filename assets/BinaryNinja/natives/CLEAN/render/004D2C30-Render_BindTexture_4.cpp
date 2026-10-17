@@ -1,0 +1,32 @@
+// IGI native provenance: Render_BindTexture_4 - 0x004D2C30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D2C30-Render_BindTexture_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "Render_BindTexture_4.h"
+int32_t Render_BindTexture_4()
+
+{
+    Render_DrawRigidMesh_7(0, 0);
+    g_a54678 = 1;
+    int32_t* entity_val = &g_a538f0;
+
+    for (int32_t* i = &g_a542f4; i < &g_a545f4; )
+    {
+        i[-1] = 0;
+        *i = 0;
+        entity_val[9] = 0;
+        i[1] = 0;
+        *entity_val = 0;
+        entity_val[1] = 0;
+        i = &i[3];
+        entity_val = &entity_val[0xa];
+    }
+
+    Sys_FreeMemory_2(&g_a54640, 0x10, 0x80, 4);
+    Sys_FreeMemory_2(&g_a54620, 0x34, 0x80, 4);
+    Sys_FreeMemory_2(&g_a54608, 0x1c, 0x80, 4);
+    Sys_FreeMemory_2(&g_a54660, 0x2c, 0x80, 4);
+    int32_t result = Sys_FreeMemory_2(&g_a545f0, 0x14, 0x100, 4);
+    g_a54684 = 0;
+    g_a54688 = 0;
+    g_a54658 = 0;
+    return result;
+}

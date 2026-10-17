@@ -1,0 +1,80 @@
+// IGI native provenance: HeightMap_Init - 0x00506FA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00506FA0-HeightMap_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+#include "HeightMap_Init.h"
+int32_t* HeightMap_Init()
+
+{
+    Sys_ResolveSymbol_13(0xa7b138);
+    Sys_OpenFileStream_14(0xa7b138, 0x19111911);
+    int32_t item_110 = 0;
+    int16_t data_1 = TaskType_Register("HeightMap", 0x100, g_54875c, 0);
+    g_a7b248 = data_1;
+    QTask_RemoveEventCallback(data_1, 0, sub_506de0);
+    QTask_RemoveEventCallback(g_a7b248, 0xd, sub_507d00);
+    QTask_RemoveEventCallback(g_a7b248, 0x10, sub_506f60);
+    QTask_TriggerEvent(g_a7b248, 2, HeightMap_LoadParameters);
+    int32_t data_3 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_a7b248, data_3, sub_507400);
+    int32_t data_4 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_a7b248, data_4, HeightMap_Setup);
+    QTask_RemoveEventCallback(g_a7b248, 0xa, 0);
+    QTask_RemoveEventCallback(g_a7b248, 0xb, 0);
+    int32_t data_6 = Render_DrawSplineMesh_4();
+    QTask_RemoveEventCallback(g_a7b248, data_6, 0);
+    QTask_RemoveEventCallback(g_a7b248, 9, 0);
+    QTask_RemoveEventCallback(g_a7b248, 0xc, 0);
+    QTask_RemoveEventCallback(g_a7b248, 0xf, HeightMap_Enter);
+    int32_t data_8 = SoundSys_AttachLipsync_2();
+    int32_t item_108_3 = data_8;
+    data_8 = g_a7b248;
+    QTask_RemoveEventCallback(data_8, item_108_3, sub_4f64e0);
+    QTask_RemoveEventCallback(g_a7b248, 8, 0);
+    QTask_RemoveEventCallback(g_a7b248, 4, 0);
+    QTask_RemoveEventCallback(g_a7b248, 5, 0);
+    g_a7b244 = Script_EvaluateCondition_7(0xe);
+    int32_t data_11 = Script_ParseEnumReal32_4();
+    void item_100;
+    void item_90;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_90, data_11, 7, 0);
+    int32_t data_13 = Script_ParseEnumString_3();
+    void item_48;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_48, data_13, 7, 0);
+    int32_t data_15 = Script_ParseEnumString_3();
+    void item_1c;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_1c, data_15, 7, 0);
+    int32_t data_17 = Script_ParseEnumInt32_4();
+    void item_24;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_24, data_17, 7, 0);
+    int32_t data_19 = Script_ParseEnumInt32_4();
+    void item_23;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_23, data_19, 6, 0);
+    int32_t data_21 = Script_SpawnNewTask_2();
+    void item_14;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_14, data_21, 6, 0);
+    int32_t data_23 = Script_SpawnNewTask_2();
+    void item_10;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_10, data_23, 6, 0);
+    int32_t data_25 = Script_ParseEnumInt32_4();
+    void item_1f;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_1f, data_25, 6, 0);
+    int32_t data_27 = Script_ParseEnumString_3();
+    void item_44;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_44, data_27, 3, 0);
+    int32_t data_29 = Script_ParseEnumString_3();
+    void item_30;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_30, data_29, 7, 0);
+    int32_t data_31 = Script_ParseEnumString_3();
+    void item_2c;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_2c, data_31, 7, 0);
+    int32_t data_33 = Script_ParseEnumString_3();
+    void item_28;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_28, data_33, 6, 0);
+    int32_t data_35 = Script_SpawnNewTask_2();
+    void item_c;
+    Script_UndefinedParameterTy(g_a7b244, &item_100, &item_c, data_35, 6, 0);
+    int32_t data_37 = Script_ParseEnumInt32_4();
+    void item_1e;
+    int32_t* result = Script_UndefinedParameterTy(g_a7b244, &item_100, &item_1e, data_37, 6, 0);
+    g_b97df4 = 0;
+    return result;
+}
