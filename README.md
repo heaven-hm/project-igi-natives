@@ -1,6 +1,6 @@
 # Project I.G.I. Native Engine Research
 
-This repository contains reverse-engineering records and C exports derived from the retail `igi.exe` binary. The target is the original x86 game engine. The native export work is based on IGI1 binary evidence; C# OpenIGI is not its implementation source.
+This repository contains reverse-engineering records and C exports derived from the retail `igi.exe` binary. The target is the original Windows x86 game engine. CrossOver is an optional local comparison environment only; it is not a player requirement or a shipped dependency. The native export work is based on IGI1 binary evidence; C# OpenIGI is not its implementation source.
 
 ## What is in this repository
 
@@ -24,17 +24,11 @@ The source exports are decompiler-derived representations of the executable, not
 
 ## Project-side logging
 
-Retail-native behavior and project diagnostics are kept separate. Do not insert new log calls into a recovered native body and describe them as original IGI behavior. C++ integration code can use `igi::diagnostics::log_retail_native` to add a timestamped record containing the native name, retail virtual address, severity, and message. The existing logger writes to stderr and, when configured, the application log file. For example:
+Retail-native behavior and project diagnostics are kept separate. C++ integration code can use `igi::diagnostics::log_retail_native` to add timestamp, severity, native name, and retail address metadata. The log message payload must be copied verbatim from `igi.exe` and matched to the native through string references in the analysis; do not author substitute gameplay or error text. The logger writes to stderr and, when configured, the application log file. The extracted printable strings are in [`igi_string.txt`](igi_string.txt); this raw extraction also contains library/import strings and false positives, so confirm each message's references before using it. These diagnostic prefixes are project metadata, not original game text.
 
-```cpp
-igi::diagnostics::log_retail_native(
-    igi::diagnostics::Severity::information,
-    "FallLanding",
-    0x00408460,
-    "entered with landing flag set");
-```
+Recreate the extraction with `strings -a /path/to/igi.exe > igi_string.txt`. `strings` output proves that bytes occur in the executable, not which routine uses them; use REA/Ghidra references to associate a message with its native before logging it.
 
-Use `--verbose` for debug-level diagnostics. Log entry, exit, important state transitions, and failures at the C++ integration boundary; do not emit per-frame noise unless verbose logging is enabled.
+Use `--verbose` for debug-level diagnostics. Keep logging at the C++ integration boundary; do not insert new logging calls into recovered native bodies and present them as retail behavior.
 
 ## Building the experimental gameplay prototype
 

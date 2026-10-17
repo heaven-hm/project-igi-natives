@@ -1,0 +1,11046 @@
+!This program cannot be run in DOS mode.
+6gGqX4GqX4GqX4<mT4DqX4
+SS4FqX4
+mV4XqX4
+SR4!qX4
+SS4FqX4
+RK4LqX4GqX4CqX4%nK4HqX4GqY4;qX4
+w^4FqX4RichGqX4
+.text
+`.rdata
+@.data
+.rsrc
+hDaS
+j hdaS
+h8|V
+hLaS
+h8|V
+PhlaS
+|$PW
+5X|V
+5X|V
+_^][
+|$PW
+5HaS
+5HaS
+_H^]
+-HaS
+D$AEV
+-HaS
+_H^]
+_^][
+_^][
+@Vf
+UVW3
+5L|V
+=8|V
+t$W
+t$W
+tSV
+S@WQ
+tUV
+S@WQ
+_H^]
+PjThtbS
+hp @
+h`"@
+h@'@
+hdbS
+hPbS
+h<bS
+h,bS
+t$3
+Sh@"@
+h@cS
+t+WSh
+h|bS
+SUVW
+=02S
+8XDu
+9x8}
+_^][
+P4jC
+_^][
+D$$VWj
+-1S
+h(cS
+_^][Y
+h`6@
+h82S
+h@2S
+hL2S
+hp8@
+hX2S
+hd2S
+hP9@
+hp2S
+h|2S
+h`>@
+hP7@
+hPP@
+h`V@
+h`W@
+hPD@
+h@C@
+h`A@
+h0B@
+h`I@
+h`O@
+h0U@
+h V@
+h\~S
+h8~S
+h~S
+h@L@
+hPN@
+hd}S
+h@}S
+h@K@
+hPM@
+hl|S
+hH|S
+hp<@
+h$|S
+h0;@
+hp;@
+F PV
+N QV
+V RV
+D$j
+D$$V3
+D$$VWj
+D$$VWj
+D$$VWj
+t$(Wj
+L$,VQ
+D$$VWj
+D$$VWj h
+SVWj Pj
+D$ t|V
+D$$VWj
+t$(Wj
+t$(Wj
+t$(Wj
+T$$VW
+D$$VWj
+D$$VWj
+D$$VWj
+D$ t|V
+D$,SVWj
+D$$t|V
+~|SVW3
+_^[]
+SVWj
+L$0h
+D$8RP
+D$$VWj
+D$,SUVWj
+D$<u
+D$(t|V
+_^][
+D$$t|V
+_^][
+D$$t|V
+_^][
+D$$SVWj
+D$$VWj
+D$ t|V
+D$$SVWj
+D$$SVWj
+D$$VWj
+D$ t|V
+D$$SVWj
+D$$VWj
+D$ t|V
+D$$SVWj
+D$$VWj
+D$ t|V
+D$$SVWj
+D$$VWj
+D$ W
+D$$VWj
+SUVW
+D$ t|V
+_^][
+j Pj
+D$ t|V
+_^][
+D$ t|V
+_^][
+D$ t|V
+_^][
+D$$I
+D$ W
+D$,SUVWj
+D$(t|V
+_^][
+t$(Wj
+D$$VWj
+=TeS
+T$ +
+_^][
+D$Ph
+Ph82S
+Ph@2S
+L$(Ph
+T$8PRW
+D$ WPQ
+PQRhp2S
+Qh|2S
+T<(hd
+T<$hX
+D$,WPQ
+PhX2S
+$hd2S
+L$ PQV
+hL2S
+$A=DiS
+_[^]
+[tj
+,h`k@
+hpk@
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+333?
+D$ PV
+SUVWj
+D$$P
+_^][
+_^][
+_^][
+_^[
+hP{@
+L$(P
+T$QRP
+L$8P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+L$,P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+L$0P
+T$QRP
+L$4P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+_]t2
+h0~@
+D$$VWj
+t$(Wj
+|$0j 
+T$0Rj
+D$8j
+T$0Rj
+D$8j
+t$\W
+L$<h\
+T$<hL
+D$<h<
+L$<QR
+D$,F
+D$4Q
+t$W
+t$Wj
+L>RV
+t$V
+BtVQ
+B$VQ
+BpVQ
+BVQ
+BPVQ
+t$Wj
+t$V
+BtVQ
+B(VQ
+BpVQ
+BTVQ
+t$V
+BtVQ
+B,VQ
+BpVQ
+B VQ
+BXVQ
+L>QW
+t$V
+BtVQ
+B0VQ
+BpVQ
+B\VQ
+t$V
+BtVQ
+B4VQ
+BpVQ
+B`VQ
+t$V
+BtVQ
+B8VQ
+BpVQ
+B VQ
+BdVQ
+t$Wj
+L>RV
+t$V
+BtVQ
+B<VQ
+BpVQ
+BhVQ
+t$Wj
+L>RV
+t$V
+BtVQ
+B@VQ
+BpVQ
+BVQ
+BlVQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+T$RQ
+t$W
+SUVW
+@$WV
+_^][
+B0WV
+_^][
+A<WV
+_^][
+@@WV
+_^][
+_^][
+_^][
+_^][
+B WV
+_^][
+_^][
+t$WV
+t$pWV
+L$Dh
+T$HQR
+D$,PV
+D$ R
+L$XPQ
+D$p_^
+t$(V
+t$pWV
+D$PQV
+T$LQR
+t[HuwjSj
+0_^][
+t$pWV
+\$pQV
+T$LQR
+t$lWV
+T$@h
+D$DRP
+L$ PV
+L$PPQ
+,_^[
+t$lV
+D$$R
+L$\PQ
+T$h^
+t$WV
+BxWV
+A|WV
+t$pWV
+T$TRV
+L$@P
+T$HQ
+L$tQV
+|$,j
+L$xQ
+D$lR
+D$|R
+t$ t\
+t$ Pj
+D$DP
+L$0QU
+T$,RU
+t$W
+t$LW
+D$4Qh
+L$(Q
+V RP
+D$ Q
+t$W
+t$LW
+L$0h
+T$,R
+N QP
+t$W
+t$LW
+L$0h
+T$,R
+N QP
+t$W
+t$W
+%l4S
+t$W
+@u&j
+t$WV
+t$W
+t$W
+_^][
+@_^t"
+SUVW
+_^][
+tf;l$ u@
+B$WV
+_^][
+_^][
+A(WV
+_^][
+@ WV
+_^][
+_^][
+A0WV
+_^][
+_^][
+_^][
+BWV
+_^][
+_^][
+_^][
+@ueW
+T$,RW
+_^][
+B,WV
+_^][
+SUVW
+|$ j
+_^][
+B0WV
+_^][
+_^][
+BWV
+_^][
+t$j
+\$0UV
+_^][
+t$j
+Kn=h
+Kn=j
+t$j
+Kn=h
+t{UV
+Kn=UUP
+(]_^[
+t$Wj
+_^][
+Kn=j
+T$DRW
+_^][
+_^][
+Kn=j
+t$Wj
+@t.j
+|$ J
+_^][
+_^][
+t$V
+pRP
+h $A
+h@$A
+h 1A
+h07A
+t$4Wj
+D$$t|V
+|$,3
+97~-
+l$0VW
+D$$t|V
+_^][
+|$,3
+97~=S
+SUVW
+l$,%
+MxPQ
+T$dQR
+t$(V
+]^[Y
+]^[Y
+t$DWV
+opQV
+D$$R
+L$,PQU
+T$pRV
+opRV
+L$$P
+T$,QRU
+D$pPV
+l$PU
+D$W
+L$ QU
+D$ R
+L$(PQR
+D$pPU
+_^][
+D$<F
+D$4P
+D$0VP
+|$xj
+L$dVQ
+T$|VR
+L$@PQ
+<_^[
+L$0VQ
+D$Tj
+D$|VP
+D$0VP
+|$`j
+L$|VQ
+L$@PQ
+T$tVR
+L$0VQ
+D$Tj
+t$ W
+_^][
+|$(WV
+\$$t"Ht-Ht
+_^][
+<SUV
+L$4PQ
+$PVW
+\$Lt"Ht-Ht
+D$,P
+\$Ht"Ht-Ht
+[uAj
+NxhPwV<h
+t$8W
+T$(R
+D$ j
+D$,j
+D$dP
+L$pQ
+T$\R
+D$dP
+D$do
+L$8PQ
+D$8j
+D$PW
+T$pQR
+L$\Pf
+L$0RPQj
+D$Lh
+D$hQ
+D$ h
+D$4Q
+L$(3
+_^][
+t2It
+D$$RSVP
+L$$PUWQ
+_^][
+L$h
+QSUVW
+_^]3
+_^][Y
+L$,3
+T$HV
+D$,h
+|$Dh
+Pj,U
+Qj-U
+T$Rj
+D$ t|V
+L$j
+T$PRj
+D$(VP
+L$j
+T$PRj
+D$(VP
+t$W
+T$QVR
+T$QVR
+t$Pf
+VQWP
+Pj8h
+hPTA
+hpQA
+Vh`RA
+D$,P
+D$(h
+L$8QWR
+D$`h
+\$Pj
+\$\j
+\$<j
+\$Hj
+\$\jV
+\$pQR
+D$Pt|V
+V(@j
+hpQA
+hpQA
+t$Ht
+h0[A
+h`bA
+hPeA
+h0XA
+hPYA
+h`ZA
+L>hfff?h
+D$$VWj
+D$$VWj
+D$4PP
+D$$VWj
+L$4Q
+D$ W
+UVWj
+L$8h\
+T$@R
+T$HR
+h4cS
+SUVW
+\$&u
+_^][
+~wSVW
+_^[]
+~uSVW
+_^[]
+h(cS
+~pVW
+_^][
+_^][
+;Ht
+D$<S
+\$8V
+D$P
+L$(V
+h`rA
+h zA
+T$QRP
+L$(P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t$$Wj
+SVh`yA
+jhX
+tZ;h
+tZ;h
+tZ;h
+tZ;h
+tZ;h
+tZ;h
+tZ;h
+tZ;h
+|$,j
+O0QW
+O0QW
+T$(W
+t$(Wj
+D$$V
+t$$Wj
+D$$VWj
+D$ VW
+_][V
+_^][
+T$$h ~A
+D$8h ~A
+@_^][
+QSUV
+JtFJ
+_^][Y
+^][Y
+_^][Y
+L$ j
+_^][Y
+u(_^][Y
+_^][Y
+_^][Y
+_^][Y
+_^][Y
+u(_^][Y
+u(_^][Y
+^][Y
+^][Y
+^][Y
+_^][Y
+_^][Y
+{QVWR
+_^][Y
+_^][Y
+u9hd
+t$P
+F0tXPV
+F0PV
+t$W
+D$PV
+D$_
+|$VW
+F4toW
+F4PV
+N4QV
+F0PV
+SUVW
+h(cS
+t)Sh
+_^]3
+_^]3
+_^]3
+L$WPh
+][_^
+F@_^
+N<99t
+L$(P
+T$QRP
+T$QRP
+T$QRP
+=VW3
+H9>
+D$(R
+SUVW
+D$ 3
+_^][
+SUVW
+T$$C
+L$8R
+_^][
+Pj$h
+l$V
+~ S3
+Pj\h,
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+D$@Q
+D$lQ
+D$HQ
+D$$Sh
+d$4SSSQ
+d$,Q
+,_^[
+L$0P
+T$QRP
+L$4P
+T$QRP
+l$V
+~6W3
+EDRP
+_^][
+SUVW
+T$$QR
+ht|V
+ODPQ
+L$(%
+_^][
+F\B;
+E PV
+;W`t
+T$DQR
+L$LQV
+T$<V
+L$(R
+T$$QR
+D$,Q
+D$PQ
+D$\Q
+O\C@
+9>tf;
+PhD"
+L$\P
+T$QRP
+L$0PQ
+L$4P
+T$QRP
+T$QRP
+T$QRP
+VTRP
+ht|V
+t;VW
+_^][
+_^][
+tVW
+FDWP
+92t4A
+_^][
+L$0P
+T$QRP
+L$4PQ
+T$QRP
+T$QRP
+T$ %
+t<VW
+SUV
+T$4h
+D$8h
+D$@P
+L$4QP
+D$@P
+T$HRQRPS
+_^][
+tVW
+FDWP
+92t.A
+_^][
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+t$%
+t$W
+\$4%
+0_^[
+t$(W
+L$$P
+W PQRW
+tVU
+tVW
+_^][
+D$|
+|$SU
+D$(j
+D$@RQ
+tVW
+t-VW
+|$3
+VT;:t!@
+N(Uj
+tVW
+T$LQh
+D$XVP
+T$LQh
+D$XP
+T9:t0A
+L$\P
+T$QRP
+T$QRP
+L$0P
+T$QRP
+L$4P
+T$QRP
+t$3
+FDW;
+tyUW
+U@PW
+ w23
+t$W3
+NTQP
+t?ht|V
+F(_^
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+VDht
+ht|V
+t$W
+V$SSP
+F QRPV
+SIShP
+t3VW
+D2TF
+T$h\
+****
+D$xRWP
+L$4Q
+_^][
+tVW
+T$LQhh
+FTj(
+L$\PQ
+T$LQhh
+D$XP
+L$PQR
+L$PQR
+t$%
+t$WhP
+T$$%
+F QRPV
+O RPQW
+_^][
+?SQh
+FMPSh
+<_^[
+t$W
+T$LQh
+D$XVP
+T$LQh
+D$XP
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+t$%
+\$HUV
+ht|V
+L$ h
+|$XWV
+_^][
+_^][
+M,S+
+_^][
+tVW
+t>VW
+tVW
+T$LQh
+D$XVP
+T$LQh
+D$XP
+9:t0A
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+\$LUV
+L$(Q
+L$4Q
+T$8RP
+L$\QV
+L$dQV
+t$Xtu
+L$XR
+L$Xt?
+L$\%
+_^][
+t$ W
+D$$3
+QRPSWUV
+L$$+
+L$$+
+Au#j
+_^][
+t$$W
+D$$S
+D$(h
+D$@Q
+VMRSh
+_^][
+tVW
+T$LQh
+L$XPQ
+D$`Rh
+L$lVQ
+T$HQh
+D$TP
+T$XQh
+D$dP
+T$V
+L$\P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t$%
+VDhX
+L$ %
+_^][
+V PQRV
+FDVP
+t0VW
+t$ W
+D$ j
+$PQP
+D$4PRQR
+<_^][
+NTQP
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+VDhX
+_^[Y
+F QRPV
+NDVQ
+t0VW
+t$ W
+L$ j
+$PQP
+D$4PRQRP
+<_^][
+D$RPQ
+NTQP
+P QRP
+D$,Q
+h`"B
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+NTQP
+L$0%
+VDWR
+L$V
+T$lW
+D$HQ
+D$tQ
+D$PQ
+_^uF
+d$$SSSQ
+d$,Q
+tSW
+tVW
+tVW
+hP*B
+h@&B
+D$RPQ
+D$RPQ
+T$,PR
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+t$%
+\$HV
+t@UW3
+VUhH
+L$ QR
+L$P%
+SUVW
+l$ j
+UWSV
+/QSV
+UWSV
+T$4j
+0_^][
+D$$+
+D$$j
+D$<h
+D$<Q
+T$ +
+T$0j
+L$ u
+L$ +
+D$$j
+D$<Q
+_^][
+_^][
+G QRPW
+ODWQ
+ h0/B
+h@.B
+L$0P
+T$QRP
+T$QRP
+t$L%
+$RPW
+F\QP
+T$VW
+GXRVP
+L$j
+T$HQh
+T$LQh
+hP3B
+h0=B
+h@2B
+D$,VWj
+D$ t|V
+D$,VWj
+D$ t|V
+t$%
+~DVW
+SUVW
+L$ Q
+PUUS
+ht|V
+L$ %
+_^][
+(SUV
+t$8W
+T$,h\
+D$8j
+OWSV
+D$ R
+N RPQV
+gfff
+_^][
+L$V
+D$Pj
+VDQR
+]_^[
+SUVW
+\$\R
+T$8P
+_^][
+T$0j
+t$(Uj
+RCVR
+L$$j
+][_^
+T$LQh
+L$XPQ
+D$`Rh
+T$lQR
+T$LQh
+D$XP
+T$\Qh
+D$hP
+D$~bSU
+GDRP
+QUVW
+_^]Y
+PjTh
+8h`BB
+h DB
+t$f9F
+9Y<u
+9Y@u
+$SUVW
+L$8E
+T$8+
+T$ }
+_^][
+SUVW
+D$T3
+D$8Q
+D$$SSSQ
+D$0Q
+D$<Q
+D$DQ
+(_^][
+Pj@h
+8h@LB
+T$$Q
+hPPB
+h@SB
+h`UB
+L$(P
+T$QRP
+L$xPQ
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+~pUW
+NpQV
+T$LQhD
+L$XPQ
+D$`Rh4
+T$lQR
+L$tPh$
+T$DQh
+D$PVP
+T$LQhD
+D$XP
+T$\Qh4
+D$hP
+T$lQh$
+D$xP
+T$|Qh
+D$DP
+UVWS
+L$<PQ
+T$,R
+_^][
+T$xR
+SPQS
+T$pVR
+L$|PQ
+T$DQR
+Cl_^][
+L$lVQ
+D$xRP
+L$@PQ
+_^][
+L$DPQ
+K,RPQ
+C,RP
+L$0PQ
+Cl_^[
+L$X_^[
+D$V
+t$WP
+tIWPV
+H RQhT
+T$QR
+t?VQW
+B QPhT
+L$0P
+T$QRP
+L$(P
+T$QRP
+L$,P
+T$QRP
+NPRPQV
+FP_^][
+t$W3
+^x_^3
+^x_^3
+Ft_^
+8Y)t
+t%H_
+Nt^[
+^t_^3
+t$ P
+T$PR
+\$8UVWS
+kXSPU
+T$$QR
+\$PUV
+L$DPQ
+CXVP
+_^][
+L$ V
+NLf9A
+N,f9A
+h@gB
+h`hB
+h0mB
+l$VW
+$QUR
+\$8P
+L$<PQ
+D$<RP
+T$<QR
+_^][
+9Jt9
+h`hB
+h@rB
+\$VW
+$QSR
+\$HU
+l$PVW
+\$TP
+_^][
+h@gB
+h`hB
+h0mB
+\$HUV
+\$TQ
+_^][
+h@yB
+hpzB
+h`hB
+h@}B
+hp}B
+h0mB
+\$VW
+$QSR
+_^[]
+T$xR
+s PV
+D$TPSS
+;Ht
+T$QRP
+L$xP
+T$QRP
+T$QRP
+t$$3
+\$(P
+|$ j
+QjR
+D$0j
+L$LPQ
+D$XRh
+L$xj
+_^][
+T$0j
+D$LRP
+_^][
+\$XVW
+D$HSP
+$URPQ
+]_^[
+|$0h
+D$4j
+L$$QS
+\$ V
+_^[
+\$ V
+L$QS
+T$RS
+\$pUV
+D$0RP
+L$<PQ
+\$,;
+\$(RP
+E(h2q
+T$(R
+k?h33s?hOg2BS
+9>tp;
+T$(RV
+_^][
+*tIU
+L$ Qh
+_^][
+_^][
+t$j
+D$Ph
+L$_
+\$R
+D$,Og
+33KA
+33KA
+D$ 33KA
+T$4Rj
+T$(QR
+_^][
+t$W
+ _^[
+\$$VW
+D$4WP
+VWPU
+\$$t
+D$tj
+|$83
+\$ R
+L$ QV
+L$,QV
+_^]
+SVWPQ
+\$R
+L$<QV
+D$V
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+333?
+fff?
+\$\U
+l$\VW
+\$dQ
+_^][
+\$X3
+L$d_^[
+L$%
+t$V
+\$VW
+$QSR
+_^[]
+LSUVWj0
+G RP
+_^][
+\$8P
+T$@R
+_^][
+QHRPQ
+SVWR
+$PSQ
+ _^[]
+D$l=
+_^][
+@SVWj$
+F RP
+L$QV
+\$DVW
+T$QR
+\$HU
+l$PVW
+\$XP
+_^][
+L$QV
+8_^[
+_^][
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+t$$3
+\$(P
+D$,VP
+L$lj
+L$ PQ
+T$0RV
+t2VW
+\$$R
+_^][
+_^][
+~>SV
+Phfff?h
+Qx?hOg2BV
+T$RV
+D$T3
+t$0+
+D$Xj
+T$pQ
+D$3
+|$P9H
+\$8t
+*tIS
+L$ Qh
+_^][
+~ASV
+^[_]
+% 7S
+Fu_^
+$QVW
+9Ht
+T$LQh,
+D$XVP
+T$LQh,
+D$XP
+h0mB
+\$UV
+$QUR
+WhWR
+T$ R
+T$(_
+D$0RP
+_^][
+L$dPQ
+_^][
+TSUV
+t$dW
+l$pUV
+D$$Q
+L$,QR
+|$lt
+D$ph
+D$tP
+ _^][
+hP)C
+h /C
+h@/C
+h`/C
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t$$3
+\$(P
+pB^[
+\$8UV
+\$DP
+D$$SP
+L$dj
+t&SV
+t$(S
+_^][
+_^][
+9xt
+\$ P
+L$4P
+T$ RU
+D$tPU
+KpRQ
+P(Uh2q
+?hOg2BS
+L$ F
+T$Xj
+toPS
+*tIU
+L$ Qh
+_^][
+\$3
+\$V
+@q=
+@)\
+% 7S
+D$P
+L$%
+t$V
+_^][
+hpGC
+h0JC
+hPJC
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+t$ j
+\$$P
+_^][
+9p$t
+\$ P
+T$RV
+tSUV
+D$4RP
+T$\QR
+W(QSh2q
+?hOg2BV
+_^][
+D$Xj
+T$pQ
+*tIU
+L$,Qh
+_^][
+\$3
+\$W
+@fff?
+@33s?
+@ff
+@33
+% 7S
+Nt_^
+$QSR
+_^][
+t$XW
+hp}B
+\$8U
+l$@VW
+\$HP
+_^][
+$QSR
+_^][
+t$\W
+h`TC
+h0YC
+\$8U
+l$@VW
+\$HP
+_^][
+(_^[
+$QSR
+_^][
+hP\C
+hP^C
+8h`_C
+hp}B
+t$8W
+\$@P
+\$VW
+$QSR
+h@gC
+L$<PQ
+_^][
+hPiC
+,h@jC
+hPjC
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+N PQ
+Pj\h
+h`lC
+L$(P
+T$QRP
+L$)P
+T$QRP
+L$*P
+T$QRP
+T$QRP
+L$,P
+T$QRP
+F$PV
+F8Qh
+t$,3
+L$03
+t$0u
+L$0u
+D$ h
+D$Lj
+$_^[
+^4Qh
+L$ P
+T$DQR
+tA;~8t'
+99t
+t$@
+;D$u7
+hP}C
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RP
+D$RPQ
+D$RPQ
+T$LQh
+D$XVP
+T$LQh
+D$XP
+D$ PQ
+$QVRW
+T$,Q
+D$dRP
+t#Ht
+L$$h
+L$4RQP
+_^]
+Pj h
+tSUVW
+ht|V
+UUPUUh
+L$DQW
+T$0h
+L$XP
+L$$QVRPS
+L$LQVRPS
+P_^][
+UPWF
+QPWF
+j QPWF
+p^][
+p^][
+L$PQR
+L$PQR
+l$TVW
+D$,UP
+Sp_^][
+_^][
+l$V3
+_^][
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+l$dV
+?^][
+_^][
+h`hB
+$QSR
+_^][
+\$XV
+L$%
+D$TVW
+|$XP
+T$XQ
+D$RP
+T$Xj
+d$ j
+\$HQ
+D$DQ
+L$TR
+T$TP
+D$dQ
+L$dR
+l$3
+VSUP
+$VUR
+EhUP
+FhVP
+$RSP
+KhPSQ
+\$P
+$QVR
+T$LQh
+L$XPQ
+D$`Rh
+L$lVQ
+T$LQh
+D$XP
+T$\Qh
+D$hP
+L$(P
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t:VW
+@u#V
+t$hW
+T$<Rj
+SVWj
+t$%
+t!VW
+_^]
+L$%
+t$V
+L$VQ
+D$TRh
+L$`VQ
+L$VQ
+D$TRh
+L$`Q
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+t$%
+t!VW
+tdPV
+L$%
+t$V
+L$VQ
+D$TRh
+T$`QR
+L$hPh
+T$tVR
+L$VQ
+D$TRh
+L$`Q
+D$dRh
+L$pQ
+h`hB
+L$(P
+T$QRP
+L$xP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t$$3
+\$(P
+QhOg2BRP
+*tQVWS
+L$ Qh
+_^PU
+l$U
+$QUR
+ _^][
+QPRF
+\$P
+$QVR
+\$R
+ChSP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t$$3
+\$(Q
+$RVP
+VhVR
+$RSP
+$_^[
+SVWj
+WVSP
+$RSP
+l$,W
+99tY;
+t#SP
+9L$0u
+T$0@
+D$V
+\$`UV
+D$PRP
+L$PUQR
+\$hP
+t$W
+VhVR
+l$VW
+D$WP
+T$TQh`
+L$`PQ
+D$hRhP
+T$tQR
+D$VP
+L$Th<
+T$\SR
+L$LPh,
+D$XRP
+T$`Qh
+L$lPQ
+D$tRh
+D$LRP
+T$TQh
+D$`WP
+T$PQh`
+D$\P
+T$`QhP
+D$lP
+T$Ph<
+D$XP
+T$HQh,
+D$TP
+T$XQh
+D$dP
+T$hQh
+D$tP
+T$xQh
+T$HQh
+D$TP
+\$X3
+L$d_^[
+u?hOg2BV
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+t$ j
+\$$P
+Ph33s?h33s?hOg2BV
+*tIU
+L$ Qh
+_^][
+L$RP
+T$QRP
+T$QRP
+T$QRP
+$RVP
+VhVR
+\$tV
+L$$Q
+D$0RP
+\$|R
+$PSQ
+D$(SP
+L$xQ
+D$PPS
+_^][
+T$LQh
+L$XPQ
+D$`Rh
+L$lVQ
+T$LQh
+D$XP
+T$\Qh
+D$hP
+t$`j
+D$DVP
+L$8VQ
+T$(R
+D$4PQ
+D$R
+L$@P
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+l$hV
+L$ UQ
+T$ UR
+L$\QP
+d$DP
+NpPQ
+t$8W
+L$$VQ
+%P8S
+t$PW
+|$Xj
+D$$V
+L$<VQ
+\$ US
+ClVWj
+\$0P
+$QSR
+D$4SP
+L$LSQ
+FhVP
+T$LVR
+D$,VP
+L$(QVW
+L$PQR
+L$PQR
+t,VW
+L$%
+t$V
+L$VQ
+D$TRhp
+T$`QR
+L$hPhd
+D$tRP
+T$|QhP
+D$HVP
+L$VQ
+D$TRhp
+L$`Q
+D$dRhd
+L$pQ
+D$tRhP
+L$PQR
+t%VW
+L$%
+t$V
+L$VQ
+D$TRh
+L$`VQ
+L$VQ
+D$TRh
+L$`Q
+8h0'D
+h@'D
+hp)D
+h0*D
+hP4D
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+hp D
+hp*D
+h`,D
+hP4D
+t$$WV
+\$,Q
+FhVP
+l$$VW3
+%p8S
+%p8S
+$WPQ
+_^][
+t$W3
+F PW
+l$HVW3
+u@h(
+_^][
+_^][
+NhVQ
+t$,W
+\$0P
+$QVR
+FhVP
+T$(VR
+D$,^
+]P][
+\$Q
+$RVP
+9At
+$RVP
+NhPVQ
+t%WV
+FhVP
+\$Q
+$WVR
+FhVP
+VpQR
+T$LQh
+L$XPQ
+D$`Rhl
+T$lQR
+L$tPhX
+T$DQh,
+D$PVP
+T$LQh
+D$XP
+T$\Qhl
+D$hP
+T$lQhX
+D$xP
+T$|Qh,
+D$DP
+t$XW
+D$DVP
+T$hQ
+D$0RP
+d$8Rj
+D$8Q
+L$XR
+T$XP
+D$hQ
+L$hR
+T$xP
+D$xQ
+\$(V
+D$8V
+D$<j
+@Wh
+D$DPQV
+@^[_
+D$xSP
+D$DQR
+D$@R
+L$@P
+L$,j
+T$lQ
+L$DQ
+t$ H
+T$TW
+T$ QR
+L$ PQ
+L$$V
+T$0QR
+t$ Wj
+D$WP
+\$(Q
+$RVP
+NhPVQ
+_^[
+$QVR
+FhVP
+h@8D
+h`:D
+hp=D
+D$RPQ
+D$RPQ
+t$V
+t!VW
+9Jh~
+9Jh~
+L$%
+t$V
+L$VQ
+D$TRh
+T$`QR
+L$hPh
+D$tRP
+T$|Qh
+L$HPQ
+D$PRh
+T$\QR
+L$dPh
+T$pVR
+L$VQ
+D$TRh
+L$`Q
+D$dRh
+L$pQ
+D$tRh
+L$HQ
+D$LRh
+L$XQ
+L$V
+h DD
+h`FD
+h`HD
+hp}B
+h@ID
+hpJD
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+hPAD
+h`BD
+h`hB
+\$VWPSR
+$VSQ
+\$,P
+$RVP
+NhPVQ
+9Ph~
+VhVR
+$RVP
+NhPVQ
+FpRP
+t$8j
+T$LQh
+L$XPQ
+D$`Rh
+T$lQR
+L$tPh
+T$LQh
+D$XP
+T$\Qh
+D$hP
+T$lQh
+D$xP
+h OD
+hpRD
+h0WD
+h XD
+h@XD
+h`XD
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+\$(Q
+$RVP
+NhPVQ
+9Ph~
+V RP
+FhVP
+$RSP
+KhPSQ
+,_^[
+,SVW
+T$LQh
+L$XPQ
+D$`Rh4
+T$lQR
+L$tPh$
+T$DQh
+L$PPQ
+D$XRh
+T$dQR
+L$lPh
+T$xVR
+T$LQh
+D$XP
+T$\Qh
+D$hP
+T$lQh$
+D$xP
+T$|Qh4
+D$DP
+T$HQh
+D$TP
+T$XQh
+D$dP
+\$R
+ChSP
+t$0S
+\$8P
+t$W
+G PV
+~ _^
+h0xD
+hPkD
+hpdD
+l$VU
+VhVR
+t$PWV
+D$VP
+L$4W
+t*UV
+T$,j
+L$ h
+D$@j
+T$xQR
+M QP
+M QP
+M QP
+,SVW
+*tMW
+_^][
+T$LQh
+L$XPQ
+D$`Rh
+T$lQR
+L$tPh
+T$DQh
+L$PPQ
+D$XRh
+T$dQR
+L$lPh
+D$xRP
+D$HP
+T$LQh
+D$XP
+T$\Qh
+D$hP
+T$lQh
+D$xP
+T$|Qh
+D$DP
+T$HQh
+D$TP
+T$XQh
+D$dP
+T$hQhx
+D$tP
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+t$V
+t!VW
+_9Jh~
+9Jh~
+QSUVW
+_^][Y
+L$VQ
+D$TRh
+T$`QR
+L$hPh
+D$tRP
+T$|Qh
+L$HPQ
+D$PRh
+T$\QR
+L$dPh
+T$pVR
+L$VQ
+D$TRh
+L$`Q
+D$dRh
+L$pQ
+D$tRh
+L$HQ
+D$LRh
+L$XQ
+T$QRP
+T$QRP
+T$QRP
+$QVR
+$QSR
+_^][
+\$XV
+ _^[
+t$%
+T$QRP
+T$QRP
+T$QRP
+L$%
+t$V
+L$VQ
+D$TRh
+T$`QR
+L$hPh4
+T$tVR
+L$VQ
+D$TRh
+L$`Q
+D$dRh4
+L$pQ
+l$U
+$QUR
+$_^][
+FhVP
+hp}B
+D$R
+$SUV
+t$4W
+T$<PQVU
+CRPSWQ
+_^][
+[u8V
+P QR
+HpQR
+D$PQ
+t$d3
+D$(UVj
+D$8@
+D$8;
+PSRj
+0_[^]
+D$TPW
+L$dWQ
+_^][
+T$TRV
+D$dVP
+_^][
+L$TQU
+T$dUR
+_^][
+_^][
+RVSPj
+0_^[
+L$(P
+T$QRP
+L$XP
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+$SVW
+_^]
+L$j
+t$W
+|$0j
+L$0j
+"PVh`
+PVh@
+D$$VWj
+VWQR
+|$0j
+PVh@
+|$0j
+PVh 
+|$0j
+|$0j
+PVh@
+|$8j
+D$ t|V
+|$8j
+D$ t|V
+|$0j
+PVhp
+|$4j
+|$4j
+|$0j
+PVh0
+D$0j
+C(RSh
+|$0j
+WVhp
+D$$VWj
+SUVWP
+L$8j
+T$4RUh@
+D$ t|V
+_^][
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$W
+D$,VWj
+D$ t|V
+SVWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+D$$VWj
+t$(Wj
+D$$VWj
+t$(Wj
+D$,VWj
+D$ t|V
+D$ t|V
+D$ t|V
+D$ t|V
+D$ t|V
+D$ t|V
+t$0Wj
+D$ t|V
+W|\j
+t$4j
+t$,j
+D$$t|V
+D$ t|V
+AuBA
+D$ t|V
+D$ t|V
+H(VWj$
+D$ 
+D$u
+_^][
+l$`VW
+D$lj
+UxQR
+_^][
+_^][
+L$LQ
+D$h@
+L$pQj
+T$HR
+D$LRU
+D$<PU
+u+Pj
+L$hQS
+_^][
+_^][
+_^][
+VWR2
+L$QR
+t!PV
+_]^[
+t$V
+|$2
+SUVW
+_^][
+W RP
+G RP
+_^][
+D$ P
+t3WV
+T$LQh
+D$XVP
+T$LQh
+D$XP
+l$VW
+_^][
+VWU2
+VVU
+_^][
+t$W
+^][Y
+^][Y
+_^][Y
+T$ PR
+98~`
+D$8;
+Ht)HuSW
+t"PW
+?h3333VQ
+?h3333PQ
+L$WVWQhx
+t$S
+D$|j
+D$,P
+D$4RP
+L$j
+h3333QR
+D$XWP
+\$Puwj
+?h3333
+C WP
+L$@j
+T$\QR
+G0to
+A0ta
+L$@j
+T$\QR
+D$@j
+ItoIu
+WVQhL
+D$V
+L$RQP
+L$RQP
+L$RQP
+D$3
+L$Q
+D$Q
+L$4S
+L$0S
+L$,S
+L$@S
+L$<S
+L$8S
+L$LS
+L$HS
+|$DS
+D$,VP
+|$j
+L$DVQ
+\$xVW
+D$S
+T$dQR
+D$|_^[
+|$;G
+_^][
+9Pt
+L$j
+T$ Aj
+L$(QRV
+EPWP
+_^]3
+L$0BVQ
+T$lV
+d$@R
+SUVW
+|$0W
+_^]3
+T$ QR
+D$(P
+T$LQR
+_^][
+9Fu!
+_^][
+L$<PQ
+_^]3
+tFVW
+_^][
+tpWV
+Pj(h
+hp4E
+D$RPQ
+D$RPQ
+Pj4h
+h06E
+hP6E
+,hp6E
+t$V
+F,t:
+^(Php
+|$W
+u,;w
+|$P
+_^][
+D:TP
+_^][
+t$W
+~hPj
+|$j
+@ VQ
+@$VQ
+@(VQ
+B WV
+A$WV
+@(WV
+t$W
+|$3
+A$WV
+@(WV
+A RV
+A(RV
+A RV
+A$RV
+A(RV
+hpPE
+hpUE
+T$QRP
+T$QRP
+_^][
+_^][
+\$XU
+L$\QU
+t=HuCU
+whPj
+L$$%
+GxRP
+\$@V
+t$@W
+D$QR
+0SUV
+t$@W
+T$0R
+$SVU
+Aupj
+_^][
+_^][
+_^][
+\$XU
+l$XV
+D$(P
+L$$RP
+t$W
+~hPj
+|$j
+t$Wj
+@,VQ
+@0VQ
+@4VQ
+@,VQ
+@0VQ
+@4VQ
+B,WV
+A0WV
+@4WV
+t$W
+|$3
+A,WV
+@4WV
+l$ uYj
+|$ j
+@_^]
+FhSP
+SSQV
+hplE
+@h@nE
+hPnE
+h0tE
+h vE
+T$QRP
+T$QRP
+whPj
+L$$%
+GxRP
+\$@V
+t$@W
+D$QR
+0SUV
+t$@W
+T$0R
+$UVW
+_^][
+_^][
+\$XU
+l$XV
+D$(P
+L$$RP
+D:TP
+_^][
+t$W
+~hPj
+|$j
+AtWV
+_^][
+@xWV
+_^][
+_^][
+_^][
+T$RQ
+T$RQ
+T$RQ
+BtWV
+A|WV
+BhWV
+t$W
+|$3
+AtRV
+t$W
+|$3
+l$ uYj
+|$ j
+t$Wj
+t$Wj
+t$lWV
+T$0QV
+D$ R
+L$(P
+T$`QR
+hPnE
+T$QRP
+T$QRP
+@u;V
+T$V
+\$XU
+L$\QU
+t|Ht<
+\$@V
+t$@W
+L$Lj
+D$QR
+0SUV
+t$@W
+T$0R
+$SVU
+Auzj
+_^][
+_^][
+_^][
+l$TV
+D$(P
+D:TP
+_^][
+t$W
+~hPj
+|$j
+SUVW
+|$ j
+@tWV
+_^][
+BxWV
+_^][
+_^][
+@WV
+_^][
+_^][
+_^][
+@DWV
+_^][
+@tVQ
+@xVQ
+BtWV
+AxWV
+B(WV
+TSUV
+t$dW
+AtWV
+_^][
+@xWV
+_^][
+_^][
+T$,Q
+D$,PQ
+T$(P
+D$ PQRW
+A(WV
+_^][
+_^][
+AtWV
+_^][
+@xWV
+_^][
+_^][
+_^][
+BtWV
+AxWV
+BLWV
+T$RQ
+T$RQ
+T$RQ
+BhVQ
+t$W
+|$3
+AxWV
+t$W
+|$3
+AtRV
+A|WV
+@hWV
+l$ u[j
+|$ j
+t$Wj
+t$Wj
+AtRV
+AxRV
+t$lWV
+T$0QV
+D$ R
+L$(P
+T$`QR
+$_^[
+hPnE
+T$QRP
+T$QRP
+t$W
+@u;V
+T$V
+tPj
+_^][
+\$@V
+t$@W
+D$Hj
+D$H]
+L$RP
+]VW
+D$pj
+T$8PWV3
+D$(Q
+D$(@
+L$xQ
+T$pR
+t$,WV2
+_^][
+_^][
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+|$ @
+D$ SP
+D$ P
+_^][
+_]tB
+_^]t
+T$%
+l$%
+T$%
+l$%
+T$%
+D$ h
+D$$j7
+D$(j!
+t$W
+|$;~
+tY;~
+tT;~tOW
+SUVWj
+_^][
+ VWj
+D$ t|V
+t$WVP
+Rhff
+t$W
+t$WV
+HSVW
+t$X;
+Gh90u
+\$`%
+L$QV
+FxWP
+SUVW
+9wTu
+Nh9)u
+L$HQU
+D$XRPV
+D$(QRP
+txWP
+ht|V
+_^][
+QUSW
+_^][
+D$4u
+D$8u
+D$0t
+D$4t
+D$8t
+VRW
+_^][
+VxQR
+tSWUS
+|$W
+$PWQ
+L$pQ
+D$<3
+D$4DCBA
+_^][
+\$UV
+_^][
+|$;G
+]VW9
+_^[
+Wt`S
+L$PQ
+D$(Rj
+\$ UV
+|$(j
+D$,PW
+D$,V
+D$,j
+T$DRPV
+D$ V
+D$$V
+D$8V
+D$Hj
+L$\h
+L$Lh
+D$Pj
+D$hj
+T$dPQP
+D$|PRQRPV
+x^][
+D$HQRj P
+L$(t
+D$,t
+_^][
+T$LQh8
+L$XPQ
+D$`Rh,
+L$lVQ
+T$LQh8
+D$XP
+T$\Qh,
+D$hP
+^_][
+~5SVW
+tGjD
+L$QR
+\SUV
+t$l3
+_^][
+UVWj
+D$8RP
+|$hS
+_^][
+\$8U
+D$DQR
+L$ PQ
+-(9S
+L$$3
+-X9S
+T$DQ
+D$`RPS
+D$ R
+L$HP
+T$dQRS
+L$@P
+T$\QRS
+T$@QRS
+L$PPQh
+D$hRPh
+QRht
+SVWj
+L$PPQ
+L$XQ
+T$\R
+-h9S
+C8PP
+D$TRP
+_^[
+D$lS
+T$@R
+T$@R
+T$@PR
+L$dPQ
+L$dPQ
+%`4S
+DCBAf
+tRS
+D$(P
+,SVW
+t$@
+T$4VW
+T$dQR
+L$$QU
+_^][
+D$,VW
+D$(3
+L$Q
+\$,VW
+T$ Q
+D$$RPS
+L$0QS
+ _^[
+T$XVW
+t$0P
+t$0W3
+L$+
+D$HPh
+T$,RP
+L$0Q
+T$4PR
+D$0Uh
+L$0Q
+D$Hj
+T$`RQ
+T$8Ph
+T$<PRQ
+|$xj
+D$lh
+T$<h
+L$8P
+2>PSV
+D$$Og2
+?QSV
+hpDF
+t$3
+t$TW
+Ch98
+L$`%
+-(9S
+_^][
+?_^][
+T$DP
+D$,VP
+D$$j
+T$xR
+D$|P
+D$(P
+\$@U
+L$XPQ
+T$Ph
+_^][
+NxPQ
+NxQRV
+ffff
+t$W
+L$V
+F RP
+h`hB
+8hP_F
+\$VW
+$QSR
+T$R
+L$Q
+\$`P
+l$hVW
+\$lR
+_^][
+SUV3
+WVPQ
+D$$u
+h`cF
+h`lF
+T$xW
+L$8Q
+Qh! 
+L$8Q
+Qh! 
+D$3
+L$8Q
+Qh! 
+Q|_^
+F J;
+GXSVPj
+h`lF
+\PPR
+Pj@hP
+h oF
+,h0oF
+L$PQR
+L$PQR
+8h uF
+h0uF
+L$(P
+T$QRP
+L$xP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+t$W
+t}SW
+_[^]
+Pj$h
+h`yF
+,hpyF
+h`|F
+L$,VQ
+T$ VR
+L$$h
+D$PRP
+,SUVW
+\$8tW
+_^][
+L$V
+D$0V
+D$4j
+D$8h
+L$8PQV
+T$0R
+D$$R
+L$0PQ
+D$(R
+L$0PQR
+T$HP
+D$HQ
+8_^[
+L$$PQ
+L$(Ph
+T$0R
+T$(Qh
+D$0P
+L$(P
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+l$VWU
+_^][
+t$3
+gfffG
+^_][
+Pj$h
+D$$Q
+D$h
+D$(ht|V
+D$0Q
+PQVht|V
+D$0Q
+@_^[
+t Hu2
+G _^
+G _^
+SUVW
+D$ h
+D$,Q
+Rjxh
+|$$j
+D$(h
+D$8j
+D$Hh
+D$@h
+_^][
+Pj8h
+tbh0
+D$ Q
+SSRht|V
+^[_]
+D$h
+FVj
+D$lh<
+L$0h0
+T$0h0
+D$0h0
+T$hPRjxh
+D$hh
+PSjxh
+_^][
+UVWj
+ht|V
+D A
+D  
+D$ PV
+D$ PU
+_^][
+Ht)Hu7
+tSUVW
+T$(Ph
+?QShx
+DUUUV
+% :S
+ht|V
+$PUUUUUj
+RPht|V
+$QUUUUUj
+% :S
+T$$P
+Qht|V
+UURQ
+$UUUUUj
+WxQRht|V
+UUPQ
+$UUUUUj
+L$$R
+Pht|V
+UUQQ
+$UUUUUj
+PQht|V
+UURQ
+$UUUUUj
+%:S
+PQWht|V
+%:S
+$UUUUUj
+\$(Uh
+$WUUUUUj
+$WUUUUUj
+D$ph
+T$`Q
+D$pRPj
+_^][
+D$`3
+,UVW
+D$$Pj
+NpPh
+V QRhx
+FxjK
+^xPQ
+SUVW
+s5f@Qf
+t8f;
+t3fHQ
+D$XP
+M PQ
+L$ @
+D$8PU
+L$ @
+t(PS
+tPS
+|$W
+Pj<h
+N PQ
+D$(Q
+D$ j
+D$8PQh
+Ht%Ht
+CQRP
+T$,P
+D$,Q
+L$,R
+T$,PQRV
+T$pW
+D$TW
+D$,RQ
+D$<Q
+D$8P
+T$(P
+D$(Q
+L$(R
+T$(PQRV
+T$PP
+D$\QRP
+t$HW
+$PQW
+\SUV
+t$lW
+T$,h
+_^][
+|$j
+L$j
+L$PQR
+L$PQR
+L$PQR
+t$WV
+T$LQh
+D$XVP
+T$LQh
+D$XP
+ffff
+D$ff
+\$P
+SUVWj
+KpPQ
+%`:S
+\$Lj
+D$Hj
+L$4P
+T$hQR
+T$QRP
+L$xP
+T$QRP
+T$QRP
+VhPVR
+\$P
+KhPSQ
+T$LQh
+D$XVP
+T$LQh
+D$XP
+ffff
+D$ff
+L$4Ph
+T$0ht|V
+ht|V
+T$QRP
+L$xP
+T$QRP
+T$QRP
+T$QRP
+VhPVR
+NhPVQ
+T$LQh
+D$XVP
+T$LQh
+D$XP
+ffff
+D$ff
+ht|V
+PjHh`
+L$,P
+T$QRP
+L$LP
+T$QRP
+ _^][
+Pj h
+D$ S
+D$,V
+D$4W
+D$<Q
+D$hRP
+D$,3
+T$\Q
+T$RP
+l$V3
+_^][
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+L$QV
+VhVR
+l$VW
+$VUR
+Q,RPWU
+DRUU
+$RPQ
+_^][
+h`hB
+l$tVWj
+D$8P
+T$@R
+D$8P
+M QP
+_^][
+j QP
+\$8P
+$QSR
+L$LPQ
+_^][
+L$,P
+_^][
+hp}B
+#<h$
+T$^
+t$%
+_^][
+_^][
+L$%
+t$V
+T$_
+D$^[
+h@$G
+Pjxhl
+L$PQR
+QSUV
+ht|V
+F ht|V
+_^][Y
+F t*
+F _^
+SUVW
+D$Tj
+L$Dj
+T$|Q
+SPQW
+T$`QRV
+\$(SV
+T$ j
+D$$QRPV
+D$ h
+|$(h
+|$4W
+t$PSWVVSVVR
+D$ j
+CWSWPVSVP
+\$,+
+d$<j
+hp@S
+D$ j
+hp@S
+L$Th
+?VQh
+T$ j
+D$<Ph
+@_^][
+T$$h
+D$(QRP
+D$xRP
+|$hj
+t$4V
+l$\G
+L$4P
+T$PQRh
+D$8PVQUR
+D$4UUQ
+L$0Q
+T$@h
+?PQj
+^_][
+\$VW
+F u=3
+D$ _
+D$\R
+O|PQ
+\$D3
+D$Lh
+D$Lj
+L$8Q
+T$LRP
+D$$V
+D$(V
+D$ V
+\$C
+T$HR
+D$XS
+\$XU
+H,VW
+Cx][
+L$j
+t$W
+h0)G
+\$VW
+_^[]
+\$HV
+L$QV
+ESV
+F(hh
+T$ QR
+u*hP
+_^][Y
+_^][Y
+_^][Y
+_^][Y
+_^][Y
+_^][Y
+,hP.G
+h@0G
+hp}B
+h03G
+_^][
+_^][
+_^][
+_^][
+T$(%
+D$4j
+D$8h
+|$@h
+t$8V
+\$DWVSSWSSQ
+l$,j
+CVWVUSWSUR
+D$lj
+VWVSPWP
+CVWVUPWP
+D$8j
+D$<h
+D$<PQP
+D$Tj
+PQPj
+D$4j
+D$Dh
+L$LQP
+D$PPj
+<][_^
+L$^
+h 6G
+4SVW
+t$HVW
+D$$R
+PQRW
+$_^[
+SUVW
+|$03
+T$8QR
+D$,hd
+L$4QR
+D$\j
+l$ph
+D$|PV
+T_^][
+\$(UV
+_^][
+hp}B
+_^][
+L$^
+l$VWU
+B^][
+h0=G
+h`IG
+h0NG
+h0OG
+hPOG
+h`OG
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+%|8S
+NpQV
+t$<3
+L$D;
+\$0t
+kpQU
+T$(SR
+L$PPQ
+D$@RP
+L$8Q
+FhVP
+l$VW
+SQWSU
+EpPU
+_^][
+,SVW
+\$R
+ChSP
+h`TG
+h`YG
+_^][
+_^][
+D$(t
+D$DRP
+L$0Pf
+L$0f9A
+T$0f9B
+D$4f
+L$0R
+D$PRP
+t$$W
+@@hd
+L$[
+h0]G
+h0_G
+L$PQR
+L$PQ
+\$8UV
+A_u<
+u(hH
+\$R
+SVWj
+T$Hj
+L$XRh
+h@cG
+t$@V
+\$DP
+L$8P
+%@AS
+D$8j
+L$lP
+D_^][
+L$,j
+D$@PQ
+D$xRPQ
+@_^][
+SVWj
+hPnG
+hpoG
+L$_
+T$^[
+\$$P
+D$0WP
+L$$QW
+T$0h
+HuHh
+T$0h
+uah<
+N QP
+?hOg2BV
+\$P
+$QVR
+t$W3
+t$@h
+hpzG
+hpzG
+D$DVW
+t$ W
+\$VW
+_^[]
+\$HV
+L$QV
+L$j
+L$SVWj
+T$ RP
+L$PQR
+L$PQR
+%l4S
+t$V
+VUUU
+gfff
+T$3
+D$PQ
+_^][
+M QR
+M QP
+|$ 3
+\$<u
+L$4PQ
+QPRU
+D$4j
+L$$V
+VUUU
+gfff
+?^][
+_^][
+t$(W
+|$0%
+t$ t
+T$R
+_$_^[
+_^][
+l$VW
+t-HuLV
+M!QW
+\$W
+t$ V
+\$$P
+N PQ
+D$^
+t$(j
+%LAS
+%HAS
+D$ W
+l$4h
+L$<QRW
+D$\fff?
+fff?
+L$,Q
+L$0Q
+(_^[
+t$$3
+L$(QV
+D$(RP
+T$ R
+$SUVW
+L$$Phd
+T$0RP
+D$@R
+D$@j
+l$Th
+L$`QS
+,_^][
+LSUV
+t$\3
+T$`RW
+L$`PQ
+L$Phd
+T$XR
+D$0Q
+D$4W
+D$8W
+D$<j
+D$@j
+D$Xh
+T$pR
+D$lPQ
+L$pRQPQW
+L$ R
+_^][
+t$,W3
+L$ hd
+T$(R
+D$HQ
+D$0j
+D$4j
+l$`h
+T$HRPW
+_^][
+t$0W3
+L$4QV
+D$4RP
+T$$R
+L$0P
+D$4_
+@SUVW
+D$T+
+T$ QR
+T$0PQR
+T$,P
+T$pR
+D$0PSW
+T$0RQ
+_^][
+L$j
+A@^]
+t$W
+T$pRS
+Ph8
+t$43
+N PQV
+_^[
+~RSV
+^[_U
+\$lPQ
+T$8f
+|$(f
+L$4t(
+T$8f
+T$DRP
+V0Rf
+_^][
+t$$3
+D$PQ
+T$$WRPQ
+ _^[
+t$W
+~gW;
+9h4uF9
+h4MA
+|$<U
+\$T|
+_^][
+_^][
+L$h
+T$(h
+D$P
+99t6B
+99t7B
+jdj@h 
+T$RV
+t$ VW
+_^][
+;t$ 
+D$ j
+ PSUV
+WQVSU
+_^][
+(9q@
+(9q@
+D$(j
+[@QP
+=|AS
+|$$j
+T$pQRP
+T$PQRP
+D$<SU
+L$@~,
+;t$H
+T$Hj
+\$HUU
+ PQSV
+F UWP
+T$dVRS
+_^][
+(9q@
+(9q@
+D$Pj
+T$0S
+PjHh$
+T$4Q
+\$PUVW
+L$ j
+D$,PQ
+D$HRPQ
+_^][
+UVWj
+L$QV
+T$0Vj
+L$0P
+D$D
+D$033KA
+D$433KA
+D$833KA
+?PQh
+$RPQV
+D$ 
+D$33KA
+33KA
+33KA
+|$<Wj
+$_^[
+D$j
+L$0QP
+T$dRj
+L$HPh<
+D$$Z
+L$(3
+PjHhH
+T$(RSWPQh
+T$;
+N@ho
+D$$PQh
+t$ j
+\$$P
+L$+
+9K u
+UlPj
+l$DQ
+D$TRP
+L$PQ
+_^][
+T$TP
+D$Th
+L$`R
+T$`P
+L$`R
+T$`P
+D$`Q
+L$`R
+\$DP
+D$`Q
+L$`R
+T$`P
+D$`Q
+L$`RPQ
+(SVWj
+Kltw
+T$`j
+$hOg2Bh
+hP H
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+\$(Q
+$RVP
+NhPVQ
+\$ UV
+C0Ph
+_^][
+FhVP
+*tMS
+L$$Qh
+*tMW
+L$$Qh
+$QUR
+EhUP
+,_^][
+$QVR
+T$LQh,
+D$XVP
+T$LQh,
+D$XP
+\$R
+ChSP
+$QWR
+hP&H
+t$W3
+VpRP
+V QRP
+_^][
+%|8S
+%|8S
+L$HPQ
+T$h
+D$0RP
+D$`QR
+PQUS
+L$(h
+_^][
+MSVW
+D$,ff
+D$4ff
+D$Dff
+D$Lff
+D$\ff
+D$dff
+D$tff
+D$|ff
+D$,RP
+9|$ t
+ F^[
+VWQj
+D$0RP
+D$`QR
+PQUS
+L$(h
+_^][
+L$lj
+L$HQ
+_^][
+L$Q
+T$j
+h`NH
+_^[
+h`OH
+t$(j
+h`NH
+Pj(h
+h RH
+333?
+333?
+|$4P
+D$$P
+D$4QRPW
+hpUH
+8h@WH
+hPWH
+hpWH
+hpXH
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+t$3
+@u*V
+T$LQh
+L$XPQ
+D$`Rh
+T$lQR
+L$tPh
+T$DQh
+L$PPQ
+D$XRh
+L$dVQ
+T$LQh
+D$XP
+T$\Qh
+D$hP
+T$lQh
+D$xP
+T$|Qh
+D$DP
+T$HQh
+D$TP
+UVWj
+h [H
+h@[H
+8h `H
+G$_^][
+G$_^][
+eCAVS
+G$_^][
+~sVS
+G$_^][
+G$_^][
+ht|V
+T$$WR
+SUVW
+tNVW
+$RVW
+PUVW
+_^][
+SUVW
+T$$UUUh
+CQRP
+T$(u
+URPWQ
+_^][
+I<SV3
+\$ t
+\$ VV
+d$<Q
+D$dQ
+fff?
+T$8P
+L$j
+\$0UW3
+t$@V
+D+ 3
+t$<B
+t$<|
+t$@j
+ht|V
+D$<u
+D+,][
+D+LRh
+D+,_][
+hpmH
+<h0oH
+ SVW
+Fth$
+ht|V
+t$W
+HSUVW
+|$\f
+T$\RQ
+QRPV
+T$(hT
+D$0PQ
+_^][
+CRPV
+h0wH
+h`xH
+h yH
+h {H
+hpzH
+L$PQR
+L$PQR
+L$PQR
+UVW
+L$QV
+t:WV
+tWV
+NpVQ
+T$LQhD
+D$XVP
+T$LQhD
+D$XP
+h ~H
+D$RPQ
+D$RPQ
+F|VP
+~>U3
+G$F;0|
+SUVW
+|$,3
+D$ P
+_^][
+T$LQh
+L$XPQ
+D$`Rh
+T$lQR
+L$tPh
+T$LQh
+D$XP
+T$\Qh
+D$hP
+T$lQh
+D$xP
+L$(P
+T$QRP
+|$W
+L$(P
+T$QRP
+T$QRP
+L$@P
+T$QRP
+T$QRP
+t VW
+t VW
+T$LQh
+D$XVP
+T$LQh
+D$XP
+L$(P
+T$QRP
+T$QRP
+L$tP
+T$QRP
+T$QRP
+T$QRP
+L$xP
+T$QRP
+L$|P
+T$QRP
+VdSSSh`
+T$LQhl
+L$XPQ
+D$`Rh`
+T$lQR
+L$tPhT
+T$DQhD
+D$PVP
+T$LQhl
+D$XP
+T$\Qh`
+D$hP
+T$lQhT
+D$xP
+T$|QhD
+D$DP
+\$<9C
+D$8;
+90t(U
+L$HQVWS
+T$DRVWS
+L$HP
+T$$QRUS
+^]_[
+\$V
+u#UW
+D$$U
+_^][
+D$ j
+L$(P
+D$4PQ
+97t)
+\$<V
+D$4P
+{VS
+T$R
+T$Q
+Vpj2j2
+L$,j
+%@BS
+L$P
+Npj2j2
+D$,j
+D$0
+D$0
+L$P
+Npj2j2
+D$,j
+%@BS
+D$R
+Fpj2j2
+T$,j
+8SUVWj
+L$,PQ
+T$8R
+D$$P
+T$ R
+_^][
+ _^[
+D$0SV
+t$4W
+L$Q
+Z~,j
+t$W
+;_^[
+;_^[
+t$W
+_^]
+M QV
+ _^]
+_^]
+?h3333QR
+_^][
+Au>j
+_^][
+_^][
+_^][
+_^][
+L$$UQ
+7_^][
+_^][
+_^][
+Au2
+D$hP
+L$TWQ
+L$;
+L$QPWVS
+D$|
+D$x*
+PRWVS
+D$H
+D$y
+L$QPWVS
+D$H
+D$y
+L$;
+RPWVS
+D$|
+D$<V
+L$PQ
+D$,VP
+L$4P
+T$ QR
+D$LVP
+L$<VQ
+WVPQ
+SUVW
+l$$t
+G RP
+_^][
+t$W
+_^]
+M QV
+ _^]
+_^]
+?h3333QR
+_^][
+Au>j
+_^][
+_^][
+t$W
+M QV
+ _^]
+_^]
+,_^]
+,_^]
+,_^]
+_^]
+t$W
+M QV
+ _^]
+_^]
+,_^]
+,_^]
+,_^]
+_^]
+\$V
+t$W
+h3333PW
+BPh
+QRV
+_^[
+l$<V
+t$<W
+B)PVQ
+L$Q
+_^]
+_^]
+_^]
+\$$V
+t$$W
+D$VP
+(_^[
+t$W
+l$,V
+t$,W
+_^][
+_^][
+D$ VP
+L$,h5
+$_^][
+_^][
+_^][
+_^][
+B(PV
+_^][
+l$,V
+t$,W
+_^][
+_^][
+L$ VQ
+T$,h5
+$_^][
+_^][
+_^][
+B(PV
+_^][
+t$W
+_ _^[
+_ _^[
+l$0V
+t$0W
+}(h0
+_^][
+_^][
+L$$VQ
+T$0h5
+$_^][
+_^][
+_^][
+H(QV
+_^][
+D$$u
+t$ u
+D$(SP
+H(QS
+_^[
+_^[
+_^[
+l$LVWj
+_^]2
+?^]2
+D$(PW
+D$(PW
+N QP
+\$VW
+T$+
+s(hX
+L$+
+_^[
+_^]2
+t$$WVP
+T$$j
+\$VW
+\$$U
+l$,VW
+_^][
+D$SUV
+_^][Y
+_^][Y
+_^][Y
+t$j
+t$W
+t$W
+t$(W
+T$0RV
+_^][
+D$,Q
+_^][
+D$,P
+L$4hPwV=QV
+_^][
+T$+
+\$V
+t$W
+\$V
+t$W
+?_^][
+N_^][
+F^][
+_^][
+PQh,
+_^][
+_^][
+U^][
+E^][
+_^][
+D$hD
+L$^
+]_^[
+SUVWh
+5(1S
+D$4p
+D$(P
+@ht|V
+D$8RP
+Ss.j
+L$|hh
+T$tj
+USSh
+L$$;
+T$dj
+D$`j
+L$XQ
+T$XR
+D$dj
+L$ Q
+_^][
+_^]3
+SUWQ
+wAt1
+Hu?j
+_^]3
+_^]3
+t0Ht
+SUWR
+_^][
+uK_^]
+_^]3
+_^]3
+mte=
+3t+=
+XtP=
+/t'=
+/t'=W
+Ph4!T
+hP!T
+hl!T
+ht"T
+hD"T
+hl!T
+T$QR
+L$PQ
+D$f
+t%PVhH
+SUVW3
+Wj R
+_^]2
+C0jlPQ
+_^][
+vidst
+C<E;
+_^][
+_^][
+_^][
+D$<j
+L$8Q
+UVPhvidc
+QVh@
+_^][
+SVWP
+SVWP
+L$,h
+D$Ph
+L$0QV
+t$`W
+D$PQ
+u@_^
+u!_^
+D$d 
+|$ tw
+L$(Q
+_^][
+_^][
+SUVW
+|$03
+T$0PS
+W$_^][
+o$_^][
+hD#T
+h<$T
+h0$T
+h $T
+hl#T
+D$8Ph
+L$+
+RPQj
+D$Q
+T$%
+L$3
+UVW3
+WhPJS
+T$(PRh
+Rh JS
+L$(PQh
+T$(PRh
+Rh0"I
+hd$T
+L$(PQh
+_^][
+hd$T
+L$(PQh
+L$$%
+T$&P
+L$(%
+T$(PQh
+h %T
+h<%T
+hPJS
+hp&I
+_[^]
+hT%T
+hD(T
+Vhp+I
+PVhd'T
+PVhD'T
+PVh$'T
+PVhd&T
+PVhD&T
+Vh4&T
+$Vhx%T
+D$Pht(T
+QPh`(T
+Ft>=
+%%%%
+%%%%
+%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%
+%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+ !"#$
+JJJJJJJJJJJJJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJJJJ
+JJJJJJJJJJJJJJJJJJJ
+ !"JJ#$%&'()*+,-./012345J6789:;<=JJ>?@JJJJJJJABCDJJJJJJEFGHI
+h ;I
+hP=I
+h0;I
+hP$I
+hPLI
+hpII
+h`:I
+hPOI
+h 8I
+L$(PQh
+L$(PQh
+L$(PQh
+T$(h
+D$8Ph
+SUVW
+PhPJS
+D$@h
+L$LPQh
+L$@h
+T$LPRh
+h JS
+T$@h
+D$PPh
+uVSj
+tvVSj
+t`VSh
+L$@h
+T$LPRh
+T$@hD(T
+D$PPh
+T$@h
+D$PPh
+D$@h|7T
+L$LPQh
+L$@h`7T
+T$LPRh
+D$@hH7T
+L$LPQh
+T$@h47T
+D$PPh
+T$(UR
+D$$j
+D$(j
+_^][
+D$(|
+D$,!
+_^][
+D$(|
+D$l 
+D$p@
+L$(h
+_^][
+D$$|
+_^][
+T$(h
+_^][
+_^][
+_^][
+F9Gs
+u;G w
+hh8T
+L$$PQh
+hX8T
+L$$PQh
+Ph(8T
+L$$PQh
+h47T
+L$$PQh
+SVWj
+D$T|
+9n$t3
+L$$Q
+L$8U
+D$0U
+D$ Q
+_^][
+h 8I
+hPOI
+P,^t
+t$3
+UVWh
+D$8=
+D$d`
+D$D$
+T$$RP
+D$h$
+j0RP
+|$hh
+D$lPQ
+l$ t9
+D$tj
+D$8h
+D$D3
+t$hj
+D$dh
+D$du
+L$D@
+D$LP
+l$$B;
+C0E;
+D$4E;
+UPQR
+^][_
+l$3
+L$ S
+L$$RWQU
+Sj,R
+QL^_
+u4QP
+T$ R
+SUVW
+S=ILSFt
+h :T
+_^][
+L$@Q
+T$DR
+D$HP
+_^][
+T$$RVPW
+|$\f
+L$,f
+D$\$
+T$(3
+T$lW
+_^][
+_^][
+URPh
+_^][
+F_^
+l$0V
+u09T
+M09T
+D$83
+T$43
+]09T
+D$8H
+L$ _[f
+D$f
+T$9Pt
+QRSj
+D$ W;
+t$ +
+D$ PV
+|$,WP
+tNVh
+SVWu
+T$pSWQR
+L$LPQ
+|$$S
+D$($
+N@PQ
+_^]3
+gfff
+_^][
+SUV
+L$$Qj
+_^][
+D$ +
+SUVWu
+V$;Q 
+D$ +
+T$ RP
+_^][
+F<_^][
+@VQRht
+t$P
+L$PQ
+L$d]
+\$hVW
+_^[]
+_^]2
+_^]2
+RhD:T
+RhD:T
+|$0j
+VDWR
+L$PQV
+teVW
+SDQR
+SVWj$
+_^[
+Rh yI
+hpyI
+hPyI
+hl:T
+D$pRP
+\$0V
+t$8W
+SUVW
+_^][
+\$U
+_^][
+hL<T
+h,<T
+_^][
+_^][
+_^][
+_^][
+_^][
+Rh`JS
+_^][
+hL<T
+u'h,<T
+_^][
+_^][
+|$,j
+D$0l
+hd;T
+_^][
+T$4RP
+hH;T
+_^][
+L$ Qh@JS
+_^][
+h0JS
+_^][
+h$;T
+_^][
+T$(hPJS
+_^][
+WSPS
+D$,h
+T$j
+h\<T
+\$(u
+;D$@}
+D$Ph
+T$dSRP
+D$$RPW
+\$4VW
+T$(V
+Rj P
+@ Pj
+D$$H
+]_^[
+T$\#
+N}Lj
+L$(SU
+BlVW
+L$4t
+t$4u
+D$8@
+t$W
+L$<;
+hh<T
+|$T3
+T$TRV
+Vj"P
+RP_^
+D$\R
+'h  
+T$DJ
+\$HG
+t$<J;
+I Qj
+'h  
+t$<I;
+#h  
+L$4Q
+_^][
+T$ Rj$
+D$(SUV
+T$,W
+X$Wf
+X$Wf
+_^][
+t$0W
+L$4j
+T$4j
+Rh  
+l$8f
+L$@3
+=XDr
+SUVW
+_^][
+T$0QR
+D$$@
+VUUUf
+tk#E
+VUUU
+|$$f
+|$$;
+_^][
+_^][
+L$ P
+T$hQR
+v$UV
+T$,RU
+@ Pj
+_^][
+L$PQ
+l$<VW
+T$H;
+ h  
+\$Lt
+L$Lt
+t$Lu
+Q<RP
+Rj<P
+T$`QR
+N PQ
+@ Pj
+_^][
+_^][
+|$X3
+HQV
+Vj"P
+QP_^
+Vj"P
+|$X3
+HQV
+Vj"P
+QP_^
+Vj"P
+Vh4=T
+L$(QS
+L$8P
+L$DQR
+t$,9H
+D$(PS
+@ Pj
+NhQhp
+T$(RS
+W Rj
+|$0R
+U R3
+$jhh
+D$(3
+T$(RS
+@ Pj
+U R3
+U R3
+L$ Q
+$jhh
+Rj P
+sPWPV
+Q<RP
+Rj<P
+L$,P
+@ Pj
+6VPQ
+6VPQ
+C\_^]
+D$HP
+Q<RP
+Rj<P
+L$(P
+@ Pj
+M Q3
+6VQP
+C\_^]
+F<PW
+@ Pj
+PhD3DRP
+PhXTRVP
+PhDNERP
+PhPMTLP
+PhD3DRP
+PhXTRVP
+PhDNERP
+PhD3DRP
+PhXTRVP
+PhDNERP
+hHSMCQ
+hXTVCS
+hECFCU
+hTAMCQ
+hHPSCR
+D$4RP
+][_^
+t(Ht4
+l$(V
+\$\UV
+T$ QR
+L$$QV
+L$$QV
+_^][
+D$xA
+L$@SU
+_H^]
+Qh4=T
+D$DUV
+VUUUf
+|$8#G
+VUUU
+VUUUf
+t$,#F
+VUUUf
+_^][
+_^][
+D$8j
+D$SUV
+_^][
+D$W
+L$j
+V4QR
+h8>T
+h >T
+Pj8h
+PjDh
+Pjth
+PjTh
+hP5J
+$hP6J
+hp=T
+h\=T
+h@9J
+h05J
+T$XRj
+"h  
+L$$h
+R|_^][
+F,Pj
+h05J
+N4Rh
+V8PQQ
+F8QRP
+t$0Pj
+G Pj
+RhP>T
+D$ Q
+L$dQ
+T$(Q
+T$LRj
+D$(E
+F,j@SP
+VLRS
+F,SP
+VLRS
+Q|_^][
+T$|Rj
+D$Pfff?
+D$Xfff?
+Q|_^][
+HSUVW
+G,Pj
+L$(R
+Rh\>T
+D$`V
+D$@PQ
+L$DQQ
+$PRQV
+D_^][
+B 02CV
+B$Iu
+C =02CVu
+XSVW
+SUVW
+=|BT
+=|BT
+_^][
+L$W
+tzVS
+GIt%
+t/Ku
+QQSV
+YQf%
+D$%
+-@ET
+uWj
+;5P%
+^h `S
+YYh(`S
+h$`S
+;t$s
+^[_3
+QQSV
+YQf%
+$jj
+$jj
+SVWUj
+]_^[
+h ]J
+t.;t$$t(
+_^[
+R9Q
+kY[
+<"u%
+F<"t
+t9UW
+?=t"U
+QQS3
+PSSW
+8"uD
+8"uF@
+8"u,
+-l0S
+@@f9
+@@f9
+=`0S
+SS@SSPVSS
+t#SSUP
+t$$VSS
+_^][YY
+DSUVWh
+95@%
+95@%
+_^][
+8MZu
+Ph<CS
+Ph$CS
+t>j,P
+Yt0@
+VC20XC00U
+SVWU
+tEVU
+t3x<
+]_^[
+A=P@T
+h(FS
+hFS
+Vt6P
+SUVW
+;=@%
+_^][
+t$3
+~&WP
+SVW3
+VWss
+SVW
+QQSV
+btHHt.
+SUV3
+_^][
+hlFS
+hPFS
+eYt,F
+=|BT
+EYY
+EYY
+SVt'
+hxFS
+80t<
+E^[]
+VWt*
+Sj0W
+8-PS
+_^[]
+t$V
+Fu"
+_WPS
+E9}_t
+HHtpHHtl
+RPWV
+5p@T
+L$u
+EQQ
+EQQ
+EYY]
+t%It
+_^[]
+A=hCT
+D$%
+D$%
+D$%
+D$%
+D$.%
+-4DT
+D$ %
+D$.%
+-4DT
+D$ %
+-@ET
+-JET
+-@ET
+-@ET
+-@ET
+-@ET
+-^ET
+u49U
+u#9U
+9Eu19U
+e9Mue9U
+5(9S
+SVWu
+^}%95|BT
+^_[3
+Ez@T
+90tr
+%41S
+tHt
+Wj@Y3
+t7SW
+    
+@AA;
+Yt4^
+=|BT
+=|BT
+=|BT
+u,9E
+]u~
+uK^;
+uiSj
+uY;]
+pD#U
+j #M
+j?^;
+SUVWu
+_^][
+QQSV
+sN;E
+)u9U
+u%C@
+)E9Ur4
+VWuBhTHS
+hHHS
+tPh8HS
+h$HS
+B=@hT
+ tj
+E9}
++M;M
++E;E
+Yu!j
+W;5@%
+);}u
+MS3
+t-Ht!Ht
+5t.;
+SVWj 
+ESVW
+t!CS
+ESVWj 
+G@P
+Y+O
+1_^[
+PPPP
+PPPP
+@PWV
+_^[]
+USVWf
+5|BT
+;D$v
+D$3
+;T$w
+hhHS
+^VhdHS
+PVh`HS
+t+Ht$Ht
+Hunj
+Y_^[
+YHYt
+HtHt
+hxHS
+9=Lb
+uFWWj
+[ShdHS
+"WWSh`HS
+9} u
+E WW
+tMWWS
+t@9}
+VSh 
+=|BT
+u?Vj
+@}>j
+t$3
+\SVW
++ttHHtd
+=|BT
+=|BT
+9t$u
+`9Mtc}
+9MtAVW
+9Mu
+%,1S
+%<0S
+%80S
+%D0S
+%,0S
+%00S
+% 0S
+%0S
+%h1S
+%d1S
+%$0S
+%`1S
+%l1S
+tDWh
+tDWh
+SUVWPQ
+D$,@
+|$@C
+;\$4
+<\u9
+tw$3
+\</u
+t$@3
+|$(|
+t$$A
+D$4CFE
+p^]
+_^]3
+D$_
+D$ t/
+/EJu
+0*@A
+0*@A
+u.9|$
+_^]3
+$SUVW
+|$@3
+L$(t
+D$8;
+D$8R
+L$ PQh
+L$0RPSQW
+;T$(
+L$ VQh
+9\$ u
+D$ u
+;T$(|
+QRSVW
+,*t 
+T$H%
+;9\$Lt)%
+T$ VRh
+T$ VRh
+PRSVW
+D$<;
+_^]3
+T$S
+L$ ~2
+D$<RP
+D$ F;
+_^]3
+D$Q
+L$h
+D$Ph
+tWSW
+:w83
+L$P
+~(SW
+tF</u6
+C<0|.<9
+_^][
+t$W
+PWhnT
+\$UV
+RVUh<nT
+_^][
+_^][
+L$Q
+SUVW
+_^][Y
+BF<;u
+_^][Y
+l$VW
+IQUV
+_^]3
+^_][
+SUVW3
+_^][
+SUVWj
+RhLoT
+Ph4oT
+_^][
+SUVWP
+tpSWh
+WhLoT
+Ph4oT
+_^][
+_^]3
+_^]3
+_^][
+SUVW
+_^][
+_^][
+_^]3
+t$W
+Shp9
+|$W
+RhpoT
+tIWSh
+hLoT
+Ph4oT
+<:t+
+]_^[
+T$VW
+\$UW3
+_^][
+=TEXHu.V
+=BODYu$WV
+\$UVW3
+;t$ 
+=TEXH
+=BODY
+ttSW
+NP3
+D$HPU
+_^][Y
+_^]3
+hdpT
+hTpT
+hDpT
+h0pT
+h pT
+T$P
+L$3
+L$(R
+u^8N
+uY8V
+D$$Q
+L$$RPQ
+<LuW8N
+uR8N
+uM8V
+QRP3
+L$(R
+T$(QR
+WhtpT
+D$$S
+D$ VW
+t$ V
+\$V
+T$\VWPQ
+D$\VW
+D$\VW
+D$\VW
+D$`S
+\$XVWPS
+L$ Q
+D$8VW
+L$|3
+D$lR
+\$(U
+l$(V
+T$@P
+D$0QRVWSVWSUQ
+D$TQ
+_^][
+Vh8>
+SUVW3
+D$ RP
+tF9E u8
+(_^]
+_^]3
+t$W
+D$ RP
+D$PV
+D$^
+t$$V
+=ILFFuDV
+=IRESu4
+L$Qj
+RVSW
+D$Pj
+t$ ]
+D$Pj
+SUVWP
+=NAME
+L$(QV
+=ILFFuNW
+=DBUGu>W
+=CSTRu
+=BODYVuM
+=ILFFu_V
+=IRESuO
+|$8Wj
+D$LWVSP
+=CSTRVu1
+=PATH
+=ILFFu:V
+=DBUGu*V
+_^]3
+L$ Qh
+9Q4t
+RhPqT
+D$PV
+T$ P
+D$ Q
+L$ R
+T$ P
+D$ Q
+D$,f
+t$ f
+t$$f
+D$$SU
+l$0V
+T$ f
+T$$f
+T$(^]f
+SUVW
+|$(3
+=ILFF
+=FONT
+hFNTHU
+hTRANU
+hANMFU
+D$,S
+D$4j
+L$Dj
+|$8QRPj
+L$(Qh
+OPj
+RPSW
+_^][
+T$(Rh
+D$(Ph
+|$(j
+N(PPH
+PQSU
+QRPSSU
+V,PPH
+PQSU
+RPQSSU
+T$(R
+LuQ8V
+u!8V
+Lu&8V
+u!8V
+tGVj
+__^
+D$ ~S
+T$ |
+_^][
+t>SV
+]VW
+t$90t
+\$U
+|$$W
+D$$Qf
+V@;
+_^][
+\$UVW
+,H][Y
+,B_^][Y
+_^][
+\$(UVW
+D$4f
+L$L%
+D$XR
+T$TP
+D$TQ
+L$LRPVQW
+\$4@
+_^][
+D$4f
+t$(P
+L$XVQ
+L$TR
+T$TP
+D$LQRUPW
+_^][
+hrT
+t$j
+u.8H
+D$ VW
+D$ VW
+D$ VW
+D$(VW
+D$ t|V
+PQh`
+D$ V
+D$ W
+SUV3
+L$,QSS
+T$,R
+D$0SP
+_^]3
+L$,Q
+D$$RP
+L$$UQ
+D$4RP
+L$0SQ
+_^]3
+D$,RP
+T$@PR
+L$,QhlrT
+_^][
+Uh@rT
+_^][
+Uh@rT
+_^][
+D$WPU
+L$0Qj
+D$@P
+L$DSQ
+_^uL
+L$Q
+Uh@rT
+Uh@rT
+L$\h
+D$4RP
+D$ RP
+T$,QR
+L$,PQ
+D$P
+L$Q
+T$$Wh
+L$ j
+T$HQR
+T$$Wh
+L$ j
+T$HQR
+D$ V
+D$ W
+L$^
+hsT
+h(sT
+T$Q
+L$RQP
+L$R
+D$Q
+hdsT
+hLsT
+LVVh
+h@sT
+D$$VWj
+V$Rh
+QRhxtT
+PQhxtT
+T$(Uh
+]_^[
+N$QhDtT
+F$Ph
+N$Qh
+RPhxtT
+N$Qh
+HtfHtFH
+FHt6
+RPhxtT
+u._^
+N$Qh
+V$Rh
+V$RhDtT
+t$(W3
+D$,_^
+D$,_^
+\$Q
+\$P
+\$R
+\$P
+D$,_^
+\$R
+D$,_^
+\$Q
+D$,_^
+\$P
+D$,_^
+\$R
+D$,_^
+\$Q
+D$,_^
+D$,_^
+D$,_^
+F$PhDtT
+V$Rh
+F$Ph
+RPhxtT
+L$j
+t$ W
+JQPj
+L$,j
+QRPj
+QRPj
+QRPj
+QRPU
+QRPj
+D$,j
+BPQj
+HQRj
+Ph\uT
+Ph<uT
+T$(_^
+D$(_^]
+SUVW
+_^][Y
+PhXvT
+_^][Y
+_^][Y
+_^][Y
+KI;
+_^][Y
+Ph(vT
+PhXvT
+_^][Y
+_^][Y
+K_^]
+_^][Y
+\$UV
+_^][
+_^][
+tJ9H
+_^][
+_^][
+_^][
+_^][
+_^][
+_^][
+~!Vh
+QhDwT
+uVS
+SUVW
+UVhpyT
+Vh`yT
+h4yT
+L$,Q
+T$8h(yT
+D$Hh
+L$Xh
+T$ j
+D$8h
+L$Hh
+T$Xh
+D$ j
+L$8h
+T$Hh
+D$Xh
+L$(h
+T$<Q
+T$,j
+h|xT
+T$4QR
+L$4PhhxT
+PQRW
+L$<h
+T$,3
+j<QU
+L$4Ph
+L$PQ
+T$0R
+_[^]
+L$8h
+_[^]
+T$4h\wT
+[^]
+L$PQ
+    
+    
+D$th
+L$(P
+T$LQR
+D$8RP
+T$DQR
+L$DPQ
+Uh\wT
+T$$R
+_^][
+L$PQ
+@SVW
+t$PWV
+\$PWS
+t$PUPV
+L$$h
+T$,RV
+L$Lh
+\$tRV
+D$Dh
+L$LQV
+D$(h
+L$0QV
+ _^[
+WRV
+D$@h
+L$HQV
+D$$h
+L$,QV
+T$<h
+D$DPV
+_^[
+IQRP
+t$LVj
+t$LVj
+t$LVj
+t$LVj
+hLzT
+\$T~e
+PhHzT
+hDzT
+L$TCA;
+L$T|
+h@zT
+D$ h<zT
+L$0QV
+PhHzT
+h<zT
+ ][_^
+t$LQV
+Rh8zT
+L$$QV
+D$Dh4zT
+Rh8zT
+D$4h4zT
+L$<QV
+h\zT
+Sw*3
+hXzT
+hTzT
+hPzT
+h\zT
+IQRP
+WPQh`zT
+hdzT
+$h`zT
+D$C
+T$j
+SUV
+T$(W
+L$0ItvItPIt
+T$,QRP
+T$,QRP
+N_^
+D$j
+D$3
+J$H_
+P(S3
+t$0SSVP
+t$4j
+L$,QP
+L$4^[
+L$0^
+T$j
+PQRV
+hd{T
+hH{T
+^h0{T
+D$PW
+|$<r.
+>Lu)
+u 8F
+B9^
+F$];
+|$3
+GPF;
+SVW3
+t$3
+\$@US
+D$HPS
+D$4RP
+D$<PS
+D$0Q
+L$(QS
+t$ WV
+L$(PQV
+L$QV
+HIt!
+D$$f
+L$$QV
+L$ P
+D$,j
+L$$PQU
+T$0j
+D$(RPU
+WSUV
+_^][
+T$$3
+_^][
+_^][
+_^][
+t$V
+D$PV
+L$3
+h |T
+h |T
+h |T
+h0|T
+W@QPV
+_^][
+NHSQ
+_^][
+NHSQ
+_^][
+_^][
+h0|T
+D$V
+t$W
+NtJ<
+FRPh`}T
+SUVW3
+_^][
+_^][
+L$ _
+1^][
+T$ _
+2^][
+_^][
+D$PV
+L$QV
+T$RV
+Ph~T
+UVWS
+D$$W
+t~WS
+t_WS
+u;WS
+_^][
+_^][
+8(u;
+t(SW
+t$W
+_^[
+_^[
+h4~T
+h4~T
+_^][
+< t<
+< t<
+_^]3
+t%;u$s
+;u$s
+]u
+]u
+QRWP
+QRWP
+_^[]Y
+~vVW
+_^][Y
+][Y
+v%S3
+vTVW
+_^][Y
+D$VPQ
+T$R
+VhH~T
+\$U
+Shx~T
+_^][
+L$PQR
+SUVWj
+_^][
+_^][
+9;tM
+_^][Y
+_^]3
+T$ j
+^][Y
+L$,PQ
+L$ PQC
+X_^[
+hdCS
+t$(W
+D$h
+D$(V
+t$(W
+IQRP
+t$(W
+IQRP
+t$(W
+IQRP
+t$(W
+IQRP
+D$VW
+D$%
+IQRP
+hdCS
+h\zT
+hXzT
+hTzT
+h\zT
+    
+L$>=
+D$> 
+hLzT
+t$ R
+D$<RPQ
+T$Tf
+T$x3
+\$WPSR
+$RSP
+\$VW
+K_^[
+D$0PQ
+L$TR
+T$TP
+h`FL
+h EL
+NQW
+T$,Rj
+D$4j
+$RVP
+\$P
+$VWQ
+|$h
+L$X3
+_^][
+t$V
+SUVWj
+,=${
+Qj@P
+_^][
+QSUV
+_^][Y
+_^][
+D$UPV
+]_^[
+SUVW
+L$$Q
+hpfL
+h`gL
+D$HP
+_^][
+\$(VWj
+GQS
+\$(UVWj
+D$ t|V
+_^][
+D$V
+$SVW
+G PV
+T$,R
+T$,R
+T$,RQ
+L$,QP
+T$P+
+D$WP
+L$QPVR
+T$$P
+RSWPQ
+l$$W
+D$ uM
+D$(f
+D$(u
+D$4_][
+D$$3
+N4QUWPS
+DSVW
+G PV
+T$4R
+L$0P
+D$$Q
+L$0RPQ
+D$(RS
+T$dVPQR
+D$WP
+L$QPSR
+T$,P
+RVWPQ
+L$(SUV
+t$(Wf
+\$0PS
+T$<+
+T$\3
+L$Hf
+T$DQRUP
+_^][
+L$DSUV
+t$@Wf
+T$0U
+L$<QR
+D$<P
+T$PQ
+L$PR
+T$tQPVRW
+_^][
+f;P8t
+f9_:u
+_^][
+u VS
+T$ FJ
+T$ |
+9|$@
+9|$X|
+9t$D
+9t$\|
+9T$H
+9T$`|
+D$,H
+J8tV#
+t$,FB
+\$(2
+T$,@
+L$,%
+9L$X|
+|$D;
+9T$\|
+9D$H
+9D$`|
+L$Lf
+D$+
+L$d;
+L$h;
+D$dQPR
+D$+
+D$X+
+L$D;
+T$H;
+T$,3
+t$pt
+T$`u
+@P9t$l
+L$ "
+T$x;
+T$p;
+T$|;
+T$t;
+L$\4
+P8tV#
+T$0@
+L$0%
+\$,+
+D$43
+\$,+
+L$x;
+L$|3
+\$@t
+L$Lt
+L$4P
+T$(QRj
+%(9S
+%(9S
+%(9S
+\$PUV
+L$h3
+D$Xu
+D$$H
+|$0+
+t$4+
+l$83
+D$(3
+_^];
+D$@SUV
+D$$s
+D$$3
+T$PI
+\$$+
+t$0#
+D$0PQ
+D$(RPQ
+SUVWtC
+D$xt
+\$4t
+_^][
+_^]3
+%(9S
+%(9S
+WPVQS
+L$ 3
+D$T5
+T$$E
+T$$t
+D$<3
+D$(+
+D$(+
+D$(Q
+D$,R
+D$ VP
+T$<H
+L$ I
+L$$3
+L$$3
+|$,;
+x8t%
+_^]3
+SUVWu"
+D$,h
+\$ $
+%(9S
+%(9S
+E PQ
+RPVQW
+%(9S
+%(9S
+QRVPW
+%(9S
+%(9S
+DCBA
+t}9u
+VWPS
+ESVW
+|$43
+T$`3
+D$8Q
+t$O
+D$T+
+D$+
+D$+
+D$@
+D$ @
+L$ht
+\$`t
+L$$t
+%(9S
+%(9S
+DCBA
+t}9u
+VWPS
+|$$3
+VWSUPQ
+_^][
+L$ WQj
+T$@WRU
+_^][
+\$V
+ttSU
+D$0j
+_^][
+l$4V
+t$0W3
+D$,R
+T$<R
+L$0h
+IUPQh
+F<_^][
+SUVWh
+|/hX
+_^][
+_^][
+\$,UVW3
+D$8_^]f
+D$8f
+_^]f
+_^]3
+@VWj
+D$ hd
+L$(j
+D$W
+t:Vhl
+L$(h
+T$0j
+D$@P
+$Vhl
+L$(hp
+T$0j
+hMANVP
+hTSNI
+h TTG
+T$8Q
+[_^]
+t$;
+hSDOM
+]_^[
+SVWj
+PhHSEMP
+$WWh
+UPhATTAP
+PhXTVMP
+PhTROPP
+PhCFTPP
+PhXVTPP
+hTXANR
+hTXANP
+t hTXANP
+hTXANW
+L$Q
+hLOVS
+]_^[
+SUVWj
+D$$Phl
+QhSEMSP
+hCAFS
+ShXTVSP
+ShEGDEQ
+_^][
+\$UV
+WUhFXETP
+C8~w
+C8Vh 
+_^][Y
+k8_^][Y
+l$V3
+ShFLAPP
+}D~j
+E<~R
+U<hl
+_^][
+]<_^][
+SVWj
+hMNABQ
+t$WV
+F@Hx
+(SUV
+t$8W
+D$$~d
+@`;A`~
+QWht
+L$$_
+L$ ;
+L$ Q
+T$ RP
+L$ QR
+@VW
+|$3
+G;p
+|$3
+SUVWj
+@_^][
+j j2h
+PHRP
+PHRP
+PHRP
+L$,RP
+L$@3
+T$A
+|$@+
+T$4+
+t$8+
+\$P+
+L$8+
+L$h+
+|$<+
+L$pt
+L$|;
+|$|t-
+D$(H
+D$hCH
+T$Lt
+L$#L$|
+L$\u
+D$\;
+|$`t9
+P0t.
+D$\u
+T$XB
+D$X@
+@B=x
+L$,=
+l$<3
+|$L;
+9]t
+t$HVU
+|$L9]t
+D$H8\0
+tEW3
+QSUVW
+_^][Y
+j4h F
+j,h`F
+@W3
+t$3
+~>W3
+^]_[Y
+D$S3
+t$DWj
+D$DRP
+T$$V
+T$0V
+T$3
+D$W3
+~jSU
+tyHtQHt2
+SVPW
+ _^][
+_^][
+WPQR
+_^][
+SPQR
+_^][
+WVPU
+tSVPU
+_^][
+T$P
+D$R
+T$PR
+D$,P
+D$$Q
+L$$R
+T$$P
+D$$Q
+L$$R
+T$$P
+D$$QRPj
+42H;
+_^][Y
+_^][Y
+_^][Y
+_^][Y
+t$PW
+\$(3
+L$(PQ
+T$`W
+T$4VPQR
+\$LUV
+L$$Q
+D$ SP
+L$,3
+Sl~O
+t$\_
+D$$RPU
+DSUV
+t$\Wj
+l$dP
+D$LUP
+L$LUQ
+T$,QR
+L$HSQWV
+D$,RP
+L$HSQWV
+D$XPj
+V~T
+^^]
+_^][
+\$,V
+D$0S
+L$8P
+D$(_
+D$P
+SUVW
+WQRS
+h`KM
+h@HM
+_^][
+BVW
+D$~ 
+\$h[
+D$`_
+F,tD
+SSVWRU
+N,QSVWPU
+T$ QRVWSU
+T$ taVj
+\$ UVW3
+D$0;
+D$(F
+\$,G
+_^][
+D$$_^][
+p0A;
+D$ t
+$RPQ
+D$ ]
+PQRW
+h XM
+T$V
+SUVW
+|$D;
+D$DPU
+_^][
+_^][
+_^][
+_^][
+_^][
+_^][
+_^][
+_^][
+SUVW
+D$ PQU
+_^][
+9ott
+D$QRP
+T$$RPWQ
+T$Dj
+t$W
+|$VW
+t$@Wj
+hJBOBW
+SUhHBOBP
+hHSOBV
+hTSLPV
+hTSLTV
+hLAOB
+hHBOBV
+hHLABV
+\$8j
+t$$hNAOBW
+hHAOBW
+hHTOBW
+hDTOBW
+hHROBP
+4:~$
+hDROB
+D$,P
+D$,~9
+hHEOBW
+hDEOBW
+\$4S
+D$TP
+][_^
+hHBOBV
+D$pW
+L$lQ
+^][_
+HtSU
+l$@V
+t$@;
+Pl~O
+\$P;
+T$LSRUVW
+_^][
+T$;
+h vM
+MSV
+|$Dt:%
+D$D3
+D$<Q
+L$pt
+USV
+QRV
+D$\@
+D$\;
+V QRVP
+PVWQ
+NhPQ
+PjPh<
+JLF;
+t$W
+D$ 3
+T$$R
+hPBP
+h`hB
+t$u
+KlWP
+\$ Q
+$RSP
+^][Y
+\$HU
+l$PVW
+\$XP
+$QSR
+_^][
+UVW
+D$,P
+L$ PQ
+RPQh
+t$A@
+T$LAS
+L$lU
+_H^]
+D$<DCBA
+A(^][
+f9M<
+L$ QPWV
+_^][
+f9j<
+t9+t
+_^][
+f9B<
+QPVR
+VQRS
+0_^[
+T$Xj
+T$XB
+T$PPR
+t$XN
+t$X;
+D$dN
+t$X;
+T$dN
+t$X;
+t$XN
+t$X;
+t$X;
+D$PP
+][_^
+SUVW
+_^][
+D$<SVj
+L$LPQ
+D$@^
+D$@^
+_^][
+_^][
+t$V
+L$PVQ
+j h8
+L$Q
+T$ RV
+_^][
+A_^
+Y][
+Y][
+L$4S
+\$,U
+T$,Q
+RWVPQS
+yf9
+D$0RPV
+\$8;
+_^][
+T$$Q
+\$ RP
+D$8P
+\E;h
+_^][
+_^]3
+t$3
+WSVP
+SUVW
+T$ E;
+T$ Ky
+_^][
+_^][
+4_^][
+SUVW
+_^][
+$QWR
+9Alt
+D$d=
+T$Tj
+T$TB
+T$LPR
+t$XN
+t$X;
+D$dN
+t$X;
+T$dN
+t$X;
+t$XN
+t$X;
+t$T;
+D$LP
+L$X3
+_^[]
+t$W
+Pj$h
+SVW3
+D$ WW
+L$DW
+\$_^
+T$DQR
+L$P
+T$HQR
+L$\R
+\$_^
+T$DQR
+L$P
+T$HQR
+L$\R
+T$$SV
+L$0t
+t$4u
+lvBC
+t$t%
+|$(f
+T$Ht
+Nd+z
+T$(f
+T$Lt
+KtPQ
+<SVW
+L$,R
+T$,P
+D$<Q
+L$<R
+\$\V
+L$ QV
+SUV3
+WSPQ
+|$@PVW
+D$D:
+D$8j
+QRVP
+D$LQ
+L$LR
+T$LP
+D$LQ
+L$LRPQUWV
+_^][
+uWV
+L$(PQ
+D$ Q
+D$0R
+\$@P
+\$PP
+L$LP
+T$8QR
+L$LP
+L$XQ
+T$PRQ
+f9H<
+L$$~}
+T$tPP
+L$(Qj
+RPSQ
+T$ S
+t$@VS
+Pjhh`
+D$V
+L0^
+T$SV
+L$ ;
+\$0UV
+L$,G;
+^][_
+SUVW
+L$$}=
+u @;
+L$$F;
+t$ |
+_^]3
+SUV3
+_^][
+_^][
+Pj h
+DhP_N
+hp_N
+V RP
+WVPQ
+L$QS
+h0hN
+SVW
+L$Pj
+SVW
+L$Pj
+L$$Q
+SRPQ
+@t*V
+_^][
+_^][
+D$ VPW
+_^][
+_^][
+ueSUV
+t$hV
+D$P
+D$l
+RPUSQ
+D$x
+RPUSQ
+]_^[
+Pj h
+Wt%h 
+SUVWj
+_^][
+@Rj
+PQhx
+l$VW
+PQWR
+_^][
+t3SV
+Sj<3
+Pj hh
+hPyN
+h`zN
+,h`yN
+Pj,hx
+P(RPQ
+,h0~N
+h ~N
+C4PV
+D$HR
+L$tPQ
+T$|h
+L$pQ
+h ~N
+Pj$h
+l$U
+D$O
+QRhL
+D$dh
+L$$W
+D$(Q
+j Rj
+j Pj
+D$ t|V
+L$QV
+|$0j
+L$8PP
+D$@Q
+T$DQ
+D$HQ
+L$LQ
+\$$j
+D$(Q
+l$,%
+D$,Q
+D$0Q
+T$4Q
+D$8Q
+L$<Q
+T$@Q
+^_][
+Pj|h@
+Pj|h4
+x,WVRQP
+Pj hT
+D$O
+RPh,
+L$lhx
+L$$W
+D$(Q
+j Rj
+j Pj
+D$ t|V
+RPh@
+L$dh
+t$W
+L$0W
+D$4Q
+j Rj
+j Pj
+D$,t|V
+_^][
+D$V
+C4RP
+Pj`hL
+Z\t5
+Z!^[
+E"PhX
+_^][
+l$VW
+t$W
+L$Vj Q
+\$dRPW
+D$,t|V
+_^][
+T$ VW
+Pjhhl
+|$,j
+T$,Rj
+D$4j
+|$h
+D$TW
+L$DS
+\$TV
+D$0PS
+GQR
+L$xPQ
+_^][
+T$V
+QRPV
+L$0QV
+t$W
+H\_A^
+Pj h
+Pj@h
+PjDh
+Pj h
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+D$@P
+L$PQR
+L$PQR
+L$LPQR
+L$LPQR
+L$LPQR
+L$LPQR
+L$LPQR
+L$LPQR
+ht|V
+|$3
+|$8j
+j Pj
+l$8|
+D$8|
+L$8Qj
+T$@j
+T$$F
+D$$t|V
+_^][
+|$h
+SUVW3
+_^]3
+_^][
+T$HQ
+D$f
+Pj(h
+D$RPQ
+D$RPQ
+L$Qh
+D$RP
+QhH
+IRWV
+T$3
+ tj
+Pj8h
+Pj h
+Pj h
+Pj h
+Pj h
+0h ~H
+hp}B
+hp}B
+\$UVW
+ESVW
+$h`zT
+t$j
+$h`zT
+\$ WP
+D$,Q
+L$8RPQ
+\$ WP
+D$,Q
+L$8RPQ
+t$j
+RQh`zT
+RQh
+t$j
+t$j
+D$V
+L$_
+t$W
+D$_
+t$j
+D$_
+t$j
+j PQR
+t$j
+t$Wj
+t$j
+PQh<
+D$Xj@P
+L$|Q
+D$|P
+T$8RW
+D$0t|V
+_^][
+VWPh
+D$RP
+D$P
+|$W
+t$3
+FL_^[
+9~-P
+T$$h
+_^][
+t$W
+B<.u
+J<0|"<9
+_^[Y
+\$U
+_^][
+_^][
+GRPh<
+VWUP
+_^][
+_^]2
+_^][
+T$RV
+\$R
+ChSP
+h0)O
+hP+O
+h@2O
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+$RVP
+FhVP
+$VSQ
+ShVSR
+,SVW
+$QWR
+SVWj
+hp5O
+h06O
+hp6O
+SUVW
+7_^][
+h@;O
+h@9O
+h0=O
+h <O
+L$(P
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$ Q
+D$$RPQ
+^dPh(l
+T$LQhD
+L$XPQ
+D$`RhT
+L$lVQ
+T$LQhD
+D$XP
+T$\QhT
+D$hP
+l$ VW
+_^][
+_^][
+\$V
+|"~EV
+h`AO
+hpAO
+h`EO
+\$VW
+[L_^[
+~7SVW
+SUVW
+L$$QWPVU
+_^][
+hPPO
+h eO
+L$(P
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+L$pP
+T$QRP
+L$hP
+T$QRP
+L$tP
+T$QRP
+L$xP
+T$QRP
+L$|P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$LQhD
+L$XPQ
+D$`Rh
+T$lQR
+L$tPhT
+T$LQhD
+D$XP
+T$\Qh
+D$hP
+T$lQhT
+D$xP
+8^`u
+8^`tKV
+t'VW
+Fdy{
+u,8^`t
+tVW
+t$8^`u?
+D$@RP
+L$4PQ
+T$<R
+L$DPQ
+L$LRPQ
+D$HV
+D$\RP
+D$ u
+CVW
+I RPQ
+Q4PR
+D$8RP
+D$0V
+?hpl
+$hpl
+$hpl
+T$8Ph
+D$HR
+jZj<Q
+L$\R
+T$\QRP
+\$,ug
+D$,Q
+$WWRPh
+CWWWQ
+T$HP
+D$HQ
+L$HR
+T$HP
+D$HQ
+L$HRP
+T$$QR
+T$QR
+G|WP
+\$(3
+_^]3
+-,8S
+\$$Q
+D$4VW
+|$3
+@P_^;
+hpqO
+h vO
+h0vO
+L$XPQ
+|$S
+SUV
+D$,V
+\$ VW
+t$j
+L$SUV
+_^][
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RP
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+NhVQ
+RPh |
+VVVPQ
+|$h3
+D$hh
+L$xj
+L$8RQSP
+T$0P
+ChRSP
+|$hh
+D$ph
+L$HQSR
+D$HPSQ
+t$W3
+^0j
+WhHr
+t$ W
+FP_^
+GP;_Pt
+EVW
+f90t%
+A=Hr
+L$f
+D$^
+A=Hr
+l$;uX|
+E\_@
+_^][
+]VW
+t$8:
+|$8PW
+D$$VP
+T$@VR
+GpVP
+D$V
+|$ WV
+t$,h
+T$,j
+L$RP
+D$W
+|$,P
+T$QR
+T$QR
+T$j
+L$Q
+T$R
+_XSV
+L$$QV
+GlRW
+D$8PV
+L$XQV
+T$dRV
+L$QV
+D$\h
+L$hj
+L$\RP
+T$LQRPW
+D$$PV
+L$0RPQW
+T$$RW
+_^[Y
+D$V
+D$V
+D$V
+D$V
+t$(W
+L$j
+L$j
+L$j
+t$$W
+L$j
+L$j
+D$PV
+L$QV
+L$j
+l$V
+~8WSU
+EXC;
+_^][
+D$0h
+L$8QW
+_^][
+L$j
+T$$RV
+FX_^
+Rhhr
+MVW
+Fh33
+SUV
+t$ 3
+l$ V
+\$ ;
+l$ h
+Fh33
+T$,;
+T$4u
+D$L3
+T$;
+D$ 3
+D$4tW3
+9T$uH
+T$8R
+L$,@
+D$0_^[
+D$(W
+MQRSPV
+T$@P
+SWQRPV
+L$Q
+D$0_^[
+T$ V
+\$TUV
+|$hVQWS
+L$pRPQVWS
+\$`Q
+$RSV
+PQVS
+\$pR
+$PSV
+_^][
+\$C
+t$HW
+FQR
+L$(PQ
+hS!3
+hSUW
+D$hPW
+T$0VQR
+D$XR
+L$,PQ
+T$$HP
+T$xP
+D$hR
+T$hSUP
+D$`R
+T$`P
+D$pR
+T$pP
+D$$j
+D$dQ
+L$dR
+T$TSUP
+D$\Q
+L$lR
+T$lP
+D$|Q
+L$|R
+^_][
+\$ _^
+Y<t(f
+T$TSR
+L$\PQSR
+L$F
+KpVR
+t$ WV
+D$VP
+|$4j
+QRVP
+|$8j
+ERVW
+D$Tj
+T$VW
+T$,f
+T$03
+H*^t
+T$ Q
+SUVWj
+_^][
+SUVWj
+_^][
+_^][
+_^]3
+SVWP
+T$PQ
+D$3RP
+T$`RP
+D$`PQ
+\$$RP
+D$xPQ
+D$`PQ
+\$$RP
+T$PQ
+D$3RP
+l$ VW
+_^][
+l$tVWPU
+D$0;
+|$|3
+GMt!
+UhUR
+$QUR
+L$@Qh
+L$,P
+L$8PQ
+T$lj
+(;\$
+T$$QVR
+T$(Q
+D$<PV
+t$|QV
+_^][
+,SVW
+\$f
+D$_^
+Pjhh
+,h@'P
+hp0P
+h 1P
+hP1P
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$tRPQ
+D$tRPQ
+D$tRPQ
+D$tRPQ
+D$tRPQ
+D$tRPQ
+D$xPQ
+D$tRPQ
+T$,QR
+SUPQ
+\$R
+CD][
+\$VW
+[L_^[
+L$%
+L$%
+L$%
+L$%
+Pj h8
+PjdhT
+h`;P
+D$(RP
+D$T=
+SVWj
+l$j
+VWPS
+,h ?P
+hPBP
+\$VWPSR
+$QSR
+0_^[]
+\$HU
+l$PVW
+\$XP
+$QSR
+_^][
+hpIP
+h0EP
+L$XP
+T$QRP
+L$pP
+T$QRP
+T$QRP
+T$QRP
+T$LQh
+D$XVP
+T$LQh
+D$XP
+|$ +
+L$(+
+D$0B
+9)tY;
+_^][
+t$ 3
+L$QVR
+<*t]
+_^U
+h@LP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+PjDh
+\$0UV
+D$(+
+_^][
+_^][
+_^][
+PjTh$
+h@XP
+hPXP
+_M]_^[
+_M_^[
+_]^Y
+Ph`ZP
+\$$UVWS
+tx_^]3
+Pj hl
+h ~H
+h _P
+hP]P
+Dh@bP
+h@^P
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+BhRP
+D$$u
+L$u3
+|$`3
+L$pj
+T$(#
+t$(#
+t$(#
+L$<QSP
+T$0P
+ChRSP
+L$j
+D$2
+|$`h
+L$xj
+|$`h
+\$tj
+T$pj
+D$H
+T$HRSP
+L$HQSR
+L$I
+t$ ^
+h`oP
+Dh@sP
+L$xP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QR
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+FhVP
+D$,u
+|$p3
+D$ph
+T$ #
+t$ #
+t$ #
+L$8RQSP
+T$0P
+ChRSP
+@@@@
+@@@@
+|$ph8
+L$xh
+T$PRSP
+L$PQSR
+t$(^
+L$QV
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+l$dVW
+L$pQV
+D$p;
+_^][
+\$4UV
+3333
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QR
+T$QRP
+|$3
+~3UV
+GXF;
+GXC;
+^]_[
+D$PV
+T$RP
+T$RP
+3333
+SVW3
+C0uQ
+L$8SQ
+D$@RP
+;xX|
+L$8VQ
+2_^[
+tE~C
+D$@W
+T$RP
+h8LS
+T$0Rj
+L703
+_^][
+_^][
+Ht)Ht
+Hu"j
+PPPR
+T$V
+\$DUV
+T$4PR
+0_^][
+L$V3
+SUVWj
+|$$3
+5P1S
+_^][
+D$l3
+L$QP
+QSVRP
+QSVRP
+QSVRP
+L$0RPQ
+9X tJ
+T$$t%
+L$ ;
+D$ P
+9](tE
+D$LH;
+M RP
+T$<RP
+WVRWVP
+WVSWVR
+T$@WVP
+T$0R
+L$\R
+_H^]
+D$ +
+D$ +
+D$ +
+T$ ;
+9j P
+"h  
+T$ ;
+R|_^][
+T$ V
+9j P
+"h  
+T$ ;
+T$ V
+5j P
+!h  
+T$ ;
+R|_^][
+SUVW
+L$|3
+_^][
+SUVW
+`9l$
+_^][
+TSUV3
+L$$;
+;L$(
+\$\w
+|$\@A;
+_^][
+SUVW
+\$L;
+;|$P
+l$D;
+9Y\u
+;D$4
+;D$P
+\$$+
+;D$H
+l$03
+T$03
+|$,G@;
+_^][
+;|$4
+;|$P
+D$,;\$D
+;\$H
+D$,C
+_^][
+;|$4
+;|$P
+S;t$D
+;t$H
+_^][
+t$03
+L$:V
+_^][
+D$=
+L$v
+T$(j
+L$Q
+L$3
+\$`3
+L$`t[
+L$xu
+L$,t
+L$,t
+L$l;
+\$Xt
+|$4u/
+2;L$l
+D$<;
+T$03
+;T$<u
+t$XF
+_^][
+|$H3
+D$0SP
+T$,PR
+L$4PQ
+tSRV
+0_^[
+L$<t
+_^][
+L$@t
+_^][
+_^][
+_^][
+_^][
+d$(_^[
+\$\V
+L$ QV
+L$(QR
+D$j j 
+T$RP
+h@)Q
+T$$R
+D$(PV
+D$4CE@
+D$4@
+D$4|
+D$$P
+_^][
+~jUV
+SUV3
+Sj#P
+Qj$P
+L$ Qj%
+Sj/P
+L$x;
+=X5S
+D$X
+D$X
+D$D+
+D$pCB
+;T$<
+\$d%
+\$\#
+D$0A
+L$@@;
+;L$<tm
+T$0j
+D$0j
+\$0u 
+\$$+
+\$$+
+L$L@;
+;L$<tb
+T$Lj
+T$Lu$
+_^][
+\$VW
+_^][
+D$h3
+\$`O
+_^][
+_^][
+_^][
+_^][
+_^][
+_^][
+h@fQ
+T$u
+gVWj
+SSSj
+SWPj
+Y_^[
+<$tmf
+<$tmf
+L$W
+GIt#
+=|BT
+tD+E
+QSVW
+t7)E
+QSVW
+WVVVV
+SUVW
+|$(3
+l$$A:
+<\uc
+ wS3
+A<9~
+FA<"u
+_^][
+XuLAO
+u-_^]3
+_^]3
+..FAO
+.FAO
+.FAO
+.FAO
+<$t <0u
+SUVW
+CvK
+T$,PQR
+_^][
+CvS
+D$,QRP
+_^][
+t$W3
+=MROF
+=MROF
+=MROFt
+=MROFt
+QSUV
+MROF
+L;PQ
+_^][Y
+D$$S
+_^][
+T$ SVW
+\$$+
+T$(3
+~g;l$(}=
+D$0;
+]_^[Y
+T$ SVW
+\$$+
+T$(3
+~[;l$(}1
+D$0;
+]_^[Y
+\$ +
+L$$3
+|$,3
+;T$$}
+;\$(}
+|$,|
+]_^[
+SUVWt/
+|$<+
+T$83
+t$ 3
+;|$<}M;T$8}G
+_^][
+AujV
+t$(W
+L$ P
+D$RPQ
+t!VW
+ SUV
+L$0W
+\$,WSUQ
+L$,R
+PWSUQR
+8_^][
+ERVP
+PhHL
+VjQ
+D$(RPQ
+t$^
+T$ RS
+~%VW
+j h,
+Pj0h@
+D$RPQ
+D$RPQ
+L$(P
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+@P_^
+t$DW
+F\_^
+FX_^
+t3Vf
+f;5L
+Qh9:t
+T$,VW
+T$S
+D$LRU
+L$TSP
+D$ ]
+D$ o
+D$ o
+T$lQR
+|$L3
+L$0@
+_^][
+^][_
+t$LW
+=H5S
+L$PQP
+CpRPW
+V(QR
+D$LWP
+T$<QRSP
+PjDh
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+G _^[
+D$Q
+$QSR
+ _^][
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+T$LQhD
+L$XPQ
+D$`RhT
+L$lVQ
+T$LQhD
+D$XP
+T$\QhT
+D$hP
+Gd_^
+WlWR
+PjDh@
+D$RPQ
+L$QV
+E PU
+E@_^]
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+T$$QR
+L$$PQ
+d$$3
+T$B
+T$3
+D$,@
+|$,3
+\$3
+T$03
+D$3
+D$<;
+D$<A
+D$;
+D$03
+D$C;
+D$\B
+D$3
+D$F;
+t$Pf
+F|PUU?
+|$~2
+FHht|V
+ht|V
+D$Sht|V
+~HSW
+D$P
+F Rj
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+L$DPQ
+D$`P
+D$\RP
+T$\QR
+\$tt
+D$hP
+D$\
+T$R
+Pj0h(
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+T$LQh
+D$XVP
+T$`Qh|
+D$lVP
+T$LQh
+D$XP
+T$\Qh|
+D$hP
+^h_^
+^h_^
+SUVWj
+ _^][
+$PVQ
+T$LQh
+D$XVP
+T$LQh
+D$XP
+FhVP
+L$,PQ
+GpRP
+\$4Q
+$RWP
+QSUVW
+_^][Y
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+T$LQh
+D$XVP
+T$LQh
+D$XP
+@Ph@8
+Au h@8
+^h_^
+^h_^
+EWVR
+L$PQR
+\$VW
+[L_^[
+l$,R
+Pj@h$
+L$PPQR
+L$PPQR
+L$PPQR
+L$LP
+T$(QRP
+L$0P
+L$HPQ
+PhQPR
+;u0t
+;}0t
+M$@;
+U @;
+]<G;
+M @;
+UHSV
+U(VQ
+D_^[
+D$H;
+D$0R
+L$,P
+T$(Q
+D$dR
+L$\P
+T$TQ
+D_^[
+D$lo
+D$0R
+L$,P
+T$(Q
+D$dR
+L$\P
+T$TQ
+T$|QR
+M$VWR
+D$ht
+T$tF
+VUUUf
+L$,f
+D$nf;
+L$lf
+|$pf
+D$4Q
+L$4P
+D$4Q
+M PQ
+R(Pj
+L$LR
+tHu
+L$4P
+D$4Q
+L$4P
+E QP
+tHu
+L$8Q
+L$8Q
+L$8Q
+L$(QQ
+M QP
+L$\R
+T$,3
+VUUU
+t$0f
+L$,f
+SUVWj
+_^][
+SUVW
+_^][
+ht|V
+SVW3
+Wh 4R
+_^][
+SUVW
+9_$t
+_^][
+_^][
+|$W
+t$(W3
+9h8u
+L$ QS
+9l$,u9
+t39/~/3
+$;/|
+L/0R
+FxSP
+T/8tT9P,~O
+;Q,|
+_^][
+u_]3
+f9O*
+L$D~-3
+f9G(~
+W*@;
+D$D|
+K f9o*
+D$DA
+VUUUf
+t$@f
+D$ff;
+L$df
+D$d%
+D$f%
+t$H%
+L$Pt
+L$LQV
+D$X3
+RSVPP
+QSVPP
+RSVUP
+D$,PSVW
+D$dRSV@
+D$df
+D$\PV
+AuEf
+T$,3
+VUUU
+L$,f
+G*A;
+F,E;
+^_][
+D$h<
+ClV3
+f9p<~
+H(Rj
+l$@j
+|$,B
+tAHu\
+|$hj
+L$\j
+PWWUUV
+T$d+
+%07S
+\$,j
+D$xh
+L$|PQR
+D$4H
+L$,j
+T$Xj
+QWWUUV
+L$H+
+%07S
+\$,j
+D$xh
+L$|PQR
+D$T;
+L$(A
+D$dH
+D$,@
+L$H+
+|$hj
+L$\Q
+T$TR
+_^][
+4SUVW
+_^][
+hP4R
+,h09R
+hpSR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$0QR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+L$,PQR
+hPTR
+h`TR
+hPaR
+_^][Y
+@SUV
+t$PW
+FLRP
+F<PUQ
+_^][
+VLRQP
+_^][
+FLPRQ
+_^][
+VLRQPW
+_^][
+Pjdh
+PjTh
+h`qR
+8h`rR
+hprR
+hptR
+$h`tR
+h sR
+L$`PQR
+L$`PQR
+L$`PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+L$PQR
+t$<u
+QSUV
+_^][Y
+_^][Y
+L$4PQR
+L$4PQR
+L$4PQR
+L$4PQR
+L$4PQR
+L$4PQR
+D$h\
+Ph0A
+Rh0A
+PQh0A
+Ph0A
+PhPA
+PhhA
+PhtA
+^][u
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+9At
+9A t
+9AHt
+9ALt
+9APt
+9ATt
+t$W3
+|$VWW
+T$@RP
+@_^[
+$QSR
+$QSR
+_^][
+D$U
+$USR
+_^][
+L$(P
+T$QRP
+L$@P
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+T$QRP
+_^][
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+D$RPQ
+C8u,
+C _^[
+$_^[
+t$W3
+Ntht|V
+~hQ3
+L$4P
+L$|P
+t$^
+Pjxh
+L$(P
+T$QRP
+L$pP
+T$QRP
+L$tP
+T$QRP
+T$QRP
+\$`U
+D$$PUQS
+_^][
+_^[
+D$4P
+ESV
+L$Hh
+T$4j
+D$|RPQ
+T$Hj
+D$\j
+L$LPQR
+t$^
+^[_]
+EWVQ
+Dh`hB
+D$RPQ
+D$RPQ
+_^][
+t$^
+Pjxh
+L$xP
+T$QRP
+L$tP
+T$QRP
+PpQR
+Pj(h
+L$(P
+T$QRP
+Pj|h
+vtQP
+D$<A
+D$8B
+D$(RPV
+$SUVW
+|$83
+T$$QRS
+FUPV
+D$(H
+SUVW3
+_^][
+IPVhA
+\$U3
+WPSQ
+L$RPh4
+L$RPhD
+T$,h
+D$DP
+T$PR
+L$SV
+D$(SUV
+XW3
+|$$S
+|$ ;
+u@9L$
+uD9L$
+_^][
+\$ _^
+t$3
+t$r
+D$r
+u+VPQS
+L$ ;
+T$@
+\$,;
+9L$ 
+D$3
+9L$ tJ
+t$u.
+D$
+D$
+|$}
+D$ PW
+T$\j
+T$TR
+L$TQ
+D$ PV
+L$\j
+L$TQ
+D$TP
+D$LP
+D$XVQ
+T$,Q
+D$(R
+D$XR
+L$XP
+D$HPQ
+T$$R
+D$(P
+ESVW
+L$ ~R
+D$ ~R
+L$8PQR
+T$@Q
+D$4%
+|$$;
+4SUW
+|$H3
+|$(9T$(wL
+|$(9T$(w<
+o(_][
+T$L3
+l$,VS
+D$L@
+^_][
+D$,;
+D$83
+|$0j
+L$ j
+L$(I
+D$,F
+RVSW
+t$0j
+D$(P
+_^][
+D$3
+FtMf
+Rf9tQ
+If9TH
+SUVWu
+_^]3
+L$ PRQ
+_^][
+D$(_f
+N^][f
+SUVW
+T$ S
+_^][Y
+L$SW
+h@S
+}{8XPuv
+@$QRP
+_^][Y
+xDO;
+@$QRP
+_^][Y
+_^][Y
+P$QR
+t$H#
+L$H#
+D$xRP
+D$,QS
+VHQRP
+\$VSP
+1H;
+T$Q
+XtRP
+@P_;
+@P_;
+FxWP
+\$HVWPS
+L$QV
+\$VWP
+QRSP
+KhQP
+\$HU
+l$PVW
+PQSR
+_^][
+t$W
+D$0R
+D$$R
+L$ PQ
+T$<R
+T$$P
+L$$h
+CPQP
+D$@PRQR
+h@!S
+<h0 S
+xxVW
+t$Pj
+^[_]
+@GOStart
+GOPlayer
+GOInRemap
+GOInMouInv
+GOInMouSens
+GOGfxDisp
+GOGfxDevice
+GOGfxGamma
+GOGfxPerformance
+GOGameLang
+GOGameDiff
+GOIsBlood
+GOSoundSpeech
+GOSoundMusic
+GOSoundFX
+GOActiveMission
+GOContentControlPW
+ENGLISH
+GERMAN
+FRENCH
+ITALIAN
+SPANISH
+GD_1
+GD_2
+GD_3
+y@333333
+@ffffff
+@ffffff
+333333
+?Og2B
+6<d;
+@ffffff
+@333333
+LCPwV<
+>UUU?
+>ffV?
+*<333>33s?
+;fff?
+A?Mm
+@UUUU
+:333?&
+z?]t
+@)\O?
+3?333
+Qx?Og2A
+Q<PwV=333333
+@333333
+J?ffffff
+ BOg2
+ ?Pw
+HBUUe?
+@ffffff
+BPwV>333333
+?ff&?
+=ffF?
+Aff6?
+9=ffF=
+@>33C?
+@43333
+LDffffff
+@?fff9|
+Dffffff
+ Fff
+x?%I
+E@UU]?
+aEq=J?
+333333
+UUUUUU
+Cq=*F
+__GLOBAL_HEAP_SELECTED
+__MSVCRT_HEAP_SELECT
+runtime error 
+TLOSS error
+SING error
+DOMAIN error
+R6028
+- unable to initialize heap
+R6027
+- not enough space for lowio initialization
+R6026
+- not enough space for stdio initialization
+R6025
+- pure virtual function call
+R6024
+- not enough space for _onexit/atexit table
+R6019
+- unable to open console device
+R6018
+- unexpected heap error
+R6017
+- unexpected multithread lock error
+R6016
+- not enough space for thread data
+abnormal program termination
+R6009
+- not enough space for environment
+R6008
+- not enough space for arguments
+R6002
+- floating point not loaded
+Microsoft Visual C++ Runtime Library
+Runtime Error!
+Program: 
+<program name unknown>
+GAIsProcessorFeaturePresent
+KERNEL32
+e+000
+ (8PX
+700WP
+`h````
+ppxxxx
+(null)
+frexp
+fmod
+_hypot
+_cabs
+ldexp
+modf
+fabs
+floor
+ceil
+sqrt
+atan2
+atan
+acos
+asin
+tanh
+cosh
+sinh
+log10
+GetLastActivePopup
+GetActiveWindow
+MessageBoxA
+user32.dll
+1#QNAN
+1#INF
+1#IND
+1#SNAN
+6e-{
+kc}
+t!a+
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+DEST
+n`\f
+UUUUUU
+P@UUUUUU
+@@333333
+MbP?
+>ffffffT?
+GetDriveTypeA
+GetLocaleInfoA
+ReleaseMutex
+Sleep
+GetLastError
+CreateMutexA
+GetTickCount
+FreeLibrary
+GetProcAddress
+OutputDebugStringA
+LoadLibraryA
+GetVersionExA
+DebugBreak
+GetModuleHandleA
+GetStartupInfoA
+GetCommandLineA
+GetVersion
+ExitProcess
+TerminateProcess
+GetCurrentProcess
+RtlUnwind
+UnhandledExceptionFilter
+GetModuleFileNameA
+FreeEnvironmentStringsA
+FreeEnvironmentStringsW
+WideCharToMultiByte
+GetEnvironmentStrings
+GetEnvironmentStringsW
+SetHandleCount
+GetStdHandle
+GetFileType
+GetEnvironmentVariableA
+HeapDestroy
+HeapCreate
+VirtualFree
+HeapFree
+WriteFile
+CloseHandle
+SetFilePointer
+RaiseException
+GetCPInfo
+GetACP
+GetOEMCP
+HeapAlloc
+VirtualAlloc
+HeapReAlloc
+SetStdHandle
+FlushFileBuffers
+ReadFile
+CreateFileA
+MultiByteToWideChar
+GetStringTypeA
+GetStringTypeW
+LCMapStringA
+LCMapStringW
+SetEndOfFile
+KERNEL32.dll
+SetWindowTextA
+UnregisterClassA
+SetForegroundWindow
+GetMessageA
+DestroyWindow
+DispatchMessageA
+TranslateMessage
+PeekMessageA
+ShowWindow
+ShowCursor
+CreateWindowExA
+GetSystemMetrics
+MessageBoxA
+RegisterClassA
+LoadCursorA
+LoadIconA
+GetForegroundWindow
+PostMessageA
+DefWindowProcA
+PostQuitMessage
+ReleaseDC
+GetDC
+SetFocus
+UpdateWindow
+SetWindowPos
+AdjustWindowRect
+GetWindowLongA
+ClientToScreen
+GetClientRect
+InvalidateRect
+USER32.dll
+GetDeviceCaps
+DeleteDC
+CreateICA
+GDI32.dll
+CoUninitialize
+CoInitialize
+CoCreateInstance
+ole32.dll
+mciSendCommandA
+mixerGetControlDetailsA
+mixerGetLineControlsA
+mixerGetLineInfoA
+mixerGetDevCapsA
+mixerOpen
+mixerGetNumDevs
+mixerClose
+mixerSetControlDetails
+WINMM.dll
+DirectInputCreateEx
+DirectInputCreateA
+DINPUT.dll
+DSOUND.dll
+DirectDrawEnumerateExA
+DirectDrawCreateEx
+DDRAW.dll
+AVIFileInit
+AVIFileExit
+AVIFileRelease
+AVIStreamRelease
+ICClose
+ICSendMessage
+AVIStreamReadFormat
+AVIStreamInfoA
+AVIFileGetStream
+AVIFileInfoA
+AVIFileOpenA
+ICLocate
+ICDecompress
+AVIStreamRead
+AVIFIL32.dll
+MSVFW32.dll
+CompareFileTime
+FindClose
+FindNextFileA
+FindFirstFileA
+GetFileTime
+QueryPerformanceCounter
+DeleteFileA
+GetLocalTime
+0.0.124MagicNumber0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+QTASK_TYPE_UNDEFINED
+QTask
+QTasktype "%s" not deallocated
+QTask event not deallocated
+Unable to allocate event
+Unable to allocate task type
+QTask type "%s" not defined
+Flow_RequestEvent
+FLOW_EVENT_RESTART_GAME
+FLOW_EVENT_GAME
+FLOW_EVENT_MAINMENU
+FLOW_EVENT_INTRO
+FLOW_EVENT_QUIT
+Flow
+EXCEPTION FAULT: 0x000002
+LOCAL:weapons/weaponconfig.qsc
+LOCAL:physicsobj
+LOCAL:animtrigger
+LOCAL:magicobj
+LOCAL:config.qsc
+LOCAL:menusystem\mainmenu.qsc
+.\ymbe.afp
+.\mpzm.afp
+.\anys.afp
+.\dilj.afp
+C!*H#x
+IGI CD not found. Please insert CD in drive.
+MoveLeft
+MoveRight
+MoveUp
+MoveDown
+Fire
+AlternateFire
+Reload
+Activate
+Crouch
+Jump
+NextWeapon
+PrevWeapon
+Peek
+Binoculars
+MapComputer
+ToggleWalkRun
+ZoomIn
+ZoomOut
+WeaponCategory1
+WeaponCategory2
+WeaponCategory3
+WeaponCategory4
+WeaponCategory5
+WeaponCategory6
+WeaponCategory7
+WeaponCategory8
+ WeaponCategory9
+INPUTPORT_DEVICE_KEYBOARD
+INPUTPORT_DEVICE_JOYPAD
+INPUTPORT_DEVICE_MOUSE
+KEY_ANGLE
+@KEY_ESC
+@KEY_A
+@KEY_B
+@KEY_C
+@KEY_D
+@KEY_E
+@KEY_F
+@KEY_G
+@KEY_H
+@KEY_I
+@KEY_J
+@KEY_K
+@KEY_L
+@KEY_M
+@KEY_N
+@KEY_O
+@KEY_P
+@KEY_Q
+@KEY_R
+@KEY_S
+@KEY_T
+@KEY_U
+@KEY_V
+@KEY_W
+@KEY_X
+@KEY_Y
+@KEY_Z
+@KEY_0
+@KEY_1
+@KEY_2
+@KEY_3
+@KEY_4
+@KEY_5
+@KEY_6
+@KEY_7
+@KEY_8
+@KEY_9
+@KEY_SEPARATOR
+@KEY_DECIMAL
+@KEY_COMMA
+@KEY_COLON
+@KEY_SLASH
+@KEY_CAPITAL
+@KEY_BACKSLASH
+@KEY_BACKSPACE
+@KEY_UNDERLINE
+@KEY_CAPSLOCK
+@KEY_NUMLOCK
+@KEY_SCROLL
+@KEY_TAB
+@KEY_RETURN
+@KEY_LEFT_SHIFT
+@KEY_RIGHT_SHIFT
+@KEY_LEFT_CTRL
+@KEY_RIGHT_CTRL
+@KEY_LEFT_ALT
+@KEY_RIGHT_ALT
+@KEY_DIVIDE
+@KEY_MULTIPLY
+@KEY_SUBTRACT
+@KEY_ADD
+@KEY_MINUS
+@KEY_EQUALS
+@KEY_LEFT_BRACKET
+@KEY_RIGHT_BRACKET
+@KEY_SEMICOLON
+@KEY_APOSTROPHE
+@KEY_GRAVE
+@KEY_LEFT_MENU
+@KEY_RIGHT_MENU
+@KEY_LEFT_WIN
+@KEY_RIGHT_WIN
+@KEY_SPACE
+@KEY_END
+@KEY_HOME
+@KEY_LEFT
+@KEY_UP
+@KEY_RIGHT
+@KEY_DOWN
+@KEY_INSERT
+@KEY_DELETE
+@KEY_PAGEUP
+@KEY_PAGEDOWN
+@KEY_F1
+@KEY_F2
+@KEY_F3
+@KEY_F4
+@KEY_F5
+@KEY_F6
+@KEY_F7
+@KEY_F8
+@KEY_F9
+@KEY_F10
+@KEY_F11
+@KEY_F12
+@KEY_F13
+@KEY_F14
+@KEY_F15
+@KEY_NUMPAD0
+@KEY_NUMPAD1
+@KEY_NUMPAD2
+@KEY_NUMPAD3
+@KEY_NUMPAD4
+@KEY_NUMPAD5
+@KEY_NUMPAD6
+@KEY_NUMPAD7
+@KEY_NUMPAD8
+@KEY_NUMPAD9
+@KEY_NUMPADENTER
+@KEY_NUMPADCOMMA
+@KEY_NUMPADEQUALS
+@KEY_NUMPADSTAR
+@KEY_NUMPADMINUS
+@KEY_NUMPADPLUS
+@KEY_NUMPADPERIOD
+@KEY_NUMPADSLASH
+@MOUSE_BUTTON_1
+MOUSE_BUTTON_2
+MOUSE_BUTTON_3
+MOUSE_BUTTON_4
+MOUSE_BUTTON_5
+MOUSE_BUTTON_6
+MOUSE_BUTTON_7
+MOUSE_BUTTON_8
+MOUSE_WHEEL_UP
+MOUSE_WHEEL_DOWN
+DefineGameOptions
+Config_ResetGraphicOptions
+Config_IsGermany
+Config_IsContentControlPasswordEnabled
+Config_VerifyContentControlPassword
+Config_GetContentControlPassword
+Config_SetContentControlPassword
+Config_SoundOptionsGetReverseStereo
+Config_SoundOptionsGetSpeechVolume
+Config_SoundOptionsGetSpeech
+Config_SoundOptionsGetMusicVolume
+Config_SoundOptionsGetMusic
+Config_SoundOptionsGetSoundsEffectsVolume
+Config_SoundOptionsGetSoundsEffects
+Config_SoundOptionsSetReverseStereo
+Config_SoundOptionsSetSpeechVolume
+Config_SoundOptionsSetSpeech
+Config_SoundOptionsSetMusicVolume
+Config_SoundOptionsSetMusic
+Config_SoundOptionsSetSoundsEffectsVolume
+Config_SoundOptionsSetSoundsEffects
+Config_GraphicOptionsNumPerfLevels
+Config_GraphicOptionsGetPerfLevelFromFlags
+Config_GraphicOptionsGetPerfFlagsFromLevel
+Config_GraphicOptionsGetPerformanceFlags
+Config_GraphicOptionsGetGamma
+Config_GraphicOptionsGetDevice
+Config_GraphicOptionsGetTransparency
+Config_GraphicOptionsGetResolution
+Config_GraphicOptionsSetPerformanceFlags
+Config_GraphicOptionsSetGamma
+Config_GraphicOptionsSetDevice
+Config_GraphicOptionsSetTransparency
+Config_GraphicOptionsSetResolution
+Config_GameOptionsInputSetBloodEnabled
+Config_GameOptionsInputSetMouseSensitivity
+Config_GameOptionsInputSetInvertMouse
+Config_GameOptionsInputGetBloodEnabled
+Config_GameOptionsInputGetMouseSensitivity
+Config_GameOptionsInputGetInvertMouse
+Config_FillRenderDeviceListBox
+Config_FillScreenResolutionListBox
+Config_FillMissionTextBox
+Config_FillMissionPictureBox
+Config_FillMissionSelectionBox
+Config_GetNumberOfPlayerProfiles
+Config_PlayerGetActiveMission
+Config_DeletePlayerProfile
+Config_CreateNewPlayerProfile
+Config_SetActivePlayerProfileIndex
+Config_GetActivePlayerProfileIndex
+Config_FillPlayerProfileListBox
+%dx%dx%d
+LANGUAGE:
+No D3D drivers with hardware acceleration found.
+LOCAL:language/%s/
+Could not create config file %s.
+%s(%d);
+%s("%s");
+FALSE
+TRUE
+%s(%s);
+%s(%d, %f);
+%s(%f);
+%s(%d, %d, %d);
+%d);
+%s);
+HumanAIConfigItem
+HumanAIConfig
+%s, %s
+LOCAL:common/ai/settings.qsc
+Unable to create HumanAIConfig task
+No configuration found for AIType: #%d, Difficulty: #%d
+No active playerprofile found
+No HumanAIConfig task found
+TASKTYPE_.*
+HUMANAI_DETECTIONEVENT_.*_RANGE
+WeaponConfig
+WeaponConfigContainer
+DefineGameMaterial
+DefineQMaterial
+SetActiveMaterial
+GameMaterial_LoadParameters: Couldn't load script "%s"
+LOCAL:material/material.qsc
+Toggle fly
+Toggle third person
+Zoom reset
+Zoom out
+Zoom in
+Weapon select
+Activate map computer
+Peek
+Next weapon
+Jump
+Crouch
+Activate
+Reload
+Alternate fire
+Fire
+Down
+Right
+Left
+Analog Y
+Analog X
+player_fall_3
+player_fall_2
+player_fall_1
+jump_1
+picklock_loop
+pickloop_end
+typecomp_loop
+typecomp_end
+walk_ladder_%d
+wire_slide_1
+wire_drag_%d
+player_death_
+WEAPON_ID_PROXIMITYMINE
+AMMO_ID_M203
+WEAPON_ID_M16A2
+AMMO_ID_MEDIPACK
+WEAPON_ID_BINOCULARS
+guns_dry_1
+grenade_tick_1
+UnlimitedAmmo
+DefineHumanPlayerAmmoLimit
+DefineHumanPlayerWeaponCategory
+DefineHumanPlayerWeaponCycle
+DefineHumanPlayerGeneral
+HumanPlayer
+Player angle: %.2f, %.2f
+Player position: %.2f, %.2f, %.2f
+Ground!
+Delta translation Z: %.2f
+Delta translation Y: %.2f
+Delta translation X: %.2f
+Ground angle: %.3f
+Distance to ground from feet: %.2fm
+Delta move Gamma: %.2f
+Delta move Beta: %.2f
+Delta move Alpha: %.2f
+Delta move pos Z: %.2f
+Delta move pos Y: %.2f
+Delta move pos X: %.2f
+Attach task: %x
+Ground task: %x
+Speed Z (m/s): %.2f
+earcandy
+player_hit_
+Difficulty level not defined %d
+player_xplhit_
+punched_02
+punched_01
+elfence_spark1
+RANGE: 1000+M
+Model: %s
+RANGE: %0.2fM
+HumanPlayer_LoadParameters: Couldn't load script "%s"
+LOCAL:humanplayer/humanplayer.qsc
+WeaponType_Open(): Couldn't load script: %s
+%s/%s
+weapon.qsc
+LOCAL:weapons
+WEAPON_ID_.*
+AMMODISPLAYTYPE_.*
+SIGHTDISPLAYTYPE_.*
+WEAPONTYPE_.*
+AMMODISPLAYTYPE_GRENADE
+AMMODISPLAYTYPE_SHELL
+AMMODISPLAYTYPE_BARREL
+AMMODISPLAYTYPE_CLIP
+AMMODISPLAYTYPE_NORMAL
+AMMODISPLAYTYPE_NONE
+SIGHTDISPLAYTYPE_CROSSHAIR
+SIGHTDISPLAYTYPE_NONE
+WEAPONTYPE_PROXIMITYMINE
+WEAPONTYPE_MEDIPACK
+WEAPONTYPE_BINOCULAR
+WEAPONTYPE_GRENADE
+WEAPONTYPE_KNIFE
+WEAPONTYPE_SHOTGUN
+WEAPONTYPE_PISTOL
+WEAPONTYPE_GUN
+DefineWeaponType
+Weapon ID %d not unique
+INTROSCREEN:outro.avi
+INTROSCREEN:intro_us.avi
+INTROSCREEN:intro_eu.avi
+INTROSCREEN:vp.avi
+INTROSCREEN:innerloop.avi
+INTROSCREEN:eidos.avi
+INTROSCREEN:
+LOCAL:screens/intro/
+IntroScreen
+LANGUAGE:movies.res
+MovieSubtitle_RegisterText
+MovieSubtitle_RegisterFont
+Invalid introscreen mode
+LOCAL:common/sprites/battery.spr
+LOCAL:computer/font1.fnt
+Game_CutsceneDelete
+Game_DisableMusic
+Game_EnableMusic
+Game_SetSFXVolume
+Game_SetMusicVolume
+Game_EnablePlayerInput
+Game_DisablePlayerInput
+Game_UpdateVolume
+Game_SetMission
+MATH_PI
+WORLD_METER
+GAME_FREQUENCY
+Game
+Level
+game_music
+EXCEPTION FAULT: 0x000001
+MISSION:sounds/
+LOCAL:common/sounds/
+LOCAL:common/textures/textures.res
+LOCAL:common/sprites/sprites.res
+MISSION:sounds
+LOCAL:common/sounds
+LOCAL:common/
+%sterrain/terrain
+MISSION:
+LOCAL:%s/
+The mission ID %d does not exist.
+Raining:
+LOCAL:common/textures/
+LOCAL:common/sprites/
+EXCEPTION FAULT: 0x000000
+Time spent redrawing: %.2f%%
+MenuManager
+MENUSYS:
+LOCAL:menusystem\
+MENUMANAGER_RESTARTLEVEL
+MENUMANAGER_IDLE
+MENUMANAGER_STARTGAME
+MENUMANAGER_QUITTOMAINMENU
+MENUMANAGER_QUIT
+MenuManager_SetEnabled
+MenuManager_DeactivatePopuScreen
+MenuManager_ActivatePopupScreen
+MenuManager_ForceUpdateWindow
+MenuManager_PopScreen
+MenuManager_PushScreen
+MenuManager_SetLanguage
+MenuManager_LeaveMenus
+MenuManager_RequestScreen
+LOCAL:menusystem/sound/sounds.res
+pointer.spr
+missions.res
+menusystem.res
+LOCAL:menusystem/missionsprites.res
+LOCAL:language/%s/%s
+menu_music
+menu_high
+Failed to load menumanager: '%s'
+EXCEPTION FAULT: 0x000004
+Task_New
+RM: %s
+LOCAL:%s/%s
+MenuLoader
+BackgroundFX
+DialogWindow
+A Creative Experience (LONDON)
+Manual Design & Layout
+Creative Designer
+Caroline Simon
+Creative Services Manager
+Matt Carter-Johnson
+Creative Services
+Printed Materials Coordinator
+Jacqui Ralston
+Group Localisation Manager
+Flavia Grant
+Localisation Manager
+Holly Andrews
+Localisation
+PR Specialist
+Eva Whitlow
+Product Manager (US)
+Dave DePaulis
+Product Manager (France)
+Christel
+Product Manager (Germany)
+Herman
+Product Manager
+Rebecca West
+Marketing
+Maike Kh
+rgen Lottermoser
+Sam Byung Kil
+Marco Vernetti
+Iain Willows
+Alex Lepoureau
+Assistant QA Localisation Manager
+QA Localisation
+James Featherstone
+Assistant QA Manager
+Jean-Yves Duret
+QA Manager
+Chris Rowley
+Lawrence Day
+Steve Didd
+Tester
+Chris Ince
+Lead Tester
+Daryl Bibby
+External Development Manager
+David Rose
+Shadow Producer (US)
+Frank Hom
+Assistant Producer
+Andrew Norman
+Executive Producer
+Ed Bainbridge
+Producer
+Richard Carter
+EIDOS Interactive
+Larissa Murray
+Danny McCall
+Amanda Mealing
+Kerry Shale
+Voice Talent
+Philip Morris at AllintheGame
+Casting and Voice Production
+IGI QA
+Henning Strandvik
+Musician & Sound Designer
+Kim M. Jensen
+Music
+Artist2
+Mikael Noguchi
+Artist1
+Joachim Barrum
+Lead Artist
+Olav-Rasmus Vorren
+Jolyon Leonard
+Level Designer
+Ole Marius Kohmann
+Lead Level Designer
+Gavin Skinner
+Level Design
+Thomas Hagen
+Additional Programming
+Henrik Holmdahl
+Paul Endresen
+Johan Overbye
+Stein Pedersen
+Tim van Klooster
+Paal Holmberg
+Martin Gram
+Programmer
+Anders Dybdahl
+Lead Programmer
+Ole Marius Liabo
+Programming
+Project Leader
+Andrew Wensley
+Game Concept
+Innerloop
+TypeWriterBox
+font4.fnt
+font3.fnt
+font2.fnt
+font1.fnt
+TextBox
+PictureBox
+ScrollListBox
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+menu_sel2
+%s.nActiveID
+AsciiBox
+ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz
+InputBox
+menu_k01
+menu_k0%.1d
+%s.zData
+ToggleBox
+%s.isOn
+ListBox
+%s_2.spr
+%s_1.spr
+SlideBar
+%s_3.spr
+%s.nValue
+%s.vValue
+slidevert
+BMenuTextConditional
+glow.spr
+menu_sel
+BTEXT_ORANGE
+TEXT_GREEN
+TEXT_WHITE
+TEXT_BLACK
+MenuText
+MenuButton
+MenuScreen
+logo_us.pic
+logo.pic
+%s.nUserData
+MenuFrame
+%s_%d.spr
+ModelViewBox
+minefield
+ControlsMenu_ConvertOffsetFromFloat
+ControlsMenu_ConvertFloatFromOffset
+ControlsMenu
+Select a key or button
+menu_cancel
+%s.isReset
+%s.nOffset
+LINEUPMODE_HOR_FILLOUT
+LINEUPMODE_HOR_RIGHT
+LINEUPMODE_HOR_CENTRE
+LINEUPMODE_HOR_LEFT
+LINEUPMODE_VERT_FILLOUT
+LINEUPMODE_VERT_BOTTOM
+LINEUPMODE_VERT_CENTRE
+LINEUPMODE_VERT_TOP
+LINEUPMODE_NONE
+MenuWindow
+Cursor
+ConditionalSound
+%s.nPlayTick
+%s.isPlaying
+%s.isLastRun
+%s.isRun
+CarAI: Error in graph %d. No link between nodes %d and %d.
+CarAI
+Command not supported by CARAI: %d.
+TASKTYPE_CARDOOR
+CarDoor
+VirModel "%s" not available
+TASKTYPE_HELIWHEEL
+HeliWheel
+TASKTYPE_HELIDOOR
+HeliDoor
+TASKTYPE_ROCKETPOD
+RocketPod
+700_10_1
+TASKTYPE_HITZONE
+HitZone
+MISSILE_TYPE_HIND_HELICOPTER
+MISSILE_TYPE_BOMB
+MISSILE_TYPE_MISSILE_KEYBOARD
+MISSILE_TYPE_MISSILE_ANTITANK
+MISSILE_TYPE_MISSILE_BALLISTIC
+MISSILE_TYPE_MISSILE_DIRECT
+MISSILE_SMOKE_NORMAL
+MISSILE_SMOKE_NONE
+TASKTYPE_MISSILE
+Missile
+1009_01_1
+explo_03_l
+** %s **
+Model "%s" not available
+Missile - Model
+110_02_1
+APilotAnim
+Thrust
+Train
+train_loop_2
+train_loop_1
+TASKTYPE_AFTERBURNER
+AfterburnerPrimitive
+Afterburner
+TASKTYPE_ROTOR
+RotorPrimitive
+Rotor
+?Lights
+Break
+dGamma
+TASKTYPE_CAR
+%s.isExploded
+TASKTYPE_WHEEL
+Wheel
+AdBeta
+dAlpha
+TASKTYPE_HELI
+Heli
+helicopter_1
+?Force Z
+Catapult
+Gear
+Cockpit
+TASKTYPE_PLANE
+Plane
+su27
+TASKTYPE_COCKPITSHIELD
+CockpitShield
+TASKTYPE_GEAR
+TASKTYPE_HATCH
+Hatch
+RUDDER_GAMMA
+RUDDER_AILERON
+RUDDER_TAILERON_RIGHT
+RUDDER_TAILERON_LEFT
+TASKTYPE_RUDDER
+Rudder
+snow.tex
+RainEffect
+EnvironmentSound
+rain_2
+Right ecco: %.2f %.2f %.2f %.2f
+Left ecco: %.2f %.2f %.2f %.2f
+Ambient rain
+Steam
+Smoke
+smoke2.spr
+smoke1.spr
+blood1.spr
+fireball.spr
+TASKTYPE_SMOKE
+1729_01_1
+%s.vGenerateFactor
+concrete2.spr
+concrete1.spr
+TASKTYPE_GUNSHOTEFFECT
+GunShotEffect
+PlaceExplosiveTBA
+RotatingObject
+Explode sound
+On sound
+Destroyde model
+Off model
+On model
+alarmlight.spr
+TASKTYPE_ALARMLIGHTREFLECTOR
+AlarmLightReflector
+TASKTYPE_ALARMLIGHT
+AlarmLight
+%s.isDestroyed
+MineField
+Radio sound %d
+Radio
+Generator
+%s.nBackupTimer
+SimpointObjGenerator
+TASKTYPE_EXPLODEMAGICOBJ
+ExplodeMagicObj
+ElevatorFloorIndicator
+Start sound
+Stop sound
+Move sound
+Wanted floor %d
+Elevator
+%s.isStop
+%s.isStart
+%s.isMoving
+%s.nWantedFloor
+%s.nInactive
+%s.isWantedFloor%d
+%s.vLastFloor
+%s.vFloor
+TASKTYPE_GENERICPHYSICSMAGICOBJ
+GenericPhysicsMagicObj
+TASKTYPE_GENERICPHYSICSOBJ
+GenericPhysicsObj
+Wire
+%s.isLastInUse
+%s.isInUse
+TASKTYPE_FENCE
+Fence
+elfence_loop
+TASKTYPE_LADDER
+Ladder
+AlarmControl
+%s.nTriggerLastTick
+%s.isAlarm
+%s.isTrigger
+SCameraControl
+%s.isDetection
+TASKTYPE_SCAMERALENSVIEWCONE
+SCameraLensViewCone
+SCameraLens
+SCamera
+explo_camera
+camera_beep_l
+camera_beep_al
+camera_beep_s
+camera_move
+313_03_1
+313_02_1
+313_01_1
+%s.nDetectionTime
+%s.isLastDetection
+Terminal
+explo_02_m
+%s.isHackedThisTick
+%s.isHacked
+TASKTYPE_DRAWER
+Drawer
+Cabinet
+%s.isSearched
+switch
+Switch
+%s.isLastDestroyed
+%s.isLastPressed
+%s.isPressed
+%s.isLastOn
+Open sound
+Close sound
+Move sound
+Door
+%s.nDoorOpenTicks
+%s.isPicked
+%s.isLastOpen
+%s.isLastClosed
+%s.isClosed
+%s.isOpen
+%s.isLocked
+GenericTBA
+%s.isFinishedThisTick
+%s.isFinished
+TASKTYPE_BUILDING
+Building
+TASKTYPE_RADARDISH
+RadarDish
+explosion_1
+Siren
+TASKTYPE_GLASS
+Glass
+glass_crush_1
+glass_crush_2
+glass_crush_3
+333?333?333?
+333?333?333?GlassShatter
+AmbientArea
+johan
+EVENT_FRIENDLYDETECTION
+EVENT_ENEMYDETECTION
+EVENT_EXPLOSION
+EVENT_GUNSHOTMISS
+EVENT_FLASHBANG
+EVENT_GRENADELAND
+EVENT_GRENADETHROWN
+EVENT_GUNSHOT
+EVENT_TAKINGDAMAGE
+EVENT_LADDER
+EVENT_FENCE
+EVENT_DOOR
+EVENT_GROUNDIMPACT
+EVENT_WALK
+EVENT_ALARMOFF
+EVENT_ALARMON
+EVENT_COMBAT
+EVENT_ALERT_RESPONSE
+EVENT_ALERT
+EVENT_IDLE
+EVENT_ANIMATION
+EVENT_DEAD
+EVENT_DELETE
+EVENT_CREATE
+if (AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+  AIFunction_DefaultHandler();
+// Remove the // before the functions to use
+//  AIFunction_SetAlarmTriggerID(xx);
+//  AIFunction_SetAlarmControlID(xx);
+//  AIFunction_SetAlarmAccess(AIALARMACCESS_BEFORECOMBAT);
+//  AIFunction_SetAlarmAccess(AIALARMACCESS_AFTERCOMBAT);
+//  AIFunction_SetGunnerID(xx);
+else if (AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+// Remove the // before the AIAction_Patrol to use
+//    AIAction_Patrol(xxxx, 0, AIACTIONFLAG_NONE);
+else if (AIFunction_GetCurrentEventType() == AIEVENT_ALARMON)
+// Remove the // before the AIAction_Patrol to use
+//    AIAction_Patrol(xxxx, 0, AIACTIONFLAG_NONE);
+else if (AIFunction_GetCurrentEventType() == AIEVENT_COMBAT)
+  AIFunction_DefaultHandler();
+else
+  AIFunction_DefaultHandler();
+AITYPE_SPETNAZ_GUARD_SPAS
+AITYPE_SPETNAZ_GUARD_AK
+AITYPE_SPETNAZ_GUARD_UZI
+AITYPE_SPETNAZ_PATROL_SPAS
+AITYPE_SPETNAZ_PATROL_AK
+AITYPE_SPETNAZ_PATROL_UZI
+AITYPE_MAFIA_GUARD_SPAS
+AITYPE_MAFIA_GUARD_AK
+AITYPE_MAFIA_GUARD_UZI
+AITYPE_MAFIA_PATROL_SPAS
+AITYPE_MAFIA_PATROL_AK
+AITYPE_MAFIA_PATROL_UZI
+AITYPE_SECURITY_PATROL_SPAS
+AITYPE_SECURITY_PATROL_UZI
+AITYPE_GUARD_PISTOL
+AITYPE_GUARD_SPAS
+AITYPE_GUARD_AK
+AITYPE_GUARD_UZI
+AITYPE_PATROL_PISTOL
+AITYPE_PATROL_SPAS
+AITYPE_PATROL_AK
+AITYPE_PATROL_UZI
+AITYPE_CIVILIAN
+AITYPE_PRIBOI
+AITYPE_EKK
+AITYPE_ANYA
+AITYPE_SNIPER
+AITYPE_GUNNER
+AITYPE_RPG
+LOCAL:common/ai/guard.qsc
+LOCAL:common/ai/patrol.qsc
+LOCAL:common/ai/civilian.qsc
+LOCAL:common/ai/priboi.qsc
+LOCAL:common/ai/ekk.qsc
+LOCAL:common/ai/anya.qsc
+LOCAL:common/ai/sniper.qsc
+LOCAL:common/ai/gunner.qsc
+LOCAL:common/ai/rpg.qsc
+HumanAI
+AIFunction_SendResponse
+AIFunction_GetAnimationToPlay
+AIFunction_AddAnimationEntry
+AIFunction_SetAnimationInterval
+AIFunction_GetAlarmTriggerDistance
+AIFunction_GetEventDistance
+AIFunction_GetRandomValue
+AIFunction_GetScriptRealValue
+AIFunction_IsEventBehind
+AIFunction_GetCurrentEventType
+AIFunction_GetScriptIntegerValue
+AIFunction_GetGunnerStatus
+AIFunction_GetAlarmControlStatus
+AIFunction_GetGunnerID
+AIFunction_GetAlarmAccess
+AIFunction_GetAlarmControlID
+AIFunction_GetAlarmTriggerID
+AIFunction_SetScriptRealValue
+AIFunction_SetScriptIntegerValue
+AIFunction_SetGunnerID
+AIFunction_SetAlarmAccess
+AIFunction_SetAlarmControlID
+AIFunction_SetAlarmTriggerID
+AIFunction_SetDeathAnimation
+AIFunction_SetInstantDeath
+AIFunction_SetInvulnerability
+AIFunction_SetEventPriority
+AIFunction_SetSecondaryViewGamma
+AIFunction_SetSecondaryViewAlpha
+AIFunction_SetSecondaryAlarmViewLength
+AIFunction_SetSecondaryViewLength
+AIFunction_SetViewGamma
+AIFunction_SetViewAlpha
+AIFunction_SetAlarmViewLength
+AIFunction_SetViewLength
+AIFunction_RemoveAlarmActions
+AIFunction_DefaultHandler
+AIAction_SetCombat
+AIAction_Idle
+AIAction_RunPanicking
+AIAction_KickGrenade
+AIAction_Stunned
+AIAction_LookAtEvent
+AIAction_MoveToEvent
+AIAction_PlaySound
+AIAction_PlayAnimation
+AIAction_FireAtTask
+AIAction_FireAtNode
+AIAction_RunToNode
+AIAction_WalkToNode
+AIAction_Activate
+AIAction_FallFlat
+AIAction_Dead
+AIAction_Combat
+AIAction_Patrol
+EventStack empty
+AlarmControl ID #%d not defined
+StationaryGun ID #%d not defined
+No EVENT to distance
+AlarmTrigger ID #%d not defined
+Maximum number of animation entries (#%d) reached
+No animation entries defined
+No EVENT to respond
+AIALARMACCESS_AFTERCOMBAT
+AIALARMACCESS_BEFORECOMBAT
+HUMANAI_DETECTIONEVENT_GUNSHOT_SILENCED_RANGE
+HUMANAI_DETECTIONEVENT_GUNSHOT_RANGE
+AIACTIONFLAG_PUSHABLE
+AIACTIONFLAG_NONE
+AIEVENT_FRIENDLYDETECTION
+AIEVENT_ENEMYDETECTION
+AIEVENT_EXPLOSION
+AIEVENT_GUNSHOTMISS
+AIEVENT_FLASHBANG
+AIEVENT_GRENADELAND
+AIEVENT_GRENADETHROWN
+AIEVENT_GUNSHOT
+AIEVENT_TAKINGDAMAGE
+AIEVENT_LADDER
+AIEVENT_FENCE
+AIEVENT_DOOR
+AIEVENT_GROUNDIMPACT
+AIEVENT_WALK
+AIEVENT_ALARMOFF
+AIEVENT_ALARMON
+AIEVENT_COMBAT
+AIEVENT_ALERT_RESPONSE
+AIEVENT_ALERT
+AIEVENT_IDLE
+AIEVENT_ANIMATION
+AIEVENT_DEAD
+AIEVENT_DELETE
+AIEVENT_CREATE
+Events: %d
+No AI graph in HumanAI #%d
+No AI script in HumanAI #%d
+Weapon not initialized, human #%d
+Action pushed by: %s
+No items on actionstack was run
+HumanAI #%d couldn't find closest node in graph #%d
+HumanAI #%d has AIGraph ID (#%d) but no matching AIGraph was found
+MISSION:AI/%d.qsc
+ActionStack full
+A:  %f, CA: %f
+CA: %f, CG: %f
+A:  %f, G:  %f
+Waiting for door to open
+Not enough items in movement queue
+Error in graph %d nodenet, Node #%d not found
+Error in graph %d routenet, Node #%d to #%d
+ERROR IN ROUTENET: %d to %d or %d to %d
+A:  %f,  G: %f
+HumanMonitor - no target
+Set travel speed to %d km/h
+Set travel speed. Parameter is speed in km/h
+Quit script, stops script. Takes no parameters
+End script, only runs commands after this one. Takes no parameters
+Looks at node id %d
+Look at specific node, parameter is node id
+Crouch. Takes no parameters
+Runs to node id %d
+Runs to specific node, parameter is node id
+Walks to node id %d
+Walks to a specific node, parameter is node id
+Delays the script execution for %d ticks
+Delays the script execution, parameter is in ticks
+Plays predefined animation %d
+Play animation, parameter is predefine animation id
+No command entered
+PatrolPathCommand
+PATROLPATHCOMMAND_SETSPEED
+PATROLPATHCOMMAND_QUIT
+PATROLPATHCOMMAND_END
+PATROLPATHCOMMAND_LOOKATNODE
+PATROLPATHCOMMAND_CROUCH
+PATROLPATHCOMMAND_RUNTO
+PATROLPATHCOMMAND_WALKTO
+PATROLPATHCOMMAND_DELAY
+PATROLPATHCOMMAND_ANIMATION
+PATROLPATHCOMMAND_NONE
+PatrolPath
+END command following END command
+walk_rain_%1d
+Animation #%d not found
+ai_death_
+HumanSoldierFemale
+#%d is trying to change to invalid weapon #%d
+ai_hit_
+ai_xplhit_
+HumanSoldierRPG
+HumanSoldierPistol
+HumanSoldier
+stab_01
+HumanPlayerInput
+LOCAL:
+HUMAN_TEAM_BAD
+HUMAN_TEAM_GOOD
+blood2.spr
+hole_blood4.tex
+hole_blood3.tex
+hole_blood2.tex
+hole_blood1.tex
+shadow1.tex
+Human_GetCutSceneDeltaTime
+CRITERIA_HUMAN%d
+CRITERIA_HUMAN
+Human
+weaponpickup_1
+gunshotmiss
+%s.eTeam
+%s.isDead
+SpeedZ: %.2f
+SpeedY: %.2f
+SpeedX: %.2f
+PosZ: %.2f
+PosY: %.2f
+PosX: %.2f
+Distance to roof from feet: %.2f
+Roof!
+Checks: %d
+%s%d
+HumanView
+005_01_1
+HumanAttach
+TASKTYPE_DEATHZONE
+DeathZone
+LOCAL:computer/font3.fnt
+ComputerStartup
+DefineComputerLimit
+DefineComputerObjective
+CMARKER_COLOR_BLUE
+MARKER_COLOR_GREEN
+MARKER_COLOR_YELLOW
+MARKER_COLOR_RED
+MARKER_COLOR_NONE
+MARKER_BOX
+MARKER_NONE
+ComputerObject
+ComputerHilight
+ComputerLog
+OBJECTIVES
+ComputerObjectives
+INCOMPLETE
+COMPLETE
+FAILED
+%s %d: 
+OBJECTIVE
+Computer_nZoomLevel
+ComputerMap
+DOWNLOADING
+CONNECTING
+INITIALIZING
+mapcomp_01
+mapcomp_03
+mapcomp_05
+COMPUTER:h_scamera2.spr
+COMPUTER:h_scamera1.spr
+COMPUTER:h_sentrygun.spr
+COMPUTER:h_9.spr
+COMPUTER:h_8.spr
+COMPUTER:h_7.spr
+COMPUTER:h_6.spr
+COMPUTER:h_5.spr
+COMPUTER:h_4.spr
+COMPUTER:h_3.spr
+COMPUTER:h_2.spr
+COMPUTER:h_1.spr
+COMPUTER:h_0.spr
+COMPUTER:h_mine.spr
+COMPUTER:h_cabinet.spr
+COMPUTER:h_computer.spr
+COMPUTER:h_camera.spr
+COMPUTER:h_guard.spr
+COMPUTER:h_player.spr
+COMPUTER:
+LOCAL:computer/
+ComputerMenu
+No New function for menu!!
+COMPUTER:objective_2.spr
+COMPUTER:objective_1.spr
+COMPUTER:sphere_3.spr
+COMPUTER:sphere_2.spr
+COMPUTER:sphere_1.spr
+COMPUTER:minus_3.spr
+COMPUTER:minus_2.spr
+COMPUTER:minus_1.spr
+COMPUTER:plus_3.spr
+COMPUTER:plus_2.spr
+COMPUTER:plus_1.spr
+COMPUTER:arrowdown_3.spr
+COMPUTER:arrowdown_2.spr
+COMPUTER:arrowdown_1.spr
+COMPUTER:arrowup_3.spr
+COMPUTER:arrowup_2.spr
+COMPUTER:arrowup_1.spr
+COMPUTER:arrow4_3.spr
+COMPUTER:arrow4_2.spr
+COMPUTER:arrow4_1.spr
+COMPUTER:arrow3_3.spr
+COMPUTER:arrow3_2.spr
+COMPUTER:arrow3_1.spr
+COMPUTER:arrow2_3.spr
+COMPUTER:arrow2_2.spr
+COMPUTER:arrow2_1.spr
+COMPUTER:arrow1_3.spr
+COMPUTER:arrow1_2.spr
+COMPUTER:arrow1_1.spr
+COMPUTER:pointer.spr
+LOCAL:computer/font4.fnt
+LANGUAGE:objectives.res
+LANGUAGE:computer.res
+COMPUTER:computer.res
+ComputerButtonItem
+ComputerTextItem
+Computer
+mapcomputer
+GenericPickup
+pickup
+%s.isPickedUp
+GunPickup
+weapondrop_02
+weapondrop_01
+PICKEDUPWEAPON%s
+AmmoPickup
+PICKEDUPAMMO
+STATUSSCREEN:ammo.spr
+AddAmmo
+TASKTYPE_GUNX2
+Gunx2
+TASKTYPE_KNIFESTAB
+KnifeStab
+AIStationaryGunHolder
+TASKTYPE_AISTATIONARYGUN
+AIStationaryGun
+TASKTYPE_MEDIPACK
+Medipack
+WEAPON_ID_MEDIPACK
+Factor of human max damage to add for each round
+TASKTYPE_BINOCULAR
+Binocular
+bin_zoom_1
+Binocular - Min FOV (degrees)
+Binocular - Max FOV (degrees)
+Binocular - Default FOV (degrees)
+hey way i killed your mom today
+stein is the motherfucking coolest
+the quick brown fox jumps over the lazy dog
+BinocularOverlayHolder
+binoculars.spr
+BinocularOverlay
+WNES
+%s: %0.f+%s
+%s: %0.f%s
+RANGE
+weapons/strings/Binoculars/range
+TASKTYPE_CABARREL
+TASKTYPE_CACLIP
+GunCAClip
+GunCABarrel
+VirModel is null
+101_05_1
+101_02_1
+113_01_1
+TASKTYPE_GUNSPAS12
+GunSPAS12
+WEAPON_ID_SPAS12
+snipersight_y.spr
+snipersight_x.spr
+snipersight.spr
+TASKTYPE_GUNDRAGUNOV
+GunDRAGUNOV
+WEAPON_ID_DRAGUNOV
+Zoom - Min FOV (degrees)
+TASKTYPE_GUNM16A2
+GunM16A2
+m203_launch_1
+%-4d
+M203 - Model
+M203 - Activate radius (meters)
+M203 - Explosion radius (meters)
+M203 - Muzzle velocity (km/h)
+108_05_1
+TASKTYPE_GUNMP5SD
+GunMP5SD
+WEAPON_ID_MP5SD
+WEAPON_ID_M2HB
+StationaryGun
+TASKTYPE_PROXIMITYMINE
+ProximityMine
+Proximitymine - Explosion radius (meters)
+Proximitymine - Activate radius (meters)
+Proximitymine - Countdown time (seconds)
+Proximitymine - Time before arming (seconds)
+TASKTYPE_MINE
+Mine
+136_01_1
+explo_proxy
+proxy_arm
+TASKTYPE_M203
+M203
+GRENADE_EXPLOSIONTYPE_FLASHBANG
+GRENADE_EXPLOSIONTYPE_NORMAL
+TASKTYPE_GRENADE
+Grenade
+Grenade - Explosion damage factor
+Grenade - Explosion radius (meters)
+Grenade - Explosion falloff (meters)
+grenade_bnc_1
+TASKTYPE_GUNMOVINGPART
+TASKTYPE_GUNCLIP
+TASKTYPE_GUNFLAME
+GunMovingPart
+GunClip
+GunFlame
+EUnknown weapon type: %d
+TASKTYPE_GUN
+GunCasing
+weapons/strings/%s
+riccochet_4
+riccochet_3
+riccochet_2
+riccochet_1
+TASKTYPE_GUNSHOT
+GunShot
+AmmoType_Open(): Couldn't load script: %s
+ammo.qsc
+DefineAmmoType
+LOCAL:ammo
+AMMO_ID_.*
+BulletHole
+burn1.tex
+FlashBang
+explo_flash
+1006_01_1
+ExplosionSmoke
+Fragment
+FireBall
+Explosion0
+ExplodeObject
+HumanCamera
+ERROR IN HUMANCAMERA HUMANLIST
+HumanCamera humanlist not empty
+Mission_Open(): Couldn't load script: %s
+mission.qsc
+mission.qvm
+MISSION_NEXT_MISSION_UNDEFINED
+DefineMission
+Mission ID %d not unique
+LOCAL:missions
+GameScreen
+StatusMessage
+%s.nTicksSinceFinishedDisplay
+%s.nFinishedDisplay
+%s.isFinishedDisplay
+%s.nTickSendt
+%s.isSendt
+StatusMessageScreen_ClearMessages
+StatusMessageScreen
+LANGUAGE:messages.res
+STATUSSCREEN:a_c4.spr
+STATUSSCREEN:a_wire.spr
+STATUSSCREEN:a_ladder.spr
+STATUSSCREEN:a_fence.spr
+STATUSSCREEN:a_door.spr
+STATUSSCREEN:action_pressbutton.spr
+STATUSSCREEN:a_gun.spr
+STATUSSCREEN:action_picklock.spr
+STATUSSCREEN:action_comput.spr
+STATUSSCREEN:action_searchcab.spr
+STATUSSCREEN:weapon.spr
+STATUSSCREEN:note.spr
+STATUSSCREEN:anya.spr
+STATUSSCREEN:
+LOCAL:screens/game/status/
+StatusScreen
+Test
+STATUSSCREEN:uzi.spr
+STATUSSCREEN:stationary.spr
+STATUSSCREEN:splintgrenade.spr
+STATUSSCREEN:spaz.spr
+STATUSSCREEN:SAW.spr
+STATUSSCREEN:proximity.spr
+STATUSSCREEN:Mp5.spr
+STATUSSCREEN:M16.spr
+STATUSSCREEN:LAW80.spr
+STATUSSCREEN:knife.spr
+STATUSSCREEN:jackhammer.spr
+STATUSSCREEN:health.spr
+STATUSSCREEN:glock.spr
+STATUSSCREEN:flashgrenade.spr
+STATUSSCREEN:druganov.spr
+STATUSSCREEN:deserteagle.spr
+STATUSSCREEN:colt.spr
+STATUSSCREEN:binoculars.spr
+STATUSSCREEN:ak47.spr
+STATUSSCREEN:powerbar.spr
+STATUSSCREEN:powerbarbackground.spr
+STATUSSCREEN:rocket.spr
+STATUSSCREEN:M16_alternative.spr
+STATUSSCREEN:spl_grenade.spr
+STATUSSCREEN:shell7.spr
+STATUSSCREEN:barrel6.spr
+STATUSSCREEN:clip20.spr
+STATUSSCREEN:cross.spr
+STATUSSCREEN:status.res
+Time Left: %d minute%s, %d second%s
+ConditionalContainer
+GuardGenerator
+%s.nSpawns
+%s.isSpawned
+SubLevel
+EditVariable
+LevelFlow_IsCountryUSA
+LevelFlow_LevelFailed
+LevelFlow_GetBreakCutSceneKey
+TASKTYPE_LEVELFLOW
+LevelFlow
+306_01_1
+LOCAL:menusystem/ingamemenu.qsc
+LevelFlow: No player profile found
+Key9.isPressed
+Key8.isPressed
+Key7.isPressed
+Key6.isPressed
+Key5.isPressed
+Key4.isPressed
+Key3.isPressed
+Key2.isPressed
+Key1.isPressed
+Key0.isPressed
+%s.eDifficulty
+%s.nTick
+%s.isFailed
+%s.isComplete
+AIDetection - QTask mask is full
+000_01_1
+LOCAL:menusystem/loading_us.pic
+LOCAL:menusystem/loading.pic
+LOCAL:menusystem/loadingscreen.res
+detected_06
+detected_05
+detected_04
+detected_03
+detected_02
+detected_01
+Dead
+Waiting for patrol command
+Waiting for stand state
+Female Combat - Stand
+No nodes near target
+FindFreePosition stack not large enough
+Combat - Stand
+Kneel throw grenade
+Waiting for kneel state
+Combat - Kneel
+liedown throw grenade
+Waiting for liedown state
+Combat - Liedown
+HumanAI #%d has no nodeoccupationiten
+Position not on node #%d
+Combat - RePosition
+Tracking target at node #%d
+Combat - Follow
+Combat - LookForTarget
+Turning to target
+RPG Combat - Stand
+RPG Combat - Kneel
+Guard Combat - Stand
+No primary weapon
+Target is in guncone
+MG:%1.3f, A-:%1.3f, A+:%1.3f
+Gun params:
+Gun->Tgt: A:%1.3f, G:%1.3f
+Stationary gun ID #%d not found
+Gunner Combat - Stand
+Stand - Roll left
+Stand - Roll right
+Stand - Fire
+Stand - Reload
+Stand - CloseCombat Trigger
+Stand - Throwing grenade
+Kneel - Roll left
+Kneel - Roll right
+Kneel - Fire
+Kneel - Reload
+LieDown - Fire
+LieDown - Reload
+Requesting action
+Waiting for standstate
+In progress
+Playing animation - %d
+Move to event %d
+Look at event, %d
+Stunned
+Kick grenade
+RunPanicking stack not large enough
+Run panicking
+Idle
+Set Combat
+Level QTask ID #%d not defined (AI Activate)
+Patrolling, Walkto:%d, Cur:%d
+Patrolling, Runto:%d, Cur:%d
+Patrolling, LookAtNode : %d
+Patrolling, Standaction : %d
+Patrolling, Delay : %d
+Fall flat - %d
+Walk To Node - %d
+Run To Node - %d
+Fire At Node - %d, %d
+FireAtTask target not based on qobj tasktype
+HumanAI - FireAtTask, task id #%d not defined
+Fire At Task - %d, %d
+AI(%d) type(%s) channel(%d)
+Germany
+Failed to register WinProc callback.
+Unable to remove WinProc callback
+IGI is already running.
+Invalid FPU rounding mode. May be caused by running a debug session with ftol optimize turned on.
+HardcoreGerman
+Couldn't open window
+Error
+This application requires DirectX version %d.%d or greater to run.
+WinInput
+Window
+filesys.cfg
+IGIMUTEX
+DIERR_BETADIRECTINPUTVERSION
+DIERR_ALREADYINITIALIZED
+Unknown error
+DIERR_OLDDIRECTINPUTVERSION
+DIERR_INVALIDPARAM
+DIERR_BADDRIVERVER
+DIERR_ACQUIRED
+DIERR_INPUTLOST
+DIERR_OUTOFMEMORY
+DIERR_NOTINITIALIZED
+DIERR_NOTACQUIRED
+DIERR_REPORTFULL
+DIERR_NOTFOUND
+DIERR_OTHERAPPHASPRIO
+DIERR_UNPLUGGED
+DIERR_EFFECTPLAYING
+DIERR_NOTBUFFERED
+DIERR_INCOMPLETEEFFECT
+DIERR_NOTEXCLUSIVEACQUIRED
+DIERR_HASEFFECTS
+DIERR_NOTDOWNLOADED
+DIERR_MOREDATA
+DIERR_DEVICENOTREG
+DIERR_INSUFFICIENTPRIVS
+DIERR_DEVICEFULL
+DIERR_NOAGGREGATION
+DIERR_UNSUPPORTED
+DIERR_NOINTERFACE
+DIERR_GENERIC
+Failed get mouse state: %s
+Could not get mouse caps!
+Could not set cooperative level for keyboard!
+Could not set data format for mouse!
+Could not create DirectInput device mouse!
+Could not create DirectInput mouse object!
+Could not set data format for keyboard!
+Could not create DirectInput device keyboard!
+Could not create DirectInput keyboard object!
+DirectX error message: %s
+Couldn't read pixel format
+.wav
+.qsc
+Couldn't create texture surface
+No more Display callbacks available.
+SnapshotPrimitive
+BlitPrimitive
+ClipWindowPrimitive
+GetGFXCaps
+Enum
+DisplayClear
+DisplaySwapBuffers
+DisplayVSync
+DisplayRestore
+DisplayUnsetMode
+DisplaySetMode
+DisplayClose
+DisplayOpen
+Display can only be opened once!
+Couldn't enumerate Direct3D devices
+Couldn't get driver caps
+Couldn't get the Direct3D interface
+Couldn't create DirectDraw object
+{%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}
+Couldn't wait for vblank
+Couldn't clear screen
+Couldn't enumerate display modes.
+%s  VRAM usage             %.2f mb
+%s  Texture footprint      %.2f mb
+%s  Textures created       %d
+%sResources in use
+%s  Can have size not 2^x  %s
+%s  Must have size 2^x     %s
+%sTexture caps
+%s  Subpixel rasterizing   %s
+%s  Mipmap lod bias        %s
+%s  Anisotropic filtering  %s
+%s  Antialiasing           %s
+%s  Transp. sorting        %s
+%s  Scene capture          %s
+%s  Per-vertex fog         %s
+%s  Per-pixel fog          %s
+%s  Range fog              %s
+%s  WFog                   %s
+%s  ZFog                   %s
+%s  Depth bias             %s
+%s  WBuffer                %s
+%s  ZBuffer formats:
+%sRasterization caps
+Direct3D hardware caps
+----------------------
+Couldn't get device caps
+%s    %d bits z
+%s    %d bits z and stencil
+D3DERR_VIEWPORTHASNODEVICE
+D3DERR_VIEWPORTDATANOTSET
+D3DERR_NOVIEWPORTS
+D3DERR_NOTINBEGIN
+D3DERR_INBEGIN
+D3DERR_SCENE_END_FAILED
+D3DERR_SCENE_BEGIN_FAILED
+D3DERR_SCENE_NOT_IN_SCENE
+D3DERR_SCENE_IN_SCENE
+D3DERR_LIGHTNOTINTHISVIEWPORT
+D3DERR_LIGHTHASVIEWPORT
+D3DERR_LIGHT_SET_FAILED
+D3DERR_SURFACENOTINVIDMEM
+D3DERR_ZBUFF_NEEDS_VIDEOMEMORY
+D3DERR_ZBUFF_NEEDS_SYSTEMMEMORY
+D3DERR_INVALIDPALETTE
+D3DERR_MATERIAL_GETDATA_FAILED
+D3DERR_MATERIAL_SETDATA_FAILED
+D3DERR_MATERIAL_DESTROY_FAILED
+D3DERR_MATERIAL_CREATE_FAILED
+D3DERR_TEXTURE_BADSIZE
+D3DERR_INVALIDVERTEXTYPE
+D3DERR_INVALIDPRIMITIVETYPE
+D3DERR_INVALIDCURRENTVIEWPORT
+D3DERR_SETVIEWPORTDATA_FAILED
+D3DERR_MAXTRIX_GETDATA_FAILED
+D3DERR_MATRIX_SETDATA_FAILED
+D3DERR_MATRIX_DESTROY_FAILED
+D3DERR_MATRIX_CREATE_FAILED
+D3DERR_TEXTURE_GETSURF_FAILED
+D3DERR_TEXTURE_NOT_LOCKED
+D3DERR_TEXTURE_LOCKED
+D3DERR_SWAP_FAILED
+D3DERR_LOAD_FAILED
+D3DERR_TEXTURE_UNLOCK_FAILED
+D3DERR_TEXTURE_LOCK_FAILED
+D3DERR_TEXTURE_DESTROY_FAILED
+D3DERR_TEXTURE_CREATE_FAILED
+D3DERR_TEXTURE_NO_SUPPORT
+D3DERR_CLIPPED_FAILED
+D3DERR_EXECUTE_FAILED
+D3DERR_EXECUTE_NOT_LOCKED
+D3DERR_EXECUTE_LOCKED
+D3DERR_EXECUTE_UNLOCK_FAILED
+D3DERR_EXECUTE_LOCK_FAILED
+D3DERR_EXECUTE_DESTROY_FAILED
+D3DERR_EXECUTE_CREATE_FAILED
+D3DERR_INITFAILED
+D3DERR_INVALID_DEVICE
+D3DERR_BADMINORVERSION
+D3DERR_BADMAJORVERSION
+DDERR_NOTPAGELOCKED
+DDERR_CANTPAGEUNLOCK
+DDERR_CANTPAGELOCK
+DDERR_DCALREADYCREATED
+DDERR_INVALIDSURFACETYPE
+DDERR_NOMIPMAPHW
+DDERR_UNSUPPORTEDMODE
+DDERR_NOTPALETTIZED
+DDERR_IMPLICITLYCREATED
+DDERR_WRONGMODE
+DDERR_NODC
+DDERR_CANTCREATEDC
+DDERR_NOTLOCKED
+DDERR_CANTDUPLICATE
+DDERR_NOTFLIPPABLE
+DDERR_EXCLUSIVEMODEALREADYSET
+DDERR_NOTAOVERLAYSURFACE
+DDERR_INVALIDPOSITION
+DDERR_NOOVERLAYDEST
+DDERR_OVERLAYNOTVISIBLE
+DDERR_NODDROPSHW
+DDERR_NOBLTHW
+DDERR_BLTFASTCANTCLIP
+DDERR_NOPALETTEHW
+DDERR_NOPALETTEATTACHED
+DDERR_HWNDALREADYSET
+DDERR_HWNDSUBCLASSED
+DDERR_NOHWND
+DDERR_NOCLIPPERATTACHED
+DDERR_CLIPPERISUSINGHWND
+DDERR_REGIONTOOSMALL
+DDERR_NOEMULATION
+DDERR_PRIMARYSURFACEALREADYEXISTS
+DDERR_NODIRECTDRAWHW
+DDERR_DIRECTDRAWALREADYCREATED
+DDERR_INVALIDDIRECTDRAWGUID
+DDERR_XALIGN
+DDERR_WASSTILLDRAWING
+DDERR_VERTICALBLANKINPROGRESS
+DDERR_UNSUPPORTEDMASK
+DDERR_UNSUPPORTEDFORMAT
+DDERR_TOOBIGWIDTH
+DDERR_TOOBIGSIZE
+DDERR_TOOBIGHEIGHT
+DDERR_SURFACENOTATTACHED
+DDERR_SURFACELOST
+DDERR_SURFACEISOBSCURED
+DDERR_CANTLOCKSURFACE
+DDERR_SURFACEBUSY
+DDERR_SURFACEALREADYDEPENDENT
+DDERR_SURFACEALREADYATTACHED
+DDERR_COLORKEYNOTSET
+DDERR_PALETTEBUSY
+DDERR_OVERLAYCOLORKEYONLYONEACTIVE
+DDERR_OVERLAYCANTCLIP
+DDERR_OUTOFVIDEOMEMORY
+DDERR_OUTOFCAPS
+DDERR_NOZOVERLAYHW
+DDERR_NOZBUFFERHW
+DDERR_NOVSYNCHW
+DDERR_NOTEXTUREHW
+DDERR_NOT8BITCOLOR
+DDERR_NOT4BITCOLORINDEX
+DDERR_NOT4BITCOLOR
+DDERR_NOSTRETCHHW
+DDERR_NOROTATIONHW
+DDERR_NORASTEROPHW
+DDERR_NOOVERLAYHW
+DDERR_NOTFOUND
+DDERR_NOMIRRORHW
+DDERR_NOGDI
+DDERR_NOFLIPHW
+DDERR_NOEXCLUSIVEMODE
+DDERR_NODIRECTDRAWSUPPORT
+DDERR_NOCOLORKEYHW
+DDERR_NOCOLORKEY
+DDERR_NOCOOPERATIVELEVELSET
+DDERR_NOCOLORCONVHW
+DDERR_NOCLIPLIST
+DDERR_NOALPHAHW
+DDERR_NO3D
+DDERR_LOCKEDSURFACES
+DDERR_INVALIDRECT
+DDERR_INVALIDPIXELFORMAT
+DDERR_INVALIDOBJECT
+DDERR_INVALIDMODE
+DDERR_INVALIDCLIPLIST
+DDERR_INVALIDCAPS
+DDERR_INCOMPATIBLEPRIMARY
+DDERR_HEIGHTALIGN
+DDERR_EXCEPTION
+DDERR_CURRENTLYNOTAVAIL
+DDERR_CANNOTDETACHSURFACE
+DDERR_CANNOTATTACHSURFACE
+DDERR_ALREADYINITIALIZED
+DDERR_INVALIDPARAMS
+DDERR_OUTOFMEMORY
+DDERR_UNSUPPORTED
+DDERR_GENERIC
+Direct3D
+Couldn't create dynamic vertex buffer
+Couldn't set renderstate
+Couldn't set cooperative level
+Couldn't set clipping window
+BeginScene failed.
+Couldn't set clipper
+Couldn't set clipper's hWnd
+Couldn't create clipper
+Couldn't set viewport
+Couldn't create device
+Direct3D device not found
+Couldn't find zbuffer format
+Display
+Couldn't update primary surface
+Couldn't restore surfaces
+Video memory free: %d
+Couldn't flip
+Couldn't evict textures
+Failed to unlock framebuffer.
+Invalid framebuffer format
+Failed to lock framebuffer.
+No more Direct3D callbacks available.
+,[1K6
+ADH~OqW/`
+cdaudio
+CD Audio
+Wave
+SOUND - File %s already loaded!
+SOUND - File %s not valid format!
+SOUND - Invalid filename %s
+SetNearClippingPlane
+SetActiveTransContext
+TransContextPrimitive
+Invalid layer
+Couldn't set view matrix
+Couldn't set projection matrix
+OffscreenBuffer
+DirectDrawCreateEx
+Couldn't create CLSID_DirectMusic
+Couldn't CreateSurface
+Couldn't Set coop level
+Couldn't QI DDraw2
+Couldn't create DDraw
+Couldn't LoadLibrary DDraw
+DirectDrawCreate
+DDRAW.DLL
+Couldn't GetProcAddress DInputCreate
+DirectInputCreateA
+Couldn't LoadLibrary DInput
+DINPUT.DLL
+Rain
+PolyListDynCubeObjPrimitive
+PolyListDynCubeObj
+Error occured during rendering
+Mesh format not supported
+Bone model too large. Model %s has %d vertices.
+model %s not converted
+DrawHandiCamFilter
+DrawBandFilter
+DrawLineFilter
+HandiCamFilter
+BandFilter
+WideScreenFilter
+LineFilter
+CAMERAFILTER_TYPE_HANDICAM
+CAMERAFILTER_TYPE_BAND_UPDATE
+CAMERAFILTER_TYPE_BAND
+CAMERAFILTER_TYPE_LINE
+CAMERAFILTER_TYPE_NONE
+CAMERA %d
+%2.2d : %2.2d : %2.2d : %2.2d
+fmod
+?pow
+kU'9
+HMXB
+?Zd;
+?/L[
+S;uD
+z?aUY
+D?$?
+U>c{
+zc%C1
+.:3q
+-64OS
+NKeb
+Fatal error:
+Warning:
+Internal memory allocator inconsistency: Totalalloc: %d
+%d block%s of memory have not been deallocated.
+Mem_Alloc() failed to allocate %d bytes.
+Total allocated by user: %d.
+Total by Mem_Alloc():%d.
+RenderMode: Failed to create new rendermode '%s'
+RenderMode: Failed to create new method '%s'
+Error in alias path: %s
+Device not present: %s
+Illegal device name in path: "%s".
+No files loaded at address: %p
+SetLOD
+GetTextureSize
+ReloadTexture
+RefreshTexture
+GetActiveTMU
+SetActiveTMU
+GetTMUs
+EndTextureList
+BeginTextureList
+DownloadTexture
+DeAllocTexture
+AllocTexture
+'%s' is not a valid Texture file.
+Atan2 undefined in origo
+QVertex:RegisterStrip
+Failed to load resource: '%s'
+RESOURCE
+Error in resource file: '%s'
+Resource_Unload() : Resource '%s' is not loaded.
+Resource_Flush() : Couldn't locate resource at %p.
+Invalid sprite file: %s
+The font '%s' must be packed. Ask Stein.
+ILF file corrupt: %s
+SortRender
+DownloadPalette
+DeAllocPalette
+AllocPalette
+'%s' is not a valid palette file.
+An error occured when compiling file: %s
+Failed to load QVM file: %s
+.qas
+.qvm
+An error occured in script file: %s
+Error in QVM program: %s
+Script_SetSymbolContext(): Symbol not found: %s
+Script: Stack underflow.
+Script: Stack overflow.
+BreakScript
+_Script_SetWarningLevel
+SCRIPT_WARNINGLEVEL_HIGH
+SCRIPT_WARNINGLEVEL_NORMAL
+SCRIPT_WARNINGLEVEL_NO_WARNINGS
+Syntax error in string expression, line %d
+Syntax error in assignment, line %d
+Expression: Cannot assign to constant, line %d
+Internal script error. Invalid assignment, line %d
+Unknown identifier '%s' in expression, line %d
+Numeric member in string expression. Line %d.
+Syntax error in line %d, '%s'. Binary operator requires lvalue.
+Expected ')' in line %d: '%s'
+Syntax error in line %d: '%s'.
+Syntax error in line %d: '%s'. Expected operand.
+Syntax error in line %d: '%s'
+Unexpected end of file in line %d: '%s'
+Expected ':' in line %d: '%s'
+Script: Internal Error: Unknown opcode: %02X.
+Too few arguments to functions in line %d: '%s'
+Parse error (missing " ?) in line %d: '%s'
+Too many arguments to function in line %d: '%s'
+Script: Internal Error: Illegal expression type.
+Internal error!!!
+Undefined symbol: '%s'
+%d script symbol references not deallocated.
+Duplicate label: '%s'
+Failed to open file '%s' for writing.
+Failed to load assembler source file: '%s'
+Cleaning up
+Failed to create temporary file '%s'.
+Unknown label '%s' at PC:%08x
+Patching code
+INTERNAL ERROR: QVMAsm bin file size does not match computed program size!!!
+Unknown opcode: %s
+Assembling
+-?[0-9]+
+[a-zA-Z][a-zA-Z0-9_.]*
+@[0-9a-zA-Z]+
+[0-9a-zA-Z]+:
+0x[0-9a-fA-F]+
+-?[0-9]+/.[0-9]+
+[a-zA-Z][a-zA-Z0-9_]*:
+"([~\\"]*(\.)*)*"
+[ \t\n\r]+
+Initialising parser.
+LOCAL:qvmbin.tmp
+/0qvmbin.tmp
+{.*:(.*//)*}.*
+Parsing script and generating assembly code.
+Internal error: Unknown statement block type.
+%s%p
+Unknown expression type
+Unknown operator in expression.
+Instruction not implemented.
+UNKNOWN DATA TYPE
+%d words of data.
+"%s"
+Unknown data type.
+Undefined error
+Function argument overflow: %d arguments.
+Datablock not present
+Index out of range
+No function on stack
+Identifier not a function
+Identifier not a variable
+Unknown identifier: %s
+Internal error (read: BUG!!!).
+Illegal operand(s) for instruction
+Illegal instruction
+Syntax error
+Stack overflow
+Stack underflow
+Internal error.
+Unhandled opcode.
+ILLEGAL
+MINUS
+PLUS
+ASSIGN
+LAND
+CALL
+PUSHM
+PUSH1
+PUSH0
+PUSHIIW
+PUSHIIB
+PUSHII
+PUSHI
+PUSHSIW
+PUSHSIB
+PUSHSI
+PUSHS
+PUSHA
+PUSHF
+PUSHW
+PUSHB
+PUSH
+Token too big in line %d '%s'.
+Script error: Aborting.
+Unexpected '}' in line %d
+Unexpected end of file.
+while
+else
+Syntax error in line %d
+'else' without matching 'if' in line %d
+Unknown block type.
+Unable to remove symbol "%s" (not registered)
+Symbol "%s" already registered in hash table
+@%08X
+Opcode not implemented for PUSHSTRING
+@%08X
+QTaskList is full
+Trying to remove unrigistered QTask from QTaskList
+Rigid Object
+DefineMagicObj
+RigidDynCubeObj
+RigidDynCubeObj_ParseConfigFile(): Couldn't load script: %s
+vssver
+Magic object type "%s" not defined (Created from model "%s")
+Invalid dyncubetree
+.lmp
+.tex
+CreateTerrainTileMap
+CreateTerrainMaterial
+.ctr
+.cmd
+.hmp
+.bit
+Invalid category
+MTP_nLODVirModel >= %d
+missing
+UnloadModel
+LoadModel
+DeinitModels
+InitModels
+%s%s.mtp
+%smodels/%s.res
+%stextures/%s.res
+Mesh "%s" and source code are incompatible. (Mesh "%s" is version %0.2f, source code is version %0.2f.)
+LOCAL:models/%s.mef
+%smodels/%s.mef
+LOCAL:textures/%s.tex
+%spalettes/%s.pal
+%sanims/%s.iff
+?Detail level %d is more complex than level 0 for model %s.
+ExcludeObject
+DrawLightmapMesh
+DrawSplineMesh
+DrawBoneMesh
+DrawRigidMesh
+RenderModeUVFromGenericUV
+GenericUVFromRenderModeUV
+Illegal alloc info
+Should't have allocate hash data! ERROR!
+Should have allocated data for cube existing previous frame
+Closest Z: %.2f
+No more QCube callbacks available.
+Callback not found
+Failed to create boneobj of type %d, no hierarchy loaded
+BlendBranch to illegal target
+BoneObj_DeleteBlendNodeBranch: Illegal child type
+BoneObj_GetOrientationCB: Illegal orientation type
+IFF File %s is not of correct type.
+File %s is not IFF file.
+BoneDynCubeObj
+Bone Object
+QObj
+TASKTYPE_MAGICOBJ
+MagicObj
+Hazinglayers
+Fog layer logic error
+SectorInteriorObject
+SectorObject
+Sector
+Magic object model "%s" not found
+MagicObjContainer
+fff?fff?fff?
+Shadow
+SplineObjSegment
+DynCubeObj
+?t|V
+DefineTriggerOnce
+DefineGraph
+DefineSound
+DefineGroup
+SoundSysDefParent
+SoundSysDef
+SoundSysController
+%ssounds.qsc
+%s/sounds.qsc
+.WAV
+.RES
+Screen
+ILFF|P
+FONTFNTH
+ANMF
+TRAN
+TEXH
+BODY
+LOCAL:debug.fnt
+DebugText
+CameraControlTask
+ViewportQTask
+TerraDrawTask
+SoundDefSound
+%s("%s", "%s", %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %d, %d, %d, %8.08f, %s
+FadeOutEnd
+FadeOutStart
+GlowTask
+SoundDefTriggerOnce
+%s("%s", "%s", %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %d, %d, %d, %d, %s, %s
+SoundDefGraph
+, %8.08f
+%s("%s", "%s", %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %8.08f, %d, %d, %d, %d
+SoundDefGroup
+%s("%s"
+SoundSysMicrophone
+DefineAnimTrigger
+AnimTrigger_ParseConfigFile(): Couldn't load script: %s
+InputPort
+ModelLODSettingsContainer
+ModelLODSettings
+LODSettings
+LOCAL:lod.qsc
+DefinePhysicsObjType
+Physics obj model %s is defined multiple times.
+PhysicsObjType_ParseConfigFile(): Couldn't load script: %s
+ScreenGrab
+LOCAL:grab
+%s/A%07d.tga
+%s DOESN'T EXIST
+%s/empty.dat
+BIT_31
+BIT_30
+BIT_29
+BIT_28
+BIT_27
+BIT_26
+BIT_25
+BIT_24
+BIT_23
+BIT_22
+BIT_21
+BIT_20
+BIT_19
+BIT_18
+BIT_17
+BIT_16
+BIT_15
+BIT_14
+BIT_13
+BIT_12
+BIT_11
+BIT_10
+BIT_9
+BIT_8
+BIT_7
+BIT_6
+BIT_5
+BIT_4
+BIT_3
+BIT_2
+BIT_1
+BIT_0
+Task_DeclareParameters
+DropDownCombo
+PushButton
+ObjectPos
+Degrees
+Angle
+PitchGraph
+Bitfield
+ScriptFile
+GraphEnvelope
+Graph
+bool8
+QTaskNote
+LevelExpression
+String256
+String32
+String16
+VarString
+Int16
+Int32
+Real64x3
+Real64
+Real32x9
+Real32x3
+Real32
+Quat32
+CameraBase
+Dynamic
+Static
+%f, %f, %f
+%f, %f, %f, %f, %f, %f, %f, %f, %f
+Too few parameters in line %d of file '%s'
+Level_Load(): Couldn't load script: %s
+%s/objects.qsc
+LevelQTaskID %d already defined
+%s_%d
+.isExists
+%s.%s
+Unable to allocate parameter type
+Undefined parameter type.
+Unable to allocate parameter event
+EnumString256
+EnumString32
+EnumString16
+EnumReal32
+EnumInt32
+TASKTYPE_EDITRIGIDOBJ
+EditRigidObj
+AnimData
+AnimTask
+Vehicle create handler must be overloaded
+Vehicle delete handler must be overloaded
+Vehicle run handler must be overloaded
+CRITERIA_VEHICLE
+Vehicle
+TASKTYPE_CUTSCENE
+CutScene
+1721_01_1
+gen_32
+RainDynCubeObj
+Line
+Visible Cubes: %d
+TerrainLightMap
+Illegal shift size
+%s%slightmap/%s%d.lmp
+Too many lightmaps whene generated
+NO FREE NODESIZE ELEMENTS
+Undefined GraphNodeDataSize
+GRAPHNODE ID ALREADY USED
+GRAPHNODE - LINKLIMIT REACHED
+GraphStream - collision in hash for %s
+Unable to open %s for reading
+eLinkType
+nLinkID2
+nLinkID1
+nNodeCriteria
+nNodeMaterial
+vNodeRadius
+vNodeGamma
+tNodePosition
+nNodeID
+nMaxNodes
+MISSION:graphs/graph%d.dat
+PhysicsObj
+PhysicsObj create handler must be overloaded
+PhysicsObj delete handler must be overloaded
+PhysicsObj run handler must be overloaded
+Particle2DDynCubeObjTask
+TagItemString256
+TagItemString16
+TagItemReal32
+TagItemInt32
+TagItem
+H*%s
+SplineObjWaypoint
+SplineObj
+%sModel length: %f meter
+Segment length: %f meter
+EditorRigidObj
+SimpointObj
+SimpointObjContainer
+TASKTYPE_PHYSICSMAGICOBJ
+PhysicsMagicObj
+AreaActivate
+%s.nActive
+Unable to register AreaActivate criteria
+EditRigidObjAttachedToBone
+MenuItemTask
+MenuItem
+MenuItem_Move() called with illegal direction parameter.
+Container
+Too many items in texture modifier stack!
+TextureModifier
+limit reached
+Too many texturemodfiers
+HeightMap
+TASKTYPE_EDITCAMERA
+EditCamera
+1717_01_1
+CAMERAFILTER_TYPE_.*
+Sync
+RouteTable
+NODECRITERIA_STAIR
+NODECRITERIA_VIEW
+NODECRITERIA_DOOR
+AIGraph
+QVertex:DrawStrip
+Could not get capabilities for one or more joysticks .
+Could not acquire one or more joystick devices.
+Could not create DirectInput joypad object.
+Failed to create device.
+Failed to obtain interface.
+Illegal openmode (%X) for file %s.
+Couldn't get attached surface
+Couldn't get surface description
+Unsupported texture format
+Couldn't get mipmap
+Trying to download mipmap texture that is not power of 2 in width or height
+Couldn't blit surface
+Couldn't unlock surface
+Invalid texture format
+Couldn't lock surface
+Couldn't create surface
+Couldn't get surfacedesc
+Strip length not supported.
+OffscreenBufferSprite_RenderSprite() : Texture type not supported.
+@TerrainMesh_RenderAll
+GlowInstancePrimitive
+GlowReadBufferPrimitive
+Unknown blendmode
+Out of terrain renderchunks
+acos
+asin
+Couldn't load texture file '%s'.
+Texture file not of required type: '%s'.
+@Unable to register NodeCriteria %s
+1703_01_1
+GraphNode
+WaterLevel
+Water
+GFXCapsViewer
+ShadowTask
+SplinePathNodeQTask
+SplinePathNode
+Parent must be of type SplinePathDynCubeObj
+SplinePathDynCubeObj
+SplinePathGuideQTask
+TASKTYPE_ANIMSOUND
+AnimSound
+TASKTYPE_EDITORMAGICOBJ
+EditorMagicObj
+TASKTYPE_LEVELTIMER
+LevelTimer
+SoundManager
+?FlatWaterLayer
+FlatWater
+File not found
+LOCAL:%s%s
+BFlatSkyLayer
+FlatSky
+GR_MIPMAP_NEAREST_DITHER
+GR_MIPMAP_NEAREST
+GR_MIPMAP_DISABLE
+MipMapControl
+Couldn't set texturestagestate
+TASKTYPE_SMOOTHQTASK
+SmoothQTask
+%s.vIdealValue
+%s.vRealValue
+TASKTYPE_MOVERIGIDOBJ
+Gamma %d
+Beta %d
+Alpha %d
+Position %d
+MoveRigidObj
+TASKTYPE_NOISEQTASK
+NoiseQTask
+Origo
+RangeReal32
+LensflareItem
+Lensflare
+ AMISSION:%s
+lightmaps
+MISSION:%s/%s
+lightmaps.res
+%s%05d
+%s/%s_%05d.olm
+LightmapInfo
+Lightsource not found
+DirlightKeyframe
+Dirlight
+Link setting %s
+Scale B %s
+Scale G %s
+Scale R %s
+Fog density %s
+Fog color %s
+Ambient color %s
+object category %d
+terrain
+GlobalLightKeyframe
+GlobalLight
+BMatrixMode
+isLockGamma
+isLockBeta
+isLockAlpha
+Delta Radius
+Radius
+Delta Gamma
+Gamma
+Delta Beta
+Beta
+DeltaAlpha
+Alpha
+UpdateTargetFactor
+dDisplacementZ
+dDisplacementY
+dDisplacementX
+DisplacementZ
+DisplacementY
+DisplacementX
+ObjectB
+ObjectA
+SetMode
+AnimCam
+(Default)
+(None)
+Circle
+Relative
+Flyby
+M:Angles
+M:Speed
+M:Object
+M:World
+L:%s
+U:%.2f
+B:%d
+A:%d
+Parent ID
+ddGamma
+ddBeta
+ddAlpha
+ddZo
+ddYo
+ddXo
+ddZw
+ddYw
+ddXw
+AnimRigidDynCubeObj
+AnimScaleTask
+EditHazinglayer
+CubeModifier
+DiscardTerrainArea
+DiscardTerrain
+SkyTask
+LevelScript
+SimBoneDynCubeObj
+?Sky
+%04d-%02d-%02d
+%02d-%02d-%02d
+%04d
+WaterMesh
+CamTask
+FlashTask
+ParticleSystemDynCubeObj
+FreeCamera
+SpriteParticleSystemDynCubeObj
+SpotlightDynCubeObj
+PointlightDynCubeObj
+Pointlight
+Spotlight
+TASKTYPE_BONEMAGICOBJ
+BoneMagicObj
+Sprite3D
+TransparencyListStartPrimitive
+TransparencyListPrimitive
+TransparencyList
+3330
+#(""
+wr""""
+wwx(ww
+www"www
+r rp
+OOOOO
+!!!!!
+!!!!O
+!!!!!!!OC!!!!!!
+KKKKKs"
+KKK"!OK"CKKK"
+PKKKKKJ!
+!IOPIrIIIIr
+IIIIIIIIO
+mD#Dns!r
+rrrrr
+rrrrr
+rrrrrr
+rrrrrr
+OOOOO
+Df)H
+VVVVVVV
+JKKKKKKEQQ
+KKKKK
+KKKKKD
+PPKKKKKKKK
+rmIIIICCCCOmmmII
+CCIIICCm!!ImIIIIIIIUV
+EJC!
+!"EKO!O
+mEKDDK
+VVVVVVV

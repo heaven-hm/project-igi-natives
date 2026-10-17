@@ -54,11 +54,11 @@ void log(Severity severity, std::string_view subsystem, std::string_view message
 }
 
 void log_retail_native(Severity severity, std::string_view native_name,
-                       std::uint32_t retail_virtual_address, std::string_view message) {
+                       std::uint32_t retail_virtual_address, std::string_view retail_message) {
     std::ostringstream formatted_message;
     formatted_message << native_name << " - 0x" << std::uppercase << std::hex
                       << std::setw(8) << std::setfill('0') << retail_virtual_address
-                      << ": " << message;
+                      << ": " << retail_message;
     log(severity, "retail-native", formatted_message.str());
 }
 
