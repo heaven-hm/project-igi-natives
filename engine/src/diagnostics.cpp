@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <iostream>
 #include <mutex>
+#include <sstream>
 #include <stdexcept>
 
 namespace igi::diagnostics {
@@ -50,6 +51,15 @@ void log(Severity severity, std::string_view subsystem, std::string_view message
         write_entry(output_file);
         output_file.flush();
     }
+}
+
+void log_retail_native(Severity severity, std::string_view native_name,
+                       std::uint32_t retail_virtual_address, std::string_view message) {
+    std::ostringstream formatted_message;
+    formatted_message << native_name << " - 0x" << std::uppercase << std::hex
+                      << std::setw(8) << std::setfill('0') << retail_virtual_address
+                      << ": " << message;
+    log(severity, "retail-native", formatted_message.str());
 }
 
 } // namespace igi::diagnostics
