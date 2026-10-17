@@ -11,6 +11,7 @@
     "IGINatives_ghidra.py",
     "IGINatives.idc",
     "IGINatives.map",
-    "IGINatives.csv"
+    "IGINatives.csv",
+    "IGINatives.r2"
   ]
 }
