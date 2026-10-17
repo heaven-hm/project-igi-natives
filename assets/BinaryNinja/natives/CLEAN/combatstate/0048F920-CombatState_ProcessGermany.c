@@ -3,7 +3,7 @@
 #include "CombatState_ProcessGermany.h"
 
 int32_t CombatState_ProcessGermany()
+
 {
-    // Native implementation (0x48f920-0x48f929, 1 blocks)
-    return 0;
+    return FX_DebrisSpawn_25(1);
 }

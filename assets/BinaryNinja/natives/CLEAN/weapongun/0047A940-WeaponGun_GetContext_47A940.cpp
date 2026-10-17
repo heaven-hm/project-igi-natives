@@ -2,8 +2,10 @@
 // Evidence: 0047A940-WeaponGun_GetContext_47A940.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_GetContext_47A940.h"
 
-void* WeaponGun_GetContext_47A940(void* context, int32_t* param_2)
+void* WeaponGun_GetContext_47A940(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x47a940-0x47a95b, 1 blocks)
-    return 0;
+    *arg2 = **(arg1 + 0x130);
+    arg2[1] = arg1 + 0x178;
+    return arg1 + 0x178;
 }

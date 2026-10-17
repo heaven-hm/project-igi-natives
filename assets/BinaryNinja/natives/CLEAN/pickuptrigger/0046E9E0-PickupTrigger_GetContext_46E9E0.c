@@ -2,8 +2,9 @@
 // Evidence: 0046E9E0-PickupTrigger_GetContext_46E9E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_GetContext_46E9E0.h"
 
-int32_t PickupTrigger_GetContext_46E9E0(int32_t context, int32_t* param_2)
+int32_t PickupTrigger_GetContext_46E9E0(int32_t arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x46e9e0-0x46e9f0, 1 blocks)
-    return 0;
+    *arg2 = arg1 + 0x168;
+    return arg1 + 0x168;
 }

@@ -2,8 +2,8 @@
 // Evidence: 0051AE90-WeatherWaterSky_InvokeTryingToRemoveUnrigi.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeTryingToRemoveUnrigi.h"
 
-int32_t WeatherWaterSky_InvokeTryingToRemoveUnrigi(int32_t context)
+int32_t WeatherWaterSky_InvokeTryingToRemoveUnrigi(int32_t arg1)
+
 {
-    // Native implementation (0x51ae90-0x51aea5, 1 blocks)
-    return 0;
+    return DynObj_TryingToRemoveUnrigi(g_a83760, arg1);
 }

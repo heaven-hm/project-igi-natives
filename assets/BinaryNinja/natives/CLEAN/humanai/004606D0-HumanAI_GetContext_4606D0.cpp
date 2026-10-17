@@ -2,8 +2,11 @@
 // Evidence: 004606D0-HumanAI_GetContext_4606D0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_GetContext_4606D0.h"
 
-int32_t* HumanAI_GetContext_4606D0(int32_t context, int32_t* param_2)
+int32_t* HumanAI_GetContext_4606D0(int32_t arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4606d0-0x4606eb, 1 blocks)
-    return 0;
+    *arg2 = arg1 + 0x20;
+    arg2[1] = arg1 + 0x78;
+    arg2[2] = 0;
+    return arg2;
 }

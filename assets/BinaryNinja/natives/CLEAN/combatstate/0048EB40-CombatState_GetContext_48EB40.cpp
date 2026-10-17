@@ -2,8 +2,11 @@
 // Evidence: 0048EB40-CombatState_GetContext_48EB40.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_GetContext_48EB40.h"
 
-void* CombatState_GetContext_48EB40(void* context)
+void* CombatState_GetContext_48EB40(void* arg1)
+
 {
-    // Native implementation (0x48eb40-0x48eb56, 1 blocks)
-    return 0;
+    *(arg1 + 0x18) = FX_ExplosionSpawn_21;
+    void* result = *(arg1 + 0x28);
+    *(result + 0xc) = 0xffffffff;
+    return result;
 }

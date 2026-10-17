@@ -2,8 +2,16 @@
 // Evidence: 00427FC0-VehiclePhysics_ProcessMissile.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ProcessMissile.h"
 
-char* VehiclePhysics_ProcessMissile(void* context, char* param_2)
+char* VehiclePhysics_ProcessMissile(void* arg1, char* arg2)
+
 {
-    // Native implementation (0x427fc0-0x427fec, 6 blocks)
-    return 0;
+    if (arg1 != *(arg2 + 4) && arg1 != *(arg2 + 8) && arg1 != *(arg2 + 0xc)
+        && *(arg1 + 0x1c) != g_53bb8c)
+    {
+        *arg2 = 1;
+        return arg2;
+    }
+
+    *arg2 = 0;
+    return arg2;
 }

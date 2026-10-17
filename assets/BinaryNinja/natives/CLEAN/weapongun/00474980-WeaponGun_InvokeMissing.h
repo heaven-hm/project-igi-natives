@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 00474980 WeaponGun_InvokeMissing | gate PASS | openigi True */
-float* WeaponGun_InvokeMissing(float context);
+float* WeaponGun_InvokeMissing(float arg1);

@@ -2,8 +2,58 @@
 // Evidence: 0045B6E0-HumanAI_InvokeStateAnimation_45B6E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_InvokeStateAnimation_45B6E0.h"
 
-void* HumanAI_InvokeStateAnimation_45B6E0(void* context, int32_t param_2)
+void* HumanAI_InvokeStateAnimation_45B6E0(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x45b6e0-0x45b7b6, 11 blocks)
-    return 0;
+    int32_t context_val = *(arg1 + 8);
+
+    if (!(context_val & 4))
+    {
+        void* edx_1 = *(arg1 + 4);
+        *(arg1 + 0xc) = *(arg1 + 0x10);
+        *(arg1 + 0x10) = 0x1d;
+        int32_t ecx_2 = *(edx_1 + 0x74);
+        *(arg1 + 0x14) = ecx_2;
+        return ecx_2(arg1, arg2);
+    }
+
+    if (context_val & 0x10000)
+    {
+        void* edx_3 = *(arg1 + 4);
+        *(arg1 + 0xc) = *(arg1 + 0x10);
+        *(arg1 + 0x10) = 0x1e;
+        int32_t ecx_4 = *(edx_3 + 0x78);
+        *(arg1 + 0x14) = ecx_4;
+        return ecx_4(arg1, arg2);
+    }
+
+    if (context_val & 0x20000)
+    {
+        void* edx_5 = *(arg1 + 4);
+        *(arg1 + 0xc) = *(arg1 + 0x10);
+        *(arg1 + 0x10) = 0x20;
+        int32_t ecx_6 = *(edx_5 + 0x80);
+        *(arg1 + 0x14) = ecx_6;
+        return ecx_6(arg1, arg2);
+    }
+
+    if (!(context_val & 0x2000000))
+    {
+        void* edx_7 = *(arg1 + 4);
+        *(arg1 + 0xc) = *(arg1 + 0x10);
+        *(arg1 + 0x10) = 0xc;
+        int32_t ecx_8 = *(edx_7 + 0x30);
+        *(arg1 + 0x14) = ecx_8;
+        return ecx_8(arg1, arg2);
+    }
+
+    if (!(*(&context_val + 1) & 2))
+        return arg1;
+
+    void* edx_9 = *(arg1 + 4);
+    *(arg1 + 0xc) = *(arg1 + 0x10);
+    *(arg1 + 0x10) = 6;
+    int32_t ecx_10 = *(edx_9 + 0x18);
+    *(arg1 + 0x14) = ecx_10;
+    return ecx_10(arg1, arg2);
 }

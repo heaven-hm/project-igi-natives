@@ -2,8 +2,9 @@
 // Evidence: 00438C00-ExplosionObj_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke4.h"
 
-int32_t* ExplosionObj_Invoke4(int32_t* context)
+int32_t* ExplosionObj_Invoke4(int32_t* arg1)
+
 {
-    // Native implementation (0x438c00-0x438c0d, 1 blocks)
-    return 0;
+    *arg1 = g_57be8c;
+    return arg1;
 }

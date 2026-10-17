@@ -3,7 +3,9 @@
 #include "AnimSpline_DefaultHandler_50BBE0.h"
 
 int32_t AnimSpline_DefaultHandler_50BBE0()
+
 {
-    // Native implementation (0x50bbe0-0x50bbfd, 1 blocks)
-    return 0;
+    int32_t* 5ca114_1 = g_5ca114;
+    g_a7cebc = 0;
+    return (*(*5ca114_1 + 0x10))(5ca114_1, Physics_SimulateRigidBody_12, 0);
 }

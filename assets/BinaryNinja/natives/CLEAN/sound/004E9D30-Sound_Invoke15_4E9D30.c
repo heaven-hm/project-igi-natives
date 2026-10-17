@@ -2,8 +2,56 @@
 // Evidence: 004E9D30-Sound_Invoke15_4E9D30.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke15_4E9D30.h"
 
-int32_t Sound_Invoke15_4E9D30(void* context, int32_t* param_2)
+int32_t Sound_Invoke15_4E9D30(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4e9d30-0x4e9d84, 11 blocks)
-    return 0;
+    int32_t result = arg2[1];
+
+    if (!result)
+    {
+        char* result_val = *arg2;
+        int32_t base_val;
+        int32_t var_c_1 = base_val;
+        char* esi_1 = arg1 + 0xe3;
+
+        while (true)
+        {
+            char edx_1 = *result_val;
+            char ebx_1 = *esi_1;
+            bool c_1 = edx_1 < ebx_1;
+
+            if (edx_1 == ebx_1)
+            {
+                if (!edx_1)
+                {
+                    result = 0;
+                    break;
+                }
+
+                edx_1 = result_val[1];
+                ebx_1 = esi_1[1];
+                c_1 = edx_1 < ebx_1;
+
+                if (edx_1 == ebx_1)
+                {
+                    result_val = &result_val[2];
+                    esi_1 = &esi_1[2];
+
+                    if (edx_1)
+                        continue;
+
+                    result = 0;
+                    break;
+                }
+            }
+
+            result = result_val - result_val + 1;
+            break;
+        }
+
+        if (!result)
+            arg2[1] = arg1;
+    }
+
+    return result;
 }

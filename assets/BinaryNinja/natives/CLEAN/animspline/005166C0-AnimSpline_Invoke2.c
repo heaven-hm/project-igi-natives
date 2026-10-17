@@ -3,7 +3,11 @@
 #include "AnimSpline_Invoke2.h"
 
 int32_t AnimSpline_Invoke2()
+
 {
-    // Native implementation (0x5166c0-0x5166e3, 1 blocks)
-    return 0;
+    Sys_OpenFileStream_2(&g_a7f878);
+    int32_t* a7f890_1 = g_a7f890;
+    int32_t result = (*(*a7f890_1 + 8))(a7f890_1);
+    g_a7f890 = 0;
+    return result;
 }

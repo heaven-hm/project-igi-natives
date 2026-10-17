@@ -3,7 +3,8 @@
 #include "DisplayRender_DefaultHandler_49DB10.h"
 
 int32_t DisplayRender_DefaultHandler_49DB10()
+
 {
-    // Native implementation (0x49db10-0x49db20, 1 blocks)
-    return 0;
+    int32_t* 5ca114_1 = g_5ca114;
+    return (*(*5ca114_1 + 0x50))(5ca114_1, 0x1b, 0);
 }

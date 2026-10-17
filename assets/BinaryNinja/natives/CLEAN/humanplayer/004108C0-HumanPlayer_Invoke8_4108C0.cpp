@@ -2,8 +2,9 @@
 // Evidence: 004108C0-HumanPlayer_Invoke8_4108C0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Invoke8_4108C0.h"
 
-int32_t HumanPlayer_Invoke8_4108C0(int32_t context, int32_t param_2)
+int32_t HumanPlayer_Process(int32_t arg1, int32_t arg2)
+
 {
-    // Native implementation (0x4108c0-0x4108f5, 1 blocks)
-    return 0;
+    return (*(((Script_ParseEnumReal32_8() * 0x180 + AI_UpdateOrders_17()) << 2) + &g_a96ae0))(
+        arg1, arg2);
 }

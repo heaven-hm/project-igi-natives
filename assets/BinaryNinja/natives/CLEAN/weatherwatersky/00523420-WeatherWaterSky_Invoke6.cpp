@@ -2,8 +2,18 @@
 // Evidence: 00523420-WeatherWaterSky_Invoke6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke6.h"
 
-int32_t* WeatherWaterSky_Invoke6(int32_t* context)
+int32_t* WeatherWaterSky_Invoke6(int32_t* arg1)
+
 {
-    // Native implementation (0x523420-0x52344c, 4 blocks)
-    return 0;
+    int32_t* result = arg1;
+
+    if (!result[2])
+    {
+        result = Camera_UpdateViewCone_6(*result, g_a83b24);
+
+        if (result)
+            g_a83978 = 1;
+    }
+
+    return result;
 }

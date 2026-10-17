@@ -2,9 +2,8 @@
 // Evidence: 00493B20-DisplayRender_DefaultHandler_493B20.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_DefaultHandler_493B20.h"
 
-int32_t DisplayRender_DefaultHandler_493B20()
-{
+int32_t DisplayRender_DefaultHandler_493B20() __pure
 
-    // Native implementation (0x493b20-0x493b26, 1 blocks)
-    return 0;
+{
+    return 1;
 }

@@ -2,8 +2,13 @@
 // Evidence: 00453650-HumanAI_Invoke33.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke33.h"
 
-int32_t* HumanAI_Invoke33(int32_t* context)
+int32_t* HumanAI_Invoke33(int32_t* arg1)
+
 {
-    // Native implementation (0x453650-0x453666, 3 blocks)
-    return 0;
+    int32_t* result = arg1;
+
+    if (result[0xc])
+        result = Camera_ApplyHandiCam_33(&result[8]);
+
+    return result;
 }

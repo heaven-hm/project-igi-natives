@@ -2,8 +2,9 @@
 // Evidence: 0041D9D0-MenuUI_Invoke6_41D9D0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke6_41D9D0.h"
 
-int32_t* MenuUI_Invoke6_41D9D0(int32_t* context)
+int32_t* MenuUI_Invoke6_41D9D0(int32_t* arg1)
+
 {
-    // Native implementation (0x41d9d0-0x41d9dd, 1 blocks)
-    return 0;
+    *arg1 = g_57bbc4;
+    return arg1;
 }

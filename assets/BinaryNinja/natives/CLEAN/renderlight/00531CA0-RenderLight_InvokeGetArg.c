@@ -2,8 +2,17 @@
 // Evidence: 00531CA0-RenderLight_InvokeGetArg.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_InvokeGetArg.h"
 
-int32_t RenderLight_InvokeGetArg(void* context, char* param_2)
+int32_t RenderLight_InvokeGetArg(void* arg1, char* arg2)
+
 {
-    // Native implementation (0x531ca0-0x531cc8, 4 blocks)
+    int32_t result_val = *(arg2 + 4);
+
+    if (arg1 != result_val && *(arg1 + 0x118) != result_val)
+    {
+        *arg2 = 1;
+        return 1;
+    }
+
+    *arg2 = 0;
     return 0;
 }

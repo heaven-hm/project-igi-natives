@@ -2,8 +2,9 @@
 // Evidence: 00432F80-VehiclePhysics_Invoke12_432F80.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke12_432F80.h"
 
-int32_t* VehiclePhysics_Invoke12_432F80(int32_t* context)
+int32_t* VehiclePhysics_Invoke12_432F80(int32_t* arg1)
+
 {
-    // Native implementation (0x432f80-0x432f8b, 1 blocks)
-    return 0;
+    *arg1 = 0x154;
+    return arg1;
 }

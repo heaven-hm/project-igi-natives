@@ -2,8 +2,9 @@
 // Evidence: 0052A1D0-RenderLight_GetContext_52A1D0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_GetContext_52A1D0.h"
 
-int32_t RenderLight_GetContext_52A1D0(int32_t context, int32_t* param_2)
+int32_t RenderLight_GetContext_52A1D0(int32_t arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x52a1d0-0x52a1ec, 1 blocks)
-    return 0;
+    __builtin_memcpy(*arg2, arg1 + 0x100, 0xa8);
+    return arg1;
 }

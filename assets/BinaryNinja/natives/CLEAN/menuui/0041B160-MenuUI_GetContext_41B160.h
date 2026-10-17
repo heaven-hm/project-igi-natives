@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 0041B160 MenuUI_GetContext_41B160 | gate PASS | openigi True */
-int32_t* MenuUI_GetContext_41B160(int32_t* context);
+int32_t* MenuUI_GetContext_41B160(int32_t* arg1);

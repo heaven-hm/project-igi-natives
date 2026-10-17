@@ -2,7 +2,11 @@
 // Evidence: 004A9A1F-MathSys_Invoke17.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke17.h"
 
-long double() {
-    // Native implementation (0x4a9a1f-0x4a9a25, 1 blocks)
-    return 0;
+int32_t MathSys_Invoke17() __location("st0")
+
+{
+    int16_t x87control;
+    long double x87_r0;
+    long double x87_r1;
+    return Camera_SetFieldOfView_17(x87control, x87_r0, x87_r1);
 }

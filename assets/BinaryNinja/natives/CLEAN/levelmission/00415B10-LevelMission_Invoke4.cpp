@@ -2,8 +2,9 @@
 // Evidence: 00415B10-LevelMission_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelMission_Invoke4.h"
 
-int32_t LevelMission_Invoke4(char* context)
+int32_t LevelMission_Invoke4(char* arg1)
+
 {
-    // Native implementation (0x415b10-0x415b2a, 1 blocks)
-    return 0;
+    g_539560 = Camera_ResetMatrix_4(arg1);
+    return FX_TrailUpdate_24(0);
 }

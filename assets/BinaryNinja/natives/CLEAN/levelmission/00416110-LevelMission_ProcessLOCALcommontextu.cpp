@@ -2,8 +2,15 @@
 // Evidence: 00416110-LevelMission_ProcessLOCALcommontextu.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelMission_ProcessLOCALcommontextu.h"
 
-void* LevelMission_ProcessLOCALcommontextu(void* context)
+void* LevelMission_ProcessLOCALcommontextu(void* arg1)
+
 {
-    // Native implementation (0x416110-0x41612c, 3 blocks)
-    return 0;
+    void* result = arg1;
+    result = *(result + 1);
+    g_57b1a0 = result;
+
+    if (result)
+        result = SoundSys_Update3DPosition_11("Raining:\n");
+
+    return result;
 }

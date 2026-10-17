@@ -2,8 +2,9 @@
 // Evidence: 0051F330-WeatherWaterSky_GetContext_51F330.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_GetContext_51F330.h"
 
-int32_t* WeatherWaterSky_GetContext_51F330(int32_t* context)
+int32_t* WeatherWaterSky_GetContext_51F330(int32_t* arg1)
+
 {
-    // Native implementation (0x51f330-0x51f33d, 1 blocks)
-    return 0;
+    *arg1 = g_a837a4;
+    return arg1;
 }

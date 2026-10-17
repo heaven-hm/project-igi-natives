@@ -2,8 +2,8 @@
 // Evidence: 00491910-DisplayRender_Invoke3.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_Invoke3.h"
 
-int32_t DisplayRender_Invoke3(int32_t* context, int32_t* param_2)
+int32_t DisplayRender_Invoke3(int32_t* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x491910-0x49192b, 1 blocks)
-    return 0;
+    return Sys_DispatchOpcode_3(*arg1, *arg2, arg2[1]);
 }

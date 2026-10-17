@@ -2,8 +2,21 @@
 // Evidence: 0041ACA0-MenuUI_Invoke13_41ACA0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke13_41ACA0.h"
 
-int32_t* MenuUI_Invoke13_41ACA0(void* context, int32_t param_2)
+int32_t* MenuUI_Invoke13_41ACA0(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x41aca0-0x41ad1c, 1 blocks)
-    return 0;
+    (*((Menu_PlayMusic_13() << 2) + &g_a96ae0))(arg1, arg2);
+    *(arg1 + 0x28) = 0x80;
+    *(arg1 + 0x2c) = 0x80;
+    *(arg1 + 0x54) = 0;
+    *(arg1 + 0x94) = 0;
+    *(arg1 + 0x98) = 0;
+    *(arg1 + 0x20) = 0x12c;
+    *(arg1 + 0x24) = 0xe6;
+    *(arg1 + 0x3c) = 1;
+    *(arg1 + 0x40) = 1;
+    *(arg1 + 0x21a0) = 0;
+    *(arg1 + 0x219c) = 0;
+    Script_ExecuteLevelScript_6(arg1 + 0x21a4);
+    return Script_ExecuteLevelScript_6(arg1 + 0x21f4);
 }

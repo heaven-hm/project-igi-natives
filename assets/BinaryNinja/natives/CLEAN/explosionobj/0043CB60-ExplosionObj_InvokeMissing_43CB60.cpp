@@ -2,8 +2,9 @@
 // Evidence: 0043CB60-ExplosionObj_InvokeMissing_43CB60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_InvokeMissing_43CB60.h"
 
-int32_t* ExplosionObj_InvokeMissing_43CB60(int32_t* context)
+int32_t* ExplosionObj_InvokeMissing_43CB60(int32_t* arg1)
+
 {
-    // Native implementation (0x43cb60-0x43cb6d, 1 blocks)
-    return 0;
+    *arg1 = g_57bf88;
+    return arg1;
 }

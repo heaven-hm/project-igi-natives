@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
-/* 004E94D0 Sound_Invoke2 | gate FAIL | openigi True */
-int32_t Sound_Invoke2();
+#include <stdbool.h>
+
+/* 004E94D0 Sound_Invoke2 | gate PASS | openigi True */
+int32_t j_Terrain_SampleHeightmap_2();

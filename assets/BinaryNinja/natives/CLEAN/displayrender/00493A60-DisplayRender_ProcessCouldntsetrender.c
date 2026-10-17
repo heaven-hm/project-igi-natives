@@ -3,7 +3,20 @@
 #include "DisplayRender_ProcessCouldntsetrender.h"
 
 int32_t DisplayRender_ProcessCouldntsetrender()
+
 {
-    // Native implementation (0x493a60-0x493ab1, 4 blocks)
-    return 0;
+    int32_t* 5ca114_1 = g_5ca114;
+    int32_t result = (*(*5ca114_1 + 0x50))(5ca114_1, 0x88, 1);
+
+    if (!result)
+        return result;
+
+    void var_400;
+    Game_DataSymbolLoad(&var_400, "Couldn't set renderstate");
+    int32_t var_414 = DDERR_GENERIC(result);
+    void* var_418 = &var_400;
+    Error_Show("%s\n\nDirectX error message: %s");
+
+    while (true)
+        /* nop */
 }

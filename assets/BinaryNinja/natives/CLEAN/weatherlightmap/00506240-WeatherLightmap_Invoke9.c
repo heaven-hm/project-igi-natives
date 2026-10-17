@@ -2,8 +2,27 @@
 // Evidence: 00506240-WeatherLightmap_Invoke9.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke9.h"
 
-void* WeatherLightmap_Invoke9(void* context)
+void* WeatherLightmap_Invoke9(void* arg1)
+
 {
-    // Native implementation (0x506240-0x506290, 6 blocks)
-    return 0;
+    if (!*(arg1 + 0xd4))
+    {
+        int32_t eax_1 = *(arg1 + 0xe4);
+
+        if (eax_1 != 0xffffffff)
+        {
+            int32_t a7ad08_1 = g_a7ad08;
+
+            if (eax_1 != a7ad08_1 - 1)
+            {
+                void* ecx_1 = *((a7ad08_1 << 2) + &g_a7a8f0);
+                *((eax_1 << 2) + &g_a7a8f4) = ecx_1;
+                *(ecx_1 + 0xe4) = eax_1;
+            }
+
+            g_a7ad08 -= 1;
+        }
+    }
+
+    return DynObj_RegisterSymbol_9(*(arg1 + 0x68), arg1);
 }

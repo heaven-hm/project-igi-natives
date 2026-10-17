@@ -2,8 +2,9 @@
 // Evidence: 0043F6E0-ExplosionObj_Invoke9_43F6E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke9_43F6E0.h"
 
-int32_t ExplosionObj_Invoke9_43F6E0(int32_t* context)
+int32_t ExplosionObj_Invoke9_43F6E0(int32_t* arg1)
+
 {
-    // Native implementation (0x43f6e0-0x43f6f7, 1 blocks)
-    return 0;
+    void* result_val = *arg1;
+    return FX_FireBallUpdate_9(result_val, result_val + 0x4ac);
 }

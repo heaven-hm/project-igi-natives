@@ -2,8 +2,20 @@
 // Evidence: 0046ABE0-PickupTrigger_InvokeGetActiveMode_46ABE0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeGetActiveMode_46ABE0.h"
 
-void* PickupTrigger_InvokeGetActiveMode_46ABE0(void* context)
+void* PickupTrigger_InvokeGetActiveMode_46ABE0(void* arg1)
+
 {
-    // Native implementation (0x46abe0-0x46ac27, 1 blocks)
-    return 0;
+    int32_t context_val;
+    int32_t var_4_1 = context_val;
+    float var_4 = g_c28b44;
+    long double x87_r7_1 = g_c28b48;
+    g_5be2b0 = arg1;
+    *(arg1 + 0x20) = 0;
+    *(arg1 + 0x2c) = 0;
+    *(arg1 + 0x24) = var_4 * 0.5f;
+    *(arg1 + 0x30) = 0;
+    *(arg1 + 0x34) = 0;
+    *(arg1 + 0x38) = 0;
+    *(arg1 + 0x28) = x87_r7_1 * 0.5f;
+    return arg1;
 }

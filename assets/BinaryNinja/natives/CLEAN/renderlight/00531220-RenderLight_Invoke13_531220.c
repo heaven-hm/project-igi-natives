@@ -2,8 +2,9 @@
 // Evidence: 00531220-RenderLight_Invoke13_531220.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_Invoke13_531220.h"
 
-int32_t RenderLight_Invoke13_531220(void* context)
+int32_t RenderLight_Invoke13_531220(void* arg1)
+
 {
-    // Native implementation (0x531220-0x531244, 1 blocks)
-    return 0;
+    return Render_DrawSplineMesh_13(arg1 + 0x20, arg1 + 0x68, *(arg1 + 0x74), arg1 + 0x78,
+        *(arg1 + 0x84));
 }

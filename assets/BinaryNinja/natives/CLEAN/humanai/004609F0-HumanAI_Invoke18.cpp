@@ -2,8 +2,9 @@
 // Evidence: 004609F0-HumanAI_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke18.h"
 
-int32_t HumanAI_Invoke18(int32_t context, bool* param_2)
+int32_t HumanAI_Invoke18(int32_t arg1, bool* arg2)
+
 {
-    // Native implementation (0x4609f0-0x460a05, 1 blocks)
-    return 0;
+    *arg2 = *(arg1 + 0xfc) == 1;
+    return arg1;
 }

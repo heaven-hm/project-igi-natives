@@ -2,8 +2,24 @@
 // Evidence: 004FD5E0-WeatherLightmap_GetContext_4FD5E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_GetContext_4FD5E0.h"
 
-void* WeatherLightmap_GetContext_4FD5E0(void* context)
+void* WeatherLightmap_GetContext_4FD5E0(void* arg1)
+
 {
-    // Native implementation (0x4fd5e0-0x4fd660, 1 blocks)
-    return 0;
+    *(arg1 + 0x88) = 0xffffffff;
+    *(arg1 + 0x90) = 0xffffffff;
+    *(arg1 + 0x98) = 0xffffffff;
+    *(arg1 + 0x8c) = 0x7fefffff;
+    *(arg1 + 0x94) = 0x7fefffff;
+    *(arg1 + 0x9c) = 0x7fefffff;
+    *(arg1 + 0xa0) = 0xffffffff;
+    *(arg1 + 0xa8) = 0xffffffff;
+    *(arg1 + 0xb0) = 0xffffffff;
+    *(arg1 + 0xa4) = 0xffefffff;
+    *(arg1 + 0xac) = 0xffefffff;
+    *(arg1 + 0xb4) = 0xffefffff;
+    __builtin_memset(arg1 + 0x6c, 0, 0x14);
+    *(arg1 + 0xf0) = 0;
+    *(arg1 + 0xfd) = 1;
+    *(arg1 + 0xfc) = 0;
+    return arg1;
 }

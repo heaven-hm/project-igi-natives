@@ -3,7 +3,10 @@
 #include "MathSys_DefaultHandler_4A9B39.h"
 
 int32_t MathSys_DefaultHandler_4A9B39()
+
 {
-    // Native implementation (0x4a9b39-0x4a9b3b, 1 blocks)
-    return 0;
+    char context_val;
+    void* frame_ptr;
+    /* tailcall */
+    return MathSys_ProcessStep_4A8C78(context_val, frame_ptr);
 }

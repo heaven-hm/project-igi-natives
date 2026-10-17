@@ -2,8 +2,9 @@
 // Evidence: 004E67B0-Sound_InvokeSoundFileSNotValidFo.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_InvokeSoundFileSNotValidFo.h"
 
-int32_t Sound_InvokeSoundFileSNotValidFo(int32_t* context)
+int32_t Sound_InvokeSoundFileSNotValidFo(int32_t* arg1)
+
 {
-    // Native implementation (0x4e67b0-0x4e67c4, 1 blocks)
-    return 0;
+    int32_t var_4 = arg1[1];
+    return Display_SoundFileSNotValidFo(*arg1);
 }

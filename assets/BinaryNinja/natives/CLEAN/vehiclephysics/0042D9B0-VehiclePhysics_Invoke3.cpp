@@ -2,8 +2,17 @@
 // Evidence: 0042D9B0-VehiclePhysics_Invoke3.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke3.h"
 
-int32_t VehiclePhysics_Invoke3(void* context, int32_t param_2)
+int32_t VehiclePhysics_Invoke3(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x42d9b0-0x42d9eb, 3 blocks)
-    return 0;
+    void* source_ptr = *(arg1 + 0x130);
+    uint32_t eax_1 = Level_LoadLevel_3();
+    int32_t data_val = 0;
+    data_val = *(source_ptr + 0x1c);
+    int32_t result = *(((eax_1 * 0x180 + data_val) << 2) + &g_a96ae0);
+
+    if (!result)
+        return result;
+
+    return result(source_ptr, arg2);
 }

@@ -2,8 +2,25 @@
 // Evidence: 00481E60-CombatState_ProcessStep_481E60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_ProcessStep_481E60.h"
 
-void* CombatState_ProcessStep_481E60(void* context, void* param_2)
+void* CombatState_ProcessStep_481E60(void* arg1, void* arg2)
+
 {
-    // Native implementation (0x481e60-0x481e99, 4 blocks)
-    return 0;
+    void* result;
+    result = *(arg1 + 0x190);
+
+    if (!result)
+    {
+        result = arg2;
+        long double x87_r7_2 = *(result + 4) + *(arg1 + 0x1e8);
+        *(arg1 + 0x1e8) = x87_r7_2;
+        long double temp0_1 = *(arg1 + 0x1ec);
+        x87_r7_2 - temp0_1;
+        result = (x87_r7_2 < temp0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, temp0_1) ? 1 : 0) << 0xa
+            | (x87_r7_2 == temp0_1 ? 1 : 0) << 0xe;
+
+        if (!(*(&result + 1) & 1))
+            *(arg1 + 0x1f4) = 0;
+    }
+
+    return result;
 }

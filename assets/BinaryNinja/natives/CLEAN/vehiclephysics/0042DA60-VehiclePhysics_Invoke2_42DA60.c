@@ -2,8 +2,9 @@
 // Evidence: 0042DA60-VehiclePhysics_Invoke2_42DA60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke2_42DA60.h"
 
-int32_t* VehiclePhysics_Invoke2_42DA60(int32_t* context)
+int32_t* VehiclePhysics_Invoke2_42DA60(int32_t* arg1)
+
 {
-    // Native implementation (0x42da60-0x42da6b, 1 blocks)
-    return 0;
+    *arg1 = 0x20;
+    return arg1;
 }

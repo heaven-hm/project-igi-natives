@@ -2,8 +2,9 @@
 // Evidence: 004E8B60-Sound_GetContext_4E8B60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_GetContext_4E8B60.h"
 
-int32_t* Sound_GetContext_4E8B60(void* context, int32_t* param_2)
+int32_t* Sound_GetContext_4E8B60(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4e8b60-0x4e8b71, 1 blocks)
-    return 0;
+    *(arg1 + 0xcc) = *arg2;
+    return arg2;
 }

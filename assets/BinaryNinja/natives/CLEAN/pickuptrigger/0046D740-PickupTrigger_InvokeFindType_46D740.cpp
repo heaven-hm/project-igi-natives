@@ -2,8 +2,13 @@
 // Evidence: 0046D740-PickupTrigger_InvokeFindType_46D740.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeFindType_46D740.h"
 
-int32_t* PickupTrigger_InvokeFindType_46D740(int32_t* context)
+int32_t* PickupTrigger_InvokeFindType_46D740(int32_t* arg1)
+
 {
-    // Native implementation (0x46d740-0x46d756, 3 blocks)
-    return 0;
+    int32_t* result = arg1;
+
+    if (*(result + 0x109))
+        result = QTask_FindType(result);
+
+    return result;
 }

@@ -2,8 +2,9 @@
 // Evidence: 0043F340-ExplosionObj_GetContext_43F340.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_GetContext_43F340.h"
 
-void* ExplosionObj_GetContext_43F340(void* context)
+void* ExplosionObj_GetContext_43F340(void* arg1)
+
 {
-    // Native implementation (0x43f340-0x43f351, 1 blocks)
-    return 0;
+    *(arg1 + 0x131) = *(arg1 + 0x130);
+    return arg1;
 }

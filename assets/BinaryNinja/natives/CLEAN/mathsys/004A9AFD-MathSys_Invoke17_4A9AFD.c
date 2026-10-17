@@ -2,8 +2,39 @@
 // Evidence: 004A9AFD-MathSys_Invoke17_4A9AFD.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke17_4A9AFD.h"
 
-long double __fastcall(int16_t context, void* param_2 )
+long double __fastcall MathSys_Invoke17_4A9AFD(int16_t arg1, void* arg2)
+
 {
-    // Native implementation (0x4a9afd-0x4a9b32, 8 blocks)
-    return 0;
+    long double x87_r0;
+    int32_t result_val = Camera_ApplyWideScreen_17(x87_r0);
+    arg1 = arg1;
+    long double 544540_1;
+
+    if (arg1)
+    {
+        *(arg2 - 0x90) = 2;
+        544540_1 = g_544540;
+
+        if (result_val == 1)
+        {
+            *(&arg1 + 1) = *(&arg1 + 1);
+
+            if (*(&arg1 + 1))
+                return -(544540_1);
+        }
+    }
+    else
+    {
+        544540_1 = 0;
+
+        if (result_val == 1)
+        {
+            *(&arg1 + 1) = *(&arg1 + 1);
+
+            if (*(&arg1 + 1))
+                return -(544540_1);
+        }
+    }
+
+    return 544540_1;
 }

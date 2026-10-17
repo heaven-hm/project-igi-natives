@@ -2,8 +2,9 @@
 // Evidence: 0046D040-PickupTrigger_InvokeInit.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeInit.h"
 
-int32_t* PickupTrigger_InvokeInit(int32_t* context)
+int32_t* PickupTrigger_InvokeInit(int32_t* arg1)
+
 {
-    // Native implementation (0x46d040-0x46d04d, 1 blocks)
-    return 0;
+    *arg1 = g_5be2f8;
+    return arg1;
 }

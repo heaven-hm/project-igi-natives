@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 0050AB50 AnimSpline_InvokeCouldnTGetSurfaceDes | gate PASS | openigi True */
-int32_t AnimSpline_InvokeCouldnTGetSurfaceDes(void* context);
+int32_t AnimSpline_InvokeCouldnTGetSurfaceDes(void* arg1);

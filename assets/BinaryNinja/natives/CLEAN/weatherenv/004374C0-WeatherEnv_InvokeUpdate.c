@@ -2,8 +2,9 @@
 // Evidence: 004374C0-WeatherEnv_InvokeUpdate.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherEnv_InvokeUpdate.h"
 
-int32_t* WeatherEnv_InvokeUpdate(int32_t* context)
+int32_t* WeatherEnv_InvokeUpdate(int32_t* arg1)
+
 {
-    // Native implementation (0x4374c0-0x4374cd, 1 blocks)
-    return 0;
+    *arg1 = g_57bda8;
+    return arg1;
 }

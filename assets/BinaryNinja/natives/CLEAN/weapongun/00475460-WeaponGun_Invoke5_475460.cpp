@@ -2,8 +2,9 @@
 // Evidence: 00475460-WeaponGun_Invoke5_475460.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_Invoke5_475460.h"
 
-int32_t WeaponGun_Invoke5_475460(void* context, int32_t param_2)
+int32_t WeaponGun_Invoke5_475460(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x475460-0x475494, 1 blocks)
-    return 0;
+    (*((Weapon_ComputeAccuracy_5() << 2) + &g_a96ae0))(arg1, arg2);
+    return Game_DataSymbolLoad(arg1 + 0x104, "WEAPON_ID_PROXIMITYMINE");
 }

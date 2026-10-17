@@ -2,8 +2,9 @@
 // Evidence: 0048EBE0-CombatState_ProcessWalkToNoded.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_ProcessWalkToNoded.h"
 
-void* CombatState_ProcessWalkToNoded(void* context)
+void* CombatState_ProcessWalkToNoded(void* arg1)
+
 {
-    // Native implementation (0x48ebe0-0x48ebec, 1 blocks)
-    return 0;
+    *(arg1 + 0x18) = FX_WalkToNodeD;
+    return arg1;
 }

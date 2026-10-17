@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 00492450 DisplayRender_ProcessCouldntclearscre | gate PASS | openigi True */
 int32_t* DisplayRender_ProcessCouldntclearscre();

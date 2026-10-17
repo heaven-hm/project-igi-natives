@@ -2,8 +2,9 @@
 // Evidence: 00433000-VehiclePhysics_Invoke4_433000.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke4_433000.h"
 
-int32_t VehiclePhysics_Invoke4_433000(int32_t context, int32_t* param_2)
+int32_t VehiclePhysics_Invoke4_433000(int32_t arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x433000-0x433010, 1 blocks)
-    return 0;
+    *arg2 = arg1 + 0x8c0;
+    return arg1 + 0x8c0;
 }

@@ -2,8 +2,9 @@
 // Evidence: 00502E80-WeatherLightmap_Invoke2_502E80.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke2_502E80.h"
 
-int32_t* WeatherLightmap_Invoke2_502E80(int32_t* context)
+int32_t* WeatherLightmap_Invoke2_502E80(int32_t* arg1)
+
 {
-    // Native implementation (0x502e80-0x502e8d, 1 blocks)
-    return 0;
+    *arg1 = g_a7a61c;
+    return arg1;
 }

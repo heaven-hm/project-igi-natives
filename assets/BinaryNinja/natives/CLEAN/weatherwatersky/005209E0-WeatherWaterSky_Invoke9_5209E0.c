@@ -2,8 +2,8 @@
 // Evidence: 005209E0-WeatherWaterSky_Invoke9_5209E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke9_5209E0.h"
 
-void* WeatherWaterSky_Invoke9_5209E0(void* context)
+void* WeatherWaterSky_Invoke9_5209E0(void* arg1)
+
 {
-    // Native implementation (0x5209e0-0x5209f5, 1 blocks)
-    return 0;
+    return DynObj_RegisterSymbol_9(*(arg1 + 0xf0), arg1);
 }

@@ -2,8 +2,9 @@
 // Evidence: 00502F90-WeatherLightmap_GetContext_502F90.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_GetContext_502F90.h"
 
-int32_t* WeatherLightmap_GetContext_502F90(int32_t* context)
+int32_t* WeatherLightmap_GetContext_502F90(int32_t* arg1)
+
 {
-    // Native implementation (0x502f90-0x502f9d, 1 blocks)
-    return 0;
+    *arg1 = g_a7a508;
+    return arg1;
 }

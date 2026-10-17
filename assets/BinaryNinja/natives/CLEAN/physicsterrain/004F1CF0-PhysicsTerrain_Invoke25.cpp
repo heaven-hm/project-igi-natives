@@ -2,8 +2,8 @@
 // Evidence: 004F1CF0-PhysicsTerrain_Invoke25.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_Invoke25.h"
 
-int32_t PhysicsTerrain_Invoke25(int32_t context)
+int32_t PhysicsTerrain_Invoke25(int32_t arg1)
+
 {
-    // Native implementation (0x4f1cf0-0x4f1d09, 1 blocks)
-    return 0;
+    return DynObj_LinkDynamicCube(Sys_CloseFileStream_25(), PhysicsTerrain_Invoke3, arg1);
 }

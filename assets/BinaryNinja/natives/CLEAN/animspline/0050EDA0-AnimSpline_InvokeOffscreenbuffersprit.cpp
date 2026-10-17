@@ -2,8 +2,11 @@
 // Evidence: 0050EDA0-AnimSpline_InvokeOffscreenbuffersprit.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_InvokeOffscreenbuffersprit.h"
 
-int32_t AnimSpline_InvokeOffscreenbuffersprit(float context)
+int32_t AnimSpline_InvokeOffscreenbuffersprit(float arg1)
+
 {
-    // Native implementation (0x50eda0-0x50edbc, 3 blocks)
-    return 0;
+    if (!*(arg1 + 0x42))
+        return Physics_EvaluateAreaCriteria_14(arg1);
+
+    return Physics_Offscreenbuffersprit(arg1);
 }

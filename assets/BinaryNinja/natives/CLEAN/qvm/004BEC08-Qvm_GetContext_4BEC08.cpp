@@ -2,8 +2,9 @@
 // Evidence: 004BEC08-Qvm_GetContext_4BEC08.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_GetContext_4BEC08.h"
 
-int32_t Qvm_GetContext_4BEC08(void* context, int32_t param_2)
+int32_t Qvm_GetContext_4BEC08(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x4bec08-0x4bec1c, 1 blocks)
-    return 0;
+    /* tailcall */
+    return Sys_ExecuteBytecode_30(arg1, arg2);
 }

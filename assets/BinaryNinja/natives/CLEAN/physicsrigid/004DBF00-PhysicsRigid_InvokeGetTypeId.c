@@ -2,8 +2,20 @@
 // Evidence: 004DBF00-PhysicsRigid_InvokeGetTypeId.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_InvokeGetTypeId.h"
 
-void* PhysicsRigid_InvokeGetTypeId(void* context, int32_t* param_2)
+void* PhysicsRigid_InvokeGetTypeId(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4dbf00-0x4dbf2b, 3 blocks)
-    return 0;
+    void* result_val = *arg2;
+
+    if (!result_val)
+    {
+        arg2[1] = 0;
+        return result_val;
+    }
+
+    int32_t eax_1 = *(result_val + 4);
+    int32_t data_val = 0;
+    data_val = eax_1 == *(arg1 + 0x6c);
+    arg2[1] = data_val;
+    return eax_1;
 }

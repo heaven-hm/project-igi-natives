@@ -2,8 +2,15 @@
 // Evidence: 0042FC50-VehiclePhysics_Invoke12_42FC50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke12_42FC50.h"
 
-char* VehiclePhysics_Invoke12_42FC50(int32_t context, char* param_2)
+char* VehiclePhysics_Invoke12_42FC50(int32_t arg1, char* arg2)
+
 {
-    // Native implementation (0x42fc50-0x42fc6a, 4 blocks)
-    return 0;
+    if (*(arg2 + 8) != arg1 && *(arg2 + 0xc) != arg1)
+    {
+        *arg2 = 1;
+        return arg2;
+    }
+
+    *arg2 = 0;
+    return arg2;
 }

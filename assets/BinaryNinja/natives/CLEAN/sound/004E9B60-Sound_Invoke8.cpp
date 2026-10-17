@@ -2,8 +2,13 @@
 // Evidence: 004E9B60-Sound_Invoke8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke8.h"
 
-void* Sound_Invoke8(void* context)
+void* Sound_Invoke8(void* arg1)
+
 {
-    // Native implementation (0x4e9b60-0x4e9b76, 3 blocks)
-    return 0;
+    void* result = arg1;
+
+    if (!*(result + 0xe2))
+        result = SoundSys_PlaySoundSample_8(result);
+
+    return result;
 }

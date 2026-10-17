@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 004191F0 MenuUI_Invoke6 | gate PASS | openigi True */
-void* MenuUI_Invoke6(void* context);
+void* MenuUI_Invoke6(void* arg1);

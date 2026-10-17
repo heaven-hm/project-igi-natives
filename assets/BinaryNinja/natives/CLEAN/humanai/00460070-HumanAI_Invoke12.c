@@ -2,8 +2,8 @@
 // Evidence: 00460070-HumanAI_Invoke12.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke12.h"
 
-int32_t HumanAI_Invoke12(int32_t context)
+int32_t HumanAI_Invoke12(int32_t arg1)
+
 {
-    // Native implementation (0x460070-0x460085, 1 blocks)
-    return 0;
+    return Table_GetAt(arg1 + 0x4c4, 0);
 }

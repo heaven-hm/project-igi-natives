@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 00474ED0 WeaponGun_GetContext_474ED0 | gate PASS | openigi True */
-int32_t* WeaponGun_GetContext_474ED0(int32_t* context);
+int32_t* WeaponGun_GetContext_474ED0(int32_t* arg1);

@@ -2,8 +2,9 @@
 // Evidence: 00504C40-WeatherLightmap_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke5.h"
 
-int32_t* WeatherLightmap_Invoke5(int32_t* context)
+int32_t* WeatherLightmap_Invoke5(int32_t* arg1)
+
 {
-    // Native implementation (0x504c40-0x504c4d, 1 blocks)
-    return 0;
+    *arg1 = g_ba8080;
+    return arg1;
 }

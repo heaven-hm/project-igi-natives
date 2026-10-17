@@ -2,8 +2,9 @@
 // Evidence: 0050A430-AnimSpline_Invoke4_50A430.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_Invoke4_50A430.h"
 
-int32_t AnimSpline_Invoke4_50A430(void* context)
+int32_t AnimSpline_Invoke4_50A430(void* arg1)
+
 {
-    // Native implementation (0x50a430-0x50a44c, 1 blocks)
-    return 0;
+    *(arg1 + 0xa8) = 0;
+    return Camera_UpdateTransform_4(*(arg1 + 0x98));
 }

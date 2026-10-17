@@ -2,8 +2,9 @@
 // Evidence: 004881F0-CombatState_InvokeIsexists_4881F0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_InvokeIsexists_4881F0.h"
 
-int32_t* CombatState_InvokeIsexists_4881F0(int32_t* context)
+int32_t* CombatState_InvokeIsexists_4881F0(int32_t* arg1)
+
 {
-    // Native implementation (0x4881f0-0x4881fd, 1 blocks)
-    return 0;
+    *arg1 = g_5c8a88;
+    return arg1;
 }

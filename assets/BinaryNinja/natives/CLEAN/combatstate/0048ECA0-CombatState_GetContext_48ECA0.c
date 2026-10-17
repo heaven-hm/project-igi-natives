@@ -2,8 +2,12 @@
 // Evidence: 0048ECA0-CombatState_GetContext_48ECA0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_GetContext_48ECA0.h"
 
-void* CombatState_GetContext_48ECA0(void* context)
+void* CombatState_GetContext_48ECA0(void* arg1)
+
 {
-    // Native implementation (0x48eca0-0x48ecba, 1 blocks)
-    return 0;
+    void* result = *(arg1 + 0x28);
+    *(arg1 + 0x18) = FX_FireBallUpdate_21;
+    *(result + 0x19) = 0;
+    *(result + 0x14) = 0xffffffff;
+    return result;
 }

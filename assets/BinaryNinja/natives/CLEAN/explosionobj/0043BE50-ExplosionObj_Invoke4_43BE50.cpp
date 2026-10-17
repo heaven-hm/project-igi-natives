@@ -2,8 +2,9 @@
 // Evidence: 0043BE50-ExplosionObj_Invoke4_43BE50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke4_43BE50.h"
 
-int32_t* ExplosionObj_Invoke4_43BE50(int32_t* context)
+int32_t* ExplosionObj_Invoke4_43BE50(int32_t* arg1)
+
 {
-    // Native implementation (0x43be50-0x43be5d, 1 blocks)
-    return 0;
+    *arg1 = g_57bf60;
+    return arg1;
 }

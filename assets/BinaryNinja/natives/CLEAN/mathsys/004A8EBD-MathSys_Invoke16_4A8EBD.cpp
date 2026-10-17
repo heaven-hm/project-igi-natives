@@ -2,9 +2,8 @@
 // Evidence: 004A8EBD-MathSys_Invoke16_4A8EBD.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke16_4A8EBD.h"
 
-void MathSys_Invoke16_4A8EBD()
-{
+void MathSys_Invoke16_4A8EBD() __noreturn
 
-    // Native implementation (0x4a8ebd-0x4a8ee2, 1 blocks)
-    return 0;
+{
+    trap(6);
 }

@@ -2,8 +2,9 @@
 // Evidence: 0042DCE0-VehiclePhysics_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke5.h"
 
-int32_t* VehiclePhysics_Invoke5(int32_t* context)
+int32_t* VehiclePhysics_Invoke5(int32_t* arg1)
+
 {
-    // Native implementation (0x42dce0-0x42dceb, 1 blocks)
-    return 0;
+    *arg1 = 0x2c0;
+    return arg1;
 }

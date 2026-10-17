@@ -2,8 +2,10 @@
 // Evidence: 0051C090-WeatherWaterSky_InvokeUpdateList.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeUpdateList.h"
 
-void* WeatherWaterSky_InvokeUpdateList(void* context)
+void* WeatherWaterSky_InvokeUpdateList(void* arg1)
+
 {
-    // Native implementation (0x51c090-0x51c09d, 1 blocks)
-    return 0;
+    *(arg1 + 0x20) = 0;
+    *(arg1 + 0x40) = 0;
+    return arg1;
 }

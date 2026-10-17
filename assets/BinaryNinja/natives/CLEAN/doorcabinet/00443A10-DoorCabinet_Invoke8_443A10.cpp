@@ -2,8 +2,10 @@
 // Evidence: 00443A10-DoorCabinet_Invoke8_443A10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_Invoke8_443A10.h"
 
-int32_t DoorCabinet_Invoke8_443A10(void* context, int32_t param_2)
+int32_t DoorCabinet_Invoke8_443A10(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x443a10-0x443a52, 1 blocks)
+    (*(((Script_ParseEnumReal32_8() * 0x180 + FX_TrailUpdate()) << 2) + &g_a96ae0))(arg1, arg2);
+    Script_Isexists(arg1 + 0x250, arg1);
     return 0;
 }

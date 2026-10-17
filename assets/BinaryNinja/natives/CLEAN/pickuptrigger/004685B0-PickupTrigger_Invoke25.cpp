@@ -2,8 +2,9 @@
 // Evidence: 004685B0-PickupTrigger_Invoke25.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_Invoke25.h"
 
-int32_t* PickupTrigger_Invoke25(int32_t* context)
+int32_t* PickupTrigger_Invoke25(int32_t* arg1)
+
 {
-    // Native implementation (0x4685b0-0x4685bd, 1 blocks)
-    return 0;
+    *arg1 = g_5bdc84;
+    return arg1;
 }

@@ -2,8 +2,9 @@
 // Evidence: 004E4280-Sound_Invoke13.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke13.h"
 
-char* Sound_Invoke13(char* context)
+char* Sound_Invoke13(char* arg1)
+
 {
-    // Native implementation (0x4e4280-0x4e4288, 1 blocks)
-    return 0;
+    *arg1 = 1;
+    return arg1;
 }

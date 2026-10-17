@@ -2,8 +2,9 @@
 // Evidence: 0051B4E0-WeatherWaterSky_InvokeFormatString.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeFormatString.h"
 
-int32_t* WeatherWaterSky_InvokeFormatString(int32_t* context)
+int32_t* WeatherWaterSky_InvokeFormatString(int32_t* arg1)
+
 {
-    // Native implementation (0x51b4e0-0x51b4eb, 1 blocks)
-    return 0;
+    *arg1 = 0x21;
+    return arg1;
 }

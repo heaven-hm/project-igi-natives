@@ -2,8 +2,8 @@
 // Evidence: 0044A1A0-DoorCabinet_InvokeFindType.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_InvokeFindType.h"
 
-int32_t DoorCabinet_InvokeFindType(void* context)
+int32_t DoorCabinet_InvokeFindType(void* arg1)
+
 {
-    // Native implementation (0x44a1a0-0x44a1b2, 1 blocks)
-    return 0;
+    return QTask_FindType(*(arg1 + 0x2b040));
 }

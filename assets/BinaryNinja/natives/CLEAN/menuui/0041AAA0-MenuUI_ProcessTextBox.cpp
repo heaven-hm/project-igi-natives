@@ -2,8 +2,11 @@
 // Evidence: 0041AAA0-MenuUI_ProcessTextBox.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_ProcessTextBox.h"
 
-void* MenuUI_ProcessTextBox(void* context)
+void* MenuUI_ProcessTextBox(void* arg1)
+
 {
-    // Native implementation (0x41aaa0-0x41aab3, 3 blocks)
-    return 0;
+    if (*(arg1 + 0x54))
+        *(arg1 + 0x54) = 0;
+
+    return arg1;
 }

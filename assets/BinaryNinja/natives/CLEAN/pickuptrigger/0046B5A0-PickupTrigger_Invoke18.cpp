@@ -2,8 +2,13 @@
 // Evidence: 0046B5A0-PickupTrigger_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_Invoke18.h"
 
-int32_t* PickupTrigger_Invoke18(void* context)
+int32_t* PickupTrigger_Invoke18(void* arg1)
+
 {
-    // Native implementation (0x46b5a0-0x46b5b6, 3 blocks)
-    return 0;
+    int32_t* result = *(arg1 + 0x84);
+
+    if (result)
+        result = Sys_ReadFileBlock_18(result);
+
+    return result;
 }

@@ -2,8 +2,9 @@
 // Evidence: 00428270-VehiclePhysics_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke18.h"
 
-int32_t VehiclePhysics_Invoke18(float context)
+int32_t VehiclePhysics_Invoke18(float arg1)
+
 {
-    // Native implementation (0x428270-0x42827c, 1 blocks)
+    Menu_HandleInput_18(arg1);
     return 0;
 }

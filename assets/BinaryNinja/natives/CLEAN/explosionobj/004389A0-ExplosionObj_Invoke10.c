@@ -2,8 +2,11 @@
 // Evidence: 004389A0-ExplosionObj_Invoke10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke10.h"
 
-int32_t ExplosionObj_Invoke10(void* context, int32_t param_2)
+int32_t ExplosionObj_Invoke10(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x4389a0-0x4389d7, 1 blocks)
-    return 0;
+    int32_t result = (*((Env_InitLadder_10() << 2) + &g_a96ae0))(arg1, arg2);
+    *(arg1 + 0x2a8) = 0x3f400000;
+    *(arg1 + 0x2ac) = 0xffffffff;
+    return result;
 }

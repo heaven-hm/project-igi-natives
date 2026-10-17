@@ -2,8 +2,10 @@
 // Evidence: 004484F0-DoorCabinet_GetContext_4484F0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_GetContext_4484F0.h"
 
-void* DoorCabinet_GetContext_4484F0(void* context)
+void* DoorCabinet_GetContext_4484F0(void* arg1)
+
 {
-    // Native implementation (0x4484f0-0x44850b, 1 blocks)
-    return 0;
+    *(arg1 + 0x239) = 1;
+    *(arg1 + 0x23c) = *(g_bc2360 + 0x68);
+    return arg1;
 }

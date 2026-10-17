@@ -2,8 +2,9 @@
 // Evidence: 00442730-DoorCabinet_InvokeMissing.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_InvokeMissing.h"
 
-int32_t* DoorCabinet_InvokeMissing(int32_t* context)
+int32_t* DoorCabinet_InvokeMissing(int32_t* arg1)
+
 {
-    // Native implementation (0x442730-0x44273d, 1 blocks)
-    return 0;
+    *arg1 = g_57c184;
+    return arg1;
 }

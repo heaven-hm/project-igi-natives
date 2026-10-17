@@ -3,7 +3,7 @@
 #include "PickupTrigger_Invoke29_46AE20.h"
 
 int32_t PickupTrigger_Invoke29_46AE20()
+
 {
-    // Native implementation (0x46ae20-0x46ae2b, 1 blocks)
-    return 0;
+    g_5be2b0 = 0;
 }

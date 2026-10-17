@@ -2,7 +2,10 @@
 // Evidence: 004A910E-MathSys_Invoke16_4A910E.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke16_4A910E.h"
 
-long double(long double context , long double param_2 ) {
-    // Native implementation (0x4a910e-0x4a912e, 1 blocks)
-    return 0;
+int32_t MathSys_Invoke16_4A910E(long double arg1, int80_t arg2) __location("st0")
+
+{
+    return_address = arg2;
+    int16_t x87control;
+    return Camera_ApplyLineFilter_16(x87control, return_address, arg1);
 }

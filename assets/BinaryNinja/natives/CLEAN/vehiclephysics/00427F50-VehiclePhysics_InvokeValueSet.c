@@ -2,8 +2,14 @@
 // Evidence: 00427F50-VehiclePhysics_InvokeValueSet.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_InvokeValueSet.h"
 
-int32_t VehiclePhysics_InvokeValueSet(long double context , long double param_2 , int32_t* param_3)
+int32_t VehiclePhysics_InvokeValueSet(long double arg1, long double arg2, int32_t* arg3)
+
 {
-    // Native implementation (0x427f50-0x427f7f, 1 blocks)
-    return 0;
+    float dest_ptr = arg3[2];
+    float* base_val = *arg3;
+    Profile_ValueSet(arg3[1], dest_ptr);
+    *base_val = arg1;
+    int32_t result = Profile_ValueSet(arg3[1], dest_ptr + 1);
+    base_val[1] = arg2;
+    return result;
 }

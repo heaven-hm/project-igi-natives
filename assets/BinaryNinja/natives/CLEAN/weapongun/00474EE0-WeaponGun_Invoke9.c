@@ -2,8 +2,16 @@
 // Evidence: 00474EE0-WeaponGun_Invoke9.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_Invoke9.h"
 
-int32_t* WeaponGun_Invoke9(void* context, int32_t* param_2)
+int32_t* WeaponGun_Invoke9(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x474ee0-0x474f0b, 3 blocks)
-    return 0;
+    if (arg2[0x11])
+    {
+        *(arg1 + 0x21c) = 1;
+        return arg2;
+    }
+
+    *(arg1 + 0x208) = *arg2;
+    *(arg1 + 0x21c) = 1;
+    return arg1;
 }

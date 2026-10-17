@@ -2,8 +2,9 @@
 // Evidence: 0045F880-HumanAI_InvokeMissing.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_InvokeMissing.h"
 
-int32_t* HumanAI_InvokeMissing(int32_t* context)
+int32_t* HumanAI_InvokeMissing(int32_t* arg1)
+
 {
-    // Native implementation (0x45f880-0x45f88d, 1 blocks)
-    return 0;
+    *arg1 = g_5bdc18;
+    return arg1;
 }

@@ -2,8 +2,18 @@
 // Evidence: 00424260-MenuUI_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke5.h"
 
-char* MenuUI_Invoke5(void* context, char* param_2)
+char* MenuUI_Invoke5(void* arg1, char* arg2)
+
 {
-    // Native implementation (0x424260-0x424280, 5 blocks)
-    return 0;
+    char* result = arg2;
+
+    if (!result || !*result)
+    {
+        result = *(arg1 + 0x44);
+
+        if (result)
+            result = Menu_RequestScreen_5(result);
+    }
+
+    return result;
 }

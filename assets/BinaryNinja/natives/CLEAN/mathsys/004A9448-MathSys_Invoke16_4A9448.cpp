@@ -2,7 +2,14 @@
 // Evidence: 004A9448-MathSys_Invoke16_4A9448.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke16_4A9448.h"
 
-long double __stdcall(long double context , int32_t param_2) {
-    // Native implementation (0x4a9448-0x4a947c, 3 blocks)
-    return 0;
+int32_t __stdcall MathSys_Invoke16_4A9448(long double arg1, int32_t arg2) __location("st0")
+
+{
+    int32_t result_val;
+    bool c0;
+    bool c1;
+    bool c2;
+    bool c3;
+    result_val = (c0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9 | (c2 ? 1 : 0) << 0xa | (c3 ? 1 : 0) << 0xe;
+    return Camera_ApplyWideScreen_16(arg2, arg1);
 }

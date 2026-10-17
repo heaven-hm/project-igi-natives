@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 004FEA60 WeatherLightmap_Invoke3 | gate PASS | openigi True */
-void WeatherLightmap_Invoke3(void* context);
+void WeatherLightmap_Invoke3(void* arg1);

@@ -2,8 +2,9 @@
 // Evidence: 0048EC40-CombatState_ProcessRunToNoded.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_ProcessRunToNoded.h"
 
-void* CombatState_ProcessRunToNoded(void* context)
+void* CombatState_ProcessRunToNoded(void* arg1)
+
 {
-    // Native implementation (0x48ec40-0x48ec4c, 1 blocks)
-    return 0;
+    *(arg1 + 0x18) = FX_RunToNodeD;
+    return arg1;
 }

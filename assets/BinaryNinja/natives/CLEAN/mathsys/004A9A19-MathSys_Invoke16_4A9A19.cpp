@@ -2,7 +2,11 @@
 // Evidence: 004A9A19-MathSys_Invoke16_4A9A19.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke16_4A9A19.h"
 
-long double() {
-    // Native implementation (0x4a9a19-0x4a9a1f, 1 blocks)
-    return 0;
+int32_t MathSys_Invoke16_4A9A19() __location("st0")
+
+{
+    int16_t x87control;
+    long double x87_r0;
+    long double x87_r1;
+    return Camera_ResetMatrix_16(x87control, x87_r0, x87_r1);
 }

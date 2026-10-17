@@ -2,8 +2,11 @@
 // Evidence: 00436090-WeatherEnv_InvokeValueSet.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherEnv_InvokeValueSet.h"
 
-int32_t WeatherEnv_InvokeValueSet(long double context , int32_t* param_2)
+int32_t WeatherEnv_InvokeValueSet(long double arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x436090-0x4360ab, 1 blocks)
-    return 0;
+    float* source_ptr = *arg2;
+    int32_t result = Profile_ValueSet(arg2[1], arg2[2]);
+    *source_ptr = arg1;
+    return result;
 }

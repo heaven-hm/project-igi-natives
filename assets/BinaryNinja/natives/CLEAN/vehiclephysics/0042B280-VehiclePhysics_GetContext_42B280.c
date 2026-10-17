@@ -2,8 +2,13 @@
 // Evidence: 0042B280-VehiclePhysics_GetContext_42B280.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_GetContext_42B280.h"
 
-char* VehiclePhysics_GetContext_42B280(void* context, int32_t* param_2)
+char* VehiclePhysics_GetContext_42B280(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x42b280-0x42b2b9, 1 blocks)
-    return 0;
+    int32_t* result_val = *arg2;
+    *(arg1 + 0x764) = *result_val;
+    *(arg1 + 0x768) = result_val[1];
+    *(arg1 + 0x720) = result_val[2];
+    *(arg1 + 0x730) = result_val[3];
+    return Menu_LeaveMenus_21(arg1, 0);
 }

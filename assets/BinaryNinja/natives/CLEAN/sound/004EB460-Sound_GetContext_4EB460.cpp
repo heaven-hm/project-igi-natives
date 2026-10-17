@@ -2,8 +2,9 @@
 // Evidence: 004EB460-Sound_GetContext_4EB460.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_GetContext_4EB460.h"
 
-void* Sound_GetContext_4EB460(void* context)
+void* Sound_GetContext_4EB460(void* arg1)
+
 {
-    // Native implementation (0x4eb460-0x4eb469, 1 blocks)
-    return 0;
+    *(arg1 + 0x21) = 1;
+    return arg1;
 }

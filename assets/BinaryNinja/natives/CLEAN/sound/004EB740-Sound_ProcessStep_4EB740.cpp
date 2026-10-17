@@ -2,8 +2,11 @@
 // Evidence: 004EB740-Sound_ProcessStep_4EB740.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_ProcessStep_4EB740.h"
 
-char* Sound_ProcessStep_4EB740(void* context, char** param_2)
+char* Sound_ProcessStep_4EB740(void* arg1, char** arg2)
+
 {
-    // Native implementation (0x4eb740-0x4eb753, 3 blocks)
-    return 0;
+    if (*(arg1 + 0x22))
+        *arg2 = arg1 + 0x22;
+
+    return arg1 + 0x22;
 }

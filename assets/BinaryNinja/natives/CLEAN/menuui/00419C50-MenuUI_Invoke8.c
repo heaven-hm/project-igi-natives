@@ -2,8 +2,9 @@
 // Evidence: 00419C50-MenuUI_Invoke8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke8.h"
 
-int32_t MenuUI_Invoke8(int32_t context, int32_t param_2)
+int32_t MenuUI_Invoke8(int32_t arg1, int32_t arg2)
+
 {
-    // Native implementation (0x419c50-0x419c85, 1 blocks)
-    return 0;
+    return (*(((Script_ParseEnumReal32_8() * 0x180 + Menu_PlayMusic_13()) << 2) + &g_a96ae0))(arg1,
+        arg2);
 }

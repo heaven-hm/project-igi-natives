@@ -2,8 +2,9 @@
 // Evidence: 004723D0-WeaponGun_InvokeIsexists.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_InvokeIsexists.h"
 
-int32_t* WeaponGun_InvokeIsexists(int32_t* context)
+int32_t* WeaponGun_InvokeIsexists(int32_t* arg1)
+
 {
-    // Native implementation (0x4723d0-0x4723dd, 1 blocks)
-    return 0;
+    *arg1 = g_5be348;
+    return arg1;
 }

@@ -2,8 +2,8 @@
 // Evidence: 00497950-DisplayRender_Invoke2_497950.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_Invoke2_497950.h"
 
-int32_t DisplayRender_Invoke2_497950(int32_t* context)
+int32_t DisplayRender_Invoke2_497950(int32_t* arg1)
+
 {
-    // Native implementation (0x497950-0x49796b, 1 blocks)
-    return 0;
+    return Sys_CheckHeap_2(*arg1, g_543a68, DisplayRender_ProcessTransContextPrim);
 }

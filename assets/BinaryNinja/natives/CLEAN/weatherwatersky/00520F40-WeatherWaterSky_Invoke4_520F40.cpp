@@ -2,8 +2,9 @@
 // Evidence: 00520F40-WeatherWaterSky_Invoke4_520F40.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke4_520F40.h"
 
-int32_t* WeatherWaterSky_Invoke4_520F40(int32_t* context)
+int32_t* WeatherWaterSky_Invoke4_520F40(int32_t* arg1)
+
 {
-    // Native implementation (0x520f40-0x520f4d, 1 blocks)
-    return 0;
+    *arg1 = g_a8389c;
+    return arg1;
 }

@@ -2,8 +2,10 @@
 // Evidence: 004FEB50-WeatherLightmap_Invoke4_4FEB50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke4_4FEB50.h"
 
-void* WeatherLightmap_Invoke4_4FEB50(void* context)
+void* WeatherLightmap_Invoke4_4FEB50(void* arg1)
+
 {
-    // Native implementation (0x4feb50-0x4feb6d, 1 blocks)
-    return 0;
+    void* result = Script_SpawnNewTask_32(arg1, Script_SpawnNewTask_4());
+    *(arg1 + 0x124) = 0;
+    return result;
 }

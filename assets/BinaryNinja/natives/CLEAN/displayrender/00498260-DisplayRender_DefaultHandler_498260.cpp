@@ -3,7 +3,9 @@
 #include "DisplayRender_DefaultHandler_498260.h"
 
 int32_t DisplayRender_DefaultHandler_498260()
+
 {
-    // Native implementation (0x498260-0x498289, 1 blocks)
+    int32_t ecx_1 = (g_bcaaa4 * g_bcaaa0) << 2;
+    __builtin_memset(__builtin_memset(g_bcaaa8, 0, ecx_1 & 0xfffffffc), 0, ecx_1 & 3);
     return 0;
 }

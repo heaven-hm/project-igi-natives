@@ -2,8 +2,18 @@
 // Evidence: 004DA270-PhysicsRigid_ProcessStep_4DA270.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_ProcessStep_4DA270.h"
 
-int32_t PhysicsRigid_ProcessStep_4DA270(void* context)
+int32_t PhysicsRigid_ProcessStep_4DA270(void* arg1)
+
 {
-    // Native implementation (0x4da270-0x4da291, 3 blocks)
-    return 0;
+    int32_t result = *(arg1 + 0x8c);
+
+    if (!result)
+    {
+        int32_t a5e2fc_1 = g_a5e2fc;
+        *((a5e2fc_1 << 2) + &g_a54694) = arg1;
+        result = a5e2fc_1 + 1;
+        g_a5e2fc = result;
+    }
+
+    return result;
 }

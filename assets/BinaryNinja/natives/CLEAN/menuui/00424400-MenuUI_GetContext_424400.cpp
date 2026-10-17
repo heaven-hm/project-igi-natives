@@ -2,8 +2,11 @@
 // Evidence: 00424400-MenuUI_GetContext_424400.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_GetContext_424400.h"
 
-char* MenuUI_GetContext_424400(void* context, char* param_2)
+char* MenuUI_GetContext_424400(void* arg1, char* arg2)
+
 {
-    // Native implementation (0x424400-0x424418, 1 blocks)
-    return 0;
+    *arg2 = 1;
+    *(arg2 + 4) = *(arg1 + 0x28);
+    *(arg2 + 8) = *(arg1 + 0x2c);
+    return arg2;
 }

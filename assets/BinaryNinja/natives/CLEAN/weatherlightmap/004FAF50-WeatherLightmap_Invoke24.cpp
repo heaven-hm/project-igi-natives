@@ -2,8 +2,10 @@
 // Evidence: 004FAF50-WeatherLightmap_Invoke24.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke24.h"
 
-char* WeatherLightmap_Invoke24(int32_t* context)
+char* WeatherLightmap_Invoke24(int32_t* arg1)
+
 {
-    // Native implementation (0x4faf50-0x4faf7c, 1 blocks)
-    return 0;
+    __builtin_memset(&g_a77260, 0, 0x240);
+    arg1[2] = 0;
+    return Script_ParseEnumString_24(arg1, &g_a77260, 0);
 }

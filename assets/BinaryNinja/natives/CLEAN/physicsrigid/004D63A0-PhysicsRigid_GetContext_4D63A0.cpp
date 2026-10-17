@@ -2,8 +2,8 @@
 // Evidence: 004D63A0-PhysicsRigid_GetContext_4D63A0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_GetContext_4D63A0.h"
 
-long double(void* context)
+long double PhysicsRigid_GetContext_4D63A0(void* arg1)
+
 {
-    // Native implementation (0x4d63a0-0x4d63a8, 1 blocks)
-    return 0;
+    return *(arg1 + 8);
 }

@@ -2,8 +2,9 @@
 // Evidence: 004F0700-PhysicsTerrain_GetParam_4F0700.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_GetParam_4F0700.h"
 
-int32_t PhysicsTerrain_GetParam_4F0700(int32_t context)
+int32_t PhysicsTerrain_GetParam_4F0700(int32_t arg1)
+
 {
-    // Native implementation (0x4f0700-0x4f070a, 1 blocks)
-    return 0;
+    data_a758b4 = arg1;
+    return arg1;
 }

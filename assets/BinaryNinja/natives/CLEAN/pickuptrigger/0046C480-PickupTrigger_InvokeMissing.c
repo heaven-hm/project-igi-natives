@@ -2,8 +2,9 @@
 // Evidence: 0046C480-PickupTrigger_InvokeMissing.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeMissing.h"
 
-int32_t* PickupTrigger_InvokeMissing(int32_t* context)
+int32_t* PickupTrigger_InvokeMissing(int32_t* arg1)
+
 {
-    // Native implementation (0x46c480-0x46c48d, 1 blocks)
-    return 0;
+    *arg1 = g_5be2d4;
+    return arg1;
 }

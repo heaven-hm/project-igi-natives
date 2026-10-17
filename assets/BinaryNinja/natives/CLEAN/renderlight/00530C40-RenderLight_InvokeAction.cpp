@@ -2,8 +2,8 @@
 // Evidence: 00530C40-RenderLight_InvokeAction.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_InvokeAction.h"
 
-int32_t RenderLight_InvokeAction(void* context)
+int32_t RenderLight_InvokeAction(void* arg1)
+
 {
-    // Native implementation (0x530c40-0x530c55, 1 blocks)
-    return 0;
+    return SpriteParticleSystemDynCubeObj_Action(*(arg1 + 0x24), *(arg1 + 0x20));
 }

@@ -2,8 +2,15 @@
 // Evidence: 004A5DAA-MathSys_ProcessStep_4A5DAA.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_ProcessStep_4A5DAA.h"
 
-int32_t MathSys_ProcessStep_4A5DAA()
+🌐  int32_t __abnormal_termination()
+
 {
-    // Native implementation (0x4a5daa-0x4a5dcd, 4 blocks)
+    TEB* fsbase;
+    struct _EXCEPTION_REGISTRATION_RECORD* ExceptionList = fsbase->NtTib.ExceptionList;
+
+    if (ExceptionList->Handler == MathSys_Invoke7
+            && *(ExceptionList + 8) == *(*(ExceptionList + 0xc) + 0xc))
+        return 1;
+
     return 0;
 }

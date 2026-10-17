@@ -2,8 +2,14 @@
 // Evidence: 00410960-HumanPlayer_InvokeRunUpdate.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_InvokeRunUpdate.h"
 
-void* HumanPlayer_InvokeRunUpdate(int32_t context, void* param_2)
+void* HumanPlayer_InvokeRunUpdate(int32_t arg1, void* arg2)
+
 {
-    // Native implementation (0x410960-0x41099f, 3 blocks)
-    return 0;
+    if (!*(arg1 + 0x250))
+    {
+        __builtin_memcpy(arg1 + 0x110, arg1 + 0x1b0, 0xa0);
+        __builtin_memcpy(arg1 + 0x1b0, *(arg2 + 4), 0xa0);
+    }
+
+    return HumanPlayer_RunUpdate(arg1);
 }

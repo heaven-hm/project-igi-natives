@@ -2,8 +2,10 @@
 // Evidence: 00480F30-CombatState_GetContext_480F30.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_GetContext_480F30.h"
 
-void* CombatState_GetContext_480F30(void* context)
+void* CombatState_GetContext_480F30(void* arg1)
+
 {
-    // Native implementation (0x480f30-0x480f40, 1 blocks)
-    return 0;
+    *(arg1 + 0x40) = 0;
+    *(arg1 + 0x84) = 0;
+    return arg1;
 }

@@ -2,8 +2,24 @@
 // Evidence: 004A9C05-MathSys_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke18.h"
 
-long double(int16_t context , int16_t param_2 , int16_t param_3 , long double param_4 , long double param_5 )
+long double MathSys_Invoke18(int16_t arg1, int16_t arg2, int16_t arg3, long double arg4, long double arg5)
+
 {
-    // Native implementation (0x4a9c05-0x4a9c37, 3 blocks)
-    return 0;
+    int16_t x87control;
+    int16_t x87status;
+    int16_t x87tag;
+    uint864_t temp0;
+    temp0 = __fnsave_memmem108(arg1, arg3, arg2);
+    double var_78;
+    int32_t result_val;
+    char context_val;
+    result_val = Camera_ResetMatrix_18(arg5, arg4, &var_78);
+    __frstor_memmem108(temp0);
+
+    if (!result_val)
+        return var_78;
+
+    void* frame_ptr;
+    /* tailcall */
+    return Camera_SetFieldOfView_16(context_val, frame_ptr);
 }

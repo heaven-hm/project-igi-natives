@@ -2,8 +2,9 @@
 // Evidence: 004EF850-PhysicsTerrain_InvokeTooFewParametersInLi.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_InvokeTooFewParametersInLi.h"
 
-int32_t* PhysicsTerrain_InvokeTooFewParametersInLi(int32_t* context)
+int32_t* PhysicsTerrain_InvokeTooFewParametersInLi(int32_t* arg1)
+
 {
-    // Native implementation (0x4ef850-0x4ef85b, 1 blocks)
-    return 0;
+    *arg1 = 0x41;
+    return arg1;
 }

@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 0046DF70 PickupTrigger_InvokeUpdate | gate PASS | openigi True */
-int32_t PickupTrigger_InvokeUpdate(int32_t* context);
+int32_t PickupTrigger_InvokeUpdate(int32_t* arg1);

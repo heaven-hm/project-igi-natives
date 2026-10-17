@@ -2,8 +2,8 @@
 // Evidence: 00448510-DoorCabinet_Invoke9_448510.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_Invoke9_448510.h"
 
-int32_t DoorCabinet_Invoke9_448510(void* context, int32_t* param_2)
+int32_t DoorCabinet_Invoke9_448510(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x448510-0x44852b, 1 blocks)
-    return 0;
+    return FX_FireBallUpdate_9(*arg2, *(arg1 + 0x254));
 }

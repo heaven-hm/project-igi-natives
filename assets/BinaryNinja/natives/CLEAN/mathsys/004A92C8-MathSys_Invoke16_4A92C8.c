@@ -2,8 +2,18 @@
 // Evidence: 004A92C8-MathSys_Invoke16_4A92C8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke16_4A92C8.h"
 
-long double __stdcall(long double context , double param_2, int32_t param_3 )
+long double __stdcall MathSys_Invoke16_4A92C8(long double arg1, double arg2, int32_t arg3)
+
 {
-    // Native implementation (0x4a92c8-0x4a9314, 5 blocks)
-    return 0;
+    int32_t eax_1 = arg3 & 0x7ff00000;
+
+    if (eax_1 == 0x7ff00000)
+        return arg1 / arg2;
+
+    bool c0;
+    bool c1;
+    bool c2;
+    bool c3;
+    eax_1 = (c0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9 | (c2 ? 1 : 0) << 0xa | (c3 ? 1 : 0) << 0xe;
+    return Camera_ApplyHandiCam_16(arg2, arg1);
 }

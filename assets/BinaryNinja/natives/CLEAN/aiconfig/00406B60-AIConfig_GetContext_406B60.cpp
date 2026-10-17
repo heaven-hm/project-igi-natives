@@ -2,8 +2,9 @@
 // Evidence: 00406B60-AIConfig_GetContext_406B60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_GetContext_406B60.h"
 
-int32_t* AIConfig_GetContext_406B60(int32_t* context)
+int32_t* AIConfig_GetContext_406B60(int32_t* arg1)
+
 {
-    // Native implementation (0x406b60-0x406b6d, 1 blocks)
-    return 0;
+    *arg1 = g_5690b0;
+    return arg1;
 }

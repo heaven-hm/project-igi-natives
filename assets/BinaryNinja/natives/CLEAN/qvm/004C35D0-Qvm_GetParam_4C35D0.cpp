@@ -2,8 +2,9 @@
 // Evidence: 004C35D0-Qvm_GetParam_4C35D0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_GetParam_4C35D0.h"
 
-bool* Qvm_GetParam_4C35D0(int32_t context, bool* param_2)
+bool* Qvm_GetParam_4C35D0(int32_t arg1, bool* arg2)
+
 {
-    // Native implementation (0x4c35d0-0x4c35e1, 1 blocks)
-    return 0;
+    *arg2 = arg1 != *(arg2 + 4);
+    return arg2;
 }

@@ -2,8 +2,9 @@
 // Evidence: 0041B830-MenuUI_Invoke4_41B830.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke4_41B830.h"
 
-int32_t* MenuUI_Invoke4_41B830(int32_t* context)
+int32_t* MenuUI_Invoke4_41B830(int32_t* arg1)
+
 {
-    // Native implementation (0x41b830-0x41b83d, 1 blocks)
-    return 0;
+    *arg1 = g_57bba8;
+    return arg1;
 }

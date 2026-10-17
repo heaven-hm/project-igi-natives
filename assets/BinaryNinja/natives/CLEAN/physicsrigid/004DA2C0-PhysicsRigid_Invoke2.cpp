@@ -2,8 +2,11 @@
 // Evidence: 004DA2C0-PhysicsRigid_Invoke2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_Invoke2.h"
 
-void* PhysicsRigid_Invoke2(void* context)
+void* PhysicsRigid_Invoke2(void* arg1)
+
 {
-    // Native implementation (0x4da2c0-0x4da2d5, 3 blocks)
-    return 0;
+    if (!*(arg1 + 0x8c))
+        g_a5e2fc -= 1;
+
+    return arg1;
 }

@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 0041A120 MenuUI_ProcessTypeWriterBox | gate PASS | openigi True */
-void* MenuUI_ProcessTypeWriterBox(void* context);
+void* MenuUI_ProcessTypeWriterBox(void* arg1);

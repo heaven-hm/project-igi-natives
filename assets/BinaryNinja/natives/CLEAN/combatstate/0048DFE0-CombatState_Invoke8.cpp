@@ -2,8 +2,14 @@
 // Evidence: 0048DFE0-CombatState_Invoke8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_Invoke8.h"
 
-int32_t* CombatState_Invoke8(void* context, int32_t* param_2)
+int32_t* CombatState_Invoke8(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x48dfe0-0x48e016, 1 blocks)
-    return 0;
+    int32_t* eax_1 = arg2;
+    void* source_ptr = eax_1[0xa];
+    eax_1[6] = FX_MoveToEventD;
+    Physics_ApplyImpulse_8(&arg2, *(arg1 + 0x3b6c), source_ptr + 8);
+    int32_t* result = arg2;
+    *(source_ptr + 0x20) = *result;
+    return result;
 }

@@ -2,8 +2,9 @@
 // Evidence: 00453670-HumanAI_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke4.h"
 
-int32_t* HumanAI_Invoke4(int32_t* context)
+int32_t* HumanAI_Invoke4(int32_t* arg1)
+
 {
-    // Native implementation (0x453670-0x45367d, 1 blocks)
-    return 0;
+    *arg1 = g_5bda7c;
+    return arg1;
 }

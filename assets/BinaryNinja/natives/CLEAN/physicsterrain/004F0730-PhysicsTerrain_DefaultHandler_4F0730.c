@@ -3,7 +3,7 @@
 #include "PhysicsTerrain_DefaultHandler_4F0730.h"
 
 int32_t PhysicsTerrain_DefaultHandler_4F0730()
+
 {
-    // Native implementation (0x4f0730-0x4f073b, 1 blocks)
-    return 0;
+    data_a758b8 = 0;
 }

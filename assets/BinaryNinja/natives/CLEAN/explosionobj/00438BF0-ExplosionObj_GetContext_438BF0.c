@@ -2,8 +2,9 @@
 // Evidence: 00438BF0-ExplosionObj_GetContext_438BF0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_GetContext_438BF0.h"
 
-int32_t* ExplosionObj_GetContext_438BF0(int32_t* context)
+int32_t* ExplosionObj_GetContext_438BF0(int32_t* arg1)
+
 {
-    // Native implementation (0x438bf0-0x438bfb, 1 blocks)
-    return 0;
+    *arg1 = 0xd;
+    return arg1;
 }

@@ -2,8 +2,11 @@
 // Evidence: 0049FAF0-DisplayRender_GetContext_49FAF0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_GetContext_49FAF0.h"
 
-void* DisplayRender_GetContext_49FAF0(void* context)
+void* DisplayRender_GetContext_49FAF0(void* arg1)
+
 {
-    // Native implementation (0x49faf0-0x49fb01, 1 blocks)
-    return 0;
+    int32_t data_val = *(arg1 + 0xc);
+    *(arg1 + 0x10) = *(arg1 + 8);
+    *(arg1 + 0x14) = data_val;
+    return arg1;
 }

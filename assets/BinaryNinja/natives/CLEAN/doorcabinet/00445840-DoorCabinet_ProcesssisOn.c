@@ -2,8 +2,11 @@
 // Evidence: 00445840-DoorCabinet_ProcesssisOn.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_ProcesssisOn.h"
 
-void* DoorCabinet_ProcesssisOn(void* context)
+void* DoorCabinet_ProcesssisOn(void* arg1)
+
 {
-    // Native implementation (0x445840-0x445856, 3 blocks)
-    return 0;
+    if (*(arg1 + 0x220))
+        *(arg1 + 0x1c2) = 1;
+
+    return arg1;
 }

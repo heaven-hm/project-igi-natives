@@ -2,8 +2,9 @@
 // Evidence: 00489280-CombatState_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_Invoke5.h"
 
-int32_t* CombatState_Invoke5(int32_t* context)
+int32_t* CombatState_Invoke5(int32_t* arg1)
+
 {
-    // Native implementation (0x489280-0x48928d, 1 blocks)
-    return 0;
+    *arg1 = g_5c8aa4;
+    return arg1;
 }

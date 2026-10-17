@@ -3,7 +3,24 @@
 #include "Sound_Invoke20_4E7A60.h"
 
 int32_t* Sound_Invoke20_4E7A60()
+
 {
-    // Native implementation (0x4e7a60-0x4e7abb, 5 blocks)
-    return 0;
+    int32_t* result = g_a5ebd4;
+
+    if (result)
+    {
+        Sys_PushStack_20(**&g_a5ebd0);
+        Heap_FreeEntry(g_a5ebd4);
+        result = g_a5ebd0;
+        g_a5ebd4 = 0;
+        *result = 0;
+    }
+
+    result = g_5488d8;
+
+    if (result)
+        result = Display_SwapBuffers_13(0xa5eb80);
+
+    g_a5ea70 = 0;
+    return result;
 }

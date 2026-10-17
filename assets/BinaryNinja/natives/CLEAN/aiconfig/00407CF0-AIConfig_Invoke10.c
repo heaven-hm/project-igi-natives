@@ -2,8 +2,9 @@
 // Evidence: 00407CF0-AIConfig_Invoke10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_Invoke10.h"
 
-int32_t* AIConfig_Invoke10(int32_t* context)
+int32_t* AIConfig_Invoke10(int32_t* arg1)
+
 {
-    // Native implementation (0x407cf0-0x407cfd, 1 blocks)
-    return 0;
+    *arg1 = g_569208;
+    return arg1;
 }

@@ -3,7 +3,7 @@
 #include "CombatState_Invoke23.h"
 
 int32_t CombatState_Invoke23()
+
 {
-    // Native implementation (0x48f350-0x48f359, 1 blocks)
-    return 0;
+    return FX_FireBallUpdate_23(0);
 }

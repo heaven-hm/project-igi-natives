@@ -3,7 +3,7 @@
 #include "PhysicsTerrain_DefaultHandler_4F06F0.h"
 
 int32_t PhysicsTerrain_DefaultHandler_4F06F0()
+
 {
-    // Native implementation (0x4f06f0-0x4f06fb, 1 blocks)
-    return 0;
+    g_a758ac = 0;
 }

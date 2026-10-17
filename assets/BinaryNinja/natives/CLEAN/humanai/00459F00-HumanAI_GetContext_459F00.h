@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 00459F00 HumanAI_GetContext_459F00 | gate PASS | openigi True */
-int32_t* HumanAI_GetContext_459F00(int32_t* context);
+int32_t* HumanAI_GetContext_459F00(int32_t* arg1);

@@ -2,8 +2,9 @@
 // Evidence: 00467520-PickupTrigger_InvokeIsexists.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeIsexists.h"
 
-int32_t* PickupTrigger_InvokeIsexists(int32_t* context)
+int32_t* PickupTrigger_InvokeIsexists(int32_t* arg1)
+
 {
-    // Native implementation (0x467520-0x46752d, 1 blocks)
-    return 0;
+    *arg1 = g_5bdc6c;
+    return arg1;
 }

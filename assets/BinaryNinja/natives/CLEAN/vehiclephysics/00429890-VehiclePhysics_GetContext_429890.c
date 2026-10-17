@@ -2,8 +2,9 @@
 // Evidence: 00429890-VehiclePhysics_GetContext_429890.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_GetContext_429890.h"
 
-int32_t* VehiclePhysics_GetContext_429890(int32_t* context)
+int32_t* VehiclePhysics_GetContext_429890(int32_t* arg1)
+
 {
-    // Native implementation (0x429890-0x42989d, 1 blocks)
-    return 0;
+    *arg1 = g_57bc94;
+    return arg1;
 }

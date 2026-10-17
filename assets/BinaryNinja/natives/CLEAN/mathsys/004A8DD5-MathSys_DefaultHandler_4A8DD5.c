@@ -2,9 +2,8 @@
 // Evidence: 004A8DD5-MathSys_DefaultHandler_4A8DD5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_DefaultHandler_4A8DD5.h"
 
-void MathSys_DefaultHandler_4A8DD5()
-{
+void MathSys_DefaultHandler_4A8DD5() __noreturn
 
-    // Native implementation (0x4a8dd5-0x4a8de0, 1 blocks)
-    return 0;
+{
+    trap(6);
 }

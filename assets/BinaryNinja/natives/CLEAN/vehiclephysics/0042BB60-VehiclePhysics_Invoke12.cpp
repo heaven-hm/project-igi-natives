@@ -2,8 +2,10 @@
 // Evidence: 0042BB60-VehiclePhysics_Invoke12.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke12.h"
 
-int32_t VehiclePhysics_Invoke12(int32_t context, int32_t param_2)
+int32_t VehiclePhysics_Invoke12(int32_t arg1, int32_t arg2)
+
 {
-    // Native implementation (0x42bb60-0x42bb95, 1 blocks)
-    return 0;
+    return (
+        *(((DynObj_UpdateDynTree_12() * 0x180 + Script_ExecuteLevelScript_16()) << 2) + &g_a96ae0))(
+        arg1, arg2);
 }

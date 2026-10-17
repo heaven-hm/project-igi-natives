@@ -2,8 +2,8 @@
 // Evidence: 0050A040-AnimSpline_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_Invoke4.h"
 
-int32_t AnimSpline_Invoke4(PSTR context)
+int32_t AnimSpline_Invoke4(PSTR arg1)
+
 {
-    // Native implementation (0x50a040-0x50a04c, 1 blocks)
-    return 0;
+    return Terrain_RenderWaterSurface_4(arg1);
 }

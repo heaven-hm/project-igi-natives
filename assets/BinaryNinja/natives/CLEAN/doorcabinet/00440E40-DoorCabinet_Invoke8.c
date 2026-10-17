@@ -2,8 +2,9 @@
 // Evidence: 00440E40-DoorCabinet_Invoke8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_Invoke8.h"
 
-int32_t* DoorCabinet_Invoke8(int32_t* context)
+int32_t* DoorCabinet_Invoke8(int32_t* arg1)
+
 {
-    // Native implementation (0x440e40-0x440e4d, 1 blocks)
-    return 0;
+    *arg1 = g_57c170;
+    return arg1;
 }

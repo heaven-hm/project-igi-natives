@@ -2,8 +2,8 @@
 // Evidence: 0048EB2C-CombatState_Invoke2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_Invoke2.h"
 
-void* CombatState_Invoke2(void* context)
+void* CombatState_Invoke2(void* arg1)
+
 {
-    // Native implementation (0x48eb2c-0x48eb40, 1 blocks)
-    return 0;
+    return AI_SelectTarget_2(arg1);
 }

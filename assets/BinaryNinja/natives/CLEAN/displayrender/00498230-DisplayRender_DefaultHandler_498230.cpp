@@ -3,7 +3,11 @@
 #include "DisplayRender_DefaultHandler_498230.h"
 
 int32_t DisplayRender_DefaultHandler_498230()
+
 {
-    // Native implementation (0x498230-0x498255, 1 blocks)
-    return 0;
+    g_bcaaa0 = 0;
+    g_bcaaa4 = 0;
+    __builtin_memset(&g_bcaac0, 0, 0x18);
+    g_bcaaa8 = 0;
+    return 1;
 }

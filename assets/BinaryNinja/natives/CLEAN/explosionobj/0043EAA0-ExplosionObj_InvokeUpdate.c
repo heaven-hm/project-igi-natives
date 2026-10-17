@@ -2,8 +2,8 @@
 // Evidence: 0043EAA0-ExplosionObj_InvokeUpdate.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_InvokeUpdate.h"
 
-void* ExplosionObj_InvokeUpdate(float context)
+void* ExplosionObj_InvokeUpdate(float arg1)
+
 {
-    // Native implementation (0x43eaa0-0x43eaac, 1 blocks)
-    return 0;
+    return GenericPhysicsObj_Update(arg1);
 }

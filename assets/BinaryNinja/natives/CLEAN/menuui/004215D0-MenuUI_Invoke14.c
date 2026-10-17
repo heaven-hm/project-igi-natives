@@ -2,8 +2,9 @@
 // Evidence: 004215D0-MenuUI_Invoke14.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke14.h"
 
-char* MenuUI_Invoke14(void* context)
+char* MenuUI_Invoke14(void* arg1)
+
 {
-    // Native implementation (0x4215d0-0x4215f2, 1 blocks)
-    return 0;
+    return Menu_UpdateLanguage_14(arg1, *(arg1 + 0x20), *(arg1 + 0x24), *(arg1 + 0x28),
+        *(arg1 + 0x2c), nullptr, nullptr);
 }

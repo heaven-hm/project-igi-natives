@@ -2,8 +2,17 @@
 // Evidence: 00434A50-VehiclePhysics_ProcessStep_434A50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ProcessStep_434A50.h"
 
-void* VehiclePhysics_ProcessStep_434A50(int32_t* context)
+void* VehiclePhysics_ProcessStep_434A50(int32_t* arg1)
+
 {
-    // Native implementation (0x434a50-0x434a73, 4 blocks)
-    return 0;
+    int32_t result = *arg1;
+
+    if (result >= 0 && result < 0xa)
+    {
+        arg1[1] = &(&data_53bef0)[result * 4];
+        return &(&data_53bef0)[result * 4];
+    }
+
+    arg1[1] = 0;
+    return result;
 }

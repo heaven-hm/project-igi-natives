@@ -2,8 +2,11 @@
 // Evidence: 00432F40-VehiclePhysics_InvokeLoadParameters_432F40.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_InvokeLoadParameters_432F40.h"
 
-int32_t* VehiclePhysics_InvokeLoadParameters_432F40(void* context, int32_t* param_2)
+int32_t* VehiclePhysics_InvokeLoadParameters_432F40(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x432f40-0x432f5e, 1 blocks)
-    return 0;
+    void* source_ptr = *arg2;
+    int32_t* result = Vehicle_LoadParameters(arg1, arg2);
+    *(source_ptr + 0x70) = 0;
+    return result;
 }

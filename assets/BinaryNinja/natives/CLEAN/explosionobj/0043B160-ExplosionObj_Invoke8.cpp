@@ -2,8 +2,9 @@
 // Evidence: 0043B160-ExplosionObj_Invoke8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke8.h"
 
-int32_t* ExplosionObj_Invoke8(int32_t* context)
+int32_t* ExplosionObj_Invoke8(int32_t* arg1)
+
 {
-    // Native implementation (0x43b160-0x43b16d, 1 blocks)
-    return 0;
+    *arg1 = g_57bef8;
+    return arg1;
 }

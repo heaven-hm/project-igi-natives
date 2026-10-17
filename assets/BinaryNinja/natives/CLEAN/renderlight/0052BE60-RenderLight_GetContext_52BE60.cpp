@@ -2,8 +2,9 @@
 // Evidence: 0052BE60-RenderLight_GetContext_52BE60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_GetContext_52BE60.h"
 
-int32_t* RenderLight_GetContext_52BE60(int32_t* context)
+int32_t* RenderLight_GetContext_52BE60(int32_t* arg1)
+
 {
-    // Native implementation (0x52be60-0x52be6d, 1 blocks)
-    return 0;
+    *arg1 = g_a84544;
+    return arg1;
 }

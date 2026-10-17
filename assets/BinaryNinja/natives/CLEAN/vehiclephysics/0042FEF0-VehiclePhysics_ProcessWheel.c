@@ -2,8 +2,9 @@
 // Evidence: 0042FEF0-VehiclePhysics_ProcessWheel.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ProcessWheel.h"
 
-int32_t* VehiclePhysics_ProcessWheel(int32_t* context)
+int32_t* VehiclePhysics_ProcessWheel(int32_t* arg1)
+
 {
-    // Native implementation (0x42fef0-0x42fefb, 1 blocks)
-    return 0;
+    *arg1 = 0x2f0;
+    return arg1;
 }

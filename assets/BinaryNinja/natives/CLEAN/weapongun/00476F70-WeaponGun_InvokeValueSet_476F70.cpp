@@ -2,8 +2,15 @@
 // Evidence: 00476F70-WeaponGun_InvokeValueSet_476F70.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_InvokeValueSet_476F70.h"
 
-int32_t WeaponGun_InvokeValueSet_476F70(long double context , int32_t* param_2)
+int32_t WeaponGun_InvokeValueSet_476F70(long double arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x476f70-0x476f9c, 1 blocks)
-    return 0;
+    float dest_ptr = arg2[2];
+    float base_val = arg2[1];
+    float* source_ptr = *arg2;
+    Profile_ValueSet(base_val, dest_ptr);
+    *source_ptr = arg1;
+    int32_t result = Script_GetArg(base_val, dest_ptr + 1);
+    source_ptr[1] = result;
+    return result;
 }

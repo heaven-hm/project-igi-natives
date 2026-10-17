@@ -2,8 +2,9 @@
 // Evidence: 005188B0-WeatherWaterSky_InvokeFindType.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeFindType.h"
 
-int32_t* WeatherWaterSky_InvokeFindType(int32_t* context)
+int32_t* WeatherWaterSky_InvokeFindType(int32_t* arg1)
+
 {
-    // Native implementation (0x5188b0-0x5188bd, 1 blocks)
-    return 0;
+    *arg1 = g_a801fc;
+    return arg1;
 }

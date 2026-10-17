@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 00509440 AnimSpline_GetContext_509440 | gate PASS | openigi True */
-int32_t* AnimSpline_GetContext_509440(int32_t* context);
+int32_t* AnimSpline_GetContext_509440(int32_t* arg1);

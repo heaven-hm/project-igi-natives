@@ -2,8 +2,9 @@
 // Evidence: 00518C90-WeatherWaterSky_GetContext_518C90.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_GetContext_518C90.h"
 
-void* WeatherWaterSky_GetContext_518C90(void* context)
+void* WeatherWaterSky_GetContext_518C90(void* arg1)
+
 {
-    // Native implementation (0x518c90-0x518c9b, 1 blocks)
-    return 0;
+    *(arg1 + 0x4ba0) += 1;
+    return arg1;
 }

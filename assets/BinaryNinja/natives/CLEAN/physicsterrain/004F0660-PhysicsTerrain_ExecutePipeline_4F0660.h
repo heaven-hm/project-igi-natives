@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 004F0660 PhysicsTerrain_ExecutePipeline_4F0660 | gate PASS | openigi True */
-void* PhysicsTerrain_ExecutePipeline_4F0660(void* context);
+void* PhysicsTerrain_ExecutePipeline_4F0660(void* arg1);

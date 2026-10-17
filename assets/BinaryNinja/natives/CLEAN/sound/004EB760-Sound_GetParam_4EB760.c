@@ -2,8 +2,9 @@
 // Evidence: 004EB760-Sound_GetParam_4EB760.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_GetParam_4EB760.h"
 
-int32_t Sound_GetParam_4EB760(int32_t context, int32_t param_2)
+int32_t Sound_GetParam_4EB760(int32_t arg1, int32_t arg2)
+
 {
-    // Native implementation (0x4eb760-0x4eb777, 1 blocks)
-    return 0;
+    __builtin_memcpy(arg1 + 0x48, arg2, 0x18);
+    return arg1;
 }

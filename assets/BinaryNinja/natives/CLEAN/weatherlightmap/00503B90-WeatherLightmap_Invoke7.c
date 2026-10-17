@@ -2,8 +2,8 @@
 // Evidence: 00503B90-WeatherLightmap_Invoke7.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke7.h"
 
-void* WeatherLightmap_Invoke7(void* context)
+void* WeatherLightmap_Invoke7(void* arg1)
+
 {
-    // Native implementation (0x503b90-0x503ba7, 1 blocks)
-    return 0;
+    return DynObj_RemoveSymbol_7(g_a44344, arg1, 0);
 }

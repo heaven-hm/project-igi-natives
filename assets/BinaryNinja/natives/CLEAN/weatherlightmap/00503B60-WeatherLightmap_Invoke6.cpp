@@ -2,8 +2,9 @@
 // Evidence: 00503B60-WeatherLightmap_Invoke6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke6.h"
 
-void* WeatherLightmap_Invoke6(void* context)
+void* WeatherLightmap_Invoke6(void* arg1)
+
 {
-    // Native implementation (0x503b60-0x503b87, 1 blocks)
-    return 0;
+    DynObj_LookupHashItem_6(g_a44344, arg1, 0);
+    return DynObj_RegisterSymbol_8(g_a44344, arg1, 0);
 }

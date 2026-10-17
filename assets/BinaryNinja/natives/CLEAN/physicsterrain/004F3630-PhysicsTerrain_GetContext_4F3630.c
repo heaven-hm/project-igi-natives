@@ -2,8 +2,12 @@
 // Evidence: 004F3630-PhysicsTerrain_GetContext_4F3630.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_GetContext_4F3630.h"
 
-void* PhysicsTerrain_GetContext_4F3630(void* context, int32_t* param_2)
+void* PhysicsTerrain_GetContext_4F3630(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4f3630-0x4f3669, 1 blocks)
-    return 0;
+    int32_t* result_val = *arg2;
+    *result_val = *(arg1 + 0x20150);
+    __builtin_memcpy(&result_val[1], arg1 + 0x6c, 0x88);
+    __builtin_memcpy(&result_val[0x23], arg1 + 0xf4, 0x20000);
+    return &result_val[1];
 }

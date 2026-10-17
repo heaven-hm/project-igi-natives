@@ -2,8 +2,9 @@
 // Evidence: 00407BA0-AIConfig_InvokeApplyProfile_407BA0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_InvokeApplyProfile_407BA0.h"
 
-int32_t AIConfig_InvokeApplyProfile_407BA0(void* context)
+int32_t AIConfig_InvokeApplyProfile_407BA0(void* arg1)
+
 {
-    // Native implementation (0x407ba0-0x407bac, 1 blocks)
+    AIConfig_ApplyProfile(arg1);
     return 0;
 }

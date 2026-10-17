@@ -2,8 +2,11 @@
 // Evidence: 0041D030-MenuUI_ProcessInputBox.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_ProcessInputBox.h"
 
-void* MenuUI_ProcessInputBox(void* context)
+void* MenuUI_ProcessInputBox(void* arg1)
+
 {
-    // Native implementation (0x41d030-0x41d049, 3 blocks)
-    return 0;
+    if (*(arg1 + 0xf0))
+        *(arg1 + 0xf0) = 0;
+
+    return arg1;
 }

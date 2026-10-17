@@ -2,8 +2,15 @@
 // Evidence: 00416A90-LevelMission_Invoke11.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelMission_Invoke11.h"
 
-char* LevelMission_Invoke11(int32_t context, char* param_2)
+char* LevelMission_Invoke11(int32_t arg1, char* arg2)
+
 {
-    // Native implementation (0x416a90-0x416aaf, 5 blocks)
-    return 0;
+    if (arg1 != *(arg2 + 4) && arg1 != *(arg2 + 8) && arg1 != *(arg2 + 0xc))
+    {
+        *arg2 = 1;
+        return arg2;
+    }
+
+    *arg2 = 0;
+    return arg2;
 }

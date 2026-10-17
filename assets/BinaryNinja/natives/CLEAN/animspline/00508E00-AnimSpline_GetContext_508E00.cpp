@@ -2,8 +2,14 @@
 // Evidence: 00508E00-AnimSpline_GetContext_508E00.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_GetContext_508E00.h"
 
-void* AnimSpline_GetContext_508E00(void* context)
+void* AnimSpline_GetContext_508E00(void* arg1)
+
 {
-    // Native implementation (0x508e00-0x508e24, 1 blocks)
-    return 0;
+    *(arg1 + 0x20) = 0;
+    *(arg1 + 0x24) = 0;
+    *(arg1 + 0x348) = 0;
+    *(arg1 + 0x66c) = 0;
+    *(arg1 + 0x990) = 0;
+    data_a7b2a0 = arg1;
+    return arg1;
 }

@@ -2,8 +2,8 @@
 // Evidence: 004E09C0-Sound_InvokeFindType.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_InvokeFindType.h"
 
-int32_t Sound_InvokeFindType(void* context)
+int32_t Sound_InvokeFindType(void* arg1)
+
 {
-    // Native implementation (0x4e09c0-0x4e09cf, 1 blocks)
-    return 0;
+    return QTask_FindType(*(arg1 + 0x74));
 }

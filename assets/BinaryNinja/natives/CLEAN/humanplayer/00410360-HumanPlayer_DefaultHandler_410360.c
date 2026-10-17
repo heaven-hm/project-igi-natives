@@ -3,7 +3,7 @@
 #include "HumanPlayer_DefaultHandler_410360.h"
 
 int32_t HumanPlayer_DefaultHandler_410360()
+
 {
-    // Native implementation (0x410360-0x410368, 1 blocks)
-    return 0;
+    g_56e214 = 1;
 }

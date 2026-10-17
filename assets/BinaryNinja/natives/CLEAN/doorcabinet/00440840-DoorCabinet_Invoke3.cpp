@@ -2,8 +2,15 @@
 // Evidence: 00440840-DoorCabinet_Invoke3.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_Invoke3.h"
 
-int32_t* DoorCabinet_Invoke3(void* context, int32_t param_2)
+int32_t* DoorCabinet_Invoke3(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x440840-0x44089f, 1 blocks)
-    return 0;
+    (*((Env_UpdateCameraLens_3() << 2) + &g_a96ae0))(arg1, arg2);
+    *(arg1 + 0x2a0) = 0;
+    *(arg1 + 0x2a1) = 0;
+    *(arg1 + 0x2a2) = 0;
+    *(arg1 + 0x2a4) = 0xffffd8f0;
+    *(arg1 + 0x2a8) = 0;
+    Script_ExecuteLevelScript_6(arg1 + 0x2ac);
+    return Script_ExecuteLevelScript_6(arg1 + 0x2fc);
 }

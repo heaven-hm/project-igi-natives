@@ -2,8 +2,11 @@
 // Evidence: 004EDA70-PhysicsTerrain_GetContext_4EDA70.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_GetContext_4EDA70.h"
 
-void* PhysicsTerrain_GetContext_4EDA70(void* context)
+void* PhysicsTerrain_GetContext_4EDA70(void* arg1)
+
 {
-    // Native implementation (0x4eda70-0x4eda97, 1 blocks)
-    return 0;
+    __builtin_memset(arg1 + 0x20, 0, 0x18);
+    *(arg1 + 0x38) = 0x3f800000;
+    *(arg1 + 0x3c) = 0x40800000;
+    return arg1;
 }

@@ -3,7 +3,12 @@
 #include "PhysicsTerrain_ProcessStep_4F0640.h"
 
 int32_t PhysicsTerrain_ProcessStep_4F0640()
+
 {
-    // Native implementation (0x4f0640-0x4f0654, 3 blocks)
-    return 0;
+    int32_t a758b0_1 = g_a758b0;
+
+    if (a758b0_1)
+        g_a758b0 = 0;
+
+    return a758b0_1;
 }

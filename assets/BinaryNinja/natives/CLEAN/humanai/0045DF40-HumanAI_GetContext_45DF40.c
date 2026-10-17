@@ -2,8 +2,9 @@
 // Evidence: 0045DF40-HumanAI_GetContext_45DF40.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_GetContext_45DF40.h"
 
-int32_t* HumanAI_GetContext_45DF40(int32_t* context)
+int32_t* HumanAI_GetContext_45DF40(int32_t* arg1)
+
 {
-    // Native implementation (0x45df40-0x45df4d, 1 blocks)
-    return 0;
+    *arg1 = g_5bdac8;
+    return arg1;
 }

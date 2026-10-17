@@ -2,8 +2,9 @@
 // Evidence: 0041A9E0-MenuUI_GetContext_41A9E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_GetContext_41A9E0.h"
 
-int32_t* MenuUI_GetContext_41A9E0(int32_t* context)
+int32_t* MenuUI_GetContext_41A9E0(int32_t* arg1)
+
 {
-    // Native implementation (0x41a9e0-0x41a9ed, 1 blocks)
-    return 0;
+    *arg1 = g_57bb90;
+    return arg1;
 }

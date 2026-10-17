@@ -2,8 +2,9 @@
 // Evidence: 0040EF5C-HumanPlayer_GetContext_40EF5C.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_GetContext_40EF5C.h"
 
-void* HumanPlayer_GetContext_40EF5C(void* context)
+void* HumanPlayer_GetContext_40EF5C(void* arg1)
+
 {
-    // Native implementation (0x40ef5c-0x40ef70, 1 blocks)
-    return 0;
+    *(arg1 + 0x14) = HumanPlayer_PlayFootstep_7;
+    return arg1;
 }

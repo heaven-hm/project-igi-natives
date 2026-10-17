@@ -2,8 +2,9 @@
 // Evidence: 00412420-HumanPlayer_Invoke16.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Invoke16.h"
 
-int32_t HumanPlayer_Invoke16(int32_t* context)
+int32_t HumanPlayer_Invoke16(int32_t* arg1)
+
 {
-    // Native implementation (0x412420-0x412432, 1 blocks)
-    return 0;
+    int32_t var_4 = 0;
+    return Input_SamplePlayerFrame(*arg1);
 }

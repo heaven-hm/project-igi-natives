@@ -2,8 +2,9 @@
 // Evidence: 004F64E0-WeatherLightmap_GetContext_4F64E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_GetContext_4F64E0.h"
 
-int32_t* WeatherLightmap_GetContext_4F64E0(int32_t* context)
+int32_t* WeatherLightmap_GetContext_4F64E0(int32_t* arg1)
+
 {
-    // Native implementation (0x4f64e0-0x4f64eb, 1 blocks)
-    return 0;
+    *arg1 = 0;
+    return arg1;
 }

@@ -2,8 +2,9 @@
 // Evidence: 0051D8B0-WeatherWaterSky_Invoke7.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke7.h"
 
-void* WeatherWaterSky_Invoke7(void* context)
+void* WeatherWaterSky_Invoke7(void* arg1)
+
 {
-    // Native implementation (0x51d8b0-0x51d8d3, 1 blocks)
-    return 0;
+    *(g_a44344 + 0xdfc) = 0;
+    return DynObj_RemoveSymbol_7(*(arg1 + 0x68), arg1, 0xffffffff);
 }

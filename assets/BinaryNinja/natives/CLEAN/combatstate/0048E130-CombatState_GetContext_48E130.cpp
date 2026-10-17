@@ -2,8 +2,11 @@
 // Evidence: 0048E130-CombatState_GetContext_48E130.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_GetContext_48E130.h"
 
-void* CombatState_GetContext_48E130(void* context)
+void* CombatState_GetContext_48E130(void* arg1)
+
 {
-    // Native implementation (0x48e130-0x48e146, 1 blocks)
-    return 0;
+    *(arg1 + 0x18) = AIAction_Stunned_Run;
+    void* result = *(arg1 + 0x28);
+    *(result + 0xc) = 0xffffffff;
+    return result;
 }

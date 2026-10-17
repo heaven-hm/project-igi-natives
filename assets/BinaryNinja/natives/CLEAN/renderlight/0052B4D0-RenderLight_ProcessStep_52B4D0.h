@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 0052B4D0 RenderLight_ProcessStep_52B4D0 | gate PASS | openigi True */
-int32_t* RenderLight_ProcessStep_52B4D0(int32_t context);
+int32_t* RenderLight_ProcessStep_52B4D0(int32_t arg1);

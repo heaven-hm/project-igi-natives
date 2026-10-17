@@ -2,8 +2,17 @@
 // Evidence: 00529A70-RenderLight_Invoke7.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_Invoke7.h"
 
-void* RenderLight_Invoke7(int32_t* context)
+void* RenderLight_Invoke7(int32_t* arg1)
+
 {
-    // Native implementation (0x529a70-0x529a93, 4 blocks)
-    return 0;
+    int32_t result = *arg1;
+
+    if (result >= 0 && result < 0x16)
+    {
+        arg1[1] = &(&data_54f1a0)[result * 4];
+        return &(&data_54f1a0)[result * 4];
+    }
+
+    arg1[1] = 0;
+    return result;
 }

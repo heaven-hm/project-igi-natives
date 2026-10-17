@@ -2,9 +2,8 @@
 // Evidence: 0050A5C0-AnimSpline_ProcessStep_50A5C0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_ProcessStep_50A5C0.h"
 
-int32_t AnimSpline_ProcessStep_50A5C0(int32_t context)
-{
+int32_t AnimSpline_ProcessStep_50A5C0(int32_t arg1) __pure
 
-    // Native implementation (0x50a5c0-0x50a5cd, 3 blocks)
+{
     return 0;
 }

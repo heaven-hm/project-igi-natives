@@ -2,8 +2,8 @@
 // Evidence: 00497970-DisplayRender_ProcessTransContextPrim.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_ProcessTransContextPrim.h"
 
-int32_t DisplayRender_ProcessTransContextPrim(void* context)
+int32_t DisplayRender_ProcessTransContextPrim(void* arg1)
+
 {
-    // Native implementation (0x497970-0x49797f, 1 blocks)
-    return 0;
+    return Transcontext_SetActiveTransContext(arg1 + 0x10);
 }

@@ -2,8 +2,12 @@
 // Evidence: 004A5D20-MathSys_Invoke7.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke7.h"
 
-int32_t MathSys_Invoke7(int32_t context, int32_t param_2, int32_t* param_3)
+int32_t MathSys_Invoke7(int32_t arg1, int32_t arg2, int32_t* arg3)
+
 {
-    // Native implementation (0x4a5d20-0x4a5d42, 3 blocks)
-    return 0;
+    if (!(*(arg1 + 4) & 6))
+        return 1;
+
+    *arg3 = arg2;
+    return 3;
 }

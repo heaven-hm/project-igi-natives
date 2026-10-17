@@ -2,8 +2,11 @@
 // Evidence: 004A9A28-MathSys_DefaultHandler_4A9A28.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_DefaultHandler_4A9A28.h"
 
-int32_t MathSys_DefaultHandler_4A9A28(long double context)
+int32_t MathSys_DefaultHandler_4A9A28(long double arg1)
+
 {
-    // Native implementation (0x4a9a28-0x4a9a2b, 1 blocks)
-    return 0;
+    long double st0;
+    bool c1;
+    bool c2;
+    st0 = __fptan(arg1);
 }

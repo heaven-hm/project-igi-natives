@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 0051EB30 WeatherWaterSky_GetContext_51EB30 | gate PASS | openigi True */
-int32_t* WeatherWaterSky_GetContext_51EB30(int32_t* context);
+int32_t* WeatherWaterSky_GetContext_51EB30(int32_t* arg1);

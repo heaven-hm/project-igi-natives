@@ -2,8 +2,9 @@
 // Evidence: 004A9AF8-MathSys_Invoke17_4A9AF8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke17_4A9AF8.h"
 
-long double()
+long double MathSys_Invoke17_4A9AF8()
+
 {
-    // Native implementation (0x4a9af8-0x4a9afd, 1 blocks)
-    return 0;
+    /* tailcall */
+    return MathSys_DefaultHandler_4A8BDB();
 }

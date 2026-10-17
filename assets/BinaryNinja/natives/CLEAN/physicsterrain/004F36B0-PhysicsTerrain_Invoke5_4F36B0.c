@@ -2,8 +2,9 @@
 // Evidence: 004F36B0-PhysicsTerrain_Invoke5_4F36B0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_Invoke5_4F36B0.h"
 
-int32_t* PhysicsTerrain_Invoke5_4F36B0(int32_t* context)
+int32_t* PhysicsTerrain_Invoke5_4F36B0(int32_t* arg1)
+
 {
-    // Native implementation (0x4f36b0-0x4f36bb, 1 blocks)
-    return 0;
+    *arg1 = 0x2008c;
+    return arg1;
 }

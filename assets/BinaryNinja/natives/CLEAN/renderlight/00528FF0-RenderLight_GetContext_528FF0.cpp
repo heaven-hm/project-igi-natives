@@ -2,8 +2,10 @@
 // Evidence: 00528FF0-RenderLight_GetContext_528FF0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_GetContext_528FF0.h"
 
-void* RenderLight_GetContext_528FF0(void* context)
+void* RenderLight_GetContext_528FF0(void* arg1)
+
 {
-    // Native implementation (0x528ff0-0x529003, 1 blocks)
-    return 0;
+    *(arg1 + 0xd4) = 0;
+    *(arg1 + 0x19f) = 0;
+    return arg1;
 }

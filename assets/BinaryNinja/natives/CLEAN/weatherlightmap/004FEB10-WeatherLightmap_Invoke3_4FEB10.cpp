@@ -2,8 +2,9 @@
 // Evidence: 004FEB10-WeatherLightmap_Invoke3_4FEB10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke3_4FEB10.h"
 
-int32_t* WeatherLightmap_Invoke3_4FEB10(int32_t* context)
+int32_t* WeatherLightmap_Invoke3_4FEB10(int32_t* arg1)
+
 {
-    // Native implementation (0x4feb10-0x4feb1d, 1 blocks)
-    return 0;
+    *arg1 = g_a7a4f0;
+    return arg1;
 }

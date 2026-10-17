@@ -2,8 +2,13 @@
 // Evidence: 0051C0A0-WeatherWaterSky_InvokeUpdateList_51C0A0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeUpdateList_51C0A0.h"
 
-int32_t* WeatherWaterSky_InvokeUpdateList_51C0A0(void* context)
+int32_t* WeatherWaterSky_InvokeUpdateList_51C0A0(void* arg1)
+
 {
-    // Native implementation (0x51c0a0-0x51c0b3, 3 blocks)
-    return 0;
+    int32_t* result = *(arg1 + 0x40);
+
+    if (result)
+        result = Qtask_UpdateList(result);
+
+    return result;
 }

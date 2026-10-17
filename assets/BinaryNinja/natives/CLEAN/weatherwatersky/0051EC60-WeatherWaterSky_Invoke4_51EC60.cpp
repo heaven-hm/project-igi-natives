@@ -2,8 +2,9 @@
 // Evidence: 0051EC60-WeatherWaterSky_Invoke4_51EC60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke4_51EC60.h"
 
-int32_t* WeatherWaterSky_Invoke4_51EC60(int32_t* context)
+int32_t* WeatherWaterSky_Invoke4_51EC60(int32_t* arg1)
+
 {
-    // Native implementation (0x51ec60-0x51ec6d, 1 blocks)
-    return 0;
+    *arg1 = g_ba1fe0;
+    return arg1;
 }

@@ -2,8 +2,9 @@
 // Evidence: 00527470-RenderLight_Invoke2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_Invoke2.h"
 
-void* RenderLight_Invoke2(void* context)
+void* RenderLight_Invoke2(void* arg1)
+
 {
-    // Native implementation (0x527470-0x52747f, 1 blocks)
-    return 0;
+    *(*(arg1 + 0x14) + 0x5c) = 0xff7fffff;
+    return arg1;
 }

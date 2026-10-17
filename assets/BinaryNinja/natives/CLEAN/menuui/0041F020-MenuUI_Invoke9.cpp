@@ -2,8 +2,9 @@
 // Evidence: 0041F020-MenuUI_Invoke9.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke9.h"
 
-int32_t* MenuUI_Invoke9(int32_t* context)
+int32_t* MenuUI_Invoke9(int32_t* arg1)
+
 {
-    // Native implementation (0x41f020-0x41f02d, 1 blocks)
-    return 0;
+    *arg1 = g_57bbdc;
+    return arg1;
 }

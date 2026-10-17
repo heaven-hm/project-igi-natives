@@ -2,8 +2,18 @@
 // Evidence: 0043B490-ExplosionObj_InvokeTrailUpdate_43B490.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_InvokeTrailUpdate_43B490.h"
 
-int32_t* ExplosionObj_InvokeTrailUpdate_43B490(void* context, int32_t param_2)
+int32_t* ExplosionObj_InvokeTrailUpdate_43B490(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x43b490-0x43b4fc, 1 blocks)
-    return 0;
+    (*((FX_TrailUpdate() << 2) + &g_a96ae0))(arg1, arg2);
+    *(arg1 + 0x238) = 0;
+    *(arg1 + 0x23c) = 0;
+    *(arg1 + 0x23d) = 0;
+    int32_t* result = Script_ExecuteLevelScript_6(arg1 + 0x240);
+    *(arg1 + 0x290) = 0;
+    *(arg1 + 0x2a0) = 0;
+    *(arg1 + 0x2b0) = 0x41200000;
+    *(arg1 + 0x2b4) = 1;
+    *(arg1 + 0x2b8) = 0xffffffff;
+    return result;
 }

@@ -2,8 +2,10 @@
 // Evidence: 004F6500-WeatherLightmap_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke18.h"
 
-int32_t* WeatherLightmap_Invoke18(void* context, int32_t* param_2)
+int32_t* WeatherLightmap_Invoke18(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4f6500-0x4f651c, 1 blocks)
-    return 0;
+    *(arg1 + 0x64) = *arg2;
+    *(arg1 + 0x26c) = 1;
+    return Script_ParseEnumInt32_18(arg1);
 }

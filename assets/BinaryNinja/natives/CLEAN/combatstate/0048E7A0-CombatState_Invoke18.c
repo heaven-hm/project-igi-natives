@@ -2,8 +2,12 @@
 // Evidence: 0048E7A0-CombatState_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_Invoke18.h"
 
-int32_t CombatState_Invoke18(void* context, int32_t* param_2, int32_t* param_3)
+int32_t CombatState_Invoke18(void* arg1, int32_t* arg2, int32_t* arg3)
+
 {
-    // Native implementation (0x48e7a0-0x48e7cb, 3 blocks)
-    return 0;
+    if (!FX_SmokeEmit_18(arg1, arg2, 0, 0))
+        return 0;
+
+    *arg3 = *arg2;
+    return 1;
 }

@@ -2,8 +2,8 @@
 // Evidence: 0043A5E0-ExplosionObj_Invoke1009011.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke1009011.h"
 
-int32_t ExplosionObj_Invoke1009011(void* context)
+int32_t ExplosionObj_Invoke1009011(void* arg1)
+
 {
-    // Native implementation (0x43a5e0-0x43a5ec, 1 blocks)
-    return 0;
+    return Vehicle_1009011(arg1);
 }

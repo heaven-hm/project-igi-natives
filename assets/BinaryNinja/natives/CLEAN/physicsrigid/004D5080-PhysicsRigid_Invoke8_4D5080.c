@@ -2,8 +2,8 @@
 // Evidence: 004D5080-PhysicsRigid_Invoke8_4D5080.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_Invoke8_4D5080.h"
 
-int32_t PhysicsRigid_Invoke8_4D5080(void* context)
+int32_t PhysicsRigid_Invoke8_4D5080(void* arg1)
+
 {
-    // Native implementation (0x4d5080-0x4d508c, 1 blocks)
-    return 0;
+    return Render_ClipMesh_8(arg1);
 }

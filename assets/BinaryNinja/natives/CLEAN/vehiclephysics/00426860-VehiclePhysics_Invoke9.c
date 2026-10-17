@@ -2,8 +2,8 @@
 // Evidence: 00426860-VehiclePhysics_Invoke9.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke9.h"
 
-void* VehiclePhysics_Invoke9(void* context)
+void* VehiclePhysics_Invoke9(void* arg1)
+
 {
-    // Native implementation (0x426860-0x426872, 1 blocks)
-    return 0;
+    return DynObj_RegisterSymbol_9(*(arg1 + 0x68), arg1);
 }

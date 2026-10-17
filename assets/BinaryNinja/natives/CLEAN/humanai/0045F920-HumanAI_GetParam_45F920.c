@@ -2,8 +2,9 @@
 // Evidence: 0045F920-HumanAI_GetParam_45F920.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_GetParam_45F920.h"
 
-char* HumanAI_GetParam_45F920(char* context)
+char* HumanAI_GetParam_45F920(char* arg1)
+
 {
-    // Native implementation (0x45f920-0x45f928, 1 blocks)
-    return 0;
+    *arg1 = 0;
+    return arg1;
 }

@@ -2,8 +2,9 @@
 // Evidence: 00470500-WeaponGun_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_Invoke5.h"
 
-int32_t WeaponGun_Invoke5(void* context, int32_t param_2)
+int32_t WeaponGun_Invoke5(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x470500-0x470534, 1 blocks)
-    return 0;
+    (*((Weapon_ComputeAccuracy_5() << 2) + &g_a96ae0))(arg1, arg2);
+    return Game_DataSymbolLoad(arg1 + 0x104, "WEAPON_ID_MEDIPACK");
 }

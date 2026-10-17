@@ -3,7 +3,27 @@
 #include "DisplayRender_ProcessCouldntclearscre.h"
 
 int32_t* DisplayRender_ProcessCouldntclearscre()
+
 {
-    // Native implementation (0x492450-0x4924c8, 5 blocks)
-    return 0;
+    int32_t* 5ca114_1 = g_5ca114;
+
+    if (5ca114_1)
+    {
+        5ca114_1 = (*(*5ca114_1 + 0x28))(5ca114_1, 0, 0, 3,
+            (((g_bcadf0 << 8) + g_bcadf4) << 8) + g_bcadf8, 0x3f800000, 0);
+
+        if (5ca114_1)
+        {
+            void var_400;
+            Game_DataSymbolLoad(&var_400, "Couldn't clear screen");
+            int32_t var_414 = DDERR_GENERIC(5ca114_1);
+            void* var_418 = &var_400;
+            Error_Show("%s\n\nDirectX error message: %s");
+
+            while (true)
+                /* nop */
+        }
+    }
+
+    return 5ca114_1;
 }

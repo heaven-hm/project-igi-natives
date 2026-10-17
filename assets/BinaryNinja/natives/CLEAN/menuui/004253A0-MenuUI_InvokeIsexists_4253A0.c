@@ -2,8 +2,9 @@
 // Evidence: 004253A0-MenuUI_InvokeIsexists_4253A0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_InvokeIsexists_4253A0.h"
 
-int32_t MenuUI_InvokeIsexists_4253A0(void* context)
+int32_t MenuUI_InvokeIsexists_4253A0(void* arg1)
+
 {
-    // Native implementation (0x4253a0-0x4253b2, 1 blocks)
+    Script_Isexists(arg1 + 0x20, arg1);
     return 0;
 }

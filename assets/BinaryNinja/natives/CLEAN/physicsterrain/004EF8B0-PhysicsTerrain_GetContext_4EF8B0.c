@@ -2,8 +2,9 @@
 // Evidence: 004EF8B0-PhysicsTerrain_GetContext_4EF8B0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_GetContext_4EF8B0.h"
 
-int32_t* PhysicsTerrain_GetContext_4EF8B0(int32_t* context)
+int32_t* PhysicsTerrain_GetContext_4EF8B0(int32_t* arg1)
+
 {
-    // Native implementation (0x4ef8b0-0x4ef8bb, 1 blocks)
-    return 0;
+    *arg1 = 0xb;
+    return arg1;
 }

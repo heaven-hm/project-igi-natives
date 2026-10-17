@@ -2,8 +2,9 @@
 // Evidence: 0050BBC0-AnimSpline_GetContext_50BBC0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_GetContext_50BBC0.h"
 
-int32_t* AnimSpline_GetContext_50BBC0(int32_t* context)
+int32_t* AnimSpline_GetContext_50BBC0(int32_t* arg1)
+
 {
-    // Native implementation (0x50bbc0-0x50bbcd, 1 blocks)
-    return 0;
+    *arg1 = g_a7ceac;
+    return arg1;
 }

@@ -1,4 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include <stdbool.h>
+
 /* 004A9414 MathSys_Invoke16_4A9414 | gate PASS | openigi True */
-long double __stdcall(long double context , int16_t param_2) ;
+int32_t __stdcall MathSys_Invoke16_4A9414(long double arg1, int16_t arg2) __location("st0");

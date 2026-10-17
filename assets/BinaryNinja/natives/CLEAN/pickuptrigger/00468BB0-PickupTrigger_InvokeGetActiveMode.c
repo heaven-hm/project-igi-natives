@@ -3,7 +3,7 @@
 #include "PickupTrigger_InvokeGetActiveMode.h"
 
 int32_t PickupTrigger_InvokeGetActiveMode()
+
 {
-    // Native implementation (0x468bb0-0x468bbb, 1 blocks)
-    return 0;
+    g_5bdd68 = 0;
 }

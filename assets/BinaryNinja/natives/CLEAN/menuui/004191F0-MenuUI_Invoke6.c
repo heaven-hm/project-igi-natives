@@ -2,8 +2,11 @@
 // Evidence: 004191F0-MenuUI_Invoke6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke6.h"
 
-void* MenuUI_Invoke6(void* context)
+void* MenuUI_Invoke6(void* arg1)
+
 {
-    // Native implementation (0x4191f0-0x419206, 1 blocks)
-    return 0;
+    *(arg1 + 0x20) = 0;
+    *(arg1 + 0x121) = 0;
+    *(arg1 + 0x120) = 0;
+    return arg1;
 }

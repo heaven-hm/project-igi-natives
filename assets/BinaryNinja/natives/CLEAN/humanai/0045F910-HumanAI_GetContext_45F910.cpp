@@ -2,8 +2,9 @@
 // Evidence: 0045F910-HumanAI_GetContext_45F910.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_GetContext_45F910.h"
 
-int32_t HumanAI_GetContext_45F910(int32_t context, int32_t* param_2)
+int32_t HumanAI_GetContext_45F910(int32_t arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x45f910-0x45f920, 1 blocks)
-    return 0;
+    *arg2 = arg1 + 0x340;
+    return arg1 + 0x340;
 }

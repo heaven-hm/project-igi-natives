@@ -2,8 +2,9 @@
 // Evidence: 004F0190-PhysicsTerrain_GetContext_4F0190.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_GetContext_4F0190.h"
 
-int16_t* PhysicsTerrain_GetContext_4F0190(int16_t* context, int32_t* param_2)
+int16_t* PhysicsTerrain_GetContext_4F0190(int16_t* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x4f0190-0x4f01a1, 1 blocks)
-    return 0;
+    *arg1 = **arg2;
+    return arg1;
 }

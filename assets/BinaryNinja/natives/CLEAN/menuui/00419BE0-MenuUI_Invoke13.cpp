@@ -2,8 +2,14 @@
 // Evidence: 00419BE0-MenuUI_Invoke13.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke13.h"
 
-int32_t MenuUI_Invoke13(void* context, int32_t param_2)
+int32_t MenuUI_Invoke13(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x419be0-0x419c19, 1 blocks)
-    return 0;
+    (*((Menu_PlayMusic_13() << 2) + &g_a96ae0))(arg1, arg2);
+    *(arg1 + 0x3c) = 1;
+    *(arg1 + 0x40) = 1;
+    *(arg1 + 0x58) = 0;
+    *(arg1 + 0x54) = 0;
+    *(arg1 + 0x59) = 1;
+    return 1;
 }

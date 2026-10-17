@@ -2,8 +2,13 @@
 // Evidence: 004A36B0-DisplayRender_Invoke19.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_Invoke19.h"
 
-int32_t DisplayRender_Invoke19(void* context)
+int32_t DisplayRender_Invoke19(void* arg1)
+
 {
-    // Native implementation (0x4a36b0-0x4a36cc, 3 blocks)
-    return 0;
+    int32_t result = *((g_935c00 << 2) + &g_a94e84);
+
+    if (result)
+        result = result(*(arg1 + 0xc));
+
+    return result;
 }

@@ -3,7 +3,7 @@
 #include "PickupTrigger_InvokeNoMoreQcubeCallbacks.h"
 
 int32_t* PickupTrigger_InvokeNoMoreQcubeCallbacks()
+
 {
-    // Native implementation (0x4678f0-0x4678fc, 1 blocks)
-    return 0;
+    return Render_NoMoreQcubeCallbacks(AI_UpdatePatrol_25);
 }

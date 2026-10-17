@@ -2,8 +2,18 @@
 // Evidence: 00420E90-MenuUI_Invoke13_420E90.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke13_420E90.h"
 
-int32_t* MenuUI_Invoke13_420E90(void* context, int32_t param_2)
+int32_t* MenuUI_Invoke13_420E90(void* arg1, int32_t arg2)
+
 {
-    // Native implementation (0x420e90-0x420ef5, 1 blocks)
-    return 0;
+    (*((Menu_PlayMusic_13() << 2) + &g_a96ae0))(arg1, arg2);
+    *(arg1 + 0x20) = 0x12c;
+    *(arg1 + 0x54) = 0;
+    *(arg1 + 0x94) = 0;
+    *(arg1 + 0xd4) = 0;
+    *(arg1 + 0x114) = 0;
+    *(arg1 + 0x16c) = 0;
+    *(arg1 + 0x24) = 0xe6;
+    *(arg1 + 0x3c) = 1;
+    *(arg1 + 0x40) = 1;
+    return Script_ExecuteLevelScript_6(arg1 + 0x11c);
 }

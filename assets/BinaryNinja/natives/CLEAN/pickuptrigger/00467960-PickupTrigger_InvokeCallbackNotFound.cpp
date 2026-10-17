@@ -3,7 +3,7 @@
 #include "PickupTrigger_InvokeCallbackNotFound.h"
 
 void** PickupTrigger_InvokeCallbackNotFound()
+
 {
-    // Native implementation (0x467960-0x46796c, 1 blocks)
-    return 0;
+    return Render_CallbackNotFound(AI_UpdatePatrol_25);
 }

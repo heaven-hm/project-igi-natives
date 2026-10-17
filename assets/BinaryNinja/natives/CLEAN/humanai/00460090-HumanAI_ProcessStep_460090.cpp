@@ -2,8 +2,15 @@
 // Evidence: 00460090-HumanAI_ProcessStep_460090.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_ProcessStep_460090.h"
 
-int32_t* HumanAI_ProcessStep_460090(void* context, int32_t* param_2)
+int32_t* HumanAI_ProcessStep_460090(void* arg1, int32_t* arg2)
+
 {
-    // Native implementation (0x460090-0x4600bb, 4 blocks)
-    return 0;
+    if (*arg2 && *(*(arg1 + 0x4ec) + 0xd9))
+    {
+        *arg2 = 1;
+        return arg2;
+    }
+
+    *arg2 = 0;
+    return arg2;
 }
