@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerHilight_LoadParameters (VA 0x00468570; static CFG gate PASS, CFG score 1.000).
 #include "ComputerHilight_LoadParameters.h"
 void* ComputerHilight_LoadParameters(void* a1)
 

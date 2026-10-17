@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Hazinglayers_Update (VA 0x004DA2E0; static CFG gate PASS, CFG score 1.000).
 #include "Hazinglayers_Update.h"
 uint32_t Hazinglayers_Update()
 

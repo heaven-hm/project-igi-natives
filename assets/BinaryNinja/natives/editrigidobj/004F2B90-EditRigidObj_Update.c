@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_Update (VA 0x004F2B90; static CFG gate PASS, CFG score 0.970).
 #include "EditRigidObj_Update.h"
 float* EditRigidObj_Update(float a1)
 

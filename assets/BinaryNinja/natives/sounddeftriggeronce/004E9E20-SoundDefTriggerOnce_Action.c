@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefTriggerOnce_Action (VA 0x004E9E20; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefTriggerOnce_Action.h"
 float SoundDefTriggerOnce_Action(int32_t a1, int32_t* a2) __location("valA")
 

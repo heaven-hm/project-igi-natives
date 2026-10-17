@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_MoveToEvent (VA 0x0044D7D0; static CFG gate PASS, CFG score 0.944).
 #include "AIAction_MoveToEvent.h"
 int32_t AIAction_MoveToEvent(int32_t a1, float a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_005011 (VA 0x00464660; static CFG gate PASS, CFG score 0.952).
 #include "AI_005011.h"
 int32_t AI_005011(int32_t* a1)
 

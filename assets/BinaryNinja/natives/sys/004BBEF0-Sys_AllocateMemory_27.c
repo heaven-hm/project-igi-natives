@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_27 (VA 0x004BBEF0; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_AllocateMemory_27.h"
 int32_t Sys_AllocateMemory_27(char* a1)
 

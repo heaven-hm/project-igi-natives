@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneDynCubeObj_Update (VA 0x004D94F0; static CFG gate PASS, CFG score 1.000).
 #include "BoneDynCubeObj_Update.h"
 void BoneDynCubeObj_Update(int32_t* a1, int32_t* a2)
 

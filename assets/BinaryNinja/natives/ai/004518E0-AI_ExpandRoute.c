@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_ExpandRoute (VA 0x004518E0; static CFG gate PASS, CFG score 0.979).
 #include "AI_ExpandRoute.h"
 int32_t* AI_ExpandRoute(void* a1, int32_t a2, double* a3, char a4)
 

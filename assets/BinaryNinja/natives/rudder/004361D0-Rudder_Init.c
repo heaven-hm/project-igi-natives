@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rudder_Init (VA 0x004361D0; static CFG gate PASS, CFG score 1.000).
 #include "Rudder_Init.h"
 void* Rudder_Init()
 

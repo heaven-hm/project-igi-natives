@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_ComputerComputerRes (VA 0x0046B070; static CFG gate PASS, CFG score 1.000).
 #include "AI_ComputerComputerRes.h"
 int32_t* AI_ComputerComputerRes()
 

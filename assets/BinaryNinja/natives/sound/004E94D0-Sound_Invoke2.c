@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sound_Invoke2 (VA 0x004E94D0; static CFG gate FAIL, CFG score 0.722).
 #include "Sound_Invoke2.h"
 
 int32_t()

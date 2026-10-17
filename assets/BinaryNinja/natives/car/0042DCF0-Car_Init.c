@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Init (VA 0x0042DCF0; static CFG gate PASS, CFG score 1.000).
 #include "Car_Init.h"
 ❓  void* Car_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

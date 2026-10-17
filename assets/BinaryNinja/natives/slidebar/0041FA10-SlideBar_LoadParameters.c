@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_LoadParameters (VA 0x0041FA10; static CFG gate PASS, CFG score 0.956).
 #include "SlideBar_LoadParameters.h"
 int32_t SlideBar_LoadParameters(float a1)
 

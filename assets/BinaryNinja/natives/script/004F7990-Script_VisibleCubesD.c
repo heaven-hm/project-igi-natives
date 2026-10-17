@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_VisibleCubesD (VA 0x004F7990; static CFG gate PASS, CFG score 0.944).
 #include "Script_VisibleCubesD.h"
 int32_t Script_VisibleCubesD(void* a1)
 

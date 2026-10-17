@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_Init (VA 0x0041F340; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Init.h"
 int32_t* SlideBar_Init()
 

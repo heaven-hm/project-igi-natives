@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_Init (VA 0x0044C8D0; static CFG gate PASS, CFG score 0.980).
 #include "HumanAI_Init.h"
 ❓  void* HumanAI_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

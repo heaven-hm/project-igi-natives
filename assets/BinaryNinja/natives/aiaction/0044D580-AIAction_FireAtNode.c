@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_FireAtNode (VA 0x0044D580; static CFG gate PASS, CFG score 0.958).
 #include "AIAction_FireAtNode.h"
 int32_t AIAction_FireAtNode(long double a1 @ fp0, long double a2 @ fp1, int32_t a3, float a4 @ 0xc)
 

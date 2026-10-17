@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_InitLadder_9 (VA 0x00447D40; static CFG gate PASS, CFG score 1.000).
 #include "Env_InitLadder_9.h"
 void* Env_InitLadder_9(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CouldnTSetClippingWi (VA 0x00493CA0; static CFG gate PASS, CFG score 0.917).
 #include "Display_CouldnTSetClippingWi.h"
 int32_t Display_CouldnTSetClippingWi(void* a1)
 

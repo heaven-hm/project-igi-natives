@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_Open (VA 0x00413A90; static CFG gate CANDIDATE, CFG score 0.750).
 #include "00413A90-WeaponType_Open.h"
 
 /* Analysis reconstruction for the original 32-bit Windows image.

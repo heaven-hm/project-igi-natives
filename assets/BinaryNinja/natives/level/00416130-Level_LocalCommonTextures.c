@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_LocalCommonTextures (VA 0x00416130; static CFG gate FAIL, CFG score 0.733).
 #include "Level_LocalCommonTextures.h"
 int32_t Level_LocalCommonTextures()
 

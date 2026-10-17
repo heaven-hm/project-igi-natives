@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuButton_Process (VA 0x00421550; static CFG gate PASS, CFG score 1.000).
 #include "MenuButton_Process.h"
 int32_t MenuButton_Process(void* a1, int32_t a2)
 

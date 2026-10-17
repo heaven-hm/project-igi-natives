@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_TestCandidate (VA 0x004898D0; static CFG gate PASS, CFG score 1.000).
 #include "AI_TestCandidate.h"
 int32_t AI_TestCandidate(void* a1, void* a2, double* a3, double* a4, float a5)
 

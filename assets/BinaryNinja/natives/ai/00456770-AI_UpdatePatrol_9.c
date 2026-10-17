@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_UpdatePatrol_9 (VA 0x00456770; static CFG gate PASS, CFG score 1.000).
 #include "AI_UpdatePatrol_9.h"
 int32_t AI_UpdatePatrol_9(void* a1, void* a2)
 

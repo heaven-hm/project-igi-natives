@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunClip_Action (VA 0x004776C0; static CFG gate FAIL, CFG score 0.667).
 #include "GunClip_Action.h"
 void* GunClip_Action(void* a1, int32_t* a2)
 

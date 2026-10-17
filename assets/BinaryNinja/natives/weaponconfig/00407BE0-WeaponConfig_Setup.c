@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponConfig_Setup (VA 0x00407BE0; static CFG gate PASS, CFG score 0.917).
 #include "WeaponConfig_Setup.h"
 int32_t* WeaponConfig_Setup(void* a1)
 

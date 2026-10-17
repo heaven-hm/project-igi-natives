@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SendResponse (VA 0x0044EE40; static CFG gate PASS, CFG score 0.889).
 #include "AIFunction_SendResponse.h"
 int32_t AIFunction_SendResponse(int32_t a1)
 

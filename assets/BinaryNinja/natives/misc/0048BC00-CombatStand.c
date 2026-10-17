@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CombatStand (VA 0x0048BC00; static CFG gate PASS, CFG score 1.000).
 #include "CombatStand.h"
 int32_t* CombatStand(int32_t* a1, int32_t* a2)
 

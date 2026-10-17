@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_IsBlood (VA 0x00403DF0; static CFG gate FAIL, CFG score 0.833).
 #include "GO_IsBlood.h"
 int32_t GO_IsBlood(int32_t a1, float a2 @ 0xc)
 

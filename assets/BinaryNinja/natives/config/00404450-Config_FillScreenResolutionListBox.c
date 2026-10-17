@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_FillScreenResolutionListBox (VA 0x00404450; static CFG gate PASS, CFG score 0.917).
 #include "Config_FillScreenResolutionListBox.h"
 int32_t Config_FillScreenResolutionListBox(int32_t a1, float a2 @ 0xc)
 

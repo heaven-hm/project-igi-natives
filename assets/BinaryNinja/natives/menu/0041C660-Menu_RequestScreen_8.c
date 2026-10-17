@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_RequestScreen_8 (VA 0x0041C660; static CFG gate PASS, CFG score 1.000).
 #include "Menu_RequestScreen_8.h"
 uint32_t Menu_RequestScreen_8()
 

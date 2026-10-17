@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyHandiCam_17 (VA 0x004A9B8E; static CFG gate FAIL, CFG score 0.625).
 #include "Camera_ApplyHandiCam_17.h"
 void __fastcall Camera_ApplyHandiCam_17(int16_t a1, void* a2 @ flagP, long double a3 @ fp0)
 

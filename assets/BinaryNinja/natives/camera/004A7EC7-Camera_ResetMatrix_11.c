@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_11 (VA 0x004A7EC7; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_11.h"
 int32_t* Camera_ResetMatrix_11(char* a1, int32_t* a2, int32_t* a3, int32_t* a4)
 

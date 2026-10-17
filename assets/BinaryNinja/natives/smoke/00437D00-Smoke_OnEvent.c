@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Smoke_OnEvent (VA 0x00437D00; static CFG gate PASS, CFG score 1.000).
 #include "Smoke_OnEvent.h"
 int32_t Smoke_OnEvent(void* a1)
 

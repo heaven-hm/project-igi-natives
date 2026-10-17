@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ExecuteBytecode_15 (VA 0x004B5730; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_ExecuteBytecode_15.h"
 int32_t Sys_ExecuteBytecode_15(float a1, float a2, int32_t a3, float a4, float a5, int32_t a6, float a7, float a8, float a9, float a10, float a11, float a12, int32_t a13, int32_t a14, int32_t a15)
 

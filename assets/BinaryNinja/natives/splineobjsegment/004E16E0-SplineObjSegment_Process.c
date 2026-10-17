@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObjSegment_Process (VA 0x004E16E0; static CFG gate PASS, CFG score 0.952).
 #include "SplineObjSegment_Process.h"
 int32_t* SplineObjSegment_Process(float a1, int32_t* a2)
 

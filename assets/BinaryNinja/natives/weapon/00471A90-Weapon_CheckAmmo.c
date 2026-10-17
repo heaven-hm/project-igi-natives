@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_CheckAmmo (VA 0x00471A90; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_CheckAmmo.h"
 int32_t Weapon_CheckAmmo(float a1, float a2, float a3, float a4, float a5, float a6, int32_t a7)
 

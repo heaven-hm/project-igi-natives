@@ -1,3 +1,4 @@
+// Original IGI.EXE function: camera_move (VA 0x00441BF0; static CFG gate PASS, CFG score 0.944).
 #include "camera_move.h"
 struct status_msg* camera_move(long double a1 @ fp0, float a2)
 

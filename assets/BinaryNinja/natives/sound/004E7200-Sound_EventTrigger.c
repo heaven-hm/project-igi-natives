@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sound_EventTrigger (VA 0x004E7200; static CFG gate PASS, CFG score 0.963).
 #include "Sound_EventTrigger.h"
 int32_t* Sound_EventTrigger(char* a1, char* a2, int32_t a3)
 

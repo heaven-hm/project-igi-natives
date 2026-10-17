@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SwapBuffers_6 (VA 0x004922B0; static CFG gate FAIL, CFG score 0.733).
 #include "Display_SwapBuffers_6.h"
 int32_t __stdcall Display_SwapBuffers_6(char* a1, int32_t* a2 @ 0xc, int32_t* a3)
 

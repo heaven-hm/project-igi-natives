@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_EventQueued (VA 0x00450520; static CFG gate PASS, CFG score 0.917).
 #include "HumanAI_EventQueued.h"
 int32_t* HumanAI_EventQueued(void* a1, int32_t* a2)
 

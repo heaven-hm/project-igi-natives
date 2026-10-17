@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_ApplyImpulse_11 (VA 0x0050A6C0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_ApplyImpulse_11.h"
 int32_t* Physics_ApplyImpulse_11()
 

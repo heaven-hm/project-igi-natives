@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessage_ShowFull (VA 0x00485970; static CFG gate FAIL, CFG score 0.818).
 #include "StatusMessage_ShowFull.h"
 struct status_msg* StatusMessage_ShowFull(void* ctx, char* message, char* sprite, char* style)
 

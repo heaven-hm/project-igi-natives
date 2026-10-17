@@ -1,3 +1,4 @@
+// Original IGI.EXE function: VehiclePhysics_UpdateState_4352A0 (VA 0x004352A0; static CFG gate PASS, CFG score 1.000).
 #include "VehiclePhysics_UpdateState_4352A0.h"
 
 void*(void* arg1)

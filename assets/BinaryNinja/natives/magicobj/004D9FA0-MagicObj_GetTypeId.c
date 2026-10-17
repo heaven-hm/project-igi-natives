@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObj_GetTypeId (VA 0x004D9FA0; static CFG gate PASS, CFG score 1.000).
 #include "MagicObj_GetTypeId.h"
 int32_t MagicObj_GetTypeId()
 

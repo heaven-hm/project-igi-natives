@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerLog_Setup (VA 0x00468BC0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerLog_Setup.h"
 void* ComputerLog_Setup(float a1)
 

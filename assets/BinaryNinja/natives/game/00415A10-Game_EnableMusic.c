@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_EnableMusic (VA 0x00415A10; static CFG gate FAIL, CFG score 0.667).
 #include "Game_EnableMusic.h"
 int32_t Game_EnableMusic(int32_t a1)
 

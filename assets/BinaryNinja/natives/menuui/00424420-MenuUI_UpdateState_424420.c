@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_UpdateState_424420 (VA 0x00424420; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_UpdateState_424420.h"
 
 char*(void* arg1, char* arg2)

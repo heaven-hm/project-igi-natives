@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_TakeCover_21 (VA 0x004638A0; static CFG gate PASS, CFG score 1.000).
 #include "AI_TakeCover_21.h"
 struct status_msg* AI_TakeCover_21(void* a1, int32_t a2, int32_t a3)
 

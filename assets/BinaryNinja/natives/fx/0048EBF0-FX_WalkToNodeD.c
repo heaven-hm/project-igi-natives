@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_WalkToNodeD (VA 0x0048EBF0; static CFG gate PASS, CFG score 1.000).
 #include "FX_WalkToNodeD.h"
 int32_t FX_WalkToNodeD(int32_t a1, int32_t* a2)
 

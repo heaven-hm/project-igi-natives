@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_SetWarningLevel (VA 0x004B8C60; static CFG gate PASS, CFG score 0.889).
 #include "Script_SetWarningLevel.h"
 int32_t Script_SetWarningLevel(int32_t a1, float a2 @ 0xc)
 

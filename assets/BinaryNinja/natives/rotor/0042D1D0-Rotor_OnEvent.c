@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rotor_OnEvent (VA 0x0042D1D0; static CFG gate PASS, CFG score 0.905).
 #include "Rotor_OnEvent.h"
 int32_t Rotor_OnEvent(void* a1)
 

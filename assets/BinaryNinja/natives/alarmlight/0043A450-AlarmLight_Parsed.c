@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmLight_Parsed (VA 0x0043A450; static CFG gate PASS, CFG score 0.972).
 #include "AlarmLight_Parsed.h"
 int32_t AlarmLight_Parsed(float a1, char* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunDRAGUNOV_Setup (VA 0x00473040; static CFG gate PASS, CFG score 1.000).
 #include "GunDRAGUNOV_Setup.h"
 int32_t GunDRAGUNOV_Setup(float a1, int32_t a2)
 

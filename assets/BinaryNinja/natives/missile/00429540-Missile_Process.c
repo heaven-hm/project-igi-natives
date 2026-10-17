@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Missile_Process (VA 0x00429540; static CFG gate PASS, CFG score 0.933).
 #include "Missile_Process.h"
 int32_t* Missile_Process(void* a1)
 

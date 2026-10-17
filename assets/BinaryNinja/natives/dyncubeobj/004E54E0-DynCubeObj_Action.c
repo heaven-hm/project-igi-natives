@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynCubeObj_Action (VA 0x004E54E0; static CFG gate PASS, CFG score 1.000).
 #include "DynCubeObj_Action.h"
 int32_t DynCubeObj_Action(int32_t* a1)
 

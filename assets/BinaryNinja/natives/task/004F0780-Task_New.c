@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Task_New (VA 0x004F0780; static CFG gate PASS, CFG score 0.986).
 #include "Task_New.h"
 int32_t Task_New(int32_t a1, void* a2, float a3)
 

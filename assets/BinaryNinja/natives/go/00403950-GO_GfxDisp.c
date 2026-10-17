@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_GfxDisp (VA 0x00403950; static CFG gate PASS, CFG score 0.917).
 #include "GO_GfxDisp.h"
 int32_t GO_GfxDisp(int32_t a1, float a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PointlightDynCubeObj_Init (VA 0x00531300; static CFG gate PASS, CFG score 1.000).
 #include "PointlightDynCubeObj_Init.h"
 int32_t PointlightDynCubeObj_Init()
 

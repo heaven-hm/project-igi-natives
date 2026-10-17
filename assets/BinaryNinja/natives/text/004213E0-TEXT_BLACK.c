@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TEXT_BLACK (VA 0x004213E0; static CFG gate PASS, CFG score 1.000).
 #include "TEXT_BLACK.h"
 uint32_t TEXT_BLACK()
 

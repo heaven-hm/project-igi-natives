@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_UpdateGlobalLight_5 (VA 0x005268E0; static CFG gate PASS, CFG score 1.000).
 #include "Light_UpdateGlobalLight_5.h"
 int32_t* Light_UpdateGlobalLight_5(int32_t a1)
 

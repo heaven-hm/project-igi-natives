@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ParseEnumString_13 (VA 0x004F2D50; static CFG gate FAIL, CFG score 0.778).
 #include "Script_ParseEnumString_13.h"
 float* Script_ParseEnumString_13(void* a1)
 

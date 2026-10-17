@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Heli_ReceiveChannels (VA 0x00431B70; static CFG gate PASS, CFG score 0.972).
 #include "Heli_ReceiveChannels.h"
 int32_t Heli_ReceiveChannels(float a1, int32_t* a2)
 

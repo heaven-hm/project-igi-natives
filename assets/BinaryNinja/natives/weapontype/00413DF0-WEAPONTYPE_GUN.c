@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WEAPONTYPE_GUN (VA 0x00413DF0; static CFG gate PASS, CFG score 1.000).
 #include "WEAPONTYPE_GUN.h"
 void* WEAPONTYPE_GUN()
 

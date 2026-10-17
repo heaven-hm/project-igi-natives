@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_LoadParameters (VA 0x0041D720; static CFG gate PASS, CFG score 0.974).
 #include "InputBox_LoadParameters.h"
 int32_t InputBox_LoadParameters(void* a1)
 

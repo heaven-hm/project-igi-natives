@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_E000 (VA 0x004A72CE; static CFG gate PASS, CFG score 1.000).
 #include "Camera_E000.h"
 char* Camera_E000(double* a1, char* a2, void* a3, int32_t a4)
 

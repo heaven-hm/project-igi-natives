@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherLightmap_GetContext_506290 (VA 0x00506290; static CFG gate PASS, CFG score 1.000).
 #include "WeatherLightmap_GetContext_506290.h"
 
 int32_t*(int32_t* arg1 )

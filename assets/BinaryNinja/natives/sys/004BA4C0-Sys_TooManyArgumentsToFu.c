@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_TooManyArgumentsToFu (VA 0x004BA4C0; static CFG gate PASS, CFG score 0.956).
 #include "Sys_TooManyArgumentsToFu.h"
 int32_t* Sys_TooManyArgumentsToFu(int32_t* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_InitPlane_10 (VA 0x0043EF10; static CFG gate PASS, CFG score 0.867).
 #include "Vehicle_InitPlane_10.h"
 struct status_msg* Vehicle_InitPlane_10(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t* a5)
 

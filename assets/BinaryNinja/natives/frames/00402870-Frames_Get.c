@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Frames_Get (VA 0x00402870; static CFG gate PASS, CFG score 1.000).
 #include "Frames_Get.h"
 int32_t Frames_Get()
 

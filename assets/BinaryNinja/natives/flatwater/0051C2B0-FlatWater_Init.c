@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatWater_Init (VA 0x0051C2B0; static CFG gate PASS, CFG score 1.000).
 #include "FlatWater_Init.h"
 int32_t* FlatWater_Init()
 

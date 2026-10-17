@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunPickup_LoadParameters (VA 0x0046CD20; static CFG gate PASS, CFG score 0.939).
 #include "GunPickup_LoadParameters.h"
 int32_t GunPickup_LoadParameters(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanView_Setup (VA 0x004644A0; static CFG gate PASS, CFG score 1.000).
 #include "HumanView_Setup.h"
 int32_t* HumanView_Setup(void* a1, int32_t a2)
 

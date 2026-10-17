@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CarDoor_Init (VA 0x00426630; static CFG gate PASS, CFG score 1.000).
 #include "CarDoor_Init.h"
 void* CarDoor_Init()
 

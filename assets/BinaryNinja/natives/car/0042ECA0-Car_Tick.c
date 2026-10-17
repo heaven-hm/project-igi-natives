@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Tick (VA 0x0042ECA0; static CFG gate PASS, CFG score 1.000).
 #include "Car_Tick.h"
 void* Car_Tick(int32_t a1)
 

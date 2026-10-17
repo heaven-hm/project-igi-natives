@@ -1,3 +1,4 @@
+// Original IGI.EXE function: VehiclePhysics_Invoke9 (VA 0x00426860; static CFG gate PASS, CFG score 1.000).
 #include "VehiclePhysics_Invoke9.h"
 
 void*(void* arg1)

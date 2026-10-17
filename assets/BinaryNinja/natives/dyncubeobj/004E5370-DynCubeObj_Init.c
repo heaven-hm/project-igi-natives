@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynCubeObj_Init (VA 0x004E5370; static CFG gate PASS, CFG score 1.000).
 #include "DynCubeObj_Init.h"
 int32_t DynCubeObj_Init()
 

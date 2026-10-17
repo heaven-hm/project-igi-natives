@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SoundFileSNotValidFo (VA 0x00495F70; static CFG gate PASS, CFG score 0.946).
 #include "Display_SoundFileSNotValidFo.h"
 int32_t Display_SoundFileSNotValidFo(int32_t* a1)
 

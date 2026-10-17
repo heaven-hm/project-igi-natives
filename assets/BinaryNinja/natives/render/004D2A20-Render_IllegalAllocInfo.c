@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_IllegalAllocInfo (VA 0x004D2A20; static CFG gate PASS, CFG score 1.000).
 #include "Render_IllegalAllocInfo.h"
 int32_t Render_IllegalAllocInfo()
 

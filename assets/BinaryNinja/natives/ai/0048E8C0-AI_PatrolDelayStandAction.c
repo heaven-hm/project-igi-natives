@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_PatrolDelayStandAction (VA 0x0048E8C0; static CFG gate PASS, CFG score 1.000).
 #include "AI_PatrolDelayStandAction.h"
 
 int32_t* AI_PatrolDelayStandAction(int32_t pThis, void* param)

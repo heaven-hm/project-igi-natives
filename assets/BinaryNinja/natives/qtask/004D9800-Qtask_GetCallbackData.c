@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qtask_GetCallbackData (VA 0x004D9800; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_GetCallbackData.h"
 int32_t Qtask_GetCallbackData(void* a1)
 

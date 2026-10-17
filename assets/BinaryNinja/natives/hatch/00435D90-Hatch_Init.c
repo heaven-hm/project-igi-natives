@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Hatch_Init (VA 0x00435D90; static CFG gate PASS, CFG score 1.000).
 #include "Hatch_Init.h"
 void* Hatch_Init()
 

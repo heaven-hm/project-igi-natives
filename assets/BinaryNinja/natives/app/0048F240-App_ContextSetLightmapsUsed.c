@@ -1,3 +1,4 @@
+// Original IGI.EXE function: App_ContextSetLightmapsUsed (VA 0x0048F240; static CFG gate PASS, CFG score 1.000).
 #include "App_ContextSetLightmapsUsed.h"
 int32_t App_ContextSetLightmapsUsed(char a1)
 

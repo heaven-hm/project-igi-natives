@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Heli_Update (VA 0x00432950; static CFG gate PASS, CFG score 0.952).
 #include "Heli_Update.h"
 int32_t Heli_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_Setactivematerial (VA 0x00407D60; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_Setactivematerial.h"
 void* HumanPlayer_Setactivematerial()
 

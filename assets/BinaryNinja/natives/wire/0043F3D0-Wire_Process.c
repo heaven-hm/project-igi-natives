@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_Process (VA 0x0043F3D0; static CFG gate PASS, CFG score 0.958).
 #include "Wire_Process.h"
 int32_t Wire_Process(float a1)
 

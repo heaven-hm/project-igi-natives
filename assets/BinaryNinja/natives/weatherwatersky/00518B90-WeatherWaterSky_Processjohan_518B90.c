@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherWaterSky_Processjohan_518B90 (VA 0x00518B90; static CFG gate PASS, CFG score 1.000).
 #include "WeatherWaterSky_Processjohan_518B90.h"
 
 int32_t(int32_t* arg1)

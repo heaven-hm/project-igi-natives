@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_LiedownFire (VA 0x0048DDC0; static CFG gate PASS, CFG score 1.000).
 #include "FX_LiedownFire.h"
 bool FX_LiedownFire(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PatrolPathCommand_Init (VA 0x004533B0; static CFG gate PASS, CFG score 1.000).
 #include "PatrolPathCommand_Init.h"
 int32_t* PatrolPathCommand_Init()
 

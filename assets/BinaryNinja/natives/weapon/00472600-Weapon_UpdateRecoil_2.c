@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateRecoil_2 (VA 0x00472600; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_UpdateRecoil_2.h"
 struct status_msg* Weapon_UpdateRecoil_2(void* a1)
 

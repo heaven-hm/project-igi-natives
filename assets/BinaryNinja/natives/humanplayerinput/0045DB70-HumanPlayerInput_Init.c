@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayerInput_Init (VA 0x0045DB70; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayerInput_Init.h"
 int32_t* HumanPlayerInput_Init()
 

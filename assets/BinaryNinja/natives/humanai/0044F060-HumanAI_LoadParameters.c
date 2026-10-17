@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_LoadParameters (VA 0x0044F060; static CFG gate FAIL, CFG score 0.809).
 #include "HumanAI_LoadParameters.h"
 int32_t HumanAI_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LightmapInfo_Process (VA 0x00526150; static CFG gate PASS, CFG score 1.000).
 #include "LightmapInfo_Process.h"
 int32_t LightmapInfo_Process(void* a1, int32_t* a2)
 

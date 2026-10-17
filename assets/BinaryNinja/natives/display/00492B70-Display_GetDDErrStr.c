@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_GetDDErrStr (VA 0x00492B70; static CFG gate PASS, CFG score 1.000).
 #include "Display_GetDDErrStr.h"
 
 int32_t __stdcall Display_GetDDErrStr(void* pThis, char* param)

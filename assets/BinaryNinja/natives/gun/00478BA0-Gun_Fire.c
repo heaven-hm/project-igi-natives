@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_Fire (VA 0x00478BA0; static CFG gate PASS, CFG score 0.965).
 #include "Gun_Fire.h"
 struct status_msg* Gun_Fire(double* a1, char* a2)
 

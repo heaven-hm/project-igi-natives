@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessage_OnEvent_2 (VA 0x00485870; static CFG gate PASS, CFG score 1.000).
 #include "StatusMessage_OnEvent_2.h"
 int32_t StatusMessage_OnEvent_2(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_CalculateNormals (VA 0x005122B0; static CFG gate FAIL, CFG score 0.667).
 #include "Terrain_CalculateNormals.h"
 int32_t Terrain_CalculateNormals(int32_t a1, int32_t a2)
 

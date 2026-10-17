@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_UnknownBlendmode (VA 0x005144E0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_UnknownBlendmode.h"
 int32_t Terrain_UnknownBlendmode(int32_t a1)
 

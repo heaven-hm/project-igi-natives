@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Body_ResolveCollision (VA 0x004FB9A0; static CFG gate PASS, CFG score 1.000).
 #include "Body_ResolveCollision.h"
 ❓  int32_t* Body_ResolveCollision(float a1 @ 0x8, float a2)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

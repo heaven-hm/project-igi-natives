@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terminal_Setup (VA 0x00443990; static CFG gate PASS, CFG score 1.000).
 #include "Terminal_Setup.h"
 char* Terminal_Setup(void* a1)
 

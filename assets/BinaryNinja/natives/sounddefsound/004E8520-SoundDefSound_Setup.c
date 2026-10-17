@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefSound_Setup (VA 0x004E8520; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefSound_Setup.h"
 int32_t* SoundDefSound_Setup(void* a1, int32_t* a2)
 

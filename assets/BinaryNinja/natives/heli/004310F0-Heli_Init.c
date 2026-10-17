@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Heli_Init (VA 0x004310F0; static CFG gate PASS, CFG score 1.000).
 #include "Heli_Init.h"
 ❓  void* Heli_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

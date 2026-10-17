@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIStationaryGun_Setup (VA 0x0046F390; static CFG gate PASS, CFG score 0.933).
 #include "AIStationaryGun_Setup.h"
 struct status_msg* AIStationaryGun_Setup(long double a1 @ fp0, float a2)
 

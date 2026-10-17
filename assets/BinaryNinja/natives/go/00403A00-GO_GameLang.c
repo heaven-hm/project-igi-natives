@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_GameLang (VA 0x00403A00; static CFG gate PASS, CFG score 0.917).
 #include "GO_GameLang.h"
 int32_t GO_GameLang(int32_t a1, float a2 @ 0xc)
 

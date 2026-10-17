@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Update (VA 0x0042F530; static CFG gate PASS, CFG score 0.957).
 #include "Car_Update.h"
 int32_t Car_Update(void* a1)
 

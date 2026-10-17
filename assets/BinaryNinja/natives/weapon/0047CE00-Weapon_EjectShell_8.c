@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EjectShell_8 (VA 0x0047CE00; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_EjectShell_8.h"
 int32_t* Weapon_EjectShell_8(int32_t* a1, int32_t a2, int32_t a3)
 

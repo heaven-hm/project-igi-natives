@@ -1,3 +1,4 @@
+// Original IGI.EXE function: World_TraceBatch (VA 0x004CDB20; static CFG gate PASS, CFG score 0.872).
 #include "World_TraceBatch.h"
 int32_t* World_TraceBatch(int32_t a1, int32_t* a2, double* a3, double* a4, int32_t* a5, char a6, double* a7, int32_t a8, int32_t a9)
 

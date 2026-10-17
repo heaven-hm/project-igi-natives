@@ -1,3 +1,4 @@
+// Original IGI.EXE function: M203_LoadParameters (VA 0x004761B0; static CFG gate PASS, CFG score 0.944).
 #include "M203_LoadParameters.h"
 struct status_msg* M203_LoadParameters(float a1)
 

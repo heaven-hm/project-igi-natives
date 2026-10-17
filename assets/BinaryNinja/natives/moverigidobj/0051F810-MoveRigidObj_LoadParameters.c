@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MoveRigidObj_LoadParameters (VA 0x0051F810; static CFG gate PASS, CFG score 0.905).
 #include "MoveRigidObj_LoadParameters.h"
 int32_t* MoveRigidObj_LoadParameters(uint32_t a1)
 

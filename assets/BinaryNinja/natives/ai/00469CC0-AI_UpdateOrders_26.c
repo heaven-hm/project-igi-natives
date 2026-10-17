@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_UpdateOrders_26 (VA 0x00469CC0; static CFG gate FAIL, CFG score 0.833).
 #include "AI_UpdateOrders_26.h"
 double* AI_UpdateOrders_26(void* a1, void* a2)
 

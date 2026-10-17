@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyPostProcess (VA 0x004A2430; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess.h"
 struct status_msg* Camera_ApplyPostProcess(void* a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8, uint32_t a9, uint32_t a10)
 

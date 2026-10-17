@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DiscardTerrain_Init (VA 0x0052C0C0; static CFG gate PASS, CFG score 1.000).
 #include "DiscardTerrain_Init.h"
 int32_t* DiscardTerrain_Init()
 

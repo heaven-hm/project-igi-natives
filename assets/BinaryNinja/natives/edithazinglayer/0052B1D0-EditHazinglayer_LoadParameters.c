@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditHazinglayer_LoadParameters (VA 0x0052B1D0; static CFG gate PASS, CFG score 0.889).
 #include "EditHazinglayer_LoadParameters.h"
 int32_t EditHazinglayer_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SmoothQTask_Init (VA 0x0051EEE0; static CFG gate PASS, CFG score 1.000).
 #include "SmoothQTask_Init.h"
 void* SmoothQTask_Init()
 

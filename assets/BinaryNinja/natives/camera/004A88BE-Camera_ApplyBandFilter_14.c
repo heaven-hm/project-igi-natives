@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyBandFilter_14 (VA 0x004A88BE; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_14.h"
 int32_t Camera_ApplyBandFilter_14(int16_t a1 @ x87control, long double a2 @ fp0) __location("fp0")
 

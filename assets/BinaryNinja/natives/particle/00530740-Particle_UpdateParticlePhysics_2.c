@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_UpdateParticlePhysics_2 (VA 0x00530740; static CFG gate PASS, CFG score 1.000).
 #include "Particle_UpdateParticlePhysics_2.h"
 int32_t Particle_UpdateParticlePhysics_2(int32_t* a1 @ 0x8, int32_t* a2)
 

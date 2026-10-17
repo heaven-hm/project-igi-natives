@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ShadowTask_Update (VA 0x00519820; static CFG gate PASS, CFG score 1.000).
 #include "ShadowTask_Update.h"
 uint32_t ShadowTask_Update()
 

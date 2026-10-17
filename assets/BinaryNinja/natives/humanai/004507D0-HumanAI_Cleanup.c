@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_Cleanup (VA 0x004507D0; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_Cleanup.h"
 int32_t HumanAI_Cleanup(void* a1)
 

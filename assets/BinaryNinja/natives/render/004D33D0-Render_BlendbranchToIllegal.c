@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_BlendbranchToIllegal (VA 0x004D33D0; static CFG gate PASS, CFG score 1.000).
 #include "Render_BlendbranchToIllegal.h"
 int32_t Render_BlendbranchToIllegal(int32_t a1, int32_t a2, void* a3, int32_t* a4)
 

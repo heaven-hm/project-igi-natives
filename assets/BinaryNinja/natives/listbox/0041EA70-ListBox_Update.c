@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_Update (VA 0x0041EA70; static CFG gate PASS, CFG score 0.922).
 #include "ListBox_Update.h"
 int32_t ListBox_Update(void* a1, int32_t a2)
 

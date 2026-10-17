@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunShot_Process (VA 0x0047C3D0; static CFG gate PASS, CFG score 1.000).
 #include "GunShot_Process.h"
 void* GunShot_Process(void* a1)
 

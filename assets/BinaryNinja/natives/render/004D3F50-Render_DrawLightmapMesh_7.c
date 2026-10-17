@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawLightmapMesh_7 (VA 0x004D3F50; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawLightmapMesh_7.h"
 float Render_DrawLightmapMesh_7(long double a1 @ fp6, float a2 @ 0x8, float a3) __location("valA")
 

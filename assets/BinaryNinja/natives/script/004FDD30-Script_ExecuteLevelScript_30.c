@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ExecuteLevelScript_30 (VA 0x004FDD30; static CFG gate PASS, CFG score 1.000).
 #include "Script_ExecuteLevelScript_30.h"
 void Script_ExecuteLevelScript_30(void* a1, int32_t a2)
 

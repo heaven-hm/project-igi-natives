@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_CloseEvent_2 (VA 0x00401A20; static CFG gate PASS, CFG score 1.000).
 #include "QTask_CloseEvent_2.h"
 uint32_t QTask_CloseEvent_2(int16_t a1)
 

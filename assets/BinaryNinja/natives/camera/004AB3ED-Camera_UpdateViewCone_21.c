@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateViewCone_21 (VA 0x004AB3ED; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_21.h"
 int32_t* Camera_UpdateViewCone_21()
 

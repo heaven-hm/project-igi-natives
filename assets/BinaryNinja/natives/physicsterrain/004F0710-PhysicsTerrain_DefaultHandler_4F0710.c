@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsTerrain_DefaultHandler_4F0710 (VA 0x004F0710; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsTerrain_DefaultHandler_4F0710.h"
 
 int32_t()

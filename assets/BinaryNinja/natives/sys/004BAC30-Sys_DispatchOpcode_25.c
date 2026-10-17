@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_25 (VA 0x004BAC30; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_25.h"
 void* Sys_DispatchOpcode_25(int32_t a1)
 

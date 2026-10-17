@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_PlaySound (VA 0x00408770; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_PlaySound.h"
 int32_t HumanPlayer_PlaySound(void* a1, void* a2)
 

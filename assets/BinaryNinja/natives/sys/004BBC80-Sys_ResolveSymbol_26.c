@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_26 (VA 0x004BBC80; static CFG gate FAIL, CFG score 0.436).
 #include "Sys_ResolveSymbol_26.h"
 int32_t Sys_ResolveSymbol_26()
 

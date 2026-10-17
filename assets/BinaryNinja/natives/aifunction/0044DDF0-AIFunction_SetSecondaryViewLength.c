@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetSecondaryViewLength (VA 0x0044DDF0; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetSecondaryViewLength.h"
 int32_t AIFunction_SetSecondaryViewLength(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

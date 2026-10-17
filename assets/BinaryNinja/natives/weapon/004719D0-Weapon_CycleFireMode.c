@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_CycleFireMode (VA 0x004719D0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_CycleFireMode.h"
 int32_t Weapon_CycleFireMode(float* a1, int32_t* a2)
 

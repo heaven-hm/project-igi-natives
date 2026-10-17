@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FadeOutEnd_Init (VA 0x004E92C0; static CFG gate PASS, CFG score 1.000).
 #include "FadeOutEnd_Init.h"
 int32_t FadeOutEnd_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_RegisterSymbol_3 (VA 0x004C0780; static CFG gate PASS, CFG score 0.905).
 #include "DynObj_RegisterSymbol_3.h"
 int32_t __convention("regparm") DynObj_RegisterSymbol_3(int32_t a1, int32_t a2, int32_t a3, void* a4, int32_t* a5)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalSound_OnEvent (VA 0x004254A0; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalSound_OnEvent.h"
 int32_t ConditionalSound_OnEvent(void* a1)
 

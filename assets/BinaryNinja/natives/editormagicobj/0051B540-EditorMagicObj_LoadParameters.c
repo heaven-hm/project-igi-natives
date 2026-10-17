@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditorMagicObj_LoadParameters (VA 0x0051B540; static CFG gate FAIL, CFG score 0.833).
 #include "EditorMagicObj_LoadParameters.h"
 int32_t EditorMagicObj_LoadParameters(void* a1, void* a2)
 

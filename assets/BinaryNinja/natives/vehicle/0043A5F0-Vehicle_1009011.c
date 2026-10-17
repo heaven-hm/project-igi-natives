@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_1009011 (VA 0x0043A5F0; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_1009011.h"
 int32_t Vehicle_1009011(void* a1)
 

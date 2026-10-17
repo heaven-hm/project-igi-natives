@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateTransform_9 (VA 0x004A6A50; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_9.h"
 void __fastcall Camera_UpdateTransform_9(void** a1)
 

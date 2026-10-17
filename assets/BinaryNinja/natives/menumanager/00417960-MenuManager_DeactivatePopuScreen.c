@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_DeactivatePopuScreen (VA 0x00417960; static CFG gate FAIL, CFG score 0.667).
 #include "MenuManager_DeactivatePopuScreen.h"
 int32_t MenuManager_DeactivatePopuScreen(int32_t a1, void* a2)
 

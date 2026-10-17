@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_CutsceneDelete (VA 0x00415AB0; static CFG gate FAIL, CFG score 0.833).
 #include "Game_CutsceneDelete.h"
 int32_t Game_CutsceneDelete(int32_t a1)
 

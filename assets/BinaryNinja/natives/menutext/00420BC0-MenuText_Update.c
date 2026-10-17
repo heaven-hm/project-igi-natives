@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuText_Update (VA 0x00420BC0; static CFG gate PASS, CFG score 1.000).
 #include "MenuText_Update.h"
 void* MenuText_Update(void* a1)
 

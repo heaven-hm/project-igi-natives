@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_EvaluateAreaCriteria_13 (VA 0x0050D7E0; static CFG gate FAIL, CFG score 0.667).
 #include "Physics_EvaluateAreaCriteria_13.h"
 ❓  int32_t Physics_EvaluateAreaCriteria_13(void* a1)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

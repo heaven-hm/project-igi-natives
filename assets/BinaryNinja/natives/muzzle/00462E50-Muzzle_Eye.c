@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Muzzle_Eye (VA 0x00462E50; static CFG gate PASS, CFG score 1.000).
 #include "Muzzle_Eye.h"
 void* Muzzle_Eye(void* a1)
 

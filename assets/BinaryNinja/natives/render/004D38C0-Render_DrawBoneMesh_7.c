@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawBoneMesh_7 (VA 0x004D38C0; static CFG gate PASS, CFG score 0.917).
 #include "Render_DrawBoneMesh_7.h"
 int32_t Render_DrawBoneMesh_7(int32_t a1, void* a2)
 

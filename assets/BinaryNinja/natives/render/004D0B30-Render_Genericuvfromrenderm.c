@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_Genericuvfromrenderm (VA 0x004D0B30; static CFG gate PASS, CFG score 1.000).
 #include "Render_Genericuvfromrenderm.h"
 int32_t Render_Genericuvfromrenderm()
 

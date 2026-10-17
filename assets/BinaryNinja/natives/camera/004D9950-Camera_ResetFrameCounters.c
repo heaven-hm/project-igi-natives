@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetFrameCounters (VA 0x004D9950; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetFrameCounters.h"
 void* Camera_ResetFrameCounters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefSound_Update (VA 0x004E8B80; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefSound_Update.h"
 int32_t SoundDefSound_Update(void* a1, float* a2)
 

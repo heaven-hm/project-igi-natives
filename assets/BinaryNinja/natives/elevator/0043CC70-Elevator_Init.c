@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Elevator_Init (VA 0x0043CC70; static CFG gate PASS, CFG score 1.000).
 #include "Elevator_Init.h"
 int32_t* Elevator_Init()
 

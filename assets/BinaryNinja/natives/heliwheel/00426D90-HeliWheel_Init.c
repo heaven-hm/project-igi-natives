@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeliWheel_Init (VA 0x00426D90; static CFG gate PASS, CFG score 1.000).
 #include "HeliWheel_Init.h"
 void* HeliWheel_Init()
 

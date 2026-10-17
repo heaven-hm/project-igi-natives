@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_CameraBeepS (VA 0x00441AE0; static CFG gate PASS, CFG score 1.000).
 #include "Env_CameraBeepS.h"
 struct status_msg* Env_CameraBeepS(void* a1)
 

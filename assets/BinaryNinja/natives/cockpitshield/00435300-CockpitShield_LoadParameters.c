@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CockpitShield_LoadParameters (VA 0x00435300; static CFG gate PASS, CFG score 0.933).
 #include "CockpitShield_LoadParameters.h"
 int32_t CockpitShield_LoadParameters(void* a1, float a2)
 

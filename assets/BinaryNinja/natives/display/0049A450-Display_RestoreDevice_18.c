@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_RestoreDevice_18 (VA 0x0049A450; static CFG gate PASS, CFG score 0.867).
 #include "Display_RestoreDevice_18.h"
 struct status_msg* Display_RestoreDevice_18(uint32_t a1, void* a2, int32_t a3, int32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8, uint32_t a9, char* a10, uint32_t a11)
 

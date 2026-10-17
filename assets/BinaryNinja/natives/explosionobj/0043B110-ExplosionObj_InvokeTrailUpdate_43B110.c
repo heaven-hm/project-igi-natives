@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplosionObj_InvokeTrailUpdate_43B110 (VA 0x0043B110; static CFG gate PASS, CFG score 1.000).
 #include "ExplosionObj_InvokeTrailUpdate_43B110.h"
 
 char*(void* arg1)

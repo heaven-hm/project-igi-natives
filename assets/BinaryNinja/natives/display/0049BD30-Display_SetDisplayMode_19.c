@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetDisplayMode_19 (VA 0x0049BD30; static CFG gate FAIL, CFG score 0.667).
 #include "Display_SetDisplayMode_19.h"
 int32_t Display_SetDisplayMode_19()
 

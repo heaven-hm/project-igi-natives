@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AreaActivate_Init (VA 0x005043B0; static CFG gate PASS, CFG score 1.000).
 #include "AreaActivate_Init.h"
 int32_t* AreaActivate_Init()
 

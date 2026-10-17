@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_LoadParameters (VA 0x00444420; static CFG gate PASS, CFG score 0.926).
 #include "Cabinet_LoadParameters.h"
 int32_t Cabinet_LoadParameters(int32_t* a1)
 

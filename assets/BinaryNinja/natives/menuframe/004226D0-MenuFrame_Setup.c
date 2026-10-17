@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuFrame_Setup (VA 0x004226D0; static CFG gate PASS, CFG score 1.000).
 #include "MenuFrame_Setup.h"
 int32_t MenuFrame_Setup(void* a1)
 

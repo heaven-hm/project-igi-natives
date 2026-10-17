@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_WalkRain1D_4 (VA 0x00463920; static CFG gate PASS, CFG score 1.000).
 #include "AI_WalkRain1D_4.h"
 void AI_WalkRain1D_4(void* a1)
 

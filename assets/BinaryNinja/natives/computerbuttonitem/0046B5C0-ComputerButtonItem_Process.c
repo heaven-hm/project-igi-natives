@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerButtonItem_Process (VA 0x0046B5C0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerButtonItem_Process.h"
 int32_t ComputerButtonItem_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_ValidateCombatTask (VA 0x0048E5F0; static CFG gate PASS, CFG score 1.000).
 #include "AI_ValidateCombatTask.h"
 
 int32_t* AI_ValidateCombatTask(void* pThis @ 0x8)

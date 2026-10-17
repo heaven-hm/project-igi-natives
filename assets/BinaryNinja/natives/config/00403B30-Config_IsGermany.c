@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_IsGermany (VA 0x00403B30; static CFG gate PASS, CFG score 0.889).
 #include "Config_IsGermany.h"
 int32_t Config_IsGermany(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeObject_Cleanup_4 (VA 0x004824C0; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeObject_Cleanup_4.h"
 void* ExplodeObject_Cleanup_4(void* a1, int32_t* a2)
 

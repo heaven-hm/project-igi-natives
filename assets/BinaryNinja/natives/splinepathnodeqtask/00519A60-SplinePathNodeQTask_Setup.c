@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathNodeQTask_Setup (VA 0x00519A60; static CFG gate PASS, CFG score 1.000).
 #include "SplinePathNodeQTask_Setup.h"
 int32_t SplinePathNodeQTask_Setup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawRigidMesh_2 (VA 0x004D0C50; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawRigidMesh_2.h"
 uint32_t Render_DrawRigidMesh_2()
 

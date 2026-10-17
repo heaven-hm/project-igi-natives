@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_Cleanup (VA 0x004B83D0; static CFG gate PASS, CFG score 1.000).
 #include "Qvm_Cleanup.h"
 int32_t Qvm_Cleanup(int32_t* a1)
 

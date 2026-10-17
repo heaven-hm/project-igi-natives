@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPickup_Setup (VA 0x0046C410; static CFG gate PASS, CFG score 1.000).
 #include "GenericPickup_Setup.h"
 int32_t GenericPickup_Setup(void* a1)
 

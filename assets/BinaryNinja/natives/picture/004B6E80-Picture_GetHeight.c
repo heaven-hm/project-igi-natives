@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Picture_GetHeight (VA 0x004B6E80; static CFG gate PASS, CFG score 1.000).
 #include "Picture_GetHeight.h"
 int32_t Picture_GetHeight(int32_t* a1)
 

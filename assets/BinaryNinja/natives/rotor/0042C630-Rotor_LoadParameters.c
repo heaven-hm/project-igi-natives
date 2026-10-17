@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rotor_LoadParameters (VA 0x0042C630; static CFG gate FAIL, CFG score 0.815).
 #include "Rotor_LoadParameters.h"
 void* Rotor_LoadParameters(void* a1)
 

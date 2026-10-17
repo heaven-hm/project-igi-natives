@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_6 (VA 0x004B1DC0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_6.h"
 int32_t Sys_ResolveSymbol_6(int32_t a1, int32_t a2)
 

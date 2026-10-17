@@ -1,3 +1,4 @@
+// Original IGI.EXE function: File_Open (VA 0x004A5350; static CFG gate PASS, CFG score 1.000).
 #include "File_Open.h"
 int32_t* File_Open(PSTR a1, char* a2)
 

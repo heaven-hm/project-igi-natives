@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_1009011 (VA 0x00481A60; static CFG gate PASS, CFG score 0.944).
 #include "FX_1009011.h"
 struct status_msg* FX_1009011(double* a1)
 

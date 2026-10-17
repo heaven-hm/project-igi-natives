@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyLineFilter_18 (VA 0x004A9CE5; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyLineFilter_18.h"
 🌐  long double __fastcall __fload_withFB(int32_t a1, double* a2)
 

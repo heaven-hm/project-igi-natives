@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_ResetEmitters_6 (VA 0x00532490; static CFG gate PASS, CFG score 0.986).
 #include "Particle_ResetEmitters_6.h"
 int32_t Particle_ResetEmitters_6()
 

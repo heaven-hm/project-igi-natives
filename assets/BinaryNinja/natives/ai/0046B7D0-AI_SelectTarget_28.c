@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_SelectTarget_28 (VA 0x0046B7D0; static CFG gate PASS, CFG score 1.000).
 #include "AI_SelectTarget_28.h"
 void* AI_SelectTarget_28(void* a1, float a2, int32_t a3)
 

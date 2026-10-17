@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terminal_Update (VA 0x00443B80; static CFG gate PASS, CFG score 1.000).
 #include "Terminal_Update.h"
 int32_t Terminal_Update(void* a1)
 

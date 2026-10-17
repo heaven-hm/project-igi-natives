@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAttach_Init (VA 0x00465A10; static CFG gate PASS, CFG score 1.000).
 #include "HumanAttach_Init.h"
 int32_t HumanAttach_Init()
 

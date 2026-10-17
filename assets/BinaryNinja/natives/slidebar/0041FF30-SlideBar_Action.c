@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_Action (VA 0x0041FF30; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Action.h"
 int32_t SlideBar_Action(int80_t a1 @ fp0, int32_t a2)
 

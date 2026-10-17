@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneDynCubeObj_Setup (VA 0x004D7620; static CFG gate PASS, CFG score 0.889).
 #include "BoneDynCubeObj_Setup.h"
 int32_t* BoneDynCubeObj_Setup(float a1, int32_t* a2, float a3 @ 0x6c, float a4, float a5, double a6 @ 0xa0, int16_t* a7 @ 0xc0, float a8 @ 0xe4, float a9, float a10, float a11, float a12, float a13, float a14, float a15)
 

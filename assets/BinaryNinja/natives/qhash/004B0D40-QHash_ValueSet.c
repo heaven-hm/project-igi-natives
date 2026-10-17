@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QHash_ValueSet (VA 0x004B0D40; static CFG gate PASS, CFG score 1.000).
 #include "QHash_ValueSet.h"
 int32_t QHash_ValueSet()
 

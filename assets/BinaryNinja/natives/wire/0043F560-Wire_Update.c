@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_Update (VA 0x0043F560; static CFG gate PASS, CFG score 0.889).
 #include "Wire_Update.h"
 int32_t Wire_Update(double* a1, void* a2)
 

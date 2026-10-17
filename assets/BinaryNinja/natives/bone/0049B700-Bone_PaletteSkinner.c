@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Bone_PaletteSkinner (VA 0x0049B700; static CFG gate PASS, CFG score 1.000).
 #include "Bone_PaletteSkinner.h"
 int32_t Bone_PaletteSkinner(void* a1, int32_t a2, float a3, int32_t a4)
 

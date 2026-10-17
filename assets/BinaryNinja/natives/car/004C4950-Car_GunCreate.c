@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_GunCreate (VA 0x004C4950; static CFG gate FAIL, CFG score 0.833).
 #include "Car_GunCreate.h"
 int32_t* Car_GunCreate(void* a1, void* a2, int32_t a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_Action (VA 0x00423D30; static CFG gate PASS, CFG score 1.000).
 #include "ControlsMenu_Action.h"
 int32_t ControlsMenu_Action(void* a1)
 

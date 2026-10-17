@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapons_CountGet (VA 0x00413BB0; static CFG gate PASS, CFG score 1.000).
 #include "Weapons_CountGet.h"
 int32_t Weapons_CountGet()
 

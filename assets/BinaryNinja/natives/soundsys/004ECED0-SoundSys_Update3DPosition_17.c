@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_Update3DPosition_17 (VA 0x004ECED0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_Update3DPosition_17.h"
 void* SoundSys_Update3DPosition_17(int32_t* a1, float a2, float a3, float a4, float a5)
 

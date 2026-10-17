@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSpline_InvokeCouldnTGetSurfaceDes (VA 0x0050AB50; static CFG gate PASS, CFG score 1.000).
 #include "AnimSpline_InvokeCouldnTGetSurfaceDes.h"
 
 int32_t(void* arg1)

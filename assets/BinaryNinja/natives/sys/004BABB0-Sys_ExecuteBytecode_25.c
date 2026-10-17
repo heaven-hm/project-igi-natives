@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ExecuteBytecode_25 (VA 0x004BABB0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ExecuteBytecode_25.h"
 void** Sys_ExecuteBytecode_25(char* a1)
 

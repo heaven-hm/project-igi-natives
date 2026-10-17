@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_OnEvent (VA 0x0041C500; static CFG gate PASS, CFG score 1.000).
 #include "ScrollListBox_OnEvent.h"
 int32_t* ScrollListBox_OnEvent(void* a1)
 

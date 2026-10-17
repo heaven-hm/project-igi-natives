@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_AmmoType (VA 0x0047CAD0; static CFG gate PASS, CFG score 0.980).
 #include "Define_AmmoType.h"
 int32_t Define_AmmoType(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

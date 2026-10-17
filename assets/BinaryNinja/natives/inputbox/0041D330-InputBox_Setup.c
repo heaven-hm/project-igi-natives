@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_Setup (VA 0x0041D330; static CFG gate PASS, CFG score 1.000).
 #include "InputBox_Setup.h"
 int32_t InputBox_Setup(void* a1)
 

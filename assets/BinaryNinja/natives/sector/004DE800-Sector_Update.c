@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sector_Update (VA 0x004DE800; static CFG gate PASS, CFG score 1.000).
 #include "Sector_Update.h"
 void* Sector_Update(void* a1, int32_t a2)
 

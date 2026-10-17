@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_DamageHandler (VA 0x0045D3C0; static CFG gate PASS, CFG score 1.000).
 #include "Human_DamageHandler.h"
 int32_t Human_DamageHandler(void* a1, float a2)
 

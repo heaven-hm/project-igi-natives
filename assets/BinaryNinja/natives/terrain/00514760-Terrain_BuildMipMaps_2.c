@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_BuildMipMaps_2 (VA 0x00514760; static CFG gate FAIL, CFG score 0.731).
 #include "Terrain_BuildMipMaps_2.h"
 uint32_t Terrain_BuildMipMaps_2(char a1 @ 0x24, char a2 @ 0x64, int32_t a3 @ 0xa4, int32_t* a4 @ 0xc4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSpline_ProcessStep_50BE90 (VA 0x0050BE90; static CFG gate PASS, CFG score 1.000).
 #include "AnimSpline_ProcessStep_50BE90.h"
 
 char*(int32_t* arg1)

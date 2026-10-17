@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CombatGunnerStand (VA 0x0048D2C0; static CFG gate PASS, CFG score 1.000).
 #include "AI_CombatGunnerStand.h"
 
 int32_t* AI_CombatGunnerStand(void* pThis, void* param)

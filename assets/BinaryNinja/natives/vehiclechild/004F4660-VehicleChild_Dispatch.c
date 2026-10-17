@@ -1,3 +1,4 @@
+// Original IGI.EXE function: VehicleChild_Dispatch (VA 0x004F4660; static CFG gate FAIL, CFG score 0.667).
 #include "VehicleChild_Dispatch.h"
 void* VehicleChild_Dispatch(void* a1)
 

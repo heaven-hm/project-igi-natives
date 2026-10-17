@@ -1,3 +1,4 @@
+// Original IGI.EXE function: NoiseQTask_OnEvent (VA 0x00520350; static CFG gate PASS, CFG score 1.000).
 #include "NoiseQTask_OnEvent.h"
 int32_t NoiseQTask_OnEvent(void* a1)
 

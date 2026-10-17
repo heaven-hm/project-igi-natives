@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_FillMissionSelectionBox (VA 0x00405660; static CFG gate PASS, CFG score 0.933).
 #include "Config_FillMissionSelectionBox.h"
 int32_t Config_FillMissionSelectionBox(int32_t a1)
 

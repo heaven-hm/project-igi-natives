@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qhash_Reset (VA 0x004B0D90; static CFG gate PASS, CFG score 1.000).
 #include "Qhash_Reset.h"
 void* Qhash_Reset()
 

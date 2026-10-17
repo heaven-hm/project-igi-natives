@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_Setup (VA 0x0045F050; static CFG gate PASS, CFG score 1.000).
 #include "Human_Setup.h"
 int32_t* Human_Setup(float a1, int32_t a2)
 

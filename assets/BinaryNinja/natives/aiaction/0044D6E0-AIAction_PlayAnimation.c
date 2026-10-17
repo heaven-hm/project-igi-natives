@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_PlayAnimation (VA 0x0044D6E0; static CFG gate PASS, CFG score 0.933).
 #include "AIAction_PlayAnimation.h"
 int32_t AIAction_PlayAnimation(int32_t a1, float a2 @ 0xc)
 

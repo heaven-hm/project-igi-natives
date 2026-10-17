@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlashTask_LoadParameters (VA 0x00530AD0; static CFG gate PASS, CFG score 1.000).
 #include "FlashTask_LoadParameters.h"
 int32_t FlashTask_LoadParameters(float a1)
 

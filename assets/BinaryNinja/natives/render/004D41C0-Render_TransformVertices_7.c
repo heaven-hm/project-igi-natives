@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_TransformVertices_7 (VA 0x004D41C0; static CFG gate FAIL, CFG score 0.833).
 #include "Render_TransformVertices_7.h"
 float Render_TransformVertices_7(float a1, int32_t a2, float a3, float a4, float a5, float a6) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_FireAtTask (VA 0x0048EDE0; static CFG gate PASS, CFG score 1.000).
 #include "AI_FireAtTask.h"
 
 void* AI_FireAtTask(void* pThis @ 0x8)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SpriteParticleSystemDynCubeObj_Init (VA 0x00531190; static CFG gate PASS, CFG score 1.000).
 #include "SpriteParticleSystemDynCubeObj_Init.h"
 int32_t SpriteParticleSystemDynCubeObj_Init()
 

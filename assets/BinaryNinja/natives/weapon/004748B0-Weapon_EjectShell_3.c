@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EjectShell_3 (VA 0x004748B0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_EjectShell_3.h"
 float Weapon_EjectShell_3(float a1) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_SelectTarget_19 (VA 0x00463260; static CFG gate PASS, CFG score 0.889).
 #include "AI_SelectTarget_19.h"
 int32_t AI_SelectTarget_19(void* a1)
 

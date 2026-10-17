@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CheckCapabilities_8 (VA 0x004955F0; static CFG gate PASS, CFG score 1.000).
 #include "Display_CheckCapabilities_8.h"
 int32_t* Display_CheckCapabilities_8(void* a1)
 

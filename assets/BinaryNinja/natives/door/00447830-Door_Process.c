@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_Process (VA 0x00447830; static CFG gate PASS, CFG score 0.889).
 #include "Door_Process.h"
 int32_t* Door_Process(uint32_t a1, char* a2)
 

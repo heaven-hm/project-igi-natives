@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ladder_Setup (VA 0x004403C0; static CFG gate PASS, CFG score 1.000).
 #include "Ladder_Setup.h"
 void* Ladder_Setup(void* a1)
 

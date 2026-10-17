@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Grenade_Action (VA 0x004768A0; static CFG gate PASS, CFG score 1.000).
 #include "Grenade_Action.h"
 int32_t* Grenade_Action(int32_t* a1 @ 0x8)
 

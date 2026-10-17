@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_Offscreenbuffer (VA 0x00498080; static CFG gate PASS, CFG score 1.000).
 #include "Display_Offscreenbuffer.h"
 int32_t Display_Offscreenbuffer()
 

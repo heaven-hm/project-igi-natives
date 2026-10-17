@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_CheckCollision_10 (VA 0x00413BD0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_CheckCollision_10.h"
 int32_t* HumanPlayer_CheckCollision_10(int32_t a1)
 

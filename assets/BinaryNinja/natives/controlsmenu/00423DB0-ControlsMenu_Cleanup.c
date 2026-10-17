@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_Cleanup (VA 0x00423DB0; static CFG gate PASS, CFG score 1.000).
 #include "ControlsMenu_Cleanup.h"
 int32_t ControlsMenu_Cleanup()
 

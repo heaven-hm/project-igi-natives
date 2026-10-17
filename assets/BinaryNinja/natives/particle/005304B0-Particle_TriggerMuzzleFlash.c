@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_TriggerMuzzleFlash (VA 0x005304B0; static CFG gate PASS, CFG score 1.000).
 #include "Particle_TriggerMuzzleFlash.h"
 int16_t* Particle_TriggerMuzzleFlash(int32_t a1, int16_t a2)
 

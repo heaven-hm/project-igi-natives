@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sound_Load (VA 0x004E68D0; static CFG gate PASS, CFG score 1.000).
 #include "Sound_Load.h"
 int32_t Sound_Load(void* a1)
 

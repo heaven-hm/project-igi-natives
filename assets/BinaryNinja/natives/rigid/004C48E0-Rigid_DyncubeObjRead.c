@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rigid_DyncubeObjRead (VA 0x004C48E0; static CFG gate PASS, CFG score 1.000).
 #include "Rigid_DyncubeObjRead.h"
 char* Rigid_DyncubeObjRead(char* a1)
 

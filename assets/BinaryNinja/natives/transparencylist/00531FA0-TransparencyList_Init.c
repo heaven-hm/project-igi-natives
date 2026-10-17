@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TransparencyList_Init (VA 0x00531FA0; static CFG gate PASS, CFG score 1.000).
 #include "TransparencyList_Init.h"
 int32_t TransparencyList_Init()
 

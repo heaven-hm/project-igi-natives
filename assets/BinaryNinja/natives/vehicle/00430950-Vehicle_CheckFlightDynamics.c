@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_CheckFlightDynamics (VA 0x00430950; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_CheckFlightDynamics.h"
 int32_t Vehicle_CheckFlightDynamics()
 

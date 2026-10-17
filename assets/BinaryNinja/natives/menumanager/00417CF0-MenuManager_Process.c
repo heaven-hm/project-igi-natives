@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_Process (VA 0x00417CF0; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_Process.h"
 int32_t MenuManager_Process(void* a1, char* a2)
 

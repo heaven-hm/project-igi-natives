@@ -1,3 +1,4 @@
+// Original IGI.EXE function: VehiclePhysics_GetContext_431B60 (VA 0x00431B60; static CFG gate PASS, CFG score 1.000).
 #include "VehiclePhysics_GetContext_431B60.h"
 
 int32_t*(int32_t* arg1 )

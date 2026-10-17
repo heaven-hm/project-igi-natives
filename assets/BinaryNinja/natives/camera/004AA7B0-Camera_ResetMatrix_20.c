@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_20 (VA 0x004AA7B0; static CFG gate FAIL, CFG score 0.583).
 #include "Camera_ResetMatrix_20.h"
 char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
 

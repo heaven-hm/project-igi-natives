@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGraph_Process (VA 0x004EA8D0; static CFG gate FAIL, CFG score 0.744).
 #include "SoundDefGraph_Process.h"
 int32_t SoundDefGraph_Process(void* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_FailedToCreateBoneob (VA 0x004D2D60; static CFG gate PASS, CFG score 1.000).
 #include "Render_FailedToCreateBoneob.h"
 void* Render_FailedToCreateBoneob(int32_t* a1, int32_t a2)
 

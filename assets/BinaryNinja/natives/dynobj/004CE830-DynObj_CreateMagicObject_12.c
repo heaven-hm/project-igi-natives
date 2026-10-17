@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_CreateMagicObject_12 (VA 0x004CE830; static CFG gate PASS, CFG score 0.917).
 #include "DynObj_CreateMagicObject_12.h"
 int32_t* DynObj_CreateMagicObject_12(int32_t* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunDRAGUNOV_Process (VA 0x00473330; static CFG gate PASS, CFG score 1.000).
 #include "GunDRAGUNOV_Process.h"
 float* GunDRAGUNOV_Process(float a1 @ 0x8)
 

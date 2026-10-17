@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_Allocpalette (VA 0x004B7C80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_Allocpalette.h"
 int32_t Sys_Allocpalette()
 

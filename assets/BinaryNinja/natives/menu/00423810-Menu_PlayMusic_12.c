@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_PlayMusic_12 (VA 0x00423810; static CFG gate PASS, CFG score 1.000).
 #include "Menu_PlayMusic_12.h"
 int32_t __convention("regparm") Menu_PlayMusic_12(int32_t a1, int32_t a2, int32_t a3, int32_t a4)
 

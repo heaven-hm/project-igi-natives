@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyBandFilter_23 (VA 0x004ABE70; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_23.h"
 enum WIN32_ERROR Camera_ApplyBandFilter_23(int32_t a1)
 

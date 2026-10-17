@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TypeWriterBox_LoadParameters (VA 0x0041A6D0; static CFG gate PASS, CFG score 1.000).
 #include "TypeWriterBox_LoadParameters.h"
 int32_t TypeWriterBox_LoadParameters(void* a1)
 

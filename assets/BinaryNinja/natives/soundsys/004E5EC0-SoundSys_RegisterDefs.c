@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_RegisterDefs (VA 0x004E5EC0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_RegisterDefs.h"
 
 int32_t* SoundSys_RegisterDefs(int32_t pThis, void* param)

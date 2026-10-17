@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_AidetectionQtaskMask (VA 0x00489640; static CFG gate PASS, CFG score 1.000).
 #include "FX_AidetectionQtaskMask.h"
 int32_t FX_AidetectionQtaskMask(int16_t a1)
 

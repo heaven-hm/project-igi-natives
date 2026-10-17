@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_LeaveMenus_13 (VA 0x00424220; static CFG gate PASS, CFG score 1.000).
 #include "Menu_LeaveMenus_13.h"
 void* Menu_LeaveMenus_13(void* a1, void* a2)
 

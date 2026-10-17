@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GameOptionsInputGetBloodEnabled (VA 0x00404340; static CFG gate PASS, CFG score 0.889).
 #include "Config_GameOptionsInputGetBloodEnabled.h"
 int32_t Config_GameOptionsInputGetBloodEnabled(int32_t a1)
 

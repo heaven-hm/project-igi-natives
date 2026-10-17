@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Music_SetSfxVolume (VA 0x00495F30; static CFG gate PASS, CFG score 1.000).
 #include "Music_SetSfxVolume.h"
 int32_t Music_SetSfxVolume(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_Patrol (VA 0x0044D0E0; static CFG gate PASS, CFG score 0.944).
 #include "AIAction_Patrol.h"
 int32_t AIAction_Patrol(int32_t a1, float a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_PlaySound (VA 0x0044D750; static CFG gate PASS, CFG score 0.944).
 #include "AIAction_PlaySound.h"
 int32_t AIAction_PlaySound(int32_t a1, float a2 @ 0xc)
 

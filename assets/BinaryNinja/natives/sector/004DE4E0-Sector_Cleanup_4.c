@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sector_Cleanup_4 (VA 0x004DE4E0; static CFG gate PASS, CFG score 1.000).
 #include "Sector_Cleanup_4.h"
 int32_t Sector_Cleanup_4(void* a1)
 

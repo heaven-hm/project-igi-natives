@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Hatch_LoadParameters (VA 0x00435F60; static CFG gate PASS, CFG score 1.000).
 #include "Hatch_LoadParameters.h"
 int32_t Hatch_LoadParameters(void* a1, float a2)
 

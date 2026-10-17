@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_ResetGraphicOptions (VA 0x00403B70; static CFG gate PASS, CFG score 0.970).
 #include "Config_ResetGraphicOptions.h"
 int32_t Config_ResetGraphicOptions(int32_t a1)
 

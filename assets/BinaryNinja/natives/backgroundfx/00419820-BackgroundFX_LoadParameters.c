@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BackgroundFX_LoadParameters (VA 0x00419820; static CFG gate PASS, CFG score 1.000).
 #include "BackgroundFX_LoadParameters.h"
 int32_t BackgroundFX_LoadParameters(float a1)
 

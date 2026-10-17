@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_Setup (VA 0x0041FCE0; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Setup.h"
 int32_t SlideBar_Setup(int32_t a1)
 

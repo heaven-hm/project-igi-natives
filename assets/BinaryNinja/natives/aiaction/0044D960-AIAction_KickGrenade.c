@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_KickGrenade (VA 0x0044D960; static CFG gate PASS, CFG score 0.905).
 #include "AIAction_KickGrenade.h"
 int32_t AIAction_KickGrenade(int32_t a1, int32_t a2 @ 0xc)
 

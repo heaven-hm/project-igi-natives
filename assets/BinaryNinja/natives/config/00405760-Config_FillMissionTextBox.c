@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_FillMissionTextBox (VA 0x00405760; static CFG gate PASS, CFG score 0.917).
 #include "Config_FillMissionTextBox.h"
 int32_t Config_FillMissionTextBox(int32_t a1)
 

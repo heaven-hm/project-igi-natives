@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObj_LoadParameters (VA 0x004FB2C0; static CFG gate FAIL, CFG score 0.667).
 #include "PhysicsObj_LoadParameters.h"
 int32_t PhysicsObj_LoadParameters(void* a1, int32_t* a2)
 

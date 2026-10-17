@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DeathZone_LoadParameters (VA 0x00465CD0; static CFG gate PASS, CFG score 0.875).
 #include "DeathZone_LoadParameters.h"
 int32_t DeathZone_LoadParameters(int32_t* a1, float a2)
 

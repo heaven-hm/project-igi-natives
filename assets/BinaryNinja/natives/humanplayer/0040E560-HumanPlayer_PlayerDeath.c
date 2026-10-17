@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_PlayerDeath (VA 0x0040E560; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_PlayerDeath.h"
 int32_t HumanPlayer_PlayerDeath(void* a1, void* a2)
 

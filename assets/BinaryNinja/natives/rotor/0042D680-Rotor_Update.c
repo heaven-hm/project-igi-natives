@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rotor_Update (VA 0x0042D680; static CFG gate PASS, CFG score 0.889).
 #include "Rotor_Update.h"
 void* Rotor_Update(void* a1, float a2)
 

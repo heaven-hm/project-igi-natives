@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldier_Action (VA 0x0045A5E0; static CFG gate PASS, CFG score 0.970).
 #include "HumanSoldier_Action.h"
 int32_t HumanSoldier_Action(void* a1, float* a2)
 

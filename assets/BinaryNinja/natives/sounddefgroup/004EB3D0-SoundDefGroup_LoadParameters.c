@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGroup_LoadParameters (VA 0x004EB3D0; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefGroup_LoadParameters.h"
 int32_t* SoundDefGroup_LoadParameters(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Fence_Process (VA 0x0043FE50; static CFG gate PASS, CFG score 1.000).
 #include "Fence_Process.h"
 char* Fence_Process(void* a1)
 

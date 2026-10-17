@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateZoom_8 (VA 0x0047D920; static CFG gate PASS, CFG score 0.852).
 #include "Weapon_UpdateZoom_8.h"
 int32_t Weapon_UpdateZoom_8(double* a1, float* a2, void* a3, int32_t* a4, void* a5, int32_t a6, int32_t a7, float a8)
 

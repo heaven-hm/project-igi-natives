@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_DeployGear_6 (VA 0x00438240; static CFG gate FAIL, CFG score 0.833).
 #include "Vehicle_DeployGear_6.h"
 void* Vehicle_DeployGear_6(void* a1)
 

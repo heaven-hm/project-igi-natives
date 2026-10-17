@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Building_OnEvent (VA 0x00448950; static CFG gate PASS, CFG score 1.000).
 #include "Building_OnEvent.h"
 int32_t Building_OnEvent(float a1, void* a2)
 

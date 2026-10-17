@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_9 (VA 0x004B2760; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_9.h"
 int32_t Sys_DispatchOpcode_9(float a1) __location("fp0")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_HandleInput_11 (VA 0x00422B10; static CFG gate PASS, CFG score 1.000).
 #include "Menu_HandleInput_11.h"
 uint32_t Menu_HandleInput_11()
 

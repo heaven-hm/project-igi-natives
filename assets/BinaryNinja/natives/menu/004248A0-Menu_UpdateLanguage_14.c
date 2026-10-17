@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_UpdateLanguage_14 (VA 0x004248A0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_UpdateLanguage_14.h"
 char* Menu_UpdateLanguage_14(void* a1, void* a2, int32_t a3, char* a4, int32_t a5, int32_t* a6, char** a7)
 

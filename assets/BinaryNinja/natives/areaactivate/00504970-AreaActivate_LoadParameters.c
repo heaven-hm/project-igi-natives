@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AreaActivate_LoadParameters (VA 0x00504970; static CFG gate PASS, CFG score 1.000).
 #include "AreaActivate_LoadParameters.h"
 void* AreaActivate_LoadParameters(void* a1)
 

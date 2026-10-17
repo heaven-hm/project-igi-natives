@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_Action (VA 0x0041DB30; static CFG gate PASS, CFG score 1.000).
 #include "InputBox_Action.h"
 int32_t InputBox_Action(void* a1)
 

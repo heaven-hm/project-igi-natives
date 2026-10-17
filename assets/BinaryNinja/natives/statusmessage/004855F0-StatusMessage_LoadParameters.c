@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessage_LoadParameters (VA 0x004855F0; static CFG gate PASS, CFG score 1.000).
 #include "StatusMessage_LoadParameters.h"
 int32_t* StatusMessage_LoadParameters(long double a1 @ fp0, int32_t* a2)
 

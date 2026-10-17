@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_LoadParameters (VA 0x0041EC70; static CFG gate PASS, CFG score 0.867).
 #include "ListBox_LoadParameters.h"
 int32_t ListBox_LoadParameters(void* a1)
 

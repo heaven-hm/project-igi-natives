@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_Action (VA 0x004F5050; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_Action.h"
 int32_t CutScene_Action(void* a1)
 

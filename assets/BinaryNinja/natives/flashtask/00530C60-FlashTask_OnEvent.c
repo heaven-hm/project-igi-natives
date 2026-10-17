@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlashTask_OnEvent (VA 0x00530C60; static CFG gate PASS, CFG score 1.000).
 #include "FlashTask_OnEvent.h"
 uint32_t FlashTask_OnEvent()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_FormatString_19 (VA 0x004F7120; static CFG gate PASS, CFG score 1.000).
 #include "Script_FormatString_19.h"
 void* Script_FormatString_19(void* a1, int32_t a2)
 

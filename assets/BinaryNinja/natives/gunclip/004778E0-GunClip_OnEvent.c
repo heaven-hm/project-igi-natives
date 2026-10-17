@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunClip_OnEvent (VA 0x004778E0; static CFG gate PASS, CFG score 1.000).
 #include "GunClip_OnEvent.h"
 int32_t GunClip_OnEvent(void* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_PopStack_13 (VA 0x004B46A0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_PopStack_13.h"
 int32_t Sys_PopStack_13()
 

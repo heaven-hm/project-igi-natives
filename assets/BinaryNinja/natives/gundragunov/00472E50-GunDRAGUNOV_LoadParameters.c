@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunDRAGUNOV_LoadParameters (VA 0x00472E50; static CFG gate PASS, CFG score 1.000).
 #include "GunDRAGUNOV_LoadParameters.h"
 void* GunDRAGUNOV_LoadParameters(float* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DiscardTerrain_Process (VA 0x0052C5A0; static CFG gate PASS, CFG score 1.000).
 #include "DiscardTerrain_Process.h"
 int32_t DiscardTerrain_Process(int32_t* a1, void* a2)
 

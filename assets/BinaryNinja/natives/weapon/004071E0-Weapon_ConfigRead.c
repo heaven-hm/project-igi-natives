@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_ConfigRead (VA 0x004071E0; static CFG gate FAIL, CFG score 0.833).
 #include "Weapon_ConfigRead.h"
 void* Weapon_ConfigRead(int32_t a1, void* a2)
 

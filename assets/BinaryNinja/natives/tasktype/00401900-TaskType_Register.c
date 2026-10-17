@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TaskType_Register (VA 0x00401900; static CFG gate PASS, CFG score 1.000).
 #include "TaskType_Register.h"
 int32_t TaskType_Register(int32_t a1, int32_t a2, int16_t a3, int32_t a4)
 

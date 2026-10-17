@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BulletHole_LoadParameters (VA 0x0047E0C0; static CFG gate PASS, CFG score 1.000).
 #include "BulletHole_LoadParameters.h"
 int32_t BulletHole_LoadParameters(void* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericTBA_Update (VA 0x004483F0; static CFG gate PASS, CFG score 1.000).
 #include "GenericTBA_Update.h"
 int32_t GenericTBA_Update(void* a1)
 

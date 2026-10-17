@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_FormatString_7 (VA 0x004F1980; static CFG gate FAIL, CFG score 0.778).
 #include "Script_FormatString_7.h"
 int32_t* Script_FormatString_7(int32_t* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_ApplyRecoil_5 (VA 0x0040D8E0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_ApplyRecoil_5.h"
 void** HumanPlayer_ApplyRecoil_5(void* a1, void* a2)
 

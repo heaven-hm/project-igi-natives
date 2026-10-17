@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PictureBox_LoadParameters (VA 0x0041B590; static CFG gate PASS, CFG score 1.000).
 #include "PictureBox_LoadParameters.h"
 int32_t* PictureBox_LoadParameters(int80_t a1 @ fp0, void* a2)
 

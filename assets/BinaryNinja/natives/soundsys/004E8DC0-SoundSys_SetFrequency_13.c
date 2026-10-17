@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetFrequency_13 (VA 0x004E8DC0; static CFG gate FAIL, CFG score 0.833).
 #include "SoundSys_SetFrequency_13.h"
 int32_t SoundSys_SetFrequency_13(void* a1)
 

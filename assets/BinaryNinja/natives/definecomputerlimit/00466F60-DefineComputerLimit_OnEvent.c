@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineComputerLimit_OnEvent (VA 0x00466F60; static CFG gate PASS, CFG score 1.000).
 #include "DefineComputerLimit_OnEvent.h"
 int32_t DefineComputerLimit_OnEvent()
 

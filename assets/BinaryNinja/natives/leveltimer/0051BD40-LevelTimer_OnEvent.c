@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelTimer_OnEvent (VA 0x0051BD40; static CFG gate PASS, CFG score 1.000).
 #include "LevelTimer_OnEvent.h"
 int32_t LevelTimer_OnEvent(void* a1)
 

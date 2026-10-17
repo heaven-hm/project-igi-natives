@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ExecuteLevelScript_20 (VA 0x004F7DF0; static CFG gate PASS, CFG score 1.000).
 #include "Script_ExecuteLevelScript_20.h"
 int32_t Script_ExecuteLevelScript_20(void* a1, float a2)
 

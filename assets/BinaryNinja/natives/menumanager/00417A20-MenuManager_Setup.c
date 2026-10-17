@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_Setup (VA 0x00417A20; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_Setup.h"
 int32_t MenuManager_Setup(void* a1)
 

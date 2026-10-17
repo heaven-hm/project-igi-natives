@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Fence_Update (VA 0x0043FEA0; static CFG gate PASS, CFG score 1.000).
 #include "Fence_Update.h"
 int32_t Fence_Update(float a1)
 

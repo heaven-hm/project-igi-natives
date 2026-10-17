@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rudder_Setup (VA 0x004362C0; static CFG gate PASS, CFG score 0.889).
 #include "Rudder_Setup.h"
 float* Rudder_Setup(void* a1, int32_t* a2)
 

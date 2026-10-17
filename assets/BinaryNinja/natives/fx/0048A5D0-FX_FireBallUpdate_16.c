@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_FireBallUpdate_16 (VA 0x0048A5D0; static CFG gate PASS, CFG score 1.000).
 #include "FX_FireBallUpdate_16.h"
 int32_t FX_FireBallUpdate_16(void* a1)
 

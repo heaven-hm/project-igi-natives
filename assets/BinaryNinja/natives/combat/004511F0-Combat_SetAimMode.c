@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Combat_SetAimMode (VA 0x004511F0; static CFG gate PASS, CFG score 1.000).
 #include "Combat_SetAimMode.h"
 int32_t Combat_SetAimMode(void* a1, void* a2, int32_t a3)
 

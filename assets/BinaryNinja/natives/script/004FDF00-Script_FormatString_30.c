@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_FormatString_30 (VA 0x004FDF00; static CFG gate PASS, CFG score 0.972).
 #include "Script_FormatString_30.h"
 struct status_msg* Script_FormatString_30(void* a1, void* a2, uint32_t a3, int32_t* a4, int32_t* a5, int32_t* a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10, int32_t a11, int32_t a12, int32_t a13)
 

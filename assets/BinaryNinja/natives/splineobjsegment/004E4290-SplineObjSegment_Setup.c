@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObjSegment_Setup (VA 0x004E4290; static CFG gate PASS, CFG score 1.000).
 #include "SplineObjSegment_Setup.h"
 int32_t SplineObjSegment_Setup(void* a1)
 

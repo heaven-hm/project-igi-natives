@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_KneelFire (VA 0x0048DCD0; static CFG gate PASS, CFG score 1.000).
 #include "FX_KneelFire.h"
 bool FX_KneelFire(void* a1)
 

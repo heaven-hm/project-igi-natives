@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPhysicsObj_Update_2 (VA 0x0043EDF0; static CFG gate PASS, CFG score 1.000).
 #include "GenericPhysicsObj_Update_2.h"
 void* GenericPhysicsObj_Update_2(void* a1, int32_t* a2)
 

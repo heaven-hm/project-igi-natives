@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIStationaryGunHolder_Init_2 (VA 0x0046E210; static CFG gate PASS, CFG score 1.000).
 #include "AIStationaryGunHolder_Init_2.h"
 
 int32_t* AIStationaryGunHolder_Init_2(float pThis)

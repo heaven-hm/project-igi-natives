@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qtask_GetList (VA 0x004D9860; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_GetList.h"
 int32_t Qtask_GetList()
 

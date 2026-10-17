@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_UpdateWaterWaves_10 (VA 0x0051A4A0; static CFG gate FAIL, CFG score 0.833).
 #include "Terrain_UpdateWaterWaves_10.h"
 float* Terrain_UpdateWaterWaves_10(float a1, float* a2, float a3, float a4)
 

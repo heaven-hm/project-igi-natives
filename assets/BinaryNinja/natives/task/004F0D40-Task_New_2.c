@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Task_New_2 (VA 0x004F0D40; static CFG gate PASS, CFG score 1.000).
 #include "Task_New_2.h"
 int32_t __convention("regparm") Task_New_2(int32_t a1, int32_t a2, int32_t a3, void* a4, int32_t a5)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextureModifier_Init (VA 0x00505F60; static CFG gate PASS, CFG score 1.000).
 #include "TextureModifier_Init.h"
 int32_t* TextureModifier_Init()
 

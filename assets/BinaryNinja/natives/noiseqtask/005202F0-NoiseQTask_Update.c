@@ -1,3 +1,4 @@
+// Original IGI.EXE function: NoiseQTask_Update (VA 0x005202F0; static CFG gate PASS, CFG score 1.000).
 #include "NoiseQTask_Update.h"
 int32_t NoiseQTask_Update(void* a1)
 

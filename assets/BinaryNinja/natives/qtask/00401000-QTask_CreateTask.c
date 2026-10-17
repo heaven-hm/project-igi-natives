@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_CreateTask (VA 0x00401000; static CFG gate PASS, CFG score 1.000).
 #include "QTask_CreateTask.h"
 int32_t QTask_CreateTask()
 

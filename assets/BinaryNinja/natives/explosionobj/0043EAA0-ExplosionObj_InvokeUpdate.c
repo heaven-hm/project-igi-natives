@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplosionObj_InvokeUpdate (VA 0x0043EAA0; static CFG gate PASS, CFG score 1.000).
 #include "ExplosionObj_InvokeUpdate.h"
 
 void*(float arg1)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObj_ValidateVirModel (VA 0x004D99E0; static CFG gate PASS, CFG score 1.000).
 #include "MagicObj_ValidateVirModel.h"
 
 int32_t MagicObj_ValidateVirModel(int32_t pThis)

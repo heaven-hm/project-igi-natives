@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_CleanupTypes (VA 0x00401780; static CFG gate PASS, CFG score 1.000).
 #include "QTask_CleanupTypes.h"
 int32_t* QTask_CleanupTypes(void* a1)
 

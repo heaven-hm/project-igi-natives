@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeObject_LoadParameters (VA 0x00481780; static CFG gate PASS, CFG score 0.933).
 #include "ExplodeObject_LoadParameters.h"
 int32_t* ExplodeObject_LoadParameters(float a1)
 

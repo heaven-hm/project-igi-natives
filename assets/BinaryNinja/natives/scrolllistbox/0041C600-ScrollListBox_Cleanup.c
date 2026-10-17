@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_Cleanup (VA 0x0041C600; static CFG gate PASS, CFG score 1.000).
 #include "ScrollListBox_Cleanup.h"
 int32_t ScrollListBox_Cleanup(void* a1)
 

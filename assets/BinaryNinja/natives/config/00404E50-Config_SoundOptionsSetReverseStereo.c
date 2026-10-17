@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SoundOptionsSetReverseStereo (VA 0x00404E50; static CFG gate PASS, CFG score 0.889).
 #include "Config_SoundOptionsSetReverseStereo.h"
 int32_t Config_SoundOptionsSetReverseStereo(int32_t a1, float a2 @ 0xc)
 

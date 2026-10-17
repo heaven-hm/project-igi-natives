@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAttach_LoadParameters (VA 0x00465B00; static CFG gate PASS, CFG score 1.000).
 #include "HumanAttach_LoadParameters.h"
 int32_t HumanAttach_LoadParameters(void* a1, int32_t a2)
 

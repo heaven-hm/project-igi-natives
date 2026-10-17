@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObj_Init (VA 0x004D9970; static CFG gate PASS, CFG score 1.000).
 #include "MagicObj_Init.h"
 
 void* MagicObj_Init(void* pThis)

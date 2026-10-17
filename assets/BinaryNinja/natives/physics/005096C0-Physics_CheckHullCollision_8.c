@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_CheckHullCollision_8 (VA 0x005096C0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CheckHullCollision_8.h"
 void* Physics_CheckHullCollision_8(void* a1, int32_t a2, int32_t a3)
 

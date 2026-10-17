@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_HandleInput_20 (VA 0x00429DC0; static CFG gate PASS, CFG score 0.933).
 #include "Menu_HandleInput_20.h"
 int32_t Menu_HandleInput_20(float a1)
 

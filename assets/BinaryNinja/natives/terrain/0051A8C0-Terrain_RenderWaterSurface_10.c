@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_RenderWaterSurface_10 (VA 0x0051A8C0; static CFG gate FAIL, CFG score 0.778).
 #include "Terrain_RenderWaterSurface_10.h"
 void Terrain_RenderWaterSurface_10(float a1)
 

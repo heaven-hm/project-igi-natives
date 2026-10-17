@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mem_Alloc (VA 0x004B0C60; static CFG gate PASS, CFG score 1.000).
 #include "Mem_Alloc.h"
 void* Mem_Alloc(int32_t a1, int32_t a2)
 

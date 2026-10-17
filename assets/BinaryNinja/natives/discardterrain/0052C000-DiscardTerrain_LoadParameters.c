@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DiscardTerrain_LoadParameters (VA 0x0052C000; static CFG gate PASS, CFG score 0.917).
 #include "DiscardTerrain_LoadParameters.h"
 int32_t DiscardTerrain_LoadParameters(int32_t* a1)
 

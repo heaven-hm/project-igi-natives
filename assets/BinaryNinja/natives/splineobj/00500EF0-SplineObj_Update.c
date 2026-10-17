@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObj_Update (VA 0x00500EF0; static CFG gate PASS, CFG score 0.910).
 #include "SplineObj_Update.h"
 float* SplineObj_Update(int32_t* a1)
 

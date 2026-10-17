@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetMasterVolume_16 (VA 0x004EC2C0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetMasterVolume_16.h"
 float SoundSys_SetMasterVolume_16(void* a1, int32_t a2, float a3, void* a4, float* a5, float a6) __location("valA")
 

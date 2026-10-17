@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PatrolPath_Find (VA 0x00453840; static CFG gate PASS, CFG score 1.000).
 #include "PatrolPath_Find.h"
 void* const PatrolPath_Find(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_Definegroup (VA 0x004E63E0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_Definegroup.h"
 int32_t SoundSys_Definegroup()
 

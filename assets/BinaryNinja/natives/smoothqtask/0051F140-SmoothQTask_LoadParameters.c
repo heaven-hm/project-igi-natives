@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SmoothQTask_LoadParameters (VA 0x0051F140; static CFG gate FAIL, CFG score 0.778).
 #include "SmoothQTask_LoadParameters.h"
 int32_t SmoothQTask_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_InsertHashItem_11 (VA 0x004CC810; static CFG gate PASS, CFG score 0.963).
 #include "DynObj_InsertHashItem_11.h"
 ❓  int32_t DynObj_InsertHashItem_11(int32_t* a1 @ 0x8, int32_t a2 @ 0x10, double* a3, int32_t a4 @ 0x9c, int32_t a5, int32_t a6, int32_t a7, int32_t a8, void* a9, void* a10, int32_t a11 @ 0xf0, int32_t a12)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

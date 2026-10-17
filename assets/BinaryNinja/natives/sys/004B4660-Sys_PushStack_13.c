@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_PushStack_13 (VA 0x004B4660; static CFG gate PASS, CFG score 1.000).
 #include "Sys_PushStack_13.h"
 float* Sys_PushStack_13(float* a1, float* a2, float a3)
 

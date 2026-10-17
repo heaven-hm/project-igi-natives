@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_10 (VA 0x004B2930; static CFG gate PASS, CFG score 1.000).
 #include "Sys_AllocateMemory_10.h"
 long double Sys_AllocateMemory_10(float* a1)
 

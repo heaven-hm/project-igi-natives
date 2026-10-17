@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ComputeNormals_7 (VA 0x004D4500; static CFG gate FAIL, CFG score 0.733).
 #include "Render_ComputeNormals_7.h"
 int32_t Render_ComputeNormals_7(float* a1, float a2, float a3, float a4)
 

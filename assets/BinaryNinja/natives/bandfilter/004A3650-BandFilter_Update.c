@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BandFilter_Update (VA 0x004A3650; static CFG gate PASS, CFG score 1.000).
 #include "BandFilter_Update.h"
 int32_t** BandFilter_Update(void* a1)
 

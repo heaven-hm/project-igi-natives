@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_LoadParameters (VA 0x00489290; static CFG gate PASS, CFG score 1.000).
 #include "LevelFlow_LoadParameters.h"
 int32_t LevelFlow_LoadParameters(int80_t a1 @ fp0, void* a2)
 

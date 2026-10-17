@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sprite3D_LoadParameters (VA 0x00531E10; static CFG gate PASS, CFG score 1.000).
 #include "Sprite3D_LoadParameters.h"
 int32_t Sprite3D_LoadParameters(float a1)
 

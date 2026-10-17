@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LoadingScreen_Show (VA 0x0048A440; static CFG gate PASS, CFG score 0.983).
 #include "LoadingScreen_Show.h"
 int32_t* LoadingScreen_Show(int32_t a1)
 

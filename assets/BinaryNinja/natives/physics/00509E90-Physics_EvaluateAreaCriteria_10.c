@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_EvaluateAreaCriteria_10 (VA 0x00509E90; static CFG gate PASS, CFG score 1.000).
 #include "Physics_EvaluateAreaCriteria_10.h"
 int32_t* Physics_EvaluateAreaCriteria_10()
 

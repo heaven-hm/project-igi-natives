@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Is_ResourceLoaded (VA 0x004B5B90; static CFG gate PASS, CFG score 1.000).
 #include "Is_ResourceLoaded.h"
 int32_t Is_ResourceLoaded(void* a1, void** a2)
 

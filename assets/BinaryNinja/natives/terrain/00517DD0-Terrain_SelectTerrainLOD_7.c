@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_SelectTerrainLOD_7 (VA 0x00517DD0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SelectTerrainLOD_7.h"
 int16_t* Terrain_SelectTerrainLOD_7(char* a1, int32_t a2, int16_t* a3, int16_t* a4, int32_t a5, int32_t a6, int32_t* a7)
 

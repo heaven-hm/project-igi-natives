@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CheckSector_24 (VA 0x00467620; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckSector_24.h"
 float* AI_CheckSector_24(float* a1, float* a2, float a3, float a4)
 

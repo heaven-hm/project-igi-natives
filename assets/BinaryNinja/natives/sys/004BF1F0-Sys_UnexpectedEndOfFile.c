@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UnexpectedEndOfFile (VA 0x004BF1F0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnexpectedEndOfFile.h"
 int32_t Sys_UnexpectedEndOfFile(int32_t* a1, void** a2)
 

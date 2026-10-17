@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Glass_Update (VA 0x00449BA0; static CFG gate PASS, CFG score 1.000).
 #include "Glass_Update.h"
 int32_t Glass_Update(float a1, float a2)
 

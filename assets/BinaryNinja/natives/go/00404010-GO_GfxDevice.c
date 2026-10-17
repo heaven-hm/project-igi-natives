@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_GfxDevice (VA 0x00404010; static CFG gate FAIL, CFG score 0.833).
 #include "GO_GfxDevice.h"
 int32_t GO_GfxDevice(int32_t a1, float a2 @ 0xc)
 

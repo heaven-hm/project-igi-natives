@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PolyListDynCubeObj_Process (VA 0x0049A9B0; static CFG gate PASS, CFG score 1.000).
 #include "PolyListDynCubeObj_Process.h"
 int32_t PolyListDynCubeObj_Process(int32_t a1 @ flagP, void* a2)
 

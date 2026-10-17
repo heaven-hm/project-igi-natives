@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Process (VA 0x0042E940; static CFG gate PASS, CFG score 1.000).
 #include "Car_Process.h"
 int32_t* Car_Process(void* a1)
 

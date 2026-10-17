@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SimBoneDynCubeObj_Update (VA 0x0052CA60; static CFG gate PASS, CFG score 1.000).
 #include "SimBoneDynCubeObj_Update.h"
 uint32_t SimBoneDynCubeObj_Update()
 

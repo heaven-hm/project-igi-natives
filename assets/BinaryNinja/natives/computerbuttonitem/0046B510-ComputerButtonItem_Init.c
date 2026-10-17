@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerButtonItem_Init (VA 0x0046B510; static CFG gate PASS, CFG score 1.000).
 #include "ComputerButtonItem_Init.h"
 int32_t ComputerButtonItem_Init()
 

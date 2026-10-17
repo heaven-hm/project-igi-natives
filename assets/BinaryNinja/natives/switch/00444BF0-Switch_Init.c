@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_Init (VA 0x00444BF0; static CFG gate PASS, CFG score 1.000).
 #include "Switch_Init.h"
 int32_t* Switch_Init()
 

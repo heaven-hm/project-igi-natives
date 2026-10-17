@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_AddAnimationEntry (VA 0x0044EBB0; static CFG gate PASS, CFG score 0.905).
 #include "AIFunction_AddAnimationEntry.h"
 int32_t AIFunction_AddAnimationEntry(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UnknownBlockType_2 (VA 0x004BFA80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnknownBlockType_2.h"
 int32_t Sys_UnknownBlockType_2(void* a1)
 

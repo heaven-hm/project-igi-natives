@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_PushStack_25 (VA 0x004BACA0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_PushStack_25.h"
 int32_t Sys_PushStack_25(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_Igimutex (VA 0x0048F530; static CFG gate PASS, CFG score 0.951).
 #include "FX_Igimutex.h"
 WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
 

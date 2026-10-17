@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyWideScreen_25 (VA 0x004ACAEC; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_25.h"
 int32_t Camera_ApplyWideScreen_25(int16_t* a1, int32_t* a2)
 

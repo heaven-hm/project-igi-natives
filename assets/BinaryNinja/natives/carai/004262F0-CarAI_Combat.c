@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CarAI_Combat (VA 0x004262F0; static CFG gate PASS, CFG score 0.939).
 #include "CarAI_Combat.h"
 int32_t CarAI_Combat(long double a1 @ fp0, float a2)
 

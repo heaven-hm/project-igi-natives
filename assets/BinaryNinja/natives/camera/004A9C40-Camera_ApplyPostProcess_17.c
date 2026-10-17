@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyPostProcess_17 (VA 0x004A9C40; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess_17.h"
 🌐  long double __convention("regparm") __startTwoArgErrorHandling(int32_t a1, int32_t a2, long double a3 @ fp0, int32_t a4 @ 0xc, int32_t a5 @ 0x10, int32_t a6 @ 0x14, int32_t a7 @ 0x18)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Glass_Init (VA 0x00449970; static CFG gate PASS, CFG score 1.000).
 #include "Glass_Init.h"
 void* Glass_Init()
 

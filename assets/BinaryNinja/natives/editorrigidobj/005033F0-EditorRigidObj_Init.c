@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditorRigidObj_Init (VA 0x005033F0; static CFG gate PASS, CFG score 1.000).
 #include "EditorRigidObj_Init.h"
 int32_t EditorRigidObj_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AddAmmo_Init (VA 0x0046DB40; static CFG gate PASS, CFG score 1.000).
 #include "AddAmmo_Init.h"
 int32_t* AddAmmo_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObj_Cleanup_3 (VA 0x00503150; static CFG gate PASS, CFG score 1.000).
 #include "SplineObj_Cleanup_3.h"
 void* SplineObj_Cleanup_3(void* a1, int32_t a2)
 

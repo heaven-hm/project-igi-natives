@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DebugText_Init (VA 0x004E7840; static CFG gate PASS, CFG score 1.000).
 #include "DebugText_Init.h"
 int32_t* DebugText_Init()
 

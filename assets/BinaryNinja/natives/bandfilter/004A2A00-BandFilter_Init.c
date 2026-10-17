@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BandFilter_Init (VA 0x004A2A00; static CFG gate PASS, CFG score 1.000).
 #include "BandFilter_Init.h"
 int32_t BandFilter_Init()
 

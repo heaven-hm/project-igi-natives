@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetAlarmControlStatus (VA 0x0044E4F0; static CFG gate PASS, CFG score 0.857).
 #include "AIFunction_GetAlarmControlStatus.h"
 int32_t AIFunction_GetAlarmControlStatus(int32_t a1)
 

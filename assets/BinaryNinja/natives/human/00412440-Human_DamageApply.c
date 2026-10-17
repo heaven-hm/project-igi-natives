@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_DamageApply (VA 0x00412440; static CFG gate PASS, CFG score 1.000).
 #include "Human_DamageApply.h"
 float Human_DamageApply(float a1, int32_t* a2) __location("valA")
 

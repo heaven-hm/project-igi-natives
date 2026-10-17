@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplosionObj_Invoke10 (VA 0x004389A0; static CFG gate PASS, CFG score 1.000).
 #include "ExplosionObj_Invoke10.h"
 
 int32_t(void* arg1, int32_t arg2)

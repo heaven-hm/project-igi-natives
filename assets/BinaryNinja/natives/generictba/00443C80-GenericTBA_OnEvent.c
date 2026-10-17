@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericTBA_OnEvent (VA 0x00443C80; static CFG gate PASS, CFG score 1.000).
 #include "GenericTBA_OnEvent.h"
 int32_t GenericTBA_OnEvent(double* a1, void* a2)
 

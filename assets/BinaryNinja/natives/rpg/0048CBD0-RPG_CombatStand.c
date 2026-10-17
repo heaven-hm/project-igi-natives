@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RPG_CombatStand (VA 0x0048CBD0; static CFG gate PASS, CFG score 1.000).
 #include "RPG_CombatStand.h"
 int32_t* RPG_CombatStand(void* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GOStart (VA 0x00403660; static CFG gate FAIL, CFG score 0.833).
 #include "GOStart.h"
 int32_t GOStart(int32_t a1, float a2 @ 0xc)
 

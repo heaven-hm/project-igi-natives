@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RenderLight_Thunk_531470 (VA 0x00531470; static CFG gate FAIL, CFG score 0.750).
 #include "RenderLight_Thunk_531470.h"
 
 int32_t()

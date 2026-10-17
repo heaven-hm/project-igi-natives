@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObj_ParentTransform (VA 0x004D9C30; static CFG gate PASS, CFG score 0.867).
 #include "MagicObj_ParentTransform.h"
 void* MagicObj_ParentTransform(void* a1, float a2)
 

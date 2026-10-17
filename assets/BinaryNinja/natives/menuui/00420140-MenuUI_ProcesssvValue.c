@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_ProcesssvValue (VA 0x00420140; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_ProcesssvValue.h"
 
 void*(void* arg1)

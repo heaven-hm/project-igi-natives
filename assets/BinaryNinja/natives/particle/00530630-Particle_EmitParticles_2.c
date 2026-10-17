@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_EmitParticles_2 (VA 0x00530630; static CFG gate PASS, CFG score 1.000).
 #include "Particle_EmitParticles_2.h"
 int32_t Particle_EmitParticles_2(int32_t a1, int32_t a2, int16_t a3, int16_t* a4)
 

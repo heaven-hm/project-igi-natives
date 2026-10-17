@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunX2_Setup (VA 0x0046DCB0; static CFG gate PASS, CFG score 1.000).
 #include "GunX2_Setup.h"
 
 void* GunX2_Setup(void* pThis)

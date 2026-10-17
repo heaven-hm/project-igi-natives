@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_Update (VA 0x004890F0; static CFG gate PASS, CFG score 1.000).
 #include "LevelFlow_Update.h"
 int32_t LevelFlow_Update(void* a1)
 

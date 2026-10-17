@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Screen_Init (VA 0x004E7370; static CFG gate PASS, CFG score 0.958).
 #include "Screen_Init.h"
 int32_t Screen_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_Johan (VA 0x004CEC40; static CFG gate PASS, CFG score 0.867).
 #include "DynObj_Johan.h"
 void* DynObj_Johan(char* a1)
 

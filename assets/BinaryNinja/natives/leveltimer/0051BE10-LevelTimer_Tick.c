@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelTimer_Tick (VA 0x0051BE10; static CFG gate PASS, CFG score 1.000).
 #include "LevelTimer_Tick.h"
 int32_t LevelTimer_Tick(int80_t a1 @ fp0, void* a2)
 

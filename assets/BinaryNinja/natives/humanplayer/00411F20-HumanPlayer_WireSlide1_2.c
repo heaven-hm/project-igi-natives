@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_WireSlide1_2 (VA 0x00411F20; static CFG gate PASS, CFG score 0.981).
 #include "HumanPlayer_WireSlide1_2.h"
 int32_t HumanPlayer_WireSlide1_2(float* a1)
 

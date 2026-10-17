@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sync_Setup (VA 0x00508E40; static CFG gate PASS, CFG score 0.889).
 #include "Sync_Setup.h"
 int32_t Sync_Setup(int32_t* a1)
 

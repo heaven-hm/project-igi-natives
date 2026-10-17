@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_UpdateCameraLens_12 (VA 0x0044C860; static CFG gate FAIL, CFG score 0.667).
 #include "Env_UpdateCameraLens_12.h"
 int32_t Env_UpdateCameraLens_12(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5)
 

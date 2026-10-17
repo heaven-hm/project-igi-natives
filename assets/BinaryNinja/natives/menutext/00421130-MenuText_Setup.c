@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuText_Setup (VA 0x00421130; static CFG gate PASS, CFG score 1.000).
 #include "MenuText_Setup.h"
 int32_t MenuText_Setup(int32_t a1)
 

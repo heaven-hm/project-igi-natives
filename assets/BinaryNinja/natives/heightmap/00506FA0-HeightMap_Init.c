@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeightMap_Init (VA 0x00506FA0; static CFG gate PASS, CFG score 1.000).
 #include "HeightMap_Init.h"
 int32_t* HeightMap_Init()
 

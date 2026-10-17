@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TerraDrawTask_Init (VA 0x004E82C0; static CFG gate PASS, CFG score 1.000).
 #include "TerraDrawTask_Init.h"
 int32_t TerraDrawTask_Init()
 

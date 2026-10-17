@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Plane_ReceiveChannels (VA 0x004337E0; static CFG gate PASS, CFG score 0.972).
 #include "Plane_ReceiveChannels.h"
 void* Plane_ReceiveChannels(float a1, int32_t* a2)
 

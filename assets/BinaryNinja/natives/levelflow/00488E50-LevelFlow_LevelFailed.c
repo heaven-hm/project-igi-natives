@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_LevelFailed (VA 0x00488E50; static CFG gate FAIL, CFG score 0.667).
 #include "LevelFlow_LevelFailed.h"
 int32_t LevelFlow_LevelFailed(int32_t a1)
 

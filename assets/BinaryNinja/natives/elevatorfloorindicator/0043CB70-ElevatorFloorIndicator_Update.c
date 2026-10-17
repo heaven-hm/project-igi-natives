@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ElevatorFloorIndicator_Update (VA 0x0043CB70; static CFG gate PASS, CFG score 0.958).
 #include "ElevatorFloorIndicator_Update.h"
 int32_t ElevatorFloorIndicator_Update(float a1)
 

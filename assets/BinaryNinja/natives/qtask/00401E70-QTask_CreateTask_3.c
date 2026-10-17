@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_CreateTask_3 (VA 0x00401E70; static CFG gate PASS, CFG score 1.000).
 #include "QTask_CreateTask_3.h"
 int32_t QTask_CreateTask_3(void* a1, int32_t a2, int32_t a3, int32_t a4)
 

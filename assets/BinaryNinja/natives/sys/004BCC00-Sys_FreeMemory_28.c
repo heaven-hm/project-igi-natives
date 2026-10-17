@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_28 (VA 0x004BCC00; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_28.h"
 int32_t Sys_FreeMemory_28(char* a1, int32_t* a2, int32_t* a3, int32_t* a4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainDynCubeObj_Setup (VA 0x004F7170; static CFG gate PASS, CFG score 0.917).
 #include "RainDynCubeObj_Setup.h"
 int32_t RainDynCubeObj_Setup(long double a1 @ fp1, float a2)
 

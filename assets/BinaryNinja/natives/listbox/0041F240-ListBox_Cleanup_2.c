@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_Cleanup_2 (VA 0x0041F240; static CFG gate PASS, CFG score 1.000).
 #include "ListBox_Cleanup_2.h"
 int32_t ListBox_Cleanup_2(void* a1)
 

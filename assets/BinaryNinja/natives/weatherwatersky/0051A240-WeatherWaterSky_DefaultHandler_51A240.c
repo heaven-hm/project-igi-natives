@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherWaterSky_DefaultHandler_51A240 (VA 0x0051A240; static CFG gate PASS, CFG score 1.000).
 #include "WeatherWaterSky_DefaultHandler_51A240.h"
 
 int32_t(void* arg1)

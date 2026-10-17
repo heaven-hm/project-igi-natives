@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_Action (VA 0x0042B930; static CFG gate FAIL, CFG score 0.833).
 #include "Train_Action.h"
 void* Train_Action(void* a1, void** a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_UnableToRemoveWinpro (VA 0x0048F4F0; static CFG gate PASS, CFG score 1.000).
 #include "FX_UnableToRemoveWinpro.h"
 int32_t* FX_UnableToRemoveWinpro(int32_t a1)
 

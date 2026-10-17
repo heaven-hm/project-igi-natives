@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalSound_Update (VA 0x004253C0; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalSound_Update.h"
 int32_t ConditionalSound_Update(void* a1)
 

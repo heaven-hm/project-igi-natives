@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_Germany (VA 0x0048F020; static CFG gate PASS, CFG score 1.000).
 #include "FX_Germany.h"
 int32_t FX_Germany()
 

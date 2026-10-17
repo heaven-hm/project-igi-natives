@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_CheckQTaskID_6 (VA 0x00416EF0; static CFG gate PASS, CFG score 1.000).
 #include "Level_CheckQTaskID_6.h"
 void* Level_CheckQTaskID_6(void* a1)
 

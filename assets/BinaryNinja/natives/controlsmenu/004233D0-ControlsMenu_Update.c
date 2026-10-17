@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_Update (VA 0x004233D0; static CFG gate PASS, CFG score 1.000).
 #include "ControlsMenu_Update.h"
 int32_t ControlsMenu_Update(void* a1, int32_t a2)
 

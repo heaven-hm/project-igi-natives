@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Smoke_Process (VA 0x00438000; static CFG gate PASS, CFG score 0.967).
 #include "Smoke_Process.h"
 void* Smoke_Process(void* a1)
 

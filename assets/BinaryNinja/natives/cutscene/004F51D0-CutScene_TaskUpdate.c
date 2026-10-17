@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_TaskUpdate (VA 0x004F51D0; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_TaskUpdate.h"
 int32_t* CutScene_TaskUpdate(int80_t a1 @ fp0, void* a2)
 

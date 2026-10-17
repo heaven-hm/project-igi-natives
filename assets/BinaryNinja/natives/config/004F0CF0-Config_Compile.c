@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Compile (VA 0x004F0CF0; static CFG gate PASS, CFG score 1.000).
 #include "Config_Compile.h"
 int32_t Config_Compile(int32_t a1, void* a2, char a3)
 

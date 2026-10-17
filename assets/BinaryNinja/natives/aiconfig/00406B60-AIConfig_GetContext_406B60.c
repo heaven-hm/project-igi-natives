@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIConfig_GetContext_406B60 (VA 0x00406B60; static CFG gate PASS, CFG score 1.000).
 #include "AIConfig_GetContext_406B60.h"
 
 int32_t*(int32_t* arg1 )

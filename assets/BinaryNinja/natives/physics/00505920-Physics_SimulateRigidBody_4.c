@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_SimulateRigidBody_4 (VA 0x00505920; static CFG gate PASS, CFG score 1.000).
 #include "Physics_SimulateRigidBody_4.h"
 void* const __convention("regparm") Physics_SimulateRigidBody_4(int32_t a1, int32_t a2, void* a3, void* a4, int32_t a5, int32_t a6)
 

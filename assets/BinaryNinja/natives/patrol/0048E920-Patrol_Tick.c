@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Patrol_Tick (VA 0x0048E920; static CFG gate PASS, CFG score 1.000).
 #include "Patrol_Tick.h"
 int32_t* Patrol_Tick(int32_t* a1, int32_t* a2)
 

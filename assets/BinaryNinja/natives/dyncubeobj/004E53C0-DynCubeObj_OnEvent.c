@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynCubeObj_OnEvent (VA 0x004E53C0; static CFG gate FAIL, CFG score 0.833).
 #include "DynCubeObj_OnEvent.h"
 int32_t* DynCubeObj_OnEvent(int32_t a1, int32_t a2, int32_t a3, double* a4, float a5)
 

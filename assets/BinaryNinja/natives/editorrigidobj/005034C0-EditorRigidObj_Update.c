@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditorRigidObj_Update (VA 0x005034C0; static CFG gate PASS, CFG score 1.000).
 #include "EditorRigidObj_Update.h"
 uint32_t EditorRigidObj_Update()
 

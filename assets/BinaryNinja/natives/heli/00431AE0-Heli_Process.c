@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Heli_Process (VA 0x00431AE0; static CFG gate PASS, CFG score 1.000).
 #include "Heli_Process.h"
 int32_t* Heli_Process(void* a1)
 

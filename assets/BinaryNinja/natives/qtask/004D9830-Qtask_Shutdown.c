@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qtask_Shutdown (VA 0x004D9830; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_Shutdown.h"
 int32_t Qtask_Shutdown()
 

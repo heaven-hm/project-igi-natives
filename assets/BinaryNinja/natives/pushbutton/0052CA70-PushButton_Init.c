@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PushButton_Init (VA 0x0052CA70; static CFG gate PASS, CFG score 1.000).
 #include "PushButton_Init.h"
 int32_t PushButton_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CockpitShield_Init (VA 0x004351E0; static CFG gate PASS, CFG score 1.000).
 #include "CockpitShield_Init.h"
 void* CockpitShield_Init()
 

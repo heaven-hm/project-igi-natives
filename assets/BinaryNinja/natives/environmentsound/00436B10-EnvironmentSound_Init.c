@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EnvironmentSound_Init (VA 0x00436B10; static CFG gate PASS, CFG score 1.000).
 #include "EnvironmentSound_Init.h"
 int32_t* EnvironmentSound_Init()
 

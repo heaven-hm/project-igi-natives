@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CameraBase_OnEvent (VA 0x004EFBA0; static CFG gate PASS, CFG score 1.000).
 #include "CameraBase_OnEvent.h"
 int32_t CameraBase_OnEvent(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, float* a4, float a5)
 

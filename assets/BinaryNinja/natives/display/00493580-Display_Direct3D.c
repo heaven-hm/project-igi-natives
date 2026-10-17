@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_Direct3D (VA 0x00493580; static CFG gate PASS, CFG score 0.972).
 #include "Display_Direct3D.h"
 int32_t* Display_Direct3D()
 

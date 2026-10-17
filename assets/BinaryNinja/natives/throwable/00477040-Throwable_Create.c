@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Throwable_Create (VA 0x00477040; static CFG gate PASS, CFG score 0.985).
 #include "Throwable_Create.h"
 struct status_msg* Throwable_Create(float a1, void* a2, double* a3, int32_t a4, int32_t* a5, void* a6, int32_t a7)
 

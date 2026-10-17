@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DIERR_GENERIC (VA 0x0048FA80; static CFG gate PASS, CFG score 1.000).
 #include "DIERR_GENERIC.h"
 int32_t DIERR_GENERIC(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanView_Init (VA 0x00464260; static CFG gate PASS, CFG score 1.000).
 #include "HumanView_Init.h"
 int32_t HumanView_Init()
 

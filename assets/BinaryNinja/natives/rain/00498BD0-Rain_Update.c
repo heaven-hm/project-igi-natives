@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rain_Update (VA 0x00498BD0; static CFG gate PASS, CFG score 0.852).
 #include "Rain_Update.h"
 int32_t Rain_Update(void* a1)
 

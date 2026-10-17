@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_ComputeAccuracy_9 (VA 0x0047E9A0; static CFG gate PASS, CFG score 0.967).
 #include "Weapon_ComputeAccuracy_9.h"
 struct status_msg* Weapon_ComputeAccuracy_9(int32_t* a1, int32_t* a2, uint32_t a3, uint32_t a4)
 

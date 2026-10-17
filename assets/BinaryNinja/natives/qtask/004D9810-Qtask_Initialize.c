@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qtask_Initialize (VA 0x004D9810; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_Initialize.h"
 int32_t* Qtask_Initialize()
 

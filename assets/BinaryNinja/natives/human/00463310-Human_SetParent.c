@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_SetParent (VA 0x00463310; static CFG gate FAIL, CFG score 0.778).
 #include "Human_SetParent.h"
 void* Human_SetParent(void* a1, void* a2)
 

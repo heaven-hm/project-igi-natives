@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_Graph (VA 0x004EAD20; static CFG gate PASS, CFG score 0.980).
 #include "Define_Graph.h"
 int32_t Define_Graph(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, int32_t a7, void* a8, float a9)
 

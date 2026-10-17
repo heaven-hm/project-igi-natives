@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Afterburner_Update (VA 0x0042BD40; static CFG gate PASS, CFG score 0.926).
 #include "Afterburner_Update.h"
 int32_t** Afterburner_Update(void* a1)
 

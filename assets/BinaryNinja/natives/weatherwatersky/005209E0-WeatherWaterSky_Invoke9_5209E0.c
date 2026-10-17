@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherWaterSky_Invoke9_5209E0 (VA 0x005209E0; static CFG gate PASS, CFG score 1.000).
 #include "WeatherWaterSky_Invoke9_5209E0.h"
 
 void*(void* arg1)

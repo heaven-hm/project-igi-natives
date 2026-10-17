@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_IlfFileCorruptS (VA 0x004B6720; static CFG gate PASS, CFG score 1.000).
 #include "Sys_IlfFileCorruptS.h"
 int32_t* Sys_IlfFileCorruptS(int32_t* a1, int32_t* a2)
 

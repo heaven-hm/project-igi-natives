@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CreateSurface (VA 0x004903B0; static CFG gate PASS, CFG score 0.978).
 #include "Display_CreateSurface.h"
 int32_t Display_CreateSurface(void* a1)
 

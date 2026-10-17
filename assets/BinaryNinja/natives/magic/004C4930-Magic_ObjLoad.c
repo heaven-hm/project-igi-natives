@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Magic_ObjLoad (VA 0x004C4930; static CFG gate PASS, CFG score 1.000).
 #include "Magic_ObjLoad.h"
 int32_t Magic_ObjLoad(void* a1)
 

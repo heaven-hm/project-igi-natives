@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PatrolPath_OnTick (VA 0x00453730; static CFG gate PASS, CFG score 1.000).
 #include "PatrolPath_OnTick.h"
 int32_t* PatrolPath_OnTick(int32_t* a1)
 

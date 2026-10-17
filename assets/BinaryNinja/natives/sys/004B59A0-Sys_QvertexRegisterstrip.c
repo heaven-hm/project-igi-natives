@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_QvertexRegisterstrip (VA 0x004B59A0; static CFG gate FAIL, CFG score 0.505).
 #include "Sys_QvertexRegisterstrip.h"
 int32_t Sys_QvertexRegisterstrip()
 

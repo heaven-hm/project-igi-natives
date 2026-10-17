@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_1Snan (VA 0x004AE0CA; static CFG gate PASS, CFG score 1.000).
 #include "Camera_1Snan.h"
 int32_t Camera_1Snan(int16_t a1 @ 0xc, char* a2, char a3, char* a4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StationaryGun_LoadParameters (VA 0x00474190; static CFG gate PASS, CFG score 1.000).
 #include "StationaryGun_LoadParameters.h"
 uint32_t StationaryGun_LoadParameters(float a1)
 

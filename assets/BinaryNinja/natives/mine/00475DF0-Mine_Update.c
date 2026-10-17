@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mine_Update (VA 0x00475DF0; static CFG gate PASS, CFG score 0.933).
 #include "Mine_Update.h"
 struct status_msg* Mine_Update(void* a1, void* a2)
 

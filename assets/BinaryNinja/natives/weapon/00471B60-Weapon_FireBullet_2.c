@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_FireBullet_2 (VA 0x00471B60; static CFG gate PASS, CFG score 0.979).
 #include "Weapon_FireBullet_2.h"
 int32_t Weapon_FireBullet_2(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CheckHearing_23 (VA 0x00465730; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckHearing_23.h"
 int32_t AI_CheckHearing_23(void* a1)
 

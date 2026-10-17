@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_RmS (VA 0x00486650; static CFG gate PASS, CFG score 0.952).
 #include "FX_RmS.h"
 char* FX_RmS(char (** a1)[0x16], void* a2)
 

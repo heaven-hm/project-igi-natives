@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_Setup (VA 0x00416260; static CFG gate PASS, CFG score 1.000).
 #include "Game_Setup.h"
 int32_t Game_Setup(int32_t* a1)
 

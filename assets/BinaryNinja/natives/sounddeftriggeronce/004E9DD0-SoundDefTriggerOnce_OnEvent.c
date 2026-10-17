@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefTriggerOnce_OnEvent (VA 0x004E9DD0; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefTriggerOnce_OnEvent.h"
 int32_t SoundDefTriggerOnce_OnEvent(void* a1, float* a2)
 

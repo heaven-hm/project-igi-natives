@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_ActiveMission (VA 0x00403750; static CFG gate FAIL, CFG score 0.833).
 #include "GO_ActiveMission.h"
 int32_t GO_ActiveMission(int32_t a1, float a2 @ 0xc)
 

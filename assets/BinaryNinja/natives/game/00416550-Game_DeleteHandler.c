@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_DeleteHandler (VA 0x00416550; static CFG gate PASS, CFG score 0.986).
 #include "Game_DeleteHandler.h"
 int32_t Game_DeleteHandler()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RePosition (VA 0x0048C760; static CFG gate PASS, CFG score 1.000).
 #include "RePosition.h"
 int32_t* RePosition(void* a1, int32_t* a2)
 

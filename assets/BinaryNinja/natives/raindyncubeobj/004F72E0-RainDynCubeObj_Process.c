@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainDynCubeObj_Process (VA 0x004F72E0; static CFG gate PASS, CFG score 1.000).
 #include "RainDynCubeObj_Process.h"
 void* RainDynCubeObj_Process(void* a1)
 

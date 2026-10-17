@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_FailedToRegisterWinp (VA 0x0048F490; static CFG gate PASS, CFG score 1.000).
 #include "FX_FailedToRegisterWinp.h"
 void* FX_FailedToRegisterWinp(int32_t a1)
 

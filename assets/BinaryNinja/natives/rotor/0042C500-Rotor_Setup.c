@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rotor_Setup (VA 0x0042C500; static CFG gate PASS, CFG score 0.900).
 #include "Rotor_Setup.h"
 int32_t* Rotor_Setup(void* a1, int32_t* a2)
 

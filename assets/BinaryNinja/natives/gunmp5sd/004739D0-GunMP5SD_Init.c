@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunMP5SD_Init (VA 0x004739D0; static CFG gate PASS, CFG score 1.000).
 #include "GunMP5SD_Init.h"
 void* GunMP5SD_Init()
 

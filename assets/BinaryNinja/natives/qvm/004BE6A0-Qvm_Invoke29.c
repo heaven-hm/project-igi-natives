@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_Invoke29 (VA 0x004BE6A0; static CFG gate PASS, CFG score 1.000).
 #include "Qvm_Invoke29.h"
 
 void* __fastcall(float arg1 @ ecx)

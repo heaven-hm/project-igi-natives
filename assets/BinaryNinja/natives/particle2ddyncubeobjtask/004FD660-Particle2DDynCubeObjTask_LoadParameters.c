@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle2DDynCubeObjTask_LoadParameters (VA 0x004FD660; static CFG gate FAIL, CFG score 0.812).
 #include "Particle2DDynCubeObjTask_LoadParameters.h"
 void* Particle2DDynCubeObjTask_LoadParameters(int32_t* a1)
 

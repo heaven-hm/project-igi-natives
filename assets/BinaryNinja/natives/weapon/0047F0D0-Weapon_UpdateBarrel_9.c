@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateBarrel_9 (VA 0x0047F0D0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_UpdateBarrel_9.h"
 struct status_msg* Weapon_UpdateBarrel_9(void* a1, int32_t a2, int32_t a3, int32_t a4, float a5)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeliDoor_Setup (VA 0x004274E0; static CFG gate FAIL, CFG score 0.833).
 #include "HeliDoor_Setup.h"
 int32_t HeliDoor_Setup(float a1, int32_t* a2)
 

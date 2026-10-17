@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGraph_LoadParameters (VA 0x004EA600; static CFG gate FAIL, CFG score 0.809).
 #include "SoundDefGraph_LoadParameters.h"
 int32_t SoundDefGraph_LoadParameters(void* a1, int32_t* a2)
 

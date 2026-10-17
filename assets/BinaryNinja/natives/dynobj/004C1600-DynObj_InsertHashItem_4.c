@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_InsertHashItem_4 (VA 0x004C1600; static CFG gate PASS, CFG score 0.875).
 #include "DynObj_InsertHashItem_4.h"
 void* DynObj_InsertHashItem_4(int32_t* a1, int32_t* a2)
 

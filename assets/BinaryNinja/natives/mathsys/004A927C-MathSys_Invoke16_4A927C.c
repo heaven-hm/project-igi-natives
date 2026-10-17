@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MathSys_Invoke16_4A927C (VA 0x004A927C; static CFG gate PASS, CFG score 1.000).
 #include "MathSys_Invoke16_4A927C.h"
 
 long double __stdcall(long double arg1 , float arg2)

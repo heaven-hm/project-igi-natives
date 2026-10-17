@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSysMicrophone_OnTick (VA 0x004EBDF0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSysMicrophone_OnTick.h"
 int32_t SoundSysMicrophone_OnTick(int32_t* a1)
 

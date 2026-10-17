@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ExecuteBytecode_2 (VA 0x004B0D10; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ExecuteBytecode_2.h"
 int32_t Sys_ExecuteBytecode_2(void* a1)
 

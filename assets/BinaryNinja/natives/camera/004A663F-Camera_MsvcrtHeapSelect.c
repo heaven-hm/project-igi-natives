@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_MsvcrtHeapSelect (VA 0x004A663F; static CFG gate PASS, CFG score 1.000).
 #include "Camera_MsvcrtHeapSelect.h"
 int32_t Camera_MsvcrtHeapSelect()
 

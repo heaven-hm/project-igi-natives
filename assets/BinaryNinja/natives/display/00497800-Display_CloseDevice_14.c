@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CloseDevice_14 (VA 0x00497800; static CFG gate PASS, CFG score 1.000).
 #include "Display_CloseDevice_14.h"
 int32_t Display_CloseDevice_14(int32_t a1)
 

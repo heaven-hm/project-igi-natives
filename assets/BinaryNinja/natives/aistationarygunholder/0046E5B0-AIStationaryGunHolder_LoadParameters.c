@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIStationaryGunHolder_LoadParameters (VA 0x0046E5B0; static CFG gate PASS, CFG score 0.970).
 #include "AIStationaryGunHolder_LoadParameters.h"
 void* AIStationaryGunHolder_LoadParameters(float a1)
 

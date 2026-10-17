@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsSetGamma (VA 0x004048B0; static CFG gate PASS, CFG score 0.889).
 #include "Config_GraphicOptionsSetGamma.h"
 int32_t Config_GraphicOptionsSetGamma(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsGetDevice (VA 0x00404710; static CFG gate FAIL, CFG score 0.778).
 #include "Config_GraphicOptionsGetDevice.h"
 int32_t Config_GraphicOptionsGetDevice(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_FireBallUpdate_2 (VA 0x00481360; static CFG gate FAIL, CFG score 0.667).
 #include "FX_FireBallUpdate_2.h"
 int32_t FX_FireBallUpdate_2(void* a1, float a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9)
 

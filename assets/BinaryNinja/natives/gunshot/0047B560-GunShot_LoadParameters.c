@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunShot_LoadParameters (VA 0x0047B560; static CFG gate PASS, CFG score 0.857).
 #include "GunShot_LoadParameters.h"
 void* GunShot_LoadParameters(void* a1)
 

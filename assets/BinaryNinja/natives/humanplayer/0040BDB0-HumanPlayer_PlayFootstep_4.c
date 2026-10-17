@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_PlayFootstep_4 (VA 0x0040BDB0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_PlayFootstep_4.h"
 float HumanPlayer_PlayFootstep_4(void* a1, void* a2) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefTriggerOnce_Update (VA 0x004E9B80; static CFG gate FAIL, CFG score 0.714).
 #include "SoundDefTriggerOnce_Update.h"
 int32_t SoundDefTriggerOnce_Update(void* a1, int32_t* a2)
 

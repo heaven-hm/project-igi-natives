@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Missile_Update (VA 0x00429730; static CFG gate PASS, CFG score 1.000).
 #include "Missile_Update.h"
 char* Missile_Update(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, long double a7 @ fp6, int32_t a8, int32_t* a9)
 

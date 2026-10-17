@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_SyntaxErrorInStringE (VA 0x004B8CE0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_SyntaxErrorInStringE.h"
 char* Sys_SyntaxErrorInStringE(char* a1, int16_t* a2, char* a3)
 

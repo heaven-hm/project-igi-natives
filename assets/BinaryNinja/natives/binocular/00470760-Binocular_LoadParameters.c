@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_LoadParameters (VA 0x00470760; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_LoadParameters.h"
 int32_t* Binocular_LoadParameters(void* a1, int32_t a2)
 

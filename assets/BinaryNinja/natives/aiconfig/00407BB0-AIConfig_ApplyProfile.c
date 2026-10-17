@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIConfig_ApplyProfile (VA 0x00407BB0; static CFG gate FAIL, CFG score 0.667).
 #include "AIConfig_ApplyProfile.h"
 int32_t AIConfig_ApplyProfile(void* a1)
 

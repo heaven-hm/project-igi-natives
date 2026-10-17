@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SimpointObjGenerator_Setup (VA 0x0043BCA0; static CFG gate PASS, CFG score 1.000).
 #include "SimpointObjGenerator_Setup.h"
 int32_t SimpointObjGenerator_Setup(void* a1)
 

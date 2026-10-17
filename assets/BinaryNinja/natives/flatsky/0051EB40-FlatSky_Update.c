@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatSky_Update (VA 0x0051EB40; static CFG gate PASS, CFG score 1.000).
 #include "FlatSky_Update.h"
 int32_t FlatSky_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathGuideQTask_Init (VA 0x0051B140; static CFG gate PASS, CFG score 1.000).
 #include "SplinePathGuideQTask_Init.h"
 int32_t* SplinePathGuideQTask_Init()
 

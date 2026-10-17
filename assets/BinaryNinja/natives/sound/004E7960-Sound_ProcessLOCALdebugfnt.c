@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sound_ProcessLOCALdebugfnt (VA 0x004E7960; static CFG gate PASS, CFG score 0.958).
 #include "Sound_ProcessLOCALdebugfnt.h"
 
 int32_t()

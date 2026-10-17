@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qsc_Compile (VA 0x004B8410; static CFG gate PASS, CFG score 0.889).
 #include "Qsc_Compile.h"
 int32_t Qsc_Compile(void* a1)
 

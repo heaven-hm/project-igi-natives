@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GFXCapsViewer_Update (VA 0x00519750; static CFG gate PASS, CFG score 1.000).
 #include "GFXCapsViewer_Update.h"
 uint32_t GFXCapsViewer_Update()
 

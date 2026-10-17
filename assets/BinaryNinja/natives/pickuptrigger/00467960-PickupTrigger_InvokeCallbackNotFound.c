@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PickupTrigger_InvokeCallbackNotFound (VA 0x00467960; static CFG gate PASS, CFG score 1.000).
 #include "PickupTrigger_InvokeCallbackNotFound.h"
 
 void**()

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerObjectives_Process (VA 0x00469110; static CFG gate PASS, CFG score 0.974).
 #include "ComputerObjectives_Process.h"
 void* ComputerObjectives_Process(void* a1)
 

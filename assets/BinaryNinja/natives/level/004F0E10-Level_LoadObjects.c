@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_LoadObjects (VA 0x004F0E10; static CFG gate PASS, CFG score 1.000).
 #include "Level_LoadObjects.h"
 int32_t Level_LoadObjects(int32_t a1, int32_t a2)
 

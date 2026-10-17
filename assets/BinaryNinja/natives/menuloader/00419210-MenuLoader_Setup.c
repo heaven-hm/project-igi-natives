@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuLoader_Setup (VA 0x00419210; static CFG gate PASS, CFG score 1.000).
 #include "MenuLoader_Setup.h"
 int32_t* MenuLoader_Setup(void* a1)
 

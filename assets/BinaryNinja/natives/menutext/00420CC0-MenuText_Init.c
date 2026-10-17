@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuText_Init (VA 0x00420CC0; static CFG gate PASS, CFG score 1.000).
 #include "MenuText_Init.h"
 void* MenuText_Init()
 

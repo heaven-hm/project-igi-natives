@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_SampleHeightmap_8 (VA 0x005182B0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SampleHeightmap_8.h"
 int32_t Terrain_SampleHeightmap_8(int32_t* a1, float* a2, float* a3)
 

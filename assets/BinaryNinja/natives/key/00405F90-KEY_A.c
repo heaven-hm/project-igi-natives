@@ -1,3 +1,4 @@
+// Original IGI.EXE function: KEY_A (VA 0x00405F90; static CFG gate PASS, CFG score 1.000).
 #include "KEY_A.h"
 int32_t KEY_A(int32_t* a1, int32_t a2)
 

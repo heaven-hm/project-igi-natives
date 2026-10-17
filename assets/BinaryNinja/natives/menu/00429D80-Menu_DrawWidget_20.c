@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_DrawWidget_20 (VA 0x00429D80; static CFG gate PASS, CFG score 1.000).
 #include "Menu_DrawWidget_20.h"
 struct status_msg* Menu_DrawWidget_20(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SoundOptionsSetSpeech (VA 0x00404CF0; static CFG gate PASS, CFG score 0.889).
 #include "Config_SoundOptionsSetSpeech.h"
 int32_t Config_SoundOptionsSetSpeech(int32_t a1, float a2 @ 0xc)
 

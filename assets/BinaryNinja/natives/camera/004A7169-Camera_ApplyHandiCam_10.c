@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyHandiCam_10 (VA 0x004A7169; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyHandiCam_10.h"
 int32_t Camera_ApplyHandiCam_10() __pure
 

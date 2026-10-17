@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObjSegment_LoadParameters (VA 0x004E3F80; static CFG gate PASS, CFG score 1.000).
 #include "SplineObjSegment_LoadParameters.h"
 void* SplineObjSegment_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsRigid_ProcessStep_4DA270 (VA 0x004DA270; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsRigid_ProcessStep_4DA270.h"
 
 int32_t(void* arg1)

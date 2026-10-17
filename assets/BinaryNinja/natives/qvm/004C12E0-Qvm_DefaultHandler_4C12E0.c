@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_DefaultHandler_4C12E0 (VA 0x004C12E0; static CFG gate PASS, CFG score 1.000).
 #include "Qvm_DefaultHandler_4C12E0.h"
 
 int32_t(int32_t* arg1, int32_t* arg2)

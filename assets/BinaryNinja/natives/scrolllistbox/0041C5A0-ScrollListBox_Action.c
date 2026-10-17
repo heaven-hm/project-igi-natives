@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_Action (VA 0x0041C5A0; static CFG gate PASS, CFG score 1.000).
 #include "ScrollListBox_Action.h"
 int32_t ScrollListBox_Action(void* a1)
 

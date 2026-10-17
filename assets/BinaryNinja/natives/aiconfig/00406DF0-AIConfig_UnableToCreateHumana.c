@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIConfig_UnableToCreateHumana (VA 0x00406DF0; static CFG gate PASS, CFG score 0.982).
 #include "AIConfig_UnableToCreateHumana.h"
 void* AIConfig_UnableToCreateHumana(void* a1)
 

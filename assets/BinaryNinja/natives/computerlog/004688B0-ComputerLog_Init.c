@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerLog_Init (VA 0x004688B0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerLog_Init.h"
 int32_t ComputerLog_Init()
 

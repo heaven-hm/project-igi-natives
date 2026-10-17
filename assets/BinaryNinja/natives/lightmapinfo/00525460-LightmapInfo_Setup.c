@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LightmapInfo_Setup (VA 0x00525460; static CFG gate PASS, CFG score 0.873).
 #include "LightmapInfo_Setup.h"
 int32_t LightmapInfo_Setup(void* a1, int32_t* a2)
 

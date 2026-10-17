@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PickupTrigger_InvokeFindType_46D740 (VA 0x0046D740; static CFG gate PASS, CFG score 1.000).
 #include "PickupTrigger_InvokeFindType_46D740.h"
 
 int32_t*(int32_t* arg1)

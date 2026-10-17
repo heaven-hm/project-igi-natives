@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_15 (VA 0x004B5AF0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_15.h"
 int32_t Sys_ResolveSymbol_15(char* a1, char* a2)
 

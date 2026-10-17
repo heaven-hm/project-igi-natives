@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SimpointObj_Process (VA 0x005035B0; static CFG gate FAIL, CFG score 0.800).
 #include "SimpointObj_Process.h"
 int32_t* SimpointObj_Process(int32_t* a1)
 

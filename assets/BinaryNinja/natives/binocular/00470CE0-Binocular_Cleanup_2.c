@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_Cleanup_2 (VA 0x00470CE0; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_Cleanup_2.h"
 int32_t Binocular_Cleanup_2(int32_t a1 @ 0x8)
 

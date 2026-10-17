@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_SetLanguage (VA 0x00417810; static CFG gate FAIL, CFG score 0.833).
 #include "MenuManager_SetLanguage.h"
 int32_t MenuManager_SetLanguage(int32_t a1, void* a2, float a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_UpdateCockpit (VA 0x00430940; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_UpdateCockpit.h"
 uint32_t Vehicle_UpdateCockpit()
 

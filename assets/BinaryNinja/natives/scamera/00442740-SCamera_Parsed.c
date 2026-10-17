@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_Parsed (VA 0x00442740; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Parsed.h"
 char* SCamera_Parsed(float a1, char* a2)
 

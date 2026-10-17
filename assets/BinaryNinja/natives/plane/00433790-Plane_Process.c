@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Plane_Process (VA 0x00433790; static CFG gate PASS, CFG score 1.000).
 #include "Plane_Process.h"
 int32_t* Plane_Process(void* a1)
 

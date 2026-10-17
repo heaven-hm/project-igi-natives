@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_Setup (VA 0x00478840; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Setup.h"
 int32_t Gun_Setup(void* a1)
 

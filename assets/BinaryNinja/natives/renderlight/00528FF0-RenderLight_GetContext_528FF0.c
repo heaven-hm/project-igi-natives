@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RenderLight_GetContext_528FF0 (VA 0x00528FF0; static CFG gate PASS, CFG score 1.000).
 #include "RenderLight_GetContext_528FF0.h"
 
 void*(void* arg1)

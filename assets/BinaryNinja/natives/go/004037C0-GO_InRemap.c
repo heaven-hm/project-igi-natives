@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_InRemap (VA 0x004037C0; static CFG gate PASS, CFG score 0.917).
 #include "GO_InRemap.h"
 int32_t GO_InRemap(int32_t a1, float a2 @ 0xc)
 

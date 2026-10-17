@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_OnEvent (VA 0x004789C0; static CFG gate PASS, CFG score 1.000).
 #include "Gun_OnEvent.h"
 int32_t* Gun_OnEvent(void* a1)
 

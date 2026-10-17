@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_IsContentControlPasswordEnabled (VA 0x00403D90; static CFG gate FAIL, CFG score 0.667).
 #include "Config_IsContentControlPasswordEnabled.h"
 int32_t Config_IsContentControlPasswordEnabled(int32_t a1)
 

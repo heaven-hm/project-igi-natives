@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelTimer_Process (VA 0x0051BDB0; static CFG gate PASS, CFG score 1.000).
 #include "LevelTimer_Process.h"
 char* LevelTimer_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Radio_Init (VA 0x0043AD80; static CFG gate PASS, CFG score 1.000).
 #include "Radio_Init.h"
 int32_t* Radio_Init()
 

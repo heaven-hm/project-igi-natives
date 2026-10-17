@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_Kernel32 (VA 0x004A71A7; static CFG gate PASS, CFG score 0.889).
 #include "Camera_Kernel32.h"
 int32_t Camera_Kernel32()
 

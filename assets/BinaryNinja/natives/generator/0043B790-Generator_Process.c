@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Generator_Process (VA 0x0043B790; static CFG gate PASS, CFG score 1.000).
 #include "Generator_Process.h"
 int32_t Generator_Process(void* a1)
 

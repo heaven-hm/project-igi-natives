@@ -1,3 +1,4 @@
+// Original IGI.EXE function: menu_high (VA 0x00418FE0; static CFG gate PASS, CFG score 1.000).
 #include "menu_high.h"
 int32_t menu_high(void* a1, int32_t a2)
 

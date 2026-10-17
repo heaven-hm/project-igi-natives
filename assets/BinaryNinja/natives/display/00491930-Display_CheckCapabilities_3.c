@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CheckCapabilities_3 (VA 0x00491930; static CFG gate PASS, CFG score 1.000).
 #include "Display_CheckCapabilities_3.h"
 int32_t Display_CheckCapabilities_3()
 

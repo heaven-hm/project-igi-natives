@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_LoadSoundDef_7 (VA 0x004E6C60; static CFG gate FAIL, CFG score 0.667).
 #include "SoundSys_LoadSoundDef_7.h"
 int32_t SoundSys_LoadSoundDef_7(void* a1, int32_t a2, int32_t a3)
 

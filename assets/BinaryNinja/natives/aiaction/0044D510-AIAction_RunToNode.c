@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_RunToNode (VA 0x0044D510; static CFG gate PASS, CFG score 0.933).
 #include "AIAction_RunToNode.h"
 int32_t AIAction_RunToNode(int32_t a1, float a2 @ 0xc)
 

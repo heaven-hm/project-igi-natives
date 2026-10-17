@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanCamera_Init (VA 0x004825C0; static CFG gate PASS, CFG score 1.000).
 #include "HumanCamera_Init.h"
 char* HumanCamera_Init()
 

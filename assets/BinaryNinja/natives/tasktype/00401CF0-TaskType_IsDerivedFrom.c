@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TaskType_IsDerivedFrom (VA 0x00401CF0; static CFG gate PASS, CFG score 1.000).
 #include "TaskType_IsDerivedFrom.h"
 int32_t TaskType_IsDerivedFrom(int32_t a1, int16_t a2)
 

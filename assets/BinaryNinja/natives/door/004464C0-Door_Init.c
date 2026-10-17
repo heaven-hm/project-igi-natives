@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_Init (VA 0x004464C0; static CFG gate PASS, CFG score 0.994).
 #include "Door_Init.h"
 int32_t* Door_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_ApplyPhysics_2 (VA 0x00409410; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_ApplyPhysics_2.h"
 int32_t HumanPlayer_ApplyPhysics_2(void* a1, float a2)
 

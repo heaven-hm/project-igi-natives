@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SoundOptionsGetSpeechVolume (VA 0x00404E00; static CFG gate PASS, CFG score 0.889).
 #include "Config_SoundOptionsGetSpeechVolume.h"
 int32_t Config_SoundOptionsGetSpeechVolume(int32_t a1)
 

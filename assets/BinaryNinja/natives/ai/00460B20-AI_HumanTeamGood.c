@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_HumanTeamGood (VA 0x00460B20; static CFG gate PASS, CFG score 1.000).
 #include "AI_HumanTeamGood.h"
 int32_t AI_HumanTeamGood()
 

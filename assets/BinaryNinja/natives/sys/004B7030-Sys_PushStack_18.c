@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_PushStack_18 (VA 0x004B7030; static CFG gate PASS, CFG score 1.000).
 #include "Sys_PushStack_18.h"
 int32_t Heap_FreeEntry(int32_t* a1)
 

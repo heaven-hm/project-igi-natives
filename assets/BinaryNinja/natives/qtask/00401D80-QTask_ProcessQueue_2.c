@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_ProcessQueue_2 (VA 0x00401D80; static CFG gate PASS, CFG score 1.000).
 #include "QTask_ProcessQueue_2.h"
 int32_t QTask_ProcessQueue_2(void* a1, int32_t a2, int32_t a3)
 

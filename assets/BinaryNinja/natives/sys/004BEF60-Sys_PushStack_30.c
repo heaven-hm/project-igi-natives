@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_PushStack_30 (VA 0x004BEF60; static CFG gate FAIL, CFG score 0.778).
 #include "Sys_PushStack_30.h"
 int32_t* Sys_PushStack_30(int32_t* a1, int32_t a2, int32_t a3, int32_t a4)
 

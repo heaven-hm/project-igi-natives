@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainDynCubeObj_OnEvent (VA 0x004F7F00; static CFG gate PASS, CFG score 0.917).
 #include "RainDynCubeObj_OnEvent.h"
 void* RainDynCubeObj_OnEvent(void* a1)
 

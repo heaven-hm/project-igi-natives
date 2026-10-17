@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_VirmodelIsNull (VA 0x00480060; static CFG gate PASS, CFG score 1.000).
 #include "FX_VirmodelIsNull.h"
 struct status_msg* FX_VirmodelIsNull(double* a1, char* a2, float a3, int32_t a4, int32_t a5, int32_t a6 @ 0x1c, int32_t a7, int32_t a8, int32_t a9)
 

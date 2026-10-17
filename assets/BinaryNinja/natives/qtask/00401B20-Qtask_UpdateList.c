@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qtask_UpdateList (VA 0x00401B20; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_UpdateList.h"
 int32_t Qtask_UpdateList(int32_t* a1)
 

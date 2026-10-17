@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_10 (VA 0x004B2A10; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_10.h"
 long double Sys_DispatchOpcode_10(int32_t* a1)
 

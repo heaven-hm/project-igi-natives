@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPickup_Process (VA 0x0046C490; static CFG gate PASS, CFG score 1.000).
 #include "GenericPickup_Process.h"
 void* GenericPickup_Process(float a1)
 

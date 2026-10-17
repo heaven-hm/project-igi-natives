@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FreeCamera_LoadParameters (VA 0x00531130; static CFG gate PASS, CFG score 1.000).
 #include "FreeCamera_LoadParameters.h"
 int32_t FreeCamera_LoadParameters(void* a1)
 

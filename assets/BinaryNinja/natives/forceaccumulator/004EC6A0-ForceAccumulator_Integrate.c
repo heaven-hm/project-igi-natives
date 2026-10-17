@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ForceAccumulator_Integrate (VA 0x004EC6A0; static CFG gate PASS, CFG score 1.000).
 #include "ForceAccumulator_Integrate.h"
 int32_t ForceAccumulator_Integrate(void* a1, float* a2)
 

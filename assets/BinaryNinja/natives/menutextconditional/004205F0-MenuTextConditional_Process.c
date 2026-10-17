@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuTextConditional_Process (VA 0x004205F0; static CFG gate PASS, CFG score 1.000).
 #include "MenuTextConditional_Process.h"
 char* MenuTextConditional_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathNodeQTask_LoadParameters (VA 0x00519AD0; static CFG gate FAIL, CFG score 0.750).
 #include "SplinePathNodeQTask_LoadParameters.h"
 int32_t SplinePathNodeQTask_LoadParameters(void* a1)
 

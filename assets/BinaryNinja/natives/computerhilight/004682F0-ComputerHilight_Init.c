@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerHilight_Init (VA 0x004682F0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerHilight_Init.h"
 int32_t* ComputerHilight_Init()
 

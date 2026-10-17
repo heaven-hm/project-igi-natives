@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terminal_Init (VA 0x00443680; static CFG gate PASS, CFG score 1.000).
 #include "Terminal_Init.h"
 int32_t* Terminal_Init()
 

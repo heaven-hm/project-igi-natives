@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObj_Shutdown (VA 0x004D9F60; static CFG gate PASS, CFG score 1.000).
 #include "MagicObj_Shutdown.h"
 uint32_t MagicObj_Shutdown()
 

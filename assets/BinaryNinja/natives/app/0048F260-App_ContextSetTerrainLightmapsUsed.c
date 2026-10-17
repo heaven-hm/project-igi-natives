@@ -1,3 +1,4 @@
+// Original IGI.EXE function: App_ContextSetTerrainLightmapsUsed (VA 0x0048F260; static CFG gate PASS, CFG score 1.000).
 #include "App_ContextSetTerrainLightmapsUsed.h"
 int32_t App_ContextSetTerrainLightmapsUsed(char a1)
 

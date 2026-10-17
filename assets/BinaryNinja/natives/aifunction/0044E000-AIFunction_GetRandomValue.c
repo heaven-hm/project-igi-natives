@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetRandomValue (VA 0x0044E000; static CFG gate PASS, CFG score 0.917).
 #include "AIFunction_GetRandomValue.h"
 int32_t AIFunction_GetRandomValue(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

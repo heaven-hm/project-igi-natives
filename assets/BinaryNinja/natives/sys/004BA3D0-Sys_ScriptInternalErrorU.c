@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ScriptInternalErrorU (VA 0x004BA3D0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ScriptInternalErrorU.h"
 int32_t Sys_ScriptInternalErrorU(int32_t a1)
 

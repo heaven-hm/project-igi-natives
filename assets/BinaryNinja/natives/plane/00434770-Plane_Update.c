@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Plane_Update (VA 0x00434770; static CFG gate PASS, CFG score 0.944).
 #include "Plane_Update.h"
 int32_t Plane_Update(float a1)
 

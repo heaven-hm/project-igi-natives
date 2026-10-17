@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIStationaryGunHolder_Init (VA 0x0046E370; static CFG gate PASS, CFG score 1.000).
 #include "AIStationaryGunHolder_Init.h"
 ❓  int32_t* AIStationaryGunHolder_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

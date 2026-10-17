@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_InitHeli_2 (VA 0x00431560; static CFG gate PASS, CFG score 0.974).
 #include "Vehicle_InitHeli_2.h"
 int32_t* Vehicle_InitHeli_2(float a1)
 

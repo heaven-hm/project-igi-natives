@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetDisplayMode_6 (VA 0x00491F10; static CFG gate PASS, CFG score 0.924).
 #include "Display_SetDisplayMode_6.h"
 int32_t __stdcall Display_SetDisplayMode_6(GUID* a1, int32_t a2, int32_t* a3 @ 0x10)
 

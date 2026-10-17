@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EjectMagazine (VA 0x00471280; static CFG gate FAIL, CFG score 0.667).
 #include "Weapon_EjectMagazine.h"
 int32_t Weapon_EjectMagazine(void* a1, int32_t a2)
 

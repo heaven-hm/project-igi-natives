@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_UpdateAnimation_9 (VA 0x00413770; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_UpdateAnimation_9.h"
 uint32_t HumanPlayer_UpdateAnimation_9()
 

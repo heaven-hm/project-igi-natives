@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimRigidDynCubeObj_Init (VA 0x0052AAF0; static CFG gate PASS, CFG score 1.000).
 #include "AnimRigidDynCubeObj_Init.h"
 int32_t AnimRigidDynCubeObj_Init()
 

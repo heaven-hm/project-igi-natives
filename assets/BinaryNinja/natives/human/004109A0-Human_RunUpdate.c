@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_RunUpdate (VA 0x004109A0; static CFG gate PASS, CFG score 0.987).
 #include "Human_RunUpdate.h"
 void* Human_RunUpdate(int32_t* a1)
 

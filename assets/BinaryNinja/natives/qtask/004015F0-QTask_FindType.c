@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_FindType (VA 0x004015F0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_FindType.h"
 int32_t QTask_FindType(int32_t* a1)
 

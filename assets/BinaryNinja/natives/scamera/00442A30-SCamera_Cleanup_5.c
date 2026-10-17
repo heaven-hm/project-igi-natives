@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_Cleanup_5 (VA 0x00442A30; static CFG gate FAIL, CFG score 0.833).
 #include "SCamera_Cleanup_5.h"
 void* SCamera_Cleanup_5(void* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerObjectives_LoadParameters (VA 0x00468E90; static CFG gate PASS, CFG score 1.000).
 #include "ComputerObjectives_LoadParameters.h"
 struct status_msg* ComputerObjectives_LoadParameters(void* a1)
 

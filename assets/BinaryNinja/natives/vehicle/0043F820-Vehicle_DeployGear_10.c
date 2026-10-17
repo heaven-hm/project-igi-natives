@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_DeployGear_10 (VA 0x0043F820; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_DeployGear_10.h"
 float* Vehicle_DeployGear_10(float* a1, double* a2)
 

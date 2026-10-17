@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_LoadParameters_9 (VA 0x0040F370; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_LoadParameters_9.h"
 void* HumanPlayer_LoadParameters_9(void* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_LightmapsRes (VA 0x005210E0; static CFG gate PASS, CFG score 1.000).
 #include "Light_LightmapsRes.h"
 int32_t Light_LightmapsRes()
 

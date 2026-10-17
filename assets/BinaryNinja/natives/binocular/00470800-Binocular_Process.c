@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_Process (VA 0x00470800; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_Process.h"
 int32_t* Binocular_Process(void* a1)
 

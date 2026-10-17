@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_Font4Fnt (VA 0x00485FB0; static CFG gate PASS, CFG score 1.000).
 #include "FX_Font4Fnt.h"
 void* FX_Font4Fnt(int32_t a1, int32_t a2)
 

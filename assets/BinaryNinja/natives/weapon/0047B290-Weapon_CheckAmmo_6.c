@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_CheckAmmo_6 (VA 0x0047B290; static CFG gate PASS, CFG score 0.889).
 #include "Weapon_CheckAmmo_6.h"
 int32_t Weapon_CheckAmmo_6(double* a1, int32_t a2, void* a3, double* a4)
 

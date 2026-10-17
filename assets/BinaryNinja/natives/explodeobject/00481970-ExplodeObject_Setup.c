@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeObject_Setup (VA 0x00481970; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeObject_Setup.h"
 void* ExplodeObject_Setup(int80_t a1 @ fp0, double* a2)
 

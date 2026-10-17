@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_PlaySoundSample_16 (VA 0x004EC190; static CFG gate FAIL, CFG score 0.667).
 #include "SoundSys_PlaySoundSample_16.h"
 int32_t SoundSys_PlaySoundSample_16(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6)
 

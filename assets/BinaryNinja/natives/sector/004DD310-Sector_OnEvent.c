@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sector_OnEvent (VA 0x004DD310; static CFG gate PASS, CFG score 1.000).
 #include "Sector_OnEvent.h"
 float Sector_OnEvent(float a1) __location("valA")
 

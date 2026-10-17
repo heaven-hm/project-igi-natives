@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Grenade_Setup (VA 0x00476AC0; static CFG gate PASS, CFG score 1.000).
 #include "Grenade_Setup.h"
 uint32_t Grenade_Setup(int32_t* a1)
 

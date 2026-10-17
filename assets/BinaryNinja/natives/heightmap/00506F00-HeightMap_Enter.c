@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeightMap_Enter (VA 0x00506F00; static CFG gate PASS, CFG score 1.000).
 #include "HeightMap_Enter.h"
 void* HeightMap_Enter(void* a1)
 

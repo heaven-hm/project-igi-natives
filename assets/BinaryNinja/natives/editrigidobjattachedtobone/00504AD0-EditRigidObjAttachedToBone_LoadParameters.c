@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObjAttachedToBone_LoadParameters (VA 0x00504AD0; static CFG gate PASS, CFG score 0.917).
 #include "EditRigidObjAttachedToBone_LoadParameters.h"
 int32_t EditRigidObjAttachedToBone_LoadParameters(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_OpenFileStream_7 (VA 0x004B1E90; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_7.h"
 char* Sys_OpenFileStream_7(char* a1, int32_t a2, int32_t a3)
 

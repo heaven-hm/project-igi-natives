@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessage_Update_2 (VA 0x00485770; static CFG gate PASS, CFG score 1.000).
 #include "StatusMessage_Update_2.h"
 int32_t StatusMessage_Update_2(void* a1)
 

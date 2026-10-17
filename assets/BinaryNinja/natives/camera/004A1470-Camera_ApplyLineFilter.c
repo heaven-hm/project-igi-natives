@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyLineFilter (VA 0x004A1470; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyLineFilter.h"
 int32_t Camera_ApplyLineFilter()
 

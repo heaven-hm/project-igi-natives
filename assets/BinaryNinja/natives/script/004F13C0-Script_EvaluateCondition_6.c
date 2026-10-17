@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_EvaluateCondition_6 (VA 0x004F13C0; static CFG gate PASS, CFG score 1.000).
 #include "Script_EvaluateCondition_6.h"
 int32_t Script_EvaluateCondition_6(void* a1, void* a2)
 

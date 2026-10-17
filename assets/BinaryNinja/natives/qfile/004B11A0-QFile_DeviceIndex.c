@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QFile_DeviceIndex (VA 0x004B11A0; static CFG gate PASS, CFG score 1.000).
 #include "QFile_DeviceIndex.h"
 int32_t QFile_DeviceIndex(void* a1)
 

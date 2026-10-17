@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerObject_Setup (VA 0x00467800; static CFG gate PASS, CFG score 1.000).
 #include "ComputerObject_Setup.h"
 int32_t* ComputerObject_Setup(double* a1)
 

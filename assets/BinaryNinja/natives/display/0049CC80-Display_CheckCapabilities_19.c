@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CheckCapabilities_19 (VA 0x0049CC80; static CFG gate PASS, CFG score 1.000).
 #include "Display_CheckCapabilities_19.h"
 ❓  int32_t Display_CheckCapabilities_19(int32_t* a1, float a2)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

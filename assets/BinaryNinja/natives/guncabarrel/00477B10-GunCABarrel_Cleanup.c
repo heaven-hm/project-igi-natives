@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunCABarrel_Cleanup (VA 0x00477B10; static CFG gate PASS, CFG score 0.889).
 #include "GunCABarrel_Cleanup.h"
 void* GunCABarrel_Cleanup(void* a1)
 

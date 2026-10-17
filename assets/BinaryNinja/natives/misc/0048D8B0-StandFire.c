@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StandFire (VA 0x0048D8B0; static CFG gate PASS, CFG score 1.000).
 #include "StandFire.h"
 bool StandFire(void* a1)
 

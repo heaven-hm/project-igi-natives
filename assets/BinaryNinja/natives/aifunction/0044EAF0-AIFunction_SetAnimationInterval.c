@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetAnimationInterval (VA 0x0044EAF0; static CFG gate PASS, CFG score 0.933).
 #include "AIFunction_SetAnimationInterval.h"
 int32_t AIFunction_SetAnimationInterval(long double a1 @ fp0, long double a2 @ fp1, int32_t a3, float a4 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_Mission (VA 0x00484F60; static CFG gate PASS, CFG score 0.976).
 #include "Define_Mission.h"
 int32_t Define_Mission(int32_t a1, float a2 @ 0xc)
 

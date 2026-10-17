@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmLight_LoadParameters (VA 0x0043A270; static CFG gate PASS, CFG score 0.952).
 #include "AlarmLight_LoadParameters.h"
 struct status_msg* AlarmLight_LoadParameters(int80_t a1 @ fp0, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_LightsourceNotFound (VA 0x00526920; static CFG gate PASS, CFG score 1.000).
 #include "Light_LightsourceNotFound.h"
 int32_t Light_LightsourceNotFound(int32_t a1)
 

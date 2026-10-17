@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunShot_Update (VA 0x0047ABD0; static CFG gate PASS, CFG score 0.944).
 #include "GunShot_Update.h"
 void* GunShot_Update(int32_t a1)
 

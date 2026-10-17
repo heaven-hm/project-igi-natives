@@ -1,3 +1,4 @@
+// Original IGI.EXE function: IntroScreen_LoadParameters (VA 0x00415380; static CFG gate PASS, CFG score 1.000).
 #include "IntroScreen_LoadParameters.h"
 int32_t IntroScreen_LoadParameters(int32_t* a1)
 

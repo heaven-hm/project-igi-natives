@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Flow_Init (VA 0x00401FC0; static CFG gate PASS, CFG score 1.000).
 #include "Flow_Init.h"
 void* Flow_Init()
 

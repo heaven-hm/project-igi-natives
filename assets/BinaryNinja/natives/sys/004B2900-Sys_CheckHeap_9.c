@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CheckHeap_9 (VA 0x004B2900; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CheckHeap_9.h"
 int32_t Sys_CheckHeap_9(float* a1)
 

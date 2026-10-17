@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RigidDynCubeObj_LoadParameters (VA 0x004A01B0; static CFG gate PASS, CFG score 0.889).
 #include "RigidDynCubeObj_LoadParameters.h"
 int32_t RigidDynCubeObj_LoadParameters(void* a1)
 

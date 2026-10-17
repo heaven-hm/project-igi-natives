@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditVariable_LoadParameters (VA 0x00488980; static CFG gate PASS, CFG score 1.000).
 #include "EditVariable_LoadParameters.h"
 int32_t EditVariable_LoadParameters(void* a1)
 

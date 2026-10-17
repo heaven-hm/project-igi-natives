@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_ParseConfigFile_7 (VA 0x004C5F00; static CFG gate PASS, CFG score 0.857).
 #include "DynObj_ParseConfigFile_7.h"
 int32_t DynObj_ParseConfigFile_7(void* a1, int32_t a2)
 

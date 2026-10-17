@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_Invoke33 (VA 0x00453650; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_Invoke33.h"
 
 int32_t*(int32_t* arg1)

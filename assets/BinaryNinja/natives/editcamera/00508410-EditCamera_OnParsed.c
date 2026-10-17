@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditCamera_OnParsed (VA 0x00508410; static CFG gate PASS, CFG score 0.917).
 #include "EditCamera_OnParsed.h"
 char* EditCamera_OnParsed(void* a1, char* a2)
 

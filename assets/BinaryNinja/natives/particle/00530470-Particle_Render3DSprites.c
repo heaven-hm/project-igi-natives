@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_Render3DSprites (VA 0x00530470; static CFG gate FAIL, CFG score 0.667).
 #include "Particle_Render3DSprites.h"
 int16_t* Particle_Render3DSprites(void* a1, int16_t a2)
 

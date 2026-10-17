@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_Resource (VA 0x004B5F80; static CFG gate PASS, CFG score 0.944).
 #include "Sys_Resource.h"
 int32_t* Sys_Resource(char* a1, int32_t* a2, void* a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_ExecutePipeline_40A870 (VA 0x0040A870; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_ExecutePipeline_40A870.h"
 
 int32_t(void* arg1, void* arg2)

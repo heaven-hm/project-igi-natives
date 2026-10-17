@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_InitSoundSys_5 (VA 0x004E6530; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_InitSoundSys_5.h"
 struct status_msg* SoundSys_InitSoundSys_5(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SetActivePlayerProfileIndex (VA 0x00405050; static CFG gate FAIL, CFG score 0.833).
 #include "Config_SetActivePlayerProfileIndex.h"
 int32_t Config_SetActivePlayerProfileIndex(int32_t a1, float a2 @ 0xc)
 

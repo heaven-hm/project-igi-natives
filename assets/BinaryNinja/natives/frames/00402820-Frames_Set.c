@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Frames_Set (VA 0x00402820; static CFG gate PASS, CFG score 1.000).
 #include "Frames_Set.h"
 void Frames_Set(int32_t frames)
 

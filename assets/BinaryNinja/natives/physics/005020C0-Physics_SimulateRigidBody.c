@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_SimulateRigidBody (VA 0x005020C0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_SimulateRigidBody.h"
 long double Physics_SimulateRigidBody(float a1)
 

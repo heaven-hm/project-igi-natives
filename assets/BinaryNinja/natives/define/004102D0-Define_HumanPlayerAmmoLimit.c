@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_HumanPlayerAmmoLimit (VA 0x004102D0; static CFG gate PASS, CFG score 0.889).
 #include "Define_HumanPlayerAmmoLimit.h"
 int32_t Define_HumanPlayerAmmoLimit(int32_t a1, int32_t* a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ElevatorFloorIndicator_LoadParameters (VA 0x0043C8D0; static CFG gate PASS, CFG score 0.944).
 #include "ElevatorFloorIndicator_LoadParameters.h"
 int32_t* ElevatorFloorIndicator_LoadParameters(float a1)
 

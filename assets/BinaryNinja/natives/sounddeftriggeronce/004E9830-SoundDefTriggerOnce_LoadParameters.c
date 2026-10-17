@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefTriggerOnce_LoadParameters (VA 0x004E9830; static CFG gate FAIL, CFG score 0.833).
 #include "SoundDefTriggerOnce_LoadParameters.h"
 int32_t SoundDefTriggerOnce_LoadParameters(void* a1, int32_t* a2)
 

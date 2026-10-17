@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_Atan2UndefinedInOrig (VA 0x004B3C50; static CFG gate PASS, CFG score 1.000).
 #include "Sys_Atan2UndefinedInOrig.h"
 float* Sys_Atan2UndefinedInOrig(float* a1, float* a2, float* a3, float* a4)
 

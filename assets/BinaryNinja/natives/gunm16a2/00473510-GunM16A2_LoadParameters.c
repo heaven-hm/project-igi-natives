@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunM16A2_LoadParameters (VA 0x00473510; static CFG gate PASS, CFG score 1.000).
 #include "GunM16A2_LoadParameters.h"
 struct status_msg* GunM16A2_LoadParameters(void* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmControl_LoadParameters (VA 0x004408A0; static CFG gate PASS, CFG score 1.000).
 #include "AlarmControl_LoadParameters.h"
 int32_t AlarmControl_LoadParameters(int80_t a1 @ fp0, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_ConvertFloatFromOffset (VA 0x004231E0; static CFG gate PASS, CFG score 0.889).
 #include "ControlsMenu_ConvertFloatFromOffset.h"
 int32_t ControlsMenu_ConvertFloatFromOffset(int32_t a1, int32_t a2 @ 0xc)
 

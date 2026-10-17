@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AsciiBox_LoadParameters (VA 0x0041CD20; static CFG gate PASS, CFG score 0.889).
 #include "AsciiBox_LoadParameters.h"
 int32_t AsciiBox_LoadParameters(void* a1)
 

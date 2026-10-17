@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerButtonItem_Process_2 (VA 0x0046B660; static CFG gate PASS, CFG score 1.000).
 #include "ComputerButtonItem_Process_2.h"
 struct status_msg* ComputerButtonItem_Process_2(float a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, char a7, float a8, float a9, char a10, void* a11, char* a12, uint32_t a13, uint32_t a14, uint32_t a15, int32_t a16)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_Process (VA 0x0045F500; static CFG gate PASS, CFG score 1.000).
 #include "Human_Process.h"
 char* Human_Process(float a1, int32_t* a2)
 

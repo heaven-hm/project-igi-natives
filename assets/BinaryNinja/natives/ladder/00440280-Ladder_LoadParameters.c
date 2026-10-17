@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ladder_LoadParameters (VA 0x00440280; static CFG gate PASS, CFG score 0.970).
 #include "Ladder_LoadParameters.h"
 int32_t Ladder_LoadParameters(float a1, int32_t* a2)
 

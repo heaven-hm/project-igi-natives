@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Elevator_Action (VA 0x0043E290; static CFG gate FAIL, CFG score 0.833).
 #include "Elevator_Action.h"
 void* Elevator_Action(void* a1, void** a2)
 

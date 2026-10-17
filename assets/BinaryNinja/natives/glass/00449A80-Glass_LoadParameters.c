@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Glass_LoadParameters (VA 0x00449A80; static CFG gate PASS, CFG score 1.000).
 #include "Glass_LoadParameters.h"
 int32_t Glass_LoadParameters(int32_t* a1)
 

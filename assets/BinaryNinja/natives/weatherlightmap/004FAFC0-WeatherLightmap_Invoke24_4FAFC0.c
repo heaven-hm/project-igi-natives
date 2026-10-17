@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherLightmap_Invoke24_4FAFC0 (VA 0x004FAFC0; static CFG gate PASS, CFG score 1.000).
 #include "WeatherLightmap_Invoke24_4FAFC0.h"
 
 char*(int32_t* arg1)

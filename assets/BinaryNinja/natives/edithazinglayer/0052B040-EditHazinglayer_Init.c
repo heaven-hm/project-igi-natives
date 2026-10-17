@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditHazinglayer_Init (VA 0x0052B040; static CFG gate PASS, CFG score 1.000).
 #include "EditHazinglayer_Init.h"
 int32_t* EditHazinglayer_Init()
 

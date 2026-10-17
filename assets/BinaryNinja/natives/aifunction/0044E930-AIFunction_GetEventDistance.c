@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetEventDistance (VA 0x0044E930; static CFG gate PASS, CFG score 0.933).
 #include "AIFunction_GetEventDistance.h"
 int32_t AIFunction_GetEventDistance(int32_t a1)
 

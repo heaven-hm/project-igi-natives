@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneMagicObj_Init (VA 0x005317D0; static CFG gate PASS, CFG score 1.000).
 #include "BoneMagicObj_Init.h"
 void* BoneMagicObj_Init()
 

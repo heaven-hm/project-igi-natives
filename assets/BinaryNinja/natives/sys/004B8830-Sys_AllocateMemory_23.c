@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_23 (VA 0x004B8830; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_AllocateMemory_23.h"
 int32_t Sys_AllocateMemory_23(int32_t a1, int32_t a2)
 

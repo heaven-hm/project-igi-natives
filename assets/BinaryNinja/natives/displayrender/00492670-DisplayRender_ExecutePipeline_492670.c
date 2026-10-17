@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_ExecutePipeline_492670 (VA 0x00492670; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_ExecutePipeline_492670.h"
 
 int32_t __stdcall(void* arg1, char* arg2)

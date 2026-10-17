@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_GlassCrush1 (VA 0x0044A630; static CFG gate PASS, CFG score 1.000).
 #include "Env_GlassCrush1.h"
 struct status_msg* Env_GlassCrush1(int32_t a1)
 

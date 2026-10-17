@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ExecuteLevelScript_14 (VA 0x004F3D30; static CFG gate FAIL, CFG score 0.833).
 #include "Script_ExecuteLevelScript_14.h"
 int32_t Script_ExecuteLevelScript_14(void* a1, int32_t* a2)
 

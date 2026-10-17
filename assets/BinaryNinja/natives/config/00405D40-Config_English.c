@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_English (VA 0x00405D40; static CFG gate PASS, CFG score 1.000).
 #include "Config_English.h"
 int32_t Config_English(int32_t* a1, int32_t a2)
 

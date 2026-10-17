@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_Update (VA 0x004446E0; static CFG gate PASS, CFG score 1.000).
 #include "Cabinet_Update.h"
 char* Cabinet_Update(float a1, char* a2)
 

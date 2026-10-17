@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_Process (VA 0x0042B500; static CFG gate FAIL, CFG score 0.800).
 #include "Train_Process.h"
 int32_t Train_Process(float a1, void* a2)
 

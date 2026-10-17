@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mesh_SkinBones (VA 0x0049F700; static CFG gate PASS, CFG score 0.939).
 #include "Mesh_SkinBones.h"
 int32_t* Mesh_SkinBones(int32_t* a1)
 

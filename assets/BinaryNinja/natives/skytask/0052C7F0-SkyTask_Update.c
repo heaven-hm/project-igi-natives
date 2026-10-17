@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SkyTask_Update (VA 0x0052C7F0; static CFG gate PASS, CFG score 1.000).
 #include "SkyTask_Update.h"
 uint32_t SkyTask_Update()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_SoundFX (VA 0x00403F80; static CFG gate PASS, CFG score 0.889).
 #include "GO_SoundFX.h"
 int32_t GO_SoundFX(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Resource_Load (VA 0x004B5F00; static CFG gate PASS, CFG score 1.000).
 #include "Resource_Load.h"
 int32_t* __convention("regparm") Resource_Load(int32_t a1, int32_t a2, void* a3, int32_t* a4 @ 0x8)
 

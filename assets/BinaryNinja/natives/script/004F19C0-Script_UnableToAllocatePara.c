@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_UnableToAllocatePara (VA 0x004F19C0; static CFG gate FAIL, CFG score 0.833).
 #include "Script_UnableToAllocatePara.h"
 int32_t Script_UnableToAllocatePara(int32_t a1, int32_t a2)
 

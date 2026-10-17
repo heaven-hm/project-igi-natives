@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_Init (VA 0x00443ED0; static CFG gate PASS, CFG score 1.000).
 #include "Cabinet_Init.h"
 void* Cabinet_Init()
 

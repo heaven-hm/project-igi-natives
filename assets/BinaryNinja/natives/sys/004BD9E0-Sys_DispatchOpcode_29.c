@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_29 (VA 0x004BD9E0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_29.h"
 void* Sys_DispatchOpcode_29(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CloseFileStream_12 (VA 0x004B3B60; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CloseFileStream_12.h"
 int32_t* Sys_CloseFileStream_12(int32_t* a1, float a2)
 

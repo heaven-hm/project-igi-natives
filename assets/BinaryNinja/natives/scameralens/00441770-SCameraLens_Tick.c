@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCameraLens_Tick (VA 0x00441770; static CFG gate PASS, CFG score 0.956).
 #include "SCameraLens_Tick.h"
 int32_t SCameraLens_Tick(double* a1)
 

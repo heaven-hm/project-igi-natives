@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_DrawWidget_19 (VA 0x00428A60; static CFG gate PASS, CFG score 0.889).
 #include "Menu_DrawWidget_19.h"
 int32_t Menu_DrawWidget_19(void* a1, double* a2)
 

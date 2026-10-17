@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunShot_TakeSlot (VA 0x0047B190; static CFG gate FAIL, CFG score 0.667).
 #include "GunShot_TakeSlot.h"
 int32_t GunShot_TakeSlot(void* a1, int32_t a2, int32_t* a3, void* a4, int32_t a5, int32_t a6)
 

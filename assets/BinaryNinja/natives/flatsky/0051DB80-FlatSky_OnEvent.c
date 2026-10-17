@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatSky_OnEvent (VA 0x0051DB80; static CFG gate PASS, CFG score 1.000).
 #include "FlatSky_OnEvent.h"
 int32_t FlatSky_OnEvent(void* a1)
 

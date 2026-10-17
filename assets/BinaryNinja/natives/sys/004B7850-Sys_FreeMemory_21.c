@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_21 (VA 0x004B7850; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_FreeMemory_21.h"
 char* Sys_FreeMemory_21(char* a1, void* a2)
 

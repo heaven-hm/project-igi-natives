@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Explosion0_OnEvent (VA 0x004806E0; static CFG gate PASS, CFG score 1.000).
 #include "Explosion0_OnEvent.h"
 int32_t Explosion0_OnEvent(int32_t a1)
 

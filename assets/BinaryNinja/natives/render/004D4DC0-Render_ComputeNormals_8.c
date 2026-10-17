@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ComputeNormals_8 (VA 0x004D4DC0; static CFG gate PASS, CFG score 1.000).
 #include "Render_ComputeNormals_8.h"
 int32_t Render_ComputeNormals_8(int32_t a1, int32_t a2, int32_t* a3, void* a4, float a5, float a6)
 

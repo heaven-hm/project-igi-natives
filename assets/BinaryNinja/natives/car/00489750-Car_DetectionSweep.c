@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_DetectionSweep (VA 0x00489750; static CFG gate PASS, CFG score 1.000).
 #include "Car_DetectionSweep.h"
 void* Car_DetectionSweep(void* a1, double* a2, float a3, int32_t a4)
 

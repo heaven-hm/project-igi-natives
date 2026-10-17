@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SoundInvalidFilename (VA 0x00497390; static CFG gate PASS, CFG score 1.000).
 #include "Display_SoundInvalidFilename.h"
 char* Display_SoundInvalidFilename(char* a1, char* a2)
 

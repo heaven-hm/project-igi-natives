@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Frames_GetUpdateCounter (VA 0x004028B0; static CFG gate PASS, CFG score 1.000).
 #include "Frames_GetUpdateCounter.h"
 uint32_t Frames_GetUpdateCounter()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIGraph_Init (VA 0x00508FA0; static CFG gate PASS, CFG score 0.992).
 #include "AIGraph_Init.h"
 void* AIGraph_Init()
 

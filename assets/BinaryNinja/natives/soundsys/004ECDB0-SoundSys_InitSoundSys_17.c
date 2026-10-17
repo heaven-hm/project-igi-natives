@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_InitSoundSys_17 (VA 0x004ECDB0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_InitSoundSys_17.h"
 float SoundSys_InitSoundSys_17(void* a1) __location("valA")
 

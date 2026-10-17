@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Flow_SetState (VA 0x004028A0; static CFG gate PASS, CFG score 1.000).
 #include "Flow_SetState.h"
 int32_t Flow_SetState(int32_t a1)
 

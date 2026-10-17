@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_LookupHashItem_11 (VA 0x004CD300; static CFG gate FAIL, CFG score 0.833).
 #include "DynObj_LookupHashItem_11.h"
 int32_t DynObj_LookupHashItem_11(int16_t* a1, double* a2, double* a3, double* a4, int32_t a5, char a6, int32_t* a7, int32_t* a8, int32_t a9, float* a10)
 

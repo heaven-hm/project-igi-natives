@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerTextItem_Process (VA 0x0046B890; static CFG gate PASS, CFG score 1.000).
 #include "ComputerTextItem_Process.h"
 int32_t ComputerTextItem_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Soldier_DeathFallSolver (VA 0x0045D5B0; static CFG gate PASS, CFG score 0.882).
 #include "Soldier_DeathFallSolver.h"
 double* Soldier_DeathFallSolver(double* a1, void* a2, int32_t* a3, int32_t* a4)
 

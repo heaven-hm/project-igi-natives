@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmControl_Setup (VA 0x00440A40; static CFG gate PASS, CFG score 1.000).
 #include "AlarmControl_Setup.h"
 int32_t AlarmControl_Setup(void* a1)
 

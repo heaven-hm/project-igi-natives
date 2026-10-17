@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericTBA_Setup (VA 0x00448160; static CFG gate PASS, CFG score 1.000).
 #include "GenericTBA_Setup.h"
 char* GenericTBA_Setup(void* a1)
 

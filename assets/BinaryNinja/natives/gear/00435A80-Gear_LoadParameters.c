@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gear_LoadParameters (VA 0x00435A80; static CFG gate PASS, CFG score 0.933).
 #include "Gear_LoadParameters.h"
 int32_t Gear_LoadParameters(void* a1, float a2)
 

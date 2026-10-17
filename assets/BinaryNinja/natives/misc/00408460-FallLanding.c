@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FallLanding (VA 0x00408460; static CFG gate PASS, CFG score 1.000).
 #include "FallLanding.h"
 int32_t FallLanding(float a1)
 

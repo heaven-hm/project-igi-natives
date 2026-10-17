@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_Group (VA 0x004EBA90; static CFG gate PASS, CFG score 0.976).
 #include "Define_Group.h"
 int32_t Define_Group(int32_t a1, void* a2, float a3)
 

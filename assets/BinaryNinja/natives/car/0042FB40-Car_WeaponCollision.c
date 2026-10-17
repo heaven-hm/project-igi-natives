@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_WeaponCollision (VA 0x0042FB40; static CFG gate PASS, CFG score 1.000).
 #include "Car_WeaponCollision.h"
 int32_t* Car_WeaponCollision(void* a1, float a2)
 

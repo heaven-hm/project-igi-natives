@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_OnEvent_2 (VA 0x00422FC0; static CFG gate PASS, CFG score 1.000).
 #include "ControlsMenu_OnEvent_2.h"
 
 void* ControlsMenu_OnEvent_2(void* pThis)

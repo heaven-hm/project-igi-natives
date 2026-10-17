@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_ValidateAnimEntry (VA 0x00456920; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_ValidateAnimEntry.h"
 
 void* HumanAI_ValidateAnimEntry(void* pThis, void* param)

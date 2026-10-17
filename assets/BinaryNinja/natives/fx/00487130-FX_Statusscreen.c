@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_Statusscreen (VA 0x00487130; static CFG gate PASS, CFG score 1.000).
 #include "FX_Statusscreen.h"
 int32_t FX_Statusscreen()
 

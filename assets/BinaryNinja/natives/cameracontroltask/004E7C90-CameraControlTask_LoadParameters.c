@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CameraControlTask_LoadParameters (VA 0x004E7C90; static CFG gate PASS, CFG score 1.000).
 #include "CameraControlTask_LoadParameters.h"
 void CameraControlTask_LoadParameters(void* a1)
 

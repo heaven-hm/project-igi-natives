@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainDynCubeObj_Update (VA 0x004F77C0; static CFG gate PASS, CFG score 0.867).
 #include "RainDynCubeObj_Update.h"
 int32_t** RainDynCubeObj_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_24 (VA 0x004B9660; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_24.h"
 void Sys_DispatchOpcode_24(long double a1 @ fp0, long double a2 @ fp1, int32_t a3)
 

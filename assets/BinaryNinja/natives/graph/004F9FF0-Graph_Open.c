@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_Open (VA 0x004F9FF0; static CFG gate PASS, CFG score 1.000).
 #include "Graph_Open.h"
 int32_t Graph_Open(void* a1 @ 0x8)
 

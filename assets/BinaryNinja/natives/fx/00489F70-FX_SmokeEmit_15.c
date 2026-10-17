@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_SmokeEmit_15 (VA 0x00489F70; static CFG gate PASS, CFG score 1.000).
 #include "FX_SmokeEmit_15.h"
 float FX_SmokeEmit_15(float a1) __location("valA")
 

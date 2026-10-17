@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UnknownExpressionTyp (VA 0x004BC2F0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnknownExpressionTyp.h"
 void Sys_UnknownExpressionTyp(int32_t* a1, char* a2)
 

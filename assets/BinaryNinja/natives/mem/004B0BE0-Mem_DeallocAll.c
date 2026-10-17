@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mem_DeallocAll (VA 0x004B0BE0; static CFG gate PASS, CFG score 1.000).
 #include "Mem_DeallocAll.h"
 int32_t Mem_DeallocAll()
 

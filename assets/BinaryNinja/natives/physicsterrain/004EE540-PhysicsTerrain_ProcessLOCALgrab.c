@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsTerrain_ProcessLOCALgrab (VA 0x004EE540; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsTerrain_ProcessLOCALgrab.h"
 
 int32_t()

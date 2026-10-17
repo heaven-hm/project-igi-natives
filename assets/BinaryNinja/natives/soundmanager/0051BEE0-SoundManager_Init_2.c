@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundManager_Init_2 (VA 0x0051BEE0; static CFG gate PASS, CFG score 1.000).
 #include "SoundManager_Init_2.h"
 
 int32_t SoundManager_Init_2(void* pThis, char* param)

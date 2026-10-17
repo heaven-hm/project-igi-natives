@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldier_OnEvent (VA 0x0045A3D0; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldier_OnEvent.h"
 uint32_t HumanSoldier_OnEvent(void* a1, float a2)
 

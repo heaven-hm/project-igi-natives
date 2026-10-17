@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_ViewCam (VA 0x00463760; static CFG gate PASS, CFG score 1.000).
 #include "Human_ViewCam.h"
 int32_t Human_ViewCam(void* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSysMicrophone_Setup (VA 0x004EBCD0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSysMicrophone_Setup.h"
 int32_t* SoundSysMicrophone_Setup(void* a1)
 

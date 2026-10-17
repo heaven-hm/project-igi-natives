@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeliWheel_Process (VA 0x00426FA0; static CFG gate FAIL, CFG score 0.833).
 #include "HeliWheel_Process.h"
 int32_t HeliWheel_Process(float a1, int32_t* a2)
 

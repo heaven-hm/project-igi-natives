@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CarDoor_LoadParameters (VA 0x00426740; static CFG gate PASS, CFG score 0.875).
 #include "CarDoor_LoadParameters.h"
 int32_t CarDoor_LoadParameters(int32_t* a1, float a2)
 

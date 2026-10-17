@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_HandleInput_4 (VA 0x0040BA70; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_HandleInput_4.h"
 int32_t* HumanPlayer_HandleInput_4(void* a1, void* a2)
 

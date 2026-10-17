@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rotor_Init (VA 0x0042D2B0; static CFG gate PASS, CFG score 1.000).
 #include "Rotor_Init.h"
 void* Rotor_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: IntroScreen_Update (VA 0x00415170; static CFG gate PASS, CFG score 1.000).
 #include "IntroScreen_Update.h"
 int32_t IntroScreen_Update(int32_t a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerObject_Init (VA 0x00467700; static CFG gate PASS, CFG score 1.000).
 #include "ComputerObject_Init.h"
 void* ComputerObject_Init()
 

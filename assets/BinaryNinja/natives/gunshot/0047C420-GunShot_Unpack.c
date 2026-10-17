@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunShot_Unpack (VA 0x0047C420; static CFG gate FAIL, CFG score 0.833).
 #include "GunShot_Unpack.h"
 int32_t GunShot_Unpack(int32_t* a1 @ 0x8)
 

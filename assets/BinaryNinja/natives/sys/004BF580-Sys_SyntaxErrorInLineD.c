@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_SyntaxErrorInLineD (VA 0x004BF580; static CFG gate PASS, CFG score 1.000).
 #include "Sys_SyntaxErrorInLineD.h"
 int32_t Sys_SyntaxErrorInLineD(int32_t* a1, void** a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_UndefinedGraphnodeda (VA 0x004F94D0; static CFG gate PASS, CFG score 1.000).
 #include "Script_UndefinedGraphnodeda.h"
 int32_t Script_UndefinedGraphnodeda(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_DeleteTask (VA 0x004014B0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_DeleteTask.h"
 int32_t QTask_DeleteTask()
 

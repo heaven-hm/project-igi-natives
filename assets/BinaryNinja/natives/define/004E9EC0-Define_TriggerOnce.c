@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_TriggerOnce (VA 0x004E9EC0; static CFG gate PASS, CFG score 0.982).
 #include "Define_TriggerOnce.h"
 int32_t Define_TriggerOnce(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, long double a7 @ fp6, int32_t a8, void* a9, float a10)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CombatPlayAnimation (VA 0x0048DEC0; static CFG gate PASS, CFG score 1.000).
 #include "CombatPlayAnimation.h"
 int32_t CombatPlayAnimation(void* a1, int32_t* a2)
 

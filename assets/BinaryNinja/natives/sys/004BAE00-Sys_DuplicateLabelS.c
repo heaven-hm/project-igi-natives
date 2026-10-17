@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DuplicateLabelS (VA 0x004BAE00; static CFG gate PASS, CFG score 0.852).
 #include "Sys_DuplicateLabelS.h"
 int32_t* Sys_DuplicateLabelS(void* a1, int32_t a2)
 

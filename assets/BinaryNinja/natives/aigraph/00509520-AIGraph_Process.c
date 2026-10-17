@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIGraph_Process (VA 0x00509520; static CFG gate PASS, CFG score 1.000).
 #include "AIGraph_Process.h"
 int32_t AIGraph_Process(void* a1, int32_t* a2)
 

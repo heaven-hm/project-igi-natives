@@ -1,3 +1,4 @@
+// Original IGI.EXE function: App_ContextSetDebugged (VA 0x0048F1A0; static CFG gate PASS, CFG score 1.000).
 #include "App_ContextSetDebugged.h"
 int32_t App_ContextSetDebugged(char a1)
 

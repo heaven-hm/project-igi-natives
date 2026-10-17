@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuItem_Init (VA 0x00505630; static CFG gate PASS, CFG score 1.000).
 #include "MenuItem_Init.h"
 int32_t MenuItem_Init()
 

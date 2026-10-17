@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_FireWeapon_27 (VA 0x0046A9F0; static CFG gate PASS, CFG score 1.000).
 #include "AI_FireWeapon_27.h"
 int32_t* AI_FireWeapon_27(void* a1, void* a2)
 

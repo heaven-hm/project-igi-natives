@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DebugText_Update (VA 0x004E79A0; static CFG gate PASS, CFG score 1.000).
 #include "DebugText_Update.h"
 int32_t* DebugText_Update()
 

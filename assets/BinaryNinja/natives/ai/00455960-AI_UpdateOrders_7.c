@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_UpdateOrders_7 (VA 0x00455960; static CFG gate PASS, CFG score 1.000).
 #include "AI_UpdateOrders_7.h"
 uint32_t AI_UpdateOrders_7()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GuardGenerator_Action (VA 0x004884D0; static CFG gate PASS, CFG score 1.000).
 #include "GuardGenerator_Action.h"
 int32_t GuardGenerator_Action(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuFrame_OnEvent (VA 0x00422640; static CFG gate PASS, CFG score 1.000).
 #include "MenuFrame_OnEvent.h"
 int32_t MenuFrame_OnEvent(void* a1, int32_t a2)
 

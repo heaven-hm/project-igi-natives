@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CheckHeap_24 (VA 0x004BA340; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CheckHeap_24.h"
 int32_t Sys_CheckHeap_24(int32_t a1)
 

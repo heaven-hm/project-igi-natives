@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_14 (VA 0x004B4E00; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_ResolveSymbol_14.h"
 int32_t Sys_ResolveSymbol_14(int32_t* a1, int32_t a2, float a3, float a4, float a5, float a6, int32_t a7, int32_t a8, int32_t a9)
 

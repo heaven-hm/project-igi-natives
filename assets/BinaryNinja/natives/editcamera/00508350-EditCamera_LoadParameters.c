@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditCamera_LoadParameters (VA 0x00508350; static CFG gate PASS, CFG score 1.000).
 #include "EditCamera_LoadParameters.h"
 int32_t* EditCamera_LoadParameters(void* a1)
 

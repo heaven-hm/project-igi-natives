@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_GetContext_4C13A0 (VA 0x004C13A0; static CFG gate PASS, CFG score 1.000).
 #include "Qvm_GetContext_4C13A0.h"
 
 int32_t(int32_t* arg1, int32_t* arg2)

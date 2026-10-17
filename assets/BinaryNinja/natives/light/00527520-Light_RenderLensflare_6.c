@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_RenderLensflare_6 (VA 0x00527520; static CFG gate PASS, CFG score 0.971).
 #include "Light_RenderLensflare_6.h"
 int32_t* Light_RenderLensflare_6(void* a1)
 

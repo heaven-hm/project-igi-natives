@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Afterburner_Init (VA 0x0042BEB0; static CFG gate PASS, CFG score 1.000).
 #include "Afterburner_Init.h"
 void* Afterburner_Init()
 

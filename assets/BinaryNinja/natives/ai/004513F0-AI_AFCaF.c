@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_AFCaF (VA 0x004513F0; static CFG gate PASS, CFG score 1.000).
 #include "AI_AFCaF.h"
 int32_t AI_AFCaF(long double a1 @ fp0, float a2)
 

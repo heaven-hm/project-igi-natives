@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_Setup (VA 0x004238B0; static CFG gate PASS, CFG score 1.000).
 #include "ControlsMenu_Setup.h"
 int32_t ControlsMenu_Setup(int32_t a1)
 

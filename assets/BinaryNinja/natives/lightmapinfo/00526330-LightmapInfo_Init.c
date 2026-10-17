@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LightmapInfo_Init (VA 0x00526330; static CFG gate PASS, CFG score 1.000).
 #include "LightmapInfo_Init.h"
 int32_t LightmapInfo_Init()
 

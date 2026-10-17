@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Soldier_Execute (VA 0x0045C440; static CFG gate PASS, CFG score 1.000).
 #include "Soldier_Execute.h"
 void* Soldier_Execute(void* a1, int32_t* a2)
 

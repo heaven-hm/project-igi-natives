@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_MeshFormatNotSupport (VA 0x0049B4B0; static CFG gate FAIL, CFG score 0.809).
 #include "Display_MeshFormatNotSupport.h"
 void* Display_MeshFormatNotSupport(void* a1)
 

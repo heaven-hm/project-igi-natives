@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_ReceiveChannels (VA 0x0042B040; static CFG gate PASS, CFG score 1.000).
 #include "Train_ReceiveChannels.h"
 float Train_ReceiveChannels(void* a1, int32_t* a2) __location("valA")
 

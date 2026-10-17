@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Smoke_Init (VA 0x00437510; static CFG gate PASS, CFG score 1.000).
 #include "Smoke_Init.h"
 char* Smoke_Init()
 

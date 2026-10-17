@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsSetResolution (VA 0x00404510; static CFG gate PASS, CFG score 0.933).
 #include "Config_GraphicOptionsSetResolution.h"
 int32_t Config_GraphicOptionsSetResolution(int32_t a1, float a2 @ 0xc)
 

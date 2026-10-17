@@ -1,3 +1,4 @@
+// Original IGI.EXE function: mapcomp_05 (VA 0x00469FE0; static CFG gate PASS, CFG score 1.000).
 #include "mapcomp_05.h"
 int32_t mapcomp_05(void* a1, float a2)
 

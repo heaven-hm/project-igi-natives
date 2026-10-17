@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ModelViewBox_Init (VA 0x00422B40; static CFG gate PASS, CFG score 1.000).
 #include "ModelViewBox_Init.h"
 int32_t* ModelViewBox_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StationaryGun_Process (VA 0x00474E30; static CFG gate PASS, CFG score 1.000).
 #include "StationaryGun_Process.h"
 int32_t StationaryGun_Process(double* a1, void* a2)
 

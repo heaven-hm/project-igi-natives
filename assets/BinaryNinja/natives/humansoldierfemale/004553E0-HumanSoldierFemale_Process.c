@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldierFemale_Process (VA 0x004553E0; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldierFemale_Process.h"
 int32_t HumanSoldierFemale_Process(float a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Picture_GetWidth (VA 0x004B6E70; static CFG gate PASS, CFG score 1.000).
 #include "Picture_GetWidth.h"
 int32_t Picture_GetWidth(int32_t* a1)
 

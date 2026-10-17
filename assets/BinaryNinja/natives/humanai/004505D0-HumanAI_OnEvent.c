@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_OnEvent (VA 0x004505D0; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_OnEvent.h"
 int32_t HumanAI_OnEvent(int32_t* a1)
 

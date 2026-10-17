@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_LoadParameters (VA 0x0045F280; static CFG gate PASS, CFG score 0.986).
 #include "Human_LoadParameters.h"
 uint32_t Human_LoadParameters(float a1, int32_t a2)
 

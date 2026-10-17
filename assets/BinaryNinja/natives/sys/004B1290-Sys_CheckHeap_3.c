@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CheckHeap_3 (VA 0x004B1290; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_CheckHeap_3.h"
 int32_t Sys_CheckHeap_3(int32_t a1, int32_t a2)
 

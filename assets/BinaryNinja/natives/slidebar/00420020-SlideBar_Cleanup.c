@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_Cleanup (VA 0x00420020; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Cleanup.h"
 int32_t* SlideBar_Cleanup(void* a1)
 

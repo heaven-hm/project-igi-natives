@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ParseEnumInt32_29 (VA 0x004FC620; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumInt32_29.h"
 int32_t Script_ParseEnumInt32_29(void* a1, int32_t a2, char a3, double* a4)
 

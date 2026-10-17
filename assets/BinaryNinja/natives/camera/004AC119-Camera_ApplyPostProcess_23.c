@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyPostProcess_23 (VA 0x004AC119; static CFG gate FAIL, CFG score 0.639).
 #include "Camera_ApplyPostProcess_23.h"
 int32_t Camera_ApplyPostProcess_23()
 

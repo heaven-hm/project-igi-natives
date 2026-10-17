@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_Transcontextprimitiv (VA 0x00497980; static CFG gate PASS, CFG score 1.000).
 #include "Display_Transcontextprimitiv.h"
 int32_t Display_Transcontextprimitiv()
 

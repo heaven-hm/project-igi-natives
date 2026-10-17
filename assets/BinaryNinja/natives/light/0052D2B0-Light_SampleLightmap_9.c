@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SampleLightmap_9 (VA 0x0052D2B0; static CFG gate PASS, CFG score 1.000).
 #include "Light_SampleLightmap_9.h"
 int32_t Light_SampleLightmap_9(int32_t* a1, int32_t* a2, int32_t* a3, int32_t* a4, int32_t* a5, int32_t* a6)
 

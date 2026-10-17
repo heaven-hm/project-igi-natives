@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_Cleanup (VA 0x004F30A0; static CFG gate PASS, CFG score 1.000).
 #include "EditRigidObj_Cleanup.h"
 int32_t EditRigidObj_Cleanup(float a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_TooFewParametersInLi (VA 0x004F1C20; static CFG gate PASS, CFG score 1.000).
 #include "Script_TooFewParametersInLi.h"
 void Script_TooFewParametersInLi(int32_t* a1, int32_t a2)
 

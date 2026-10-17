@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Patrol_CombatStart (VA 0x0048ABA0; static CFG gate PASS, CFG score 1.000).
 #include "Patrol_CombatStart.h"
 int32_t* Patrol_CombatStart(void* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BackgroundFX_Process (VA 0x00419950; static CFG gate PASS, CFG score 1.000).
 #include "BackgroundFX_Process.h"
 int32_t BackgroundFX_Process(int32_t* a1, float* a2)
 

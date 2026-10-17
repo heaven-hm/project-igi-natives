@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ToggleBox_LoadParameters (VA 0x0041E020; static CFG gate PASS, CFG score 1.000).
 #include "ToggleBox_LoadParameters.h"
 int32_t ToggleBox_LoadParameters(void* a1)
 

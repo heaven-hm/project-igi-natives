@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextBox_Process (VA 0x0041AD20; static CFG gate PASS, CFG score 1.000).
 #include "TextBox_Process.h"
 char* TextBox_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ClipMesh_14 (VA 0x004DD4B0; static CFG gate PASS, CFG score 1.000).
 #include "Render_ClipMesh_14.h"
 int32_t* Render_ClipMesh_14(void* a1, float* a2, int32_t* a3, int32_t a4)
 

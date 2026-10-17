@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BandFilter_Cleanup_5 (VA 0x004A38A0; static CFG gate PASS, CFG score 1.000).
 #include "BandFilter_Cleanup_5.h"
 int32_t BandFilter_Cleanup_5(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_FireAtTask (VA 0x0044D630; static CFG gate PASS, CFG score 0.958).
 #include "AIAction_FireAtTask.h"
 int32_t AIAction_FireAtTask(long double a1 @ fp0, long double a2 @ fp1, int32_t a3, float a4 @ 0xc)
 

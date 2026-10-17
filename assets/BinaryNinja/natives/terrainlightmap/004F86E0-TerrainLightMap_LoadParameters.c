@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TerrainLightMap_LoadParameters (VA 0x004F86E0; static CFG gate PASS, CFG score 1.000).
 #include "TerrainLightMap_LoadParameters.h"
 int32_t TerrainLightMap_LoadParameters(void* a1)
 

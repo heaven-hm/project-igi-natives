@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RenderLight_Invoke7 (VA 0x00529A70; static CFG gate PASS, CFG score 1.000).
 #include "RenderLight_Invoke7.h"
 
 void*(int32_t* arg1 )

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunClip_Init (VA 0x00477220; static CFG gate PASS, CFG score 1.000).
 #include "GunClip_Init.h"
 void* GunClip_Init()
 

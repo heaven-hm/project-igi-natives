@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SmoothQTask_OnEvent (VA 0x0051F270; static CFG gate PASS, CFG score 1.000).
 #include "SmoothQTask_OnEvent.h"
 int32_t SmoothQTask_OnEvent(void* a1)
 

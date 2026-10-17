@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_Invoke13_41A600 (VA 0x0041A600; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_Invoke13_41A600.h"
 
 void*(void* arg1)

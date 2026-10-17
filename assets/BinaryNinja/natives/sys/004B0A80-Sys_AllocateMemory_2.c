@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_2 (VA 0x004B0A80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_AllocateMemory_2.h"
 int32_t Sys_AllocateMemory_2(int32_t a1, int32_t a2, char* a3, int32_t a4)
 

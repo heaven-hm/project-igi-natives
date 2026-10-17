@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunMP5SD_LoadParameters (VA 0x00473AF0; static CFG gate PASS, CFG score 1.000).
 #include "GunMP5SD_LoadParameters.h"
 float GunMP5SD_LoadParameters(float* a1, float a2) __location("valA")
 

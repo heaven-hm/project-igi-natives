@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_EvaluateAreaCriteria_6 (VA 0x00507D60; static CFG gate PASS, CFG score 0.889).
 #include "Physics_EvaluateAreaCriteria_6.h"
 struct status_msg* Physics_EvaluateAreaCriteria_6(void* a1, void* a2, int32_t a3)
 

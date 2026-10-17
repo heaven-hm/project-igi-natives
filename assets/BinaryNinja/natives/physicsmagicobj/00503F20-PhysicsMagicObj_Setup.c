@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsMagicObj_Setup (VA 0x00503F20; static CFG gate PASS, CFG score 0.867).
 #include "PhysicsMagicObj_Setup.h"
 void* PhysicsMagicObj_Setup(void* a1, float a2)
 

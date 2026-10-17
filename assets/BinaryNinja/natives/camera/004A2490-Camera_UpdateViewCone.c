@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateViewCone (VA 0x004A2490; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone.h"
 struct status_msg* Camera_UpdateViewCone(void* a1, uint32_t a2, float a3, float a4, float a5, uint32_t a6, uint32_t a7, uint32_t a8)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateRecoil_7 (VA 0x0047C610; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_UpdateRecoil_7.h"
 int32_t* Weapon_UpdateRecoil_7(float* a1, int32_t* a2, int32_t a3 @ 0x14, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t* a9)
 

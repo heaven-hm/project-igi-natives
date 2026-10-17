@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WorldObject_CommitTransform (VA 0x004C6940; static CFG gate PASS, CFG score 1.000).
 #include "WorldObject_CommitTransform.h"
 int32_t WorldObject_CommitTransform(void* a1, void* a2, double* a3, float a4)
 

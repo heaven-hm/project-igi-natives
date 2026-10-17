@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sector_Setup (VA 0x004DE6B0; static CFG gate PASS, CFG score 0.852).
 #include "Sector_Setup.h"
 int32_t Sector_Setup(uint32_t a1, int32_t* a2)
 

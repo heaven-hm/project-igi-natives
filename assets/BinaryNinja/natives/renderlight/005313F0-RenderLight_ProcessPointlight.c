@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RenderLight_ProcessPointlight (VA 0x005313F0; static CFG gate PASS, CFG score 1.000).
 #include "RenderLight_ProcessPointlight.h"
 
 int32_t*(void* arg1, void* arg2)

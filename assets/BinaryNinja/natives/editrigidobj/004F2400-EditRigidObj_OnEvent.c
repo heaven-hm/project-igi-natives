@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_OnEvent (VA 0x004F2400; static CFG gate FAIL, CFG score 0.833).
 #include "EditRigidObj_OnEvent.h"
 int32_t EditRigidObj_OnEvent(void* a1, int32_t* a2)
 

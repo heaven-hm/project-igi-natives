@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawSplineMesh_5 (VA 0x004D2E40; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawSplineMesh_5.h"
 void* Render_DrawSplineMesh_5(int32_t* a1)
 

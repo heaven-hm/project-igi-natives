@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UnknownDataType_3 (VA 0x004BCCC0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnknownDataType_3.h"
 int32_t Sys_UnknownDataType_3(void* a1, int32_t* a2, int32_t* a3, int32_t* a4)
 

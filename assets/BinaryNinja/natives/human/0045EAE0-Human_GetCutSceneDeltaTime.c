@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_GetCutSceneDeltaTime (VA 0x0045EAE0; static CFG gate FAIL, CFG score 0.833).
 #include "Human_GetCutSceneDeltaTime.h"
 int32_t Human_GetCutSceneDeltaTime(int32_t a1)
 

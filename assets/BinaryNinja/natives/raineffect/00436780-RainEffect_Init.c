@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainEffect_Init (VA 0x00436780; static CFG gate PASS, CFG score 1.000).
 #include "RainEffect_Init.h"
 char* RainEffect_Init()
 

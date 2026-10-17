@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_EvaluateCondition_29 (VA 0x004FC870; static CFG gate PASS, CFG score 1.000).
 #include "Script_EvaluateCondition_29.h"
 int32_t Script_EvaluateCondition_29(float* a1, void* a2, float* a3, float* a4 @ 0x14)
 

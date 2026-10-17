@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateBarrel (VA 0x00470F70; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_UpdateBarrel.h"
 void* Weapon_UpdateBarrel(void* a1, float* a2, float* a3, float a4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_FormatScreen_12 (VA 0x004237C0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_FormatScreen_12.h"
 void* Menu_FormatScreen_12(void* a1)
 

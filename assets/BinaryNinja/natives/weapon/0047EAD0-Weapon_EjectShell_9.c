@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EjectShell_9 (VA 0x0047EAD0; static CFG gate PASS, CFG score 0.967).
 #include "Weapon_EjectShell_9.h"
 struct status_msg* Weapon_EjectShell_9(int32_t a1, int32_t a2, int32_t* a3, int32_t a4, int16_t a5, int32_t a6, int32_t a7)
 

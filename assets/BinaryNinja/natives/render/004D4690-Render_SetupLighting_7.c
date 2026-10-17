@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_SetupLighting_7 (VA 0x004D4690; static CFG gate PASS, CFG score 1.000).
 #include "Render_SetupLighting_7.h"
 float Render_SetupLighting_7(int32_t a1, float a2, int32_t* a3) __location("valA")
 

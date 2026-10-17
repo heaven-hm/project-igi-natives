@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Warning_Show (VA 0x004AF810; static CFG gate PASS, CFG score 0.889).
 #include "Warning_Show.h"
 int32_t Warning_Show(char* a1)
 

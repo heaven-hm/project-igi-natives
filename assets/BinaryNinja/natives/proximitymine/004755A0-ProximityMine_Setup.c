@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ProximityMine_Setup (VA 0x004755A0; static CFG gate PASS, CFG score 0.958).
 #include "ProximityMine_Setup.h"
 void* ProximityMine_Setup(void* a1, char* a2)
 

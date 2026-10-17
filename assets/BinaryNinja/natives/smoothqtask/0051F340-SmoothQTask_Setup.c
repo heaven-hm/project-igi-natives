@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SmoothQTask_Setup (VA 0x0051F340; static CFG gate PASS, CFG score 1.000).
 #include "SmoothQTask_Setup.h"
 int32_t* SmoothQTask_Setup(long double a1 @ fp0, int32_t a2)
 

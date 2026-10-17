@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_PlaySoundSample_19 (VA 0x004EE3B0; static CFG gate PASS, CFG score 0.889).
 #include "SoundSys_PlaySoundSample_19.h"
 int32_t __fastcall SoundSys_PlaySoundSample_19(int16_t* a1)
 

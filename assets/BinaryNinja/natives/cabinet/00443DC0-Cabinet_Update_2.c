@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_Update_2 (VA 0x00443DC0; static CFG gate PASS, CFG score 1.000).
 #include "Cabinet_Update_2.h"
 
 int32_t Cabinet_Update_2(float pThis, int32_t param)

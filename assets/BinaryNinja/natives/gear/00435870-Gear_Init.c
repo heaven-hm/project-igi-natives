@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gear_Init (VA 0x00435870; static CFG gate PASS, CFG score 1.000).
 #include "Gear_Init.h"
 void* Gear_Init()
 

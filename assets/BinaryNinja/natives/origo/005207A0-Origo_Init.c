@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Origo_Init (VA 0x005207A0; static CFG gate PASS, CFG score 1.000).
 #include "Origo_Init.h"
 int32_t* Origo_Init()
 

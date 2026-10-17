@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CamTask_Update (VA 0x00530250; static CFG gate PASS, CFG score 1.000).
 #include "CamTask_Update.h"
 uint32_t CamTask_Update()
 

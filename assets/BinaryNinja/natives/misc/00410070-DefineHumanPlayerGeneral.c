@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineHumanPlayerGeneral (VA 0x00410070; static CFG gate PASS, CFG score 0.972).
 #include "DefineHumanPlayerGeneral.h"
 int32_t DefineHumanPlayerGeneral(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, long double a7 @ fp6, long double a8 @ fp7, int32_t a9, float a10 @ 0xc)
 

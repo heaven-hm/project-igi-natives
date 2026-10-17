@@ -1,3 +1,4 @@
+// Original IGI.EXE function: App_ContextSetDebugtextState (VA 0x0048F1E0; static CFG gate PASS, CFG score 1.000).
 #include "App_ContextSetDebugtextState.h"
 int32_t App_ContextSetDebugtextState(char a1)
 

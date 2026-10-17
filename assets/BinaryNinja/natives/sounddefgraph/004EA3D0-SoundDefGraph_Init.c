@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGraph_Init (VA 0x004EA3D0; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefGraph_Init.h"
 int32_t SoundDefGraph_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_False (VA 0x004B8B20; static CFG gate PASS, CFG score 0.982).
 #include "Sys_False.h"
 int32_t Sys_False()
 

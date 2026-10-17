@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditVariable_OnEvent (VA 0x00488AA0; static CFG gate PASS, CFG score 1.000).
 #include "EditVariable_OnEvent.h"
 int32_t EditVariable_OnEvent(void* a1)
 

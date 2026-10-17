@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_ProcessOpcodenotimpleme (VA 0x004C1400; static CFG gate PASS, CFG score 0.881).
 #include "Qvm_ProcessOpcodenotimpleme.h"
 
 int32_t(int32_t* arg1, int32_t* arg2, int32_t arg3)

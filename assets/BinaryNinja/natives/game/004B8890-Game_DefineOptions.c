@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_DefineOptions (VA 0x004B8890; static CFG gate PASS, CFG score 1.000).
 #include "Game_DefineOptions.h"
 void* Game_DefineOptions(int32_t* a1, int32_t a2, int32_t a3, int32_t a4)
 

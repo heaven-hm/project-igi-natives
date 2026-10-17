@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_Process (VA 0x0041D3A0; static CFG gate PASS, CFG score 1.000).
 #include "InputBox_Process.h"
 int32_t** InputBox_Process(void* a1, int32_t a2)
 

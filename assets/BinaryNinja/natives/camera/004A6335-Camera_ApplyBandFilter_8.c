@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyBandFilter_8 (VA 0x004A6335; static CFG gate PASS, CFG score 0.889).
 #include "Camera_ApplyBandFilter_8.h"
 PSTR Camera_ApplyBandFilter_8()
 

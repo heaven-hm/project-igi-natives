@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_7 (VA 0x00494C50; static CFG gate PASS, CFG score 0.941).
 #include "Display_SyncVSync_7.h"
 void* Display_SyncVSync_7(void* a1)
 

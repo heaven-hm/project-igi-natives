@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_StandThrowingGrenade (VA 0x0048DBF0; static CFG gate PASS, CFG score 1.000).
 #include "FX_StandThrowingGrenade.h"
 int32_t FX_StandThrowingGrenade(void* a1)
 

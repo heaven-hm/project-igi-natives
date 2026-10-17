@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_PlaySoundSample_13 (VA 0x004E8780; static CFG gate FAIL, CFG score 0.667).
 #include "SoundSys_PlaySoundSample_13.h"
 void* SoundSys_PlaySoundSample_13(void* a1)
 

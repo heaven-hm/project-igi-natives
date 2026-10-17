@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_InitPlane_3 (VA 0x00433410; static CFG gate PASS, CFG score 0.963).
 #include "Vehicle_InitPlane_3.h"
 float Vehicle_InitPlane_3(float a1) __location("valA")
 

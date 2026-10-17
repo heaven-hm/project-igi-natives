@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Medipack_Init (VA 0x00470410; static CFG gate PASS, CFG score 1.000).
 #include "Medipack_Init.h"
 void* Medipack_Init()
 

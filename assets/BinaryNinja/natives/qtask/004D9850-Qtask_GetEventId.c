@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qtask_GetEventId (VA 0x004D9850; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_GetEventId.h"
 int32_t Qtask_GetEventId()
 

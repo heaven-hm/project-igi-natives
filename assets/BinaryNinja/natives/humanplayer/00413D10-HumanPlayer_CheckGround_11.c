@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_CheckGround_11 (VA 0x00413D10; static CFG gate FAIL, CFG score 0.667).
 #include "HumanPlayer_CheckGround_11.h"
 void* HumanPlayer_CheckGround_11(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, void* a7, int32_t a8, int32_t a9)
 

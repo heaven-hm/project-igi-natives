@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_ClearSurfaces_2 (VA 0x00490E90; static CFG gate PASS, CFG score 1.000).
 #include "Display_ClearSurfaces_2.h"
 HRESULT Display_ClearSurfaces_2(void* a1, int32_t a2, uint32_t a3, int32_t a4, int32_t a5)
 

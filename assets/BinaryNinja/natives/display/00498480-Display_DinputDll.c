@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_DinputDll (VA 0x00498480; static CFG gate PASS, CFG score 0.892).
 #include "Display_DinputDll.h"
 BOOL Display_DinputDll(int32_t* a1, int32_t* a2)
 

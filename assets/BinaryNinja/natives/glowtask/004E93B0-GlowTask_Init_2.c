@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GlowTask_Init_2 (VA 0x004E93B0; static CFG gate PASS, CFG score 1.000).
 #include "GlowTask_Init_2.h"
 
 int32_t GlowTask_Init_2()

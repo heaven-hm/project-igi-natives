@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GameScreen_Init (VA 0x004851B0; static CFG gate PASS, CFG score 1.000).
 #include "GameScreen_Init.h"
 int32_t GameScreen_Init()
 

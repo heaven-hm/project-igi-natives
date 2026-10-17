@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_EventDispatch (VA 0x0044FC90; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_EventDispatch.h"
 int32_t HumanAI_EventDispatch(void* a1, int32_t a2, int32_t a3)
 

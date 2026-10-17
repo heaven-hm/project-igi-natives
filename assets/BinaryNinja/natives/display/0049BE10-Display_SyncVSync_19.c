@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_19 (VA 0x0049BE10; static CFG gate FAIL, CFG score 0.800).
 #include "Display_SyncVSync_19.h"
 int32_t* Display_SyncVSync_19(void* a1, void* a2)
 

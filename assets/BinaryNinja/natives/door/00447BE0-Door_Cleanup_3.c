@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_Cleanup_3 (VA 0x00447BE0; static CFG gate PASS, CFG score 1.000).
 #include "Door_Cleanup_3.h"
 int32_t Door_Cleanup_3(void* a1)
 

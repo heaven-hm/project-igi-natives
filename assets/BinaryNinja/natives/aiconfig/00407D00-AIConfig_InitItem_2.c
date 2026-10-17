@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIConfig_InitItem_2 (VA 0x00407D00; static CFG gate PASS, CFG score 1.000).
 #include "AIConfig_InitItem_2.h"
 uint32_t AIConfig_InitItem_2()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_ExplosionTick (VA 0x0042E5A0; static CFG gate PASS, CFG score 1.000).
 #include "Car_ExplosionTick.h"
 int32_t* Car_ExplosionTick(double* a1)
 

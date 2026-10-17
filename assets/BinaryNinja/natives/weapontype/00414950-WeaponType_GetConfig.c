@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_GetConfig (VA 0x00414950; static CFG gate PASS, CFG score 1.000).
 #include "WeaponType_GetConfig.h"
 int32_t WeaponType_GetConfig(int32_t a1 @ 0xc, int32_t a2)
 

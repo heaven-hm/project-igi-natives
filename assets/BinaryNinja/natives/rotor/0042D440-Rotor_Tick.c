@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rotor_Tick (VA 0x0042D440; static CFG gate PASS, CFG score 1.000).
 #include "Rotor_Tick.h"
 void* Rotor_Tick(float a1)
 

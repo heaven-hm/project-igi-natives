@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gunner_Combat (VA 0x0048D340; static CFG gate PASS, CFG score 0.967).
 #include "Gunner_Combat.h"
 int32_t* Gunner_Combat(long double a1 @ fp1, int32_t a2, int32_t* a3)
 

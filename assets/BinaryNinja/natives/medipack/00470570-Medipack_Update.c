@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Medipack_Update (VA 0x00470570; static CFG gate PASS, CFG score 1.000).
 #include "Medipack_Update.h"
 void* Medipack_Update(int32_t* a1 @ 0x8)
 

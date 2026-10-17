@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Flow_RunHandler (VA 0x00402930; static CFG gate FAIL, CFG score 0.831).
 #include "Flow_RunHandler.h"
 int32_t Flow_RunHandler()
 

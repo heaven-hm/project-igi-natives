@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_12 (VA 0x004B4010; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_ResolveSymbol_12.h"
 float Sys_ResolveSymbol_12(int32_t a1, int32_t* a2) __location("valA")
 

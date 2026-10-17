@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_ComputeAccuracy_7 (VA 0x0047C4C0; static CFG gate FAIL, CFG score 0.667).
 #include "Weapon_ComputeAccuracy_7.h"
 void* Weapon_ComputeAccuracy_7(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7)
 

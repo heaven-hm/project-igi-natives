@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Symbol_Remove (VA 0x004C0460; static CFG gate PASS, CFG score 1.000).
 #include "Symbol_Remove.h"
 int32_t Symbol_Remove(int32_t* a1, int32_t* a2)
 

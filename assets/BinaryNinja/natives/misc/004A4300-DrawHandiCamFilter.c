@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DrawHandiCamFilter (VA 0x004A4300; static CFG gate FAIL, CFG score 0.667).
 #include "DrawHandiCamFilter.h"
 int32_t DrawHandiCamFilter(int32_t a1 @ flagP, void* a2)
 

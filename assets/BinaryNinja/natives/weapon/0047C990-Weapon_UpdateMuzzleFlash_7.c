@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateMuzzleFlash_7 (VA 0x0047C990; static CFG gate FAIL, CFG score 0.667).
 #include "Weapon_UpdateMuzzleFlash_7.h"
 void* Weapon_UpdateMuzzleFlash_7(void* a1, int32_t a2)
 

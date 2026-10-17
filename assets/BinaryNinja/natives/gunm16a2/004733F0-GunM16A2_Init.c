@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunM16A2_Init (VA 0x004733F0; static CFG gate PASS, CFG score 1.000).
 #include "GunM16A2_Init.h"
 void* GunM16A2_Init()
 

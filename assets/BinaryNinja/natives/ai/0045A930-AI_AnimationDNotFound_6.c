@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_AnimationDNotFound_6 (VA 0x0045A930; static CFG gate PASS, CFG score 1.000).
 #include "AI_AnimationDNotFound_6.h"
 int32_t AI_AnimationDNotFound_6(void* a1, void* a2)
 

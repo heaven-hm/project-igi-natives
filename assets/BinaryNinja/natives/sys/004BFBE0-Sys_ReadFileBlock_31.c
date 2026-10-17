@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ReadFileBlock_31 (VA 0x004BFBE0; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_ReadFileBlock_31.h"
 void* Sys_ReadFileBlock_31(void* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunPickup_OnEvent (VA 0x0046D1D0; static CFG gate PASS, CFG score 1.000).
 #include "GunPickup_OnEvent.h"
 int32_t GunPickup_OnEvent(void* a1)
 

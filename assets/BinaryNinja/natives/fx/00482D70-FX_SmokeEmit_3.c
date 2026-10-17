@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_SmokeEmit_3 (VA 0x00482D70; static CFG gate FAIL, CFG score 0.758).
 #include "FX_SmokeEmit_3.h"
 float FX_SmokeEmit_3(void* a1) __location("valA")
 

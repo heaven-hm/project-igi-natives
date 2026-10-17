@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_Defineanimtrigger (VA 0x004EBE70; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_Defineanimtrigger.h"
 void* SoundSys_Defineanimtrigger()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MoveRigidObj_Update (VA 0x0051F980; static CFG gate PASS, CFG score 1.000).
 #include "MoveRigidObj_Update.h"
 int32_t MoveRigidObj_Update(void* a1)
 

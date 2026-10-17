@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_AttachLipsync_18 (VA 0x004EE1B0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_AttachLipsync_18.h"
 void* SoundSys_AttachLipsync_18(void* a1)
 

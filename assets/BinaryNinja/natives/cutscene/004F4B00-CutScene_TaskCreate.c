@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_TaskCreate (VA 0x004F4B00; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_TaskCreate.h"
 int32_t* CutScene_TaskCreate()
 

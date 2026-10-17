@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_Stunned (VA 0x0044D8F0; static CFG gate PASS, CFG score 0.933).
 #include "AIAction_Stunned.h"
 int32_t AIAction_Stunned(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

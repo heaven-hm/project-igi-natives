@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetInstantDeath (VA 0x0044E1B0; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetInstantDeath.h"
 int32_t AIFunction_SetInstantDeath(int32_t a1, float a2 @ 0xc)
 

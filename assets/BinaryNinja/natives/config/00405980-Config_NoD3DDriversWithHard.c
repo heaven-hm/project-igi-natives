@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_NoD3DDriversWithHard (VA 0x00405980; static CFG gate FAIL, CFG score 0.733).
 #include "Config_NoD3DDriversWithHard.h"
 int32_t Config_NoD3DDriversWithHard()
 

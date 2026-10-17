@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_InitPlane_9 (VA 0x0043D960; static CFG gate PASS, CFG score 0.963).
 #include "Vehicle_InitPlane_9.h"
 int32_t Vehicle_InitPlane_9(float a1)
 

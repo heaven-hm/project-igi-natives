@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuTextConditional_Setup (VA 0x004208F0; static CFG gate PASS, CFG score 1.000).
 #include "MenuTextConditional_Setup.h"
 int32_t MenuTextConditional_Setup(int32_t a1)
 

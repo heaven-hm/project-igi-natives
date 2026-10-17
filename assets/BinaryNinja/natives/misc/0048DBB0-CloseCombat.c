@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CloseCombat (VA 0x0048DBB0; static CFG gate PASS, CFG score 1.000).
 #include "CloseCombat.h"
 bool CloseCombat(void* a1)
 

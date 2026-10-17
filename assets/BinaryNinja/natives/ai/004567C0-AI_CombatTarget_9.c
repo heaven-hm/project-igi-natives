@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CombatTarget_9 (VA 0x004567C0; static CFG gate PASS, CFG score 1.000).
 #include "AI_CombatTarget_9.h"
 struct status_msg* AI_CombatTarget_9(void* a1, int32_t* a2)
 

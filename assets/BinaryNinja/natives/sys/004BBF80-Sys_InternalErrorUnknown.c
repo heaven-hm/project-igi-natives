@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_InternalErrorUnknown (VA 0x004BBF80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_InternalErrorUnknown.h"
 int32_t Sys_InternalErrorUnknown(int32_t* a1, int32_t* a2)
 

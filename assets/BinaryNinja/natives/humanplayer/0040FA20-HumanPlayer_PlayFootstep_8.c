@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_PlayFootstep_8 (VA 0x0040FA20; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_PlayFootstep_8.h"
 int32_t HumanPlayer_PlayFootstep_8(void* a1, void* a2)
 

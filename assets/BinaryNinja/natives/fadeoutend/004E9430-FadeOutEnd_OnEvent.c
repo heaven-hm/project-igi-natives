@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FadeOutEnd_OnEvent (VA 0x004E9430; static CFG gate PASS, CFG score 1.000).
 #include "FadeOutEnd_OnEvent.h"
 struct status_msg* FadeOutEnd_OnEvent(void* a1)
 

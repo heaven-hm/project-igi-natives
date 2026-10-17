@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_LoadSoundDef_2 (VA 0x004E51C0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_LoadSoundDef_2.h"
 int32_t SoundSys_LoadSoundDef_2()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_DataSymbolRemoveThunk (VA 0x004B80A0; static CFG gate PASS, CFG score 1.000).
 #include "Game_DataSymbolRemoveThunk.h"
 int32_t Game_DataSymbolRemoveThunk(char* a1)
 

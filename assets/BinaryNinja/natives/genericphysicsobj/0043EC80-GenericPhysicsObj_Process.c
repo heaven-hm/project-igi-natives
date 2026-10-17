@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPhysicsObj_Process (VA 0x0043EC80; static CFG gate PASS, CFG score 0.923).
 #include "GenericPhysicsObj_Process.h"
 int32_t GenericPhysicsObj_Process(void* a1)
 

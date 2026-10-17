@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetFrequency_8 (VA 0x004E6FA0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetFrequency_8.h"
 void* SoundSys_SetFrequency_8(void* a1)
 

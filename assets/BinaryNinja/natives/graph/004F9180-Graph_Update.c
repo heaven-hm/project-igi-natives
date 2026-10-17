@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_Update (VA 0x004F9180; static CFG gate PASS, CFG score 1.000).
 #include "Graph_Update.h"
 int32_t Graph_Update(void* a1)
 

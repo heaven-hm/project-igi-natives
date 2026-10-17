@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SampleLightmap_7 (VA 0x0052AFB0; static CFG gate PASS, CFG score 1.000).
 #include "Light_SampleLightmap_7.h"
 uint32_t Light_SampleLightmap_7()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneMagicObj_LoadParameters (VA 0x00531620; static CFG gate PASS, CFG score 1.000).
 #include "BoneMagicObj_LoadParameters.h"
 int32_t BoneMagicObj_LoadParameters(void* a1)
 

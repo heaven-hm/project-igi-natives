@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QScript_ParseAndAssemble (VA 0x004BBCB0; static CFG gate PASS, CFG score 0.965).
 #include "QScript_ParseAndAssemble.h"
 int32_t QScript_ParseAndAssemble(void* a1, void* a2)
 

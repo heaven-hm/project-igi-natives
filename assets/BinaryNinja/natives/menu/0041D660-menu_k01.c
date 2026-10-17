@@ -1,3 +1,4 @@
+// Original IGI.EXE function: menu_k01 (VA 0x0041D660; static CFG gate PASS, CFG score 1.000).
 #include "menu_k01.h"
 int32_t menu_k01(void* a1, int32_t a2)
 

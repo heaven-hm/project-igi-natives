@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_OnEvent (VA 0x0041DA90; static CFG gate PASS, CFG score 1.000).
 #include "InputBox_OnEvent.h"
 int32_t* InputBox_OnEvent(void* a1)
 

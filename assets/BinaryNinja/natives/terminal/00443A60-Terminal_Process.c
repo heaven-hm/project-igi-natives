@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terminal_Process (VA 0x00443A60; static CFG gate PASS, CFG score 1.000).
 #include "Terminal_Process.h"
 int32_t Terminal_Process(void* a1)
 

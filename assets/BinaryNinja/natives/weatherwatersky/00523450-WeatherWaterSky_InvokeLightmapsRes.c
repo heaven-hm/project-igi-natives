@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherWaterSky_InvokeLightmapsRes (VA 0x00523450; static CFG gate PASS, CFG score 1.000).
 #include "WeatherWaterSky_InvokeLightmapsRes.h"
 
 int32_t(void* arg1)

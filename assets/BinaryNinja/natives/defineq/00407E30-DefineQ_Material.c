@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineQ_Material (VA 0x00407E30; static CFG gate PASS, CFG score 0.952).
 #include "DefineQ_Material.h"
 int32_t DefineQ_Material(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, int32_t a4, int32_t a5 @ 0xc)
 

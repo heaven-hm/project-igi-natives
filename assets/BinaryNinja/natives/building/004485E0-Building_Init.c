@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Building_Init (VA 0x004485E0; static CFG gate PASS, CFG score 1.000).
 #include "Building_Init.h"
 void* Building_Init()
 

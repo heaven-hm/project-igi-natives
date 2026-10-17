@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_NoMoreDirect3DCallba (VA 0x00495190; static CFG gate PASS, CFG score 1.000).
 #include "Display_NoMoreDirect3DCallba.h"
 int32_t* Display_NoMoreDirect3DCallba(int32_t a1, int32_t* a2)
 

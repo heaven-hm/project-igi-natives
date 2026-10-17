@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FreeCamera_OnEvent (VA 0x00531180; static CFG gate PASS, CFG score 1.000).
 #include "FreeCamera_OnEvent.h"
 uint32_t FreeCamera_OnEvent()
 

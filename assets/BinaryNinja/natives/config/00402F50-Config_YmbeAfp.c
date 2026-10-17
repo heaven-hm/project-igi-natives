@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_YmbeAfp (VA 0x00402F50; static CFG gate PASS, CFG score 0.944).
 #include "Config_YmbeAfp.h"
 int32_t __fastcall Config_YmbeAfp(int32_t a1)
 

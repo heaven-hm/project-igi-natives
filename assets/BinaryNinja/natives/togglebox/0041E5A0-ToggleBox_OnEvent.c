@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ToggleBox_OnEvent (VA 0x0041E5A0; static CFG gate PASS, CFG score 1.000).
 #include "ToggleBox_OnEvent.h"
 int32_t ToggleBox_OnEvent(void* a1)
 

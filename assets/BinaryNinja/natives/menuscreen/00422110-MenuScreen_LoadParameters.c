@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuScreen_LoadParameters (VA 0x00422110; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_LoadParameters.h"
 int32_t MenuScreen_LoadParameters(void* a1)
 

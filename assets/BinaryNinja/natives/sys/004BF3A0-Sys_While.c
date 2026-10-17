@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_While (VA 0x004BF3A0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_While.h"
 int32_t Sys_While(void* a1)
 

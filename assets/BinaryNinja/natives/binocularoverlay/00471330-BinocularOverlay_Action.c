@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BinocularOverlay_Action (VA 0x00471330; static CFG gate PASS, CFG score 1.000).
 #include "BinocularOverlay_Action.h"
 int32_t* BinocularOverlay_Action(int80_t a1 @ fp0, void* a2)
 

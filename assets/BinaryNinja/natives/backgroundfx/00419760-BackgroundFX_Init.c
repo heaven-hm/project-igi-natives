@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BackgroundFX_Init (VA 0x00419760; static CFG gate PASS, CFG score 1.000).
 #include "BackgroundFX_Init.h"
 int32_t BackgroundFX_Init()
 

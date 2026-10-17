@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PushButton_Process (VA 0x0052CB30; static CFG gate PASS, CFG score 1.000).
 #include "PushButton_Process.h"
 float* PushButton_Process()
 

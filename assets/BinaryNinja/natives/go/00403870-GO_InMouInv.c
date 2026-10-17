@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_InMouInv (VA 0x00403870; static CFG gate FAIL, CFG score 0.833).
 #include "GO_InMouInv.h"
 int32_t GO_InMouInv(int32_t a1, float a2 @ 0xc)
 

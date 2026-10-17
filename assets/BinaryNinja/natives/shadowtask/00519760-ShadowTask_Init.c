@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ShadowTask_Init (VA 0x00519760; static CFG gate PASS, CFG score 1.000).
 #include "ShadowTask_Init.h"
 int32_t* ShadowTask_Init()
 

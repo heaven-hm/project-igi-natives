@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_GraphnodeIdAlreadyUs (VA 0x004F9510; static CFG gate PASS, CFG score 0.852).
 #include "Script_GraphnodeIdAlreadyUs.h"
 int32_t* Script_GraphnodeIdAlreadyUs(void* a1, int32_t a2, int32_t a3, int32_t a4, float a5, int32_t a6, int32_t a7)
 

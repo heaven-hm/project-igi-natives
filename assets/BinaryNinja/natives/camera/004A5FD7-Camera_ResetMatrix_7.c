@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_7 (VA 0x004A5FD7; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_7.h"
 char* Camera_ResetMatrix_7()
 

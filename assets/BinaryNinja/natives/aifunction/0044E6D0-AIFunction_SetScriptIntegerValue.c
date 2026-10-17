@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetScriptIntegerValue (VA 0x0044E6D0; static CFG gate PASS, CFG score 0.889).
 #include "AIFunction_SetScriptIntegerValue.h"
 int32_t AIFunction_SetScriptIntegerValue(int32_t a1, float a2 @ 0xc)
 

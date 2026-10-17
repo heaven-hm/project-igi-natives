@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObj_InitLod (VA 0x004EDB30; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsObj_InitLod.h"
 
 int32_t PhysicsObj_InitLod(void* pThis)

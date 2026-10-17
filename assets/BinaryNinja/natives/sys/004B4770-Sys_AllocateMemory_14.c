@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_14 (VA 0x004B4770; static CFG gate PASS, CFG score 1.000).
 #include "Sys_AllocateMemory_14.h"
 long double Sys_AllocateMemory_14(int32_t* a1)
 

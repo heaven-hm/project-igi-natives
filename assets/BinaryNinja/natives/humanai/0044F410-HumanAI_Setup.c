@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_Setup (VA 0x0044F410; static CFG gate PASS, CFG score 0.984).
 #include "HumanAI_Setup.h"
 void* HumanAI_Setup(int32_t a1)
 

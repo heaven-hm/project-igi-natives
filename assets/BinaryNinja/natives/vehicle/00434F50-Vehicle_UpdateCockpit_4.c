@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_UpdateCockpit_4 (VA 0x00434F50; static CFG gate FAIL, CFG score 0.833).
 #include "Vehicle_UpdateCockpit_4.h"
 int32_t Vehicle_UpdateCockpit_4(void* a1, float* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsRigid_Invoke2 (VA 0x004DA2C0; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsRigid_Invoke2.h"
 
 void*(void* arg1)

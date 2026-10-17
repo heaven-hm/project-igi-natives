@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObj_Process (VA 0x005008F0; static CFG gate FAIL, CFG score 0.800).
 #include "SplineObj_Process.h"
 int32_t SplineObj_Process(float a1)
 

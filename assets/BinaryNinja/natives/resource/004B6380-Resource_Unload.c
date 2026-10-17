@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Resource_Unload (VA 0x004B6380; static CFG gate PASS, CFG score 1.000).
 #include "Resource_Unload.h"
 int32_t Resource_Unload(int32_t* a1)
 

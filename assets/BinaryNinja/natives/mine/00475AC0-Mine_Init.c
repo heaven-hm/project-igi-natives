@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mine_Init (VA 0x00475AC0; static CFG gate PASS, CFG score 1.000).
 #include "Mine_Init.h"
 void* Mine_Init()
 

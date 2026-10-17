@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetScriptRealValue (VA 0x0044E790; static CFG gate PASS, CFG score 0.889).
 #include "AIFunction_SetScriptRealValue.h"
 int32_t AIFunction_SetScriptRealValue(int80_t a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

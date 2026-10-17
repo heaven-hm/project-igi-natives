@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_NoFilesLoadedAtAddre (VA 0x004B1A90; static CFG gate PASS, CFG score 1.000).
 #include "Sys_NoFilesLoadedAtAddre.h"
 int32_t* Sys_NoFilesLoadedAtAddre(int32_t a1)
 

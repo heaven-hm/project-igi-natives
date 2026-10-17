@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RigidDynCubeObj_Cleanup_2 (VA 0x004C4660; static CFG gate PASS, CFG score 1.000).
 #include "RigidDynCubeObj_Cleanup_2.h"
 void RigidDynCubeObj_Cleanup_2(int32_t* a1, float a2)
 

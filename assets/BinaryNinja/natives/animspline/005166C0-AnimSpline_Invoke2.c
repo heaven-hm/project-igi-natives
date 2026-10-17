@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSpline_Invoke2 (VA 0x005166C0; static CFG gate PASS, CFG score 1.000).
 #include "AnimSpline_Invoke2.h"
 
 int32_t()

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MipMapControl_LoadParameters (VA 0x0051EE10; static CFG gate PASS, CFG score 1.000).
 #include "MipMapControl_LoadParameters.h"
 int32_t MipMapControl_LoadParameters(void* a1)
 

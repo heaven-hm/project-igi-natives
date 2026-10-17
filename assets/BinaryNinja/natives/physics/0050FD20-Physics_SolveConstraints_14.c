@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_SolveConstraints_14 (VA 0x0050FD20; static CFG gate PASS, CFG score 1.000).
 #include "Physics_SolveConstraints_14.h"
 int32_t Physics_SolveConstraints_14(int32_t* a1, float a2)
 

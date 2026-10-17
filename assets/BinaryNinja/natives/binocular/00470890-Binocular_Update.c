@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_Update (VA 0x00470890; static CFG gate PASS, CFG score 0.958).
 #include "Binocular_Update.h"
 int32_t* Binocular_Update(void* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_LanguageMessagesRes (VA 0x004868A0; static CFG gate PASS, CFG score 1.000).
 #include "FX_LanguageMessagesRes.h"
 int32_t* FX_LanguageMessagesRes()
 

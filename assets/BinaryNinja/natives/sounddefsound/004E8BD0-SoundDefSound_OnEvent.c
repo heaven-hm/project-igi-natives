@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefSound_OnEvent (VA 0x004E8BD0; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefSound_OnEvent.h"
 float SoundDefSound_OnEvent(int32_t a1, int32_t* a2) __location("valA")
 

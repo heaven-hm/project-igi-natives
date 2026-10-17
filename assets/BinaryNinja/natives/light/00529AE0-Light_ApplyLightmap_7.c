@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_ApplyLightmap_7 (VA 0x00529AE0; static CFG gate PASS, CFG score 1.000).
 #include "Light_ApplyLightmap_7.h"
 void* Light_ApplyLightmap_7(void* a1 @ 0x8)
 

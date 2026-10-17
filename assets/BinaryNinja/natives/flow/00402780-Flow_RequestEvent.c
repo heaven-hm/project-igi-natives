@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Flow_RequestEvent (VA 0x00402780; static CFG gate PASS, CFG score 0.889).
 #include "Flow_RequestEvent.h"
 int32_t Flow_RequestEvent(int32_t a1, float a2 @ 0xc)
 

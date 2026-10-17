@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_ScanViewCone_5 (VA 0x00444B00; static CFG gate PASS, CFG score 1.000).
 #include "Env_ScanViewCone_5.h"
 uint32_t Env_ScanViewCone_5()
 

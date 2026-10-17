@@ -1,3 +1,4 @@
+// Original IGI.EXE function: KnifeStab_Open (VA 0x0046DDC0; static CFG gate PASS, CFG score 1.000).
 #include "KnifeStab_Open.h"
 
 int32_t* KnifeStab_Open(void* pThis, int32_t* param)

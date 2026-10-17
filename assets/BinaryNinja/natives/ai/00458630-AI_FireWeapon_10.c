@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_FireWeapon_10 (VA 0x00458630; static CFG gate PASS, CFG score 1.000).
 #include "AI_FireWeapon_10.h"
 void AI_FireWeapon_10(void* a1, void* a2)
 

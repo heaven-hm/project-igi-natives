@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Q_TaskHashTableSet (VA 0x004BAAC0; static CFG gate PASS, CFG score 0.933).
 #include "Q_TaskHashTableSet.h"
 void* Q_TaskHashTableSet(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7)
 

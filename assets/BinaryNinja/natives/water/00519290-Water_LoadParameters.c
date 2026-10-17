@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Water_LoadParameters (VA 0x00519290; static CFG gate PASS, CFG score 0.879).
 #include "Water_LoadParameters.h"
 void* Water_LoadParameters(void* a1)
 

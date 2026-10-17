@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObj_Create (VA 0x004FB080; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsObj_Create.h"
 
 char* PhysicsObj_Create(int32_t* pThis)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Generator_Setup (VA 0x0043B6E0; static CFG gate PASS, CFG score 1.000).
 #include "Generator_Setup.h"
 int32_t Generator_Setup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sector_Init (VA 0x004DCF20; static CFG gate PASS, CFG score 1.000).
 #include "Sector_Init.h"
 int32_t Sector_Init()
 

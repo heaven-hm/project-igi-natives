@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_FormatString_28 (VA 0x004FC0E0; static CFG gate FAIL, CFG score 0.844).
 #include "Script_FormatString_28.h"
 float* Script_FormatString_28(float a1, float a2, float a3, float a4, float a5, int32_t a6, double* a7)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_FireMessage (VA 0x00479780; static CFG gate PASS, CFG score 1.000).
 #include "Gun_FireMessage.h"
 int32_t Gun_FireMessage(float a1, void* a2)
 

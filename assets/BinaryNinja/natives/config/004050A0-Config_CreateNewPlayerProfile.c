@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_CreateNewPlayerProfile (VA 0x004050A0; static CFG gate PASS, CFG score 0.857).
 #include "Config_CreateNewPlayerProfile.h"
 int32_t Config_CreateNewPlayerProfile(int32_t a1, float a2 @ 0xc)
 

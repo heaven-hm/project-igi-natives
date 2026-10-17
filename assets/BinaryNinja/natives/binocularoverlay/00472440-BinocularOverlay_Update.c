@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BinocularOverlay_Update (VA 0x00472440; static CFG gate FAIL, CFG score 0.750).
 #include "BinocularOverlay_Update.h"
 int32_t BinocularOverlay_Update(void* a1, void* a2)
 

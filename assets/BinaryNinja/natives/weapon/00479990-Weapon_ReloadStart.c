@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_ReloadStart (VA 0x00479990; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_ReloadStart.h"
 void** Weapon_ReloadStart(void* a1, int32_t* a2)
 

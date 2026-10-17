@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Combat_Reload (VA 0x0048DB10; static CFG gate PASS, CFG score 1.000).
 #include "Combat_Reload.h"
 int32_t Combat_Reload(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MoveRigidObj_Setup (VA 0x0051FAA0; static CFG gate PASS, CFG score 1.000).
 #include "MoveRigidObj_Setup.h"
 int32_t MoveRigidObj_Setup(int80_t a1 @ fp0, float a2)
 

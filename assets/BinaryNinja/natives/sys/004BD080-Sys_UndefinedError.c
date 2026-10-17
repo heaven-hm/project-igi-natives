@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UndefinedError (VA 0x004BD080; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UndefinedError.h"
 int32_t Sys_UndefinedError(int32_t* a1)
 

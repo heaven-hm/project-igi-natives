@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunCABarrel_Init (VA 0x00472670; static CFG gate PASS, CFG score 1.000).
 #include "GunCABarrel_Init.h"
 void* GunCABarrel_Init()
 

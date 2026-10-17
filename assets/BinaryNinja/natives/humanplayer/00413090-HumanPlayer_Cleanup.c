@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_Cleanup (VA 0x00413090; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_Cleanup.h"
 int32_t HumanPlayer_Cleanup(void* a1, int32_t* a2)
 

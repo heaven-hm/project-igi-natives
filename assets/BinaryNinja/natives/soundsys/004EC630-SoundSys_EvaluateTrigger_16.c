@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_EvaluateTrigger_16 (VA 0x004EC630; static CFG gate FAIL, CFG score 0.833).
 #include "SoundSys_EvaluateTrigger_16.h"
 void* SoundSys_EvaluateTrigger_16(void* a1)
 

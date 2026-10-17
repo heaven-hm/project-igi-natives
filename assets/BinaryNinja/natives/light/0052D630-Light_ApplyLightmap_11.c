@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_ApplyLightmap_11 (VA 0x0052D630; static CFG gate PASS, CFG score 1.000).
 #include "Light_ApplyLightmap_11.h"
 int32_t Light_ApplyLightmap_11(int32_t* a1, int32_t* a2)
 

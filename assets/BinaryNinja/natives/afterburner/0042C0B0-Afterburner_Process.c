@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Afterburner_Process (VA 0x0042C0B0; static CFG gate PASS, CFG score 0.905).
 #include "Afterburner_Process.h"
 int32_t Afterburner_Process(void* a1, int32_t* a2)
 

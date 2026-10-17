@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SimpointObjGenerator_LoadParameters (VA 0x0043BB20; static CFG gate PASS, CFG score 0.905).
 #include "SimpointObjGenerator_LoadParameters.h"
 int32_t SimpointObjGenerator_LoadParameters(float a1)
 

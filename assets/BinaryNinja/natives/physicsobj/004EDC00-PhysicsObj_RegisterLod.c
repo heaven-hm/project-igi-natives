@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObj_RegisterLod (VA 0x004EDC00; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsObj_RegisterLod.h"
 
 int32_t* PhysicsObj_RegisterLod(int32_t pThis)

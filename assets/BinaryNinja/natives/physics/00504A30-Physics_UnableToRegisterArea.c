@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_UnableToRegisterArea (VA 0x00504A30; static CFG gate PASS, CFG score 1.000).
 #include "Physics_UnableToRegisterArea.h"
 int32_t Physics_UnableToRegisterArea(int32_t* a1, int32_t a2)
 

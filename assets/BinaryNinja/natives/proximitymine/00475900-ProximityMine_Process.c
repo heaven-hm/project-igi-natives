@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ProximityMine_Process (VA 0x00475900; static CFG gate PASS, CFG score 1.000).
 #include "ProximityMine_Process.h"
 int32_t ProximityMine_Process(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, int32_t* a5 @ 0x8)
 

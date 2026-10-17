@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerStartup_Update (VA 0x00466480; static CFG gate PASS, CFG score 1.000).
 #include "ComputerStartup_Update.h"
 int32_t ComputerStartup_Update(void* a1)
 

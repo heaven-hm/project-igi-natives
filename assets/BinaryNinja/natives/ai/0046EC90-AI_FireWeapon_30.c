@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_FireWeapon_30 (VA 0x0046EC90; static CFG gate FAIL, CFG score 0.833).
 #include "AI_FireWeapon_30.h"
 void* AI_FireWeapon_30(double* a1, float* a2)
 

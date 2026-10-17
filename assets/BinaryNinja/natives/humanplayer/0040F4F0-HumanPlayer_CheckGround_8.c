@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_CheckGround_8 (VA 0x0040F4F0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_CheckGround_8.h"
 int32_t HumanPlayer_CheckGround_8(void* a1, void* a2)
 

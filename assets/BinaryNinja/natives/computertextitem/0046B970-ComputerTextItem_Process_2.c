@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerTextItem_Process_2 (VA 0x0046B970; static CFG gate PASS, CFG score 1.000).
 #include "ComputerTextItem_Process_2.h"
 struct status_msg* ComputerTextItem_Process_2(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, char a7, uint32_t a8, uint32_t a9, void* a10, char* a11, uint32_t a12, int32_t a13)
 

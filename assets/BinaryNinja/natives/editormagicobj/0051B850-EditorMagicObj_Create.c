@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditorMagicObj_Create (VA 0x0051B850; static CFG gate PASS, CFG score 1.000).
 #include "EditorMagicObj_Create.h"
 
 int32_t* EditorMagicObj_Create(void* pThis, float param)

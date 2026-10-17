@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gear_Setup (VA 0x00435BD0; static CFG gate PASS, CFG score 1.000).
 #include "Gear_Setup.h"
 int32_t Gear_Setup(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, int32_t* a5 @ 0x8)
 

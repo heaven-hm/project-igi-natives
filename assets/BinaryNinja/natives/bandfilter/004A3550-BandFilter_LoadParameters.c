@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BandFilter_LoadParameters (VA 0x004A3550; static CFG gate PASS, CFG score 1.000).
 #include "BandFilter_LoadParameters.h"
 void* BandFilter_LoadParameters(void* a1)
 

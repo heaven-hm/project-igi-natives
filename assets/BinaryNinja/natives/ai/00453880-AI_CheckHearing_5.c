@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CheckHearing_5 (VA 0x00453880; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckHearing_5.h"
 int32_t* AI_CheckHearing_5(int32_t* a1, int32_t a2)
 

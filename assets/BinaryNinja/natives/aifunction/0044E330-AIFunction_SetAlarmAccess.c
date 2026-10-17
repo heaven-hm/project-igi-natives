@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetAlarmAccess (VA 0x0044E330; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetAlarmAccess.h"
 int32_t AIFunction_SetAlarmAccess(int32_t a1, float a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_CouldNotCreateDirect_2 (VA 0x0048FFF0; static CFG gate PASS, CFG score 0.970).
 #include "FX_CouldNotCreateDirect_2.h"
 void* FX_CouldNotCreateDirect_2()
 

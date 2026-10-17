@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuScreen_Cleanup (VA 0x00422300; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_Cleanup.h"
 int32_t* MenuScreen_Cleanup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_RmS (VA 0x004680B0; static CFG gate PASS, CFG score 1.000).
 #include "AI_RmS.h"
 int32_t AI_RmS(int32_t* a1)
 

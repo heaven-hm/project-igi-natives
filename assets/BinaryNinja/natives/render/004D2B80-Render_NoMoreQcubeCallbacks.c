@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_NoMoreQcubeCallbacks (VA 0x004D2B80; static CFG gate PASS, CFG score 1.000).
 #include "Render_NoMoreQcubeCallbacks.h"
 int32_t* Render_NoMoreQcubeCallbacks(int32_t a1)
 

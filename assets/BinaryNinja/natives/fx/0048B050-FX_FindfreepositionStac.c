@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_FindfreepositionStac (VA 0x0048B050; static CFG gate PASS, CFG score 0.967).
 #include "FX_FindfreepositionStac.h"
 ❓  void* __stdcall FX_FindfreepositionStac(void** a1 @ 0x1430, int32_t* a2, char a3, void* a4)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

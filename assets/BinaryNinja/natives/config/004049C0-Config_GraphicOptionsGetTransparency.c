@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsGetTransparency (VA 0x004049C0; static CFG gate PASS, CFG score 0.889).
 #include "Config_GraphicOptionsGetTransparency.h"
 int32_t Config_GraphicOptionsGetTransparency(int32_t a1)
 

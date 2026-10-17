@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSpline_Invoke13_50E450 (VA 0x0050E450; static CFG gate PASS, CFG score 1.000).
 #include "AnimSpline_Invoke13_50E450.h"
 
 void(int32_t* arg1, int32_t* arg2)

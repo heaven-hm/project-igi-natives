@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_EvaluateCondition_23 (VA 0x004F98A0; static CFG gate FAIL, CFG score 0.833).
 #include "Script_EvaluateCondition_23.h"
 void* Script_EvaluateCondition_23(float* a1, void* a2, char a3)
 

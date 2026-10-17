@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_QtasklistIsFull (VA 0x004C1790; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_QtasklistIsFull.h"
 int32_t* DynObj_QtasklistIsFull(int32_t* a1, int32_t a2)
 

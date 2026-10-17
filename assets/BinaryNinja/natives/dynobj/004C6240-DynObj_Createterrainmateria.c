@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_Createterrainmateria (VA 0x004C6240; static CFG gate FAIL, CFG score 0.809).
 #include "DynObj_Createterrainmateria.h"
 void* DynObj_Createterrainmateria(void* a1, int32_t a2)
 

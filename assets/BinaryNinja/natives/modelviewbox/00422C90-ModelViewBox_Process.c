@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ModelViewBox_Process (VA 0x00422C90; static CFG gate PASS, CFG score 0.963).
 #include "ModelViewBox_Process.h"
 int32_t ModelViewBox_Process(void* a1, int32_t a2)
 

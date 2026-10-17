@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsNumPerfLevels (VA 0x00405620; static CFG gate FAIL, CFG score 0.667).
 #include "Config_GraphicOptionsNumPerfLevels.h"
 int32_t Config_GraphicOptionsNumPerfLevels(int32_t a1)
 

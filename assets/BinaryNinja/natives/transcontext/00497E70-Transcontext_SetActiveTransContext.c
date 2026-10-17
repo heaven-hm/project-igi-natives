@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Transcontext_SetActiveTransContext (VA 0x00497E70; static CFG gate FAIL, CFG score 0.667).
 #include "Transcontext_SetActiveTransContext.h"
 int32_t Transcontext_SetActiveTransContext(int32_t* a1)
 

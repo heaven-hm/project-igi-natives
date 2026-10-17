@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GraphNode_LoadParameters (VA 0x00518890; static CFG gate PASS, CFG score 1.000).
 #include "GraphNode_LoadParameters.h"
 void* GraphNode_LoadParameters(void* a1)
 

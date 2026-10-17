@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ExecuteLevelScript_28 (VA 0x004FBF00; static CFG gate PASS, CFG score 1.000).
 #include "Script_ExecuteLevelScript_28.h"
 float Script_ExecuteLevelScript_28(void* a1, float a2, float* a3, float* a4, int32_t a5, int32_t a6) __location("valA")
 

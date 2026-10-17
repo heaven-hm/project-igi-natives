@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerLog_LoadParameters (VA 0x00468920; static CFG gate PASS, CFG score 1.000).
 #include "ComputerLog_LoadParameters.h"
 struct status_msg* ComputerLog_LoadParameters(float a1)
 

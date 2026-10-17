@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateTransform_10 (VA 0x004A6E17; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_10.h"
 void* Camera_UpdateTransform_10(int32_t* a1)
 

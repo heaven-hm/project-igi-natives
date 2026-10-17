@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_SmokeEmit_18 (VA 0x0048B260; static CFG gate PASS, CFG score 0.979).
 #include "FX_SmokeEmit_18.h"
 void* FX_SmokeEmit_18(void* a1, int32_t* a2, char a3, char a4)
 

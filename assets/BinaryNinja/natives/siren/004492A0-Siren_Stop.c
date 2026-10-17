@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Siren_Stop (VA 0x004492A0; static CFG gate PASS, CFG score 1.000).
 #include "Siren_Stop.h"
 
 int32_t* Siren_Stop(void* pThis, int32_t param)

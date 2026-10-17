@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateZoom_5 (VA 0x004785F0; static CFG gate FAIL, CFG score 0.667).
 #include "Weapon_UpdateZoom_5.h"
 void* Weapon_UpdateZoom_5(void* a1)
 

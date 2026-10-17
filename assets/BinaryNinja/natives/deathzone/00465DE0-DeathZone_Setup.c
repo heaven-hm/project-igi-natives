@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DeathZone_Setup (VA 0x00465DE0; static CFG gate PASS, CFG score 1.000).
 #include "DeathZone_Setup.h"
 int32_t DeathZone_Setup(void* a1)
 

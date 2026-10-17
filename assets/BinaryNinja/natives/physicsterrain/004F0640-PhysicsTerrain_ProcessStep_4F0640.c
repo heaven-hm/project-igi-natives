@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsTerrain_ProcessStep_4F0640 (VA 0x004F0640; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsTerrain_ProcessStep_4F0640.h"
 
 int32_t()

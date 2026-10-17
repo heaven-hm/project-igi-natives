@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_Player (VA 0x004036B0; static CFG gate PASS, CFG score 0.889).
 #include "GO_Player.h"
 int32_t GO_Player(int32_t a1, float a2 @ 0xc)
 

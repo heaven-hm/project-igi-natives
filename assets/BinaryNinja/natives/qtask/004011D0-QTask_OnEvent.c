@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_OnEvent (VA 0x004011D0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_OnEvent.h"
 char* QTask_OnEvent()
 

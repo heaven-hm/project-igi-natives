@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_GraphstreamCollision (VA 0x004F9DF0; static CFG gate PASS, CFG score 1.000).
 #include "Script_GraphstreamCollision.h"
 void* Script_GraphstreamCollision(char* a1, int32_t a2, int32_t a3)
 

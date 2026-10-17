@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_SpawnRound (VA 0x00474360; static CFG gate PASS, CFG score 1.000).
 #include "Gun_SpawnRound.h"
 void* Gun_SpawnRound(void* a1, char a2)
 

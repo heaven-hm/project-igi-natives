@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_13 (VA 0x004B45A0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_13.h"
 float* Sys_DispatchOpcode_13(float* a1, float a2, float a3, float a4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_OpenDevice_6 (VA 0x00491EA0; static CFG gate PASS, CFG score 1.000).
 #include "Display_OpenDevice_6.h"
 int32_t Display_OpenDevice_6(int32_t a1, int32_t a2)
 

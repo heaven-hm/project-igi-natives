@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SubLevel_Process (VA 0x00488560; static CFG gate PASS, CFG score 1.000).
 #include "SubLevel_Process.h"
 
 void* SubLevel_Process(void* pThis, int32_t param)

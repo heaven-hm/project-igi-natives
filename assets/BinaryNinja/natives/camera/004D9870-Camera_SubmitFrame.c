@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_SubmitFrame (VA 0x004D9870; static CFG gate PASS, CFG score 0.905).
 #include "Camera_SubmitFrame.h"
 int32_t* Camera_SubmitFrame(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t* a6 @ 0x1c, int32_t a7, int32_t a8, float a9)
 

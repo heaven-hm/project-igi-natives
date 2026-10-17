@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_Action (VA 0x004FAEE0; static CFG gate PASS, CFG score 1.000).
 #include "Graph_Action.h"
 int32_t* Graph_Action(int32_t* a1)
 

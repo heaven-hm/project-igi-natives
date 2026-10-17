@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_UpdateForces_11 (VA 0x0050A830; static CFG gate PASS, CFG score 1.000).
 #include "Physics_UpdateForces_11.h"
 int32_t* Physics_UpdateForces_11(int32_t* a1)
 

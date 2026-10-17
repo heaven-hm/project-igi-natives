@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIStationaryGunHolder_Process (VA 0x0046E7F0; static CFG gate PASS, CFG score 0.976).
 #include "AIStationaryGunHolder_Process.h"
 char* AIStationaryGunHolder_Process(float a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AmmoPickup_LoadParameters (VA 0x0046D5F0; static CFG gate PASS, CFG score 0.939).
 #include "AmmoPickup_LoadParameters.h"
 int32_t AmmoPickup_LoadParameters(int32_t* a1)
 

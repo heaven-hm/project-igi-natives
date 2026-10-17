@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalSound_Start (VA 0x00425200; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalSound_Start.h"
 struct status_msg* ConditionalSound_Start(void* a1)
 

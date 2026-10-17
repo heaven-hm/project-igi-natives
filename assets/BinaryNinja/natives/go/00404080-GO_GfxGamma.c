@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_GfxGamma (VA 0x00404080; static CFG gate FAIL, CFG score 0.833).
 #include "GO_GfxGamma.h"
 int32_t GO_GfxGamma(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

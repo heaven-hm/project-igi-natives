@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FreeCamera_Init (VA 0x005310E0; static CFG gate PASS, CFG score 1.000).
 #include "FreeCamera_Init.h"
 int32_t FreeCamera_Init()
 

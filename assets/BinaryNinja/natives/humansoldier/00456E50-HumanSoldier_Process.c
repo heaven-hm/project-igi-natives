@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldier_Process (VA 0x00456E50; static CFG gate PASS, CFG score 0.979).
 #include "HumanSoldier_Process.h"
 int32_t HumanSoldier_Process(int32_t* a1, int32_t a2)
 

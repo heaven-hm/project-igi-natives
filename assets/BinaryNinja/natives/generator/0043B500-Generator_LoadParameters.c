@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Generator_LoadParameters (VA 0x0043B500; static CFG gate PASS, CFG score 1.000).
 #include "Generator_LoadParameters.h"
 struct status_msg* Generator_LoadParameters(int80_t a1 @ fp0, void* a2)
 

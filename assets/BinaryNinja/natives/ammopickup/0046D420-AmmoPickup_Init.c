@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AmmoPickup_Init (VA 0x0046D420; static CFG gate PASS, CFG score 1.000).
 #include "AmmoPickup_Init.h"
 int32_t* AmmoPickup_Init()
 

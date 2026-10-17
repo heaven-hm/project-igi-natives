@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_GameMaterial (VA 0x00407F50; static CFG gate PASS, CFG score 0.980).
 #include "Define_GameMaterial.h"
 int32_t Define_GameMaterial(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, int32_t a5, float a6 @ 0xc)
 

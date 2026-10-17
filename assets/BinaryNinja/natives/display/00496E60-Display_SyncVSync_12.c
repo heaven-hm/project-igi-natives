@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_12 (VA 0x00496E60; static CFG gate FAIL, CFG score 0.800).
 #include "Display_SyncVSync_12.h"
 char Display_SyncVSync_12(int32_t a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: M203_Setup (VA 0x00476340; static CFG gate PASS, CFG score 0.944).
 #include "M203_Setup.h"
 int32_t M203_Setup(int32_t* a1)
 

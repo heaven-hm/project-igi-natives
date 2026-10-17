@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_UpdateCameraLens_8 (VA 0x004474E0; static CFG gate FAIL, CFG score 0.778).
 #include "Env_UpdateCameraLens_8.h"
 float* Env_UpdateCameraLens_8(void* a1)
 

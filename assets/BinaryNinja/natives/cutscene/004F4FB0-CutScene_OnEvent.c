@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_OnEvent (VA 0x004F4FB0; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_OnEvent.h"
 int32_t CutScene_OnEvent(void* a1)
 

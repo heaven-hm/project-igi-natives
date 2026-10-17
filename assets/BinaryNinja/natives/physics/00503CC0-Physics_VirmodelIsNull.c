@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_VirmodelIsNull (VA 0x00503CC0; static CFG gate PASS, CFG score 0.889).
 #include "Physics_VirmodelIsNull.h"
 struct status_msg* Physics_VirmodelIsNull(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t* a5)
 

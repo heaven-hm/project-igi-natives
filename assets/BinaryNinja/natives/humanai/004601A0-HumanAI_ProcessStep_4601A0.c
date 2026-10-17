@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_ProcessStep_4601A0 (VA 0x004601A0; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_ProcessStep_4601A0.h"
 
 void*(void* arg1, double* arg2)

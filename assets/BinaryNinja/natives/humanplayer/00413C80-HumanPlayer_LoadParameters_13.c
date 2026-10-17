@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_LoadParameters_13 (VA 0x00413C80; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_LoadParameters_13.h"
 int32_t __convention("regparm") HumanPlayer_LoadParameters_13(int32_t a1, int32_t a2, int32_t a3, void* a4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CheckHeap_8 (VA 0x004B26C0; static CFG gate PASS, CFG score 0.889).
 #include "Sys_CheckHeap_8.h"
 int32_t Sys_CheckHeap_8()
 

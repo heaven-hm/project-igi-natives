@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunPickup_Setup (VA 0x0046CEA0; static CFG gate PASS, CFG score 1.000).
 #include "GunPickup_Setup.h"
 int32_t GunPickup_Setup(float a1)
 

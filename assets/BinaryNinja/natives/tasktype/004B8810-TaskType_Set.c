@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TaskType_Set (VA 0x004B8810; static CFG gate PASS, CFG score 1.000).
 #include "TaskType_Set.h"
 void* TaskType_Set(int32_t* a1, int32_t a2)
 

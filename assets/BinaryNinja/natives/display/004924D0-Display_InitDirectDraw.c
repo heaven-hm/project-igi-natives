@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_InitDirectDraw (VA 0x004924D0; static CFG gate PASS, CFG score 1.000).
 #include "Display_InitDirectDraw.h"
 
 ❓  void* const __stdcall Display_InitDirectDraw(int32_t* pThis @ 0x101a0)

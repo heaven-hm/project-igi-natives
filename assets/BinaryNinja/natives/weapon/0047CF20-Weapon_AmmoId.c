@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_AmmoId (VA 0x0047CF20; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_AmmoId.h"
 int32_t Weapon_AmmoId()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_ProcessCouldntsetrender_493AC0 (VA 0x00493AC0; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_ProcessCouldntsetrender_493AC0.h"
 
 int32_t()

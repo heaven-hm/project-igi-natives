@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayerInput_Setup (VA 0x0045DE20; static CFG gate PASS, CFG score 0.889).
 #include "HumanPlayerInput_Setup.h"
 char* HumanPlayerInput_Setup(void* a1)
 

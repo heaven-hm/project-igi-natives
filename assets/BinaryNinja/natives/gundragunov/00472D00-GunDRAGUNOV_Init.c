@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunDRAGUNOV_Init (VA 0x00472D00; static CFG gate PASS, CFG score 1.000).
 #include "GunDRAGUNOV_Init.h"
 char* GunDRAGUNOV_Init()
 

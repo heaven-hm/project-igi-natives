@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_ApplyImpulse_13 (VA 0x0050E1E0; static CFG gate FAIL, CFG score 0.750).
 #include "Physics_ApplyImpulse_13.h"
 void* Physics_ApplyImpulse_13(void* a1)
 

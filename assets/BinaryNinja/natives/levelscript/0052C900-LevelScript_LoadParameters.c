@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelScript_LoadParameters (VA 0x0052C900; static CFG gate FAIL, CFG score 0.833).
 #include "LevelScript_LoadParameters.h"
 void* LevelScript_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_TestViewCones (VA 0x004502F0; static CFG gate FAIL, CFG score 0.833).
 #include "AI_TestViewCones.h"
 double* AI_TestViewCones(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, void* a4, double* a5, char a6)
 

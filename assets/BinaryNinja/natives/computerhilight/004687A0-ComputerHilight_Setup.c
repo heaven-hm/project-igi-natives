@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerHilight_Setup (VA 0x004687A0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerHilight_Setup.h"
 int32_t ComputerHilight_Setup(int80_t a1 @ fp0, int32_t* a2, void* a3)
 

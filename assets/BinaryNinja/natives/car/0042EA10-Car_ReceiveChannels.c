@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_ReceiveChannels (VA 0x0042EA10; static CFG gate PASS, CFG score 0.967).
 #include "Car_ReceiveChannels.h"
 int32_t* Car_ReceiveChannels(void* a1, float a2)
 

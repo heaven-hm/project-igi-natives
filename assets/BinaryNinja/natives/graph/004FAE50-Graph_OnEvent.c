@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_OnEvent (VA 0x004FAE50; static CFG gate PASS, CFG score 1.000).
 #include "Graph_OnEvent.h"
 int32_t Graph_OnEvent(void* a1, int32_t* a2)
 

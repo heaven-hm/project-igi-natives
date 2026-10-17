@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuItemTask_LoadParameters (VA 0x00504EF0; static CFG gate PASS, CFG score 1.000).
 #include "MenuItemTask_LoadParameters.h"
 void* MenuItemTask_LoadParameters(void* a1)
 

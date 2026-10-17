@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_ExplosionSpawn_6 (VA 0x00485170; static CFG gate PASS, CFG score 1.000).
 #include "FX_ExplosionSpawn_6.h"
 void* FX_ExplosionSpawn_6(int32_t a1)
 

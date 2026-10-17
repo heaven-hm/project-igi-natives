@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_LocalTexturesSTex (VA 0x004CF790; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_LocalTexturesSTex.h"
 int32_t* DynObj_LocalTexturesSTex(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DialogWindow_LoadParameters (VA 0x00419CB0; static CFG gate PASS, CFG score 1.000).
 #include "DialogWindow_LoadParameters.h"
 int32_t DialogWindow_LoadParameters(int32_t a1)
 

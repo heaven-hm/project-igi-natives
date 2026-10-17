@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PickupTrigger_InvokeInit_46D050 (VA 0x0046D050; static CFG gate PASS, CFG score 1.000).
 #include "PickupTrigger_InvokeInit_46D050.h"
 
 int32_t*(float arg1)

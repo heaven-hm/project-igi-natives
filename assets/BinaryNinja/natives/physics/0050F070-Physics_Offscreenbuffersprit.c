@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_Offscreenbuffersprit (VA 0x0050F070; static CFG gate PASS, CFG score 1.000).
 #include "Physics_Offscreenbuffersprit.h"
 int32_t Physics_Offscreenbuffersprit(void* a1)
 

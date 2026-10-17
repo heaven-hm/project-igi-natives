@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldierFemale_Setup (VA 0x00454F10; static CFG gate PASS, CFG score 0.979).
 #include "HumanSoldierFemale_Setup.h"
 int32_t HumanSoldierFemale_Setup(int32_t* a1, int32_t a2)
 

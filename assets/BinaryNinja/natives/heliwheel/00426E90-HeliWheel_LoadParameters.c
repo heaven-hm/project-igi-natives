@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeliWheel_LoadParameters (VA 0x00426E90; static CFG gate PASS, CFG score 0.875).
 #include "HeliWheel_LoadParameters.h"
 int32_t HeliWheel_LoadParameters(int32_t* a1, float a2)
 

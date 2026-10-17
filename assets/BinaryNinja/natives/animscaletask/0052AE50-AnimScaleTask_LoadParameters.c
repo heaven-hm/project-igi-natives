@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimScaleTask_LoadParameters (VA 0x0052AE50; static CFG gate PASS, CFG score 0.867).
 #include "AnimScaleTask_LoadParameters.h"
 void* AnimScaleTask_LoadParameters(void* a1)
 

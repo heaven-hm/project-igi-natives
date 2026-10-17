@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TypeWriterBox_Process (VA 0x0041A4D0; static CFG gate PASS, CFG score 1.000).
 #include "TypeWriterBox_Process.h"
 int32_t TypeWriterBox_Process(void* a1, int32_t a2)
 

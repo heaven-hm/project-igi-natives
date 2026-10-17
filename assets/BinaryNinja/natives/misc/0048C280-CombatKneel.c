@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CombatKneel (VA 0x0048C280; static CFG gate PASS, CFG score 1.000).
 #include "CombatKneel.h"
 int32_t* CombatKneel(int32_t* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_OpenEvent (VA 0x00401050; static CFG gate PASS, CFG score 1.000).
 #include "QTask_OpenEvent.h"
 int32_t QTask_OpenEvent(int32_t a1 @ flagP)
 

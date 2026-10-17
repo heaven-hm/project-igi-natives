@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuLoader_OnEvent (VA 0x004192B0; static CFG gate PASS, CFG score 1.000).
 #include "MenuLoader_OnEvent.h"
 uint32_t MenuLoader_OnEvent()
 

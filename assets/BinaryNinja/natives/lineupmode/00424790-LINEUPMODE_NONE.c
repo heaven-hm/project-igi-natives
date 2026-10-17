@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LINEUPMODE_NONE (VA 0x00424790; static CFG gate PASS, CFG score 1.000).
 #include "LINEUPMODE_NONE.h"
 uint32_t LINEUPMODE_NONE()
 

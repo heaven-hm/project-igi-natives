@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_AttachedMovement (VA 0x00462CF0; static CFG gate PASS, CFG score 0.889).
 #include "Human_AttachedMovement.h"
 int32_t Human_AttachedMovement(void* a1)
 

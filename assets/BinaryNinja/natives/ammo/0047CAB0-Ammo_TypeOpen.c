@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ammo_TypeOpen (VA 0x0047CAB0; static CFG gate FAIL, CFG score 0.833).
 #include "Ammo_TypeOpen.h"
 int32_t Ammo_TypeOpen()
 

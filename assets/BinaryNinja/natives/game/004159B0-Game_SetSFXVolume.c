@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_SetSFXVolume (VA 0x004159B0; static CFG gate PASS, CFG score 0.889).
 #include "Game_SetSFXVolume.h"
 int32_t Game_SetSFXVolume(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

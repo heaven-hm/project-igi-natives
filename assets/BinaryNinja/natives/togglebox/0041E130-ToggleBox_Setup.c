@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ToggleBox_Setup (VA 0x0041E130; static CFG gate PASS, CFG score 1.000).
 #include "ToggleBox_Setup.h"
 int32_t ToggleBox_Setup(int32_t a1)
 

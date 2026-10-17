@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MathSys_DefaultHandler_4A9AD4 (VA 0x004A9AD4; static CFG gate PASS, CFG score 1.000).
 #include "MathSys_DefaultHandler_4A9AD4.h"
 
 int32_t(void* arg1 @ ebp) __location("st0")

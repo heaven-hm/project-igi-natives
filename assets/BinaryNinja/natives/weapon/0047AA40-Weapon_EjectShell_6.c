@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EjectShell_6 (VA 0x0047AA40; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_EjectShell_6.h"
 uint32_t Weapon_EjectShell_6()
 

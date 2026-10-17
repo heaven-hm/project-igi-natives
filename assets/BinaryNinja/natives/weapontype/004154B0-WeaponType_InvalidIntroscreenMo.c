@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_InvalidIntroscreenMo (VA 0x004154B0; static CFG gate PASS, CFG score 1.000).
 #include "WeaponType_InvalidIntroscreenMo.h"
 struct status_msg* WeaponType_InvalidIntroscreenMo(void* a1, int32_t a2, char a3)
 

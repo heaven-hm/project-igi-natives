@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_DisablePlayerInput (VA 0x004157D0; static CFG gate PASS, CFG score 0.889).
 #include "Game_DisablePlayerInput.h"
 int32_t Game_DisablePlayerInput(int32_t a1)
 

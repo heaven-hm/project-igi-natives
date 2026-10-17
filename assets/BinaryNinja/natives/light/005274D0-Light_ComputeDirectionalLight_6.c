@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_ComputeDirectionalLight_6 (VA 0x005274D0; static CFG gate PASS, CFG score 1.000).
 #include "Light_ComputeDirectionalLight_6.h"
 int32_t Light_ComputeDirectionalLight_6(float a1)
 

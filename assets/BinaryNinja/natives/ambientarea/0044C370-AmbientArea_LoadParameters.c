@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AmbientArea_LoadParameters (VA 0x0044C370; static CFG gate PASS, CFG score 1.000).
 #include "AmbientArea_LoadParameters.h"
 int32_t AmbientArea_LoadParameters(int80_t a1 @ fp0, void* a2)
 

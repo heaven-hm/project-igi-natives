@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BinocularOverlay_Cleanup (VA 0x00471400; static CFG gate PASS, CFG score 1.000).
 #include "BinocularOverlay_Cleanup.h"
 int32_t* BinocularOverlay_Cleanup(void* a1)
 

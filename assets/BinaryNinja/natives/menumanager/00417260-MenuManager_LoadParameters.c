@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_LoadParameters (VA 0x00417260; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_LoadParameters.h"
 struct status_msg* MenuManager_LoadParameters(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetBackgroundColourFn (VA 0x00491E70; static CFG gate PASS, CFG score 1.000).
 #include "Display_SetBackgroundColourFn.h"
 uint32_t Display_SetBackgroundColourFn(char a1, char a2, char a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CombatState_ProcessStep_481E60 (VA 0x00481E60; static CFG gate PASS, CFG score 1.000).
 #include "CombatState_ProcessStep_481E60.h"
 
 void*(void* arg1, void* arg2)

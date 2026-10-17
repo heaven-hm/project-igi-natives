@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Building_Process (VA 0x00448890; static CFG gate PASS, CFG score 1.000).
 #include "Building_Process.h"
 float Building_Process(float a1) __location("valA")
 

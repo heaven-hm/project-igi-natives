@@ -1,3 +1,4 @@
+// Original IGI.EXE function: M203_Process (VA 0x00476600; static CFG gate PASS, CFG score 1.000).
 #include "M203_Process.h"
 int32_t* M203_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputPort_OnEvent (VA 0x004ED5B0; static CFG gate PASS, CFG score 1.000).
 #include "InputPort_OnEvent.h"
 uint32_t InputPort_OnEvent()
 

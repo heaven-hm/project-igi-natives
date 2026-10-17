@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_Cleanup_4 (VA 0x00479CA0; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Cleanup_4.h"
 void** Gun_Cleanup_4(void* a1, float* a2)
 

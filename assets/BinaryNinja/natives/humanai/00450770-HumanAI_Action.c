@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_Action (VA 0x00450770; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_Action.h"
 int32_t HumanAI_Action(void* a1)
 

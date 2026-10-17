@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_EventBroadcast (VA 0x00450CE0; static CFG gate PASS, CFG score 1.000).
 #include "AI_EventBroadcast.h"
 int32_t* AI_EventBroadcast(int32_t a1)
 

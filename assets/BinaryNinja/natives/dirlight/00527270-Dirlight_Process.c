@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Dirlight_Process (VA 0x00527270; static CFG gate PASS, CFG score 1.000).
 #include "Dirlight_Process.h"
 int32_t Dirlight_Process(void* a1)
 

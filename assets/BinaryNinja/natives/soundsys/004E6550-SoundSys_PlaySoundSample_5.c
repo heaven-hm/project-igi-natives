@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_PlaySoundSample_5 (VA 0x004E6550; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_PlaySoundSample_5.h"
 struct status_msg* SoundSys_PlaySoundSample_5(void* a1, int32_t a2)
 

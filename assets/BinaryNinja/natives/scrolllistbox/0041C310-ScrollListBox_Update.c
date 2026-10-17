@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_Update (VA 0x0041C310; static CFG gate PASS, CFG score 1.000).
 #include "ScrollListBox_Update.h"
 void* ScrollListBox_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_15 (VA 0x004B5860; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_15.h"
 float Sys_DispatchOpcode_15(float* a1, float a2, float a3, float a4, int32_t a5, float a6, float a7, float a8, int32_t a9, float a10, float a11, float a12, int32_t a13, int32_t a14) __location("valA")
 

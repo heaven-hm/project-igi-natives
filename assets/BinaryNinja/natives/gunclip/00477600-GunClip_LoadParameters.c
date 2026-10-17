@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunClip_LoadParameters (VA 0x00477600; static CFG gate PASS, CFG score 0.875).
 #include "GunClip_LoadParameters.h"
 int32_t GunClip_LoadParameters(void* a1, int32_t* a2)
 

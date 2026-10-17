@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessage_Setup (VA 0x004856D0; static CFG gate PASS, CFG score 1.000).
 #include "StatusMessage_Setup.h"
 void* StatusMessage_Setup(void* a1)
 

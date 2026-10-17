@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeObject_Update (VA 0x00481C40; static CFG gate PASS, CFG score 0.907).
 #include "ExplodeObject_Update.h"
 float* ExplodeObject_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_Init (VA 0x0041E690; static CFG gate PASS, CFG score 1.000).
 #include "ListBox_Init.h"
 int32_t* ListBox_Init()
 

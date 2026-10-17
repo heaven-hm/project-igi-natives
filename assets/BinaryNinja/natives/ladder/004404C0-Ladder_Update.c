@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ladder_Update (VA 0x004404C0; static CFG gate PASS, CFG score 1.000).
 #include "Ladder_Update.h"
 int32_t Ladder_Update(double* a1, int32_t* a2)
 

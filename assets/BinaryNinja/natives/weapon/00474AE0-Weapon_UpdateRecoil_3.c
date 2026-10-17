@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateRecoil_3 (VA 0x00474AE0; static CFG gate FAIL, CFG score 0.778).
 #include "Weapon_UpdateRecoil_3.h"
 float* Weapon_UpdateRecoil_3(void* a1)
 

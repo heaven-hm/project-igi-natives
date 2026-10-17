@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsMagicObj_LoadParameters (VA 0x00503DF0; static CFG gate PASS, CFG score 0.917).
 #include "PhysicsMagicObj_LoadParameters.h"
 int32_t* PhysicsMagicObj_LoadParameters(void* a1, float a2)
 

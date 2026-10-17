@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MoveRigidObj_Init (VA 0x0051F580; static CFG gate PASS, CFG score 1.000).
 #include "MoveRigidObj_Init.h"
 void* MoveRigidObj_Init()
 

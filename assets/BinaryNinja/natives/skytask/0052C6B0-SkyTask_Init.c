@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SkyTask_Init (VA 0x0052C6B0; static CFG gate PASS, CFG score 1.000).
 #include "SkyTask_Init.h"
 int32_t* SkyTask_Init()
 

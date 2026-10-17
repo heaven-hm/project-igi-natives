@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Water_Setup (VA 0x00518CA0; static CFG gate FAIL, CFG score 0.667).
 #include "Water_Setup.h"
 double* Water_Setup(void* a1, int32_t* a2)
 

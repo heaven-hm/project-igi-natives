@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetMasterVolume_14 (VA 0x004EA040; static CFG gate FAIL, CFG score 0.849).
 #include "SoundSys_SetMasterVolume_14.h"
 int32_t SoundSys_SetMasterVolume_14(void* a1)
 

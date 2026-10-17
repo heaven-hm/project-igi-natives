@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeObject_Process (VA 0x00481BC0; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeObject_Process.h"
 void* ExplodeObject_Process(void* a1)
 

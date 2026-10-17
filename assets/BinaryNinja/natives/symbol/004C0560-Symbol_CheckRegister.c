@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Symbol_CheckRegister (VA 0x004C0560; static CFG gate PASS, CFG score 0.905).
 #include "Symbol_CheckRegister.h"
 int32_t Symbol_CheckRegister(int32_t* a1, int32_t* a2, int32_t a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Named_Combat (VA 0x0048ACC0; static CFG gate PASS, CFG score 1.000).
 #include "Named_Combat.h"
 int32_t* Named_Combat(int32_t a1, int32_t* a2)
 

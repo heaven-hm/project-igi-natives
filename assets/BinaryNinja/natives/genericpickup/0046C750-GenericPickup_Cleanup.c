@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPickup_Cleanup (VA 0x0046C750; static CFG gate PASS, CFG score 1.000).
 #include "GenericPickup_Cleanup.h"
 int32_t GenericPickup_Cleanup(float a1, int32_t a2)
 

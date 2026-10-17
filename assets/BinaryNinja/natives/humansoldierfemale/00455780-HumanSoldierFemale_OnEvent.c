@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldierFemale_OnEvent (VA 0x00455780; static CFG gate PASS, CFG score 0.970).
 #include "HumanSoldierFemale_OnEvent.h"
 int32_t HumanSoldierFemale_OnEvent(void* a1, float* a2)
 

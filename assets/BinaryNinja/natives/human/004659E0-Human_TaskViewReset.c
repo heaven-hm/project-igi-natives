@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_TaskViewReset (VA 0x004659E0; static CFG gate PASS, CFG score 1.000).
 #include "Human_TaskViewReset.h"
 void* Human_TaskViewReset(void* a1)
 

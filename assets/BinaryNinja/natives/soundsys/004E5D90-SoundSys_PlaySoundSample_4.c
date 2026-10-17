@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_PlaySoundSample_4 (VA 0x004E5D90; static CFG gate FAIL, CFG score 0.833).
 #include "SoundSys_PlaySoundSample_4.h"
 int32_t SoundSys_PlaySoundSample_4()
 

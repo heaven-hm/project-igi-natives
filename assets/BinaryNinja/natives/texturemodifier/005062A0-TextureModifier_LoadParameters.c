@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextureModifier_LoadParameters (VA 0x005062A0; static CFG gate PASS, CFG score 0.892).
 #include "TextureModifier_LoadParameters.h"
 int32_t TextureModifier_LoadParameters(int32_t* a1)
 

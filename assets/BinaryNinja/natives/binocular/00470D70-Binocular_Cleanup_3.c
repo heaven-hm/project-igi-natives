@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_Cleanup_3 (VA 0x00470D70; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_Cleanup_3.h"
 float Binocular_Cleanup_3(int32_t* a1 @ 0x8) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_SpeedZMS2F (VA 0x004550B0; static CFG gate PASS, CFG score 1.000).
 #include "AI_SpeedZMS2F.h"
 int32_t AI_SpeedZMS2F(float* a1)
 

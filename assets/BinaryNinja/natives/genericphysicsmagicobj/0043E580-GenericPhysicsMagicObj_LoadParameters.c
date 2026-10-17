@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPhysicsMagicObj_LoadParameters (VA 0x0043E580; static CFG gate PASS, CFG score 1.000).
 #include "GenericPhysicsMagicObj_LoadParameters.h"
 float* GenericPhysicsMagicObj_LoadParameters(float a1)
 

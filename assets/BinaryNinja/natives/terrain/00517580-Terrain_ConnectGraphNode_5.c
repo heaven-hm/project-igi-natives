@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_ConnectGraphNode_5 (VA 0x00517580; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_ConnectGraphNode_5.h"
 int32_t Terrain_ConnectGraphNode_5(char* a1)
 

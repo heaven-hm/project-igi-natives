@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_Update (VA 0x004452F0; static CFG gate PASS, CFG score 0.963).
 #include "Switch_Update.h"
 float* Switch_Update(float a1)
 

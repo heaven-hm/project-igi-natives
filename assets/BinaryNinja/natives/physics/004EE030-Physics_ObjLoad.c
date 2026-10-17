@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_ObjLoad (VA 0x004EE030; static CFG gate PASS, CFG score 1.000).
 #include "Physics_ObjLoad.h"
 int32_t Physics_ObjLoad(void* a1)
 

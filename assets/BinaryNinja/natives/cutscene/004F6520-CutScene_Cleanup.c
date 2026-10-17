@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_Cleanup (VA 0x004F6520; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_Cleanup.h"
 int32_t* CutScene_Cleanup(void* a1)
 

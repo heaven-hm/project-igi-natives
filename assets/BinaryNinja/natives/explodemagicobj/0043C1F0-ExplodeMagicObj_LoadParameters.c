@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeMagicObj_LoadParameters (VA 0x0043C1F0; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeMagicObj_LoadParameters.h"
 int32_t ExplodeMagicObj_LoadParameters(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, int32_t* a6 @ 0x8)
 

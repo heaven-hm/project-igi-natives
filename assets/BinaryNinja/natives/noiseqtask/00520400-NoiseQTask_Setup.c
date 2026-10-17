@@ -1,3 +1,4 @@
+// Original IGI.EXE function: NoiseQTask_Setup (VA 0x00520400; static CFG gate PASS, CFG score 1.000).
 #include "NoiseQTask_Setup.h"
 int32_t NoiseQTask_Setup(long double a1 @ fp0, void* a2)
 

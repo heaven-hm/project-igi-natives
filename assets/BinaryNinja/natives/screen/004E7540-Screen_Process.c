@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Screen_Process (VA 0x004E7540; static CFG gate FAIL, CFG score 0.667).
 #include "Screen_Process.h"
 int32_t Screen_Process(int32_t a1, char a2)
 

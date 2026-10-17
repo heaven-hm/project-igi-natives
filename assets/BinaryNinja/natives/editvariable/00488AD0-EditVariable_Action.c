@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditVariable_Action (VA 0x00488AD0; static CFG gate PASS, CFG score 1.000).
 #include "EditVariable_Action.h"
 int32_t EditVariable_Action(void* a1)
 

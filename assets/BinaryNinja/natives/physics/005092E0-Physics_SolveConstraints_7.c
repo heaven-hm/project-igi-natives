@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_SolveConstraints_7 (VA 0x005092E0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_SolveConstraints_7.h"
 void* Physics_SolveConstraints_7(void* a1)
 

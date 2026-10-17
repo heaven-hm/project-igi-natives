@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_MtpNlodvirmodelD (VA 0x004CEBA0; static CFG gate FAIL, CFG score 0.778).
 #include "DynObj_MtpNlodvirmodelD.h"
 void* DynObj_MtpNlodvirmodelD(int32_t a1)
 

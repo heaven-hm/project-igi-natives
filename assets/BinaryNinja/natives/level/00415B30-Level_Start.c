@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_Start (VA 0x00415B30; static CFG gate PASS, CFG score 0.996).
 #include "Level_Start.h"
 int32_t Level_Start(void* a1)
 

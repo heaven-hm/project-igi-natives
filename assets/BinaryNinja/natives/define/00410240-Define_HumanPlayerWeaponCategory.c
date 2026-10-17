@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_HumanPlayerWeaponCategory (VA 0x00410240; static CFG gate PASS, CFG score 0.889).
 #include "Define_HumanPlayerWeaponCategory.h"
 int32_t Define_HumanPlayerWeaponCategory(int32_t a1, float a2 @ 0xc)
 

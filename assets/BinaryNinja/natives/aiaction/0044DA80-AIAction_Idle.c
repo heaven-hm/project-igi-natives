@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_Idle (VA 0x0044DA80; static CFG gate PASS, CFG score 0.889).
 #include "AIAction_Idle.h"
 int32_t AIAction_Idle(int32_t a1, float a2 @ 0xc)
 

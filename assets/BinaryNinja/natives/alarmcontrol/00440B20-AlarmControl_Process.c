@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmControl_Process (VA 0x00440B20; static CFG gate PASS, CFG score 1.000).
 #include "AlarmControl_Process.h"
 int32_t AlarmControl_Process(void* a1)
 

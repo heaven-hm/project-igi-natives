@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DialogWindow_Init (VA 0x004199F0; static CFG gate PASS, CFG score 1.000).
 #include "DialogWindow_Init.h"
 int32_t* DialogWindow_Init()
 

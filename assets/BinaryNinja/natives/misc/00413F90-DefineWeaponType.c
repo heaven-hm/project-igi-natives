@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineWeaponType (VA 0x00413F90; static CFG gate PASS, CFG score 0.994).
 #include "DefineWeaponType.h"
 int32_t DefineWeaponType(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, long double a7 @ fp6, long double a8 @ fp7, int32_t a9, float a10 @ 0xc)
 

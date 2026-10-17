@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Combat_BeginBurst (VA 0x0048B9C0; static CFG gate PASS, CFG score 0.970).
 #include "Combat_BeginBurst.h"
 uint32_t Combat_BeginBurst(int32_t a1, char a2)
 

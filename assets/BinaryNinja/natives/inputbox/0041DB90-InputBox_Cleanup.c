@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_Cleanup (VA 0x0041DB90; static CFG gate PASS, CFG score 1.000).
 #include "InputBox_Cleanup.h"
 int32_t InputBox_Cleanup(void* a1)
 

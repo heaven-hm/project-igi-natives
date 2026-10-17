@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_DeletePlayerProfile (VA 0x00405400; static CFG gate FAIL, CFG score 0.750).
 #include "Config_DeletePlayerProfile.h"
 int32_t Config_DeletePlayerProfile(int32_t a1, float a2 @ 0xc)
 

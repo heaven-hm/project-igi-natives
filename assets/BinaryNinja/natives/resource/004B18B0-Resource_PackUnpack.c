@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Resource_PackUnpack (VA 0x004B18B0; static CFG gate PASS, CFG score 0.976).
 #include "Resource_PackUnpack.h"
 void* Resource_PackUnpack(void* a1, int32_t* a2)
 

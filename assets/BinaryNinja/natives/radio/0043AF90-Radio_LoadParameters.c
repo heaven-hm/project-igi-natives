@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Radio_LoadParameters (VA 0x0043AF90; static CFG gate PASS, CFG score 1.000).
 #include "Radio_LoadParameters.h"
 int32_t* Radio_LoadParameters(int80_t a1 @ fp0, void* a2)
 

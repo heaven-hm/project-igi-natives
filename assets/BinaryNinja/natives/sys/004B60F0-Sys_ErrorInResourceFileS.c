@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ErrorInResourceFileS (VA 0x004B60F0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ErrorInResourceFileS.h"
 int32_t Sys_ErrorInResourceFileS(int32_t a1, void* a2, void* a3, int32_t* a4)
 

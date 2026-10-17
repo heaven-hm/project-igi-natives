@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_ClearSurfaces_16 (VA 0x00498460; static CFG gate PASS, CFG score 1.000).
 #include "Display_ClearSurfaces_16.h"
 int32_t Display_ClearSurfaces_16(int16_t a1 @ x87control)
 

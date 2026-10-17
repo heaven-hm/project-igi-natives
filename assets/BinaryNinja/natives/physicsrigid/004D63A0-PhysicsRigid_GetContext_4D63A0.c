@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsRigid_GetContext_4D63A0 (VA 0x004D63A0; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsRigid_GetContext_4D63A0.h"
 
 long double(void* arg1)

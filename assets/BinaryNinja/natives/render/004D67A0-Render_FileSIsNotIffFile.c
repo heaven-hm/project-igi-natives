@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_FileSIsNotIffFile (VA 0x004D67A0; static CFG gate PASS, CFG score 0.930).
 #include "Render_FileSIsNotIffFile.h"
 int32_t Render_FileSIsNotIffFile(int32_t* a1)
 

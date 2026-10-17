@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GlowTask_Create (VA 0x004E9360; static CFG gate PASS, CFG score 1.000).
 #include "GlowTask_Create.h"
 
 int32_t GlowTask_Create(void* pThis)

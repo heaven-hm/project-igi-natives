@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_DebrisSpawn_6 (VA 0x00485DB0; static CFG gate PASS, CFG score 0.852).
 #include "FX_DebrisSpawn_6.h"
 ❓  char* __stdcall FX_DebrisSpawn_6(int32_t a1 @ 0x281c, int32_t a2, float a3)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

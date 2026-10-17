@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetGammaRamp_3 (VA 0x00491980; static CFG gate PASS, CFG score 1.000).
 #include "Display_SetGammaRamp_3.h"
 int32_t Display_SetGammaRamp_3(void* a1, char a2, int32_t a3)
 

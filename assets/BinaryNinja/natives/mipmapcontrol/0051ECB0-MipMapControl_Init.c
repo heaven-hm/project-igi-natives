@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MipMapControl_Init (VA 0x0051ECB0; static CFG gate PASS, CFG score 1.000).
 #include "MipMapControl_Init.h"
 int32_t* MipMapControl_Init()
 

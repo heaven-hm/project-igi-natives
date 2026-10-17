@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Gosoundspeech (VA 0x00405E00; static CFG gate PASS, CFG score 1.000).
 #include "Config_Gosoundspeech.h"
 int32_t Config_Gosoundspeech(int32_t* a1, int32_t a2)
 

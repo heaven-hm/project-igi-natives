@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeMagicObj_Init (VA 0x0043BFD0; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeMagicObj_Init.h"
 void* ExplodeMagicObj_Init()
 

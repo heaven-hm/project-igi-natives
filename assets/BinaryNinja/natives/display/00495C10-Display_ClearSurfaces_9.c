@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_ClearSurfaces_9 (VA 0x00495C10; static CFG gate PASS, CFG score 1.000).
 #include "Display_ClearSurfaces_9.h"
 uint32_t Display_ClearSurfaces_9(HMIXEROBJ a1, void* a2, void* a3, int32_t a4, int32_t a5)
 

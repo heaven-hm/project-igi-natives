@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputPort_Init (VA 0x004ED510; static CFG gate PASS, CFG score 1.000).
 #include "InputPort_Init.h"
 int32_t InputPort_Init()
 

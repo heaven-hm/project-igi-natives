@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessageScreen_ClearMessages (VA 0x00485AD0; static CFG gate PASS, CFG score 0.889).
 #include "StatusMessageScreen_ClearMessages.h"
 void StatusMessageScreen_ClearMessages()
 

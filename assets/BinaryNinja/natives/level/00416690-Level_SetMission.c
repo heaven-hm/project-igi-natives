@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_SetMission (VA 0x00416690; static CFG gate PASS, CFG score 1.000).
 #include "Level_SetMission.h"
 int32_t Level_SetMission()
 

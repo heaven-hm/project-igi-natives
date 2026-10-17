@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Siren_LoadParameters (VA 0x004494D0; static CFG gate PASS, CFG score 1.000).
 #include "Siren_LoadParameters.h"
 struct status_msg* Siren_LoadParameters(int80_t a1 @ fp0, void* a2)
 

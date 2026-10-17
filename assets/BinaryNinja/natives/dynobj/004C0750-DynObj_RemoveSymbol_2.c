@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_RemoveSymbol_2 (VA 0x004C0750; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_RemoveSymbol_2.h"
 void* DynObj_RemoveSymbol_2(void* a1)
 

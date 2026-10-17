@@ -1,3 +1,4 @@
+// Original IGI.EXE function: VehiclePhysics_Invoke12_42BBA0 (VA 0x0042BBA0; static CFG gate PASS, CFG score 1.000).
 #include "VehiclePhysics_Invoke12_42BBA0.h"
 
 int32_t*(void* arg1, int32_t arg2)

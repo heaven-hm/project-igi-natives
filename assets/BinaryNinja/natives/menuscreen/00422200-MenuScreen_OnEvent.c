@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuScreen_OnEvent (VA 0x00422200; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_OnEvent.h"
 int32_t MenuScreen_OnEvent(void* a1)
 

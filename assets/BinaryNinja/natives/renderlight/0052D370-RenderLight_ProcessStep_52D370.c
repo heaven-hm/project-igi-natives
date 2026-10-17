@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RenderLight_ProcessStep_52D370 (VA 0x0052D370; static CFG gate PASS, CFG score 1.000).
 #include "RenderLight_ProcessStep_52D370.h"
 
 float*()

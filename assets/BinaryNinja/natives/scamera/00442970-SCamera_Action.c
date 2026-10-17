@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_Action (VA 0x00442970; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Action.h"
 int32_t SCamera_Action(void* a1)
 

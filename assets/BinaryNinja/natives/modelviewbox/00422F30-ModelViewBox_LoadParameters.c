@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ModelViewBox_LoadParameters (VA 0x00422F30; static CFG gate PASS, CFG score 1.000).
 #include "ModelViewBox_LoadParameters.h"
 int32_t ModelViewBox_LoadParameters(int32_t a1)
 

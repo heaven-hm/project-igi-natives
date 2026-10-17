@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Combat_MobileC (VA 0x0048BBD0; static CFG gate PASS, CFG score 1.000).
 #include "Combat_MobileC.h"
 void* Combat_MobileC(void* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RigidDynCubeObj_OnEvent (VA 0x004C35F0; static CFG gate PASS, CFG score 1.000).
 #include "RigidDynCubeObj_OnEvent.h"
 void* RigidDynCubeObj_OnEvent(void* a1, int32_t* a2)
 

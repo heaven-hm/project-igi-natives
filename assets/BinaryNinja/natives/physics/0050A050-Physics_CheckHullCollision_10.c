@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_CheckHullCollision_10 (VA 0x0050A050; static CFG gate FAIL, CFG score 0.738).
 #include "Physics_CheckHullCollision_10.h"
 HANDLE Physics_CheckHullCollision_10(int32_t a1, int32_t a2, int32_t a3, int32_t a4)
 

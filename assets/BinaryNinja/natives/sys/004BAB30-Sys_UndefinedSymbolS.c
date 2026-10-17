@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UndefinedSymbolS (VA 0x004BAB30; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UndefinedSymbolS.h"
 int32_t Sys_UndefinedSymbolS(char* a1)
 

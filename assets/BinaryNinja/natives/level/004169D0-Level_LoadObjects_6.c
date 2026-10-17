@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_LoadObjects_6 (VA 0x004169D0; static CFG gate FAIL, CFG score 0.667).
 #include "Level_LoadObjects_6.h"
 char* Level_LoadObjects_6(char* a1)
 

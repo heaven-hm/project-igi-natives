@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_HandleInput_6 (VA 0x0040DE90; static CFG gate PASS, CFG score 0.889).
 #include "HumanPlayer_HandleInput_6.h"
 void** HumanPlayer_HandleInput_6(void* a1, void* a2)
 

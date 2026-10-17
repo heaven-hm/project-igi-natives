@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetDisplayMode_11 (VA 0x004966B0; static CFG gate PASS, CFG score 1.000).
 #include "Display_SetDisplayMode_11.h"
 int32_t* Display_SetDisplayMode_11(int32_t* a1, int32_t** a2)
 

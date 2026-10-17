@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_ProcessCouldntclearscre (VA 0x00492450; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_ProcessCouldntclearscre.h"
 
 int32_t*()

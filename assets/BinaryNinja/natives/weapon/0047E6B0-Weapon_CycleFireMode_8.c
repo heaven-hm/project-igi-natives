@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_CycleFireMode_8 (VA 0x0047E6B0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_CycleFireMode_8.h"
 uint32_t Weapon_CycleFireMode_8()
 

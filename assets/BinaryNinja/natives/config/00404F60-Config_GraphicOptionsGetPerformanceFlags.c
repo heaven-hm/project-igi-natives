@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsGetPerformanceFlags (VA 0x00404F60; static CFG gate PASS, CFG score 0.889).
 #include "Config_GraphicOptionsGetPerformanceFlags.h"
 int32_t Config_GraphicOptionsGetPerformanceFlags(int32_t a1)
 

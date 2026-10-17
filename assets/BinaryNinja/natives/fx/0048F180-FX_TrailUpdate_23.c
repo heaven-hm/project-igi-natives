@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_TrailUpdate_23 (VA 0x0048F180; static CFG gate PASS, CFG score 1.000).
 #include "FX_TrailUpdate_23.h"
 int32_t FX_TrailUpdate_23(int32_t a1, int32_t a2)
 

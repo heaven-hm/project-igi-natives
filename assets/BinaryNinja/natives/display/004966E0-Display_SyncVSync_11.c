@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_11 (VA 0x004966E0; static CFG gate PASS, CFG score 1.000).
 #include "Display_SyncVSync_11.h"
 int32_t __convention("regparm") Display_SyncVSync_11(int32_t a1, int32_t a2, int32_t a3, void* a4)
 

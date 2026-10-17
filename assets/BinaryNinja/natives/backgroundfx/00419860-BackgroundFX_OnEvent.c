@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BackgroundFX_OnEvent (VA 0x00419860; static CFG gate PASS, CFG score 1.000).
 #include "BackgroundFX_OnEvent.h"
 int32_t BackgroundFX_OnEvent(float a1 @ 0x8)
 

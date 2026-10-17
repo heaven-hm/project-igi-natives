@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerTextItem_Init (VA 0x0046B7F0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerTextItem_Init.h"
 int32_t ComputerTextItem_Init()
 

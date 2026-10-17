@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PointlightDynCubeObj_Update (VA 0x005314F0; static CFG gate PASS, CFG score 1.000).
 #include "PointlightDynCubeObj_Update.h"
 uint32_t PointlightDynCubeObj_Update()
 

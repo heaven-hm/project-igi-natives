@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_Setup (VA 0x00446AC0; static CFG gate PASS, CFG score 1.000).
 #include "Door_Setup.h"
 void* Door_Setup(void* a1)
 

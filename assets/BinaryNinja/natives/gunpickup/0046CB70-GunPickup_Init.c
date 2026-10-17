@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunPickup_Init (VA 0x0046CB70; static CFG gate PASS, CFG score 1.000).
 #include "GunPickup_Init.h"
 int32_t* GunPickup_Init()
 

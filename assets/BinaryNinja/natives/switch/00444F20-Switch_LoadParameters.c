@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_LoadParameters (VA 0x00444F20; static CFG gate PASS, CFG score 0.963).
 #include "Switch_LoadParameters.h"
 int32_t* Switch_LoadParameters(float a1)
 

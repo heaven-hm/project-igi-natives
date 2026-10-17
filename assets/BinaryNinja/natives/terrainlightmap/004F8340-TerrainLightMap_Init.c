@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TerrainLightMap_Init (VA 0x004F8340; static CFG gate PASS, CFG score 1.000).
 #include "TerrainLightMap_Init.h"
 int32_t* TerrainLightMap_Init()
 

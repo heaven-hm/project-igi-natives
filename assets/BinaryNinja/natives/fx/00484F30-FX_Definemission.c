@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_Definemission (VA 0x00484F30; static CFG gate FAIL, CFG score 0.833).
 #include "FX_Definemission.h"
 int32_t FX_Definemission()
 

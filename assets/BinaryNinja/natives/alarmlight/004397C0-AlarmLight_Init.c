@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmLight_Init (VA 0x004397C0; static CFG gate PASS, CFG score 1.000).
 #include "AlarmLight_Init.h"
 char* AlarmLight_Init()
 

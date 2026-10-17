@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ParseEnumReal32_25 (VA 0x004FA4E0; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumReal32_25.h"
 int32_t __convention("regparm") Script_ParseEnumReal32_25(int32_t a1, int32_t a2, int32_t a3, void* a4, char a5)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ForceAccumulator_Add (VA 0x004ECF50; static CFG gate FAIL, CFG score 0.667).
 #include "ForceAccumulator_Add.h"
 void* ForceAccumulator_Add(void* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_ActivateEntity_5 (VA 0x00444B30; static CFG gate FAIL, CFG score 0.833).
 #include "Env_ActivateEntity_5.h"
 double* Env_ActivateEntity_5(double* a1, double* a2, int32_t a3)
 

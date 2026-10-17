@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_RegisterEventCallback_3 (VA 0x00401FA0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_RegisterEventCallback_3.h"
 uint32_t QTask_RegisterEventCallback_3(int16_t a1, int32_t a2)
 

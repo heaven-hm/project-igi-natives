@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mine_Process (VA 0x00475D90; static CFG gate PASS, CFG score 1.000).
 #include "Mine_Process.h"
 int32_t Mine_Process(void* a1, int32_t a2)
 

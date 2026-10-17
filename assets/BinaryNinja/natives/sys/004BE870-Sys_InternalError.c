@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_InternalError (VA 0x004BE870; static CFG gate PASS, CFG score 1.000).
 #include "Sys_InternalError.h"
 int32_t Sys_InternalError(int32_t* a1)
 

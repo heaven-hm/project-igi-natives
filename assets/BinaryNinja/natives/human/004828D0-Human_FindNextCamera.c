@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_FindNextCamera (VA 0x004828D0; static CFG gate PASS, CFG score 1.000).
 #include "Human_FindNextCamera.h"
 void* Human_FindNextCamera(void* a1)
 

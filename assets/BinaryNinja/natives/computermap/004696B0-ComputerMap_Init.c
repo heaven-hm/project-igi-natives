@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerMap_Init (VA 0x004696B0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerMap_Init.h"
 void* ComputerMap_Init()
 

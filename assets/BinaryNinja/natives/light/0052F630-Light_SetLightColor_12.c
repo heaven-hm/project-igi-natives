@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SetLightColor_12 (VA 0x0052F630; static CFG gate FAIL, CFG score 0.815).
 #include "Light_SetLightColor_12.h"
 void* Light_SetLightColor_12(float* a1, void* a2, double* a3, void* a4, void* a5, int32_t a6)
 

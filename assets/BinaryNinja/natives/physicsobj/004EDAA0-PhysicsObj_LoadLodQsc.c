@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObj_LoadLodQsc (VA 0x004EDAA0; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsObj_LoadLodQsc.h"
 
 void* PhysicsObj_LoadLodQsc(void* pThis)

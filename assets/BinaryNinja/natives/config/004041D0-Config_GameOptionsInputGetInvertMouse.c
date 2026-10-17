@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GameOptionsInputGetInvertMouse (VA 0x004041D0; static CFG gate PASS, CFG score 0.889).
 #include "Config_GameOptionsInputGetInvertMouse.h"
 int32_t Config_GameOptionsInputGetInvertMouse(int32_t a1)
 

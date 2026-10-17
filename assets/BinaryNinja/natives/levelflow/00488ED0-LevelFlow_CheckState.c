@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_CheckState (VA 0x00488ED0; static CFG gate PASS, CFG score 1.000).
 #include "LevelFlow_CheckState.h"
 
 int32_t* LevelFlow_CheckState(void* pThis)

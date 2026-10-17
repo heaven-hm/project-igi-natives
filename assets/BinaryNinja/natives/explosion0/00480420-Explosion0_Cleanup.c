@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Explosion0_Cleanup (VA 0x00480420; static CFG gate PASS, CFG score 1.000).
 #include "Explosion0_Cleanup.h"
 int32_t Explosion0_Cleanup(int32_t a1)
 

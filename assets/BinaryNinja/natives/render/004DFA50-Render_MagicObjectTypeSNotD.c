@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_MagicObjectTypeSNotD (VA 0x004DFA50; static CFG gate PASS, CFG score 0.861).
 #include "Render_MagicObjectTypeSNotD.h"
 int32_t* Render_MagicObjectTypeSNotD(void* a1)
 

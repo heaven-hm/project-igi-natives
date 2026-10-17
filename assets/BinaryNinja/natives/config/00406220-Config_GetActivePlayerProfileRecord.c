@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GetActivePlayerProfileRecord (VA 0x00406220; static CFG gate PASS, CFG score 1.000).
 #include "Config_GetActivePlayerProfileRecord.h"
 void* Config_GetActivePlayerProfileRecord()
 

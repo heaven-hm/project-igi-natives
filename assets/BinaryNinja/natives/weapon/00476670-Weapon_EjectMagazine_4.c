@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EjectMagazine_4 (VA 0x00476670; static CFG gate PASS, CFG score 0.926).
 #include "Weapon_EjectMagazine_4.h"
 struct status_msg* Weapon_EjectMagazine_4(void* a1, void* a2, void* a3, int32_t a4, int32_t a5, int32_t* a6, char* a7, int32_t a8, int32_t a9)
 

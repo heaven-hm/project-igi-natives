@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_TriggerAlarm_12 (VA 0x0044C830; static CFG gate PASS, CFG score 1.000).
 #include "Env_TriggerAlarm_12.h"
 struct status_msg* Env_TriggerAlarm_12(void* a1)
 

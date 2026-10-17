@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelScript_Execute (VA 0x0052C7C0; static CFG gate PASS, CFG score 1.000).
 #include "LevelScript_Execute.h"
 
 void* LevelScript_Execute(void* pThis)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmLight_Cleanup_2 (VA 0x00439B70; static CFG gate FAIL, CFG score 0.833).
 #include "AlarmLight_Cleanup_2.h"
 int32_t AlarmLight_Cleanup_2(float a1)
 

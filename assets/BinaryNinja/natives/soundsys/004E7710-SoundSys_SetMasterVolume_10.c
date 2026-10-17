@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetMasterVolume_10 (VA 0x004E7710; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetMasterVolume_10.h"
 void SoundSys_SetMasterVolume_10(int32_t* a1, char* a2)
 

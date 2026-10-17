@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_6 (VA 0x00492230; static CFG gate FAIL, CFG score 0.667).
 #include "Display_SyncVSync_6.h"
 int32_t __stdcall Display_SyncVSync_6(void* a1 @ 0xc, void* a2)
 

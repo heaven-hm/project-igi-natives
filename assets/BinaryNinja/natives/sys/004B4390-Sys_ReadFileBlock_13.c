@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ReadFileBlock_13 (VA 0x004B4390; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_ReadFileBlock_13.h"
 int32_t Sys_ReadFileBlock_13(int32_t a1, float a2)
 

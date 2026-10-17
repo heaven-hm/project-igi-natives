@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_FadeParticles (VA 0x00530580; static CFG gate PASS, CFG score 1.000).
 #include "Particle_FadeParticles.h"
 int32_t Particle_FadeParticles(int32_t a1, int16_t a2, int16_t a3)
 

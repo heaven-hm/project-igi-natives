@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Lensflare_LoadParameters (VA 0x00520F50; static CFG gate PASS, CFG score 1.000).
 #include "Lensflare_LoadParameters.h"
 void* Lensflare_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PatrolPathCommand_Update (VA 0x004534B0; static CFG gate PASS, CFG score 1.000).
 #include "PatrolPathCommand_Update.h"
 void PatrolPathCommand_Update(void* a1)
 

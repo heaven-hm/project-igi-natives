@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_UpdatePatrol_23 (VA 0x00464800; static CFG gate PASS, CFG score 0.889).
 #include "AI_UpdatePatrol_23.h"
 float AI_UpdatePatrol_23(float a1, float a2) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_Init (VA 0x0042ACC0; static CFG gate PASS, CFG score 1.000).
 #include "Train_Init.h"
 int32_t* Train_Init()
 

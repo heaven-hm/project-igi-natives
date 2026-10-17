@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_LinkEventHandler (VA 0x004012F0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_LinkEventHandler.h"
 int32_t* QTask_LinkEventHandler(int32_t a1, int16_t a2)
 

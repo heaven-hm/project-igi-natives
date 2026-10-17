@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerMenu_LoadParameters (VA 0x0046AC30; static CFG gate PASS, CFG score 1.000).
 #include "ComputerMenu_LoadParameters.h"
 void* ComputerMenu_LoadParameters(float a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_Action (VA 0x0045E3E0; static CFG gate PASS, CFG score 1.000).
 #include "Human_Action.h"
 void Human_Action(void* a1, char* a2)
 

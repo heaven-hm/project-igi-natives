@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RotatingObject_Init (VA 0x00438DF0; static CFG gate PASS, CFG score 1.000).
 #include "RotatingObject_Init.h"
 int32_t* RotatingObject_Init()
 

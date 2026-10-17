@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Read (VA 0x00405850; static CFG gate PASS, CFG score 1.000).
 #include "Config_Read.h"
 int32_t Config_Read(void* a1)
 

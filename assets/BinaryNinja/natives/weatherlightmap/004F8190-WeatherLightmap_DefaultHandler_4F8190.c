@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherLightmap_DefaultHandler_4F8190 (VA 0x004F8190; static CFG gate PASS, CFG score 1.000).
 #include "WeatherLightmap_DefaultHandler_4F8190.h"
 
 int32_t(void* arg1)

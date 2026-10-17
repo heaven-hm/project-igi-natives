@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlashBang_LoadParameters (VA 0x0047E790; static CFG gate PASS, CFG score 0.917).
 #include "FlashBang_LoadParameters.h"
 struct status_msg* FlashBang_LoadParameters(void* a1)
 

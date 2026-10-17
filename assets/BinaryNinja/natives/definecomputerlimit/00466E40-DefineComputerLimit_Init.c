@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineComputerLimit_Init (VA 0x00466E40; static CFG gate PASS, CFG score 1.000).
 #include "DefineComputerLimit_Init.h"
 int32_t* DefineComputerLimit_Init()
 

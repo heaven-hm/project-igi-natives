@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCameraControl_Init (VA 0x00440C20; static CFG gate PASS, CFG score 1.000).
 #include "SCameraControl_Init.h"
 int32_t* SCameraControl_Init()
 

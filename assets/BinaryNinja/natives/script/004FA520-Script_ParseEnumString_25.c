@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ParseEnumString_25 (VA 0x004FA520; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumString_25.h"
 int32_t __convention("regparm") Script_ParseEnumString_25(int32_t a1, int32_t a2, int32_t a3, void* a4, char a5)
 

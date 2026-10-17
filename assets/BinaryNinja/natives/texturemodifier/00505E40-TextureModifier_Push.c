@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextureModifier_Push (VA 0x00505E40; static CFG gate PASS, CFG score 1.000).
 #include "TextureModifier_Push.h"
 
 void* TextureModifier_Push(void* pThis)

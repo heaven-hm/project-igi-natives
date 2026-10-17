@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_UpdateGlobalLight_12 (VA 0x0052E660; static CFG gate FAIL, CFG score 0.849).
 #include "Light_UpdateGlobalLight_12.h"
 float Light_UpdateGlobalLight_12(float a1, int32_t* a2, int32_t a3 @ 0x110, int32_t a4, int32_t a5) __location("valA")
 

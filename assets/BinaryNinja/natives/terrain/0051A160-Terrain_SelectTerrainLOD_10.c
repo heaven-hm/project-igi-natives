@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_SelectTerrainLOD_10 (VA 0x0051A160; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SelectTerrainLOD_10.h"
 int32_t Terrain_SelectTerrainLOD_10(float a1, int32_t a2)
 

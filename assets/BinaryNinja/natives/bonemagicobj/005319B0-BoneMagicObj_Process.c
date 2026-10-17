@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneMagicObj_Process (VA 0x005319B0; static CFG gate FAIL, CFG score 0.833).
 #include "BoneMagicObj_Process.h"
 void* BoneMagicObj_Process(void* a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditVariable_Init (VA 0x00488800; static CFG gate PASS, CFG score 1.000).
 #include "EditVariable_Init.h"
 int32_t* EditVariable_Init()
 

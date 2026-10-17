@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_333333333 (VA 0x0044A1D0; static CFG gate PASS, CFG score 0.917).
 #include "Env_333333333.h"
 struct status_msg* Env_333333333(uint32_t a1, int32_t* a2, double* a3, float* a4, void* a5)
 

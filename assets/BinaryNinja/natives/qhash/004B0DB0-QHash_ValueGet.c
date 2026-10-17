@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QHash_ValueGet (VA 0x004B0DB0; static CFG gate PASS, CFG score 1.000).
 #include "QHash_ValueGet.h"
 int32_t QHash_ValueGet()
 

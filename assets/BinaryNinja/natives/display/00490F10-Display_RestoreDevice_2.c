@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_RestoreDevice_2 (VA 0x00490F10; static CFG gate PASS, CFG score 1.000).
 #include "Display_RestoreDevice_2.h"
 int32_t Display_RestoreDevice_2(float a1)
 

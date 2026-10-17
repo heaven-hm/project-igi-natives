@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CouldnTSetViewport (VA 0x00497A00; static CFG gate PASS, CFG score 0.973).
 #include "Display_CouldnTSetViewport.h"
 int32_t Display_CouldnTSetViewport(void** a1)
 

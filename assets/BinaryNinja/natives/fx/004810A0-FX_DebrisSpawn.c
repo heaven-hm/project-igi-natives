@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_DebrisSpawn (VA 0x004810A0; static CFG gate PASS, CFG score 0.933).
 #include "FX_DebrisSpawn.h"
 struct status_msg* FX_DebrisSpawn(int32_t a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, int32_t a7, uint32_t a8, uint32_t a9, int32_t* a10, int32_t a11, int32_t a12, int32_t* a13, int32_t a14, int32_t a15, int32_t* a16, uint32_t a17, uint32_t a18, uint32_t a19, uint32_t a20)
 

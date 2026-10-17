@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_Watermesh (VA 0x0052DD70; static CFG gate PASS, CFG score 1.000).
 #include "Light_Watermesh.h"
 int32_t Light_Watermesh()
 

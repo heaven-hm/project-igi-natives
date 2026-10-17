@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_FireWeapon_24 (VA 0x00466240; static CFG gate PASS, CFG score 1.000).
 #include "AI_FireWeapon_24.h"
 struct status_msg* AI_FireWeapon_24(uint32_t a1, uint32_t a2, int32_t a3, void** a4, int32_t* a5, int32_t* a6, uint32_t a7)
 

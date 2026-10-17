@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_ParseConfigFile_12 (VA 0x004CE910; static CFG gate PASS, CFG score 0.917).
 #include "DynObj_ParseConfigFile_12.h"
 int32_t* DynObj_ParseConfigFile_12(int32_t a1, int32_t* a2, int32_t a3, int32_t a4)
 

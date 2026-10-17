@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wheel_Process (VA 0x00430170; static CFG gate PASS, CFG score 1.000).
 #include "Wheel_Process.h"
 void* Wheel_Process(void* a1)
 

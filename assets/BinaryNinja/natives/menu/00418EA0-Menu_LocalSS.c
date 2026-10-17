@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_LocalSS (VA 0x00418EA0; static CFG gate PASS, CFG score 0.939).
 #include "Menu_LocalSS.h"
 int32_t* Menu_LocalSS(void* a1, int32_t a2)
 

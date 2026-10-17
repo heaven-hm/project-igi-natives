@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_PostLoad (VA 0x004F63C0; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_PostLoad.h"
 int32_t CutScene_PostLoad(void* a1, char* a2)
 

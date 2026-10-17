@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GraphNode_Init (VA 0x00518760; static CFG gate PASS, CFG score 1.000).
 #include "GraphNode_Init.h"
 int32_t* GraphNode_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_UpdateRudder_3 (VA 0x00433530; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_UpdateRudder_3.h"
 float Vehicle_UpdateRudder_3(float a1) __location("valA")
 

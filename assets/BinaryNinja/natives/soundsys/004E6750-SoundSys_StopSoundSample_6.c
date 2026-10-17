@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_StopSoundSample_6 (VA 0x004E6750; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_StopSoundSample_6.h"
 int32_t SoundSys_StopSoundSample_6(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObjType_ParseConfigFile (VA 0x004EDFE0; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsObjType_ParseConfigFile.h"
 char* PhysicsObjType_ParseConfigFile(char* a1)
 

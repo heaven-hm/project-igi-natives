@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Task_DeclareParameters (VA 0x004F0740; static CFG gate FAIL, CFG score 0.667).
 #include "Task_DeclareParameters.h"
 int32_t Task_DeclareParameters(int32_t a1)
 

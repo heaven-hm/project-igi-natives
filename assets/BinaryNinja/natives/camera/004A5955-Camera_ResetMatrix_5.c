@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_5 (VA 0x004A5955; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_5.h"
 🌐  int32_t _test_whether_TOS_is_int(long double a1 @ fp0)
 

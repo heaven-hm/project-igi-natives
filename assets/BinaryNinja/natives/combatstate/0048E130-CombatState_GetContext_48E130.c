@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CombatState_GetContext_48E130 (VA 0x0048E130; static CFG gate PASS, CFG score 1.000).
 #include "CombatState_GetContext_48E130.h"
 
 void*(void* arg1 )

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Afterburner_LoadParameters (VA 0x0042BC30; static CFG gate PASS, CFG score 0.889).
 #include "Afterburner_LoadParameters.h"
 int32_t* Afterburner_LoadParameters(int32_t* a1, float a2)
 

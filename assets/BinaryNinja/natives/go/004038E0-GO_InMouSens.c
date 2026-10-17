@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_InMouSens (VA 0x004038E0; static CFG gate FAIL, CFG score 0.833).
 #include "GO_InMouSens.h"
 int32_t GO_InMouSens(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

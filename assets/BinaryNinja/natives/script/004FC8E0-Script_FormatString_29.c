@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_FormatString_29 (VA 0x004FC8E0; static CFG gate PASS, CFG score 1.000).
 #include "Script_FormatString_29.h"
 float Script_FormatString_29(float a1, float* a2, float a3, float* a4, float a5, float a6 @ 0x1c) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CamTask_OnTick (VA 0x005302D0; static CFG gate PASS, CFG score 1.000).
 #include "CamTask_OnTick.h"
 int32_t CamTask_OnTick(int32_t a1 @ 0x8, int32_t* a2, int32_t* a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_Dead (VA 0x0044D260; static CFG gate PASS, CFG score 0.889).
 #include "AIAction_Dead.h"
 int32_t AIAction_Dead(int32_t a1, float a2 @ 0xc)
 

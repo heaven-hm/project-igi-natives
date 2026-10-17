@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_GetContext (VA 0x00402880; static CFG gate PASS, CFG score 1.000).
 #include "Game_GetContext.h"
 struct frames_ctx* Game_GetContext()
 

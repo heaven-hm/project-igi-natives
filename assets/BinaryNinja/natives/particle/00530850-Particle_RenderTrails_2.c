@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle_RenderTrails_2 (VA 0x00530850; static CFG gate PASS, CFG score 1.000).
 #include "Particle_RenderTrails_2.h"
 int32_t* Particle_RenderTrails_2(int32_t* a1, int32_t a2, int32_t* a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RadarDish_LoadParameters (VA 0x00448E30; static CFG gate FAIL, CFG score 0.833).
 #include "RadarDish_LoadParameters.h"
 void* RadarDish_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldierRPG_Update (VA 0x00457430; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldierRPG_Update.h"
 uint32_t HumanSoldierRPG_Update(void* a1, float a2)
 

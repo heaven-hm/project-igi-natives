@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_Action (VA 0x00401230; static CFG gate PASS, CFG score 1.000).
 #include "QTask_Action.h"
 void QTask_Action()
 

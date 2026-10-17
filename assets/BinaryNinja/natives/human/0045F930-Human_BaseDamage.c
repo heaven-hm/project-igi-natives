@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_BaseDamage (VA 0x0045F930; static CFG gate PASS, CFG score 1.000).
 #include "Human_BaseDamage.h"
 int32_t Human_BaseDamage(void* a1, int32_t* a2)
 

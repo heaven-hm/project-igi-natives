@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_Action (VA 0x00447A90; static CFG gate PASS, CFG score 1.000).
 #include "Door_Action.h"
 int32_t Door_Action(void* a1)
 

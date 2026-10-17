@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Dirlight_Setup (VA 0x005271E0; static CFG gate PASS, CFG score 1.000).
 #include "Dirlight_Setup.h"
 int32_t Dirlight_Setup(void* a1)
 

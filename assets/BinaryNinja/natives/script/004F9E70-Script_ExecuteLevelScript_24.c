@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ExecuteLevelScript_24 (VA 0x004F9E70; static CFG gate PASS, CFG score 1.000).
 #include "Script_ExecuteLevelScript_24.h"
 int32_t Script_ExecuteLevelScript_24(char* a1)
 

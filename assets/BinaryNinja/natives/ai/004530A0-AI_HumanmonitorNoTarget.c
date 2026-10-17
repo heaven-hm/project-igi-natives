@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_HumanmonitorNoTarget (VA 0x004530A0; static CFG gate PASS, CFG score 1.000).
 #include "AI_HumanmonitorNoTarget.h"
 int32_t* AI_HumanmonitorNoTarget(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Explosion0_Process (VA 0x004805F0; static CFG gate PASS, CFG score 0.944).
 #include "Explosion0_Process.h"
 int32_t Explosion0_Process(float a1)
 

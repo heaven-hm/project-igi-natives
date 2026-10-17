@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_SteerHuman (VA 0x00451540; static CFG gate PASS, CFG score 0.985).
 #include "AI_SteerHuman.h"
 int32_t AI_SteerHuman(long double a1 @ fp0, long double a2 @ fp1, void* a3)
 

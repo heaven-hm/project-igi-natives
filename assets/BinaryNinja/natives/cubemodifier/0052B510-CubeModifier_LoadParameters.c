@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CubeModifier_LoadParameters (VA 0x0052B510; static CFG gate FAIL, CFG score 0.667).
 #include "CubeModifier_LoadParameters.h"
 int32_t CubeModifier_LoadParameters(int32_t a1)
 

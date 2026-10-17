@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_AttachLipsync_7 (VA 0x004E6CE0; static CFG gate FAIL, CFG score 0.667).
 #include "SoundSys_AttachLipsync_7.h"
 int32_t SoundSys_AttachLipsync_7(void* a1, char a2)
 

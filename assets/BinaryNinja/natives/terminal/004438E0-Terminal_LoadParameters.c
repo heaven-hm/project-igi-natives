@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terminal_LoadParameters (VA 0x004438E0; static CFG gate PASS, CFG score 1.000).
 #include "Terminal_LoadParameters.h"
 char Terminal_LoadParameters(int80_t a1 @ fp0, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_BindTexture_9 (VA 0x004D6130; static CFG gate PASS, CFG score 1.000).
 #include "Render_BindTexture_9.h"
 int32_t Render_BindTexture_9(float a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, float a7)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_OnEvent (VA 0x00445730; static CFG gate PASS, CFG score 1.000).
 #include "Switch_OnEvent.h"
 int32_t Switch_OnEvent(double* a1, void* a2)
 

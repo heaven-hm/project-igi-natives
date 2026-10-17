@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DrawBandFilter (VA 0x004A3940; static CFG gate PASS, CFG score 1.000).
 #include "DrawBandFilter.h"
 float DrawBandFilter(int32_t* a1) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_SimulateRigidBody_12 (VA 0x0050BC00; static CFG gate FAIL, CFG score 0.667).
 #include "Physics_SimulateRigidBody_12.h"
 int32_t __stdcall Physics_SimulateRigidBody_12(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mine_LoadParameters (VA 0x00475C10; static CFG gate PASS, CFG score 1.000).
 #include "Mine_LoadParameters.h"
 int32_t Mine_LoadParameters(void* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_Init (VA 0x004FAA60; static CFG gate PASS, CFG score 1.000).
 #include "Graph_Init.h"
 void* Graph_Init()
 

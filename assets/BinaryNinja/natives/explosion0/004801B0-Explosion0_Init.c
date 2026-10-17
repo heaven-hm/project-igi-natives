@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Explosion0_Init (VA 0x004801B0; static CFG gate PASS, CFG score 1.000).
 #include "Explosion0_Init.h"
 char* Explosion0_Init()
 

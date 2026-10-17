@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ComputeNormals_12 (VA 0x004DA180; static CFG gate FAIL, CFG score 0.667).
 #include "Render_ComputeNormals_12.h"
 int32_t Render_ComputeNormals_12(void** a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Siren_Process (VA 0x00449710; static CFG gate PASS, CFG score 1.000).
 #include "Siren_Process.h"
 int32_t Siren_Process(void* a1)
 

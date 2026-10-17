@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GlobalLight_Init (VA 0x00527C90; static CFG gate PASS, CFG score 1.000).
 #include "GlobalLight_Init.h"
 int32_t* GlobalLight_Init()
 

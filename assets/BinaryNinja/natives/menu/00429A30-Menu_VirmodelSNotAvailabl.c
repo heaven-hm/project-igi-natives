@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_VirmodelSNotAvailabl (VA 0x00429A30; static CFG gate PASS, CFG score 0.943).
 #include "Menu_VirmodelSNotAvailabl.h"
 struct status_msg* Menu_VirmodelSNotAvailabl(void* a1, void* a2, void* a3, double* a4, void* a5, float a6, double* a7, void* a8, char* a9, int32_t a10)
 

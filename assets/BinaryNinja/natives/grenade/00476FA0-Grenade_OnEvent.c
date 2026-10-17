@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Grenade_OnEvent (VA 0x00476FA0; static CFG gate PASS, CFG score 1.000).
 #include "Grenade_OnEvent.h"
 struct status_msg* Grenade_OnEvent(int32_t* a1 @ 0x8)
 

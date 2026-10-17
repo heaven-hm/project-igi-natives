@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunCABarrel_LoadParameters (VA 0x004727F0; static CFG gate PASS, CFG score 0.857).
 #include "GunCABarrel_LoadParameters.h"
 int32_t* GunCABarrel_LoadParameters(void* a1, int32_t* a2)
 

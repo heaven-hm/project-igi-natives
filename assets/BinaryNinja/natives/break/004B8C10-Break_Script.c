@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Break_Script (VA 0x004B8C10; static CFG gate FAIL, CFG score 0.667).
 #include "Break_Script.h"
 int32_t Break_Script(int32_t a1)
 

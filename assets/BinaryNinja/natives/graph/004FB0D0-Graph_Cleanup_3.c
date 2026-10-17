@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_Cleanup_3 (VA 0x004FB0D0; static CFG gate PASS, CFG score 1.000).
 #include "Graph_Cleanup_3.h"
 int32_t* Graph_Cleanup_3(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_Setup (VA 0x0041C080; static CFG gate PASS, CFG score 1.000).
 #include "ScrollListBox_Setup.h"
 int32_t ScrollListBox_Setup(int32_t a1)
 

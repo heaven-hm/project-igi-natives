@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyLineFilter_3 (VA 0x004A5000; static CFG gate FAIL, CFG score 0.667).
 #include "Camera_ApplyLineFilter_3.h"
 int32_t Camera_ApplyLineFilter_3(int32_t a1 @ flagP, int32_t a2 @ srcS, int32_t a3 @ dstD, int32_t* a4, int32_t a5, struct _EXCEPTION_REGISTRATION_RECORD* a6, int32_t a7)
 

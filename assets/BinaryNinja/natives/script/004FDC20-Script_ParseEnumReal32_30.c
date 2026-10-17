@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ParseEnumReal32_30 (VA 0x004FDC20; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumReal32_30.h"
 long double Script_ParseEnumReal32_30(void* a1)
 

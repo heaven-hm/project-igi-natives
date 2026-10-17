@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuScreen_Setup (VA 0x00421A10; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_Setup.h"
 int32_t MenuScreen_Setup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Fence_OnEvent (VA 0x004400C0; static CFG gate PASS, CFG score 1.000).
 #include "Fence_OnEvent.h"
 int32_t Fence_OnEvent(void* a1, void* a2)
 

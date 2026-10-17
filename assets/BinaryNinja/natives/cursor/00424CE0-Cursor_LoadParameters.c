@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cursor_LoadParameters (VA 0x00424CE0; static CFG gate PASS, CFG score 1.000).
 #include "Cursor_LoadParameters.h"
 int32_t Cursor_LoadParameters(void* a1)
 

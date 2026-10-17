@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TransparencyList_Setup (VA 0x00532030; static CFG gate PASS, CFG score 1.000).
 #include "TransparencyList_Setup.h"
 int32_t* TransparencyList_Setup(int32_t* a1)
 

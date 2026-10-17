@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_MoveToNode_17 (VA 0x0045F580; static CFG gate PASS, CFG score 1.000).
 #include "AI_MoveToNode_17.h"
 int32_t AI_MoveToNode_17(void* a1, double* a2, double* a3, int32_t a4)
 

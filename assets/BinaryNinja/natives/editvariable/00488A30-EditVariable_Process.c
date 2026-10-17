@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditVariable_Process (VA 0x00488A30; static CFG gate PASS, CFG score 1.000).
 #include "EditVariable_Process.h"
 char* EditVariable_Process(void* a1)
 

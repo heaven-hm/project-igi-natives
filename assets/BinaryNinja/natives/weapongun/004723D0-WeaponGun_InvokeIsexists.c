@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponGun_InvokeIsexists (VA 0x004723D0; static CFG gate PASS, CFG score 1.000).
 #include "WeaponGun_InvokeIsexists.h"
 
 int32_t*(int32_t* arg1 )

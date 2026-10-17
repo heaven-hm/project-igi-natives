@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_Setup (VA 0x0043F360; static CFG gate PASS, CFG score 1.000).
 #include "Wire_Setup.h"
 void* Wire_Setup(void* a1)
 

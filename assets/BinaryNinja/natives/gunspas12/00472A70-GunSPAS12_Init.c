@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunSPAS12_Init (VA 0x00472A70; static CFG gate PASS, CFG score 1.000).
 #include "GunSPAS12_Init.h"
 void* GunSPAS12_Init()
 

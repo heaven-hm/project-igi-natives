@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_MagicObj (VA 0x004C4520; static CFG gate PASS, CFG score 1.000).
 #include "Define_MagicObj.h"
 int32_t Define_MagicObj(int32_t a1, float a2 @ 0xc)
 

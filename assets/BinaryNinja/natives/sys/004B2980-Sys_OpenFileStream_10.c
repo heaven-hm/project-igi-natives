@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_OpenFileStream_10 (VA 0x004B2980; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_10.h"
 long double Sys_OpenFileStream_10(float* a1, float* a2)
 

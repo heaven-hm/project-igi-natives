@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusMessageScreen_Init (VA 0x00485A40; static CFG gate PASS, CFG score 1.000).
 #include "StatusMessageScreen_Init.h"
 void* StatusMessageScreen_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_FallFlat (VA 0x0044D2C0; static CFG gate PASS, CFG score 0.929).
 #include "AIAction_FallFlat.h"
 int32_t AIAction_FallFlat(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

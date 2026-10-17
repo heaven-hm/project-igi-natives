@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_Setup (VA 0x0042A150; static CFG gate PASS, CFG score 1.000).
 #include "Train_Setup.h"
 int32_t Train_Setup(void* a1, char* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSysController_SetParent (VA 0x004E6000; static CFG gate PASS, CFG score 1.000).
 #include "SoundSysController_SetParent.h"
 
 int32_t SoundSysController_SetParent(int32_t pThis, int32_t param)

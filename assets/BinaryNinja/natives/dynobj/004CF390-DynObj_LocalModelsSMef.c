@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_LocalModelsSMef (VA 0x004CF390; static CFG gate PASS, CFG score 0.991).
 #include "DynObj_LocalModelsSMef.h"
 int32_t* DynObj_LocalModelsSMef(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineComputerObjective_Init (VA 0x00466F70; static CFG gate PASS, CFG score 1.000).
 #include "DefineComputerObjective_Init.h"
 int32_t* DefineComputerObjective_Init()
 

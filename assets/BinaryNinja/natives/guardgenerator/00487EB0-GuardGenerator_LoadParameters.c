@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GuardGenerator_LoadParameters (VA 0x00487EB0; static CFG gate PASS, CFG score 1.000).
 #include "GuardGenerator_LoadParameters.h"
 int32_t GuardGenerator_LoadParameters(void* a1)
 

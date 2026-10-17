@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GlowTask_Update (VA 0x004E94E0; static CFG gate PASS, CFG score 1.000).
 #include "GlowTask_Update.h"
 uint32_t GlowTask_Update()
 

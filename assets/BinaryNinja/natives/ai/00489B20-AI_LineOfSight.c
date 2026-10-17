@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_LineOfSight (VA 0x00489B20; static CFG gate PASS, CFG score 1.000).
 #include "AI_LineOfSight.h"
 int32_t AI_LineOfSight(float a1, double* a2, int32_t a3, double* a4)
 

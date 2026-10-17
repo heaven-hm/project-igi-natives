@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericTBA_LoadParameters (VA 0x004480B0; static CFG gate PASS, CFG score 1.000).
 #include "GenericTBA_LoadParameters.h"
 char GenericTBA_LoadParameters(int80_t a1 @ fp0, void* a2)
 

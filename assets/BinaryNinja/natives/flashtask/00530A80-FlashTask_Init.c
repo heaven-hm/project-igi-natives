@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlashTask_Init (VA 0x00530A80; static CFG gate PASS, CFG score 1.000).
 #include "FlashTask_Init.h"
 int32_t FlashTask_Init()
 

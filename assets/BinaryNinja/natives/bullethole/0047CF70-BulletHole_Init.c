@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BulletHole_Init (VA 0x0047CF70; static CFG gate PASS, CFG score 1.000).
 #include "BulletHole_Init.h"
 int32_t BulletHole_Init()
 

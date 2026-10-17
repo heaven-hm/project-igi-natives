@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SaveGraphicOptions (VA 0x00405300; static CFG gate PASS, CFG score 0.952).
 #include "Config_SaveGraphicOptions.h"
 int32_t Config_SaveGraphicOptions()
 

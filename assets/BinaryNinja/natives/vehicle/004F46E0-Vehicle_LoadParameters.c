@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_LoadParameters (VA 0x004F46E0; static CFG gate FAIL, CFG score 0.667).
 #include "Vehicle_LoadParameters.h"
 int32_t* Vehicle_LoadParameters(void* a1, int32_t* a2)
 

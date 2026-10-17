@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_SkinBones_8 (VA 0x004D4B60; static CFG gate PASS, CFG score 1.000).
 #include "Render_SkinBones_8.h"
 float Render_SkinBones_8(int32_t a1, float a2, float a3, float a4) __location("valA")
 

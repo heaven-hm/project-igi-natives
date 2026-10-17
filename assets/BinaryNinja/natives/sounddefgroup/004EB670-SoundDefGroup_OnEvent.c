@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGroup_OnEvent (VA 0x004EB670; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefGroup_OnEvent.h"
 int32_t SoundDefGroup_OnEvent(void* a1, int32_t* a2)
 

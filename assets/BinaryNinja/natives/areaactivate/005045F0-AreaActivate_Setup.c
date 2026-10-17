@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AreaActivate_Setup (VA 0x005045F0; static CFG gate FAIL, CFG score 0.750).
 #include "AreaActivate_Setup.h"
 int32_t AreaActivate_Setup(void* a1)
 

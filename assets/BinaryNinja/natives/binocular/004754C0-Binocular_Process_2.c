@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_Process_2 (VA 0x004754C0; static CFG gate FAIL, CFG score 0.833).
 #include "Binocular_Process_2.h"
 int32_t Binocular_Process_2(float a1, int32_t* a2)
 

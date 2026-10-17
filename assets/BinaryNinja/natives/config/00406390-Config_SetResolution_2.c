@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SetResolution_2 (VA 0x00406390; static CFG gate PASS, CFG score 0.963).
 #include "Config_SetResolution_2.h"
 int32_t __fastcall Config_SetResolution_2(int32_t a1)
 

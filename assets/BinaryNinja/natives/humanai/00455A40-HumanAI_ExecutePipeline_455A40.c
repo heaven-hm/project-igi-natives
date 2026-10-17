@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_ExecutePipeline_455A40 (VA 0x00455A40; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_ExecutePipeline_455A40.h"
 
 void*(void* arg1, int32_t arg2)

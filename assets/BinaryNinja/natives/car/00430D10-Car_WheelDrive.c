@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_WheelDrive (VA 0x00430D10; static CFG gate PASS, CFG score 1.000).
 #include "Car_WheelDrive.h"
 void* Car_WheelDrive(float* a1, float a2, float a3)
 

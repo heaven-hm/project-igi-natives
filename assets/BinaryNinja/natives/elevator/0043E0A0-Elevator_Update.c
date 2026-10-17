@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Elevator_Update (VA 0x0043E0A0; static CFG gate PASS, CFG score 1.000).
 #include "Elevator_Update.h"
 int32_t Elevator_Update(void* a1)
 

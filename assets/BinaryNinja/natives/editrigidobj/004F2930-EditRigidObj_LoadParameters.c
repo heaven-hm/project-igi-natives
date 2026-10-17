@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_LoadParameters (VA 0x004F2930; static CFG gate PASS, CFG score 0.905).
 #include "EditRigidObj_LoadParameters.h"
 int32_t EditRigidObj_LoadParameters(int32_t* a1)
 

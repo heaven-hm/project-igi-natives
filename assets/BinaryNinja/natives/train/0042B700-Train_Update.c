@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_Update (VA 0x0042B700; static CFG gate PASS, CFG score 1.000).
 #include "Train_Update.h"
 uint32_t Train_Update(int80_t a1 @ fp0, void* a2)
 

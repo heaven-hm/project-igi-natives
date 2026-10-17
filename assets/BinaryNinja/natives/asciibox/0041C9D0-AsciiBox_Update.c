@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AsciiBox_Update (VA 0x0041C9D0; static CFG gate PASS, CFG score 1.000).
 #include "AsciiBox_Update.h"
 int32_t* AsciiBox_Update(void* a1)
 

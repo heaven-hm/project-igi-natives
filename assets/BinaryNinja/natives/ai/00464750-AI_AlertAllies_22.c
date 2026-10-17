@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_AlertAllies_22 (VA 0x00464750; static CFG gate PASS, CFG score 1.000).
 #include "AI_AlertAllies_22.h"
 void* AI_AlertAllies_22(void* a1)
 

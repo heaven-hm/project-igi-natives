@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalSound_LoadParameters (VA 0x00425050; static CFG gate FAIL, CFG score 0.833).
 #include "ConditionalSound_LoadParameters.h"
 int32_t ConditionalSound_LoadParameters(void* a1)
 

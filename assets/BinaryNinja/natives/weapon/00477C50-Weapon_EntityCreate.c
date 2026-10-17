@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_EntityCreate (VA 0x00477C50; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_EntityCreate.h"
 struct status_msg* Weapon_EntityCreate(void* a1, int16_t a2, int32_t* a3, int32_t a4, char a5)
 

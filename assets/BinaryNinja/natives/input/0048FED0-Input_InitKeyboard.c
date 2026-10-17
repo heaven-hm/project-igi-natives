@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Input_InitKeyboard (VA 0x0048FED0; static CFG gate PASS, CFG score 1.000).
 #include "Input_InitKeyboard.h"
 
 int32_t Input_InitKeyboard(int32_t pThis @ 0x8, int32_t param)

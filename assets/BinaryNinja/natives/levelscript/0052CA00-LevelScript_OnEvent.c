@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelScript_OnEvent (VA 0x0052CA00; static CFG gate PASS, CFG score 1.000).
 #include "LevelScript_OnEvent.h"
 int32_t LevelScript_OnEvent()
 

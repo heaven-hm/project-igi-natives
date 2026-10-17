@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CombatTarget_13 (VA 0x0045AB00; static CFG gate PASS, CFG score 1.000).
 #include "AI_CombatTarget_13.h"
 int32_t AI_CombatTarget_13(void* a1, void* a2)
 

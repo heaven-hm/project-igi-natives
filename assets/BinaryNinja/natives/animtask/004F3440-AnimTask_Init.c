@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimTask_Init (VA 0x004F3440; static CFG gate PASS, CFG score 1.000).
 #include "AnimTask_Init.h"
 int32_t AnimTask_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlashBang_Init (VA 0x0047E700; static CFG gate PASS, CFG score 1.000).
 #include "FlashBang_Init.h"
 char* FlashBang_Init()
 

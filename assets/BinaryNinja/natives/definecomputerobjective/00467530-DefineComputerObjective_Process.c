@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineComputerObjective_Process (VA 0x00467530; static CFG gate PASS, CFG score 1.000).
 #include "DefineComputerObjective_Process.h"
 int32_t DefineComputerObjective_Process(void* a1)
 

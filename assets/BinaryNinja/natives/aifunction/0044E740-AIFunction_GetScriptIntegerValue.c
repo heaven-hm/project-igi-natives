@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetScriptIntegerValue (VA 0x0044E740; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_GetScriptIntegerValue.h"
 int32_t AIFunction_GetScriptIntegerValue(int32_t a1, int32_t a2 @ 0xc)
 

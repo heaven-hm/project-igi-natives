@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_RequestScreen_20 (VA 0x00428B60; static CFG gate FAIL, CFG score 0.833).
 #include "Menu_RequestScreen_20.h"
 int32_t Menu_RequestScreen_20(long double a1 @ fp0, long double a2 @ fp1, void* a3, double* a4)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HealthFraction (VA 0x00460400; static CFG gate PASS, CFG score 1.000).
 #include "HealthFraction.h"
 int32_t HealthFraction(int32_t a1, int32_t* a2)
 

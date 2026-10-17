@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_TriggerAlarm_13 (VA 0x0044FE50; static CFG gate PASS, CFG score 1.000).
 #include "Env_TriggerAlarm_13.h"
 int32_t Env_TriggerAlarm_13(void* a1, void** a2)
 

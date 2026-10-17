@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineAnimTrigger (VA 0x004EBEB0; static CFG gate PASS, CFG score 1.000).
 #include "DefineAnimTrigger.h"
 int32_t DefineAnimTrigger(int32_t a1, float a2 @ 0xc)
 

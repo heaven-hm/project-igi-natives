@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPickup_LoadParameters (VA 0x0046C3C0; static CFG gate PASS, CFG score 1.000).
 #include "GenericPickup_LoadParameters.h"
 int32_t GenericPickup_LoadParameters(void* a1)
 

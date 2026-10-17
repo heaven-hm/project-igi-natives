@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_AiDeath_2 (VA 0x00459520; static CFG gate PASS, CFG score 1.000).
 #include "AI_AiDeath_2.h"
 void* AI_AiDeath_2(void* a1, void* a2)
 

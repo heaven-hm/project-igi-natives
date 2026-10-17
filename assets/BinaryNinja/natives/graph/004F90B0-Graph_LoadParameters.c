@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Graph_LoadParameters (VA 0x004F90B0; static CFG gate PASS, CFG score 0.905).
 #include "Graph_LoadParameters.h"
 int32_t* Graph_LoadParameters(void* a1)
 

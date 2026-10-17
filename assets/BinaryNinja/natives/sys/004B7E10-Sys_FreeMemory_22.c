@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_22 (VA 0x004B7E10; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_22.h"
 int32_t Sys_FreeMemory_22(char* a1)
 

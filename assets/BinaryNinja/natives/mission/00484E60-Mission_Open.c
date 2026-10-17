@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mission_Open (VA 0x00484E60; static CFG gate PASS, CFG score 0.933).
 #include "Mission_Open.h"
 int32_t Mission_Open(int32_t* a1)
 

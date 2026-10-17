@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_26 (VA 0x004BB180; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_DispatchOpcode_26.h"
 int32_t Sys_DispatchOpcode_26(int32_t* a1, char* a2)
 

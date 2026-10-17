@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathGuideQTask_LoadParameters (VA 0x0051AEB0; static CFG gate PASS, CFG score 0.952).
 #include "SplinePathGuideQTask_LoadParameters.h"
 void SplinePathGuideQTask_LoadParameters(float a1)
 

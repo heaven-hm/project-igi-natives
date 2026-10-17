@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AmmoPickup_OnEvent (VA 0x0046D990; static CFG gate PASS, CFG score 0.933).
 #include "AmmoPickup_OnEvent.h"
 int32_t AmmoPickup_OnEvent(void* a1, int32_t* a2)
 

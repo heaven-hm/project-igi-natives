@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_UpdateOrders_18 (VA 0x004610C0; static CFG gate PASS, CFG score 0.889).
 #include "AI_UpdateOrders_18.h"
 int32_t AI_UpdateOrders_18(float a1)
 

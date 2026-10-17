@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_OnEvent (VA 0x0043F700; static CFG gate PASS, CFG score 1.000).
 #include "Wire_OnEvent.h"
 int32_t Wire_OnEvent(void* a1)
 

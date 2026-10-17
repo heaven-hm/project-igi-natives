@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ControlsMenu_InitOffsets (VA 0x00423EB0; static CFG gate PASS, CFG score 1.000).
 #include "ControlsMenu_InitOffsets.h"
 
 void* ControlsMenu_InitOffsets(void* pThis)

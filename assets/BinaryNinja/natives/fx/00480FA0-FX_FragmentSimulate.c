@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_FragmentSimulate (VA 0x00480FA0; static CFG gate PASS, CFG score 1.000).
 #include "FX_FragmentSimulate.h"
 uint32_t FX_FragmentSimulate()
 

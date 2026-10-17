@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_SetTeam (VA 0x0040FDF0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_SetTeam.h"
 
 void HumanPlayer_SetTeam(void* pThis, void* param)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ToggleBox_Update (VA 0x0041E500; static CFG gate PASS, CFG score 1.000).
 #include "ToggleBox_Update.h"
 int32_t* ToggleBox_Update(void* a1)
 

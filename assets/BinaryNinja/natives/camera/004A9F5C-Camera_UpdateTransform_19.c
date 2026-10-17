@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateTransform_19 (VA 0x004A9F5C; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_19.h"
 int32_t __convention("regparm") Camera_UpdateTransform_19(int32_t a1, int32_t a2, int32_t a3, double a4)
 

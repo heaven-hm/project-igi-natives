@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CouldnTReadPixelForm_2 (VA 0x004910C0; static CFG gate PASS, CFG score 0.952).
 #include "Display_CouldnTReadPixelForm_2.h"
 int32_t Display_CouldnTReadPixelForm_2(void* a1)
 

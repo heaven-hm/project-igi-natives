@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGraph_OnEvent (VA 0x004EAC90; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefGraph_OnEvent.h"
 float SoundDefGraph_OnEvent(int32_t a1, int32_t* a2) __location("valA")
 

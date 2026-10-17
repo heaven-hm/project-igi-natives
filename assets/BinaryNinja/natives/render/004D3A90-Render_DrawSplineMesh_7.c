@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawSplineMesh_7 (VA 0x004D3A90; static CFG gate PASS, CFG score 0.867).
 #include "Render_DrawSplineMesh_7.h"
 int32_t Render_DrawSplineMesh_7(float* a1, float a2, float* a3, float a4, float a5)
 

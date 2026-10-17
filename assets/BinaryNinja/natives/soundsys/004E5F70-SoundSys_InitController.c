@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_InitController (VA 0x004E5F70; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_InitController.h"
 
 void* SoundSys_InitController(void* pThis, int32_t param)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SampleLightmap_11 (VA 0x0052DCB0; static CFG gate PASS, CFG score 1.000).
 #include "Light_SampleLightmap_11.h"
 long double Light_SampleLightmap_11(float a1, float a2, int32_t a3)
 

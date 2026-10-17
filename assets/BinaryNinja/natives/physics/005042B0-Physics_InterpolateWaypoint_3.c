@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_InterpolateWaypoint_3 (VA 0x005042B0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_InterpolateWaypoint_3.h"
 double* Physics_InterpolateWaypoint_3(void* a1, double* a2)
 

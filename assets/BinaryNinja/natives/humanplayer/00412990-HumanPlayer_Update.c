@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_Update (VA 0x00412990; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_Update.h"
 int32_t HumanPlayer_Update(float a1, float a2)
 

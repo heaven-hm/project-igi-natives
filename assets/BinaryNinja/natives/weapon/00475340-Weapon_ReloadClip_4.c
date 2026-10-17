@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_ReloadClip_4 (VA 0x00475340; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_ReloadClip_4.h"
 int32_t Weapon_ReloadClip_4(void* a1)
 

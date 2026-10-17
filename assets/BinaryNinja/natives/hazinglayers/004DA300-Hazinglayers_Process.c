@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Hazinglayers_Process (VA 0x004DA300; static CFG gate PASS, CFG score 1.000).
 #include "Hazinglayers_Process.h"
 void** Hazinglayers_Process(int32_t* a1, int32_t* a2, double* a3, double* a4, void** a5, int32_t a6)
 

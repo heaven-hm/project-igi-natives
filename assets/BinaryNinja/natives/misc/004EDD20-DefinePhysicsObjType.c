@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefinePhysicsObjType (VA 0x004EDD20; static CFG gate PASS, CFG score 1.000).
 #include "DefinePhysicsObjType.h"
 int32_t DefinePhysicsObjType(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, int32_t a5, char* a6 @ 0xc)
 

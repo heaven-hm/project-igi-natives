@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_LeaveMenus_19 (VA 0x00428630; static CFG gate PASS, CFG score 0.944).
 #include "Menu_LeaveMenus_19.h"
 int32_t Menu_LeaveMenus_19(float a1)
 

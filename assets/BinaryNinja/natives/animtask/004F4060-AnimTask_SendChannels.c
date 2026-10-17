@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimTask_SendChannels (VA 0x004F4060; static CFG gate PASS, CFG score 1.000).
 #include "AnimTask_SendChannels.h"
 void* AnimTask_SendChannels(void* a1)
 

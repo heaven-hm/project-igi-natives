@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_OnEvent (VA 0x0041F740; static CFG gate PASS, CFG score 0.942).
 #include "SlideBar_OnEvent.h"
 int32_t SlideBar_OnEvent(long double a1 @ fp0, void* a2, int32_t a3)
 

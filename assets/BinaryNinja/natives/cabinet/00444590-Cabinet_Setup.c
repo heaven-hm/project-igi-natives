@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_Setup (VA 0x00444590; static CFG gate FAIL, CFG score 0.667).
 #include "Cabinet_Setup.h"
 void* Cabinet_Setup(void* a1)
 

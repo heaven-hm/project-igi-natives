@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunClip_Cleanup (VA 0x00477A70; static CFG gate PASS, CFG score 0.857).
 #include "GunClip_Cleanup.h"
 int32_t* GunClip_Cleanup(void* a1, int32_t* a2)
 

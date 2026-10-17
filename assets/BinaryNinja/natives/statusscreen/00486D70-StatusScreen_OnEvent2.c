@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusScreen_OnEvent2 (VA 0x00486D70; static CFG gate PASS, CFG score 1.000).
 #include "StatusScreen_OnEvent2.h"
 
 int32_t StatusScreen_OnEvent2(void* pThis)

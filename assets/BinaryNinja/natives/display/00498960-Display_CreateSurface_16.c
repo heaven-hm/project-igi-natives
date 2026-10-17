@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CreateSurface_16 (VA 0x00498960; static CFG gate PASS, CFG score 1.000).
 #include "Display_CreateSurface_16.h"
 struct status_msg* Display_CreateSurface_16(uint32_t a1, int32_t a2, int32_t a3, float a4, float a5)
 

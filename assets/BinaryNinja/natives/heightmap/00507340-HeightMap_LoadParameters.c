@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeightMap_LoadParameters (VA 0x00507340; static CFG gate PASS, CFG score 1.000).
 #include "HeightMap_LoadParameters.h"
 void* HeightMap_LoadParameters(void* a1)
 

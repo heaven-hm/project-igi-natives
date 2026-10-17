@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimScaleTask_Init (VA 0x0052AD10; static CFG gate PASS, CFG score 1.000).
 #include "AnimScaleTask_Init.h"
 ❓  int32_t* AnimScaleTask_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

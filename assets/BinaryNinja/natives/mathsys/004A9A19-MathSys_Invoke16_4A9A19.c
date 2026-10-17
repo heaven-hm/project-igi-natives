@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MathSys_Invoke16_4A9A19 (VA 0x004A9A19; static CFG gate PASS, CFG score 1.000).
 #include "MathSys_Invoke16_4A9A19.h"
 
 int80_t() __location("st0")

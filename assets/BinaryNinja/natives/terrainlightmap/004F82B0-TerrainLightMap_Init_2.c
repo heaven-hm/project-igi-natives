@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TerrainLightMap_Init_2 (VA 0x004F82B0; static CFG gate PASS, CFG score 1.000).
 #include "TerrainLightMap_Init_2.h"
 
 void* TerrainLightMap_Init_2(void* pThis)

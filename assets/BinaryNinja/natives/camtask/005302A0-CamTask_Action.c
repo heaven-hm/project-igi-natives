@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CamTask_Action (VA 0x005302A0; static CFG gate FAIL, CFG score 0.435).
 #include "CamTask_Action.h"
 int32_t CamTask_Action()
 

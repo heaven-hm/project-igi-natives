@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayerInput_Process (VA 0x0045DF50; static CFG gate FAIL, CFG score 0.833).
 #include "HumanPlayerInput_Process.h"
 int32_t HumanPlayerInput_Process(void* a1)
 

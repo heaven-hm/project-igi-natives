@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_BoneobjDeleteblendno (VA 0x004D3440; static CFG gate PASS, CFG score 1.000).
 #include "Render_BoneobjDeleteblendno.h"
 int32_t Render_BoneobjDeleteblendno(int32_t a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Elevator_Process (VA 0x0043DF20; static CFG gate PASS, CFG score 1.000).
 #include "Elevator_Process.h"
 int32_t Elevator_Process(void* a1)
 

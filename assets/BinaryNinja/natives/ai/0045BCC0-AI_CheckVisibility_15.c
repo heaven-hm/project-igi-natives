@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CheckVisibility_15 (VA 0x0045BCC0; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckVisibility_15.h"
 void* AI_CheckVisibility_15(void* a1, int32_t a2)
 

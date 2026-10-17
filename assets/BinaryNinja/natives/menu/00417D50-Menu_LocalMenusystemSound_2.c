@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_LocalMenusystemSound_2 (VA 0x00417D50; static CFG gate PASS, CFG score 0.939).
 #include "Menu_LocalMenusystemSound_2.h"
 int32_t Menu_LocalMenusystemSound_2(void* a1)
 

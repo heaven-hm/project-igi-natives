@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_Tick (VA 0x00478640; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Tick.h"
 uint32_t Gun_Tick(int32_t* a1)
 

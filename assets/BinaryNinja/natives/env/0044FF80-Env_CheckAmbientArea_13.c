@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_CheckAmbientArea_13 (VA 0x0044FF80; static CFG gate PASS, CFG score 1.000).
 #include "Env_CheckAmbientArea_13.h"
 void* Env_CheckAmbientArea_13(void* a1)
 

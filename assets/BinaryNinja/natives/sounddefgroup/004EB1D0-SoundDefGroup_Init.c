@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGroup_Init (VA 0x004EB1D0; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefGroup_Init.h"
 int32_t SoundDefGroup_Init()
 

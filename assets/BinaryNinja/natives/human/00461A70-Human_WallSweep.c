@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_WallSweep (VA 0x00461A70; static CFG gate PASS, CFG score 0.905).
 #include "Human_WallSweep.h"
 int32_t Human_WallSweep(void* a1, double* a2, int32_t* a3, float* a4, int32_t* a5)
 

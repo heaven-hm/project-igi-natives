@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_Draw (VA 0x00512C30; static CFG gate FAIL, CFG score 0.778).
 #include "Terrain_Draw.h"
 ❓  int32_t __stdcall Terrain_Draw(float a1 @ 0xd0, float a2, float a3, float a4, float a5, float a6, float a7, float a8, double a9 @ 0x188, double a10, double a11 @ 0x1e0, double a12)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

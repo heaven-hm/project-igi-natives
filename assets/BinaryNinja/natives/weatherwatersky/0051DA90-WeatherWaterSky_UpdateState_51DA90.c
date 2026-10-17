@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherWaterSky_UpdateState_51DA90 (VA 0x0051DA90; static CFG gate PASS, CFG score 1.000).
 #include "WeatherWaterSky_UpdateState_51DA90.h"
 
 int32_t(float arg1)

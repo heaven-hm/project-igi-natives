@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_GetActiveMode (VA 0x00491CF0; static CFG gate PASS, CFG score 1.000).
 #include "Display_GetActiveMode.h"
 int32_t Display_GetActiveMode() __pure
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_Setup (VA 0x004450F0; static CFG gate PASS, CFG score 1.000).
 #include "Switch_Setup.h"
 void* Switch_Setup(int80_t a1 @ fp0, void* a2)
 

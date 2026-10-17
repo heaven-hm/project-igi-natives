@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_InitType_2 (VA 0x00414F40; static CFG gate PASS, CFG score 0.958).
 #include "WeaponType_InitType_2.h"
 int32_t WeaponType_InitType_2(int32_t a1, void* a2, int32_t a3, char* a4)
 

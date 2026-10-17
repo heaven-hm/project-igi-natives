@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_Earcandy (VA 0x00411240; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_Earcandy.h"
 void* HumanPlayer_Earcandy(void* a1)
 

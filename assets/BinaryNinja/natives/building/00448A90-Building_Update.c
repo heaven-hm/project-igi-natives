@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Building_Update (VA 0x00448A90; static CFG gate PASS, CFG score 1.000).
 #include "Building_Update.h"
 void* Building_Update(void* a1, int32_t* a2)
 

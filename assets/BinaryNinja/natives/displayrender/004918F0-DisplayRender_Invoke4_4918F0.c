@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_Invoke4_4918F0 (VA 0x004918F0; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_Invoke4_4918F0.h"
 
 int32_t(PSTR arg1)

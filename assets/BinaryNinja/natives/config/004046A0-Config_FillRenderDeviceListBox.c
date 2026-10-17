@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_FillRenderDeviceListBox (VA 0x004046A0; static CFG gate FAIL, CFG score 0.833).
 #include "Config_FillRenderDeviceListBox.h"
 int32_t Config_FillRenderDeviceListBox(int32_t a1)
 

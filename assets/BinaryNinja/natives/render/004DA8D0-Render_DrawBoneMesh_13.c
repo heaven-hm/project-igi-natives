@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawBoneMesh_13 (VA 0x004DA8D0; static CFG gate FAIL, CFG score 0.667).
 #include "Render_DrawBoneMesh_13.h"
 int32_t Render_DrawBoneMesh_13(int32_t a1, int32_t* a2, int32_t a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_CallNativeHandler_31 (VA 0x004FE650; static CFG gate FAIL, CFG score 0.833).
 #include "Script_CallNativeHandler_31.h"
 struct status_msg* Script_CallNativeHandler_31(void* a1, int32_t a2, int32_t a3)
 

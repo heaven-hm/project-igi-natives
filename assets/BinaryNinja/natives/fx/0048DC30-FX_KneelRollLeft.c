@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_KneelRollLeft (VA 0x0048DC30; static CFG gate PASS, CFG score 1.000).
 #include "FX_KneelRollLeft.h"
 bool FX_KneelRollLeft(void* a1)
 

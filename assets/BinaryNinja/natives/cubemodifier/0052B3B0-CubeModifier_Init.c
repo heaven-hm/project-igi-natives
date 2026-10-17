@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CubeModifier_Init (VA 0x0052B3B0; static CFG gate PASS, CFG score 0.980).
 #include "CubeModifier_Init.h"
 int32_t* CubeModifier_Init()
 

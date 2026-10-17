@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextBox_Update (VA 0x0041B170; static CFG gate PASS, CFG score 1.000).
 #include "TextBox_Update.h"
 int32_t TextBox_Update(void* a1)
 

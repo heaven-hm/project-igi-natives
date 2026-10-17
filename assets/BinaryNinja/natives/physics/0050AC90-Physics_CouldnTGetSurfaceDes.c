@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_CouldnTGetSurfaceDes (VA 0x0050AC90; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CouldnTGetSurfaceDes.h"
 int32_t Physics_CouldnTGetSurfaceDes(int32_t* a1)
 

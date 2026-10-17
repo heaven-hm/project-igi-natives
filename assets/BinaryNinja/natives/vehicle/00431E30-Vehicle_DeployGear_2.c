@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_DeployGear_2 (VA 0x00431E30; static CFG gate PASS, CFG score 0.972).
 #include "Vehicle_DeployGear_2.h"
 int32_t Vehicle_DeployGear_2(float a1)
 

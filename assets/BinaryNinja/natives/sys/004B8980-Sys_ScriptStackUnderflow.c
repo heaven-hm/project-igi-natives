@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ScriptStackUnderflow (VA 0x004B8980; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ScriptStackUnderflow.h"
 int32_t Sys_ScriptStackUnderflow(int32_t a1)
 

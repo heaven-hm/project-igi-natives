@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_ClearSurfaces_19 (VA 0x0049C7D0; static CFG gate PASS, CFG score 1.000).
 #include "Display_ClearSurfaces_19.h"
 void Display_ClearSurfaces_19()
 

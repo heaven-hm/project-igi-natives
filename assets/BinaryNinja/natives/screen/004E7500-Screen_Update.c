@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Screen_Update (VA 0x004E7500; static CFG gate PASS, CFG score 1.000).
 #include "Screen_Update.h"
 uint32_t Screen_Update()
 

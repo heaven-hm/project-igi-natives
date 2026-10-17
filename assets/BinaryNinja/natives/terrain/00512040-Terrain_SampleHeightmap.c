@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_SampleHeightmap (VA 0x00512040; static CFG gate FAIL, CFG score 0.818).
 #include "Terrain_SampleHeightmap.h"
 int32_t Terrain_SampleHeightmap(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t* a7, int32_t* a8, int32_t* a9, char a10, char a11, char a12)
 

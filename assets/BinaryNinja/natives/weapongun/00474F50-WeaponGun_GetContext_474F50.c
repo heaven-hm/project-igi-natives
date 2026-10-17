@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponGun_GetContext_474F50 (VA 0x00474F50; static CFG gate PASS, CFG score 1.000).
 #include "WeaponGun_GetContext_474F50.h"
 
 int32_t*(int32_t* arg1 )

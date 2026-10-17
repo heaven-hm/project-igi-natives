@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputPort_Action (VA 0x004ED5E0; static CFG gate PASS, CFG score 1.000).
 #include "InputPort_Action.h"
 int32_t InputPort_Action(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8 @ 0x24, int32_t a9, int32_t a10, int32_t a11, int32_t a12, int32_t a13, int32_t a14, int32_t a15)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherLightmap_ProcessRainDynCubeObj (VA 0x004F71F0; static CFG gate PASS, CFG score 1.000).
 #include "WeatherLightmap_ProcessRainDynCubeObj.h"
 
 char*(void* arg1, void* arg2)

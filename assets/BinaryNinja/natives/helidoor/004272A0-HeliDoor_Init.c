@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HeliDoor_Init (VA 0x004272A0; static CFG gate PASS, CFG score 1.000).
 #include "HeliDoor_Init.h"
 void* HeliDoor_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_FormatString_12 (VA 0x004F2310; static CFG gate FAIL, CFG score 0.667).
 #include "Script_FormatString_12.h"
 int32_t Script_FormatString_12(void* a1, int32_t a2, int32_t a3)
 

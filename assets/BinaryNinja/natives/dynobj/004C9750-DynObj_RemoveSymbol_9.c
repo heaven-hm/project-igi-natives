@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_RemoveSymbol_9 (VA 0x004C9750; static CFG gate FAIL, CFG score 0.833).
 #include "DynObj_RemoveSymbol_9.h"
 uint32_t DynObj_RemoveSymbol_9(int32_t a1, int32_t* a2, double* a3, uint32_t a4, char a5, int32_t a6, int32_t a7)
 

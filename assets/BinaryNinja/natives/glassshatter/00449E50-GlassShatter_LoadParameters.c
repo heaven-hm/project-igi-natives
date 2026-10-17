@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GlassShatter_LoadParameters (VA 0x00449E50; static CFG gate PASS, CFG score 1.000).
 #include "GlassShatter_LoadParameters.h"
 int32_t GlassShatter_LoadParameters(float a1)
 

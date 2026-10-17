@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_InterpolateWaypoint_2 (VA 0x005031F0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_InterpolateWaypoint_2.h"
 int32_t Physics_InterpolateWaypoint_2(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, long double a7 @ fp6, long double a8 @ fp7, float* a9, int32_t* a10, float a11)
 

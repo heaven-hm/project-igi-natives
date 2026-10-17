@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SwapBuffers_20 (VA 0x0049F1C0; static CFG gate PASS, CFG score 0.889).
 #include "Display_SwapBuffers_20.h"
 int32_t Display_SwapBuffers_20(double* a1)
 

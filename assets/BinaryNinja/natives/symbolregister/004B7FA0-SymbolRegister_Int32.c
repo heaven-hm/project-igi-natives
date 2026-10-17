@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SymbolRegister_Int32 (VA 0x004B7FA0; static CFG gate PASS, CFG score 1.000).
 #include "SymbolRegister_Int32.h"
 void* SymbolRegister_Int32(int32_t* a1, int32_t a2)
 

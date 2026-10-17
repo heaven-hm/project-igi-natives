@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_5 (VA 0x004B19C0; static CFG gate FAIL, CFG score 0.800).
 #include "Sys_FreeMemory_5.h"
 void** Sys_FreeMemory_5(int32_t a1)
 

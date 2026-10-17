@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_Setup (VA 0x004F43E0; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_Setup.h"
 int32_t Vehicle_Setup(void* a1, int32_t a2)
 

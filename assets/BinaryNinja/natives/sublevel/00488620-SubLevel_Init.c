@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SubLevel_Init (VA 0x00488620; static CFG gate PASS, CFG score 1.000).
 #include "SubLevel_Init.h"
 int32_t* SubLevel_Init()
 

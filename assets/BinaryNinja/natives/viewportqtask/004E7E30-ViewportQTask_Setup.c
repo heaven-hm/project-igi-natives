@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ViewportQTask_Setup (VA 0x004E7E30; static CFG gate PASS, CFG score 0.958).
 #include "ViewportQTask_Setup.h"
 int32_t ViewportQTask_Setup(void* a1)
 

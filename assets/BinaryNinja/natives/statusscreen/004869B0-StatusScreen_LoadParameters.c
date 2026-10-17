@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusScreen_LoadParameters (VA 0x004869B0; static CFG gate PASS, CFG score 1.000).
 #include "StatusScreen_LoadParameters.h"
 struct status_msg* StatusScreen_OnLoad(void* a1)
 

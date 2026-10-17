@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputBox_Update (VA 0x0041D9E0; static CFG gate PASS, CFG score 1.000).
 #include "InputBox_Update.h"
 int32_t* InputBox_Update(void* a1)
 

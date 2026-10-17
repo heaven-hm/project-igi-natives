@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Smoke_Update (VA 0x00437CA0; static CFG gate PASS, CFG score 1.000).
 #include "Smoke_Update.h"
 int32_t Smoke_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_SetupLighting_14 (VA 0x004DCDD0; static CFG gate PASS, CFG score 1.000).
 #include "Render_SetupLighting_14.h"
 int32_t Render_SetupLighting_14(void* a1)
 

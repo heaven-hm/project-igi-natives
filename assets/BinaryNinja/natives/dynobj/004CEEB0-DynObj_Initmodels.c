@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_Initmodels (VA 0x004CEEB0; static CFG gate PASS, CFG score 0.933).
 #include "DynObj_Initmodels.h"
 int32_t DynObj_Initmodels()
 

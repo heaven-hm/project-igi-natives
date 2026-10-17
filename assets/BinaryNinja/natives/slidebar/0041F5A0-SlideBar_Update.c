@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_Update (VA 0x0041F5A0; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Update.h"
 int32_t* SlideBar_Update(void* a1, int32_t a2)
 

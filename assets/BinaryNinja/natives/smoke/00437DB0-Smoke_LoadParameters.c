@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Smoke_LoadParameters (VA 0x00437DB0; static CFG gate PASS, CFG score 0.958).
 #include "Smoke_LoadParameters.h"
 int32_t Smoke_LoadParameters(long double a1 @ fp0, void* a2)
 

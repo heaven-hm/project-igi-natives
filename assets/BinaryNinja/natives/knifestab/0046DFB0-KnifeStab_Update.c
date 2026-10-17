@@ -1,3 +1,4 @@
+// Original IGI.EXE function: KnifeStab_Update (VA 0x0046DFB0; static CFG gate PASS, CFG score 0.917).
 #include "KnifeStab_Update.h"
 int32_t KnifeStab_Update(int32_t* a1, float a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_ForceUpdateWindow (VA 0x00417880; static CFG gate PASS, CFG score 0.917).
 #include "MenuManager_ForceUpdateWindow.h"
 int32_t MenuManager_ForceUpdateWindow(int32_t a1, float a2 @ 0xc)
 

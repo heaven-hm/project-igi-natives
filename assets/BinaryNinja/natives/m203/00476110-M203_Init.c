@@ -1,3 +1,4 @@
+// Original IGI.EXE function: M203_Init (VA 0x00476110; static CFG gate PASS, CFG score 1.000).
 #include "M203_Init.h"
 char* M203_Init()
 

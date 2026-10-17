@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RigidDynCubeObj_Init (VA 0x004C3450; static CFG gate PASS, CFG score 1.000).
 #include "RigidDynCubeObj_Init.h"
 uint32_t RigidDynCubeObj_Init()
 

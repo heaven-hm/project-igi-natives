@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_RegisterSymbol_14 (VA 0x004CEFA0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_RegisterSymbol_14.h"
 int32_t* DynObj_RegisterSymbol_14(int32_t a1)
 

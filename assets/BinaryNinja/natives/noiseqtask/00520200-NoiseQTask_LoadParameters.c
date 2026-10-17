@@ -1,3 +1,4 @@
+// Original IGI.EXE function: NoiseQTask_LoadParameters (VA 0x00520200; static CFG gate FAIL, CFG score 0.750).
 #include "NoiseQTask_LoadParameters.h"
 int32_t NoiseQTask_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_InvokeStateAnimation (VA 0x00454220; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_InvokeStateAnimation.h"
 
 void*(void* arg1, int32_t arg2)

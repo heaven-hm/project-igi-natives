@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ToggleBox_Process (VA 0x0041DEB0; static CFG gate PASS, CFG score 1.000).
 #include "ToggleBox_Process.h"
 int32_t ToggleBox_Process(void* a1)
 

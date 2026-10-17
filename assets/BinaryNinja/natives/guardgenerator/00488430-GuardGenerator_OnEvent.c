@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GuardGenerator_OnEvent (VA 0x00488430; static CFG gate PASS, CFG score 1.000).
 #include "GuardGenerator_OnEvent.h"
 int32_t GuardGenerator_OnEvent(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GetContentControlPassword (VA 0x00403C70; static CFG gate FAIL, CFG score 0.833).
 #include "Config_GetContentControlPassword.h"
 int32_t Config_GetContentControlPassword(int32_t a1)
 

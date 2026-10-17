@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_UpdateWaterWaves_6 (VA 0x00517980; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_UpdateWaterWaves_6.h"
 int32_t* Terrain_UpdateWaterWaves_6(int32_t* a1, int32_t a2)
 

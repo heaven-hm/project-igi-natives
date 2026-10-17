@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_333333333Glassshatte (VA 0x0044BD70; static CFG gate PASS, CFG score 0.917).
 #include "Env_333333333Glassshatte.h"
 struct status_msg* Env_333333333Glassshatte(uint32_t a1, float* a2, double* a3, double* a4, float a5 @ 0x18)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_LocalGrab (VA 0x004EE6B0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_LocalGrab.h"
 void* SoundSys_LocalGrab(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RotatingObject_Process (VA 0x004395D0; static CFG gate PASS, CFG score 0.944).
 #include "RotatingObject_Process.h"
 int32_t RotatingObject_Process(float a1)
 

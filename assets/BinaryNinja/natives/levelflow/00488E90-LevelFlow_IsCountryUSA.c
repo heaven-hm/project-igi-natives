@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_IsCountryUSA (VA 0x00488E90; static CFG gate PASS, CFG score 0.889).
 #include "LevelFlow_IsCountryUSA.h"
 int32_t LevelFlow_IsCountryUSA(int32_t a1)
 

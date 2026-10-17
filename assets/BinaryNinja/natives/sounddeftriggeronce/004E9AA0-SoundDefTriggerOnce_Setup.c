@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefTriggerOnce_Setup (VA 0x004E9AA0; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefTriggerOnce_Setup.h"
 int32_t SoundDefTriggerOnce_Setup(int32_t a1)
 

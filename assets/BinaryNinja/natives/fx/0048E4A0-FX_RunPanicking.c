@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_RunPanicking (VA 0x0048E4A0; static CFG gate PASS, CFG score 1.000).
 #include "FX_RunPanicking.h"
 int32_t FX_RunPanicking(void* a1, int32_t* a2)
 

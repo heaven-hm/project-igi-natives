@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ComputeNormals_4 (VA 0x004D27F0; static CFG gate PASS, CFG score 1.000).
 #include "Render_ComputeNormals_4.h"
 void Render_ComputeNormals_4(void* a1)
 

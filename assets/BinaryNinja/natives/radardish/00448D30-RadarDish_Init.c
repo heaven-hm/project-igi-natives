@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RadarDish_Init (VA 0x00448D30; static CFG gate PASS, CFG score 1.000).
 #include "RadarDish_Init.h"
 void* RadarDish_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PatrolPath_Process (VA 0x00453710; static CFG gate PASS, CFG score 1.000).
 #include "PatrolPath_Process.h"
 uint32_t PatrolPath_Process()
 

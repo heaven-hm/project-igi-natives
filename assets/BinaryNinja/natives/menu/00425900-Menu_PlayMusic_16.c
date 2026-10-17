@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_PlayMusic_16 (VA 0x00425900; static CFG gate PASS, CFG score 0.929).
 #include "Menu_PlayMusic_16.h"
 int32_t* Menu_PlayMusic_16(long double a1 @ fp0, void* a2)
 

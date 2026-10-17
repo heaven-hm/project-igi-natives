@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Resource_Flush (VA 0x004B63D0; static CFG gate PASS, CFG score 1.000).
 #include "Resource_Flush.h"
 int32_t Resource_Flush(int32_t a1)
 

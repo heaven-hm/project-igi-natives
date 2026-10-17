@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_LoadLevel_5 (VA 0x00416930; static CFG gate FAIL, CFG score 0.667).
 #include "Level_LoadLevel_5.h"
 char* Level_LoadLevel_5(char* a1)
 

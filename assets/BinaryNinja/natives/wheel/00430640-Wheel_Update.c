@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wheel_Update (VA 0x00430640; static CFG gate PASS, CFG score 0.875).
 #include "Wheel_Update.h"
 int32_t Wheel_Update(void* a1, int32_t* a2)
 

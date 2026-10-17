@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QFile_ReadWrite (VA 0x004B1510; static CFG gate PASS, CFG score 0.967).
 #include "QFile_ReadWrite.h"
 int32_t* QFile_ReadWrite(void* a1, char* a2)
 

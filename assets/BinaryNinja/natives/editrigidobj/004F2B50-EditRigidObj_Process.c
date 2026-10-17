@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_Process (VA 0x004F2B50; static CFG gate PASS, CFG score 1.000).
 #include "EditRigidObj_Process.h"
 void* EditRigidObj_Process(void* a1)
 

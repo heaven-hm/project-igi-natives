@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ModelViewBox_Update (VA 0x00422E40; static CFG gate PASS, CFG score 0.958).
 #include "ModelViewBox_Update.h"
 void* ModelViewBox_Update(void* a1, int32_t a2)
 

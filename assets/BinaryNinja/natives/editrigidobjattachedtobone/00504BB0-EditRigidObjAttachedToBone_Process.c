@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObjAttachedToBone_Process (VA 0x00504BB0; static CFG gate PASS, CFG score 0.889).
 #include "EditRigidObjAttachedToBone_Process.h"
 int32_t EditRigidObjAttachedToBone_Process(void* a1)
 

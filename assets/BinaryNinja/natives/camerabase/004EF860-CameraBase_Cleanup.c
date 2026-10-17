@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CameraBase_Cleanup (VA 0x004EF860; static CFG gate PASS, CFG score 1.000).
 #include "CameraBase_Cleanup.h"
 int32_t CameraBase_Cleanup(float* a1, int32_t* a2)
 

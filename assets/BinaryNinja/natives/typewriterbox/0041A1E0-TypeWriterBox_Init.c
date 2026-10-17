@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TypeWriterBox_Init (VA 0x0041A1E0; static CFG gate PASS, CFG score 1.000).
 #include "TypeWriterBox_Init.h"
 int32_t* TypeWriterBox_Init()
 

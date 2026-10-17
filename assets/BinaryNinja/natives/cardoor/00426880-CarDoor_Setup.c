@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CarDoor_Setup (VA 0x00426880; static CFG gate PASS, CFG score 0.867).
 #include "CarDoor_Setup.h"
 int32_t CarDoor_Setup(void* a1, int32_t* a2)
 

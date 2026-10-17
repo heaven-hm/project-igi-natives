@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SlideBar_Process (VA 0x0041F6C0; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Process.h"
 int32_t SlideBar_Process(void* a1)
 

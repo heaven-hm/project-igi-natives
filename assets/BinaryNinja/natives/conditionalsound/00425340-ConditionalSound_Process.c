@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalSound_Process (VA 0x00425340; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalSound_Process.h"
 char* ConditionalSound_Process(void* a1)
 

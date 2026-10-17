@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatSky_LoadParameters (VA 0x0051EA10; static CFG gate PASS, CFG score 0.889).
 #include "FlatSky_LoadParameters.h"
 int32_t FlatSky_LoadParameters(void* a1)
 

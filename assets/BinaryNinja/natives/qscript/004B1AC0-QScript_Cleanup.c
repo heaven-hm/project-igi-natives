@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QScript_Cleanup (VA 0x004B1AC0; static CFG gate PASS, CFG score 1.000).
 #include "QScript_Cleanup.h"
 int32_t QScript_Cleanup(void* a1)
 

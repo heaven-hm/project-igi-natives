@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SampleLightmap_6 (VA 0x00529010; static CFG gate FAIL, CFG score 0.733).
 #include "Light_SampleLightmap_6.h"
 float Light_SampleLightmap_6(void* a1) __location("valA")
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_WheelSweep (VA 0x0042EF00; static CFG gate PASS, CFG score 0.900).
 #include "Car_WheelSweep.h"
 int32_t Car_WheelSweep(float* a1)
 

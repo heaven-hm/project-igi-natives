@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CreateTerrainMaterial (VA 0x004C6670; static CFG gate PASS, CFG score 0.967).
 #include "CreateTerrainMaterial.h"
 int32_t CreateTerrainMaterial(int32_t a1, float a2 @ 0xc)
 

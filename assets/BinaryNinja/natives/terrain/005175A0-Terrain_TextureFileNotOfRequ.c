@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_TextureFileNotOfRequ (VA 0x005175A0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_TextureFileNotOfRequ.h"
 int32_t* Terrain_TextureFileNotOfRequ(int32_t* a1)
 

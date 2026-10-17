@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_ProcessABCDEFGHIJKLMNOP_41CC40 (VA 0x0041CC40; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_ProcessABCDEFGHIJKLMNOP_41CC40.h"
 
 int32_t(void* arg1, int32_t arg2)

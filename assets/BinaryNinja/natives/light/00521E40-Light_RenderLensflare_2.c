@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_RenderLensflare_2 (VA 0x00521E40; static CFG gate FAIL, CFG score 0.833).
 #include "Light_RenderLensflare_2.h"
 uint32_t Light_RenderLensflare_2(void* a1, double* a2, float* a3 @ 0x10, float* a4, void* a5, int32_t a6, float a7, float a8, float a9, float a10, float a11, float a12, float a13, float a14, float a15 @ 0xf8, float a16, float a17, float a18, float a19, float a20, float a21, float a22)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GlassShatter_Init (VA 0x00449D30; static CFG gate PASS, CFG score 1.000).
 #include "GlassShatter_Init.h"
 int32_t GlassShatter_Init()
 

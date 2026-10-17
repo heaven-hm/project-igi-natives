@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GetNumberOfPlayerProfiles (VA 0x004054F0; static CFG gate FAIL, CFG score 0.667).
 #include "Config_GetNumberOfPlayerProfiles.h"
 int32_t Config_GetNumberOfPlayerProfiles(int32_t a1)
 

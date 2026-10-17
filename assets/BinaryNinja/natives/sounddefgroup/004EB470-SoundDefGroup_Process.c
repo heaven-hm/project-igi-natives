@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefGroup_Process (VA 0x004EB470; static CFG gate FAIL, CFG score 0.733).
 #include "SoundDefGroup_Process.h"
 int32_t SoundDefGroup_Process(void* a1, int32_t* a2)
 

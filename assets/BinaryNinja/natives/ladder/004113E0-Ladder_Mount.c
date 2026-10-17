@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ladder_Mount (VA 0x004113E0; static CFG gate PASS, CFG score 0.989).
 #include "Ladder_Mount.h"
 double* Ladder_Mount(float a1)
 

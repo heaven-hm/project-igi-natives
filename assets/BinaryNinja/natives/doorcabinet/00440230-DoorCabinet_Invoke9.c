@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DoorCabinet_Invoke9 (VA 0x00440230; static CFG gate PASS, CFG score 1.000).
 #include "DoorCabinet_Invoke9.h"
 
 int32_t(int32_t* arg1 )

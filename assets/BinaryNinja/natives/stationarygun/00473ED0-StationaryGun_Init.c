@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StationaryGun_Init (VA 0x00473ED0; static CFG gate PASS, CFG score 1.000).
 #include "StationaryGun_Init.h"
 int32_t* StationaryGun_Init()
 

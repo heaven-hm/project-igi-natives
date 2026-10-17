@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ScriptInternalErrorI (VA 0x004BA880; static CFG gate FAIL, CFG score 0.844).
 #include "Sys_ScriptInternalErrorI.h"
 char* Sys_ScriptInternalErrorI(int32_t a1, int32_t* a2, int32_t a3, char* a4)
 

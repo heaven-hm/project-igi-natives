@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_TimeSpentRedrawing2F (VA 0x004163E0; static CFG gate PASS, CFG score 1.000).
 #include "Level_TimeSpentRedrawing2F.h"
 void* Level_TimeSpentRedrawing2F()
 

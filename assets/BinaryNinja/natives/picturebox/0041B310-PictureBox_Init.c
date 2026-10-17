@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PictureBox_Init (VA 0x0041B310; static CFG gate PASS, CFG score 1.000).
 #include "PictureBox_Init.h"
 int32_t* PictureBox_Init()
 

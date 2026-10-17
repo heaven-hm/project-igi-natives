@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StationaryGun_Update (VA 0x00474F60; static CFG gate PASS, CFG score 0.857).
 #include "StationaryGun_Update.h"
 void* StationaryGun_Update(double* a1, int32_t* a2)
 

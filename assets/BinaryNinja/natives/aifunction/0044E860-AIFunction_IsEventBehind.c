@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_IsEventBehind (VA 0x0044E860; static CFG gate FAIL, CFG score 0.667).
 #include "AIFunction_IsEventBehind.h"
 int32_t AIFunction_IsEventBehind(int32_t a1)
 

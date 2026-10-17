@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SimBoneDynCubeObj_Init (VA 0x0052CA30; static CFG gate PASS, CFG score 1.000).
 #include "SimBoneDynCubeObj_Init.h"
 int32_t SimBoneDynCubeObj_Init()
 

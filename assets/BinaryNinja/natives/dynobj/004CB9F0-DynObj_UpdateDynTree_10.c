@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_UpdateDynTree_10 (VA 0x004CB9F0; static CFG gate PASS, CFG score 0.852).
 #include "DynObj_UpdateDynTree_10.h"
 int32_t* DynObj_UpdateDynTree_10(int32_t a1, int32_t* a2, double* a3, int32_t* a4, double* a5, char a6, double* a7, int32_t a8)
 

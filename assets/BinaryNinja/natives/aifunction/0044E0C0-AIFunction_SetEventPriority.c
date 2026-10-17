@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetEventPriority (VA 0x0044E0C0; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetEventPriority.h"
 int32_t AIFunction_SetEventPriority(int32_t a1, float a2 @ 0xc)
 

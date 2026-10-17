@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TagItem_Init (VA 0x004FE7C0; static CFG gate PASS, CFG score 1.000).
 #include "TagItem_Init.h"
 int32_t* TagItem_Init()
 

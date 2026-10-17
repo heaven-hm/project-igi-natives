@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_Init (VA 0x0040FE30; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_Init.h"
 void* HumanPlayer_Init()
 

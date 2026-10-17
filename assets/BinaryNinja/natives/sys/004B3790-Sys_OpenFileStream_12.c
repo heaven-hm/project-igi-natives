@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_OpenFileStream_12 (VA 0x004B3790; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_OpenFileStream_12.h"
 int32_t Sys_OpenFileStream_12(int32_t a1, float* a2, float a3)
 

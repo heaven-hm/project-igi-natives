@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Frames_GetTaskCounter (VA 0x004028C0; static CFG gate PASS, CFG score 1.000).
 #include "Frames_GetTaskCounter.h"
 uint32_t Frames_GetTaskCounter()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_FindAnimation (VA 0x004547B0; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_FindAnimation.h"
 
 void* HumanAI_FindAnimation(void* pThis, void* param)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalContainer_Tick (VA 0x004874E0; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalContainer_Tick.h"
 int32_t* ConditionalContainer_Tick(int32_t* a1)
 

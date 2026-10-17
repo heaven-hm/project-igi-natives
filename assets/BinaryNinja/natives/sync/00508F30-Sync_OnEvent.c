@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sync_OnEvent (VA 0x00508F30; static CFG gate PASS, CFG score 1.000).
 #include "Sync_OnEvent.h"
 uint32_t Sync_OnEvent()
 

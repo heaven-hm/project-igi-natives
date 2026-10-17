@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_RenderWaterSurface_3 (VA 0x00516770; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_RenderWaterSurface_3.h"
 char* Terrain_RenderWaterSurface_3(char* a1)
 

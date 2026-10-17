@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_WalkToNode (VA 0x0044D4A0; static CFG gate PASS, CFG score 0.933).
 #include "AIAction_WalkToNode.h"
 int32_t AIAction_WalkToNode(int32_t a1, float a2 @ 0xc)
 

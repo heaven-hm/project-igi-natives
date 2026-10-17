@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_EvaluateCondition_20 (VA 0x004F80B0; static CFG gate PASS, CFG score 1.000).
 #include "Script_EvaluateCondition_20.h"
 uint32_t Script_EvaluateCondition_20()
 

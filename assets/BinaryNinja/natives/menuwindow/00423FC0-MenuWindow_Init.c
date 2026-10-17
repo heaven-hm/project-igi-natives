@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuWindow_Init (VA 0x00423FC0; static CFG gate PASS, CFG score 1.000).
 #include "MenuWindow_Init.h"
 void* MenuWindow_Init()
 

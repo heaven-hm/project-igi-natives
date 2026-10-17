@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Goplayer (VA 0x00405C90; static CFG gate PASS, CFG score 1.000).
 #include "Config_Goplayer.h"
 int32_t Config_Goplayer(int32_t* a1, int32_t a2)
 

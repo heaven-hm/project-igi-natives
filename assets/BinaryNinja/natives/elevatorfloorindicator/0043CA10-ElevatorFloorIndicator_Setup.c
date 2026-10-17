@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ElevatorFloorIndicator_Setup (VA 0x0043CA10; static CFG gate PASS, CFG score 1.000).
 #include "ElevatorFloorIndicator_Setup.h"
 struct status_msg* ElevatorFloorIndicator_Setup(int80_t a1 @ fp0, int32_t a2)
 

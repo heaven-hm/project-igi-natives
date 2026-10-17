@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_DeployGear_3 (VA 0x00433580; static CFG gate FAIL, CFG score 0.667).
 #include "Vehicle_DeployGear_3.h"
 float Vehicle_DeployGear_3(float a1) __location("valA")
 

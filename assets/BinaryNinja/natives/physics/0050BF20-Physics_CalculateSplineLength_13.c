@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_CalculateSplineLength_13 (VA 0x0050BF20; static CFG gate FAIL, CFG score 0.754).
 #include "Physics_CalculateSplineLength_13.h"
 int32_t Physics_CalculateSplineLength_13(float a1 @ 0xc, int32_t a2 @ 0x28, float a3 @ 0x34, int32_t a4 @ 0x50, float a5 @ 0x5c, int32_t a6 @ 0x78, int32_t a7, int32_t a8, int32_t a9)
 

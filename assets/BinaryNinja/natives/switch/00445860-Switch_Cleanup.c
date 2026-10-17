@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_Cleanup (VA 0x00445860; static CFG gate PASS, CFG score 1.000).
 #include "Switch_Cleanup.h"
 int32_t Switch_Cleanup(void* a1)
 

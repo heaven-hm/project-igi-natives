@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Flow_LoadParameters (VA 0x00402260; static CFG gate PASS, CFG score 1.000).
 #include "Flow_LoadParameters.h"
 void* Flow_LoadParameters(uint32_t a1)
 

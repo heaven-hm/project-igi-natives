@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wheel_Init (VA 0x0042FF00; static CFG gate PASS, CFG score 1.000).
 #include "Wheel_Init.h"
 void* Wheel_Init()
 

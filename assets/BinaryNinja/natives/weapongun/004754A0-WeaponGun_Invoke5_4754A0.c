@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponGun_Invoke5_4754A0 (VA 0x004754A0; static CFG gate PASS, CFG score 1.000).
 #include "WeaponGun_Invoke5_4754A0.h"
 
 int32_t(int32_t arg1)

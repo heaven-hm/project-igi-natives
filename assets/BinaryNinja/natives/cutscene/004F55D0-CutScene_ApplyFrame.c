@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_ApplyFrame (VA 0x004F55D0; static CFG gate PASS, CFG score 0.974).
 #include "CutScene_ApplyFrame.h"
 int32_t* CutScene_ApplyFrame(void* a1, int32_t* a2, int32_t a3, int32_t a4, double a5, char a6)
 

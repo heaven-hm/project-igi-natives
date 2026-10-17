@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_GetContext_4BEC70 (VA 0x004BEC70; static CFG gate PASS, CFG score 1.000).
 #include "Qvm_GetContext_4BEC70.h"
 
 void*(void* arg1)

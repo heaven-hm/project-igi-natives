@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_AlertAllies_29 (VA 0x0046C980; static CFG gate PASS, CFG score 0.896).
 #include "AI_AlertAllies_29.h"
 struct status_msg* AI_AlertAllies_29(void* a1, int32_t a2, float* a3, int32_t a4)
 

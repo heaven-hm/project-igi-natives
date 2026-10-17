@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetFrequency_10 (VA 0x004E7790; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetFrequency_10.h"
 char* SoundSys_SetFrequency_10(int32_t* a1, int32_t a2)
 

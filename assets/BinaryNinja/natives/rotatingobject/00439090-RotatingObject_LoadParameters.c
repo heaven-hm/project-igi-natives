@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RotatingObject_LoadParameters (VA 0x00439090; static CFG gate PASS, CFG score 0.917).
 #include "RotatingObject_LoadParameters.h"
 void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 

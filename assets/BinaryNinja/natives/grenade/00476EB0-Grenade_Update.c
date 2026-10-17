@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Grenade_Update (VA 0x00476EB0; static CFG gate PASS, CFG score 1.000).
 #include "Grenade_Update.h"
 int32_t Grenade_Update(float a1, float a2)
 

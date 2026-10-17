@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_Process (VA 0x004426D0; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Process.h"
 void* SCamera_Process(void* a1)
 

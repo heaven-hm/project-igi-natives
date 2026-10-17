@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_SetCategory (VA 0x00414A60; static CFG gate PASS, CFG score 1.000).
 #include "WeaponType_SetCategory.h"
 float* WeaponType_SetCategory(float* a1, int32_t* a2)
 

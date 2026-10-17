@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_GfxPerformance (VA 0x004040F0; static CFG gate FAIL, CFG score 0.833).
 #include "GO_GfxPerformance.h"
 int32_t GO_GfxPerformance(int32_t a1, float a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_PushStack_14 (VA 0x004B4BE0; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_PushStack_14.h"
 int32_t Sys_PushStack_14(float a1, float a2, float a3, float a4, float a5, float a6, float a7, float a8, float a9, float a10, float a11, float a12, float a13, float a14, float a15, float a16, int32_t a17, int32_t a18, int32_t a19, int32_t a20, int32_t a21, int32_t a22, int32_t a23)
 

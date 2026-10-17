@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_CouldNotCreateDirect (VA 0x00509980; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CouldNotCreateDirect.h"
 int32_t Physics_CouldNotCreateDirect()
 

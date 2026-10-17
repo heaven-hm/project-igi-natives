@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LODSettings_LoadParameters (VA 0x004EDB60; static CFG gate PASS, CFG score 1.000).
 #include "LODSettings_LoadParameters.h"
 float* LODSettings_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_LoadParameters (VA 0x0043F1F0; static CFG gate PASS, CFG score 0.905).
 #include "Wire_LoadParameters.h"
 int32_t Wire_LoadParameters(int32_t* a1)
 

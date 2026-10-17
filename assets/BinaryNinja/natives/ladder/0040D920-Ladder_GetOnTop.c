@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ladder_GetOnTop (VA 0x0040D920; static CFG gate PASS, CFG score 1.000).
 #include "Ladder_GetOnTop.h"
 int32_t* Ladder_GetOnTop(void* a1, void* a2)
 

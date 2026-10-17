@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AreaActivate_Update (VA 0x00504530; static CFG gate PASS, CFG score 1.000).
 #include "AreaActivate_Update.h"
 int32_t AreaActivate_Update(void* a1)
 

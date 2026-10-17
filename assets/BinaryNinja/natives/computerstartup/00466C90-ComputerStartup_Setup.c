@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerStartup_Setup (VA 0x00466C90; static CFG gate PASS, CFG score 1.000).
 #include "ComputerStartup_Setup.h"
 void ComputerStartup_Setup(void* a1)
 

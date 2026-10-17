@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Water_Init_2 (VA 0x00518E50; static CFG gate PASS, CFG score 1.000).
 #include "Water_Init_2.h"
 
 int32_t Water_Init_2(void* pThis, int32_t* param)

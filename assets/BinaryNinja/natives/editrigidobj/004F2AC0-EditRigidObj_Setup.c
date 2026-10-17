@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_Setup (VA 0x004F2AC0; static CFG gate FAIL, CFG score 0.667).
 #include "EditRigidObj_Setup.h"
 void* EditRigidObj_Setup(void* a1)
 

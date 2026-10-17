@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_FireUpdate (VA 0x00478900; static CFG gate FAIL, CFG score 0.667).
 #include "Weapon_FireUpdate.h"
 int32_t Weapon_FireUpdate(int32_t a1, int32_t* a2)
 

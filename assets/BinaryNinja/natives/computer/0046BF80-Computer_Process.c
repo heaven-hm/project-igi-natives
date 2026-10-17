@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Computer_Process (VA 0x0046BF80; static CFG gate PASS, CFG score 1.000).
 #include "Computer_Process.h"
 int32_t Computer_Process(void* a1)
 

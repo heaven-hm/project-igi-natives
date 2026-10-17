@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_SetMusicVolume (VA 0x00415950; static CFG gate PASS, CFG score 0.889).
 #include "Game_SetMusicVolume.h"
 int32_t Game_SetMusicVolume(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

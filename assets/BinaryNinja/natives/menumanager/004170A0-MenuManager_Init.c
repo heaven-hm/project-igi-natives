@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_Init (VA 0x004170A0; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_Init.h"
 ❓  int32_t* MenuManager_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

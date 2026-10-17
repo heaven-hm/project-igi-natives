@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ClosestZ2F (VA 0x004D2840; static CFG gate PASS, CFG score 0.939).
 #include "Render_ClosestZ2F.h"
 int32_t Render_ClosestZ2F(void* a1, char* a2)
 

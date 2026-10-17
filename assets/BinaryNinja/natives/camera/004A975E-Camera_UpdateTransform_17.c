@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateTransform_17 (VA 0x004A975E; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_17.h"
 long double __convention("regparm") Camera_UpdateTransform_17(int32_t a1, int32_t a2, int16_t a3 @ x87control, long double a4, int32_t a5 @ 0xa, long double a6, long double a7)
 

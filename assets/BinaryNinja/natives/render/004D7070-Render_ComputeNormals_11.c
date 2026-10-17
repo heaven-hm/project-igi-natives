@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_ComputeNormals_11 (VA 0x004D7070; static CFG gate PASS, CFG score 1.000).
 #include "Render_ComputeNormals_11.h"
 float Render_ComputeNormals_11(float a1, float a2, float a3, int32_t a4, int32_t a5) __location("valA")
 

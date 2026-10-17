@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_HitDamage (VA 0x00416D80; static CFG gate PASS, CFG score 1.000).
 #include "Human_HitDamage.h"
 void* Human_HitDamage()
 

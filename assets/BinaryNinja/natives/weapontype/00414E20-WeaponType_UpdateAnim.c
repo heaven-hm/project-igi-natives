@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_UpdateAnim (VA 0x00414E20; static CFG gate PASS, CFG score 0.963).
 #include "WeaponType_UpdateAnim.h"
 double* WeaponType_UpdateAnim(double* a1, double* a2, int32_t a3)
 

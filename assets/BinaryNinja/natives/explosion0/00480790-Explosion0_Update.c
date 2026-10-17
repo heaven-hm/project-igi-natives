@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Explosion0_Update (VA 0x00480790; static CFG gate PASS, CFG score 0.897).
 #include "Explosion0_Update.h"
 int32_t Explosion0_Update(float a1)
 

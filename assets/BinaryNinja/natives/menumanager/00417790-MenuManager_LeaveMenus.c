@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_LeaveMenus (VA 0x00417790; static CFG gate PASS, CFG score 0.917).
 #include "MenuManager_LeaveMenus.h"
 int32_t MenuManager_LeaveMenus(int32_t a1, void* a2, float a3)
 

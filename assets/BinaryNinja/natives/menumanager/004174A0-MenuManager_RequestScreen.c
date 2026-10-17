@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_RequestScreen (VA 0x004174A0; static CFG gate PASS, CFG score 0.917).
 #include "MenuManager_RequestScreen.h"
 int32_t MenuManager_RequestScreen(int32_t a1, void* a2, float a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Write (VA 0x00405BD0; static CFG gate PASS, CFG score 1.000).
 #include "Config_Write.h"
 int32_t Config_Write(void* a1)
 

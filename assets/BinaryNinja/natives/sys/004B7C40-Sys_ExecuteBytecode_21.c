@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ExecuteBytecode_21 (VA 0x004B7C40; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_ExecuteBytecode_21.h"
 int32_t Sys_ExecuteBytecode_21(void* a1)
 

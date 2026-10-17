@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_ProcessMeshformatnotsup (VA 0x0049FE60; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_ProcessMeshformatnotsup.h"
 
 int32_t(int32_t* arg1)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_RequestScreen_6 (VA 0x00419630; static CFG gate PASS, CFG score 1.000).
 #include "Menu_RequestScreen_6.h"
 int32_t Menu_RequestScreen_6(float* a1, float* a2)
 

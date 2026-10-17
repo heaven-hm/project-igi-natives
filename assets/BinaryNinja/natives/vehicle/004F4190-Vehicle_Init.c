@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_Init (VA 0x004F4190; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_Init.h"
 int32_t Vehicle_Init()
 

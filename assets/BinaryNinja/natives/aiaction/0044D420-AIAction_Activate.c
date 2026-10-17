@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_Activate (VA 0x0044D420; static CFG gate PASS, CFG score 0.944).
 #include "AIAction_Activate.h"
 int32_t AIAction_Activate(int32_t a1, float a2 @ 0xc)
 

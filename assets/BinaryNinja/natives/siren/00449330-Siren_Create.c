@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Siren_Create (VA 0x00449330; static CFG gate PASS, CFG score 1.000).
 #include "Siren_Create.h"
 
 char* Siren_Create(void* pThis)

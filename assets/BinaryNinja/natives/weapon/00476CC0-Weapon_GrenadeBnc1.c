@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_GrenadeBnc1 (VA 0x00476CC0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_GrenadeBnc1.h"
 uint32_t Weapon_GrenadeBnc1(void* a1)
 

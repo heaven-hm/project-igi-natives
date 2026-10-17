@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Hazinglayers_Init (VA 0x004DA1D0; static CFG gate PASS, CFG score 1.000).
 #include "Hazinglayers_Init.h"
 int32_t Hazinglayers_Init()
 

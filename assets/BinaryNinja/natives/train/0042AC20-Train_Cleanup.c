@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_Cleanup (VA 0x0042AC20; static CFG gate PASS, CFG score 1.000).
 #include "Train_Cleanup.h"
 int32_t* Train_Cleanup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_20 (VA 0x004B7630; static CFG gate FAIL, CFG score 0.809).
 #include "Sys_DispatchOpcode_20.h"
 int32_t* Sys_DispatchOpcode_20(int32_t a1, int32_t a2, void* a3)
 

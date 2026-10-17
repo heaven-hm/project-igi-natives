@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_FiringStateGet (VA 0x00477C10; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_FiringStateGet.h"
 int32_t Weapon_FiringStateGet()
 

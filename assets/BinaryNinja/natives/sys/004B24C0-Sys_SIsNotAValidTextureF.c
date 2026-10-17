@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_SIsNotAValidTextureF (VA 0x004B24C0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_SIsNotAValidTextureF.h"
 int32_t Sys_SIsNotAValidTextureF(int32_t* a1, int32_t a2, int32_t* a3)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmLight_Update (VA 0x0043A660; static CFG gate PASS, CFG score 1.000).
 #include "AlarmLight_Update.h"
 int32_t AlarmLight_Update(float a1, float a2)
 

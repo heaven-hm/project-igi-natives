@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_BuildEyeSnapshot (VA 0x00489960; static CFG gate FAIL, CFG score 0.833).
 #include "AI_BuildEyeSnapshot.h"
 int32_t AI_BuildEyeSnapshot(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, double* a4, double* a5)
 

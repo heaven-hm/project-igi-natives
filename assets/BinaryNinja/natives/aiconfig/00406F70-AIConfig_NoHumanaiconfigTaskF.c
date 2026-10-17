@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIConfig_NoHumanaiconfigTaskF (VA 0x00406F70; static CFG gate PASS, CFG score 1.000).
 #include "AIConfig_NoHumanaiconfigTaskF.h"
 int32_t AIConfig_NoHumanaiconfigTaskF(void* a1)
 

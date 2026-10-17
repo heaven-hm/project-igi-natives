@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PictureBox_OnEvent (VA 0x0041B750; static CFG gate PASS, CFG score 1.000).
 #include "PictureBox_OnEvent.h"
 int32_t PictureBox_OnEvent(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_2 (VA 0x00490C40; static CFG gate PASS, CFG score 0.867).
 #include "Display_SyncVSync_2.h"
 bool Display_SyncVSync_2(void* a1, int32_t a2, int32_t a3)
 

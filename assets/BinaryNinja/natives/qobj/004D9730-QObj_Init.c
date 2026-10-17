@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QObj_Init (VA 0x004D9730; static CFG gate PASS, CFG score 1.000).
 #include "QObj_Init.h"
 int32_t QObj_Init()
 

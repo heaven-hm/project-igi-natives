@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_RemoveEventCallback_2 (VA 0x00401BB0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_RemoveEventCallback_2.h"
 void* QTask_RemoveEventCallback_2(int32_t* a1, void* a2)
 

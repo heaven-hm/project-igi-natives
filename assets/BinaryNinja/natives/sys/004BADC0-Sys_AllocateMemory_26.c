@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_26 (VA 0x004BADC0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_AllocateMemory_26.h"
 int32_t* Sys_AllocateMemory_26(void* a1, int32_t a2)
 

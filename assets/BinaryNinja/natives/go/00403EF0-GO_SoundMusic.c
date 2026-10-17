@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_SoundMusic (VA 0x00403EF0; static CFG gate PASS, CFG score 0.889).
 #include "GO_SoundMusic.h"
 int32_t GO_SoundMusic(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

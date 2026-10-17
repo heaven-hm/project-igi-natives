@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_Display (VA 0x004942A0; static CFG gate PASS, CFG score 0.872).
 #include "Display_Display.h"
 int32_t Display_Display(int32_t a1, int32_t a2, int32_t a3, int32_t a4, void* a5, int32_t* a6)
 

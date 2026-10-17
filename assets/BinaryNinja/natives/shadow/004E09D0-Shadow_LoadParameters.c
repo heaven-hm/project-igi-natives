@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Shadow_LoadParameters (VA 0x004E09D0; static CFG gate PASS, CFG score 1.000).
 #include "Shadow_LoadParameters.h"
 int32_t* Shadow_LoadParameters(float a1)
 

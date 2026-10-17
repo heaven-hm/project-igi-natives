@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalContainer_LoadParameters (VA 0x004874A0; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalContainer_LoadParameters.h"
 int32_t* ConditionalContainer_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sound_ProcessStep_4EB360 (VA 0x004EB360; static CFG gate PASS, CFG score 1.000).
 #include "Sound_ProcessStep_4EB360.h"
 
 void(void* arg1, int32_t* arg2)

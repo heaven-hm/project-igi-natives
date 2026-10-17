@@ -1,3 +1,4 @@
+// Original IGI.EXE function: VehiclePhysics_ExecutePipeline_42B2F0 (VA 0x0042B2F0; static CFG gate PASS, CFG score 1.000).
 #include "VehiclePhysics_ExecutePipeline_42B2F0.h"
 
 int32_t*(int32_t* arg1 )

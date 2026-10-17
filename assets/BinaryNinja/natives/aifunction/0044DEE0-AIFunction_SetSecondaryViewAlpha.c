@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetSecondaryViewAlpha (VA 0x0044DEE0; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetSecondaryViewAlpha.h"
 int32_t AIFunction_SetSecondaryViewAlpha(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

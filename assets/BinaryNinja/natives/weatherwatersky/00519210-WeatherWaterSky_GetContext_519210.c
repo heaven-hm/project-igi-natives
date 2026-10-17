@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherWaterSky_GetContext_519210 (VA 0x00519210; static CFG gate PASS, CFG score 1.000).
 #include "WeatherWaterSky_GetContext_519210.h"
 
 int32_t*(int32_t* arg1 )

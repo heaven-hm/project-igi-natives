@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_QvertexDrawstrip (VA 0x00509930; static CFG gate FAIL, CFG score 0.633).
 #include "Physics_QvertexDrawstrip.h"
 int32_t Physics_QvertexDrawstrip()
 

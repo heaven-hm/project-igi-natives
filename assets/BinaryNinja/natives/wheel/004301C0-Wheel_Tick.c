@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wheel_Tick (VA 0x004301C0; static CFG gate PASS, CFG score 1.000).
 #include "Wheel_Tick.h"
 int32_t Wheel_Tick(float a1)
 

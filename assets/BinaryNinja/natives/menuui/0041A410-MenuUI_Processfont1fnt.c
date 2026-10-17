@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_Processfont1fnt (VA 0x0041A410; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_Processfont1fnt.h"
 
 int32_t(void* arg1)

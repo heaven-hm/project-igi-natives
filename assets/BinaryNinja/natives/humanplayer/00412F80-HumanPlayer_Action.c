@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_Action (VA 0x00412F80; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_Action.h"
 struct status_msg* HumanPlayer_Action(void* a1)
 

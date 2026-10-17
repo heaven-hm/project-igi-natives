@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalContainer_Action (VA 0x00487920; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalContainer_Action.h"
 int32_t ConditionalContainer_Action(void* a1)
 

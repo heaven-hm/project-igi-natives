@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_LeftEcco2F2F2F2F (VA 0x00436DA0; static CFG gate PASS, CFG score 0.952).
 #include "Vehicle_LeftEcco2F2F2F2F.h"
 int32_t Vehicle_LeftEcco2F2F2F2F(void* a1)
 

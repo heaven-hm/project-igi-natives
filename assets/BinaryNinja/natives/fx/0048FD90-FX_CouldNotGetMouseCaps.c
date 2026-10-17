@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_CouldNotGetMouseCaps (VA 0x0048FD90; static CFG gate PASS, CFG score 1.000).
 #include "FX_CouldNotGetMouseCaps.h"
 int32_t FX_CouldNotGetMouseCaps()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_HumancameraHumanlist (VA 0x00484CF0; static CFG gate PASS, CFG score 1.000).
 #include "FX_HumancameraHumanlist.h"
 char* FX_HumancameraHumanlist()
 

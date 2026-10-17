@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Train_LoadParameters (VA 0x0042A100; static CFG gate PASS, CFG score 1.000).
 #include "Train_LoadParameters.h"
 int32_t Train_LoadParameters(void* a1)
 

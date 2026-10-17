@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyWideScreen_10 (VA 0x004A71D0; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_10.h"
 uint32_t Camera_ApplyWideScreen_10(char* a1)
 

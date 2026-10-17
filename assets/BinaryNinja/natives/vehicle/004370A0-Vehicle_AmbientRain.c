@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_AmbientRain (VA 0x004370A0; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_AmbientRain.h"
 int32_t Vehicle_AmbientRain(float a1)
 

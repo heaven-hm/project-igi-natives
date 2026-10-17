@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_Update (VA 0x00478970; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Update.h"
 void* Gun_Update(void* a1)
 

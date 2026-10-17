@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_Glowreadbufferprimit (VA 0x00512820; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_Glowreadbufferprimit.h"
 int32_t Terrain_Glowreadbufferprimit()
 

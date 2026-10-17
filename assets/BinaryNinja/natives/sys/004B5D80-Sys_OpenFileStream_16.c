@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_OpenFileStream_16 (VA 0x004B5D80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_16.h"
 void* Sys_OpenFileStream_16(void* a1, int32_t a2, void* a3)
 

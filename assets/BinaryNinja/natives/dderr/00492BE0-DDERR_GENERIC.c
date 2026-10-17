@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DDERR_GENERIC (VA 0x00492BE0; static CFG gate PASS, CFG score 1.000).
 #include "DDERR_GENERIC.h"
 int32_t DDERR_GENERIC(int32_t a1)
 

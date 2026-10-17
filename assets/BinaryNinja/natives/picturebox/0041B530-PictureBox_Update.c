@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PictureBox_Update (VA 0x0041B530; static CFG gate PASS, CFG score 1.000).
 #include "PictureBox_Update.h"
 int32_t PictureBox_Update(void* a1, int32_t a2)
 

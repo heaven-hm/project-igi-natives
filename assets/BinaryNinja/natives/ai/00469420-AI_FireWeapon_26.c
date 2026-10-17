@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_FireWeapon_26 (VA 0x00469420; static CFG gate PASS, CFG score 1.000).
 #include "AI_FireWeapon_26.h"
 uint32_t AI_FireWeapon_26()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MineField_Init (VA 0x0043A840; static CFG gate PASS, CFG score 1.000).
 #include "MineField_Init.h"
 int32_t* MineField_Init()
 

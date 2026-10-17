@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_HandleInput_22 (VA 0x0042F7C0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_HandleInput_22.h"
 void* Menu_HandleInput_22(void* a1)
 

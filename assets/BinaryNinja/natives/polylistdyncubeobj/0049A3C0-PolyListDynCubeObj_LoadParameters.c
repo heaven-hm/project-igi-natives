@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PolyListDynCubeObj_LoadParameters (VA 0x0049A3C0; static CFG gate PASS, CFG score 1.000).
 #include "PolyListDynCubeObj_LoadParameters.h"
 void** PolyListDynCubeObj_LoadParameters(void* a1)
 

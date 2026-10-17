@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_LevelQtaskIdDNotDefi (VA 0x0048E620; static CFG gate PASS, CFG score 1.000).
 #include "FX_LevelQtaskIdDNotDefi.h"
 int32_t* FX_LevelQtaskIdDNotDefi(int32_t* a1, void* const a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_TakeCover_3 (VA 0x00452580; static CFG gate PASS, CFG score 1.000).
 #include "AI_TakeCover_3.h"
 int32_t AI_TakeCover_3(void* a1, int32_t a2, float a3, char a4)
 

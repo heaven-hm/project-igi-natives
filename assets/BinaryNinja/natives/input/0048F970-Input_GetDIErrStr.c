@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Input_GetDIErrStr (VA 0x0048F970; static CFG gate PASS, CFG score 1.000).
 #include "Input_GetDIErrStr.h"
 
 LRESULT __stdcall Input_GetDIErrStr(HWND pThis, uint32_t param, WPARAM flags, LPARAM arg4)

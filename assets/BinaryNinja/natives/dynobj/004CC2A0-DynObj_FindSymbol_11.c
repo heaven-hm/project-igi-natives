@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_FindSymbol_11 (VA 0x004CC2A0; static CFG gate PASS, CFG score 0.872).
 #include "DynObj_FindSymbol_11.h"
 int32_t* DynObj_FindSymbol_11(int32_t a1, int32_t* a2, double* a3, double* a4, int32_t* a5, char a6, double* a7, int32_t a8)
 

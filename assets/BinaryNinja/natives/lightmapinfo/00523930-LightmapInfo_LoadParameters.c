@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LightmapInfo_LoadParameters (VA 0x00523930; static CFG gate PASS, CFG score 1.000).
 #include "LightmapInfo_LoadParameters.h"
 int32_t LightmapInfo_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_Init (VA 0x00488BB0; static CFG gate PASS, CFG score 1.000).
 #include "LevelFlow_Init.h"
 void* LevelFlow_Init()
 

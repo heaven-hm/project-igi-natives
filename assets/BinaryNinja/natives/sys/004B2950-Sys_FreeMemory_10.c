@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_10 (VA 0x004B2950; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_10.h"
 long double Sys_FreeMemory_10(float* a1, float* a2)
 

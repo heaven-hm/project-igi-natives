@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_UpdateTransform_27 (VA 0x004AD1B0; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_27.h"
 🌐  uint32_t __stdcall __aullrem(int32_t a1, uint32_t a2, int32_t a3, uint32_t a4) __pure
 

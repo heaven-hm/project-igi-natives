@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldierRPG_OnEvent (VA 0x00457620; static CFG gate PASS, CFG score 0.970).
 #include "HumanSoldierRPG_OnEvent.h"
 int32_t HumanSoldierRPG_OnEvent(void* a1, float* a2)
 

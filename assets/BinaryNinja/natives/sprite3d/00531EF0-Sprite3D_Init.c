@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sprite3D_Init (VA 0x00531EF0; static CFG gate PASS, CFG score 1.000).
 #include "Sprite3D_Init.h"
 int32_t Sprite3D_Init()
 

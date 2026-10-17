@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SetLightColor_8 (VA 0x0052BCC0; static CFG gate FAIL, CFG score 0.833).
 #include "Light_SetLightColor_8.h"
 int32_t Light_SetLightColor_8(int32_t a1, int32_t a2, void* a3)
 

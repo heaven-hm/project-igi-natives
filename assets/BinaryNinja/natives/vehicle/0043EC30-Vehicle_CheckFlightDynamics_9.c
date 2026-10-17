@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_CheckFlightDynamics_9 (VA 0x0043EC30; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_CheckFlightDynamics_9.h"
 float* Vehicle_CheckFlightDynamics_9(float a1)
 

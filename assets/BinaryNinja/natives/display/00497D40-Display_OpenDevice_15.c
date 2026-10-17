@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_OpenDevice_15 (VA 0x00497D40; static CFG gate FAIL, CFG score 0.722).
 #include "Display_OpenDevice_15.h"
 int32_t Display_OpenDevice_15()
 

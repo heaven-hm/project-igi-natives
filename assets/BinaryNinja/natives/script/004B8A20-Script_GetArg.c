@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_GetArg (VA 0x004B8A20; static CFG gate PASS, CFG score 1.000).
 #include "Script_GetArg.h"
 int32_t Script_GetArg(float a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Missile_Setup (VA 0x00428CA0; static CFG gate PASS, CFG score 1.000).
 #include "Missile_Setup.h"
 void* Missile_Setup(void* a1)
 

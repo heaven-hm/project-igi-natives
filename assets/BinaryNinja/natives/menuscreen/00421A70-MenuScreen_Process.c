@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuScreen_Process (VA 0x00421A70; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_Process.h"
 int32_t MenuScreen_Process(int32_t a1, int32_t a2)
 

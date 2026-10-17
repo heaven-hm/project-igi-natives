@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_OnEvent (VA 0x0045F890; static CFG gate PASS, CFG score 1.000).
 #include "Human_OnEvent.h"
 float* Human_OnEvent(float a1)
 

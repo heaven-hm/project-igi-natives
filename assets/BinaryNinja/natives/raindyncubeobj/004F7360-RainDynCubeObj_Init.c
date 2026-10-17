@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainDynCubeObj_Init (VA 0x004F7360; static CFG gate PASS, CFG score 0.992).
 #include "RainDynCubeObj_Init.h"
 ❓  int32_t RainDynCubeObj_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

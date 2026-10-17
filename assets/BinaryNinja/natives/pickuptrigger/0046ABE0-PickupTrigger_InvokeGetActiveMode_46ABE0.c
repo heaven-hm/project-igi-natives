@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PickupTrigger_InvokeGetActiveMode_46ABE0 (VA 0x0046ABE0; static CFG gate PASS, CFG score 1.000).
 #include "PickupTrigger_InvokeGetActiveMode_46ABE0.h"
 
 void*(void* arg1)

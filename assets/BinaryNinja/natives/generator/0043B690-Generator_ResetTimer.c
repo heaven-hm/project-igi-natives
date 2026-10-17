@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Generator_ResetTimer (VA 0x0043B690; static CFG gate PASS, CFG score 1.000).
 #include "Generator_ResetTimer.h"
 
 int32_t Generator_ResetTimer(void* pThis, int32_t param)

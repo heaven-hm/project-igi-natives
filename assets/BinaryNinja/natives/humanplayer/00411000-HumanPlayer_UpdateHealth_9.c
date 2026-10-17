@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_UpdateHealth_9 (VA 0x00411000; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_UpdateHealth_9.h"
 int32_t* HumanPlayer_UpdateHealth_9(int32_t* a1)
 

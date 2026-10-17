@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_User32Dll (VA 0x004ABBBD; static CFG gate FAIL, CFG score 0.833).
 #include "Camera_User32Dll.h"
 int32_t Camera_User32Dll(int32_t a1, int32_t a2, int32_t a3)
 

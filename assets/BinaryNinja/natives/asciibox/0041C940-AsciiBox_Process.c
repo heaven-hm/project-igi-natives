@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AsciiBox_Process (VA 0x0041C940; static CFG gate PASS, CFG score 1.000).
 #include "AsciiBox_Process.h"
 int32_t AsciiBox_Process(void* a1)
 

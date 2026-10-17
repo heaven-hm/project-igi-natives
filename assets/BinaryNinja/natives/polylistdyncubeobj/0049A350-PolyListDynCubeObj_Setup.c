@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PolyListDynCubeObj_Setup (VA 0x0049A350; static CFG gate PASS, CFG score 1.000).
 #include "PolyListDynCubeObj_Setup.h"
 void* PolyListDynCubeObj_Setup(void* a1)
 

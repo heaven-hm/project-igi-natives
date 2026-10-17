@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObj_GetEventId (VA 0x004D9FB0; static CFG gate PASS, CFG score 1.000).
 #include "MagicObj_GetEventId.h"
 int32_t MagicObj_GetEventId()
 

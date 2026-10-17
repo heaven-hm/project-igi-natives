@@ -1,3 +1,4 @@
+// Original IGI.EXE function: menu_music (VA 0x00418520; static CFG gate PASS, CFG score 1.000).
 #include "menu_music.h"
 int32_t menu_music(void* a1)
 

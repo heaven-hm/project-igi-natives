@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DefineComputerObjective_Setup (VA 0x004674D0; static CFG gate PASS, CFG score 1.000).
 #include "DefineComputerObjective_Setup.h"
 char* DefineComputerObjective_Setup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_InvokeRestoreDevice_4A4CB0 (VA 0x004A4CB0; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_InvokeRestoreDevice_4A4CB0.h"
 
 int32_t(int32_t arg1)

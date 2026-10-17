@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_VirmodelIsNull (VA 0x004D9700; static CFG gate PASS, CFG score 1.000).
 #include "Render_VirmodelIsNull.h"
 int32_t Render_VirmodelIsNull(void* a1, int32_t* a2)
 

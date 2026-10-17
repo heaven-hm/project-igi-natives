@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetDisplayMode_9 (VA 0x00495A90; static CFG gate PASS, CFG score 1.000).
 #include "Display_SetDisplayMode_9.h"
 int32_t Display_SetDisplayMode_9()
 

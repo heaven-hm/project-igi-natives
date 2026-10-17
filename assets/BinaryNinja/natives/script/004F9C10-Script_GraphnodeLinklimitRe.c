@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_GraphnodeLinklimitRe (VA 0x004F9C10; static CFG gate PASS, CFG score 1.000).
 #include "Script_GraphnodeLinklimitRe.h"
 int32_t Script_GraphnodeLinklimitRe(void* a1, int32_t a2)
 

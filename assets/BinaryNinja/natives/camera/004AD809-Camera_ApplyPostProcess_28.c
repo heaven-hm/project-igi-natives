@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyPostProcess_28 (VA 0x004AD809; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess_28.h"
 char* Camera_ApplyPostProcess_28(uint32_t a1, int32_t a2)
 

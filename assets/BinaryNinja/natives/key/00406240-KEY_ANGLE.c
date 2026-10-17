@@ -1,3 +1,4 @@
+// Original IGI.EXE function: KEY_ANGLE (VA 0x00406240; static CFG gate PASS, CFG score 1.000).
 #include "KEY_ANGLE.h"
 int32_t KEY_ANGLE(int32_t a1, int32_t* a2, void** a3)
 

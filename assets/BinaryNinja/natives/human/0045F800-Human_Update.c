@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_Update (VA 0x0045F800; static CFG gate PASS, CFG score 1.000).
 #include "Human_Update.h"
 char* Human_Update(float a1, int32_t* a2)
 

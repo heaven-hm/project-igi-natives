@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneMagicObj_Update (VA 0x00531CD0; static CFG gate PASS, CFG score 1.000).
 #include "BoneMagicObj_Update.h"
 int32_t BoneMagicObj_Update(int32_t* a1 @ 0x8)
 

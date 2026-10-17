@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimTrigger_ParseConfigFile (VA 0x004EC070; static CFG gate PASS, CFG score 1.000).
 #include "AnimTrigger_ParseConfigFile.h"
 char* AnimTrigger_ParseConfigFile(char* a1)
 

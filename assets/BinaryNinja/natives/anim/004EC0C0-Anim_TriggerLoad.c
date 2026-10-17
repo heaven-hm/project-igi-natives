@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Anim_TriggerLoad (VA 0x004EC0C0; static CFG gate PASS, CFG score 1.000).
 #include "Anim_TriggerLoad.h"
 int32_t Anim_TriggerLoad(void* a1)
 

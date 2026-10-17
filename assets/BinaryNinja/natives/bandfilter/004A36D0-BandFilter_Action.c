@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BandFilter_Action (VA 0x004A36D0; static CFG gate PASS, CFG score 1.000).
 #include "BandFilter_Action.h"
 void* BandFilter_Action(float a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_InvokeSkinBones_49C850 (VA 0x0049C850; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_InvokeSkinBones_49C850.h"
 
 int32_t*(int32_t* arg1)

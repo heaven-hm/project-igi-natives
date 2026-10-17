@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunM16A2_Update (VA 0x004737F0; static CFG gate PASS, CFG score 0.923).
 #include "GunM16A2_Update.h"
 void* GunM16A2_Update(int32_t* a1 @ 0x8)
 

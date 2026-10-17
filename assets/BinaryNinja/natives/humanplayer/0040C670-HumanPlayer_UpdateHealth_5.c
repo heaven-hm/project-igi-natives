@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_UpdateHealth_5 (VA 0x0040C670; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_UpdateHealth_5.h"
 struct status_msg* HumanPlayer_UpdateHealth_5(void* a1, float a2)
 

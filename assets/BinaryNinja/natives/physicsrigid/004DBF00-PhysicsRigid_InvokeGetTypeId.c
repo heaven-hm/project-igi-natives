@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsRigid_InvokeGetTypeId (VA 0x004DBF00; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsRigid_InvokeGetTypeId.h"
 
 void*(void* arg1, int32_t* arg2)

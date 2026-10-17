@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GameOptionsInputSetMouseSensitivity (VA 0x00404230; static CFG gate PASS, CFG score 0.889).
 #include "Config_GameOptionsInputSetMouseSensitivity.h"
 int32_t Config_GameOptionsInputSetMouseSensitivity(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

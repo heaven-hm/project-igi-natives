@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_UpdateVolume (VA 0x004158E0; static CFG gate PASS, CFG score 0.944).
 #include "Game_UpdateVolume.h"
 int32_t Game_UpdateVolume(int32_t a1)
 

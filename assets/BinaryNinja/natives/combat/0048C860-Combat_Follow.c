@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Combat_Follow (VA 0x0048C860; static CFG gate PASS, CFG score 1.000).
 #include "Combat_Follow.h"
 int32_t* Combat_Follow(int32_t* a1, int32_t* a2)
 

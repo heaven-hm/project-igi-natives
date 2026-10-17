@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Radio_Process (VA 0x0043B250; static CFG gate PASS, CFG score 1.000).
 #include "Radio_Process.h"
 int32_t Radio_Process(void* a1)
 

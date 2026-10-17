@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneDynCubeObj_Process (VA 0x004D88D0; static CFG gate PASS, CFG score 0.889).
 #include "BoneDynCubeObj_Process.h"
 ❓  int32_t* BoneDynCubeObj_Process(float a1, float a2, float a3 @ 0x30, float a4, float a5 @ 0x64, float a6, float a7, float a8, float a9, float a10, float a11, float a12)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

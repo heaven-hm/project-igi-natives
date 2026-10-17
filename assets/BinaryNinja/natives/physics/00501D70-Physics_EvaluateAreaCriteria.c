@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_EvaluateAreaCriteria (VA 0x00501D70; static CFG gate FAIL, CFG score 0.778).
 #include "Physics_EvaluateAreaCriteria.h"
 float* Physics_EvaluateAreaCriteria(void* a1)
 

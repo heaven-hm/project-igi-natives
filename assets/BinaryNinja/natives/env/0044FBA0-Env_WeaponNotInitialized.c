@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_WeaponNotInitialized (VA 0x0044FBA0; static CFG gate PASS, CFG score 1.000).
 #include "Env_WeaponNotInitialized.h"
 void Env_WeaponNotInitialized(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GameMaterial_LoadParameters (VA 0x00408350; static CFG gate PASS, CFG score 1.000).
 #include "GameMaterial_LoadParameters.h"
 int32_t GameMaterial_LoadParameters()
 

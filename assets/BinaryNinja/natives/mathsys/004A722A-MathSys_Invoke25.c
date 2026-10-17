@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MathSys_Invoke25 (VA 0x004A722A; static CFG gate PASS, CFG score 1.000).
 #include "MathSys_Invoke25.h"
 
 char*(char* arg1)

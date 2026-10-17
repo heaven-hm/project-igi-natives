@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_Cleanup_2 (VA 0x00444260; static CFG gate PASS, CFG score 1.000).
 #include "Cabinet_Cleanup_2.h"
 int32_t Cabinet_Cleanup_2(float a1)
 

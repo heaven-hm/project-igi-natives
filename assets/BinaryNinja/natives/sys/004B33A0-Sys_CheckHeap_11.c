@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CheckHeap_11 (VA 0x004B33A0; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_CheckHeap_11.h"
 int32_t Sys_CheckHeap_11(int32_t a1, float* a2, float a3, float a4, float a5)
 

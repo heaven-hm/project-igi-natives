@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_ApplyPhysics_4 (VA 0x0040BBD0; static CFG gate PASS, CFG score 0.933).
 #include "HumanPlayer_ApplyPhysics_4.h"
 int32_t HumanPlayer_ApplyPhysics_4(void* a1, float a2)
 

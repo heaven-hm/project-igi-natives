@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_LocalCommonSprites (VA 0x004161D0; static CFG gate FAIL, CFG score 0.733).
 #include "Level_LocalCommonSprites.h"
 int32_t Level_LocalCommonSprites()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AmbientArea_Init (VA 0x0044C130; static CFG gate PASS, CFG score 1.000).
 #include "AmbientArea_Init.h"
 int32_t* AmbientArea_Init()
 

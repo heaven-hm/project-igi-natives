@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_26 (VA 0x004AD140; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_26.h"
 🌐  uint32_t __stdcall __aulldiv(int32_t a1, uint32_t a2, int32_t a3, uint32_t a4) __pure
 

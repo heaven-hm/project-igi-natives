@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Cleanup_3 (VA 0x0042FD40; static CFG gate PASS, CFG score 1.000).
 #include "Car_Cleanup_3.h"
 int32_t Car_Cleanup_3(void* a1)
 

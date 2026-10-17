@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AsciiBox_Setup (VA 0x0041CDF0; static CFG gate PASS, CFG score 1.000).
 #include "AsciiBox_Setup.h"
 int32_t AsciiBox_Setup(int32_t a1)
 

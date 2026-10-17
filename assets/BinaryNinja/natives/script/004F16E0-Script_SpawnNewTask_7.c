@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_SpawnNewTask_7 (VA 0x004F16E0; static CFG gate PASS, CFG score 1.000).
 #include "Script_SpawnNewTask_7.h"
 int32_t Script_SpawnNewTask_7(int32_t* a1, void* a2)
 

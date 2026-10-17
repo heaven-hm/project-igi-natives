@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_MovementIntegrator (VA 0x004614B0; static CFG gate PASS, CFG score 0.978).
 #include "Human_MovementIntegrator.h"
 int32_t Human_MovementIntegrator(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CameraBase_Init (VA 0x004EE970; static CFG gate PASS, CFG score 0.999).
 #include "CameraBase_Init.h"
 int32_t* CameraBase_Init()
 

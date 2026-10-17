@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalContainer_OnEvent (VA 0x00487860; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalContainer_OnEvent.h"
 int32_t ConditionalContainer_OnEvent(void* a1)
 

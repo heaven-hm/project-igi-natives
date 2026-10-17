@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_DataSymbolLoad (VA 0x004A53B3; static CFG gate PASS, CFG score 1.000).
 #include "Game_DataSymbolLoad.h"
 int32_t Game_DataSymbolLoad(char* a1, char* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Soldier_DeathStateB (VA 0x0045C650; static CFG gate PASS, CFG score 1.000).
 #include "Soldier_DeathStateB.h"
 void* Soldier_DeathStateB(void* a1, void* a2)
 

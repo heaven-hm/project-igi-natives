@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_CheckAmbientArea_7 (VA 0x004453E0; static CFG gate FAIL, CFG score 0.778).
 #include "Env_CheckAmbientArea_7.h"
 float* Env_CheckAmbientArea_7(void* a1)
 

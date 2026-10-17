@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditVariable_Setup (VA 0x004889B0; static CFG gate PASS, CFG score 1.000).
 #include "EditVariable_Setup.h"
 int32_t* EditVariable_Setup(int80_t a1 @ fp0, void* a2)
 

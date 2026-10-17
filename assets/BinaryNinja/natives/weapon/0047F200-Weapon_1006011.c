@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_1006011 (VA 0x0047F200; static CFG gate PASS, CFG score 0.948).
 #include "Weapon_1006011.h"
 struct status_msg* Weapon_1006011(int32_t* a1)
 

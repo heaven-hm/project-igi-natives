@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Create_TerrainTileMap (VA 0x004C6760; static CFG gate PASS, CFG score 0.889).
 #include "Create_TerrainTileMap.h"
 int32_t Create_TerrainTileMap(int32_t a1, float a2 @ 0xc)
 

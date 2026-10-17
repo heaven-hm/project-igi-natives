@@ -1,3 +1,4 @@
+// Original IGI.EXE function: InputPort_LoadParameters (VA 0x004ED560; static CFG gate PASS, CFG score 1.000).
 #include "InputPort_LoadParameters.h"
 int16_t* InputPort_LoadParameters(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsGetGamma (VA 0x00404910; static CFG gate PASS, CFG score 0.889).
 #include "Config_GraphicOptionsGetGamma.h"
 int32_t Config_GraphicOptionsGetGamma(int32_t a1)
 

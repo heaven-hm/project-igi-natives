@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CombatTarget_17 (VA 0x0045ECD0; static CFG gate FAIL, CFG score 0.750).
 #include "AI_CombatTarget_17.h"
 int32_t AI_CombatTarget_17(void* a1)
 

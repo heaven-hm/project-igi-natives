@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditCamera_Init (VA 0x00507F10; static CFG gate PASS, CFG score 1.000).
 #include "EditCamera_Init.h"
 void* EditCamera_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPhysicsObj_LoadParameters (VA 0x0043EBA0; static CFG gate PASS, CFG score 1.000).
 #include "GenericPhysicsObj_LoadParameters.h"
 float* GenericPhysicsObj_LoadParameters(float a1)
 

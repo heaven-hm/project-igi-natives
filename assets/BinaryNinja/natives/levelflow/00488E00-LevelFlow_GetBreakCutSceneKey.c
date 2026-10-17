@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelFlow_GetBreakCutSceneKey (VA 0x00488E00; static CFG gate FAIL, CFG score 0.667).
 #include "LevelFlow_GetBreakCutSceneKey.h"
 int32_t LevelFlow_GetBreakCutSceneKey(int32_t a1)
 

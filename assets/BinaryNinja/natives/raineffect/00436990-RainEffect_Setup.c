@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainEffect_Setup (VA 0x00436990; static CFG gate PASS, CFG score 1.000).
 #include "RainEffect_Setup.h"
 int32_t RainEffect_Setup(int80_t a1 @ fp0, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatSky_Process (VA 0x0051E1F0; static CFG gate PASS, CFG score 1.000).
 #include "FlatSky_Process.h"
 float FlatSky_Process(void* a1) __location("valA")
 

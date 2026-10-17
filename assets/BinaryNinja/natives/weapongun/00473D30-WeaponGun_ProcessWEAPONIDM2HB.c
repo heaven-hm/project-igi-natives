@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponGun_ProcessWEAPONIDM2HB (VA 0x00473D30; static CFG gate PASS, CFG score 1.000).
 #include "WeaponGun_ProcessWEAPONIDM2HB.h"
 
 int32_t(float arg1)

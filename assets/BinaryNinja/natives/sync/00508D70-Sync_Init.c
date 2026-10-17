@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sync_Init (VA 0x00508D70; static CFG gate PASS, CFG score 1.000).
 #include "Sync_Init.h"
 int32_t Sync_Init()
 

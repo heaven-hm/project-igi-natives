@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Siren_Init_2 (VA 0x00449220; static CFG gate PASS, CFG score 1.000).
 #include "Siren_Init_2.h"
 
 int32_t Siren_Init_2(long double pThis @ st0, long double param @ st1, int32_t* flags @ 0x8)

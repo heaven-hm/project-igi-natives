@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathDynCubeObj_OnEvent (VA 0x0051A280; static CFG gate FAIL, CFG score 0.667).
 #include "SplinePathDynCubeObj_OnEvent.h"
 int32_t SplinePathDynCubeObj_OnEvent(int32_t a1, float a2, int32_t a3, float a4)
 

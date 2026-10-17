@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneDynCubeObj_LoadParameters (VA 0x005124C0; static CFG gate PASS, CFG score 0.944).
 #include "BoneDynCubeObj_LoadParameters.h"
 int32_t BoneDynCubeObj_LoadParameters(void* a1)
 

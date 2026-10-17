@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_AttachLipsync_8 (VA 0x004E7180; static CFG gate PASS, CFG score 0.933).
 #include "SoundSys_AttachLipsync_8.h"
 int32_t SoundSys_AttachLipsync_8(char* a1, int32_t a2, int32_t a3)
 

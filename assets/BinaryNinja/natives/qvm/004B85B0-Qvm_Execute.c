@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_Execute (VA 0x004B85B0; static CFG gate PASS, CFG score 1.000).
 #include "Qvm_Execute.h"
 int32_t Qvm_Execute(void* a1)
 

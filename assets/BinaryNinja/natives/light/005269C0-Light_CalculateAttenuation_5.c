@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_CalculateAttenuation_5 (VA 0x005269C0; static CFG gate PASS, CFG score 0.976).
 #include "Light_CalculateAttenuation_5.h"
 int32_t* Light_CalculateAttenuation_5(float a1)
 

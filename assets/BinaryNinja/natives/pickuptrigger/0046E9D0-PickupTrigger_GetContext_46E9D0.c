@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PickupTrigger_GetContext_46E9D0 (VA 0x0046E9D0; static CFG gate PASS, CFG score 1.000).
 #include "PickupTrigger_GetContext_46E9D0.h"
 
 int32_t*(int32_t* arg1 )

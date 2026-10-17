@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_UpdateCameraLens_2 (VA 0x00442020; static CFG gate PASS, CFG score 0.917).
 #include "Env_UpdateCameraLens_2.h"
 int32_t Env_UpdateCameraLens_2(int32_t* a1, void* a2)
 

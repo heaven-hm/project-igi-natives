@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIEVENT_CREATE_2 (VA 0x00450B20; static CFG gate PASS, CFG score 1.000).
 #include "AIEVENT_CREATE_2.h"
 int32_t AIEVENT_CREATE_2()
 

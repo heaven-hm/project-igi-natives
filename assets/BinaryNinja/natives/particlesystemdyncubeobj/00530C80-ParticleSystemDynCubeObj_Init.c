@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ParticleSystemDynCubeObj_Init (VA 0x00530C80; static CFG gate PASS, CFG score 1.000).
 #include "ParticleSystemDynCubeObj_Init.h"
 int32_t* ParticleSystemDynCubeObj_Init()
 

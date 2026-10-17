@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_PopScreen (VA 0x00417710; static CFG gate PASS, CFG score 0.889).
 #include "MenuManager_PopScreen.h"
 int32_t MenuManager_PopScreen(int32_t a1, void* a2, float a3)
 

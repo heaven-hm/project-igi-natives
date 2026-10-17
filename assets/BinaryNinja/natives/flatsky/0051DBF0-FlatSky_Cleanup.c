@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatSky_Cleanup (VA 0x0051DBF0; static CFG gate PASS, CFG score 1.000).
 #include "FlatSky_Cleanup.h"
 int32_t FlatSky_Cleanup(void* a1)
 

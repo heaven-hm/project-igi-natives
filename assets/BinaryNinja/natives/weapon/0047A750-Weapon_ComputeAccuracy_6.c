@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_ComputeAccuracy_6 (VA 0x0047A750; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_ComputeAccuracy_6.h"
 int32_t Weapon_ComputeAccuracy_6(int32_t a1, float a2)
 

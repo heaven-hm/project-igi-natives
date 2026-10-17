@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_Definephysicsobjtype (VA 0x004EDCE0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_Definephysicsobjtype.h"
 void* SoundSys_Definephysicsobjtype()
 

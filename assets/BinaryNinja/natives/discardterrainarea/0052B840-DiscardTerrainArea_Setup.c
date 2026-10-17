@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DiscardTerrainArea_Setup (VA 0x0052B840; static CFG gate FAIL, CFG score 0.800).
 #include "DiscardTerrainArea_Setup.h"
 void* DiscardTerrainArea_Setup(int32_t a1)
 

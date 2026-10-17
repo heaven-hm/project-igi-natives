@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RocketPod_LoadParameters (VA 0x00427940; static CFG gate PASS, CFG score 0.900).
 #include "RocketPod_LoadParameters.h"
 uint32_t RocketPod_LoadParameters(int32_t* a1, float a2)
 

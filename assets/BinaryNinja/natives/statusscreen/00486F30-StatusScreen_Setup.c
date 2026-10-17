@@ -1,3 +1,4 @@
+// Original IGI.EXE function: StatusScreen_Setup (VA 0x00486F30; static CFG gate PASS, CFG score 1.000).
 #include "StatusScreen_Setup.h"
 int32_t* StatusScreen_OnEvent3()
 

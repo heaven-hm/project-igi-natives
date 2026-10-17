@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_LeaveMenus_8 (VA 0x0041C690; static CFG gate FAIL, CFG score 0.667).
 #include "Menu_LeaveMenus_8.h"
 int32_t Menu_LeaveMenus_8(int32_t a1, int32_t a2)
 

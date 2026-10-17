@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_TransformVertices_3 (VA 0x004D0EF0; static CFG gate PASS, CFG score 1.000).
 #include "Render_TransformVertices_3.h"
 void** Render_TransformVertices_3()
 

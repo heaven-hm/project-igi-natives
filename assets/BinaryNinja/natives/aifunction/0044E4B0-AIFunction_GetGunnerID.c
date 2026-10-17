@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetGunnerID (VA 0x0044E4B0; static CFG gate FAIL, CFG score 0.667).
 #include "AIFunction_GetGunnerID.h"
 int32_t AIFunction_GetGunnerID(int32_t a1)
 

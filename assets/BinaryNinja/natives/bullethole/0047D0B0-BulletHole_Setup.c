@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BulletHole_Setup (VA 0x0047D0B0; static CFG gate PASS, CFG score 0.889).
 #include "BulletHole_Setup.h"
 int32_t BulletHole_Setup(void* a1, int32_t a2)
 

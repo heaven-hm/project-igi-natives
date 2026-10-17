@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_WeaponsStringsBinocu (VA 0x00471480; static CFG gate PASS, CFG score 0.989).
 #include "Weapon_WeaponsStringsBinocu.h"
 int32_t Weapon_WeaponsStringsBinocu(void* a1)
 

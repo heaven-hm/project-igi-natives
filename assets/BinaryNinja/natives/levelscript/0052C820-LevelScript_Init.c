@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelScript_Init (VA 0x0052C820; static CFG gate PASS, CFG score 1.000).
 #include "LevelScript_Init.h"
 int32_t* LevelScript_Init()
 

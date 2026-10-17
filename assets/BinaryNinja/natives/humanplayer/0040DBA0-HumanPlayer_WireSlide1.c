@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_WireSlide1 (VA 0x0040DBA0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_WireSlide1.h"
 struct status_msg* HumanPlayer_WireSlide1(void* a1, void* a2)
 

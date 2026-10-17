@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Action (VA 0x0042FC00; static CFG gate FAIL, CFG score 0.667).
 #include "Car_Action.h"
 void** Car_Action(void* a1, void** a2)
 

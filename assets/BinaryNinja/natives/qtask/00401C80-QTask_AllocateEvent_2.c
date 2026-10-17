@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_AllocateEvent_2 (VA 0x00401C80; static CFG gate PASS, CFG score 1.000).
 #include "QTask_AllocateEvent_2.h"
 void* const QTask_AllocateEvent_2(void* a1, int16_t a2)
 

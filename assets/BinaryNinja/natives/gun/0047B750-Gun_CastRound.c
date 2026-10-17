@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_CastRound (VA 0x0047B750; static CFG gate PASS, CFG score 0.935).
 #include "Gun_CastRound.h"
 int32_t Gun_CastRound(void* a1)
 

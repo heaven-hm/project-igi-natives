@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObj_OnEvent (VA 0x00503070; static CFG gate PASS, CFG score 1.000).
 #include "SplineObj_OnEvent.h"
 int32_t* SplineObj_OnEvent(void* a1, int32_t* a2)
 

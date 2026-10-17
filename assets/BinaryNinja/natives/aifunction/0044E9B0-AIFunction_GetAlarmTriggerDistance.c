@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetAlarmTriggerDistance (VA 0x0044E9B0; static CFG gate PASS, CFG score 0.867).
 #include "AIFunction_GetAlarmTriggerDistance.h"
 int32_t AIFunction_GetAlarmTriggerDistance(int32_t a1)
 

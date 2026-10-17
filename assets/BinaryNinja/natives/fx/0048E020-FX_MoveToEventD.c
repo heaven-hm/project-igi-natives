@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_MoveToEventD (VA 0x0048E020; static CFG gate PASS, CFG score 1.000).
 #include "FX_MoveToEventD.h"
 int32_t FX_MoveToEventD(int32_t a1, int32_t* a2)
 

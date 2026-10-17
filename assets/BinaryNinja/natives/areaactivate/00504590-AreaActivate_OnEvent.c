@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AreaActivate_OnEvent (VA 0x00504590; static CFG gate PASS, CFG score 1.000).
 #include "AreaActivate_OnEvent.h"
 int32_t AreaActivate_OnEvent(void* a1)
 

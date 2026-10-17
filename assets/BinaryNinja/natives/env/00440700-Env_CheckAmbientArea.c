@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_CheckAmbientArea (VA 0x00440700; static CFG gate PASS, CFG score 1.000).
 #include "Env_CheckAmbientArea.h"
 uint32_t Env_CheckAmbientArea()
 

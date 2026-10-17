@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Locomotion_GetState (VA 0x0048EFE0; static CFG gate PASS, CFG score 1.000).
 #include "Locomotion_GetState.h"
 int32_t Locomotion_GetState(void* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_ChangeParent (VA 0x004014E0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_ChangeParent.h"
 int32_t QTask_ChangeParent(int16_t a1)
 

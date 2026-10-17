@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_WriteChannel (VA 0x0048EF70; static CFG gate PASS, CFG score 1.000).
 #include "AI_WriteChannel.h"
 void* AI_WriteChannel(void* a1, int32_t a2, float a3)
 

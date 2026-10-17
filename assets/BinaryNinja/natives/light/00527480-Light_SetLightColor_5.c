@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_SetLightColor_5 (VA 0x00527480; static CFG gate PASS, CFG score 1.000).
 #include "Light_SetLightColor_5.h"
 uint32_t Light_SetLightColor_5()
 

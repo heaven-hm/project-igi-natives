@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SoundOptionsGetMusicVolume (VA 0x00404CA0; static CFG gate PASS, CFG score 0.889).
 #include "Config_SoundOptionsGetMusicVolume.h"
 int32_t Config_SoundOptionsGetMusicVolume(int32_t a1)
 

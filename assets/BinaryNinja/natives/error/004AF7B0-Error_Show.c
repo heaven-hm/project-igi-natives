@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Error_Show (VA 0x004AF7B0; static CFG gate PASS, CFG score 0.889).
 #include "Error_Show.h"
 int32_t Error_Show(char* a1)
 

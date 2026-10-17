@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SetGammaRamp_19 (VA 0x0049D480; static CFG gate FAIL, CFG score 0.667).
 #include "Display_SetGammaRamp_19.h"
 int32_t Display_SetGammaRamp_19()
 

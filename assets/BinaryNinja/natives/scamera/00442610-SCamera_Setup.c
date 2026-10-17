@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_Setup (VA 0x00442610; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Setup.h"
 int32_t* SCamera_Setup(int80_t a1 @ fp0, void* a2)
 

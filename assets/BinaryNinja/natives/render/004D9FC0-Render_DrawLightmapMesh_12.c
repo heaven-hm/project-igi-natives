@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawLightmapMesh_12 (VA 0x004D9FC0; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawLightmapMesh_12.h"
 struct status_msg* Render_DrawLightmapMesh_12(double* a1, double* a2, int32_t* a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8)
 

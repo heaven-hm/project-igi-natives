@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_GroundQuery (VA 0x00462390; static CFG gate PASS, CFG score 0.900).
 #include "Human_GroundQuery.h"
 int32_t* Human_GroundQuery(void* a1, double* a2, int32_t* a3, int32_t* a4 @ 0x14, float a5)
 

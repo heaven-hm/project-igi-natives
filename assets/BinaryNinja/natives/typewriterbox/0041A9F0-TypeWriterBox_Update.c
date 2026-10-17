@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TypeWriterBox_Update (VA 0x0041A9F0; static CFG gate PASS, CFG score 1.000).
 #include "TypeWriterBox_Update.h"
 void TypeWriterBox_Update(void* a1)
 

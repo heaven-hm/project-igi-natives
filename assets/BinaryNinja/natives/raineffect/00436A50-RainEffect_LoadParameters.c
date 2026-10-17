@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainEffect_LoadParameters (VA 0x00436A50; static CFG gate PASS, CFG score 1.000).
 #include "RainEffect_LoadParameters.h"
 int32_t RainEffect_LoadParameters(void* a1)
 

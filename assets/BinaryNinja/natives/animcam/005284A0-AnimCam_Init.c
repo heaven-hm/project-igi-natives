@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimCam_Init (VA 0x005284A0; static CFG gate PASS, CFG score 1.000).
 #include "AnimCam_Init.h"
 int32_t* AnimCam_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ReadFileBlock_10 (VA 0x004B29A0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ReadFileBlock_10.h"
 int32_t Sys_ReadFileBlock_10(double* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_DisplayCanOnlyBeOpen (VA 0x00491700; static CFG gate PASS, CFG score 1.000).
 #include "Display_DisplayCanOnlyBeOpen.h"
 int32_t Display_DisplayCanOnlyBeOpen()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MovieSubtitle_RegisterMedia (VA 0x004150E0; static CFG gate PASS, CFG score 1.000).
 #include "MovieSubtitle_RegisterMedia.h"
 
 int32_t MovieSubtitle_RegisterMedia(void* pThis, int32_t* param)

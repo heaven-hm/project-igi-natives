@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_CdAudio (VA 0x00495640; static CFG gate PASS, CFG score 0.882).
 #include "Display_CdAudio.h"
 uint32_t Display_CdAudio()
 

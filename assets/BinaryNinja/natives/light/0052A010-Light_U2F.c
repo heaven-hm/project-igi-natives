@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_U2F (VA 0x0052A010; static CFG gate PASS, CFG score 1.000).
 #include "Light_U2F.h"
 int32_t __convention("regparm") Light_U2F(int32_t a1, int32_t a2, int32_t a3, void* a4)
 

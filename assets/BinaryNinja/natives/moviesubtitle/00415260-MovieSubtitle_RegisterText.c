@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MovieSubtitle_RegisterText (VA 0x00415260; static CFG gate PASS, CFG score 0.979).
 #include "MovieSubtitle_RegisterText.h"
 int32_t MovieSubtitle_RegisterText(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp3, long double a4 @ fp4, long double a5 @ fp5, long double a6 @ fp6, int32_t a7, char* a8, float a9)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_InterpolateWaypoint_7 (VA 0x00508620; static CFG gate FAIL, CFG score 0.833).
 #include "Physics_InterpolateWaypoint_7.h"
 float* Physics_InterpolateWaypoint_7(double* a1, float* a2, int32_t a3)
 

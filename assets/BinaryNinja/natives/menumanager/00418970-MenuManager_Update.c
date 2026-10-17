@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_Update (VA 0x00418970; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_Update.h"
 int32_t MenuManager_Update(void* a1)
 

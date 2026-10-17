@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_HandleInput (VA 0x004012A0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_HandleInput.h"
 struct status_msg* QTask_HandleInput(void* ctx, int32_t kind, int32_t flags)
 

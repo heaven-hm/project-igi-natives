@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_LinkDynamicCube_6 (VA 0x004C5870; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_LinkDynamicCube_6.h"
 int32_t DynObj_LinkDynamicCube_6()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PlaceExplosiveTBA_Init_2 (VA 0x004387B0; static CFG gate PASS, CFG score 1.000).
 #include "PlaceExplosiveTBA_Init_2.h"
 
 int32_t* PlaceExplosiveTBA_Init_2(long double pThis @ st0, int32_t* param @ 0x8)

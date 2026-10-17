@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_UpdateStamina_5 (VA 0x0040C510; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_UpdateStamina_5.h"
 int32_t HumanPlayer_UpdateStamina_5(void* a1, int32_t a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_UpdateSensors_3 (VA 0x004526E0; static CFG gate PASS, CFG score 0.967).
 #include "AI_UpdateSensors_3.h"
 void* AI_UpdateSensors_3(void* a1)
 

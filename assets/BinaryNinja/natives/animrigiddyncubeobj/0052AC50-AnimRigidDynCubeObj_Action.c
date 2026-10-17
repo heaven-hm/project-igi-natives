@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimRigidDynCubeObj_Action (VA 0x0052AC50; static CFG gate PASS, CFG score 0.889).
 #include "AnimRigidDynCubeObj_Action.h"
 int32_t AnimRigidDynCubeObj_Action(void* a1, int32_t* a2)
 

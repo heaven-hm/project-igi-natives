@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_OnEvent (VA 0x0041F030; static CFG gate PASS, CFG score 1.000).
 #include "ListBox_OnEvent.h"
 int32_t* ListBox_OnEvent(void* a1)
 

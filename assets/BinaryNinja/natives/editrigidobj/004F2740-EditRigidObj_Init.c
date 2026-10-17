@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EditRigidObj_Init (VA 0x004F2740; static CFG gate PASS, CFG score 1.000).
 #include "EditRigidObj_Init.h"
 void* EditRigidObj_Init()
 

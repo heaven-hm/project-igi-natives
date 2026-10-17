@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_1009011_2 (VA 0x0043AC40; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_1009011_2.h"
 struct status_msg* Vehicle_1009011_2(void* a1)
 

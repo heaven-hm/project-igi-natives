@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_000011 (VA 0x00489C60; static CFG gate PASS, CFG score 1.000).
 #include "FX_000011.h"
 int32_t FX_000011(void* a1, int32_t* a2)
 

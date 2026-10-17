@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LODSettings_Init (VA 0x004ED6B0; static CFG gate PASS, CFG score 1.000).
 #include "LODSettings_Init.h"
 int32_t* LODSettings_Init()
 

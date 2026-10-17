@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_6 (VA 0x004A5C30; static CFG gate PASS, CFG score 0.926).
 #include "Camera_ResetMatrix_6.h"
 long double Camera_ResetMatrix_6(double a1)
 

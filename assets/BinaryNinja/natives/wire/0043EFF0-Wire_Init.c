@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_Init (VA 0x0043EFF0; static CFG gate PASS, CFG score 1.000).
 #include "Wire_Init.h"
 int32_t* Wire_Init()
 

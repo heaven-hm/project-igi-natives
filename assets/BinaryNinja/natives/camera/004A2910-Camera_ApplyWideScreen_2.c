@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyWideScreen_2 (VA 0x004A2910; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_2.h"
 struct status_msg* Camera_ApplyWideScreen_2(void* a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5)
 

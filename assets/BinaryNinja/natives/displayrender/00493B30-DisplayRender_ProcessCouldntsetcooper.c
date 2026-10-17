@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DisplayRender_ProcessCouldntsetcooper (VA 0x00493B30; static CFG gate PASS, CFG score 1.000).
 #include "DisplayRender_ProcessCouldntsetcooper.h"
 
 int32_t*()

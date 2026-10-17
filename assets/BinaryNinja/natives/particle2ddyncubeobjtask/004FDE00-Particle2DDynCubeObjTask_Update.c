@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Particle2DDynCubeObjTask_Update (VA 0x004FDE00; static CFG gate PASS, CFG score 1.000).
 #include "Particle2DDynCubeObjTask_Update.h"
 int32_t Particle2DDynCubeObjTask_Update(float a1, void* a2)
 

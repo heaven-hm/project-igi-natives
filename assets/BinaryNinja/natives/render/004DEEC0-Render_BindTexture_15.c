@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_BindTexture_15 (VA 0x004DEEC0; static CFG gate PASS, CFG score 0.926).
 #include "Render_BindTexture_15.h"
 float Render_BindTexture_15(float a1) __location("valA")
 

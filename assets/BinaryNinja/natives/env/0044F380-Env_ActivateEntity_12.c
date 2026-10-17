@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Env_ActivateEntity_12 (VA 0x0044F380; static CFG gate PASS, CFG score 1.000).
 #include "Env_ActivateEntity_12.h"
 void* Env_ActivateEntity_12(void* a1)
 

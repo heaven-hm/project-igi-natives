@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Car_Run (VA 0x0042E320; static CFG gate PASS, CFG score 0.978).
 #include "Car_Run.h"
 uint32_t Car_Run(double* a1)
 

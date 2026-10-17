@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_4 (VA 0x004B12F0; static CFG gate FAIL, CFG score 0.778).
 #include "Sys_FreeMemory_4.h"
 int32_t Script_RegisterNamespace(char* a1, void* a2)
 

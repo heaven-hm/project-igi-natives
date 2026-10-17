@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RainDynCubeObj_LoadParameters (VA 0x004F6C00; static CFG gate PASS, CFG score 0.917).
 #include "RainDynCubeObj_LoadParameters.h"
 int32_t* RainDynCubeObj_LoadParameters(void* a1)
 

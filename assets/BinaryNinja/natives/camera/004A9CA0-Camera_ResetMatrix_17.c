@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ResetMatrix_17 (VA 0x004A9CA0; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_17.h"
 🌐  long double __twoToTOS(long double a1 @ fp0)
 

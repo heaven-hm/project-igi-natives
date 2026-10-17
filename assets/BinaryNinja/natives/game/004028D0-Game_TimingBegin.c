@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_TimingBegin (VA 0x004028D0; static CFG gate PASS, CFG score 1.000).
 #include "Game_TimingBegin.h"
 int32_t Game_TimingBegin()
 

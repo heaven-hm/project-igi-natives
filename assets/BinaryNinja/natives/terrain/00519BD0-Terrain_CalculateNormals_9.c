@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_CalculateNormals_9 (VA 0x00519BD0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_CalculateNormals_9.h"
 float Terrain_CalculateNormals_9(float a1) __location("valA")
 

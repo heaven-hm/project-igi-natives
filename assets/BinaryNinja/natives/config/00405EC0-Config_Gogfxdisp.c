@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Gogfxdisp (VA 0x00405EC0; static CFG gate PASS, CFG score 1.000).
 #include "Config_Gogfxdisp.h"
 int32_t Config_Gogfxdisp(int32_t* a1, int32_t a2)
 

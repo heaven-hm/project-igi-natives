@@ -1,3 +1,4 @@
+// Original IGI.EXE function: String_VFormat (VA 0x004A5702; static CFG gate PASS, CFG score 1.000).
 #include "String_VFormat.h"
 int32_t String_VFormat(char* a1, char* a2, int32_t a3)
 

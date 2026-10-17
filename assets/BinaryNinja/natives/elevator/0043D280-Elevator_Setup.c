@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Elevator_Setup (VA 0x0043D280; static CFG gate PASS, CFG score 0.975).
 #include "Elevator_Setup.h"
 uint32_t Elevator_Setup(int32_t* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_ApplyLightmap_9 (VA 0x0052CE90; static CFG gate PASS, CFG score 1.000).
 #include "Light_ApplyLightmap_9.h"
 int32_t Light_ApplyLightmap_9(float* a1, float* a2, float* a3, float* a4, float a5, float a6)
 

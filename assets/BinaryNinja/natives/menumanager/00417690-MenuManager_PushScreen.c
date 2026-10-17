@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuManager_PushScreen (VA 0x00417690; static CFG gate FAIL, CFG score 0.833).
 #include "MenuManager_PushScreen.h"
 int32_t MenuManager_PushScreen(int32_t a1, void* a2, float a3)
 

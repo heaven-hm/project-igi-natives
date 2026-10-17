@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ParseEnumString_27 (VA 0x004FA950; static CFG gate PASS, CFG score 0.889).
 #include "Script_ParseEnumString_27.h"
 uint32_t Script_ParseEnumString_27(void* a1, int32_t a2)
 

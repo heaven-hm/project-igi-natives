@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyBandFilter_12 (VA 0x004A7F2A; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_12.h"
 BOOL __convention("regparm") Camera_ApplyBandFilter_12(int32_t a1, int32_t a2, int32_t a3, int32_t a4 @ 0x8)
 

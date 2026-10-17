@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_QtaskTypeSNotDefined (VA 0x00401A70; static CFG gate PASS, CFG score 1.000).
 #include "QTask_QtaskTypeSNotDefined.h"
 int32_t QTask_QtaskTypeSNotDefined(char* a1)
 

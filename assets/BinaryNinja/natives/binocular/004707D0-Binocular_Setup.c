@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Binocular_Setup (VA 0x004707D0; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_Setup.h"
 int32_t Binocular_Setup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_TakeDamage (VA 0x00408A40; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_TakeDamage.h"
 int32_t HumanPlayer_TakeDamage(void* a1, void* a2)
 

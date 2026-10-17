@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PolyListDynCubeObj_OnEvent (VA 0x0049A6E0; static CFG gate FAIL, CFG score 0.667).
 #include "PolyListDynCubeObj_OnEvent.h"
 int32_t PolyListDynCubeObj_OnEvent()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_LoadParameters (VA 0x0041BDD0; static CFG gate PASS, CFG score 0.985).
 #include "ScrollListBox_LoadParameters.h"
 int32_t ScrollListBox_LoadParameters(void* a1)
 

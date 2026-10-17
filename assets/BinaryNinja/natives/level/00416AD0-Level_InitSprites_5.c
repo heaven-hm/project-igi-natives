@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Level_InitSprites_5 (VA 0x00416AD0; static CFG gate FAIL, CFG score 0.833).
 #include "Level_InitSprites_5.h"
 int32_t Level_InitSprites_5(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, void* a5, int32_t a6, float a7)
 

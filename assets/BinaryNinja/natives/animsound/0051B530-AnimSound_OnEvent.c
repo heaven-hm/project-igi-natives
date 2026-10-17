@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSound_OnEvent (VA 0x0051B530; static CFG gate PASS, CFG score 1.000).
 #include "AnimSound_OnEvent.h"
 uint32_t AnimSound_OnEvent()
 

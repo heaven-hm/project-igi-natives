@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_SetFieldOfView_4 (VA 0x004A528A; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_4.h"
 uint32_t Camera_SetFieldOfView_4(int32_t* a1)
 

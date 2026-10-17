@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PlaceExplosiveTBA_LoadParameters (VA 0x004389E0; static CFG gate FAIL, CFG score 0.844).
 #include "PlaceExplosiveTBA_LoadParameters.h"
 int32_t PlaceExplosiveTBA_LoadParameters(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, float a5, void* a6)
 

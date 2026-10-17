@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Afterburner_Setup (VA 0x0042BFA0; static CFG gate PASS, CFG score 1.000).
 #include "Afterburner_Setup.h"
 int32_t Afterburner_Setup(float a1)
 

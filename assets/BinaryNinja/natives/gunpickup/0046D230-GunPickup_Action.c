@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunPickup_Action (VA 0x0046D230; static CFG gate PASS, CFG score 0.952).
 #include "GunPickup_Action.h"
 int32_t GunPickup_Action(void* a1, int32_t* a2)
 

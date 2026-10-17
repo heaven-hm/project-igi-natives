@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_ProcessTextBox (VA 0x0041AAA0; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_ProcessTextBox.h"
 
 void*(void* arg1)

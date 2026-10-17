@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsObj_Setup (VA 0x0042DA70; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsObj_Setup.h"
 void* PhysicsObj_Setup(int32_t* a1 @ 0x8)
 

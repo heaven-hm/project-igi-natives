@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CheckSector_28 (VA 0x0046C020; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckSector_28.h"
 struct status_msg* AI_CheckSector_28(void* a1)
 

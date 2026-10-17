@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPhysicsMagicObj_OnEvent (VA 0x0043E600; static CFG gate PASS, CFG score 1.000).
 #include "GenericPhysicsMagicObj_OnEvent.h"
 float* GenericPhysicsMagicObj_OnEvent(float a1)
 

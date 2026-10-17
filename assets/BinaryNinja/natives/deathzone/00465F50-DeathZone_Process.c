@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DeathZone_Process (VA 0x00465F50; static CFG gate PASS, CFG score 0.875).
 #include "DeathZone_Process.h"
 int32_t DeathZone_Process(float a1, double** a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_TimingEnd (VA 0x004028F0; static CFG gate PASS, CFG score 1.000).
 #include "Game_TimingEnd.h"
 int32_t Game_TimingEnd()
 

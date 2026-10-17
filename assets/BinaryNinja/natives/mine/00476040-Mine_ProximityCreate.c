@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mine_ProximityCreate (VA 0x00476040; static CFG gate PASS, CFG score 0.852).
 #include "Mine_ProximityCreate.h"
 struct status_msg* Mine_ProximityCreate(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, char a9)
 

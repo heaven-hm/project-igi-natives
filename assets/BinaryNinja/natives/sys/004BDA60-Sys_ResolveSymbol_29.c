@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_29 (VA 0x004BDA60; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_29.h"
 void* Sys_ResolveSymbol_29(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wheel_FrictionDrive (VA 0x00430960; static CFG gate PASS, CFG score 1.000).
 #include "Wheel_FrictionDrive.h"
 void* Wheel_FrictionDrive(float* a1, float* a2, float* a3, float* a4, float a5, float a6, float a7)
 

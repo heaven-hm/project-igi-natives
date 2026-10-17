@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AmmoPickup_Update (VA 0x0046D930; static CFG gate PASS, CFG score 1.000).
 #include "AmmoPickup_Update.h"
 int32_t AmmoPickup_Update(void* a1)
 

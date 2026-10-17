@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_Init (VA 0x0045E450; static CFG gate PASS, CFG score 0.997).
 #include "Human_Init.h"
 int32_t Human_Init()
 

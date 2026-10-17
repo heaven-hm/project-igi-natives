@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObj_Init (VA 0x00502250; static CFG gate PASS, CFG score 1.000).
 #include "SplineObj_Init.h"
 int32_t* SplineObj_Init()
 

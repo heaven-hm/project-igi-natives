@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_CycleWeapon (VA 0x004149B0; static CFG gate PASS, CFG score 1.000).
 #include "WeaponType_CycleWeapon.h"
 int32_t WeaponType_CycleWeapon(int32_t a1, double* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetAlarmControlID (VA 0x0044E430; static CFG gate FAIL, CFG score 0.667).
 #include "AIFunction_GetAlarmControlID.h"
 int32_t AIFunction_GetAlarmControlID(int32_t a1)
 

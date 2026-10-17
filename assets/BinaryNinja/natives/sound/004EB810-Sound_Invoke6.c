@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sound_Invoke6 (VA 0x004EB810; static CFG gate PASS, CFG score 1.000).
 #include "Sound_Invoke6.h"
 
 void*(void* arg1, int32_t arg2)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Vehicle_InitPlane_5 (VA 0x00435C30; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_InitPlane_5.h"
 uint32_t Vehicle_InitPlane_5()
 

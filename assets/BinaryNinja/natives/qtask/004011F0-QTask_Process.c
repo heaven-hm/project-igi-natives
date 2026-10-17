@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_Process (VA 0x004011F0; static CFG gate FAIL, CFG score 0.722).
 #include "QTask_Process.h"
 int32_t QTask_Process()
 

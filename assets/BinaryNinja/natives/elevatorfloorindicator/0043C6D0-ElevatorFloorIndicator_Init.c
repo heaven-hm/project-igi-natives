@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ElevatorFloorIndicator_Init (VA 0x0043C6D0; static CFG gate PASS, CFG score 1.000).
 #include "ElevatorFloorIndicator_Init.h"
 int32_t* ElevatorFloorIndicator_Init()
 

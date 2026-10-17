@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_InterpolateWaypoint_4 (VA 0x00505600; static CFG gate PASS, CFG score 1.000).
 #include "Physics_InterpolateWaypoint_4.h"
 struct status_msg* Physics_InterpolateWaypoint_4(void* a1)
 

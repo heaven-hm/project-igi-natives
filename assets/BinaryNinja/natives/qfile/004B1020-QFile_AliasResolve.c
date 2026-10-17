@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QFile_AliasResolve (VA 0x004B1020; static CFG gate FAIL, CFG score 0.778).
 #include "QFile_AliasResolve.h"
 int32_t QFile_AliasResolve(char* a1, void* a2, int32_t a3)
 

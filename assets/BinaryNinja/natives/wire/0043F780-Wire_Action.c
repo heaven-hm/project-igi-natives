@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Wire_Action (VA 0x0043F780; static CFG gate PASS, CFG score 1.000).
 #include "Wire_Action.h"
 int32_t Wire_Action(void* a1)
 

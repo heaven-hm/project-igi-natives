@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CutScene_LoadParameters (VA 0x004F4EE0; static CFG gate PASS, CFG score 0.944).
 #include "CutScene_LoadParameters.h"
 int32_t CutScene_LoadParameters(void* a1)
 

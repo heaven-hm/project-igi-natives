@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Building_LoadParameters (VA 0x00448760; static CFG gate PASS, CFG score 0.867).
 #include "Building_LoadParameters.h"
 int32_t Building_LoadParameters(int32_t* a1, int32_t a2)
 

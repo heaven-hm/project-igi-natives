@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_IllegalDeviceNameInP (VA 0x004B1420; static CFG gate PASS, CFG score 0.958).
 #include "Sys_IllegalDeviceNameInP.h"
 int32_t Sys_IllegalDeviceNameInP(void* a1, int32_t a2, void* a3)
 

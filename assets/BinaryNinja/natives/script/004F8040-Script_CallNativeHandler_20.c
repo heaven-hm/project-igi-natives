@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_CallNativeHandler_20 (VA 0x004F8040; static CFG gate PASS, CFG score 1.000).
 #include "Script_CallNativeHandler_20.h"
 int32_t Script_CallNativeHandler_20(void* a1)
 

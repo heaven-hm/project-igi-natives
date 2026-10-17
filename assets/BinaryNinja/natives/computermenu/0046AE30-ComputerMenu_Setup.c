@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerMenu_Setup (VA 0x0046AE30; static CFG gate PASS, CFG score 1.000).
 #include "ComputerMenu_Setup.h"
 int32_t ComputerMenu_Setup(int32_t a1)
 

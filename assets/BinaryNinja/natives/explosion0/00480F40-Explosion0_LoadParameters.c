@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Explosion0_LoadParameters (VA 0x00480F40; static CFG gate PASS, CFG score 1.000).
 #include "Explosion0_LoadParameters.h"
 uint32_t Explosion0_LoadParameters(int32_t* a1)
 

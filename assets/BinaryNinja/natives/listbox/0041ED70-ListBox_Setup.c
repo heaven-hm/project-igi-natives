@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_Setup (VA 0x0041ED70; static CFG gate PASS, CFG score 0.926).
 #include "ListBox_Setup.h"
 int32_t ListBox_Setup(void* a1)
 

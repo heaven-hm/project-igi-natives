@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Lensflare_Init (VA 0x00520BB0; static CFG gate PASS, CFG score 0.982).
 #include "Lensflare_Init.h"
 int32_t Lensflare_Init()
 

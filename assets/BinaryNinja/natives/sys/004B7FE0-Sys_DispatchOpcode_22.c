@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_22 (VA 0x004B7FE0; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_DispatchOpcode_22.h"
 int32_t Sys_DispatchOpcode_22(int32_t a1, double* a2)
 

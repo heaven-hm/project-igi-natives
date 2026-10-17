@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneDynCubeObj_Init (VA 0x004D7550; static CFG gate PASS, CFG score 1.000).
 #include "BoneDynCubeObj_Init.h"
 int32_t BoneDynCubeObj_Init()
 

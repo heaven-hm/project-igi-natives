@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetDeathAnimation (VA 0x0044E210; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetDeathAnimation.h"
 int32_t AIFunction_SetDeathAnimation(int32_t a1, float a2 @ 0xc)
 

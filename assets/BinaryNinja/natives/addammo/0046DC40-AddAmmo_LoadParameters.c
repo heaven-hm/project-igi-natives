@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AddAmmo_LoadParameters (VA 0x0046DC40; static CFG gate PASS, CFG score 1.000).
 #include "AddAmmo_LoadParameters.h"
 int32_t AddAmmo_LoadParameters(int32_t* a1)
 

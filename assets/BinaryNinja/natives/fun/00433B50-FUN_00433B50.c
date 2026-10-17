@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FUN_00433B50 (VA 0x00433B50; static CFG gate PASS, CFG score 1.000).
 #include "FUN_00433B50.h"
 void* FUN_00433B50(double* a1)
 

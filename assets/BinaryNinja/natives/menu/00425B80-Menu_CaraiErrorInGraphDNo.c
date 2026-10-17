@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_CaraiErrorInGraphDNo (VA 0x00425B80; static CFG gate PASS, CFG score 1.000).
 #include "Menu_CaraiErrorInGraphDNo.h"
 double* Menu_CaraiErrorInGraphDNo(double* a1, void* a2, int32_t* a3, int32_t a4, void* a5)
 

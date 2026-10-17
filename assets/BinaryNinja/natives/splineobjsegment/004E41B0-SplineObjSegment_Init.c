@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplineObjSegment_Init (VA 0x004E41B0; static CFG gate PASS, CFG score 1.000).
 #include "SplineObjSegment_Init.h"
 uint32_t SplineObjSegment_Init()
 

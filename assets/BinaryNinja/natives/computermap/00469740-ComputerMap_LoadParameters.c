@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerMap_LoadParameters (VA 0x00469740; static CFG gate PASS, CFG score 0.991).
 #include "ComputerMap_LoadParameters.h"
 void* ComputerMap_LoadParameters(void* a1)
 

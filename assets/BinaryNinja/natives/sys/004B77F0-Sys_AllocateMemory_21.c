@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_AllocateMemory_21 (VA 0x004B77F0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_AllocateMemory_21.h"
 void* Sys_AllocateMemory_21(int32_t* a1, char* a2, int32_t a3, void* a4)
 

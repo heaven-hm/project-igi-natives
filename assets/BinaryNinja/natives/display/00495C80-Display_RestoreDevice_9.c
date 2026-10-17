@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_RestoreDevice_9 (VA 0x00495C80; static CFG gate PASS, CFG score 1.000).
 #include "Display_RestoreDevice_9.h"
 int32_t* Display_RestoreDevice_9()
 

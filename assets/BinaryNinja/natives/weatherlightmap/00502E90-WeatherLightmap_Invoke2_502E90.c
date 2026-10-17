@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeatherLightmap_Invoke2_502E90 (VA 0x00502E90; static CFG gate PASS, CFG score 1.000).
 #include "WeatherLightmap_Invoke2_502E90.h"
 
 int32_t(float arg1, void* arg2)

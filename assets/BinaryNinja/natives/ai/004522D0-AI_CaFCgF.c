@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CaFCgF (VA 0x004522D0; static CFG gate PASS, CFG score 0.852).
 #include "AI_CaFCgF.h"
 int32_t AI_CaFCgF(long double a1 @ fp0, long double a2 @ fp1, void* a3, int32_t a4, float a5, char a6)
 

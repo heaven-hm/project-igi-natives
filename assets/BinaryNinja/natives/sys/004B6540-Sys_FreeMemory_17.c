@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_17 (VA 0x004B6540; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_17.h"
 int32_t Sys_FreeMemory_17(void* a1, int32_t a2, int32_t a3, int16_t a4, int16_t a5, int16_t a6, int16_t a7, int16_t a8, int32_t a9, float a10, float a11, float a12, float a13)
 

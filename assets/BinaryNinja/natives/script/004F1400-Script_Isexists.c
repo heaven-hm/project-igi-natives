@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_Isexists (VA 0x004F1400; static CFG gate PASS, CFG score 0.926).
 #include "Script_Isexists.h"
 int32_t Script_Isexists(int32_t* a1, void* a2)
 

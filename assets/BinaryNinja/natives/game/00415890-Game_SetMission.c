@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_SetMission (VA 0x00415890; static CFG gate FAIL, CFG score 0.833).
 #include "Game_SetMission.h"
 int32_t Game_SetMission(int32_t a1, float a2 @ 0xc)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundDefSound_LoadParameters (VA 0x004E8840; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefSound_LoadParameters.h"
 int32_t SoundDefSound_LoadParameters(int32_t a1)
 

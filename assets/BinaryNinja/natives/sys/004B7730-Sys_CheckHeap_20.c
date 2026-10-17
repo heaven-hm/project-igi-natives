@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CheckHeap_20 (VA 0x004B7730; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CheckHeap_20.h"
 void* Sys_CheckHeap_20(int32_t* a1, void* a2)
 

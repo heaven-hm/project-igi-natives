@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_ExecuteLevelScript_12 (VA 0x004F2070; static CFG gate PASS, CFG score 0.867).
 #include "Script_ExecuteLevelScript_12.h"
 void* Script_ExecuteLevelScript_12(int32_t a1, char* a2, void* a3)
 

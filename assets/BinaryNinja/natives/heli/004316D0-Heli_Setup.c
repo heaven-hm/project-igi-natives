@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Heli_Setup (VA 0x004316D0; static CFG gate PASS, CFG score 0.963).
 #include "Heli_Setup.h"
 char* Heli_Setup(int80_t a1 @ fp0, char* a2)
 

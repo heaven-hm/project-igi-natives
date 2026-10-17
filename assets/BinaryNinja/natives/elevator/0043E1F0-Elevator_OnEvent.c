@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Elevator_OnEvent (VA 0x0043E1F0; static CFG gate PASS, CFG score 1.000).
 #include "Elevator_OnEvent.h"
 void* Elevator_OnEvent(float a1)
 

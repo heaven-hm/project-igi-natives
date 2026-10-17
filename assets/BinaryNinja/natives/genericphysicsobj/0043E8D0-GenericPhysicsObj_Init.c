@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GenericPhysicsObj_Init (VA 0x0043E8D0; static CFG gate PASS, CFG score 1.000).
 #include "GenericPhysicsObj_Init.h"
 void* GenericPhysicsObj_Init()
 

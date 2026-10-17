@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qvm_Load (VA 0x004B80B0; static CFG gate PASS, CFG score 0.914).
 #include "Qvm_Load.h"
 int32_t* Qvm_Load(void* a1)
 

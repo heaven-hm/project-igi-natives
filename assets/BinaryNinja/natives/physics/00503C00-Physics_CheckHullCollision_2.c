@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_CheckHullCollision_2 (VA 0x00503C00; static CFG gate FAIL, CFG score 0.778).
 #include "Physics_CheckHullCollision_2.h"
 struct status_msg* Physics_CheckHullCollision_2(uint32_t a1, int32_t a2, int32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, int32_t* a8, char a9)
 

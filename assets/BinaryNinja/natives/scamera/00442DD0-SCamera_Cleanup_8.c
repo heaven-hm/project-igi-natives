@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_Cleanup_8 (VA 0x00442DD0; static CFG gate PASS, CFG score 0.911).
 #include "SCamera_Cleanup_8.h"
 void* SCamera_Cleanup_8(double* a1, float a2)
 

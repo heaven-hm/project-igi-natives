@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Light_RenderLensflare_9 (VA 0x0052C610; static CFG gate PASS, CFG score 0.952).
 #include "Light_RenderLensflare_9.h"
 struct status_msg* Light_RenderLensflare_9(void* a1, int32_t a2, int32_t a3)
 

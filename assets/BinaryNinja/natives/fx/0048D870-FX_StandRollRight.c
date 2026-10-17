@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_StandRollRight (VA 0x0048D870; static CFG gate PASS, CFG score 1.000).
 #include "FX_StandRollRight.h"
 bool FX_StandRollRight(void* a1)
 

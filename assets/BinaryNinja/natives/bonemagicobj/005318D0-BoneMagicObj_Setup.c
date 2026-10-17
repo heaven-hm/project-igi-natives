@@ -1,3 +1,4 @@
+// Original IGI.EXE function: BoneMagicObj_Setup (VA 0x005318D0; static CFG gate PASS, CFG score 0.889).
 #include "BoneMagicObj_Setup.h"
 int32_t BoneMagicObj_Setup(int32_t* a1, int32_t* a2)
 

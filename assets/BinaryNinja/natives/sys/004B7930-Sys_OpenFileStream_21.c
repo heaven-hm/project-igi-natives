@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_OpenFileStream_21 (VA 0x004B7930; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_21.h"
 int32_t Sys_OpenFileStream_21(float a1, float a2, float a3, float a4, float a5, float a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10)
 

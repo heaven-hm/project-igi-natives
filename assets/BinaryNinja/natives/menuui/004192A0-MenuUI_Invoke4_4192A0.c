@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_Invoke4_4192A0 (VA 0x004192A0; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_Invoke4_4192A0.h"
 
 int32_t*(int32_t* arg1 )

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Qhash_Init (VA 0x004B0D60; static CFG gate PASS, CFG score 1.000).
 #include "Qhash_Init.h"
 void* Qhash_Init(char a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_Combat (VA 0x0044D160; static CFG gate PASS, CFG score 0.917).
 #include "AIAction_Combat.h"
 int32_t AIAction_Combat(int32_t a1, float a2 @ 0xc)
 

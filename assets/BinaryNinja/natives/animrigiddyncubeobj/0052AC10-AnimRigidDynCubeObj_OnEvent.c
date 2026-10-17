@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimRigidDynCubeObj_OnEvent (VA 0x0052AC10; static CFG gate FAIL, CFG score 0.667).
 #include "AnimRigidDynCubeObj_OnEvent.h"
 int32_t AnimRigidDynCubeObj_OnEvent(int32_t a1, int32_t* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_UndefinedParameterTy (VA 0x004F1A80; static CFG gate PASS, CFG score 1.000).
 #include "Script_UndefinedParameterTy.h"
 int32_t* Script_UndefinedParameterTy(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, char a5, int32_t a6)
 

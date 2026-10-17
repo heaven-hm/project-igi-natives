@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuFrame_Update (VA 0x004225F0; static CFG gate FAIL, CFG score 0.833).
 #include "MenuFrame_Update.h"
 int32_t MenuFrame_Update(void* a1, int32_t a2)
 

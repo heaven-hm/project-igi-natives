@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Gun_MagFill (VA 0x004798C0; static CFG gate PASS, CFG score 1.000).
 #include "Gun_MagFill.h"
 char* Gun_MagFill(int32_t* a1, char* a2)
 

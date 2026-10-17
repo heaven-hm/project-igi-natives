@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_Alloctexture (VA 0x004B2180; static CFG gate FAIL, CFG score 0.551).
 #include "Sys_Alloctexture.h"
 int32_t Sys_Alloctexture()
 

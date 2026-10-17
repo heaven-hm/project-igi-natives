@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_Slidevert (VA 0x004201E0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_Slidevert.h"
 struct status_msg* Menu_Slidevert(void* a1, int32_t a2)
 

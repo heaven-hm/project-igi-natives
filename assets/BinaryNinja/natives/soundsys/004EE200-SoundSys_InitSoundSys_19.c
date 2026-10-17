@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_InitSoundSys_19 (VA 0x004EE200; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_InitSoundSys_19.h"
 int32_t SoundSys_InitSoundSys_19(void* a1)
 

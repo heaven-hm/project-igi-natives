@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Shadow_Init (VA 0x004E0950; static CFG gate PASS, CFG score 1.000).
 #include "Shadow_Init.h"
 int32_t Shadow_Init()
 

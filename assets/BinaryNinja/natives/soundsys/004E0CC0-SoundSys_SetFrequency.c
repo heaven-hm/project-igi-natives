@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_SetFrequency (VA 0x004E0CC0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetFrequency.h"
 struct status_msg* SoundSys_SetFrequency(void* a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8, uint32_t a9)
 

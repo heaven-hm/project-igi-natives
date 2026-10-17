@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_DrawWidget_7 (VA 0x0041B870; static CFG gate FAIL, CFG score 0.667).
 #include "Menu_DrawWidget_7.h"
 int32_t Menu_DrawWidget_7(int32_t a1, int32_t a2)
 

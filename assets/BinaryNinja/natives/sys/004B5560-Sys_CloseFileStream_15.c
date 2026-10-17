@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_CloseFileStream_15 (VA 0x004B5560; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_CloseFileStream_15.h"
 int32_t Sys_CloseFileStream_15(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10, int32_t a11, int32_t a12, int32_t a13, int32_t a14, int32_t a15, int32_t a16, int32_t a17, float a18, float a19, float a20, int32_t a21, int32_t a22, int32_t a23, int32_t a24, int32_t a25)
 

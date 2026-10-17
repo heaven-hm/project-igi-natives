@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_NoNewFunctionForMenu (VA 0x0046AFB0; static CFG gate PASS, CFG score 0.935).
 #include "AI_NoNewFunctionForMenu.h"
 int32_t AI_NoNewFunctionForMenu(int32_t a1)
 

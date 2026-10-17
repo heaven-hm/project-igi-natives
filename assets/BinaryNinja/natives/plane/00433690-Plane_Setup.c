@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Plane_Setup (VA 0x00433690; static CFG gate PASS, CFG score 1.000).
 #include "Plane_Setup.h"
 struct status_msg* Plane_Setup(int80_t a1 @ fp0, void* a2)
 

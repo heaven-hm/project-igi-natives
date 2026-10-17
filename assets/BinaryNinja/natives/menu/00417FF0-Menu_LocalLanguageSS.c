@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_LocalLanguageSS (VA 0x00417FF0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_LocalLanguageSS.h"
 int32_t Menu_LocalLanguageSS(void* a1, int32_t a2)
 

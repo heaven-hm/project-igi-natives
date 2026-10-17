@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Profile_ValueSet (VA 0x004B8A50; static CFG gate PASS, CFG score 1.000).
 #include "Profile_ValueSet.h"
 int32_t Profile_ValueSet(float a1, float a2)
 

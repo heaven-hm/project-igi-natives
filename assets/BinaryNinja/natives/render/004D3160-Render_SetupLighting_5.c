@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_SetupLighting_5 (VA 0x004D3160; static CFG gate PASS, CFG score 1.000).
 #include "Render_SetupLighting_5.h"
 float* Render_SetupLighting_5(float* a1, float* a2, float* a3, float a4)
 

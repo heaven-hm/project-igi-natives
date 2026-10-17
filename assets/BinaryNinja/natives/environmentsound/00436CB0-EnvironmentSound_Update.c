@@ -1,3 +1,4 @@
+// Original IGI.EXE function: EnvironmentSound_Update (VA 0x00436CB0; static CFG gate PASS, CFG score 1.000).
 #include "EnvironmentSound_Update.h"
 int32_t* EnvironmentSound_Update(void* a1)
 

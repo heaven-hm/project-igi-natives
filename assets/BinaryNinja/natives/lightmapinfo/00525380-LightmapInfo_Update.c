@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LightmapInfo_Update (VA 0x00525380; static CFG gate PASS, CFG score 1.000).
 #include "LightmapInfo_Update.h"
 int32_t* LightmapInfo_Update(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MagicObjContainer_Init (VA 0x004E0840; static CFG gate PASS, CFG score 1.000).
 #include "MagicObjContainer_Init.h"
 int32_t MagicObjContainer_Init()
 

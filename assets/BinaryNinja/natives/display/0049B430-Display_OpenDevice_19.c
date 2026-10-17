@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_OpenDevice_19 (VA 0x0049B430; static CFG gate PASS, CFG score 1.000).
 #include "Display_OpenDevice_19.h"
 void* Display_OpenDevice_19(void* a1, int32_t a2, int32_t a3)
 

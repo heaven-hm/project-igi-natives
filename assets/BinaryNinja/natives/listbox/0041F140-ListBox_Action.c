@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ListBox_Action (VA 0x0041F140; static CFG gate PASS, CFG score 1.000).
 #include "ListBox_Action.h"
 int32_t* ListBox_Action(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LevelTimer_LoadParameters (VA 0x0051BC60; static CFG gate PASS, CFG score 0.889).
 #include "LevelTimer_LoadParameters.h"
 int32_t LevelTimer_LoadParameters(void* a1)
 

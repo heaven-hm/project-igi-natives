@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_FireBallUpdate_20 (VA 0x0048E300; static CFG gate PASS, CFG score 0.889).
 #include "FX_FireBallUpdate_20.h"
 ❓  int32_t* __stdcall FX_FireBallUpdate_20(void* a1 @ 0x1408, int32_t* a2, int32_t a3, int32_t a4, int32_t a5)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

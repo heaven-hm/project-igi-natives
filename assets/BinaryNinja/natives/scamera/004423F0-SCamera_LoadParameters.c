@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SCamera_LoadParameters (VA 0x004423F0; static CFG gate PASS, CFG score 0.933).
 #include "SCamera_LoadParameters.h"
 int32_t* SCamera_LoadParameters(int32_t* a1)
 

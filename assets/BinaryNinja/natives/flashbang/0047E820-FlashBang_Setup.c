@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlashBang_Setup (VA 0x0047E820; static CFG gate PASS, CFG score 0.974).
 #include "FlashBang_Setup.h"
 int32_t FlashBang_Setup(int32_t* a1)
 

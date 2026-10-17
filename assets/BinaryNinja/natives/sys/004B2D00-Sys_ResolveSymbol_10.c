@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_10 (VA 0x004B2D00; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_10.h"
 float* Sys_ResolveSymbol_10(float* a1, float* a2, float* a3)
 

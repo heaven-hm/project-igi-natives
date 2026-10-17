@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_DrawLightmapMesh_6 (VA 0x004D35B0; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawLightmapMesh_6.h"
 int32_t* Render_DrawLightmapMesh_6()
 

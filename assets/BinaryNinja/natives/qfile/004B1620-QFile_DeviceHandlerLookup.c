@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QFile_DeviceHandlerLookup (VA 0x004B1620; static CFG gate PASS, CFG score 1.000).
 #include "QFile_DeviceHandlerLookup.h"
 int32_t QFile_DeviceHandlerLookup(char* a1)
 

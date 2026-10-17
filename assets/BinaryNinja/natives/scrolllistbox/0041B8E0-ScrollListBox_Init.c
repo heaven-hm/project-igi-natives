@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScrollListBox_Init (VA 0x0041B8E0; static CFG gate PASS, CFG score 1.000).
 #include "ScrollListBox_Init.h"
 ❓  int32_t* ScrollListBox_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

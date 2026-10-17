@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathDynCubeObj_Process (VA 0x0051A370; static CFG gate PASS, CFG score 1.000).
 #include "SplinePathDynCubeObj_Process.h"
 float* SplinePathDynCubeObj_Process(float* a1, float a2, float a3, float a4)
 

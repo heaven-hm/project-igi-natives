@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PhysicsTerrain_GetContext_4F0560 (VA 0x004F0560; static CFG gate PASS, CFG score 1.000).
 #include "PhysicsTerrain_GetContext_4F0560.h"
 
 int32_t*(char* arg1, int32_t* arg2)

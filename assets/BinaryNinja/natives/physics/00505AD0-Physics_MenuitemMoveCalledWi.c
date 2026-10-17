@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Physics_MenuitemMoveCalledWi (VA 0x00505AD0; static CFG gate PASS, CFG score 0.963).
 #include "Physics_MenuitemMoveCalledWi.h"
 int32_t Physics_MenuitemMoveCalledWi(void* a1, int32_t a2)
 

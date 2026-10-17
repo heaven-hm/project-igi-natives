@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeObject_Init (VA 0x004813E0; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeObject_Init.h"
 int32_t* ExplodeObject_Init()
 

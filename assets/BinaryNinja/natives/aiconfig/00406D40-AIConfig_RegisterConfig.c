@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIConfig_RegisterConfig (VA 0x00406D40; static CFG gate PASS, CFG score 1.000).
 #include "AIConfig_RegisterConfig.h"
 void AIConfig_RegisterConfig(void* a1)
 

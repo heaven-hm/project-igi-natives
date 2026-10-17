@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Define_HumanPlayerWeaponCycle (VA 0x004101C0; static CFG gate FAIL, CFG score 0.833).
 #include "Define_HumanPlayerWeaponCycle.h"
 int32_t Define_HumanPlayerWeaponCycle(int32_t a1, int32_t* a2 @ 0xc)
 

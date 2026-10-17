@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_InvokeStateAnimation (VA 0x0040AA30; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_InvokeStateAnimation.h"
 
 void*(void* arg1, int32_t arg2)

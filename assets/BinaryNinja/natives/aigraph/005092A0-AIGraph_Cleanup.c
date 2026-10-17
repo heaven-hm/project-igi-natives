@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIGraph_Cleanup (VA 0x005092A0; static CFG gate PASS, CFG score 1.000).
 #include "AIGraph_Cleanup.h"
 char* AIGraph_Cleanup(int32_t* a1)
 

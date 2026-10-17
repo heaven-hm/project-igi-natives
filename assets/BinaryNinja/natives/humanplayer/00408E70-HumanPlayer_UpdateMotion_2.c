@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_UpdateMotion_2 (VA 0x00408E70; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_UpdateMotion_2.h"
 int32_t HumanPlayer_UpdateMotion_2(void* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSound_Init (VA 0x0051B400; static CFG gate PASS, CFG score 1.000).
 #include "AnimSound_Init.h"
 void* AnimSound_Init()
 

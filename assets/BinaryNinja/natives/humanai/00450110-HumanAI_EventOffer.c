@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_EventOffer (VA 0x00450110; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_EventOffer.h"
 double* HumanAI_EventOffer(void* a1, double** a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RocketPod_Setup (VA 0x00427A70; static CFG gate PASS, CFG score 0.912).
 #include "RocketPod_Setup.h"
 int32_t RocketPod_Setup(void* a1)
 

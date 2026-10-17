@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cursor_Init (VA 0x00424B90; static CFG gate PASS, CFG score 1.000).
 #include "Cursor_Init.h"
 void* Cursor_Init()
 

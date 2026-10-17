@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CombatLieDown_Dispatch (VA 0x0048C540; static CFG gate PASS, CFG score 1.000).
 #include "CombatLieDown_Dispatch.h"
 int32_t* CombatLieDown_Dispatch(int32_t* a1, int32_t* a2)
 

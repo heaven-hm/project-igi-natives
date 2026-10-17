@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldier_Init_2 (VA 0x0045C9B0; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldier_Init_2.h"
 
 void* HumanSoldier_Init_2(void* pThis, void* param)

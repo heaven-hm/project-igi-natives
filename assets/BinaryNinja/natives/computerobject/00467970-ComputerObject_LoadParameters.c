@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerObject_LoadParameters (VA 0x00467970; static CFG gate PASS, CFG score 1.000).
 #include "ComputerObject_LoadParameters.h"
 int32_t* ComputerObject_LoadParameters(void* a1)
 

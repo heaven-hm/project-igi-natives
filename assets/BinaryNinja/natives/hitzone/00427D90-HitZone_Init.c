@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HitZone_Init (VA 0x00427D90; static CFG gate PASS, CFG score 1.000).
 #include "HitZone_Init.h"
 void* HitZone_Init()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_SkinBones_6 (VA 0x004D3600; static CFG gate PASS, CFG score 1.000).
 #include "Render_SkinBones_6.h"
 int32_t* Render_SkinBones_6(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10, int32_t a11, int32_t a12)
 

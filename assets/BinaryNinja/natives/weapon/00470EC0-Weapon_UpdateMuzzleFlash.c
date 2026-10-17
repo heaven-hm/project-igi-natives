@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_UpdateMuzzleFlash (VA 0x00470EC0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_UpdateMuzzleFlash.h"
 float* Weapon_UpdateMuzzleFlash(float* a1, float* a2, float* a3, double* a4)
 

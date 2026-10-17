@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Ladder_ClimbTick (VA 0x0040D6B0; static CFG gate PASS, CFG score 1.000).
 #include "Ladder_ClimbTick.h"
 int32_t Ladder_ClimbTick(void* a1, void* a2)
 

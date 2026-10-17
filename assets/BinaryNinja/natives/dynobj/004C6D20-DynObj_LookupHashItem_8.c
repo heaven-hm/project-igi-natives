@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_LookupHashItem_8 (VA 0x004C6D20; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_LookupHashItem_8.h"
 void* DynObj_LookupHashItem_8(void* a1, int32_t* a2, void* a3, int32_t a4, int32_t a5, int32_t a6, void* a7)
 

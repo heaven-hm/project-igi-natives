@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ResolveSymbol_23 (VA 0x004B8A80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_23.h"
 char* Sys_ResolveSymbol_23(float a1, int32_t a2, char* a3, char* a4)
 

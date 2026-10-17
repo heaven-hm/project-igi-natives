@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_DispatchOpcode_8 (VA 0x004B2640; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_8.h"
 int32_t __fastcall Sys_DispatchOpcode_8(int32_t a1)
 

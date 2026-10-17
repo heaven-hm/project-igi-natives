@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_GameDiff (VA 0x00403AC0; static CFG gate FAIL, CFG score 0.833).
 #include "GO_GameDiff.h"
 int32_t GO_GameDiff(int32_t a1, float a2 @ 0xc)
 

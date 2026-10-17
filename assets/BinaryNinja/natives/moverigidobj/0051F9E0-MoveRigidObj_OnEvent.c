@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MoveRigidObj_OnEvent (VA 0x0051F9E0; static CFG gate PASS, CFG score 1.000).
 #include "MoveRigidObj_OnEvent.h"
 int32_t MoveRigidObj_OnEvent(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_EvaluateCondition_13 (VA 0x004F3390; static CFG gate FAIL, CFG score 0.778).
 #include "Script_EvaluateCondition_13.h"
 struct status_msg* Script_EvaluateCondition_13(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t* a5, int32_t* a6)
 

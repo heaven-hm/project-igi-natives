@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalSound_Stop (VA 0x004251C0; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalSound_Stop.h"
 int32_t* ConditionalSound_Stop(void* a1)
 

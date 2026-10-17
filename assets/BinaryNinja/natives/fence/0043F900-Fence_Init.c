@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Fence_Init (VA 0x0043F900; static CFG gate PASS, CFG score 1.000).
 #include "Fence_Init.h"
 void* Fence_Init()
 

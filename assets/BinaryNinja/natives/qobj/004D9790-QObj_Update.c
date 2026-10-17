@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QObj_Update (VA 0x004D9790; static CFG gate PASS, CFG score 1.000).
 #include "QObj_Update.h"
 uint32_t QObj_Update()
 

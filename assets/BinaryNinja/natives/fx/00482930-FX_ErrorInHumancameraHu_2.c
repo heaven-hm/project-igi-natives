@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_ErrorInHumancameraHu_2 (VA 0x00482930; static CFG gate PASS, CFG score 1.000).
 #include "FX_ErrorInHumancameraHu_2.h"
 int32_t FX_ErrorInHumancameraHu_2(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanPlayer_LoadParameters_11 (VA 0x00410370; static CFG gate PASS, CFG score 0.938).
 #include "HumanPlayer_LoadParameters_11.h"
 int32_t HumanPlayer_LoadParameters_11(int32_t* a1, int32_t a2)
 

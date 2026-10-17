@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SaveSoundOptions (VA 0x004058A0; static CFG gate PASS, CFG score 1.000).
 #include "Config_SaveSoundOptions.h"
 int32_t Config_SaveSoundOptions()
 

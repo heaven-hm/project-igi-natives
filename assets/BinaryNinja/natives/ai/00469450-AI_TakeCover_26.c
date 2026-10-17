@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_TakeCover_26 (VA 0x00469450; static CFG gate PASS, CFG score 0.897).
 #include "AI_TakeCover_26.h"
 int32_t AI_TakeCover_26(int32_t a1, int32_t a2, int32_t a3, int32_t a4, char* a5 @ 0x18, void* a6, int32_t a7)
 

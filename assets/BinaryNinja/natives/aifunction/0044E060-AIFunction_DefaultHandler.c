@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_DefaultHandler (VA 0x0044E060; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_DefaultHandler.h"
 int32_t AIFunction_DefaultHandler(int32_t a1)
 

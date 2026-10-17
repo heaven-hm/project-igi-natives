@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CarAI_Init (VA 0x00425C80; static CFG gate PASS, CFG score 1.000).
 #include "CarAI_Init.h"
 int32_t* CarAI_Init()
 

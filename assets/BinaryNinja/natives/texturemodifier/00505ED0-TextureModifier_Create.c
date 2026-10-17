@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextureModifier_Create (VA 0x00505ED0; static CFG gate PASS, CFG score 1.000).
 #include "TextureModifier_Create.h"
 
 void* TextureModifier_Create(void* pThis)

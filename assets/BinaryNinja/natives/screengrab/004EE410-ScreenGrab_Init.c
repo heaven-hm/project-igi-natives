@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ScreenGrab_Init (VA 0x004EE410; static CFG gate PASS, CFG score 1.000).
 #include "ScreenGrab_Init.h"
 int32_t* ScreenGrab_Init()
 

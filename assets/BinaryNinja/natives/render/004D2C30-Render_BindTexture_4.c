@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Render_BindTexture_4 (VA 0x004D2C30; static CFG gate PASS, CFG score 1.000).
 #include "Render_BindTexture_4.h"
 int32_t Render_BindTexture_4()
 

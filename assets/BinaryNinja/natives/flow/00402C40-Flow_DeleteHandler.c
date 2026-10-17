@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Flow_DeleteHandler (VA 0x00402C40; static CFG gate FAIL, CFG score 0.556).
 #include "Flow_DeleteHandler.h"
 int32_t Flow_DeleteHandler()
 

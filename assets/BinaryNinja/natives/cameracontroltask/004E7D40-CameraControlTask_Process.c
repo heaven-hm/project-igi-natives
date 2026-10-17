@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CameraControlTask_Process (VA 0x004E7D40; static CFG gate PASS, CFG score 1.000).
 #include "CameraControlTask_Process.h"
 struct status_msg* CameraControlTask_Process(void* a1, uint32_t a2)
 

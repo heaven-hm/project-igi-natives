@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuButton_Init (VA 0x00421430; static CFG gate PASS, CFG score 1.000).
 #include "MenuButton_Init.h"
 int32_t* MenuButton_Init()
 

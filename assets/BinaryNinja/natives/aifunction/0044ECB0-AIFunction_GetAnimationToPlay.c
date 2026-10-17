@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetAnimationToPlay (VA 0x0044ECB0; static CFG gate PASS, CFG score 0.852).
 #include "AIFunction_GetAnimationToPlay.h"
 int32_t AIFunction_GetAnimationToPlay(int32_t a1)
 

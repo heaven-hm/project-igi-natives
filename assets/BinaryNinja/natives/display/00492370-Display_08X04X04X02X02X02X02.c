@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_08X04X04X02X02X02X02 (VA 0x00492370; static CFG gate PASS, CFG score 1.000).
 #include "Display_08X04X04X02X02X02X02.h"
 int32_t Display_08X04X04X02X02X02X02(char* a1, int32_t a2, int16_t a3, int16_t a4 @ 0xe, char a5, char a6 @ 0x11, char a7 @ 0x12, char a8 @ 0x13, char a9, char a10 @ 0x15, char a11 @ 0x16, char a12 @ 0x17)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SymbolRegister_Bool8 (VA 0x004B7EE0; static CFG gate PASS, CFG score 1.000).
 #include "SymbolRegister_Bool8.h"
 void* SymbolRegister_Bool8(int32_t* a1, int32_t a2)
 

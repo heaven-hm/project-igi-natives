@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RadarDish_Setup (VA 0x00448CF0; static CFG gate PASS, CFG score 1.000).
 #include "RadarDish_Setup.h"
 int32_t* RadarDish_Setup(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: WeaponType_RegisterType_2 (VA 0x00414ED0; static CFG gate PASS, CFG score 1.000).
 #include "WeaponType_RegisterType_2.h"
 void** WeaponType_RegisterType_2(void** a1, void* a2, int32_t a3)
 

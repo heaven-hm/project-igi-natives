@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_GraphicOptionsGetPerfFlagsFromLevel (VA 0x004055C0; static CFG gate PASS, CFG score 0.889).
 #include "Config_GraphicOptionsGetPerfFlagsFromLevel.h"
 int32_t Config_GraphicOptionsGetPerfFlagsFromLevel(int32_t a1, float a2 @ 0xc)
 

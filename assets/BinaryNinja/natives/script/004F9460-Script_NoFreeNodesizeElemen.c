@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Script_NoFreeNodesizeElemen (VA 0x004F9460; static CFG gate PASS, CFG score 1.000).
 #include "Script_NoFreeNodesizeElemen.h"
 int16_t* Script_NoFreeNodesizeElemen(int16_t a1, int32_t a2)
 

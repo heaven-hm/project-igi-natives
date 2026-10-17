@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AI_CheckSector_22 (VA 0x004647D0; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckSector_22.h"
 int32_t AI_CheckSector_22(void* a1)
 

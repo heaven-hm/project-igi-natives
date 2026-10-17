@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Camera_ApplyHandiCam_14 (VA 0x004A88F4; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyHandiCam_14.h"
 long double Camera_ApplyHandiCam_14(int16_t a1 @ x87control, int32_t a2, int32_t a3, int32_t a4, int32_t a5)
 

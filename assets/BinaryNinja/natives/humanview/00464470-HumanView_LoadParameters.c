@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanView_LoadParameters (VA 0x00464470; static CFG gate PASS, CFG score 1.000).
 #include "HumanView_LoadParameters.h"
 int32_t HumanView_LoadParameters(void* a1)
 

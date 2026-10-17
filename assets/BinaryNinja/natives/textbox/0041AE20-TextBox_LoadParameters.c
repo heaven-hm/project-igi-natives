@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextBox_LoadParameters (VA 0x0041AE20; static CFG gate PASS, CFG score 1.000).
 #include "TextBox_LoadParameters.h"
 int32_t TextBox_LoadParameters(int80_t a1 @ fp0, void* a2)
 

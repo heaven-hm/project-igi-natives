@@ -1,3 +1,4 @@
+// Original IGI.EXE function: RenderLight_DefaultHandler_528760 (VA 0x00528760; static CFG gate PASS, CFG score 1.000).
 #include "RenderLight_DefaultHandler_528760.h"
 
 void*(void* arg1)

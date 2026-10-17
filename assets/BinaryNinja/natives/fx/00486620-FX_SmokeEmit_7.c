@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FX_SmokeEmit_7 (VA 0x00486620; static CFG gate PASS, CFG score 1.000).
 #include "FX_SmokeEmit_7.h"
 struct status_msg* FX_SmokeEmit_7(void* a1)
 

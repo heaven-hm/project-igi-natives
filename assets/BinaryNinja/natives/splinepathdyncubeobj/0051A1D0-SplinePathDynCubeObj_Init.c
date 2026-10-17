@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SplinePathDynCubeObj_Init (VA 0x0051A1D0; static CFG gate PASS, CFG score 1.000).
 #include "SplinePathDynCubeObj_Init.h"
 int32_t SplinePathDynCubeObj_Init()
 

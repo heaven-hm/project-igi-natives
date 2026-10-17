@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rain_Init (VA 0x00498AB0; static CFG gate PASS, CFG score 1.000).
 #include "Rain_Init.h"
 int32_t* Rain_Init()
 

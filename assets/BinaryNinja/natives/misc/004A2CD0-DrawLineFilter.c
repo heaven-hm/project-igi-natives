@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DrawLineFilter (VA 0x004A2CD0; static CFG gate PASS, CFG score 1.000).
 #include "DrawLineFilter.h"
 int32_t DrawLineFilter(int32_t a1 @ flagP, void* a2)
 

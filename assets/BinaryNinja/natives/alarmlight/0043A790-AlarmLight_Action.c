@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmLight_Action (VA 0x0043A790; static CFG gate PASS, CFG score 1.000).
 #include "AlarmLight_Action.h"
 int32_t AlarmLight_Action(void* a1)
 

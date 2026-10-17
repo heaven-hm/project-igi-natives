@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunCABarrel_Update (VA 0x00472880; static CFG gate PASS, CFG score 0.889).
 #include "GunCABarrel_Update.h"
 void* GunCABarrel_Update(void* a1)
 

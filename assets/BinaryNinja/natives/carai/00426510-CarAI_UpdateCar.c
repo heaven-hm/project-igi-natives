@@ -1,3 +1,4 @@
+// Original IGI.EXE function: CarAI_UpdateCar (VA 0x00426510; static CFG gate PASS, CFG score 1.000).
 #include "CarAI_UpdateCar.h"
 int32_t CarAI_UpdateCar(void* a1, int32_t a2, int32_t a3, int32_t a4, float a5)
 

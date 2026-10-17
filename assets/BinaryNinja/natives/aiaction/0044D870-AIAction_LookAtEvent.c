@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIAction_LookAtEvent (VA 0x0044D870; static CFG gate PASS, CFG score 0.944).
 #include "AIAction_LookAtEvent.h"
 int32_t AIAction_LookAtEvent(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

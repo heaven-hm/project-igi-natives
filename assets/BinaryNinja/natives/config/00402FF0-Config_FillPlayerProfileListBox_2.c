@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_FillPlayerProfileListBox_2 (VA 0x00402FF0; static CFG gate PASS, CFG score 0.996).
 #include "Config_FillPlayerProfileListBox_2.h"
 int32_t Config_FillPlayerProfileListBox_2()
 

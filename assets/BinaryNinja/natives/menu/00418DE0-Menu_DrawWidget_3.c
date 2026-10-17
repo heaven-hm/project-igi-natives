@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_DrawWidget_3 (VA 0x00418DE0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_DrawWidget_3.h"
 void* Menu_DrawWidget_3(void* a1, char* a2)
 

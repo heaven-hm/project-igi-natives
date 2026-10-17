@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ComputerStartup_LoadParameters (VA 0x00466CF0; static CFG gate PASS, CFG score 1.000).
 #include "ComputerStartup_LoadParameters.h"
 void ComputerStartup_LoadParameters(int32_t a1)
 

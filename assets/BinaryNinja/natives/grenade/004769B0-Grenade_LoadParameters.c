@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Grenade_LoadParameters (VA 0x004769B0; static CFG gate PASS, CFG score 0.963).
 #include "Grenade_LoadParameters.h"
 int32_t* Grenade_LoadParameters(float a1)
 

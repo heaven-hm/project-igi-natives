@@ -1,3 +1,4 @@
+// Original IGI.EXE function: LookForTarget (VA 0x0048CAB0; static CFG gate PASS, CFG score 1.000).
 #include "LookForTarget.h"
 int32_t* LookForTarget(void* a1, int32_t* a2)
 

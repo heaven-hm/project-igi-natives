@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_ExecuteBytecode_12 (VA 0x004B3BA0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ExecuteBytecode_12.h"
 float* Sys_ExecuteBytecode_12(float* a1, float a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Resource_Unpack (VA 0x004B16D0; static CFG gate FAIL, CFG score 0.667).
 #include "Resource_Unpack.h"
 int32_t Resource_Unpack(int32_t* a1, int32_t a2, int32_t a3)
 

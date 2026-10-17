@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_FillMissionPictureBox (VA 0x004056F0; static CFG gate PASS, CFG score 0.917).
 #include "Config_FillMissionPictureBox.h"
 int32_t Config_FillMissionPictureBox(int32_t a1)
 

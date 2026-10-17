@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GraphNode_OnEvent (VA 0x00518900; static CFG gate PASS, CFG score 1.000).
 #include "GraphNode_OnEvent.h"
 uint32_t GraphNode_OnEvent()
 

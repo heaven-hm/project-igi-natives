@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Human_Separation (VA 0x00462BA0; static CFG gate PASS, CFG score 1.000).
 #include "Human_Separation.h"
 float* Human_Separation(double* a1 @ 0x8, double* a2, float* a3)
 

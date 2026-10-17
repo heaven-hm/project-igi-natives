@@ -1,3 +1,4 @@
+// Original IGI.EXE function: DynObj_InvalidCategory (VA 0x004C7290; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_InvalidCategory.h"
 int32_t DynObj_InvalidCategory(int32_t a1, int16_t a2)
 

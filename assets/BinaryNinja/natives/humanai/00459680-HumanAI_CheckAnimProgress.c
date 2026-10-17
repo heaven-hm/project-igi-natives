@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_CheckAnimProgress (VA 0x00459680; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_CheckAnimProgress.h"
 
 void* HumanAI_CheckAnimProgress(void* pThis, void* param)

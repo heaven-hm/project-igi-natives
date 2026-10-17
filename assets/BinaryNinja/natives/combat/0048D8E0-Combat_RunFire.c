@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Combat_RunFire (VA 0x0048D8E0; static CFG gate PASS, CFG score 0.972).
 #include "Combat_RunFire.h"
 int32_t Combat_RunFire(void* a1)
 

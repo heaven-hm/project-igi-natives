@@ -1,3 +1,4 @@
+// Original IGI.EXE function: FlatWater_LoadParameters (VA 0x0051C5B0; static CFG gate PASS, CFG score 0.967).
 #include "FlatWater_LoadParameters.h"
 void* FlatWater_LoadParameters(float a1, float a2 @ 0xc, float a3 @ 0x14, float a4 @ 0x2c, float a5, float a6 @ 0x68, float a7, float a8, float a9, int32_t a10 @ 0x8c, float a11 @ 0x128, float a12)
 

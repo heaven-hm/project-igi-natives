@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SoundOptionsSetMusic (VA 0x00404B90; static CFG gate PASS, CFG score 0.889).
 #include "Config_SoundOptionsSetMusic.h"
 int32_t Config_SoundOptionsSetMusic(int32_t a1, float a2 @ 0xc)
 

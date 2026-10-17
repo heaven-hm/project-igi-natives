@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_GetGunnerStatus (VA 0x0044E5E0; static CFG gate PASS, CFG score 0.857).
 #include "AIFunction_GetGunnerStatus.h"
 int32_t AIFunction_GetGunnerStatus(int32_t a1)
 

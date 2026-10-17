@@ -1,3 +1,4 @@
+// Original IGI.EXE function: TextBox_OnEvent (VA 0x0041AD70; static CFG gate PASS, CFG score 1.000).
 #include "TextBox_OnEvent.h"
 int32_t TextBox_OnEvent(void* a1, int32_t a2)
 

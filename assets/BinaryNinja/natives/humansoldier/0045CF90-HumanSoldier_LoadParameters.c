@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanSoldier_LoadParameters (VA 0x0045CF90; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldier_LoadParameters.h"
 int32_t HumanSoldier_LoadParameters(void* a1)
 

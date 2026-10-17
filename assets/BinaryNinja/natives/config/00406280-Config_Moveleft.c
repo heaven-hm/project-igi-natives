@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Moveleft (VA 0x00406280; static CFG gate PASS, CFG score 1.000).
 #include "Config_Moveleft.h"
 int32_t Config_Moveleft(int32_t a1, int32_t* a2, void** a3)
 

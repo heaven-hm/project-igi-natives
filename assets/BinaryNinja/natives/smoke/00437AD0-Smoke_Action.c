@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Smoke_Action (VA 0x00437AD0; static CFG gate FAIL, CFG score 0.667).
 #include "Smoke_Action.h"
 void* Smoke_Action(void* a1, int32_t* a2)
 

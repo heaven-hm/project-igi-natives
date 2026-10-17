@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanView_Process (VA 0x00464580; static CFG gate PASS, CFG score 1.000).
 #include "HumanView_Process.h"
 int32_t HumanView_Process(void* a1, int32_t* a2)
 

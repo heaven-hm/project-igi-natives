@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_Update (VA 0x00446B50; static CFG gate PASS, CFG score 1.000).
 #include "Door_Update.h"
 int32_t Door_Update(double* a1, void* a2)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UnknownDataType_2 (VA 0x004BCAE0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnknownDataType_2.h"
 int32_t Sys_UnknownDataType_2(char* a1, int32_t a2, float a3, int32_t a4, int32_t a5)
 

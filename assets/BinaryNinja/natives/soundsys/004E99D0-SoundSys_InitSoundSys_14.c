@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_InitSoundSys_14 (VA 0x004E99D0; static CFG gate FAIL, CFG score 0.667).
 #include "SoundSys_InitSoundSys_14.h"
 void* SoundSys_InitSoundSys_14(void* a1)
 

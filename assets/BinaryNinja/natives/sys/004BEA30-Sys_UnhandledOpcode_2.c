@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_UnhandledOpcode_2 (VA 0x004BEA30; static CFG gate PASS, CFG score 0.933).
 #include "Sys_UnhandledOpcode_2.h"
 char* Sys_UnhandledOpcode_2(int32_t* a1)
 

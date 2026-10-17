@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_SoundOptionsGetSoundsEffectsVolume (VA 0x00404B40; static CFG gate PASS, CFG score 0.889).
 #include "Config_SoundOptionsGetSoundsEffectsVolume.h"
 int32_t Config_SoundOptionsGetSoundsEffectsVolume(int32_t a1)
 

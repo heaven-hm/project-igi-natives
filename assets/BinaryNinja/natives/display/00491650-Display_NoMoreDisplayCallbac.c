@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_NoMoreDisplayCallbac (VA 0x00491650; static CFG gate PASS, CFG score 1.000).
 #include "Display_NoMoreDisplayCallbac.h"
 int32_t* Display_NoMoreDisplayCallbac(int32_t a1, int32_t* a2)
 

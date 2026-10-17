@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Rudder_LoadParameters (VA 0x004360C0; static CFG gate PASS, CFG score 0.875).
 #include "Rudder_LoadParameters.h"
 int32_t Rudder_LoadParameters(int32_t* a1, float a2)
 

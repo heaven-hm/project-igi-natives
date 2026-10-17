@@ -1,3 +1,4 @@
+// Original IGI.EXE function: SoundSys_Update3DPosition_15 (VA 0x004EBBF0; static CFG gate FAIL, CFG score 0.750).
 #include "SoundSys_Update3DPosition_15.h"
 int32_t SoundSys_Update3DPosition_15(int32_t a1, int32_t a2, int32_t a3)
 

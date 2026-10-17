@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ExplodeMagicObj_Update (VA 0x0043C2D0; static CFG gate PASS, CFG score 1.000).
 #include "ExplodeMagicObj_Update.h"
 int32_t ExplodeMagicObj_Update(float a1, float a2)
 

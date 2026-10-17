@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_GenerateOctree (VA 0x004D14E0; static CFG gate PASS, CFG score 0.867).
 #include "Render_ShouldHaveAllocatedD.h"
 int32_t Render_ShouldHaveAllocatedD(void* a1)
 

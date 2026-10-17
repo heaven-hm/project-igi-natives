@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_8 (VA 0x004B23B0; static CFG gate PASS, CFG score 0.889).
 #include "Sys_FreeMemory_8.h"
 int32_t Sys_FreeMemory_8(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9)
 

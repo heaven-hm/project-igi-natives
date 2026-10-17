@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SyncVSync_20 (VA 0x0049EC70; static CFG gate PASS, CFG score 0.917).
 #include "Display_SyncVSync_20.h"
 int32_t* Display_SyncVSync_20(double* a1)
 

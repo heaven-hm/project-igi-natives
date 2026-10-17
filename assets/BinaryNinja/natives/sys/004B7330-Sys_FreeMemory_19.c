@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sys_FreeMemory_19 (VA 0x004B7330; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_19.h"
 int32_t* Sys_FreeMemory_19(int32_t a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GunCABarrel_OnEvent (VA 0x00472930; static CFG gate PASS, CFG score 1.000).
 #include "GunCABarrel_OnEvent.h"
 void* GunCABarrel_OnEvent(double* a1, void* a2)
 

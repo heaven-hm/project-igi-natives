@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Terrain_RenderQuadtree_6 (VA 0x005178E0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_RenderQuadtree_6.h"
 void** Terrain_RenderQuadtree_6(void** a1, int32_t a2)
 

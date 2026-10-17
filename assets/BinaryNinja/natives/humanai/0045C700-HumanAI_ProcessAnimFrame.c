@@ -1,3 +1,4 @@
+// Original IGI.EXE function: HumanAI_ProcessAnimFrame (VA 0x0045C700; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_ProcessAnimFrame.h"
 
 void* HumanAI_ProcessAnimFrame(void* pThis, void* param)

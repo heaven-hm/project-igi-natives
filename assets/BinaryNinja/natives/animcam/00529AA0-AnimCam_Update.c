@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimCam_Update (VA 0x00529AA0; static CFG gate PASS, CFG score 1.000).
 #include "AnimCam_Update.h"
 int32_t AnimCam_Update(void* a1, int32_t* a2)
 

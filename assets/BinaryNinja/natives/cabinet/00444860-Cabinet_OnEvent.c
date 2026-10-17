@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Cabinet_OnEvent (VA 0x00444860; static CFG gate PASS, CFG score 1.000).
 #include "Cabinet_OnEvent.h"
 int32_t Cabinet_OnEvent(double* a1, void* a2)
 

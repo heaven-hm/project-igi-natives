@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Door_LoadParameters (VA 0x00446D10; static CFG gate PASS, CFG score 0.986).
 #include "Door_LoadParameters.h"
 struct status_msg* Door_LoadParameters(long double a1 @ fp0, void* a2)
 

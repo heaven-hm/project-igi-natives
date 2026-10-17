@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_Language_2 (VA 0x00405B30; static CFG gate PASS, CFG score 1.000).
 #include "Config_Language_2.h"
 int32_t Config_Language_2()
 

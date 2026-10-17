@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Weapon_FlameUpdate (VA 0x004779E0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_FlameUpdate.h"
 void* Weapon_FlameUpdate(void* a1, int32_t* a2)
 

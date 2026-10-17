@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Game_Restart (VA 0x00416FE0; static CFG gate PASS, CFG score 1.000).
 #include "Game_Restart.h"
 int32_t Game_Restart()
 

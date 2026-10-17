@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AIFunction_SetViewGamma (VA 0x0044DD90; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_SetViewGamma.h"
 int32_t AIFunction_SetViewGamma(long double a1 @ fp0, int32_t a2, float a3 @ 0xc)
 

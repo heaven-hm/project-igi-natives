@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Menu_UpdateLanguage_7 (VA 0x0041B260; static CFG gate PASS, CFG score 1.000).
 #include "Menu_UpdateLanguage_7.h"
 uint32_t Menu_UpdateLanguage_7()
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: GO_ContentControlPW (VA 0x00403C10; static CFG gate FAIL, CFG score 0.833).
 #include "GO_ContentControlPW.h"
 int32_t GO_ContentControlPW(int32_t a1, float a2 @ 0xc)
 

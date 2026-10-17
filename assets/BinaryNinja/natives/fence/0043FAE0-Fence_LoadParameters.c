@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Fence_LoadParameters (VA 0x0043FAE0; static CFG gate PASS, CFG score 0.944).
 #include "Fence_LoadParameters.h"
 int32_t* Fence_LoadParameters(int32_t* a1)
 

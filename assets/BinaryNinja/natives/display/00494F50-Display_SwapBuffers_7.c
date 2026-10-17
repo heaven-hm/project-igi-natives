@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Display_SwapBuffers_7 (VA 0x00494F50; static CFG gate PASS, CFG score 1.000).
 #include "Display_SwapBuffers_7.h"
 int32_t Display_SwapBuffers_7(HWND a1, int32_t a2, int32_t a3, void* a4)
 

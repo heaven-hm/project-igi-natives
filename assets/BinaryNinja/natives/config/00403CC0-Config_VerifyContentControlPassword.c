@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Config_VerifyContentControlPassword (VA 0x00403CC0; static CFG gate FAIL, CFG score 0.833).
 #include "Config_VerifyContentControlPassword.h"
 int32_t Config_VerifyContentControlPassword(int32_t a1, float a2 @ 0xc)
 

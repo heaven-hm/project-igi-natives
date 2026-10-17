@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Mine_OnEvent (VA 0x00475F30; static CFG gate PASS, CFG score 1.000).
 #include "Mine_OnEvent.h"
 int32_t Mine_OnEvent(float a1, int32_t a2)
 

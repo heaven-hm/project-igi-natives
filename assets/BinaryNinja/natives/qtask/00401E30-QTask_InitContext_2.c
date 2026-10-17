@@ -1,3 +1,4 @@
+// Original IGI.EXE function: QTask_InitContext_2 (VA 0x00401E30; static CFG gate PASS, CFG score 1.000).
 #include "QTask_InitContext_2.h"
 void* QTask_InitContext_2(void* a1, int32_t a2, int32_t a3)
 

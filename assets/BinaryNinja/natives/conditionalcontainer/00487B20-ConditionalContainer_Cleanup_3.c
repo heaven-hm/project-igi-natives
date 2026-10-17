@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ConditionalContainer_Cleanup_3 (VA 0x00487B20; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalContainer_Cleanup_3.h"
 int32_t ConditionalContainer_Cleanup_3(void* a1, int32_t a2)
 

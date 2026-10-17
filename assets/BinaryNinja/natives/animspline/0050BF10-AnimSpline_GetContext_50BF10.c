@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSpline_GetContext_50BF10 (VA 0x0050BF10; static CFG gate PASS, CFG score 1.000).
 #include "AnimSpline_GetContext_50BF10.h"
 
 void*(void* arg1)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Switch_Process (VA 0x00445270; static CFG gate PASS, CFG score 1.000).
 #include "Switch_Process.h"
 void* Switch_Process(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: Sector_LoadParameters (VA 0x004DD1C0; static CFG gate PASS, CFG score 0.933).
 #include "Sector_LoadParameters.h"
 int32_t Sector_LoadParameters(void* a1)
 

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AlarmControl_SetTrigger (VA 0x004409F0; static CFG gate PASS, CFG score 1.000).
 #include "AlarmControl_SetTrigger.h"
 
 int32_t AlarmControl_SetTrigger(void* pThis, int32_t param)

@@ -1,3 +1,4 @@
+// Original IGI.EXE function: ParticleSystemDynCubeObj_LoadParameters (VA 0x00530CD0; static CFG gate FAIL, CFG score 0.778).
 #include "ParticleSystemDynCubeObj_LoadParameters.h"
 int32_t ParticleSystemDynCubeObj_LoadParameters(void* a1)
 

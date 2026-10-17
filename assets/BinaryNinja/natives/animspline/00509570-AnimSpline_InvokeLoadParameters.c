@@ -1,3 +1,4 @@
+// Original IGI.EXE function: AnimSpline_InvokeLoadParameters (VA 0x00509570; static CFG gate PASS, CFG score 1.000).
 #include "AnimSpline_InvokeLoadParameters.h"
 
 int32_t(void* arg1, int32_t arg2)

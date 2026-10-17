@@ -1,3 +1,4 @@
+// Original IGI.EXE function: MenuUI_GetContext_424C10 (VA 0x00424C10; static CFG gate PASS, CFG score 1.000).
 #include "MenuUI_GetContext_424C10.h"
 
 void*(void* arg1, int32_t arg2)

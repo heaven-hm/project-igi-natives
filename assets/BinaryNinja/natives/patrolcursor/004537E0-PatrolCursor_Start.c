@@ -1,3 +1,4 @@
+// Original IGI.EXE function: PatrolCursor_Start (VA 0x004537E0; static CFG gate PASS, CFG score 1.000).
 #include "PatrolCursor_Start.h"
 int32_t* PatrolCursor_Start(void** a1, int32_t a2, int32_t a3)
 
