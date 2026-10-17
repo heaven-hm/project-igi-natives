@@ -1,8 +1,8 @@
 {
   "version": "5.0_FINAL_CENSUS",
   "binary": "IGI.EXE (Retail PE32 Intel 80386, Base 0x00400000)",
-  "binary_coverage": "100.00% of Binary Ninja Disassembled Functions",
-  "total_discovered": 5732,
+  "binary_coverage": "100.0% (5735/5735 functions unified across Binary Ninja + Ghidra + Radare2)",
+  "total_discovered": 5735,
   "newly_discovered_this_pass": 2691,
   "subsystem_count": 365,
   "natives": [
@@ -29916,6 +29916,33 @@
       "evidence": "IGI Retail Engine Native (CFG score 1.000, gate PASS, 0x400000 PE base)",
       "category": "Camera, Optics & Post-FX",
       "source_file": "camera/004A9D28-Camera_ApplyBandFilter_18.c"
+    },
+    {
+      "address": "0x004A9D3E",
+      "hash": "004A9D3E",
+      "name": "MathSys_RestoreFpuCw",
+      "subsystem": "mathsys",
+      "evidence": "Ghidra + Radare2 verified native (VA 0x004A9D3E, FPU control word restore, 11 callers)",
+      "category": "Math CRT Engine Native",
+      "source_file": "mathsys/004A9D3E-MathSys_RestoreFpuCw.c"
+    },
+    {
+      "address": "0x004A9D4B",
+      "hash": "004A9D4B",
+      "name": "MathSys_MathExit",
+      "subsystem": "mathsys",
+      "evidence": "Ghidra + Radare2 verified native (VA 0x004A9D4B, Math error exit handler, 2 callers)",
+      "category": "Math CRT Engine Native",
+      "source_file": "mathsys/004A9D4B-MathSys_MathExit.c"
+    },
+    {
+      "address": "0x004A9D89",
+      "hash": "004A9D89",
+      "name": "MathSys_HandleFpuException",
+      "subsystem": "mathsys",
+      "evidence": "Ghidra + Radare2 verified native (VA 0x004A9D89, FPU exception error handler, 1 caller)",
+      "category": "Math CRT Engine Native",
+      "source_file": "mathsys/004A9D89-MathSys_HandleFpuException.c"
     },
     {
       "address": "0x004A9E2C",
