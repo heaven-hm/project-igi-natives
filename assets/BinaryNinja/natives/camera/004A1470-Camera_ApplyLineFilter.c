@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyLineFilter (VA 0x004A1470; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyLineFilter - 0x004A1470 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A1470-Camera_ApplyLineFilter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyLineFilter.h"
 int32_t Camera_ApplyLineFilter()
 

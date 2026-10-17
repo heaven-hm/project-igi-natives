@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Symbol_CheckRegister (VA 0x004C0560; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Symbol_CheckRegister - 0x004C0560 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C0560-Symbol_CheckRegister.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Symbol_CheckRegister.h"
 int32_t Symbol_CheckRegister(int32_t* context, int32_t* param_2, int32_t param_3)
 

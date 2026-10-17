@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_UpdatePatrol_26 (VA 0x00468DA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_UpdatePatrol_26 - 0x00468DA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00468DA0-AI_UpdatePatrol_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_UpdatePatrol_26.h"
 uint32_t AI_UpdatePatrol_26()
 

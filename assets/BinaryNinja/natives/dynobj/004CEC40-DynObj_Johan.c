@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_Johan (VA 0x004CEC40; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: DynObj_Johan - 0x004CEC40 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CEC40-DynObj_Johan.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_Johan.h"
 void* DynObj_Johan(char* context)
 

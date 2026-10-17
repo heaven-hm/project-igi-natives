@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_RegisterDefs (VA 0x004E5EC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_RegisterDefs - 0x004E5EC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E5EC0-SoundSys_RegisterDefs.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_RegisterDefs.h"
 
 int32_t* SoundSys_RegisterDefs(int32_t pThis, void* param)

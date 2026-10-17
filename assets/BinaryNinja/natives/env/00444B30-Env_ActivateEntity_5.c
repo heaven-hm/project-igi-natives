@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_ActivateEntity_5 (VA 0x00444B30; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Env_ActivateEntity_5 - 0x00444B30 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00444B30-Env_ActivateEntity_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_ActivateEntity_5.h"
 double* Env_ActivateEntity_5(double* context, double* param_2, int32_t param_3)
 

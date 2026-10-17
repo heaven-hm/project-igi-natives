@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Siren_Init (VA 0x00449360; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Siren_Init - 0x00449360 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449360-Siren_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Siren_Init.h"
 int32_t* Siren_Init()
 

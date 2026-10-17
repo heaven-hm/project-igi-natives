@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PictureBox_Setup (VA 0x0041B5F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PictureBox_Setup - 0x0041B5F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041B5F0-PictureBox_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PictureBox_Setup.h"
 int32_t PictureBox_Setup(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetViewLength (VA 0x0044DC40; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetViewLength - 0x0044DC40 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044DC40-AIFunction_SetViewLength.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetViewLength.h"
 int32_t AIFunction_SetViewLength(long double context , int32_t param_2, float param_3 )
 

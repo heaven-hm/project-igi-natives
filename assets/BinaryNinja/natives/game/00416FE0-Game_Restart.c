@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_Restart (VA 0x00416FE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Game_Restart - 0x00416FE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416FE0-Game_Restart.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_Restart.h"
 int32_t Game_Restart()
 

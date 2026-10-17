@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Activate (VA 0x0044D420; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: AIAction_Activate - 0x0044D420 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D420-AIAction_Activate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Activate.h"
 int32_t AIAction_Activate(int32_t context, float param_2 )
 

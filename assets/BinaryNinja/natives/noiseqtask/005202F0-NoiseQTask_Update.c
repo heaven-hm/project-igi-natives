@@ -1,4 +1,5 @@
-// Original IGI.EXE function: NoiseQTask_Update (VA 0x005202F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: NoiseQTask_Update - 0x005202F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005202F0-NoiseQTask_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "NoiseQTask_Update.h"
 int32_t NoiseQTask_Update(void* context)
 

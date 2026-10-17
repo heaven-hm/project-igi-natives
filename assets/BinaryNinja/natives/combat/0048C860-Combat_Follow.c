@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Combat_Follow (VA 0x0048C860; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Combat_Follow - 0x0048C860 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048C860-Combat_Follow.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Combat_Follow.h"
 int32_t* Combat_Follow(int32_t* context, int32_t* param_2)
 

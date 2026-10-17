@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ToggleBox_LoadParameters (VA 0x0041E020; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ToggleBox_LoadParameters - 0x0041E020 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041E020-ToggleBox_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ToggleBox_LoadParameters.h"
 int32_t ToggleBox_LoadParameters(void* context)
 

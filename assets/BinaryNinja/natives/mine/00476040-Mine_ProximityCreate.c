@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mine_ProximityCreate (VA 0x00476040; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Mine_ProximityCreate - 0x00476040 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476040-Mine_ProximityCreate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mine_ProximityCreate.h"
 struct status_msg* Mine_ProximityCreate(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8, char param_9)
 

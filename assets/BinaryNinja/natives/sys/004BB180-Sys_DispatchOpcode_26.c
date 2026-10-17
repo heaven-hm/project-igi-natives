@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_26 (VA 0x004BB180; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Sys_DispatchOpcode_26 - 0x004BB180 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004BB180-Sys_DispatchOpcode_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_26.h"
 int32_t Sys_DispatchOpcode_26(int32_t* context, char* param_2)
 

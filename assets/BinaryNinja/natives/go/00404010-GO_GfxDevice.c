@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_GfxDevice (VA 0x00404010; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GO_GfxDevice - 0x00404010 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00404010-GO_GfxDevice.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_GfxDevice.h"
 int32_t GO_GfxDevice(int32_t context, float param_2 )
 

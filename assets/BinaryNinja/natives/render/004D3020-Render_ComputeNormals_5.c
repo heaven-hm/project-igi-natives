@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ComputeNormals_5 (VA 0x004D3020; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_ComputeNormals_5 - 0x004D3020 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D3020-Render_ComputeNormals_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ComputeNormals_5.h"
 int32_t Render_ComputeNormals_5(long double context , float* param_2, float* param_3, float param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_RequestScreen_12 (VA 0x00423050; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_RequestScreen_12 - 0x00423050 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00423050-Menu_RequestScreen_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_RequestScreen_12.h"
 uint32_t Menu_RequestScreen_12()
 

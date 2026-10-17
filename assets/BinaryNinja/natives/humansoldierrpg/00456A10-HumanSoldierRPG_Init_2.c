@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierRPG_Init_2 (VA 0x00456A10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanSoldierRPG_Init_2 - 0x00456A10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00456A10-HumanSoldierRPG_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierRPG_Init_2.h"
 
 void* HumanSoldierRPG_Init_2(void* pThis, void* param)

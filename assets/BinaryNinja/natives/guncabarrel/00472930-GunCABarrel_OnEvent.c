@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunCABarrel_OnEvent (VA 0x00472930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunCABarrel_OnEvent - 0x00472930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00472930-GunCABarrel_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunCABarrel_OnEvent.h"
 void* GunCABarrel_OnEvent(double* context, void* param_2)
 

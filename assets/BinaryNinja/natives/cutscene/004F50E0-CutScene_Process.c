@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CutScene_Process (VA 0x004F50E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CutScene_Process - 0x004F50E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F50E0-CutScene_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CutScene_Process.h"
 int32_t* CutScene_Process(void* context)
 

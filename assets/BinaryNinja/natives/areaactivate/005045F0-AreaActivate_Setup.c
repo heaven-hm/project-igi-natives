@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AreaActivate_Setup (VA 0x005045F0; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: AreaActivate_Setup - 0x005045F0 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 005045F0-AreaActivate_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AreaActivate_Setup.h"
 int32_t AreaActivate_Setup(void* context)
 

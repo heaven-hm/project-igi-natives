@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplosionObj_GetContext_43C2B0 (VA 0x0043C2B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplosionObj_GetContext_43C2B0 - 0x0043C2B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043C2B0-ExplosionObj_GetContext_43C2B0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_GetContext_43C2B0.h"
 
 void* ExplosionObj_GetContext_43C2B0(void* context, void* param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_ProcessStep_528260 (VA 0x00528260; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_ProcessStep_528260 - 0x00528260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00528260-RenderLight_ProcessStep_528260.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_ProcessStep_528260.h"
 
 int32_t* RenderLight_ProcessStep_528260(void* context)

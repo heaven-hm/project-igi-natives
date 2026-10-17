@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumInt32_28 (VA 0x004FB5F0; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: Script_ParseEnumInt32_28 - 0x004FB5F0 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004FB5F0-Script_ParseEnumInt32_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumInt32_28.h"
 void* Script_ParseEnumInt32_28(void* context)
 

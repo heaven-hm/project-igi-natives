@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SyncVSync_20 (VA 0x0049EC70; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Display_SyncVSync_20 - 0x0049EC70 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049EC70-Display_SyncVSync_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SyncVSync_20.h"
 int32_t* Display_SyncVSync_20(double* context)
 

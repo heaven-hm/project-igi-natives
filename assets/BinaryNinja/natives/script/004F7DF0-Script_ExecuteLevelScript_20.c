@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ExecuteLevelScript_20 (VA 0x004F7DF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_ExecuteLevelScript_20 - 0x004F7DF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7DF0-Script_ExecuteLevelScript_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ExecuteLevelScript_20.h"
 int32_t Script_ExecuteLevelScript_20(void* context, float param_2)
 

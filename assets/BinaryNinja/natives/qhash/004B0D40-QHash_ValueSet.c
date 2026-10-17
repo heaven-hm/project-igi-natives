@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QHash_ValueSet (VA 0x004B0D40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QHash_ValueSet - 0x004B0D40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B0D40-QHash_ValueSet.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QHash_ValueSet.h"
 int32_t QHash_ValueSet()
 

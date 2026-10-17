@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Train_Process (VA 0x0042B500; static CFG gate FAIL, CFG score 0.800).
+// IGI native provenance: Train_Process - 0x0042B500 - CFG score 80.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0042B500-Train_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Train_Process.h"
 int32_t Train_Process(float context, void* param_2)
 

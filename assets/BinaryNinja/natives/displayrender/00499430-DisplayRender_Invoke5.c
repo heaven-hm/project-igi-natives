@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_Invoke5 (VA 0x00499430; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_Invoke5 - 0x00499430 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00499430-DisplayRender_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_Invoke5.h"
 
 int32_t* DisplayRender_Invoke5(int32_t context , int32_t* param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuItem_Init_2 (VA 0x00505510; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuItem_Init_2 - 0x00505510 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505510-MenuItem_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuItem_Init_2.h"
 
 void* MenuItem_Init_2(void* pThis, int32_t param)

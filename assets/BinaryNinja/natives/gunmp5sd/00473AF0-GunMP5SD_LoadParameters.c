@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunMP5SD_LoadParameters (VA 0x00473AF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunMP5SD_LoadParameters - 0x00473AF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00473AF0-GunMP5SD_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunMP5SD_LoadParameters.h"
 float GunMP5SD_LoadParameters(float* context, float param_2) {
     void* context_val = *(param_2 + 0x2c);

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_RenderLensflare_2 (VA 0x00521E40; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Light_RenderLensflare_2 - 0x00521E40 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00521E40-Light_RenderLensflare_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_RenderLensflare_2.h"
 uint32_t Light_RenderLensflare_2(void* context, double* param_2, float* param_3 , float* param_4, void* param_5, int32_t param_6, float param_7, float param_8, float param_9, float param_10, float param_11, float param_12, float param_13, float param_14, float param_15 , float param_16, float param_17, float param_18, float param_19, float param_20, float param_21, float param_22)
 

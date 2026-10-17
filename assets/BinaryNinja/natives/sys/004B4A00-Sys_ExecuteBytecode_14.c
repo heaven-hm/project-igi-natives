@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ExecuteBytecode_14 (VA 0x004B4A00; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_ExecuteBytecode_14 - 0x004B4A00 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B4A00-Sys_ExecuteBytecode_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ExecuteBytecode_14.h"
 int32_t Sys_ExecuteBytecode_14(float context, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, int32_t param_8, int32_t param_9, int32_t param_10)
 

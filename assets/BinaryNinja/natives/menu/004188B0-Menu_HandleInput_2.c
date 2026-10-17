@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_HandleInput_2 (VA 0x004188B0; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Menu_HandleInput_2 - 0x004188B0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004188B0-Menu_HandleInput_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_HandleInput_2.h"
 void* Menu_HandleInput_2(void* context)
 

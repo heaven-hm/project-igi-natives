@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CutScene_TaskCreate (VA 0x004F4B00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CutScene_TaskCreate - 0x004F4B00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4B00-CutScene_TaskCreate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CutScene_TaskCreate.h"
 int32_t* CutScene_TaskCreate()
 

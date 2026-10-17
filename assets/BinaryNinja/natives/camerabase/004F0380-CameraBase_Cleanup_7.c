@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraBase_Cleanup_7 (VA 0x004F0380; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CameraBase_Cleanup_7 - 0x004F0380 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0380-CameraBase_Cleanup_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraBase_Cleanup_7.h"
 int32_t* CameraBase_Cleanup_7(int32_t context, int32_t* param_2)
 

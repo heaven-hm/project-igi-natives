@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanCamera_CleanupList (VA 0x00484CE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanCamera_CleanupList - 0x00484CE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00484CE0-HumanCamera_CleanupList.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanCamera_CleanupList.h"
 
 void* HumanCamera_CleanupList(void* pThis)

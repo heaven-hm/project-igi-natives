@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ExecuteBytecode_15 (VA 0x004B5730; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_ExecuteBytecode_15 - 0x004B5730 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B5730-Sys_ExecuteBytecode_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ExecuteBytecode_15.h"
 int32_t Sys_ExecuteBytecode_15(float context, float param_2, int32_t param_3, float param_4, float param_5, int32_t param_6, float param_7, float param_8, float param_9, float param_10, float param_11, float param_12, int32_t param_13, int32_t param_14, int32_t param_15)
 

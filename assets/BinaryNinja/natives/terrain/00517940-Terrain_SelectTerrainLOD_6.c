@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_SelectTerrainLOD_6 (VA 0x00517940; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_SelectTerrainLOD_6 - 0x00517940 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00517940-Terrain_SelectTerrainLOD_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_SelectTerrainLOD_6.h"
 void** Terrain_SelectTerrainLOD_6(void* context, int32_t param_2)
 

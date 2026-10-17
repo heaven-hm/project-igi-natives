@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunPickup_Action (VA 0x0046D230; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: GunPickup_Action - 0x0046D230 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046D230-GunPickup_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunPickup_Action.h"
 int32_t GunPickup_Action(void* context, int32_t* param_2)
 

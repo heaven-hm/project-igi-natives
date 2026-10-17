@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_ExecutePipeline_4BEFE0 (VA 0x004BEFE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_ExecutePipeline_4BEFE0 - 0x004BEFE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BEFE0-Qvm_ExecutePipeline_4BEFE0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_ExecutePipeline_4BEFE0.h"
 
 int32_t Qvm_ExecutePipeline_4BEFE0(int32_t* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainDynCubeObj_OnEvent (VA 0x004F7F00; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: RainDynCubeObj_OnEvent - 0x004F7F00 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7F00-RainDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainDynCubeObj_OnEvent.h"
 void* RainDynCubeObj_OnEvent(void* context)
 

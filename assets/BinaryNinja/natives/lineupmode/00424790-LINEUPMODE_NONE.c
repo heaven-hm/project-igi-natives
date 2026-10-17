@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LINEUPMODE_NONE (VA 0x00424790; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LINEUPMODE_NONE - 0x00424790 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00424790-LINEUPMODE_NONE.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LINEUPMODE_NONE.h"
 uint32_t LINEUPMODE_NONE()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_ApplyRecoil_2 (VA 0x004099E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_ApplyRecoil_2 - 0x004099E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004099E0-HumanPlayer_ApplyRecoil_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_ApplyRecoil_2.h"
 int32_t HumanPlayer_ApplyRecoil_2(void* context, float param_2)
 

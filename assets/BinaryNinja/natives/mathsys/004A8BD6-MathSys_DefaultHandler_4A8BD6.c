@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MathSys_DefaultHandler_4A8BD6 (VA 0x004A8BD6; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MathSys_DefaultHandler_4A8BD6 - 0x004A8BD6 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A8BD6-MathSys_DefaultHandler_4A8BD6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_DefaultHandler_4A8BD6.h"
 
 long double() {

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuItem_Move (VA 0x00505A10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuItem_Move - 0x00505A10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505A10-MenuItem_Move.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuItem_Move.h"
 
 void* MenuItem_Move(void* pThis, int32_t* param)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_ProcessShadow (VA 0x004E0890; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sound_ProcessShadow - 0x004E0890 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E0890-Sound_ProcessShadow.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_ProcessShadow.h"
 
 void* Sound_ProcessShadow(void* context, int32_t param_2)

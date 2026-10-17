@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsGetPerformanceFlags (VA 0x00404F60; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GraphicOptionsGetPerformanceFlags - 0x00404F60 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404F60-Config_GraphicOptionsGetPerformanceFlags.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsGetPerformanceFlags.h"
 int32_t Config_GraphicOptionsGetPerformanceFlags(int32_t context)
 

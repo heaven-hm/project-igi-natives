@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QFile_DeviceIndex (VA 0x004B11A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QFile_DeviceIndex - 0x004B11A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B11A0-QFile_DeviceIndex.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QFile_DeviceIndex.h"
 int32_t QFile_DeviceIndex(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_15 (VA 0x004B5860; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_15 - 0x004B5860 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B5860-Sys_DispatchOpcode_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_15.h"
 float Sys_DispatchOpcode_15(float* context, float param_2, float param_3, float param_4, int32_t param_5, float param_6, float param_7, float param_8, int32_t param_9, float param_10, float param_11, float param_12, int32_t param_13, int32_t param_14) {
     long double fp0;

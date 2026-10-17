@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Train_Action (VA 0x0042B930; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Train_Action - 0x0042B930 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0042B930-Train_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Train_Action.h"
 void* Train_Action(void* context, void** param_2)
 

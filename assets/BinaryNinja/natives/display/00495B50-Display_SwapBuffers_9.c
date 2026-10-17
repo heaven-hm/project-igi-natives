@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SwapBuffers_9 (VA 0x00495B50; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Display_SwapBuffers_9 - 0x00495B50 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00495B50-Display_SwapBuffers_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SwapBuffers_9.h"
 int32_t Display_SwapBuffers_9()
 

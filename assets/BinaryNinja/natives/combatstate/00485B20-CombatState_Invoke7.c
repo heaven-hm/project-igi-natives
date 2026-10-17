@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CombatState_Invoke7 (VA 0x00485B20; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: CombatState_Invoke7 - 0x00485B20 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485B20-CombatState_Invoke7.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_Invoke7.h"
 
 int32_t CombatState_Invoke7(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_ExplosionSpawn_3 (VA 0x00482A40; static CFG gate FAIL, CFG score 0.722).
+// IGI native provenance: FX_ExplosionSpawn_3 - 0x00482A40 - CFG score 72.2% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00482A40-FX_ExplosionSpawn_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_ExplosionSpawn_3.h"
 int32_t FX_ExplosionSpawn_3(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_Invoke20_4E7A60 (VA 0x004E7A60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sound_Invoke20_4E7A60 - 0x004E7A60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7A60-Sound_Invoke20_4E7A60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke20_4E7A60.h"
 
 int32_t* Sound_Invoke20_4E7A60()

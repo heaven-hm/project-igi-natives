@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FragmentSimulate_4 (VA 0x00483A00; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: FX_FragmentSimulate_4 - 0x00483A00 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00483A00-FX_FragmentSimulate_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FragmentSimulate_4.h"
 int32_t* FX_FragmentSimulate_4(void* context , double* param_2)
 

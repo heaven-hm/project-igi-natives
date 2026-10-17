@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SoundInvalidFilename (VA 0x00497390; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_SoundInvalidFilename - 0x00497390 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00497390-Display_SoundInvalidFilename.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SoundInvalidFilename.h"
 char* Display_SoundInvalidFilename(char* context, char* param_2)
 

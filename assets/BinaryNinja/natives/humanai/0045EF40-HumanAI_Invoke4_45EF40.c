@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Invoke4_45EF40 (VA 0x0045EF40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_Invoke4_45EF40 - 0x0045EF40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045EF40-HumanAI_Invoke4_45EF40.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke4_45EF40.h"
 
 int32_t HumanAI_Invoke4_45EF40(void* context)

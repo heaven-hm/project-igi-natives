@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_FormatScreen_17 (VA 0x00426610; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_FormatScreen_17 - 0x00426610 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426610-Menu_FormatScreen_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_FormatScreen_17.h"
 uint32_t Menu_FormatScreen_17()
 

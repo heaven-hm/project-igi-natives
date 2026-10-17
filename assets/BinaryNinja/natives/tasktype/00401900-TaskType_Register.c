@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TaskType_Register (VA 0x00401900; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TaskType_Register - 0x00401900 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401900-TaskType_Register.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TaskType_Register.h"
 int32_t TaskType_Register(int32_t context, int32_t param_2, int16_t param_3, int32_t param_4)
 

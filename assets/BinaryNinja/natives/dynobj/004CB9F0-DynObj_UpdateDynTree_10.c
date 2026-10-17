@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_UpdateDynTree_10 (VA 0x004CB9F0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: DynObj_UpdateDynTree_10 - 0x004CB9F0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CB9F0-DynObj_UpdateDynTree_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_UpdateDynTree_10.h"
 int32_t* DynObj_UpdateDynTree_10(int32_t context, int32_t* param_2, double* param_3, int32_t* param_4, double* param_5, char param_6, double* param_7, int32_t param_8)
 

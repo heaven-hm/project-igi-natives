@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessage_ShowFull (VA 0x00485970; static CFG gate FAIL, CFG score 0.818).
+// IGI native provenance: StatusMessage_ShowFull - 0x00485970 - CFG score 81.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00485970-StatusMessage_ShowFull.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessage_ShowFull.h"
 struct status_msg* StatusMessage_ShowFull(void* ctx, char* message, char* sprite, char* style)
 

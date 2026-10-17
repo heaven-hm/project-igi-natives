@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Setup (VA 0x0044F410; static CFG gate PASS, CFG score 0.984).
+// IGI native provenance: HumanAI_Setup - 0x0044F410 - CFG score 98.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044F410-HumanAI_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Setup.h"
 void* HumanAI_Setup(int32_t context)
 

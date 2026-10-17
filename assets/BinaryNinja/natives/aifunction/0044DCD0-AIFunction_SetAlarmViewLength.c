@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetAlarmViewLength (VA 0x0044DCD0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetAlarmViewLength - 0x0044DCD0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044DCD0-AIFunction_SetAlarmViewLength.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetAlarmViewLength.h"
 int32_t AIFunction_SetAlarmViewLength(long double context , int32_t param_2, float param_3 )
 

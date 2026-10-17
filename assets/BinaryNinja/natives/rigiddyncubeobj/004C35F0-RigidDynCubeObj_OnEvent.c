@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RigidDynCubeObj_OnEvent (VA 0x004C35F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RigidDynCubeObj_OnEvent - 0x004C35F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C35F0-RigidDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RigidDynCubeObj_OnEvent.h"
 void* RigidDynCubeObj_OnEvent(void* context, int32_t* param_2)
 

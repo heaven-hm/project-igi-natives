@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SaveGraphicOptions (VA 0x00405300; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: Config_SaveGraphicOptions - 0x00405300 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405300-Config_SaveGraphicOptions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SaveGraphicOptions.h"
 int32_t Config_SaveGraphicOptions()
 

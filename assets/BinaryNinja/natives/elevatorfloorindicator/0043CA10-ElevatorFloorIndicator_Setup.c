@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ElevatorFloorIndicator_Setup (VA 0x0043CA10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ElevatorFloorIndicator_Setup - 0x0043CA10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043CA10-ElevatorFloorIndicator_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ElevatorFloorIndicator_Setup.h"
 struct status_msg* ElevatorFloorIndicator_Setup(long double context , int32_t param_2)
 

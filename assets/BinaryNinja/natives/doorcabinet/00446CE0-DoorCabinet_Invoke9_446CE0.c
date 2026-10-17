@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DoorCabinet_Invoke9_446CE0 (VA 0x00446CE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DoorCabinet_Invoke9_446CE0 - 0x00446CE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00446CE0-DoorCabinet_Invoke9_446CE0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_Invoke9_446CE0.h"
 
 int32_t DoorCabinet_Invoke9_446CE0(void* context, int32_t* param_2)

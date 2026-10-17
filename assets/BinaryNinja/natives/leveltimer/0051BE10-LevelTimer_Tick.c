@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelTimer_Tick (VA 0x0051BE10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelTimer_Tick - 0x0051BE10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051BE10-LevelTimer_Tick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelTimer_Tick.h"
 int32_t LevelTimer_Tick(long double context , void* param_2)
 

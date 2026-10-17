@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LightmapInfo_Update (VA 0x00525380; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LightmapInfo_Update - 0x00525380 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00525380-LightmapInfo_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LightmapInfo_Update.h"
 int32_t* LightmapInfo_Update(void* context)
 

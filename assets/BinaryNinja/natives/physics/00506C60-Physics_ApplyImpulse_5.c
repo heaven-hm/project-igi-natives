@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_ApplyImpulse_5 (VA 0x00506C60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_ApplyImpulse_5 - 0x00506C60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00506C60-Physics_ApplyImpulse_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_ApplyImpulse_5.h"
 int32_t Physics_ApplyImpulse_5(int32_t context) {
     if (context >= 0x100)

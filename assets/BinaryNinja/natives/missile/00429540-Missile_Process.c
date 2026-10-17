@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Missile_Process (VA 0x00429540; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Missile_Process - 0x00429540 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00429540-Missile_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Missile_Process.h"
 int32_t* Missile_Process(void* context)
 

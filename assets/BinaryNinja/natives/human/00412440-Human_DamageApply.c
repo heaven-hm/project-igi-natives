@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_DamageApply (VA 0x00412440; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_DamageApply - 0x00412440 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00412440-Human_DamageApply.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_DamageApply.h"
 float Human_DamageApply(float context, int32_t* param_2) // Sig: void Human_DamageApply(HumanPlayer* human)
 // Note: Applies DAMAGE/knockback to the human player: reads enable flag byte

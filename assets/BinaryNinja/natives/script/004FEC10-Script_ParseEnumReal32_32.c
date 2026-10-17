@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumReal32_32 (VA 0x004FEC10; static CFG gate PASS, CFG score 0.903).
+// IGI native provenance: Script_ParseEnumReal32_32 - 0x004FEC10 - CFG score 90.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FEC10-Script_ParseEnumReal32_32.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumReal32_32.h"
 char* Script_ParseEnumReal32_32(int32_t context, float* param_2, int32_t* param_3, char* param_4, float param_5, int32_t param_6, float* param_7 )
 

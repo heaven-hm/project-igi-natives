@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ExecuteBytecode_27 (VA 0x004BC770; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_ExecuteBytecode_27 - 0x004BC770 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BC770-Sys_ExecuteBytecode_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ExecuteBytecode_27.h"
 int32_t Sys_ExecuteBytecode_27(int32_t* context)
 

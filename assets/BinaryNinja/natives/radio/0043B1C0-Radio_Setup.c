@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Radio_Setup (VA 0x0043B1C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Radio_Setup - 0x0043B1C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043B1C0-Radio_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Radio_Setup.h"
 int32_t Radio_Setup(void* context)
 

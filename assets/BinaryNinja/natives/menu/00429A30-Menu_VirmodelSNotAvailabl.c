@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_VirmodelSNotAvailabl (VA 0x00429A30; static CFG gate PASS, CFG score 0.943).
+// IGI native provenance: Menu_VirmodelSNotAvailabl - 0x00429A30 - CFG score 94.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00429A30-Menu_VirmodelSNotAvailabl.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_VirmodelSNotAvailabl.h"
 struct status_msg* Menu_VirmodelSNotAvailabl(void* context, void* param_2, void* param_3, double* param_4, void* param_5, float param_6, double* param_7, void* param_8, char* param_9, int32_t param_10)
 

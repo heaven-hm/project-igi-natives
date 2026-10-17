@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Flow_DeleteHandler (VA 0x00402C40; static CFG gate FAIL, CFG score 0.556).
+// IGI native provenance: Flow_DeleteHandler - 0x00402C40 - CFG score 55.6% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00402C40-Flow_DeleteHandler.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Flow_DeleteHandler.h"
 int32_t Flow_DeleteHandler()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QFile_AliasResolve (VA 0x004B1020; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: QFile_AliasResolve - 0x004B1020 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B1020-QFile_AliasResolve.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QFile_AliasResolve.h"
 int32_t QFile_AliasResolve(char* context, void* param_2, int32_t param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RPG_CombatKneel (VA 0x0048CDF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RPG_CombatKneel - 0x0048CDF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048CDF0-RPG_CombatKneel.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RPG_CombatKneel.h"
 int32_t* RPG_CombatKneel(int32_t context, int32_t* param_2)
 

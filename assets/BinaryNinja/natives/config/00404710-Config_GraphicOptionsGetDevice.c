@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsGetDevice (VA 0x00404710; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Config_GraphicOptionsGetDevice - 0x00404710 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00404710-Config_GraphicOptionsGetDevice.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsGetDevice.h"
 int32_t Config_GraphicOptionsGetDevice(int32_t context)
 

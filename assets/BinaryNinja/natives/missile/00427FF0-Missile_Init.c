@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Missile_Init (VA 0x00427FF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Missile_Init - 0x00427FF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427FF0-Missile_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Missile_Init.h"
 int32_t* Missile_Init()
 

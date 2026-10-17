@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ConditionalSound_Stop (VA 0x004251C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ConditionalSound_Stop - 0x004251C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004251C0-ConditionalSound_Stop.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ConditionalSound_Stop.h"
 int32_t* ConditionalSound_Stop(void* context)
 

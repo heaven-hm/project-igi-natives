@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SimBoneDynCubeObj_Update (VA 0x0052CA60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SimBoneDynCubeObj_Update - 0x0052CA60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052CA60-SimBoneDynCubeObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SimBoneDynCubeObj_Update.h"
 uint32_t SimBoneDynCubeObj_Update()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Train_Update (VA 0x0042B700; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Train_Update - 0x0042B700 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042B700-Train_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Train_Update.h"
 uint32_t Train_Update(long double context , void* param_2)
 

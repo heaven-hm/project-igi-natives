@@ -1,4 +1,5 @@
-// Original IGI.EXE function: NoiseQTask_Init (VA 0x0051FEF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: NoiseQTask_Init - 0x0051FEF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051FEF0-NoiseQTask_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "NoiseQTask_Init.h"
 int32_t* NoiseQTask_Init()
 

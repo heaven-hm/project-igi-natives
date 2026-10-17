@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_SpawnNewTask_25 (VA 0x004FA160; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_SpawnNewTask_25 - 0x004FA160 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FA160-Script_SpawnNewTask_25.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_SpawnNewTask_25.h"
 int32_t Script_SpawnNewTask_25(void* context, void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_UpdateStamina_9 (VA 0x00410F70; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: HumanPlayer_UpdateStamina_9 - 0x00410F70 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00410F70-HumanPlayer_UpdateStamina_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_UpdateStamina_9.h"
 int32_t* HumanPlayer_UpdateStamina_9(void* context)
 

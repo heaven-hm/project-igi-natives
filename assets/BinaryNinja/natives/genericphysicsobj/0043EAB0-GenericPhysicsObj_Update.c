@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPhysicsObj_Update (VA 0x0043EAB0; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: GenericPhysicsObj_Update - 0x0043EAB0 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043EAB0-GenericPhysicsObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPhysicsObj_Update.h"
 void* GenericPhysicsObj_Update(float context)
 

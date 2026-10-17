@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PickupTrigger_InvokeLoadParameters (VA 0x00465AC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PickupTrigger_InvokeLoadParameters - 0x00465AC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00465AC0-PickupTrigger_InvokeLoadParameters.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeLoadParameters.h"
 
 int32_t PickupTrigger_InvokeLoadParameters(int32_t* context, int32_t param_2)

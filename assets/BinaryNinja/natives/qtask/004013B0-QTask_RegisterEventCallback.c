@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_RegisterEventCallback (VA 0x004013B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_RegisterEventCallback - 0x004013B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004013B0-QTask_RegisterEventCallback.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_RegisterEventCallback.h"
 int32_t* QTask_RegisterEventCallback(void* context, int16_t param_2, int32_t param_3)
 

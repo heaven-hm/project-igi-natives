@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierFemale_Process (VA 0x004553E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanSoldierFemale_Process - 0x004553E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004553E0-HumanSoldierFemale_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierFemale_Process.h"
 int32_t HumanSoldierFemale_Process(float context, int32_t* param_2)
 

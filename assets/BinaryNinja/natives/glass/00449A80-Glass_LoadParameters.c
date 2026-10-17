@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Glass_LoadParameters (VA 0x00449A80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Glass_LoadParameters - 0x00449A80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449A80-Glass_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Glass_LoadParameters.h"
 int32_t Glass_LoadParameters(int32_t* context)
 

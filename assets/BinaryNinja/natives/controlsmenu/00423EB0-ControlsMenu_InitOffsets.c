@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_InitOffsets (VA 0x00423EB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_InitOffsets - 0x00423EB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00423EB0-ControlsMenu_InitOffsets.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_InitOffsets.h"
 
 void* ControlsMenu_InitOffsets(void* pThis)

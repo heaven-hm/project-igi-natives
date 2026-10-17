@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_InterpolateWaypoint_4 (VA 0x00505600; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_InterpolateWaypoint_4 - 0x00505600 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505600-Physics_InterpolateWaypoint_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_InterpolateWaypoint_4.h"
 struct status_msg* Physics_InterpolateWaypoint_4(void* context)
 

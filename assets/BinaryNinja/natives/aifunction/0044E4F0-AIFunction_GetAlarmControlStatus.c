@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetAlarmControlStatus (VA 0x0044E4F0; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: AIFunction_GetAlarmControlStatus - 0x0044E4F0 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044E4F0-AIFunction_GetAlarmControlStatus.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetAlarmControlStatus.h"
 int32_t AIFunction_GetAlarmControlStatus(int32_t context)
 

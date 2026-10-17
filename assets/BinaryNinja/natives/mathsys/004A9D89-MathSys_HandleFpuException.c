@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MathSys_HandleFpuException (VA 0x004A9D89; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MathSys_HandleFpuException - 0x004A9D89 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A9D89-MathSys_HandleFpuException.md; Ghidra/Radare2 static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_HandleFpuException.h"
 
 void MathSys_HandleFpuException(void)

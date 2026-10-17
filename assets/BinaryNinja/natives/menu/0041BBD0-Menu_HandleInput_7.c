@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_HandleInput_7 (VA 0x0041BBD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_HandleInput_7 - 0x0041BBD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041BBD0-Menu_HandleInput_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_HandleInput_7.h"
 int32_t* Menu_HandleInput_7(void* context)
 

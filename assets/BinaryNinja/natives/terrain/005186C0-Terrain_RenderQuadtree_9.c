@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_RenderQuadtree_9 (VA 0x005186C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_RenderQuadtree_9 - 0x005186C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005186C0-Terrain_RenderQuadtree_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_RenderQuadtree_9.h"
 int32_t Terrain_RenderQuadtree_9(int32_t* context)
 

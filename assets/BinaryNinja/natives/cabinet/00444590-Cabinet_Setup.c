@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Cabinet_Setup (VA 0x00444590; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Cabinet_Setup - 0x00444590 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00444590-Cabinet_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Cabinet_Setup.h"
 void* Cabinet_Setup(void* context)
 

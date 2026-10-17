@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerLog_Init (VA 0x004688B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerLog_Init - 0x004688B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004688B0-ComputerLog_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerLog_Init.h"
 int32_t ComputerLog_Init()
 

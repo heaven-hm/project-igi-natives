@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_CheckGround_3 (VA 0x00409FF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_CheckGround_3 - 0x00409FF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00409FF0-HumanPlayer_CheckGround_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_CheckGround_3.h"
 int32_t HumanPlayer_CheckGround_3(void* context, float param_2)
 

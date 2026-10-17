@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HeightMap_Enter (VA 0x00506F00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HeightMap_Enter - 0x00506F00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00506F00-HeightMap_Enter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HeightMap_Enter.h"
 void* HeightMap_Enter(void* context)
 

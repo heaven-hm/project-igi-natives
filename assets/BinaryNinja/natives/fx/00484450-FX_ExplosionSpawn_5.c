@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_ExplosionSpawn_5 (VA 0x00484450; static CFG gate PASS, CFG score 0.902).
+// IGI native provenance: FX_ExplosionSpawn_5 - 0x00484450 - CFG score 90.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00484450-FX_ExplosionSpawn_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_ExplosionSpawn_5.h"
 int32_t FX_ExplosionSpawn_5(void* context)
 

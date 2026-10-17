@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CheckHeap_20 (VA 0x004B7730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_CheckHeap_20 - 0x004B7730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B7730-Sys_CheckHeap_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CheckHeap_20.h"
 void* Sys_CheckHeap_20(int32_t* context, void* param_2)
 

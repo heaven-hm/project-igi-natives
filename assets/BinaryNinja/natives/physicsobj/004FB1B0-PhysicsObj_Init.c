@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_Init (VA 0x004FB1B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObj_Init - 0x004FB1B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FB1B0-PhysicsObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_Init.h"
 int32_t PhysicsObj_Init()
 

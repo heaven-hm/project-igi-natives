@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_DefineOptions (VA 0x004B8890; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Game_DefineOptions - 0x004B8890 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B8890-Game_DefineOptions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_DefineOptions.h"
 void* Game_DefineOptions(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4)
 

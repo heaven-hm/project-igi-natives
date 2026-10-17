@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SetVolume (VA 0x00406200; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_SetVolume - 0x00406200 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406200-Config_SetVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SetVolume.h"
 int32_t Config_SetVolume(int32_t context)
 

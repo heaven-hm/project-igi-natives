@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_UpdateTransform_14 (VA 0x004A87FC; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_UpdateTransform_14 - 0x004A87FC - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A87FC-Camera_UpdateTransform_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_UpdateTransform_14.h"
 int32_t Camera_UpdateTransform_14(int16_t context , int32_t param_2, int32_t param_3)
 

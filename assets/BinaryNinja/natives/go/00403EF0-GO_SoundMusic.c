@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_SoundMusic (VA 0x00403EF0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GO_SoundMusic - 0x00403EF0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403EF0-GO_SoundMusic.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_SoundMusic.h"
 int32_t GO_SoundMusic(long double context , int32_t param_2, float param_3 )
 

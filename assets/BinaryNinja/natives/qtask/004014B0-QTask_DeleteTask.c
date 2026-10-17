@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_DeleteTask (VA 0x004014B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_DeleteTask - 0x004014B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004014B0-QTask_DeleteTask.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_DeleteTask.h"
 int32_t QTask_DeleteTask()
 

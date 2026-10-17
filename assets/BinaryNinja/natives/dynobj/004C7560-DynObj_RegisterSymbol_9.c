@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RegisterSymbol_9 (VA 0x004C7560; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_RegisterSymbol_9 - 0x004C7560 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C7560-DynObj_RegisterSymbol_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RegisterSymbol_9.h"
 void* DynObj_RegisterSymbol_9(int32_t context, void* param_2)
 

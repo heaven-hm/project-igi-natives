@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumString_13 (VA 0x004F2D50; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Script_ParseEnumString_13 - 0x004F2D50 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F2D50-Script_ParseEnumString_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumString_13.h"
 float* Script_ParseEnumString_13(void* context)
 

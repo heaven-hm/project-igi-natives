@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_Update3DPosition_9 (VA 0x004E7350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_Update3DPosition_9 - 0x004E7350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7350-SoundSys_Update3DPosition_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_Update3DPosition_9.h"
 int32_t SoundSys_Update3DPosition_9(int32_t context)
 

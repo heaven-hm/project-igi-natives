@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RegisterSymbol_10 (VA 0x004C9A30; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: DynObj_RegisterSymbol_10 - 0x004C9A30 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004C9A30-DynObj_RegisterSymbol_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RegisterSymbol_10.h"
 int32_t DynObj_RegisterSymbol_10(void* context, int32_t* param_2, double* param_3 , int32_t param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_InitDirectDraw (VA 0x004924D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_InitDirectDraw - 0x004924D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004924D0-Display_InitDirectDraw.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_InitDirectDraw.h"
 
 ❓  void* const __stdcall Display_InitDirectDraw(int32_t* pThis )

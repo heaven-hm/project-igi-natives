@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TextureModifier_Create (VA 0x00505ED0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TextureModifier_Create - 0x00505ED0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505ED0-TextureModifier_Create.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TextureModifier_Create.h"
 
 void* TextureModifier_Create(void* pThis)

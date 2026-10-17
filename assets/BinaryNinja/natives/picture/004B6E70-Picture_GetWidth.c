@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Picture_GetWidth (VA 0x004B6E70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Picture_GetWidth - 0x004B6E70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B6E70-Picture_GetWidth.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Picture_GetWidth.h"
 int32_t Picture_GetWidth(int32_t* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_DefaultHandler (VA 0x0044E060; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_DefaultHandler - 0x0044E060 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E060-AIFunction_DefaultHandler.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_DefaultHandler.h"
 int32_t AIFunction_DefaultHandler(int32_t context)
 

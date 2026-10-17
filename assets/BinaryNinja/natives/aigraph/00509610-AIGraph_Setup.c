@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIGraph_Setup (VA 0x00509610; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIGraph_Setup - 0x00509610 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00509610-AIGraph_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIGraph_Setup.h"
 int32_t AIGraph_Setup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ReadFileBlock_31 (VA 0x004BFBE0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Sys_ReadFileBlock_31 - 0x004BFBE0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004BFBE0-Sys_ReadFileBlock_31.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ReadFileBlock_31.h"
 void* Sys_ReadFileBlock_31(void* context, void* param_2)
 

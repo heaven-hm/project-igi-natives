@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FlatWater_LoadParameters (VA 0x0051C5B0; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: FlatWater_LoadParameters - 0x0051C5B0 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051C5B0-FlatWater_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FlatWater_LoadParameters.h"
 void* FlatWater_LoadParameters(float context, float param_2 , float param_3 , float param_4 , float param_5, float param_6 , float param_7, float param_8, float param_9, int32_t param_10 , float param_11 , float param_12)
 

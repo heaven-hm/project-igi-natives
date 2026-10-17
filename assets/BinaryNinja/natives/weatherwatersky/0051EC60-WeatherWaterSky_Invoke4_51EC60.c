@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_Invoke4_51EC60 (VA 0x0051EC60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_Invoke4_51EC60 - 0x0051EC60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051EC60-WeatherWaterSky_Invoke4_51EC60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke4_51EC60.h"
 
 int32_t* WeatherWaterSky_Invoke4_51EC60(int32_t* context)

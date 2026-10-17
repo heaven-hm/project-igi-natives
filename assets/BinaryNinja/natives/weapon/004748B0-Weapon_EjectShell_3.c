@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_EjectShell_3 (VA 0x004748B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_EjectShell_3 - 0x004748B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004748B0-Weapon_EjectShell_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_EjectShell_3.h"
 float Weapon_EjectShell_3(float context) {
     float entity_val = context;

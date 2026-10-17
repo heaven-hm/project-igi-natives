@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Computer_Process (VA 0x0046BF80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Computer_Process - 0x0046BF80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046BF80-Computer_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Computer_Process.h"
 int32_t Computer_Process(void* context)
 

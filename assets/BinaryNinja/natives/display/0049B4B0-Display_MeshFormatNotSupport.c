@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_MeshFormatNotSupport (VA 0x0049B4B0; static CFG gate FAIL, CFG score 0.809).
+// IGI native provenance: Display_MeshFormatNotSupport - 0x0049B4B0 - CFG score 80.9% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0049B4B0-Display_MeshFormatNotSupport.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_MeshFormatNotSupport.h"
 void* Display_MeshFormatNotSupport(void* context)
 

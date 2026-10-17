@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_ActivateEntity_7 (VA 0x00446290; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_ActivateEntity_7 - 0x00446290 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00446290-Env_ActivateEntity_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_ActivateEntity_7.h"
 int32_t Env_ActivateEntity_7(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObjAttachedToBone_Process_2 (VA 0x00504DC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditRigidObjAttachedToBone_Process_2 - 0x00504DC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00504DC0-EditRigidObjAttachedToBone_Process_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObjAttachedToBone_Process_2.h"
 void* EditRigidObjAttachedToBone_Process_2(int32_t* context, int32_t* param_2)
 

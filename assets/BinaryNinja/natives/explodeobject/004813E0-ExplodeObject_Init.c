@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeObject_Init (VA 0x004813E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplodeObject_Init - 0x004813E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004813E0-ExplodeObject_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeObject_Init.h"
 int32_t* ExplodeObject_Init()
 

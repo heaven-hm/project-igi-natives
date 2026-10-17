@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyBandFilter (VA 0x004A1570; static CFG gate FAIL, CFG score 0.788).
+// IGI native provenance: Camera_ApplyBandFilter - 0x004A1570 - CFG score 78.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004A1570-Camera_ApplyBandFilter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyBandFilter.h"
 int32_t* Camera_ApplyBandFilter(void* context, int32_t* param_2)
 

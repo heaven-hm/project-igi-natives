@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_Process (VA 0x004DE740; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sector_Process - 0x004DE740 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DE740-Sector_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_Process.h"
 int32_t Sector_Process(void* context)
 

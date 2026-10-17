@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_UpdateTransform_26 (VA 0x004ACB72; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_UpdateTransform_26 - 0x004ACB72 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ACB72-Camera_UpdateTransform_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_UpdateTransform_26.h"
 char* Camera_UpdateTransform_26(char* context, char* param_2, int32_t param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GameOptionsInputGetInvertMouse (VA 0x004041D0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GameOptionsInputGetInvertMouse - 0x004041D0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004041D0-Config_GameOptionsInputGetInvertMouse.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GameOptionsInputGetInvertMouse.h"
 int32_t Config_GameOptionsInputGetInvertMouse(int32_t context)
 

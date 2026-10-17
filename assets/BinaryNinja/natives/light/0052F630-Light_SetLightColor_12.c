@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_SetLightColor_12 (VA 0x0052F630; static CFG gate FAIL, CFG score 0.815).
+// IGI native provenance: Light_SetLightColor_12 - 0x0052F630 - CFG score 81.5% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0052F630-Light_SetLightColor_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_SetLightColor_12.h"
 void* Light_SetLightColor_12(float* context, void* param_2, double* param_3, void* param_4, void* param_5, int32_t param_6)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Radio_LoadParameters (VA 0x0043AF90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Radio_LoadParameters - 0x0043AF90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043AF90-Radio_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Radio_LoadParameters.h"
 int32_t* Radio_LoadParameters(long double context , void* param_2)
 

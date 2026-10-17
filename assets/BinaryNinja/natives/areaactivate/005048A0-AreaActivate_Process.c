@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AreaActivate_Process (VA 0x005048A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AreaActivate_Process - 0x005048A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005048A0-AreaActivate_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AreaActivate_Process.h"
 int32_t AreaActivate_Process(void* context)
 

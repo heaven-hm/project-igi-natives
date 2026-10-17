@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TerraDrawTask_Init (VA 0x004E82C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TerraDrawTask_Init - 0x004E82C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E82C0-TerraDrawTask_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TerraDrawTask_Init.h"
 int32_t TerraDrawTask_Init()
 

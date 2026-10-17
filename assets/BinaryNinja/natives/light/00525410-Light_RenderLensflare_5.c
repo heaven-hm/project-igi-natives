@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_RenderLensflare_5 (VA 0x00525410; static CFG gate FAIL, CFG score 0.722).
+// IGI native provenance: Light_RenderLensflare_5 - 0x00525410 - CFG score 72.2% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00525410-Light_RenderLensflare_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_RenderLensflare_5.h"
 int32_t Light_RenderLensflare_5(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Resource_Unload (VA 0x004B6380; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Resource_Unload - 0x004B6380 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B6380-Resource_Unload.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Resource_Unload.h"
 int32_t Resource_Unload(int32_t* context)
 

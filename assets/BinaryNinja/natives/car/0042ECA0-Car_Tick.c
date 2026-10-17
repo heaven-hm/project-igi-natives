@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_Tick (VA 0x0042ECA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Car_Tick - 0x0042ECA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042ECA0-Car_Tick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_Tick.h"
 void* Car_Tick(int32_t context)
 

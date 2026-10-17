@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_SpawnNewTask_31 (VA 0x004FE120; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Script_SpawnNewTask_31 - 0x004FE120 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004FE120-Script_SpawnNewTask_31.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_SpawnNewTask_31.h"
 int32_t Script_SpawnNewTask_31(void* context, int32_t param_2, int32_t* param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int16_t param_8, int32_t param_9)
 

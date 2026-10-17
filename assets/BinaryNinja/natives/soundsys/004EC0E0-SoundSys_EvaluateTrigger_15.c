@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_EvaluateTrigger_15 (VA 0x004EC0E0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: SoundSys_EvaluateTrigger_15 - 0x004EC0E0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004EC0E0-SoundSys_EvaluateTrigger_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_EvaluateTrigger_15.h"
 int32_t SoundSys_EvaluateTrigger_15(int32_t context, int32_t param_2, int32_t param_3)
 

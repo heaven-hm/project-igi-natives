@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CheckHeap_10 (VA 0x004B2D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_CheckHeap_10 - 0x004B2D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B2D90-Sys_CheckHeap_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CheckHeap_10.h"
 float* Sys_CheckHeap_10(float* context, float* param_2, float* param_3, float* param_4, float* param_5, int32_t* param_6)
 

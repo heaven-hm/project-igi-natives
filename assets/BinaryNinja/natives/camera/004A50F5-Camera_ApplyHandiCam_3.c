@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyHandiCam_3 (VA 0x004A50F5; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyHandiCam_3 - 0x004A50F5 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A50F5-Camera_ApplyHandiCam_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyHandiCam_3.h"
 int32_t _start()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_ConnectGraphNode_4 (VA 0x00516C91; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_ConnectGraphNode_4 - 0x00516C91 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00516C91-Terrain_ConnectGraphNode_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_ConnectGraphNode_4.h"
 uint32_t Terrain_ConnectGraphNode_4(char* context, int32_t param_2, uint32_t param_3, int32_t* param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericTBA_OnEvent (VA 0x00443C80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericTBA_OnEvent - 0x00443C80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00443C80-GenericTBA_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericTBA_OnEvent.h"
 int32_t GenericTBA_OnEvent(double* context, void* param_2)
 

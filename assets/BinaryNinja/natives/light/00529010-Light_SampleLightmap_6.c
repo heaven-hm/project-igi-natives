@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_SampleLightmap_6 (VA 0x00529010; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Light_SampleLightmap_6 - 0x00529010 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00529010-Light_SampleLightmap_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_SampleLightmap_6.h"
 float Light_SampleLightmap_6(void* context) {
     void* data_val = *(context + 0x108);

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SyncVSync_6 (VA 0x00492230; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Display_SyncVSync_6 - 0x00492230 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00492230-Display_SyncVSync_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SyncVSync_6.h"
 int32_t __stdcall Display_SyncVSync_6(void* context , void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuFrame_LoadParameters (VA 0x00422A50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuFrame_LoadParameters - 0x00422A50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422A50-MenuFrame_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuFrame_LoadParameters.h"
 int32_t MenuFrame_LoadParameters(void* context)
 

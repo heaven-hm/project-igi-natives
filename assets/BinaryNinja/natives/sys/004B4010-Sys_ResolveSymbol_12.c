@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ResolveSymbol_12 (VA 0x004B4010; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_ResolveSymbol_12 - 0x004B4010 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B4010-Sys_ResolveSymbol_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ResolveSymbol_12.h"
 float Sys_ResolveSymbol_12(int32_t context, int32_t* param_2) {
     float entity_val = *param_2;

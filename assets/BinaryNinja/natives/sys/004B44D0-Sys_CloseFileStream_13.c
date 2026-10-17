@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CloseFileStream_13 (VA 0x004B44D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_CloseFileStream_13 - 0x004B44D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B44D0-Sys_CloseFileStream_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CloseFileStream_13.h"
 float* Sys_CloseFileStream_13(float context, float* param_2, float* param_3, float* param_4, float* param_5)
 

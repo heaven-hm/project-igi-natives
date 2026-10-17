@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCamera_Cleanup (VA 0x004415C0; static CFG gate PASS, CFG score 0.938).
+// IGI native provenance: SCamera_Cleanup - 0x004415C0 - CFG score 93.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004415C0-SCamera_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCamera_Cleanup.h"
 char* SCamera_Cleanup(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_IsEventBehind (VA 0x0044E860; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: AIFunction_IsEventBehind - 0x0044E860 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E860-AIFunction_IsEventBehind.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_IsEventBehind.h"
 int32_t AIFunction_IsEventBehind(int32_t context)
 

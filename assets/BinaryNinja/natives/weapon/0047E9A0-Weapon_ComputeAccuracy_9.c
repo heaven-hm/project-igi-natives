@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_ComputeAccuracy_9 (VA 0x0047E9A0; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: Weapon_ComputeAccuracy_9 - 0x0047E9A0 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047E9A0-Weapon_ComputeAccuracy_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_ComputeAccuracy_9.h"
 struct status_msg* Weapon_ComputeAccuracy_9(int32_t* context, int32_t* param_2, uint32_t param_3, uint32_t param_4)
 

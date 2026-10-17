@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyPostProcess_20 (VA 0x004AA6AE; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyPostProcess_20 - 0x004AA6AE - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AA6AE-Camera_ApplyPostProcess_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyPostProcess_20.h"
 void* Camera_ApplyPostProcess_20(int32_t* context)
 

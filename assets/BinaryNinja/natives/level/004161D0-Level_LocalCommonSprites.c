@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_LocalCommonSprites (VA 0x004161D0; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Level_LocalCommonSprites - 0x004161D0 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004161D0-Level_LocalCommonSprites.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_LocalCommonSprites.h"
 int32_t Level_LocalCommonSprites()
 

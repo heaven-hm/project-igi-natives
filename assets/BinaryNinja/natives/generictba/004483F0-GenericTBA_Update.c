@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericTBA_Update (VA 0x004483F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericTBA_Update - 0x004483F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004483F0-GenericTBA_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericTBA_Update.h"
 int32_t GenericTBA_Update(void* context)
 

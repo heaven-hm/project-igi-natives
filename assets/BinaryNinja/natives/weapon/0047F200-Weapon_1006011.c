@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_1006011 (VA 0x0047F200; static CFG gate PASS, CFG score 0.948).
+// IGI native provenance: Weapon_1006011 - 0x0047F200 - CFG score 94.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047F200-Weapon_1006011.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_1006011.h"
 struct status_msg* Weapon_1006011(int32_t* context)
 

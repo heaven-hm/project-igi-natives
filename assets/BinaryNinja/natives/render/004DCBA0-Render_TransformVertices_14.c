@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_TransformVertices_14 (VA 0x004DCBA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_TransformVertices_14 - 0x004DCBA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DCBA0-Render_TransformVertices_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_TransformVertices_14.h"
 void* Render_TransformVertices_14(int32_t* context, void* param_2)
 

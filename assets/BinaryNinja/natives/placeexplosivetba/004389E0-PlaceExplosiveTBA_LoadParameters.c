@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PlaceExplosiveTBA_LoadParameters (VA 0x004389E0; static CFG gate FAIL, CFG score 0.844).
+// IGI native provenance: PlaceExplosiveTBA_LoadParameters - 0x004389E0 - CFG score 84.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004389E0-PlaceExplosiveTBA_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PlaceExplosiveTBA_LoadParameters.h"
 int32_t PlaceExplosiveTBA_LoadParameters(long double context , long double param_2 , long double param_3 , long double param_4 , float param_5, void* param_6)
 

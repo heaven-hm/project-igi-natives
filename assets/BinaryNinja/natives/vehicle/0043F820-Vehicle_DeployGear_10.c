@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_DeployGear_10 (VA 0x0043F820; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_DeployGear_10 - 0x0043F820 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043F820-Vehicle_DeployGear_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_DeployGear_10.h"
 float* Vehicle_DeployGear_10(float* context, double* param_2)
 

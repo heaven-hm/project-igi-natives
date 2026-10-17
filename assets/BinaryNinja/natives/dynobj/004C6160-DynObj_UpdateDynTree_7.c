@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_UpdateDynTree_7 (VA 0x004C6160; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_UpdateDynTree_7 - 0x004C6160 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C6160-DynObj_UpdateDynTree_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_UpdateDynTree_7.h"
 int32_t DynObj_UpdateDynTree_7(void* context)
 

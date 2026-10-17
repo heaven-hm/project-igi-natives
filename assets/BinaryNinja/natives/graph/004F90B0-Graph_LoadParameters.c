@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Graph_LoadParameters (VA 0x004F90B0; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Graph_LoadParameters - 0x004F90B0 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F90B0-Graph_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Graph_LoadParameters.h"
 int32_t* Graph_LoadParameters(void* context)
 

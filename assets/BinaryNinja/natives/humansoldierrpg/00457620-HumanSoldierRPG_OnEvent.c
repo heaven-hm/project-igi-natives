@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierRPG_OnEvent (VA 0x00457620; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: HumanSoldierRPG_OnEvent - 0x00457620 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00457620-HumanSoldierRPG_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierRPG_OnEvent.h"
 int32_t HumanSoldierRPG_OnEvent(void* context, float* param_2)
 

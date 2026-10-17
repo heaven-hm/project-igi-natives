@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_Setup (VA 0x004DE6B0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Sector_Setup - 0x004DE6B0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DE6B0-Sector_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_Setup.h"
 int32_t Sector_Setup(uint32_t context, int32_t* param_2)
 

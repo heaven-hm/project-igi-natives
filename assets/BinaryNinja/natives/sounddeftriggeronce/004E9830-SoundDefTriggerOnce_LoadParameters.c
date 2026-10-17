@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefTriggerOnce_LoadParameters (VA 0x004E9830; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: SoundDefTriggerOnce_LoadParameters - 0x004E9830 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E9830-SoundDefTriggerOnce_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefTriggerOnce_LoadParameters.h"
 int32_t SoundDefTriggerOnce_LoadParameters(void* context, int32_t* param_2)
 

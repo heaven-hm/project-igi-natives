@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sync_Setup (VA 0x00508E40; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Sync_Setup - 0x00508E40 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00508E40-Sync_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sync_Setup.h"
 int32_t Sync_Setup(int32_t* context)
 

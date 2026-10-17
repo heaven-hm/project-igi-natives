@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_FindSymbol_9 (VA 0x004C75F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_FindSymbol_9 - 0x004C75F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C75F0-DynObj_FindSymbol_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_FindSymbol_9.h"
 void* const DynObj_FindSymbol_9(int32_t context, void* param_2)
 

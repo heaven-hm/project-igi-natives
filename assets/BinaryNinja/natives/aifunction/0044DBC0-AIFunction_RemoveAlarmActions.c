@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_RemoveAlarmActions (VA 0x0044DBC0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_RemoveAlarmActions - 0x0044DBC0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044DBC0-AIFunction_RemoveAlarmActions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_RemoveAlarmActions.h"
 int32_t AIFunction_RemoveAlarmActions(int32_t context)
 

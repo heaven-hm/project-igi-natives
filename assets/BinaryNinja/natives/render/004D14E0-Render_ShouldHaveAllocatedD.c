@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_GenerateOctree (VA 0x004D14E0; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Render_ShouldHaveAllocatedD - 0x004D14E0 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D14E0-Render_ShouldHaveAllocatedD.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ShouldHaveAllocatedD.h"
 int32_t Render_ShouldHaveAllocatedD(void* context)
 

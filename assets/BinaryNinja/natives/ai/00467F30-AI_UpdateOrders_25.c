@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_UpdateOrders_25 (VA 0x00467F30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_UpdateOrders_25 - 0x00467F30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467F30-AI_UpdateOrders_25.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_UpdateOrders_25.h"
 void AI_UpdateOrders_25(float context)
 

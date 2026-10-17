@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_PlaySound_9 (VA 0x00411770; static CFG gate PASS, CFG score 0.966).
+// IGI native provenance: HumanPlayer_PlaySound_9 - 0x00411770 - CFG score 96.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00411770-HumanPlayer_PlaySound_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_PlaySound_9.h"
 int32_t* HumanPlayer_PlaySound_9(float context)
 

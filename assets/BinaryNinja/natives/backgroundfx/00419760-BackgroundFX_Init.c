@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BackgroundFX_Init (VA 0x00419760; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BackgroundFX_Init - 0x00419760 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00419760-BackgroundFX_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BackgroundFX_Init.h"
 int32_t BackgroundFX_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_UpdateMuzzleFlash (VA 0x00470EC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_UpdateMuzzleFlash - 0x00470EC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470EC0-Weapon_UpdateMuzzleFlash.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_UpdateMuzzleFlash.h"
 float* Weapon_UpdateMuzzleFlash(float* context, float* param_2, float* param_3, double* param_4)
 

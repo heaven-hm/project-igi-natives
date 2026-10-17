@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TaskType_IsDerivedFrom (VA 0x00401CF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TaskType_IsDerivedFrom - 0x00401CF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401CF0-TaskType_IsDerivedFrom.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TaskType_IsDerivedFrom.h"
 int32_t TaskType_IsDerivedFrom(int32_t context, int16_t param_2)
 

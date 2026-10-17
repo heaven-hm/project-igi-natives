@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_FillMissionSelectionBox (VA 0x00405660; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Config_FillMissionSelectionBox - 0x00405660 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405660-Config_FillMissionSelectionBox.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_FillMissionSelectionBox.h"
 int32_t Config_FillMissionSelectionBox(int32_t context)
 

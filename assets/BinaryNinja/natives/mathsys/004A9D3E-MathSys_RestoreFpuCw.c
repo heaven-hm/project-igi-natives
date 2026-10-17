@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MathSys_RestoreFpuCw (VA 0x004A9D3E; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MathSys_RestoreFpuCw - 0x004A9D3E - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A9D3E-MathSys_RestoreFpuCw.md; Ghidra/Radare2 static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_RestoreFpuCw.h"
 
 void MathSys_RestoreFpuCw(void)

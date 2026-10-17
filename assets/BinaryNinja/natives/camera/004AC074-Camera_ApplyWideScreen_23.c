@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyWideScreen_23 (VA 0x004AC074; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyWideScreen_23 - 0x004AC074 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AC074-Camera_ApplyWideScreen_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyWideScreen_23.h"
 int32_t Camera_ApplyWideScreen_23()
 

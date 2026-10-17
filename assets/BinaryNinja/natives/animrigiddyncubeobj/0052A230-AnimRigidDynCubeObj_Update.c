@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimRigidDynCubeObj_Update (VA 0x0052A230; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: AnimRigidDynCubeObj_Update - 0x0052A230 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052A230-AnimRigidDynCubeObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimRigidDynCubeObj_Update.h"
 int32_t AnimRigidDynCubeObj_Update(void* context, int32_t* param_2)
 

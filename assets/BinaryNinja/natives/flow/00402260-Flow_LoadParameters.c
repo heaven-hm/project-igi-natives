@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Flow_LoadParameters (VA 0x00402260; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Flow_LoadParameters - 0x00402260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402260-Flow_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Flow_LoadParameters.h"
 void* Flow_LoadParameters(uint32_t context)
 

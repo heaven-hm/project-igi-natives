@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_PushScreen (VA 0x00417690; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: MenuManager_PushScreen - 0x00417690 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00417690-MenuManager_PushScreen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_PushScreen.h"
 int32_t MenuManager_PushScreen(int32_t context, void* param_2, float param_3)
 

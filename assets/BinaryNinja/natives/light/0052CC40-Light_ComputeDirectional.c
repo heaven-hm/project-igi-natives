@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_ComputeDirectional (VA 0x0052CC40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_ComputeDirectional - 0x0052CC40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052CC40-Light_ComputeDirectional.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_ComputeDirectional.h"
 int32_t Light_ComputeDirectional(float* context)
 

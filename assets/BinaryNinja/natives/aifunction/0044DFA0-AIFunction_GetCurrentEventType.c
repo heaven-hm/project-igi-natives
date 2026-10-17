@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetCurrentEventType (VA 0x0044DFA0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_GetCurrentEventType - 0x0044DFA0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044DFA0-AIFunction_GetCurrentEventType.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetCurrentEventType.h"
 int32_t AIFunction_GetCurrentEventType(int32_t context)
 

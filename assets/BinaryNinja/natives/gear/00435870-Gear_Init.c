@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gear_Init (VA 0x00435870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Gear_Init - 0x00435870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00435870-Gear_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gear_Init.h"
 void* Gear_Init()
 

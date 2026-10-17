@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PatrolPath_Init (VA 0x00453550; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: PatrolPath_Init - 0x00453550 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00453550-PatrolPath_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PatrolPath_Init.h"
 int32_t PatrolPath_Init()
 

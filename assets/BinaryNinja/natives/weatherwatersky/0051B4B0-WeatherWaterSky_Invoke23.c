@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_Invoke23 (VA 0x0051B4B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_Invoke23 - 0x0051B4B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051B4B0-WeatherWaterSky_Invoke23.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke23.h"
 
 int32_t WeatherWaterSky_Invoke23(int32_t* context)

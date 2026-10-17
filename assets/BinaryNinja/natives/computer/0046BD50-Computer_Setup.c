@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Computer_Setup (VA 0x0046BD50; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Computer_Setup - 0x0046BD50 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046BD50-Computer_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Computer_Setup.h"
 int32_t Computer_Setup(void* context)
 

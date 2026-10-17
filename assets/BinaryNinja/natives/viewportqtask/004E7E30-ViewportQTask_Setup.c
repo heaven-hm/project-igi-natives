@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ViewportQTask_Setup (VA 0x004E7E30; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: ViewportQTask_Setup - 0x004E7E30 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7E30-ViewportQTask_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ViewportQTask_Setup.h"
 int32_t ViewportQTask_Setup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_11 (VA 0x004B32B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_11 - 0x004B32B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B32B0-Sys_DispatchOpcode_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_11.h"
 long double Sys_DispatchOpcode_11(double* context, double* param_2)
 

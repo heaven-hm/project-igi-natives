@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_TooManyArgumentsToFu (VA 0x004BA4C0; static CFG gate PASS, CFG score 0.956).
+// IGI native provenance: Sys_TooManyArgumentsToFu - 0x004BA4C0 - CFG score 95.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BA4C0-Sys_TooManyArgumentsToFu.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_TooManyArgumentsToFu.h"
 int32_t* Sys_TooManyArgumentsToFu(int32_t* context, void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_SoundFX (VA 0x00403F80; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GO_SoundFX - 0x00403F80 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403F80-GO_SoundFX.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_SoundFX.h"
 int32_t GO_SoundFX(long double context , int32_t param_2, float param_3 )
 

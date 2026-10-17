@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimCam_Update_2 (VA 0x00528400; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimCam_Update_2 - 0x00528400 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00528400-AnimCam_Update_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimCam_Update_2.h"
 
 void* AnimCam_Update_2(void* pThis)

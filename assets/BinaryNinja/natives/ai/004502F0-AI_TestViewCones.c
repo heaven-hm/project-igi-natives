@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_TestViewCones (VA 0x004502F0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AI_TestViewCones - 0x004502F0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004502F0-AI_TestViewCones.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_TestViewCones.h"
 double* AI_TestViewCones(long double context , long double param_2 , long double param_3 , void* param_4, double* param_5, char param_6)
 

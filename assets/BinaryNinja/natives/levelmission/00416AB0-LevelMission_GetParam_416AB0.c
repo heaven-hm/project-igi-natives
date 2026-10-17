@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelMission_GetParam_416AB0 (VA 0x00416AB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelMission_GetParam_416AB0 - 0x00416AB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416AB0-LevelMission_GetParam_416AB0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelMission_GetParam_416AB0.h"
 
 bool* LevelMission_GetParam_416AB0(int32_t context, bool* param_2)

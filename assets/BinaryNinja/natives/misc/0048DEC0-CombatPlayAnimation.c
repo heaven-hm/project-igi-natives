@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CombatPlayAnimation (VA 0x0048DEC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CombatPlayAnimation - 0x0048DEC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048DEC0-CombatPlayAnimation.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatPlayAnimation.h"
 int32_t CombatPlayAnimation(void* context, int32_t* param_2)
 

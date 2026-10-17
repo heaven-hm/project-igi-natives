@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RemoveSymbol_6 (VA 0x004C5900; static CFG gate PASS, CFG score 0.980).
+// IGI native provenance: DynObj_RemoveSymbol_6 - 0x004C5900 - CFG score 98.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C5900-DynObj_RemoveSymbol_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RemoveSymbol_6.h"
 int32_t DynObj_RemoveSymbol_6()
 

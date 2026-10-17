@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeObject_Action (VA 0x00481F90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplodeObject_Action - 0x00481F90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00481F90-ExplodeObject_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeObject_Action.h"
 int32_t ExplodeObject_Action(void* context)
 

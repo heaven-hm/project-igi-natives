@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Frames_Set (VA 0x00402820; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Frames_Set - 0x00402820 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402820-Frames_Set.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Frames_Set.h"
 void Frames_Set(int32_t frames)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CarDoor_Init (VA 0x00426630; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CarDoor_Init - 0x00426630 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426630-CarDoor_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CarDoor_Init.h"
 void* CarDoor_Init()
 

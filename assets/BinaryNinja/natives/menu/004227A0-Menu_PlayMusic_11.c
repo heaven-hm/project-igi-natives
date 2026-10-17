@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_PlayMusic_11 (VA 0x004227A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_PlayMusic_11 - 0x004227A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004227A0-Menu_PlayMusic_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_PlayMusic_11.h"
 int32_t Menu_PlayMusic_11(void* context, int32_t param_2, int32_t param_3, int32_t param_4, float param_5, int32_t param_6, int32_t param_7, int32_t param_8)
 

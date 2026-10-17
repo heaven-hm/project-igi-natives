@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_SIsNotAValidTextureF (VA 0x004B24C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_SIsNotAValidTextureF - 0x004B24C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B24C0-Sys_SIsNotAValidTextureF.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_SIsNotAValidTextureF.h"
 int32_t Sys_SIsNotAValidTextureF(int32_t* context, int32_t param_2, int32_t* param_3)
 

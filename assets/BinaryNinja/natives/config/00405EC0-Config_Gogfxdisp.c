@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_Gogfxdisp (VA 0x00405EC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_Gogfxdisp - 0x00405EC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405EC0-Config_Gogfxdisp.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_Gogfxdisp.h"
 int32_t Config_Gogfxdisp(int32_t* context, int32_t param_2)
 

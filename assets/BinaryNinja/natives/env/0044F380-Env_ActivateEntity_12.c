@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_ActivateEntity_12 (VA 0x0044F380; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_ActivateEntity_12 - 0x0044F380 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044F380-Env_ActivateEntity_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_ActivateEntity_12.h"
 void* Env_ActivateEntity_12(void* context)
 

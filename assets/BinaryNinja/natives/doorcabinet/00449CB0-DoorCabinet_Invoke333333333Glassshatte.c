@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DoorCabinet_Invoke333333333Glassshatte (VA 0x00449CB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DoorCabinet_Invoke333333333Glassshatte - 0x00449CB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449CB0-DoorCabinet_Invoke333333333Glassshatte.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_Invoke333333333Glassshatte.h"
 
 struct status_msg*(struct status_msg* context, int32_t* param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GameScreen_Process (VA 0x00485320; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GameScreen_Process - 0x00485320 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485320-GameScreen_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GameScreen_Process.h"
 int32_t GameScreen_Process(void* context)
 

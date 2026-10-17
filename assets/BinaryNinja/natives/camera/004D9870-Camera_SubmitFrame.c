@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_SubmitFrame (VA 0x004D9870; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Camera_SubmitFrame - 0x004D9870 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9870-Camera_SubmitFrame.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_SubmitFrame.h"
 int32_t* Camera_SubmitFrame(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t* param_6 , int32_t param_7, int32_t param_8, float param_9)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunShot_TakeSlot (VA 0x0047B190; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: GunShot_TakeSlot - 0x0047B190 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0047B190-GunShot_TakeSlot.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunShot_TakeSlot.h"
 int32_t GunShot_TakeSlot(void* context, int32_t param_2, int32_t* param_3, void* param_4, int32_t param_5, int32_t param_6)
 

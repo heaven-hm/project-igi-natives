@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_SoundSpeech (VA 0x00403E60; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GO_SoundSpeech - 0x00403E60 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403E60-GO_SoundSpeech.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_SoundSpeech.h"
 int32_t GO_SoundSpeech(long double context , int32_t param_2, float param_3 )
 

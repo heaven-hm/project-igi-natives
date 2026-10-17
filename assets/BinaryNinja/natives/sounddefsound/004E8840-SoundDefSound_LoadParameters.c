@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefSound_LoadParameters (VA 0x004E8840; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefSound_LoadParameters - 0x004E8840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8840-SoundDefSound_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefSound_LoadParameters.h"
 int32_t SoundDefSound_LoadParameters(int32_t context)
 

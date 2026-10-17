@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputPort_Process (VA 0x004ED5C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: InputPort_Process - 0x004ED5C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ED5C0-InputPort_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputPort_Process.h"
 struct status_msg* InputPort_Process(void* context)
 

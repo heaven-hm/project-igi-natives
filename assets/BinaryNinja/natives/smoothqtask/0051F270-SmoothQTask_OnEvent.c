@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SmoothQTask_OnEvent (VA 0x0051F270; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SmoothQTask_OnEvent - 0x0051F270 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051F270-SmoothQTask_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SmoothQTask_OnEvent.h"
 int32_t SmoothQTask_OnEvent(void* context)
 

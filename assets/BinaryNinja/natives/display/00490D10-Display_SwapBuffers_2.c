@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SwapBuffers_2 (VA 0x00490D10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_SwapBuffers_2 - 0x00490D10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00490D10-Display_SwapBuffers_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SwapBuffers_2.h"
 HRESULT Display_SwapBuffers_2(int32_t context , int32_t param_2 , float param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PatrolPath_Update (VA 0x00453600; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PatrolPath_Update - 0x00453600 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00453600-PatrolPath_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PatrolPath_Update.h"
 void* PatrolPath_Update()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputBox_Cleanup (VA 0x0041DB90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: InputBox_Cleanup - 0x0041DB90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041DB90-InputBox_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputBox_Cleanup.h"
 int32_t InputBox_Cleanup(void* context)
 

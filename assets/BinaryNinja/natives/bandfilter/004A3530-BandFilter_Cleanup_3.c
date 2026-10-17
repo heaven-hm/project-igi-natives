@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BandFilter_Cleanup_3 (VA 0x004A3530; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BandFilter_Cleanup_3 - 0x004A3530 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A3530-BandFilter_Cleanup_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BandFilter_Cleanup_3.h"
 int32_t BandFilter_Cleanup_3(void* context)
 

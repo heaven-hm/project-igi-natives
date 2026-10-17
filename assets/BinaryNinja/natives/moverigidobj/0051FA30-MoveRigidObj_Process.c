@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MoveRigidObj_Process (VA 0x0051FA30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MoveRigidObj_Process - 0x0051FA30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051FA30-MoveRigidObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MoveRigidObj_Process.h"
 int32_t MoveRigidObj_Process(void* context)
 

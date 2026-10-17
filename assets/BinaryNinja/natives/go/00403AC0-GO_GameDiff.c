@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_GameDiff (VA 0x00403AC0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GO_GameDiff - 0x00403AC0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00403AC0-GO_GameDiff.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_GameDiff.h"
 int32_t GO_GameDiff(int32_t context, float param_2 )
 

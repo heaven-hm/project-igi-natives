@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ReadFileBlock_12 (VA 0x004B38E0; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Sys_ReadFileBlock_12 - 0x004B38E0 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B38E0-Sys_ReadFileBlock_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ReadFileBlock_12.h"
 int32_t Sys_ReadFileBlock_12(float* context, float param_2, float param_3, float param_4)
 

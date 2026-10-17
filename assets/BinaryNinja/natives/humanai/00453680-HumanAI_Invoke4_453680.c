@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Invoke4_453680 (VA 0x00453680; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_Invoke4_453680 - 0x00453680 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00453680-HumanAI_Invoke4_453680.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke4_453680.h"
 
 void* HumanAI_Invoke4_453680(void* context)

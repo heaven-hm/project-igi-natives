@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_MtpNlodvirmodelD (VA 0x004CEBA0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: DynObj_MtpNlodvirmodelD - 0x004CEBA0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004CEBA0-DynObj_MtpNlodvirmodelD.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_MtpNlodvirmodelD.h"
 void* DynObj_MtpNlodvirmodelD(int32_t context)
 

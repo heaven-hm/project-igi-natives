@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_MenuitemMoveCalledWi (VA 0x00505AD0; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Physics_MenuitemMoveCalledWi - 0x00505AD0 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505AD0-Physics_MenuitemMoveCalledWi.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_MenuitemMoveCalledWi.h"
 int32_t Physics_MenuitemMoveCalledWi(void* context, int32_t param_2)
 

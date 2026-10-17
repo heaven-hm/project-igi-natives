@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_Sound (VA 0x004E8C60; static CFG gate PASS, CFG score 0.979).
+// IGI native provenance: Define_Sound - 0x004E8C60 - CFG score 97.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8C60-Define_Sound.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_Sound.h"
 int32_t Define_Sound(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , int32_t param_8, void* param_9, float param_10)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerHilight_Setup (VA 0x004687A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerHilight_Setup - 0x004687A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004687A0-ComputerHilight_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerHilight_Setup.h"
 int32_t ComputerHilight_Setup(long double context , int32_t* param_2, void* param_3)
 

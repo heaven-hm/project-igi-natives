@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ConditionalSound_Action (VA 0x00425560; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ConditionalSound_Action - 0x00425560 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00425560-ConditionalSound_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ConditionalSound_Action.h"
 int32_t* ConditionalSound_Action(void* context)
 

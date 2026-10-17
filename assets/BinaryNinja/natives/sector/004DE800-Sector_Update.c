@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_Update (VA 0x004DE800; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sector_Update - 0x004DE800 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DE800-Sector_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_Update.h"
 void* Sector_Update(void* context, int32_t param_2)
 

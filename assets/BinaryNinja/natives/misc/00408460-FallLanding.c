@@ -1,157 +1,148 @@
-// Original IGI.EXE function: FallLanding (VA 0x00408460; static CFG gate PASS, CFG score 1.000).
-#include "FallLanding.h"
-int32_t FallLanding(float context)
+// IGI native provenance: FallLanding - 0x00408460 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00408460-FallLanding.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
+// REA/Ghidra assembly evidence: ev_2a58670f35511db6ce1c14fd9011eacb7b7cc84e605a9fb3072fafb1ac77a72c.
+// Binary: igi.exe PE32 x86, SHA-256 dea34892d417715873ea61d7b2ba5556655f1ad65385104348146f9679915a01.
+// The player-state structure is unresolved; field offsets below are observed retail offsets.
 
+#include "00408460-FallLanding.h"
+
+#include <math.h>
+#include <stdbool.h>
+#include <stdint.h>
+
+extern const float g_5333f0;
+extern const float g_5333ec;
+extern const float g_5333e8;
+extern const float g_5333bc;
+extern const float g_5333e4;
+extern const double g_5333d8;
+extern const float g_5333d0;
+extern const float g_5333cc;
+extern const float g_5333c8;
+extern const float g_5333c4;
+extern const float g_56e1f4;
+
+// These catalog aliases are not independently confirmed as retail symbol names.
+extern void AI_UpdatePatrol_24(void *camera_task, float camera_vertical_kick);
+extern int32_t FX_FragmentSimulate_14(void *damage_state, int32_t damage_kind);
+extern uint8_t Human_HitDamage(void);
+extern void Game_DataSymbolLoad(char *output_buffer, const char *sound_name);
+extern void SoundSys_SetMasterVolume_7(void *camera_task, char *sound_name);
+extern void *DynObj_UpdateDynTree_4(void *player_state);
+extern int32_t AI_EventBroadcast(void *event_parameters);
+
+static bool IsOrderedNonzero(float value)
 {
-    float source_val = context;
-    float item_54 = 0.0f;
-    long double fpu_val_7_1 = *(source_val + 0x66c) - 84.7416916f;
-    *(source_val + 0x66c) = fpu_val_7_1;
-    long double fpu6 = 0.0f;
-    long double fpu5 = *(source_val + 0x1b8);
-    long double f1 = 0.0f;
-    fpu5 - f1;
+    return !isnan(value) && value != 0.0f;
+}
 
-    if (!(*(&((fpu5 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu5, f1) ? 1 : 0) << 0xa
-            | (fpu5 == f1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x40))
-        item_54 = -(g_56e1f4);
+void FallLanding(void *human_player)
+{
+    uint8_t *player_state = (uint8_t *)human_player;
+    float *vertical_velocity = (float *)(player_state + 0x66c);
+    float forward_axis_input = *(float *)(player_state + 0x1b8);
+    float backward_axis_input = *(float *)(player_state + 0x1bc);
+    float left_axis_input = *(float *)(player_state + 0x1c0);
+    float right_axis_input = *(float *)(player_state + 0x1c4);
+    float forward_acceleration = 0.0f;
+    float lateral_acceleration = 0.0f;
 
-    long double fpu_val_5_3 = *(source_val + 0x1bc);
-    long double f2 = 0.0f;
-    fpu_val_5_3 - f2;
+    *vertical_velocity -= g_5333f0;
 
-    if (!(*(&((fpu_val_5_3 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_5_3, f2) ? 1 : 0) << 0xa
-            | (fpu_val_5_3 == f2 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x40))
-        item_54 = g_56e1f4 + item_54;
-
-    long double fpu_val_5_6 = *(source_val + 0x1c0);
-    long double f3 = 0.0f;
-    fpu_val_5_6 - f3;
-
-    if (!(*(&((fpu_val_5_6 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_5_6, f3) ? 1 : 0) << 0xa
-            | (fpu_val_5_6 == f3 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x40))
-        fpu6 = g_56e1f4;
-
-    long double fpu_val_5_7 = *(source_val + 0x1c4);
-    long double f4 = 0.0f;
-    fpu_val_5_7 - f4;
-    int16_t result = (fpu_val_5_7 < f4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_5_7, f4) ? 1 : 0) << 0xa
-        | (fpu_val_5_7 == f4 ? 1 : 0) << 0xe | 0x3000;
-
-    if (!(*(&result + 1) & 0x40))
-        fpu6 = fpu6 - g_56e1f4;
-
-    bool flag_0 = !(*(source_val + 0x2f4) & 4);
-    float item_44 = fpu6 * *(source_val + 0x88) + item_54 * *(source_val + 0x84);
-    long double fpu_val_6_3 = fpu6 * *(source_val + 0x94) + item_54 * *(source_val + 0x90);
-    *(source_val + 0x664) = fpu6 * *(source_val + 0x7c) + item_54 * *(source_val + 0x78) + *(source_val + 0x664);
-    *(source_val + 0x668) = item_44 + *(source_val + 0x668);
-    long double fpu_val_7_3 = fpu_val_7_1 + fpu_val_6_3;
-    *(source_val + 0x66c) = fpu_val_7_3;
-
-    if (flag_0)
-        return result;
-
-    long double f5 = 0.0f;
-    fpu_val_7_3 - f5;
-
-    if (*(&((fpu_val_7_3 < f5 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f5) ? 1 : 0) << 0xa
-            | (fpu_val_7_3 == f5 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
-        fpu_val_7_3 = -(fpu_val_7_3);
-
-    long double fpu_val_7_5 = fpu_val_7_3 * 0.000244140625f * 30.0f;
-    long double fpu_val_7_6 = fpu_val_7_5 * 0.125f;
-    long double f6 = 0.0f;
-    fpu_val_7_6 - f6;
-
-    if (!(*(&((fpu_val_7_6 < f6 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f6) ? 1 : 0) << 0xa
-        | (fpu_val_7_6 == f6 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+    if (IsOrderedNonzero(forward_axis_input))
     {
-        long double f7_1 = 1.0f;
-        fpu_val_7_6 - f7_1;
-
-        if (!(*(&((fpu_val_7_6 < f7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f7_1) ? 1 : 0) << 0xa
-                | (fpu_val_7_6 == f7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
-            fpu_val_7_6 = 1.0f;
+        forward_acceleration = -g_56e1f4;
     }
-    else
-        fpu_val_7_6 = 0.0f;
 
-    int32_t entity_val;
-    int32_t item_60 = entity_val;
-    AI_UpdatePatrol_24(*(source_val + 0x4ec), fpu_val_7_6 * -1024.0);
-    int32_t item_30 = 0x46a00000;
-    context = fpu_val_7_5 - 14.0f;
-    long double fpu_val_7_12 = context;
-    long double f8 = 0.0f;
-    fpu_val_7_12 - f8;
-
-    if (!(*(&((fpu_val_7_12 < f8 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_12, f8) ? 1 : 0) << 0xa
-        | (fpu_val_7_12 == f8 ? 1 : 0) << 0xe) + 1) & 0x41))
+    if (IsOrderedNonzero(backward_axis_input))
     {
-        *(source_val + 0x2e8) = 0xd;
-        FX_FragmentSimulate_14(source_val + 0x254, 0xd);
-        context = context * 0.0769230798f * *(source_val + 0x258);
+        forward_acceleration += g_56e1f4;
+    }
 
-        if (!Human_HitDamage())
+    if (IsOrderedNonzero(left_axis_input))
+    {
+        lateral_acceleration = g_56e1f4;
+    }
+
+    if (IsOrderedNonzero(right_axis_input))
+    {
+        lateral_acceleration -= g_56e1f4;
+    }
+
+    *(float *)(player_state + 0x664) +=
+        forward_acceleration * *(float *)(player_state + 0x78)
+        + lateral_acceleration * *(float *)(player_state + 0x7c);
+    *(float *)(player_state + 0x668) +=
+        forward_acceleration * *(float *)(player_state + 0x84)
+        + lateral_acceleration * *(float *)(player_state + 0x88);
+    *vertical_velocity +=
+        forward_acceleration * *(float *)(player_state + 0x90)
+        + lateral_acceleration * *(float *)(player_state + 0x94);
+
+    if ((*(uint8_t *)(player_state + 0x2f4) & 0x04U) == 0U)
+    {
+        return;
+    }
+
+    float landing_speed_metres_per_second = fabsf(*vertical_velocity) * g_5333e8 * g_5333bc;
+    float camera_kick_fraction = landing_speed_metres_per_second * 0.125f;
+
+    if (camera_kick_fraction < 0.0f)
+    {
+        camera_kick_fraction = 0.0f;
+    }
+    else if (camera_kick_fraction > 1.0f)
+    {
+        camera_kick_fraction = 1.0f;
+    }
+
+    AI_UpdatePatrol_24(
+        *(void **)(player_state + 0x4ec),
+        camera_kick_fraction * -1024.0f);
+
+    float damage_speed_metres_per_second = landing_speed_metres_per_second - g_5333d0;
+    float landing_damage = 0.0f;
+
+    if (damage_speed_metres_per_second > 0.0f)
+    {
+        *(int32_t *)(player_state + 0x2e8) = 13;
+        FX_FragmentSimulate_14(player_state + 0x254, 13);
+
+        landing_damage = damage_speed_metres_per_second
+            * g_5333cc
+            * *(float *)(player_state + 0x258);
+
+        if (Human_HitDamage() == 0U)
         {
-            *(source_val + 0x2c8) = context + *(source_val + 0x2c8);
-            *(source_val + 0x254) = context + *(source_val + 0x254);
+            *(float *)(player_state + 0x2c8) += landing_damage;
+            *(float *)(player_state + 0x254) += landing_damage;
         }
 
-        long double fpu_val_7_20 = context;
-        long double f9_1 = 0.0f;
-        fpu_val_7_20 - f9_1;
-
-        if (!(*(&((fpu_val_7_20 < f9_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_20, f9_1) ? 1 : 0) << 0xa
-            | (fpu_val_7_20 == f9_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+        if (!isnan(landing_damage) && landing_damage != 0.0f)
         {
-            long double fpu_val_7_22 = *(source_val + 0x258) * 0.100000001f;
-            long double f10_1 = context;
-            fpu_val_7_22 - f10_1;
-            char* item_64_2;
-            char* item_60_2;
-            char item_20[0x20];
+            const float maximum_health = *(float *)(player_state + 0x258);
+            const char *fall_sound_name = "player_fall_1";
 
-            if (*(&((fpu_val_7_22 < f10_1 ? 1 : 0) << 8
-                | (FCMP_UO(fpu_val_7_22, f10_1) ? 1 : 0) << 0xa
-                | (fpu_val_7_22 == f10_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+            if (landing_damage >= maximum_health * g_5333c8)
             {
-                long double fpu_val_7_24 = *(source_val + 0x258) * 0.200000003f;
-                long double f11_1 = context;
-                fpu_val_7_24 - f11_1;
-
-                if (*(&((fpu_val_7_24 < f11_1 ? 1 : 0) << 8
-                    | (FCMP_UO(fpu_val_7_24, f11_1) ? 1 : 0) << 0xa
-                    | (fpu_val_7_24 == f11_1 ? 1 : 0) << 0xe) + 1) & 0x41)
-                {
-                    item_60_2 = "player_fall_3";
-                    item_64_2 = &item_20;
-                }
-                else
-                {
-                    item_60_2 = "player_fall_2";
-                    item_64_2 = &item_20;
-                }
-            }
-            else
-            {
-                item_60_2 = "player_fall_1";
-                item_64_2 = &item_20;
+                fall_sound_name = landing_damage >= maximum_health * g_5333c4
+                    ? "player_fall_3"
+                    : "player_fall_2";
             }
 
-            Game_DataSymbolLoad(item_64_2, item_60_2);
-            SoundSys_SetMasterVolume_7(*(source_val + 0x4ec), &item_20);
-            int32_t item_30_1 = 0x47200000;
+            char sound_event_name[32];
+            Game_DataSymbolLoad(sound_event_name, fall_sound_name);
+            SoundSys_SetMasterVolume_7(*(void **)(player_state + 0x4ec), sound_event_name);
         }
     }
 
-    int32_t data_6 = *(source_val + 0xfc);
-    int32_t item_3c = 0xb;
-    int32_t item_38 = data_6;
-    int32_t item_34 = 0x46;
-    int32_t item_2c = DynObj_UpdateDynTree_4(source_val);
-    float item_28 = source_val;
-    float item_24 = source_val;
-    return AI_EventBroadcast(&item_3c);
+    uint32_t landing_event_parameters[6];
+    landing_event_parameters[0] = 0x0bU;
+    landing_event_parameters[1] = *(uint32_t *)(player_state + 0xfc);
+    landing_event_parameters[2] = 0x46U;
+    landing_event_parameters[3] = (uint32_t)(uintptr_t)DynObj_UpdateDynTree_4(human_player);
+    landing_event_parameters[4] = (uint32_t)(uintptr_t)human_player;
+    landing_event_parameters[5] = (uint32_t)(uintptr_t)human_player;
+
+    AI_EventBroadcast(landing_event_parameters);
 }

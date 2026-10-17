@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GetActiveGraphicOptions (VA 0x00404590; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_GetActiveGraphicOptions - 0x00404590 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404590-Config_GetActiveGraphicOptions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GetActiveGraphicOptions.h"
 void* Config_GetActiveGraphicOptions()
 

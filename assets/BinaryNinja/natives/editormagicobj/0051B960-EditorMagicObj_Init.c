@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditorMagicObj_Init (VA 0x0051B960; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditorMagicObj_Init - 0x0051B960 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051B960-EditorMagicObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditorMagicObj_Init.h"
 void* EditorMagicObj_Init()
 

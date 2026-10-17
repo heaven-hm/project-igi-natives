@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_PlaySoundSample_19 (VA 0x004EE3B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: SoundSys_PlaySoundSample_19 - 0x004EE3B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EE3B0-SoundSys_PlaySoundSample_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_PlaySoundSample_19.h"
 int32_t __fastcall SoundSys_PlaySoundSample_19(int16_t* context)
 

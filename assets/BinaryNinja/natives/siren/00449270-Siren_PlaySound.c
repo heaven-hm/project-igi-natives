@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Siren_PlaySound (VA 0x00449270; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Siren_PlaySound - 0x00449270 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449270-Siren_PlaySound.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Siren_PlaySound.h"
 
 int32_t Siren_PlaySound(void* pThis, int32_t* param)

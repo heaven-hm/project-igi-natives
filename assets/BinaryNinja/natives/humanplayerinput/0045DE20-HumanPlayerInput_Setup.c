@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayerInput_Setup (VA 0x0045DE20; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: HumanPlayerInput_Setup - 0x0045DE20 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045DE20-HumanPlayerInput_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayerInput_Setup.h"
 char* HumanPlayerInput_Setup(void* context)
 

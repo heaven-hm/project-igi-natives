@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ResetMatrix_16 (VA 0x004A96AC; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ResetMatrix_16 - 0x004A96AC - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A96AC-Camera_ResetMatrix_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ResetMatrix_16.h"
 long double Camera_ResetMatrix_16(int16_t context , long double param_2 , long double param_3 )
 

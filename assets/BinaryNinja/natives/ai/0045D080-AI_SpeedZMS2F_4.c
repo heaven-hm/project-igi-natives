@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_SpeedZMS2F_4 (VA 0x0045D080; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_SpeedZMS2F_4 - 0x0045D080 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045D080-AI_SpeedZMS2F_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_SpeedZMS2F_4.h"
 int32_t AI_SpeedZMS2F_4(float* context)
 

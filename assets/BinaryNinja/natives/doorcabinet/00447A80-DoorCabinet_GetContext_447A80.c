@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DoorCabinet_GetContext_447A80 (VA 0x00447A80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DoorCabinet_GetContext_447A80 - 0x00447A80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00447A80-DoorCabinet_GetContext_447A80.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_GetContext_447A80.h"
 
 int32_t* DoorCabinet_GetContext_447A80(int32_t* context)

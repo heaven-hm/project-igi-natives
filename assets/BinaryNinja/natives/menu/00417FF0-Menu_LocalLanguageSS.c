@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_LocalLanguageSS (VA 0x00417FF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_LocalLanguageSS - 0x00417FF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00417FF0-Menu_LocalLanguageSS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_LocalLanguageSS.h"
 int32_t Menu_LocalLanguageSS(void* context, int32_t param_2)
 

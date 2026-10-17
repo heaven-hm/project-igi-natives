@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Magic_ObjLoad (VA 0x004C4930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Magic_ObjLoad - 0x004C4930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C4930-Magic_ObjLoad.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Magic_ObjLoad.h"
 int32_t Magic_ObjLoad(void* context)
 

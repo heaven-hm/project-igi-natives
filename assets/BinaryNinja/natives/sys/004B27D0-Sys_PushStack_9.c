@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PushStack_9 (VA 0x004B27D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_PushStack_9 - 0x004B27D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B27D0-Sys_PushStack_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PushStack_9.h"
 int32_t Sys_PushStack_9(float context) {
     long double fpu7 = context;

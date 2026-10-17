@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_Process (VA 0x0045F500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_Process - 0x0045F500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045F500-Human_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_Process.h"
 char* Human_Process(float context, int32_t* param_2)
 

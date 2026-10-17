@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_Init (VA 0x004170A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuManager_Init - 0x004170A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004170A0-MenuManager_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_Init.h"
 ❓  int32_t* MenuManager_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

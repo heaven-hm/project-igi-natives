@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Earcandy (VA 0x00411240; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Earcandy - 0x00411240 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00411240-HumanPlayer_Earcandy.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Earcandy.h"
 void* HumanPlayer_Earcandy(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ShadowTask_Update (VA 0x00519820; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ShadowTask_Update - 0x00519820 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00519820-ShadowTask_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ShadowTask_Update.h"
 uint32_t ShadowTask_Update()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ClipMesh_15 (VA 0x004DF500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_ClipMesh_15 - 0x004DF500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DF500-Render_ClipMesh_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ClipMesh_15.h"
 int32_t* Render_ClipMesh_15(float context, int32_t* param_2, int32_t* param_3)
 

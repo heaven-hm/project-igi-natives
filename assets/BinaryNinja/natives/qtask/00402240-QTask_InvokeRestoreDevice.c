@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_InvokeRestoreDevice (VA 0x00402240; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: QTask_InvokeRestoreDevice - 0x00402240 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00402240-QTask_InvokeRestoreDevice.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_InvokeRestoreDevice.h"
 
 int32_t QTask_InvokeRestoreDevice(int32_t context)

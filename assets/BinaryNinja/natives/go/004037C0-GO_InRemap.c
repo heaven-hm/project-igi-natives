@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_InRemap (VA 0x004037C0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: GO_InRemap - 0x004037C0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004037C0-GO_InRemap.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_InRemap.h"
 int32_t GO_InRemap(int32_t context, float param_2 )
 

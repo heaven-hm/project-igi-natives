@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rotor_LoadParameters (VA 0x0042C630; static CFG gate FAIL, CFG score 0.815).
+// IGI native provenance: Rotor_LoadParameters - 0x0042C630 - CFG score 81.5% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0042C630-Rotor_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rotor_LoadParameters.h"
 void* Rotor_LoadParameters(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuScreen_Cleanup (VA 0x00422300; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuScreen_Cleanup - 0x00422300 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422300-MenuScreen_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuScreen_Cleanup.h"
 int32_t* MenuScreen_Cleanup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_DebrisSpawn_10 (VA 0x004883C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_DebrisSpawn_10 - 0x004883C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004883C0-FX_DebrisSpawn_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_DebrisSpawn_10.h"
 void** FX_DebrisSpawn_10(void* context, void* param_2)
 

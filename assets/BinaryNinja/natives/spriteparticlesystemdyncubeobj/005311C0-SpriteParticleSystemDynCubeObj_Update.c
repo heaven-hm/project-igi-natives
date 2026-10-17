@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SpriteParticleSystemDynCubeObj_Update (VA 0x005311C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SpriteParticleSystemDynCubeObj_Update - 0x005311C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005311C0-SpriteParticleSystemDynCubeObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SpriteParticleSystemDynCubeObj_Update.h"
 uint32_t SpriteParticleSystemDynCubeObj_Update()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Graph_Open (VA 0x004F9FF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Graph_Open - 0x004F9FF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9FF0-Graph_Open.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Graph_Open.h"
 int32_t Graph_Open(void* context )
 

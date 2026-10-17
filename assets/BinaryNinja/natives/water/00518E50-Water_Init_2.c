@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Water_Init_2 (VA 0x00518E50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Water_Init_2 - 0x00518E50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00518E50-Water_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Water_Init_2.h"
 
 int32_t Water_Init_2(void* pThis, int32_t* param)

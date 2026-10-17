@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_NoFreeNodesizeElemen (VA 0x004F9460; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_NoFreeNodesizeElemen - 0x004F9460 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9460-Script_NoFreeNodesizeElemen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_NoFreeNodesizeElemen.h"
 int16_t* Script_NoFreeNodesizeElemen(int16_t context, int32_t param_2)
 

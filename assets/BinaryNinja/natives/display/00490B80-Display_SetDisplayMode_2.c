@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetDisplayMode_2 (VA 0x00490B80; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Display_SetDisplayMode_2 - 0x00490B80 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00490B80-Display_SetDisplayMode_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetDisplayMode_2.h"
 int32_t Display_SetDisplayMode_2(void* context, int32_t param_2)
 

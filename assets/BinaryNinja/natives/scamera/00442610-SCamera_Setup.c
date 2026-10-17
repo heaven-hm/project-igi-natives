@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCamera_Setup (VA 0x00442610; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SCamera_Setup - 0x00442610 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00442610-SCamera_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCamera_Setup.h"
 int32_t* SCamera_Setup(long double context , void* param_2)
 

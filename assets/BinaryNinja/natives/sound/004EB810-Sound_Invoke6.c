@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_Invoke6 (VA 0x004EB810; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sound_Invoke6 - 0x004EB810 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EB810-Sound_Invoke6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke6.h"
 
 void* Sound_Invoke6(void* context, int32_t param_2)

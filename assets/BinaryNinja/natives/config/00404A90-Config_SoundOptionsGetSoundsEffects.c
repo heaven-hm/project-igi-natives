@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsGetSoundsEffects (VA 0x00404A90; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsGetSoundsEffects - 0x00404A90 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404A90-Config_SoundOptionsGetSoundsEffects.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsGetSoundsEffects.h"
 int32_t Config_SoundOptionsGetSoundsEffects(int32_t context)
 

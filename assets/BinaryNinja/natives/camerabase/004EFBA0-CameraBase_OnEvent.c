@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraBase_OnEvent (VA 0x004EFBA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CameraBase_OnEvent - 0x004EFBA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EFBA0-CameraBase_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraBase_OnEvent.h"
 int32_t CameraBase_OnEvent(long double context , long double param_2 , long double param_3 , float* param_4, float param_5)
 

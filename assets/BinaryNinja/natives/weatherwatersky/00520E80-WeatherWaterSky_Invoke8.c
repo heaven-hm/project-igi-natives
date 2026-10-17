@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_Invoke8 (VA 0x00520E80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_Invoke8 - 0x00520E80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520E80-WeatherWaterSky_Invoke8.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Invoke8.h"
 
 void* WeatherWaterSky_Invoke8(void* context)

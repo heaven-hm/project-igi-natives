@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunClip_OnEvent (VA 0x004778E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunClip_OnEvent - 0x004778E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004778E0-GunClip_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunClip_OnEvent.h"
 int32_t GunClip_OnEvent(void* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_UpdateParticlePhysics_4 (VA 0x00531540; static CFG gate FAIL, CFG score 0.530).
+// IGI native provenance: Particle_UpdateParticlePhysics_4 - 0x00531540 - CFG score 53.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00531540-Particle_UpdateParticlePhysics_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_UpdateParticlePhysics_4.h"
 int32_t Particle_UpdateParticlePhysics_4()
 

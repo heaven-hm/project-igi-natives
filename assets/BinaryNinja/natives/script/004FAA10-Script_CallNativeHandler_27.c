@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_CallNativeHandler_27 (VA 0x004FAA10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_CallNativeHandler_27 - 0x004FAA10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FAA10-Script_CallNativeHandler_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_CallNativeHandler_27.h"
 uint32_t Script_CallNativeHandler_27(void* context)
 

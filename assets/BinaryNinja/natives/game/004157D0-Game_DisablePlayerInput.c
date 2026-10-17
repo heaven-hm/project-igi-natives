@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_DisablePlayerInput (VA 0x004157D0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Game_DisablePlayerInput - 0x004157D0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004157D0-Game_DisablePlayerInput.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_DisablePlayerInput.h"
 int32_t Game_DisablePlayerInput(int32_t context)
 

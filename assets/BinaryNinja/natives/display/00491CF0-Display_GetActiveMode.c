@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_GetActiveMode (VA 0x00491CF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_GetActiveMode - 0x00491CF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491CF0-Display_GetActiveMode.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_GetActiveMode.h"
 int32_t Display_GetActiveMode() // Sig: void* Display_GetActiveMode()
 // Note: RETURNS pointer to the ACTIVE display-mode struct (global 0xC28B40):

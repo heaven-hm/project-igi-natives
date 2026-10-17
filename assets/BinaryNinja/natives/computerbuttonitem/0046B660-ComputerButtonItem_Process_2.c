@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerButtonItem_Process_2 (VA 0x0046B660; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerButtonItem_Process_2 - 0x0046B660 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B660-ComputerButtonItem_Process_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerButtonItem_Process_2.h"
 struct status_msg* ComputerButtonItem_Process_2(float context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, char param_7, float param_8, float param_9, char param_10, void* param_11, char* param_12, uint32_t param_13, uint32_t param_14, uint32_t param_15, int32_t param_16)
 

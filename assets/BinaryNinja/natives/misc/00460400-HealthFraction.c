@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HealthFraction (VA 0x00460400; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HealthFraction - 0x00460400 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00460400-HealthFraction.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HealthFraction.h"
 int32_t HealthFraction(int32_t context, int32_t* param_2)
 

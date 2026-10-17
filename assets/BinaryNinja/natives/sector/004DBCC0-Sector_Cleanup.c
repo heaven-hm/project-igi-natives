@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_Cleanup (VA 0x004DBCC0; static CFG gate FAIL, CFG score 0.800).
+// IGI native provenance: Sector_Cleanup - 0x004DBCC0 - CFG score 80.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004DBCC0-Sector_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_Cleanup.h"
 int32_t Sector_Cleanup(int32_t* context, int32_t* param_2)
 

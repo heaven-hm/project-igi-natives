@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraBase_Cleanup_5 (VA 0x004F01C0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: CameraBase_Cleanup_5 - 0x004F01C0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F01C0-CameraBase_Cleanup_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraBase_Cleanup_5.h"
 int32_t CameraBase_Cleanup_5(int32_t* context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Siren_Stop (VA 0x004492A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Siren_Stop - 0x004492A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004492A0-Siren_Stop.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Siren_Stop.h"
 
 int32_t* Siren_Stop(void* pThis, int32_t param)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_SyntaxErrorInLineD (VA 0x004BF580; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_SyntaxErrorInLineD - 0x004BF580 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BF580-Sys_SyntaxErrorInLineD.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_SyntaxErrorInLineD.h"
 int32_t Sys_SyntaxErrorInLineD(int32_t* context, void** param_2)
 

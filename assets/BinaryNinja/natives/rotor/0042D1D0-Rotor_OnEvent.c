@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rotor_OnEvent (VA 0x0042D1D0; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Rotor_OnEvent - 0x0042D1D0 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042D1D0-Rotor_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rotor_OnEvent.h"
 int32_t Rotor_OnEvent(void* context)
 

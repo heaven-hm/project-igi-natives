@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_InvokeDataSymbolLoad (VA 0x0052B320; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_InvokeDataSymbolLoad - 0x0052B320 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052B320-RenderLight_InvokeDataSymbolLoad.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_InvokeDataSymbolLoad.h"
 
 int32_t* RenderLight_InvokeDataSymbolLoad(void* context)

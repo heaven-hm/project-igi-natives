@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FragmentSimulate_27 (VA 0x0048F360; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: FX_FragmentSimulate_27 - 0x0048F360 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F360-FX_FragmentSimulate_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FragmentSimulate_27.h"
 void* FX_FragmentSimulate_27(char* context, int32_t param_2)
 

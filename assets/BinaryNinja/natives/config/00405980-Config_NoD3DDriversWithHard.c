@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_NoD3DDriversWithHard (VA 0x00405980; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Config_NoD3DDriversWithHard - 0x00405980 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00405980-Config_NoD3DDriversWithHard.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_NoD3DDriversWithHard.h"
 int32_t Config_NoD3DDriversWithHard()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_LinkDynamicCube_3 (VA 0x004C11F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_LinkDynamicCube_3 - 0x004C11F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C11F0-DynObj_LinkDynamicCube_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_LinkDynamicCube_3.h"
 int32_t DynObj_LinkDynamicCube_3(int32_t* context)
 

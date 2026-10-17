@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CloseFileStream_15 (VA 0x004B5560; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_CloseFileStream_15 - 0x004B5560 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B5560-Sys_CloseFileStream_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CloseFileStream_15.h"
 int32_t Sys_CloseFileStream_15(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10, int32_t param_11, int32_t param_12, int32_t param_13, int32_t param_14, int32_t param_15, int32_t param_16, int32_t param_17, float param_18, float param_19, float param_20, int32_t param_21, int32_t param_22, int32_t param_23, int32_t param_24, int32_t a25)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetScriptRealValue (VA 0x0044E790; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AIFunction_SetScriptRealValue - 0x0044E790 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044E790-AIFunction_SetScriptRealValue.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetScriptRealValue.h"
 int32_t AIFunction_SetScriptRealValue(long double context , int32_t param_2, float param_3 )
 

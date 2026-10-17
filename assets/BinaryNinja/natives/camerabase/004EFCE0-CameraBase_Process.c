@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraBase_Process (VA 0x004EFCE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CameraBase_Process - 0x004EFCE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EFCE0-CameraBase_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraBase_Process.h"
 int32_t CameraBase_Process(long double context , long double param_2 , long double param_3 , float* param_4, float param_5)
 

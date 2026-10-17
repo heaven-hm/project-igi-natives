@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Ladder_LoadParameters (VA 0x00440280; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: Ladder_LoadParameters - 0x00440280 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440280-Ladder_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Ladder_LoadParameters.h"
 int32_t Ladder_LoadParameters(float context, int32_t* param_2)
 

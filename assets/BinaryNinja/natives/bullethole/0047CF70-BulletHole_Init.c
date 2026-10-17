@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BulletHole_Init (VA 0x0047CF70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BulletHole_Init - 0x0047CF70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047CF70-BulletHole_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BulletHole_Init.h"
 int32_t BulletHole_Init()
 

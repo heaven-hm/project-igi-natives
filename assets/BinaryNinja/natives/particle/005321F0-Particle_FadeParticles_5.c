@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_FadeParticles_5 (VA 0x005321F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Particle_FadeParticles_5 - 0x005321F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005321F0-Particle_FadeParticles_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_FadeParticles_5.h"
 void Particle_FadeParticles_5(void** context, int32_t* param_2, void* param_3, int32_t param_4)
 

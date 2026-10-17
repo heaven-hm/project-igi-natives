@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ClosestZ2F (VA 0x004D2840; static CFG gate PASS, CFG score 0.939).
+// IGI native provenance: Render_ClosestZ2F - 0x004D2840 - CFG score 93.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D2840-Render_ClosestZ2F.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ClosestZ2F.h"
 int32_t Render_ClosestZ2F(void* context, char* param_2)
 

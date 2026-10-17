@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Music_SetVolume (VA 0x00495E70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Music_SetVolume - 0x00495E70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00495E70-Music_SetVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Music_SetVolume.h"
 int32_t Music_SetVolume(float context, float param_2)
 

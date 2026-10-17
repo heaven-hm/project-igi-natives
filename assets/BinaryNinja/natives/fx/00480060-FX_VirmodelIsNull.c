@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_VirmodelIsNull (VA 0x00480060; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_VirmodelIsNull - 0x00480060 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00480060-FX_VirmodelIsNull.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_VirmodelIsNull.h"
 struct status_msg* FX_VirmodelIsNull(double* context, char* param_2, float param_3, int32_t param_4, int32_t param_5, int32_t param_6 , int32_t param_7, int32_t param_8, int32_t param_9)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_Process (VA 0x004011F0; static CFG gate FAIL, CFG score 0.722).
+// IGI native provenance: QTask_Process - 0x004011F0 - CFG score 72.2% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004011F0-QTask_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_Process.h"
 int32_t QTask_Process()
 

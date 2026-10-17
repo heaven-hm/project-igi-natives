@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_IllegalDeviceNameInP (VA 0x004B1420; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: Sys_IllegalDeviceNameInP - 0x004B1420 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B1420-Sys_IllegalDeviceNameInP.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_IllegalDeviceNameInP.h"
 int32_t Sys_IllegalDeviceNameInP(void* context, int32_t param_2, void* param_3)
 

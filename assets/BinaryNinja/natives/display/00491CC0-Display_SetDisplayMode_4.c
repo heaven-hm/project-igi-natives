@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetDisplayMode_4 (VA 0x00491CC0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Display_SetDisplayMode_4 - 0x00491CC0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00491CC0-Display_SetDisplayMode_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetDisplayMode_4.h"
 int32_t Display_SetDisplayMode_4()
 

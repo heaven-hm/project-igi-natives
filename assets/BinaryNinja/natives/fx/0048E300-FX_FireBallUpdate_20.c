@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FireBallUpdate_20 (VA 0x0048E300; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: FX_FireBallUpdate_20 - 0x0048E300 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048E300-FX_FireBallUpdate_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FireBallUpdate_20.h"
 ❓  int32_t* __stdcall FX_FireBallUpdate_20(void* context , int32_t* param_2, int32_t param_3, int32_t param_4, int32_t param_5)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

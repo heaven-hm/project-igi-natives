@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MoveRigidObj_Update (VA 0x0051F980; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MoveRigidObj_Update - 0x0051F980 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051F980-MoveRigidObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MoveRigidObj_Update.h"
 int32_t MoveRigidObj_Update(void* context)
 

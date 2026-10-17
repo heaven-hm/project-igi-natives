@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StandFire (VA 0x0048D8B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StandFire - 0x0048D8B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048D8B0-StandFire.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StandFire.h"
 bool StandFire(void* context)
 

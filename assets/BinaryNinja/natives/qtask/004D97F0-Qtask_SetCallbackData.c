@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qtask_SetCallbackData (VA 0x004D97F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qtask_SetCallbackData - 0x004D97F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D97F0-Qtask_SetCallbackData.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qtask_SetCallbackData.h"
 int32_t Qtask_SetCallbackData(void* context, int32_t param_2)
 

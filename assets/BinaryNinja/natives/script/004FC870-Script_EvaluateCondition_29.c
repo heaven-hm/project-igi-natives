@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_EvaluateCondition_29 (VA 0x004FC870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_EvaluateCondition_29 - 0x004FC870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FC870-Script_EvaluateCondition_29.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_EvaluateCondition_29.h"
 int32_t Script_EvaluateCondition_29(float* context, void* param_2, float* param_3, float* param_4 )
 

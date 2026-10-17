@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_CallNativeHandler_21 (VA 0x004F8FE0; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: Script_CallNativeHandler_21 - 0x004F8FE0 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F8FE0-Script_CallNativeHandler_21.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_CallNativeHandler_21.h"
 struct status_msg* Script_CallNativeHandler_21(void* context, void* param_2, int32_t param_3)
 

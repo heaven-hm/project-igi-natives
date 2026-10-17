@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_UpdateCameraLens_2 (VA 0x00442020; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Env_UpdateCameraLens_2 - 0x00442020 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00442020-Env_UpdateCameraLens_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_UpdateCameraLens_2.h"
 int32_t Env_UpdateCameraLens_2(int32_t* context, void* param_2)
 

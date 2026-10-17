@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gear_LoadParameters (VA 0x00435A80; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Gear_LoadParameters - 0x00435A80 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00435A80-Gear_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gear_LoadParameters.h"
 int32_t Gear_LoadParameters(void* context, float param_2)
 

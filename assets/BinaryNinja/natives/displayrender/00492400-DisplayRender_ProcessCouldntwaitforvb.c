@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_ProcessCouldntwaitforvb (VA 0x00492400; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_ProcessCouldntwaitforvb - 0x00492400 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00492400-DisplayRender_ProcessCouldntwaitforvb.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_ProcessCouldntwaitforvb.h"
 
 int32_t DisplayRender_ProcessCouldntwaitforvb()

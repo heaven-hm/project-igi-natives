@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_RegisterGroup (VA 0x004EB9C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_RegisterGroup - 0x004EB9C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EB9C0-SoundSys_RegisterGroup.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_RegisterGroup.h"
 
 void* SoundSys_RegisterGroup(void* pThis, int32_t param)

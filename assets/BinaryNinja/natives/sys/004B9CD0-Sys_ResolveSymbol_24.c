@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ResolveSymbol_24 (VA 0x004B9CD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_ResolveSymbol_24 - 0x004B9CD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B9CD0-Sys_ResolveSymbol_24.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ResolveSymbol_24.h"
 int32_t Sys_ResolveSymbol_24(int32_t* context, char** param_2, int32_t param_3, int32_t param_4)
 

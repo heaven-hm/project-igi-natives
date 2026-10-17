@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Soldier_DeathStateA (VA 0x0045C5A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Soldier_DeathStateA - 0x0045C5A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045C5A0-Soldier_DeathStateA.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Soldier_DeathStateA.h"
 void* Soldier_DeathStateA(void* context, void* param_2)
 

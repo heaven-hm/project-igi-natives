@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GuardGenerator_Setup (VA 0x00487EE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GuardGenerator_Setup - 0x00487EE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00487EE0-GuardGenerator_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GuardGenerator_Setup.h"
 int32_t* GuardGenerator_Setup(long double context , void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerLog_Setup (VA 0x00468BC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerLog_Setup - 0x00468BC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00468BC0-ComputerLog_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerLog_Setup.h"
 void* ComputerLog_Setup(float context)
 

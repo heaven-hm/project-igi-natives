@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_StandRollRight (VA 0x0048D870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_StandRollRight - 0x0048D870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048D870-FX_StandRollRight.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_StandRollRight.h"
 bool FX_StandRollRight(void* context)
 

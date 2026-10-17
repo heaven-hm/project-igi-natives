@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_RenderLensflare_3 (VA 0x00523D40; static CFG gate PASS, CFG score 0.991).
+// IGI native provenance: Light_RenderLensflare_3 - 0x00523D40 - CFG score 99.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00523D40-Light_RenderLensflare_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_RenderLensflare_3.h"
 int32_t* Light_RenderLensflare_3(void* context, int32_t param_2, int32_t param_3 , int32_t param_4, int32_t param_5)
 

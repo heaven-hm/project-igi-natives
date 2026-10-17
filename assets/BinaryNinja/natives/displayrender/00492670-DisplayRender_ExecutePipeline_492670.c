@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_ExecutePipeline_492670 (VA 0x00492670; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_ExecutePipeline_492670 - 0x00492670 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00492670-DisplayRender_ExecutePipeline_492670.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_ExecutePipeline_492670.h"
 
 int32_t __stdcall(void* context, char* param_2)

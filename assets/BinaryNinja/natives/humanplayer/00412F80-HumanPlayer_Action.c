@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Action (VA 0x00412F80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Action - 0x00412F80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00412F80-HumanPlayer_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Action.h"
 struct status_msg* HumanPlayer_Action(void* context)
 

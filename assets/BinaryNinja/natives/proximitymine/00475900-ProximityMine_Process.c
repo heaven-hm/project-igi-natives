@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ProximityMine_Process (VA 0x00475900; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ProximityMine_Process - 0x00475900 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00475900-ProximityMine_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ProximityMine_Process.h"
 int32_t ProximityMine_Process(long double context , long double param_2 , long double param_3 , long double param_4 , int32_t* param_5 )
 

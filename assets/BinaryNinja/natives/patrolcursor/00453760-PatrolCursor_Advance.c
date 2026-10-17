@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PatrolCursor_Advance (VA 0x00453760; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PatrolCursor_Advance - 0x00453760 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00453760-PatrolCursor_Advance.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PatrolCursor_Advance.h"
 int32_t* PatrolCursor_Advance(int32_t* context)
 

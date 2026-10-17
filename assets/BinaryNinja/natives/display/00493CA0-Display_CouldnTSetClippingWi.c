@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CouldnTSetClippingWi (VA 0x00493CA0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Display_CouldnTSetClippingWi - 0x00493CA0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00493CA0-Display_CouldnTSetClippingWi.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CouldnTSetClippingWi.h"
 int32_t Display_CouldnTSetClippingWi(void* context)
 

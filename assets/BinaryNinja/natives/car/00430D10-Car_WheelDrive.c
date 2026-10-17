@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_WheelDrive (VA 0x00430D10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Car_WheelDrive - 0x00430D10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00430D10-Car_WheelDrive.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_WheelDrive.h"
 void* Car_WheelDrive(float* context, float param_2, float param_3)
 

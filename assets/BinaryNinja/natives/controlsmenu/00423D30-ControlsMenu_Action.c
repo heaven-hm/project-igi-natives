@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_Action (VA 0x00423D30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_Action - 0x00423D30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00423D30-ControlsMenu_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_Action.h"
 int32_t ControlsMenu_Action(void* context)
 

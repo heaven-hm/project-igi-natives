@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_17 (VA 0x004B65E0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Sys_OpenFileStream_17 - 0x004B65E0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B65E0-Sys_OpenFileStream_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_17.h"
 int32_t Sys_OpenFileStream_17(int32_t* context, char param_2, int16_t param_3, int16_t param_4, int16_t param_5, int16_t param_6, int16_t param_7, int32_t param_8, int32_t param_9, int32_t param_10, int32_t param_11)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_Cleanup_7 (VA 0x00460850; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_Cleanup_7 - 0x00460850 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00460850-Human_Cleanup_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_Cleanup_7.h"
 int32_t Human_Cleanup_7(void* context)
 

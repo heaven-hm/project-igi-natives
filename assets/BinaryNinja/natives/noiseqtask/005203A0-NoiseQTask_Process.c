@@ -1,4 +1,5 @@
-// Original IGI.EXE function: NoiseQTask_Process (VA 0x005203A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: NoiseQTask_Process - 0x005203A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005203A0-NoiseQTask_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "NoiseQTask_Process.h"
 char* NoiseQTask_Process(void* context)
 

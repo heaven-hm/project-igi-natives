@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Hatch_LoadParameters (VA 0x00435F60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Hatch_LoadParameters - 0x00435F60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00435F60-Hatch_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Hatch_LoadParameters.h"
 int32_t Hatch_LoadParameters(void* context, float param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_ProcessQueue (VA 0x00401890; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_ProcessQueue - 0x00401890 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401890-QTask_ProcessQueue.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_ProcessQueue.h"
 int32_t QTask_ProcessQueue(int16_t context, int32_t param_2)
 

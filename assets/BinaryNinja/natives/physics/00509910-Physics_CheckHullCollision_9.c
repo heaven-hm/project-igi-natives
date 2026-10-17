@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_CheckHullCollision_9 (VA 0x00509910; static CFG gate FAIL, CFG score 0.520).
+// IGI native provenance: Physics_CheckHullCollision_9 - 0x00509910 - CFG score 52.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00509910-Physics_CheckHullCollision_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_CheckHullCollision_9.h"
 int32_t Physics_CheckHullCollision_9()
 

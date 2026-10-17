@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsNumPerfLevels (VA 0x00405620; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Config_GraphicOptionsNumPerfLevels - 0x00405620 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00405620-Config_GraphicOptionsNumPerfLevels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsNumPerfLevels.h"
 int32_t Config_GraphicOptionsNumPerfLevels(int32_t context)
 

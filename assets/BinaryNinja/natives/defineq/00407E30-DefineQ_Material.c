@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineQ_Material (VA 0x00407E30; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: DefineQ_Material - 0x00407E30 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00407E30-DefineQ_Material.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineQ_Material.h"
 int32_t DefineQ_Material(long double context , long double param_2 , long double param_3 , int32_t param_4, int32_t param_5 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelScript_Init (VA 0x0052C820; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelScript_Init - 0x0052C820 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052C820-LevelScript_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelScript_Init.h"
 int32_t* LevelScript_Init()
 

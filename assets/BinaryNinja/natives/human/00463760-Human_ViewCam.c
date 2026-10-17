@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_ViewCam (VA 0x00463760; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_ViewCam - 0x00463760 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00463760-Human_ViewCam.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_ViewCam.h"
 int32_t Human_ViewCam(void* context, int32_t param_2)
 

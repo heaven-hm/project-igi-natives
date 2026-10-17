@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherLightmap_Invoke2 (VA 0x004FEAE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherLightmap_Invoke2 - 0x004FEAE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FEAE0-WeatherLightmap_Invoke2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_Invoke2.h"
 
 int32_t* WeatherLightmap_Invoke2(int32_t* context)

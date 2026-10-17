@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_Invoke9 (VA 0x005280E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_Invoke9 - 0x005280E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005280E0-RenderLight_Invoke9.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_Invoke9.h"
 
 int32_t* RenderLight_Invoke9(void* context)

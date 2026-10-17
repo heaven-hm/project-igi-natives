@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_08X04X04X02X02X02X02 (VA 0x00492370; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_08X04X04X02X02X02X02 - 0x00492370 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00492370-Display_08X04X04X02X02X02X02.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_08X04X04X02X02X02X02.h"
 int32_t Display_08X04X04X02X02X02X02(char* context, int32_t param_2, int16_t param_3, int16_t param_4 , char param_5, char param_6 , char param_7 , char param_8 , char param_9, char param_10 , char param_11 , char param_12 )
 

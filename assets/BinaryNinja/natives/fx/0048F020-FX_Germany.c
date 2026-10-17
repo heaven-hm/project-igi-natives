@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_Germany (VA 0x0048F020; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_Germany - 0x0048F020 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F020-FX_Germany.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_Germany.h"
 int32_t FX_Germany()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_SetState (VA 0x00422FB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_SetState - 0x00422FB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422FB0-ControlsMenu_SetState.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_SetState.h"
 
 int32_t* ControlsMenu_SetState(int32_t* pThis )

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_CalculateSplineLength_8 (VA 0x00509340; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_CalculateSplineLength_8 - 0x00509340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00509340-Physics_CalculateSplineLength_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_CalculateSplineLength_8.h"
 int32_t Physics_CalculateSplineLength_8(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_FreeMemory_21 (VA 0x004B7850; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_FreeMemory_21 - 0x004B7850 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B7850-Sys_FreeMemory_21.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_FreeMemory_21.h"
 char* Sys_FreeMemory_21(char* context, void* param_2)
 

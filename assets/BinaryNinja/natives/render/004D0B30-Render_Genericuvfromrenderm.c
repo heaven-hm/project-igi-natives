@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_Genericuvfromrenderm (VA 0x004D0B30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_Genericuvfromrenderm - 0x004D0B30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D0B30-Render_Genericuvfromrenderm.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_Genericuvfromrenderm.h"
 int32_t Render_Genericuvfromrenderm()
 

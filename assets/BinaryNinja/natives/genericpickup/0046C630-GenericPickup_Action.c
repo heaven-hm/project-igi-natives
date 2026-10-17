@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPickup_Action (VA 0x0046C630; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GenericPickup_Action - 0x0046C630 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046C630-GenericPickup_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPickup_Action.h"
 int32_t GenericPickup_Action(void* context, void* param_2)
 

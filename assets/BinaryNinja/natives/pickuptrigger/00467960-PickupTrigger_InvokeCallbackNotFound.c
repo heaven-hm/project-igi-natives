@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PickupTrigger_InvokeCallbackNotFound (VA 0x00467960; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PickupTrigger_InvokeCallbackNotFound - 0x00467960 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467960-PickupTrigger_InvokeCallbackNotFound.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_InvokeCallbackNotFound.h"
 
 void** PickupTrigger_InvokeCallbackNotFound()

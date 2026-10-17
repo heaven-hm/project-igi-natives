@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetDisplayMode_20 (VA 0x0049EB50; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Display_SetDisplayMode_20 - 0x0049EB50 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0049EB50-Display_SetDisplayMode_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetDisplayMode_20.h"
 int32_t Display_SetDisplayMode_20(void* context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ExecuteLevelScript_7 (VA 0x004F1840; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Script_ExecuteLevelScript_7 - 0x004F1840 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F1840-Script_ExecuteLevelScript_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ExecuteLevelScript_7.h"
 int32_t Script_ExecuteLevelScript_7()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_PlayMusic_22 (VA 0x0042E870; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Menu_PlayMusic_22 - 0x0042E870 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042E870-Menu_PlayMusic_22.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_PlayMusic_22.h"
 int32_t* Menu_PlayMusic_22(long double context , int32_t param_2)
 

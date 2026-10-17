@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefGraph_Setup (VA 0x004EA560; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefGraph_Setup - 0x004EA560 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EA560-SoundDefGraph_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefGraph_Setup.h"
 int32_t* SoundDefGraph_Setup(void* context, int32_t* param_2)
 

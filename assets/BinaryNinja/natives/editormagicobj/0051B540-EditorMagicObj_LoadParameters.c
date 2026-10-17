@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditorMagicObj_LoadParameters (VA 0x0051B540; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: EditorMagicObj_LoadParameters - 0x0051B540 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0051B540-EditorMagicObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditorMagicObj_LoadParameters.h"
 int32_t EditorMagicObj_LoadParameters(void* context, void* param_2)
 

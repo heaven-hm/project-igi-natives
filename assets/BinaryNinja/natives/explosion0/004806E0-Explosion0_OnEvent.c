@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Explosion0_OnEvent (VA 0x004806E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Explosion0_OnEvent - 0x004806E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004806E0-Explosion0_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Explosion0_OnEvent.h"
 int32_t Explosion0_OnEvent(int32_t context)
 

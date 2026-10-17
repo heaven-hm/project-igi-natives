@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_ContentControlPW (VA 0x00403C10; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GO_ContentControlPW - 0x00403C10 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00403C10-GO_ContentControlPW.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_ContentControlPW.h"
 int32_t GO_ContentControlPW(int32_t context, float param_2 )
 

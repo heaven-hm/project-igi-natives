@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_ApplyPhysics_5 (VA 0x0040CB90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_ApplyPhysics_5 - 0x0040CB90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040CB90-HumanPlayer_ApplyPhysics_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_ApplyPhysics_5.h"
 void* HumanPlayer_ApplyPhysics_5(void* context, float param_2)
 

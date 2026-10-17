@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessageScreen_OnEvent (VA 0x00485B80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusMessageScreen_OnEvent - 0x00485B80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485B80-StatusMessageScreen_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessageScreen_OnEvent.h"
 int32_t StatusMessageScreen_OnEvent(int32_t context, int32_t param_2)
 

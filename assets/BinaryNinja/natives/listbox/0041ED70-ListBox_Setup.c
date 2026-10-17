@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_Setup (VA 0x0041ED70; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: ListBox_Setup - 0x0041ED70 - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041ED70-ListBox_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_Setup.h"
 int32_t ListBox_Setup(void* context)
 

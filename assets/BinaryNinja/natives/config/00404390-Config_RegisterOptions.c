@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_RegisterOptions (VA 0x00404390; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_RegisterOptions - 0x00404390 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404390-Config_RegisterOptions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_RegisterOptions.h"
 void* Config_RegisterOptions(void* context)
 

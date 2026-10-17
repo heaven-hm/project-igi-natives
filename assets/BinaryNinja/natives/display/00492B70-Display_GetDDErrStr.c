@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_GetDDErrStr (VA 0x00492B70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_GetDDErrStr - 0x00492B70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00492B70-Display_GetDDErrStr.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_GetDDErrStr.h"
 
 int32_t __stdcall Display_GetDDErrStr(void* pThis, char* param)

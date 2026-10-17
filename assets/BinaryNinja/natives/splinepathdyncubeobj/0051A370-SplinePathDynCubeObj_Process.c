@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplinePathDynCubeObj_Process (VA 0x0051A370; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SplinePathDynCubeObj_Process - 0x0051A370 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051A370-SplinePathDynCubeObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplinePathDynCubeObj_Process.h"
 float* SplinePathDynCubeObj_Process(float* context, float param_2, float param_3, float param_4)
 

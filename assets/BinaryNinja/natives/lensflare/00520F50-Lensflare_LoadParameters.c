@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Lensflare_LoadParameters (VA 0x00520F50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Lensflare_LoadParameters - 0x00520F50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520F50-Lensflare_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Lensflare_LoadParameters.h"
 void* Lensflare_LoadParameters(void* context)
 

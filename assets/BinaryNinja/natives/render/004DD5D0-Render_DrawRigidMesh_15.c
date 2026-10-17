@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawRigidMesh_15 (VA 0x004DD5D0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Render_DrawRigidMesh_15 - 0x004DD5D0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004DD5D0-Render_DrawRigidMesh_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawRigidMesh_15.h"
 int32_t Render_DrawRigidMesh_15(int32_t context, int32_t* param_2, int32_t* param_3)
 

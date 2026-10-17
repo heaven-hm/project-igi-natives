@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Origo_Init (VA 0x005207A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Origo_Init - 0x005207A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005207A0-Origo_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Origo_Init.h"
 int32_t* Origo_Init()
 

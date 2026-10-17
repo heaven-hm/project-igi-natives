@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ComputeNormals_7 (VA 0x004D4500; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Render_ComputeNormals_7 - 0x004D4500 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004D4500-Render_ComputeNormals_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ComputeNormals_7.h"
 int32_t Render_ComputeNormals_7(float* context, float param_2, float param_3, float param_4)
 

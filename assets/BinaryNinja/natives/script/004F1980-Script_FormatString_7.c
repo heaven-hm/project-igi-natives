@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_7 (VA 0x004F1980; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Script_FormatString_7 - 0x004F1980 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F1980-Script_FormatString_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_7.h"
 int32_t* Script_FormatString_7(int32_t* context, int32_t param_2)
 

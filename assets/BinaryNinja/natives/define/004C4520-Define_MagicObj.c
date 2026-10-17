@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_MagicObj (VA 0x004C4520; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Define_MagicObj - 0x004C4520 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C4520-Define_MagicObj.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_MagicObj.h"
 int32_t Define_MagicObj(int32_t context, float param_2 )
 

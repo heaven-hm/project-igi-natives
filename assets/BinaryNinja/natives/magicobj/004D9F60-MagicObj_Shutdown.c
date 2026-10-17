@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MagicObj_Shutdown (VA 0x004D9F60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MagicObj_Shutdown - 0x004D9F60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9F60-MagicObj_Shutdown.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MagicObj_Shutdown.h"
 uint32_t MagicObj_Shutdown()
 

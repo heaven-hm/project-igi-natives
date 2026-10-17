@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DrawLineFilter (VA 0x004A2CD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DrawLineFilter - 0x004A2CD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A2CD0-DrawLineFilter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DrawLineFilter.h"
 int32_t DrawLineFilter(int32_t context , void* param_2)
 

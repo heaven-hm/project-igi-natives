@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawSplineMesh_11 (VA 0x004D6D40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawSplineMesh_11 - 0x004D6D40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D6D40-Render_DrawSplineMesh_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawSplineMesh_11.h"
 int32_t* Render_DrawSplineMesh_11(int32_t* context)
 

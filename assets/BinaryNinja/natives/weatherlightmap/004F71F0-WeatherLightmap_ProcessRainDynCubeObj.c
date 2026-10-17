@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherLightmap_ProcessRainDynCubeObj (VA 0x004F71F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherLightmap_ProcessRainDynCubeObj - 0x004F71F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F71F0-WeatherLightmap_ProcessRainDynCubeObj.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_ProcessRainDynCubeObj.h"
 
 char* WeatherLightmap_ProcessRainDynCubeObj(void* context, void* param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Radio_Process (VA 0x0043B250; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Radio_Process - 0x0043B250 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043B250-Radio_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Radio_Process.h"
 int32_t Radio_Process(void* context)
 

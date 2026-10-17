@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PushStack_29 (VA 0x004BDA00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_PushStack_29 - 0x004BDA00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BDA00-Sys_PushStack_29.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PushStack_29.h"
 int32_t Sys_PushStack_29(void* context, int32_t param_2)
 

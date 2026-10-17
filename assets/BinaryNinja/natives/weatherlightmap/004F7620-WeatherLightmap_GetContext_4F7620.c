@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherLightmap_GetContext_4F7620 (VA 0x004F7620; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherLightmap_GetContext_4F7620 - 0x004F7620 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7620-WeatherLightmap_GetContext_4F7620.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_GetContext_4F7620.h"
 
 int32_t* WeatherLightmap_GetContext_4F7620(int32_t* context)

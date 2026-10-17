@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherLightmap_InvokeComputeNormals (VA 0x00502FA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherLightmap_InvokeComputeNormals - 0x00502FA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00502FA0-WeatherLightmap_InvokeComputeNormals.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_InvokeComputeNormals.h"
 
 int32_t WeatherLightmap_InvokeComputeNormals(float context, void* param_2)

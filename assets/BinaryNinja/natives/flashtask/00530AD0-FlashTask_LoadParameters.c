@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FlashTask_LoadParameters (VA 0x00530AD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FlashTask_LoadParameters - 0x00530AD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00530AD0-FlashTask_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FlashTask_LoadParameters.h"
 int32_t FlashTask_LoadParameters(float context)
 

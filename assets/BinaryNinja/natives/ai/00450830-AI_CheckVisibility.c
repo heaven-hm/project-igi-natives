@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CheckVisibility (VA 0x00450830; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_CheckVisibility - 0x00450830 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00450830-AI_CheckVisibility.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CheckVisibility.h"
 int32_t* AI_CheckVisibility()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_Alloctexture (VA 0x004B2180; static CFG gate FAIL, CFG score 0.551).
+// IGI native provenance: Sys_Alloctexture - 0x004B2180 - CFG score 55.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B2180-Sys_Alloctexture.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_Alloctexture.h"
 int32_t Sys_Alloctexture()
 

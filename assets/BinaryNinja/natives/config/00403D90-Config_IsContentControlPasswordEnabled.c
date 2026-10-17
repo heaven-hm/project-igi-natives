@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_IsContentControlPasswordEnabled (VA 0x00403D90; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Config_IsContentControlPasswordEnabled - 0x00403D90 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00403D90-Config_IsContentControlPasswordEnabled.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_IsContentControlPasswordEnabled.h"
 int32_t Config_IsContentControlPasswordEnabled(int32_t context)
 

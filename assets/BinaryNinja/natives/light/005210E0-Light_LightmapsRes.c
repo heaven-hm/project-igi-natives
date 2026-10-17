@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_LightmapsRes (VA 0x005210E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_LightmapsRes - 0x005210E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005210E0-Light_LightmapsRes.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_LightmapsRes.h"
 int32_t Light_LightmapsRes()
 

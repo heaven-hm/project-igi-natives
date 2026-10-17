@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_ApplyLightmap_13 (VA 0x0052FFA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_ApplyLightmap_13 - 0x0052FFA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052FFA0-Light_ApplyLightmap_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_ApplyLightmap_13.h"
 uint32_t Light_ApplyLightmap_13(void* context, double* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_27 (VA 0x004BC790; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_27 - 0x004BC790 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BC790-Sys_DispatchOpcode_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_27.h"
 int32_t Sys_DispatchOpcode_27(int32_t* context, char* param_2)
 

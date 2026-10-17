@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_20 (VA 0x004B7630; static CFG gate FAIL, CFG score 0.809).
+// IGI native provenance: Sys_DispatchOpcode_20 - 0x004B7630 - CFG score 80.9% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B7630-Sys_DispatchOpcode_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_20.h"
 int32_t* Sys_DispatchOpcode_20(int32_t context, int32_t param_2, void* param_3)
 

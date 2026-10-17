@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuScreen_LoadParameters (VA 0x00422110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuScreen_LoadParameters - 0x00422110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422110-MenuScreen_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuScreen_LoadParameters.h"
 int32_t MenuScreen_LoadParameters(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Siren_Init_2 (VA 0x00449220; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Siren_Init_2 - 0x00449220 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449220-Siren_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Siren_Init_2.h"
 
 int32_t Siren_Init_2(long double pThis , long double param , int32_t* flags )

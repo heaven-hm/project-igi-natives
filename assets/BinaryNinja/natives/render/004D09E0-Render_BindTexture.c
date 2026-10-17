@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_BindTexture (VA 0x004D09E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_BindTexture - 0x004D09E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D09E0-Render_BindTexture.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_BindTexture.h"
 void** Render_BindTexture(void** context, void* param_2, int32_t param_3, char* param_4)
 

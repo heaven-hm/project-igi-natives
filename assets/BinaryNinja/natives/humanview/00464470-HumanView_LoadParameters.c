@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanView_LoadParameters (VA 0x00464470; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanView_LoadParameters - 0x00464470 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00464470-HumanView_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanView_LoadParameters.h"
 int32_t HumanView_LoadParameters(void* context)
 

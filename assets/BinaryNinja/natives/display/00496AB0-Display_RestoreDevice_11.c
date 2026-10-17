@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_RestoreDevice_11 (VA 0x00496AB0; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Display_RestoreDevice_11 - 0x00496AB0 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00496AB0-Display_RestoreDevice_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_RestoreDevice_11.h"
 int32_t Display_RestoreDevice_11(int32_t context, int32_t param_2)
 

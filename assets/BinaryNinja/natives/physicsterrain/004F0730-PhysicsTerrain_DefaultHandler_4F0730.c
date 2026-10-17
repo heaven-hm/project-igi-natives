@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_DefaultHandler_4F0730 (VA 0x004F0730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_DefaultHandler_4F0730 - 0x004F0730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0730-PhysicsTerrain_DefaultHandler_4F0730.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_DefaultHandler_4F0730.h"
 
 int32_t PhysicsTerrain_DefaultHandler_4F0730()

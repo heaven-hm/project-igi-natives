@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_InitType (VA 0x004148F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponType_InitType - 0x004148F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004148F0-WeaponType_InitType.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_InitType.h"
 int32_t WeaponType_InitType(int32_t context , int32_t param_2, double param_3)
 

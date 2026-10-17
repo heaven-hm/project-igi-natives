@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyLineFilter_3 (VA 0x004A5000; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Camera_ApplyLineFilter_3 - 0x004A5000 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004A5000-Camera_ApplyLineFilter_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyLineFilter_3.h"
 int32_t Camera_ApplyLineFilter_3(int32_t context , int32_t param_2 , int32_t param_3 , int32_t* param_4, int32_t param_5, struct _EXCEPTION_REGISTRATION_RECORD* param_6, int32_t param_7)
 

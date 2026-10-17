@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RigidDynCubeObj_LoadParameters (VA 0x004A01B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: RigidDynCubeObj_LoadParameters - 0x004A01B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A01B0-RigidDynCubeObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RigidDynCubeObj_LoadParameters.h"
 int32_t RigidDynCubeObj_LoadParameters(void* context)
 

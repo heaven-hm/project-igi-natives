@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_4 (VA 0x004B1760; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_DispatchOpcode_4 - 0x004B1760 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B1760-Sys_DispatchOpcode_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_4.h"
 int32_t Sys_DispatchOpcode_4(int32_t* context)
 

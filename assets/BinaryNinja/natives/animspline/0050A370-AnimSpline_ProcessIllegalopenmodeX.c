@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimSpline_ProcessIllegalopenmodeX (VA 0x0050A370; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimSpline_ProcessIllegalopenmodeX - 0x0050A370 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050A370-AnimSpline_ProcessIllegalopenmodeX.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_ProcessIllegalopenmodeX.h"
 
 PSTR AnimSpline_ProcessIllegalopenmodeX(PSTR context , int32_t param_2)

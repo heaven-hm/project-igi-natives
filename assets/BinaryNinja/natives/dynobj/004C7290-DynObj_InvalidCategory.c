@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_InvalidCategory (VA 0x004C7290; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_InvalidCategory - 0x004C7290 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C7290-DynObj_InvalidCategory.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_InvalidCategory.h"
 int32_t DynObj_InvalidCategory(int32_t context, int16_t param_2)
 

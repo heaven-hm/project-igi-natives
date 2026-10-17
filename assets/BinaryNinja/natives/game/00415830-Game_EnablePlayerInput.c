@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_EnablePlayerInput (VA 0x00415830; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Game_EnablePlayerInput - 0x00415830 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00415830-Game_EnablePlayerInput.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_EnablePlayerInput.h"
 int32_t Game_EnablePlayerInput(int32_t context)
 

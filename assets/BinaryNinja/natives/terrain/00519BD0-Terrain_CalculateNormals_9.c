@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_CalculateNormals_9 (VA 0x00519BD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_CalculateNormals_9 - 0x00519BD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00519BD0-Terrain_CalculateNormals_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_CalculateNormals_9.h"
 float Terrain_CalculateNormals_9(float context) {
     float source_val = context;

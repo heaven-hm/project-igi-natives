@@ -1,4 +1,5 @@
-// Original IGI.EXE function: M203_LoadParameters (VA 0x004761B0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: M203_LoadParameters - 0x004761B0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004761B0-M203_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "M203_LoadParameters.h"
 struct status_msg* M203_LoadParameters(float context)
 

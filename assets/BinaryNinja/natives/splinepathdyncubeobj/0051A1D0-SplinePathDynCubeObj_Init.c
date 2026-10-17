@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplinePathDynCubeObj_Init (VA 0x0051A1D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SplinePathDynCubeObj_Init - 0x0051A1D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051A1D0-SplinePathDynCubeObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplinePathDynCubeObj_Init.h"
 int32_t SplinePathDynCubeObj_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Building_Process (VA 0x00448890; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Building_Process - 0x00448890 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00448890-Building_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Building_Process.h"
 float Building_Process(float context) {
     Render_SetupLighting_15(context, context + 0x1c8);

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_SetSFXVolume (VA 0x004159B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Game_SetSFXVolume - 0x004159B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004159B0-Game_SetSFXVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_SetSFXVolume.h"
 int32_t Game_SetSFXVolume(long double context , int32_t param_2, float param_3 )
 

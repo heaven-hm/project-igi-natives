@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_Sortrender (VA 0x004B73C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_Sortrender - 0x004B73C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B73C0-Sys_Sortrender.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_Sortrender.h"
 int32_t Sys_Sortrender()
 

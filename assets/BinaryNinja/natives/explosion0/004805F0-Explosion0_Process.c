@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Explosion0_Process (VA 0x004805F0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Explosion0_Process - 0x004805F0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004805F0-Explosion0_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Explosion0_Process.h"
 int32_t Explosion0_Process(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_IsBlood (VA 0x00403DF0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GO_IsBlood - 0x00403DF0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00403DF0-GO_IsBlood.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_IsBlood.h"
 int32_t GO_IsBlood(int32_t context, float param_2 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetDisplayMode_6 (VA 0x00491F10; static CFG gate PASS, CFG score 0.924).
+// IGI native provenance: Display_SetDisplayMode_6 - 0x00491F10 - CFG score 92.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491F10-Display_SetDisplayMode_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetDisplayMode_6.h"
 int32_t __stdcall Display_SetDisplayMode_6(GUID* context, int32_t param_2, int32_t* param_3 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mem_DeallocAll (VA 0x004B0BE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Mem_DeallocAll - 0x004B0BE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B0BE0-Mem_DeallocAll.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mem_DeallocAll.h"
 int32_t Mem_DeallocAll()
 

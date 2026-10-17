@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Water_Setup (VA 0x00518CA0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Water_Setup - 0x00518CA0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00518CA0-Water_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Water_Setup.h"
 double* Water_Setup(void* context, int32_t* param_2)
 

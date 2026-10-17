@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_UpdateLanguage_22 (VA 0x0042E180; static CFG gate PASS, CFG score 0.974).
+// IGI native provenance: Menu_UpdateLanguage_22 - 0x0042E180 - CFG score 97.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042E180-Menu_UpdateLanguage_22.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_UpdateLanguage_22.h"
 int32_t* Menu_UpdateLanguage_22(float context)
 

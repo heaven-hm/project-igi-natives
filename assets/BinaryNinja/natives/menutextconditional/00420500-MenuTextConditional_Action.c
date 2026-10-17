@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuTextConditional_Action (VA 0x00420500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuTextConditional_Action - 0x00420500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00420500-MenuTextConditional_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuTextConditional_Action.h"
 int32_t MenuTextConditional_Action(void* context, int32_t param_2)
 

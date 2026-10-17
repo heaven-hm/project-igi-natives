@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_30 (VA 0x004BEC40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_30 - 0x004BEC40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BEC40-Sys_DispatchOpcode_30.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_30.h"
 int32_t Sys_DispatchOpcode_30(void* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_FormatScreen_23 (VA 0x0042FDF0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Menu_FormatScreen_23 - 0x0042FDF0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0042FDF0-Menu_FormatScreen_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_FormatScreen_23.h"
 double* Menu_FormatScreen_23(double* context, double* param_2, int32_t param_3)
 

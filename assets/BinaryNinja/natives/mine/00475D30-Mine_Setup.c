@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mine_Setup (VA 0x00475D30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Mine_Setup - 0x00475D30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00475D30-Mine_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mine_Setup.h"
 int32_t Mine_Setup(int32_t context)
 

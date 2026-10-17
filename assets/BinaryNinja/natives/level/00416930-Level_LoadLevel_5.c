@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_LoadLevel_5 (VA 0x00416930; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Level_LoadLevel_5 - 0x00416930 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00416930-Level_LoadLevel_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_LoadLevel_5.h"
 char* Level_LoadLevel_5(char* context)
 

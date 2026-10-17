@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DoorCabinet_ProcesssisOn (VA 0x00445840; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DoorCabinet_ProcesssisOn - 0x00445840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00445840-DoorCabinet_ProcesssisOn.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_ProcesssisOn.h"
 
 void* DoorCabinet_ProcesssisOn(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplineObjSegment_LoadParameters (VA 0x004E3F80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SplineObjSegment_LoadParameters - 0x004E3F80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E3F80-SplineObjSegment_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplineObjSegment_LoadParameters.h"
 void* SplineObjSegment_LoadParameters(void* context)
 

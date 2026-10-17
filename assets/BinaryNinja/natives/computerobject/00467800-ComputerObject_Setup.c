@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerObject_Setup (VA 0x00467800; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerObject_Setup - 0x00467800 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467800-ComputerObject_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerObject_Setup.h"
 int32_t* ComputerObject_Setup(double* context)
 

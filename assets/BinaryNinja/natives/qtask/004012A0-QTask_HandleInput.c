@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_HandleInput (VA 0x004012A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_HandleInput - 0x004012A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004012A0-QTask_HandleInput.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_HandleInput.h"
 struct status_msg* QTask_HandleInput(void* ctx, int32_t kind, int32_t flags)
 

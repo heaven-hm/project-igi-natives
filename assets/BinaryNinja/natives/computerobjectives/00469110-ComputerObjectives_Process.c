@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerObjectives_Process (VA 0x00469110; static CFG gate PASS, CFG score 0.974).
+// IGI native provenance: ComputerObjectives_Process - 0x00469110 - CFG score 97.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00469110-ComputerObjectives_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerObjectives_Process.h"
 void* ComputerObjectives_Process(void* context)
 

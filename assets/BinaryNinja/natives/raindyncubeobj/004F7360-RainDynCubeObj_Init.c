@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainDynCubeObj_Init (VA 0x004F7360; static CFG gate PASS, CFG score 0.992).
+// IGI native provenance: RainDynCubeObj_Init - 0x004F7360 - CFG score 99.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7360-RainDynCubeObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainDynCubeObj_Init.h"
 ❓  int32_t RainDynCubeObj_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

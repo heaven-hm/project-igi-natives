@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RegisterSymbol_12 (VA 0x004CE410; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_RegisterSymbol_12 - 0x004CE410 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CE410-DynObj_RegisterSymbol_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RegisterSymbol_12.h"
 int32_t DynObj_RegisterSymbol_12(float context, double* param_2, double* param_3, char param_4, float param_5, int32_t param_6, int32_t param_7, float* param_8)
 

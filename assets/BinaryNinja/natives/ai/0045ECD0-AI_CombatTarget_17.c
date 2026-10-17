@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CombatTarget_17 (VA 0x0045ECD0; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: AI_CombatTarget_17 - 0x0045ECD0 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0045ECD0-AI_CombatTarget_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CombatTarget_17.h"
 int32_t AI_CombatTarget_17(void* context)
 

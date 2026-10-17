@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCameraLens_Tick (VA 0x00441770; static CFG gate PASS, CFG score 0.956).
+// IGI native provenance: SCameraLens_Tick - 0x00441770 - CFG score 95.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00441770-SCameraLens_Tick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCameraLens_Tick.h"
 int32_t SCameraLens_Tick(double* context)
 

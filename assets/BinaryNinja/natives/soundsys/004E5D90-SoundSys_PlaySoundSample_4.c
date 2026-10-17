@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_PlaySoundSample_4 (VA 0x004E5D90; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: SoundSys_PlaySoundSample_4 - 0x004E5D90 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E5D90-SoundSys_PlaySoundSample_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_PlaySoundSample_4.h"
 int32_t SoundSys_PlaySoundSample_4()
 

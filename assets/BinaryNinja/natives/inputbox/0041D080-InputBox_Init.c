@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputBox_Init (VA 0x0041D080; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: InputBox_Init - 0x0041D080 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041D080-InputBox_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputBox_Init.h"
 int32_t* InputBox_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsSetMusic (VA 0x00404B90; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsSetMusic - 0x00404B90 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404B90-Config_SoundOptionsSetMusic.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsSetMusic.h"
 int32_t Config_SoundOptionsSetMusic(int32_t context, float param_2 )
 

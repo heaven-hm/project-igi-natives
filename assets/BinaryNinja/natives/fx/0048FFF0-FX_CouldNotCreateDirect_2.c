@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_CouldNotCreateDirect_2 (VA 0x0048FFF0; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: FX_CouldNotCreateDirect_2 - 0x0048FFF0 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048FFF0-FX_CouldNotCreateDirect_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_CouldNotCreateDirect_2.h"
 void* FX_CouldNotCreateDirect_2()
 

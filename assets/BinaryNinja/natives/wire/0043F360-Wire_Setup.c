@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Wire_Setup (VA 0x0043F360; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Wire_Setup - 0x0043F360 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043F360-Wire_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Wire_Setup.h"
 void* Wire_Setup(void* context)
 

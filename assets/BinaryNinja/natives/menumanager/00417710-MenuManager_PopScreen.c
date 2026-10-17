@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_PopScreen (VA 0x00417710; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: MenuManager_PopScreen - 0x00417710 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00417710-MenuManager_PopScreen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_PopScreen.h"
 int32_t MenuManager_PopScreen(int32_t context, void* param_2, float param_3)
 

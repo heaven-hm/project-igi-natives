@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BackgroundFX_LoadParameters (VA 0x00419820; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BackgroundFX_LoadParameters - 0x00419820 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00419820-BackgroundFX_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BackgroundFX_LoadParameters.h"
 int32_t BackgroundFX_LoadParameters(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_Open (VA 0x00413A90; static CFG gate CANDIDATE, CFG score 0.750).
+// IGI native provenance: WeaponType_Open - 0x00413A90 - Radare2 CFG 6 blocks (candidate; no CFG score recorded); runtime behavior not verified.
+// Evidence: 00413A90-WeaponType_Open.md; catalog provenance record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "00413A90-WeaponType_Open.h"
 
 /* Analysis reconstruction for the original 32-bit Windows image.

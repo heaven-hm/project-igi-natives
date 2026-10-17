@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Water_LoadParameters (VA 0x00519290; static CFG gate PASS, CFG score 0.879).
+// IGI native provenance: Water_LoadParameters - 0x00519290 - CFG score 87.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00519290-Water_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Water_LoadParameters.h"
 void* Water_LoadParameters(void* context)
 

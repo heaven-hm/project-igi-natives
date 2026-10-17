@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_PlayFootstep (VA 0x00408720; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_PlayFootstep - 0x00408720 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00408720-HumanPlayer_PlayFootstep.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_PlayFootstep.h"
 int32_t HumanPlayer_PlayFootstep(void* context)
 

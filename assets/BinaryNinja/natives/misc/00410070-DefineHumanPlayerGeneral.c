@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineHumanPlayerGeneral (VA 0x00410070; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: DefineHumanPlayerGeneral - 0x00410070 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00410070-DefineHumanPlayerGeneral.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineHumanPlayerGeneral.h"
 int32_t DefineHumanPlayerGeneral(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , long double param_8 , int32_t param_9, float param_10 )
 

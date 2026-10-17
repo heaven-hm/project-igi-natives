@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineComputerObjective_Init (VA 0x00466F70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefineComputerObjective_Init - 0x00466F70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00466F70-DefineComputerObjective_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineComputerObjective_Init.h"
 int32_t* DefineComputerObjective_Init()
 

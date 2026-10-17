@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuScreen_Init (VA 0x00421750; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuScreen_Init - 0x00421750 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00421750-MenuScreen_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuScreen_Init.h"
 int32_t* MenuScreen_Init()
 

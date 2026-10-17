@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Wire_OnEvent (VA 0x0043F700; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Wire_OnEvent - 0x0043F700 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043F700-Wire_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Wire_OnEvent.h"
 int32_t Wire_OnEvent(void* context)
 

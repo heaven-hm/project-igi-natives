@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SpriteParticleSystemDynCubeObj_OnEvent (VA 0x005311E0; static CFG gate FAIL, CFG score 0.411).
+// IGI native provenance: SpriteParticleSystemDynCubeObj_OnEvent - 0x005311E0 - CFG score 41.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 005311E0-SpriteParticleSystemDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SpriteParticleSystemDynCubeObj_OnEvent.h"
 int32_t SpriteParticleSystemDynCubeObj_OnEvent()
 

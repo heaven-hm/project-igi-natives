@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Invoke16 (VA 0x00412420; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Invoke16 - 0x00412420 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00412420-HumanPlayer_Invoke16.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Invoke16.h"
 
 int32_t HumanPlayer_Invoke16(int32_t* context)

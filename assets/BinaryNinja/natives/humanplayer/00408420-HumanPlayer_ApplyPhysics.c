@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_ApplyPhysics (VA 0x00408420; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_ApplyPhysics - 0x00408420 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00408420-HumanPlayer_ApplyPhysics.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_ApplyPhysics.h"
 void* HumanPlayer_ApplyPhysics(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PictureBox_Update (VA 0x0041B530; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PictureBox_Update - 0x0041B530 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041B530-PictureBox_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PictureBox_Update.h"
 int32_t PictureBox_Update(void* context, int32_t param_2)
 

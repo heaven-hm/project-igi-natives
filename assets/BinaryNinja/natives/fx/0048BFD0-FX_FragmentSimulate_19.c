@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FragmentSimulate_19 (VA 0x0048BFD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_FragmentSimulate_19 - 0x0048BFD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048BFD0-FX_FragmentSimulate_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FragmentSimulate_19.h"
 int32_t FX_FragmentSimulate_19(int32_t* context, void* param_2)
 

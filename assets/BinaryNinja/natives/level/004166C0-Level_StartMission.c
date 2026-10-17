@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_StartMission (VA 0x004166C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_StartMission - 0x004166C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004166C0-Level_StartMission.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_StartMission.h"
 int32_t Level_StartMission()
 

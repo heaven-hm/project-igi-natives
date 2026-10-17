@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_ExpandRoute (VA 0x004518E0; static CFG gate PASS, CFG score 0.979).
+// IGI native provenance: AI_ExpandRoute - 0x004518E0 - CFG score 97.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004518E0-AI_ExpandRoute.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_ExpandRoute.h"
 int32_t* AI_ExpandRoute(void* context, int32_t param_2, double* param_3, char param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeObject_Setup (VA 0x00481970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplodeObject_Setup - 0x00481970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00481970-ExplodeObject_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeObject_Setup.h"
 void* ExplodeObject_Setup(long double context , double* param_2)
 

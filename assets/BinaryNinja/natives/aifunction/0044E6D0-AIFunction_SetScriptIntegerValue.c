@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetScriptIntegerValue (VA 0x0044E6D0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AIFunction_SetScriptIntegerValue - 0x0044E6D0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044E6D0-AIFunction_SetScriptIntegerValue.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetScriptIntegerValue.h"
 int32_t AIFunction_SetScriptIntegerValue(int32_t context, float param_2 )
 

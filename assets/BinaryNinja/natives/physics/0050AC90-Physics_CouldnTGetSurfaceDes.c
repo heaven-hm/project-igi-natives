@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_CouldnTGetSurfaceDes (VA 0x0050AC90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_CouldnTGetSurfaceDes - 0x0050AC90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050AC90-Physics_CouldnTGetSurfaceDes.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_CouldnTGetSurfaceDes.h"
 int32_t Physics_CouldnTGetSurfaceDes(int32_t* context)
 

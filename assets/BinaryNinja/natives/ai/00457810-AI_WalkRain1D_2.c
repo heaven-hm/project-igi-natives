@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_WalkRain1D_2 (VA 0x00457810; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_WalkRain1D_2 - 0x00457810 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00457810-AI_WalkRain1D_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_WalkRain1D_2.h"
 void AI_WalkRain1D_2(void* context)
 

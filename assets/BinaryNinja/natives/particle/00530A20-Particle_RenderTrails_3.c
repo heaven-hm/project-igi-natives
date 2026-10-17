@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_RenderTrails_3 (VA 0x00530A20; static CFG gate FAIL, CFG score 0.541).
+// IGI native provenance: Particle_RenderTrails_3 - 0x00530A20 - CFG score 54.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00530A20-Particle_RenderTrails_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_RenderTrails_3.h"
 int32_t Particle_RenderTrails_3()
 

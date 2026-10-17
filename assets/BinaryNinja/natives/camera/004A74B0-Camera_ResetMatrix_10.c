@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ResetMatrix_10 (VA 0x004A74B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ResetMatrix_10 - 0x004A74B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A74B0-Camera_ResetMatrix_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ResetMatrix_10.h"
 char* Camera_ResetMatrix_10(double* context, char* param_2, int32_t param_3, int32_t param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_TrailUpdate_7 (VA 0x004868D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_TrailUpdate_7 - 0x004868D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004868D0-FX_TrailUpdate_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_TrailUpdate_7.h"
 void StatusList_Clear(void* context)
 

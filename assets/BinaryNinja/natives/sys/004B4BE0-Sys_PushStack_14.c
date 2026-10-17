@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PushStack_14 (VA 0x004B4BE0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_PushStack_14 - 0x004B4BE0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B4BE0-Sys_PushStack_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PushStack_14.h"
 int32_t Sys_PushStack_14(float context, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, float param_9, float param_10, float param_11, float param_12, float param_13, float param_14, float param_15, float param_16, int32_t param_17, int32_t param_18, int32_t param_19, int32_t param_20, int32_t param_21, int32_t param_22, int32_t param_23)
 

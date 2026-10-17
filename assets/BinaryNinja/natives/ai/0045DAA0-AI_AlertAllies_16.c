@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_AlertAllies_16 (VA 0x0045DAA0; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: AI_AlertAllies_16 - 0x0045DAA0 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045DAA0-AI_AlertAllies_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_AlertAllies_16.h"
 int32_t AI_AlertAllies_16(long double context , void* param_2, double* param_3)
 

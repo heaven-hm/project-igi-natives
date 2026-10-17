@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsGetReverseStereo (VA 0x00404EB0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsGetReverseStereo - 0x00404EB0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404EB0-Config_SoundOptionsGetReverseStereo.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsGetReverseStereo.h"
 int32_t Config_SoundOptionsGetReverseStereo(int32_t context)
 

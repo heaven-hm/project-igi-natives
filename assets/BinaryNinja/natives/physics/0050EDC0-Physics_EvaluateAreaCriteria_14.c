@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_EvaluateAreaCriteria_14 (VA 0x0050EDC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_EvaluateAreaCriteria_14 - 0x0050EDC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050EDC0-Physics_EvaluateAreaCriteria_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_EvaluateAreaCriteria_14.h"
 void Physics_EvaluateAreaCriteria_14(float context)
 

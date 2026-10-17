@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ScrollListBox_LoadParameters (VA 0x0041BDD0; static CFG gate PASS, CFG score 0.985).
+// IGI native provenance: ScrollListBox_LoadParameters - 0x0041BDD0 - CFG score 98.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041BDD0-ScrollListBox_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ScrollListBox_LoadParameters.h"
 int32_t ScrollListBox_LoadParameters(void* context)
 

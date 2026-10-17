@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_GetContext_5272F0 (VA 0x005272F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_GetContext_5272F0 - 0x005272F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005272F0-RenderLight_GetContext_5272F0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_GetContext_5272F0.h"
 
 void* RenderLight_GetContext_5272F0(void* context)

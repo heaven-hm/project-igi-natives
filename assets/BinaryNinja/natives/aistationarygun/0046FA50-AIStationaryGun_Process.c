@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIStationaryGun_Process (VA 0x0046FA50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIStationaryGun_Process - 0x0046FA50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046FA50-AIStationaryGun_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIStationaryGun_Process.h"
 int32_t AIStationaryGun_Process(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , int32_t* param_8 )
 

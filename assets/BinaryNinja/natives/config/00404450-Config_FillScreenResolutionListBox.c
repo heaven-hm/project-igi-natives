@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_FillScreenResolutionListBox (VA 0x00404450; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Config_FillScreenResolutionListBox - 0x00404450 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404450-Config_FillScreenResolutionListBox.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_FillScreenResolutionListBox.h"
 int32_t Config_FillScreenResolutionListBox(int32_t context, float param_2 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Combat_SetAimMode (VA 0x004511F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Combat_SetAimMode - 0x004511F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004511F0-Combat_SetAimMode.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Combat_SetAimMode.h"
 int32_t Combat_SetAimMode(void* context, void* param_2, int32_t param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TransparencyList_Init (VA 0x00531FA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TransparencyList_Init - 0x00531FA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531FA0-TransparencyList_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TransparencyList_Init.h"
 int32_t TransparencyList_Init()
 

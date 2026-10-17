@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Q_TaskHashTableSet (VA 0x004BAAC0; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Q_TaskHashTableSet - 0x004BAAC0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BAAC0-Q_TaskHashTableSet.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Q_TaskHashTableSet.h"
 void* Q_TaskHashTableSet(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7)
 

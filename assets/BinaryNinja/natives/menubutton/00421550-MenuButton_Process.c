@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuButton_Process (VA 0x00421550; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuButton_Process - 0x00421550 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00421550-MenuButton_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuButton_Process.h"
 int32_t MenuButton_Process(void* context, int32_t param_2)
 

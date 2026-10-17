@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_RestoreDevice_18 (VA 0x0049A450; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Display_RestoreDevice_18 - 0x0049A450 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049A450-Display_RestoreDevice_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_RestoreDevice_18.h"
 struct status_msg* Display_RestoreDevice_18(uint32_t context, void* param_2, int32_t param_3, int32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8, uint32_t param_9, char* param_10, uint32_t param_11)
 

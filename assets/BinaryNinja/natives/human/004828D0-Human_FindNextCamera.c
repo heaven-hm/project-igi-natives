@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_FindNextCamera (VA 0x004828D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_FindNextCamera - 0x004828D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004828D0-Human_FindNextCamera.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_FindNextCamera.h"
 void* Human_FindNextCamera(void* context)
 

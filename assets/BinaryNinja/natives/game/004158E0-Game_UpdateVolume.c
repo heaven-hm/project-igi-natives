@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_UpdateVolume (VA 0x004158E0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Game_UpdateVolume - 0x004158E0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004158E0-Game_UpdateVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_UpdateVolume.h"
 int32_t Game_UpdateVolume(int32_t context)
 

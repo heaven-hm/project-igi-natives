@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EnvironmentSound_Update (VA 0x00436CB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EnvironmentSound_Update - 0x00436CB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00436CB0-EnvironmentSound_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EnvironmentSound_Update.h"
 int32_t* EnvironmentSound_Update(void* context)
 

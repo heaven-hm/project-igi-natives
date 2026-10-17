@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_UpdateState_51DA90 (VA 0x0051DA90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_UpdateState_51DA90 - 0x0051DA90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051DA90-WeatherWaterSky_UpdateState_51DA90.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_UpdateState_51DA90.h"
 
 int32_t WeatherWaterSky_UpdateState_51DA90(float context)

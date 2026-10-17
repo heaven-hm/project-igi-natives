@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_LeaveMenus_7 (VA 0x0041AFB0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Menu_LeaveMenus_7 - 0x0041AFB0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041AFB0-Menu_LeaveMenus_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_LeaveMenus_7.h"
 int32_t Menu_LeaveMenus_7(int32_t context, int32_t param_2, int32_t param_3 , char* param_4 , void* param_5, int32_t* param_6, int32_t param_7)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyLineFilter_13 (VA 0x004A865C; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyLineFilter_13 - 0x004A865C - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A865C-Camera_ApplyLineFilter_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyLineFilter_13.h"
 int32_t Camera_ApplyLineFilter_13(char context) {
     if (context & 0x20)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericTBA_Setup (VA 0x00448160; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericTBA_Setup - 0x00448160 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00448160-GenericTBA_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericTBA_Setup.h"
 char* GenericTBA_Setup(void* context)
 

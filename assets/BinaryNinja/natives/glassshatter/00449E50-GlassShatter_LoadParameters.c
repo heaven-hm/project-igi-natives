@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GlassShatter_LoadParameters (VA 0x00449E50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GlassShatter_LoadParameters - 0x00449E50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449E50-GlassShatter_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GlassShatter_LoadParameters.h"
 int32_t GlassShatter_LoadParameters(float context)
 

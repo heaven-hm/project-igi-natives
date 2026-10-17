@@ -1,4 +1,5 @@
-// Original IGI.EXE function: IntroScreen_Setup (VA 0x00415450; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: IntroScreen_Setup - 0x00415450 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00415450-IntroScreen_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "IntroScreen_Setup.h"
 void* IntroScreen_Setup(void* context)
 

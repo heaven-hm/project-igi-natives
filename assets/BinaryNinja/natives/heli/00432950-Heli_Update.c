@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Heli_Update (VA 0x00432950; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: Heli_Update - 0x00432950 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00432950-Heli_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Heli_Update.h"
 int32_t Heli_Update(void* context)
 

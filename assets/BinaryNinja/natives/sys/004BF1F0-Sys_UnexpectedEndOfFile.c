@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_UnexpectedEndOfFile (VA 0x004BF1F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_UnexpectedEndOfFile - 0x004BF1F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BF1F0-Sys_UnexpectedEndOfFile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_UnexpectedEndOfFile.h"
 int32_t Sys_UnexpectedEndOfFile(int32_t* context, void** param_2)
 

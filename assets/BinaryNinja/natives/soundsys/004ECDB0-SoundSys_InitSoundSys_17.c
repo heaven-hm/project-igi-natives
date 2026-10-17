@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_InitSoundSys_17 (VA 0x004ECDB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_InitSoundSys_17 - 0x004ECDB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ECDB0-SoundSys_InitSoundSys_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_InitSoundSys_17.h"
 float SoundSys_InitSoundSys_17(void* context) {
     float item_c = *(context + 0x18);

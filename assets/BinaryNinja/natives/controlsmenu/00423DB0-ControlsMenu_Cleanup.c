@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_Cleanup (VA 0x00423DB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_Cleanup - 0x00423DB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00423DB0-ControlsMenu_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_Cleanup.h"
 int32_t ControlsMenu_Cleanup()
 

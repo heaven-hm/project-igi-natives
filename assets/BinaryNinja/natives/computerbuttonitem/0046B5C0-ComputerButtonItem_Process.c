@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerButtonItem_Process (VA 0x0046B5C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerButtonItem_Process - 0x0046B5C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B5C0-ComputerButtonItem_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerButtonItem_Process.h"
 int32_t ComputerButtonItem_Process(void* context)
 

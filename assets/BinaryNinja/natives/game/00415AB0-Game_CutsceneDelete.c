@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_CutsceneDelete (VA 0x00415AB0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Game_CutsceneDelete - 0x00415AB0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00415AB0-Game_CutsceneDelete.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_CutsceneDelete.h"
 int32_t Game_CutsceneDelete(int32_t context)
 

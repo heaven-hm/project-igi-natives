@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_Invokemusic (VA 0x00418080; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_Invokemusic - 0x00418080 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418080-MenuUI_Invokemusic.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invokemusic.h"
 
 void* __fastcall(int32_t context)

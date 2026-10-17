@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunClip_Action (VA 0x004776C0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: GunClip_Action - 0x004776C0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004776C0-GunClip_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunClip_Action.h"
 void* GunClip_Action(void* context, int32_t* param_2)
 

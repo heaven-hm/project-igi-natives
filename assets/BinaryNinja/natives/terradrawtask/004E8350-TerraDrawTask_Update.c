@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TerraDrawTask_Update (VA 0x004E8350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TerraDrawTask_Update - 0x004E8350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8350-TerraDrawTask_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TerraDrawTask_Update.h"
 uint32_t TerraDrawTask_Update()
 

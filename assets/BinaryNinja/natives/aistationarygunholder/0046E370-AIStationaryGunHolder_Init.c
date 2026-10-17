@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIStationaryGunHolder_Init (VA 0x0046E370; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIStationaryGunHolder_Init - 0x0046E370 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046E370-AIStationaryGunHolder_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIStationaryGunHolder_Init.h"
 ❓  int32_t* AIStationaryGunHolder_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

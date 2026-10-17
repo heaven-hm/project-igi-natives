@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PickupTrigger_Invoke27 (VA 0x00467C60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PickupTrigger_Invoke27 - 0x00467C60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467C60-PickupTrigger_Invoke27.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_Invoke27.h"
 
 int32_t PickupTrigger_Invoke27(float context, float param_2)

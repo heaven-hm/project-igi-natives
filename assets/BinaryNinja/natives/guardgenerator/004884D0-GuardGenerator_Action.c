@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GuardGenerator_Action (VA 0x004884D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GuardGenerator_Action - 0x004884D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004884D0-GuardGenerator_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GuardGenerator_Action.h"
 int32_t GuardGenerator_Action(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimTask_SendChannels (VA 0x004F4060; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimTask_SendChannels - 0x004F4060 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4060-AnimTask_SendChannels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimTask_SendChannels.h"
 void* AnimTask_SendChannels(void* context)
 

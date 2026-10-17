@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_InitPlane_3 (VA 0x00433410; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Vehicle_InitPlane_3 - 0x00433410 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00433410-Vehicle_InitPlane_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_InitPlane_3.h"
 float Vehicle_InitPlane_3(float context) {
     int32_t* source_val = context;

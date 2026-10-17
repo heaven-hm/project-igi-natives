@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PatrolPath_OnTick (VA 0x00453730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PatrolPath_OnTick - 0x00453730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00453730-PatrolPath_OnTick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PatrolPath_OnTick.h"
 int32_t* PatrolPath_OnTick(int32_t* context)
 

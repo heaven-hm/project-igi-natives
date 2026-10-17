@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_ClearSurfaces (VA 0x00490360; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_ClearSurfaces - 0x00490360 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00490360-Display_ClearSurfaces.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_ClearSurfaces.h"
 uint32_t Display_ClearSurfaces()
 

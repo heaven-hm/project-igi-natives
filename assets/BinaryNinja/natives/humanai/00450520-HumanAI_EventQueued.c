@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_EventQueued (VA 0x00450520; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: HumanAI_EventQueued - 0x00450520 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00450520-HumanAI_EventQueued.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_EventQueued.h"
 int32_t* HumanAI_EventQueued(void* context, int32_t* param_2)
 

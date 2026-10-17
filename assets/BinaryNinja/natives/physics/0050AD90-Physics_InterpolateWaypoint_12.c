@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_InterpolateWaypoint_12 (VA 0x0050AD90; static CFG gate PASS, CFG score 0.991).
+// IGI native provenance: Physics_InterpolateWaypoint_12 - 0x0050AD90 - CFG score 99.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050AD90-Physics_InterpolateWaypoint_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_InterpolateWaypoint_12.h"
 int32_t Physics_InterpolateWaypoint_12(int32_t* context)
 

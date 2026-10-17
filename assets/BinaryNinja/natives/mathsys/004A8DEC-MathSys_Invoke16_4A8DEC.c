@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MathSys_Invoke16_4A8DEC (VA 0x004A8DEC; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MathSys_Invoke16_4A8DEC - 0x004A8DEC - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A8DEC-MathSys_Invoke16_4A8DEC.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_Invoke16_4A8DEC.h"
 
 int32_t MathSys_Invoke16_4A8DEC(long double context)

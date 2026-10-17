@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_SetParent (VA 0x00463310; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Human_SetParent - 0x00463310 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00463310-Human_SetParent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_SetParent.h"
 void* Human_SetParent(void* context, void* param_2)
 

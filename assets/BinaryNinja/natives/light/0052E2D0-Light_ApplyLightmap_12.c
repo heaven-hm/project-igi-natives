@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_ApplyLightmap_12 (VA 0x0052E2D0; static CFG gate FAIL, CFG score 0.765).
+// IGI native provenance: Light_ApplyLightmap_12 - 0x0052E2D0 - CFG score 76.5% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0052E2D0-Light_ApplyLightmap_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_ApplyLightmap_12.h"
 int32_t Light_ApplyLightmap_12(int32_t context , float param_2)
 

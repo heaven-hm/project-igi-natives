@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierFemale_Setup (VA 0x00454F10; static CFG gate PASS, CFG score 0.979).
+// IGI native provenance: HumanSoldierFemale_Setup - 0x00454F10 - CFG score 97.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00454F10-HumanSoldierFemale_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierFemale_Setup.h"
 int32_t HumanSoldierFemale_Setup(int32_t* context, int32_t param_2)
 

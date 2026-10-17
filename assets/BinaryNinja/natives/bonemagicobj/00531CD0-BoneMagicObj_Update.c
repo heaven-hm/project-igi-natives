@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneMagicObj_Update (VA 0x00531CD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BoneMagicObj_Update - 0x00531CD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531CD0-BoneMagicObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneMagicObj_Update.h"
 int32_t BoneMagicObj_Update(int32_t* context )
 

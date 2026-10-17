@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayerInput_Init (VA 0x0045DB70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayerInput_Init - 0x0045DB70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045DB70-HumanPlayerInput_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayerInput_Init.h"
 int32_t* HumanPlayerInput_Init()
 

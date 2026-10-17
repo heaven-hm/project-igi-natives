@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Resource_PackUnpack (VA 0x004B18B0; static CFG gate PASS, CFG score 0.976).
+// IGI native provenance: Resource_PackUnpack - 0x004B18B0 - CFG score 97.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B18B0-Resource_PackUnpack.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Resource_PackUnpack.h"
 void* Resource_PackUnpack(void* context, int32_t* param_2)
 

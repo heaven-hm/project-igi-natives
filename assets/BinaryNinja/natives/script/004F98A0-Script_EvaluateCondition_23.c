@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_EvaluateCondition_23 (VA 0x004F98A0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Script_EvaluateCondition_23 - 0x004F98A0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F98A0-Script_EvaluateCondition_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_EvaluateCondition_23.h"
 void* Script_EvaluateCondition_23(float* context, void* param_2, char param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CouldnTSetViewport (VA 0x00497A00; static CFG gate PASS, CFG score 0.973).
+// IGI native provenance: Display_CouldnTSetViewport - 0x00497A00 - CFG score 97.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00497A00-Display_CouldnTSetViewport.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CouldnTSetViewport.h"
 int32_t Display_CouldnTSetViewport(void** context)
 

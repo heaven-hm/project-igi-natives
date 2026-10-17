@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessage_OnEvent_2 (VA 0x00485870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusMessage_OnEvent_2 - 0x00485870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485870-StatusMessage_OnEvent_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessage_OnEvent_2.h"
 int32_t StatusMessage_OnEvent_2(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_UpdateAnimation_6 (VA 0x0040E3C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_UpdateAnimation_6 - 0x0040E3C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040E3C0-HumanPlayer_UpdateAnimation_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_UpdateAnimation_6.h"
 int32_t HumanPlayer_UpdateAnimation_6(void* context, void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_RegisterType_2 (VA 0x00414ED0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponType_RegisterType_2 - 0x00414ED0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00414ED0-WeaponType_RegisterType_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_RegisterType_2.h"
 void** WeaponType_RegisterType_2(void** context, void* param_2, int32_t param_3)
 

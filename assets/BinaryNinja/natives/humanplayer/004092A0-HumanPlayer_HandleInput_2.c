@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_HandleInput_2 (VA 0x004092A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_HandleInput_2 - 0x004092A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004092A0-HumanPlayer_HandleInput_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_HandleInput_2.h"
 int32_t HumanPlayer_HandleInput_2(void* context, void* param_2)
 

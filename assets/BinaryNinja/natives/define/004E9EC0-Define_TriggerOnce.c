@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_TriggerOnce (VA 0x004E9EC0; static CFG gate PASS, CFG score 0.982).
+// IGI native provenance: Define_TriggerOnce - 0x004E9EC0 - CFG score 98.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E9EC0-Define_TriggerOnce.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_TriggerOnce.h"
 int32_t Define_TriggerOnce(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , int32_t param_8, void* param_9, float param_10)
 

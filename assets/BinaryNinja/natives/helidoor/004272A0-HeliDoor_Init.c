@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HeliDoor_Init (VA 0x004272A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HeliDoor_Init - 0x004272A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004272A0-HeliDoor_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HeliDoor_Init.h"
 void* HeliDoor_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAttach_OnEvent (VA 0x00465BB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAttach_OnEvent - 0x00465BB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00465BB0-HumanAttach_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAttach_OnEvent.h"
 uint32_t HumanAttach_OnEvent()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_BlendbranchToIllegal (VA 0x004D33D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_BlendbranchToIllegal - 0x004D33D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D33D0-Render_BlendbranchToIllegal.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_BlendbranchToIllegal.h"
 int32_t Render_BlendbranchToIllegal(int32_t context, int32_t param_2, void* param_3, int32_t* param_4)
 

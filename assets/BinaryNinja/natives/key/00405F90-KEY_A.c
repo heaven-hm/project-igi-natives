@@ -1,4 +1,5 @@
-// Original IGI.EXE function: KEY_A (VA 0x00405F90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: KEY_A - 0x00405F90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405F90-KEY_A.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "KEY_A.h"
 int32_t KEY_A(int32_t* context, int32_t param_2)
 

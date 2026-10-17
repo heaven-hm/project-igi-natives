@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rudder_Init (VA 0x004361D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Rudder_Init - 0x004361D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004361D0-Rudder_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rudder_Init.h"
 void* Rudder_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Frames_GetTaskCounter (VA 0x004028C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Frames_GetTaskCounter - 0x004028C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004028C0-Frames_GetTaskCounter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Frames_GetTaskCounter.h"
 uint32_t Frames_GetTaskCounter()
 

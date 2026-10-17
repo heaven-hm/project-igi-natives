@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GameOptionsInputSetBloodEnabled (VA 0x004042E0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GameOptionsInputSetBloodEnabled - 0x004042E0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004042E0-Config_GameOptionsInputSetBloodEnabled.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GameOptionsInputSetBloodEnabled.h"
 int32_t Config_GameOptionsInputSetBloodEnabled(long double context , int32_t param_2, float param_3 )
 

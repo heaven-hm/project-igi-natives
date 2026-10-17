@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_SampleHeightmap_9 (VA 0x00519BA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_SampleHeightmap_9 - 0x00519BA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00519BA0-Terrain_SampleHeightmap_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_SampleHeightmap_9.h"
 uint32_t Terrain_SampleHeightmap_9()
 

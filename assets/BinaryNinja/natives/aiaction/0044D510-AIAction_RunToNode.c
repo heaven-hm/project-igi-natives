@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_RunToNode (VA 0x0044D510; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: AIAction_RunToNode - 0x0044D510 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D510-AIAction_RunToNode.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_RunToNode.h"
 int32_t AIAction_RunToNode(int32_t context, float param_2 )
 

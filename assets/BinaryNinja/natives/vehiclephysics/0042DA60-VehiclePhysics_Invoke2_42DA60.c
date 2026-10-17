@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_Invoke2_42DA60 (VA 0x0042DA60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_Invoke2_42DA60 - 0x0042DA60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042DA60-VehiclePhysics_Invoke2_42DA60.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke2_42DA60.h"
 
 int32_t* VehiclePhysics_Invoke2_42DA60(int32_t* context)

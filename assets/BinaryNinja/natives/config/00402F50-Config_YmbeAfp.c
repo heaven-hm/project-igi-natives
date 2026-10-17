@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_YmbeAfp (VA 0x00402F50; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Config_YmbeAfp - 0x00402F50 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402F50-Config_YmbeAfp.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_YmbeAfp.h"
 int32_t __fastcall Config_YmbeAfp(int32_t context)
 

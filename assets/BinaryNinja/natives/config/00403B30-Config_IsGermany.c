@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_IsGermany (VA 0x00403B30; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_IsGermany - 0x00403B30 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403B30-Config_IsGermany.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_IsGermany.h"
 int32_t Config_IsGermany(int32_t context)
 

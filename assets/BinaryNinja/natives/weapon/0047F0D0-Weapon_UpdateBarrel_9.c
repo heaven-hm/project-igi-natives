@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_UpdateBarrel_9 (VA 0x0047F0D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_UpdateBarrel_9 - 0x0047F0D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047F0D0-Weapon_UpdateBarrel_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_UpdateBarrel_9.h"
 struct status_msg* Weapon_UpdateBarrel_9(void* context, int32_t param_2, int32_t param_3, int32_t param_4, float param_5)
 

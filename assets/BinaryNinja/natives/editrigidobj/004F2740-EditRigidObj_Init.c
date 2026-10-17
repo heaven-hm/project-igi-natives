@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObj_Init (VA 0x004F2740; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditRigidObj_Init - 0x004F2740 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F2740-EditRigidObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObj_Init.h"
 void* EditRigidObj_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusScreen_LoadParameters (VA 0x004869B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusScreen_LoadParameters - 0x004869B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004869B0-StatusScreen_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusScreen_LoadParameters.h"
 struct status_msg* StatusScreen_OnLoad(void* context)
 

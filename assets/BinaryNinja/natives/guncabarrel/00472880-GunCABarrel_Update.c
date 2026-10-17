@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunCABarrel_Update (VA 0x00472880; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GunCABarrel_Update - 0x00472880 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00472880-GunCABarrel_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunCABarrel_Update.h"
 void* GunCABarrel_Update(void* context)
 

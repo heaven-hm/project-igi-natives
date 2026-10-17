@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_WireSlide1_2 (VA 0x00411F20; static CFG gate PASS, CFG score 0.981).
+// IGI native provenance: HumanPlayer_WireSlide1_2 - 0x00411F20 - CFG score 98.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00411F20-HumanPlayer_WireSlide1_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_WireSlide1_2.h"
 int32_t HumanPlayer_WireSlide1_2(float* context)
 

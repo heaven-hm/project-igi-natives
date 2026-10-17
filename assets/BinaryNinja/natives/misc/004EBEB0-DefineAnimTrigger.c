@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineAnimTrigger (VA 0x004EBEB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefineAnimTrigger - 0x004EBEB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EBEB0-DefineAnimTrigger.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineAnimTrigger.h"
 int32_t DefineAnimTrigger(int32_t context, float param_2 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ParticleSystemDynCubeObj_LoadParameters (VA 0x00530CD0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: ParticleSystemDynCubeObj_LoadParameters - 0x00530CD0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00530CD0-ParticleSystemDynCubeObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ParticleSystemDynCubeObj_LoadParameters.h"
 int32_t ParticleSystemDynCubeObj_LoadParameters(void* context)
 

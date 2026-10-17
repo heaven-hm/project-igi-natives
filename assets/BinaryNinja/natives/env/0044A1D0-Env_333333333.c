@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_333333333 (VA 0x0044A1D0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Env_333333333 - 0x0044A1D0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044A1D0-Env_333333333.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_333333333.h"
 struct status_msg* Env_333333333(uint32_t context, int32_t* param_2, double* param_3, float* param_4, void* param_5)
 

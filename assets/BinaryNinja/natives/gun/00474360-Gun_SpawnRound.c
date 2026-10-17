@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_SpawnRound (VA 0x00474360; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Gun_SpawnRound - 0x00474360 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00474360-Gun_SpawnRound.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_SpawnRound.h"
 void* Gun_SpawnRound(void* context, char param_2)
 

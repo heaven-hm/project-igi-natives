@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_27 (VA 0x004BBF60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_OpenFileStream_27 - 0x004BBF60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BBF60-Sys_OpenFileStream_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_27.h"
 int32_t Sys_OpenFileStream_27(int32_t* context)
 

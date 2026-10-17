@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FailedGetMouseStateS (VA 0x0048FC20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_FailedGetMouseStateS - 0x0048FC20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048FC20-FX_FailedGetMouseStateS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FailedGetMouseStateS.h"
 int32_t FX_FailedGetMouseStateS()
 

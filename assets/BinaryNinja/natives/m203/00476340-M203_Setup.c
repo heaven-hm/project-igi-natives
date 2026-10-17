@@ -1,4 +1,5 @@
-// Original IGI.EXE function: M203_Setup (VA 0x00476340; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: M203_Setup - 0x00476340 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476340-M203_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "M203_Setup.h"
 int32_t M203_Setup(int32_t* context)
 

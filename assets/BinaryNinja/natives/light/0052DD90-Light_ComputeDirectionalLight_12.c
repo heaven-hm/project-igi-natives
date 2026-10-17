@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_ComputeDirectionalLight_12 (VA 0x0052DD90; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Light_ComputeDirectionalLight_12 - 0x0052DD90 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052DD90-Light_ComputeDirectionalLight_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_ComputeDirectionalLight_12.h"
 int32_t Light_ComputeDirectionalLight_12(void* context)
 

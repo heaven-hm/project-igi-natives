@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_UpdateLanguage_20 (VA 0x00428D00; static CFG gate PASS, CFG score 0.938).
+// IGI native provenance: Menu_UpdateLanguage_20 - 0x00428D00 - CFG score 93.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00428D00-Menu_UpdateLanguage_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_UpdateLanguage_20.h"
 void* Menu_UpdateLanguage_20(float context)
 

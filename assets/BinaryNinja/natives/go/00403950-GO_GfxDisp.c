@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_GfxDisp (VA 0x00403950; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: GO_GfxDisp - 0x00403950 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403950-GO_GfxDisp.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_GfxDisp.h"
 int32_t GO_GfxDisp(int32_t context, float param_2 )
 

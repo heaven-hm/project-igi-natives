@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_Parsed (VA 0x0043A450; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: AlarmLight_Parsed - 0x0043A450 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043A450-AlarmLight_Parsed.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_Parsed.h"
 int32_t AlarmLight_Parsed(float context, char* param_2)
 

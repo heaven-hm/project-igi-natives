@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyWideScreen_8 (VA 0x004A6612; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyWideScreen_8 - 0x004A6612 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A6612-Camera_ApplyWideScreen_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyWideScreen_8.h"
 HMODULE Camera_ApplyWideScreen_8(int32_t* context)
 

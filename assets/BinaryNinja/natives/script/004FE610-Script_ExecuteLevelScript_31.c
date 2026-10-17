@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ExecuteLevelScript_31 (VA 0x004FE610; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_ExecuteLevelScript_31 - 0x004FE610 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FE610-Script_ExecuteLevelScript_31.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ExecuteLevelScript_31.h"
 double* Script_ExecuteLevelScript_31(void* context, double* param_2)
 

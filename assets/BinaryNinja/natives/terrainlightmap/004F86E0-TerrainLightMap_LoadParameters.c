@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TerrainLightMap_LoadParameters (VA 0x004F86E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TerrainLightMap_LoadParameters - 0x004F86E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F86E0-TerrainLightMap_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TerrainLightMap_LoadParameters.h"
 int32_t TerrainLightMap_LoadParameters(void* context)
 

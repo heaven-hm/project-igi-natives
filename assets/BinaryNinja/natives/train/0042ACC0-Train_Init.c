@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Train_Init (VA 0x0042ACC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Train_Init - 0x0042ACC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042ACC0-Train_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Train_Init.h"
 int32_t* Train_Init()
 

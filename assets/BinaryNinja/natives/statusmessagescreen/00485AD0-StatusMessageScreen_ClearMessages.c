@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessageScreen_ClearMessages (VA 0x00485AD0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: StatusMessageScreen_ClearMessages - 0x00485AD0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485AD0-StatusMessageScreen_ClearMessages.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessageScreen_ClearMessages.h"
 void StatusMessageScreen_ClearMessages()
 

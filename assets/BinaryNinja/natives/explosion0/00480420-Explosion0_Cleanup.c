@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Explosion0_Cleanup (VA 0x00480420; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Explosion0_Cleanup - 0x00480420 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00480420-Explosion0_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Explosion0_Cleanup.h"
 int32_t Explosion0_Cleanup(int32_t context)
 

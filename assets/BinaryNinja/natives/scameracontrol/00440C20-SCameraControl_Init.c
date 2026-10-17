@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCameraControl_Init (VA 0x00440C20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SCameraControl_Init - 0x00440C20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440C20-SCameraControl_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCameraControl_Init.h"
 int32_t* SCameraControl_Init()
 

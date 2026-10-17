@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_Update (VA 0x0041EA70; static CFG gate PASS, CFG score 0.922).
+// IGI native provenance: ListBox_Update - 0x0041EA70 - CFG score 92.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041EA70-ListBox_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_Update.h"
 int32_t ListBox_Update(void* context, int32_t param_2)
 

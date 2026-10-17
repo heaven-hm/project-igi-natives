@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_TriggerMuzzleFlash_3 (VA 0x005309C0; static CFG gate FAIL, CFG score 0.597).
+// IGI native provenance: Particle_TriggerMuzzleFlash_3 - 0x005309C0 - CFG score 59.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 005309C0-Particle_TriggerMuzzleFlash_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_TriggerMuzzleFlash_3.h"
 int32_t Particle_TriggerMuzzleFlash_3()
 

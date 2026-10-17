@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineWeaponType (VA 0x00413F90; static CFG gate PASS, CFG score 0.994).
+// IGI native provenance: DefineWeaponType - 0x00413F90 - CFG score 99.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00413F90-DefineWeaponType.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineWeaponType.h"
 int32_t DefineWeaponType(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , long double param_8 , int32_t param_9, float param_10 )
 

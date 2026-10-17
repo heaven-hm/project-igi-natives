@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SlideBar_Init (VA 0x0041F340; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SlideBar_Init - 0x0041F340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041F340-SlideBar_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SlideBar_Init.h"
 int32_t* SlideBar_Init()
 

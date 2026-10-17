@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Create_TerrainTileMap (VA 0x004C6760; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Create_TerrainTileMap - 0x004C6760 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C6760-Create_TerrainTileMap.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Create_TerrainTileMap.h"
 int32_t Create_TerrainTileMap(int32_t context, float param_2 )
 

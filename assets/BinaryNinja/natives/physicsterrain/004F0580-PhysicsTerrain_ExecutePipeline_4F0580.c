@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_ExecutePipeline_4F0580 (VA 0x004F0580; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_ExecutePipeline_4F0580 - 0x004F0580 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0580-PhysicsTerrain_ExecutePipeline_4F0580.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_ExecutePipeline_4F0580.h"
 
 void* PhysicsTerrain_ExecutePipeline_4F0580(void* context)

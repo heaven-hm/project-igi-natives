@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyLineFilter_17 (VA 0x004A9A41; static CFG gate FAIL, CFG score 0.533).
+// IGI native provenance: Camera_ApplyLineFilter_17 - 0x004A9A41 - CFG score 53.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004A9A41-Camera_ApplyLineFilter_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyLineFilter_17.h"
 int32_t Camera_ApplyLineFilter_17(void* context , long double param_2 ) {
     *(context - 0x90) = 0xfe;

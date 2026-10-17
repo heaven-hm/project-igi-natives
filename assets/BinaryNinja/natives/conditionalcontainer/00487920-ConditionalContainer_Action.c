@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ConditionalContainer_Action (VA 0x00487920; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ConditionalContainer_Action - 0x00487920 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00487920-ConditionalContainer_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ConditionalContainer_Action.h"
 int32_t ConditionalContainer_Action(void* context)
 

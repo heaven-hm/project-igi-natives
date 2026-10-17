@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuText_Setup (VA 0x00421130; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuText_Setup - 0x00421130 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00421130-MenuText_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuText_Setup.h"
 int32_t MenuText_Setup(int32_t context)
 

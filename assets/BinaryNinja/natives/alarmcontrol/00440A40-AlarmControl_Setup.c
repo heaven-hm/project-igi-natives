@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmControl_Setup (VA 0x00440A40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmControl_Setup - 0x00440A40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440A40-AlarmControl_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmControl_Setup.h"
 int32_t AlarmControl_Setup(void* context)
 

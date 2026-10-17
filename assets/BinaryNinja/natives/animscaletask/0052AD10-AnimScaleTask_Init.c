@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimScaleTask_Init (VA 0x0052AD10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimScaleTask_Init - 0x0052AD10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052AD10-AnimScaleTask_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimScaleTask_Init.h"
 ❓  int32_t* AnimScaleTask_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

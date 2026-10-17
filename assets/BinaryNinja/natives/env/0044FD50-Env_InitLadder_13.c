@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_InitLadder_13 (VA 0x0044FD50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_InitLadder_13 - 0x0044FD50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044FD50-Env_InitLadder_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_InitLadder_13.h"
 int32_t Env_InitLadder_13(int32_t* context)
 

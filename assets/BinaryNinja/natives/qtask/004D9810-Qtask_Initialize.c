@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qtask_Initialize (VA 0x004D9810; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qtask_Initialize - 0x004D9810 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9810-Qtask_Initialize.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qtask_Initialize.h"
 int32_t* Qtask_Initialize()
 

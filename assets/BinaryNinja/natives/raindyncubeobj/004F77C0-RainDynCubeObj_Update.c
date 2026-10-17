@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainDynCubeObj_Update (VA 0x004F77C0; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: RainDynCubeObj_Update - 0x004F77C0 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F77C0-RainDynCubeObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainDynCubeObj_Update.h"
 int32_t** RainDynCubeObj_Update(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BinocularOverlay_Update (VA 0x00472440; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: BinocularOverlay_Update - 0x00472440 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00472440-BinocularOverlay_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BinocularOverlay_Update.h"
 int32_t BinocularOverlay_Update(void* context, void* param_2)
 

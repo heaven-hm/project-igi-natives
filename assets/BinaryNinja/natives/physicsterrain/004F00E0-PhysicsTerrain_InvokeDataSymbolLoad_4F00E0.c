@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_InvokeDataSymbolLoad_4F00E0 (VA 0x004F00E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_InvokeDataSymbolLoad_4F00E0 - 0x004F00E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F00E0-PhysicsTerrain_InvokeDataSymbolLoad_4F00E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_InvokeDataSymbolLoad_4F00E0.h"
 
 int32_t PhysicsTerrain_InvokeDataSymbolLoad_4F00E0(int32_t* context, void* param_2)

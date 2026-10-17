@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplosionObj_Invoke10 (VA 0x004389A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplosionObj_Invoke10 - 0x004389A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004389A0-ExplosionObj_Invoke10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplosionObj_Invoke10.h"
 
 int32_t ExplosionObj_Invoke10(void* context, int32_t param_2)

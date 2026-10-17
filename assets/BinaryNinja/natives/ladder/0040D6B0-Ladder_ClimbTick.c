@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Ladder_ClimbTick (VA 0x0040D6B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Ladder_ClimbTick - 0x0040D6B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040D6B0-Ladder_ClimbTick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Ladder_ClimbTick.h"
 int32_t Ladder_ClimbTick(void* context, void* param_2)
 

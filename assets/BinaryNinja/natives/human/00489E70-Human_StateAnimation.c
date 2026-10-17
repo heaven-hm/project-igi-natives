@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_StateAnimation (VA 0x00489E70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_StateAnimation - 0x00489E70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00489E70-Human_StateAnimation.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_StateAnimation.h"
 int32_t Human_StateAnimation(void* context, int32_t param_2, float param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SkinBones (VA 0x004D0790; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SkinBones - 0x004D0790 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D0790-Render_SkinBones.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SkinBones.h"
 int32_t Render_SkinBones(void* context, int32_t param_2)
 

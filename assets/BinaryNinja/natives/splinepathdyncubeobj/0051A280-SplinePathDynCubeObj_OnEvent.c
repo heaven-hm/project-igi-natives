@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplinePathDynCubeObj_OnEvent (VA 0x0051A280; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: SplinePathDynCubeObj_OnEvent - 0x0051A280 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0051A280-SplinePathDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplinePathDynCubeObj_OnEvent.h"
 int32_t SplinePathDynCubeObj_OnEvent(int32_t context, float param_2, int32_t param_3, float param_4)
 

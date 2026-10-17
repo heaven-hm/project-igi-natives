@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_LocalTexturesSTex (VA 0x004CF790; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_LocalTexturesSTex - 0x004CF790 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CF790-DynObj_LocalTexturesSTex.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_LocalTexturesSTex.h"
 int32_t* DynObj_LocalTexturesSTex(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuScreen_OnEvent (VA 0x00422200; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuScreen_OnEvent - 0x00422200 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422200-MenuScreen_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuScreen_OnEvent.h"
 int32_t MenuScreen_OnEvent(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunDRAGUNOV_LoadParameters (VA 0x00472E50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunDRAGUNOV_LoadParameters - 0x00472E50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00472E50-GunDRAGUNOV_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunDRAGUNOV_LoadParameters.h"
 void* GunDRAGUNOV_LoadParameters(float* context, void* param_2)
 

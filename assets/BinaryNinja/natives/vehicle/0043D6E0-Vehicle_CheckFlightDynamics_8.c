@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_CheckFlightDynamics_8 (VA 0x0043D6E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_CheckFlightDynamics_8 - 0x0043D6E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043D6E0-Vehicle_CheckFlightDynamics_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_CheckFlightDynamics_8.h"
 float Vehicle_CheckFlightDynamics_8(float context) {
     float source_val = context;

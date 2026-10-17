@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponGun_GetContext_4789B0 (VA 0x004789B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponGun_GetContext_4789B0 - 0x004789B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004789B0-WeaponGun_GetContext_4789B0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_GetContext_4789B0.h"
 
 int32_t* WeaponGun_GetContext_4789B0(int32_t* context)

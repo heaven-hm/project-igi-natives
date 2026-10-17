@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_DeleteHandler (VA 0x004F4170; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_DeleteHandler - 0x004F4170 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4170-Vehicle_DeleteHandler.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_DeleteHandler.h"
 
 void Vehicle_DeleteHandler() {

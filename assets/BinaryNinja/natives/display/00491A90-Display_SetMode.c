@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetMode (VA 0x00491A90; static CFG gate PASS, CFG score 0.899).
+// IGI native provenance: Display_SetMode - 0x00491A90 - CFG score 89.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491A90-Display_SetMode.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetMode.h"
 int32_t Display_SetMode(void* context)
 

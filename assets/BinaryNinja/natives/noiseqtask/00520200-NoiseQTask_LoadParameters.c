@@ -1,4 +1,5 @@
-// Original IGI.EXE function: NoiseQTask_LoadParameters (VA 0x00520200; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: NoiseQTask_LoadParameters - 0x00520200 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00520200-NoiseQTask_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "NoiseQTask_LoadParameters.h"
 int32_t NoiseQTask_LoadParameters(void* context)
 

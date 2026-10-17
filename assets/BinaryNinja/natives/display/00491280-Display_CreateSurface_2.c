@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CreateSurface_2 (VA 0x00491280; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Display_CreateSurface_2 - 0x00491280 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491280-Display_CreateSurface_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CreateSurface_2.h"
 char* Display_CreateSurface_2(char* context, int32_t* param_2)
 

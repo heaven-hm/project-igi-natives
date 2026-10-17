@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_CalculateSplineLength_13 (VA 0x0050BF20; static CFG gate FAIL, CFG score 0.754).
+// IGI native provenance: Physics_CalculateSplineLength_13 - 0x0050BF20 - CFG score 75.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0050BF20-Physics_CalculateSplineLength_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_CalculateSplineLength_13.h"
 int32_t Physics_CalculateSplineLength_13(float context , int32_t param_2 , float param_3 , int32_t param_4 , float param_5 , int32_t param_6 , int32_t param_7, int32_t param_8, int32_t param_9)
 

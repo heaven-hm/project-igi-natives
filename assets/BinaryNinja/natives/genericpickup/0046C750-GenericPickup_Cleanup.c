@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPickup_Cleanup (VA 0x0046C750; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericPickup_Cleanup - 0x0046C750 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046C750-GenericPickup_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPickup_Cleanup.h"
 int32_t GenericPickup_Cleanup(float context, int32_t param_2)
 

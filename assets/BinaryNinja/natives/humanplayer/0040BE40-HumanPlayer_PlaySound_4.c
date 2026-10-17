@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_PlaySound_4 (VA 0x0040BE40; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: HumanPlayer_PlaySound_4 - 0x0040BE40 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040BE40-HumanPlayer_PlaySound_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_PlaySound_4.h"
 int32_t HumanPlayer_PlaySound_4(void* context, float param_2)
 

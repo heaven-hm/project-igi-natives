@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Anim_TriggerLoad (VA 0x004EC0C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Anim_TriggerLoad - 0x004EC0C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EC0C0-Anim_TriggerLoad.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Anim_TriggerLoad.h"
 int32_t Anim_TriggerLoad(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerMap_LoadParameters (VA 0x00469740; static CFG gate PASS, CFG score 0.991).
+// IGI native provenance: ComputerMap_LoadParameters - 0x00469740 - CFG score 99.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00469740-ComputerMap_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerMap_LoadParameters.h"
 void* ComputerMap_LoadParameters(void* context)
 

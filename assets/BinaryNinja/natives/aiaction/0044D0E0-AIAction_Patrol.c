@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Patrol (VA 0x0044D0E0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: AIAction_Patrol - 0x0044D0E0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D0E0-AIAction_Patrol.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Patrol.h"
 int32_t AIAction_Patrol(int32_t context, float param_2 )
 

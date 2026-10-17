@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPhysicsObj_Process (VA 0x0043EC80; static CFG gate PASS, CFG score 0.923).
+// IGI native provenance: GenericPhysicsObj_Process - 0x0043EC80 - CFG score 92.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043EC80-GenericPhysicsObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPhysicsObj_Process.h"
 int32_t GenericPhysicsObj_Process(void* context)
 

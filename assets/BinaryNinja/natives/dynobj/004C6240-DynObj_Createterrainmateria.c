@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_Createterrainmateria (VA 0x004C6240; static CFG gate FAIL, CFG score 0.809).
+// IGI native provenance: DynObj_Createterrainmateria - 0x004C6240 - CFG score 80.9% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004C6240-DynObj_Createterrainmateria.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_Createterrainmateria.h"
 void* DynObj_Createterrainmateria(void* context, int32_t param_2)
 

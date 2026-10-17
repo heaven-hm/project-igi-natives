@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SkinBones_12 (VA 0x004DA0A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SkinBones_12 - 0x004DA0A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DA0A0-Render_SkinBones_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SkinBones_12.h"
 int32_t Render_SkinBones_12(void* context, double* param_2, double* param_3, int32_t* param_4, float param_5, int32_t param_6, int32_t param_7, int32_t param_8, int32_t param_9)
 

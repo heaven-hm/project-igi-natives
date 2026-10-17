@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplineObjSegment_Process (VA 0x004E16E0; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: SplineObjSegment_Process - 0x004E16E0 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E16E0-SplineObjSegment_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplineObjSegment_Process.h"
 int32_t* SplineObjSegment_Process(float context, int32_t* param_2)
 

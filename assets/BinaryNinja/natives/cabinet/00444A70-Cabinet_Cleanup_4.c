@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Cabinet_Cleanup_4 (VA 0x00444A70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Cabinet_Cleanup_4 - 0x00444A70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00444A70-Cabinet_Cleanup_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Cabinet_Cleanup_4.h"
 int32_t Cabinet_Cleanup_4(void* context)
 

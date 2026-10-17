@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_Kernel32 (VA 0x004A71A7; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Camera_Kernel32 - 0x004A71A7 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A71A7-Camera_Kernel32.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_Kernel32.h"
 int32_t Camera_Kernel32()
 

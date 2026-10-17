@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_Invoke28 (VA 0x004BD730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_Invoke28 - 0x004BD730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BD730-Qvm_Invoke28.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_Invoke28.h"
 
 int32_t __fastcall(float context )

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_EmitParticles_2 (VA 0x00530630; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Particle_EmitParticles_2 - 0x00530630 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00530630-Particle_EmitParticles_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_EmitParticles_2.h"
 int32_t Particle_EmitParticles_2(int32_t context, int32_t param_2, int16_t param_3, int16_t* param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeMagicObj_LoadParameters (VA 0x0043C1F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplodeMagicObj_LoadParameters - 0x0043C1F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043C1F0-ExplodeMagicObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeMagicObj_LoadParameters.h"
 int32_t ExplodeMagicObj_LoadParameters(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , int32_t* param_6 )
 

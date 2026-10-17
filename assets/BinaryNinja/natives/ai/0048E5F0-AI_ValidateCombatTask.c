@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_ValidateCombatTask (VA 0x0048E5F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_ValidateCombatTask - 0x0048E5F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048E5F0-AI_ValidateCombatTask.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_ValidateCombatTask.h"
 
 int32_t* AI_ValidateCombatTask(void* pThis )

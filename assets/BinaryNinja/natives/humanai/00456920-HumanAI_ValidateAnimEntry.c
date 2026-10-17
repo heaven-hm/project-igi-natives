@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_ValidateAnimEntry (VA 0x00456920; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_ValidateAnimEntry - 0x00456920 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00456920-HumanAI_ValidateAnimEntry.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_ValidateAnimEntry.h"
 
 void* HumanAI_ValidateAnimEntry(void* pThis, void* param)

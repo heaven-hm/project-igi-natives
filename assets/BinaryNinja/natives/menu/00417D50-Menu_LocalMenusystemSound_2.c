@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_LocalMenusystemSound_2 (VA 0x00417D50; static CFG gate PASS, CFG score 0.939).
+// IGI native provenance: Menu_LocalMenusystemSound_2 - 0x00417D50 - CFG score 93.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00417D50-Menu_LocalMenusystemSound_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_LocalMenusystemSound_2.h"
 int32_t Menu_LocalMenusystemSound_2(void* context)
 

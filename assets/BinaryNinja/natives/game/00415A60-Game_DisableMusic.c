@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_DisableMusic (VA 0x00415A60; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Game_DisableMusic - 0x00415A60 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00415A60-Game_DisableMusic.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_DisableMusic.h"
 int32_t Game_DisableMusic(int32_t context)
 

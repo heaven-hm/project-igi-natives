@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_LoadParameters (VA 0x004FB2C0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: PhysicsObj_LoadParameters - 0x004FB2C0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004FB2C0-PhysicsObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_LoadParameters.h"
 int32_t PhysicsObj_LoadParameters(void* context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeObject_Cleanup_3 (VA 0x00482390; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ExplodeObject_Cleanup_3 - 0x00482390 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00482390-ExplodeObject_Cleanup_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeObject_Cleanup_3.h"
 int32_t ExplodeObject_Cleanup_3(float context, void* param_2)
 

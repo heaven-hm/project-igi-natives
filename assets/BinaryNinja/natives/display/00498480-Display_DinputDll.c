@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_DinputDll (VA 0x00498480; static CFG gate PASS, CFG score 0.892).
+// IGI native provenance: Display_DinputDll - 0x00498480 - CFG score 89.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00498480-Display_DinputDll.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_DinputDll.h"
 BOOL Display_DinputDll(int32_t* context, int32_t* param_2)
 

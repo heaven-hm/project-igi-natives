@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Explosion0_Init (VA 0x004801B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Explosion0_Init - 0x004801B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004801B0-Explosion0_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Explosion0_Init.h"
 char* Explosion0_Init()
 

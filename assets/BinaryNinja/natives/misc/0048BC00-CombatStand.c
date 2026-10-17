@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CombatStand (VA 0x0048BC00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CombatStand - 0x0048BC00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048BC00-CombatStand.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatStand.h"
 int32_t* CombatStand(int32_t* context, int32_t* param_2)
 

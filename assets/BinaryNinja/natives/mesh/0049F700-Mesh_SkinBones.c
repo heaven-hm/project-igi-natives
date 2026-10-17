@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mesh_SkinBones (VA 0x0049F700; static CFG gate PASS, CFG score 0.939).
+// IGI native provenance: Mesh_SkinBones - 0x0049F700 - CFG score 93.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049F700-Mesh_SkinBones.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mesh_SkinBones.h"
 int32_t* Mesh_SkinBones(int32_t* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CloseDevice (VA 0x00490230; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: Display_CloseDevice - 0x00490230 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00490230-Display_CloseDevice.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CloseDevice.h"
 int32_t Display_CloseDevice()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SwapBuffers_6 (VA 0x004922B0; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Display_SwapBuffers_6 - 0x004922B0 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004922B0-Display_SwapBuffers_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SwapBuffers_6.h"
 int32_t __stdcall Display_SwapBuffers_6(char* context, int32_t* param_2 , int32_t* param_3)
 

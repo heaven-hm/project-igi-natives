@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_KneelFire (VA 0x0048DCD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_KneelFire - 0x0048DCD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048DCD0-FX_KneelFire.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_KneelFire.h"
 bool FX_KneelFire(void* context)
 

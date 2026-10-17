@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ClipMesh_7 (VA 0x004D4710; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_ClipMesh_7 - 0x004D4710 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D4710-Render_ClipMesh_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ClipMesh_7.h"
 int32_t Render_ClipMesh_7()
 

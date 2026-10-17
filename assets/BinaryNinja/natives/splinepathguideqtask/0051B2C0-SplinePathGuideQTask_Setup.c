@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplinePathGuideQTask_Setup (VA 0x0051B2C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SplinePathGuideQTask_Setup - 0x0051B2C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051B2C0-SplinePathGuideQTask_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplinePathGuideQTask_Setup.h"
 void* SplinePathGuideQTask_Setup(void* context)
 

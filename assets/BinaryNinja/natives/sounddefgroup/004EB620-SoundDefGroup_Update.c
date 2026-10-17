@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefGroup_Update (VA 0x004EB620; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefGroup_Update - 0x004EB620 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EB620-SoundDefGroup_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefGroup_Update.h"
 int32_t SoundDefGroup_Update(void* context, void** param_2)
 

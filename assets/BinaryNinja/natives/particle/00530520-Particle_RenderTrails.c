@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_RenderTrails (VA 0x00530520; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Particle_RenderTrails - 0x00530520 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00530520-Particle_RenderTrails.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_RenderTrails.h"
 int16_t* Particle_RenderTrails(int32_t context, int16_t param_2, int16_t param_3)
 

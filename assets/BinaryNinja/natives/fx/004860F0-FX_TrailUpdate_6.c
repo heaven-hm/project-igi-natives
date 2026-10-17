@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_TrailUpdate_6 (VA 0x004860F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_TrailUpdate_6 - 0x004860F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004860F0-FX_TrailUpdate_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_TrailUpdate_6.h"
 int32_t FX_TrailUpdate_6(int32_t context, int32_t param_2, float param_3, float param_4)
 

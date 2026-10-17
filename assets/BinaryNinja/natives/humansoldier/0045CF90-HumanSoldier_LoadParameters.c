@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldier_LoadParameters (VA 0x0045CF90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanSoldier_LoadParameters - 0x0045CF90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045CF90-HumanSoldier_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldier_LoadParameters.h"
 int32_t HumanSoldier_LoadParameters(void* context)
 

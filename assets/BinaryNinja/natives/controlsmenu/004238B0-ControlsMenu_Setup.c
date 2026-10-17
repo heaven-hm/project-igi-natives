@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_Setup (VA 0x004238B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_Setup - 0x004238B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004238B0-ControlsMenu_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_Setup.h"
 int32_t ControlsMenu_Setup(int32_t context)
 

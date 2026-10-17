@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_StopSoundSample (VA 0x004E0E20; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: SoundSys_StopSoundSample - 0x004E0E20 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E0E20-SoundSys_StopSoundSample.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_StopSoundSample.h"
 int32_t SoundSys_StopSoundSample(int32_t context, int32_t param_2, int32_t* param_3, float param_4, int32_t* param_5, float param_6)
 

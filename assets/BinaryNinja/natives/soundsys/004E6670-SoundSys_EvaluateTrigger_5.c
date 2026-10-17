@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_EvaluateTrigger_5 (VA 0x004E6670; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_EvaluateTrigger_5 - 0x004E6670 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E6670-SoundSys_EvaluateTrigger_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_EvaluateTrigger_5.h"
 int32_t SoundSys_EvaluateTrigger_5()
 

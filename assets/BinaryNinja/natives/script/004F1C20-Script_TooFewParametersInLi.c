@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_TooFewParametersInLi (VA 0x004F1C20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_TooFewParametersInLi - 0x004F1C20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F1C20-Script_TooFewParametersInLi.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_TooFewParametersInLi.h"
 void Script_TooFewParametersInLi(int32_t* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPhysicsMagicObj_Process (VA 0x0043E670; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericPhysicsMagicObj_Process - 0x0043E670 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043E670-GenericPhysicsMagicObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPhysicsMagicObj_Process.h"
 void* GenericPhysicsMagicObj_Process(void* context, int32_t* param_2)
 

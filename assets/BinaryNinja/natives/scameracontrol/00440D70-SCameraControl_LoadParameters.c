@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCameraControl_LoadParameters (VA 0x00440D70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SCameraControl_LoadParameters - 0x00440D70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440D70-SCameraControl_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCameraControl_LoadParameters.h"
 char SCameraControl_LoadParameters(long double context , void* param_2)
 

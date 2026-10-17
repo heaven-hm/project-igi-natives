@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObjAttachedToBone_Init (VA 0x00504C50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditRigidObjAttachedToBone_Init - 0x00504C50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00504C50-EditRigidObjAttachedToBone_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObjAttachedToBone_Init.h"
 int32_t* EditRigidObjAttachedToBone_Init()
 

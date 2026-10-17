@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsGetResolution (VA 0x004045B0; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Config_GraphicOptionsGetResolution - 0x004045B0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004045B0-Config_GraphicOptionsGetResolution.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsGetResolution.h"
 int32_t Config_GraphicOptionsGetResolution(int32_t context, float param_2 )
 

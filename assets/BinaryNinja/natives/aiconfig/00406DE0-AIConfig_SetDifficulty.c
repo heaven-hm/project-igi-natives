@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIConfig_SetDifficulty (VA 0x00406DE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIConfig_SetDifficulty - 0x00406DE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406DE0-AIConfig_SetDifficulty.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_SetDifficulty.h"
 int32_t AIConfig_SetDifficulty()
 

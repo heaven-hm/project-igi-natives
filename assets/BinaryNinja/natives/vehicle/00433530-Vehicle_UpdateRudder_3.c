@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_UpdateRudder_3 (VA 0x00433530; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_UpdateRudder_3 - 0x00433530 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00433530-Vehicle_UpdateRudder_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_UpdateRudder_3.h"
 float Vehicle_UpdateRudder_3(float context) {
     float result = context;

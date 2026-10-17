@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetGammaRamp_16 (VA 0x00498950; static CFG gate FAIL, CFG score 0.633).
+// IGI native provenance: Display_SetGammaRamp_16 - 0x00498950 - CFG score 63.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00498950-Display_SetGammaRamp_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetGammaRamp_16.h"
 int32_t Display_SetGammaRamp_16()
 

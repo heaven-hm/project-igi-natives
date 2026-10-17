@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SaveSoundOptions (VA 0x004058A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_SaveSoundOptions - 0x004058A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004058A0-Config_SaveSoundOptions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SaveSoundOptions.h"
 int32_t Config_SaveSoundOptions()
 

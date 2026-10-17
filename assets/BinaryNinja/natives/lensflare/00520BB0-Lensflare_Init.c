@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Lensflare_Init (VA 0x00520BB0; static CFG gate PASS, CFG score 0.982).
+// IGI native provenance: Lensflare_Init - 0x00520BB0 - CFG score 98.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520BB0-Lensflare_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Lensflare_Init.h"
 int32_t Lensflare_Init()
 

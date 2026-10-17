@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RigidDynCubeObj_Cleanup_2 (VA 0x004C4660; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RigidDynCubeObj_Cleanup_2 - 0x004C4660 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C4660-RigidDynCubeObj_Cleanup_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RigidDynCubeObj_Cleanup_2.h"
 void RigidDynCubeObj_Cleanup_2(int32_t* context, float param_2)
 

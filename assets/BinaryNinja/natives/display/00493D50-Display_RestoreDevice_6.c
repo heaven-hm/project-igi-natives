@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_RestoreDevice_6 (VA 0x00493D50; static CFG gate PASS, CFG score 0.955).
+// IGI native provenance: Display_RestoreDevice_6 - 0x00493D50 - CFG score 95.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00493D50-Display_RestoreDevice_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_RestoreDevice_6.h"
 int32_t Display_RestoreDevice_6(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Smoke_Process (VA 0x00438000; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: Smoke_Process - 0x00438000 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00438000-Smoke_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Smoke_Process.h"
 void* Smoke_Process(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_Slidevert (VA 0x004201E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_Slidevert - 0x004201E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004201E0-Menu_Slidevert.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_Slidevert.h"
 struct status_msg* Menu_Slidevert(void* context, int32_t param_2)
 

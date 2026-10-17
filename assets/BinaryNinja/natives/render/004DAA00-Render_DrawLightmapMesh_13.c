@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawLightmapMesh_13 (VA 0x004DAA00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawLightmapMesh_13 - 0x004DAA00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DAA00-Render_DrawLightmapMesh_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawLightmapMesh_13.h"
 int32_t Render_DrawLightmapMesh_13()
 

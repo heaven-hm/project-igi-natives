@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObjType_ParseConfigFile (VA 0x004EDFE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObjType_ParseConfigFile - 0x004EDFE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDFE0-PhysicsObjType_ParseConfigFile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObjType_ParseConfigFile.h"
 char* PhysicsObjType_ParseConfigFile(char* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_LoadParameters (VA 0x004DD1C0; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Sector_LoadParameters - 0x004DD1C0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DD1C0-Sector_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_LoadParameters.h"
 int32_t Sector_LoadParameters(void* context)
 

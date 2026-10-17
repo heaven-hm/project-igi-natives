@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_UpdateForces (VA 0x00502200; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Physics_UpdateForces - 0x00502200 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00502200-Physics_UpdateForces.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_UpdateForces.h"
 int32_t* Physics_UpdateForces(int32_t context, int32_t param_2, int32_t param_3)
 

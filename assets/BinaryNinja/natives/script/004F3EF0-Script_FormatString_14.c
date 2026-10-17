@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_14 (VA 0x004F3EF0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Script_FormatString_14 - 0x004F3EF0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F3EF0-Script_FormatString_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_14.h"
 void* const Script_FormatString_14(int32_t context, int32_t param_2)
 

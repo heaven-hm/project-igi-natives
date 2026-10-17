@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Frames_Get (VA 0x00402870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Frames_Get - 0x00402870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402870-Frames_Get.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Frames_Get.h"
 int32_t Frames_Get()
 

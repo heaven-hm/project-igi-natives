@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CheckCapabilities_12 (VA 0x00497450; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_CheckCapabilities_12 - 0x00497450 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00497450-Display_CheckCapabilities_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CheckCapabilities_12.h"
 uint32_t Display_CheckCapabilities_12(char* context)
 

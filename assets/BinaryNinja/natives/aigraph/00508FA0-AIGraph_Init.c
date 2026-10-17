@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIGraph_Init (VA 0x00508FA0; static CFG gate PASS, CFG score 0.992).
+// IGI native provenance: AIGraph_Init - 0x00508FA0 - CFG score 99.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00508FA0-AIGraph_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIGraph_Init.h"
 void* AIGraph_Init()
 

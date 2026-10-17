@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSysController_Init (VA 0x004E6070; static CFG gate PASS, CFG score 0.975).
+// IGI native provenance: SoundSysController_Init - 0x004E6070 - CFG score 97.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E6070-SoundSysController_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSysController_Init.h"
 int32_t SoundSysController_Init()
 

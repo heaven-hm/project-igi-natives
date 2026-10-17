@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QScript_ParseAndAssemble (VA 0x004BBCB0; static CFG gate PASS, CFG score 0.965).
+// IGI native provenance: QScript_ParseAndAssemble - 0x004BBCB0 - CFG score 96.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BBCB0-QScript_ParseAndAssemble.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QScript_ParseAndAssemble.h"
 int32_t QScript_ParseAndAssemble(void* context, void* param_2)
 

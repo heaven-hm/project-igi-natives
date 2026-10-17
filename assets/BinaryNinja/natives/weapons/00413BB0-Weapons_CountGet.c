@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapons_CountGet (VA 0x00413BB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapons_CountGet - 0x00413BB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00413BB0-Weapons_CountGet.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapons_CountGet.h"
 int32_t Weapons_CountGet()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TextureModifier_Init_2 (VA 0x00505F20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TextureModifier_Init_2 - 0x00505F20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505F20-TextureModifier_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TextureModifier_Init_2.h"
 
 void* TextureModifier_Init_2(void* pThis)

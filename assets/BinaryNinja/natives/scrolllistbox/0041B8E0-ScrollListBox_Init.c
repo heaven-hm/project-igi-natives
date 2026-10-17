@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ScrollListBox_Init (VA 0x0041B8E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ScrollListBox_Init - 0x0041B8E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041B8E0-ScrollListBox_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ScrollListBox_Init.h"
 ❓  int32_t* ScrollListBox_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_VisibleCubesD (VA 0x004F7990; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Script_VisibleCubesD - 0x004F7990 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7990-Script_VisibleCubesD.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_VisibleCubesD.h"
 int32_t Script_VisibleCubesD(void* context)
 

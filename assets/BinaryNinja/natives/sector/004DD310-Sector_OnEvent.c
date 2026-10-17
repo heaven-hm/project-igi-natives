@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_OnEvent (VA 0x004DD310; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sector_OnEvent - 0x004DD310 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DD310-Sector_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_OnEvent.h"
 float Sector_OnEvent(float context) {
     float result = context;

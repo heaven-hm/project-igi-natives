@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusScreen_OnEvent1 (VA 0x00486CD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusScreen_OnEvent1 - 0x00486CD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00486CD0-StatusScreen_OnEvent1.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusScreen_OnEvent1.h"
 
 int32_t StatusScreen_OnEvent1(void* pThis)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Setactivematerial (VA 0x00407D60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Setactivematerial - 0x00407D60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00407D60-HumanPlayer_Setactivematerial.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Setactivematerial.h"
 void* HumanPlayer_Setactivematerial()
 

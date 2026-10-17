@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Fence_Process (VA 0x0043FE50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Fence_Process - 0x0043FE50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043FE50-Fence_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Fence_Process.h"
 char* Fence_Process(void* context)
 

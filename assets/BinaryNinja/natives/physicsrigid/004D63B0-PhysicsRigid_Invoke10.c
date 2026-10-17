@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsRigid_Invoke10 (VA 0x004D63B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsRigid_Invoke10 - 0x004D63B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D63B0-PhysicsRigid_Invoke10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_Invoke10.h"
 
 int32_t PhysicsRigid_Invoke10(float* context)

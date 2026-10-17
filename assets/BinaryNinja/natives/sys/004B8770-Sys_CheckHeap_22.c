@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CheckHeap_22 (VA 0x004B8770; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_CheckHeap_22 - 0x004B8770 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B8770-Sys_CheckHeap_22.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CheckHeap_22.h"
 int32_t Sys_CheckHeap_22(int32_t context)
 

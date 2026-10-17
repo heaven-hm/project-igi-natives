@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Bone_PaletteSkinner (VA 0x0049B700; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Bone_PaletteSkinner - 0x0049B700 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049B700-Bone_PaletteSkinner.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Bone_PaletteSkinner.h"
 int32_t Bone_PaletteSkinner(void* context, int32_t param_2, float param_3, int32_t param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_GrenadeBnc1 (VA 0x00476CC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_GrenadeBnc1 - 0x00476CC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476CC0-Weapon_GrenadeBnc1.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_GrenadeBnc1.h"
 uint32_t Weapon_GrenadeBnc1(void* context)
 

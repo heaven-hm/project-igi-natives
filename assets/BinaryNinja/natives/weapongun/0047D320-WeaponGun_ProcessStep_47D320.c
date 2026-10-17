@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponGun_ProcessStep_47D320 (VA 0x0047D320; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponGun_ProcessStep_47D320 - 0x0047D320 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047D320-WeaponGun_ProcessStep_47D320.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_ProcessStep_47D320.h"
 
 int32_t WeaponGun_ProcessStep_47D320(void* context)

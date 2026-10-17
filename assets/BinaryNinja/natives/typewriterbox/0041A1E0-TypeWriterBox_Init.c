@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TypeWriterBox_Init (VA 0x0041A1E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TypeWriterBox_Init - 0x0041A1E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041A1E0-TypeWriterBox_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TypeWriterBox_Init.h"
 int32_t* TypeWriterBox_Init()
 

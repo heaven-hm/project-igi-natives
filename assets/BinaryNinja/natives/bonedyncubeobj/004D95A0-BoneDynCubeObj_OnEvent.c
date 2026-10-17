@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneDynCubeObj_OnEvent (VA 0x004D95A0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: BoneDynCubeObj_OnEvent - 0x004D95A0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004D95A0-BoneDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneDynCubeObj_OnEvent.h"
 int32_t BoneDynCubeObj_OnEvent(void* context, double* param_2)
 

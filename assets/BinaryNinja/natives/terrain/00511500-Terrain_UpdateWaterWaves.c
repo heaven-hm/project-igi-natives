@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_UpdateWaterWaves (VA 0x00511500; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Terrain_UpdateWaterWaves - 0x00511500 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00511500-Terrain_UpdateWaterWaves.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_UpdateWaterWaves.h"
 int32_t Terrain_UpdateWaterWaves()
 

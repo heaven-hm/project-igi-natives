@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RadarDish_Setup (VA 0x00448CF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RadarDish_Setup - 0x00448CF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00448CF0-RadarDish_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RadarDish_Setup.h"
 int32_t* RadarDish_Setup(void* context)
 

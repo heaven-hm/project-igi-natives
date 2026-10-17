@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIConfig_NoHumanaiconfigTaskF (VA 0x00406F70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIConfig_NoHumanaiconfigTaskF - 0x00406F70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406F70-AIConfig_NoHumanaiconfigTaskF.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_NoHumanaiconfigTaskF.h"
 int32_t AIConfig_NoHumanaiconfigTaskF(void* context)
 

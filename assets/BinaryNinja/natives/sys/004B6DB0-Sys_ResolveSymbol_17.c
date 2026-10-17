@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ResolveSymbol_17 (VA 0x004B6DB0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Sys_ResolveSymbol_17 - 0x004B6DB0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B6DB0-Sys_ResolveSymbol_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ResolveSymbol_17.h"
 int32_t* Sys_ResolveSymbol_17(int32_t* context)
 

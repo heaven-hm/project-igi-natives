@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIConfig_InitItem (VA 0x00406D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIConfig_InitItem - 0x00406D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406D90-AIConfig_InitItem.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_InitItem.h"
 uint32_t AIConfig_InitItem()
 

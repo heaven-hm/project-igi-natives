@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_SolveConstraints_13 (VA 0x0050E7F0; static CFG gate FAIL, CFG score 0.741).
+// IGI native provenance: Physics_SolveConstraints_13 - 0x0050E7F0 - CFG score 74.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0050E7F0-Physics_SolveConstraints_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_SolveConstraints_13.h"
 int32_t Physics_SolveConstraints_13(void* context)
 

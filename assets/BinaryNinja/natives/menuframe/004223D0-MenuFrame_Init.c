@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuFrame_Init (VA 0x004223D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuFrame_Init - 0x004223D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004223D0-MenuFrame_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuFrame_Init.h"
 int32_t* MenuFrame_Init()
 

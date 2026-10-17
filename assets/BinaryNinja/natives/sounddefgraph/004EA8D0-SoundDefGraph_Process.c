@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefGraph_Process (VA 0x004EA8D0; static CFG gate FAIL, CFG score 0.744).
+// IGI native provenance: SoundDefGraph_Process - 0x004EA8D0 - CFG score 74.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004EA8D0-SoundDefGraph_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefGraph_Process.h"
 int32_t SoundDefGraph_Process(void* context, int32_t* param_2)
 

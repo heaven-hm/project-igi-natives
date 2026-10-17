@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_InvokeOnEvent (VA 0x00424280; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_InvokeOnEvent - 0x00424280 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00424280-MenuUI_InvokeOnEvent.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_InvokeOnEvent.h"
 
 void* MenuUI_InvokeOnEvent(void* context)

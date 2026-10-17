@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Frames_GetUpdateCounter (VA 0x004028B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Frames_GetUpdateCounter - 0x004028B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004028B0-Frames_GetUpdateCounter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Frames_GetUpdateCounter.h"
 uint32_t Frames_GetUpdateCounter()
 

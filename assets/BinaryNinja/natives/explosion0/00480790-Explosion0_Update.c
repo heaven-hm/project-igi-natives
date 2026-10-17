@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Explosion0_Update (VA 0x00480790; static CFG gate PASS, CFG score 0.897).
+// IGI native provenance: Explosion0_Update - 0x00480790 - CFG score 89.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00480790-Explosion0_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Explosion0_Update.h"
 int32_t Explosion0_Update(float context)
 

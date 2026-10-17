@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_SimulateRigidBody_4 (VA 0x00505920; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_SimulateRigidBody_4 - 0x00505920 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505920-Physics_SimulateRigidBody_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_SimulateRigidBody_4.h"
 void* const Physics_SimulateRigidBody_4(int32_t context, int32_t param_2, void* param_3, void* param_4, int32_t param_5, int32_t param_6)
 

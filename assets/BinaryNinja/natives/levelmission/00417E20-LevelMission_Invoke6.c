@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelMission_Invoke6 (VA 0x00417E20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelMission_Invoke6 - 0x00417E20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00417E20-LevelMission_Invoke6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelMission_Invoke6.h"
 
 int32_t LevelMission_Invoke6(int32_t* context, void* param_2)

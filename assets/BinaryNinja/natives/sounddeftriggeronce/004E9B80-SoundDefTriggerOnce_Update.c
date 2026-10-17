@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefTriggerOnce_Update (VA 0x004E9B80; static CFG gate FAIL, CFG score 0.714).
+// IGI native provenance: SoundDefTriggerOnce_Update - 0x004E9B80 - CFG score 71.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E9B80-SoundDefTriggerOnce_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefTriggerOnce_Update.h"
 int32_t SoundDefTriggerOnce_Update(void* context, int32_t* param_2)
 

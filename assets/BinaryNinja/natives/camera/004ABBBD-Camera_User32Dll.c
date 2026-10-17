@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_User32Dll (VA 0x004ABBBD; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Camera_User32Dll - 0x004ABBBD - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004ABBBD-Camera_User32Dll.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_User32Dll.h"
 int32_t Camera_User32Dll(int32_t context, int32_t param_2, int32_t param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_WallSweep (VA 0x00461A70; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Human_WallSweep - 0x00461A70 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00461A70-Human_WallSweep.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_WallSweep.h"
 int32_t Human_WallSweep(void* context, double* param_2, int32_t* param_3, float* param_4, int32_t* param_5)
 

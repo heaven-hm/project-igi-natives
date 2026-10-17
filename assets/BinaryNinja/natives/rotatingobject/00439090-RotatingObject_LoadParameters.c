@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RotatingObject_LoadParameters (VA 0x00439090; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: RotatingObject_LoadParameters - 0x00439090 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00439090-RotatingObject_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RotatingObject_LoadParameters.h"
 void* RotatingObject_LoadParameters(long double context , float param_2)
 

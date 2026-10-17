@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CombatTarget_23 (VA 0x00464BD0; static CFG gate PASS, CFG score 0.951).
+// IGI native provenance: AI_CombatTarget_23 - 0x00464BD0 - CFG score 95.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00464BD0-AI_CombatTarget_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CombatTarget_23.h"
 int32_t AI_CombatTarget_23(void* context, void* param_2)
 

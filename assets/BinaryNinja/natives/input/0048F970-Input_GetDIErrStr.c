@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Input_GetDIErrStr (VA 0x0048F970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Input_GetDIErrStr - 0x0048F970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F970-Input_GetDIErrStr.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Input_GetDIErrStr.h"
 
 LRESULT __stdcall Input_GetDIErrStr(HWND pThis, uint32_t param, WPARAM flags, LPARAM param_4)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetSecondaryViewGamma (VA 0x0044DF40; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetSecondaryViewGamma - 0x0044DF40 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044DF40-AIFunction_SetSecondaryViewGamma.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetSecondaryViewGamma.h"
 int32_t AIFunction_SetSecondaryViewGamma(long double context , int32_t param_2, float param_3 )
 

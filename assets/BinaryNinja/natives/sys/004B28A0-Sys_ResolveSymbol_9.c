@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ResolveSymbol_9 (VA 0x004B28A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_ResolveSymbol_9 - 0x004B28A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B28A0-Sys_ResolveSymbol_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ResolveSymbol_9.h"
 int32_t Sys_ResolveSymbol_9(double context) {
     long double fpu7 = context;

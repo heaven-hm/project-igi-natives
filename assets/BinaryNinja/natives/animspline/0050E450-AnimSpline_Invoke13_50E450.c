@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimSpline_Invoke13_50E450 (VA 0x0050E450; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimSpline_Invoke13_50E450 - 0x0050E450 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050E450-AnimSpline_Invoke13_50E450.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_Invoke13_50E450.h"
 
 void AnimSpline_Invoke13_50E450(int32_t* context, int32_t* param_2)

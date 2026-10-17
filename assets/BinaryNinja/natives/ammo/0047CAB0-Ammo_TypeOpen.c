@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Ammo_TypeOpen (VA 0x0047CAB0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Ammo_TypeOpen - 0x0047CAB0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0047CAB0-Ammo_TypeOpen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Ammo_TypeOpen.h"
 int32_t Ammo_TypeOpen()
 

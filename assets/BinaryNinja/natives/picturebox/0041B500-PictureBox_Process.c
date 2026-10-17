@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PictureBox_Process (VA 0x0041B500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PictureBox_Process - 0x0041B500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041B500-PictureBox_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PictureBox_Process.h"
 char* PictureBox_Process(void* context)
 

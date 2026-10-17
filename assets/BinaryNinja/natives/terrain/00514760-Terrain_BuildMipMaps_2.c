@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_BuildMipMaps_2 (VA 0x00514760; static CFG gate FAIL, CFG score 0.731).
+// IGI native provenance: Terrain_BuildMipMaps_2 - 0x00514760 - CFG score 73.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00514760-Terrain_BuildMipMaps_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_BuildMipMaps_2.h"
 uint32_t Terrain_BuildMipMaps_2(char context , char param_2 , int32_t param_3 , int32_t* param_4 )
 

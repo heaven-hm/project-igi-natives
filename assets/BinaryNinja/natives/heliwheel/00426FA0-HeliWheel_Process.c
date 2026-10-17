@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HeliWheel_Process (VA 0x00426FA0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: HeliWheel_Process - 0x00426FA0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00426FA0-HeliWheel_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HeliWheel_Process.h"
 int32_t HeliWheel_Process(float context, int32_t* param_2)
 

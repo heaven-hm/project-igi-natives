@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CaFCgF (VA 0x004522D0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: AI_CaFCgF - 0x004522D0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004522D0-AI_CaFCgF.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CaFCgF.h"
 int32_t AI_CaFCgF(long double context , long double param_2 , void* param_3, int32_t param_4, float param_5, char param_6)
 

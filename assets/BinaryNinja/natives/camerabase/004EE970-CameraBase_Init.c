@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraBase_Init (VA 0x004EE970; static CFG gate PASS, CFG score 0.999).
+// IGI native provenance: CameraBase_Init - 0x004EE970 - CFG score 99.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EE970-CameraBase_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraBase_Init.h"
 int32_t* CameraBase_Init()
 

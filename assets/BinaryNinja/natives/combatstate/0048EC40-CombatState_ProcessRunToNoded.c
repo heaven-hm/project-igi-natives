@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CombatState_ProcessRunToNoded (VA 0x0048EC40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CombatState_ProcessRunToNoded - 0x0048EC40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048EC40-CombatState_ProcessRunToNoded.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_ProcessRunToNoded.h"
 
 void* CombatState_ProcessRunToNoded(void* context)

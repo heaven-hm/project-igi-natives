@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_MenuK01D (VA 0x0041D6A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_MenuK01D - 0x0041D6A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041D6A0-Menu_MenuK01D.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_MenuK01D.h"
 int32_t Menu_MenuK01D(void* context, int32_t param_2, char param_3)
 

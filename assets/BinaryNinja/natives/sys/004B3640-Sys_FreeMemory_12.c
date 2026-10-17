@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_FreeMemory_12 (VA 0x004B3640; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Sys_FreeMemory_12 - 0x004B3640 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B3640-Sys_FreeMemory_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_FreeMemory_12.h"
 int32_t Sys_FreeMemory_12(int32_t context, float* param_2, float param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_Goplayer (VA 0x00405C90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_Goplayer - 0x00405C90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405C90-Config_Goplayer.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_Goplayer.h"
 int32_t Config_Goplayer(int32_t* context, int32_t param_2)
 

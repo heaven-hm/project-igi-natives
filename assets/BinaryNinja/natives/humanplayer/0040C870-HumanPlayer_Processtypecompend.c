@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Processtypecompend (VA 0x0040C870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Processtypecompend - 0x0040C870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040C870-HumanPlayer_Processtypecompend.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Processtypecompend.h"
 
 int32_t HumanPlayer_Processtypecompend(void* context, void* param_2)

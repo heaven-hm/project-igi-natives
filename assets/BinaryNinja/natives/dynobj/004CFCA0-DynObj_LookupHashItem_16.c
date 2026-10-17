@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_LookupHashItem_16 (VA 0x004CFCA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_LookupHashItem_16 - 0x004CFCA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CFCA0-DynObj_LookupHashItem_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_LookupHashItem_16.h"
 int32_t DynObj_LookupHashItem_16()
 

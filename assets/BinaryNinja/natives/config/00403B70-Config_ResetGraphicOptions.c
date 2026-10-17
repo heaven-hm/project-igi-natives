@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_ResetGraphicOptions (VA 0x00403B70; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: Config_ResetGraphicOptions - 0x00403B70 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403B70-Config_ResetGraphicOptions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_ResetGraphicOptions.h"
 int32_t Config_ResetGraphicOptions(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SlideBar_Process (VA 0x0041F6C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SlideBar_Process - 0x0041F6C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041F6C0-SlideBar_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SlideBar_Process.h"
 int32_t SlideBar_Process(void* context)
 

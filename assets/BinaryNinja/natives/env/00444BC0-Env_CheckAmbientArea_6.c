@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_CheckAmbientArea_6 (VA 0x00444BC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_CheckAmbientArea_6 - 0x00444BC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00444BC0-Env_CheckAmbientArea_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_CheckAmbientArea_6.h"
 void* Env_CheckAmbientArea_6(void* context)
 

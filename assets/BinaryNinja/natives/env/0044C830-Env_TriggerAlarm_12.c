@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_TriggerAlarm_12 (VA 0x0044C830; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_TriggerAlarm_12 - 0x0044C830 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044C830-Env_TriggerAlarm_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_TriggerAlarm_12.h"
 struct status_msg* Env_TriggerAlarm_12(void* context)
 

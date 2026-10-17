@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_CheckHullCollision (VA 0x00502130; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_CheckHullCollision - 0x00502130 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00502130-Physics_CheckHullCollision.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_CheckHullCollision.h"
 void* Physics_CheckHullCollision(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_Invoke4_422B00 (VA 0x00422B00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_Invoke4_422B00 - 0x00422B00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422B00-MenuUI_Invoke4_422B00.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke4_422B00.h"
 
 int32_t* MenuUI_Invoke4_422B00(int32_t* context)

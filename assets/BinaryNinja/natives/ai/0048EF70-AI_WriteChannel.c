@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_WriteChannel (VA 0x0048EF70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_WriteChannel - 0x0048EF70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048EF70-AI_WriteChannel.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_WriteChannel.h"
 void* AI_WriteChannel(void* context, int32_t param_2, float param_3)
 

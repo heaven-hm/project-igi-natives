@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Smoke_Update (VA 0x00437CA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Smoke_Update - 0x00437CA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00437CA0-Smoke_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Smoke_Update.h"
 int32_t Smoke_Update(void* context)
 

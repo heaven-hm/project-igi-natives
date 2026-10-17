@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_CalculateAttenuation_5 (VA 0x005269C0; static CFG gate PASS, CFG score 0.976).
+// IGI native provenance: Light_CalculateAttenuation_5 - 0x005269C0 - CFG score 97.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005269C0-Light_CalculateAttenuation_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_CalculateAttenuation_5.h"
 int32_t* Light_CalculateAttenuation_5(float context)
 

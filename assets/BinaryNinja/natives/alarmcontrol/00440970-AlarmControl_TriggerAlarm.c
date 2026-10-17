@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmControl_TriggerAlarm (VA 0x00440970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmControl_TriggerAlarm - 0x00440970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440970-AlarmControl_TriggerAlarm.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmControl_TriggerAlarm.h"
 
 char* AlarmControl_TriggerAlarm(void* pThis)

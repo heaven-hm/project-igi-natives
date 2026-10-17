@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_InitSprites_6 (VA 0x00416D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_InitSprites_6 - 0x00416D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416D90-Level_InitSprites_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_InitSprites_6.h"
 void* Level_InitSprites_6()
 

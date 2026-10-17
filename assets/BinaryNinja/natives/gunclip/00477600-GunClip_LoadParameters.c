@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunClip_LoadParameters (VA 0x00477600; static CFG gate PASS, CFG score 0.875).
+// IGI native provenance: GunClip_LoadParameters - 0x00477600 - CFG score 87.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477600-GunClip_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunClip_LoadParameters.h"
 int32_t GunClip_LoadParameters(void* context, int32_t* param_2)
 

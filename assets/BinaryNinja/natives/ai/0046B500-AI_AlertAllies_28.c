@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_AlertAllies_28 (VA 0x0046B500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_AlertAllies_28 - 0x0046B500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B500-AI_AlertAllies_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_AlertAllies_28.h"
 int32_t AI_AlertAllies_28()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynCubeObj_OnEvent (VA 0x004E53C0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: DynCubeObj_OnEvent - 0x004E53C0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E53C0-DynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynCubeObj_OnEvent.h"
 int32_t* DynCubeObj_OnEvent(int32_t context, int32_t param_2, int32_t param_3, double* param_4, float param_5)
 

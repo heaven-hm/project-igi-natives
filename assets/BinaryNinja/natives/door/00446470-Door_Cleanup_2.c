@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Door_Cleanup_2 (VA 0x00446470; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Door_Cleanup_2 - 0x00446470 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00446470-Door_Cleanup_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Door_Cleanup_2.h"
 int32_t Door_Cleanup_2(void* context, double* param_2)
 

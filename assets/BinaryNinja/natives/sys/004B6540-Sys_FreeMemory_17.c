@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_FreeMemory_17 (VA 0x004B6540; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_FreeMemory_17 - 0x004B6540 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B6540-Sys_FreeMemory_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_FreeMemory_17.h"
 int32_t Sys_FreeMemory_17(void* context, int32_t param_2, int32_t param_3, int16_t param_4, int16_t param_5, int16_t param_6, int16_t param_7, int16_t param_8, int32_t param_9, float param_10, float param_11, float param_12, float param_13)
 

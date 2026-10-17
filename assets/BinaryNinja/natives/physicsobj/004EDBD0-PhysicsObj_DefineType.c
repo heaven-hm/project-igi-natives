@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_DefineType (VA 0x004EDBD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObj_DefineType - 0x004EDBD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDBD0-PhysicsObj_DefineType.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_DefineType.h"
 
 void* PhysicsObj_DefineType(void* pThis)

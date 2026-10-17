@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_25 (VA 0x004BAC30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_25 - 0x004BAC30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BAC30-Sys_DispatchOpcode_25.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_25.h"
 void* Sys_DispatchOpcode_25(int32_t context)
 

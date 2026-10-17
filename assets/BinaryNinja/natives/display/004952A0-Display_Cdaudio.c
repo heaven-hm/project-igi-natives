@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_Cdaudio (VA 0x004952A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_Cdaudio - 0x004952A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004952A0-Display_Cdaudio.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_Cdaudio.h"
 uint32_t Display_Cdaudio()
 

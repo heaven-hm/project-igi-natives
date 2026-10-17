@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_RequestScreen (VA 0x004174A0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: MenuManager_RequestScreen - 0x004174A0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004174A0-MenuManager_RequestScreen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_RequestScreen.h"
 int32_t MenuManager_RequestScreen(int32_t context, void* param_2, float param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TextBox_OnEvent (VA 0x0041AD70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TextBox_OnEvent - 0x0041AD70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041AD70-TextBox_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TextBox_OnEvent.h"
 int32_t TextBox_OnEvent(void* context, int32_t param_2)
 

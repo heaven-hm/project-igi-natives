@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_Mission (VA 0x00484F60; static CFG gate PASS, CFG score 0.976).
+// IGI native provenance: Define_Mission - 0x00484F60 - CFG score 97.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00484F60-Define_Mission.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_Mission.h"
 int32_t Define_Mission(int32_t context, float param_2 )
 

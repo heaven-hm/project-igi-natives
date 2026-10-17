@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CheckHeap_18 (VA 0x004B7160; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Sys_CheckHeap_18 - 0x004B7160 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B7160-Sys_CheckHeap_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CheckHeap_18.h"
 int32_t Sys_CheckHeap_18()
 

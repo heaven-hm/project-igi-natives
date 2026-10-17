@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_FindSymbol_14 (VA 0x004CF050; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_FindSymbol_14 - 0x004CF050 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CF050-DynObj_FindSymbol_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_FindSymbol_14.h"
 int32_t* DynObj_FindSymbol_14()
 

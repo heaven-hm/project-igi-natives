@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_HumanPlayerWeaponCycle (VA 0x004101C0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Define_HumanPlayerWeaponCycle - 0x004101C0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004101C0-Define_HumanPlayerWeaponCycle.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_HumanPlayerWeaponCycle.h"
 int32_t Define_HumanPlayerWeaponCycle(int32_t context, int32_t* param_2 )
 

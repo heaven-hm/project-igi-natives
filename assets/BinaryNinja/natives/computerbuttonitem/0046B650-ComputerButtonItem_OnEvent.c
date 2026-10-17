@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerButtonItem_OnEvent (VA 0x0046B650; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerButtonItem_OnEvent - 0x0046B650 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B650-ComputerButtonItem_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerButtonItem_OnEvent.h"
 uint32_t ComputerButtonItem_OnEvent()
 

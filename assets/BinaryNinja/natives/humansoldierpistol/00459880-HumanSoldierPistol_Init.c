@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierPistol_Init (VA 0x00459880; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanSoldierPistol_Init - 0x00459880 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00459880-HumanSoldierPistol_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierPistol_Init.h"
 int32_t* HumanSoldierPistol_Init()
 

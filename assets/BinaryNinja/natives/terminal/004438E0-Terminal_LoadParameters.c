@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terminal_LoadParameters (VA 0x004438E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terminal_LoadParameters - 0x004438E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004438E0-Terminal_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terminal_LoadParameters.h"
 char Terminal_LoadParameters(long double context , void* param_2)
 

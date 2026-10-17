@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_English (VA 0x00405D40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_English - 0x00405D40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405D40-Config_English.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_English.h"
 int32_t Config_English(int32_t* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_SmokeEmit_15 (VA 0x00489F70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_SmokeEmit_15 - 0x00489F70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00489F70-FX_SmokeEmit_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_SmokeEmit_15.h"
 float FX_SmokeEmit_15(float context) {
     float source_val = context;

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneDynCubeObj_Init (VA 0x004D7550; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BoneDynCubeObj_Init - 0x004D7550 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D7550-BoneDynCubeObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneDynCubeObj_Init.h"
 int32_t BoneDynCubeObj_Init()
 

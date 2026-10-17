@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_SetFieldOfView_15 (VA 0x004A8B37; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_SetFieldOfView_15 - 0x004A8B37 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A8B37-Camera_SetFieldOfView_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_SetFieldOfView_15.h"
 int32_t __fastcall __trandisp2(int32_t context, void* param_2, void* param_3 , long double param_4 , long double param_5 )
 

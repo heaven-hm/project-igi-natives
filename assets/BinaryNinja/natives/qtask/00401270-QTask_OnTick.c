@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_OnTick (VA 0x00401270; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_OnTick - 0x00401270 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401270-QTask_OnTick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_OnTick.h"
 void QTask_OnTick()
 

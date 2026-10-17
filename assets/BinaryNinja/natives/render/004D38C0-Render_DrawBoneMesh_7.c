@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawBoneMesh_7 (VA 0x004D38C0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Render_DrawBoneMesh_7 - 0x004D38C0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D38C0-Render_DrawBoneMesh_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawBoneMesh_7.h"
 int32_t Render_DrawBoneMesh_7(int32_t context, void* param_2)
 

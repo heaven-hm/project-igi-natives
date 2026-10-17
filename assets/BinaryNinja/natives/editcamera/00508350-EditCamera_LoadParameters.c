@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditCamera_LoadParameters (VA 0x00508350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditCamera_LoadParameters - 0x00508350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00508350-EditCamera_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditCamera_LoadParameters.h"
 int32_t* EditCamera_LoadParameters(void* context)
 

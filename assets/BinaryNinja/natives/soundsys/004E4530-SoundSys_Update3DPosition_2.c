@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_Update3DPosition_2 (VA 0x004E4530; static CFG gate PASS, CFG score 0.924).
+// IGI native provenance: SoundSys_Update3DPosition_2 - 0x004E4530 - CFG score 92.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E4530-SoundSys_Update3DPosition_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_Update3DPosition_2.h"
 int32_t* SoundSys_Update3DPosition_2(float context, int32_t* param_2, double* param_3, float* param_4, float* param_5, char param_6, char param_7, int32_t param_8, char* param_9 )
 

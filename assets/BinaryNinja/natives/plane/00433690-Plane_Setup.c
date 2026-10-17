@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Plane_Setup (VA 0x00433690; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Plane_Setup - 0x00433690 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00433690-Plane_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Plane_Setup.h"
 struct status_msg* Plane_Setup(long double context , void* param_2)
 

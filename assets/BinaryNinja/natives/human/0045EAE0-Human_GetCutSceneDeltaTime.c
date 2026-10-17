@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_GetCutSceneDeltaTime (VA 0x0045EAE0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Human_GetCutSceneDeltaTime - 0x0045EAE0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0045EAE0-Human_GetCutSceneDeltaTime.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_GetCutSceneDeltaTime.h"
 int32_t Human_GetCutSceneDeltaTime(int32_t context)
 

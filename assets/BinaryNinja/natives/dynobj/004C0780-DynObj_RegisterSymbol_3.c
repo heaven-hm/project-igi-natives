@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RegisterSymbol_3 (VA 0x004C0780; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: DynObj_RegisterSymbol_3 - 0x004C0780 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C0780-DynObj_RegisterSymbol_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RegisterSymbol_3.h"
 int32_t DynObj_RegisterSymbol_3(int32_t context, int32_t param_2, int32_t param_3, void* param_4, int32_t* param_5)
 

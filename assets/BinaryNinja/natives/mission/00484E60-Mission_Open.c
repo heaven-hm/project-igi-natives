@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mission_Open (VA 0x00484E60; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Mission_Open - 0x00484E60 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00484E60-Mission_Open.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mission_Open.h"
 int32_t Mission_Open(int32_t* context)
 

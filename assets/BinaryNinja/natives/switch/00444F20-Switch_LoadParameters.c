@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Switch_LoadParameters (VA 0x00444F20; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Switch_LoadParameters - 0x00444F20 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00444F20-Switch_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Switch_LoadParameters.h"
 int32_t* Switch_LoadParameters(float context)
 

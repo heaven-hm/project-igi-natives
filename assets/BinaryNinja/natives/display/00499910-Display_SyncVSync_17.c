@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SyncVSync_17 (VA 0x00499910; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_SyncVSync_17 - 0x00499910 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00499910-Display_SyncVSync_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SyncVSync_17.h"
 int32_t Display_SyncVSync_17(void* context, double param_2)
 

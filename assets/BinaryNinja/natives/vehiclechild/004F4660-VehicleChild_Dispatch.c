@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehicleChild_Dispatch (VA 0x004F4660; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: VehicleChild_Dispatch - 0x004F4660 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F4660-VehicleChild_Dispatch.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehicleChild_Dispatch.h"
 void* VehicleChild_Dispatch(void* context)
 

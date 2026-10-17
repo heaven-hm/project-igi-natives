@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuText_Init (VA 0x00420CC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuText_Init - 0x00420CC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00420CC0-MenuText_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuText_Init.h"
 void* MenuText_Init()
 

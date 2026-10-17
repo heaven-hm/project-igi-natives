@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerStartup_Init (VA 0x004663D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerStartup_Init - 0x004663D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004663D0-ComputerStartup_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerStartup_Init.h"
 int32_t ComputerStartup_Init()
 

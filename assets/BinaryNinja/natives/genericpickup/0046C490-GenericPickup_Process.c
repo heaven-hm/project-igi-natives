@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPickup_Process (VA 0x0046C490; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericPickup_Process - 0x0046C490 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046C490-GenericPickup_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPickup_Process.h"
 void* GenericPickup_Process(float context)
 

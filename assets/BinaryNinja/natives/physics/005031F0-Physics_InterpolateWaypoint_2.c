@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_InterpolateWaypoint_2 (VA 0x005031F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_InterpolateWaypoint_2 - 0x005031F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005031F0-Physics_InterpolateWaypoint_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_InterpolateWaypoint_2.h"
 int32_t Physics_InterpolateWaypoint_2(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , long double param_8 , float* param_9, int32_t* param_10, float param_11)
 

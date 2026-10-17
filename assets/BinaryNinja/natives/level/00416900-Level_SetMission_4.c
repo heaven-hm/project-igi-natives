@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_SetMission_4 (VA 0x00416900; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_SetMission_4 - 0x00416900 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416900-Level_SetMission_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_SetMission_4.h"
 int32_t Level_SetMission_4(void* context)
 

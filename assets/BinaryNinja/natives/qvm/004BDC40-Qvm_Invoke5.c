@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_Invoke5 (VA 0x004BDC40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_Invoke5 - 0x004BDC40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BDC40-Qvm_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_Invoke5.h"
 
 int32_t __stdcall(int32_t* context )

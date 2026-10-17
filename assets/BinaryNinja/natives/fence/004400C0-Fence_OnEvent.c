@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Fence_OnEvent (VA 0x004400C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Fence_OnEvent - 0x004400C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004400C0-Fence_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Fence_OnEvent.h"
 int32_t Fence_OnEvent(void* context, void* param_2)
 

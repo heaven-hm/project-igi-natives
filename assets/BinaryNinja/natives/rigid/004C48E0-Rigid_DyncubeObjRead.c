@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rigid_DyncubeObjRead (VA 0x004C48E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Rigid_DyncubeObjRead - 0x004C48E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C48E0-Rigid_DyncubeObjRead.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rigid_DyncubeObjRead.h"
 char* Rigid_DyncubeObjRead(char* context)
 

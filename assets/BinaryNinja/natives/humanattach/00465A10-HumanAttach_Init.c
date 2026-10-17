@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAttach_Init (VA 0x00465A10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAttach_Init - 0x00465A10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00465A10-HumanAttach_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAttach_Init.h"
 int32_t HumanAttach_Init()
 

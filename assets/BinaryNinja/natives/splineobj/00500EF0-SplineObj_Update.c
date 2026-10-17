@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplineObj_Update (VA 0x00500EF0; static CFG gate PASS, CFG score 0.910).
+// IGI native provenance: SplineObj_Update - 0x00500EF0 - CFG score 91.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00500EF0-SplineObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplineObj_Update.h"
 float* SplineObj_Update(int32_t* context)
 

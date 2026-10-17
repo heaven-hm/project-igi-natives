@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Water_Init (VA 0x00518EF0; static CFG gate PASS, CFG score 0.992).
+// IGI native provenance: Water_Init - 0x00518EF0 - CFG score 99.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00518EF0-Water_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Water_Init.h"
 int32_t* Water_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawLightmapMesh_12 (VA 0x004D9FC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawLightmapMesh_12 - 0x004D9FC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9FC0-Render_DrawLightmapMesh_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawLightmapMesh_12.h"
 struct status_msg* Render_DrawLightmapMesh_12(double* context, double* param_2, int32_t* param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunX2_Setup (VA 0x0046DCB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunX2_Setup - 0x0046DCB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046DCB0-GunX2_Setup.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunX2_Setup.h"
 
 void* GunX2_Setup(void* pThis)

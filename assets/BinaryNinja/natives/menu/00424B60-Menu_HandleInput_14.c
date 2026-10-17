@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_HandleInput_14 (VA 0x00424B60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_HandleInput_14 - 0x00424B60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00424B60-Menu_HandleInput_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_HandleInput_14.h"
 struct status_msg* Menu_HandleInput_14(void* context, int32_t param_2)
 

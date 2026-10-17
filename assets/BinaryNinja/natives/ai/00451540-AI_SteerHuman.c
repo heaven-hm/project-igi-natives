@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_SteerHuman (VA 0x00451540; static CFG gate PASS, CFG score 0.985).
+// IGI native provenance: AI_SteerHuman - 0x00451540 - CFG score 98.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00451540-AI_SteerHuman.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_SteerHuman.h"
 int32_t AI_SteerHuman(long double context , long double param_2 , void* param_3)
 

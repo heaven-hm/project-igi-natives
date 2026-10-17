@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineComputerObjective_Process (VA 0x00467530; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefineComputerObjective_Process - 0x00467530 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467530-DefineComputerObjective_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineComputerObjective_Process.h"
 int32_t DefineComputerObjective_Process(void* context)
 

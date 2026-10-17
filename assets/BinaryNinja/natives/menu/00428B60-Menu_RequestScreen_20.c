@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_RequestScreen_20 (VA 0x00428B60; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Menu_RequestScreen_20 - 0x00428B60 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00428B60-Menu_RequestScreen_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_RequestScreen_20.h"
 int32_t Menu_RequestScreen_20(long double context , long double param_2 , void* param_3, double* param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_EvaluateCondition_26 (VA 0x004FA810; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_EvaluateCondition_26 - 0x004FA810 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FA810-Script_EvaluateCondition_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_EvaluateCondition_26.h"
 int16_t* Script_EvaluateCondition_26(void* context, int16_t* param_2)
 

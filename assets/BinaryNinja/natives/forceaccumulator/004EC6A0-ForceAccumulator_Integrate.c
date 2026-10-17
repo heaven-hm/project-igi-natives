@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ForceAccumulator_Integrate (VA 0x004EC6A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ForceAccumulator_Integrate - 0x004EC6A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EC6A0-ForceAccumulator_Integrate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ForceAccumulator_Integrate.h"
 int32_t ForceAccumulator_Integrate(void* context, float* param_2)
 

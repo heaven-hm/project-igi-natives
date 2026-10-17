@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CutScene_TaskUpdate (VA 0x004F51D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CutScene_TaskUpdate - 0x004F51D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F51D0-CutScene_TaskUpdate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CutScene_TaskUpdate.h"
 int32_t* CutScene_TaskUpdate(long double context , void* param_2)
 

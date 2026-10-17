@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AsciiBox_Update (VA 0x0041C9D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AsciiBox_Update - 0x0041C9D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041C9D0-AsciiBox_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AsciiBox_Update.h"
 int32_t* AsciiBox_Update(void* context)
 

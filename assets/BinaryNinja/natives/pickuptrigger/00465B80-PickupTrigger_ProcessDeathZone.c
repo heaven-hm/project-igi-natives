@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PickupTrigger_ProcessDeathZone (VA 0x00465B80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PickupTrigger_ProcessDeathZone - 0x00465B80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00465B80-PickupTrigger_ProcessDeathZone.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_ProcessDeathZone.h"
 
 int32_t PickupTrigger_ProcessDeathZone(void* context, char* param_2)

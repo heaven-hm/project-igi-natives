@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Init (VA 0x0040FE30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Init - 0x0040FE30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040FE30-HumanPlayer_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Init.h"
 void* HumanPlayer_Init()
 

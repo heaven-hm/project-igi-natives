@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AmbientArea_Process (VA 0x0044C740; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AmbientArea_Process - 0x0044C740 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044C740-AmbientArea_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AmbientArea_Process.h"
 int32_t AmbientArea_Process(void* context)
 

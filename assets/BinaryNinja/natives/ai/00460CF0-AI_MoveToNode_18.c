@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_MoveToNode_18 (VA 0x00460CF0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AI_MoveToNode_18 - 0x00460CF0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00460CF0-AI_MoveToNode_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_MoveToNode_18.h"
 float* AI_MoveToNode_18(float* context)
 

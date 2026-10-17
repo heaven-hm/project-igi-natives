@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_BindTexture_15 (VA 0x004DEEC0; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: Render_BindTexture_15 - 0x004DEEC0 - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DEEC0-Render_BindTexture_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_BindTexture_15.h"
 float Render_BindTexture_15(float context) {
     float result = *(context + 0x6c);

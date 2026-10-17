@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_ExplosionSpawn_7 (VA 0x00486210; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_ExplosionSpawn_7 - 0x00486210 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00486210-FX_ExplosionSpawn_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_ExplosionSpawn_7.h"
 int32_t FX_ExplosionSpawn_7(int32_t context, int32_t param_2, float param_3, float param_4, int32_t param_5)
 

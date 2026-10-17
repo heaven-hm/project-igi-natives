@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Cleanup_2 (VA 0x00413120; static CFG gate PASS, CFG score 0.951).
+// IGI native provenance: HumanPlayer_Cleanup_2 - 0x00413120 - CFG score 95.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00413120-HumanPlayer_Cleanup_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Cleanup_2.h"
 void* HumanPlayer_Cleanup_2(void* context, int32_t param_2)
 

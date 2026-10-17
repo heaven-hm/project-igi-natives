@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Medipack_Update (VA 0x00470570; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Medipack_Update - 0x00470570 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470570-Medipack_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Medipack_Update.h"
 void* Medipack_Update(int32_t* context )
 

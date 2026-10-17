@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_EnableMusic (VA 0x00415A10; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Game_EnableMusic - 0x00415A10 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00415A10-Game_EnableMusic.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_EnableMusic.h"
 int32_t Game_EnableMusic(int32_t context)
 

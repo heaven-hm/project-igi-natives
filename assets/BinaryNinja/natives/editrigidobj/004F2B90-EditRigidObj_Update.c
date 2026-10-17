@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObj_Update (VA 0x004F2B90; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: EditRigidObj_Update - 0x004F2B90 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F2B90-EditRigidObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObj_Update.h"
 float* EditRigidObj_Update(float context)
 

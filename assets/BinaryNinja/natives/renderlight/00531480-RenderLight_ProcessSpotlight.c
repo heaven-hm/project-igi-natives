@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_ProcessSpotlight (VA 0x00531480; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_ProcessSpotlight - 0x00531480 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531480-RenderLight_ProcessSpotlight.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_ProcessSpotlight.h"
 
 int32_t* RenderLight_ProcessSpotlight(void* context, void* param_2)

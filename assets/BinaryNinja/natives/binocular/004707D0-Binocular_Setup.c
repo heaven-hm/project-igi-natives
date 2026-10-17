@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_Setup (VA 0x004707D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Binocular_Setup - 0x004707D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004707D0-Binocular_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_Setup.h"
 int32_t Binocular_Setup(void* context)
 

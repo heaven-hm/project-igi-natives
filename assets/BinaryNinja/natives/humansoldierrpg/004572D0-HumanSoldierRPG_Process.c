@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierRPG_Process (VA 0x004572D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanSoldierRPG_Process - 0x004572D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004572D0-HumanSoldierRPG_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierRPG_Process.h"
 int32_t HumanSoldierRPG_Process(void* context, int32_t* param_2)
 

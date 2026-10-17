@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_24 (VA 0x004B9660; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_24 - 0x004B9660 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B9660-Sys_DispatchOpcode_24.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_24.h"
 void Sys_DispatchOpcode_24(long double context , long double param_2 , int32_t param_3)
 

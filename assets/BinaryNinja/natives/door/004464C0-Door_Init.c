@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Door_Init (VA 0x004464C0; static CFG gate PASS, CFG score 0.994).
+// IGI native provenance: Door_Init - 0x004464C0 - CFG score 99.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004464C0-Door_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Door_Init.h"
 int32_t* Door_Init()
 

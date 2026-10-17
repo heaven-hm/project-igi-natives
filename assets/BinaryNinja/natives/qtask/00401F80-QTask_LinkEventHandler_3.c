@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_LinkEventHandler_3 (VA 0x00401F80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_LinkEventHandler_3 - 0x00401F80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401F80-QTask_LinkEventHandler_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_LinkEventHandler_3.h"
 int32_t QTask_LinkEventHandler_3(int32_t context)
 

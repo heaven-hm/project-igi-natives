@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetGammaRamp_13 (VA 0x00497700; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Display_SetGammaRamp_13 - 0x00497700 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00497700-Display_SetGammaRamp_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetGammaRamp_13.h"
 void Display_SetGammaRamp_13()
 

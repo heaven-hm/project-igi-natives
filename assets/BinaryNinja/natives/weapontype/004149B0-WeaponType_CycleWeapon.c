@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_CycleWeapon (VA 0x004149B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponType_CycleWeapon - 0x004149B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004149B0-WeaponType_CycleWeapon.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_CycleWeapon.h"
 int32_t WeaponType_CycleWeapon(int32_t context, double* param_2)
 

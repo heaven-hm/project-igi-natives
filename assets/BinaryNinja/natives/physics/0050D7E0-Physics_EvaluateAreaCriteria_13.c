@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_EvaluateAreaCriteria_13 (VA 0x0050D7E0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Physics_EvaluateAreaCriteria_13 - 0x0050D7E0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0050D7E0-Physics_EvaluateAreaCriteria_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_EvaluateAreaCriteria_13.h"
 ❓  int32_t Physics_EvaluateAreaCriteria_13(void* context)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Warning_Show (VA 0x004AF810; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Warning_Show - 0x004AF810 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AF810-Warning_Show.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Warning_Show.h"
 int32_t Warning_Show(char* context)
 

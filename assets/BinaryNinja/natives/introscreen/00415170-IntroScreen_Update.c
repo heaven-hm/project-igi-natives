@@ -1,4 +1,5 @@
-// Original IGI.EXE function: IntroScreen_Update (VA 0x00415170; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: IntroScreen_Update - 0x00415170 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00415170-IntroScreen_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "IntroScreen_Update.h"
 int32_t IntroScreen_Update(int32_t context, void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_FreeMemory_11 (VA 0x004B3100; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_FreeMemory_11 - 0x004B3100 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B3100-Sys_FreeMemory_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_FreeMemory_11.h"
 int32_t Sys_FreeMemory_11(double* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DeathZone_Process (VA 0x00465F50; static CFG gate PASS, CFG score 0.875).
+// IGI native provenance: DeathZone_Process - 0x00465F50 - CFG score 87.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00465F50-DeathZone_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DeathZone_Process.h"
 int32_t DeathZone_Process(float context, double** param_2)
 

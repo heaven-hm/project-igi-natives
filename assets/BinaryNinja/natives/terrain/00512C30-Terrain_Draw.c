@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_Draw (VA 0x00512C30; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Terrain_Draw - 0x00512C30 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00512C30-Terrain_Draw.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_Draw.h"
 ❓  int32_t __stdcall Terrain_Draw(float context , float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, double param_9 , double param_10, double param_11 , double param_12)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

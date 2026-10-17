@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CubeModifier_LoadParameters (VA 0x0052B510; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: CubeModifier_LoadParameters - 0x0052B510 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0052B510-CubeModifier_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CubeModifier_LoadParameters.h"
 int32_t CubeModifier_LoadParameters(int32_t context)
 

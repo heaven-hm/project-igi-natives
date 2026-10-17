@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_SetFieldOfView_27 (VA 0x004AD225; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_SetFieldOfView_27 - 0x004AD225 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AD225-Camera_SetFieldOfView_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_SetFieldOfView_27.h"
 BOOL Camera_SetFieldOfView_27(uint32_t context, uint8_t* param_2, int32_t param_3, uint16_t* param_4, uint32_t param_5, uint32_t param_6, int32_t param_7)
 

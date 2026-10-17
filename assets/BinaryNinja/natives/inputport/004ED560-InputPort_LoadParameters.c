@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputPort_LoadParameters (VA 0x004ED560; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: InputPort_LoadParameters - 0x004ED560 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ED560-InputPort_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputPort_LoadParameters.h"
 int16_t* InputPort_LoadParameters(int32_t context)
 

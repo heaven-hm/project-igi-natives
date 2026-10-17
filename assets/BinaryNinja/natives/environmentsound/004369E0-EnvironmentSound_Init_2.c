@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EnvironmentSound_Init_2 (VA 0x004369E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EnvironmentSound_Init_2 - 0x004369E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004369E0-EnvironmentSound_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EnvironmentSound_Init_2.h"
 
 char* EnvironmentSound_Init_2(void* pThis)

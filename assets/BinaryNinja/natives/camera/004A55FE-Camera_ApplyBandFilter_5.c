@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyBandFilter_5 (VA 0x004A55FE; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: Camera_ApplyBandFilter_5 - 0x004A55FE - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A55FE-Camera_ApplyBandFilter_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyBandFilter_5.h"
 long double Camera_ApplyBandFilter_5(double context)
 

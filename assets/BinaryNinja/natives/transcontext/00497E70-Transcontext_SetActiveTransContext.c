@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Transcontext_SetActiveTransContext (VA 0x00497E70; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Transcontext_SetActiveTransContext - 0x00497E70 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00497E70-Transcontext_SetActiveTransContext.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Transcontext_SetActiveTransContext.h"
 int32_t Transcontext_SetActiveTransContext(int32_t* context)
 

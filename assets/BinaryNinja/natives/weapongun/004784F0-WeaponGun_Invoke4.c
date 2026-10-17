@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponGun_Invoke4 (VA 0x004784F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponGun_Invoke4 - 0x004784F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004784F0-WeaponGun_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_Invoke4.h"
 
 void* WeaponGun_Invoke4(void* context)

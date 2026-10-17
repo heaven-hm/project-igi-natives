@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_MovementIntegrator (VA 0x004614B0; static CFG gate PASS, CFG score 0.978).
+// IGI native provenance: Human_MovementIntegrator - 0x004614B0 - CFG score 97.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004614B0-Human_MovementIntegrator.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_MovementIntegrator.h"
 int32_t Human_MovementIntegrator(void* context)
 

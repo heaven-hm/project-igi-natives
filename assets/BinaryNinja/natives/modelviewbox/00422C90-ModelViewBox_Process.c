@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ModelViewBox_Process (VA 0x00422C90; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: ModelViewBox_Process - 0x00422C90 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422C90-ModelViewBox_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ModelViewBox_Process.h"
 int32_t ModelViewBox_Process(void* context, int32_t param_2)
 

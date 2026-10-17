@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponGun_InvokeOnEvent (VA 0x0047D060; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponGun_InvokeOnEvent - 0x0047D060 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047D060-WeaponGun_InvokeOnEvent.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_InvokeOnEvent.h"
 
 void* WeaponGun_InvokeOnEvent(void* context, int32_t param_2)

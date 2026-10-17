@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawRigidMesh (VA 0x004D0180; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawRigidMesh - 0x004D0180 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D0180-Render_DrawRigidMesh.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawRigidMesh.h"
 int32_t Render_DrawRigidMesh(float context)
 

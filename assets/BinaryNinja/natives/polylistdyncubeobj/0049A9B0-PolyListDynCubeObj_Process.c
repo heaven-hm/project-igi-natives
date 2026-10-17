@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PolyListDynCubeObj_Process (VA 0x0049A9B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PolyListDynCubeObj_Process - 0x0049A9B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049A9B0-PolyListDynCubeObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PolyListDynCubeObj_Process.h"
 int32_t PolyListDynCubeObj_Process(int32_t context , void* param_2)
 

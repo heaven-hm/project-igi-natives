@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_CheckAmbientArea_7 (VA 0x004453E0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Env_CheckAmbientArea_7 - 0x004453E0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004453E0-Env_CheckAmbientArea_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_CheckAmbientArea_7.h"
 float* Env_CheckAmbientArea_7(void* context)
 

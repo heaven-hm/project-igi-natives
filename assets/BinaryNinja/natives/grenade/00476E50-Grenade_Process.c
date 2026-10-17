@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Grenade_Process (VA 0x00476E50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Grenade_Process - 0x00476E50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476E50-Grenade_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Grenade_Process.h"
 int32_t Grenade_Process(void* context)
 

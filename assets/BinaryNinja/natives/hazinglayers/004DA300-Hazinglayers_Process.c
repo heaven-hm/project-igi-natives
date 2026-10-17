@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Hazinglayers_Process (VA 0x004DA300; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Hazinglayers_Process - 0x004DA300 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DA300-Hazinglayers_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Hazinglayers_Process.h"
 void** Hazinglayers_Process(int32_t* context, int32_t* param_2, double* param_3, double* param_4, void** param_5, int32_t param_6)
 

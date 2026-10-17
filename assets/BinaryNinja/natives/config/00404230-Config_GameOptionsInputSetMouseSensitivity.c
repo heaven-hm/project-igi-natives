@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GameOptionsInputSetMouseSensitivity (VA 0x00404230; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GameOptionsInputSetMouseSensitivity - 0x00404230 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404230-Config_GameOptionsInputSetMouseSensitivity.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GameOptionsInputSetMouseSensitivity.h"
 int32_t Config_GameOptionsInputSetMouseSensitivity(long double context , int32_t param_2, float param_3 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GetNumberOfPlayerProfiles (VA 0x004054F0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Config_GetNumberOfPlayerProfiles - 0x004054F0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004054F0-Config_GetNumberOfPlayerProfiles.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GetNumberOfPlayerProfiles.h"
 int32_t Config_GetNumberOfPlayerProfiles(int32_t context)
 

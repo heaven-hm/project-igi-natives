@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_26 (VA 0x004FA850; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_FormatString_26 - 0x004FA850 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FA850-Script_FormatString_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_26.h"
 int32_t* Script_FormatString_26(void* context, int32_t* param_2)
 

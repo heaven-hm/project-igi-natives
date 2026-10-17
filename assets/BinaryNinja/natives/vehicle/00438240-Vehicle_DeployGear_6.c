@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_DeployGear_6 (VA 0x00438240; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Vehicle_DeployGear_6 - 0x00438240 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00438240-Vehicle_DeployGear_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_DeployGear_6.h"
 void* Vehicle_DeployGear_6(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_Group (VA 0x004EBA90; static CFG gate PASS, CFG score 0.976).
+// IGI native provenance: Define_Group - 0x004EBA90 - CFG score 97.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EBA90-Define_Group.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_Group.h"
 int32_t Define_Group(int32_t context, void* param_2, float param_3)
 

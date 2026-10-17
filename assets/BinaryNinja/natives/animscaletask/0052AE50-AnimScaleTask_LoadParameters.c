@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimScaleTask_LoadParameters (VA 0x0052AE50; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: AnimScaleTask_LoadParameters - 0x0052AE50 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052AE50-AnimScaleTask_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimScaleTask_LoadParameters.h"
 void* AnimScaleTask_LoadParameters(void* context)
 

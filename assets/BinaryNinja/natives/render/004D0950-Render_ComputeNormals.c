@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ComputeNormals (VA 0x004D0950; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_ComputeNormals - 0x004D0950 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D0950-Render_ComputeNormals.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ComputeNormals.h"
 long double Render_ComputeNormals(int32_t* context)
 

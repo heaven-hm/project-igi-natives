@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsRigid_UpdateState_4DE240 (VA 0x004DE240; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsRigid_UpdateState_4DE240 - 0x004DE240 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DE240-PhysicsRigid_UpdateState_4DE240.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_UpdateState_4DE240.h"
 
 int32_t* PhysicsRigid_UpdateState_4DE240(void* context, int32_t param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponConfig_Setup (VA 0x00407BE0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: WeaponConfig_Setup - 0x00407BE0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00407BE0-WeaponConfig_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponConfig_Setup.h"
 int32_t* WeaponConfig_Setup(void* context)
 

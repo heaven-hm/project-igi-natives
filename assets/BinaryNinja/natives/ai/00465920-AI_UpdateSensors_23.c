@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_UpdateSensors_23 (VA 0x00465920; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: AI_UpdateSensors_23 - 0x00465920 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00465920-AI_UpdateSensors_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_UpdateSensors_23.h"
 void* AI_UpdateSensors_23(void* context, int32_t param_2, char param_3)
 

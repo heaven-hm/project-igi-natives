@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting (VA 0x004D0970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SetupLighting - 0x004D0970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D0970-Render_SetupLighting.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting.h"
 void** Render_SetupLighting(void** context, void* param_2, int32_t param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_SetCombat (VA 0x0044DAE0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: AIAction_SetCombat - 0x0044DAE0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044DAE0-AIAction_SetCombat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_SetCombat.h"
 int32_t AIAction_SetCombat(int32_t context, int32_t param_2 )
 

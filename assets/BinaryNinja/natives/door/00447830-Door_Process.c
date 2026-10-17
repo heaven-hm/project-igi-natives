@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Door_Process (VA 0x00447830; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Door_Process - 0x00447830 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00447830-Door_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Door_Process.h"
 int32_t* Door_Process(uint32_t context, char* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawBoneMesh_11 (VA 0x004D6640; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawBoneMesh_11 - 0x004D6640 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D6640-Render_DrawBoneMesh_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawBoneMesh_11.h"
 void Render_DrawBoneMesh_11(int32_t context)
 

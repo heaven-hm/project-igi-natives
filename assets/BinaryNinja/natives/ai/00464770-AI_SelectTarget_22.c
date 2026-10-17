@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_SelectTarget_22 (VA 0x00464770; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_SelectTarget_22 - 0x00464770 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00464770-AI_SelectTarget_22.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_SelectTarget_22.h"
 void* AI_SelectTarget_22(void* context, float param_2, int32_t param_3, int32_t param_4, int32_t param_5)
 

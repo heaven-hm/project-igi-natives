@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetAlarmControlID (VA 0x0044E430; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: AIFunction_GetAlarmControlID - 0x0044E430 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E430-AIFunction_GetAlarmControlID.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetAlarmControlID.h"
 int32_t AIFunction_GetAlarmControlID(int32_t context)
 

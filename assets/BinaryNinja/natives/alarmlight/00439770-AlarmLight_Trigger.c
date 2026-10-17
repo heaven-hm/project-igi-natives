@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_Trigger (VA 0x00439770; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmLight_Trigger - 0x00439770 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00439770-AlarmLight_Trigger.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_Trigger.h"
 
 int32_t AlarmLight_Trigger(void* pThis, int32_t* param)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimSpline_Invoke27 (VA 0x00509450; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimSpline_Invoke27 - 0x00509450 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00509450-AnimSpline_Invoke27.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_Invoke27.h"
 
 int32_t AnimSpline_Invoke27(void* context, int32_t* param_2)

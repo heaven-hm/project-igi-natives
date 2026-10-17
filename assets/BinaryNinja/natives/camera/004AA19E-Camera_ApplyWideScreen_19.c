@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyWideScreen_19 (VA 0x004AA19E; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Camera_ApplyWideScreen_19 - 0x004AA19E - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AA19E-Camera_ApplyWideScreen_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyWideScreen_19.h"
 int32_t Camera_ApplyWideScreen_19(uint32_t context)
 

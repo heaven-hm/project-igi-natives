@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_PlayerDeath (VA 0x0040E560; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_PlayerDeath - 0x0040E560 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040E560-HumanPlayer_PlayerDeath.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_PlayerDeath.h"
 int32_t HumanPlayer_PlayerDeath(void* context, void* param_2)
 

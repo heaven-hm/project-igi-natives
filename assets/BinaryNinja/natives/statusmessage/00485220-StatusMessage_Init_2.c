@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessage_Init_2 (VA 0x00485220; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusMessage_Init_2 - 0x00485220 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485220-StatusMessage_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessage_Init_2.h"
 
 int32_t StatusMessage_Init_2(void* pThis)

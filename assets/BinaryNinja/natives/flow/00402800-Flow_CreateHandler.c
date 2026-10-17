@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Flow_CreateHandler (VA 0x00402800; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Flow_CreateHandler - 0x00402800 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402800-Flow_CreateHandler.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Flow_CreateHandler.h"
 struct status_msg* Flow_CreateHandler(void* context)
 

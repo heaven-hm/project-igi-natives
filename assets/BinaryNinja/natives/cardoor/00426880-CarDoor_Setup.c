@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CarDoor_Setup (VA 0x00426880; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: CarDoor_Setup - 0x00426880 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426880-CarDoor_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CarDoor_Setup.h"
 int32_t CarDoor_Setup(void* context, int32_t* param_2)
 

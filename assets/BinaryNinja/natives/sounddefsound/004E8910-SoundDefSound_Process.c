@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefSound_Process (VA 0x004E8910; static CFG gate FAIL, CFG score 0.714).
+// IGI native provenance: SoundDefSound_Process - 0x004E8910 - CFG score 71.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E8910-SoundDefSound_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefSound_Process.h"
 int32_t SoundDefSound_Process(void* context, int32_t* param_2)
 

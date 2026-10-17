@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BulletHole_Setup (VA 0x0047D0B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: BulletHole_Setup - 0x0047D0B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047D0B0-BulletHole_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BulletHole_Setup.h"
 int32_t BulletHole_Setup(void* context, int32_t param_2)
 

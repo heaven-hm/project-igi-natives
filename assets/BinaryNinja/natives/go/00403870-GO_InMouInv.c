@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_InMouInv (VA 0x00403870; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GO_InMouInv - 0x00403870 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00403870-GO_InMouInv.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_InMouInv.h"
 int32_t GO_InMouInv(int32_t context, float param_2 )
 

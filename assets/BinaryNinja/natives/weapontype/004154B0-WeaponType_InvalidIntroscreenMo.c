@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_InvalidIntroscreenMo (VA 0x004154B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponType_InvalidIntroscreenMo - 0x004154B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004154B0-WeaponType_InvalidIntroscreenMo.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_InvalidIntroscreenMo.h"
 struct status_msg* WeaponType_InvalidIntroscreenMo(void* context, int32_t param_2, char param_3)
 

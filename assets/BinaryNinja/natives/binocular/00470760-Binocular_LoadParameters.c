@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_LoadParameters (VA 0x00470760; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Binocular_LoadParameters - 0x00470760 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470760-Binocular_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_LoadParameters.h"
 int32_t* Binocular_LoadParameters(void* context, int32_t param_2)
 

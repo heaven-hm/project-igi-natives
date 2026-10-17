@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_DrawWidget_2 (VA 0x00418840; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_DrawWidget_2 - 0x00418840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418840-Menu_DrawWidget_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_DrawWidget_2.h"
 int32_t Menu_DrawWidget_2(void* context, void* param_2)
 

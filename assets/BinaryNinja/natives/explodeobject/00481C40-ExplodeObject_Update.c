@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeObject_Update (VA 0x00481C40; static CFG gate PASS, CFG score 0.907).
+// IGI native provenance: ExplodeObject_Update - 0x00481C40 - CFG score 90.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00481C40-ExplodeObject_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeObject_Update.h"
 float* ExplodeObject_Update(void* context)
 

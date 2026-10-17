@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_1Snan (VA 0x004AE0CA; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_1Snan - 0x004AE0CA - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AE0CA-Camera_1Snan.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_1Snan.h"
 int32_t Camera_1Snan(int16_t context , char* param_2, char param_3, char* param_4)
 

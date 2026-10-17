@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ToggleBox_OnEvent (VA 0x0041E5A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ToggleBox_OnEvent - 0x0041E5A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041E5A0-ToggleBox_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ToggleBox_OnEvent.h"
 int32_t ToggleBox_OnEvent(void* context)
 

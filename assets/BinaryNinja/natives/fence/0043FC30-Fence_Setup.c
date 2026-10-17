@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Fence_Setup (VA 0x0043FC30; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Fence_Setup - 0x0043FC30 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043FC30-Fence_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Fence_Setup.h"
 int32_t* Fence_Setup(void* context)
 

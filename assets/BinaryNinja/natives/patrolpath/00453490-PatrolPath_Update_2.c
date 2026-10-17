@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PatrolPath_Update_2 (VA 0x00453490; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PatrolPath_Update_2 - 0x00453490 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00453490-PatrolPath_Update_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PatrolPath_Update_2.h"
 
 int32_t PatrolPath_Update_2(void* pThis)

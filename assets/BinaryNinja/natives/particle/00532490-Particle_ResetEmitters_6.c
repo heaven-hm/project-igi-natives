@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_ResetEmitters_6 (VA 0x00532490; static CFG gate PASS, CFG score 0.986).
+// IGI native provenance: Particle_ResetEmitters_6 - 0x00532490 - CFG score 98.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00532490-Particle_ResetEmitters_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_ResetEmitters_6.h"
 int32_t Particle_ResetEmitters_6()
 

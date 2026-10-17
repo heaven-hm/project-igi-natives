@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Flow_RunHandler (VA 0x00402930; static CFG gate FAIL, CFG score 0.831).
+// IGI native provenance: Flow_RunHandler - 0x00402930 - CFG score 83.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00402930-Flow_RunHandler.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Flow_RunHandler.h"
 int32_t Flow_RunHandler()
 

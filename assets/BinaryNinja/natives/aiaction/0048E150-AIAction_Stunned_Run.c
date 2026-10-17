@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Stunned_Run (VA 0x0048E150; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIAction_Stunned_Run - 0x0048E150 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048E150-AIAction_Stunned_Run.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Stunned_Run.h"
 int32_t* AIAction_Stunned_Run(void* context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_ActivatePopupScreen (VA 0x00417900; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: MenuManager_ActivatePopupScreen - 0x00417900 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00417900-MenuManager_ActivatePopupScreen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_ActivatePopupScreen.h"
 int32_t MenuManager_ActivatePopupScreen(int32_t context, void* param_2, float param_3)
 

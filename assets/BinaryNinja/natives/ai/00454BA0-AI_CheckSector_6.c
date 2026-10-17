@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CheckSector_6 (VA 0x00454BA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_CheckSector_6 - 0x00454BA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00454BA0-AI_CheckSector_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CheckSector_6.h"
 int32_t* AI_CheckSector_6(void* context, int32_t* param_2)
 

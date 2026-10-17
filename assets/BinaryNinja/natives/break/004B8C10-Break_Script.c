@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Break_Script (VA 0x004B8C10; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Break_Script - 0x004B8C10 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B8C10-Break_Script.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Break_Script.h"
 int32_t Break_Script(int32_t context)
 

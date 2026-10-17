@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_AmmoType (VA 0x0047CAD0; static CFG gate PASS, CFG score 0.980).
+// IGI native provenance: Define_AmmoType - 0x0047CAD0 - CFG score 98.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047CAD0-Define_AmmoType.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_AmmoType.h"
 int32_t Define_AmmoType(long double context , int32_t param_2, float param_3 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmControl_Init (VA 0x00440710; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmControl_Init - 0x00440710 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440710-AlarmControl_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmControl_Init.h"
 int32_t* AlarmControl_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_InitPlane_9 (VA 0x0043D960; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Vehicle_InitPlane_9 - 0x0043D960 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043D960-Vehicle_InitPlane_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_InitPlane_9.h"
 int32_t Vehicle_InitPlane_9(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_LoadParameters (VA 0x0041EC70; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: ListBox_LoadParameters - 0x0041EC70 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041EC70-ListBox_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_LoadParameters.h"
 int32_t ListBox_LoadParameters(void* context)
 

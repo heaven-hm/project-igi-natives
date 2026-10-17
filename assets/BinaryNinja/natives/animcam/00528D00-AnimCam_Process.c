@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimCam_Process (VA 0x00528D00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimCam_Process - 0x00528D00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00528D00-AnimCam_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimCam_Process.h"
 int32_t* AnimCam_Process(void* context, int32_t** param_2)
 

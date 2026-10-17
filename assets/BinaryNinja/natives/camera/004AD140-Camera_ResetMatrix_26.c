@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ResetMatrix_26 (VA 0x004AD140; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ResetMatrix_26 - 0x004AD140 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AD140-Camera_ResetMatrix_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ResetMatrix_26.h"
 uint32_t __stdcall __aulldiv(int32_t context, uint32_t param_2, int32_t param_3, uint32_t param_4) {
     if (!param_4)

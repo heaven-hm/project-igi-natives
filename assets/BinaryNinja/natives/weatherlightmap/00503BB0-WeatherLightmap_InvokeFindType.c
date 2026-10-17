@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherLightmap_InvokeFindType (VA 0x00503BB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherLightmap_InvokeFindType - 0x00503BB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00503BB0-WeatherLightmap_InvokeFindType.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherLightmap_InvokeFindType.h"
 
 int32_t WeatherLightmap_InvokeFindType(int32_t* context)

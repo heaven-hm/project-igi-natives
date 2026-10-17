@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCamera_OnEvent (VA 0x00442890; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SCamera_OnEvent - 0x00442890 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00442890-SCamera_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCamera_OnEvent.h"
 int32_t SCamera_OnEvent(void* context)
 

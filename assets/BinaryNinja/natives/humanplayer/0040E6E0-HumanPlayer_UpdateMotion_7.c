@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_UpdateMotion_7 (VA 0x0040E6E0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: HumanPlayer_UpdateMotion_7 - 0x0040E6E0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040E6E0-HumanPlayer_UpdateMotion_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_UpdateMotion_7.h"
 int32_t* HumanPlayer_UpdateMotion_7(void* context, void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FlatSky_Action (VA 0x0051EC30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FlatSky_Action - 0x0051EC30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051EC30-FlatSky_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FlatSky_Action.h"
 int32_t FlatSky_Action(void* context)
 

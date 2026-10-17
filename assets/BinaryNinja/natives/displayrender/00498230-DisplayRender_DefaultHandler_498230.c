@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_DefaultHandler_498230 (VA 0x00498230; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_DefaultHandler_498230 - 0x00498230 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00498230-DisplayRender_DefaultHandler_498230.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_DefaultHandler_498230.h"
 
 int32_t DisplayRender_DefaultHandler_498230()

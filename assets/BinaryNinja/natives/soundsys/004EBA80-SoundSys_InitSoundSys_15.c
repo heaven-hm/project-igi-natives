@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_InitSoundSys_15 (VA 0x004EBA80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_InitSoundSys_15 - 0x004EBA80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EBA80-SoundSys_InitSoundSys_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_InitSoundSys_15.h"
 int32_t SoundSys_InitSoundSys_15()
 

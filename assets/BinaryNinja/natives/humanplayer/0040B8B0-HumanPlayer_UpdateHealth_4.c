@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_UpdateHealth_4 (VA 0x0040B8B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_UpdateHealth_4 - 0x0040B8B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040B8B0-HumanPlayer_UpdateHealth_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_UpdateHealth_4.h"
 int32_t HumanPlayer_UpdateHealth_4(void* context, float param_2)
 

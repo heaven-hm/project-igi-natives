@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mine_Update (VA 0x00475DF0; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Mine_Update - 0x00475DF0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00475DF0-Mine_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mine_Update.h"
 struct status_msg* Mine_Update(void* context, void* param_2)
 

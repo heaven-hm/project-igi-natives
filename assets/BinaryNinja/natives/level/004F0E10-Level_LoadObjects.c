@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_LoadObjects (VA 0x004F0E10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_LoadObjects - 0x004F0E10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0E10-Level_LoadObjects.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_LoadObjects.h"
 int32_t Level_LoadObjects(int32_t context, int32_t param_2)
 

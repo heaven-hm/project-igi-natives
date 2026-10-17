@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_OnEvent (VA 0x0041F030; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ListBox_OnEvent - 0x0041F030 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041F030-ListBox_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_OnEvent.h"
 int32_t* ListBox_OnEvent(void* context)
 

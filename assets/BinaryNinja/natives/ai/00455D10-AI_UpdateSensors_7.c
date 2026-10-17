@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_UpdateSensors_7 (VA 0x00455D10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_UpdateSensors_7 - 0x00455D10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00455D10-AI_UpdateSensors_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_UpdateSensors_7.h"
 void* AI_UpdateSensors_7(void* context, float param_2)
 

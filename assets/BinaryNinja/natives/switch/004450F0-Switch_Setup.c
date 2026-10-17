@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Switch_Setup (VA 0x004450F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Switch_Setup - 0x004450F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004450F0-Switch_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Switch_Setup.h"
 void* Switch_Setup(long double context , void* param_2)
 

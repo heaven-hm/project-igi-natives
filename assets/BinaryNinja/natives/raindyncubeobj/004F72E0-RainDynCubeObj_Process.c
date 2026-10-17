@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainDynCubeObj_Process (VA 0x004F72E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RainDynCubeObj_Process - 0x004F72E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F72E0-RainDynCubeObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainDynCubeObj_Process.h"
 void* RainDynCubeObj_Process(void* context)
 

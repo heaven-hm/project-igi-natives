@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Dirlight_Setup (VA 0x005271E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Dirlight_Setup - 0x005271E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005271E0-Dirlight_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Dirlight_Setup.h"
 int32_t Dirlight_Setup(void* context)
 

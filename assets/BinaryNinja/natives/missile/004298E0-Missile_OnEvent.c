@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Missile_OnEvent (VA 0x004298E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Missile_OnEvent - 0x004298E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004298E0-Missile_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Missile_OnEvent.h"
 int32_t Missile_OnEvent(int32_t* context )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_Read (VA 0x00405850; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_Read - 0x00405850 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00405850-Config_Read.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_Read.h"
 int32_t Config_Read(void* context)
 

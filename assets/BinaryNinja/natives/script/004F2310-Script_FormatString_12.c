@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_12 (VA 0x004F2310; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Script_FormatString_12 - 0x004F2310 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F2310-Script_FormatString_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_12.h"
 int32_t Script_FormatString_12(void* context, int32_t param_2, int32_t param_3)
 

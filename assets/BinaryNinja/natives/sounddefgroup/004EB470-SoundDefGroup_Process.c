@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefGroup_Process (VA 0x004EB470; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: SoundDefGroup_Process - 0x004EB470 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004EB470-SoundDefGroup_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefGroup_Process.h"
 int32_t SoundDefGroup_Process(void* context, int32_t* param_2)
 

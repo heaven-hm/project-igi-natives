@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Siren_Create (VA 0x00449330; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Siren_Create - 0x00449330 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449330-Siren_Create.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Siren_Create.h"
 
 char* Siren_Create(void* pThis)

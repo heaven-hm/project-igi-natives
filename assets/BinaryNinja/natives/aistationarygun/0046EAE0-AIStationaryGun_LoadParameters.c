@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIStationaryGun_LoadParameters (VA 0x0046EAE0; static CFG gate PASS, CFG score 0.896).
+// IGI native provenance: AIStationaryGun_LoadParameters - 0x0046EAE0 - CFG score 89.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046EAE0-AIStationaryGun_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIStationaryGun_LoadParameters.h"
 int32_t* AIStationaryGun_LoadParameters(double* context, float param_2)
 

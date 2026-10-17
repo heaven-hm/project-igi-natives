@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CarDoor_LoadParameters (VA 0x00426740; static CFG gate PASS, CFG score 0.875).
+// IGI native provenance: CarDoor_LoadParameters - 0x00426740 - CFG score 87.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426740-CarDoor_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CarDoor_LoadParameters.h"
 int32_t CarDoor_LoadParameters(int32_t* context, float param_2)
 

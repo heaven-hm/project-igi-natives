@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Graph_Action (VA 0x004FAEE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Graph_Action - 0x004FAEE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FAEE0-Graph_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Graph_Action.h"
 int32_t* Graph_Action(int32_t* context)
 

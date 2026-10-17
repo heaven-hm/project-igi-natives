@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_Load (VA 0x004B80B0; static CFG gate PASS, CFG score 0.914).
+// IGI native provenance: Qvm_Load - 0x004B80B0 - CFG score 91.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B80B0-Qvm_Load.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_Load.h"
 int32_t* Qvm_Load(void* context)
 

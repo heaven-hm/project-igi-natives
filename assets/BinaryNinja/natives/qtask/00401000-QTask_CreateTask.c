@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_CreateTask (VA 0x00401000; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_CreateTask - 0x00401000 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401000-QTask_CreateTask.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_CreateTask.h"
 int32_t QTask_CreateTask()
 

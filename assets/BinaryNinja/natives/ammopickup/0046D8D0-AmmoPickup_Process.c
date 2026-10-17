@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AmmoPickup_Process (VA 0x0046D8D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AmmoPickup_Process - 0x0046D8D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046D8D0-AmmoPickup_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AmmoPickup_Process.h"
 int32_t AmmoPickup_Process(void* context)
 

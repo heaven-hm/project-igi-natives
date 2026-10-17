@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Train_LoadParameters (VA 0x0042A100; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Train_LoadParameters - 0x0042A100 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042A100-Train_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Train_LoadParameters.h"
 int32_t Train_LoadParameters(void* context)
 

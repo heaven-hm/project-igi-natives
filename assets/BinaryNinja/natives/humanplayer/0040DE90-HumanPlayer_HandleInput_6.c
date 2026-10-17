@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_HandleInput_6 (VA 0x0040DE90; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: HumanPlayer_HandleInput_6 - 0x0040DE90 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040DE90-HumanPlayer_HandleInput_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_HandleInput_6.h"
 void** HumanPlayer_HandleInput_6(void* context, void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_21 (VA 0x004B7930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_OpenFileStream_21 - 0x004B7930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B7930-Sys_OpenFileStream_21.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_21.h"
 int32_t Sys_OpenFileStream_21(float context, float param_2, float param_3, float param_4, float param_5, float param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10)
 

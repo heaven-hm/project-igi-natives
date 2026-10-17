@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_Update (VA 0x00478970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Gun_Update - 0x00478970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00478970-Gun_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_Update.h"
 void* Gun_Update(void* context)
 

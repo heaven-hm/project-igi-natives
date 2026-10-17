@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_NoNewFunctionForMenu (VA 0x0046AFB0; static CFG gate PASS, CFG score 0.935).
+// IGI native provenance: AI_NoNewFunctionForMenu - 0x0046AFB0 - CFG score 93.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046AFB0-AI_NoNewFunctionForMenu.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_NoNewFunctionForMenu.h"
 int32_t AI_NoNewFunctionForMenu(int32_t context)
 

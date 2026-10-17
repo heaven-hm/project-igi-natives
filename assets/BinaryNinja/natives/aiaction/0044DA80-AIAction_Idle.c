@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Idle (VA 0x0044DA80; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AIAction_Idle - 0x0044DA80 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044DA80-AIAction_Idle.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Idle.h"
 int32_t AIAction_Idle(int32_t context, float param_2 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_FillPlayerProfileListBox_2 (VA 0x00402FF0; static CFG gate PASS, CFG score 0.996).
+// IGI native provenance: Config_FillPlayerProfileListBox_2 - 0x00402FF0 - CFG score 99.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402FF0-Config_FillPlayerProfileListBox_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_FillPlayerProfileListBox_2.h"
 int32_t Config_FillPlayerProfileListBox_2()
 

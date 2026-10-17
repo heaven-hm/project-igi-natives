@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_005011 (VA 0x00464660; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: AI_005011 - 0x00464660 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00464660-AI_005011.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_005011.h"
 int32_t AI_005011(int32_t* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_LoadLevel_3 (VA 0x00416840; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_LoadLevel_3 - 0x00416840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416840-Level_LoadLevel_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_LoadLevel_3.h"
 int32_t Level_LoadLevel_3()
 

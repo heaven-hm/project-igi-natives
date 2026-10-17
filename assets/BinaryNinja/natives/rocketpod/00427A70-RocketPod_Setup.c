@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RocketPod_Setup (VA 0x00427A70; static CFG gate PASS, CFG score 0.912).
+// IGI native provenance: RocketPod_Setup - 0x00427A70 - CFG score 91.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427A70-RocketPod_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RocketPod_Setup.h"
 int32_t RocketPod_Setup(void* context)
 

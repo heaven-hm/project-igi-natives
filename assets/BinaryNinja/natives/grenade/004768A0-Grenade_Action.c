@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Grenade_Action (VA 0x004768A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Grenade_Action - 0x004768A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004768A0-Grenade_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Grenade_Action.h"
 int32_t* Grenade_Action(int32_t* context )
 

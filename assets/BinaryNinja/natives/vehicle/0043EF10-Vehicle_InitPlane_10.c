@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_InitPlane_10 (VA 0x0043EF10; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Vehicle_InitPlane_10 - 0x0043EF10 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043EF10-Vehicle_InitPlane_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_InitPlane_10.h"
 struct status_msg* Vehicle_InitPlane_10(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t* param_5)
 

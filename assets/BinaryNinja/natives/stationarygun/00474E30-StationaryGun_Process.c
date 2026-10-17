@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StationaryGun_Process (VA 0x00474E30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StationaryGun_Process - 0x00474E30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00474E30-StationaryGun_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StationaryGun_Process.h"
 int32_t StationaryGun_Process(double* context, void* param_2)
 

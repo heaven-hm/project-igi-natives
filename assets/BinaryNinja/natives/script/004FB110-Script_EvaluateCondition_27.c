@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_EvaluateCondition_27 (VA 0x004FB110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_EvaluateCondition_27 - 0x004FB110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FB110-Script_EvaluateCondition_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_EvaluateCondition_27.h"
 uint32_t Script_EvaluateCondition_27()
 

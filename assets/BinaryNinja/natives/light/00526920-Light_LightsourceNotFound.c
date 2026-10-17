@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_LightsourceNotFound (VA 0x00526920; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_LightsourceNotFound - 0x00526920 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00526920-Light_LightsourceNotFound.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_LightsourceNotFound.h"
 int32_t Light_LightsourceNotFound(int32_t context)
 

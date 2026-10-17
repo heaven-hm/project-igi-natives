@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Elevator_OnEvent (VA 0x0043E1F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Elevator_OnEvent - 0x0043E1F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043E1F0-Elevator_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Elevator_OnEvent.h"
 void* Elevator_OnEvent(float context)
 

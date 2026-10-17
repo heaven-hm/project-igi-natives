@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_CheckGround_11 (VA 0x00413D10; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: HumanPlayer_CheckGround_11 - 0x00413D10 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00413D10-HumanPlayer_CheckGround_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_CheckGround_11.h"
 void* HumanPlayer_CheckGround_11(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, void* param_7, int32_t param_8, int32_t param_9)
 

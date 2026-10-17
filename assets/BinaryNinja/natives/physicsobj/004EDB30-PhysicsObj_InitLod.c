@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_InitLod (VA 0x004EDB30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObj_InitLod - 0x004EDB30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDB30-PhysicsObj_InitLod.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_InitLod.h"
 
 int32_t PhysicsObj_InitLod(void* pThis)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIStationaryGun_Setup (VA 0x0046F390; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: AIStationaryGun_Setup - 0x0046F390 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046F390-AIStationaryGun_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIStationaryGun_Setup.h"
 struct status_msg* AIStationaryGun_Setup(long double context , float param_2)
 

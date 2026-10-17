@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_InitLadder_8 (VA 0x004463B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_InitLadder_8 - 0x004463B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004463B0-Env_InitLadder_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_InitLadder_8.h"
 int32_t Env_InitLadder_8(void* context)
 

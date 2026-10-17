@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_ApplyImpulse_13 (VA 0x0050E1E0; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: Physics_ApplyImpulse_13 - 0x0050E1E0 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0050E1E0-Physics_ApplyImpulse_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_ApplyImpulse_13.h"
 void* Physics_ApplyImpulse_13(void* context)
 

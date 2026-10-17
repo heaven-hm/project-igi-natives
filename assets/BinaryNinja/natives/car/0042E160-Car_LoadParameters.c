@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_LoadParameters (VA 0x0042E160; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Car_LoadParameters - 0x0042E160 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042E160-Car_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_LoadParameters.h"
 int32_t* Car_LoadParameters(float context)
 

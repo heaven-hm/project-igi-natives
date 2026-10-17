@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_RunHandler (VA 0x004F4180; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_RunHandler - 0x004F4180 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4180-Vehicle_RunHandler.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_RunHandler.h"
 
 void Vehicle_RunHandler() {

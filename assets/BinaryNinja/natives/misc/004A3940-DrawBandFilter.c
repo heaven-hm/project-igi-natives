@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DrawBandFilter (VA 0x004A3940; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DrawBandFilter - 0x004A3940 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A3940-DrawBandFilter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DrawBandFilter.h"
 float DrawBandFilter(int32_t* context) {
     int32_t context_val;

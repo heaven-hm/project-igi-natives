@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Soldier_DeathFallSolver (VA 0x0045D5B0; static CFG gate PASS, CFG score 0.882).
+// IGI native provenance: Soldier_DeathFallSolver - 0x0045D5B0 - CFG score 88.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045D5B0-Soldier_DeathFallSolver.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Soldier_DeathFallSolver.h"
 double* Soldier_DeathFallSolver(double* context, void* param_2, int32_t* param_3, int32_t* param_4)
 

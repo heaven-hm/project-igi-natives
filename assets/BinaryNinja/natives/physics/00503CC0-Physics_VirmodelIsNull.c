@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_VirmodelIsNull (VA 0x00503CC0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Physics_VirmodelIsNull - 0x00503CC0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00503CC0-Physics_VirmodelIsNull.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_VirmodelIsNull.h"
 struct status_msg* Physics_VirmodelIsNull(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t* param_5)
 

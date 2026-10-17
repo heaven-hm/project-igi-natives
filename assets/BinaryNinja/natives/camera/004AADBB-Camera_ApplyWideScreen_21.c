@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyWideScreen_21 (VA 0x004AADBB; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Camera_ApplyWideScreen_21 - 0x004AADBB - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004AADBB-Camera_ApplyWideScreen_21.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyWideScreen_21.h"
 int32_t* Camera_ApplyWideScreen_21(int32_t* context, int32_t* param_2)
 

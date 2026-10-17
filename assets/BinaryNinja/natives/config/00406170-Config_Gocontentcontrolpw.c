@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_Gocontentcontrolpw (VA 0x00406170; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_Gocontentcontrolpw - 0x00406170 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406170-Config_Gocontentcontrolpw.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_Gocontentcontrolpw.h"
 int32_t Config_Gocontentcontrolpw(int32_t* context)
 

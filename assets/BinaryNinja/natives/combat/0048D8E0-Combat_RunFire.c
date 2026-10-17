@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Combat_RunFire (VA 0x0048D8E0; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: Combat_RunFire - 0x0048D8E0 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048D8E0-Combat_RunFire.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Combat_RunFire.h"
 int32_t Combat_RunFire(void* context)
 

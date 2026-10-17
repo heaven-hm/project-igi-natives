@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_UpdateTransform_17 (VA 0x004A975E; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_UpdateTransform_17 - 0x004A975E - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A975E-Camera_UpdateTransform_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_UpdateTransform_17.h"
 long double Camera_UpdateTransform_17(int32_t context, int32_t param_2, int16_t param_3 , long double param_4, int32_t param_5 , long double param_6, long double param_7)
 

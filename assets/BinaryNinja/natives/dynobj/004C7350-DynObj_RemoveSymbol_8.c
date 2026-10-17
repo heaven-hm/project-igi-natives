@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RemoveSymbol_8 (VA 0x004C7350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_RemoveSymbol_8 - 0x004C7350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C7350-DynObj_RemoveSymbol_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RemoveSymbol_8.h"
 int32_t DynObj_RemoveSymbol_8(void* context, int32_t* param_2, double* param_3, double* param_4, double* param_5, int32_t param_6)
 

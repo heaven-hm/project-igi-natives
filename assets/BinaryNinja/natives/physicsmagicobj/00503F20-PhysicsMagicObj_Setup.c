@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsMagicObj_Setup (VA 0x00503F20; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: PhysicsMagicObj_Setup - 0x00503F20 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00503F20-PhysicsMagicObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsMagicObj_Setup.h"
 void* PhysicsMagicObj_Setup(void* context, float param_2)
 

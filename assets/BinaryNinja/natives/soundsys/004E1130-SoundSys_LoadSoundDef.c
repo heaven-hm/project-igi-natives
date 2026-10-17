@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_LoadSoundDef (VA 0x004E1130; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: SoundSys_LoadSoundDef - 0x004E1130 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E1130-SoundSys_LoadSoundDef.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_LoadSoundDef.h"
 int32_t SoundSys_LoadSoundDef(int32_t context, int32_t param_2, int32_t* param_3, float param_4, int32_t* param_5, float param_6)
 

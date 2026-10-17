@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Invoke2 (VA 0x00456FB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_Invoke2 - 0x00456FB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00456FB0-HumanAI_Invoke2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke2.h"
 
 int32_t HumanAI_Invoke2(int32_t context, void* param_2)

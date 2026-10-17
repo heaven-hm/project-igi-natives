@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyPostProcess_14 (VA 0x004A8935; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyPostProcess_14 - 0x004A8935 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A8935-Camera_ApplyPostProcess_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyPostProcess_14.h"
 void Camera_ApplyPostProcess_14(void* context , long double param_2 )
 

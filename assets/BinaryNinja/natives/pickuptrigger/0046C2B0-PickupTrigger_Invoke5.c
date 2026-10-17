@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PickupTrigger_Invoke5 (VA 0x0046C2B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PickupTrigger_Invoke5 - 0x0046C2B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046C2B0-PickupTrigger_Invoke5.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PickupTrigger_Invoke5.h"
 
 int32_t PickupTrigger_Invoke5(float context)

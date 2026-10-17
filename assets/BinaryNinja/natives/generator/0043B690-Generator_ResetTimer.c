@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Generator_ResetTimer (VA 0x0043B690; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Generator_ResetTimer - 0x0043B690 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043B690-Generator_ResetTimer.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Generator_ResetTimer.h"
 
 int32_t Generator_ResetTimer(void* pThis, int32_t param)

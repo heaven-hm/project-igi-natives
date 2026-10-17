@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_AttachLipsync_11 (VA 0x004E8110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_AttachLipsync_11 - 0x004E8110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8110-SoundSys_AttachLipsync_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_AttachLipsync_11.h"
 struct status_msg* SoundSys_AttachLipsync_11(void* context, uint32_t param_2, uint32_t param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8 , uint32_t param_9, uint32_t param_10, uint32_t param_11)
 

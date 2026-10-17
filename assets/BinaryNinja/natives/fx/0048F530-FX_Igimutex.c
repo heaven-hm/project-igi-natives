@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_Igimutex (VA 0x0048F530; static CFG gate PASS, CFG score 0.951).
+// IGI native provenance: FX_Igimutex - 0x0048F530 - CFG score 95.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F530-FX_Igimutex.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_Igimutex.h"
 WPARAM __stdcall FX_Igimutex(HINSTANCE context, int32_t param_2 )
 

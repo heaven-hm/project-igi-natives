@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_EvaluateTrigger_18 (VA 0x004EE140; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_EvaluateTrigger_18 - 0x004EE140 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EE140-SoundSys_EvaluateTrigger_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_EvaluateTrigger_18.h"
 void* SoundSys_EvaluateTrigger_18(char* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_DeployGear_3 (VA 0x00433580; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Vehicle_DeployGear_3 - 0x00433580 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00433580-Vehicle_DeployGear_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_DeployGear_3.h"
 float Vehicle_DeployGear_3(float context) {
     float result = context;

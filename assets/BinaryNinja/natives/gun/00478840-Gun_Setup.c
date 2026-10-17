@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_Setup (VA 0x00478840; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Gun_Setup - 0x00478840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00478840-Gun_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_Setup.h"
 int32_t Gun_Setup(void* context)
 

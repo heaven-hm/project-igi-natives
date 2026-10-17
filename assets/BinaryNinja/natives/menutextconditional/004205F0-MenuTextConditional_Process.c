@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuTextConditional_Process (VA 0x004205F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuTextConditional_Process - 0x004205F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004205F0-MenuTextConditional_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuTextConditional_Process.h"
 char* MenuTextConditional_Process(void* context)
 

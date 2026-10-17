@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Wheel_Update (VA 0x00430640; static CFG gate PASS, CFG score 0.875).
+// IGI native provenance: Wheel_Update - 0x00430640 - CFG score 87.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00430640-Wheel_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Wheel_Update.h"
 int32_t Wheel_Update(void* context, int32_t* param_2)
 

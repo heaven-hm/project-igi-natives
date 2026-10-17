@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_DeletePlayerProfile (VA 0x00405400; static CFG gate FAIL, CFG score 0.750).
+// IGI native provenance: Config_DeletePlayerProfile - 0x00405400 - CFG score 75.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00405400-Config_DeletePlayerProfile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_DeletePlayerProfile.h"
 int32_t Config_DeletePlayerProfile(int32_t context, float param_2 )
 

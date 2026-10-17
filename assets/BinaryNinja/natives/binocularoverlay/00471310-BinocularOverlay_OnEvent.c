@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BinocularOverlay_OnEvent (VA 0x00471310; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BinocularOverlay_OnEvent - 0x00471310 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00471310-BinocularOverlay_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BinocularOverlay_OnEvent.h"
 int32_t* BinocularOverlay_OnEvent(void* context)
 

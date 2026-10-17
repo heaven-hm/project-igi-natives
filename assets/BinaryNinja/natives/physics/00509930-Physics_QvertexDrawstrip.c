@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_QvertexDrawstrip (VA 0x00509930; static CFG gate FAIL, CFG score 0.633).
+// IGI native provenance: Physics_QvertexDrawstrip - 0x00509930 - CFG score 63.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00509930-Physics_QvertexDrawstrip.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_QvertexDrawstrip.h"
 int32_t Physics_QvertexDrawstrip()
 

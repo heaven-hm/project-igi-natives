@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_PlaySoundSample_13 (VA 0x004E8780; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: SoundSys_PlaySoundSample_13 - 0x004E8780 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E8780-SoundSys_PlaySoundSample_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_PlaySoundSample_13.h"
 void* SoundSys_PlaySoundSample_13(void* context)
 

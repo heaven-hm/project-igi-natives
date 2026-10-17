@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsGetSpeech (VA 0x00404D50; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsGetSpeech - 0x00404D50 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404D50-Config_SoundOptionsGetSpeech.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsGetSpeech.h"
 int32_t Config_SoundOptionsGetSpeech(int32_t context)
 

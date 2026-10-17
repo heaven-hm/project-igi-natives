@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericTBA_Process (VA 0x004482D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericTBA_Process - 0x004482D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004482D0-GenericTBA_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericTBA_Process.h"
 int32_t GenericTBA_Process(void* context)
 

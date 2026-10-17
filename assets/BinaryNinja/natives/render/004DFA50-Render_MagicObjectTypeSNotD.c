@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_MagicObjectTypeSNotD (VA 0x004DFA50; static CFG gate PASS, CFG score 0.861).
+// IGI native provenance: Render_MagicObjectTypeSNotD - 0x004DFA50 - CFG score 86.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DFA50-Render_MagicObjectTypeSNotD.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_MagicObjectTypeSNotD.h"
 int32_t* Render_MagicObjectTypeSNotD(void* context)
 

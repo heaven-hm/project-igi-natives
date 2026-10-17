@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_InitHeli_6 (VA 0x00437150; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: Vehicle_InitHeli_6 - 0x00437150 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00437150-Vehicle_InitHeli_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_InitHeli_6.h"
 int32_t Vehicle_InitHeli_6(void* context)
 

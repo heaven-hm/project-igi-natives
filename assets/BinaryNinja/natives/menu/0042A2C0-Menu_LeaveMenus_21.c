@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_LeaveMenus_21 (VA 0x0042A2C0; static CFG gate PASS, CFG score 0.911).
+// IGI native provenance: Menu_LeaveMenus_21 - 0x0042A2C0 - CFG score 91.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042A2C0-Menu_LeaveMenus_21.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_LeaveMenus_21.h"
 char* Menu_LeaveMenus_21(void* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: NoiseQTask_Setup (VA 0x00520400; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: NoiseQTask_Setup - 0x00520400 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520400-NoiseQTask_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "NoiseQTask_Setup.h"
 int32_t NoiseQTask_Setup(long double context , void* param_2)
 

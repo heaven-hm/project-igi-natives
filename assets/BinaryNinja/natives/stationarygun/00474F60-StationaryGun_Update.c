@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StationaryGun_Update (VA 0x00474F60; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: StationaryGun_Update - 0x00474F60 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00474F60-StationaryGun_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StationaryGun_Update.h"
 void* StationaryGun_Update(double* context, int32_t* param_2)
 

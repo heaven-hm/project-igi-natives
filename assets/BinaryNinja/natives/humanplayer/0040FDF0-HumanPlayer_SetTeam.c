@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_SetTeam (VA 0x0040FDF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_SetTeam - 0x0040FDF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040FDF0-HumanPlayer_SetTeam.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_SetTeam.h"
 
 void HumanPlayer_SetTeam(void* pThis, void* param)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_Action (VA 0x00401230; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_Action - 0x00401230 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401230-QTask_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_Action.h"
 void QTask_Action()
 

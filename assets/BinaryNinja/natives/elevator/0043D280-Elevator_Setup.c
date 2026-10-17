@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Elevator_Setup (VA 0x0043D280; static CFG gate PASS, CFG score 0.975).
+// IGI native provenance: Elevator_Setup - 0x0043D280 - CFG score 97.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043D280-Elevator_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Elevator_Setup.h"
 uint32_t Elevator_Setup(int32_t* context)
 

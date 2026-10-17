@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qhash_Reset (VA 0x004B0D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qhash_Reset - 0x004B0D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B0D90-Qhash_Reset.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qhash_Reset.h"
 void* Qhash_Reset()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_SetMasterVolume_16 (VA 0x004EC2C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_SetMasterVolume_16 - 0x004EC2C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EC2C0-SoundSys_SetMasterVolume_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_SetMasterVolume_16.h"
 float SoundSys_SetMasterVolume_16(void* context, int32_t param_2, float param_3, void* param_4, float* param_5, float param_6) {
     float* data_val = param_6;

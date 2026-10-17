@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_LoadObjects_7 (VA 0x00416D50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_LoadObjects_7 - 0x00416D50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416D50-Level_LoadObjects_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_LoadObjects_7.h"
 void* Level_LoadObjects_7()
 

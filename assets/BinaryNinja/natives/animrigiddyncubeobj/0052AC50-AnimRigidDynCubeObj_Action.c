@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimRigidDynCubeObj_Action (VA 0x0052AC50; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AnimRigidDynCubeObj_Action - 0x0052AC50 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052AC50-AnimRigidDynCubeObj_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimRigidDynCubeObj_Action.h"
 int32_t AnimRigidDynCubeObj_Action(void* context, int32_t* param_2)
 

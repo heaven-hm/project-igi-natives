@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuLoader_Init (VA 0x004190E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuLoader_Init - 0x004190E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004190E0-MenuLoader_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuLoader_Init.h"
 int32_t* MenuLoader_Init()
 

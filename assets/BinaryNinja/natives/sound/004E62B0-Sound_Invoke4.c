@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_Invoke4 (VA 0x004E62B0; static CFG gate FAIL, CFG score 0.694).
+// IGI native provenance: Sound_Invoke4 - 0x004E62B0 - CFG score 69.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004E62B0-Sound_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke4.h"
 
 int32_t Sound_Invoke4()

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qsprite_Register4Az (VA 0x004B53B0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Qsprite_Register4Az - 0x004B53B0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B53B0-Qsprite_Register4Az.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qsprite_Register4Az.h"
 int32_t Qsprite_Register4Az(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8, int32_t param_9, float param_10, float param_11, float param_12, int32_t param_13, int32_t param_14, int32_t param_15, int32_t param_16, int32_t param_17)
 

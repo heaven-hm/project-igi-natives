@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CheckSector_28 (VA 0x0046C020; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_CheckSector_28 - 0x0046C020 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046C020-AI_CheckSector_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CheckSector_28.h"
 struct status_msg* AI_CheckSector_28(void* context)
 

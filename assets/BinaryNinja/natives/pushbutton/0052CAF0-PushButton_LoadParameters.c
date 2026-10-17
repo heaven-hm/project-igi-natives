@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PushButton_LoadParameters (VA 0x0052CAF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PushButton_LoadParameters - 0x0052CAF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052CAF0-PushButton_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PushButton_LoadParameters.h"
 int32_t PushButton_LoadParameters(void* context, int32_t* param_2)
 

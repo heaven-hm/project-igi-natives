@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GlowTask_Create (VA 0x004E9360; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GlowTask_Create - 0x004E9360 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E9360-GlowTask_Create.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GlowTask_Create.h"
 
 int32_t GlowTask_Create(void* pThis)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_Render3DSprites (VA 0x00530470; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Particle_Render3DSprites - 0x00530470 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00530470-Particle_Render3DSprites.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_Render3DSprites.h"
 int16_t* Particle_Render3DSprites(void* context, int16_t param_2)
 

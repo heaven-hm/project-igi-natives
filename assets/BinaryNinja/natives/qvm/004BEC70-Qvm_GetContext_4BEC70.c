@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_GetContext_4BEC70 (VA 0x004BEC70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_GetContext_4BEC70 - 0x004BEC70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BEC70-Qvm_GetContext_4BEC70.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_GetContext_4BEC70.h"
 
 void* Qvm_GetContext_4BEC70(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefSound_Setup (VA 0x004E8520; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefSound_Setup - 0x004E8520 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8520-SoundDefSound_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefSound_Setup.h"
 int32_t* SoundDefSound_Setup(void* context, int32_t* param_2)
 

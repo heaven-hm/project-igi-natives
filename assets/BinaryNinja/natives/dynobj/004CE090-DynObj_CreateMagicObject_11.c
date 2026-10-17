@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_CreateMagicObject_11 (VA 0x004CE090; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: DynObj_CreateMagicObject_11 - 0x004CE090 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CE090-DynObj_CreateMagicObject_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_CreateMagicObject_11.h"
 uint32_t DynObj_CreateMagicObject_11(int32_t context, char param_2, int32_t param_3, double* param_4, int32_t param_5, int32_t param_6)
 

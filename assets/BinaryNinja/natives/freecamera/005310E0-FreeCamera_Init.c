@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FreeCamera_Init (VA 0x005310E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FreeCamera_Init - 0x005310E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005310E0-FreeCamera_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FreeCamera_Init.h"
 int32_t FreeCamera_Init()
 

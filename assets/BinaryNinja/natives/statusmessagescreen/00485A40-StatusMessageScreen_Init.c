@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessageScreen_Init (VA 0x00485A40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusMessageScreen_Init - 0x00485A40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485A40-StatusMessageScreen_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessageScreen_Init.h"
 void* StatusMessageScreen_Init()
 

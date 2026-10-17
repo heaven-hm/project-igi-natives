@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_Start (VA 0x00415B30; static CFG gate PASS, CFG score 0.996).
+// IGI native provenance: Level_Start - 0x00415B30 - CFG score 99.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00415B30-Level_Start.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_Start.h"
 int32_t Level_Start(void* context)
 

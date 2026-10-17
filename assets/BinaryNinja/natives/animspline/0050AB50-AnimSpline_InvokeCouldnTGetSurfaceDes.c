@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimSpline_InvokeCouldnTGetSurfaceDes (VA 0x0050AB50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimSpline_InvokeCouldnTGetSurfaceDes - 0x0050AB50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050AB50-AnimSpline_InvokeCouldnTGetSurfaceDes.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_InvokeCouldnTGetSurfaceDes.h"
 
 int32_t AnimSpline_InvokeCouldnTGetSurfaceDes(void* context)

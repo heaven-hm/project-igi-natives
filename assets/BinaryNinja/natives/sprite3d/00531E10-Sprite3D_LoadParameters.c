@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sprite3D_LoadParameters (VA 0x00531E10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sprite3D_LoadParameters - 0x00531E10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531E10-Sprite3D_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sprite3D_LoadParameters.h"
 int32_t Sprite3D_LoadParameters(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HeliDoor_Init_2 (VA 0x00427240; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HeliDoor_Init_2 - 0x00427240 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427240-HeliDoor_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HeliDoor_Init_2.h"
 
 int32_t HeliDoor_Init_2(long double pThis , long double param , int32_t* flags )

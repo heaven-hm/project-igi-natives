@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Throwable_Create (VA 0x00477040; static CFG gate PASS, CFG score 0.985).
+// IGI native provenance: Throwable_Create - 0x00477040 - CFG score 98.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477040-Throwable_Create.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Throwable_Create.h"
 struct status_msg* Throwable_Create(float context, void* param_2, double* param_3, int32_t param_4, int32_t* param_5, void* param_6, int32_t param_7)
 

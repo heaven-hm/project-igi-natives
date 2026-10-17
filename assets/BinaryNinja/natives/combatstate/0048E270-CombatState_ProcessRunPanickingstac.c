@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CombatState_ProcessRunPanickingstac (VA 0x0048E270; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CombatState_ProcessRunPanickingstac - 0x0048E270 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048E270-CombatState_ProcessRunPanickingstac.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_ProcessRunPanickingstac.h"
 
 int32_t* CombatState_ProcessRunPanickingstac(void* context, int32_t* param_2)

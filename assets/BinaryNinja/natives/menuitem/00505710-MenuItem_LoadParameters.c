@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuItem_LoadParameters (VA 0x00505710; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuItem_LoadParameters - 0x00505710 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505710-MenuItem_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuItem_LoadParameters.h"
 int32_t MenuItem_LoadParameters(void* context, int32_t param_2)
 

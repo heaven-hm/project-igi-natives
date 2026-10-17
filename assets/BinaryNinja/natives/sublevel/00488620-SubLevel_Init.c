@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SubLevel_Init (VA 0x00488620; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SubLevel_Init - 0x00488620 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00488620-SubLevel_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SubLevel_Init.h"
 int32_t* SubLevel_Init()
 

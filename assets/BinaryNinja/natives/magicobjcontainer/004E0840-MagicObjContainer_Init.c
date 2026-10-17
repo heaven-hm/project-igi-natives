@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MagicObjContainer_Init (VA 0x004E0840; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MagicObjContainer_Init - 0x004E0840 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E0840-MagicObjContainer_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MagicObjContainer_Init.h"
 int32_t MagicObjContainer_Init()
 

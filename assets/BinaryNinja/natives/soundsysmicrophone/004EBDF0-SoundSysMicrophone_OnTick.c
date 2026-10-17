@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSysMicrophone_OnTick (VA 0x004EBDF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSysMicrophone_OnTick - 0x004EBDF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EBDF0-SoundSysMicrophone_OnTick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSysMicrophone_OnTick.h"
 int32_t SoundSysMicrophone_OnTick(int32_t* context)
 

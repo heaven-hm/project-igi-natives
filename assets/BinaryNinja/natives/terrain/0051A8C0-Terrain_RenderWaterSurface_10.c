@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_RenderWaterSurface_10 (VA 0x0051A8C0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Terrain_RenderWaterSurface_10 - 0x0051A8C0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0051A8C0-Terrain_RenderWaterSurface_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_RenderWaterSurface_10.h"
 void Terrain_RenderWaterSurface_10(float context)
 

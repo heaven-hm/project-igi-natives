@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_CheckQTaskID_6 (VA 0x00416EF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_CheckQTaskID_6 - 0x00416EF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416EF0-Level_CheckQTaskID_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_CheckQTaskID_6.h"
 void* Level_CheckQTaskID_6(void* context)
 

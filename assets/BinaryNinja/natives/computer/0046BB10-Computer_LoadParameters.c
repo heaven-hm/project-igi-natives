@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Computer_LoadParameters (VA 0x0046BB10; static CFG gate PASS, CFG score 0.991).
+// IGI native provenance: Computer_LoadParameters - 0x0046BB10 - CFG score 99.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046BB10-Computer_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Computer_LoadParameters.h"
 int32_t Computer_LoadParameters(void* context)
 

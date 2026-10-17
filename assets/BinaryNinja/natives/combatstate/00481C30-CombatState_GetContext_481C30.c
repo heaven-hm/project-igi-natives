@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CombatState_GetContext_481C30 (VA 0x00481C30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CombatState_GetContext_481C30 - 0x00481C30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00481C30-CombatState_GetContext_481C30.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CombatState_GetContext_481C30.h"
 
 int32_t* CombatState_GetContext_481C30(int32_t* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_OpenEvent (VA 0x00401050; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_OpenEvent - 0x00401050 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401050-QTask_OpenEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_OpenEvent.h"
 int32_t QTask_OpenEvent(int32_t context )
 

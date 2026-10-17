@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_InterpolateWaypoint_10 (VA 0x00509CF0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Physics_InterpolateWaypoint_10 - 0x00509CF0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00509CF0-Physics_InterpolateWaypoint_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_InterpolateWaypoint_10.h"
 void Physics_InterpolateWaypoint_10()
 

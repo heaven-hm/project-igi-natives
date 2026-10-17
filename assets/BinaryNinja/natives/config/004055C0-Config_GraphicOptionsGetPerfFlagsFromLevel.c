@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsGetPerfFlagsFromLevel (VA 0x004055C0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GraphicOptionsGetPerfFlagsFromLevel - 0x004055C0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004055C0-Config_GraphicOptionsGetPerfFlagsFromLevel.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsGetPerfFlagsFromLevel.h"
 int32_t Config_GraphicOptionsGetPerfFlagsFromLevel(int32_t context, float param_2 )
 

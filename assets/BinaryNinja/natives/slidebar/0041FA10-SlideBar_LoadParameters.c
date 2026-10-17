@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SlideBar_LoadParameters (VA 0x0041FA10; static CFG gate PASS, CFG score 0.956).
+// IGI native provenance: SlideBar_LoadParameters - 0x0041FA10 - CFG score 95.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041FA10-SlideBar_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SlideBar_LoadParameters.h"
 int32_t SlideBar_LoadParameters(float context)
 

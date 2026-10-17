@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyBandFilter_23 (VA 0x004ABE70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyBandFilter_23 - 0x004ABE70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ABE70-Camera_ApplyBandFilter_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyBandFilter_23.h"
 enum WIN32_ERROR Camera_ApplyBandFilter_23(int32_t context)
 

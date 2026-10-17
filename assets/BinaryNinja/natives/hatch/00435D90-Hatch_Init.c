@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Hatch_Init (VA 0x00435D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Hatch_Init - 0x00435D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00435D90-Hatch_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Hatch_Init.h"
 void* Hatch_Init()
 

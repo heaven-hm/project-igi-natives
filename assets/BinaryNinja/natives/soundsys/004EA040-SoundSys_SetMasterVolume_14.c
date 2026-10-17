@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_SetMasterVolume_14 (VA 0x004EA040; static CFG gate FAIL, CFG score 0.849).
+// IGI native provenance: SoundSys_SetMasterVolume_14 - 0x004EA040 - CFG score 84.9% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004EA040-SoundSys_SetMasterVolume_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_SetMasterVolume_14.h"
 int32_t SoundSys_SetMasterVolume_14(void* context)
 

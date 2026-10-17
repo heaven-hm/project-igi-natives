@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_ComputeAccuracy_7 (VA 0x0047C4C0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Weapon_ComputeAccuracy_7 - 0x0047C4C0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0047C4C0-Weapon_ComputeAccuracy_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_ComputeAccuracy_7.h"
 void* Weapon_ComputeAccuracy_7(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7)
 

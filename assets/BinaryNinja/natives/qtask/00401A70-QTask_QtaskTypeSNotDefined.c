@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_QtaskTypeSNotDefined (VA 0x00401A70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_QtaskTypeSNotDefined - 0x00401A70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401A70-QTask_QtaskTypeSNotDefined.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_QtaskTypeSNotDefined.h"
 int32_t QTask_QtaskTypeSNotDefined(char* context)
 

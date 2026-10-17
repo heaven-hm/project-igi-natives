@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MoveRigidObj_LoadParameters (VA 0x0051F810; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: MoveRigidObj_LoadParameters - 0x0051F810 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051F810-MoveRigidObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MoveRigidObj_LoadParameters.h"
 int32_t* MoveRigidObj_LoadParameters(uint32_t context)
 

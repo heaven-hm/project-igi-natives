@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_Setup (VA 0x00416260; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Game_Setup - 0x00416260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416260-Game_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_Setup.h"
 int32_t Game_Setup(int32_t* context)
 

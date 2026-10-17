@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Elevator_LoadParameters (VA 0x0043D010; static CFG gate PASS, CFG score 0.861).
+// IGI native provenance: Elevator_LoadParameters - 0x0043D010 - CFG score 86.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043D010-Elevator_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Elevator_LoadParameters.h"
 char* Elevator_LoadParameters(int32_t* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyBandFilter_8 (VA 0x004A6335; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Camera_ApplyBandFilter_8 - 0x004A6335 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A6335-Camera_ApplyBandFilter_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyBandFilter_8.h"
 PSTR Camera_ApplyBandFilter_8()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DiscardTerrain_LoadParameters (VA 0x0052C000; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: DiscardTerrain_LoadParameters - 0x0052C000 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052C000-DiscardTerrain_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DiscardTerrain_LoadParameters.h"
 int32_t DiscardTerrain_LoadParameters(int32_t* context)
 

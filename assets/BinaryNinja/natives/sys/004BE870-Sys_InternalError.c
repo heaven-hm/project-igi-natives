@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_InternalError (VA 0x004BE870; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_InternalError - 0x004BE870 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BE870-Sys_InternalError.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_InternalError.h"
 int32_t Sys_InternalError(int32_t* context)
 

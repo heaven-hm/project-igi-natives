@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_RenderQuadtree_2 (VA 0x005125C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_RenderQuadtree_2 - 0x005125C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005125C0-Terrain_RenderQuadtree_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_RenderQuadtree_2.h"
 float Terrain_RenderQuadtree_2(float context, void* param_2) {
     float result = g_bcadc0;

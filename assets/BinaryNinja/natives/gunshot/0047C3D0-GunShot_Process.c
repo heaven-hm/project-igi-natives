@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunShot_Process (VA 0x0047C3D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunShot_Process - 0x0047C3D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047C3D0-GunShot_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunShot_Process.h"
 void* GunShot_Process(void* context)
 

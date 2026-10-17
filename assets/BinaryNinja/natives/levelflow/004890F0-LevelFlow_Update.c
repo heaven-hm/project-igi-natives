@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelFlow_Update (VA 0x004890F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelFlow_Update - 0x004890F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004890F0-LevelFlow_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelFlow_Update.h"
 int32_t LevelFlow_Update(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_OnEvent (VA 0x0043A710; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmLight_OnEvent - 0x0043A710 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043A710-AlarmLight_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_OnEvent.h"
 int32_t AlarmLight_OnEvent(void* context)
 

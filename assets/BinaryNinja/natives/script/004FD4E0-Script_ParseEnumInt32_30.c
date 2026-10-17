@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumInt32_30 (VA 0x004FD4E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_ParseEnumInt32_30 - 0x004FD4E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FD4E0-Script_ParseEnumInt32_30.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumInt32_30.h"
 float Script_ParseEnumInt32_30(void* context, float param_2) {
     long double fpu7 = 0.0f;

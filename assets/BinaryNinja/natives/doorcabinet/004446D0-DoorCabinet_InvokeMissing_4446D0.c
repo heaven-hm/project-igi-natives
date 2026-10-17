@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DoorCabinet_InvokeMissing_4446D0 (VA 0x004446D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DoorCabinet_InvokeMissing_4446D0 - 0x004446D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004446D0-DoorCabinet_InvokeMissing_4446D0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DoorCabinet_InvokeMissing_4446D0.h"
 
 int32_t* DoorCabinet_InvokeMissing_4446D0(int32_t* context)

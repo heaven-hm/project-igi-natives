@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_Invoke4 (VA 0x004EE680; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_Invoke4 - 0x004EE680 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EE680-PhysicsTerrain_Invoke4.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_Invoke4.h"
 
 int32_t* PhysicsTerrain_Invoke4(int32_t* context)

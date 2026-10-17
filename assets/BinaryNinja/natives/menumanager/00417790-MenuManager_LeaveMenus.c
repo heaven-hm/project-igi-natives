@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_LeaveMenus (VA 0x00417790; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: MenuManager_LeaveMenus - 0x00417790 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00417790-MenuManager_LeaveMenus.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_LeaveMenus.h"
 int32_t MenuManager_LeaveMenus(int32_t context, void* param_2, float param_3)
 

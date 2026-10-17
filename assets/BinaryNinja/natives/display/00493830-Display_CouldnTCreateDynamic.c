@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CouldnTCreateDynamic (VA 0x00493830; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_CouldnTCreateDynamic - 0x00493830 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00493830-Display_CouldnTCreateDynamic.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CouldnTCreateDynamic.h"
 int32_t Display_CouldnTCreateDynamic()
 

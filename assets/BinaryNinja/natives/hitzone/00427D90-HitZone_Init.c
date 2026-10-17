@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HitZone_Init (VA 0x00427D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HitZone_Init - 0x00427D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427D90-HitZone_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HitZone_Init.h"
 void* HitZone_Init()
 

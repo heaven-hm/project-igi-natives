@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_Init (VA 0x00470610; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Binocular_Init - 0x00470610 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470610-Binocular_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_Init.h"
 void* Binocular_Init()
 

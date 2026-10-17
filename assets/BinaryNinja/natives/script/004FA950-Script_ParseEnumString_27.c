@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumString_27 (VA 0x004FA950; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Script_ParseEnumString_27 - 0x004FA950 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FA950-Script_ParseEnumString_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumString_27.h"
 uint32_t Script_ParseEnumString_27(void* context, int32_t param_2)
 

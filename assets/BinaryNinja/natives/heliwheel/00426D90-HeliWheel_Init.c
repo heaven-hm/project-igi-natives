@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HeliWheel_Init (VA 0x00426D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HeliWheel_Init - 0x00426D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426D90-HeliWheel_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HeliWheel_Init.h"
 void* HeliWheel_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ExecuteLevelScript_14 (VA 0x004F3D30; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Script_ExecuteLevelScript_14 - 0x004F3D30 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F3D30-Script_ExecuteLevelScript_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ExecuteLevelScript_14.h"
 int32_t Script_ExecuteLevelScript_14(void* context, int32_t* param_2)
 

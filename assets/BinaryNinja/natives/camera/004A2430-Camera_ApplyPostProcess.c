@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyPostProcess (VA 0x004A2430; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyPostProcess - 0x004A2430 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A2430-Camera_ApplyPostProcess.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyPostProcess.h"
 struct status_msg* Camera_ApplyPostProcess(void* context, uint32_t param_2, uint32_t param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8, uint32_t param_9, uint32_t param_10)
 

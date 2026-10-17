@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_InvokeComputeNormals (VA 0x004F42D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_InvokeComputeNormals - 0x004F42D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F42D0-PhysicsTerrain_InvokeComputeNormals.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_InvokeComputeNormals.h"
 
 int32_t PhysicsTerrain_InvokeComputeNormals(float context, void* param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Train_ReceiveChannels (VA 0x0042B040; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Train_ReceiveChannels - 0x0042B040 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042B040-Train_ReceiveChannels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Train_ReceiveChannels.h"
 float Train_ReceiveChannels(void* context, int32_t* param_2) {
     int32_t* temp_val = *param_2[1];

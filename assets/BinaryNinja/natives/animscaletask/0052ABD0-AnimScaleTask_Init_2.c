@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimScaleTask_Init_2 (VA 0x0052ABD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimScaleTask_Init_2 - 0x0052ABD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052ABD0-AnimScaleTask_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimScaleTask_Init_2.h"
 
 int32_t AnimScaleTask_Init_2(int32_t* pThis )

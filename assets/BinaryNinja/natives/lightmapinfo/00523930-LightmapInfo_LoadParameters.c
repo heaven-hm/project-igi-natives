@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LightmapInfo_LoadParameters (VA 0x00523930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LightmapInfo_LoadParameters - 0x00523930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00523930-LightmapInfo_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LightmapInfo_LoadParameters.h"
 int32_t LightmapInfo_LoadParameters(void* context)
 

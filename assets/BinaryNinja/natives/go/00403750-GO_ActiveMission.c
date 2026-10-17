@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_ActiveMission (VA 0x00403750; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GO_ActiveMission - 0x00403750 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00403750-GO_ActiveMission.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_ActiveMission.h"
 int32_t GO_ActiveMission(int32_t context, float param_2 )
 

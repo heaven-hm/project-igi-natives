@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputPort_Action (VA 0x004ED5E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: InputPort_Action - 0x004ED5E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ED5E0-InputPort_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputPort_Action.h"
 int32_t InputPort_Action(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8 , int32_t param_9, int32_t param_10, int32_t param_11, int32_t param_12, int32_t param_13, int32_t param_14, int32_t param_15)
 

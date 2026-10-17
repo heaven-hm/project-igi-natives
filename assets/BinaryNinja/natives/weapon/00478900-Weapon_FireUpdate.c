@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_FireUpdate (VA 0x00478900; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Weapon_FireUpdate - 0x00478900 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00478900-Weapon_FireUpdate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_FireUpdate.h"
 int32_t Weapon_FireUpdate(int32_t context, int32_t* param_2)
 

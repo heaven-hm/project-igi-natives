@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_RmS (VA 0x00486650; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: FX_RmS - 0x00486650 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00486650-FX_RmS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_RmS.h"
 char* FX_RmS(char (** context)[0x16], void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rotor_Update (VA 0x0042D680; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Rotor_Update - 0x0042D680 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042D680-Rotor_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rotor_Update.h"
 void* Rotor_Update(void* context, float param_2)
 

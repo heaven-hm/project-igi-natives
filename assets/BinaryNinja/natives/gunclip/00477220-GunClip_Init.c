@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunClip_Init (VA 0x00477220; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunClip_Init - 0x00477220 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477220-GunClip_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunClip_Init.h"
 void* GunClip_Init()
 

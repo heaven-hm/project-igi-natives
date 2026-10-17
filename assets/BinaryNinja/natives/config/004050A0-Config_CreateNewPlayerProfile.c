@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_CreateNewPlayerProfile (VA 0x004050A0; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: Config_CreateNewPlayerProfile - 0x004050A0 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004050A0-Config_CreateNewPlayerProfile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_CreateNewPlayerProfile.h"
 int32_t Config_CreateNewPlayerProfile(int32_t context, float param_2 )
 

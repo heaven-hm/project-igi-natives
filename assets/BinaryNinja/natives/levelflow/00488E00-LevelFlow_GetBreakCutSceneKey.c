@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelFlow_GetBreakCutSceneKey (VA 0x00488E00; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: LevelFlow_GetBreakCutSceneKey - 0x00488E00 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00488E00-LevelFlow_GetBreakCutSceneKey.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelFlow_GetBreakCutSceneKey.h"
 int32_t LevelFlow_GetBreakCutSceneKey(int32_t context)
 

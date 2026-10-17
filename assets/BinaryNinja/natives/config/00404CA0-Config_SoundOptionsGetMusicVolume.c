@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsGetMusicVolume (VA 0x00404CA0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsGetMusicVolume - 0x00404CA0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404CA0-Config_SoundOptionsGetMusicVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsGetMusicVolume.h"
 int32_t Config_SoundOptionsGetMusicVolume(int32_t context)
 

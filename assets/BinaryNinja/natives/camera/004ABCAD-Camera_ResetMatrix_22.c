@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ResetMatrix_22 (VA 0x004ABCAD; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ResetMatrix_22 - 0x004ABCAD - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ABCAD-Camera_ResetMatrix_22.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ResetMatrix_22.h"
 int32_t Camera_ResetMatrix_22()
 

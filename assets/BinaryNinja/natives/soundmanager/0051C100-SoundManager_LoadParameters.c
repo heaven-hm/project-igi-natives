@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundManager_LoadParameters (VA 0x0051C100; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundManager_LoadParameters - 0x0051C100 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051C100-SoundManager_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundManager_LoadParameters.h"
 int32_t* SoundManager_LoadParameters(char* context, char* param_2)
 

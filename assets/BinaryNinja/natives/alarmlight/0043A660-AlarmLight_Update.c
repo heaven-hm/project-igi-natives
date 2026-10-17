@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_Update (VA 0x0043A660; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmLight_Update - 0x0043A660 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043A660-AlarmLight_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_Update.h"
 int32_t AlarmLight_Update(float context, float param_2)
 

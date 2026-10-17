@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_LeftEcco2F2F2F2F (VA 0x00436DA0; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: Vehicle_LeftEcco2F2F2F2F - 0x00436DA0 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00436DA0-Vehicle_LeftEcco2F2F2F2F.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_LeftEcco2F2F2F2F.h"
 int32_t Vehicle_LeftEcco2F2F2F2F(void* context)
 

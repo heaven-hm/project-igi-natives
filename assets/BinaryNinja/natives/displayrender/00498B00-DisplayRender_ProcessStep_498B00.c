@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_ProcessStep_498B00 (VA 0x00498B00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_ProcessStep_498B00 - 0x00498B00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00498B00-DisplayRender_ProcessStep_498B00.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_ProcessStep_498B00.h"
 
 void* DisplayRender_ProcessStep_498B00()

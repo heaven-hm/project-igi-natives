@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Cabinet_LoadParameters (VA 0x00444420; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: Cabinet_LoadParameters - 0x00444420 - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00444420-Cabinet_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Cabinet_LoadParameters.h"
 int32_t Cabinet_LoadParameters(int32_t* context)
 

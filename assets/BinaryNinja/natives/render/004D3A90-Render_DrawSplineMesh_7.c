@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawSplineMesh_7 (VA 0x004D3A90; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Render_DrawSplineMesh_7 - 0x004D3A90 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D3A90-Render_DrawSplineMesh_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawSplineMesh_7.h"
 int32_t Render_DrawSplineMesh_7(float* context, float param_2, float* param_3, float param_4, float param_5)
 

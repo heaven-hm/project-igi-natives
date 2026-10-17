@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunCABarrel_Cleanup (VA 0x00477B10; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GunCABarrel_Cleanup - 0x00477B10 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477B10-GunCABarrel_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunCABarrel_Cleanup.h"
 void* GunCABarrel_Cleanup(void* context)
 

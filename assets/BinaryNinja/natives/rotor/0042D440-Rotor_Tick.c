@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rotor_Tick (VA 0x0042D440; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Rotor_Tick - 0x0042D440 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042D440-Rotor_Tick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rotor_Tick.h"
 void* Rotor_Tick(float context)
 

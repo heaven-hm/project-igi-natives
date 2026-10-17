@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_BindTexture_13 (VA 0x004DBF30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_BindTexture_13 - 0x004DBF30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DBF30-Render_BindTexture_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_BindTexture_13.h"
 void Render_BindTexture_13(int32_t* context, void** param_2)
 

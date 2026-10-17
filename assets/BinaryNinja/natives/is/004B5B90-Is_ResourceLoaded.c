@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Is_ResourceLoaded (VA 0x004B5B90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Is_ResourceLoaded - 0x004B5B90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B5B90-Is_ResourceLoaded.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Is_ResourceLoaded.h"
 int32_t Is_ResourceLoaded(void* context, void** param_2)
 

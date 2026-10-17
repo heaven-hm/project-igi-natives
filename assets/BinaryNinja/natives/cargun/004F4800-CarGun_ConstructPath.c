@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CarGun_ConstructPath (VA 0x004F4800; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CarGun_ConstructPath - 0x004F4800 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4800-CarGun_ConstructPath.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CarGun_ConstructPath.h"
 int32_t* CarGun_ConstructPath(uint32_t context)
 

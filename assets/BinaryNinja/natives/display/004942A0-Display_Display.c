@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_Display (VA 0x004942A0; static CFG gate PASS, CFG score 0.872).
+// IGI native provenance: Display_Display - 0x004942A0 - CFG score 87.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004942A0-Display_Display.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_Display.h"
 int32_t Display_Display(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, void* param_5, int32_t* param_6)
 

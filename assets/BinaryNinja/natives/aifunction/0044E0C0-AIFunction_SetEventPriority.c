@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetEventPriority (VA 0x0044E0C0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetEventPriority - 0x0044E0C0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E0C0-AIFunction_SetEventPriority.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetEventPriority.h"
 int32_t AIFunction_SetEventPriority(int32_t context, float param_2 )
 

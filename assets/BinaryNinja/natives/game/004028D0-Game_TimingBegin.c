@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_TimingBegin (VA 0x004028D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Game_TimingBegin - 0x004028D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004028D0-Game_TimingBegin.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_TimingBegin.h"
 int32_t Game_TimingBegin()
 

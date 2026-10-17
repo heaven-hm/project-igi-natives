@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RigidDynCubeObj_Init (VA 0x004C3450; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RigidDynCubeObj_Init - 0x004C3450 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C3450-RigidDynCubeObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RigidDynCubeObj_Init.h"
 uint32_t RigidDynCubeObj_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsSetDevice (VA 0x004047F0; static CFG gate FAIL, CFG score 0.792).
+// IGI native provenance: Config_GraphicOptionsSetDevice - 0x004047F0 - CFG score 79.2% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004047F0-Config_GraphicOptionsSetDevice.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsSetDevice.h"
 int32_t Config_GraphicOptionsSetDevice(int32_t context, float param_2 )
 

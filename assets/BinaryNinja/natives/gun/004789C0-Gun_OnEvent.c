@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_OnEvent (VA 0x004789C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Gun_OnEvent - 0x004789C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004789C0-Gun_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_OnEvent.h"
 int32_t* Gun_OnEvent(void* context)
 

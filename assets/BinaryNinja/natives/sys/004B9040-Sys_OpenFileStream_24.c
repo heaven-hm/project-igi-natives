@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_24 (VA 0x004B9040; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_OpenFileStream_24 - 0x004B9040 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B9040-Sys_OpenFileStream_24.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_24.h"
 int32_t Sys_OpenFileStream_24(long double context , char* param_2, void* param_3)
 

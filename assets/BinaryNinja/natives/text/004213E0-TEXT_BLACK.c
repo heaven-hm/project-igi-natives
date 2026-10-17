@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TEXT_BLACK (VA 0x004213E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TEXT_BLACK - 0x004213E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004213E0-TEXT_BLACK.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TEXT_BLACK.h"
 uint32_t TEXT_BLACK()
 

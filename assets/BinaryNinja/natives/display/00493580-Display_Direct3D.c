@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_Direct3D (VA 0x00493580; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: Display_Direct3D - 0x00493580 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00493580-Display_Direct3D.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_Direct3D.h"
 int32_t* Display_Direct3D()
 

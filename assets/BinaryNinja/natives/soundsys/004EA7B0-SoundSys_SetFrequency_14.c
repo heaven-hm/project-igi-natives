@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_SetFrequency_14 (VA 0x004EA7B0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: SoundSys_SetFrequency_14 - 0x004EA7B0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004EA7B0-SoundSys_SetFrequency_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_SetFrequency_14.h"
 void* SoundSys_SetFrequency_14(void* context)
 

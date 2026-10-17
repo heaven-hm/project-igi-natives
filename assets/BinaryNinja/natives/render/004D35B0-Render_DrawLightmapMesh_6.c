@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawLightmapMesh_6 (VA 0x004D35B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawLightmapMesh_6 - 0x004D35B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D35B0-Render_DrawLightmapMesh_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawLightmapMesh_6.h"
 int32_t* Render_DrawLightmapMesh_6()
 

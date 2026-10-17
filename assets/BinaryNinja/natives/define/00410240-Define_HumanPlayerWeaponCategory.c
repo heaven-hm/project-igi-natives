@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_HumanPlayerWeaponCategory (VA 0x00410240; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Define_HumanPlayerWeaponCategory - 0x00410240 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00410240-Define_HumanPlayerWeaponCategory.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_HumanPlayerWeaponCategory.h"
 int32_t Define_HumanPlayerWeaponCategory(int32_t context, float param_2 )
 

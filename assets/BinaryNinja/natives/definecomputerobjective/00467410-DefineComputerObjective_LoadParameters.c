@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineComputerObjective_LoadParameters (VA 0x00467410; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefineComputerObjective_LoadParameters - 0x00467410 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467410-DefineComputerObjective_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineComputerObjective_LoadParameters.h"
 char DefineComputerObjective_LoadParameters(long double context , void* param_2)
 

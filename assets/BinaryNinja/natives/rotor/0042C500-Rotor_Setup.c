@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rotor_Setup (VA 0x0042C500; static CFG gate PASS, CFG score 0.900).
+// IGI native provenance: Rotor_Setup - 0x0042C500 - CFG score 90.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042C500-Rotor_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rotor_Setup.h"
 int32_t* Rotor_Setup(void* context, int32_t* param_2)
 

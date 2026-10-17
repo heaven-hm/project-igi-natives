@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_InvokeComputeNormals (VA 0x00520910; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_InvokeComputeNormals - 0x00520910 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520910-WeatherWaterSky_InvokeComputeNormals.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeComputeNormals.h"
 
 int32_t WeatherWaterSky_InvokeComputeNormals(float context, void* param_2)

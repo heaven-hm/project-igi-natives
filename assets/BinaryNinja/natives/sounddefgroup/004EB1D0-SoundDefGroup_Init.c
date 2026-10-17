@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefGroup_Init (VA 0x004EB1D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefGroup_Init - 0x004EB1D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EB1D0-SoundDefGroup_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefGroup_Init.h"
 int32_t SoundDefGroup_Init()
 

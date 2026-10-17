@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting_13 (VA 0x004DAB50; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Render_SetupLighting_13 - 0x004DAB50 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004DAB50-Render_SetupLighting_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting_13.h"
 int32_t Render_SetupLighting_13(int32_t context , int32_t param_2 , int32_t param_3 , void** param_4, float param_5)
 

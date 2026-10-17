@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_DebrisSpawn_6 (VA 0x00485DB0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: FX_DebrisSpawn_6 - 0x00485DB0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485DB0-FX_DebrisSpawn_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_DebrisSpawn_6.h"
 ❓  char* __stdcall FX_DebrisSpawn_6(int32_t context , int32_t param_2, float param_3)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

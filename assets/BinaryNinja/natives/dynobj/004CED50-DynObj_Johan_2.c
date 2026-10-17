@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_Johan_2 (VA 0x004CED50; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: DynObj_Johan_2 - 0x004CED50 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004CED50-DynObj_Johan_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_Johan_2.h"
 int32_t* DynObj_Johan_2(int32_t* context)
 

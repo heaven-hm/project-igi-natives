@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_CaraiErrorInGraphDNo_2 (VA 0x00425C10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_CaraiErrorInGraphDNo_2 - 0x00425C10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00425C10-Menu_CaraiErrorInGraphDNo_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_CaraiErrorInGraphDNo_2.h"
 int32_t* Menu_CaraiErrorInGraphDNo_2(int32_t* context, void* param_2, int32_t param_3, void* param_4)
 

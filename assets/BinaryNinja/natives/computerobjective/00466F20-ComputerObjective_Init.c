@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerObjective_Init (VA 0x00466F20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerObjective_Init - 0x00466F20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00466F20-ComputerObjective_Init.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerObjective_Init.h"
 
 int32_t ComputerObjective_Init()

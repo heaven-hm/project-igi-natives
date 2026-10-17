@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_Process (VA 0x0041E9D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ListBox_Process - 0x0041E9D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041E9D0-ListBox_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_Process.h"
 int32_t ListBox_Process(void* context)
 

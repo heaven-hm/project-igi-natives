@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AsciiBox_LoadParameters (VA 0x0041CD20; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AsciiBox_LoadParameters - 0x0041CD20 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041CD20-AsciiBox_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AsciiBox_LoadParameters.h"
 int32_t AsciiBox_LoadParameters(void* context)
 

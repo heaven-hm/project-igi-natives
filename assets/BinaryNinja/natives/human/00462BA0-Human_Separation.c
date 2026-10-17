@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_Separation (VA 0x00462BA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_Separation - 0x00462BA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00462BA0-Human_Separation.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_Separation.h"
 float* Human_Separation(double* context , double* param_2, float* param_3)
 

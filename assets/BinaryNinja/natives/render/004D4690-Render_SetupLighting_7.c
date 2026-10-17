@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting_7 (VA 0x004D4690; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SetupLighting_7 - 0x004D4690 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D4690-Render_SetupLighting_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting_7.h"
 float Render_SetupLighting_7(int32_t context, float param_2, int32_t* param_3) {
     int32_t temp_val = *param_3;

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimTrigger_ParseConfigFile (VA 0x004EC070; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimTrigger_ParseConfigFile - 0x004EC070 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EC070-AnimTrigger_ParseConfigFile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimTrigger_ParseConfigFile.h"
 char* AnimTrigger_ParseConfigFile(char* context)
 

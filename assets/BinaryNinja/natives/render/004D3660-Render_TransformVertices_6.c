@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_TransformVertices_6 (VA 0x004D3660; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Render_TransformVertices_6 - 0x004D3660 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004D3660-Render_TransformVertices_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_TransformVertices_6.h"
 int32_t Render_TransformVertices_6(void* context)
 

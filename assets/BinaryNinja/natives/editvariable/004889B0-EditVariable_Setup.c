@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditVariable_Setup (VA 0x004889B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditVariable_Setup - 0x004889B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004889B0-EditVariable_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditVariable_Setup.h"
 int32_t* EditVariable_Setup(long double context , void* param_2)
 

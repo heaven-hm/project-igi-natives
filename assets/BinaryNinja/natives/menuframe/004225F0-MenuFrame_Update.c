@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuFrame_Update (VA 0x004225F0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: MenuFrame_Update - 0x004225F0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004225F0-MenuFrame_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuFrame_Update.h"
 int32_t MenuFrame_Update(void* context, int32_t param_2)
 

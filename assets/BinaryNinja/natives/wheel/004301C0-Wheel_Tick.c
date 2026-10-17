@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Wheel_Tick (VA 0x004301C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Wheel_Tick - 0x004301C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004301C0-Wheel_Tick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Wheel_Tick.h"
 int32_t Wheel_Tick(float context)
 

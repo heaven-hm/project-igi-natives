@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuFrame_OnEvent (VA 0x00422640; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuFrame_OnEvent - 0x00422640 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422640-MenuFrame_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuFrame_OnEvent.h"
 int32_t MenuFrame_OnEvent(void* context, int32_t param_2)
 

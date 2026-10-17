@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SubLevel_Process (VA 0x00488560; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SubLevel_Process - 0x00488560 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00488560-SubLevel_Process.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SubLevel_Process.h"
 
 void* SubLevel_Process(void* pThis, int32_t param)

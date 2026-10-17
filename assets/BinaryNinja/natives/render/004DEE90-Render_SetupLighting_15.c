@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting_15 (VA 0x004DEE90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SetupLighting_15 - 0x004DEE90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DEE90-Render_SetupLighting_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting_15.h"
 void* Render_SetupLighting_15(void* context, char* param_2)
 

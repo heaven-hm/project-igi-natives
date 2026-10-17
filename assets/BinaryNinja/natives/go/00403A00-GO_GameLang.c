@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_GameLang (VA 0x00403A00; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: GO_GameLang - 0x00403A00 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00403A00-GO_GameLang.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_GameLang.h"
 int32_t GO_GameLang(int32_t context, float param_2 )
 

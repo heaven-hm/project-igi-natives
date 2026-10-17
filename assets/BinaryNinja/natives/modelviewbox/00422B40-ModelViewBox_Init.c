@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ModelViewBox_Init (VA 0x00422B40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ModelViewBox_Init - 0x00422B40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422B40-ModelViewBox_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ModelViewBox_Init.h"
 int32_t* ModelViewBox_Init()
 

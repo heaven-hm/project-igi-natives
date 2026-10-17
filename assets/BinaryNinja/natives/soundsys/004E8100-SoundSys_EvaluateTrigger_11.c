@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_EvaluateTrigger_11 (VA 0x004E8100; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_EvaluateTrigger_11 - 0x004E8100 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8100-SoundSys_EvaluateTrigger_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_EvaluateTrigger_11.h"
 int32_t SoundSys_EvaluateTrigger_11()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sprite3D_Init (VA 0x00531EF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sprite3D_Init - 0x00531EF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531EF0-Sprite3D_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sprite3D_Init.h"
 int32_t Sprite3D_Init()
 

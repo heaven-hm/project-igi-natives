@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_RestoreDevice_19 (VA 0x0049CBE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_RestoreDevice_19 - 0x0049CBE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049CBE0-Display_RestoreDevice_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_RestoreDevice_19.h"
 int32_t Display_RestoreDevice_19(void* context, void* param_2)
 

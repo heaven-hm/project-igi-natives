@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumInt32_10 (VA 0x004F1D80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_ParseEnumInt32_10 - 0x004F1D80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F1D80-Script_ParseEnumInt32_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumInt32_10.h"
 int32_t* Script_ParseEnumInt32_10(int32_t* context)
 

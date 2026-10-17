@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumString_19 (VA 0x004F6B00; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Script_ParseEnumString_19 - 0x004F6B00 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F6B00-Script_ParseEnumString_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumString_19.h"
 void* Script_ParseEnumString_19(void* context)
 

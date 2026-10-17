@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_FireAtTask (VA 0x0044D630; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: AIAction_FireAtTask - 0x0044D630 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D630-AIAction_FireAtTask.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_FireAtTask.h"
 int32_t AIAction_FireAtTask(long double context , long double param_2 , int32_t param_3, float param_4 )
 

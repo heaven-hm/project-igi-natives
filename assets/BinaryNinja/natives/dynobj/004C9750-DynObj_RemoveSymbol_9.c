@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RemoveSymbol_9 (VA 0x004C9750; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: DynObj_RemoveSymbol_9 - 0x004C9750 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004C9750-DynObj_RemoveSymbol_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RemoveSymbol_9.h"
 uint32_t DynObj_RemoveSymbol_9(int32_t context, int32_t* param_2, double* param_3, uint32_t param_4, char param_5, int32_t param_6, int32_t param_7)
 

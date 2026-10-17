@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_InitSoundSys_18 (VA 0x004EDFB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_InitSoundSys_18 - 0x004EDFB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDFB0-SoundSys_InitSoundSys_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_InitSoundSys_18.h"
 uint32_t SoundSys_InitSoundSys_18()
 

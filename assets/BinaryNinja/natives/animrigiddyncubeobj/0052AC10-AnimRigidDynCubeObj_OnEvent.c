@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimRigidDynCubeObj_OnEvent (VA 0x0052AC10; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: AnimRigidDynCubeObj_OnEvent - 0x0052AC10 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0052AC10-AnimRigidDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimRigidDynCubeObj_OnEvent.h"
 int32_t AnimRigidDynCubeObj_OnEvent(int32_t context, int32_t* param_2)
 

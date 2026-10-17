@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_TextureFileNotOfRequ (VA 0x005175A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_TextureFileNotOfRequ - 0x005175A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005175A0-Terrain_TextureFileNotOfRequ.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_TextureFileNotOfRequ.h"
 int32_t* Terrain_TextureFileNotOfRequ(int32_t* context)
 

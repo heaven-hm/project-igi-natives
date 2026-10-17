@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_ClearSurfaces_20 (VA 0x0049FB10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_ClearSurfaces_20 - 0x0049FB10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049FB10-Display_ClearSurfaces_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_ClearSurfaces_20.h"
 int32_t* Display_ClearSurfaces_20(int32_t* context)
 

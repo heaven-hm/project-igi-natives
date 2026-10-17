@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneDynCubeObj_Update (VA 0x004D94F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BoneDynCubeObj_Update - 0x004D94F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D94F0-BoneDynCubeObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneDynCubeObj_Update.h"
 void BoneDynCubeObj_Update(int32_t* context, int32_t* param_2)
 

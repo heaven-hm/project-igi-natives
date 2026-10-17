@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponGun_InvokeMissing (VA 0x00474980; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponGun_InvokeMissing - 0x00474980 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00474980-WeaponGun_InvokeMissing.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_InvokeMissing.h"
 
 float* WeaponGun_InvokeMissing(float context)

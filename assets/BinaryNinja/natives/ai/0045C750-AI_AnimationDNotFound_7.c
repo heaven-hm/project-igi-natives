@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_AnimationDNotFound_7 (VA 0x0045C750; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_AnimationDNotFound_7 - 0x0045C750 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045C750-AI_AnimationDNotFound_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_AnimationDNotFound_7.h"
 void* AI_AnimationDNotFound_7(void* context, void* param_2)
 

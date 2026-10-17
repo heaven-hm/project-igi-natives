@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneDynCubeObj_Process (VA 0x004D88D0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: BoneDynCubeObj_Process - 0x004D88D0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D88D0-BoneDynCubeObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneDynCubeObj_Process.h"
 ❓  int32_t* BoneDynCubeObj_Process(float context, float param_2, float param_3 , float param_4, float param_5 , float param_6, float param_7, float param_8, float param_9, float param_10, float param_11, float param_12)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

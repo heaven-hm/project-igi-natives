@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetAlarmTriggerDistance (VA 0x0044E9B0; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: AIFunction_GetAlarmTriggerDistance - 0x0044E9B0 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044E9B0-AIFunction_GetAlarmTriggerDistance.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetAlarmTriggerDistance.h"
 int32_t AIFunction_GetAlarmTriggerDistance(int32_t context)
 

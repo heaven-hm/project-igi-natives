@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Smoke_Setup (VA 0x00437D50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Smoke_Setup - 0x00437D50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00437D50-Smoke_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Smoke_Setup.h"
 char* Smoke_Setup(void* context)
 

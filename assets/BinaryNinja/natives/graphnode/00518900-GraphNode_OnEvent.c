@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GraphNode_OnEvent (VA 0x00518900; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GraphNode_OnEvent - 0x00518900 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00518900-GraphNode_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GraphNode_OnEvent.h"
 uint32_t GraphNode_OnEvent()
 

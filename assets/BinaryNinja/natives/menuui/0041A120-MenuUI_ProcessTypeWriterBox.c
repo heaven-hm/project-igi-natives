@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_ProcessTypeWriterBox (VA 0x0041A120; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_ProcessTypeWriterBox - 0x0041A120 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041A120-MenuUI_ProcessTypeWriterBox.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_ProcessTypeWriterBox.h"
 
 void* MenuUI_ProcessTypeWriterBox(void* context)

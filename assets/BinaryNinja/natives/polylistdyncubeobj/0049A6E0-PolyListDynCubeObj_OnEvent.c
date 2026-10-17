@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PolyListDynCubeObj_OnEvent (VA 0x0049A6E0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: PolyListDynCubeObj_OnEvent - 0x0049A6E0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0049A6E0-PolyListDynCubeObj_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PolyListDynCubeObj_OnEvent.h"
 int32_t PolyListDynCubeObj_OnEvent()
 

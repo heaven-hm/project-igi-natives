@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_TimeSpentRedrawing2F (VA 0x004163E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_TimeSpentRedrawing2F - 0x004163E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004163E0-Level_TimeSpentRedrawing2F.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_TimeSpentRedrawing2F.h"
 void* Level_TimeSpentRedrawing2F()
 

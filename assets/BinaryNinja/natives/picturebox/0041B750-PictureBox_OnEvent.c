@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PictureBox_OnEvent (VA 0x0041B750; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PictureBox_OnEvent - 0x0041B750 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041B750-PictureBox_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PictureBox_OnEvent.h"
 int32_t PictureBox_OnEvent(void* context)
 

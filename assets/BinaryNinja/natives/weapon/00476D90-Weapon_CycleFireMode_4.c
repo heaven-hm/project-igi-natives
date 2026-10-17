@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_CycleFireMode_4 (VA 0x00476D90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_CycleFireMode_4 - 0x00476D90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476D90-Weapon_CycleFireMode_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_CycleFireMode_4.h"
 float Weapon_CycleFireMode_4(float context) {
     float result = Script_ParseEnumReal32_29(context);

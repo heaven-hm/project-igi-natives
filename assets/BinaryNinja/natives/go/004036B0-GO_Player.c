@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GO_Player (VA 0x004036B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: GO_Player - 0x004036B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004036B0-GO_Player.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GO_Player.h"
 int32_t GO_Player(int32_t context, float param_2 )
 

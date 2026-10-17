@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_NoMoreDirect3DCallba (VA 0x00495190; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_NoMoreDirect3DCallba - 0x00495190 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00495190-Display_NoMoreDirect3DCallba.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_NoMoreDirect3DCallba.h"
 int32_t* Display_NoMoreDirect3DCallba(int32_t context, int32_t* param_2)
 

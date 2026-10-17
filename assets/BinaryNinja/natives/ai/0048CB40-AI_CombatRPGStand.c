@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CombatRPGStand (VA 0x0048CB40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_CombatRPGStand - 0x0048CB40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048CB40-AI_CombatRPGStand.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CombatRPGStand.h"
 
 int32_t* AI_CombatRPGStand(void* pThis, void* param)

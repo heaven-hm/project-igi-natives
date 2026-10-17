@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FlashBang_LoadParameters (VA 0x0047E790; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: FlashBang_LoadParameters - 0x0047E790 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047E790-FlashBang_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FlashBang_LoadParameters.h"
 struct status_msg* FlashBang_LoadParameters(void* context)
 

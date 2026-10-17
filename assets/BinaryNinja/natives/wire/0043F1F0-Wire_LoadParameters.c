@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Wire_LoadParameters (VA 0x0043F1F0; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Wire_LoadParameters - 0x0043F1F0 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043F1F0-Wire_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Wire_LoadParameters.h"
 int32_t Wire_LoadParameters(int32_t* context)
 

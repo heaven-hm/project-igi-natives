@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefTriggerOnce_Process (VA 0x004E9760; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefTriggerOnce_Process - 0x004E9760 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E9760-SoundDefTriggerOnce_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefTriggerOnce_Process.h"
 int32_t* SoundDefTriggerOnce_Process(void* context, int32_t* param_2)
 

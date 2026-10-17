@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_EventDispatch (VA 0x0044FC90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_EventDispatch - 0x0044FC90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044FC90-HumanAI_EventDispatch.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_EventDispatch.h"
 int32_t HumanAI_EventDispatch(void* context, int32_t param_2, int32_t param_3)
 

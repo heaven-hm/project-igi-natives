@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PlaceExplosiveTBA_Init_2 (VA 0x004387B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PlaceExplosiveTBA_Init_2 - 0x004387B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004387B0-PlaceExplosiveTBA_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PlaceExplosiveTBA_Init_2.h"
 
 int32_t* PlaceExplosiveTBA_Init_2(long double pThis , int32_t* param )

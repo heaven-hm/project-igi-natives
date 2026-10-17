@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_ProcessCouldntevicttext (VA 0x00494700; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_ProcessCouldntevicttext - 0x00494700 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00494700-DisplayRender_ProcessCouldntevicttext.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_ProcessCouldntevicttext.h"
 
 int32_t* DisplayRender_ProcessCouldntevicttext()

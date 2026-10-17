@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_16 (VA 0x004F4680; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Script_FormatString_16 - 0x004F4680 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4680-Script_FormatString_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_16.h"
 int32_t Script_FormatString_16(uint32_t context)
 

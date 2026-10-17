@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsGetGamma (VA 0x00404910; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GraphicOptionsGetGamma - 0x00404910 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404910-Config_GraphicOptionsGetGamma.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsGetGamma.h"
 int32_t Config_GraphicOptionsGetGamma(int32_t context)
 

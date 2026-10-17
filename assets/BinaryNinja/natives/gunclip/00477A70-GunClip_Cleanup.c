@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunClip_Cleanup (VA 0x00477A70; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: GunClip_Cleanup - 0x00477A70 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477A70-GunClip_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunClip_Cleanup.h"
 int32_t* GunClip_Cleanup(void* context, int32_t* param_2)
 

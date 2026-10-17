@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_11 (VA 0x004B3130; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_OpenFileStream_11 - 0x004B3130 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B3130-Sys_OpenFileStream_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_11.h"
 long double Sys_OpenFileStream_11(double* context)
 

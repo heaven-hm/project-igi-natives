@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_InsertHashItem (VA 0x004C01D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_InsertHashItem - 0x004C01D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C01D0-DynObj_InsertHashItem.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_InsertHashItem.h"
 int32_t DynObj_InsertHashItem(void* context)
 

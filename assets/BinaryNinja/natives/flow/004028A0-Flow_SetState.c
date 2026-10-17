@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Flow_SetState (VA 0x004028A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Flow_SetState - 0x004028A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004028A0-Flow_SetState.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Flow_SetState.h"
 int32_t Flow_SetState(int32_t context)
 

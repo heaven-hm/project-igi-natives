@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Update (VA 0x00412990; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Update - 0x00412990 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00412990-HumanPlayer_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Update.h"
 int32_t HumanPlayer_Update(float context, float param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_LocalScreensIntro (VA 0x00415480; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponType_LocalScreensIntro - 0x00415480 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00415480-WeaponType_LocalScreensIntro.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_LocalScreensIntro.h"
 int32_t WeaponType_LocalScreensIntro()
 

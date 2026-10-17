@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GameScreen_Update (VA 0x004852F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GameScreen_Update - 0x004852F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004852F0-GameScreen_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GameScreen_Update.h"
 uint32_t GameScreen_Update()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_GroundQuery (VA 0x00462390; static CFG gate PASS, CFG score 0.900).
+// IGI native provenance: Human_GroundQuery - 0x00462390 - CFG score 90.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00462390-Human_GroundQuery.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_GroundQuery.h"
 int32_t* Human_GroundQuery(void* context, double* param_2, int32_t* param_3, int32_t* param_4 , float param_5)
 

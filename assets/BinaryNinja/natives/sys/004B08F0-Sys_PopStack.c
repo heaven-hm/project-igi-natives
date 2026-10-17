@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PopStack (VA 0x004B08F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_PopStack - 0x004B08F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B08F0-Sys_PopStack.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PopStack.h"
 char* Sys_PopStack(char* context, char* param_2)
 

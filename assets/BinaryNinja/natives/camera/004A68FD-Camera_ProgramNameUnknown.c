@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ProgramNameUnknown (VA 0x004A68FD; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ProgramNameUnknown - 0x004A68FD - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A68FD-Camera_ProgramNameUnknown.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ProgramNameUnknown.h"
 int32_t* Camera_ProgramNameUnknown(int32_t context)
 

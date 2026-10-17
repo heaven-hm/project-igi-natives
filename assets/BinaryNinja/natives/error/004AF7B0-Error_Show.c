@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Error_Show (VA 0x004AF7B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Error_Show - 0x004AF7B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AF7B0-Error_Show.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Error_Show.h"
 int32_t Error_Show(char* context)
 

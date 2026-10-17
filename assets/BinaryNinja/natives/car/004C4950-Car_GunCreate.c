@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_GunCreate (VA 0x004C4950; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Car_GunCreate - 0x004C4950 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004C4950-Car_GunCreate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_GunCreate.h"
 int32_t* Car_GunCreate(void* context, void* param_2, int32_t param_3)
 

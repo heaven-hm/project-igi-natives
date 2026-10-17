@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunShot_Init (VA 0x0047B4B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunShot_Init - 0x0047B4B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047B4B0-GunShot_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunShot_Init.h"
 void* GunShot_Init()
 

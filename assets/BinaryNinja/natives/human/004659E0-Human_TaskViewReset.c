@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_TaskViewReset (VA 0x004659E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_TaskViewReset - 0x004659E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004659E0-Human_TaskViewReset.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_TaskViewReset.h"
 void* Human_TaskViewReset(void* context)
 

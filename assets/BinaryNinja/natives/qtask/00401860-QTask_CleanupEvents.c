@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_CleanupEvents (VA 0x00401860; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_CleanupEvents - 0x00401860 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401860-QTask_CleanupEvents.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_CleanupEvents.h"
 uint32_t QTask_CleanupEvents(int16_t context, char param_2)
 

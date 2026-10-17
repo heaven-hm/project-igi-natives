@@ -1,4 +1,5 @@
-// Original IGI.EXE function: String_VFormat (VA 0x004A5702; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: String_VFormat - 0x004A5702 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A5702-String_VFormat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "String_VFormat.h"
 int32_t String_VFormat(char* context, char* param_2, int32_t param_3)
 

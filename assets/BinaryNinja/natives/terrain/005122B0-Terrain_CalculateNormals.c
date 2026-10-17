@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_CalculateNormals (VA 0x005122B0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Terrain_CalculateNormals - 0x005122B0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 005122B0-Terrain_CalculateNormals.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_CalculateNormals.h"
 int32_t Terrain_CalculateNormals(int32_t context, int32_t param_2)
 

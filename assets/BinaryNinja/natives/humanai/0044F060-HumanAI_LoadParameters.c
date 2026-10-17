@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_LoadParameters (VA 0x0044F060; static CFG gate FAIL, CFG score 0.809).
+// IGI native provenance: HumanAI_LoadParameters - 0x0044F060 - CFG score 80.9% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044F060-HumanAI_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_LoadParameters.h"
 int32_t HumanAI_LoadParameters(void* context)
 

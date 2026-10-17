@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_ParseConfigFile_11 (VA 0x004CE390; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_ParseConfigFile_11 - 0x004CE390 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CE390-DynObj_ParseConfigFile_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_ParseConfigFile_11.h"
 uint32_t DynObj_ParseConfigFile_11(int32_t context, char param_2, int32_t param_3, double* param_4, int32_t param_5)
 

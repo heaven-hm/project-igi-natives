@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_InvokeSetMode (VA 0x004E7400; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sound_InvokeSetMode - 0x004E7400 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7400-Sound_InvokeSetMode.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_InvokeSetMode.h"
 
 int32_t Sound_InvokeSetMode(void* context)

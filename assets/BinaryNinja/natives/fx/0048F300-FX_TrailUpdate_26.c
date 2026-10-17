@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_TrailUpdate_26 (VA 0x0048F300; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: FX_TrailUpdate_26 - 0x0048F300 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0048F300-FX_TrailUpdate_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_TrailUpdate_26.h"
 int32_t FX_TrailUpdate_26(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DDERR_GENERIC (VA 0x00492BE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DDERR_GENERIC - 0x00492BE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00492BE0-DDERR_GENERIC.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DDERR_GENERIC.h"
 int32_t DDERR_GENERIC(int32_t context)
 

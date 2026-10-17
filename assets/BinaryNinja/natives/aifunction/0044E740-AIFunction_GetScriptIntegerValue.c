@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetScriptIntegerValue (VA 0x0044E740; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_GetScriptIntegerValue - 0x0044E740 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E740-AIFunction_GetScriptIntegerValue.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetScriptIntegerValue.h"
 int32_t AIFunction_GetScriptIntegerValue(int32_t context, int32_t param_2 )
 

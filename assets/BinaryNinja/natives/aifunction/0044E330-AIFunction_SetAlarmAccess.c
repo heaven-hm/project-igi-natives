@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetAlarmAccess (VA 0x0044E330; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetAlarmAccess - 0x0044E330 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E330-AIFunction_SetAlarmAccess.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetAlarmAccess.h"
 int32_t AIFunction_SetAlarmAccess(int32_t context, float param_2 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_LoadParameters_13 (VA 0x00413C80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_LoadParameters_13 - 0x00413C80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00413C80-HumanPlayer_LoadParameters_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_LoadParameters_13.h"
 int32_t HumanPlayer_LoadParameters_13(int32_t context, int32_t param_2, int32_t param_3, void* param_4)
 

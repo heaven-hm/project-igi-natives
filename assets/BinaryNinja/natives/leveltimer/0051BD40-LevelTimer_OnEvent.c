@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelTimer_OnEvent (VA 0x0051BD40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelTimer_OnEvent - 0x0051BD40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051BD40-LevelTimer_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelTimer_OnEvent.h"
 int32_t LevelTimer_OnEvent(void* context)
 

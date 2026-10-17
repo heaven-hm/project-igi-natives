@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DispatchOpcode_10 (VA 0x004B2A10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_DispatchOpcode_10 - 0x004B2A10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B2A10-Sys_DispatchOpcode_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DispatchOpcode_10.h"
 long double Sys_DispatchOpcode_10(int32_t* context)
 

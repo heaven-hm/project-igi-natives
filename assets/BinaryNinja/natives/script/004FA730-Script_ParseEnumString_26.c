@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumString_26 (VA 0x004FA730; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Script_ParseEnumString_26 - 0x004FA730 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004FA730-Script_ParseEnumString_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumString_26.h"
 int32_t Script_ParseEnumString_26(void* context, int32_t param_2)
 

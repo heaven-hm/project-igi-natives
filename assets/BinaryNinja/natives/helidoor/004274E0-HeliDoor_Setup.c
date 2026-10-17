@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HeliDoor_Setup (VA 0x004274E0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: HeliDoor_Setup - 0x004274E0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004274E0-HeliDoor_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HeliDoor_Setup.h"
 int32_t HeliDoor_Setup(float context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SyncVSync_12 (VA 0x00496E60; static CFG gate FAIL, CFG score 0.800).
+// IGI native provenance: Display_SyncVSync_12 - 0x00496E60 - CFG score 80.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00496E60-Display_SyncVSync_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SyncVSync_12.h"
 char Display_SyncVSync_12(int32_t context, int32_t* param_2)
 

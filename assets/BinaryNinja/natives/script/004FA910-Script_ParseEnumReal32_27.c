@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumReal32_27 (VA 0x004FA910; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Script_ParseEnumReal32_27 - 0x004FA910 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FA910-Script_ParseEnumReal32_27.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumReal32_27.h"
 int32_t Script_ParseEnumReal32_27(void* context, int32_t param_2)
 

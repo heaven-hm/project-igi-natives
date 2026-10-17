@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Ladder_Init (VA 0x004403E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Ladder_Init - 0x004403E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004403E0-Ladder_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Ladder_Init.h"
 void* Ladder_Init()
 

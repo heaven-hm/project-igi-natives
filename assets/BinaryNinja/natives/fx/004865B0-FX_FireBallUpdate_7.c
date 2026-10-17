@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FireBallUpdate_7 (VA 0x004865B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_FireBallUpdate_7 - 0x004865B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004865B0-FX_FireBallUpdate_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FireBallUpdate_7.h"
 int32_t FX_FireBallUpdate_7(int32_t context, int32_t param_2, int32_t param_3, float param_4)
 

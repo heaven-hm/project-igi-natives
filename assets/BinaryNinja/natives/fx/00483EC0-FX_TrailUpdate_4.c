@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_TrailUpdate_4 (VA 0x00483EC0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: FX_TrailUpdate_4 - 0x00483EC0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00483EC0-FX_TrailUpdate_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_TrailUpdate_4.h"
 int32_t* FX_TrailUpdate_4(void* context, float param_2, float param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SCamera_Parsed (VA 0x00442740; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SCamera_Parsed - 0x00442740 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00442740-SCamera_Parsed.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SCamera_Parsed.h"
 char* SCamera_Parsed(float context, char* param_2)
 

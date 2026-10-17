@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerObject_Init (VA 0x00467700; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerObject_Init - 0x00467700 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00467700-ComputerObject_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerObject_Init.h"
 void* ComputerObject_Init()
 

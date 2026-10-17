@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_SolveConstraints_9 (VA 0x00509A40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_SolveConstraints_9 - 0x00509A40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00509A40-Physics_SolveConstraints_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_SolveConstraints_9.h"
 int32_t __stdcall Physics_SolveConstraints_9(void* context)
 

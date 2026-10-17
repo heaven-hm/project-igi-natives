@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_Action (VA 0x00470BC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Binocular_Action - 0x00470BC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470BC0-Binocular_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_Action.h"
 int32_t* Binocular_Action(void* context, int32_t param_2)
 

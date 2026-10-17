@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditVariable_Cleanup (VA 0x00488B30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditVariable_Cleanup - 0x00488B30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00488B30-EditVariable_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditVariable_Cleanup.h"
 int32_t EditVariable_Cleanup(void* context)
 

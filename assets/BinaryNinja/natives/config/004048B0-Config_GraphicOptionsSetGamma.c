@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsSetGamma (VA 0x004048B0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GraphicOptionsSetGamma - 0x004048B0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004048B0-Config_GraphicOptionsSetGamma.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsSetGamma.h"
 int32_t Config_GraphicOptionsSetGamma(long double context , int32_t param_2, float param_3 )
 

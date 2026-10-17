@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_ForceUpdateWindow (VA 0x00417880; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: MenuManager_ForceUpdateWindow - 0x00417880 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00417880-MenuManager_ForceUpdateWindow.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_ForceUpdateWindow.h"
 int32_t MenuManager_ForceUpdateWindow(int32_t context, float param_2 )
 

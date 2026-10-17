@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelTimer_LoadParameters (VA 0x0051BC60; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: LevelTimer_LoadParameters - 0x0051BC60 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051BC60-LevelTimer_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelTimer_LoadParameters.h"
 int32_t LevelTimer_LoadParameters(void* context)
 

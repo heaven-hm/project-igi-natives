@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_Invoke15_4EAB30 (VA 0x004EAB30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sound_Invoke15_4EAB30 - 0x004EAB30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EAB30-Sound_Invoke15_4EAB30.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_Invoke15_4EAB30.h"
 
 int32_t Sound_Invoke15_4EAB30(void* context, int32_t* param_2)

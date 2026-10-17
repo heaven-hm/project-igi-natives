@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Heli_Setup (VA 0x004316D0; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Heli_Setup - 0x004316D0 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004316D0-Heli_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Heli_Setup.h"
 char* Heli_Setup(long double context , char* param_2)
 

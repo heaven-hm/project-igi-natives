@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ErrorInResourceFileS (VA 0x004B60F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_ErrorInResourceFileS - 0x004B60F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B60F0-Sys_ErrorInResourceFileS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ErrorInResourceFileS.h"
 int32_t Sys_ErrorInResourceFileS(int32_t context, void* param_2, void* param_3, int32_t* param_4)
 

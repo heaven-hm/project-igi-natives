@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_DuplicateLabelS (VA 0x004BAE00; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Sys_DuplicateLabelS - 0x004BAE00 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BAE00-Sys_DuplicateLabelS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_DuplicateLabelS.h"
 int32_t* Sys_DuplicateLabelS(void* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimSpline_ProcessStep_50BB80 (VA 0x0050BB80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimSpline_ProcessStep_50BB80 - 0x0050BB80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050BB80-AnimSpline_ProcessStep_50BB80.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimSpline_ProcessStep_50BB80.h"
 
 uint32_t AnimSpline_ProcessStep_50BB80(uint32_t* context)

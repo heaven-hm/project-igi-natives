@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_DeactivatePopuScreen (VA 0x00417960; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: MenuManager_DeactivatePopuScreen - 0x00417960 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00417960-MenuManager_DeactivatePopuScreen.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_DeactivatePopuScreen.h"
 int32_t MenuManager_DeactivatePopuScreen(int32_t context, void* param_2)
 

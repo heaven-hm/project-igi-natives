@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefinePhysicsObjType (VA 0x004EDD20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefinePhysicsObjType - 0x004EDD20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDD20-DefinePhysicsObjType.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefinePhysicsObjType.h"
 int32_t DefinePhysicsObjType(long double context , long double param_2 , long double param_3 , long double param_4 , int32_t param_5, char* param_6 )
 

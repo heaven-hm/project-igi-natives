@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_FreeMemory_26 (VA 0x004BAF30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_FreeMemory_26 - 0x004BAF30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BAF30-Sys_FreeMemory_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_FreeMemory_26.h"
 int32_t Sys_FreeMemory_26(char* context )
 

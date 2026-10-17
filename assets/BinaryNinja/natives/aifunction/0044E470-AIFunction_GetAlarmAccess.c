@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetAlarmAccess (VA 0x0044E470; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: AIFunction_GetAlarmAccess - 0x0044E470 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E470-AIFunction_GetAlarmAccess.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetAlarmAccess.h"
 int32_t AIFunction_GetAlarmAccess(int32_t context)
 

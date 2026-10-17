@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_SmokeEmit_3 (VA 0x00482D70; static CFG gate FAIL, CFG score 0.758).
+// IGI native provenance: FX_SmokeEmit_3 - 0x00482D70 - CFG score 75.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00482D70-FX_SmokeEmit_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_SmokeEmit_3.h"
 float FX_SmokeEmit_3(void* context) {
     long double fpu7 = *(context + 0x110);

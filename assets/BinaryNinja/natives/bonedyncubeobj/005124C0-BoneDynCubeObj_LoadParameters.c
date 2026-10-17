@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneDynCubeObj_LoadParameters (VA 0x005124C0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: BoneDynCubeObj_LoadParameters - 0x005124C0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005124C0-BoneDynCubeObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneDynCubeObj_LoadParameters.h"
 int32_t BoneDynCubeObj_LoadParameters(void* context)
 

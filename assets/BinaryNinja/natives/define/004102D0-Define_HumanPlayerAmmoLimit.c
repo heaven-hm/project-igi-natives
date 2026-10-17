@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_HumanPlayerAmmoLimit (VA 0x004102D0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Define_HumanPlayerAmmoLimit - 0x004102D0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004102D0-Define_HumanPlayerAmmoLimit.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_HumanPlayerAmmoLimit.h"
 int32_t Define_HumanPlayerAmmoLimit(int32_t context, int32_t* param_2 )
 

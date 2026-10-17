@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_Process (VA 0x004232B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_Process - 0x004232B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004232B0-ControlsMenu_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_Process.h"
 int32_t* ControlsMenu_Process(void* context, int32_t param_2)
 

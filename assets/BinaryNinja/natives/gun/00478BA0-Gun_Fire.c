@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_Fire (VA 0x00478BA0; static CFG gate PASS, CFG score 0.965).
+// IGI native provenance: Gun_Fire - 0x00478BA0 - CFG score 96.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00478BA0-Gun_Fire.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_Fire.h"
 struct status_msg* Gun_Fire(double* context, char* param_2)
 

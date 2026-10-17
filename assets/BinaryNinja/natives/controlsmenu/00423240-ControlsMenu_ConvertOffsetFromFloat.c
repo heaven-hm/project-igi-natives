@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_ConvertOffsetFromFloat (VA 0x00423240; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: ControlsMenu_ConvertOffsetFromFloat - 0x00423240 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00423240-ControlsMenu_ConvertOffsetFromFloat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_ConvertOffsetFromFloat.h"
 int32_t ControlsMenu_ConvertOffsetFromFloat(long double context , int32_t param_2, float param_3 )
 

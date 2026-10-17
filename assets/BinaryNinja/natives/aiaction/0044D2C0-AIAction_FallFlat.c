@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_FallFlat (VA 0x0044D2C0; static CFG gate PASS, CFG score 0.929).
+// IGI native provenance: AIAction_FallFlat - 0x0044D2C0 - CFG score 92.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D2C0-AIAction_FallFlat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_FallFlat.h"
 int32_t AIAction_FallFlat(long double context , int32_t param_2, float param_3 )
 

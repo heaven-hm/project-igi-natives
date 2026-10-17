@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Missile_Action (VA 0x00429920; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Missile_Action - 0x00429920 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00429920-Missile_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Missile_Action.h"
 int32_t* Missile_Action(int32_t* context )
 

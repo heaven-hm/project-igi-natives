@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_30 (VA 0x004FDF00; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: Script_FormatString_30 - 0x004FDF00 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FDF00-Script_FormatString_30.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_30.h"
 struct status_msg* Script_FormatString_30(void* context, void* param_2, uint32_t param_3, int32_t* param_4, int32_t* param_5, int32_t* param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10, int32_t param_11, int32_t param_12, int32_t param_13)
 

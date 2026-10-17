@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerMap_Init_2 (VA 0x00469660; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerMap_Init_2 - 0x00469660 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00469660-ComputerMap_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerMap_Init_2.h"
 
 int32_t ComputerMap_Init_2(void* pThis, int32_t param)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_Process_2 (VA 0x004754C0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Binocular_Process_2 - 0x004754C0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004754C0-Binocular_Process_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_Process_2.h"
 int32_t Binocular_Process_2(float context, int32_t* param_2)
 

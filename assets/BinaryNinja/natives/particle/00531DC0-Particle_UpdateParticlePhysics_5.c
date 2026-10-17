@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle_UpdateParticlePhysics_5 (VA 0x00531DC0; static CFG gate FAIL, CFG score 0.528).
+// IGI native provenance: Particle_UpdateParticlePhysics_5 - 0x00531DC0 - CFG score 52.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00531DC0-Particle_UpdateParticlePhysics_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle_UpdateParticlePhysics_5.h"
 int32_t Particle_UpdateParticlePhysics_5()
 

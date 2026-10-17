@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_LocalSS (VA 0x00418EA0; static CFG gate PASS, CFG score 0.939).
+// IGI native provenance: Menu_LocalSS - 0x00418EA0 - CFG score 93.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418EA0-Menu_LocalSS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_LocalSS.h"
 int32_t* Menu_LocalSS(void* context, int32_t param_2)
 

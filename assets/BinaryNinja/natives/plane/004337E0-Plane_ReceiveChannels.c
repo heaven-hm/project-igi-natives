@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Plane_ReceiveChannels (VA 0x004337E0; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: Plane_ReceiveChannels - 0x004337E0 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004337E0-Plane_ReceiveChannels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Plane_ReceiveChannels.h"
 void* Plane_ReceiveChannels(float context, int32_t* param_2)
 

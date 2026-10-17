@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle2DDynCubeObjTask_Process (VA 0x004FD020; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Particle2DDynCubeObjTask_Process - 0x004FD020 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FD020-Particle2DDynCubeObjTask_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle2DDynCubeObjTask_Process.h"
 int32_t Particle2DDynCubeObjTask_Process(float context)
 

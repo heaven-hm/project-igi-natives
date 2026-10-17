@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sound_EventTrigger (VA 0x004E7200; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Sound_EventTrigger - 0x004E7200 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7200-Sound_EventTrigger.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sound_EventTrigger.h"
 int32_t* Sound_EventTrigger(char* context, char* param_2, int32_t param_3)
 

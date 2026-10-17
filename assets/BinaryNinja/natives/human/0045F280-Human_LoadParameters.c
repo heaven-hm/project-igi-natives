@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_LoadParameters (VA 0x0045F280; static CFG gate PASS, CFG score 0.986).
+// IGI native provenance: Human_LoadParameters - 0x0045F280 - CFG score 98.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045F280-Human_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_LoadParameters.h"
 uint32_t Human_LoadParameters(float context, int32_t param_2)
 

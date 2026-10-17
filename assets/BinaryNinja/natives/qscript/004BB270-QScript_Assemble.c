@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QScript_Assemble (VA 0x004BB270; static CFG gate PASS, CFG score 0.983).
+// IGI native provenance: QScript_Assemble - 0x004BB270 - CFG score 98.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BB270-QScript_Assemble.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QScript_Assemble.h"
 int32_t QScript_Assemble(void* context, void* param_2)
 

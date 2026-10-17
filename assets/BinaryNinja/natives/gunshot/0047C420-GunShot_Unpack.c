@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunShot_Unpack (VA 0x0047C420; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: GunShot_Unpack - 0x0047C420 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0047C420-GunShot_Unpack.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunShot_Unpack.h"
 int32_t GunShot_Unpack(int32_t* context )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_CastRound (VA 0x0047B750; static CFG gate PASS, CFG score 0.935).
+// IGI native provenance: Gun_CastRound - 0x0047B750 - CFG score 93.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047B750-Gun_CastRound.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_CastRound.h"
 int32_t Gun_CastRound(void* context)
 

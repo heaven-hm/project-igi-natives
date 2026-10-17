@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_UpdateAnim (VA 0x00414E20; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: WeaponType_UpdateAnim - 0x00414E20 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00414E20-WeaponType_UpdateAnim.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_UpdateAnim.h"
 double* WeaponType_UpdateAnim(double* context, double* param_2, int32_t param_3)
 

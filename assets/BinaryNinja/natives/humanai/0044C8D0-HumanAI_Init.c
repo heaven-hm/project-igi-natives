@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Init (VA 0x0044C8D0; static CFG gate PASS, CFG score 0.980).
+// IGI native provenance: HumanAI_Init - 0x0044C8D0 - CFG score 98.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044C8D0-HumanAI_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Init.h"
 ❓  void* HumanAI_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

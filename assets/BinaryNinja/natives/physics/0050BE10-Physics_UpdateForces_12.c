@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_UpdateForces_12 (VA 0x0050BE10; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Physics_UpdateForces_12 - 0x0050BE10 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0050BE10-Physics_UpdateForces_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_UpdateForces_12.h"
 void* Physics_UpdateForces_12(int32_t* context)
 

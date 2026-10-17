@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_ProcessHeliWheel (VA 0x00426D30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_ProcessHeliWheel - 0x00426D30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426D30-VehiclePhysics_ProcessHeliWheel.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ProcessHeliWheel.h"
 
 int32_t VehiclePhysics_ProcessHeliWheel(void* context, char* param_2)

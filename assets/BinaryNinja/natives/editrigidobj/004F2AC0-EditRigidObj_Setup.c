@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObj_Setup (VA 0x004F2AC0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: EditRigidObj_Setup - 0x004F2AC0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F2AC0-EditRigidObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObj_Setup.h"
 void* EditRigidObj_Setup(void* context)
 

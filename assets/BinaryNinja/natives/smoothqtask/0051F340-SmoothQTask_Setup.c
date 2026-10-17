@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SmoothQTask_Setup (VA 0x0051F340; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SmoothQTask_Setup - 0x0051F340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051F340-SmoothQTask_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SmoothQTask_Setup.h"
 int32_t* SmoothQTask_Setup(long double context , int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_SetMasterVolume (VA 0x004E0CB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_SetMasterVolume - 0x004E0CB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E0CB0-SoundSys_SetMasterVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_SetMasterVolume.h"
 uint32_t SoundSys_SetMasterVolume()
 

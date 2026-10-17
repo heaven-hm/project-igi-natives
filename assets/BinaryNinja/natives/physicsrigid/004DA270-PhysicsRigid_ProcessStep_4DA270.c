@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsRigid_ProcessStep_4DA270 (VA 0x004DA270; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsRigid_ProcessStep_4DA270 - 0x004DA270 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DA270-PhysicsRigid_ProcessStep_4DA270.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_ProcessStep_4DA270.h"
 
 int32_t PhysicsRigid_ProcessStep_4DA270(void* context)

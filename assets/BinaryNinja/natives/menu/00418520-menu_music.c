@@ -1,4 +1,5 @@
-// Original IGI.EXE function: menu_music (VA 0x00418520; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: menu_music - 0x00418520 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418520-menu_music.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "menu_music.h"
 int32_t menu_music(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_OnEvent (VA 0x0045F890; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_OnEvent - 0x0045F890 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045F890-Human_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_OnEvent.h"
 float* Human_OnEvent(float context)
 

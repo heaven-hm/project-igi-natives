@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ProximityMine_Setup (VA 0x004755A0; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: ProximityMine_Setup - 0x004755A0 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004755A0-ProximityMine_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ProximityMine_Setup.h"
 void* ProximityMine_Setup(void* context, char* param_2)
 

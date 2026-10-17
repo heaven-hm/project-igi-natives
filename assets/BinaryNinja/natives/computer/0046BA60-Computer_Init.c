@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Computer_Init (VA 0x0046BA60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Computer_Init - 0x0046BA60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046BA60-Computer_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Computer_Init.h"
 int32_t Computer_Init()
 

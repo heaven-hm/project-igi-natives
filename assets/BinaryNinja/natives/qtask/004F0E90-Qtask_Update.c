@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qtask_Update (VA 0x004F0E90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qtask_Update - 0x004F0E90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0E90-Qtask_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qtask_Update.h"
 int32_t* Qtask_Update()
 

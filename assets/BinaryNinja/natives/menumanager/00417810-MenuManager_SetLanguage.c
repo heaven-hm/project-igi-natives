@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuManager_SetLanguage (VA 0x00417810; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: MenuManager_SetLanguage - 0x00417810 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00417810-MenuManager_SetLanguage.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuManager_SetLanguage.h"
 int32_t MenuManager_SetLanguage(int32_t context, void* param_2, float param_3)
 

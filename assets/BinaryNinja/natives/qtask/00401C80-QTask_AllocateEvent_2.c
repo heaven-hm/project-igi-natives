@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_AllocateEvent_2 (VA 0x00401C80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_AllocateEvent_2 - 0x00401C80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401C80-QTask_AllocateEvent_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_AllocateEvent_2.h"
 void* const QTask_AllocateEvent_2(void* context, int16_t param_2)
 

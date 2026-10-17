@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GlassShatter_Init (VA 0x00449D30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GlassShatter_Init - 0x00449D30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449D30-GlassShatter_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GlassShatter_Init.h"
 int32_t GlassShatter_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_ProcessInstructionnotim (VA 0x004BC950; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_ProcessInstructionnotim - 0x004BC950 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BC950-Qvm_ProcessInstructionnotim.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_ProcessInstructionnotim.h"
 
 void Qvm_ProcessInstructionnotim()

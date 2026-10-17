@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_Processjohan_520630 (VA 0x00520630; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_Processjohan_520630 - 0x00520630 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520630-WeatherWaterSky_Processjohan_520630.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_Processjohan_520630.h"
 
 int32_t WeatherWaterSky_Processjohan_520630(void* context, char* param_2)

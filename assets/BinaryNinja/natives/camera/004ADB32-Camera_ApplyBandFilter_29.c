@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyBandFilter_29 (VA 0x004ADB32; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyBandFilter_29 - 0x004ADB32 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ADB32-Camera_ApplyBandFilter_29.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyBandFilter_29.h"
 int32_t Camera_ApplyBandFilter_29(char* context, int32_t param_2, int32_t param_3)
 

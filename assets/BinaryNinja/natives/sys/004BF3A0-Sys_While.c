@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_While (VA 0x004BF3A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_While - 0x004BF3A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BF3A0-Sys_While.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_While.h"
 int32_t Sys_While(void* context)
 

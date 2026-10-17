@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_WeaponsStringsBinocu (VA 0x00471480; static CFG gate PASS, CFG score 0.989).
+// IGI native provenance: Weapon_WeaponsStringsBinocu - 0x00471480 - CFG score 98.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00471480-Weapon_WeaponsStringsBinocu.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_WeaponsStringsBinocu.h"
 int32_t Weapon_WeaponsStringsBinocu(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_PlaySound_Run (VA 0x0048DF80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIAction_PlaySound_Run - 0x0048DF80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048DF80-AIAction_PlaySound_Run.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_PlaySound_Run.h"
 int32_t* AIAction_PlaySound_Run(void* context, int32_t* param_2)
 

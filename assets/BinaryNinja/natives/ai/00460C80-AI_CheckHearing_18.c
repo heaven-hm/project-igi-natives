@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CheckHearing_18 (VA 0x00460C80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_CheckHearing_18 - 0x00460C80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00460C80-AI_CheckHearing_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CheckHearing_18.h"
 int32_t AI_CheckHearing_18(int32_t context, char* param_2)
 

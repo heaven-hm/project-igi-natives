@@ -1,4 +1,5 @@
-// Original IGI.EXE function: KnifeStab_Init_2 (VA 0x0046DE70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: KnifeStab_Init_2 - 0x0046DE70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046DE70-KnifeStab_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "KnifeStab_Init_2.h"
 
 void* KnifeStab_Init_2(void* pThis)

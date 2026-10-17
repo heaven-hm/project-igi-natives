@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Building_OnEvent (VA 0x00448950; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Building_OnEvent - 0x00448950 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00448950-Building_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Building_OnEvent.h"
 int32_t Building_OnEvent(float context, void* param_2)
 

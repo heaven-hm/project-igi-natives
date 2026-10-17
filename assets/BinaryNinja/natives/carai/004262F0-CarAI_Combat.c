@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CarAI_Combat (VA 0x004262F0; static CFG gate PASS, CFG score 0.939).
+// IGI native provenance: CarAI_Combat - 0x004262F0 - CFG score 93.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004262F0-CarAI_Combat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CarAI_Combat.h"
 int32_t CarAI_Combat(long double context , float param_2)
 

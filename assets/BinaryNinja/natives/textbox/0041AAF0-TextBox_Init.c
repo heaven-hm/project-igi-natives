@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TextBox_Init (VA 0x0041AAF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TextBox_Init - 0x0041AAF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041AAF0-TextBox_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TextBox_Init.h"
 ❓  int32_t* TextBox_Init()
 // This function has unresolved stack usage. View graph of stack usage to resolve.

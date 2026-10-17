@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_Processfffffffff (VA 0x004EFC10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_Processfffffffff - 0x004EFC10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EFC10-PhysicsTerrain_Processfffffffff.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_Processfffffffff.h"
 
 int32_t PhysicsTerrain_Processfffffffff(float* context, void* param_2)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MagicObj_GetTypeId (VA 0x004D9FA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MagicObj_GetTypeId - 0x004D9FA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9FA0-MagicObj_GetTypeId.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MagicObj_GetTypeId.h"
 int32_t MagicObj_GetTypeId()
 

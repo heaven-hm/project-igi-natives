@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_UpdateRecoil_4 (VA 0x00476000; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_UpdateRecoil_4 - 0x00476000 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476000-Weapon_UpdateRecoil_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_UpdateRecoil_4.h"
 uint32_t Weapon_UpdateRecoil_4()
 

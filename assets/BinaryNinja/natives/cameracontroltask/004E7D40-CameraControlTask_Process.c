@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraControlTask_Process (VA 0x004E7D40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CameraControlTask_Process - 0x004E7D40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7D40-CameraControlTask_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraControlTask_Process.h"
 struct status_msg* CameraControlTask_Process(void* context, uint32_t param_2)
 

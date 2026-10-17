@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIStationaryGunHolder_Init_2 (VA 0x0046E210; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AIStationaryGunHolder_Init_2 - 0x0046E210 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046E210-AIStationaryGunHolder_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIStationaryGunHolder_Init_2.h"
 
 int32_t* AIStationaryGunHolder_Init_2(float pThis)

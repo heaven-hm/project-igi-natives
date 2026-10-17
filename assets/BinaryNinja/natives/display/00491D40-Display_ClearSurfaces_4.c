@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_ClearSurfaces_4 (VA 0x00491D40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_ClearSurfaces_4 - 0x00491D40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491D40-Display_ClearSurfaces_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_ClearSurfaces_4.h"
 long double Display_ClearSurfaces_4()
 

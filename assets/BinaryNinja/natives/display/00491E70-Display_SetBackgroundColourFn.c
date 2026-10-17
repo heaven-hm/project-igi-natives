@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetBackgroundColourFn (VA 0x00491E70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_SetBackgroundColourFn - 0x00491E70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491E70-Display_SetBackgroundColourFn.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetBackgroundColourFn.h"
 uint32_t Display_SetBackgroundColourFn(char context, char param_2, char param_3)
 

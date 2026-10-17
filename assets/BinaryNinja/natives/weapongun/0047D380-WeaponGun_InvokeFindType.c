@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponGun_InvokeFindType (VA 0x0047D380; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponGun_InvokeFindType - 0x0047D380 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047D380-WeaponGun_InvokeFindType.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponGun_InvokeFindType.h"
 
 int32_t WeaponGun_InvokeFindType(void* context, int32_t* param_2)

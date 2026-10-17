@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuFrame_Setup (VA 0x004226D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuFrame_Setup - 0x004226D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004226D0-MenuFrame_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuFrame_Setup.h"
 int32_t MenuFrame_Setup(void* context)
 

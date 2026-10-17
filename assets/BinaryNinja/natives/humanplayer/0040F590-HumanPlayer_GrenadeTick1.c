@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_GrenadeTick1 (VA 0x0040F590; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_GrenadeTick1 - 0x0040F590 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040F590-HumanPlayer_GrenadeTick1.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_GrenadeTick1.h"
 struct status_msg* HumanPlayer_GrenadeTick1(void* context, void* param_2)
 

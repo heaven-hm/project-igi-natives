@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_SimulateRigidBody_12 (VA 0x0050BC00; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Physics_SimulateRigidBody_12 - 0x0050BC00 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0050BC00-Physics_SimulateRigidBody_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_SimulateRigidBody_12.h"
 int32_t __stdcall Physics_SimulateRigidBody_12(int32_t context)
 

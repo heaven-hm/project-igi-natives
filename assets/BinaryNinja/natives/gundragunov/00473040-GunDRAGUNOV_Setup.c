@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunDRAGUNOV_Setup (VA 0x00473040; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunDRAGUNOV_Setup - 0x00473040 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00473040-GunDRAGUNOV_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunDRAGUNOV_Setup.h"
 int32_t GunDRAGUNOV_Setup(float context, int32_t param_2)
 

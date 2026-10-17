@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LoadingScreen_Show (VA 0x0048A440; static CFG gate PASS, CFG score 0.983).
+// IGI native provenance: LoadingScreen_Show - 0x0048A440 - CFG score 98.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048A440-LoadingScreen_Show.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LoadingScreen_Show.h"
 int32_t* LoadingScreen_Show(int32_t context)
 

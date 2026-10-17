@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TypeWriterBox_LoadParameters (VA 0x0041A6D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TypeWriterBox_LoadParameters - 0x0041A6D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041A6D0-TypeWriterBox_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TypeWriterBox_LoadParameters.h"
 int32_t TypeWriterBox_LoadParameters(void* context)
 

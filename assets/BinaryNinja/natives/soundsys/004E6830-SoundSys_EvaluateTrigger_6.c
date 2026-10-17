@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_EvaluateTrigger_6 (VA 0x004E6830; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_EvaluateTrigger_6 - 0x004E6830 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E6830-SoundSys_EvaluateTrigger_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_EvaluateTrigger_6.h"
 int32_t* SoundSys_EvaluateTrigger_6(int32_t* context)
 

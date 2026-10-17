@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusScreen_Setup (VA 0x00486F30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusScreen_Setup - 0x00486F30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00486F30-StatusScreen_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusScreen_Setup.h"
 int32_t* StatusScreen_OnEvent3()
 

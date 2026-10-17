@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_UpdateWaterWaves_4 (VA 0x00516B20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_UpdateWaterWaves_4 - 0x00516B20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00516B20-Terrain_UpdateWaterWaves_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_UpdateWaterWaves_4.h"
 char* Terrain_UpdateWaterWaves_4(char* context, char* param_2, char* param_3, char* param_4, char* param_5)
 

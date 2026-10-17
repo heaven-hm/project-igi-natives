@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_UpdateGlobalLight_8 (VA 0x0052B9F0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Light_UpdateGlobalLight_8 - 0x0052B9F0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052B9F0-Light_UpdateGlobalLight_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_UpdateGlobalLight_8.h"
 void* Light_UpdateGlobalLight_8(void* context, int32_t param_2, int32_t param_3, void* param_4)
 

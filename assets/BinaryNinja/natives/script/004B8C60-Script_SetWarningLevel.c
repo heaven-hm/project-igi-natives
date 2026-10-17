@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_SetWarningLevel (VA 0x004B8C60; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Script_SetWarningLevel - 0x004B8C60 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B8C60-Script_SetWarningLevel.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_SetWarningLevel.h"
 int32_t Script_SetWarningLevel(int32_t context, float param_2 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunDRAGUNOV_Init (VA 0x00472D00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunDRAGUNOV_Init - 0x00472D00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00472D00-GunDRAGUNOV_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunDRAGUNOV_Init.h"
 char* GunDRAGUNOV_Init()
 

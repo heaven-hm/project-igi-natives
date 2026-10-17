@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunShot_Update (VA 0x0047ABD0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: GunShot_Update - 0x0047ABD0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047ABD0-GunShot_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunShot_Update.h"
 void* GunShot_Update(int32_t context)
 

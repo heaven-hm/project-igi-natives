@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sector_Cleanup_7 (VA 0x004DEB90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sector_Cleanup_7 - 0x004DEB90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DEB90-Sector_Cleanup_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sector_Cleanup_7.h"
 int32_t Sector_Cleanup_7(float context, void* param_2)
 

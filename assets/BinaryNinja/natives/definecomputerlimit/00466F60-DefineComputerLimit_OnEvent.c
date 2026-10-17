@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineComputerLimit_OnEvent (VA 0x00466F60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefineComputerLimit_OnEvent - 0x00466F60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00466F60-DefineComputerLimit_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineComputerLimit_OnEvent.h"
 int32_t DefineComputerLimit_OnEvent()
 

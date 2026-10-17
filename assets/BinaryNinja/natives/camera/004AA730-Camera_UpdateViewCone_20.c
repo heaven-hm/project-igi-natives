@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_UpdateViewCone_20 (VA 0x004AA730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_UpdateViewCone_20 - 0x004AA730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AA730-Camera_UpdateViewCone_20.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_UpdateViewCone_20.h"
 void* Camera_UpdateViewCone_20(char* context)
 

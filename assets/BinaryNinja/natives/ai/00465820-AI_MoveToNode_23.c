@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_MoveToNode_23 (VA 0x00465820; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AI_MoveToNode_23 - 0x00465820 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00465820-AI_MoveToNode_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_MoveToNode_23.h"
 int32_t AI_MoveToNode_23(int32_t* context, void* param_2)
 

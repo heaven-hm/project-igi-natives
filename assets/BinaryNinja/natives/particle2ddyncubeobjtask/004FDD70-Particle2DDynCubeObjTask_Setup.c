@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle2DDynCubeObjTask_Setup (VA 0x004FDD70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Particle2DDynCubeObjTask_Setup - 0x004FDD70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FDD70-Particle2DDynCubeObjTask_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle2DDynCubeObjTask_Setup.h"
 int32_t Particle2DDynCubeObjTask_Setup(void* context)
 

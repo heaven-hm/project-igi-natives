@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_Setup (VA 0x0045F050; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_Setup - 0x0045F050 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045F050-Human_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_Setup.h"
 int32_t* Human_Setup(float context, int32_t param_2)
 

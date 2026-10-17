@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PatrolCursor_Start (VA 0x004537E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PatrolCursor_Start - 0x004537E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004537E0-PatrolCursor_Start.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PatrolCursor_Start.h"
 int32_t* PatrolCursor_Start(void** context, int32_t param_2, int32_t param_3)
 

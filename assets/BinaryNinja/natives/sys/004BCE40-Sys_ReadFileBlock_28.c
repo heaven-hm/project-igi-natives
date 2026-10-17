@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ReadFileBlock_28 (VA 0x004BCE40; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_ReadFileBlock_28 - 0x004BCE40 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004BCE40-Sys_ReadFileBlock_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ReadFileBlock_28.h"
 int32_t Sys_ReadFileBlock_28(void* context, int32_t param_2, int32_t param_3)
 

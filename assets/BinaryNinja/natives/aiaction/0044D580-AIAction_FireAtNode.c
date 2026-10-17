@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_FireAtNode (VA 0x0044D580; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: AIAction_FireAtNode - 0x0044D580 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D580-AIAction_FireAtNode.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_FireAtNode.h"
 int32_t AIAction_FireAtNode(long double context , long double param_2 , int32_t param_3, float param_4 )
 

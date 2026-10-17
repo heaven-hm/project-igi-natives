@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunPickup_Init (VA 0x0046CB70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunPickup_Init - 0x0046CB70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046CB70-GunPickup_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunPickup_Init.h"
 int32_t* GunPickup_Init()
 

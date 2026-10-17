@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_GraphnodeLinklimitRe (VA 0x004F9C10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_GraphnodeLinklimitRe - 0x004F9C10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9C10-Script_GraphnodeLinklimitRe.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_GraphnodeLinklimitRe.h"
 int32_t Script_GraphnodeLinklimitRe(void* context, int32_t param_2)
 

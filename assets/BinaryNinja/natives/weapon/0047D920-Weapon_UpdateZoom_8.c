@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_UpdateZoom_8 (VA 0x0047D920; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Weapon_UpdateZoom_8 - 0x0047D920 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047D920-Weapon_UpdateZoom_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_UpdateZoom_8.h"
 int32_t Weapon_UpdateZoom_8(double* context, float* param_2, void* param_3, int32_t* param_4, void* param_5, int32_t param_6, int32_t param_7, float param_8)
 

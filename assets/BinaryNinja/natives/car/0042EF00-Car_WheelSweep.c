@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_WheelSweep (VA 0x0042EF00; static CFG gate PASS, CFG score 0.900).
+// IGI native provenance: Car_WheelSweep - 0x0042EF00 - CFG score 90.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042EF00-Car_WheelSweep.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_WheelSweep.h"
 int32_t Car_WheelSweep(float* context)
 

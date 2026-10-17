@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsMagicObj_LoadParameters (VA 0x00503DF0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: PhysicsMagicObj_LoadParameters - 0x00503DF0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00503DF0-PhysicsMagicObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsMagicObj_LoadParameters.h"
 int32_t* PhysicsMagicObj_LoadParameters(void* context, float param_2)
 

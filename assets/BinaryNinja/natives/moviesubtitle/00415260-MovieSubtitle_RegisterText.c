@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MovieSubtitle_RegisterText (VA 0x00415260; static CFG gate PASS, CFG score 0.979).
+// IGI native provenance: MovieSubtitle_RegisterText - 0x00415260 - CFG score 97.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00415260-MovieSubtitle_RegisterText.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MovieSubtitle_RegisterText.h"
 int32_t MovieSubtitle_RegisterText(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , int32_t param_7, char* param_8, float param_9)
 

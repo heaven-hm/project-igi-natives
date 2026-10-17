@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Graph_Process (VA 0x004F9160; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Graph_Process - 0x004F9160 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9160-Graph_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Graph_Process.h"
 void* Graph_Process(void* context)
 

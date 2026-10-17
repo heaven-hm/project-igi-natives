@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_RmS (VA 0x004680B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_RmS - 0x004680B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004680B0-AI_RmS.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_RmS.h"
 int32_t AI_RmS(int32_t* context)
 

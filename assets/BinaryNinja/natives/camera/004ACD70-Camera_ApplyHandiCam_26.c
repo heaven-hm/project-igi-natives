@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyHandiCam_26 (VA 0x004ACD70; static CFG gate FAIL, CFG score 0.583).
+// IGI native provenance: Camera_ApplyHandiCam_26 - 0x004ACD70 - CFG score 58.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004ACD70-Camera_ApplyHandiCam_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyHandiCam_26.h"
 char* Camera_ApplyHandiCam_26(char* context, char* param_2, void* param_3)
 

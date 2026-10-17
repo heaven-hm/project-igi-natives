@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_Font4Fnt (VA 0x00485FB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_Font4Fnt - 0x00485FB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00485FB0-FX_Font4Fnt.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_Font4Fnt.h"
 void* FX_Font4Fnt(int32_t context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuText_Process (VA 0x00420F00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuText_Process - 0x00420F00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00420F00-MenuText_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuText_Process.h"
 char* MenuText_Process(void* context)
 

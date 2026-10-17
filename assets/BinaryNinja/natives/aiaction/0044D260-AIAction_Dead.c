@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Dead (VA 0x0044D260; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AIAction_Dead - 0x0044D260 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D260-AIAction_Dead.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Dead.h"
 int32_t AIAction_Dead(int32_t context, float param_2 )
 

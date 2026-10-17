@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunPickup_LoadParameters (VA 0x0046CD20; static CFG gate PASS, CFG score 0.939).
+// IGI native provenance: GunPickup_LoadParameters - 0x0046CD20 - CFG score 93.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046CD20-GunPickup_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunPickup_LoadParameters.h"
 int32_t GunPickup_LoadParameters(int32_t* context)
 

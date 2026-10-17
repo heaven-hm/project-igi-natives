@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunSPAS12_Init (VA 0x00472A70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunSPAS12_Init - 0x00472A70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00472A70-GunSPAS12_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunSPAS12_Init.h"
 void* GunSPAS12_Init()
 

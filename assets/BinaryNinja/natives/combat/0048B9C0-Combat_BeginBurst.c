@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Combat_BeginBurst (VA 0x0048B9C0; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: Combat_BeginBurst - 0x0048B9C0 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048B9C0-Combat_BeginBurst.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Combat_BeginBurst.h"
 uint32_t Combat_BeginBurst(int32_t context, char param_2)
 

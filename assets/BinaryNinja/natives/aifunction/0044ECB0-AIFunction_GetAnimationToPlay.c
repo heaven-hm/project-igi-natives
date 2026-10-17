@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_GetAnimationToPlay (VA 0x0044ECB0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: AIFunction_GetAnimationToPlay - 0x0044ECB0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044ECB0-AIFunction_GetAnimationToPlay.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_GetAnimationToPlay.h"
 int32_t AIFunction_GetAnimationToPlay(int32_t context)
 

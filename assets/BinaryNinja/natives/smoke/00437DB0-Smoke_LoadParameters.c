@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Smoke_LoadParameters (VA 0x00437DB0; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: Smoke_LoadParameters - 0x00437DB0 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00437DB0-Smoke_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Smoke_LoadParameters.h"
 int32_t Smoke_LoadParameters(long double context , void* param_2)
 

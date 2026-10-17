@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_ActivateEntity (VA 0x00440C00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_ActivateEntity - 0x00440C00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440C00-Env_ActivateEntity.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_ActivateEntity.h"
 void* Env_ActivateEntity(void* context)
 

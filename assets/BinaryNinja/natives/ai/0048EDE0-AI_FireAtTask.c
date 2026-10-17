@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_FireAtTask (VA 0x0048EDE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_FireAtTask - 0x0048EDE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048EDE0-AI_FireAtTask.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_FireAtTask.h"
 
 void* AI_FireAtTask(void* pThis )

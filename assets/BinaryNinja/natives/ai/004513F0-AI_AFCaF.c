@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_AFCaF (VA 0x004513F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_AFCaF - 0x004513F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004513F0-AI_AFCaF.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_AFCaF.h"
 int32_t AI_AFCaF(long double context , float param_2)
 

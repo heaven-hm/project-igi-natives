@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumString_16 (VA 0x004F45B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_ParseEnumString_16 - 0x004F45B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F45B0-Script_ParseEnumString_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumString_16.h"
 uint32_t Script_ParseEnumString_16()
 

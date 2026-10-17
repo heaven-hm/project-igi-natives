@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_UpdateCameraLens_8 (VA 0x004474E0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Env_UpdateCameraLens_8 - 0x004474E0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004474E0-Env_UpdateCameraLens_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_UpdateCameraLens_8.h"
 float* Env_UpdateCameraLens_8(void* context)
 

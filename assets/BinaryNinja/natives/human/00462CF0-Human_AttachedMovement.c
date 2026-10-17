@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_AttachedMovement (VA 0x00462CF0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Human_AttachedMovement - 0x00462CF0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00462CF0-Human_AttachedMovement.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_AttachedMovement.h"
 int32_t Human_AttachedMovement(void* context)
 

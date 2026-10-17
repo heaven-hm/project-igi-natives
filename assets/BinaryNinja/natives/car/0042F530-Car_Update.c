@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_Update (VA 0x0042F530; static CFG gate PASS, CFG score 0.957).
+// IGI native provenance: Car_Update - 0x0042F530 - CFG score 95.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042F530-Car_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_Update.h"
 int32_t Car_Update(void* context)
 

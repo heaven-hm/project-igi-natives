@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_CheckGround_7 (VA 0x0040E740; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: HumanPlayer_CheckGround_7 - 0x0040E740 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040E740-HumanPlayer_CheckGround_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_CheckGround_7.h"
 int16_t HumanPlayer_CheckGround_7(void* context, float param_2)
 

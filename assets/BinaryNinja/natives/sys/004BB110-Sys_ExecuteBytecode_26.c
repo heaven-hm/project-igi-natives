@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ExecuteBytecode_26 (VA 0x004BB110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_ExecuteBytecode_26 - 0x004BB110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BB110-Sys_ExecuteBytecode_26.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ExecuteBytecode_26.h"
 char* Sys_ExecuteBytecode_26(int32_t context, void* param_2)
 

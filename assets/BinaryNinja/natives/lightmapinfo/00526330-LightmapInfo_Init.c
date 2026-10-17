@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LightmapInfo_Init (VA 0x00526330; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LightmapInfo_Init - 0x00526330 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00526330-LightmapInfo_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LightmapInfo_Init.h"
 int32_t LightmapInfo_Init()
 

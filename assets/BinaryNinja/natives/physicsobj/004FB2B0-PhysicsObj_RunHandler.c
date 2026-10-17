@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_RunHandler (VA 0x004FB2B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObj_RunHandler - 0x004FB2B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FB2B0-PhysicsObj_RunHandler.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_RunHandler.h"
 
 void PhysicsObj_RunHandler() {

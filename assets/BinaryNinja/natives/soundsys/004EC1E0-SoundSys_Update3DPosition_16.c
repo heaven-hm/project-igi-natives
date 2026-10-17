@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_Update3DPosition_16 (VA 0x004EC1E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_Update3DPosition_16 - 0x004EC1E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EC1E0-SoundSys_Update3DPosition_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_Update3DPosition_16.h"
 int32_t SoundSys_Update3DPosition_16(void* context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerHilight_LoadParameters (VA 0x00468570; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerHilight_LoadParameters - 0x00468570 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00468570-ComputerHilight_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerHilight_LoadParameters.h"
 void* ComputerHilight_LoadParameters(void* context)
 

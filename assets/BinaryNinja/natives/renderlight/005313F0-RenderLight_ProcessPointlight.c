@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_ProcessPointlight (VA 0x005313F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_ProcessPointlight - 0x005313F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005313F0-RenderLight_ProcessPointlight.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_ProcessPointlight.h"
 
 int32_t* RenderLight_ProcessPointlight(void* context, void* param_2)

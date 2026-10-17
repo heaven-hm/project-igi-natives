@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DiscardTerrainArea_Init (VA 0x0052B6C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DiscardTerrainArea_Init - 0x0052B6C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052B6C0-DiscardTerrainArea_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DiscardTerrainArea_Init.h"
 int32_t* DiscardTerrainArea_Init()
 

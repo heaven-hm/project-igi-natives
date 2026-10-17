@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_8 (VA 0x004B2450; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_OpenFileStream_8 - 0x004B2450 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B2450-Sys_OpenFileStream_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_8.h"
 int32_t Sys_OpenFileStream_8(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7)
 

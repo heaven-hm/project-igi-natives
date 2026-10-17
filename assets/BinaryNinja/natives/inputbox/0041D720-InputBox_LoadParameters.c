@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputBox_LoadParameters (VA 0x0041D720; static CFG gate PASS, CFG score 0.974).
+// IGI native provenance: InputBox_LoadParameters - 0x0041D720 - CFG score 97.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041D720-InputBox_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputBox_LoadParameters.h"
 int32_t InputBox_LoadParameters(void* context)
 

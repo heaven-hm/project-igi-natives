@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefTriggerOnce_Setup (VA 0x004E9AA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefTriggerOnce_Setup - 0x004E9AA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E9AA0-SoundDefTriggerOnce_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefTriggerOnce_Setup.h"
 int32_t SoundDefTriggerOnce_Setup(int32_t context)
 

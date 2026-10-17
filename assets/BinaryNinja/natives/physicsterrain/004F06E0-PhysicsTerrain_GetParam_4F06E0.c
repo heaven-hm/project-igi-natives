@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_GetParam_4F06E0 (VA 0x004F06E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_GetParam_4F06E0 - 0x004F06E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F06E0-PhysicsTerrain_GetParam_4F06E0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_GetParam_4F06E0.h"
 
 int32_t PhysicsTerrain_GetParam_4F06E0(int32_t context)

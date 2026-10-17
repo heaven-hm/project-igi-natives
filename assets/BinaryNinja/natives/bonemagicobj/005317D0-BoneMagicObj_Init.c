@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneMagicObj_Init (VA 0x005317D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BoneMagicObj_Init - 0x005317D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005317D0-BoneMagicObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneMagicObj_Init.h"
 void* BoneMagicObj_Init()
 

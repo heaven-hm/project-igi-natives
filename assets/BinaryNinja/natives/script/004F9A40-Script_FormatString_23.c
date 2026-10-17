@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_23 (VA 0x004F9A40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_FormatString_23 - 0x004F9A40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9A40-Script_FormatString_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_23.h"
 int32_t Script_FormatString_23(double* context, void* param_2, double param_3, char param_4)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ParticleSystemDynCubeObj_Setup (VA 0x00531090; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ParticleSystemDynCubeObj_Setup - 0x00531090 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531090-ParticleSystemDynCubeObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ParticleSystemDynCubeObj_Setup.h"
 int32_t ParticleSystemDynCubeObj_Setup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_LoadParameters_2 (VA 0x004082B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_LoadParameters_2 - 0x004082B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004082B0-HumanPlayer_LoadParameters_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_LoadParameters_2.h"
 uint32_t HumanPlayer_LoadParameters_2()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunCABarrel_LoadParameters (VA 0x004727F0; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: GunCABarrel_LoadParameters - 0x004727F0 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004727F0-GunCABarrel_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunCABarrel_LoadParameters.h"
 int32_t* GunCABarrel_LoadParameters(void* context, int32_t* param_2)
 

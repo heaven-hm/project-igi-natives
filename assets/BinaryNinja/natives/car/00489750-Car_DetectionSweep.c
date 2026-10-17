@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_DetectionSweep (VA 0x00489750; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Car_DetectionSweep - 0x00489750 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00489750-Car_DetectionSweep.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_DetectionSweep.h"
 void* Car_DetectionSweep(void* context, double* param_2, float param_3, int32_t param_4)
 

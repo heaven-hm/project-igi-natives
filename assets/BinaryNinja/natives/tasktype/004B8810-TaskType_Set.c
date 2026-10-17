@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TaskType_Set (VA 0x004B8810; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TaskType_Set - 0x004B8810 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B8810-TaskType_Set.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TaskType_Set.h"
 void* TaskType_Set(int32_t* context, int32_t param_2)
 

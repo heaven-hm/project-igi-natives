@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_SpawnNewTask_14 (VA 0x004F3AC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_SpawnNewTask_14 - 0x004F3AC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F3AC0-Script_SpawnNewTask_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_SpawnNewTask_14.h"
 int32_t* Script_SpawnNewTask_14(void* context)
 

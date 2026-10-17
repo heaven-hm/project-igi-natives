@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Graph_Cleanup_3 (VA 0x004FB0D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Graph_Cleanup_3 - 0x004FB0D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FB0D0-Graph_Cleanup_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Graph_Cleanup_3.h"
 int32_t* Graph_Cleanup_3(int32_t* context)
 

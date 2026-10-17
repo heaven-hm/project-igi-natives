@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SmoothQTask_Create (VA 0x0051EE80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SmoothQTask_Create - 0x0051EE80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051EE80-SmoothQTask_Create.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SmoothQTask_Create.h"
 
 void* SmoothQTask_Create(void* pThis)

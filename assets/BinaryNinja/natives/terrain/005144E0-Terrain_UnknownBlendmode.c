@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terrain_UnknownBlendmode (VA 0x005144E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terrain_UnknownBlendmode - 0x005144E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005144E0-Terrain_UnknownBlendmode.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terrain_UnknownBlendmode.h"
 int32_t Terrain_UnknownBlendmode(int32_t context)
 

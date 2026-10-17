@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SetResolution_2 (VA 0x00406390; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Config_SetResolution_2 - 0x00406390 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406390-Config_SetResolution_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SetResolution_2.h"
 int32_t __fastcall Config_SetResolution_2(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GuardGenerator_Process (VA 0x004880F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GuardGenerator_Process - 0x004880F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004880F0-GuardGenerator_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GuardGenerator_Process.h"
 char* GuardGenerator_Process(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_Action (VA 0x0045E3E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_Action - 0x0045E3E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045E3E0-Human_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_Action.h"
 void Human_Action(void* context, char* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditCamera_Init_2 (VA 0x004DE970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditCamera_Init_2 - 0x004DE970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DE970-EditCamera_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditCamera_Init_2.h"
 
 int32_t EditCamera_Init_2(void* pThis, int32_t param)

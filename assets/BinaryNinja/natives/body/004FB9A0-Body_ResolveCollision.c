@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Body_ResolveCollision (VA 0x004FB9A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Body_ResolveCollision - 0x004FB9A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FB9A0-Body_ResolveCollision.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Body_ResolveCollision.h"
 ❓  int32_t* Body_ResolveCollision(float context , float param_2)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

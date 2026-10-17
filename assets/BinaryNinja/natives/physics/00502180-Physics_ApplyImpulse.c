@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_ApplyImpulse (VA 0x00502180; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_ApplyImpulse - 0x00502180 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00502180-Physics_ApplyImpulse.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_ApplyImpulse.h"
 long double Physics_ApplyImpulse(float context, int32_t param_2)
 

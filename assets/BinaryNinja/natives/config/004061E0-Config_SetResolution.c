@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SetResolution (VA 0x004061E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_SetResolution - 0x004061E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004061E0-Config_SetResolution.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SetResolution.h"
 int32_t Config_SetResolution()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_Init (VA 0x004230A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_Init - 0x004230A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004230A0-ControlsMenu_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_Init.h"
 void* ControlsMenu_Init()
 

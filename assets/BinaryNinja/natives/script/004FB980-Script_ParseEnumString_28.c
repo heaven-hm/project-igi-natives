@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_ParseEnumString_28 (VA 0x004FB980; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_ParseEnumString_28 - 0x004FB980 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FB980-Script_ParseEnumString_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_ParseEnumString_28.h"
 void* Script_ParseEnumString_28(void* context)
 

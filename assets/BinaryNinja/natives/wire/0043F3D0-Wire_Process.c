@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Wire_Process (VA 0x0043F3D0; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: Wire_Process - 0x0043F3D0 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043F3D0-Wire_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Wire_Process.h"
 int32_t Wire_Process(float context)
 

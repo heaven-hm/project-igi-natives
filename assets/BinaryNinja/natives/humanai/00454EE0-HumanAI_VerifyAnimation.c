@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_VerifyAnimation (VA 0x00454EE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_VerifyAnimation - 0x00454EE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00454EE0-HumanAI_VerifyAnimation.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_VerifyAnimation.h"
 
 int32_t HumanAI_VerifyAnimation(int32_t pThis)

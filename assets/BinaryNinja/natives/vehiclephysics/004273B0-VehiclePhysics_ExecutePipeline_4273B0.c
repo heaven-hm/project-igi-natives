@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_ExecutePipeline_4273B0 (VA 0x004273B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_ExecutePipeline_4273B0 - 0x004273B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004273B0-VehiclePhysics_ExecutePipeline_4273B0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ExecutePipeline_4273B0.h"
 
 void* VehiclePhysics_ExecutePipeline_4273B0(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_RenderLensflare_12 (VA 0x0052E180; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_RenderLensflare_12 - 0x0052E180 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052E180-Light_RenderLensflare_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_RenderLensflare_12.h"
 void* Light_RenderLensflare_12(void* context, float* param_2, float param_3)
 

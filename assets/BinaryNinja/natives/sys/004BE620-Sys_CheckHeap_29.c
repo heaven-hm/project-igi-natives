@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CheckHeap_29 (VA 0x004BE620; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_CheckHeap_29 - 0x004BE620 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BE620-Sys_CheckHeap_29.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CheckHeap_29.h"
 int32_t Sys_CheckHeap_29(int32_t* context, int32_t* param_2, int32_t* param_3, float* param_4, float* param_5)
 

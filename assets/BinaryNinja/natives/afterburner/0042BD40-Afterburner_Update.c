@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Afterburner_Update (VA 0x0042BD40; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: Afterburner_Update - 0x0042BD40 - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042BD40-Afterburner_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Afterburner_Update.h"
 int32_t** Afterburner_Update(void* context)
 

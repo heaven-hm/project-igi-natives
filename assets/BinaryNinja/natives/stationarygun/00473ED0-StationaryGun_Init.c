@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StationaryGun_Init (VA 0x00473ED0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StationaryGun_Init - 0x00473ED0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00473ED0-StationaryGun_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StationaryGun_Init.h"
 int32_t* StationaryGun_Init()
 

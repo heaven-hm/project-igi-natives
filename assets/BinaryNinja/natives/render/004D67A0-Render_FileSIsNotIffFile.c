@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_FileSIsNotIffFile (VA 0x004D67A0; static CFG gate PASS, CFG score 0.930).
+// IGI native provenance: Render_FileSIsNotIffFile - 0x004D67A0 - CFG score 93.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D67A0-Render_FileSIsNotIffFile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_FileSIsNotIffFile.h"
 int32_t Render_FileSIsNotIffFile(int32_t* context)
 

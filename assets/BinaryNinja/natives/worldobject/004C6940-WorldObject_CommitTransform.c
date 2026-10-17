@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WorldObject_CommitTransform (VA 0x004C6940; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WorldObject_CommitTransform - 0x004C6940 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C6940-WorldObject_CommitTransform.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WorldObject_CommitTransform.h"
 int32_t WorldObject_CommitTransform(void* context, void* param_2, double* param_3, float param_4)
 

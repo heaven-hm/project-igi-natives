@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Elevator_Action (VA 0x0043E290; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Elevator_Action - 0x0043E290 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0043E290-Elevator_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Elevator_Action.h"
 void* Elevator_Action(void* context, void** param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RocketPod_Init (VA 0x00427830; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RocketPod_Init - 0x00427830 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427830-RocketPod_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RocketPod_Init.h"
 void* RocketPod_Init()
 

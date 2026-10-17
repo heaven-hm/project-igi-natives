@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_GetContext_520E70 (VA 0x00520E70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_GetContext_520E70 - 0x00520E70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520E70-WeatherWaterSky_GetContext_520E70.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_GetContext_520E70.h"
 
 int32_t* WeatherWaterSky_GetContext_520E70(int32_t* context)

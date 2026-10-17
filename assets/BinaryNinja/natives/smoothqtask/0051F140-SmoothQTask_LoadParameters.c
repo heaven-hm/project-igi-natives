@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SmoothQTask_LoadParameters (VA 0x0051F140; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: SmoothQTask_LoadParameters - 0x0051F140 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0051F140-SmoothQTask_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SmoothQTask_LoadParameters.h"
 int32_t SmoothQTask_LoadParameters(void* context)
 

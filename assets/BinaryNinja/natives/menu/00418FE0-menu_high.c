@@ -1,4 +1,5 @@
-// Original IGI.EXE function: menu_high (VA 0x00418FE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: menu_high - 0x00418FE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418FE0-menu_high.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "menu_high.h"
 int32_t menu_high(void* context, int32_t param_2)
 

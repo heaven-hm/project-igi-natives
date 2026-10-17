@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_Update (VA 0x00470890; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: Binocular_Update - 0x00470890 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470890-Binocular_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_Update.h"
 int32_t* Binocular_Update(void* context, int32_t* param_2)
 

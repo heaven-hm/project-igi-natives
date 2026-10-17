@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsRigid_ExecutePipeline_4DE3F0 (VA 0x004DE3F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsRigid_ExecutePipeline_4DE3F0 - 0x004DE3F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DE3F0-PhysicsRigid_ExecutePipeline_4DE3F0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_ExecutePipeline_4DE3F0.h"
 
 int32_t* PhysicsRigid_ExecutePipeline_4DE3F0(void* context, void* param_2)

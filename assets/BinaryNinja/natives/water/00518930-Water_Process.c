@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Water_Process (VA 0x00518930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Water_Process - 0x00518930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00518930-Water_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Water_Process.h"
 int32_t Water_Process(void* context, float param_2)
 

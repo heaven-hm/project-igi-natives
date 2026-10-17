@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_CleanupEvents_2 (VA 0x00401D50; static CFG gate FAIL, CFG score 0.722).
+// IGI native provenance: QTask_CleanupEvents_2 - 0x00401D50 - CFG score 72.2% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00401D50-QTask_CleanupEvents_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_CleanupEvents_2.h"
 int32_t QTask_CleanupEvents_2(char context)
 

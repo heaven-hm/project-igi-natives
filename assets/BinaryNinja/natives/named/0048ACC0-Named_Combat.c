@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Named_Combat (VA 0x0048ACC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Named_Combat - 0x0048ACC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048ACC0-Named_Combat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Named_Combat.h"
 int32_t* Named_Combat(int32_t context, int32_t* param_2)
 

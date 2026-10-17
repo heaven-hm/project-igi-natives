@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QObj_Update (VA 0x004D9790; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QObj_Update - 0x004D9790 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9790-QObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QObj_Update.h"
 uint32_t QObj_Update()
 

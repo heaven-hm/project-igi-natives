@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TerrainLightMap_Init (VA 0x004F8340; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TerrainLightMap_Init - 0x004F8340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F8340-TerrainLightMap_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TerrainLightMap_Init.h"
 int32_t* TerrainLightMap_Init()
 

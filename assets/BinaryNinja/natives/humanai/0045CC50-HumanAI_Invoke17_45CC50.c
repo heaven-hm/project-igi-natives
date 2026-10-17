@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Invoke17_45CC50 (VA 0x0045CC50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_Invoke17_45CC50 - 0x0045CC50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045CC50-HumanAI_Invoke17_45CC50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Invoke17_45CC50.h"
 
 int32_t* HumanAI_Invoke17_45CC50(void* context, int32_t param_2)

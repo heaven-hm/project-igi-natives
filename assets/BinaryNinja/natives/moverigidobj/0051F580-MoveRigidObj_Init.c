@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MoveRigidObj_Init (VA 0x0051F580; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MoveRigidObj_Init - 0x0051F580 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051F580-MoveRigidObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MoveRigidObj_Init.h"
 void* MoveRigidObj_Init()
 

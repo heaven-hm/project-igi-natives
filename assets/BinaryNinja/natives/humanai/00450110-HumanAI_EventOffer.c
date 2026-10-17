@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_EventOffer (VA 0x00450110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_EventOffer - 0x00450110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00450110-HumanAI_EventOffer.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_EventOffer.h"
 double* HumanAI_EventOffer(void* context, double** param_2)
 

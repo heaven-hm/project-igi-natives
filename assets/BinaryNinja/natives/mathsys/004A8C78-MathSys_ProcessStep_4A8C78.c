@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MathSys_ProcessStep_4A8C78 (VA 0x004A8C78; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: MathSys_ProcessStep_4A8C78 - 0x004A8C78 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A8C78-MathSys_ProcessStep_4A8C78.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MathSys_ProcessStep_4A8C78.h"
 
 long double __fastcall(char context, void* param_2 ) {

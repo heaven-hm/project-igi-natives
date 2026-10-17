@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditCamera_OnParsed (VA 0x00508410; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: EditCamera_OnParsed - 0x00508410 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00508410-EditCamera_OnParsed.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditCamera_OnParsed.h"
 char* EditCamera_OnParsed(void* context, char* param_2)
 

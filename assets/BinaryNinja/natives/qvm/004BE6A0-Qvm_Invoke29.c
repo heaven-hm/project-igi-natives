@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_Invoke29 (VA 0x004BE6A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_Invoke29 - 0x004BE6A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BE6A0-Qvm_Invoke29.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_Invoke29.h"
 
 void* __fastcall(float context )

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetDeathAnimation (VA 0x0044E210; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetDeathAnimation - 0x0044E210 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E210-AIFunction_SetDeathAnimation.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetDeathAnimation.h"
 int32_t AIFunction_SetDeathAnimation(int32_t context, float param_2 )
 

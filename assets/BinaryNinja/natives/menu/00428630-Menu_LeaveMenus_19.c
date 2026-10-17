@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_LeaveMenus_19 (VA 0x00428630; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Menu_LeaveMenus_19 - 0x00428630 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00428630-Menu_LeaveMenus_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_LeaveMenus_19.h"
 int32_t Menu_LeaveMenus_19(float context)
 

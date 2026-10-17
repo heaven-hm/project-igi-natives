@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelScript_LoadParameters (VA 0x0052C900; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: LevelScript_LoadParameters - 0x0052C900 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0052C900-LevelScript_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelScript_LoadParameters.h"
 void* LevelScript_LoadParameters(void* context)
 

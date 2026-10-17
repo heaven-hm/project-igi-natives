@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainDynCubeObj_Setup (VA 0x004F7170; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: RainDynCubeObj_Setup - 0x004F7170 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7170-RainDynCubeObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainDynCubeObj_Setup.h"
 int32_t RainDynCubeObj_Setup(long double context , float param_2)
 

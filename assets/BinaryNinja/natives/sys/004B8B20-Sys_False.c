@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_False (VA 0x004B8B20; static CFG gate PASS, CFG score 0.982).
+// IGI native provenance: Sys_False - 0x004B8B20 - CFG score 98.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B8B20-Sys_False.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_False.h"
 int32_t Sys_False()
 

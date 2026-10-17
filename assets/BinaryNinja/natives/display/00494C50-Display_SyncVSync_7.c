@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SyncVSync_7 (VA 0x00494C50; static CFG gate PASS, CFG score 0.941).
+// IGI native provenance: Display_SyncVSync_7 - 0x00494C50 - CFG score 94.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00494C50-Display_SyncVSync_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SyncVSync_7.h"
 void* Display_SyncVSync_7(void* context)
 

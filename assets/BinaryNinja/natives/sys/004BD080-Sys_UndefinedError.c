@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_UndefinedError (VA 0x004BD080; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_UndefinedError - 0x004BD080 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BD080-Sys_UndefinedError.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_UndefinedError.h"
 int32_t Sys_UndefinedError(int32_t* context)
 

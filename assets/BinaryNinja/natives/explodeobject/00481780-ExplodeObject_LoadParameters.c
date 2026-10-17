@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ExplodeObject_LoadParameters (VA 0x00481780; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: ExplodeObject_LoadParameters - 0x00481780 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00481780-ExplodeObject_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ExplodeObject_LoadParameters.h"
 int32_t* ExplodeObject_LoadParameters(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAIConfig_OnEvent (VA 0x00406D10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAIConfig_OnEvent - 0x00406D10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406D10-HumanAIConfig_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAIConfig_OnEvent.h"
 int32_t HumanAIConfig_OnEvent(void* context)
 

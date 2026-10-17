@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditHazinglayer_Init (VA 0x0052B040; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditHazinglayer_Init - 0x0052B040 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052B040-EditHazinglayer_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditHazinglayer_Init.h"
 int32_t* EditHazinglayer_Init()
 

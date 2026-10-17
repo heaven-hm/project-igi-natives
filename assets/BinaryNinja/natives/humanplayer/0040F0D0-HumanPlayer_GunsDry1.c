@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_GunsDry1 (VA 0x0040F0D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_GunsDry1 - 0x0040F0D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040F0D0-HumanPlayer_GunsDry1.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_GunsDry1.h"
 struct status_msg* HumanPlayer_GunsDry1(void* context, void* param_2)
 

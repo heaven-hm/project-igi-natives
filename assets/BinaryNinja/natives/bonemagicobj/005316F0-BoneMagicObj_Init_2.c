@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneMagicObj_Init_2 (VA 0x005316F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BoneMagicObj_Init_2 - 0x005316F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005316F0-BoneMagicObj_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneMagicObj_Init_2.h"
 
 int32_t BoneMagicObj_Init_2(void* pThis, void* param)

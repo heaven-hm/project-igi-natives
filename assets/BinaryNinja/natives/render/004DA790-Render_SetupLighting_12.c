@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting_12 (VA 0x004DA790; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SetupLighting_12 - 0x004DA790 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DA790-Render_SetupLighting_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting_12.h"
 uint32_t Render_SetupLighting_12(float* context, double* param_2, float param_3, float param_4, void** param_5)
 

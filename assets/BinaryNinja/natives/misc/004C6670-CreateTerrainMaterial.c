@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CreateTerrainMaterial (VA 0x004C6670; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: CreateTerrainMaterial - 0x004C6670 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C6670-CreateTerrainMaterial.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CreateTerrainMaterial.h"
 int32_t CreateTerrainMaterial(int32_t context, float param_2 )
 

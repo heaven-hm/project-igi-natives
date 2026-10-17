@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIStationaryGunHolder_Process (VA 0x0046E7F0; static CFG gate PASS, CFG score 0.976).
+// IGI native provenance: AIStationaryGunHolder_Process - 0x0046E7F0 - CFG score 97.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046E7F0-AIStationaryGunHolder_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIStationaryGunHolder_Process.h"
 char* AIStationaryGunHolder_Process(float context)
 

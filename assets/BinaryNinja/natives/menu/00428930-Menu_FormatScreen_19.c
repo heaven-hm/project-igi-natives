@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_FormatScreen_19 (VA 0x00428930; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Menu_FormatScreen_19 - 0x00428930 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00428930-Menu_FormatScreen_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_FormatScreen_19.h"
 int32_t Menu_FormatScreen_19(void* context)
 

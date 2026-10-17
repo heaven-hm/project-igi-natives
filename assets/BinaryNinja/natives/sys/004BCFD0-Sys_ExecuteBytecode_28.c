@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ExecuteBytecode_28 (VA 0x004BCFD0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_ExecuteBytecode_28 - 0x004BCFD0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004BCFD0-Sys_ExecuteBytecode_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ExecuteBytecode_28.h"
 int32_t Sys_ExecuteBytecode_28(int32_t* context)
 

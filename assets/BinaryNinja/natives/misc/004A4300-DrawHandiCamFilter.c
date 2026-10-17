@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DrawHandiCamFilter (VA 0x004A4300; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: DrawHandiCamFilter - 0x004A4300 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004A4300-DrawHandiCamFilter.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DrawHandiCamFilter.h"
 int32_t DrawHandiCamFilter(int32_t context , void* param_2)
 

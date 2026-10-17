@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyHandiCam_17 (VA 0x004A9B8E; static CFG gate FAIL, CFG score 0.625).
+// IGI native provenance: Camera_ApplyHandiCam_17 - 0x004A9B8E - CFG score 62.5% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004A9B8E-Camera_ApplyHandiCam_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyHandiCam_17.h"
 void __fastcall Camera_ApplyHandiCam_17(int16_t context, void* param_2 , long double param_3 )
 

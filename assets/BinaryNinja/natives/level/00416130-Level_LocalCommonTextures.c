@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_LocalCommonTextures (VA 0x00416130; static CFG gate FAIL, CFG score 0.733).
+// IGI native provenance: Level_LocalCommonTextures - 0x00416130 - CFG score 73.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00416130-Level_LocalCommonTextures.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_LocalCommonTextures.h"
 int32_t Level_LocalCommonTextures()
 

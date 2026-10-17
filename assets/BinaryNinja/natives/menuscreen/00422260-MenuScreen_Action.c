@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuScreen_Action (VA 0x00422260; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuScreen_Action - 0x00422260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422260-MenuScreen_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuScreen_Action.h"
 int32_t* MenuScreen_Action(void* context)
 

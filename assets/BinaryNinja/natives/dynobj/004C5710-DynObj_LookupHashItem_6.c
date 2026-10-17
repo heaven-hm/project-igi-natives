@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_LookupHashItem_6 (VA 0x004C5710; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: DynObj_LookupHashItem_6 - 0x004C5710 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004C5710-DynObj_LookupHashItem_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_LookupHashItem_6.h"
 int32_t DynObj_LookupHashItem_6(int32_t context, void* param_2, int32_t param_3)
 

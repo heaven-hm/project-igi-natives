@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_CallNativeHandler_6 (VA 0x004F1340; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_CallNativeHandler_6 - 0x004F1340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F1340-Script_CallNativeHandler_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_CallNativeHandler_6.h"
 char* Script_CallNativeHandler_6(int32_t* context)
 

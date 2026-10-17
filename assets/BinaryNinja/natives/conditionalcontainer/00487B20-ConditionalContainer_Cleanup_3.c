@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ConditionalContainer_Cleanup_3 (VA 0x00487B20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ConditionalContainer_Cleanup_3 - 0x00487B20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00487B20-ConditionalContainer_Cleanup_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ConditionalContainer_Cleanup_3.h"
 int32_t ConditionalContainer_Cleanup_3(void* context, int32_t param_2)
 

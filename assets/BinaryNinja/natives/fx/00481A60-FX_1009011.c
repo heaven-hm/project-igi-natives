@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_1009011 (VA 0x00481A60; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: FX_1009011 - 0x00481A60 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00481A60-FX_1009011.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_1009011.h"
 struct status_msg* FX_1009011(double* context)
 

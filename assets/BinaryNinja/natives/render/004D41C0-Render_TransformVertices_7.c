@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_TransformVertices_7 (VA 0x004D41C0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Render_TransformVertices_7 - 0x004D41C0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004D41C0-Render_TransformVertices_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_TransformVertices_7.h"
 float Render_TransformVertices_7(float context, int32_t param_2, float param_3, float param_4, float param_5, float param_6) {
     if (param_2 == 0xffffffff)

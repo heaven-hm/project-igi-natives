@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsGetSoundsEffectsVolume (VA 0x00404B40; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsGetSoundsEffectsVolume - 0x00404B40 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404B40-Config_SoundOptionsGetSoundsEffectsVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsGetSoundsEffectsVolume.h"
 int32_t Config_SoundOptionsGetSoundsEffectsVolume(int32_t context)
 

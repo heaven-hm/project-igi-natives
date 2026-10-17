@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetDisplayMode_16 (VA 0x00498380; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Display_SetDisplayMode_16 - 0x00498380 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00498380-Display_SetDisplayMode_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetDisplayMode_16.h"
 int32_t Display_SetDisplayMode_16(int32_t* context, int32_t param_2, int32_t param_3)
 

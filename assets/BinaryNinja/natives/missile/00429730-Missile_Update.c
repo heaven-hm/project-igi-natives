@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Missile_Update (VA 0x00429730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Missile_Update - 0x00429730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00429730-Missile_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Missile_Update.h"
 char* Missile_Update(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , int32_t param_8, int32_t* param_9)
 

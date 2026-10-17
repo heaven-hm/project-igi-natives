@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherWaterSky_InvokeFormatString (VA 0x0051B4E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherWaterSky_InvokeFormatString - 0x0051B4E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051B4E0-WeatherWaterSky_InvokeFormatString.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherWaterSky_InvokeFormatString.h"
 
 int32_t* WeatherWaterSky_InvokeFormatString(int32_t* context)

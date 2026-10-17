@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_Cleanup (VA 0x0041F1E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ListBox_Cleanup - 0x0041F1E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041F1E0-ListBox_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_Cleanup.h"
 int32_t ListBox_Cleanup(void* context)
 

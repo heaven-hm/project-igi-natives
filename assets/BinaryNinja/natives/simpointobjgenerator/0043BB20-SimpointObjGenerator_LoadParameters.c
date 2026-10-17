@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SimpointObjGenerator_LoadParameters (VA 0x0043BB20; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: SimpointObjGenerator_LoadParameters - 0x0043BB20 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043BB20-SimpointObjGenerator_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SimpointObjGenerator_LoadParameters.h"
 int32_t SimpointObjGenerator_LoadParameters(float context)
 

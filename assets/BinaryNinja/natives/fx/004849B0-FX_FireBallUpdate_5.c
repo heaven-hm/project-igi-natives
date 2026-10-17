@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FireBallUpdate_5 (VA 0x004849B0; static CFG gate FAIL, CFG score 0.821).
+// IGI native provenance: FX_FireBallUpdate_5 - 0x004849B0 - CFG score 82.1% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004849B0-FX_FireBallUpdate_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FireBallUpdate_5.h"
 int32_t FX_FireBallUpdate_5(void* context)
 

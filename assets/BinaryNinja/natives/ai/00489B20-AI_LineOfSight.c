@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_LineOfSight (VA 0x00489B20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_LineOfSight - 0x00489B20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00489B20-AI_LineOfSight.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_LineOfSight.h"
 int32_t AI_LineOfSight(float context, double* param_2, int32_t param_3, double* param_4)
 

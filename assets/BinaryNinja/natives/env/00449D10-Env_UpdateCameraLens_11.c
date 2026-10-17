@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_UpdateCameraLens_11 (VA 0x00449D10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_UpdateCameraLens_11 - 0x00449D10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00449D10-Env_UpdateCameraLens_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_UpdateCameraLens_11.h"
 uint32_t Env_UpdateCameraLens_11()
 

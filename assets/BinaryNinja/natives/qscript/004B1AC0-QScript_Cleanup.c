@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QScript_Cleanup (VA 0x004B1AC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QScript_Cleanup - 0x004B1AC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B1AC0-QScript_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QScript_Cleanup.h"
 int32_t QScript_Cleanup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FlatSky_Update (VA 0x0051EB40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FlatSky_Update - 0x0051EB40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051EB40-FlatSky_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FlatSky_Update.h"
 int32_t FlatSky_Update(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SimpointObj_Process (VA 0x005035B0; static CFG gate FAIL, CFG score 0.800).
+// IGI native provenance: SimpointObj_Process - 0x005035B0 - CFG score 80.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 005035B0-SimpointObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SimpointObj_Process.h"
 int32_t* SimpointObj_Process(int32_t* context)
 

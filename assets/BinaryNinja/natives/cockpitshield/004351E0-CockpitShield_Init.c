@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CockpitShield_Init (VA 0x004351E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CockpitShield_Init - 0x004351E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004351E0-CockpitShield_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CockpitShield_Init.h"
 void* CockpitShield_Init()
 

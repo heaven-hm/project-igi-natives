@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_28 (VA 0x004FC0E0; static CFG gate FAIL, CFG score 0.844).
+// IGI native provenance: Script_FormatString_28 - 0x004FC0E0 - CFG score 84.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004FC0E0-Script_FormatString_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_28.h"
 float* Script_FormatString_28(float context, float param_2, float param_3, float param_4, float param_5, int32_t param_6, double* param_7)
 

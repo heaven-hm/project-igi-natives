@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierPistol_Process (VA 0x0045A230; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanSoldierPistol_Process - 0x0045A230 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045A230-HumanSoldierPistol_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierPistol_Process.h"
 int32_t HumanSoldierPistol_Process(float context, int32_t* param_2)
 

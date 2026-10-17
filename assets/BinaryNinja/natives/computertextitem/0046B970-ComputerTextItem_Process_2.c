@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerTextItem_Process_2 (VA 0x0046B970; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerTextItem_Process_2 - 0x0046B970 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B970-ComputerTextItem_Process_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerTextItem_Process_2.h"
 struct status_msg* ComputerTextItem_Process_2(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, char param_7, uint32_t param_8, uint32_t param_9, void* param_10, char* param_11, uint32_t param_12, int32_t param_13)
 

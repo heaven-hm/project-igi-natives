@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TypeWriterBox_Process (VA 0x0041A4D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TypeWriterBox_Process - 0x0041A4D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041A4D0-TypeWriterBox_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TypeWriterBox_Process.h"
 int32_t TypeWriterBox_Process(void* context, int32_t param_2)
 

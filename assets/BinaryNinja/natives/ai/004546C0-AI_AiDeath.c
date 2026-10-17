@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_AiDeath (VA 0x004546C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_AiDeath - 0x004546C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004546C0-AI_AiDeath.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_AiDeath.h"
 void* AI_AiDeath(void* context, void* param_2)
 

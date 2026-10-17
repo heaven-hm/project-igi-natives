@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SlideBar_OnEvent (VA 0x0041F740; static CFG gate PASS, CFG score 0.942).
+// IGI native provenance: SlideBar_OnEvent - 0x0041F740 - CFG score 94.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041F740-SlideBar_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SlideBar_OnEvent.h"
 int32_t SlideBar_OnEvent(long double context , void* param_2, int32_t param_3)
 

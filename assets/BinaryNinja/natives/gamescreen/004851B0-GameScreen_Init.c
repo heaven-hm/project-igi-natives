@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GameScreen_Init (VA 0x004851B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GameScreen_Init - 0x004851B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004851B0-GameScreen_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GameScreen_Init.h"
 int32_t GameScreen_Init()
 

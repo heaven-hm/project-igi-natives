@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FreeCamera_OnEvent (VA 0x00531180; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FreeCamera_OnEvent - 0x00531180 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00531180-FreeCamera_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FreeCamera_OnEvent.h"
 uint32_t FreeCamera_OnEvent()
 

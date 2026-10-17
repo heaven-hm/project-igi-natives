@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CloseFileStream_29 (VA 0x004BD880; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: Sys_CloseFileStream_29 - 0x004BD880 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004BD880-Sys_CloseFileStream_29.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CloseFileStream_29.h"
 void* Sys_CloseFileStream_29(int32_t* context)
 

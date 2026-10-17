@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerObjectives_LoadParameters (VA 0x00468E90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerObjectives_LoadParameters - 0x00468E90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00468E90-ComputerObjectives_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerObjectives_LoadParameters.h"
 struct status_msg* ComputerObjectives_LoadParameters(void* context)
 

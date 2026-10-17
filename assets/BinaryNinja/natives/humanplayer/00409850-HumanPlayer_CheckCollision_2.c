@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_CheckCollision_2 (VA 0x00409850; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_CheckCollision_2 - 0x00409850 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00409850-HumanPlayer_CheckCollision_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_CheckCollision_2.h"
 int32_t HumanPlayer_CheckCollision_2(void* context, void* param_2)
 

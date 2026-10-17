@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ModelViewBox_Setup (VA 0x00422DF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ModelViewBox_Setup - 0x00422DF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422DF0-ModelViewBox_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ModelViewBox_Setup.h"
 int32_t ModelViewBox_Setup(void* context)
 

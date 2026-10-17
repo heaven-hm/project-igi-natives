@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting_3 (VA 0x004D1220; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SetupLighting_3 - 0x004D1220 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D1220-Render_SetupLighting_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting_3.h"
 int32_t Render_SetupLighting_3()
 

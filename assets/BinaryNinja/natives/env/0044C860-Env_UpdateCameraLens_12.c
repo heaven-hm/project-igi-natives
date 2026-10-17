@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_UpdateCameraLens_12 (VA 0x0044C860; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Env_UpdateCameraLens_12 - 0x0044C860 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044C860-Env_UpdateCameraLens_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_UpdateCameraLens_12.h"
 int32_t Env_UpdateCameraLens_12(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5)
 

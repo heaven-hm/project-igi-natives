@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_CheckAmmo (VA 0x00471A90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_CheckAmmo - 0x00471A90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00471A90-Weapon_CheckAmmo.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_CheckAmmo.h"
 int32_t Weapon_CheckAmmo(float context, float param_2, float param_3, float param_4, float param_5, float param_6, int32_t param_7)
 

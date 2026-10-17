@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_OpenDevice_13 (VA 0x00497510; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_OpenDevice_13 - 0x00497510 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00497510-Display_OpenDevice_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_OpenDevice_13.h"
 int32_t Display_OpenDevice_13()
 

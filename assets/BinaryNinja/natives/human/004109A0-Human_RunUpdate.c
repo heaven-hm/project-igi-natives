@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_RunUpdate (VA 0x004109A0; static CFG gate PASS, CFG score 0.987).
+// IGI native provenance: Human_RunUpdate - 0x004109A0 - CFG score 98.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004109A0-Human_RunUpdate.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_RunUpdate.h"
 void* Human_RunUpdate(int32_t* context)
 

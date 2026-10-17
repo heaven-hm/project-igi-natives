@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_GetContext_45DCB0 (VA 0x0045DCB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_GetContext_45DCB0 - 0x0045DCB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045DCB0-HumanAI_GetContext_45DCB0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_GetContext_45DCB0.h"
 
 int32_t* HumanAI_GetContext_45DCB0(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Building_LoadParameters (VA 0x00448760; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Building_LoadParameters - 0x00448760 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00448760-Building_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Building_LoadParameters.h"
 int32_t Building_LoadParameters(int32_t* context, int32_t param_2)
 

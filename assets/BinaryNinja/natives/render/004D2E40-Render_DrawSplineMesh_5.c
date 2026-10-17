@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_DrawSplineMesh_5 (VA 0x004D2E40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_DrawSplineMesh_5 - 0x004D2E40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D2E40-Render_DrawSplineMesh_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_DrawSplineMesh_5.h"
 void* Render_DrawSplineMesh_5(int32_t* context)
 

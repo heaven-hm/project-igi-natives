@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_GraphnodeIdAlreadyUs (VA 0x004F9510; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Script_GraphnodeIdAlreadyUs - 0x004F9510 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9510-Script_GraphnodeIdAlreadyUs.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_GraphnodeIdAlreadyUs.h"
 int32_t* Script_GraphnodeIdAlreadyUs(void* context, int32_t param_2, int32_t param_3, int32_t param_4, float param_5, int32_t param_6, int32_t param_7)
 

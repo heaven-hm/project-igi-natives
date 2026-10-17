@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_Run (VA 0x0042E320; static CFG gate PASS, CFG score 0.978).
+// IGI native provenance: Car_Run - 0x0042E320 - CFG score 97.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042E320-Car_Run.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_Run.h"
 uint32_t Car_Run(double* context)
 

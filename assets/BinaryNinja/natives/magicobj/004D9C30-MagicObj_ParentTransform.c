@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MagicObj_ParentTransform (VA 0x004D9C30; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: MagicObj_ParentTransform - 0x004D9C30 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D9C30-MagicObj_ParentTransform.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MagicObj_ParentTransform.h"
 void* MagicObj_ParentTransform(void* context, float param_2)
 

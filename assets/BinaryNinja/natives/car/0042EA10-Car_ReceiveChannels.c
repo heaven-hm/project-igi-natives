@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Car_ReceiveChannels (VA 0x0042EA10; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: Car_ReceiveChannels - 0x0042EA10 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042EA10-Car_ReceiveChannels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Car_ReceiveChannels.h"
 int32_t* Car_ReceiveChannels(void* context, float param_2)
 

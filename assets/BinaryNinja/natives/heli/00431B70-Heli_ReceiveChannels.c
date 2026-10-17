@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Heli_ReceiveChannels (VA 0x00431B70; static CFG gate PASS, CFG score 0.972).
+// IGI native provenance: Heli_ReceiveChannels - 0x00431B70 - CFG score 97.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00431B70-Heli_ReceiveChannels.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Heli_ReceiveChannels.h"
 int32_t Heli_ReceiveChannels(float context, int32_t* param_2)
 

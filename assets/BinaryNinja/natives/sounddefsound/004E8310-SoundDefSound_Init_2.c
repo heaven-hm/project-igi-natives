@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefSound_Init_2 (VA 0x004E8310; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefSound_Init_2 - 0x004E8310 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8310-SoundDefSound_Init_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefSound_Init_2.h"
 
 void SoundDefSound_Init_2(void* pThis)

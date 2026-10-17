@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_TakeCover_5 (VA 0x00453F80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_TakeCover_5 - 0x00453F80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00453F80-AI_TakeCover_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_TakeCover_5.h"
 int32_t AI_TakeCover_5(void* context, void* param_2)
 

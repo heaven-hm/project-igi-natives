@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIConfig_UnableToCreateHumana (VA 0x00406DF0; static CFG gate PASS, CFG score 0.982).
+// IGI native provenance: AIConfig_UnableToCreateHumana - 0x00406DF0 - CFG score 98.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406DF0-AIConfig_UnableToCreateHumana.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIConfig_UnableToCreateHumana.h"
 void* AIConfig_UnableToCreateHumana(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_GetContext_427F90 (VA 0x00427F90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_GetContext_427F90 - 0x00427F90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427F90-VehiclePhysics_GetContext_427F90.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_GetContext_427F90.h"
 
 void* VehiclePhysics_GetContext_427F90(int32_t* context)

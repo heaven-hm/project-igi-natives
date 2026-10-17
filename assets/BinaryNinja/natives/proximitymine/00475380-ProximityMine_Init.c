@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ProximityMine_Init (VA 0x00475380; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ProximityMine_Init - 0x00475380 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00475380-ProximityMine_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ProximityMine_Init.h"
 void* ProximityMine_Init()
 

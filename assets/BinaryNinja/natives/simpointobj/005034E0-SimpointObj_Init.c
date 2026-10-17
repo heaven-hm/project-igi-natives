@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SimpointObj_Init (VA 0x005034E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SimpointObj_Init - 0x005034E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005034E0-SimpointObj_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SimpointObj_Init.h"
 int32_t* SimpointObj_Init()
 

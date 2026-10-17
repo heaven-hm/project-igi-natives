@@ -1,4 +1,5 @@
-// Original IGI.EXE function: KnifeStab_Update (VA 0x0046DFB0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: KnifeStab_Update - 0x0046DFB0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046DFB0-KnifeStab_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "KnifeStab_Update.h"
 int32_t KnifeStab_Update(int32_t* context, float param_2)
 

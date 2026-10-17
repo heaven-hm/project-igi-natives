@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_Init (VA 0x0045E450; static CFG gate PASS, CFG score 0.997).
+// IGI native provenance: Human_Init - 0x0045E450 - CFG score 99.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045E450-Human_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_Init.h"
 int32_t Human_Init()
 

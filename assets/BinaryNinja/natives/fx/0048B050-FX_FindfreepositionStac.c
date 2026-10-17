@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FindfreepositionStac (VA 0x0048B050; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: FX_FindfreepositionStac - 0x0048B050 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048B050-FX_FindfreepositionStac.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FindfreepositionStac.h"
 ❓  void* __stdcall FX_FindfreepositionStac(void** context , int32_t* param_2, char param_3, void* param_4)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

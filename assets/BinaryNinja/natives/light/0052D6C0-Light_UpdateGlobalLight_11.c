@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_UpdateGlobalLight_11 (VA 0x0052D6C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_UpdateGlobalLight_11 - 0x0052D6C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052D6C0-Light_UpdateGlobalLight_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_UpdateGlobalLight_11.h"
 void* Light_UpdateGlobalLight_11(int32_t context)
 

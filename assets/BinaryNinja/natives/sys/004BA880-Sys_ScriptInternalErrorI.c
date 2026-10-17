@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ScriptInternalErrorI (VA 0x004BA880; static CFG gate FAIL, CFG score 0.844).
+// IGI native provenance: Sys_ScriptInternalErrorI - 0x004BA880 - CFG score 84.4% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004BA880-Sys_ScriptInternalErrorI.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ScriptInternalErrorI.h"
 char* Sys_ScriptInternalErrorI(int32_t context, int32_t* param_2, int32_t param_3, char* param_4)
 

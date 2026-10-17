@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RocketPod_LoadParameters (VA 0x00427940; static CFG gate PASS, CFG score 0.900).
+// IGI native provenance: RocketPod_LoadParameters - 0x00427940 - CFG score 90.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00427940-RocketPod_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RocketPod_LoadParameters.h"
 uint32_t RocketPod_LoadParameters(int32_t* context, float param_2)
 

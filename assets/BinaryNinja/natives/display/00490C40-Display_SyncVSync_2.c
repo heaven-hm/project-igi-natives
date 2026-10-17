@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SyncVSync_2 (VA 0x00490C40; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Display_SyncVSync_2 - 0x00490C40 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00490C40-Display_SyncVSync_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SyncVSync_2.h"
 bool Display_SyncVSync_2(void* context, int32_t param_2, int32_t param_3)
 

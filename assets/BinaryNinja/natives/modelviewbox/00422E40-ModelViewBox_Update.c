@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ModelViewBox_Update (VA 0x00422E40; static CFG gate PASS, CFG score 0.958).
+// IGI native provenance: ModelViewBox_Update - 0x00422E40 - CFG score 95.8% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00422E40-ModelViewBox_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ModelViewBox_Update.h"
 void* ModelViewBox_Update(void* context, int32_t param_2)
 

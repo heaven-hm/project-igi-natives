@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSysController_SetParent (VA 0x004E6000; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSysController_SetParent - 0x004E6000 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E6000-SoundSysController_SetParent.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSysController_SetParent.h"
 
 int32_t SoundSysController_SetParent(int32_t pThis, int32_t param)

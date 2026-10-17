@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Combat_MobileA (VA 0x0048C250; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Combat_MobileA - 0x0048C250 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048C250-Combat_MobileA.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Combat_MobileA.h"
 void* Combat_MobileA(void* context, void* param_2)
 

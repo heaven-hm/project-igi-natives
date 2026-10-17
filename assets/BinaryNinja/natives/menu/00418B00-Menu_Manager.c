@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_Manager (VA 0x00418B00; static CFG gate PASS, CFG score 0.914).
+// IGI native provenance: Menu_Manager - 0x00418B00 - CFG score 91.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418B00-Menu_Manager.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_Manager.h"
 int32_t* Menu_Manager(void* context, void* param_2, char param_3, char param_4, char param_5)
 

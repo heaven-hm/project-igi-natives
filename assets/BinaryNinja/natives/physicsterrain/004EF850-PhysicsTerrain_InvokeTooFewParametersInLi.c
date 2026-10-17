@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsTerrain_InvokeTooFewParametersInLi (VA 0x004EF850; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsTerrain_InvokeTooFewParametersInLi - 0x004EF850 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EF850-PhysicsTerrain_InvokeTooFewParametersInLi.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsTerrain_InvokeTooFewParametersInLi.h"
 
 int32_t* PhysicsTerrain_InvokeTooFewParametersInLi(int32_t* context)

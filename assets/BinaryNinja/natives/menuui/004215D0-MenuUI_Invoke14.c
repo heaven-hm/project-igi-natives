@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_Invoke14 (VA 0x004215D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_Invoke14 - 0x004215D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004215D0-MenuUI_Invoke14.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_Invoke14.h"
 
 char* MenuUI_Invoke14(void* context)

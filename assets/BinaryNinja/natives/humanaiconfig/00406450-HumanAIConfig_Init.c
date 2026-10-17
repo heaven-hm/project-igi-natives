@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAIConfig_Init (VA 0x00406450; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAIConfig_Init - 0x00406450 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00406450-HumanAIConfig_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAIConfig_Init.h"
 int32_t* HumanAIConfig_Init()
 

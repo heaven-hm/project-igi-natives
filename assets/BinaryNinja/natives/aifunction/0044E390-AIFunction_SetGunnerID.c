@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetGunnerID (VA 0x0044E390; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetGunnerID - 0x0044E390 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E390-AIFunction_SetGunnerID.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetGunnerID.h"
 int32_t AIFunction_SetGunnerID(int32_t context, float param_2 )
 

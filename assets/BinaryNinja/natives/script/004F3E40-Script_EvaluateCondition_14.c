@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_EvaluateCondition_14 (VA 0x004F3E40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_EvaluateCondition_14 - 0x004F3E40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F3E40-Script_EvaluateCondition_14.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_EvaluateCondition_14.h"
 uint32_t Script_EvaluateCondition_14()
 

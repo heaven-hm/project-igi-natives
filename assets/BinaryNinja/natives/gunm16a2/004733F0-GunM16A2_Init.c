@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunM16A2_Init (VA 0x004733F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunM16A2_Init - 0x004733F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004733F0-GunM16A2_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunM16A2_Init.h"
 void* GunM16A2_Init()
 

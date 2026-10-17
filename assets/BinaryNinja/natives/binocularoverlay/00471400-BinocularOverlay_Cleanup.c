@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BinocularOverlay_Cleanup (VA 0x00471400; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BinocularOverlay_Cleanup - 0x00471400 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00471400-BinocularOverlay_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BinocularOverlay_Cleanup.h"
 int32_t* BinocularOverlay_Cleanup(void* context)
 

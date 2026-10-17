@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_ApplyLightmap_7 (VA 0x00529AE0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_ApplyLightmap_7 - 0x00529AE0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00529AE0-Light_ApplyLightmap_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_ApplyLightmap_7.h"
 void* Light_ApplyLightmap_7(void* context )
 

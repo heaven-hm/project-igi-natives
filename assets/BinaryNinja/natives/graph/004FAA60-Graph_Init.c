@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Graph_Init (VA 0x004FAA60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Graph_Init - 0x004FAA60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FAA60-Graph_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Graph_Init.h"
 void* Graph_Init()
 

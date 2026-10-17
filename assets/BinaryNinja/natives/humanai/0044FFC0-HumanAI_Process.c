@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_Process (VA 0x0044FFC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_Process - 0x0044FFC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044FFC0-HumanAI_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_Process.h"
 int32_t* HumanAI_Process(void* context)
 

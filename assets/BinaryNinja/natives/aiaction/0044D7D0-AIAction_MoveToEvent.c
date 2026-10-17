@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_MoveToEvent (VA 0x0044D7D0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: AIAction_MoveToEvent - 0x0044D7D0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D7D0-AIAction_MoveToEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_MoveToEvent.h"
 int32_t AIAction_MoveToEvent(int32_t context, float param_2 )
 

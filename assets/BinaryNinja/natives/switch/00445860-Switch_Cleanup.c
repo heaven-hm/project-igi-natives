@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Switch_Cleanup (VA 0x00445860; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Switch_Cleanup - 0x00445860 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00445860-Switch_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Switch_Cleanup.h"
 int32_t Switch_Cleanup(void* context)
 

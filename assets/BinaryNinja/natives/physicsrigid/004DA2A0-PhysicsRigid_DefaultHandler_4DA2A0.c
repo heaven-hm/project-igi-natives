@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsRigid_DefaultHandler_4DA2A0 (VA 0x004DA2A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsRigid_DefaultHandler_4DA2A0 - 0x004DA2A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DA2A0-PhysicsRigid_DefaultHandler_4DA2A0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_DefaultHandler_4DA2A0.h"
 
 void* PhysicsRigid_DefaultHandler_4DA2A0(void* context)

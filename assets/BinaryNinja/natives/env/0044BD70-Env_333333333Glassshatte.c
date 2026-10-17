@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_333333333Glassshatte (VA 0x0044BD70; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: Env_333333333Glassshatte - 0x0044BD70 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044BD70-Env_333333333Glassshatte.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_333333333Glassshatte.h"
 struct status_msg* Env_333333333Glassshatte(uint32_t context, float* param_2, double* param_3, double* param_4, float param_5 )
 

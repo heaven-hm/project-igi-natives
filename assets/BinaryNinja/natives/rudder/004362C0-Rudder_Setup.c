@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rudder_Setup (VA 0x004362C0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Rudder_Setup - 0x004362C0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004362C0-Rudder_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rudder_Setup.h"
 float* Rudder_Setup(void* context, int32_t* param_2)
 

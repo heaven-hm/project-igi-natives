@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ControlsMenu_Update (VA 0x004233D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ControlsMenu_Update - 0x004233D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004233D0-ControlsMenu_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ControlsMenu_Update.h"
 int32_t ControlsMenu_Update(void* context, int32_t param_2)
 

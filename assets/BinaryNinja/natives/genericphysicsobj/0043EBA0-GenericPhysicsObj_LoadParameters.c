@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPhysicsObj_LoadParameters (VA 0x0043EBA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericPhysicsObj_LoadParameters - 0x0043EBA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043EBA0-GenericPhysicsObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPhysicsObj_LoadParameters.h"
 float* GenericPhysicsObj_LoadParameters(float context)
 

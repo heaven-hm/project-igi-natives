@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_EvaluateAreaCriteria_7 (VA 0x00508940; static CFG gate FAIL, CFG score 0.800).
+// IGI native provenance: Physics_EvaluateAreaCriteria_7 - 0x00508940 - CFG score 80.0% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00508940-Physics_EvaluateAreaCriteria_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_EvaluateAreaCriteria_7.h"
 float* Physics_EvaluateAreaCriteria_7(double* context, float* param_2, double* param_3, float* param_4, int32_t param_5)
 

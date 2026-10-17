@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_OpenDevice_4 (VA 0x00491A50; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Display_OpenDevice_4 - 0x00491A50 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00491A50-Display_OpenDevice_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_OpenDevice_4.h"
 int32_t Display_OpenDevice_4(int32_t context)
 

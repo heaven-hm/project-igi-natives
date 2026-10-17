@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MovieSubtitle_RegisterMedia (VA 0x004150E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MovieSubtitle_RegisterMedia - 0x004150E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004150E0-MovieSubtitle_RegisterMedia.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MovieSubtitle_RegisterMedia.h"
 
 int32_t MovieSubtitle_RegisterMedia(void* pThis, int32_t* param)

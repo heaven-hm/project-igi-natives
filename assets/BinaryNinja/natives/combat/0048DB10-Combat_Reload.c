@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Combat_Reload (VA 0x0048DB10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Combat_Reload - 0x0048DB10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048DB10-Combat_Reload.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Combat_Reload.h"
 int32_t Combat_Reload(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ComputeNormals_12 (VA 0x004DA180; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Render_ComputeNormals_12 - 0x004DA180 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004DA180-Render_ComputeNormals_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ComputeNormals_12.h"
 int32_t Render_ComputeNormals_12(void** context, int32_t* param_2)
 

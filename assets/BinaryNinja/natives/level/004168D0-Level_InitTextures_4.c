@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_InitTextures_4 (VA 0x004168D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Level_InitTextures_4 - 0x004168D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004168D0-Level_InitTextures_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_InitTextures_4.h"
 int32_t Level_InitTextures_4()
 

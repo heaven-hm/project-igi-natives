@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MovieSubtitle_RegisterFont (VA 0x004151E0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: MovieSubtitle_RegisterFont - 0x004151E0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004151E0-MovieSubtitle_RegisterFont.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MovieSubtitle_RegisterFont.h"
 int32_t MovieSubtitle_RegisterFont(int32_t context, int32_t param_2, float param_3)
 

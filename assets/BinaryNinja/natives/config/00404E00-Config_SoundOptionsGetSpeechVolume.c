@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsGetSpeechVolume (VA 0x00404E00; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsGetSpeechVolume - 0x00404E00 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404E00-Config_SoundOptionsGetSpeechVolume.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsGetSpeechVolume.h"
 int32_t Config_SoundOptionsGetSpeechVolume(int32_t context)
 

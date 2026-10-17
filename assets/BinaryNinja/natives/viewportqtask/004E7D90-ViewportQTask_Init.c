@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ViewportQTask_Init (VA 0x004E7D90; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: ViewportQTask_Init - 0x004E7D90 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7D90-ViewportQTask_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ViewportQTask_Init.h"
 int32_t ViewportQTask_Init()
 

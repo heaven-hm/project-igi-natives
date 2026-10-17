@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunM16A2_Update (VA 0x004737F0; static CFG gate PASS, CFG score 0.923).
+// IGI native provenance: GunM16A2_Update - 0x004737F0 - CFG score 92.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004737F0-GunM16A2_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunM16A2_Update.h"
 void* GunM16A2_Update(int32_t* context )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_InvokeIsexists_4253A0 (VA 0x004253A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_InvokeIsexists_4253A0 - 0x004253A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004253A0-MenuUI_InvokeIsexists_4253A0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_InvokeIsexists_4253A0.h"
 
 int32_t MenuUI_InvokeIsexists_4253A0(void* context)

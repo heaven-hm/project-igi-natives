@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_BuildEyeSnapshot (VA 0x00489960; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AI_BuildEyeSnapshot - 0x00489960 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00489960-AI_BuildEyeSnapshot.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_BuildEyeSnapshot.h"
 int32_t AI_BuildEyeSnapshot(long double context , long double param_2 , long double param_3 , double* param_4, double* param_5)
 

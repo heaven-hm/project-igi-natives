@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Shadow_LoadParameters (VA 0x004E09D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Shadow_LoadParameters - 0x004E09D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E09D0-Shadow_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Shadow_LoadParameters.h"
 int32_t* Shadow_LoadParameters(float context)
 

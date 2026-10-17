@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_UpdateZoom_5 (VA 0x004785F0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Weapon_UpdateZoom_5 - 0x004785F0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004785F0-Weapon_UpdateZoom_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_UpdateZoom_5.h"
 void* Weapon_UpdateZoom_5(void* context)
 

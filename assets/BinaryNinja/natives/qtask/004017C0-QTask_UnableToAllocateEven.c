@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_UnableToAllocateEven (VA 0x004017C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_UnableToAllocateEven - 0x004017C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004017C0-QTask_UnableToAllocateEven.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_UnableToAllocateEven.h"
 int32_t QTask_UnableToAllocateEvent(int16_t context)
 

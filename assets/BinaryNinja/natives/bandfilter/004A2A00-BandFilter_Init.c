@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BandFilter_Init (VA 0x004A2A00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: BandFilter_Init - 0x004A2A00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A2A00-BandFilter_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BandFilter_Init.h"
 int32_t BandFilter_Init()
 

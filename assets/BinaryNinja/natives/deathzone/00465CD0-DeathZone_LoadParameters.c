@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DeathZone_LoadParameters (VA 0x00465CD0; static CFG gate PASS, CFG score 0.875).
+// IGI native provenance: DeathZone_LoadParameters - 0x00465CD0 - CFG score 87.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00465CD0-DeathZone_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DeathZone_LoadParameters.h"
 int32_t DeathZone_LoadParameters(int32_t* context, float param_2)
 

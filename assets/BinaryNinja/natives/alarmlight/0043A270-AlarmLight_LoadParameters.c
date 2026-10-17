@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_LoadParameters (VA 0x0043A270; static CFG gate PASS, CFG score 0.952).
+// IGI native provenance: AlarmLight_LoadParameters - 0x0043A270 - CFG score 95.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043A270-AlarmLight_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_LoadParameters.h"
 struct status_msg* AlarmLight_LoadParameters(long double context , void* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Switch_OnEvent (VA 0x00445730; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Switch_OnEvent - 0x00445730 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00445730-Switch_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Switch_OnEvent.h"
 int32_t Switch_OnEvent(double* context, void* param_2)
 

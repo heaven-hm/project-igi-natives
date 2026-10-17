@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_RequestScreen_2 (VA 0x00418580; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_RequestScreen_2 - 0x00418580 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00418580-Menu_RequestScreen_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_RequestScreen_2.h"
 int32_t Menu_RequestScreen_2(void* context)
 

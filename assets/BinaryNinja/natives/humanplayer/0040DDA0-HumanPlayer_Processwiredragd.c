@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Processwiredragd (VA 0x0040DDA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Processwiredragd - 0x0040DDA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040DDA0-HumanPlayer_Processwiredragd.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Processwiredragd.h"
 
 struct status_msg*(void* context, void* param_2)

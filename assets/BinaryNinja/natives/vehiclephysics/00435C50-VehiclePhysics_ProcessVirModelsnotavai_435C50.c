@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_ProcessVirModelsnotavai_435C50 (VA 0x00435C50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_ProcessVirModelsnotavai_435C50 - 0x00435C50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00435C50-VehiclePhysics_ProcessVirModelsnotavai_435C50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ProcessVirModelsnotavai_435C50.h"
 
 int32_t VehiclePhysics_ProcessVirModelsnotavai_435C50(int32_t* context, float param_2)

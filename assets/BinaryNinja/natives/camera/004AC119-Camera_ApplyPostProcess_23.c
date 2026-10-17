@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyPostProcess_23 (VA 0x004AC119; static CFG gate FAIL, CFG score 0.639).
+// IGI native provenance: Camera_ApplyPostProcess_23 - 0x004AC119 - CFG score 63.9% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004AC119-Camera_ApplyPostProcess_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyPostProcess_23.h"
 int32_t Camera_ApplyPostProcess_23()
 

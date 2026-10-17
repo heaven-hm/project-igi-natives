@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ResetMatrix_9 (VA 0x004A6D7D; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ResetMatrix_9 - 0x004A6D7D - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A6D7D-Camera_ResetMatrix_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ResetMatrix_9.h"
 uint32_t Camera_ResetMatrix_9(int32_t context, int32_t param_2, enum SET_FILE_POINTER_MOVE_METHOD param_3)
 

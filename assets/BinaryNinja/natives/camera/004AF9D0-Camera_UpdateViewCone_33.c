@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_UpdateViewCone_33 (VA 0x004AF9D0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Camera_UpdateViewCone_33 - 0x004AF9D0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004AF9D0-Camera_UpdateViewCone_33.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_UpdateViewCone_33.h"
 int32_t Camera_UpdateViewCone_33(int32_t* context, int32_t* param_2, char* param_3)
 

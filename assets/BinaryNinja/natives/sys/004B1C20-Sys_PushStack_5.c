@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PushStack_5 (VA 0x004B1C20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_PushStack_5 - 0x004B1C20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B1C20-Sys_PushStack_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PushStack_5.h"
 int32_t Sys_PushStack_5(int32_t context, int32_t param_2)
 

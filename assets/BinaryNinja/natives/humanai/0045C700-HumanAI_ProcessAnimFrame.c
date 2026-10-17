@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_ProcessAnimFrame (VA 0x0045C700; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_ProcessAnimFrame - 0x0045C700 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045C700-HumanAI_ProcessAnimFrame.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_ProcessAnimFrame.h"
 
 void* HumanAI_ProcessAnimFrame(void* pThis, void* param)

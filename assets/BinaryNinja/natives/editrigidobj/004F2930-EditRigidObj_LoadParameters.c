@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObj_LoadParameters (VA 0x004F2930; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: EditRigidObj_LoadParameters - 0x004F2930 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F2930-EditRigidObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObj_LoadParameters.h"
 int32_t EditRigidObj_LoadParameters(int32_t* context)
 

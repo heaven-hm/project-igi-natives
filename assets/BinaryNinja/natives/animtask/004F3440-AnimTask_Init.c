@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimTask_Init (VA 0x004F3440; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimTask_Init - 0x004F3440 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F3440-AnimTask_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimTask_Init.h"
 int32_t AnimTask_Init()
 

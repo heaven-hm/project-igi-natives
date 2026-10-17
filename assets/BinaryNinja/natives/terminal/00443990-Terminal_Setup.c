@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Terminal_Setup (VA 0x00443990; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Terminal_Setup - 0x00443990 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00443990-Terminal_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Terminal_Setup.h"
 char* Terminal_Setup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_Init (VA 0x004397C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AlarmLight_Init - 0x004397C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004397C0-AlarmLight_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_Init.h"
 char* AlarmLight_Init()
 

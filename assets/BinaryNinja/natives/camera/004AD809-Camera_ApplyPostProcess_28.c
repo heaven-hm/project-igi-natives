@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyPostProcess_28 (VA 0x004AD809; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyPostProcess_28 - 0x004AD809 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AD809-Camera_ApplyPostProcess_28.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyPostProcess_28.h"
 char* Camera_ApplyPostProcess_28(uint32_t context, int32_t param_2)
 

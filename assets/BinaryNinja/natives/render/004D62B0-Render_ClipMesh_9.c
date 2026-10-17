@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ClipMesh_9 (VA 0x004D62B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_ClipMesh_9 - 0x004D62B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D62B0-Render_ClipMesh_9.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ClipMesh_9.h"
 void** Render_ClipMesh_9(void* context, int32_t param_2, float param_3)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_Invoke18 (VA 0x00428270; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_Invoke18 - 0x00428270 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00428270-VehiclePhysics_Invoke18.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_Invoke18.h"
 
 int32_t VehiclePhysics_Invoke18(float context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SpriteParticleSystemDynCubeObj_OnTick (VA 0x005312D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SpriteParticleSystemDynCubeObj_OnTick - 0x005312D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005312D0-SpriteParticleSystemDynCubeObj_OnTick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SpriteParticleSystemDynCubeObj_OnTick.h"
 int32_t SpriteParticleSystemDynCubeObj_OnTick(void* context, void* param_2, double* param_3, float param_4)
 

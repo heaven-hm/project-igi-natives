@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CouldnTReadPixelForm (VA 0x00490860; static CFG gate PASS, CFG score 0.893).
+// IGI native provenance: Display_CouldnTReadPixelForm - 0x00490860 - CFG score 89.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00490860-Display_CouldnTReadPixelForm.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CouldnTReadPixelForm.h"
 void* Display_CouldnTReadPixelForm(void* context)
 

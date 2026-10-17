@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GameMaterial_LoadParameters (VA 0x00408350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GameMaterial_LoadParameters - 0x00408350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00408350-GameMaterial_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GameMaterial_LoadParameters.h"
 int32_t GameMaterial_LoadParameters()
 

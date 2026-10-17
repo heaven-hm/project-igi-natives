@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuLoader_Setup (VA 0x00419210; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuLoader_Setup - 0x00419210 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00419210-MenuLoader_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuLoader_Setup.h"
 int32_t* MenuLoader_Setup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_LocalModelsSMef (VA 0x004CF390; static CFG gate PASS, CFG score 0.991).
+// IGI native provenance: DynObj_LocalModelsSMef - 0x004CF390 - CFG score 99.1% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CF390-DynObj_LocalModelsSMef.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_LocalModelsSMef.h"
 int32_t* DynObj_LocalModelsSMef(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundDefGroup_OnEvent (VA 0x004EB670; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundDefGroup_OnEvent - 0x004EB670 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EB670-SoundDefGroup_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundDefGroup_OnEvent.h"
 int32_t SoundDefGroup_OnEvent(void* context, int32_t* param_2)
 

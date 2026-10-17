@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_RegisterLod (VA 0x004EDC00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObj_RegisterLod - 0x004EDC00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDC00-PhysicsObj_RegisterLod.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_RegisterLod.h"
 
 int32_t* PhysicsObj_RegisterLod(int32_t pThis)

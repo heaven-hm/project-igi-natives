@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ConditionalContainer_Tick (VA 0x004874E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ConditionalContainer_Tick - 0x004874E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004874E0-ConditionalContainer_Tick.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ConditionalContainer_Tick.h"
 int32_t* ConditionalContainer_Tick(int32_t* context)
 

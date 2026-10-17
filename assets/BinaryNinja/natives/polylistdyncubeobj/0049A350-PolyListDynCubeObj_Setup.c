@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PolyListDynCubeObj_Setup (VA 0x0049A350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PolyListDynCubeObj_Setup - 0x0049A350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049A350-PolyListDynCubeObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PolyListDynCubeObj_Setup.h"
 void* PolyListDynCubeObj_Setup(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_ProcessLOCALconfigqsc (VA 0x00402070; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_ProcessLOCALconfigqsc - 0x00402070 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402070-QTask_ProcessLOCALconfigqsc.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_ProcessLOCALconfigqsc.h"
 
 int32_t QTask_ProcessLOCALconfigqsc(struct frames_ctx* context)

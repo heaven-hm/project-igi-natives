@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Menu_DrawWidget_10 (VA 0x00420C90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Menu_DrawWidget_10 - 0x00420C90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00420C90-Menu_DrawWidget_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Menu_DrawWidget_10.h"
 uint32_t Menu_DrawWidget_10()
 

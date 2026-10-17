@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainEffect_Init (VA 0x00436780; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RainEffect_Init - 0x00436780 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00436780-RainEffect_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainEffect_Init.h"
 char* RainEffect_Init()
 

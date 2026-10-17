@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AmmoPickup_OnEvent (VA 0x0046D990; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: AmmoPickup_OnEvent - 0x0046D990 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046D990-AmmoPickup_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AmmoPickup_OnEvent.h"
 int32_t AmmoPickup_OnEvent(void* context, int32_t* param_2)
 

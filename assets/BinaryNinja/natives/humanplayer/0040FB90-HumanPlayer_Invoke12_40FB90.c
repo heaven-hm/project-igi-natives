@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_Invoke12_40FB90 (VA 0x0040FB90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_Invoke12_40FB90 - 0x0040FB90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0040FB90-HumanPlayer_Invoke12_40FB90.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_Invoke12_40FB90.h"
 
 void* HumanPlayer_Invoke12_40FB90(void* context, void* param_2)

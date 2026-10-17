@@ -1,4 +1,5 @@
-// Original IGI.EXE function: World_TraceBatch (VA 0x004CDB20; static CFG gate PASS, CFG score 0.872).
+// IGI native provenance: World_TraceBatch - 0x004CDB20 - CFG score 87.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004CDB20-World_TraceBatch.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "World_TraceBatch.h"
 int32_t* World_TraceBatch(int32_t context, int32_t* param_2, double* param_3, double* param_4, int32_t* param_5, char param_6, double* param_7, int32_t param_8, int32_t param_9)
 

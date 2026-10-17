@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Mine_OnEvent (VA 0x00475F30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Mine_OnEvent - 0x00475F30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00475F30-Mine_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Mine_OnEvent.h"
 int32_t Mine_OnEvent(float context, int32_t param_2)
 

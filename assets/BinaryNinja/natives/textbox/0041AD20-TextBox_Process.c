@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TextBox_Process (VA 0x0041AD20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TextBox_Process - 0x0041AD20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041AD20-TextBox_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TextBox_Process.h"
 char* TextBox_Process(void* context)
 

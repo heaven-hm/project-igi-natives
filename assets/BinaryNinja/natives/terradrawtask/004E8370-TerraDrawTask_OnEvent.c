@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TerraDrawTask_OnEvent (VA 0x004E8370; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: TerraDrawTask_OnEvent - 0x004E8370 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E8370-TerraDrawTask_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TerraDrawTask_OnEvent.h"
 struct status_msg* TerraDrawTask_OnEvent(void* context, uint32_t param_2)
 

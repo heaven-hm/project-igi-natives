@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Flow_RequestEvent (VA 0x00402780; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Flow_RequestEvent - 0x00402780 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00402780-Flow_RequestEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Flow_RequestEvent.h"
 int32_t Flow_RequestEvent(int32_t context, float param_2 )
 

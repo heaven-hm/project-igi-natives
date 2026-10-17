@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetGammaRamp_15 (VA 0x00498040; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_SetGammaRamp_15 - 0x00498040 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00498040-Display_SetGammaRamp_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetGammaRamp_15.h"
 float* Display_SetGammaRamp_15(float* context, float* param_2, float param_3)
 

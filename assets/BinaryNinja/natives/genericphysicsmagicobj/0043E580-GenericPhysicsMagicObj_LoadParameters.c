@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GenericPhysicsMagicObj_LoadParameters (VA 0x0043E580; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GenericPhysicsMagicObj_LoadParameters - 0x0043E580 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043E580-GenericPhysicsMagicObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GenericPhysicsMagicObj_LoadParameters.h"
 float* GenericPhysicsMagicObj_LoadParameters(float context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_SetupLighting_5 (VA 0x004D3160; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_SetupLighting_5 - 0x004D3160 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D3160-Render_SetupLighting_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_SetupLighting_5.h"
 float* Render_SetupLighting_5(float* context, float* param_2, float* param_3, float param_4)
 

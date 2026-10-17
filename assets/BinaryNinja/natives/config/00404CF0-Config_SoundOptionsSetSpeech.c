@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SoundOptionsSetSpeech (VA 0x00404CF0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_SoundOptionsSetSpeech - 0x00404CF0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404CF0-Config_SoundOptionsSetSpeech.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SoundOptionsSetSpeech.h"
 int32_t Config_SoundOptionsSetSpeech(int32_t context, float param_2 )
 

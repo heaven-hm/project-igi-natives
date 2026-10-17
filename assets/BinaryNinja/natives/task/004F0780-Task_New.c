@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Task_New (VA 0x004F0780; static CFG gate PASS, CFG score 0.986).
+// IGI native provenance: Task_New - 0x004F0780 - CFG score 98.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0780-Task_New.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Task_New.h"
 int32_t Task_New(int32_t context, void* param_2, float param_3)
 

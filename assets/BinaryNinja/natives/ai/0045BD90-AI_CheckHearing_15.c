@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_CheckHearing_15 (VA 0x0045BD90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_CheckHearing_15 - 0x0045BD90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045BD90-AI_CheckHearing_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_CheckHearing_15.h"
 int32_t AI_CheckHearing_15(void* context, void* param_2)
 

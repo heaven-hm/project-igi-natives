@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DialogWindow_Init (VA 0x004199F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DialogWindow_Init - 0x004199F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004199F0-DialogWindow_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DialogWindow_Init.h"
 int32_t* DialogWindow_Init()
 

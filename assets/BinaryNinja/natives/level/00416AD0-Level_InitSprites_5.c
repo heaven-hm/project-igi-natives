@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Level_InitSprites_5 (VA 0x00416AD0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Level_InitSprites_5 - 0x00416AD0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00416AD0-Level_InitSprites_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Level_InitSprites_5.h"
 int32_t Level_InitSprites_5(long double context , long double param_2 , long double param_3 , long double param_4 , void* param_5, int32_t param_6, float param_7)
 

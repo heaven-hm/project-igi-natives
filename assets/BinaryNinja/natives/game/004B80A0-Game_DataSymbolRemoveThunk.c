@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_DataSymbolRemoveThunk (VA 0x004B80A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Game_DataSymbolRemoveThunk - 0x004B80A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B80A0-Game_DataSymbolRemoveThunk.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_DataSymbolRemoveThunk.h"
 int32_t Game_DataSymbolRemoveThunk(char* context)
 

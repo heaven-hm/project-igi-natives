@@ -1,4 +1,5 @@
-// Original IGI.EXE function: NoiseQTask_OnEvent (VA 0x00520350; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: NoiseQTask_OnEvent - 0x00520350 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00520350-NoiseQTask_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "NoiseQTask_OnEvent.h"
 int32_t NoiseQTask_OnEvent(void* context)
 

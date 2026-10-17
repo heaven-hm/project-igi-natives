@@ -1,4 +1,5 @@
-// Original IGI.EXE function: App_ContextSetDebugtextState (VA 0x0048F1E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: App_ContextSetDebugtextState - 0x0048F1E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F1E0-App_ContextSetDebugtextState.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "App_ContextSetDebugtextState.h"
 int32_t App_ContextSetDebugtextState(char context)
 

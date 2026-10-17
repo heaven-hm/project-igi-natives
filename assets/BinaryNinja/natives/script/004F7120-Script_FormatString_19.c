@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_FormatString_19 (VA 0x004F7120; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_FormatString_19 - 0x004F7120 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F7120-Script_FormatString_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_FormatString_19.h"
 void* Script_FormatString_19(void* context, int32_t param_2)
 

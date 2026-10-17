@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ToggleBox_Update (VA 0x0041E500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ToggleBox_Update - 0x0041E500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041E500-ToggleBox_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ToggleBox_Update.h"
 int32_t* ToggleBox_Update(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qvm_ProcessRigidObject (VA 0x004C3110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qvm_ProcessRigidObject - 0x004C3110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C3110-Qvm_ProcessRigidObject.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qvm_ProcessRigidObject.h"
 
 int32_t Qvm_ProcessRigidObject(float context, void* param_2)

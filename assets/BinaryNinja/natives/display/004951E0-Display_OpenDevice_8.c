@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_OpenDevice_8 (VA 0x004951E0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_OpenDevice_8 - 0x004951E0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004951E0-Display_OpenDevice_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_OpenDevice_8.h"
 int32_t* Display_OpenDevice_8(int32_t context)
 

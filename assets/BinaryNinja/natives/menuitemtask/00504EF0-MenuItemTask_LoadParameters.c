@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuItemTask_LoadParameters (VA 0x00504EF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuItemTask_LoadParameters - 0x00504EF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00504EF0-MenuItemTask_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuItemTask_LoadParameters.h"
 void* MenuItemTask_LoadParameters(void* context)
 

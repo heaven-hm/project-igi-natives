@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Afterburner_Process (VA 0x0042C0B0; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Afterburner_Process - 0x0042C0B0 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042C0B0-Afterburner_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Afterburner_Process.h"
 int32_t Afterburner_Process(void* context, int32_t* param_2)
 

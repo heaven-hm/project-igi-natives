@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuWindow_Setup (VA 0x004244B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuWindow_Setup - 0x004244B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004244B0-MenuWindow_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuWindow_Setup.h"
 int32_t MenuWindow_Setup(void* context)
 

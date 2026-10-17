@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ElevatorFloorIndicator_Action (VA 0x0043C390; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: ElevatorFloorIndicator_Action - 0x0043C390 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0043C390-ElevatorFloorIndicator_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ElevatorFloorIndicator_Action.h"
 void* ElevatorFloorIndicator_Action(void* context, int32_t* param_2)
 

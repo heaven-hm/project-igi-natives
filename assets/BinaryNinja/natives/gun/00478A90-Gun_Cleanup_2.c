@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gun_Cleanup_2 (VA 0x00478A90; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: Gun_Cleanup_2 - 0x00478A90 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00478A90-Gun_Cleanup_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gun_Cleanup_2.h"
 int32_t Gun_Cleanup_2(float context, double** param_2)
 

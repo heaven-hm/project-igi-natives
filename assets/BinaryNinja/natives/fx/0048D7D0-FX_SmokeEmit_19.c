@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_SmokeEmit_19 (VA 0x0048D7D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_SmokeEmit_19 - 0x0048D7D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048D7D0-FX_SmokeEmit_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_SmokeEmit_19.h"
 int32_t FX_SmokeEmit_19(void* context)
 

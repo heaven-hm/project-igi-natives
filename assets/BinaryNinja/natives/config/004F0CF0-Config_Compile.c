@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_Compile (VA 0x004F0CF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_Compile - 0x004F0CF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F0CF0-Config_Compile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_Compile.h"
 int32_t Config_Compile(int32_t context, void* param_2, char param_3)
 

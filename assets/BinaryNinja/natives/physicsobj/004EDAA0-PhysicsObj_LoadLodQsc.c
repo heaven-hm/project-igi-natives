@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsObj_LoadLodQsc (VA 0x004EDAA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsObj_LoadLodQsc - 0x004EDAA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EDAA0-PhysicsObj_LoadLodQsc.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsObj_LoadLodQsc.h"
 
 void* PhysicsObj_LoadLodQsc(void* pThis)

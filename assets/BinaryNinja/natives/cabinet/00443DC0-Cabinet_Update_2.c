@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Cabinet_Update_2 (VA 0x00443DC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Cabinet_Update_2 - 0x00443DC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00443DC0-Cabinet_Update_2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Cabinet_Update_2.h"
 
 int32_t Cabinet_Update_2(float pThis, int32_t param)

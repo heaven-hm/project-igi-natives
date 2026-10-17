@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_GraphstreamCollision (VA 0x004F9DF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Script_GraphstreamCollision - 0x004F9DF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F9DF0-Script_GraphstreamCollision.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_GraphstreamCollision.h"
 void* Script_GraphstreamCollision(char* context, int32_t param_2, int32_t param_3)
 

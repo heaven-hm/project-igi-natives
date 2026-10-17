@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FailedToRegisterWinp (VA 0x0048F490; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_FailedToRegisterWinp - 0x0048F490 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F490-FX_FailedToRegisterWinp.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FailedToRegisterWinp.h"
 void* FX_FailedToRegisterWinp(int32_t context)
 

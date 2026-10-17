@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunMP5SD_Setup (VA 0x00473C80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunMP5SD_Setup - 0x00473C80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00473C80-GunMP5SD_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunMP5SD_Setup.h"
 float* GunMP5SD_Setup(float context )
 

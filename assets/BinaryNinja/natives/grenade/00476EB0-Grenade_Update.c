@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Grenade_Update (VA 0x00476EB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Grenade_Update - 0x00476EB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00476EB0-Grenade_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Grenade_Update.h"
 int32_t Grenade_Update(float context, float param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplineObj_Setup (VA 0x00502740; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: SplineObj_Setup - 0x00502740 - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00502740-SplineObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplineObj_Setup.h"
 int32_t SplineObj_Setup(void* context, char* param_2)
 

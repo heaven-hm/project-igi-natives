@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_OpenFileStream_16 (VA 0x004B5D80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_OpenFileStream_16 - 0x004B5D80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B5D80-Sys_OpenFileStream_16.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_OpenFileStream_16.h"
 void* Sys_OpenFileStream_16(void* context, int32_t param_2, void* param_3)
 

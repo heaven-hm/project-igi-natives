@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_AidetectionQtaskMask (VA 0x00489640; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_AidetectionQtaskMask - 0x00489640 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00489640-FX_AidetectionQtaskMask.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_AidetectionQtaskMask.h"
 int32_t FX_AidetectionQtaskMask(int16_t context)
 

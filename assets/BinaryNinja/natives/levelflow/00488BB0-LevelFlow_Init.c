@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelFlow_Init (VA 0x00488BB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelFlow_Init - 0x00488BB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00488BB0-LevelFlow_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelFlow_Init.h"
 void* LevelFlow_Init()
 

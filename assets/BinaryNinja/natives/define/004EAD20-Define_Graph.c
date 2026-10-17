@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_Graph (VA 0x004EAD20; static CFG gate PASS, CFG score 0.980).
+// IGI native provenance: Define_Graph - 0x004EAD20 - CFG score 98.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004EAD20-Define_Graph.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_Graph.h"
 int32_t Define_Graph(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , int32_t param_7, void* param_8, float param_9)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_SetLightColor (VA 0x00521040; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_SetLightColor - 0x00521040 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00521040-Light_SetLightColor.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_SetLightColor.h"
 void* Light_SetLightColor()
 

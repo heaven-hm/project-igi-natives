@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainEffect_Setup (VA 0x00436990; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RainEffect_Setup - 0x00436990 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00436990-RainEffect_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainEffect_Setup.h"
 int32_t RainEffect_Setup(long double context , void* param_2)
 

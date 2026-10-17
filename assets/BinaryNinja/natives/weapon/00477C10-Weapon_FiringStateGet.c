@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_FiringStateGet (VA 0x00477C10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_FiringStateGet - 0x00477C10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477C10-Weapon_FiringStateGet.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_FiringStateGet.h"
 int32_t Weapon_FiringStateGet()
 

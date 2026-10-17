@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Plane_Update (VA 0x00434770; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Plane_Update - 0x00434770 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00434770-Plane_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Plane_Update.h"
 int32_t Plane_Update(float context)
 

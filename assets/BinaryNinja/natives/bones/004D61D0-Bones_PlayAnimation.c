@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Bones_PlayAnimation (VA 0x004D61D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Bones_PlayAnimation - 0x004D61D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D61D0-Bones_PlayAnimation.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Bones_PlayAnimation.h"
 int32_t Bones_PlayAnimation(float context, int32_t param_2, int32_t param_3, int32_t param_4, float param_5)
 

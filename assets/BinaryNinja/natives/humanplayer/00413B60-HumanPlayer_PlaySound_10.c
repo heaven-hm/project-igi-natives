@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_PlaySound_10 (VA 0x00413B60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_PlaySound_10 - 0x00413B60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00413B60-HumanPlayer_PlaySound_10.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_PlaySound_10.h"
 int32_t HumanPlayer_PlaySound_10()
 

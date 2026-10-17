@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessageScreen_LoadParameters (VA 0x00486020; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusMessageScreen_LoadParameters - 0x00486020 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00486020-StatusMessageScreen_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessageScreen_LoadParameters.h"
 int32_t StatusMessageScreen_LoadParameters(void* context)
 

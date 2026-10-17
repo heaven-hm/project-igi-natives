@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ExecuteBytecode_21 (VA 0x004B7C40; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Sys_ExecuteBytecode_21 - 0x004B7C40 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B7C40-Sys_ExecuteBytecode_21.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ExecuteBytecode_21.h"
 int32_t Sys_ExecuteBytecode_21(void* context)
 

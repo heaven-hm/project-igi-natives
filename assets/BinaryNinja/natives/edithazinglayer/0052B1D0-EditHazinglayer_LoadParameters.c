@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditHazinglayer_LoadParameters (VA 0x0052B1D0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: EditHazinglayer_LoadParameters - 0x0052B1D0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052B1D0-EditHazinglayer_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditHazinglayer_LoadParameters.h"
 int32_t EditHazinglayer_LoadParameters(void* context)
 

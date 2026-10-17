@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_CheckCapabilities_19 (VA 0x0049CC80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_CheckCapabilities_19 - 0x0049CC80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049CC80-Display_CheckCapabilities_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_CheckCapabilities_19.h"
 ❓  int32_t Display_CheckCapabilities_19(int32_t* context, float param_2)
 // This function has unresolved stack usage. View graph of stack usage to resolve.

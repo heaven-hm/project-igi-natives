@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_ProcessStep_434A50 (VA 0x00434A50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_ProcessStep_434A50 - 0x00434A50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00434A50-VehiclePhysics_ProcessStep_434A50.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_ProcessStep_434A50.h"
 
 void* VehiclePhysics_ProcessStep_434A50(int32_t* context)

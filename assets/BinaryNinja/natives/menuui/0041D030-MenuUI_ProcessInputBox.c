@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuUI_ProcessInputBox (VA 0x0041D030; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuUI_ProcessInputBox - 0x0041D030 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041D030-MenuUI_ProcessInputBox.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuUI_ProcessInputBox.h"
 
 void* MenuUI_ProcessInputBox(void* context)

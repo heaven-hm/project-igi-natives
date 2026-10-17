@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_Isexists (VA 0x004F1400; static CFG gate PASS, CFG score 0.926).
+// IGI native provenance: Script_Isexists - 0x004F1400 - CFG score 92.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F1400-Script_Isexists.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_Isexists.h"
 int32_t Script_Isexists(int32_t* context, void* param_2)
 

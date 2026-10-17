@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_MoveToNode_2 (VA 0x004511D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_MoveToNode_2 - 0x004511D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004511D0-AI_MoveToNode_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_MoveToNode_2.h"
 int32_t* AI_MoveToNode_2(int32_t* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_EvaluateCondition_13 (VA 0x004F3390; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Script_EvaluateCondition_13 - 0x004F3390 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F3390-Script_EvaluateCondition_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_EvaluateCondition_13.h"
 struct status_msg* Script_EvaluateCondition_13(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t* param_5, int32_t* param_6)
 

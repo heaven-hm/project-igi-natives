@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_Offscreenbuffersprit (VA 0x0050F070; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_Offscreenbuffersprit - 0x0050F070 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0050F070-Physics_Offscreenbuffersprit.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_Offscreenbuffersprit.h"
 int32_t Physics_Offscreenbuffersprit(void* context)
 

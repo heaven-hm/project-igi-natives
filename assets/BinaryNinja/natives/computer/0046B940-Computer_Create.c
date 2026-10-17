@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Computer_Create (VA 0x0046B940; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Computer_Create - 0x0046B940 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B940-Computer_Create.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Computer_Create.h"
 
 void* Computer_Create(void* pThis, int32_t* param)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetSecondaryViewAlpha (VA 0x0044DEE0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetSecondaryViewAlpha - 0x0044DEE0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044DEE0-AIFunction_SetSecondaryViewAlpha.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetSecondaryViewAlpha.h"
 int32_t AIFunction_SetSecondaryViewAlpha(long double context , int32_t param_2, float param_3 )
 

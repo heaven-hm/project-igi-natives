@@ -1,4 +1,5 @@
-// Original IGI.EXE function: MenuButton_LoadParameters (VA 0x00421600; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: MenuButton_LoadParameters - 0x00421600 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00421600-MenuButton_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "MenuButton_LoadParameters.h"
 int32_t MenuButton_LoadParameters(int32_t context)
 

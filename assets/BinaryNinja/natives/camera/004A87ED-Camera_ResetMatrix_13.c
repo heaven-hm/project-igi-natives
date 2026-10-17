@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ResetMatrix_13 (VA 0x004A87ED; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ResetMatrix_13 - 0x004A87ED - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A87ED-Camera_ResetMatrix_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ResetMatrix_13.h"
 int32_t Camera_ResetMatrix_13()
 

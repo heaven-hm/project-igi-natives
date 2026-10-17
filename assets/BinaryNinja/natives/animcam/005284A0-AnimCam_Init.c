@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AnimCam_Init (VA 0x005284A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AnimCam_Init - 0x005284A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005284A0-AnimCam_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AnimCam_Init.h"
 int32_t* AnimCam_Init()
 

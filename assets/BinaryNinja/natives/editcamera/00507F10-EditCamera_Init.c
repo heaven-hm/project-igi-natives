@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditCamera_Init (VA 0x00507F10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditCamera_Init - 0x00507F10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00507F10-EditCamera_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditCamera_Init.h"
 void* EditCamera_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: EditRigidObj_Cleanup (VA 0x004F30A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: EditRigidObj_Cleanup - 0x004F30A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F30A0-EditRigidObj_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "EditRigidObj_Cleanup.h"
 int32_t EditRigidObj_Cleanup(float context, void* param_2)
 

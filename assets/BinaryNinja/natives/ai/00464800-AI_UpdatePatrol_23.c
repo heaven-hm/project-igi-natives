@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_UpdatePatrol_23 (VA 0x00464800; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AI_UpdatePatrol_23 - 0x00464800 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00464800-AI_UpdatePatrol_23.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_UpdatePatrol_23.h"
 float AI_UpdatePatrol_23(float context, float param_2) {
     int16_t idx = 0xffff;

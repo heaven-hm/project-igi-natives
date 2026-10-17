@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_BoneobjDeleteblendno (VA 0x004D3440; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_BoneobjDeleteblendno - 0x004D3440 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D3440-Render_BoneobjDeleteblendno.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_BoneobjDeleteblendno.h"
 int32_t Render_BoneobjDeleteblendno(int32_t context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RainDynCubeObj_LoadParameters (VA 0x004F6C00; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: RainDynCubeObj_LoadParameters - 0x004F6C00 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F6C00-RainDynCubeObj_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RainDynCubeObj_LoadParameters.h"
 int32_t* RainDynCubeObj_LoadParameters(void* context)
 

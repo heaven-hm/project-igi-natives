@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GameOptionsInputSetInvertMouse (VA 0x00404160; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GameOptionsInputSetInvertMouse - 0x00404160 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00404160-Config_GameOptionsInputSetInvertMouse.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GameOptionsInputSetInvertMouse.h"
 int32_t Config_GameOptionsInputSetInvertMouse(long double context , int32_t param_2, float param_3 )
 

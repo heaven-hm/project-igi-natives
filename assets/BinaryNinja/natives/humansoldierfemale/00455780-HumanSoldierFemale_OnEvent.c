@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanSoldierFemale_OnEvent (VA 0x00455780; static CFG gate PASS, CFG score 0.970).
+// IGI native provenance: HumanSoldierFemale_OnEvent - 0x00455780 - CFG score 97.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00455780-HumanSoldierFemale_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanSoldierFemale_OnEvent.h"
 int32_t HumanSoldierFemale_OnEvent(void* context, float* param_2)
 

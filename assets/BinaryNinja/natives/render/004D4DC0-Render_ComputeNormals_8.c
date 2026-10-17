@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_ComputeNormals_8 (VA 0x004D4DC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_ComputeNormals_8 - 0x004D4DC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D4DC0-Render_ComputeNormals_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_ComputeNormals_8.h"
 int32_t Render_ComputeNormals_8(int32_t context, int32_t param_2, int32_t* param_3, void* param_4, float param_5, float param_6)
 

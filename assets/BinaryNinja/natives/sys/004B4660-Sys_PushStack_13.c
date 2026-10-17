@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PushStack_13 (VA 0x004B4660; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_PushStack_13 - 0x004B4660 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B4660-Sys_PushStack_13.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PushStack_13.h"
 float* Sys_PushStack_13(float* context, float* param_2, float param_3)
 

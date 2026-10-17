@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CameraControlTask_LoadParameters (VA 0x004E7C90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CameraControlTask_LoadParameters - 0x004E7C90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E7C90-CameraControlTask_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CameraControlTask_LoadParameters.h"
 void CameraControlTask_LoadParameters(void* context)
 

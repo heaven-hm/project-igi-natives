@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_UpdateTransform_22 (VA 0x004AB599; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Camera_UpdateTransform_22 - 0x004AB599 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004AB599-Camera_UpdateTransform_22.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_UpdateTransform_22.h"
 void** Camera_UpdateTransform_22()
 

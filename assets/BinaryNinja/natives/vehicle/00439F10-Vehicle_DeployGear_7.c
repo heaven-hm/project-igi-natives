@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_DeployGear_7 (VA 0x00439F10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_DeployGear_7 - 0x00439F10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00439F10-Vehicle_DeployGear_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_DeployGear_7.h"
 float Vehicle_DeployGear_7(float context, float param_2) {
     float dest_val = context;

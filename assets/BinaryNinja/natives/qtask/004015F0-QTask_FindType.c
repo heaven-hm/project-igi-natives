@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_FindType (VA 0x004015F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_FindType - 0x004015F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004015F0-QTask_FindType.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_FindType.h"
 int32_t QTask_FindType(int32_t* context)
 

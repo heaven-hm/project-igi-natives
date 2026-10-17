@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Container_Init (VA 0x00505C90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Container_Init - 0x00505C90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505C90-Container_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Container_Init.h"
 int32_t Container_Init()
 

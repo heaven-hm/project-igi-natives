@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_SetGammaRamp_18 (VA 0x0049B260; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Display_SetGammaRamp_18 - 0x0049B260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0049B260-Display_SetGammaRamp_18.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_SetGammaRamp_18.h"
 int32_t Display_SetGammaRamp_18()
 

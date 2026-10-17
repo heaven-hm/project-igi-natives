@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_EjectMagazine_5 (VA 0x00477D10; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Weapon_EjectMagazine_5 - 0x00477D10 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00477D10-Weapon_EjectMagazine_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_EjectMagazine_5.h"
 struct status_msg* Weapon_EjectMagazine_5(float context, float param_2, int32_t* param_3, int32_t param_4, char* param_5)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayerInput_LoadParameters (VA 0x0045DCF0; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: HumanPlayerInput_LoadParameters - 0x0045DCF0 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045DCF0-HumanPlayerInput_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayerInput_LoadParameters.h"
 int32_t HumanPlayerInput_LoadParameters(long double context , void* param_2)
 

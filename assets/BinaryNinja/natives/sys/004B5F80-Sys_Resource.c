@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_Resource (VA 0x004B5F80; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: Sys_Resource - 0x004B5F80 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B5F80-Sys_Resource.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_Resource.h"
 int32_t* Sys_Resource(char* context, int32_t* param_2, void* param_3)
 

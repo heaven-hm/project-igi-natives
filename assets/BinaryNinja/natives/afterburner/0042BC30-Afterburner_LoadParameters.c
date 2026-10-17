@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Afterburner_LoadParameters (VA 0x0042BC30; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Afterburner_LoadParameters - 0x0042BC30 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0042BC30-Afterburner_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Afterburner_LoadParameters.h"
 int32_t* Afterburner_LoadParameters(int32_t* context, float param_2)
 

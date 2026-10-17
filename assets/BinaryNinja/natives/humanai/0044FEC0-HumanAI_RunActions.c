@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_RunActions (VA 0x0044FEC0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_RunActions - 0x0044FEC0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044FEC0-HumanAI_RunActions.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_RunActions.h"
 int32_t* HumanAI_RunActions(void* context)
 

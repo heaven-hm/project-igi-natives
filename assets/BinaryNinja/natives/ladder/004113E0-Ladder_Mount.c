@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Ladder_Mount (VA 0x004113E0; static CFG gate PASS, CFG score 0.989).
+// IGI native provenance: Ladder_Mount - 0x004113E0 - CFG score 98.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004113E0-Ladder_Mount.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Ladder_Mount.h"
 double* Ladder_Mount(float context)
 

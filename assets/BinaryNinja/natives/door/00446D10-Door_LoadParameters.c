@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Door_LoadParameters (VA 0x00446D10; static CFG gate PASS, CFG score 0.986).
+// IGI native provenance: Door_LoadParameters - 0x00446D10 - CFG score 98.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00446D10-Door_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Door_LoadParameters.h"
 struct status_msg* Door_LoadParameters(long double context , void* param_2)
 

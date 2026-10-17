@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneMagicObj_Process (VA 0x005319B0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: BoneMagicObj_Process - 0x005319B0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 005319B0-BoneMagicObj_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneMagicObj_Process.h"
 void* BoneMagicObj_Process(void* context, int32_t* param_2)
 

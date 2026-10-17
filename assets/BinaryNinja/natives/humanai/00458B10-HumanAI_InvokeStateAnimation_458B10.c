@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanAI_InvokeStateAnimation_458B10 (VA 0x00458B10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanAI_InvokeStateAnimation_458B10 - 0x00458B10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00458B10-HumanAI_InvokeStateAnimation_458B10.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanAI_InvokeStateAnimation_458B10.h"
 
 void* HumanAI_InvokeStateAnimation_458B10(void* context, int32_t param_2)

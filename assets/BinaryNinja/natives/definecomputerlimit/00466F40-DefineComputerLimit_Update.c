@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DefineComputerLimit_Update (VA 0x00466F40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DefineComputerLimit_Update - 0x00466F40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00466F40-DefineComputerLimit_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DefineComputerLimit_Update.h"
 int32_t DefineComputerLimit_Update()
 

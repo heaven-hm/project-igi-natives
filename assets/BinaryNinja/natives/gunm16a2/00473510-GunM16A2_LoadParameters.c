@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunM16A2_LoadParameters (VA 0x00473510; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: GunM16A2_LoadParameters - 0x00473510 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00473510-GunM16A2_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunM16A2_LoadParameters.h"
 struct status_msg* GunM16A2_LoadParameters(void* context, void* param_2)
 

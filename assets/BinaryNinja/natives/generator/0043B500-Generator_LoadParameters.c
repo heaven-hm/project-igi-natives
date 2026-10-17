@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Generator_LoadParameters (VA 0x0043B500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Generator_LoadParameters - 0x0043B500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043B500-Generator_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Generator_LoadParameters.h"
 struct status_msg* Generator_LoadParameters(long double context , void* param_2)
 

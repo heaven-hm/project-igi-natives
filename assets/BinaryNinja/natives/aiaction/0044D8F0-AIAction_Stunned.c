@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Stunned (VA 0x0044D8F0; static CFG gate PASS, CFG score 0.933).
+// IGI native provenance: AIAction_Stunned - 0x0044D8F0 - CFG score 93.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D8F0-AIAction_Stunned.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Stunned.h"
 int32_t AIAction_Stunned(long double context , int32_t param_2, float param_3 )
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GraphicOptionsGetTransparency (VA 0x004049C0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Config_GraphicOptionsGetTransparency - 0x004049C0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004049C0-Config_GraphicOptionsGetTransparency.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GraphicOptionsGetTransparency.h"
 int32_t Config_GraphicOptionsGetTransparency(int32_t context)
 

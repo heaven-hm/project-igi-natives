@@ -1,4 +1,5 @@
-// Original IGI.EXE function: camera_move (VA 0x00441BF0; static CFG gate PASS, CFG score 0.944).
+// IGI native provenance: camera_move - 0x00441BF0 - CFG score 94.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00441BF0-camera_move.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "camera_move.h"
 struct status_msg* camera_move(long double context , float param_2)
 

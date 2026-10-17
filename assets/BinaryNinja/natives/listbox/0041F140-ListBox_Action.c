@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ListBox_Action (VA 0x0041F140; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ListBox_Action - 0x0041F140 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041F140-ListBox_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ListBox_Action.h"
 int32_t* ListBox_Action(void* context)
 

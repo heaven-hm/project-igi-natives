@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Human_BaseDamage (VA 0x0045F930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Human_BaseDamage - 0x0045F930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0045F930-Human_BaseDamage.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Human_BaseDamage.h"
 int32_t Human_BaseDamage(void* context, int32_t* param_2)
 

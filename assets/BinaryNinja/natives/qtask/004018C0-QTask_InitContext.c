@@ -1,4 +1,5 @@
-// Original IGI.EXE function: QTask_InitContext (VA 0x004018C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: QTask_InitContext - 0x004018C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004018C0-QTask_InitContext.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "QTask_InitContext.h"
 uint32_t QTask_InitContext(char context)
 

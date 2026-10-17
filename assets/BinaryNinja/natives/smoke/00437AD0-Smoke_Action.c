@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Smoke_Action (VA 0x00437AD0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Smoke_Action - 0x00437AD0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00437AD0-Smoke_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Smoke_Action.h"
 void* Smoke_Action(void* context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Medipack_Init (VA 0x00470410; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Medipack_Init - 0x00470410 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470410-Medipack_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Medipack_Init.h"
 void* Medipack_Init()
 

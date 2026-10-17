@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanView_Init (VA 0x00464260; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanView_Init - 0x00464260 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00464260-HumanView_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanView_Init.h"
 int32_t HumanView_Init()
 

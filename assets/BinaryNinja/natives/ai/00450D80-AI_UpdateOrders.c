@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_UpdateOrders (VA 0x00450D80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_UpdateOrders - 0x00450D80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00450D80-AI_UpdateOrders.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_UpdateOrders.h"
 int32_t AI_UpdateOrders(void* context, int32_t param_2, int32_t param_3)
 

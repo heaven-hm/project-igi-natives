@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RigidDynCubeObj_Action (VA 0x004C3010; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: RigidDynCubeObj_Action - 0x004C3010 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C3010-RigidDynCubeObj_Action.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RigidDynCubeObj_Action.h"
 void RigidDynCubeObj_Action(int32_t* context, float param_2)
 

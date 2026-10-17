@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qsc_Compile (VA 0x004B8410; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: Qsc_Compile - 0x004B8410 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B8410-Qsc_Compile.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qsc_Compile.h"
 int32_t Qsc_Compile(void* context)
 

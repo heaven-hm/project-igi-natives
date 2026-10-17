@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AlarmLight_Cleanup_2 (VA 0x00439B70; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AlarmLight_Cleanup_2 - 0x00439B70 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00439B70-AlarmLight_Cleanup_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AlarmLight_Cleanup_2.h"
 int32_t AlarmLight_Cleanup_2(float context)
 

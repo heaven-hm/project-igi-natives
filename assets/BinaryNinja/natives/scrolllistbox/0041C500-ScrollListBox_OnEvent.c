@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ScrollListBox_OnEvent (VA 0x0041C500; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ScrollListBox_OnEvent - 0x0041C500 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041C500-ScrollListBox_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ScrollListBox_OnEvent.h"
 int32_t* ScrollListBox_OnEvent(void* context)
 

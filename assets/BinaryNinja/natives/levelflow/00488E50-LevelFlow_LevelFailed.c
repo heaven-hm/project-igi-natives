@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelFlow_LevelFailed (VA 0x00488E50; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: LevelFlow_LevelFailed - 0x00488E50 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00488E50-LevelFlow_LevelFailed.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelFlow_LevelFailed.h"
 int32_t LevelFlow_LevelFailed(int32_t context)
 

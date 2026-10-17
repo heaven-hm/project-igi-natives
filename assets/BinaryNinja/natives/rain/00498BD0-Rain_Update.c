@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Rain_Update (VA 0x00498BD0; static CFG gate PASS, CFG score 0.852).
+// IGI native provenance: Rain_Update - 0x00498BD0 - CFG score 85.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00498BD0-Rain_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Rain_Update.h"
 int32_t Rain_Update(void* context)
 

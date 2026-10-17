@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_InitLadder_2 (VA 0x00440C10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_InitLadder_2 - 0x00440C10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00440C10-Env_InitLadder_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_InitLadder_2.h"
 void* Env_InitLadder_2(void* context)
 

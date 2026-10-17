@@ -1,4 +1,5 @@
-// Original IGI.EXE function: GunShot_LoadParameters (VA 0x0047B560; static CFG gate PASS, CFG score 0.857).
+// IGI native provenance: GunShot_LoadParameters - 0x0047B560 - CFG score 85.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0047B560-GunShot_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "GunShot_LoadParameters.h"
 void* GunShot_LoadParameters(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Switch_Update (VA 0x004452F0; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Switch_Update - 0x004452F0 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004452F0-Switch_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Switch_Update.h"
 float* Switch_Update(float context)
 

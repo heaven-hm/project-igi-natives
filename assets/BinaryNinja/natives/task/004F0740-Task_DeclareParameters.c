@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Task_DeclareParameters (VA 0x004F0740; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Task_DeclareParameters - 0x004F0740 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F0740-Task_DeclareParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Task_DeclareParameters.h"
 int32_t Task_DeclareParameters(int32_t context)
 

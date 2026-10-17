@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_RegisterSymbol_7 (VA 0x004C5A10; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_RegisterSymbol_7 - 0x004C5A10 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C5A10-DynObj_RegisterSymbol_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_RegisterSymbol_7.h"
 void* DynObj_RegisterSymbol_7(void* context, int32_t* param_2)
 

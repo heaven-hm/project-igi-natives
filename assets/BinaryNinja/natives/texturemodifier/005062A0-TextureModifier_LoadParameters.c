@@ -1,4 +1,5 @@
-// Original IGI.EXE function: TextureModifier_LoadParameters (VA 0x005062A0; static CFG gate PASS, CFG score 0.892).
+// IGI native provenance: TextureModifier_LoadParameters - 0x005062A0 - CFG score 89.2% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005062A0-TextureModifier_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "TextureModifier_LoadParameters.h"
 int32_t TextureModifier_LoadParameters(int32_t* context)
 

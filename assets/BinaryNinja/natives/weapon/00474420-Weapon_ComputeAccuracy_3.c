@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_ComputeAccuracy_3 (VA 0x00474420; static CFG gate PASS, CFG score 0.867).
+// IGI native provenance: Weapon_ComputeAccuracy_3 - 0x00474420 - CFG score 86.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00474420-Weapon_ComputeAccuracy_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_ComputeAccuracy_3.h"
 void* Weapon_ComputeAccuracy_3(double* context)
 

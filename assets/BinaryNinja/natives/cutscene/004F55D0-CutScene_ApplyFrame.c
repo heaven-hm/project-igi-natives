@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CutScene_ApplyFrame (VA 0x004F55D0; static CFG gate PASS, CFG score 0.974).
+// IGI native provenance: CutScene_ApplyFrame - 0x004F55D0 - CFG score 97.4% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F55D0-CutScene_ApplyFrame.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CutScene_ApplyFrame.h"
 int32_t* CutScene_ApplyFrame(void* context, int32_t* param_2, int32_t param_3, int32_t param_4, double param_5, char param_6)
 

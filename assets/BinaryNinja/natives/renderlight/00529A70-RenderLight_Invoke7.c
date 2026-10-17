@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RenderLight_Invoke7 (VA 0x00529A70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RenderLight_Invoke7 - 0x00529A70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00529A70-RenderLight_Invoke7.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RenderLight_Invoke7.h"
 
 void* RenderLight_Invoke7(int32_t* context)

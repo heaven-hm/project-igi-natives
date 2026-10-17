@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusScreen_Init (VA 0x00486900; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: StatusScreen_Init - 0x00486900 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00486900-StatusScreen_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusScreen_Init.h"
 int32_t StatusScreen_Init()
 

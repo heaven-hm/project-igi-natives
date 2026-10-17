@@ -1,4 +1,5 @@
-// Original IGI.EXE function: VehiclePhysics_InvokeGetArg (VA 0x00426CD0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: VehiclePhysics_InvokeGetArg - 0x00426CD0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00426CD0-VehiclePhysics_InvokeGetArg.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "VehiclePhysics_InvokeGetArg.h"
 
 int32_t VehiclePhysics_InvokeGetArg(long double context , long double param_2 , int32_t* param_3)

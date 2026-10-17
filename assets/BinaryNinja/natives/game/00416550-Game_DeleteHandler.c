@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Game_DeleteHandler (VA 0x00416550; static CFG gate PASS, CFG score 0.986).
+// IGI native provenance: Game_DeleteHandler - 0x00416550 - CFG score 98.6% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00416550-Game_DeleteHandler.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Game_DeleteHandler.h"
 int32_t Game_DeleteHandler()
 

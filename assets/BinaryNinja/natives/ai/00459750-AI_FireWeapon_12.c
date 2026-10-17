@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_FireWeapon_12 (VA 0x00459750; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_FireWeapon_12 - 0x00459750 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00459750-AI_FireWeapon_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_FireWeapon_12.h"
 void* AI_FireWeapon_12(void* context, float param_2)
 

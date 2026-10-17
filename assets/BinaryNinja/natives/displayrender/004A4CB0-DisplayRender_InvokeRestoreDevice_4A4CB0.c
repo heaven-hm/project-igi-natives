@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DisplayRender_InvokeRestoreDevice_4A4CB0 (VA 0x004A4CB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DisplayRender_InvokeRestoreDevice_4A4CB0 - 0x004A4CB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A4CB0-DisplayRender_InvokeRestoreDevice_4A4CB0.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DisplayRender_InvokeRestoreDevice_4A4CB0.h"
 
 int32_t DisplayRender_InvokeRestoreDevice_4A4CB0(int32_t context)

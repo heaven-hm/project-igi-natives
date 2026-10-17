@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_TakeDamage (VA 0x00408A40; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_TakeDamage - 0x00408A40 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00408A40-HumanPlayer_TakeDamage.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_TakeDamage.h"
 int32_t HumanPlayer_TakeDamage(void* context, void* param_2)
 

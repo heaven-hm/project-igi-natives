@@ -1,4 +1,5 @@
-// Original IGI.EXE function: RotatingObject_Init (VA 0x00438DF0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: RotatingObject_Init - 0x00438DF0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00438DF0-RotatingObject_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "RotatingObject_Init.h"
 int32_t* RotatingObject_Init()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: HumanPlayer_ExecutePipeline_409A80 (VA 0x00409A80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: HumanPlayer_ExecutePipeline_409A80 - 0x00409A80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00409A80-HumanPlayer_ExecutePipeline_409A80.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "HumanPlayer_ExecutePipeline_409A80.h"
 
 int32_t HumanPlayer_ExecutePipeline_409A80(void* context, void* param_2)

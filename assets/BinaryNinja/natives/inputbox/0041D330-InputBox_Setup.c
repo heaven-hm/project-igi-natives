@@ -1,4 +1,5 @@
-// Original IGI.EXE function: InputBox_Setup (VA 0x0041D330; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: InputBox_Setup - 0x0041D330 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0041D330-InputBox_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "InputBox_Setup.h"
 int32_t InputBox_Setup(void* context)
 

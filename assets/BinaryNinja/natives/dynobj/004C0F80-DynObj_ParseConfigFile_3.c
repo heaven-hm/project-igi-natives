@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DynObj_ParseConfigFile_3 (VA 0x004C0F80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: DynObj_ParseConfigFile_3 - 0x004C0F80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004C0F80-DynObj_ParseConfigFile_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DynObj_ParseConfigFile_3.h"
 void** DynObj_ParseConfigFile_3(void** context, int32_t* param_2)
 

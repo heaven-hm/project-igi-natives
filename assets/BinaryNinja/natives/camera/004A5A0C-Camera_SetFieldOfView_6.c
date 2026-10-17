@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_SetFieldOfView_6 (VA 0x004A5A0C; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Camera_SetFieldOfView_6 - 0x004A5A0C - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004A5A0C-Camera_SetFieldOfView_6.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_SetFieldOfView_6.h"
 void* Camera_SetFieldOfView_6(char* context, char* param_2)
 

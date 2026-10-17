@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Display_OpenDevice_15 (VA 0x00497D40; static CFG gate FAIL, CFG score 0.722).
+// IGI native provenance: Display_OpenDevice_15 - 0x00497D40 - CFG score 72.2% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00497D40-Display_OpenDevice_15.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Display_OpenDevice_15.h"
 int32_t Display_OpenDevice_15()
 

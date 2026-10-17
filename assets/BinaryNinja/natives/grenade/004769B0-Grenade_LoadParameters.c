@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Grenade_LoadParameters (VA 0x004769B0; static CFG gate PASS, CFG score 0.963).
+// IGI native provenance: Grenade_LoadParameters - 0x004769B0 - CFG score 96.3% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004769B0-Grenade_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Grenade_LoadParameters.h"
 int32_t* Grenade_LoadParameters(float context)
 

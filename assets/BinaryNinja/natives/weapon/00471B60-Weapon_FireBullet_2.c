@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_FireBullet_2 (VA 0x00471B60; static CFG gate PASS, CFG score 0.979).
+// IGI native provenance: Weapon_FireBullet_2 - 0x00471B60 - CFG score 97.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00471B60-Weapon_FireBullet_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_FireBullet_2.h"
 int32_t Weapon_FireBullet_2(void* context)
 

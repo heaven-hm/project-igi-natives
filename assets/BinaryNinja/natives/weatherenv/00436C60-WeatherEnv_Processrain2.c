@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherEnv_Processrain2 (VA 0x00436C60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherEnv_Processrain2 - 0x00436C60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00436C60-WeatherEnv_Processrain2.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherEnv_Processrain2.h"
 
 int32_t* WeatherEnv_Processrain2(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_Combat (VA 0x0044D160; static CFG gate PASS, CFG score 0.917).
+// IGI native provenance: AIAction_Combat - 0x0044D160 - CFG score 91.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D160-AIAction_Combat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_Combat.h"
 int32_t AIAction_Combat(int32_t context, float param_2 )
 

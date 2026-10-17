@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_FireBallUpdate_24 (VA 0x0048F1C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_FireBallUpdate_24 - 0x0048F1C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F1C0-FX_FireBallUpdate_24.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_FireBallUpdate_24.h"
 int32_t FX_FireBallUpdate_24(char context)
 

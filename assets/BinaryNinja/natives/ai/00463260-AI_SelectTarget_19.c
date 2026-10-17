@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_SelectTarget_19 (VA 0x00463260; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: AI_SelectTarget_19 - 0x00463260 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00463260-AI_SelectTarget_19.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_SelectTarget_19.h"
 int32_t AI_SelectTarget_19(void* context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ElevatorFloorIndicator_Process (VA 0x0043CB30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ElevatorFloorIndicator_Process - 0x0043CB30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043CB30-ElevatorFloorIndicator_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ElevatorFloorIndicator_Process.h"
 void* ElevatorFloorIndicator_Process(void* context)
 

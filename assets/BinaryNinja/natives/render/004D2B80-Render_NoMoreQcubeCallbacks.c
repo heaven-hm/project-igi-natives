@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Render_NoMoreQcubeCallbacks (VA 0x004D2B80; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Render_NoMoreQcubeCallbacks - 0x004D2B80 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D2B80-Render_NoMoreQcubeCallbacks.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Render_NoMoreQcubeCallbacks.h"
 int32_t* Render_NoMoreQcubeCallbacks(int32_t context)
 

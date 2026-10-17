@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_LoadParameters (VA 0x004F46E0; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Vehicle_LoadParameters - 0x004F46E0 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F46E0-Vehicle_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_LoadParameters.h"
 int32_t* Vehicle_LoadParameters(void* context, int32_t* param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_PushStack_8 (VA 0x004B2670; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_PushStack_8 - 0x004B2670 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B2670-Sys_PushStack_8.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_PushStack_8.h"
 int32_t __fastcall Sys_PushStack_8(int32_t context)
 

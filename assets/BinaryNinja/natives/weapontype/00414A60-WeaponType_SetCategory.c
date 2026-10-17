@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeaponType_SetCategory (VA 0x00414A60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeaponType_SetCategory - 0x00414A60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00414A60-WeaponType_SetCategory.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeaponType_SetCategory.h"
 float* WeaponType_SetCategory(float* context, int32_t* param_2)
 

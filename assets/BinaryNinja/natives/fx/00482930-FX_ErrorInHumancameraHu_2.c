@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FX_ErrorInHumancameraHu_2 (VA 0x00482930; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FX_ErrorInHumancameraHu_2 - 0x00482930 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00482930-FX_ErrorInHumancameraHu_2.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FX_ErrorInHumancameraHu_2.h"
 int32_t FX_ErrorInHumancameraHu_2(void* context)
 

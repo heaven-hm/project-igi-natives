@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CubeModifier_Init (VA 0x0052B3B0; static CFG gate PASS, CFG score 0.980).
+// IGI native provenance: CubeModifier_Init - 0x0052B3B0 - CFG score 98.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052B3B0-CubeModifier_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CubeModifier_Init.h"
 int32_t* CubeModifier_Init()
 

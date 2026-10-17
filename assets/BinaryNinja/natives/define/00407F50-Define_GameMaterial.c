@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Define_GameMaterial (VA 0x00407F50; static CFG gate PASS, CFG score 0.980).
+// IGI native provenance: Define_GameMaterial - 0x00407F50 - CFG score 98.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00407F50-Define_GameMaterial.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Define_GameMaterial.h"
 int32_t Define_GameMaterial(long double context , long double param_2 , long double param_3 , long double param_4 , int32_t param_5, float param_6 )
 

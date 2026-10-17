@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Env_WeaponNotInitialized (VA 0x0044FBA0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Env_WeaponNotInitialized - 0x0044FBA0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044FBA0-Env_WeaponNotInitialized.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Env_WeaponNotInitialized.h"
 void Env_WeaponNotInitialized(void* context)
 

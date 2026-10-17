@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CutScene_OnEvent (VA 0x004F4FB0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CutScene_OnEvent - 0x004F4FB0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004F4FB0-CutScene_OnEvent.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CutScene_OnEvent.h"
 int32_t CutScene_OnEvent(void* context)
 

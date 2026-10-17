@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_CheckHeap_11 (VA 0x004B33A0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Sys_CheckHeap_11 - 0x004B33A0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B33A0-Sys_CheckHeap_11.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_CheckHeap_11.h"
 int32_t Sys_CheckHeap_11(int32_t context, float* param_2, float param_3, float param_4, float param_5)
 

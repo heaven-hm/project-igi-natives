@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Camera_ApplyPostProcess_12 (VA 0x004A80BF; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Camera_ApplyPostProcess_12 - 0x004A80BF - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004A80BF-Camera_ApplyPostProcess_12.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Camera_ApplyPostProcess_12.h"
 void Camera_ApplyPostProcess_12(uint32_t context, int32_t* param_2, char param_3, int32_t param_4, double* param_5, double* param_6) {
     *(context + 4) = 0;

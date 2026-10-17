@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SoundSys_SetFrequency_7 (VA 0x004E6C00; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SoundSys_SetFrequency_7 - 0x004E6C00 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004E6C00-SoundSys_SetFrequency_7.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SoundSys_SetFrequency_7.h"
 int32_t SoundSys_SetFrequency_7(void* context)
 

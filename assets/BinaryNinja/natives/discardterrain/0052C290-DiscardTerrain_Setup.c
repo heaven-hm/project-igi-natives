@@ -1,4 +1,5 @@
-// Original IGI.EXE function: DiscardTerrain_Setup (VA 0x0052C290; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: DiscardTerrain_Setup - 0x0052C290 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0052C290-DiscardTerrain_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "DiscardTerrain_Setup.h"
 int32_t DiscardTerrain_Setup(int32_t context, char* param_2)
 

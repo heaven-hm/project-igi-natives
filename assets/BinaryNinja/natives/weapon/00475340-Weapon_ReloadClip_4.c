@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_ReloadClip_4 (VA 0x00475340; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Weapon_ReloadClip_4 - 0x00475340 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00475340-Weapon_ReloadClip_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_ReloadClip_4.h"
 int32_t Weapon_ReloadClip_4(void* context)
 

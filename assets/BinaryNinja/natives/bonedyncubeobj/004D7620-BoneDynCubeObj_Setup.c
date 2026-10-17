@@ -1,4 +1,5 @@
-// Original IGI.EXE function: BoneDynCubeObj_Setup (VA 0x004D7620; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: BoneDynCubeObj_Setup - 0x004D7620 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004D7620-BoneDynCubeObj_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "BoneDynCubeObj_Setup.h"
 int32_t* BoneDynCubeObj_Setup(float context, int32_t* param_2, float param_3 , float param_4, float param_5, double param_6 , int16_t* param_7 , float param_8 , float param_9, float param_10, float param_11, float param_12, float param_13, float param_14, float param_15)
 

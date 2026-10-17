@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Gunner_Combat (VA 0x0048D340; static CFG gate PASS, CFG score 0.967).
+// IGI native provenance: Gunner_Combat - 0x0048D340 - CFG score 96.7% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048D340-Gunner_Combat.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Gunner_Combat.h"
 int32_t* Gunner_Combat(long double context , int32_t param_2, int32_t* param_3)
 

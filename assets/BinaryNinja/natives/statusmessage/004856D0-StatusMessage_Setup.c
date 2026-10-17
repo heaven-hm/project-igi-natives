@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StatusMessage_Setup (VA 0x004856D0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StatusMessage_Setup - 0x004856D0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004856D0-StatusMessage_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StatusMessage_Setup.h"
 void* StatusMessage_Setup(void* context)
 

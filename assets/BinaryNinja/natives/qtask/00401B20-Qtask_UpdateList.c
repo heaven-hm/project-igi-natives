@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Qtask_UpdateList (VA 0x00401B20; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Qtask_UpdateList - 0x00401B20 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00401B20-Qtask_UpdateList.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Qtask_UpdateList.h"
 int32_t Qtask_UpdateList(int32_t* context)
 

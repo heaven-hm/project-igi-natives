@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LevelFlow_Process (VA 0x00488F90; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LevelFlow_Process - 0x00488F90 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00488F90-LevelFlow_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LevelFlow_Process.h"
 int32_t LevelFlow_Process(void* context)
 

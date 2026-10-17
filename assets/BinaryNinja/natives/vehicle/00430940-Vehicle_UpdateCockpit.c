@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Vehicle_UpdateCockpit (VA 0x00430940; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Vehicle_UpdateCockpit - 0x00430940 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00430940-Vehicle_UpdateCockpit.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Vehicle_UpdateCockpit.h"
 uint32_t Vehicle_UpdateCockpit()
 

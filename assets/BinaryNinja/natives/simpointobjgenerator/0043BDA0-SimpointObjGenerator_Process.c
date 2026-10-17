@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SimpointObjGenerator_Process (VA 0x0043BDA0; static CFG gate PASS, CFG score 0.889).
+// IGI native provenance: SimpointObjGenerator_Process - 0x0043BDA0 - CFG score 88.9% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043BDA0-SimpointObjGenerator_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SimpointObjGenerator_Process.h"
 int32_t SimpointObjGenerator_Process(void* context)
 

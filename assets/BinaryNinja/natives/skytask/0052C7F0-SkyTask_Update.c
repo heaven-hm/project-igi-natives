@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SkyTask_Update (VA 0x0052C7F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SkyTask_Update - 0x0052C7F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0052C7F0-SkyTask_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SkyTask_Update.h"
 uint32_t SkyTask_Update()
 

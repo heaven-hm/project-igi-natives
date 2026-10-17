@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_GetActivePlayerProfileIndex (VA 0x00405010; static CFG gate FAIL, CFG score 0.667).
+// IGI native provenance: Config_GetActivePlayerProfileIndex - 0x00405010 - CFG score 66.7% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 00405010-Config_GetActivePlayerProfileIndex.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_GetActivePlayerProfileIndex.h"
 int32_t Config_GetActivePlayerProfileIndex(int32_t context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Particle2DDynCubeObjTask_Init (VA 0x004FCF50; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Particle2DDynCubeObjTask_Init - 0x004FCF50 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004FCF50-Particle2DDynCubeObjTask_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Particle2DDynCubeObjTask_Init.h"
 int32_t Particle2DDynCubeObjTask_Init()
 

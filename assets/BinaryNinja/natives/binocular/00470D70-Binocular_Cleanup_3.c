@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Binocular_Cleanup_3 (VA 0x00470D70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Binocular_Cleanup_3 - 0x00470D70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00470D70-Binocular_Cleanup_3.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Binocular_Cleanup_3.h"
 float Binocular_Cleanup_3(int32_t* context ) {
     void* data_1 = *(context[1] + 0x6e4);

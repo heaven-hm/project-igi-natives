@@ -1,4 +1,5 @@
-// Original IGI.EXE function: SplineObj_Cleanup (VA 0x005030F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: SplineObj_Cleanup - 0x005030F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005030F0-SplineObj_Cleanup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "SplineObj_Cleanup.h"
 void* SplineObj_Cleanup(void* context, int32_t param_2)
 

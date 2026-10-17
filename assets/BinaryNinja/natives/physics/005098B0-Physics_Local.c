@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_Local (VA 0x005098B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_Local - 0x005098B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005098B0-Physics_Local.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_Local.h"
 int32_t Physics_Local()
 

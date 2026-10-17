@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_FreeMemory_4 (VA 0x004B12F0; static CFG gate FAIL, CFG score 0.778).
+// IGI native provenance: Sys_FreeMemory_4 - 0x004B12F0 - CFG score 77.8% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004B12F0-Sys_FreeMemory_4.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_FreeMemory_4.h"
 int32_t Script_RegisterNamespace(char* context, void* param_2)
 

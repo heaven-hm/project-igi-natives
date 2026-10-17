@@ -1,4 +1,5 @@
-// Original IGI.EXE function: FlatSky_Process (VA 0x0051E1F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: FlatSky_Process - 0x0051E1F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0051E1F0-FlatSky_Process.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "FlatSky_Process.h"
 float FlatSky_Process(void* context) {
     float item_46c = *(context + 0x70) * 4096.0f;

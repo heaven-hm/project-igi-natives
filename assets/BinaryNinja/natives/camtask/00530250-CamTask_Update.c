@@ -1,4 +1,5 @@
-// Original IGI.EXE function: CamTask_Update (VA 0x00530250; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: CamTask_Update - 0x00530250 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00530250-CamTask_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "CamTask_Update.h"
 uint32_t CamTask_Update()
 

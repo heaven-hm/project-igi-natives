@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Physics_EvaluateAreaCriteria_5 (VA 0x00505C70; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Physics_EvaluateAreaCriteria_5 - 0x00505C70 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00505C70-Physics_EvaluateAreaCriteria_5.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Physics_EvaluateAreaCriteria_5.h"
 int32_t Physics_EvaluateAreaCriteria_5()
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PhysicsRigid_Invoke6 (VA 0x004DDF60; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PhysicsRigid_Invoke6 - 0x004DDF60 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004DDF60-PhysicsRigid_Invoke6.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PhysicsRigid_Invoke6.h"
 
 int32_t PhysicsRigid_Invoke6(void* context)

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AI_ComputerComputerRes (VA 0x0046B070; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: AI_ComputerComputerRes - 0x0046B070 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046B070-AI_ComputerComputerRes.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AI_ComputerComputerRes.h"
 int32_t* AI_ComputerComputerRes()
 

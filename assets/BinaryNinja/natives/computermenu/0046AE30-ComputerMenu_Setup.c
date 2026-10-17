@@ -1,4 +1,5 @@
-// Original IGI.EXE function: ComputerMenu_Setup (VA 0x0046AE30; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: ComputerMenu_Setup - 0x0046AE30 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0046AE30-ComputerMenu_Setup.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "ComputerMenu_Setup.h"
 int32_t ComputerMenu_Setup(int32_t context)
 

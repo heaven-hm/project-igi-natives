@@ -1,4 +1,5 @@
-// Original IGI.EXE function: WeatherEnv_InvokeValueSet (VA 0x00436090; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: WeatherEnv_InvokeValueSet - 0x00436090 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00436090-WeatherEnv_InvokeValueSet.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "WeatherEnv_InvokeValueSet.h"
 
 int32_t WeatherEnv_InvokeValueSet(long double context , int32_t* param_2)

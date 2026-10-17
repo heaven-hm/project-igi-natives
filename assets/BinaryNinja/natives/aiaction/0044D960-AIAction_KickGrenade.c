@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIAction_KickGrenade (VA 0x0044D960; static CFG gate PASS, CFG score 0.905).
+// IGI native provenance: AIAction_KickGrenade - 0x0044D960 - CFG score 90.5% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0044D960-AIAction_KickGrenade.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIAction_KickGrenade.h"
 int32_t AIAction_KickGrenade(int32_t context, int32_t param_2 )
 

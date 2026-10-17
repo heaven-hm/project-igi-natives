@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Sys_ReadFileBlock_17 (VA 0x004B66A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Sys_ReadFileBlock_17 - 0x004B66A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004B66A0-Sys_ReadFileBlock_17.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Sys_ReadFileBlock_17.h"
 int32_t Sys_ReadFileBlock_17(int32_t* context)
 

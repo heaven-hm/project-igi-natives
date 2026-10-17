@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Light_SampleLightmap (VA 0x00521110; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Light_SampleLightmap - 0x00521110 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00521110-Light_SampleLightmap.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Light_SampleLightmap.h"
 float* Light_SampleLightmap(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, void* param_5, float* param_6, int32_t param_7, float* param_8, int32_t param_9, float* param_10, float* param_11, float* param_12, float* param_13, int32_t param_14, float* param_15, int32_t param_16, int32_t param_17)
 

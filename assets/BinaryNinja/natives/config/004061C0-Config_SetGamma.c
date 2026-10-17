@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Config_SetGamma (VA 0x004061C0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Config_SetGamma - 0x004061C0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004061C0-Config_SetGamma.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Config_SetGamma.h"
 void* Config_SetGamma()
 

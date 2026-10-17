@@ -1,4 +1,5 @@
-// Original IGI.EXE function: LODSettings_Init (VA 0x004ED6B0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: LODSettings_Init - 0x004ED6B0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 004ED6B0-LODSettings_Init.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "LODSettings_Init.h"
 int32_t* LODSettings_Init()
 

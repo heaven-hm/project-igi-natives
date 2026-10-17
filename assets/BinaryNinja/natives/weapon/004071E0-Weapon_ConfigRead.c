@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Weapon_ConfigRead (VA 0x004071E0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Weapon_ConfigRead - 0x004071E0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004071E0-Weapon_ConfigRead.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Weapon_ConfigRead.h"
 void* Weapon_ConfigRead(int32_t context, void* param_2)
 

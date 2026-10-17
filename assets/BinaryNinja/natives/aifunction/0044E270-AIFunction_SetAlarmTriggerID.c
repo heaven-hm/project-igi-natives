@@ -1,4 +1,5 @@
-// Original IGI.EXE function: AIFunction_SetAlarmTriggerID (VA 0x0044E270; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: AIFunction_SetAlarmTriggerID - 0x0044E270 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 0044E270-AIFunction_SetAlarmTriggerID.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "AIFunction_SetAlarmTriggerID.h"
 int32_t AIFunction_SetAlarmTriggerID(int32_t context, float param_2 )
 

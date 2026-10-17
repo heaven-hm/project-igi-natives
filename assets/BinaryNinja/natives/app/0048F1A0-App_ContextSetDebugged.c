@@ -1,4 +1,5 @@
-// Original IGI.EXE function: App_ContextSetDebugged (VA 0x0048F1A0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: App_ContextSetDebugged - 0x0048F1A0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0048F1A0-App_ContextSetDebugged.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "App_ContextSetDebugged.h"
 int32_t App_ContextSetDebugged(char context)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: StationaryGun_LoadParameters (VA 0x00474190; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: StationaryGun_LoadParameters - 0x00474190 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 00474190-StationaryGun_LoadParameters.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "StationaryGun_LoadParameters.h"
 uint32_t StationaryGun_LoadParameters(float context)
 

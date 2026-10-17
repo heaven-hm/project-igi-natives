@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Script_UnableToAllocatePara (VA 0x004F19C0; static CFG gate FAIL, CFG score 0.833).
+// IGI native provenance: Script_UnableToAllocatePara - 0x004F19C0 - CFG score 83.3% (FAIL; structural only); runtime behavior not verified.
+// Evidence: 004F19C0-Script_UnableToAllocatePara.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Script_UnableToAllocatePara.h"
 int32_t Script_UnableToAllocatePara(int32_t context, int32_t param_2)
 

@@ -1,4 +1,5 @@
-// Original IGI.EXE function: PointlightDynCubeObj_Update (VA 0x005314F0; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: PointlightDynCubeObj_Update - 0x005314F0 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 005314F0-PointlightDynCubeObj_Update.md; REA/Ghidra static record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "PointlightDynCubeObj_Update.h"
 uint32_t PointlightDynCubeObj_Update()
 

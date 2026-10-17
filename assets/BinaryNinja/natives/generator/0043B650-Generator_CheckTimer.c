@@ -1,4 +1,5 @@
-// Original IGI.EXE function: Generator_CheckTimer (VA 0x0043B650; static CFG gate PASS, CFG score 1.000).
+// IGI native provenance: Generator_CheckTimer - 0x0043B650 - CFG score 100.0% (PASS; structural only); runtime behavior not verified.
+// Evidence: 0043B650-Generator_CheckTimer.md; Binary Ninja/Radare2 CFG record; catalog: assets/BinaryNinja/IGINatives_VERIFIED.json.
 #include "Generator_CheckTimer.h"
 
 char* Generator_CheckTimer(void* pThis)
