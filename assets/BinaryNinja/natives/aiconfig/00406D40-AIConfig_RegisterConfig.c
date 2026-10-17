@@ -1,13 +1,13 @@
 // Original IGI.EXE function: AIConfig_RegisterConfig (VA 0x00406D40; static CFG gate PASS, CFG score 1.000).
 #include "AIConfig_RegisterConfig.h"
-void AIConfig_RegisterConfig(void* a1)
+void AIConfig_RegisterConfig(void* context)
 
 {
-    int32_t valA1 = AI_UpdatePatrol_4(*(a1 + 0x24));
-    void* v_114 = Config_SavePlayerProfile_2(*(a1 + 0x20));
-    int32_t v_118 = valA1;
-    void v_100;
-    Game_DataSymbolLoad(&v_100, "%s, %s");
-    void* v_124 = &v_100;
-    void* v_128 = a1;
+    int32_t data_1 = AI_UpdatePatrol_4(*(context + 0x24));
+    void* item_114 = Config_SavePlayerProfile_2(*(context + 0x20));
+    int32_t item_118 = data_1;
+    void item_100;
+    Game_DataSymbolLoad(&item_100, "%s, %s");
+    void* item_124 = &item_100;
+    void* item_128 = context;
 }

@@ -1,13 +1,13 @@
 // Original IGI.EXE function: DIERR_GENERIC (VA 0x0048FA80; static CFG gate PASS, CFG score 1.000).
 #include "DIERR_GENERIC.h"
-int32_t DIERR_GENERIC(int32_t a1)
+int32_t DIERR_GENERIC(int32_t context)
 
 {
-    if (a1 == 0x80040209)
+    if (context == 0x80040209)
         return "DIERR_UNPLUGGED";
 
-    if (a1 <= 0x80040202)
-        switch (a1)
+    if (context <= 0x80040202)
+        switch (context)
         {
             case 0x80004001:
             {
@@ -50,8 +50,8 @@ int32_t DIERR_GENERIC(int32_t a1)
                 break;
             }
         }
-    else if (a1 + 0x7ffbfdfd <= 5)
-        switch (a1)
+    else if (context + 0x7ffbfdfd <= 5)
+        switch (context)
         {
             case 0x80040203:
             {
@@ -85,7 +85,7 @@ int32_t DIERR_GENERIC(int32_t a1)
             }
         }
 
-    switch (a1)
+    switch (context)
     {
         case 0x8004020a:
         {

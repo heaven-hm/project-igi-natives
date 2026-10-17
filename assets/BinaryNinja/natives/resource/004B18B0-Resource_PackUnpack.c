@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Resource_PackUnpack (VA 0x004B18B0; static CFG gate PASS, CFG score 0.976).
 #include "Resource_PackUnpack.h"
-void* Resource_PackUnpack(void* a1, int32_t* a2)
+void* Resource_PackUnpack(void* context, int32_t* param_2)
 
 // Sig: int Resource_PackUnpack(char* resFile, char** outBuffer)
 // Note: Opens a PACKED resource file via QFile_ReadWrite (0x4B1510, mode string
@@ -8,49 +8,49 @@ void* Resource_PackUnpack(void* a1, int32_t* a2)
 // Params: resFile = packed resource path, outBuffer = receives unpacked data.
 // RETURNS entry/result pointer.
 {
-    void* dstD = a1;
-    int32_t* valA = QFile_ReadWrite(dstD, "r");
+    void* dest_val = context;
+    int32_t* data_val = QFile_ReadWrite(dest_val, "r");
 
-    if (valA)
+    if (data_val)
     {
-        if (*(*valA * 0x8c + &g_9436e8))
+        if (*(*data_val * 0x8c + &g_9436e8))
         {
-            void** valA4 = Sys_FreeMemory_5(dstD);
-            valA4[3] = *valA;
-            int32_t tmpD1 = *valA;
-            int32_t valA5 = (*(tmpD1 * 0x8c + &g_9436e8))(tmpD1, valA, &a1, valA4);
-            Sys_ReadFileBlock_4(valA);
+            void** data_4 = Sys_FreeMemory_5(dest_val);
+            data_4[3] = *data_val;
+            int32_t temp_1 = *data_val;
+            int32_t data_5 = (*(temp_1 * 0x8c + &g_9436e8))(temp_1, data_val, &context, data_4);
+            Sys_ReadFileBlock_4(data_val);
 
-            if (a2)
-                *a2 = a1;
+            if (param_2)
+                *param_2 = context;
 
-            return valA5;
+            return data_5;
         }
 
-        int32_t valA8 = Sys_PushStack_4(valA);
-        void* valA9 = Mem_Alloc(valA8, 4);
-        void** valA10 = Sys_FreeMemory_5(dstD);
-        valA10[3] = *valA;
-        valA10[6] = valA9;
-        valA10[4] = valA8;
-        Resource_Unpack(valA, valA9, valA8);
-        Sys_CheckHeap_4(valA, 0);
+        int32_t data_8 = Sys_PushStack_4(data_val);
+        void* data_9 = Mem_Alloc(data_8, 4);
+        void** data_10 = Sys_FreeMemory_5(dest_val);
+        data_10[3] = *data_val;
+        data_10[6] = data_9;
+        data_10[4] = data_8;
+        Resource_Unpack(data_val, data_9, data_8);
+        Sys_CheckHeap_4(data_val, 0);
 
-        if (!Sys_PopStack_4(valA))
+        if (!Sys_PopStack_4(data_val))
         {
-            if (a2)
-                *a2 = valA8;
+            if (param_2)
+                *param_2 = data_8;
 
-            Sys_ReadFileBlock_4(valA);
-            return valA9;
+            Sys_ReadFileBlock_4(data_val);
+            return data_9;
         }
 
-        Sys_CheckHeap_25(valA10);
-        Sys_ExecuteBytecode_2(valA9);
-        Sys_ReadFileBlock_4(valA);
+        Sys_CheckHeap_25(data_10);
+        Sys_ExecuteBytecode_2(data_9);
+        Sys_ReadFileBlock_4(data_val);
 
-        if (a2)
-            *a2 = 0;
+        if (param_2)
+            *param_2 = 0;
     }
 
     return 0;

@@ -1,88 +1,88 @@
 // Original IGI.EXE function: Render_DrawBoneMesh_7 (VA 0x004D38C0; static CFG gate PASS, CFG score 0.917).
 #include "Render_DrawBoneMesh_7.h"
-int32_t Render_DrawBoneMesh_7(int32_t a1, void* a2)
+int32_t Render_DrawBoneMesh_7(int32_t context, void* param_2)
 
 {
-    float v_28;
-    memcpy(&v_28, a1, 0x28);
-    float v_18;
-    float v_8;
-    long double x87_r7_2 = v_8 + v_18 + v_28;
-    long double f0 = 0f;
-    x87_r7_2 - f0;
-    float v_48;
-    float v_3c;
+    float item_28;
+    memcpy(&item_28, context, 0x28);
+    float item_18;
+    float item_8;
+    long double fpu_val_7_2 = item_8 + item_18 + item_28;
+    long double f0 = 0.0f;
+    fpu_val_7_2 - f0;
+    float item_48;
+    float item_3c;
 
-    if (*(&((x87_r7_2 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f0) ? 1 : 0) << 0xa
-        | (x87_r7_2 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_7_2 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_2 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_8 = v_18;
-        long double f1_1 = v_28;
-        x87_r7_8 - f1_1;
-        int32_t objC1 = 0;
-        v_48 = 1.40129846e-45f;
-        int32_t v_44_1 = 2;
-        int32_t v_40_1 = 0;
+        long double fpu_val_7_8 = item_18;
+        long double f1_1 = item_28;
+        fpu_val_7_8 - f1_1;
+        int32_t entity_1 = 0;
+        item_48 = 1.40129846e-45.0f;
+        int32_t item_44_1 = 2;
+        int32_t item_40_1 = 0;
 
-        if (!(*(&((x87_r7_8 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_8, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_8 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-            objC1 = 1;
+        if (!(*(&((fpu_val_7_8 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_8, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_8 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+            entity_1 = 1;
 
-        long double x87_r7_9 = v_8;
-        long double f2_1 = (&v_28)[objC1 * 4];
-        x87_r7_9 - f2_1;
+        long double fpu_val_7_9 = item_8;
+        long double f2_1 = (&item_28)[entity_1 * 4];
+        fpu_val_7_9 - f2_1;
 
-        if (!(*(&((x87_r7_9 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_9, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_9 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-            objC1 = 2;
+        if (!(*(&((fpu_val_7_9 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_9, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_9 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+            entity_1 = 2;
 
-        int32_t tmpD1 = (&v_48)[objC1];
-        int32_t srcS1 = (&v_48)[tmpD1];
-        long double x87_r7_14 =
-            sqrtl((&v_28)[objC1 * 4] - (&v_28)[tmpD1 * 4] - (&v_28)[srcS1 * 4] + 1f);
-        (&v_3c)[objC1] = x87_r7_14 * 0.5f;
-        long double f3_1 = 0f;
-        x87_r7_14 - f3_1;
+        int32_t temp_1 = (&item_48)[entity_1];
+        int32_t source_1 = (&item_48)[temp_1];
+        long double fpu_val_7_14 =
+            sqrtl((&item_28)[entity_1 * 4] - (&item_28)[temp_1 * 4] - (&item_28)[source_1 * 4] + 1.0f);
+        (&item_3c)[entity_1] = fpu_val_7_14 * 0.5f;
+        long double f3_1 = 0.0f;
+        fpu_val_7_14 - f3_1;
 
-        if (!(*(&((x87_r7_14 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_14, f3_1) ? 1 : 0) << 0xa
-                | (x87_r7_14 == f3_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x40))
-            x87_r7_14 = 0.5f / x87_r7_14;
+        if (!(*(&((fpu_val_7_14 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_14, f3_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_14 == f3_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x40))
+            fpu_val_7_14 = 0.5f / fpu_val_7_14;
 
-        int32_t dstD3 = tmpD1 * 3;
-        int32_t valA9 = objC1 * 3;
-        int32_t ctxB2 = srcS1 * 3;
-        (&v_3c)[tmpD1] = ((&v_28)[dstD3 + objC1] + (&v_28)[valA9 + tmpD1]) * x87_r7_14;
-        (&v_3c)[srcS1] = ((&v_28)[objC1 + ctxB2] + (&v_28)[valA9 + srcS1]) * x87_r7_14;
-        float v_30_1 = -((((&v_28)[dstD3 + srcS1] - (&v_28)[ctxB2 + tmpD1]) * x87_r7_14));
+        int32_t dest_3 = temp_1 * 3;
+        int32_t data_9 = entity_1 * 3;
+        int32_t context_2 = source_1 * 3;
+        (&item_3c)[temp_1] = ((&item_28)[dest_3 + entity_1] + (&item_28)[data_9 + temp_1]) * fpu_val_7_14;
+        (&item_3c)[source_1] = ((&item_28)[entity_1 + context_2] + (&item_28)[data_9 + source_1]) * fpu_val_7_14;
+        float item_30_1 = -((((&item_28)[dest_3 + source_1] - (&item_28)[context_2 + temp_1]) * fpu_val_7_14));
     }
     else
     {
-        long double x87_r7_4 = sqrtl(x87_r7_2 + 1f);
-        float v_30 = x87_r7_4 * 0.5f;
-        long double x87_r7_5 = 0.5f / x87_r7_4;
-        float v_14;
-        float v_c;
-        v_3c = -(((v_14 - v_c) * x87_r7_5));
-        float v_20;
-        float v_10;
-        float v_38_1 = -(((v_10 - v_20) * x87_r7_5));
-        float v_24;
-        float v_1c;
-        float v_34_1 = -(((v_24 - v_1c) * x87_r7_5));
+        long double fpu_val_7_4 = sqrtl(fpu_val_7_2 + 1.0f);
+        float item_30 = fpu_val_7_4 * 0.5f;
+        long double fpu_val_7_5 = 0.5f / fpu_val_7_4;
+        float item_14;
+        float item_c;
+        item_3c = -(((item_14 - item_c) * fpu_val_7_5));
+        float item_20;
+        float item_10;
+        float item_38_1 = -(((item_10 - item_20) * fpu_val_7_5));
+        float item_24;
+        float item_1c;
+        float item_34_1 = -(((item_24 - item_1c) * fpu_val_7_5));
     }
 
-    int32_t v_4;
-    int32_t v_2c = v_4;
-    Render_DrawRigidMesh_7(&v_28, &v_3c);
-    float srcS2 = *(a2 + 8);
-    v_48 = 0f;
-    int32_t v_44_2 = 0;
-    int32_t v_40_2 = 0;
-    Render_DrawSplineMesh_7(&v_28, &v_3c, &v_48, srcS2, 0f);
-    *(srcS2 + 0x60) = 0;
-    *(srcS2 + 0x64) = 0;
-    *(srcS2 + 0x68) = 0;
-    *(srcS2 + 0x6c) = 0x3f800000;
-    *(srcS2 + 0x70) = 0;
+    int32_t item_4;
+    int32_t item_2c = item_4;
+    Render_DrawRigidMesh_7(&item_28, &item_3c);
+    float source_2 = *(param_2 + 8);
+    item_48 = 0.0f;
+    int32_t item_44_2 = 0;
+    int32_t item_40_2 = 0;
+    Render_DrawSplineMesh_7(&item_28, &item_3c, &item_48, source_2, 0.0f);
+    *(source_2 + 0x60) = 0;
+    *(source_2 + 0x64) = 0;
+    *(source_2 + 0x68) = 0;
+    *(source_2 + 0x6c) = 0x3f800000;
+    *(source_2 + 0x70) = 0;
     return Render_DrawRigidMesh_7(0, 0);
 }

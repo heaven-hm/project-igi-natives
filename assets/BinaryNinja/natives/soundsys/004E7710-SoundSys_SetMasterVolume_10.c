@@ -1,55 +1,55 @@
 // Original IGI.EXE function: SoundSys_SetMasterVolume_10 (VA 0x004E7710; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetMasterVolume_10.h"
-void SoundSys_SetMasterVolume_10(int32_t* a1, char* a2)
+void SoundSys_SetMasterVolume_10(int32_t* context, char* param_2)
 
 {
-    int32_t ctxB;
-    int32_t v_4 = ctxB;
+    int32_t context_val;
+    int32_t item_4 = context_val;
 
-    if (!*a1)
+    if (!*context)
         return;
 
-    char* srcS1;
+    char* source_1;
 
-    for (char* i = a2; i; i = i + srcS1 + 1)
+    for (char* i = param_2; i; i = i + source_1 + 1)
     {
         char j = *i;
-        char ctxB1 = 0;
-        srcS1 = nullptr;
+        char context_1 = 0;
+        source_1 = nullptr;
 
         while (j)
         {
             if (j == 0xa)
             {
-                *(srcS1 + i) = 0;
-                ctxB1 = 1;
+                *(source_1 + i) = 0;
+                context_1 = 1;
                 break;
             }
 
-            j = *(srcS1 + i + 1);
-            srcS1 = &srcS1[1];
+            j = *(source_1 + i + 1);
+            source_1 = &source_1[1];
         }
 
-        Sys_AllocateMemory_21(*a1, i, a1[6], a1[7]);
+        Sys_AllocateMemory_21(*context, i, context[6], context[7]);
 
-        if (!ctxB1)
+        if (!context_1)
         {
             int32_t j_1 = 0xffffffff;
 
             while (j_1)
             {
-                bool cond_0_1 = 0 != *i;
+                bool flag_0_1 = 0 != *i;
                 i = &i[1];
                 j_1 -= 1;
 
-                if (!cond_0_1)
+                if (!flag_0_1)
                     break;
             }
 
-            SoundSys_LoadSoundDef_10(a1, ~j_1 - 1);
+            SoundSys_LoadSoundDef_10(context, ~j_1 - 1);
             break;
         }
 
-        SoundSys_SetFrequency_10(a1, 1);
+        SoundSys_SetFrequency_10(context, 1);
     }
 }

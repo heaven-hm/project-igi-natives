@@ -6,64 +6,64 @@ int32_t SoundSys_Definegroup()
     DynObj_CreateMagicObject_4(g_a5e60c);
     DynObj_CreateMagicObject_4(g_a5e610);
     Sys_ExecuteBytecode_2(g_a5e600);
-    char valA = g_548812;
+    char data_val = g_548812;
     g_a5e600 = 0;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548813;
+    data_val = g_548813;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548814;
+    data_val = g_548814;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548815;
+    data_val = g_548815;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548816;
+    data_val = g_548816;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548817;
+    data_val = g_548817;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548818;
+    data_val = g_548818;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_54881b;
+    data_val = g_54881b;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_548819;
+    data_val = g_548819;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_54881a;
+    data_val = g_54881a;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    uint32_t valA1 = g_54881c;
+    uint32_t data_1 = g_54881c;
 
-    if (valA1 != 0xff)
-        valA1 = QTask_CreateTask_2(valA1);
+    if (data_1 != 0xff)
+        data_1 = QTask_CreateTask_2(data_1);
 
-    valA1 = g_548808;
-    QTask_CloseEvent_2(valA1);
+    data_1 = g_548808;
+    QTask_CloseEvent_2(data_1);
     QTask_CloseEvent_2(g_54880e);
     QTask_CloseEvent_2(g_54880a);
     Sys_CloseFileStream_23("DefineGroup");

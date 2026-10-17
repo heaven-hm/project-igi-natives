@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Is_ResourceLoaded (VA 0x004B5B90; static CFG gate PASS, CFG score 1.000).
 #include "Is_ResourceLoaded.h"
-int32_t Is_ResourceLoaded(void* a1, void** a2)
+int32_t Is_ResourceLoaded(void* context, void** param_2)
 
 // Sig: int Is_ResourceLoaded(char* resourcePath, char** outEntry)
 // Note: Checks whether a resource path is ALREADY LOADED in the resource
@@ -9,106 +9,106 @@ int32_t Is_ResourceLoaded(void* a1, void** a2)
 // RETURNS non-zero + fills outEntry when found. Resource_Load calls this first
 // - use it to avoid double-loading.
 {
-    int32_t ctxB;
-    int32_t v_108 = ctxB;
-    int32_t srcS = 0;
+    int32_t context_val;
+    int32_t item_108 = context_val;
+    int32_t source_val = 0;
 
     while (true)
     {
-        void v_80;
-        srcS = QFile_AliasResolve(&v_80, a1, srcS);
-        int32_t v_104_1 = srcS;
+        void item_80;
+        source_val = QFile_AliasResolve(&item_80, context, source_val);
+        int32_t item_104_1 = source_val;
         char i_1;
-        Sys_ResolveSymbol_15(&i_1, &v_80);
+        Sys_ResolveSymbol_15(&i_1, &item_80);
         char i = i_1;
 
         if (i)
         {
-            char* valA3 = &i_1;
+            char* data_3 = &i_1;
 
             do
             {
-                char objC2 = 0x2f;
+                char entity_2 = 0x2f;
 
                 if (i != 0x5c)
-                    objC2 = *valA3;
+                    entity_2 = *data_3;
 
-                *valA3 = objC2;
-                i = valA3[1];
-                valA3 = &valA3[1];
+                *data_3 = entity_2;
+                i = data_3[1];
+                data_3 = &data_3[1];
             } while (i);
         }
 
-        uint32_t valA4 = Sys_CheckHeap_15(&i_1);
-        void* objC3 = g_943e40;
-        void* flagP1 = objC3;
-        void* dstD1 = *(objC3 + 4);
+        uint32_t data_4 = Sys_CheckHeap_15(&i_1);
+        void* entity_3 = g_943e40;
+        void* flagP1 = entity_3;
+        void* dest_1 = *(entity_3 + 4);
 
-        if (dstD1)
+        if (dest_1)
         {
             while (true)
             {
-                if (*(flagP1 + 0x20) == valA4)
+                if (*(flagP1 + 0x20) == data_4)
                 {
-                    char* srcS1 = &i_1;
-                    char* objC4 = flagP1 + 0x38;
-                    int32_t objC6;
+                    char* source_1 = &i_1;
+                    char* entity_4 = flagP1 + 0x38;
+                    int32_t entity_6;
 
                     while (true)
                     {
-                        char ctxB1 = *objC4;
-                        char f0_1 = *srcS1;
-                        bool c_1 = ctxB1 < f0_1;
+                        char context_1 = *entity_4;
+                        char f0_1 = *source_1;
+                        bool c_1 = context_1 < f0_1;
 
-                        if (ctxB1 == f0_1)
+                        if (context_1 == f0_1)
                         {
-                            if (!ctxB1)
+                            if (!context_1)
                             {
-                                objC6 = 0;
+                                entity_6 = 0;
                                 break;
                             }
 
-                            ctxB1 = objC4[1];
-                            char f3_1 = srcS1[1];
-                            c_1 = ctxB1 < f3_1;
+                            context_1 = entity_4[1];
+                            char f3_1 = source_1[1];
+                            c_1 = context_1 < f3_1;
 
-                            if (ctxB1 == f3_1)
+                            if (context_1 == f3_1)
                             {
-                                objC4 = &objC4[2];
-                                srcS1 = &srcS1[2];
+                                entity_4 = &entity_4[2];
+                                source_1 = &source_1[2];
 
-                                if (ctxB1)
+                                if (context_1)
                                     continue;
 
-                                objC6 = 0;
+                                entity_6 = 0;
                                 break;
                             }
                         }
 
-                        objC6 = objC4 - objC4 + 1;
+                        entity_6 = entity_4 - entity_4 + 1;
                         break;
                     }
 
-                    if (!objC6)
+                    if (!entity_6)
                     {
-                        if (a2)
-                            *a2 = flagP1;
+                        if (param_2)
+                            *param_2 = flagP1;
 
                         return 1;
                     }
 
-                    srcS = v_104_1;
+                    source_val = item_104_1;
                 }
 
-                flagP1 = dstD1;
-                dstD1 = *(dstD1 + 4);
+                flagP1 = dest_1;
+                dest_1 = *(dest_1 + 4);
 
-                if (!dstD1)
+                if (!dest_1)
                     break;
             }
         }
 
-        if (!srcS)
+        if (!source_val)
             break;
     }
 

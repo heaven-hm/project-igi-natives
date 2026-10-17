@@ -1,71 +1,71 @@
 // Original IGI.EXE function: Render_ComputeNormals_5 (VA 0x004D3020; static CFG gate PASS, CFG score 1.000).
 #include "Render_ComputeNormals_5.h"
-int32_t Render_ComputeNormals_5(long double a1 @ fp0, float* a2, float* a3, float a4)
+int32_t Render_ComputeNormals_5(long double context , float* param_2, float* param_3, float param_4)
 
 {
-    float v_30;
-    float v_24;
-    int32_t valA1 = Render_BindTexture_5(&v_30, &v_24, Render_SetupLighting_6(a4, 0));
-    float v_18;
-    float v_c;
-    int32_t result = Render_BindTexture_5(&v_18, &v_c, Render_SetupLighting_6(a4, 1));
+    float item_30;
+    float item_24;
+    int32_t data_1 = Render_BindTexture_5(&item_30, &item_24, Render_SetupLighting_6(param_4, 0));
+    float item_18;
+    float item_c;
+    int32_t result = Render_BindTexture_5(&item_18, &item_c, Render_SetupLighting_6(param_4, 1));
 
-    if (!valA1 && !result)
+    if (!data_1 && !result)
         return result;
 
-    if (!valA1)
+    if (!data_1)
     {
         if (result)
         {
-            if (a2)
+            if (param_2)
             {
-                *a2 = v_18;
-                int32_t v_14;
-                a2[1] = v_14;
-                int32_t v_10;
-                a2[2] = v_10;
+                *param_2 = item_18;
+                int32_t item_14;
+                param_2[1] = item_14;
+                int32_t item_10;
+                param_2[2] = item_10;
             }
 
-            if (a3)
+            if (param_3)
             {
-                *a3 = v_c;
-                int32_t v_8;
-                a3[1] = v_8;
-                int32_t v_4;
-                a3[2] = v_4;
+                *param_3 = item_c;
+                int32_t item_8;
+                param_3[1] = item_8;
+                int32_t item_4;
+                param_3[2] = item_4;
             }
         }
     }
     else if (!result)
     {
-        if (a2)
+        if (param_2)
         {
-            *a2 = v_30;
-            int32_t v_2c;
-            a2[1] = v_2c;
-            int32_t v_28;
-            a2[2] = v_28;
+            *param_2 = item_30;
+            int32_t item_2c;
+            param_2[1] = item_2c;
+            int32_t item_28;
+            param_2[2] = item_28;
         }
 
-        if (a3)
+        if (param_3)
         {
-            *a3 = v_24;
-            int32_t v_20;
-            a3[1] = v_20;
-            int32_t v_1c;
-            a3[2] = v_1c;
+            *param_3 = item_24;
+            int32_t item_20;
+            param_3[1] = item_20;
+            int32_t item_1c;
+            param_3[2] = item_1c;
         }
     }
     else
     {
-        (*(a4 + 0xc))(*(a4 + 0x18));
-        a4 = a1;
+        (*(param_4 + 0xc))(*(param_4 + 0x18));
+        param_4 = context;
 
-        if (a2)
-            Render_SetupLighting_5(a2, &v_30, &v_18, a4);
+        if (param_2)
+            Render_SetupLighting_5(param_2, &item_30, &item_18, param_4);
 
-        if (a3)
-            Render_SetupLighting_5(a3, &v_24, &v_c, a4);
+        if (param_3)
+            Render_SetupLighting_5(param_3, &item_24, &item_c, param_4);
     }
 
     return 1;

@@ -1,168 +1,168 @@
 // Original IGI.EXE function: Terrain_RenderWaterSurface_10 (VA 0x0051A8C0; static CFG gate FAIL, CFG score 0.778).
 #include "Terrain_RenderWaterSurface_10.h"
-void Terrain_RenderWaterSurface_10(float a1)
+void Terrain_RenderWaterSurface_10(float context)
 
 {
-    float tmpD = a1;
-    int32_t ctxB;
-    int32_t v_a0 = ctxB;
-    int32_t srcS = *(tmpD + 0x1f8);
+    float temp_val = context;
+    int32_t context_val;
+    int32_t item_a0 = context_val;
+    int32_t source_val = *(temp_val + 0x1f8);
 
-    if (srcS < 3)
+    if (source_val < 3)
         return;
 
-    void* valA1 = *(tmpD + 0x68);
+    void* data_1 = *(temp_val + 0x68);
 
-    if (*(valA1 + 0xc4))
+    if (*(data_1 + 0xc4))
     {
-        *(valA1 + 0x78) = *(*(tmpD + 0x6c) + 0x20) - *(valA1 + 0x20);
-        void* valA2 = *(tmpD + 0x68);
-        *(valA2 + 0x80) = *(*(tmpD + 0x6c) + 0x28) - *(valA2 + 0x28);
-        void* valA3 = *(tmpD + 0x68);
-        *(valA3 + 0x88) = *(*(tmpD + 0x6c) + 0x30) - *(valA3 + 0x30);
+        *(data_1 + 0x78) = *(*(temp_val + 0x6c) + 0x20) - *(data_1 + 0x20);
+        void* data_2 = *(temp_val + 0x68);
+        *(data_2 + 0x80) = *(*(temp_val + 0x6c) + 0x28) - *(data_2 + 0x28);
+        void* data_3 = *(temp_val + 0x68);
+        *(data_3 + 0x88) = *(*(temp_val + 0x6c) + 0x30) - *(data_3 + 0x30);
     }
 
-    void* valA4 = *(tmpD + (srcS << 2) + 0x64);
+    void* data_4 = *(temp_val + (source_val << 2) + 0x64);
 
-    if (*(valA4 + 0xc4))
+    if (*(data_4 + 0xc4))
     {
-        *(valA4 + 0x78) = *(valA4 + 0x20) - *(*(tmpD + (srcS << 2) + 0x60) + 0x20);
-        void* valA5 = *(tmpD + (srcS << 2) + 0x64);
-        *(valA5 + 0x80) = *(valA5 + 0x28) - *(*(tmpD + (srcS << 2) + 0x60) + 0x28);
-        void* valA6 = *(tmpD + (srcS << 2) + 0x64);
-        *(valA6 + 0x88) = *(valA6 + 0x30) - *(*(tmpD + (srcS << 2) + 0x60) + 0x30);
+        *(data_4 + 0x78) = *(data_4 + 0x20) - *(*(temp_val + (source_val << 2) + 0x60) + 0x20);
+        void* data_5 = *(temp_val + (source_val << 2) + 0x64);
+        *(data_5 + 0x80) = *(data_5 + 0x28) - *(*(temp_val + (source_val << 2) + 0x60) + 0x28);
+        void* data_6 = *(temp_val + (source_val << 2) + 0x64);
+        *(data_6 + 0x88) = *(data_6 + 0x30) - *(*(temp_val + (source_val << 2) + 0x60) + 0x30);
     }
 
-    if (srcS - 1 > 1)
+    if (source_val - 1 > 1)
     {
-        int32_t* valA7 = tmpD + 0x6c;
-        int32_t v_98_1 = srcS - 2;
-        bool cond_3_1;
+        int32_t* data_7 = temp_val + 0x6c;
+        int32_t item_98_1 = source_val - 2;
+        bool flag_3_1;
 
         do
         {
-            void* objC9 = *valA7;
+            void* entity_9 = *data_7;
 
-            if (*(objC9 + 0xc4))
+            if (*(entity_9 + 0xc4))
             {
-                *(objC9 + 0x78) = *(valA7[1] + 0x20) - *(valA7[-1] + 0x20);
-                *(*valA7 + 0x80) = *(valA7[1] + 0x28) - *(valA7[-1] + 0x28);
-                *(*valA7 + 0x88) = *(valA7[1] + 0x30) - *(valA7[-1] + 0x30);
-                void* objC14 = *valA7;
-                *(objC14 + 0x78) = *(objC14 + 0x78) * 0.5;
-                void* objC15 = *valA7;
-                *(objC15 + 0x80) = *(objC15 + 0x80) * 0.5;
-                void* objC16 = *valA7;
-                *(objC16 + 0x88) = *(objC16 + 0x88) * 0.5;
+                *(entity_9 + 0x78) = *(data_7[1] + 0x20) - *(data_7[-1] + 0x20);
+                *(*data_7 + 0x80) = *(data_7[1] + 0x28) - *(data_7[-1] + 0x28);
+                *(*data_7 + 0x88) = *(data_7[1] + 0x30) - *(data_7[-1] + 0x30);
+                void* entity_14 = *data_7;
+                *(entity_14 + 0x78) = *(entity_14 + 0x78) * 0.5;
+                void* entity_15 = *data_7;
+                *(entity_15 + 0x80) = *(entity_15 + 0x80) * 0.5;
+                void* entity_16 = *data_7;
+                *(entity_16 + 0x88) = *(entity_16 + 0x88) * 0.5;
             }
 
-            valA7 = &valA7[1];
-            cond_3_1 = v_98_1 != 1;
-            v_98_1 -= 1;
-        } while (cond_3_1);
+            data_7 = &data_7[1];
+            flag_3_1 = item_98_1 != 1;
+            item_98_1 -= 1;
+        } while (flag_3_1);
     }
 
     int32_t flagP2 = 0;
-    int32_t* ctxB5 = tmpD + 0x68;
-    *(*(tmpD + (srcS << 2) + 0x64) + 0x98) = 0;
-    float v_8c_1 = 0.00200000009f;
-    void* v_94_1 = nullptr;
-    *(*ctxB5 + 0x94) = 0;
+    int32_t* context_5 = temp_val + 0x68;
+    *(*(temp_val + (source_val << 2) + 0x64) + 0x98) = 0;
+    float item_8c_1 = 0.00200000009f;
+    void* item_94_1 = nullptr;
+    *(*context_5 + 0x94) = 0;
 
-    if (srcS - 1 <= 0)
+    if (source_val - 1 <= 0)
         return;
 
     while (true)
     {
-        float v_9c_1 = 0f;
-        *(*ctxB5 + 0x98) = 0;
-        int32_t valA10 = *ctxB5 + 0x20;
-        double v_78;
-        memcpy(&v_78, valA10, 0x18);
-        double v_60;
-        memcpy(&v_60, valA10, 0x18);
-        int32_t saved_dst;
-        double v_70;
-        double v_68;
-        double v_58;
-        double v_50;
+        float item_9c_1 = 0.0f;
+        *(*context_5 + 0x98) = 0;
+        int32_t data_10 = *context_5 + 0x20;
+        double item_78;
+        memcpy(&item_78, data_10, 0x18);
+        double item_60;
+        memcpy(&item_60, data_10, 0x18);
+        int32_t saved_target;
+        double item_70;
+        double item_68;
+        double item_58;
+        double item_50;
 
         while (true)
         {
-            v_9c_1 = v_9c_1 + v_8c_1;
-            void v_18;
-            int32_t valA12 = SplinePathDynCubeObj_OnEvent(&v_18, tmpD, v_94_1, v_9c_1);
-            int32_t objC22 = flagP2 & 1;
-            void* valA13 = *ctxB5;
+            item_9c_1 = item_9c_1 + item_8c_1;
+            void item_18;
+            int32_t data_12 = SplinePathDynCubeObj_OnEvent(&item_18, temp_val, item_94_1, item_9c_1);
+            int32_t entity_22 = flagP2 & 1;
+            void* data_13 = *context_5;
             flagP2 += 1;
-            memcpy(&(&saved_dst)[objC22 * 6 + 0xd], valA12, 0x18);
-            long double x87_r7_32 = v_68 - v_50;
-            long double x87_r6_1 = v_70 - v_58;
-            long double x87_r5_1 = v_78 - v_60;
-            *(valA13 + 0x98) =
-                sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_32 * x87_r7_32)
-                + *(valA13 + 0x98);
+            memcpy(&(&saved_target)[entity_22 * 6 + 0xd], data_12, 0x18);
+            long double fpu_val_7_32 = item_68 - item_50;
+            long double fpu_val_6_1 = item_70 - item_58;
+            long double fpu_val_5_1 = item_78 - item_60;
+            *(data_13 + 0x98) =
+sqrtl Terrain_RenderWaterSurface_10(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_32 * fpu_val_7_32)
+                + *(data_13 + 0x98);
 
             if (flagP2 >= 0x1f4)
                 break;
 
-            tmpD = a1;
+            temp_val = context;
         }
 
-        void* objC23 = ctxB5[1];
-        void* tmpD2 = *ctxB5;
-        long double x87_r7_38 = (*(objC23 + 0x90) + *(tmpD2 + 0x90)) * 0.5f * 0.277777791f;
-        long double f1_1 = 0f;
-        x87_r7_38 - f1_1;
+        void* entity_23 = context_5[1];
+        void* temp_2 = *context_5;
+        long double fpu_val_7_38 = (*(entity_23 + 0x90) + *(temp_2 + 0x90)) * 0.5f * 0.277777791f;
+        long double f1_1 = 0.0f;
+        fpu_val_7_38 - f1_1;
 
-        if (*(&((x87_r7_38 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_38, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_38 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
-            *(objC23 + 0x94) = 0;
+        if (*(&((fpu_val_7_38 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_38, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_38 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+            *(entity_23 + 0x94) = 0;
         else
-            *(objC23 + 0x94) = *(tmpD2 + 0x98) * 0.000244140625f / x87_r7_38 + *(tmpD2 + 0x94);
+            *(entity_23 + 0x94) = *(temp_2 + 0x98) * 0.000244140625f / fpu_val_7_38 + *(temp_2 + 0x94);
 
-        v_8c_1 = 0.00100000005f;
-        int32_t v_98_2 = 0;
-        int32_t* v_90 = 0x9c;
+        item_8c_1 = 0.00100000005f;
+        int32_t item_98_2 = 0;
+        int32_t* item_90 = 0x9c;
 
         do
         {
-            *(v_90 + *ctxB5) = 0;
-            float v_9c_2 = v_98_2 * 0.100000001f;
-            void v_48;
-            int32_t valA17 = SplinePathDynCubeObj_OnEvent(&v_48, a1, v_94_1, v_9c_2);
-            memcpy(&v_78, valA17, 0x18);
+            *(item_90 + *context_5) = 0;
+            float item_9c_2 = item_98_2 * 0.100000001f;
+            void item_48;
+            int32_t data_17 = SplinePathDynCubeObj_OnEvent(&item_48, context, item_94_1, item_9c_2);
+            memcpy(&item_78, data_17, 0x18);
             int32_t i = 0;
-            memcpy(&v_60, valA17, 0x18);
+            memcpy(&item_60, data_17, 0x18);
 
             do
             {
-                v_9c_2 = v_9c_2 + 0.00100000005f;
-                void v_30;
-                int32_t valA19 = SplinePathDynCubeObj_OnEvent(&v_30, a1, v_94_1, v_9c_2);
-                int32_t objC28 = i & 1;
-                float* valA21 = v_90 + *ctxB5;
+                item_9c_2 = item_9c_2 + 0.00100000005f;
+                void item_30;
+                int32_t data_19 = SplinePathDynCubeObj_OnEvent(&item_30, context, item_94_1, item_9c_2);
+                int32_t entity_28 = i & 1;
+                float* data_21 = item_90 + *context_5;
                 i += 1;
-                memcpy(&(&saved_dst)[objC28 * 6 + 0xd], valA19, 0x18);
-                long double x87_r7_50 = v_68 - v_50;
-                long double x87_r6_7 = v_70 - v_58;
-                long double x87_r5_3 = v_78 - v_60;
-                *valA21 = sqrtl(x87_r5_3 * x87_r5_3 + x87_r6_7 * x87_r6_7 + x87_r7_50 * x87_r7_50)
-                    + *valA21;
+                memcpy(&(&saved_target)[entity_28 * 6 + 0xd], data_19, 0x18);
+                long double fpu_val_7_50 = item_68 - item_50;
+                long double fpu_val_6_7 = item_70 - item_58;
+                long double fpu_val_5_3 = item_78 - item_60;
+                *data_21 = sqrtl(fpu_val_5_3 * fpu_val_5_3 + fpu_val_6_7 * fpu_val_6_7 + fpu_val_7_50 * fpu_val_7_50)
+                    + *data_21;
             } while (i < 0x64);
 
-            v_98_2 += 1;
-            v_90 = &v_90[1];
-        } while (&v_90[1] < 0xc4);
+            item_98_2 += 1;
+            item_90 = &item_90[1];
+        } while (&item_90[1] < 0xc4);
 
-        ctxB5 = &ctxB5[1];
-        bool cond_7_1 = v_94_1 + 1 < srcS - 1;
-        v_94_1 += 1;
+        context_5 = &context_5[1];
+        bool flag_7_1 = item_94_1 + 1 < source_val - 1;
+        item_94_1 += 1;
 
-        if (!cond_7_1)
+        if (!flag_7_1)
             break;
 
-        tmpD = a1;
+        temp_val = context;
         flagP2 = 0;
     }
 }

@@ -3,7 +3,7 @@
 int32_t QTask_DeleteTask()
 
 {
-    int32_t dstD = 0;
+    int32_t dest_val = 0;
     int16_t result;
 
     for (int16_t* i = &g_af5f08; i < 0xafa708; )
@@ -12,12 +12,12 @@ int32_t QTask_DeleteTask()
 
         if (result)
         {
-            result = QTask_ChangeParent(dstD);
+            result = QTask_ChangeParent(dest_val);
             *i = result;
         }
 
         i = &i[0x18];
-        dstD += 1;
+        dest_val += 1;
     }
 
     return result;

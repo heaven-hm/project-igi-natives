@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004A91D2 MathSys_Invoke16_4A91D2 | gate PASS | openigi True */
-void() __noreturn;
+void MathSys_Invoke16_4A91D2();

@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Qsc_Compile (VA 0x004B8410; static CFG gate PASS, CFG score 0.889).
 #include "Qsc_Compile.h"
-int32_t Qsc_Compile(void* a1)
+int32_t Qsc_Compile(void* context)
 
 // Sig: int Qsc_Compile(char* qscPath)
 // Note: Compiles a .qsc SCRIPT SOURCE into a .qvm binary: resolves the path
@@ -9,99 +9,99 @@ int32_t Qsc_Compile(void* a1)
 // = script source path. RETURNS result object/flag.
 {
     int32_t result;
-    void* objC;
-    int32_t tmpD;
-    result = Sys_AllocateMemory_16(a1);
+    void* entity_val;
+    int32_t temp_val;
+    result = Sys_AllocateMemory_16(context);
 
     if (!result)
         return result;
 
-    void* v_11c_1 = a1;
-    int32_t v_104;
-    int32_t* valA1 = Resource_Load(&v_104, tmpD, objC, &v_104);
-    int32_t* valA2 = Mem_Alloc(0x94, 4);
-    __builtin_memset(valA2, 0, 0x94);
-    valA2[0x20] = valA1;
-    valA2[0x21] = v_104;
-    void* dstD2 = a1;
+    void* item_11c_1 = context;
+    int32_t item_104;
+    int32_t* data_1 = Resource_Load(&item_104, temp_val, entity_val, &item_104);
+    int32_t* data_2 = Mem_Alloc(0x94, 4);
+    memset(data_2, 0, 0x94);
+    data_2[0x20] = data_1;
+    data_2[0x21] = item_104;
+    void* dest_2 = context;
     int32_t i = 0xffffffff;
-    valA2[0x22] = 0;
+    data_2[0x22] = 0;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD2;
-        dstD2 += 1;
+        bool flag_0_1 = 0 != *dest_2;
+        dest_2 += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC2 = ~i;
-    int32_t srcS3;
-    int32_t dstD5;
-    dstD5 = memcpy(valA2, dstD2 - objC2, objC2 & 0xfffffffc);
-    memcpy(dstD5, srcS3, objC2 & 3);
-    void* dstD6 = a1;
+    int32_t entity_2 = ~i;
+    int32_t source_3;
+    int32_t dest_5;
+    dest_5 = memcpy(data_2, dest_2 - entity_2, entity_2 & 0xfffffffc);
+    memcpy(dest_5, source_3, entity_2 & 3);
+    void* dest_6 = context;
     int32_t i_1 = 0xffffffff;
 
     while (i_1)
     {
-        bool cond_1_1 = 0 != *dstD6;
-        dstD6 += 1;
+        bool flag_1_1 = 0 != *dest_6;
+        dest_6 += 1;
         i_1 -= 1;
 
-        if (!cond_1_1)
+        if (!flag_1_1)
             break;
     }
 
-    int32_t objC6 = ~i_1;
-    void v_80;
-    int32_t srcS5;
-    int32_t dstD8;
-    dstD8 = memcpy(&v_80, dstD6 - objC6, objC6 & 0xfffffffc);
-    memcpy(dstD8, srcS5, objC6 & 3);
-    char* valA4 = Sys_OpenFileStream_7(nullptr, 0, &v_80);
-    void* dstD9 = a1;
-    *valA4 = g_547290[0];
-    valA4[4] = g_547290[4][0];
+    int32_t entity_6 = ~i_1;
+    void item_80;
+    int32_t source_5;
+    int32_t dest_8;
+    dest_8 = memcpy(&item_80, dest_6 - entity_6, entity_6 & 0xfffffffc);
+    memcpy(dest_8, source_5, entity_6 & 3);
+    char* data_4 = Sys_OpenFileStream_7(nullptr, 0, &item_80);
+    void* dest_9 = context;
+    *data_4 = g_547290[0];
+    data_4[4] = g_547290[4][0];
     int32_t i_2 = 0xffffffff;
 
     while (i_2)
     {
-        bool cond_2_1 = 0 != *dstD9;
-        dstD9 += 1;
+        bool flag_2_1 = 0 != *dest_9;
+        dest_9 += 1;
         i_2 -= 1;
 
-        if (!cond_2_1)
+        if (!flag_2_1)
             break;
     }
 
-    int32_t objC12 = ~i_2;
-    void v_100;
-    int32_t srcS7;
-    int32_t dstD11;
-    dstD11 = memcpy(&v_100, dstD9 - objC12, objC12 & 0xfffffffc);
-    memcpy(dstD11, srcS7, objC12 & 3);
-    char* valA6 = Sys_OpenFileStream_7(nullptr, 0, &v_100);
-    *valA6 = g_547288[0];
-    valA6[4] = g_547288[4][0];
-    QScript_Cleanup(&v_80);
-    QScript_Cleanup(&v_100);
+    int32_t entity_12 = ~i_2;
+    void item_100;
+    int32_t source_7;
+    int32_t dest_11;
+    dest_11 = memcpy(&item_100, dest_9 - entity_12, entity_12 & 0xfffffffc);
+    memcpy(dest_11, source_7, entity_12 & 3);
+    char* data_6 = Sys_OpenFileStream_7(nullptr, 0, &item_100);
+    *data_6 = g_547288[0];
+    data_6[4] = g_547288[4][0];
+    QScript_Cleanup(&item_80);
+    QScript_Cleanup(&item_100);
 
-    if (QScript_ParseAndAssemble(&v_100, valA2))
+    if (QScript_ParseAndAssemble(&item_100, data_2))
     {
-        Qvm_Cleanup(valA2);
-        void* __saved_edi_3 = a1;
+        Qvm_Cleanup(data_2);
+        void* saved_edi_3 = context;
         return Sys_FreeMemory_22("An error occured when compiling file: %s");
     }
 
-    if (QScript_Assemble(&v_80, &v_100))
+    if (QScript_Assemble(&item_80, &item_100))
     {
-        void* __saved_esi_3 = a1;
+        void* saved_esi_3 = context;
         return Sys_FreeMemory_22("An error occured when compiling file: %s");
     }
 
-    QScript_Cleanup(&v_100);
-    return Qvm_Cleanup(valA2);
+    QScript_Cleanup(&item_100);
+    return Qvm_Cleanup(data_2);
 }

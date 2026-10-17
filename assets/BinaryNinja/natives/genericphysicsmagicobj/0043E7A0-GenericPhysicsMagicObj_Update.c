@@ -1,31 +1,31 @@
 // Original IGI.EXE function: GenericPhysicsMagicObj_Update (VA 0x0043E7A0; static CFG gate PASS, CFG score 1.000).
 #include "GenericPhysicsMagicObj_Update.h"
-void* GenericPhysicsMagicObj_Update(void* a1, void* a2)
+void* GenericPhysicsMagicObj_Update(void* context, void* param_2)
 
 {
-    double* objC = *(a2 + 4);
-    long double x87_r7_1 = *(a1 + 0x20) - *objC;
-    double v_10 = *(a1 + 0x28) - objC[1];
-    double v_8 = *(a1 + 0x30) - objC[2];
-    long double x87_r6_4 = v_10;
-    long double fpu5 = v_8;
-    float v_24 = fpu5 * *(a1 + 0x88) + x87_r6_4 * *(a1 + 0x7c) + x87_r7_1 * *(a1 + 0x70);
-    long double x87_r4_5 = fpu5 * *(a1 + 0x8c);
-    long double x87_r3_5 = x87_r6_4 * *(a1 + 0x80);
-    float v_18 = v_24;
-    float v_20 = x87_r4_5 + x87_r3_5 + x87_r7_1 * *(a1 + 0x74);
-    float v_1c = fpu5 * *(a1 + 0x90) + x87_r6_4 * *(a1 + 0x84) + x87_r7_1 * *(a1 + 0x78);
-    long double x87_r7_4 = v_1c;
-    long double x87_r6_9 = v_20;
-    long double x87_r5_4 = v_24;
-    v_10 = v_1c;
-    long double x87_r7_7 = *(*(a1 + 0x1b4) + 8) * 200f
-        / sqrtl(x87_r5_4 * x87_r5_4 + x87_r6_9 * x87_r6_9 + x87_r7_4 * x87_r7_4);
-    v_18 = v_24 * x87_r7_7;
-    float v_14_1 = v_20 * x87_r7_7;
-    v_10 = v_10 * x87_r7_7;
-    *(&v_10 + 4) = 0;
-    v_8 = 0;
-    *(&v_8 + 4) = 0;
-    return ForceAccumulator_Add(a1 + 0xf0, &v_18);
+    double* entity_val = *(param_2 + 4);
+    long double fpu_val_7_1 = *(context + 0x20) - *entity_val;
+    double item_10 = *(context + 0x28) - entity_val[1];
+    double item_8 = *(context + 0x30) - entity_val[2];
+    long double fpu_val_6_4 = item_10;
+    long double fpu5 = item_8;
+    float item_24 = fpu5 * *(context + 0x88) + fpu_val_6_4 * *(context + 0x7c) + fpu_val_7_1 * *(context + 0x70);
+    long double fpu_val_4_5 = fpu5 * *(context + 0x8c);
+    long double fpu_val_3_5 = fpu_val_6_4 * *(context + 0x80);
+    float item_18 = item_24;
+    float item_20 = fpu_val_4_5 + fpu_val_3_5 + fpu_val_7_1 * *(context + 0x74);
+    float item_1c = fpu5 * *(context + 0x90) + fpu_val_6_4 * *(context + 0x84) + fpu_val_7_1 * *(context + 0x78);
+    long double fpu_val_7_4 = item_1c;
+    long double fpu_val_6_9 = item_20;
+    long double fpu_val_5_4 = item_24;
+    item_10 = item_1c;
+    long double fpu_val_7_7 = *(*(context + 0x1b4) + 8) * 200.0f
+        / sqrtl(fpu_val_5_4 * fpu_val_5_4 + fpu_val_6_9 * fpu_val_6_9 + fpu_val_7_4 * fpu_val_7_4);
+    item_18 = item_24 * fpu_val_7_7;
+    float item_14_1 = item_20 * fpu_val_7_7;
+    item_10 = item_10 * fpu_val_7_7;
+    *(&item_10 + 4) = 0;
+    item_8 = 0;
+    *(&item_8 + 4) = 0;
+    return ForceAccumulator_Add(context + 0xf0, &item_18);
 }

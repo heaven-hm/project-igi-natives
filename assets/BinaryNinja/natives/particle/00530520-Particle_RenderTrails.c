@@ -1,22 +1,22 @@
 // Original IGI.EXE function: Particle_RenderTrails (VA 0x00530520; static CFG gate PASS, CFG score 1.000).
 #include "Particle_RenderTrails.h"
-int16_t* Particle_RenderTrails(int32_t a1, int16_t a2, int16_t a3)
+int16_t* Particle_RenderTrails(int32_t context, int16_t param_2, int16_t param_3)
 
 {
-    int32_t valA1 = a2 * 3;
-    int16_t* result = a1 + (valA1 << 1);
-    *(a1 + a3 * 6) = *(a1 + (valA1 << 1));
-    int32_t tmpD3 = *result * 3;
-    void* objC1 = a1 + (tmpD3 << 1);
+    int32_t data_1 = param_2 * 3;
+    int16_t* result = context + (data_1 << 1);
+    *(context + param_3 * 6) = *(context + (data_1 << 1));
+    int32_t temp_3 = *result * 3;
+    void* entity_1 = context + (temp_3 << 1);
 
-    if (*(a1 + (tmpD3 << 1) + 4) != a2)
+    if (*(context + (temp_3 << 1) + 4) != param_2)
     {
-        *(objC1 + 2) = a3;
+        *(entity_1 + 2) = param_3;
         *result = 0;
         return result;
     }
 
-    *(objC1 + 4) = a3;
+    *(entity_1 + 4) = param_3;
     *result = 0;
     return result;
 }

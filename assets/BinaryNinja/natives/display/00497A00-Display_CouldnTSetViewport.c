@@ -1,73 +1,73 @@
 // Original IGI.EXE function: Display_CouldnTSetViewport (VA 0x00497A00; static CFG gate PASS, CFG score 0.973).
 #include "Display_CouldnTSetViewport.h"
-int32_t Display_CouldnTSetViewport(void** a1)
+int32_t Display_CouldnTSetViewport(void** context)
 
 {
-    void* valA = *a1;
-    float v_484 = 1f / *(valA + 0x40);
-    int32_t valA1 = *(valA + 0x60);
-    float v_488 = -1f / *(valA + 0x44);
-    void* v_4c0;
-    void v_400;
-    long double x87_r6_2;
-    long double x87_r7_4;
-    int32_t v_4a0;
+    void* data_val = *context;
+    float item_484 = 1.0f / *(data_val + 0x40);
+    int32_t data_1 = *(data_val + 0x60);
+    float item_488 = -1.0f / *(data_val + 0x44);
+    void* item_4c0;
+    void item_400;
+    long double fpu_val_6_2;
+    long double fpu_val_7_4;
+    int32_t item_4a0;
 
-    if (!valA1)
+    if (!data_1)
     {
-        v_4a0 = 0;
-        int32_t v_49c = 0;
-        int32_t v_498 = g_c28b44;
-        int32_t v_48c = g_bcacf0;
-        int32_t* valA4 = g_5ca114;
-        int32_t v_490 = g_bcabf0;
-        int32_t v_494 = g_c28b48;
-        int32_t valA5 = (*(*valA4 + 0x34))(valA4, &v_4a0);
+        item_4a0 = 0;
+        int32_t item_49c = 0;
+        int32_t item_498 = g_c28b44;
+        int32_t item_48c = g_bcacf0;
+        int32_t* data_4 = g_5ca114;
+        int32_t item_490 = g_bcabf0;
+        int32_t item_494 = g_c28b48;
+        int32_t data_5 = (*(*data_4 + 0x34))(data_4, &item_4a0);
 
-        if (!valA5)
+        if (!data_5)
         {
-            x87_r7_4 = g_bcadd8;
-            x87_r6_2 = g_bcadb8 / (g_bcadb8 - x87_r7_4);
+            fpu_val_7_4 = g_bcadd8;
+            fpu_val_6_2 = g_bcadb8 / (g_bcadb8 - fpu_val_7_4);
         }
         else
         {
-            Game_DataSymbolLoad(&v_400, "Couldn't set viewport");
-            int32_t v_4bc = DDERR_GENERIC(valA5);
-            v_4c0 = &v_400;
+            Game_DataSymbolLoad(&item_400, "Couldn't set viewport");
+            int32_t item_4bc = DDERR_GENERIC(data_5);
+            item_4c0 = &item_400;
             Error_Show("%s\n\nDirectX error message: %s");
 
             while (true)
                 /* nop */
         }
     }
-    else if (valA1 == 1)
+    else if (data_1 == 1)
     {
-        v_4a0 = 0;
-        int32_t v_49c_1 = 0;
-        int32_t v_498_1 = g_c28b44;
-        int32_t v_494_1 = g_c28b48;
-        int32_t* valA8 = g_5ca114;
-        int32_t v_48c_1 = g_bcad8c;
-        int32_t v_490_1 = g_bcadb4;
-        int32_t valA9 = (*(*valA8 + 0x34))(valA8, &v_4a0);
+        item_4a0 = 0;
+        int32_t item_49c_1 = 0;
+        int32_t item_498_1 = g_c28b44;
+        int32_t item_494_1 = g_c28b48;
+        int32_t* data_8 = g_5ca114;
+        int32_t item_48c_1 = g_bcad8c;
+        int32_t item_490_1 = g_bcadb4;
+        int32_t data_9 = (*(*data_8 + 0x34))(data_8, &item_4a0);
 
-        if (!valA9)
+        if (!data_9)
         {
-            x87_r7_4 = g_bcada0;
-            x87_r6_2 = g_bcadc8 / (g_bcadc8 - x87_r7_4);
+            fpu_val_7_4 = g_bcada0;
+            fpu_val_6_2 = g_bcadc8 / (g_bcadc8 - fpu_val_7_4);
         }
         else
         {
-            Game_DataSymbolLoad(&v_400, "Couldn't set viewport");
-            int32_t v_4bc_1 = DDERR_GENERIC(valA9);
-            v_4c0 = &v_400;
+            Game_DataSymbolLoad(&item_400, "Couldn't set viewport");
+            int32_t item_4bc_1 = DDERR_GENERIC(data_9);
+            item_4c0 = &item_400;
             Error_Show("%s\n\nDirectX error message: %s");
 
             while (true)
                 /* nop */
         }
     }
-    else if (valA1 != 2)
+    else if (data_1 != 2)
     {
         Error_Show("Invalid layer");
 
@@ -76,48 +76,48 @@ int32_t Display_CouldnTSetViewport(void** a1)
     }
     else
     {
-        v_4a0 = 0;
-        int32_t v_49c_2 = 0;
-        int32_t v_498_2 = g_c28b44;
-        int32_t v_494_2 = g_c28b48;
-        int32_t* valA12 = g_5ca114;
-        int32_t v_48c_2 = g_bcad9c;
-        int32_t v_490_2 = g_bcade4;
-        int32_t valA13 = (*(*valA12 + 0x34))(valA12, &v_4a0);
+        item_4a0 = 0;
+        int32_t item_49c_2 = 0;
+        int32_t item_498_2 = g_c28b44;
+        int32_t item_494_2 = g_c28b48;
+        int32_t* data_12 = g_5ca114;
+        int32_t item_48c_2 = g_bcad9c;
+        int32_t item_490_2 = g_bcade4;
+        int32_t data_13 = (*(*data_12 + 0x34))(data_12, &item_4a0);
 
-        if (!valA13)
+        if (!data_13)
         {
-            x87_r7_4 = g_bcadb0;
-            x87_r6_2 = g_bcada8 / (g_bcada8 - x87_r7_4);
+            fpu_val_7_4 = g_bcadb0;
+            fpu_val_6_2 = g_bcada8 / (g_bcada8 - fpu_val_7_4);
         }
         else
         {
-            Game_DataSymbolLoad(&v_400, "Couldn't set viewport");
-            int32_t v_4bc_2 = DDERR_GENERIC(valA13);
-            v_4c0 = &v_400;
+            Game_DataSymbolLoad(&item_400, "Couldn't set viewport");
+            int32_t item_4bc_2 = DDERR_GENERIC(data_13);
+            item_4c0 = &item_400;
             Error_Show("%s\n\nDirectX error message: %s");
 
             while (true)
                 /* nop */
         }
     }
-    float v_480;
-    __builtin_memset(&v_480, 0, 0x40);
-    float v_458 = x87_r6_2;
-    float v_448 = -((x87_r6_2 * x87_r7_4));
-    void* dstD1 = *a1 + 0x64;
-    v_480 = v_484;
-    float v_46c = v_488;
-    int32_t v_454 = 0x3f800000;
-    memcpy(dstD1, &v_480, 0x40);
-    int32_t* valA16 = g_5ca114;
-    int32_t valA17 = (*(*valA16 + 0x2c))(valA16, 3, &v_480);
+    float item_480;
+    memset(&item_480, 0, 0x40);
+    float item_458 = fpu_val_6_2;
+    float item_448 = -((fpu_val_6_2 * fpu_val_7_4));
+    void* dest_1 = *context + 0x64;
+    item_480 = item_484;
+    float item_46c = item_488;
+    int32_t item_454 = 0x3f800000;
+    memcpy(dest_1, &item_480, 0x40);
+    int32_t* data_16 = g_5ca114;
+    int32_t data_17 = (*(*data_16 + 0x2c))(data_16, 3, &item_480);
 
-    if (valA17)
+    if (data_17)
     {
-        Game_DataSymbolLoad(&v_400, "Couldn't set projection matrix");
-        int32_t v_4bc_4 = DDERR_GENERIC(valA17);
-        v_4c0 = &v_400;
+        Game_DataSymbolLoad(&item_400, "Couldn't set projection matrix");
+        int32_t item_4bc_4 = DDERR_GENERIC(data_17);
+        item_4c0 = &item_400;
         Error_Show("%s\n\nDirectX error message: %s");
 
         while (true)
@@ -126,17 +126,17 @@ int32_t Display_CouldnTSetViewport(void** a1)
         return;
     }
 
-    void v_440;
-    Display_SetGammaRamp_7(&v_440, *a1, nullptr);
-    int32_t* valA19 = g_5ca114;
-    int32_t result = (*(*valA19 + 0x2c))(valA19, 2, &v_440);
+    void item_440;
+    Display_SetGammaRamp_7(&item_440, *context, nullptr);
+    int32_t* data_19 = g_5ca114;
+    int32_t result = (*(*data_19 + 0x2c))(data_19, 2, &item_440);
 
     if (!result)
         return result;
 
-    Game_DataSymbolLoad(&v_400, "Couldn't set view matrix");
-    int32_t v_4bc_5 = DDERR_GENERIC(result);
-    v_4c0 = &v_400;
+    Game_DataSymbolLoad(&item_400, "Couldn't set view matrix");
+    int32_t item_4bc_5 = DDERR_GENERIC(result);
+    item_4c0 = &item_400;
     Error_Show("%s\n\nDirectX error message: %s");
 
     while (true)

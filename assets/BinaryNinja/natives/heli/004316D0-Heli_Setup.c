@@ -1,37 +1,37 @@
 // Original IGI.EXE function: Heli_Setup (VA 0x004316D0; static CFG gate PASS, CFG score 0.963).
 #include "Heli_Setup.h"
-char* Heli_Setup(int80_t a1 @ fp0, char* a2)
+char* Heli_Setup(long double context , char* param_2)
 
 {
-    double* ctxB = a2;
-    char valA = Script_FormatString_6(&ctxB[0xff]);
+    double* context_val = param_2;
+    char data_val = Script_FormatString_6(&context_val[0xff]);
     int16_t idx;
 
-    if (valA)
+    if (data_val)
     {
-        Script_SpawnNewTask_7(&ctxB[0xff], ctxB);
+        Script_SpawnNewTask_7(&context_val[0xff], context_val);
         idx = 1;
     }
 
-    if (valA && !a1)
-        Vehicle_InitPlane_2(ctxB);
-    else if (!*(ctxB + 0x74c))
+    if (data_val && !context)
+        Vehicle_InitPlane_2(context_val);
+    else if (!*(context_val + 0x74c))
     {
-        struct status_msg* valA2 = SoundSys_SetMasterVolume_7(ctxB, "helicopter_1");
+        struct status_msg* data_2 = SoundSys_SetMasterVolume_7(context_val, "helicopter_1");
 
-        if (valA2)
-            *(ctxB + 0x74c) = QTask_LinkEventHandler_2(valA2);
+        if (data_2)
+            *(context_val + 0x74c) = QTask_LinkEventHandler_2(data_2);
     }
 
-    int16_t valA3;
-    valA3 = ctxB[0xea];
-    double* v_50;
-    double v_28;
+    int16_t data_3;
+    data_3 = context_val[0xea];
+    double* item_50;
+    double item_28;
 
-    if (valA3)
+    if (data_3)
     {
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0x9c]} */
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0xa0]} */
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0x9c]} */
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0xa0]} */
 ⋯        /* unimplemented  {fcompp } f- unimplemented  {fcompp } */
             - /* unimplemented  {fcompp } f- unimplemented  {fcompp } */;
         bool c0_1 = /* bool c0_1 =
@@ -51,15 +51,15 @@ char* Heli_Setup(int80_t a1 @ fp0, char* a2)
             | (idx & 7) << 0xb) + 1) & 1))
         {
 🚫🚫            top_4 = idx - 1;
-            /* unimplemented  {fld fp0, dword [ctxB+0xa0]} */
+            /* unimplemented  {fld fp0, dword [context_val+0xa0]} */
         }
         else
         {
 🚫🚫            top_4 = idx - 1;
-            /* unimplemented  {fld fp0, dword [ctxB+0x9c]} */
+            /* unimplemented  {fld fp0, dword [context_val+0x9c]} */
         }
 
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0x98]} */
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0x98]} */
 ⋯        /* unimplemented  {fcomp fp0, fp1} f- unimplemented  {fcomp fp0, fp1} */
             - /* unimplemented  {fcomp fp0, fp1} f- unimplemented  {fcomp fp0, fp1} */;
         bool c0_2 = /* bool c0_2 =
@@ -79,8 +79,8 @@ char* Heli_Setup(int80_t a1 @ fp0, char* a2)
         if (*(&((c0_2 ? 1 : 0) << 8 | (c2_2 ? 1 : 0) << 0xa | (c3_2 ? 1 : 0) << 0xe
             | (top_4 & 7) << 0xb) + 1) & 0x41)
         {
-🚫🚫            /* unimplemented  {fld fp0, dword [ctxB+0x9c]} */
-🚫🚫            /* unimplemented  {fld fp0, dword [ctxB+0xa0]} */
+🚫🚫            /* unimplemented  {fld fp0, dword [context_val+0x9c]} */
+🚫🚫            /* unimplemented  {fld fp0, dword [context_val+0xa0]} */
 ⋯            /* unimplemented  {fcompp } f- unimplemented  {fcompp } */
                 - /* unimplemented  {fcompp } f- unimplemented  {fcompp } */;
             bool c0_3 = /* bool c0_3 =
@@ -97,59 +97,59 @@ char* Heli_Setup(int80_t a1 @ fp0, char* a2)
 
             if (!(*(&((c0_3 ? 1 : 0) << 8 | (c2_3 ? 1 : 0) << 0xa | (c3_3 ? 1 : 0) << 0xe
                     | ((top_4 + 1) & 7) << 0xb) + 1) & 1))
-🚫🚫                /* unimplemented  {fld fp0, dword [ctxB+0xa0]} */
+🚫🚫                /* unimplemented  {fld fp0, dword [context_val+0xa0]} */
             else
-🚫🚫                /* unimplemented  {fld fp0, dword [ctxB+0x9c]} */
+🚫🚫                /* unimplemented  {fld fp0, dword [context_val+0x9c]} */
         }
         else
-🚫🚫            /* unimplemented  {fld fp0, dword [ctxB+0x98]} */
+🚫🚫            /* unimplemented  {fld fp0, dword [context_val+0x98]} */
 
-🚫🚫🚫        a2 = /* a2 = unimplemented  {fstp dword [esp+0x44], fp0} */;
-        /* unimplemented  {fstp dword [esp+0x44], fp0} */
-🚫🚫        Render_ComputeNormals(*(ctxB + 0x6c));
+🚫🚫🚫        param_2 = /* param_2 = unimplemented  {fstp dword [stack_ptr+0x44], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr+0x44], fp0} */
+🚫🚫        Render_ComputeNormals(*(context_val + 0x6c));
         /* unimplemented  {call Render_ComputeNormals} */
-        void* objC1 = *(ctxB + 0x1b4);
-        int32_t valA5 = *(ctxB + 0x754);
-🚫🚫        /* unimplemented  {fmul fp0, dword [esp+0x48]} */
-        void* srcS1 = *(objC1 + 0x2d4);
-        int32_t i_3 = *(srcS1 + 0x150);
-🚫🚫🚫        a2 = /* a2 = unimplemented  {fstp dword [esp+0x44], fp0} */;
-        /* unimplemented  {fstp dword [esp+0x44], fp0} */
+        void* entity_1 = *(context_val + 0x1b4);
+        int32_t data_5 = *(context_val + 0x754);
+🚫🚫        /* unimplemented  {fmul fp0, dword [stack_ptr+0x48]} */
+        void* source_1 = *(entity_1 + 0x2d4);
+        int32_t i_3 = *(source_1 + 0x150);
+🚫🚫🚫        param_2 = /* param_2 = unimplemented  {fstp dword [stack_ptr+0x44], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr+0x44], fp0} */
 
-        if (valA5 != 0xffffffff)
+        if (data_5 != 0xffffffff)
         {
-            *(ctxB + 0x754) = valA5 - 1;
+            *(context_val + 0x754) = data_5 - 1;
 
-            if (valA5 == 1)
-                return QTask_FindType(ctxB);
+            if (data_5 == 1)
+                return QTask_FindType(context_val);
         }
         else
         {
             if (!i_3)
             {
-🚫🚫                /* unimplemented  {fld fp0, dword [esp+0x44]} */
+🚫🚫                /* unimplemented  {fld fp0, dword [stack_ptr+0x44]} */
 🚫🚫                /* unimplemented  {fmul fp0, dword [&g_533700]} */
-                uint32_t v_44_7 = 0;
-                int32_t v_48_4 = 0x47c80000;
-                int32_t v_4c_2 = 0;
-                v_50 = 0xffffffff;
-                void* v_68_1 = objC1;
-🚫🚫🚫                float v_68_2 = /* float v_68_2 = unimplemented  {fstp dword [esp], fp0} */;
-                /* unimplemented  {fstp dword [esp], fp0} */
-🚫🚫                /* unimplemented  {fld fp0, dword [esp+0x6c]} */
+                uint32_t item_44_7 = 0;
+                int32_t item_48_4 = 0x47c80000;
+                int32_t item_4c_2 = 0;
+                item_50 = 0xffffffff;
+                void* item_68_1 = entity_1;
+🚫🚫🚫                float item_68_2 = /* float item_68_2 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+                /* unimplemented  {fstp dword [stack_ptr], fp0} */
+🚫🚫                /* unimplemented  {fld fp0, dword [stack_ptr+0x6c]} */
 🚫🚫                /* unimplemented  {fmul fp0, dword [&g_5335ac]} */
-                void* v_6c_1 = objC1;
-🚫🚫🚫                uint32_t v_6c_2 = /* uint32_t v_6c_2 =
-                    unimplemented  {fstp dword [esp], fp0} */;
-                /* unimplemented  {fstp dword [esp], fp0} */
-🚫🚫                /* unimplemented  {fld fp0, dword [esp+0x70]} */
+                void* item_6c_1 = entity_1;
+🚫🚫🚫                uint32_t item_6c_2 = /* uint32_t item_6c_2 =
+                    unimplemented  {fstp dword [stack_ptr], fp0} */;
+                /* unimplemented  {fstp dword [stack_ptr], fp0} */
+🚫🚫                /* unimplemented  {fld fp0, dword [stack_ptr+0x70]} */
 🚫🚫                /* unimplemented  {fmul fp0, dword [&g_533514[4]]} */
-                void* v_70_1 = objC1;
-🚫🚫🚫                uint32_t v_70_2 = /* uint32_t v_70_2 =
-                    unimplemented  {fstp dword [esp], fp0} */;
-                /* unimplemented  {fstp dword [esp], fp0} */
-                FX_SmokeEmit(&ctxB[4], 1, 0, 0x3f800000, v_70_2, v_6c_2, v_68_2, 3, 1, nullptr,
-                    "1009_01_1", "explo_03_l", v_50, v_4c_2, v_48_4, v_44_7);
+                void* item_70_1 = entity_1;
+🚫🚫🚫                uint32_t item_70_2 = /* uint32_t item_70_2 =
+                    unimplemented  {fstp dword [stack_ptr], fp0} */;
+                /* unimplemented  {fstp dword [stack_ptr], fp0} */
+                FX_SmokeEmit(&context_val[4], 1, 0, 0x3f800000, item_70_2, item_6c_2, item_68_2, 3, 1, nullptr,
+                    "1009_01_1", "explo_03_l", item_50, item_4c_2, item_48_4, item_44_7);
             }
             else
             {
@@ -157,78 +157,78 @@ char* Heli_Setup(int80_t a1 @ fp0, char* a2)
 
                 if (i_3 > 0)
                 {
-                    int32_t* dstD1 = srcS1 + 0x128;
+                    int32_t* dest_1 = source_1 + 0x128;
                     int32_t i;
 
                     do
                     {
-                        uint32_t valA7 = Sys_FreeMemory_14(Level_SetMission_5(), 0x1e);
-                        int32_t tmpD1 = *dstD1;
-                        v_50 = ctxB;
-                        WeaponType_UpdateAnim(&v_28, v_50, tmpD1);
-🚫🚫                        /* unimplemented  {fld fp0, qword [esp+0x2c]} */
-🚫🚫                        /* unimplemented  {fadd qword [ctxB+0x20]} */
-🚫🚫🚫                        v_28 = /* v_28 = unimplemented  {fstp qword [esp+0x44], fp0} */;
-                        /* unimplemented  {fstp qword [esp+0x44], fp0} */
-🚫🚫                        /* unimplemented  {fld fp0, qword [esp+0x4c]} */
-🚫🚫                        /* unimplemented  {fadd qword [ctxB+0x28]} */
-🚫🚫🚫                        double v_20_1 = /* double v_20_1 =
-                            unimplemented  {fstp qword [esp+0x64], fp0} */;
-                        /* unimplemented  {fstp qword [esp+0x64], fp0} */
-🚫🚫                        /* unimplemented  {fld fp0, qword [esp+0x6c]} */
-🚫🚫                        /* unimplemented  {fadd qword [ctxB+0x30]} */
-🚫🚫🚫                        double v_18_1 = /* double v_18_1 =
-                            unimplemented  {fstp qword [esp+0x7c], fp0} */;
-                        /* unimplemented  {fstp qword [esp+0x7c], fp0} */
-                        FX_SmokeEmit(&v_28, 1, valA7, 0x3f800000, 0x46400000, 0x45400000,
+                        uint32_t data_7 = Sys_FreeMemory_14(Level_SetMission_5(), 0x1e);
+                        int32_t temp_1 = *dest_1;
+                        item_50 = context_val;
+                        WeaponType_UpdateAnim(&item_28, item_50, temp_1);
+🚫🚫                        /* unimplemented  {fld fp0, qword [stack_ptr+0x2c]} */
+🚫🚫                        /* unimplemented  {fadd qword [context_val+0x20]} */
+🚫🚫🚫                        item_28 = /* item_28 = unimplemented  {fstp qword [stack_ptr+0x44], fp0} */;
+                        /* unimplemented  {fstp qword [stack_ptr+0x44], fp0} */
+🚫🚫                        /* unimplemented  {fld fp0, qword [stack_ptr+0x4c]} */
+🚫🚫                        /* unimplemented  {fadd qword [context_val+0x28]} */
+🚫🚫🚫                        double item_20_1 = /* double item_20_1 =
+                            unimplemented  {fstp qword [stack_ptr+0x64], fp0} */;
+                        /* unimplemented  {fstp qword [stack_ptr+0x64], fp0} */
+🚫🚫                        /* unimplemented  {fld fp0, qword [stack_ptr+0x6c]} */
+🚫🚫                        /* unimplemented  {fadd qword [context_val+0x30]} */
+🚫🚫🚫                        double item_18_1 = /* double item_18_1 =
+                            unimplemented  {fstp qword [stack_ptr+0x7c], fp0} */;
+                        /* unimplemented  {fstp qword [stack_ptr+0x7c], fp0} */
+                        FX_SmokeEmit(&item_28, 1, data_7, 0x3f800000, 0x46400000, 0x45400000,
                             0x45400000, 3, 2, nullptr, "1009_01_1", "explo_03_l", 0xffffffff, 0,
                             0x47c80000, 0);
-                        dstD1 = &dstD1[1];
+                        dest_1 = &dest_1[1];
                         i = i_3;
                         i_3 -= 1;
                     } while (i != 1);
                 }
             }
 
-            *(ctxB + 0x754) = 0x1e;
+            *(context_val + 0x754) = 0x1e;
         }
     }
 
-    if (Script_FormatString_6(&ctxB[0xeb]))
+    if (Script_FormatString_6(&context_val[0xeb]))
     {
-        Script_SpawnNewTask_7(&ctxB[0xeb], ctxB);
-🚫🚫🚫        char v_30_2 = /* char v_30_2 = (unimplemented  {fistp qword [esp+0x18], fp0}).b */;
-        /* unimplemented  {fistp qword [esp+0x18], fp0} */
-        int32_t* valA9 = Vehicle_UpdateRudder_2(ctxB);
+        Script_SpawnNewTask_7(&context_val[0xeb], context_val);
+🚫🚫🚫        char item_30_2 = /* char item_30_2 = (unimplemented  {fistp qword [stack_ptr+0x18], fp0}).b */;
+        /* unimplemented  {fistp qword [stack_ptr+0x18], fp0} */
+        int32_t* data_9 = Vehicle_UpdateRudder_2(context_val);
 
-        if (valA9)
-            Menu_HandleInput_17(valA9, v_30_2);
+        if (data_9)
+            Menu_HandleInput_17(data_9, item_30_2);
     }
 
-    char* result = Script_FormatString_6(&ctxB[0xf5]);
+    char* result = Script_FormatString_6(&context_val[0xf5]);
 
     if (result)
     {
-        char* result_1 = *(ctxB + 0x751);
-        result = Script_SpawnNewTask_7(&ctxB[0xf5], ctxB);
-🚫🚫🚫        char v_30_3 = /* char v_30_3 = (unimplemented  {fistp qword [esp+0x18], fp0}).b */;
-        /* unimplemented  {fistp qword [esp+0x18], fp0} */
-        result = v_30_3;
-        *(ctxB + 0x751) = result;
+        char* result_1 = *(context_val + 0x751);
+        result = Script_SpawnNewTask_7(&context_val[0xf5], context_val);
+🚫🚫🚫        char item_30_3 = /* char item_30_3 = (unimplemented  {fistp qword [stack_ptr+0x18], fp0}).b */;
+        /* unimplemented  {fistp qword [stack_ptr+0x18], fp0} */
+        result = item_30_3;
+        *(context_val + 0x751) = result;
 
         if (result)
         {
-            float v_44_13 = -1.57079637f;
-            memcpy(&v_28, &ctxB[0xe], 0x28);
-            Sys_AllocateMemory_12(&v_28, &v_28, v_44_13);
-            v_50 = 1;
-            memcpy(&ctxB[0x109], &ctxB[4], 0x18);
-            memcpy(&ctxB[0x10c], &v_28, 0x28);
-            ctxB[0x117] = 0;
-            result = Car_DetectionSweep(&ctxB[0x118], &ctxB[0x109], ctxB, v_50);
+            float item_44_13 = -1.57079637f;
+            memcpy(&item_28, &context_val[0xe], 0x28);
+            Sys_AllocateMemory_12(&item_28, &item_28, item_44_13);
+            item_50 = 1;
+            memcpy(&context_val[0x109], &context_val[4], 0x18);
+            memcpy(&context_val[0x10c], &item_28, 0x28);
+            context_val[0x117] = 0;
+            result = Car_DetectionSweep(&context_val[0x118], &context_val[0x109], context_val, item_50);
         }
 
-        result = *(ctxB + 0x751);
+        result = *(context_val + 0x751);
 
         if (!result)
         {
@@ -236,17 +236,17 @@ char* Heli_Setup(int80_t a1 @ fp0, char* a2)
 
             if (result)
             {
-                FX_TrailUpdate_13(&ctxB[0x118]);
-                int32_t v_44_15 = 8;
-                int32_t v_48_9 = 4;
-                int32_t valA11 = AI_CombatTarget_22();
-                v_50 = 4;
-                result = FX_DebrisSpawn_13(&ctxB[0x118], 1, v_50, valA11, v_48_9, v_44_15);
+                FX_TrailUpdate_13(&context_val[0x118]);
+                int32_t item_44_15 = 8;
+                int32_t item_48_9 = 4;
+                int32_t data_11 = AI_CombatTarget_22();
+                item_50 = 4;
+                result = FX_DebrisSpawn_13(&context_val[0x118], 1, item_50, data_11, item_48_9, item_44_15);
             }
         }
     }
 
-    int32_t* i_2 = ctxB[1];
+    int32_t* i_2 = context_val[1];
 
     if (*i_2)
     {
@@ -254,38 +254,38 @@ char* Heli_Setup(int80_t a1 @ fp0, char* a2)
 
         if (i_1)
         {
-            int32_t tmpD3 = g_afa7e0;
+            int32_t temp_3 = g_afa7e0;
 
             do
             {
-                int32_t* srcS9 = *i_1;
-                void* valA15;
+                int32_t* source_9 = *i_1;
+                void* data_15;
 
-                if (!srcS9)
-                    valA15 = nullptr;
+                if (!source_9)
+                    data_15 = nullptr;
                 else
                 {
-                    int32_t valA12 = *srcS9;
-                    int32_t valA13 = -(valA12);
-                    valA15 = (valA13 - valA13) & srcS9;
+                    int32_t data_12 = *source_9;
+                    int32_t data_13 = -(data_12);
+                    data_15 = (data_13 - data_13) & source_9;
                 }
 
-                *((tmpD3 << 2) + &g_afa6e0) = valA15;
-                int32_t tmpD4 = tmpD3 + 1;
-                int32_t valA18 = 0;
-                g_afa7e0 = tmpD4;
-                valA18 = i_1[7];
-                result = *((valA18 << 2) + &g_a970e0);
+                *((temp_3 << 2) + &g_afa6e0) = data_15;
+                int32_t temp_4 = temp_3 + 1;
+                int32_t data_18 = 0;
+                g_afa7e0 = temp_4;
+                data_18 = i_1[7];
+                result = *((data_18 << 2) + &g_a970e0);
 
                 if (result)
                 {
                     result = result(i_1);
-                    tmpD4 = g_afa7e0;
+                    temp_4 = g_afa7e0;
                 }
 
-                i_1 = *((tmpD4 << 2) + &g_afa6dc);
-                tmpD3 = tmpD4 - 1;
-                g_afa7e0 = tmpD3;
+                i_1 = *((temp_4 << 2) + &g_afa6dc);
+                temp_3 = temp_4 - 1;
+                g_afa7e0 = temp_3;
             } while (i_1);
         }
     }

@@ -3,11 +3,11 @@
 int32_t Sys_ResolveSymbol_25()
 
 {
-    int32_t* valA = g_a43e88;
+    int32_t* data_val = g_a43e88;
 
-    if (valA)
+    if (data_val)
     {
-        DynObj_RegisterSymbol_2(valA);
+        DynObj_RegisterSymbol_2(data_val);
         g_a43e88 = 0;
     }
 
@@ -24,6 +24,6 @@ int32_t Sys_ResolveSymbol_25()
     if (!result)
         return result;
 
-    int32_t __saved_esi_2 = result;
+    int32_t saved_esi_2 = result;
     return Warning_Show("%d script symbol references not deallocated.");
 }

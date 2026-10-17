@@ -12,12 +12,12 @@ void SoundSys_EvaluateTrigger_8()
 
     do
     {
-        void* valA1 = i_1[7];
+        void* data_1 = i_1[7];
         i = i_1[1];
 
-        if (valA1)
+        if (data_1)
         {
-            Display_SetDisplayMode_12(valA1);
+            Display_SetDisplayMode_12(data_1);
             Display_CloseDevice_11(i_1[7]);
         }
 

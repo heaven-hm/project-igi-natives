@@ -1,23 +1,23 @@
 // Original IGI.EXE function: SoundSys_AttachLipsync_9 (VA 0x004E7600; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_AttachLipsync_9.h"
-int32_t** SoundSys_AttachLipsync_9(void* a1, int32_t a2, int32_t a3)
+int32_t** SoundSys_AttachLipsync_9(void* context, int32_t param_2, int32_t param_3)
 
 {
     int32_t** result = Mem_Alloc(0x24, 4);
-    int32_t* valA1;
+    int32_t* data_1;
 
-    if (!a1)
-        valA1 = nullptr;
+    if (!context)
+        data_1 = nullptr;
     else
-        valA1 = Sys_DispatchOpcode_20(a2, a3, a1);
+        data_1 = Sys_DispatchOpcode_20(param_2, param_3, context);
 
-    *result = valA1;
+    *result = data_1;
     result[6] = 0;
     result[7] = 0;
     result[2] = 0;
     result[3] = 0;
     result[1] = 0;
-    result[4] = a2;
-    result[5] = a3;
+    result[4] = param_2;
+    result[5] = param_3;
     return result;
 }

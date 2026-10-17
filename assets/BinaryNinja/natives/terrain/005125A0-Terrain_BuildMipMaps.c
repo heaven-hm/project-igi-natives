@@ -4,6 +4,6 @@ int32_t Terrain_BuildMipMaps()
 
 {
     BoneDynCubeObj_Init();
-    int32_t valA = Render_DrawSplineMesh_4();
-    return QTask_RemoveEventCallback(Render_DrawRigidMesh_12(), valA, Terrain_RenderQuadtree_2);
+    int32_t data_val = Render_DrawSplineMesh_4();
+    return QTask_RemoveEventCallback(Render_DrawRigidMesh_12(), data_val, Terrain_RenderQuadtree_2);
 }

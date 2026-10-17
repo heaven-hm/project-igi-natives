@@ -1,96 +1,96 @@
 // Original IGI.EXE function: Flow_LoadParameters (VA 0x00402260; static CFG gate PASS, CFG score 1.000).
 #include "Flow_LoadParameters.h"
-void* Flow_LoadParameters(uint32_t a1)
+void* Flow_LoadParameters(uint32_t context)
 
 {
-    int32_t valA = Timer_Now();
+    int32_t data_val = Timer_Now();
     struct frames_ctx* frames_ctx_1;
 
     if (g_5c8e00)
     {
     label_4024d0:
-        int32_t* i = *(a1 + 8);
-        int32_t valA15;
+        int32_t* i = *(context + 8);
+        int32_t data_15;
 
         if (!*i || !i)
-            valA15 = g_afa7e0;
+            data_15 = g_afa7e0;
         else
         {
-            valA15 = g_afa7e0;
+            data_15 = g_afa7e0;
 
             do
             {
-                int32_t* srcS3 = *i;
-                void* objC22;
+                int32_t* source_3 = *i;
+                void* entity_22;
 
-                if (!srcS3)
-                    objC22 = nullptr;
+                if (!source_3)
+                    entity_22 = nullptr;
                 else
                 {
-                    int32_t objC19 = *srcS3;
-                    int32_t objC20 = -(objC19);
-                    objC22 = (objC20 - objC20) & srcS3;
+                    int32_t entity_19 = *source_3;
+                    int32_t entity_20 = -(entity_19);
+                    entity_22 = (entity_20 - entity_20) & source_3;
                 }
 
-                *((valA15 << 2) + &g_afa6e0) = objC22;
-                int32_t valA16 = valA15 + 1;
-                int32_t objC23 = 0;
-                g_afa7e0 = valA16;
-                objC23 = i[7];
-                int32_t objC24 = *((objC23 << 2) + &g_a970e0);
+                *((data_15 << 2) + &g_afa6e0) = entity_22;
+                int32_t data_16 = data_15 + 1;
+                int32_t entity_23 = 0;
+                g_afa7e0 = data_16;
+                entity_23 = i[7];
+                int32_t entity_24 = *((entity_23 << 2) + &g_a970e0);
 
-                if (objC24)
+                if (entity_24)
                 {
-                    objC24(i);
-                    valA16 = g_afa7e0;
+                    entity_24(i);
+                    data_16 = g_afa7e0;
                 }
 
-                i = *((valA16 << 2) + &g_afa6dc);
-                valA15 = valA16 - 1;
-                g_afa7e0 = valA15;
+                i = *((data_16 << 2) + &g_afa6dc);
+                data_15 = data_16 - 1;
+                g_afa7e0 = data_15;
             } while (i);
         }
 
         struct frames_ctx* frames_ctx_9 = g_frames_ctx;
-        void* objC25;
-        objC25 = frames_ctx_9->pad_45[3];
-        *(&objC25 + 1) = frames_ctx_9->pad_45[4];
-        *(&objC25 + 2) = frames_ctx_9->pad_45[5];
-        *(&objC25 + 3) = frames_ctx_9->pad_45[6];
-        int32_t* i_1 = *(objC25 + 8);
+        void* entity_25;
+        entity_25 = frames_ctx_9->pad_45[3];
+        *(&entity_25 + 1) = frames_ctx_9->pad_45[4];
+        *(&entity_25 + 2) = frames_ctx_9->pad_45[5];
+        *(&entity_25 + 3) = frames_ctx_9->pad_45[6];
+        int32_t* i_1 = *(entity_25 + 8);
 
         if (*i_1 && i_1)
         {
             do
             {
-                int32_t* srcS4 = *i_1;
-                void* tmpD14;
+                int32_t* source_4 = *i_1;
+                void* temp_14;
 
-                if (!srcS4)
-                    tmpD14 = nullptr;
+                if (!source_4)
+                    temp_14 = nullptr;
                 else
                 {
-                    int32_t tmpD11 = *srcS4;
-                    int32_t tmpD12 = -(tmpD11);
-                    tmpD14 = (tmpD12 - tmpD12) & srcS4;
+                    int32_t temp_11 = *source_4;
+                    int32_t temp_12 = -(temp_11);
+                    temp_14 = (temp_12 - temp_12) & source_4;
                 }
 
-                *((valA15 << 2) + &g_afa6e0) = tmpD14;
-                int32_t valA17 = valA15 + 1;
-                int32_t tmpD15 = 0;
-                g_afa7e0 = valA17;
-                tmpD15 = i_1[7];
-                int32_t tmpD16 = *((tmpD15 << 2) + &g_a970e0);
+                *((data_15 << 2) + &g_afa6e0) = temp_14;
+                int32_t data_17 = data_15 + 1;
+                int32_t temp_15 = 0;
+                g_afa7e0 = data_17;
+                temp_15 = i_1[7];
+                int32_t temp_16 = *((temp_15 << 2) + &g_a970e0);
 
-                if (tmpD16)
+                if (temp_16)
                 {
-                    tmpD16(i_1);
-                    valA17 = g_afa7e0;
+                    temp_16(i_1);
+                    data_17 = g_afa7e0;
                 }
 
-                i_1 = *((valA17 << 2) + &g_afa6dc);
-                valA15 = valA17 - 1;
-                g_afa7e0 = valA15;
+                i_1 = *((data_17 << 2) + &g_afa6dc);
+                data_15 = data_17 - 1;
+                g_afa7e0 = data_15;
             } while (i_1);
 
             frames_ctx_9 = g_frames_ctx;
@@ -100,39 +100,39 @@ void* Flow_LoadParameters(uint32_t a1)
 
         if (!Display_CheckCapabilities_2())
         {
-            int32_t* i_2 = *(a1 + 8);
+            int32_t* i_2 = *(context + 8);
 
             if (*i_2 && i_2)
             {
-                int32_t objC26 = g_afa7e0;
+                int32_t entity_26 = g_afa7e0;
 
                 do
                 {
-                    int32_t* tmpD17 = *i_2;
-                    void* valA22;
+                    int32_t* temp_17 = *i_2;
+                    void* data_22;
 
-                    if (!tmpD17)
-                        valA22 = nullptr;
+                    if (!temp_17)
+                        data_22 = nullptr;
                     else
                     {
-                        int32_t valA19 = *tmpD17;
-                        int32_t valA20 = -(valA19);
-                        valA22 = (valA20 - valA20) & tmpD17;
+                        int32_t data_19 = *temp_17;
+                        int32_t data_20 = -(data_19);
+                        data_22 = (data_20 - data_20) & temp_17;
                     }
 
-                    *((objC26 << 2) + &g_afa6e0) = valA22;
-                    g_afa7e0 = objC26 + 1;
-                    int32_t valA23 = StatusScreen_GetEvent();
-                    int32_t objC28 = 0;
-                    objC28 = i_2[7];
-                    int32_t valA27 = *(((valA23 * 0x180 + objC28) << 2) + &g_a96ae0);
+                    *((entity_26 << 2) + &g_afa6e0) = data_22;
+                    g_afa7e0 = entity_26 + 1;
+                    int32_t data_23 = StatusScreen_GetEvent();
+                    int32_t entity_28 = 0;
+                    entity_28 = i_2[7];
+                    int32_t data_27 = *(((data_23 * 0x180 + entity_28) << 2) + &g_a96ae0);
 
-                    if (valA27)
-                        valA27(i_2);
+                    if (data_27)
+                        data_27(i_2);
 
-                    objC26 = g_afa7e0 - 1;
-                    g_afa7e0 = objC26;
-                    i_2 = *((objC26 << 2) + &g_afa6e0);
+                    entity_26 = g_afa7e0 - 1;
+                    g_afa7e0 = entity_26;
+                    i_2 = *((entity_26 << 2) + &g_afa6e0);
                 } while (i_2);
             }
         }
@@ -154,7 +154,7 @@ void* Flow_LoadParameters(uint32_t a1)
         frames_ctx_1 = g_frames_ctx;
         uint32_t unk34 = frames_ctx_1->unk34;
 
-        if (valA
+        if (data_val
             > 1000.0 / frames_ctx_1->limit * unk34 + frames_ctx_1->unk50 + frames_ctx_1->tick_base
             && frames_ctx_1->pad_40 <= 0xa && (frames_ctx_1->dirty || unk34 >= 3))
         {
@@ -163,99 +163,99 @@ void* Flow_LoadParameters(uint32_t a1)
             g_a44394 = 0;
             SoundSys_PlaySoundSample_11();
             SoundSys_InitSoundSys_11(0, 0);
-            char v_1c_1;
+            char item_1c_1;
 
             if (unk34 >= 2)
-                v_1c_1 = 0;
+                item_1c_1 = 0;
             else
             {
                 Game_TimingBegin();
-                v_1c_1 = 1;
+                item_1c_1 = 1;
             }
 
-            SoundSys_PlaySoundSample_9(v_1c_1);
-            int32_t* i_3 = *(a1 + 8);
-            int32_t valA4;
+            SoundSys_PlaySoundSample_9(item_1c_1);
+            int32_t* i_3 = *(context + 8);
+            int32_t data_4;
 
             if (!*i_3 || !i_3)
-                valA4 = g_afa7e0;
+                data_4 = g_afa7e0;
             else
             {
-                valA4 = g_afa7e0;
+                data_4 = g_afa7e0;
 
                 do
                 {
-                    int32_t* srcS1 = *i_3;
-                    void* objC6;
+                    int32_t* source_1 = *i_3;
+                    void* entity_6;
 
-                    if (!srcS1)
-                        objC6 = nullptr;
+                    if (!source_1)
+                        entity_6 = nullptr;
                     else
                     {
-                        int32_t objC3 = *srcS1;
-                        int32_t objC4 = -(objC3);
-                        objC6 = (objC4 - objC4) & srcS1;
+                        int32_t entity_3 = *source_1;
+                        int32_t entity_4 = -(entity_3);
+                        entity_6 = (entity_4 - entity_4) & source_1;
                     }
 
-                    *((valA4 << 2) + &g_afa6e0) = objC6;
-                    int32_t valA5 = valA4 + 1;
-                    int32_t objC7 = 0;
-                    g_afa7e0 = valA5;
-                    objC7 = i_3[7];
-                    int32_t objC8 = *((objC7 << 2) + &g_a970e0);
+                    *((data_4 << 2) + &g_afa6e0) = entity_6;
+                    int32_t data_5 = data_4 + 1;
+                    int32_t entity_7 = 0;
+                    g_afa7e0 = data_5;
+                    entity_7 = i_3[7];
+                    int32_t entity_8 = *((entity_7 << 2) + &g_a970e0);
 
-                    if (objC8)
+                    if (entity_8)
                     {
-                        objC8(i_3);
-                        valA5 = g_afa7e0;
+                        entity_8(i_3);
+                        data_5 = g_afa7e0;
                     }
 
-                    i_3 = *((valA5 << 2) + &g_afa6dc);
-                    valA4 = valA5 - 1;
-                    g_afa7e0 = valA4;
+                    i_3 = *((data_5 << 2) + &g_afa6dc);
+                    data_4 = data_5 - 1;
+                    g_afa7e0 = data_4;
                 } while (i_3);
             }
 
             struct frames_ctx* frames_ctx_8 = g_frames_ctx;
-            void* objC9;
-            objC9 = frames_ctx_8->pad_45[3];
-            *(&objC9 + 1) = frames_ctx_8->pad_45[4];
-            *(&objC9 + 2) = frames_ctx_8->pad_45[5];
-            *(&objC9 + 3) = frames_ctx_8->pad_45[6];
-            int32_t* i_4 = *(objC9 + 8);
+            void* entity_9;
+            entity_9 = frames_ctx_8->pad_45[3];
+            *(&entity_9 + 1) = frames_ctx_8->pad_45[4];
+            *(&entity_9 + 2) = frames_ctx_8->pad_45[5];
+            *(&entity_9 + 3) = frames_ctx_8->pad_45[6];
+            int32_t* i_4 = *(entity_9 + 8);
 
             if (*i_4 && i_4)
             {
                 do
                 {
-                    int32_t* srcS2 = *i_4;
-                    void* tmpD4;
+                    int32_t* source_2 = *i_4;
+                    void* temp_4;
 
-                    if (!srcS2)
-                        tmpD4 = nullptr;
+                    if (!source_2)
+                        temp_4 = nullptr;
                     else
                     {
-                        int32_t tmpD1 = *srcS2;
-                        int32_t tmpD2 = -(tmpD1);
-                        tmpD4 = (tmpD2 - tmpD2) & srcS2;
+                        int32_t temp_1 = *source_2;
+                        int32_t temp_2 = -(temp_1);
+                        temp_4 = (temp_2 - temp_2) & source_2;
                     }
 
-                    *((valA4 << 2) + &g_afa6e0) = tmpD4;
-                    int32_t valA6 = valA4 + 1;
-                    int32_t tmpD5 = 0;
-                    g_afa7e0 = valA6;
-                    tmpD5 = i_4[7];
-                    int32_t tmpD6 = *((tmpD5 << 2) + &g_a970e0);
+                    *((data_4 << 2) + &g_afa6e0) = temp_4;
+                    int32_t data_6 = data_4 + 1;
+                    int32_t temp_5 = 0;
+                    g_afa7e0 = data_6;
+                    temp_5 = i_4[7];
+                    int32_t temp_6 = *((temp_5 << 2) + &g_a970e0);
 
-                    if (tmpD6)
+                    if (temp_6)
                     {
-                        tmpD6(i_4);
-                        valA6 = g_afa7e0;
+                        temp_6(i_4);
+                        data_6 = g_afa7e0;
                     }
 
-                    i_4 = *((valA6 << 2) + &g_afa6dc);
-                    valA4 = valA6 - 1;
-                    g_afa7e0 = valA4;
+                    i_4 = *((data_6 << 2) + &g_afa6dc);
+                    data_4 = data_6 - 1;
+                    g_afa7e0 = data_4;
                 } while (i_4);
             }
 
@@ -277,39 +277,39 @@ void* Flow_LoadParameters(uint32_t a1)
                 frames_ctx_1 = g_frames_ctx;
             }
 
-            int32_t* i_5 = *(a1 + 8);
+            int32_t* i_5 = *(context + 8);
 
             if (*i_5 && i_5)
             {
-                int32_t objC11 = g_afa7e0;
+                int32_t entity_11 = g_afa7e0;
 
                 do
                 {
-                    int32_t* tmpD9 = *i_5;
-                    void* valA11;
+                    int32_t* temp_9 = *i_5;
+                    void* data_11;
 
-                    if (!tmpD9)
-                        valA11 = nullptr;
+                    if (!temp_9)
+                        data_11 = nullptr;
                     else
                     {
-                        int32_t valA8 = *tmpD9;
-                        int32_t valA9 = -(valA8);
-                        valA11 = (valA9 - valA9) & tmpD9;
+                        int32_t data_8 = *temp_9;
+                        int32_t data_9 = -(data_8);
+                        data_11 = (data_9 - data_9) & temp_9;
                     }
 
-                    *((objC11 << 2) + &g_afa6e0) = valA11;
-                    g_afa7e0 = objC11 + 1;
-                    int32_t valA12 = StatusScreen_GetEvent();
-                    int32_t tmpD10 = 0;
-                    tmpD10 = i_5[7];
-                    int32_t valA13 = *(((valA12 * 0x180 + tmpD10) << 2) + &g_a96ae0);
+                    *((entity_11 << 2) + &g_afa6e0) = data_11;
+                    g_afa7e0 = entity_11 + 1;
+                    int32_t data_12 = StatusScreen_GetEvent();
+                    int32_t temp_10 = 0;
+                    temp_10 = i_5[7];
+                    int32_t data_13 = *(((data_12 * 0x180 + temp_10) << 2) + &g_a96ae0);
 
-                    if (valA13)
-                        valA13(i_5);
+                    if (data_13)
+                        data_13(i_5);
 
-                    objC11 = g_afa7e0 - 1;
-                    g_afa7e0 = objC11;
-                    i_5 = *((objC11 << 2) + &g_afa6e0);
+                    entity_11 = g_afa7e0 - 1;
+                    g_afa7e0 = entity_11;
+                    i_5 = *((entity_11 << 2) + &g_afa6e0);
                 } while (i_5);
 
                 frames_ctx_1 = g_frames_ctx;
@@ -332,26 +332,26 @@ void* Flow_LoadParameters(uint32_t a1)
         }
     }
 
-    int32_t objC30;
-    objC30 = frames_ctx_1->pad_00[0x2c];
-    *(&objC30 + 1) = frames_ctx_1->pad_00[0x2d];
-    *(&objC30 + 2) = frames_ctx_1->pad_00[0x2e];
-    *(&objC30 + 3) = frames_ctx_1->pad_00[0x2f];
+    int32_t entity_30;
+    entity_30 = frames_ctx_1->pad_00[0x2c];
+    *(&entity_30 + 1) = frames_ctx_1->pad_00[0x2d];
+    *(&entity_30 + 2) = frames_ctx_1->pad_00[0x2e];
+    *(&entity_30 + 3) = frames_ctx_1->pad_00[0x2f];
 
-    if (objC30)
+    if (entity_30)
     {
-        frames_ctx_1->pad_00[0x28] = objC30;
-        frames_ctx_1->pad_00[0x29] = *(&objC30 + 1);
-        frames_ctx_1->pad_00[0x2a] = *(&objC30 + 2);
-        frames_ctx_1->pad_00[0x2b] = *(&objC30 + 3);
+        frames_ctx_1->pad_00[0x28] = entity_30;
+        frames_ctx_1->pad_00[0x29] = *(&entity_30 + 1);
+        frames_ctx_1->pad_00[0x2a] = *(&entity_30 + 2);
+        frames_ctx_1->pad_00[0x2b] = *(&entity_30 + 3);
         struct frames_ctx* frames_ctx_10 = g_frames_ctx;
         frames_ctx_10->pad_00[0x2c] = 0;
         frames_ctx_10->pad_00[0x2d] = 0;
         frames_ctx_10->pad_00[0x2e] = 0;
         frames_ctx_10->pad_00[0x2f] = 0;
 
-        if (objC30 - 1 <= 7)
-            switch (objC30)
+        if (entity_30 - 1 <= 7)
+            switch (entity_30)
             {
                 case 1:
                 {
@@ -370,7 +370,7 @@ void* Flow_LoadParameters(uint32_t a1)
                 }
                 case 4:
                 {
-                    Level_SetMission_4(a1);
+                    Level_SetMission_4(context);
                     Frames_Set(0x1e);
                     break;
                 }
@@ -412,12 +412,12 @@ void* Flow_LoadParameters(uint32_t a1)
     }
 
     g_c28c5c = frames_ctx_1->unk34;
-    int32_t objC31;
-    objC31 = frames_ctx_1->pad_45[7];
-    *(&objC31 + 1) = frames_ctx_1->pad_45[8];
-    *(&objC31 + 2) = frames_ctx_1->pad_45[9];
-    *(&objC31 + 3) = frames_ctx_1->pad_45[0xa];
-    frames_ctx_1->tick_base += objC31;
+    int32_t entity_31;
+    entity_31 = frames_ctx_1->pad_45[7];
+    *(&entity_31 + 1) = frames_ctx_1->pad_45[8];
+    *(&entity_31 + 2) = frames_ctx_1->pad_45[9];
+    *(&entity_31 + 3) = frames_ctx_1->pad_45[0xa];
+    frames_ctx_1->tick_base += entity_31;
     void* result = DEBUG_KEYSENABLEINVALID(0x43);
 
     if (result)

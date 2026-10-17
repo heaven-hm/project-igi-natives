@@ -1,83 +1,83 @@
 // Original IGI.EXE function: SCamera_Parsed (VA 0x00442740; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Parsed.h"
-char* SCamera_Parsed(float a1, char* a2)
+char* SCamera_Parsed(float context, char* param_2)
 
 {
-    DynObj_CreateMagicObject_5(a1, DynObj_Missing(a1 + 0x10c));
-    long double fpu7 = *(a1 + 0x9c);
-    long double fpu6 = *(a1 + 0xa0);
+    DynObj_CreateMagicObject_5(context, DynObj_Missing(context + 0x10c));
+    long double fpu7 = *(context + 0x9c);
+    long double fpu6 = *(context + 0xa0);
     fpu6 - fpu7;
-    long double x87_r7_1;
+    long double fpu_val_7_1;
 
     if (!(*(&((fpu6 < fpu7 ? 1 : 0) << 8 | (FCMP_UO(fpu6, fpu7) ? 1 : 0) << 0xa
             | (fpu6 == fpu7 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_1 = *(a1 + 0xa0);
+        fpu_val_7_1 = *(context + 0xa0);
     else
-        x87_r7_1 = *(a1 + 0x9c);
+        fpu_val_7_1 = *(context + 0x9c);
 
-    long double x87_r6_1 = *(a1 + 0x98);
-    x87_r6_1 - x87_r7_1;
-    long double x87_r7_3;
+    long double fpu_val_6_1 = *(context + 0x98);
+    fpu_val_6_1 - fpu_val_7_1;
+    long double fpu_val_7_3;
 
-    if (*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-        | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_4 = *(a1 + 0x9c);
-        long double x87_r6_2 = *(a1 + 0xa0);
-        x87_r6_2 - x87_r7_4;
+        long double fpu_val_7_4 = *(context + 0x9c);
+        long double fpu_val_6_2 = *(context + 0xa0);
+        fpu_val_6_2 - fpu_val_7_4;
 
-        if (!(*(&((x87_r6_2 < x87_r7_4 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_4) ? 1 : 0) << 0xa
-                | (x87_r6_2 == x87_r7_4 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_3 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_2 < fpu_val_7_4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_4) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == fpu_val_7_4 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_3 = *(context + 0xa0);
         else
-            x87_r7_3 = *(a1 + 0x9c);
+            fpu_val_7_3 = *(context + 0x9c);
     }
     else
-        x87_r7_3 = *(a1 + 0x98);
+        fpu_val_7_3 = *(context + 0x98);
 
-    long double x87_r7_6 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_3;
-    WorldObject_CommitTransform(*(a1 + 0x68), a1, a1 + 0xf0, x87_r7_6);
-    double* valA4 = DynObj_UpdateDynTree_4(a1);
-    Render_BindTexture_14(*(a1 + 0x68), a1, valA4);
-    Sys_DispatchOpcode_12(a1 + 0x70, *(a1 + 0x108));
-    Script_Isexists(a1 + 0x174, a1);
-    char* result = a2;
+    long double fpu_val_7_6 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_3;
+    WorldObject_CommitTransform(*(context + 0x68), context, context + 0xf0, fpu_val_7_6);
+    double* data_4 = DynObj_UpdateDynTree_4(context);
+    Render_BindTexture_14(*(context + 0x68), context, data_4);
+    Sys_DispatchOpcode_12(context + 0x70, *(context + 0x108));
+    Script_Isexists(context + 0x174, context);
+    char* result = param_2;
 
     if (!result || !*result)
     {
-        int32_t* i = *(a1 + 8);
+        int32_t* i = *(context + 8);
 
         if (*i && i)
         {
-            int32_t objC2 = g_afa7e0;
+            int32_t entity_2 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD2 = *i;
-                void* valA10;
+                int32_t* temp_2 = *i;
+                void* data_10;
 
-                if (!tmpD2)
-                    valA10 = nullptr;
+                if (!temp_2)
+                    data_10 = nullptr;
                 else
                 {
-                    int32_t valA7 = *tmpD2;
-                    int32_t valA8 = -(valA7);
-                    valA10 = (valA8 - valA8) & tmpD2;
+                    int32_t data_7 = *temp_2;
+                    int32_t data_8 = -(data_7);
+                    data_10 = (data_8 - data_8) & temp_2;
                 }
 
-                *((objC2 << 2) + &g_afa6e0) = valA10;
-                g_afa7e0 = objC2 + 1;
-                uint32_t valA12 = Script_ParseEnumReal32_8();
-                int32_t tmpD3 = 0;
-                tmpD3 = i[7];
-                result = *(((valA12 * 0x180 + tmpD3) << 2) + &g_a96ae0);
+                *((entity_2 << 2) + &g_afa6e0) = data_10;
+                g_afa7e0 = entity_2 + 1;
+                uint32_t data_12 = Script_ParseEnumReal32_8();
+                int32_t temp_3 = 0;
+                temp_3 = i[7];
+                result = *(((data_12 * 0x180 + temp_3) << 2) + &g_a96ae0);
 
                 if (result)
                     result = result(i, 0);
 
-                objC2 = g_afa7e0 - 1;
-                g_afa7e0 = objC2;
-                i = *((objC2 << 2) + &g_afa6e0);
+                entity_2 = g_afa7e0 - 1;
+                g_afa7e0 = entity_2;
+                i = *((entity_2 << 2) + &g_afa6e0);
             } while (i);
         }
     }

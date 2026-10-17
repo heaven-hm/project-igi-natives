@@ -1,63 +1,63 @@
 // Original IGI.EXE function: IntroScreen_LoadParameters (VA 0x00415380; static CFG gate PASS, CFG score 1.000).
 #include "IntroScreen_LoadParameters.h"
-int32_t IntroScreen_LoadParameters(int32_t* a1)
+int32_t IntroScreen_LoadParameters(int32_t* context)
 
 {
-    int32_t objC = 0;
-    float valA = a1[0xb];
-    objC = !valA;
-    int32_t dstD = objC;
+    int32_t entity_val = 0;
+    float data_val = context[0xb];
+    entity_val = !data_val;
+    int32_t dest_val = entity_val;
 
-    if (valA && !Display_SwapBuffers_2(a1, dstD, valA))
-        dstD = 1;
+    if (data_val && !Display_SwapBuffers_2(context, dest_val, data_val))
+        dest_val = 1;
 
     if (g_c28c63 & 0x80)
     {
-        void* valA2 = a1[0xb];
+        void* data_2 = context[0xb];
 
-        if (valA2)
+        if (data_2)
         {
-            Display_CreateSurface(valA2);
-            a1[0xb] = 0;
+            Display_CreateSurface(data_2);
+            context[0xb] = 0;
         }
     }
-    else if (dstD)
+    else if (dest_val)
     {
-        void* valA3 = a1[0xb];
+        void* data_3 = context[0xb];
 
-        if (valA3)
+        if (data_3)
         {
-            Display_CreateSurface(valA3);
-            a1[0xb] = 0;
+            Display_CreateSurface(data_3);
+            context[0xb] = 0;
         }
 
-        int32_t valA4 = a1[9];
+        int32_t data_4 = context[9];
 
-        if (valA4 < a1[8])
+        if (data_4 < context[8])
         {
-            int32_t v_c_4 = 0;
-            int32_t (* v_10_1)(int32_t a1, void* a2) = IntroScreen_Update;
-            void* objC2 = *(a1[0xa] + ((valA4 + 1) << 2) - 4);
-            a1[9] = valA4 + 1;
-            a1[0xb] = Display_OpenDevice_2(objC2, IntroScreen_Update, 0);
+            int32_t item_c_4 = 0;
+            int32_t (* item_10_1)(int32_t context, void* param_2) = IntroScreen_Update;
+            void* entity_2 = *(context[0xa] + ((data_4 + 1) << 2) - 4);
+            context[9] = data_4 + 1;
+            context[0xb] = Display_OpenDevice_2(entity_2, IntroScreen_Update, 0);
         }
-        else if (a1[0xd])
+        else if (context[0xd])
         {
-            void** valA7 = a1[0xa];
-            a1[9] = 0;
-            int32_t v_c_5 = 0;
-            int32_t (* v_10_2)(int32_t a1, void* a2) = IntroScreen_Update;
-            void* valA8 = *valA7;
-            a1[9] = 1;
-            a1[0xb] = Display_OpenDevice_2(valA8, IntroScreen_Update, 0);
+            void** data_7 = context[0xa];
+            context[9] = 0;
+            int32_t item_c_5 = 0;
+            int32_t (* item_10_2)(int32_t context, void* param_2) = IntroScreen_Update;
+            void* data_8 = *data_7;
+            context[9] = 1;
+            context[0xb] = Display_OpenDevice_2(data_8, IntroScreen_Update, 0);
         }
     }
 
-    int32_t result = a1[0xb];
+    int32_t result = context[0xb];
 
     if (result)
         return result;
 
     Flow_SetState(3);
-    return QTask_FindType(a1);
+    return QTask_FindType(context);
 }

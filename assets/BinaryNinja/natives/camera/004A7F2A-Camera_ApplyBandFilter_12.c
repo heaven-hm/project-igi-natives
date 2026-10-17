@@ -1,41 +1,41 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_12 (VA 0x004A7F2A; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_12.h"
-BOOL __convention("regparm") Camera_ApplyBandFilter_12(int32_t a1, int32_t a2, int32_t a3, int32_t a4 @ 0x8)
+BOOL Camera_ApplyBandFilter_12(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4 )
 
 {
-    int32_t v_8 = a3;
+    int32_t item_8 = param_3;
     int32_t arg_4;
-    int32_t valA = arg_4;
-    uint32_t valA1;
+    int32_t data_val = arg_4;
+    uint32_t data_1;
 
-    if (valA + 1 > 0x100)
+    if (data_val + 1 > 0x100)
     {
-        char objC3 = valA >> 8;
-        int32_t __saved_esi_1;
+        char entity_3 = data_val >> 8;
+        int32_t saved_esi_1;
 
-        if (!(*(&(**&g_544070)[objC3] + 1) & 0x80))
+        if (!(*(&(**&g_544070)[entity_3] + 1) & 0x80))
         {
-            *(&v_8 + 1) = 0;
-            v_8 = valA;
-            __saved_esi_1 = 1;
+            *(&item_8 + 1) = 0;
+            item_8 = data_val;
+            saved_esi_1 = 1;
         }
         else
         {
-            *(&v_8 + 2) = 0;
-            v_8 = objC3;
-            *(&v_8 + 1) = valA;
-            __saved_esi_1 = 2;
+            *(&item_8 + 2) = 0;
+            item_8 = entity_3;
+            *(&item_8 + 1) = data_val;
+            saved_esi_1 = 2;
         }
 
-        BOOL result = Camera_SetFieldOfView_27(1, &v_8, __saved_esi_1, (&arg_4 + 2), 0, 0, 1);
+        BOOL result = Camera_SetFieldOfView_27(1, &item_8, saved_esi_1, (&arg_4 + 2), 0, 0, 1);
 
         if (!result)
             return result;
 
-        valA1 = *(&arg_4 + 2);
+        data_1 = *(&arg_4 + 2);
     }
     else
-        valA1 = (**&g_544070)[valA];
+        data_1 = (**&g_544070)[data_val];
 
-    return valA1 & a4;
+    return data_1 & param_4;
 }

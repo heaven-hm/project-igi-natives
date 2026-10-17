@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Qtask_GetCallbackData (VA 0x004D9800; static CFG gate PASS, CFG score 1.000).
 #include "Qtask_GetCallbackData.h"
-int32_t Qtask_GetCallbackData(void* a1)
+int32_t Qtask_GetCallbackData(void* context)
 
 // Sig: unsigned int Qtask_GetCallbackData(void* task)
 // Note: Returns the raw 32-bit callback payload from task+0x48.
@@ -8,5 +8,5 @@ int32_t Qtask_GetCallbackData(void* a1)
 // callback tables. Ghidra/r2: exact 0x004D9800-0x004D9807 boundary, 1 basic
 // block, 0 CFG edges, cdecl 1-argument load.
 {
-    return *(a1 + 0x48);
+    return *(context + 0x48);
 }

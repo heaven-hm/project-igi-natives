@@ -9,8 +9,8 @@ int32_t* Display_RestoreDevice_9()
         return result;
 
     Sys_ReadFileBlock_4(result);
-    int32_t* valA = g_5ca190;
-    (*(*valA + 0x48))(valA);
-    int32_t* valA1 = g_5ca190;
-    return (*(*valA1 + 8))(valA1);
+    int32_t* data_val = g_5ca190;
+    (*(*data_val + 0x48))(data_val);
+    int32_t* data_1 = g_5ca190;
+    return (*(*data_1 + 8))(data_1);
 }

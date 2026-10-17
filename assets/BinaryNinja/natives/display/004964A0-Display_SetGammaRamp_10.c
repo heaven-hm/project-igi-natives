@@ -1,71 +1,71 @@
 // Original IGI.EXE function: Display_SetGammaRamp_10 (VA 0x004964A0; static CFG gate FAIL, CFG score 0.667).
 #include "Display_SetGammaRamp_10.h"
-int32_t Display_SetGammaRamp_10(void* a1, int32_t* a2, char a3)
+int32_t Display_SetGammaRamp_10(void* context, int32_t* param_2, char param_3)
 
 {
-    int32_t* flagP = a2;
-    void* valA1 = a1;
-    int32_t* srcS = flagP[9];
-    uint32_t ctxB3 = (flagP[6] * *(flagP + 0x16) * flagP[8]) >> 3;
-    a2 = srcS;
+    int32_t* flagP = param_2;
+    void* data_1 = context;
+    int32_t* source_val = flagP[9];
+    uint32_t context_3 = (flagP[6] * *(flagP + 0x16) * flagP[8]) >> 3;
+    param_2 = source_val;
 
-    if (valA1)
+    if (data_1)
     {
-        int32_t* objC1 = *(valA1 + 0x10);
-        a2 = objC1;
-        srcS = objC1;
+        int32_t* entity_1 = *(data_1 + 0x10);
+        param_2 = entity_1;
+        source_val = entity_1;
     }
 
-    if (a3)
+    if (param_3)
     {
-        int32_t valA3 = (*(*srcS + 0x50))(srcS);
-        valA3 = !valA3;
-        return valA3;
+        int32_t data_3 = (*(*source_val + 0x50))(source_val);
+        data_3 = !data_3;
+        return data_3;
     }
 
-    int32_t v_8;
-    int32_t v_4;
-    int32_t valA5 = (*(*srcS + 0x2c))(srcS, 0, ctxB3, &v_4, &a3, &v_8, &a1, 0);
+    int32_t item_8;
+    int32_t item_4;
+    int32_t data_5 = (*(*source_val + 0x2c))(source_val, 0, context_3, &item_4, &param_3, &item_8, &context, 0);
 
-    if (!valA5)
+    if (!data_5)
     {
-        int32_t valA6 = a3;
+        int32_t data_6 = param_3;
 
-        if (ctxB3 <= valA6)
+        if (context_3 <= data_6)
         {
-            int32_t srcS2;
-            int32_t dstD2;
-            dstD2 = memcpy(v_4, flagP[0xb], valA6 & 0xfffffffc);
-            memcpy(dstD2, srcS2, valA6 & 3);
-            valA6 = a3;
-            srcS = a2;
-            ctxB3 -= valA6;
+            int32_t source_2;
+            int32_t dest_2;
+            dest_2 = memcpy(item_4, flagP[0xb], data_6 & 0xfffffffc);
+            memcpy(dest_2, source_2, data_6 & 3);
+            data_6 = param_3;
+            source_val = param_2;
+            context_3 -= data_6;
         }
 
-        if (ctxB3 > 0)
+        if (context_3 > 0)
         {
-            void* objC6 = a1;
+            void* entity_6 = context;
 
-            if (ctxB3 <= objC6)
+            if (context_3 <= entity_6)
             {
-                int32_t srcS5;
-                int32_t dstD4;
-                dstD4 = memcpy(v_8, flagP[0xb] + valA6, objC6 & 0xfffffffc);
-                memcpy(dstD4, srcS5, objC6 & 3);
-                valA6 = a3;
-                srcS = a2;
+                int32_t source_5;
+                int32_t dest_4;
+                dest_4 = memcpy(item_8, flagP[0xb] + data_6, entity_6 & 0xfffffffc);
+                memcpy(dest_4, source_5, entity_6 & 3);
+                data_6 = param_3;
+                source_val = param_2;
             }
         }
 
-        valA5 = (*(*srcS + 0x4c))(srcS, v_4, valA6, v_8, a1);
+        data_5 = (*(*source_val + 0x4c))(source_val, item_4, data_6, item_8, context);
 
-        if (!valA5)
+        if (!data_5)
         {
-            valA5 = 1;
-            return valA5;
+            data_5 = 1;
+            return data_5;
         }
     }
 
-    valA5 = 0;
-    return valA5;
+    data_5 = 0;
+    return data_5;
 }

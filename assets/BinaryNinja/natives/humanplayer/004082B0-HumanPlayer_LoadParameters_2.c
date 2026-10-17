@@ -3,25 +3,25 @@
 uint32_t HumanPlayer_LoadParameters_2()
 
 {
-    void* valA;
+    void* data_val;
 
     for (int32_t* i = &g_569470; i < 0x56e170; i = &i[0x9a])
     {
         if (i[1])
         {
-            void* valA1 = i[-2];
+            void* data_1 = i[-2];
 
-            if (valA1)
+            if (data_1)
             {
-                Sys_ExecuteBytecode_2(valA1);
+                Sys_ExecuteBytecode_2(data_1);
                 i[-2] = 0;
             }
 
-            valA = *i;
+            data_val = *i;
 
-            if (valA)
+            if (data_val)
             {
-                valA = Sys_ExecuteBytecode_2(valA);
+                data_val = Sys_ExecuteBytecode_2(data_val);
                 *i = 0;
             }
 
@@ -29,8 +29,8 @@ uint32_t HumanPlayer_LoadParameters_2()
         }
     }
 
-    valA = g_538518;
-    QTask_InitContext(valA);
+    data_val = g_538518;
+    QTask_InitContext(data_val);
     QTask_InitContext(g_538519);
     return QTask_InitContext(g_53851a);
 }

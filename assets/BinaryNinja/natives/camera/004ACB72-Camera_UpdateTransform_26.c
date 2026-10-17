@@ -1,44 +1,44 @@
 // Original IGI.EXE function: Camera_UpdateTransform_26 (VA 0x004ACB72; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_26.h"
-char* Camera_UpdateTransform_26(char* a1, char* a2, int32_t a3)
+char* Camera_UpdateTransform_26(char* context, char* param_2, int32_t param_3)
 
 {
-    int32_t tmpD = a3;
-    char* ctxB = a2;
-    char* srcS = a1;
-    char* objC = *(tmpD + 0xc);
-    *srcS = 0x30;
-    char* result = &srcS[1];
+    int32_t temp_val = param_3;
+    char* context_val = param_2;
+    char* source_val = context;
+    char* entity_val = *(temp_val + 0xc);
+    *source_val = 0x30;
+    char* result = &source_val[1];
 
-    if (ctxB > 0)
+    if (context_val > 0)
     {
-        a1 = ctxB;
-        ctxB = nullptr;
+        context = context_val;
+        context_val = nullptr;
         char* i;
 
         do
         {
-            char tmpD1 = *objC;
+            char temp_1 = *entity_val;
 
-            if (!tmpD1)
-                tmpD = 0x30;
+            if (!temp_1)
+                temp_val = 0x30;
             else
             {
-                tmpD = tmpD1;
-                objC = &objC[1];
+                temp_val = temp_1;
+                entity_val = &entity_val[1];
             }
 
-            *result = tmpD;
+            *result = temp_val;
             result = &result[1];
-            i = a1;
-            a1 -= 1;
+            i = context;
+            context -= 1;
         } while (i != 1);
-        tmpD = a3;
+        temp_val = param_3;
     }
 
     *result = 0;
 
-    if (ctxB >= 0 && *objC >= 0x35)
+    if (context_val >= 0 && *entity_val >= 0x35)
     {
         while (true)
         {
@@ -53,9 +53,9 @@ char* Camera_UpdateTransform_26(char* a1, char* a2, int32_t a3)
         *result += 1;
     }
 
-    if (*srcS != 0x31)
-        return Camera_ApplyHandiCam_26(srcS, &srcS[1], Camera_UpdateViewCone_20(&srcS[1]) + 1);
+    if (*source_val != 0x31)
+        return Camera_ApplyHandiCam_26(source_val, &source_val[1], Camera_UpdateViewCone_20(&source_val[1]) + 1);
 
-    *(tmpD + 4) += 1;
+    *(temp_val + 4) += 1;
     return result;
 }

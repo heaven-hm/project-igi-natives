@@ -1,49 +1,49 @@
 // Original IGI.EXE function: QTask_FindType (VA 0x004015F0; static CFG gate PASS, CFG score 1.000).
 #include "QTask_FindType.h"
-int32_t QTask_FindType(int32_t* a1)
+int32_t QTask_FindType(int32_t* context)
 
 {
     g_567c58 -= 1;
-    int32_t tmpD1 = g_afa7e0;
-    int32_t valA = 0;
+    int32_t temp_1 = g_afa7e0;
+    int32_t data_val = 0;
 
-    if (tmpD1 > 0)
+    if (temp_1 > 0)
     {
-        int32_t* objC1 = &g_afa6e0;
+        int32_t* entity_1 = &g_afa6e0;
 
         do
         {
-            if (*objC1 == a1)
+            if (*entity_1 == context)
             {
-                int32_t* tmpD2 = *a1;
-                void* objC5;
+                int32_t* temp_2 = *context;
+                void* entity_5;
 
-                if (!tmpD2)
-                    objC5 = nullptr;
+                if (!temp_2)
+                    entity_5 = nullptr;
                 else
                 {
-                    int32_t objC2 = *tmpD2;
-                    int32_t objC3 = -(objC2);
-                    objC5 = (objC3 - objC3) & tmpD2;
+                    int32_t entity_2 = *temp_2;
+                    int32_t entity_3 = -(entity_2);
+                    entity_5 = (entity_3 - entity_3) & temp_2;
                 }
 
-                *((valA << 2) + &g_afa6e0) = objC5;
+                *((data_val << 2) + &g_afa6e0) = entity_5;
                 break;
             }
 
-            valA += 1;
-            objC1 = &objC1[1];
-        } while (valA < tmpD1);
+            data_val += 1;
+            entity_1 = &entity_1[1];
+        } while (data_val < temp_1);
     }
 
-    int32_t valA1 = 0;
-    valA1 = a1[7];
-    int32_t valA2 = *((valA1 << 2) + &g_a97ce0);
+    int32_t data_1 = 0;
+    data_1 = context[7];
+    int32_t data_2 = *((data_1 << 2) + &g_a97ce0);
 
-    if (valA2)
-        valA2(a1);
+    if (data_2)
+        data_2(context);
 
-    int32_t* i_1 = a1[4];
+    int32_t* i_1 = context[4];
 
     for (int32_t* i = i_1[1]; i; i = i[1])
     {
@@ -51,61 +51,61 @@ int32_t QTask_FindType(int32_t* a1)
         i_1 = i;
     }
 
-    int32_t objC6 = 0;
-    objC6 = a1[7];
-    int32_t valA3 = *((objC6 << 2) + &g_a976e0);
+    int32_t entity_6 = 0;
+    entity_6 = context[7];
+    int32_t data_3 = *((entity_6 << 2) + &g_a976e0);
 
-    if (valA3)
-        valA3(a1);
+    if (data_3)
+        data_3(context);
 
-    if (a1[6])
+    if (context[6])
     {
-        int32_t valA5 = g_567c40;
-        int32_t objC7 = 0;
+        int32_t data_5 = g_567c40;
+        int32_t entity_7 = 0;
 
-        if (valA5 > 0)
+        if (data_5 > 0)
         {
             do
             {
-                int32_t ctxB1 = g_567c38;
-                int32_t* valA8 = *(g_567c3c + (objC7 << 2)) * g_567c48;
+                int32_t context_1 = g_567c38;
+                int32_t* data_8 = *(g_567c3c + (entity_7 << 2)) * g_567c48;
 
-                if (*(valA8 + ctxB1) == a1)
-                    *(valA8 + ctxB1) = 0;
+                if (*(data_8 + context_1) == context)
+                    *(data_8 + context_1) = 0;
 
-                objC7 += 1;
-            } while (objC7 < valA5);
+                entity_7 += 1;
+            } while (entity_7 < data_5);
         }
     }
 
-    QTask_AllocateEvent(a1);
+    QTask_AllocateEvent(context);
 
-    if (!*(a1 + 0x1e))
-        return Sys_ExecuteBytecode_2(a1);
+    if (!*(context + 0x1e))
+        return Sys_ExecuteBytecode_2(context);
 
-    int32_t valA12 = 0;
-    valA12 = a1[7];
-    int32_t valA14 = valA12 * 0x30;
-    int32_t dstD1 = *(*(valA14 + 0xaf5f00) + a1);
-    *(valA14 + 0xaf5ef4) -= 1;
-    int32_t valA15 = 0;
-    valA15 = a1[7];
-    int32_t objC10 = valA15 * 0x30;
-    int32_t valA16 = *(objC10 + 0xaf5ef4);
+    int32_t data_12 = 0;
+    data_12 = context[7];
+    int32_t data_14 = data_12 * 0x30;
+    int32_t dest_1 = *(*(data_14 + 0xaf5f00) + context);
+    *(data_14 + 0xaf5ef4) -= 1;
+    int32_t data_15 = 0;
+    data_15 = context[7];
+    int32_t entity_10 = data_15 * 0x30;
+    int32_t data_16 = *(entity_10 + 0xaf5ef4);
 
-    if (dstD1 == valA16)
-        return valA16;
+    if (dest_1 == data_16)
+        return data_16;
 
-    int32_t tmpD4 = *(objC10 + 0xaf5ef0);
-    int32_t flagP3 = *(tmpD4 + (dstD1 << 2));
-    int32_t valA19 = *(tmpD4 + (valA16 << 2)) * *(objC10 + 0xaf5efc) + *(objC10 + 0xaf5eec);
-    int32_t ctxB3 = *(*(objC10 + 0xaf5f00) + valA19);
-    *(tmpD4 + (dstD1 << 2)) = *(tmpD4 + (ctxB3 << 2));
-    int32_t objC13 = 0;
-    objC13 = a1[7];
-    *(*(objC13 * 0x30 + 0xaf5ef0) + (ctxB3 << 2)) = flagP3;
-    int32_t objC15 = 0;
-    objC15 = a1[7];
-    *(*(objC15 * 0x30 + 0xaf5f00) + valA19) = dstD1;
-    return valA19;
+    int32_t temp_4 = *(entity_10 + 0xaf5ef0);
+    int32_t flagP3 = *(temp_4 + (dest_1 << 2));
+    int32_t data_19 = *(temp_4 + (data_16 << 2)) * *(entity_10 + 0xaf5efc) + *(entity_10 + 0xaf5eec);
+    int32_t context_3 = *(*(entity_10 + 0xaf5f00) + data_19);
+    *(temp_4 + (dest_1 << 2)) = *(temp_4 + (context_3 << 2));
+    int32_t entity_13 = 0;
+    entity_13 = context[7];
+    *(*(entity_13 * 0x30 + 0xaf5ef0) + (context_3 << 2)) = flagP3;
+    int32_t entity_15 = 0;
+    entity_15 = context[7];
+    *(*(entity_15 * 0x30 + 0xaf5f00) + data_19) = dest_1;
+    return data_19;
 }

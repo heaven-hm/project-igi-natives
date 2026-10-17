@@ -1,27 +1,27 @@
 // Original IGI.EXE function: AI_CheckVisibility_3 (VA 0x00451470; static CFG gate PASS, CFG score 0.917).
 #include "AI_CheckVisibility_3.h"
-int32_t AI_CheckVisibility_3(void* a1)
+int32_t AI_CheckVisibility_3(void* context)
 
 {
-    long double fpu7 = *(a1 + 0x34);
-    long double fpu6 = *(a1 + 0x40);
-    long double fpu5 = *(a1 + 0x4c);
-    double v_18 = *(a1 + 0x70) * fpu5 + *(a1 + 0x64) * fpu6 + *(a1 + 0x58) * fpu7;
-    double v_10 = *(a1 + 0x74) * fpu5 + *(a1 + 0x68) * fpu6 + *(a1 + 0x5c) * fpu7;
-    double* v_24 = &v_18;
-    double v_8 = *(a1 + 0x78) * fpu5 + *(a1 + 0x6c) * fpu6 + *(a1 + 0x60) * fpu7;
-    memcpy(&v_18, &v_18, 0x18);
-    v_18 = 0;
-    *(&v_18 + 4) = 0;
+    long double fpu7 = *(context + 0x34);
+    long double fpu6 = *(context + 0x40);
+    long double fpu5 = *(context + 0x4c);
+    double item_18 = *(context + 0x70) * fpu5 + *(context + 0x64) * fpu6 + *(context + 0x58) * fpu7;
+    double item_10 = *(context + 0x74) * fpu5 + *(context + 0x68) * fpu6 + *(context + 0x5c) * fpu7;
+    double* item_24 = &item_18;
+    double item_8 = *(context + 0x78) * fpu5 + *(context + 0x6c) * fpu6 + *(context + 0x60) * fpu7;
+    memcpy(&item_18, &item_18, 0x18);
+    item_18 = 0;
+    *(&item_18 + 4) = 0;
 
-    if (!Sys_PopStack_11(v_24))
-        Sys_FreeMemory_11(&v_18);
+    if (!Sys_PopStack_11(item_24))
+        Sys_FreeMemory_11(&item_18);
 
-    int32_t __saved_esi_2 = *(&v_10 + 4);
-    Sys_ResolveSymbol_9(v_10);
-    long double x87_r7_2 = v_8;
+    int32_t saved_esi_2 = *(&item_10 + 4);
+    Sys_ResolveSymbol_9(item_10);
+    long double fpu_val_7_2 = item_8;
     long double f0 = 0.0;
-    x87_r7_2 - f0;
-    return (x87_r7_2 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f0) ? 1 : 0) << 0xa
-        | (x87_r7_2 == f0 ? 1 : 0) << 0xe;
+    fpu_val_7_2 - f0;
+    return (fpu_val_7_2 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_2 == f0 ? 1 : 0) << 0xe;
 }

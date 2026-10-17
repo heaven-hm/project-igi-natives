@@ -1,50 +1,50 @@
 // Original IGI.EXE function: Camera_ApplyWideScreen_10 (VA 0x004A71D0; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_10.h"
-uint32_t Camera_ApplyWideScreen_10(char* a1)
+uint32_t Camera_ApplyWideScreen_10(char* context)
 
 {
-    char* srcS = a1;
+    char* source_val = context;
     uint32_t i;
-    int32_t objC;
-    int32_t tmpD;
-    i = Camera_SetFieldOfView_19(objC);
-    int32_t objC1 = *srcS;
+    int32_t entity_val;
+    int32_t temp_val;
+    i = Camera_SetFieldOfView_19(entity_val);
+    int32_t entity_1 = *source_val;
 
     if (i != 0x65)
     {
         do
         {
-            srcS = &srcS[1];
+            source_val = &source_val[1];
 
             if (g_54427c <= 1)
             {
-                int32_t valA2 = *srcS;
-                objC1 = g_544070;
-                valA2 = *(objC1 + (valA2 << 1));
-                i = valA2 & 4;
+                int32_t data_2 = *source_val;
+                entity_1 = g_544070;
+                data_2 = *(entity_1 + (data_2 << 1));
+                i = data_2 & 4;
             }
             else
             {
-                int32_t valA1 = *srcS;
-                int32_t v_c_1 = valA1;
-                i = Camera_ApplyBandFilter_12(valA1, tmpD, objC1, 4);
-                objC1 = 4;
+                int32_t data_1 = *source_val;
+                int32_t item_c_1 = data_1;
+                i = Camera_ApplyBandFilter_12(data_1, temp_val, entity_1, 4);
+                entity_1 = 4;
             }
         } while (i);
     }
 
-    i = *srcS;
-    *srcS = g_544280;
-    char* srcS1 = &srcS[1];
+    i = *source_val;
+    *source_val = g_544280;
+    char* source_1 = &source_val[1];
     char i_1;
 
     do
     {
-        i_1 = *srcS1;
-        *srcS1 = i;
+        i_1 = *source_1;
+        *source_1 = i;
         i = i_1;
-        i_1 = *srcS1;
-        srcS1 = &srcS1[1];
+        i_1 = *source_1;
+        source_1 = &source_1[1];
     } while (i_1);
     return i;
 }

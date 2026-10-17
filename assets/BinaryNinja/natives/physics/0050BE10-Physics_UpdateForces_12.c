@@ -1,21 +1,21 @@
 // Original IGI.EXE function: Physics_UpdateForces_12 (VA 0x0050BE10; static CFG gate FAIL, CFG score 0.778).
 #include "Physics_UpdateForces_12.h"
-void* Physics_UpdateForces_12(int32_t* a1)
+void* Physics_UpdateForces_12(int32_t* context)
 
 {
-    void* flagP = *a1;
-    void* result = Mem_Alloc(a1[3] * a1[7], 4);
+    void* flagP = *context;
+    void* result = Mem_Alloc(context[3] * context[7], 4);
     *(flagP + 0xc) = result;
-    int32_t objC1 = a1[3] * a1[7];
-    int32_t srcS1;
-    int32_t dstD1;
-    dstD1 = memcpy(result, a1[0xb], objC1 & 0xfffffffc);
-    memcpy(dstD1, srcS1, objC1 & 3);
-    result = a1[6];
+    int32_t entity_1 = context[3] * context[7];
+    int32_t source_1;
+    int32_t dest_1;
+    dest_1 = memcpy(result, context[0xb], entity_1 & 0xfffffffc);
+    memcpy(dest_1, source_1, entity_1 & 3);
+    result = context[6];
     *(flagP + 4) = result;
-    *(flagP + 6) = a1[7];
-    *(flagP + 8) = a1[3];
-    result = a1[8];
+    *(flagP + 6) = context[7];
+    *(flagP + 8) = context[3];
+    result = context[8];
     *(flagP + 0xa) = result;
     return result;
 }

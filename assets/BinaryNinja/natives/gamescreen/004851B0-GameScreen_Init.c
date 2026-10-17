@@ -3,12 +3,12 @@
 int32_t GameScreen_Init()
 
 {
-    int32_t v_4 = 0;
-    int16_t valA1 = TaskType_Register("GameScreen", 0x28, QTask_OpenEvent_2(), 0);
-    g_5c8a28 = valA1;
-    QTask_RemoveEventCallback(valA1, 0, sub_485220);
+    int32_t item_4 = 0;
+    int16_t data_1 = TaskType_Register("GameScreen", 0x28, QTask_OpenEvent_2(), 0);
+    g_5c8a28 = data_1;
+    QTask_RemoveEventCallback(data_1, 0, sub_485220);
     QTask_TriggerEvent(g_5c8a28, 1, sub_488700);
     QTask_TriggerEvent(g_5c8a28, 2, AIGraph_LoadParameters);
-    int32_t valA3 = StatusScreen_GetEvent();
-    return QTask_TriggerEvent(g_5c8a28, valA3, sub_424280);
+    int32_t data_3 = StatusScreen_GetEvent();
+    return QTask_TriggerEvent(g_5c8a28, data_3, sub_424280);
 }

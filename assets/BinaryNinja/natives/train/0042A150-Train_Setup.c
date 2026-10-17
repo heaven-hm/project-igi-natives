@@ -1,89 +1,89 @@
 // Original IGI.EXE function: Train_Setup (VA 0x0042A150; static CFG gate PASS, CFG score 1.000).
 #include "Train_Setup.h"
-int32_t Train_Setup(void* a1, char* a2)
+int32_t Train_Setup(void* context, char* param_2)
 
 {
-    int32_t srcS;
+    int32_t source_val;
 
-    if (!a2 || !*a2)
-        srcS = 0;
+    if (!param_2 || !*param_2)
+        source_val = 0;
     else
-        srcS = 1;
+        source_val = 1;
 
-    *(a1 + 0x768) = *(a1 + 0x76c);
-    DynObj_CreateMagicObject_5(a1, DynObj_Missing(a1 + 0x780));
-    float v_18;
-    WeaponType_RegisterType_2(&v_18, a1, 0);
-    float v_c;
-    WeaponType_RegisterType_2(&v_c, a1, 1);
-    long double x87_r7_1 = v_18 - v_c;
-    long double f0 = 0f;
-    x87_r7_1 - f0;
+    *(context + 0x768) = *(context + 0x76c);
+    DynObj_CreateMagicObject_5(context, DynObj_Missing(context + 0x780));
+    float item_18;
+    WeaponType_RegisterType_2(&item_18, context, 0);
+    float item_c;
+    WeaponType_RegisterType_2(&item_c, context, 1);
+    long double fpu_val_7_1 = item_18 - item_c;
+    long double f0 = 0.0f;
+    fpu_val_7_1 - f0;
 
-    if (*(&((x87_r7_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f0) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
-        x87_r7_1 = -(x87_r7_1);
+    if (*(&((fpu_val_7_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f0) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+        fpu_val_7_1 = -(fpu_val_7_1);
 
-    *(a1 + 0x74c) = x87_r7_1;
-    long double fpu6 = v_18;
-    long double f1 = 0f;
+    *(context + 0x74c) = fpu_val_7_1;
+    long double fpu6 = item_18;
+    long double f1 = 0.0f;
     fpu6 - f1;
-    long double x87_r6_1 = v_18;
+    long double fpu_val_6_1 = item_18;
 
     if (*(&((fpu6 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu6, f1) ? 1 : 0) << 0xa
             | (fpu6 == f1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1)
-        x87_r6_1 = -(x87_r6_1);
+        fpu_val_6_1 = -(fpu_val_6_1);
 
-    *(a1 + 0x748) = x87_r6_1 / x87_r7_1;
-    Script_ParseEnumReal32_28(a1, nullptr);
-    Script_CallNativeHandler_16(a1);
-    Script_ParseEnumInt32_17(a1);
-    CarGun_ConstructPath(a1);
-    void* valA4 = *(a1 + 0x14);
-    void* v_2c_2;
+    *(context + 0x748) = fpu_val_6_1 / fpu_val_7_1;
+    Script_ParseEnumReal32_28(context, nullptr);
+    Script_CallNativeHandler_16(context);
+    Script_ParseEnumInt32_17(context);
+    CarGun_ConstructPath(context);
+    void* data_4 = *(context + 0x14);
+    void* item_2c_2;
 
-    if (*(valA4 + 0x1c) == g_57bcb8)
-        v_2c_2 = valA4;
+    if (*(data_4 + 0x1c) == g_57bcb8)
+        item_2c_2 = data_4;
     else
-        v_2c_2 = a1;
+        item_2c_2 = context;
 
-    Menu_LeaveMenus_21(v_2c_2, srcS);
-    int32_t* i = *(*(a1 + 0xe8) + 8);
+    Menu_LeaveMenus_21(item_2c_2, source_val);
+    int32_t* i = *(*(context + 0xe8) + 8);
 
     if (*i && i)
     {
-        int32_t objC3 = g_afa7e0;
+        int32_t entity_3 = g_afa7e0;
 
         do
         {
-            int32_t* tmpD1 = *i;
-            void* valA8;
+            int32_t* temp_1 = *i;
+            void* data_8;
 
-            if (!tmpD1)
-                valA8 = nullptr;
+            if (!temp_1)
+                data_8 = nullptr;
             else
             {
-                int32_t valA5 = *tmpD1;
-                int32_t valA6 = -(valA5);
-                valA8 = (valA6 - valA6) & tmpD1;
+                int32_t data_5 = *temp_1;
+                int32_t data_6 = -(data_5);
+                data_8 = (data_6 - data_6) & temp_1;
             }
 
-            *((objC3 << 2) + &g_afa6e0) = valA8;
-            g_afa7e0 = objC3 + 1;
-            uint32_t valA10 = Script_ParseEnumReal32_8();
-            int32_t objC5 = 0;
-            objC5 = i[7];
-            int32_t valA14 = *(((valA10 * 0x180 + objC5) << 2) + &g_a96ae0);
+            *((entity_3 << 2) + &g_afa6e0) = data_8;
+            g_afa7e0 = entity_3 + 1;
+            uint32_t data_10 = Script_ParseEnumReal32_8();
+            int32_t entity_5 = 0;
+            entity_5 = i[7];
+            int32_t data_14 = *(((data_10 * 0x180 + entity_5) << 2) + &g_a96ae0);
 
-            if (valA14)
-                valA14(i, a2);
+            if (data_14)
+                data_14(i, param_2);
 
-            objC3 = g_afa7e0 - 1;
-            g_afa7e0 = objC3;
-            i = *((objC3 << 2) + &g_afa6e0);
+            entity_3 = g_afa7e0 - 1;
+            g_afa7e0 = entity_3;
+            i = *((entity_3 << 2) + &g_afa6e0);
         } while (i);
     }
 
-    Script_Isexists(a1 + 0x890, a1);
+    Script_Isexists(context + 0x890, context);
     return 0;
 }

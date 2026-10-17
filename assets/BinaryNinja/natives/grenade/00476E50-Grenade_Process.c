@@ -1,17 +1,17 @@
 // Original IGI.EXE function: Grenade_Process (VA 0x00476E50; static CFG gate PASS, CFG score 1.000).
 #include "Grenade_Process.h"
-int32_t Grenade_Process(void* a1)
+int32_t Grenade_Process(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x72c);
+    int32_t* data_val = *(context + 0x72c);
 
-    if (valA)
+    if (data_val)
     {
-        Qtask_UpdateList(valA);
-        *(a1 + 0x72c) = 0;
+        Qtask_UpdateList(data_val);
+        *(context + 0x72c) = 0;
     }
 
-    Script_ParseEnumString_28(a1);
-    DynObj_RegisterSymbol_9(Level_StartMission_4(), a1);
-    return DynObj_TryingToRemoveUnrigi(Level_CheckQTaskID_4(), a1);
+    Script_ParseEnumString_28(context);
+    DynObj_RegisterSymbol_9(Level_StartMission_4(), context);
+    return DynObj_TryingToRemoveUnrigi(Level_CheckQTaskID_4(), context);
 }

@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Render_FailedToCreateBoneob (VA 0x004D2D60; static CFG gate PASS, CFG score 1.000).
 #include "Render_FailedToCreateBoneob.h"
-void* Render_FailedToCreateBoneob(int32_t* a1, int32_t a2)
+void* Render_FailedToCreateBoneob(int32_t* context, int32_t param_2)
 
 {
-    *a1 = a2;
-    a1[1] = 0;
+    *context = param_2;
+    context[1] = 0;
     void* i_1 = nullptr;
-    int32_t v_8 = 0;
-    int32_t objC1 = *(a2 * 0xc + &g_a542f0);
-    int32_t v_84 = 0xffffffff;
+    int32_t item_8 = 0;
+    int32_t entity_1 = *(param_2 * 0xc + &g_a542f0);
+    int32_t item_84 = 0xffffffff;
 
-    if (objC1)
+    if (entity_1)
     {
         int32_t flagP = QHash_ValueGet();
-        int32_t valA2 = *(a2 * 0xc + &g_a542f0);
+        int32_t data_2 = *(param_2 * 0xc + &g_a542f0);
 
         if (!flagP)
             QHash_ValueSet();
 
-        a1[2] = Mem_Alloc(valA2 * 0x84, 4);
+        context[2] = Mem_Alloc(data_2 * 0x84, 4);
 
         if (!flagP)
             Sys_DispatchOpcode_2();
 
-        g_a5467c = a1[2];
-        g_a54638 = a2 * 0xc + &g_a542f0;
-        Render_DrawLightmapMesh_5(&v_84, 0xffffffff);
+        g_a5467c = context[2];
+        g_a54638 = param_2 * 0xc + &g_a542f0;
+        Render_DrawLightmapMesh_5(&item_84, 0xffffffff);
         void* i;
 
         for (i = i_1; i; i = *(i + 0x7c))
@@ -34,8 +34,8 @@ void* Render_FailedToCreateBoneob(int32_t* a1, int32_t a2)
         return i;
     }
 
-    int32_t saved_frame = a2;
-    a1[2] = 0;
+    int32_t saved_frame = param_2;
+    context[2] = 0;
     Error_Show("Failed to create boneobj of type %d, no hierarchy loaded");
 
     while (true)

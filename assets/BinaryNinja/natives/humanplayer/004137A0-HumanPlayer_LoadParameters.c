@@ -7,15 +7,15 @@ int32_t HumanPlayer_LoadParameters()
 // "HumanPlayer_LoadParameters: Couldn't load script \"%s\"". Loads humanplayer
 // parameters (weapons/ammo/cycle definitions) from script.
 {
-    int32_t* valA = Qvm_Load("LOCAL:humanplayer/humanplayer.qsc");
+    int32_t* data_val = Qvm_Load("LOCAL:humanplayer/humanplayer.qsc");
 
-    if (valA)
+    if (data_val)
     {
-        Qvm_Execute(valA);
-        return Qvm_Cleanup(valA);
+        Qvm_Execute(data_val);
+        return Qvm_Cleanup(data_val);
     }
 
-    char* v_8_1 = "LOCAL:humanplayer/humanplayer.qsc";
+    char* item_8_1 = "LOCAL:humanplayer/humanplayer.qsc";
     Error_Show("HumanPlayer_LoadParameters: Couldn't load script "%s"");
 
     while (true)

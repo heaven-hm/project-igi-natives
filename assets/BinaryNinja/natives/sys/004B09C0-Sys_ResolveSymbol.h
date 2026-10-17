@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004B09C0 Sys_ResolveSymbol | gate PASS | openigi False */
-int Sys_ResolveSymbol(int* a1, int* a2, int* a3, char * a4, int a5, int a6);
+int Sys_ResolveSymbol(int* context, int* param_2, int* param_3, char * param_4, int param_5, int param_6);

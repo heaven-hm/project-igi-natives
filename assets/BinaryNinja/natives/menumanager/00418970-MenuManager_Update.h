@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00418970 MenuManager_Update | gate PASS | openigi True */
-int MenuManager_Update(void * a1);
+int MenuManager_Update(void * context);

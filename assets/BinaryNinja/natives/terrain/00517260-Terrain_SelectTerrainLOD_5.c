@@ -1,39 +1,39 @@
 // Original IGI.EXE function: Terrain_SelectTerrainLOD_5 (VA 0x00517260; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SelectTerrainLOD_5.h"
-int32_t Terrain_SelectTerrainLOD_5(int32_t a1, void** a2, char* a3, int32_t a4)
+int32_t Terrain_SelectTerrainLOD_5(int32_t context, void** param_2, char* param_3, int32_t param_4)
 
 {
-    int32_t valA = 0;
-    char* objC = nullptr;
-    int32_t dstD = a4;
-    char* srcS = nullptr;
+    int32_t data_val = 0;
+    char* entity_val = nullptr;
+    int32_t dest_val = param_4;
+    char* source_val = nullptr;
 
-    if (dstD)
+    if (dest_val)
     {
-        int32_t ctxB1 = a1;
+        int32_t context_1 = context;
         int32_t result = 0;
-        char tmpD1;
+        char temp_1;
 
         while (true)
         {
-            tmpD1 = objC[ctxB1];
+            temp_1 = entity_val[context_1];
 
-            if (tmpD1 != 0x20 && tmpD1 != 9 && tmpD1 != 0xa && tmpD1 != 0xd)
+            if (temp_1 != 0x20 && temp_1 != 9 && temp_1 != 0xa && temp_1 != 0xd)
                 break;
 
-            objC = &objC[1];
+            entity_val = &entity_val[1];
         }
 
-        tmpD1 = objC[ctxB1];
+        temp_1 = entity_val[context_1];
         char* flagP1;
 
-        if (tmpD1 == 0x22)
+        if (temp_1 == 0x22)
         {
-            char i = objC[ctxB1 + 1];
-            flagP1 = a3;
-            void* objC1 = &objC[1];
+            char i = entity_val[context_1 + 1];
+            flagP1 = param_3;
+            void* entity_1 = &entity_val[1];
 
-            if (i != tmpD1)
+            if (i != temp_1)
             {
                 do
                 {
@@ -41,91 +41,91 @@ int32_t Terrain_SelectTerrainLOD_5(int32_t a1, void** a2, char* a3, int32_t a4)
                         return 0;
 
                     if (i != 0x5c)
-                        *(srcS + flagP1) = i;
+                        *(source_val + flagP1) = i;
                     else
                     {
-                        i = *(objC1 + ctxB1 + 1);
-                        objC1 += 1;
+                        i = *(entity_1 + context_1 + 1);
+                        entity_1 += 1;
 
                         if (i - 0x58 > 0x20)
-                            *(srcS + flagP1) = i;
+                            *(source_val + flagP1) = i;
                         else
                         {
-                            int32_t tmpD3 = 0;
-                            tmpD3 = *(i + 0x517494);
+                            int32_t temp_3 = 0;
+                            temp_3 = *(i + 0x517494);
 
-                            switch (tmpD3)
+                            switch (temp_3)
                             {
                                 case 0:
                                 {
-                                    i = *(objC1 + ctxB1 + 1);
+                                    i = *(entity_1 + context_1 + 1);
 
                                     i = i <= 0x39 ? i << 4 : ((i & 0xf) + 9) << 4;
 
-                                    char tmpD4 = *(objC1 + 1 + ctxB1 + 1);
-                                    objC1 += 2;
+                                    char temp_4 = *(entity_1 + 1 + context_1 + 1);
+                                    entity_1 += 2;
 
-                                    tmpD4 = tmpD4 <= 0x39 ? tmpD4 & 0xf : (tmpD4 & 0xf) + 9;
+                                    temp_4 = temp_4 <= 0x39 ? temp_4 & 0xf : (temp_4 & 0xf) + 9;
 
-                                    *(srcS + flagP1) = i | tmpD4;
+                                    *(source_val + flagP1) = i | temp_4;
                                     break;
                                 }
                                 case 1:
                                 {
-                                    *(srcS + flagP1) = 8;
+                                    *(source_val + flagP1) = 8;
                                     break;
                                 }
                                 case 2:
                                 {
-                                    *(srcS + flagP1) = 0xa;
+                                    *(source_val + flagP1) = 0xa;
                                     break;
                                 }
                                 case 3:
                                 {
-                                    *(srcS + flagP1) = 0xd;
+                                    *(source_val + flagP1) = 0xd;
                                     break;
                                 }
                                 case 4:
                                 {
-                                    *(srcS + flagP1) = 9;
+                                    *(source_val + flagP1) = 9;
                                     break;
                                 }
                                 case 5:
                                 {
-                                    *(srcS + flagP1) = i;
+                                    *(source_val + flagP1) = i;
                                     break;
                                 }
                             }
                         }
                     }
 
-                    i = *(objC1 + ctxB1 + 1);
-                    srcS = &srcS[1];
-                    objC1 += 1;
+                    i = *(entity_1 + context_1 + 1);
+                    source_val = &source_val[1];
+                    entity_1 += 1;
                 } while (i != 0x22);
             }
 
-            objC = objC1 + 1;
+            entity_val = entity_1 + 1;
             result = 1;
             goto label_51733d;
         }
 
-        flagP1 = a3;
-        a4 = 0;
-        a1 = 0;
+        flagP1 = param_3;
+        param_4 = 0;
+        context = 0;
 
-        if (tmpD1 < 0x30 || tmpD1 > 0x39)
+        if (temp_1 < 0x30 || temp_1 > 0x39)
         {
-            if (tmpD1 != 0x24)
+            if (temp_1 != 0x24)
                 goto label_5173e4;
 
-            srcS = 1;
-            objC = &objC[1];
-            int32_t f0_1 = dstD;
-            dstD -= 1;
-            a1 = 1;
-            a4 = 1;
-            *flagP1 = tmpD1;
+            source_val = 1;
+            entity_val = &entity_val[1];
+            int32_t f0_1 = dest_val;
+            dest_val -= 1;
+            context = 1;
+            param_4 = 1;
+            *flagP1 = temp_1;
 
             if (f0_1 == 1)
                 return 0;
@@ -133,100 +133,100 @@ int32_t Terrain_SelectTerrainLOD_5(int32_t a1, void** a2, char* a3, int32_t a4)
             goto label_5173e4;
         }
 
-        a1 = 1;
+        context = 1;
 
-        if (tmpD1 != 0x30)
+        if (temp_1 != 0x30)
         {
         label_5173da:
-            valA = 0;
+            data_val = 0;
         label_5173e4:
 
             while (true)
             {
-                char tmpD7;
+                char temp_7;
 
-                if (!a4)
+                if (!param_4)
                 {
-                    tmpD7 = objC[ctxB1];
+                    temp_7 = entity_val[context_1];
 
-                    if (a1)
+                    if (context)
                     {
-                        if (tmpD7 == 0x2e)
+                        if (temp_7 == 0x2e)
                         {
-                            *(srcS + flagP1) = 0x2e;
-                            srcS = &srcS[1];
-                            objC = &objC[1];
-                            int32_t f2_1 = dstD;
-                            dstD -= 1;
+                            *(source_val + flagP1) = 0x2e;
+                            source_val = &source_val[1];
+                            entity_val = &entity_val[1];
+                            int32_t f2_1 = dest_val;
+                            dest_val -= 1;
 
                             if (f2_1 == 1)
                                 return 0;
                         }
 
-                        tmpD7 = objC[ctxB1];
+                        temp_7 = entity_val[context_1];
 
-                        if (tmpD7 == 0x65 || tmpD7 == 0x45)
+                        if (temp_7 == 0x65 || temp_7 == 0x45)
                         {
-                            if (valA)
+                            if (data_val)
                                 break;
 
-                            *(srcS + flagP1) = tmpD7;
-                            srcS = &srcS[1];
-                            objC = &objC[1];
-                            int32_t f5_1 = dstD;
-                            dstD -= 1;
+                            *(source_val + flagP1) = temp_7;
+                            source_val = &source_val[1];
+                            entity_val = &entity_val[1];
+                            int32_t f5_1 = dest_val;
+                            dest_val -= 1;
 
                             if (f5_1 == 1)
                                 return 0;
 
-                            tmpD7 = objC[ctxB1];
+                            temp_7 = entity_val[context_1];
 
-                            if (tmpD7 == 0x2b || tmpD7 == 0x2d)
+                            if (temp_7 == 0x2b || temp_7 == 0x2d)
                             {
-                                *(srcS + flagP1) = tmpD7;
-                                srcS = &srcS[1];
-                                objC = &objC[1];
-                                int32_t f6_1 = dstD;
-                                dstD -= 1;
+                                *(source_val + flagP1) = temp_7;
+                                source_val = &source_val[1];
+                                entity_val = &entity_val[1];
+                                int32_t f6_1 = dest_val;
+                                dest_val -= 1;
 
                                 if (f6_1 == 1)
                                     return 0;
                             }
 
-                            valA = 1;
+                            data_val = 1;
                         }
 
-                        tmpD7 = objC[ctxB1];
+                        temp_7 = entity_val[context_1];
 
-                        if (tmpD7 < 0x30)
+                        if (temp_7 < 0x30)
                             break;
 
-                        if (tmpD7 > 0x39)
+                        if (temp_7 > 0x39)
                             break;
                     }
-                    else if ((tmpD7 < 0x30 || tmpD7 > 0x39) && (tmpD7 < 0x61 || tmpD7 > 0x7a)
-                            && (tmpD7 < 0x41 || tmpD7 > 0x5a) && tmpD7 != 0x5f && tmpD7 != 0x2e)
+                    else if ((temp_7 < 0x30 || temp_7 > 0x39) && (temp_7 < 0x61 || temp_7 > 0x7a)
+                            && (temp_7 < 0x41 || temp_7 > 0x5a) && temp_7 != 0x5f && temp_7 != 0x2e)
                         break;
                 }
                 else
                 {
-                    tmpD7 = objC[ctxB1];
+                    temp_7 = entity_val[context_1];
 
-                    if ((tmpD7 < 0x30 || tmpD7 > 0x39) && (tmpD7 < 0x61 || tmpD7 > 0x66))
+                    if ((temp_7 < 0x30 || temp_7 > 0x39) && (temp_7 < 0x61 || temp_7 > 0x66))
                     {
-                        if (tmpD7 < 0x41)
+                        if (temp_7 < 0x41)
                             break;
 
-                        if (tmpD7 > 0x46)
+                        if (temp_7 > 0x46)
                             break;
                     }
                 }
 
-                *(srcS + flagP1) = tmpD7;
-                srcS = &srcS[1];
-                objC = &objC[1];
-                int32_t f3_1 = dstD;
-                dstD -= 1;
+                *(source_val + flagP1) = temp_7;
+                source_val = &source_val[1];
+                entity_val = &entity_val[1];
+                int32_t f3_1 = dest_val;
+                dest_val -= 1;
 
                 if (f3_1 == 1)
                     return 0;
@@ -235,32 +235,32 @@ int32_t Terrain_SelectTerrainLOD_5(int32_t a1, void** a2, char* a3, int32_t a4)
             }
 
         label_51733d:
-            *(srcS + flagP1) = 0;
+            *(source_val + flagP1) = 0;
 
-            if (a2)
-                *a2 = &objC[ctxB1];
+            if (param_2)
+                *param_2 = &entity_val[context_1];
 
             return result;
         }
 
-        tmpD1 = objC[ctxB1 + 1];
+        temp_1 = entity_val[context_1 + 1];
 
-        if (tmpD1 != 0x78 && tmpD1 != 0x58)
+        if (temp_1 != 0x78 && temp_1 != 0x58)
             goto label_5173da;
 
-        int32_t dstD2 = dstD - 1;
-        a4 = 1;
+        int32_t dest_2 = dest_val - 1;
+        param_4 = 1;
         *flagP1 = 0x30;
 
-        if (dstD != 1)
+        if (dest_val != 1)
         {
-            char valA2 = objC[1 + ctxB1];
-            objC = &objC[2];
-            dstD = dstD2 - 1;
-            flagP1[1] = valA2;
-            srcS = 2;
+            char data_2 = entity_val[1 + context_1];
+            entity_val = &entity_val[2];
+            dest_val = dest_2 - 1;
+            flagP1[1] = data_2;
+            source_val = 2;
 
-            if (dstD2 != 1)
+            if (dest_2 != 1)
                 goto label_5173da;
         }
     }

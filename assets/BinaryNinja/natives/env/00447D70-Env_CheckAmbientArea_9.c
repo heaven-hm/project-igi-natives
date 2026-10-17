@@ -1,18 +1,18 @@
 // Original IGI.EXE function: Env_CheckAmbientArea_9 (VA 0x00447D70; static CFG gate PASS, CFG score 1.000).
 #include "Env_CheckAmbientArea_9.h"
-int32_t Env_CheckAmbientArea_9(void* a1)
+int32_t Env_CheckAmbientArea_9(void* context)
 
 {
-    void* valA2 = a1;
+    void* data_2 = context;
 
-    if (*(valA2 + 0x199))
+    if (*(data_2 + 0x199))
         return 0;
 
-    if (*(valA2 + 0x19a))
+    if (*(data_2 + 0x19a))
         return 1;
 
-    valA2 = *(valA2 + 0x290);
-    char f0 = valA2;
-    valA2 = -(valA2);
-    return valA2 - valA2 + 3;
+    data_2 = *(data_2 + 0x290);
+    char f0 = data_2;
+    data_2 = -(data_2);
+    return data_2 - data_2 + 3;
 }

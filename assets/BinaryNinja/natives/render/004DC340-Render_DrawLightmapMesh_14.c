@@ -1,42 +1,42 @@
 // Original IGI.EXE function: Render_DrawLightmapMesh_14 (VA 0x004DC340; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawLightmapMesh_14.h"
-void Render_DrawLightmapMesh_14(void** a1)
+void Render_DrawLightmapMesh_14(void** context)
 
 {
-    void** i = a1;
+    void** i = context;
 
     while (i)
     {
-        int32_t valA1 = Render_ComputeNormals_15();
-        int16_t v_8_1 = valA1;
-        valA1 = i[7];
-        char valA;
-        int32_t objC1;
-        valA = TaskType_IsDerivedFrom(valA1, v_8_1);
+        int32_t data_1 = Render_ComputeNormals_15();
+        int16_t item_8_1 = data_1;
+        data_1 = i[7];
+        char data_val;
+        int32_t entity_1;
+        data_val = TaskType_IsDerivedFrom(data_1, item_8_1);
 
-        if (!valA)
+        if (!data_val)
         {
-            int16_t valA2 = DynObj_LookupHashItem_5();
-            objC1 = i[7];
+            int16_t data_2 = DynObj_LookupHashItem_5();
+            entity_1 = i[7];
 
-            if (TaskType_IsDerivedFrom(objC1, valA2))
+            if (TaskType_IsDerivedFrom(entity_1, data_2))
             {
-                void* valA4 = i[0x3a];
+                void* data_4 = i[0x3a];
                 i[0x37] = 0;
 
-                if (valA4)
+                if (data_4)
                 {
-                    int32_t* objC2 = *(valA4 + 8);
-                    int32_t valA5 = *objC2;
-                    int32_t valA6 = -(valA5);
-                    Render_DrawLightmapMesh_14((valA6 - valA6) & objC2);
+                    int32_t* entity_2 = *(data_4 + 8);
+                    int32_t data_5 = *entity_2;
+                    int32_t data_6 = -(data_5);
+                    Render_DrawLightmapMesh_14((data_6 - data_6) & entity_2);
                 }
             }
 
-            int32_t* objC3 = i[2];
-            int32_t valA9 = *objC3;
-            int32_t valA10 = -(valA9);
-            Render_DrawLightmapMesh_14((valA10 - valA10) & objC3);
+            int32_t* entity_3 = i[2];
+            int32_t data_9 = *entity_3;
+            int32_t data_10 = -(data_9);
+            Render_DrawLightmapMesh_14((data_10 - data_10) & entity_3);
         }
 
         i = *i;

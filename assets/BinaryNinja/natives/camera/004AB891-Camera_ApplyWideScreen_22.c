@@ -1,123 +1,123 @@
 // Original IGI.EXE function: Camera_ApplyWideScreen_22 (VA 0x004AB891; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_22.h"
-void* Camera_ApplyWideScreen_22(int32_t a1)
+void* Camera_ApplyWideScreen_22(int32_t context)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
-    int32_t v_c = objC;
-    void** srcS = g_5466d0;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
+    int32_t item_c = entity_val;
+    void** source_val = g_5466d0;
     void* result;
 
     while (true)
     {
-        int32_t tmpD1 = srcS[4];
-        int32_t ctxB1;
+        int32_t temp_1 = source_val[4];
+        int32_t context_1;
 
-        if (tmpD1 == 0xffffffff)
-            ctxB1 = a1;
+        if (temp_1 == 0xffffffff)
+            context_1 = context;
         else
         {
-            int32_t* dstD1 = srcS[2];
-            int32_t* valA6 = ((dstD1 - srcS - 0x18) >> 3 << 0xc) + tmpD1;
-            int32_t* v_8_1 = valA6;
+            int32_t* dest_1 = source_val[2];
+            int32_t* data_6 = ((dest_1 - source_val - 0x18) >> 3 << 0xc) + temp_1;
+            int32_t* item_8_1 = data_6;
 
-            if (dstD1 < &srcS[0x806])
+            if (dest_1 < &source_val[0x806])
             {
                 while (true)
                 {
-                    int32_t objC2 = *dstD1;
-                    ctxB1 = a1;
+                    int32_t entity_2 = *dest_1;
+                    context_1 = context;
 
-                    if (objC2 >= ctxB1 && dstD1[1] > ctxB1)
+                    if (entity_2 >= context_1 && dest_1[1] > context_1)
                     {
-                        result = Camera_ApplyPostProcess_22(valA6, objC2, ctxB1);
+                        result = Camera_ApplyPostProcess_22(data_6, entity_2, context_1);
 
                         if (result)
                             break;
 
-                        valA6 = v_8_1;
-                        dstD1[1] = ctxB1;
+                        data_6 = item_8_1;
+                        dest_1[1] = context_1;
                     }
 
-                    dstD1 = &dstD1[2];
-                    valA6 = &valA6[0x400];
-                    v_8_1 = valA6;
+                    dest_1 = &dest_1[2];
+                    data_6 = &data_6[0x400];
+                    item_8_1 = data_6;
 
-                    if (dstD1 >= &srcS[0x806])
+                    if (dest_1 >= &source_val[0x806])
                         goto label_4ab907;
                 }
 
                 goto label_4ab95c;
             }
 
-            ctxB1 = a1;
+            context_1 = context;
         label_4ab907:
-            int32_t valA7 = srcS[2];
-            dstD1 = &srcS[6];
-            int32_t* v_8_2 = srcS[4];
+            int32_t data_7 = source_val[2];
+            dest_1 = &source_val[6];
+            int32_t* item_8_2 = source_val[4];
 
-            if (dstD1 < valA7)
+            if (dest_1 < data_7)
             {
                 while (true)
                 {
-                    int32_t valA8 = *dstD1;
+                    int32_t data_8 = *dest_1;
 
-                    if (valA8 >= ctxB1 && dstD1[1] > ctxB1)
+                    if (data_8 >= context_1 && dest_1[1] > context_1)
                     {
-                        result = Camera_ApplyPostProcess_22(v_8_2, valA8, ctxB1);
+                        result = Camera_ApplyPostProcess_22(item_8_2, data_8, context_1);
 
                         if (result)
                             break;
 
-                        dstD1[1] = ctxB1;
+                        dest_1[1] = context_1;
                     }
 
-                    v_8_2 = &v_8_2[0x400];
-                    dstD1 = &dstD1[2];
+                    item_8_2 = &item_8_2[0x400];
+                    dest_1 = &dest_1[2];
 
-                    if (dstD1 >= valA7)
+                    if (dest_1 >= data_7)
                         goto label_4ab94d;
                 }
 
             label_4ab95c:
-                g_5466d0 = srcS;
-                *dstD1 -= ctxB1;
-                srcS[2] = dstD1;
+                g_5466d0 = source_val;
+                *dest_1 -= context_1;
+                source_val[2] = dest_1;
                 break;
             }
         }
 
     label_4ab94d:
-        srcS = *srcS;
+        source_val = *source_val;
 
-        if (srcS == g_5466d0)
+        if (source_val == g_5466d0)
         {
-            void** dstD2 = &g_5446b0;
+            void** dest_2 = &g_5446b0;
             int32_t i;
             int32_t dwSize;
-            int32_t* ctxB2;
+            int32_t* context_2;
             int32_t* lpAddress;
 
             while (true)
             {
-                if (dstD2[4] == 0xffffffff || !dstD2[3])
+                if (dest_2[4] == 0xffffffff || !dest_2[3])
                 {
-                    dstD2 = *dstD2;
+                    dest_2 = *dest_2;
 
-                    if (dstD2 == &g_5446b0)
+                    if (dest_2 == &g_5446b0)
                     {
-                        void** valA17 = Camera_UpdateTransform_22();
+                        void** data_17 = Camera_UpdateTransform_22();
 
-                        if (valA17)
+                        if (data_17)
                         {
-                            void** objC7 = valA17[4];
-                            objC7[2] = ctxB1;
-                            g_5466d0 = valA17;
-                            *objC7 = objC7 + ctxB1 + 8;
-                            objC7[1] = 0xf0 - ctxB1;
-                            valA17[6] -= ctxB1;
-                            return &objC7[0x40];
+                            void** entity_7 = data_17[4];
+                            entity_7[2] = context_1;
+                            g_5466d0 = data_17;
+                            *entity_7 = entity_7 + context_1 + 8;
+                            entity_7[1] = 0xf0 - context_1;
+                            data_17[6] -= context_1;
+                            return &entity_7[0x40];
                         }
                     }
                     else
@@ -125,19 +125,19 @@ void* Camera_ApplyWideScreen_22(int32_t a1)
                 }
                 else
                 {
-                    ctxB2 = dstD2[3];
+                    context_2 = dest_2[3];
                     i = 0;
-                    int32_t* valA9 = ctxB2;
-                    lpAddress = ((ctxB2 - dstD2 - 0x18) >> 3 << 0xc) + dstD2[4];
+                    int32_t* data_9 = context_2;
+                    lpAddress = ((context_2 - dest_2 - 0x18) >> 3 << 0xc) + dest_2[4];
 
-                    if (*ctxB2 == 0xffffffff)
+                    if (*context_2 == 0xffffffff)
                     {
                         while (i < 0x10)
                         {
-                            valA9 = &valA9[2];
+                            data_9 = &data_9[2];
                             i += 1;
 
-                            if (*valA9 != 0xffffffff)
+                            if (*data_9 != 0xffffffff)
                                 break;
                         }
                     }
@@ -152,54 +152,54 @@ void* Camera_ApplyWideScreen_22(int32_t a1)
             }
 
             Camera_ApplyBandFilter_26(lpAddress, dwSize, 0);
-            int32_t* objC5 = ctxB2;
+            int32_t* entity_5 = context_2;
 
             if (i > 0)
             {
-                int32_t* valA12 = &lpAddress[1];
+                int32_t* data_12 = &lpAddress[1];
                 int32_t i_2 = i;
                 int32_t i_1;
 
                 do
                 {
-                    valA12[0x3d] = 0xff;
-                    valA12[-1] = &valA12[1];
-                    *valA12 = 0xf0;
-                    *objC5 = 0xf0;
-                    objC5[1] = 0xf1;
-                    valA12 = &valA12[0x400];
-                    objC5 = &objC5[2];
+                    data_12[0x3d] = 0xff;
+                    data_12[-1] = &data_12[1];
+                    *data_12 = 0xf0;
+                    *entity_5 = 0xf0;
+                    entity_5[1] = 0xf1;
+                    data_12 = &data_12[0x400];
+                    entity_5 = &entity_5[2];
                     i_1 = i_2;
                     i_2 -= 1;
                 } while (i_1 != 1);
             }
 
-            g_5466d0 = dstD2;
+            g_5466d0 = dest_2;
             bool c_1;
 
             while (true)
             {
-                c_1 = objC5 < &dstD2[0x806];
+                c_1 = entity_5 < &dest_2[0x806];
 
                 if (!c_1)
                     break;
 
-                if (*objC5 == 0xffffffff)
+                if (*entity_5 == 0xffffffff)
                 {
-                    c_1 = objC5 < &dstD2[0x806];
+                    c_1 = entity_5 < &dest_2[0x806];
                     break;
                 }
 
-                objC5 = &objC5[2];
+                entity_5 = &entity_5[2];
             }
 
-            dstD2[3] = (&dstD2[0x806] - &dstD2[0x806]) & objC5;
-            lpAddress[2] = a1;
-            dstD2[2] = ctxB2;
-            *ctxB2 -= a1;
-            lpAddress[1] -= a1;
+            dest_2[3] = (&dest_2[0x806] - &dest_2[0x806]) & entity_5;
+            lpAddress[2] = context;
+            dest_2[2] = context_2;
+            *context_2 -= context;
+            lpAddress[1] -= context;
             result = &lpAddress[0x40];
-            *lpAddress = lpAddress + a1 + 8;
+            *lpAddress = lpAddress + context + 8;
             break;
         }
     }

@@ -1,18 +1,18 @@
 // Original IGI.EXE function: Sys_CheckHeap_15 (VA 0x004B5B30; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CheckHeap_15.h"
-uint32_t Sys_CheckHeap_15(char* a1)
+uint32_t Sys_CheckHeap_15(char* context)
 
 {
-    char* tmpD = a1;
-    int32_t valA = 1;
-    char i = *tmpD;
+    char* temp_val = context;
+    int32_t data_val = 1;
+    char i = *temp_val;
 
     while (i)
     {
-        valA = (valA + 1) * i;
-        i = tmpD[1];
-        tmpD = &tmpD[1];
+        data_val = (data_val + 1) * i;
+        i = temp_val[1];
+        temp_val = &temp_val[1];
     }
 
-    return COMBINE(0, valA) % 0x3037;
+    return COMBINE(0, data_val) % 0x3037;
 }

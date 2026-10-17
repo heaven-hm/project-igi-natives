@@ -1,15 +1,15 @@
 // Original IGI.EXE function: AI_FireWeapon_6 (VA 0x004544C0; static CFG gate PASS, CFG score 1.000).
 #include "AI_FireWeapon_6.h"
-int32_t AI_FireWeapon_6(void* a1, void* a2)
+int32_t AI_FireWeapon_6(void* context, void* param_2)
 
 {
-    *(a2 + 0x33d) = 0;
-    *(a2 + 0x696) = 0;
-    Human_StateAnimation(a2, *(a1 + 0x10), 0f);
-    *(a2 + 0x664) = *(a2 + 0x688);
-    int32_t result = *(a2 + 0x68c);
-    *(a2 + 0x668) = result;
-    *(a2 + 0x66c) = *(a2 + 0x690);
-    *(a1 + 0x14) = AI_MoveToNode_6;
+    *(param_2 + 0x33d) = 0;
+    *(param_2 + 0x696) = 0;
+    Human_StateAnimation(param_2, *(context + 0x10), 0.0f);
+    *(param_2 + 0x664) = *(param_2 + 0x688);
+    int32_t result = *(param_2 + 0x68c);
+    *(param_2 + 0x668) = result;
+    *(param_2 + 0x66c) = *(param_2 + 0x690);
+    *(context + 0x14) = AI_MoveToNode_6;
     return result;
 }

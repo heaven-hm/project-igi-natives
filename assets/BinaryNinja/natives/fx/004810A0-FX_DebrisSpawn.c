@@ -1,124 +1,124 @@
 // Original IGI.EXE function: FX_DebrisSpawn (VA 0x004810A0; static CFG gate PASS, CFG score 0.933).
 #include "FX_DebrisSpawn.h"
-struct status_msg* FX_DebrisSpawn(int32_t a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, int32_t a7, uint32_t a8, uint32_t a9, int32_t* a10, int32_t a11, int32_t a12, int32_t* a13, int32_t a14, int32_t a15, int32_t* a16, uint32_t a17, uint32_t a18, uint32_t a19, uint32_t a20)
+struct status_msg* FX_DebrisSpawn(int32_t context, uint32_t param_2, uint32_t param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, int32_t param_7, uint32_t param_8, uint32_t param_9, int32_t* param_10, int32_t param_11, int32_t param_12, int32_t* param_13, int32_t param_14, int32_t param_15, int32_t* param_16, uint32_t param_17, uint32_t param_18, uint32_t param_19, uint32_t param_20)
 
 {
     int32_t kind;
     kind = g_5c1154;
     struct status_msg* result = QTask_HandleInput(Script_FormatString(), kind, 0);
-    memcpy(&result->head[8], a1, 0x18);
-    result->head[0xf] = a3;
-    result->head[0xe] = a2;
-    result->head[0x10] = a3;
-    result->head[0x14] = a4;
-    result->head[0x16] = a6;
-    result->head[0x15] = a5;
-    result->head[0x11] = *a16;
-    result->head[0x12] = a16[1];
-    result->head[0x13] = a16[2];
+    memcpy(&result->head[8], context, 0x18);
+    result->head[0xf] = param_3;
+    result->head[0xe] = param_2;
+    result->head[0x10] = param_3;
+    result->head[0x14] = param_4;
+    result->head[0x16] = param_6;
+    result->head[0x15] = param_5;
+    result->head[0x11] = *param_16;
+    result->head[0x12] = param_16[1];
+    result->head[0x13] = param_16[2];
     long double fpu7 = result->head[0x11];
-    long double f0 = 0f;
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (!(*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 0x40))
     {
     label_48113e:
-        long double x87_r7_3 = result->head[0x13];
-        long double x87_r6_1 = result->head[0x12];
-        long double x87_r5_1 = result->head[0x11];
-        long double x87_r7_5 =
-            1.0 / sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_3 * x87_r7_3);
-        result->head[0x11] = result->head[0x11] * x87_r7_5;
-        result->head[0x12] = result->head[0x12] * x87_r7_5;
-        result->head[0x13] = result->head[0x13] * x87_r7_5;
+        long double fpu_val_7_3 = result->head[0x13];
+        long double fpu_val_6_1 = result->head[0x12];
+        long double fpu_val_5_1 = result->head[0x11];
+        long double fpu_val_7_5 =
+            1.0 / sqrtl(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_3 * fpu_val_7_3);
+        result->head[0x11] = result->head[0x11] * fpu_val_7_5;
+        result->head[0x12] = result->head[0x12] * fpu_val_7_5;
+        result->head[0x13] = result->head[0x13] * fpu_val_7_5;
     }
     else
     {
-        long double x87_r7_1 = result->head[0x12];
-        long double f1_1 = 0f;
-        x87_r7_1 - f1_1;
+        long double fpu_val_7_1 = result->head[0x12];
+        long double f1_1 = 0.0f;
+        fpu_val_7_1 - f1_1;
 
-        if (!(*(&((x87_r7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+        if (!(*(&((fpu_val_7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
             goto label_48113e;
 
-        long double x87_r7_2 = result->head[0x13];
-        long double f2_1 = 0f;
-        x87_r7_2 - f2_1;
+        long double fpu_val_7_2 = result->head[0x13];
+        long double f2_1 = 0.0f;
+        fpu_val_7_2 - f2_1;
 
-        if (!(*(&((x87_r7_2 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+        if (!(*(&((fpu_val_7_2 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
             goto label_48113e;
     }
 
-    result->head[0x17] = a17;
-    result->head[0x18] = a18;
-    result->head[0x19] = a19;
-    result->head[0x1a] = a8;
-    result->head[0x1b] = a9;
-    int32_t* v_1c;
+    result->head[0x17] = param_17;
+    result->head[0x18] = param_18;
+    result->head[0x19] = param_19;
+    result->head[0x1a] = param_8;
+    result->head[0x1b] = param_9;
+    int32_t* item_1c;
 
-    if (a10 && *a10)
+    if (param_10 && *param_10)
     {
-        uint32_t valA8 = Weapon_CheckAmmo_8();
-        int32_t objC5 = 0;
-        objC5 = *(*a10 + 0x1c);
+        uint32_t data_8 = Weapon_CheckAmmo_8();
+        int32_t entity_5 = 0;
+        entity_5 = *(*param_10 + 0x1c);
 
-        if (*(((valA8 * 0x180 + objC5) << 2) + &g_a96ae0))
+        if (*(((data_8 * 0x180 + entity_5) << 2) + &g_a96ae0))
         {
-            int32_t tmpD8 = g_5c1164 + 0x18;
-            v_1c = a10;
-            int32_t srcS4 = *a10;
-            int32_t v_14_1 = tmpD8;
-            int32_t v_18_1 = 0;
-            int32_t v_10_1 = a7;
-            uint32_t valA13 = Weapon_CheckAmmo_8();
-            int32_t tmpD9 = 0;
-            tmpD9 = *(srcS4 + 0x1c);
-            (*(((valA13 * 0x180 + tmpD9) << 2) + &g_a96ae0))(srcS4, &v_1c);
+            int32_t temp_8 = g_5c1164 + 0x18;
+            item_1c = param_10;
+            int32_t source_4 = *param_10;
+            int32_t item_14_1 = temp_8;
+            int32_t item_18_1 = 0;
+            int32_t item_10_1 = param_7;
+            uint32_t data_13 = Weapon_CheckAmmo_8();
+            int32_t temp_9 = 0;
+            temp_9 = *(source_4 + 0x1c);
+            (*(((data_13 * 0x180 + temp_9) << 2) + &g_a96ae0))(source_4, &item_1c);
         }
     }
 
-    int32_t dstD1 = a12;
+    int32_t dest_1 = param_12;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD1;
-        dstD1 += 1;
+        bool flag_0_1 = 0 != *dest_1;
+        dest_1 += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC9 = ~i;
-    int32_t srcS6;
-    int32_t dstD4;
-    dstD4 = memcpy(&result->head[0x1c], dstD1 - objC9, objC9 & 0xfffffffc);
-    memcpy(dstD4, srcS6, objC9 & 3);
-    float v_28 = Sys_AllocateMemory_14(Level_SetMission_5()) * 0.628318548f;
-    float v_24 = Sys_AllocateMemory_14(Level_SetMission_5()) * 0.628318548f;
-    float v_20 = Sys_AllocateMemory_14(Level_SetMission_5()) * 0.628318548f;
-    float* v_40_2 = &v_28;
-    result->head[0x20] = Physics_CheckHullCollision_2(0x2d, a11, 0, 0x3f7ae148, 0x3f19999a, 0x4232674f,
-        result->head[0x15] * 0.000219726557f, &v_28, 0);
+    int32_t entity_9 = ~i;
+    int32_t source_6;
+    int32_t dest_4;
+    dest_4 = memcpy(&result->head[0x1c], dest_1 - entity_9, entity_9 & 0xfffffffc);
+    memcpy(dest_4, source_6, entity_9 & 3);
+    float item_28 = Sys_AllocateMemory_14(Level_SetMission_5()) * 0.628318548f;
+    float item_24 = Sys_AllocateMemory_14(Level_SetMission_5()) * 0.628318548f;
+    float item_20 = Sys_AllocateMemory_14(Level_SetMission_5()) * 0.628318548f;
+    float* item_40_2 = &item_28;
+    result->head[0x20] = Physics_CheckHullCollision_2(0x2d, param_11, 0, 0x3f7ae148, 0x3f19999a, 0x4232674f,
+        result->head[0x15] * 0.000219726557f, &item_28, 0);
 
-    if (a13 == 0xffffffff)
+    if (param_13 == 0xffffffff)
     {
-        result->head[0x21] = a20;
+        result->head[0x21] = param_20;
         return result;
     }
 
-    v_1c = a13;
-    int32_t v_14_2 = a14;
-    int32_t v_18_2 = 1;
-    int32_t v_c = a1;
-    int32_t v_10_2 = a15;
-    int32_t v_4 = 0;
+    item_1c = param_13;
+    int32_t item_14_2 = param_14;
+    int32_t item_18_2 = 1;
+    int32_t item_c = context;
+    int32_t item_10_2 = param_15;
+    int32_t item_4 = 0;
     struct status_msg* result_1 = result;
-    AI_EventBroadcast(&v_1c);
-    result->head[0x21] = a20;
+    AI_EventBroadcast(&item_1c);
+    result->head[0x21] = param_20;
     return result;
 }

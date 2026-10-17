@@ -5,37 +5,37 @@
 
 {
     Camera_UpdateTransform_5(0x3ed0);
-    int32_t saved_dst = 0;
-    int16_t valA1 = TaskType_Register("HumanAI", 0x3ed0, QTask_OpenEvent_2(), 0);
-    g_53c920 = valA1;
-    QTask_RemoveEventCallback(valA1, 0, HumanAI_LoadParameters);
+    int32_t saved_target = 0;
+    int16_t data_1 = TaskType_Register("HumanAI", 0x3ed0, QTask_OpenEvent_2(), 0);
+    g_53c920 = data_1;
+    QTask_RemoveEventCallback(data_1, 0, HumanAI_LoadParameters);
     QTask_TriggerEvent(g_53c920, 1, HumanAI_Setup);
     QTask_TriggerEvent(g_53c920, 2, HumanAI_Process);
-    int32_t valA3 = AI_CheckHearing();
-    QTask_RemoveEventCallback(g_53c920, valA3, HumanAI_EventOffer);
-    int32_t valA4 = Script_ParseEnumInt32_8();
-    int32_t v_14_1 = valA4;
-    valA4 = g_53c920;
-    QTask_RemoveEventCallback(valA4, v_14_1, sub_4505c0);
-    int32_t valA5 = Script_ParseEnumReal32_8();
-    QTask_RemoveEventCallback(g_53c920, valA5, HumanAI_OnEvent);
-    int32_t valA6 = Script_FormatString_5();
-    QTask_TriggerEvent(g_53c920, valA6, HumanAI_Action);
-    int32_t valA7 = Script_SpawnNewTask_6();
-    int32_t v_14_4 = valA7;
-    valA7 = g_53c920;
-    QTask_TriggerEvent(valA7, v_14_4, HumanAI_Cleanup);
+    int32_t data_3 = AI_CheckHearing();
+    QTask_RemoveEventCallback(g_53c920, data_3, HumanAI_EventOffer);
+    int32_t data_4 = Script_ParseEnumInt32_8();
+    int32_t item_14_1 = data_4;
+    data_4 = g_53c920;
+    QTask_RemoveEventCallback(data_4, item_14_1, sub_4505c0);
+    int32_t data_5 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_53c920, data_5, HumanAI_OnEvent);
+    int32_t data_6 = Script_FormatString_5();
+    QTask_TriggerEvent(g_53c920, data_6, HumanAI_Action);
+    int32_t data_7 = Script_SpawnNewTask_6();
+    int32_t item_14_4 = data_7;
+    data_7 = g_53c920;
+    QTask_TriggerEvent(data_7, item_14_4, HumanAI_Cleanup);
     QTask_RemoveEventCallback(g_53c920, 4, 0);
     g_58a9d4 = Script_EvaluateCondition_7(3);
-    int32_t valA9 = Script_FormatString_3();
+    int32_t data_9 = Script_FormatString_3();
     void arg_3d15;
-    Script_UndefinedParameterTy(g_58a9d4, &__return_addr, &arg_3d15, valA9, 7, 0);
-    int32_t valA10 = Script_ParseEnumString_3();
+    Script_UndefinedParameterTy(g_58a9d4, &return_addr, &arg_3d15, data_9, 7, 0);
+    int32_t data_10 = Script_ParseEnumString_3();
     void arg_3b68;
-    Script_UndefinedParameterTy(g_58a9d4, &__return_addr, &arg_3b68, valA10, 7, 0);
-    int32_t valA11 = Script_ParseEnumReal32_2();
+    Script_UndefinedParameterTy(g_58a9d4, &return_addr, &arg_3b68, data_10, 7, 0);
+    int32_t data_11 = Script_ParseEnumReal32_2();
     void arg_3b70;
-    Script_UndefinedParameterTy(g_58a9d4, &__return_addr, &arg_3b70, valA11, 2, 0);
+    Script_UndefinedParameterTy(g_58a9d4, &return_addr, &arg_3b70, data_11, 2, 0);
     AIAction_Patrol_2();
     AIEVENT_CREATE();
     g_58a9d8 = &g_58a9dc;
@@ -72,7 +72,7 @@
         *i_3 = 0;
         Camera_SetFieldOfView_33(&g_58a9e8, i_3);
         i_3 = &i_3[0x198];
-        __builtin_memset(&i_3[8], 0, 0x640);
+        memset(&i_3[8], 0, 0x640);
         i_3[-0x196] = 0xffffffff;
         i_3[-0x195] = 0xffffffff;
         i_3[-0x193] = 0;
@@ -109,12 +109,12 @@
         i_5[1] = 0;
         *i_5 = 0;
         Camera_SetFieldOfView_33(&g_57c748, i_5);
-        int32_t** valA13 = &i_5[3];
-        int32_t* objC6 = &i_5[4];
+        int32_t** data_13 = &i_5[3];
+        int32_t* entity_6 = &i_5[4];
         i_5 = &i_5[6];
-        *valA13 = objC6;
-        i_5[-1] = valA13;
-        *objC6 = 0;
+        *data_13 = entity_6;
+        i_5[-1] = data_13;
+        *entity_6 = 0;
         i_5[-4] = 0;
     }
 
@@ -130,6 +130,6 @@
         i_6[4] = 0;
     }
 
-    __builtin_memset(&g_5bda38, 0, 0x20);
+    memset(&g_5bda38, 0, 0x20);
     return result;
 }

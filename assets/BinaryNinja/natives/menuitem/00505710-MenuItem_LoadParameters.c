@@ -1,54 +1,54 @@
 // Original IGI.EXE function: MenuItem_LoadParameters (VA 0x00505710; static CFG gate PASS, CFG score 1.000).
 #include "MenuItem_LoadParameters.h"
-int32_t MenuItem_LoadParameters(void* a1, int32_t a2)
+int32_t MenuItem_LoadParameters(void* context, int32_t param_2)
 
 {
-    char valA1 = 1;
+    char data_1 = 1;
 
-    if (!*(a1 + 0x4d))
-        valA1 = *(a1 + 0x4e);
+    if (!*(context + 0x4d))
+        data_1 = *(context + 0x4e);
 
-    int32_t* i = *(a1 + 8);
-    *(a1 + 0x4e) = valA1;
+    int32_t* i = *(context + 8);
+    *(context + 0x4e) = data_1;
 
     if (!*i || !i)
     {
-        *(a1 + 0x4d) = 0;
-        return valA1;
+        *(context + 0x4d) = 0;
+        return data_1;
     }
 
-    int32_t objC = g_afa7e0;
-    int32_t valA11;
+    int32_t entity_val = g_afa7e0;
+    int32_t data_11;
 
     do
     {
-        int32_t* tmpD1 = *i;
-        void* valA5;
+        int32_t* temp_1 = *i;
+        void* data_5;
 
-        if (!tmpD1)
-            valA5 = nullptr;
+        if (!temp_1)
+            data_5 = nullptr;
         else
         {
-            int32_t valA2 = *tmpD1;
-            int32_t valA3 = -(valA2);
-            valA5 = (valA3 - valA3) & tmpD1;
+            int32_t data_2 = *temp_1;
+            int32_t data_3 = -(data_2);
+            data_5 = (data_3 - data_3) & temp_1;
         }
 
-        *((objC << 2) + &g_afa6e0) = valA5;
-        g_afa7e0 = objC + 1;
-        uint32_t valA7 = Physics_EvaluateAreaCriteria_5();
-        int32_t objC2 = 0;
-        objC2 = i[7];
-        valA11 = *(((valA7 * 0x180 + objC2) << 2) + &g_a96ae0);
+        *((entity_val << 2) + &g_afa6e0) = data_5;
+        g_afa7e0 = entity_val + 1;
+        uint32_t data_7 = Physics_EvaluateAreaCriteria_5();
+        int32_t entity_2 = 0;
+        entity_2 = i[7];
+        data_11 = *(((data_7 * 0x180 + entity_2) << 2) + &g_a96ae0);
 
-        if (valA11)
-            valA11 = valA11(i, a2);
+        if (data_11)
+            data_11 = data_11(i, param_2);
 
-        objC = g_afa7e0 - 1;
-        g_afa7e0 = objC;
-        i = *((objC << 2) + &g_afa6e0);
+        entity_val = g_afa7e0 - 1;
+        g_afa7e0 = entity_val;
+        i = *((entity_val << 2) + &g_afa6e0);
     } while (i);
 
-    *(a1 + 0x4d) = 0;
-    return valA11;
+    *(context + 0x4d) = 0;
+    return data_11;
 }

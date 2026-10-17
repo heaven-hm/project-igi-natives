@@ -1,23 +1,23 @@
 // Original IGI.EXE function: Menu_RequestScreen_17 (VA 0x004260C0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_RequestScreen_17.h"
-int32_t Menu_RequestScreen_17(void* a1, int32_t a2)
+int32_t Menu_RequestScreen_17(void* context, int32_t param_2)
 
 {
-    double v_18;
-    Script_CallNativeHandler_23(&v_18, Script_ExecuteLevelScript_23(*(a1 + 0x2c), a2));
-    double* valA1 = Menu_DrawWidget_16(a1);
-    long double x87_r7_1 = v_18 - *valA1;
-    double v_10;
-    long double x87_r6_1 = v_10 - valA1[1];
-    double v_8;
-    long double x87_r5_1 = v_8 - valA1[2];
-    long double x87_r4_3 = x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_1 * x87_r7_1;
+    double item_18;
+    Script_CallNativeHandler_23(&item_18, Script_ExecuteLevelScript_23(*(context + 0x2c), param_2));
+    double* data_1 = Menu_DrawWidget_16(context);
+    long double fpu_val_7_1 = item_18 - *data_1;
+    double item_10;
+    long double fpu_val_6_1 = item_10 - data_1[1];
+    double item_8;
+    long double fpu_val_5_1 = item_8 - data_1[2];
+    long double fpu_val_4_3 = fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_1 * fpu_val_7_1;
     long double f0 = 150994944.0;
-    x87_r4_3 - f0;
+    fpu_val_4_3 - f0;
     bool c1;
 
-    if (!(*(&((x87_r4_3 < f0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9
-            | (FCMP_UO(x87_r4_3, f0) ? 1 : 0) << 0xa | (x87_r4_3 == f0 ? 1 : 0) << 0xe
+    if (!(*(&((fpu_val_4_3 < f0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9
+            | (FCMP_UO(fpu_val_4_3, f0) ? 1 : 0) << 0xa | (fpu_val_4_3 == f0 ? 1 : 0) << 0xe
             | 0x3000) + 1) & 1))
         return 0;
 

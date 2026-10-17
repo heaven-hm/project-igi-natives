@@ -1,6 +1,6 @@
 // Original IGI.EXE function: SoundSys_EvaluateTrigger_18 (VA 0x004EE140; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_EvaluateTrigger_18.h"
-void* SoundSys_EvaluateTrigger_18(char* a1)
+void* SoundSys_EvaluateTrigger_18(char* context)
 
 {
     int32_t flagP = 0;
@@ -10,46 +10,46 @@ void* SoundSys_EvaluateTrigger_18(char* a1)
         while (true)
         {
             void* result = SoundSys_LoadSoundDef_18(flagP);
-            char* srcS1 = a1;
-            char* objC1 = result + 0x138;
-            int32_t objC3;
+            char* source_1 = context;
+            char* entity_1 = result + 0x138;
+            int32_t entity_3;
 
             while (true)
             {
-                char valA1 = *objC1;
-                char f0_1 = *srcS1;
-                bool c_1 = valA1 < f0_1;
+                char data_1 = *entity_1;
+                char f0_1 = *source_1;
+                bool c_1 = data_1 < f0_1;
 
-                if (valA1 == f0_1)
+                if (data_1 == f0_1)
                 {
-                    if (!valA1)
+                    if (!data_1)
                     {
-                        objC3 = 0;
+                        entity_3 = 0;
                         break;
                     }
 
-                    valA1 = objC1[1];
-                    char f3_1 = srcS1[1];
-                    c_1 = valA1 < f3_1;
+                    data_1 = entity_1[1];
+                    char f3_1 = source_1[1];
+                    c_1 = data_1 < f3_1;
 
-                    if (valA1 == f3_1)
+                    if (data_1 == f3_1)
                     {
-                        objC1 = &objC1[2];
-                        srcS1 = &srcS1[2];
+                        entity_1 = &entity_1[2];
+                        source_1 = &source_1[2];
 
-                        if (valA1)
+                        if (data_1)
                             continue;
 
-                        objC3 = 0;
+                        entity_3 = 0;
                         break;
                     }
                 }
 
-                objC3 = objC1 - objC1 + 1;
+                entity_3 = entity_1 - entity_1 + 1;
                 break;
             }
 
-            if (!objC3)
+            if (!entity_3)
                 return result;
 
             flagP += 1;

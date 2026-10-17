@@ -1,86 +1,86 @@
 // Original IGI.EXE function: Cursor_LoadParameters (VA 0x00424CE0; static CFG gate PASS, CFG score 1.000).
 #include "Cursor_LoadParameters.h"
-int32_t Cursor_LoadParameters(void* a1)
+int32_t Cursor_LoadParameters(void* context)
 
 {
-    int32_t valA5;
-    void* srcS;
-    int32_t dstD2;
+    int32_t data_5;
+    void* source_val;
+    int32_t dest_2;
 
     if (FX_FragmentSimulate_23())
     {
-        long double x87_r7_1 = g_bc20f8;
-        srcS = a1;
-        int32_t objC2 = *(srcS + 0x28);
-        *(srcS + 0x24) += g_bc20f4 * 320f;
-        bool cond_0_1 = *(srcS + 0x24) >= 0;
-        *(srcS + 0x28) = objC2 + x87_r7_1 * 240f;
-        int32_t valA10;
+        long double fpu_val_7_1 = g_bc20f8;
+        source_val = context;
+        int32_t entity_2 = *(source_val + 0x28);
+        *(source_val + 0x24) += g_bc20f4 * 320.0f;
+        bool flag_0_1 = *(source_val + 0x24) >= 0;
+        *(source_val + 0x28) = entity_2 + fpu_val_7_1 * 240.0f;
+        int32_t data_10;
 
-        if (cond_0_1)
+        if (flag_0_1)
         {
-            int32_t dstD3 = *(srcS + 0x24);
+            int32_t dest_3 = *(source_val + 0x24);
 
-            if (g_c28b44 - 1 >= dstD3)
-                valA10 = dstD3;
+            if (g_c28b44 - 1 >= dest_3)
+                data_10 = dest_3;
             else
-                valA10 = g_c28b44 - 1;
+                data_10 = g_c28b44 - 1;
         }
         else
-            valA10 = 0;
+            data_10 = 0;
 
-        *(srcS + 0x24) = valA10;
+        *(source_val + 0x24) = data_10;
 
-        if (*(srcS + 0x28) >= 0)
+        if (*(source_val + 0x28) >= 0)
         {
-            dstD2 = *(srcS + 0x28);
+            dest_2 = *(source_val + 0x28);
 
-            if (g_c28b48 - 1 >= dstD2)
-                valA5 = dstD2;
+            if (g_c28b48 - 1 >= dest_2)
+                data_5 = dest_2;
             else
-                valA5 = g_c28b48 - 1;
+                data_5 = g_c28b48 - 1;
         }
         else
-            valA5 = 0;
+            data_5 = 0;
     }
     else
     {
-        srcS = a1;
-        int32_t valA1 = g_57bc58;
-        *(srcS + 0x24) = valA1;
-        *(srcS + 0x28) = g_57bc5c;
-        int32_t valA2;
+        source_val = context;
+        int32_t data_1 = g_57bc58;
+        *(source_val + 0x24) = data_1;
+        *(source_val + 0x28) = g_57bc5c;
+        int32_t data_2;
 
-        if (valA1 >= 0)
+        if (data_1 >= 0)
         {
-            int32_t dstD1 = *(srcS + 0x24);
+            int32_t dest_1 = *(source_val + 0x24);
 
-            if (g_c28b44 - 1 >= dstD1)
-                valA2 = dstD1;
+            if (g_c28b44 - 1 >= dest_1)
+                data_2 = dest_1;
             else
-                valA2 = g_c28b44 - 1;
+                data_2 = g_c28b44 - 1;
         }
         else
-            valA2 = 0;
+            data_2 = 0;
 
-        *(srcS + 0x24) = valA2;
+        *(source_val + 0x24) = data_2;
 
-        if (*(srcS + 0x28) >= 0)
+        if (*(source_val + 0x28) >= 0)
         {
-            dstD2 = *(srcS + 0x28);
+            dest_2 = *(source_val + 0x28);
 
-            if (g_c28b48 - 1 >= dstD2)
-                valA5 = dstD2;
+            if (g_c28b48 - 1 >= dest_2)
+                data_5 = dest_2;
             else
-                valA5 = g_c28b48 - 1;
+                data_5 = g_c28b48 - 1;
         }
         else
-            valA5 = 0;
+            data_5 = 0;
     }
-    int32_t tmpD6 = *(srcS + 0x3c);
-    *(srcS + 0x28) = valA5;
-    *(srcS + 0x38) = tmpD6;
+    int32_t temp_6 = *(source_val + 0x3c);
+    *(source_val + 0x28) = data_5;
+    *(source_val + 0x38) = temp_6;
     int32_t result = *g_c28f8c & 1;
-    *(srcS + 0x3c) = result;
+    *(source_val + 0x3c) = result;
     return result;
 }

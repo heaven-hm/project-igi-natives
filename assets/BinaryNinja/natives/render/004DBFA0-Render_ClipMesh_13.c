@@ -1,46 +1,46 @@
 // Original IGI.EXE function: Render_ClipMesh_13 (VA 0x004DBFA0; static CFG gate PASS, CFG score 1.000).
 #include "Render_ClipMesh_13.h"
-void Render_ClipMesh_13(int32_t* a1, void** a2)
+void Render_ClipMesh_13(int32_t* context, void** param_2)
 
 {
-    void** i = a2;
+    void** i = param_2;
 
     while (i)
     {
-        int32_t valA1 = Render_ComputeNormals_15();
-        int16_t v_c_1 = valA1;
-        valA1 = i[7];
-        char valA;
-        int32_t objC1;
-        valA = TaskType_IsDerivedFrom(valA1, v_c_1);
+        int32_t data_1 = Render_ComputeNormals_15();
+        int16_t item_c_1 = data_1;
+        data_1 = i[7];
+        char data_val;
+        int32_t entity_1;
+        data_val = TaskType_IsDerivedFrom(data_1, item_c_1);
 
-        if (!valA)
+        if (!data_val)
         {
-            int16_t valA2 = DynObj_LookupHashItem_5();
-            objC1 = i[7];
+            int16_t data_2 = DynObj_LookupHashItem_5();
+            entity_1 = i[7];
 
-            if (TaskType_IsDerivedFrom(objC1, valA2))
+            if (TaskType_IsDerivedFrom(entity_1, data_2))
             {
-                int32_t* valA4 = i[0x1b];
+                int32_t* data_4 = i[0x1b];
 
-                if (valA4 && *(*(*(*valA4 + 0xc) + 0xc) + 0x20) == 3)
-                    *a1 += valA4[0xf];
+                if (data_4 && *(*(*(*data_4 + 0xc) + 0xc) + 0x20) == 3)
+                    *context += data_4[0xf];
 
-                void* valA6 = i[0x3a];
+                void* data_6 = i[0x3a];
 
-                if (valA6)
+                if (data_6)
                 {
-                    int32_t* objC3 = *(valA6 + 8);
-                    int32_t valA7 = *objC3;
-                    int32_t valA8 = -(valA7);
-                    Render_ClipMesh_13(a1, (valA8 - valA8) & objC3);
+                    int32_t* entity_3 = *(data_6 + 8);
+                    int32_t data_7 = *entity_3;
+                    int32_t data_8 = -(data_7);
+                    Render_ClipMesh_13(context, (data_8 - data_8) & entity_3);
                 }
             }
 
-            int32_t* objC4 = i[2];
-            int32_t valA11 = *objC4;
-            int32_t valA12 = -(valA11);
-            Render_ClipMesh_13(a1, (valA12 - valA12) & objC4);
+            int32_t* entity_4 = i[2];
+            int32_t data_11 = *entity_4;
+            int32_t data_12 = -(data_11);
+            Render_ClipMesh_13(context, (data_12 - data_12) & entity_4);
         }
 
         i = *i;

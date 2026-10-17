@@ -1,21 +1,21 @@
 // Original IGI.EXE function: RigidDynCubeObj_LoadParameters (VA 0x004A01B0; static CFG gate PASS, CFG score 0.889).
 #include "RigidDynCubeObj_LoadParameters.h"
-int32_t RigidDynCubeObj_LoadParameters(void* a1)
+int32_t RigidDynCubeObj_LoadParameters(void* context)
 
 {
-    void* v_54 = a1;
-    void v_4c;
-    void* v_50 = Render_SkinBones_13(&v_4c);
-    void* v_48;
-    void v_44;
-    Render_ComputeNormals_12(&v_48, &v_44);
-    (*((DynObj_ParseConfigFile_15() << 2) + &g_a94e84))(&v_54);
-    void v_40;
-    memcpy(&v_40, a1 + 0x20, 0x18);
-    void* tmpD = a1 + 0x70;
-    void v_28;
-    memcpy(&v_28, tmpD, 0x28);
-    int32_t* i = *(a1 + 8);
+    void* item_54 = context;
+    void item_4c;
+    void* item_50 = Render_SkinBones_13(&item_4c);
+    void* item_48;
+    void item_44;
+    Render_ComputeNormals_12(&item_48, &item_44);
+    (*((DynObj_ParseConfigFile_15() << 2) + &g_a94e84))(&item_54);
+    void item_40;
+    memcpy(&item_40, context + 0x20, 0x18);
+    void* temp_val = context + 0x70;
+    void item_28;
+    memcpy(&item_28, temp_val, 0x28);
+    int32_t* i = *(context + 8);
     int32_t result;
 
     if (!*i || !i)
@@ -26,27 +26,27 @@ int32_t RigidDynCubeObj_LoadParameters(void* a1)
 
         do
         {
-            int32_t* tmpD1 = *i;
-            void* objC4;
+            int32_t* temp_1 = *i;
+            void* entity_4;
 
-            if (!tmpD1)
-                objC4 = nullptr;
+            if (!temp_1)
+                entity_4 = nullptr;
             else
             {
-                int32_t objC1 = *tmpD1;
-                int32_t objC2 = -(objC1);
-                objC4 = (objC2 - objC2) & tmpD1;
+                int32_t entity_1 = *temp_1;
+                int32_t entity_2 = -(entity_1);
+                entity_4 = (entity_2 - entity_2) & temp_1;
             }
 
-            *((result << 2) + &g_afa6e0) = objC4;
+            *((result << 2) + &g_afa6e0) = entity_4;
             g_afa7e0 = result + 1;
-            uint32_t valA4 = DynObj_FindSymbol_6();
-            int32_t valA5 = 0;
-            valA5 = i[7];
-            int32_t valA6 = *(((valA4 * 0x180 + valA5) << 2) + &g_a96ae0);
+            uint32_t data_4 = DynObj_FindSymbol_6();
+            int32_t data_5 = 0;
+            data_5 = i[7];
+            int32_t data_6 = *(((data_4 * 0x180 + data_5) << 2) + &g_a96ae0);
 
-            if (valA6)
-                valA6(i, &v_40);
+            if (data_6)
+                data_6(i, &item_40);
 
             result = g_afa7e0 - 1;
             g_afa7e0 = result;
@@ -54,39 +54,39 @@ int32_t RigidDynCubeObj_LoadParameters(void* a1)
         } while (i);
     }
 
-    void* ctxB1 = *(a1 + 0xe8);
+    void* context_1 = *(context + 0xe8);
 
-    if (ctxB1)
+    if (context_1)
     {
-        memcpy(&v_40, a1 + 0x20, 0x18);
-        memcpy(&v_28, tmpD, 0x28);
-        int32_t* i_1 = *(ctxB1 + 8);
+        memcpy(&item_40, context + 0x20, 0x18);
+        memcpy(&item_28, temp_val, 0x28);
+        int32_t* i_1 = *(context_1 + 8);
 
         if (*i_1 && i_1)
         {
             do
             {
-                int32_t* tmpD5 = *i_1;
-                void* objC8;
+                int32_t* temp_5 = *i_1;
+                void* entity_8;
 
-                if (!tmpD5)
-                    objC8 = nullptr;
+                if (!temp_5)
+                    entity_8 = nullptr;
                 else
                 {
-                    int32_t objC5 = *tmpD5;
-                    int32_t objC6 = -(objC5);
-                    objC8 = (objC6 - objC6) & tmpD5;
+                    int32_t entity_5 = *temp_5;
+                    int32_t entity_6 = -(entity_5);
+                    entity_8 = (entity_6 - entity_6) & temp_5;
                 }
 
-                *((result << 2) + &g_afa6e0) = objC8;
+                *((result << 2) + &g_afa6e0) = entity_8;
                 g_afa7e0 = result + 1;
-                uint32_t valA10 = DynObj_FindSymbol_6();
-                int32_t valA11 = 0;
-                valA11 = i_1[7];
-                int32_t valA12 = *(((valA10 * 0x180 + valA11) << 2) + &g_a96ae0);
+                uint32_t data_10 = DynObj_FindSymbol_6();
+                int32_t data_11 = 0;
+                data_11 = i_1[7];
+                int32_t data_12 = *(((data_10 * 0x180 + data_11) << 2) + &g_a96ae0);
 
-                if (valA12)
-                    valA12(i_1, &v_40);
+                if (data_12)
+                    data_12(i_1, &item_40);
 
                 result = g_afa7e0 - 1;
                 g_afa7e0 = result;

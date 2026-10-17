@@ -1,32 +1,32 @@
 // Original IGI.EXE function: AI_TakeCover_25 (VA 0x00467DF0; static CFG gate PASS, CFG score 1.000).
 #include "AI_TakeCover_25.h"
-void AI_TakeCover_25(int32_t a1)
+void AI_TakeCover_25(int32_t context)
 
 {
-    int32_t* objC1 = a1;
-    int32_t* srcS = objC1[6];
+    int32_t* entity_1 = context;
+    int32_t* source_val = entity_1[6];
 
-    if (!srcS)
+    if (!source_val)
         return;
 
-    double* valA1 = objC1[3];
-    double* tmpD1 = *objC1;
-    float v_c = *valA1 - *tmpD1;
-    float v_8_1 = valA1[1] - tmpD1[1];
-    float v_4_1 = valA1[2] - tmpD1[2];
-    float* valA2 = objC1[1];
-    float v_18 = v_4_1 * valA2[6] + v_8_1 * valA2[3] + v_c * *valA2;
-    float v_14_1 = v_4_1 * valA2[7] + v_8_1 * valA2[4] + v_c * valA2[1];
-    long double x87_r7_17 = v_4_1 * valA2[8] + v_8_1 * valA2[5];
-    long double x87_r6_12 = v_c * valA2[2];
-    float v_8_2 = v_14_1;
-    v_c = v_18;
-    float v_4_2 = x87_r7_17 + x87_r6_12;
-    AI_UpdateSensors_24(&v_18, &v_c, objC1);
-    long double x87_r7_20 = Sys_CloseFileStream_17(srcS) * 0.5f;
-    v_18 = v_18 - x87_r7_20;
-    float v_14_2 = v_14_1 - Sys_ExecuteBytecode_17(srcS) * 0.5f;
-    v_18 = v_18 - 10f;
-    Sys_AllocateMemory_15(srcS, v_18, v_14_2, 128f, 128f, 128f, 0x3f800000, 0x44051eb8, 0, 0x400c0000,
+    double* data_1 = entity_1[3];
+    double* temp_1 = *entity_1;
+    float item_c = *data_1 - *temp_1;
+    float item_8_1 = data_1[1] - temp_1[1];
+    float item_4_1 = data_1[2] - temp_1[2];
+    float* data_2 = entity_1[1];
+    float item_18 = item_4_1 * data_2[6] + item_8_1 * data_2[3] + item_c * *data_2;
+    float item_14_1 = item_4_1 * data_2[7] + item_8_1 * data_2[4] + item_c * data_2[1];
+    long double fpu_val_7_17 = item_4_1 * data_2[8] + item_8_1 * data_2[5];
+    long double fpu_val_6_12 = item_c * data_2[2];
+    float item_8_2 = item_14_1;
+    item_c = item_18;
+    float item_4_2 = fpu_val_7_17 + fpu_val_6_12;
+    AI_UpdateSensors_24(&item_18, &item_c, entity_1);
+    long double fpu_val_7_20 = Sys_CloseFileStream_17(source_val) * 0.5f;
+    item_18 = item_18 - fpu_val_7_20;
+    float item_14_2 = item_14_1 - Sys_ExecuteBytecode_17(source_val) * 0.5f;
+    item_18 = item_18 - 10.0f;
+    Sys_AllocateMemory_15(source_val, item_18, item_14_2, 128.0f, 128.0f, 128.0f, 0x3f800000, 0x44051eb8, 0, 0x400c0000,
         0xffffffff);
 }

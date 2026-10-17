@@ -1,151 +1,151 @@
 // Original IGI.EXE function: SoundManager_LoadParameters (VA 0x0051C100; static CFG gate PASS, CFG score 1.000).
 #include "SoundManager_LoadParameters.h"
-int32_t* SoundManager_LoadParameters(char* a1, char* a2)
+int32_t* SoundManager_LoadParameters(char* context, char* param_2)
 
 {
-    char* flagP = a1;
-    int32_t* valA;
-    valA = flagP[0x20];
-    int32_t* dstD = *(flagP + 0x40);
+    char* flagP = context;
+    int32_t* data_val;
+    data_val = flagP[0x20];
+    int32_t* dest_val = *(flagP + 0x40);
 
-    if (valA)
+    if (data_val)
     {
-        if (!a2 || !*a2)
+        if (!param_2 || !*param_2)
         {
             int32_t* i = *(flagP + 8);
 
             if (*i && i)
             {
-                int32_t objC1 = g_afa7e0;
+                int32_t entity_1 = g_afa7e0;
 
                 do
                 {
-                    int32_t* tmpD1 = *i;
-                    void* valA6;
+                    int32_t* temp_1 = *i;
+                    void* data_6;
 
-                    if (!tmpD1)
-                        valA6 = nullptr;
+                    if (!temp_1)
+                        data_6 = nullptr;
                     else
                     {
-                        int32_t valA3 = *tmpD1;
-                        int32_t valA4 = -(valA3);
-                        valA6 = (valA4 - valA4) & tmpD1;
+                        int32_t data_3 = *temp_1;
+                        int32_t data_4 = -(data_3);
+                        data_6 = (data_4 - data_4) & temp_1;
                     }
 
-                    *((objC1 << 2) + &g_afa6e0) = valA6;
-                    g_afa7e0 = objC1 + 1;
-                    uint32_t valA8 = Script_ParseEnumReal32_8();
-                    int32_t objC3 = 0;
-                    objC3 = i[7];
-                    int32_t valA12 = *(((valA8 * 0x180 + objC3) << 2) + &g_a96ae0);
+                    *((entity_1 << 2) + &g_afa6e0) = data_6;
+                    g_afa7e0 = entity_1 + 1;
+                    uint32_t data_8 = Script_ParseEnumReal32_8();
+                    int32_t entity_3 = 0;
+                    entity_3 = i[7];
+                    int32_t data_12 = *(((data_8 * 0x180 + entity_3) << 2) + &g_a96ae0);
 
-                    if (valA12)
-                        valA12(i, 0);
+                    if (data_12)
+                        data_12(i, 0);
 
-                    objC1 = g_afa7e0 - 1;
-                    g_afa7e0 = objC1;
-                    i = *((objC1 << 2) + &g_afa6e0);
+                    entity_1 = g_afa7e0 - 1;
+                    g_afa7e0 = entity_1;
+                    i = *((entity_1 << 2) + &g_afa6e0);
                 } while (i);
             }
         }
 
-        if (!dstD)
+        if (!dest_val)
         {
         label_51c25c:
-            valA = SoundSys_SetMasterVolume_7(flagP, &flagP[0x20]);
+            data_val = SoundSys_SetMasterVolume_7(flagP, &flagP[0x20]);
 
-            if (valA)
+            if (data_val)
             {
-                valA = QTask_LinkEventHandler_2(valA);
-                *(flagP + 0x40) = valA;
+                data_val = QTask_LinkEventHandler_2(data_val);
+                *(flagP + 0x40) = data_val;
             }
         }
         else
         {
-            void* srcS1 = *dstD;
+            void* source_1 = *dest_val;
 
-            if (!srcS1)
+            if (!source_1)
             {
             label_51c23b:
-                void* valA19 = *dstD;
+                void* data_19 = *dest_val;
 
-                if (valA19)
+                if (data_19)
                 {
-                    SoundSys_SetFrequency_7(valA19);
-                    Qtask_UpdateList(dstD);
+                    SoundSys_SetFrequency_7(data_19);
+                    Qtask_UpdateList(dest_val);
                     *(flagP + 0x40) = 0;
                 }
 
                 goto label_51c25c;
             }
 
-            a1 = nullptr;
-            uint32_t valA14 = SoundSys_LoadSoundDef_5();
-            int32_t valA15 = 0;
-            valA15 = *(srcS1 + 0x1c);
-            int32_t valA16 = *(((valA14 * 0x180 + valA15) << 2) + &g_a96ae0);
+            context = nullptr;
+            uint32_t data_14 = SoundSys_LoadSoundDef_5();
+            int32_t data_15 = 0;
+            data_15 = *(source_1 + 0x1c);
+            int32_t data_16 = *(((data_14 * 0x180 + data_15) << 2) + &g_a96ae0);
 
-            if (valA16)
-                valA16(srcS1, &a1);
+            if (data_16)
+                data_16(source_1, &context);
 
-            char* srcS2 = a1;
+            char* source_2 = context;
 
-            if (!srcS2)
+            if (!source_2)
                 goto label_51c23b;
 
-            char* valA17 = &flagP[0x20];
+            char* data_17 = &flagP[0x20];
 
             while (true)
             {
-                char tmpD5 = *valA17;
-                char f1_1 = *srcS2;
-                bool c_2 = tmpD5 < f1_1;
+                char temp_5 = *data_17;
+                char f1_1 = *source_2;
+                bool c_2 = temp_5 < f1_1;
 
-                if (tmpD5 == f1_1)
+                if (temp_5 == f1_1)
                 {
-                    if (!tmpD5)
+                    if (!temp_5)
                     {
-                        valA = nullptr;
+                        data_val = nullptr;
                         break;
                     }
 
-                    tmpD5 = valA17[1];
-                    char f4_1 = srcS2[1];
-                    c_2 = tmpD5 < f4_1;
+                    temp_5 = data_17[1];
+                    char f4_1 = source_2[1];
+                    c_2 = temp_5 < f4_1;
 
-                    if (tmpD5 == f4_1)
+                    if (temp_5 == f4_1)
                     {
-                        valA17 = &valA17[2];
-                        srcS2 = &srcS2[2];
+                        data_17 = &data_17[2];
+                        source_2 = &source_2[2];
 
-                        if (tmpD5)
+                        if (temp_5)
                             continue;
 
-                        valA = nullptr;
+                        data_val = nullptr;
                         break;
                     }
                 }
 
-                valA = valA17 - valA17 + 1;
+                data_val = data_17 - data_17 + 1;
                 break;
             }
 
-            if (valA)
+            if (data_val)
                 goto label_51c23b;
         }
     }
-    else if (dstD)
+    else if (dest_val)
     {
-        valA = *dstD;
+        data_val = *dest_val;
 
-        if (valA)
+        if (data_val)
         {
-            SoundSys_SetFrequency_7(valA);
-            int32_t valA1 = Qtask_UpdateList(dstD);
+            SoundSys_SetFrequency_7(data_val);
+            int32_t data_1 = Qtask_UpdateList(dest_val);
             *(flagP + 0x40) = 0;
-            return valA1;
+            return data_1;
         }
     }
 
-    return valA;
+    return data_val;
 }

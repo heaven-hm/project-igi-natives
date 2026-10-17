@@ -1,114 +1,114 @@
 // Original IGI.EXE function: CarDoor_Setup (VA 0x00426880; static CFG gate PASS, CFG score 0.867).
 #include "CarDoor_Setup.h"
-int32_t CarDoor_Setup(void* a1, int32_t* a2)
+int32_t CarDoor_Setup(void* context, int32_t* param_2)
 
 {
-    float* valA = a2[1];
-    long double fpu7 = valA[2];
-    double v_40;
-    memcpy(&v_40, a1 + 0xf0, 0x18);
-    double v_38;
-    double v_30;
-    double v_94 = fpu7 * v_30 + valA[1] * v_38 + *valA * v_40;
-    double v_8c = valA[5] * v_30 + valA[4] * v_38 + valA[3] * v_40;
-    double* valA1 = *a2;
-    double v_84 = valA[8] * v_30 + valA[7] * v_38 + valA[6] * v_40;
-    long double x87_r7_12 = v_94;
-    memcpy(&v_40, &v_94, 0x18);
-    v_40 = x87_r7_12 + *valA1;
-    double v_38_1 = v_38 + valA1[1];
-    double v_30_1 = v_30 + valA1[2];
-    long double x87_r7_18 = *(a1 + 0x9c);
-    long double x87_r6_12 = *(a1 + 0xa0);
-    x87_r6_12 - x87_r7_18;
-    long double x87_r7_19;
+    float* data_val = param_2[1];
+    long double fpu7 = data_val[2];
+    double item_40;
+    memcpy(&item_40, context + 0xf0, 0x18);
+    double item_38;
+    double item_30;
+    double item_94 = fpu7 * item_30 + data_val[1] * item_38 + *data_val * item_40;
+    double item_8c = data_val[5] * item_30 + data_val[4] * item_38 + data_val[3] * item_40;
+    double* data_1 = *param_2;
+    double item_84 = data_val[8] * item_30 + data_val[7] * item_38 + data_val[6] * item_40;
+    long double fpu_val_7_12 = item_94;
+    memcpy(&item_40, &item_94, 0x18);
+    item_40 = fpu_val_7_12 + *data_1;
+    double item_38_1 = item_38 + data_1[1];
+    double item_30_1 = item_30 + data_1[2];
+    long double fpu_val_7_18 = *(context + 0x9c);
+    long double fpu_val_6_12 = *(context + 0xa0);
+    fpu_val_6_12 - fpu_val_7_18;
+    long double fpu_val_7_19;
 
-    if (!(*(&((x87_r6_12 < x87_r7_18 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, x87_r7_18) ? 1 : 0) << 0xa
-            | (x87_r6_12 == x87_r7_18 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_19 = *(a1 + 0xa0);
+    if (!(*(&((fpu_val_6_12 < fpu_val_7_18 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, fpu_val_7_18) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == fpu_val_7_18 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_19 = *(context + 0xa0);
     else
-        x87_r7_19 = *(a1 + 0x9c);
+        fpu_val_7_19 = *(context + 0x9c);
 
-    long double x87_r6_13 = *(a1 + 0x98);
-    x87_r6_13 - x87_r7_19;
-    long double x87_r7_21;
+    long double fpu_val_6_13 = *(context + 0x98);
+    fpu_val_6_13 - fpu_val_7_19;
+    long double fpu_val_7_21;
 
-    if (*(&((x87_r6_13 < x87_r7_19 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_13, x87_r7_19) ? 1 : 0) << 0xa
-        | (x87_r6_13 == x87_r7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_13 < fpu_val_7_19 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_13, fpu_val_7_19) ? 1 : 0) << 0xa
+        | (fpu_val_6_13 == fpu_val_7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_22 = *(a1 + 0x9c);
-        long double x87_r6_14 = *(a1 + 0xa0);
-        x87_r6_14 - x87_r7_22;
+        long double fpu_val_7_22 = *(context + 0x9c);
+        long double fpu_val_6_14 = *(context + 0xa0);
+        fpu_val_6_14 - fpu_val_7_22;
 
-        if (!(*(&((x87_r6_14 < x87_r7_22 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_14, x87_r7_22) ? 1 : 0) << 0xa
-                | (x87_r6_14 == x87_r7_22 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_21 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_14 < fpu_val_7_22 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_14, fpu_val_7_22) ? 1 : 0) << 0xa
+                | (fpu_val_6_14 == fpu_val_7_22 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_21 = *(context + 0xa0);
         else
-            x87_r7_21 = *(a1 + 0x9c);
+            fpu_val_7_21 = *(context + 0x9c);
     }
     else
-        x87_r7_21 = *(a1 + 0x98);
+        fpu_val_7_21 = *(context + 0x98);
 
-    float v_a8_1 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_21;
-    double* v_ac = &v_40;
-    WorldObject_CommitTransform(Level_StartMission_4(), a1, v_ac, v_a8_1);
-    int32_t valA5 = **(a1 + 0x138);
-    float v_68;
+    float item_a8_1 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_21;
+    double* item_ac = &item_40;
+    WorldObject_CommitTransform(Level_StartMission_4(), context, item_ac, item_a8_1);
+    int32_t data_5 = **(context + 0x138);
+    float item_68;
 
-    if (!valA5)
+    if (!data_5)
     {
-        float valA6 = *(a1 + 0x13c);
-        v_ac = &v_68;
-        Sys_CloseFileStream_12(v_ac, valA6);
+        float data_6 = *(context + 0x13c);
+        item_ac = &item_68;
+        Sys_CloseFileStream_12(item_ac, data_6);
     }
-    else if (valA5 == 1)
+    else if (data_5 == 1)
     {
-        float tmpD1 = *(a1 + 0x13c);
-        v_ac = &v_68;
-        Sys_ExecuteBytecode_12(v_ac, tmpD1);
+        float temp_1 = *(context + 0x13c);
+        item_ac = &item_68;
+        Sys_ExecuteBytecode_12(item_ac, temp_1);
     }
-    else if (valA5 == 2)
+    else if (data_5 == 2)
     {
-        float objC1 = *(a1 + 0x13c);
-        v_ac = &v_68;
-        Sys_DispatchOpcode_12(v_ac, objC1);
+        float entity_1 = *(context + 0x13c);
+        item_ac = &item_68;
+        Sys_DispatchOpcode_12(item_ac, entity_1);
     }
 
-    float v_5c;
-    float v_50;
-    v_94 = v_50 * *(a1 + 0x110) + v_68 * *(a1 + 0x108) + v_5c * *(a1 + 0x10c);
-    float v_64;
-    float v_58;
-    float v_4c;
-    *(&v_94 + 4) = v_4c * *(a1 + 0x110) + v_64 * *(a1 + 0x108) + v_58 * *(a1 + 0x10c);
-    float v_60;
-    float v_54;
-    float v_48;
-    v_8c = v_48 * *(a1 + 0x110) + v_60 * *(a1 + 0x108) + v_54 * *(a1 + 0x10c);
-    *(&v_8c + 4) = v_50 * *(a1 + 0x11c) + v_68 * *(a1 + 0x114) + v_5c * *(a1 + 0x118);
-    v_84 = v_4c * *(a1 + 0x11c) + v_64 * *(a1 + 0x114) + v_58 * *(a1 + 0x118);
-    *(&v_84 + 4) = v_48 * *(a1 + 0x11c) + v_60 * *(a1 + 0x114) + v_54 * *(a1 + 0x118);
-    float v_7c = v_50 * *(a1 + 0x128) + v_68 * *(a1 + 0x120) + v_5c * *(a1 + 0x124);
-    float v_78 = v_4c * *(a1 + 0x128) + v_64 * *(a1 + 0x120) + v_58 * *(a1 + 0x124);
-    int32_t v_44;
-    int32_t tmpD2 = *(a1 + 0x12c) + v_44 + 1;
-    float* valA8 = a2[1];
-    int32_t v_70 = tmpD2;
-    float v_74 = v_48 * *(a1 + 0x128) + v_60 * *(a1 + 0x120) + v_54 * *(a1 + 0x124);
-    long double x87_r7_61 = v_94;
-    memcpy(&v_68, &v_94, 0x28);
-    float v_28 = x87_r7_61 * *valA8 + *(&v_8c + 4) * valA8[1] + v_7c * valA8[2];
-    float v_24 = *(&v_94 + 4) * *valA8 + v_84 * valA8[1] + v_78 * valA8[2];
-    float v_20 = v_8c * *valA8 + *(&v_84 + 4) * valA8[1] + v_74 * valA8[2];
-    float v_1c = v_7c * valA8[5] + v_94 * valA8[3] + *(&v_8c + 4) * valA8[4];
-    float v_18 = v_78 * valA8[5] + *(&v_94 + 4) * valA8[3] + v_84 * valA8[4];
-    float v_14 = v_74 * valA8[5] + v_8c * valA8[3] + *(&v_84 + 4) * valA8[4];
-    float v_10 = v_7c * valA8[8] + v_94 * valA8[6] + *(&v_8c + 4) * valA8[7];
-    float v_c = v_78 * valA8[8] + *(&v_94 + 4) * valA8[6] + v_84 * valA8[7];
-    int32_t result = valA8[9];
-    int32_t v_4 = result + tmpD2 + 1;
-    float v_8 = v_74 * valA8[8] + v_8c * valA8[6] + *(&v_84 + 4) * valA8[7];
-    memcpy(a1 + 0x70, &v_28, 0x28);
+    float item_5c;
+    float item_50;
+    item_94 = item_50 * *(context + 0x110) + item_68 * *(context + 0x108) + item_5c * *(context + 0x10c);
+    float item_64;
+    float item_58;
+    float item_4c;
+    *(&item_94 + 4) = item_4c * *(context + 0x110) + item_64 * *(context + 0x108) + item_58 * *(context + 0x10c);
+    float item_60;
+    float item_54;
+    float item_48;
+    item_8c = item_48 * *(context + 0x110) + item_60 * *(context + 0x108) + item_54 * *(context + 0x10c);
+    *(&item_8c + 4) = item_50 * *(context + 0x11c) + item_68 * *(context + 0x114) + item_5c * *(context + 0x118);
+    item_84 = item_4c * *(context + 0x11c) + item_64 * *(context + 0x114) + item_58 * *(context + 0x118);
+    *(&item_84 + 4) = item_48 * *(context + 0x11c) + item_60 * *(context + 0x114) + item_54 * *(context + 0x118);
+    float item_7c = item_50 * *(context + 0x128) + item_68 * *(context + 0x120) + item_5c * *(context + 0x124);
+    float item_78 = item_4c * *(context + 0x128) + item_64 * *(context + 0x120) + item_58 * *(context + 0x124);
+    int32_t item_44;
+    int32_t temp_2 = *(context + 0x12c) + item_44 + 1;
+    float* data_8 = param_2[1];
+    int32_t item_70 = temp_2;
+    float item_74 = item_48 * *(context + 0x128) + item_60 * *(context + 0x120) + item_54 * *(context + 0x124);
+    long double fpu_val_7_61 = item_94;
+    memcpy(&item_68, &item_94, 0x28);
+    float item_28 = fpu_val_7_61 * *data_8 + *(&item_8c + 4) * data_8[1] + item_7c * data_8[2];
+    float item_24 = *(&item_94 + 4) * *data_8 + item_84 * data_8[1] + item_78 * data_8[2];
+    float item_20 = item_8c * *data_8 + *(&item_84 + 4) * data_8[1] + item_74 * data_8[2];
+    float item_1c = item_7c * data_8[5] + item_94 * data_8[3] + *(&item_8c + 4) * data_8[4];
+    float item_18 = item_78 * data_8[5] + *(&item_94 + 4) * data_8[3] + item_84 * data_8[4];
+    float item_14 = item_74 * data_8[5] + item_8c * data_8[3] + *(&item_84 + 4) * data_8[4];
+    float item_10 = item_7c * data_8[8] + item_94 * data_8[6] + *(&item_8c + 4) * data_8[7];
+    float item_c = item_78 * data_8[8] + *(&item_94 + 4) * data_8[6] + item_84 * data_8[7];
+    int32_t result = data_8[9];
+    int32_t item_4 = result + temp_2 + 1;
+    float item_8 = item_74 * data_8[8] + item_8c * data_8[6] + *(&item_84 + 4) * data_8[7];
+    memcpy(context + 0x70, &item_28, 0x28);
     return result;
 }

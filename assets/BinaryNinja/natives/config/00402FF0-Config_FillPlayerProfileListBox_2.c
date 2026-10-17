@@ -112,42 +112,42 @@ int32_t Config_FillPlayerProfileListBox_2()
     for (char* i_2 = "KEY_ANGLE"; i_2 < &g_537b74; i_2 = &i_2[0x24])
         TaskType_Set(i_2, *(i_2 + 0x20));
 
-    int32_t dstD = 0;
+    int32_t dest_val = 0;
 
     for (char const* const i_3 = "ENGLISH"; i_3 < "GD_1"; )
     {
-        TaskType_Set(i_3, dstD);
+        TaskType_Set(i_3, dest_val);
         i_3 = &i_3[0x10];
-        dstD += 1;
+        dest_val += 1;
     }
 
-    int32_t dstD1 = 0;
+    int32_t dest_1 = 0;
 
     for (char const* const i_4 = "GD_1"; i_4 < 0x5333ac; )
     {
-        TaskType_Set(i_4, dstD1);
+        TaskType_Set(i_4, dest_1);
         i_4 = &i_4[0x10];
-        dstD1 += 1;
+        dest_1 += 1;
     }
 
     Sys_ExecuteBytecode_3(Display_CheckCapabilities_7());
-    void v_500;
-    int32_t i_6 = Display_OpenDevice_6(&v_500, 5);
+    void item_500;
+    int32_t i_6 = Display_OpenDevice_6(&item_500, 5);
     g_567c90 = i_6;
 
     if (i_6 > 0)
     {
-        int32_t* tmpD2 = &g_568098;
-        void* ctxB1 = &v_500;
+        int32_t* temp_2 = &g_568098;
+        void* context_1 = &item_500;
         int32_t i_5;
 
         do
         {
-            void* srcS = ctxB1;
-            ctxB1 += 0x100;
-            memcpy(&tmpD2[-0x100], srcS, 0x100);
-            *tmpD2 = 0;
-            tmpD2 = &tmpD2[0x101];
+            void* source_val = context_1;
+            context_1 += 0x100;
+            memcpy(&temp_2[-0x100], source_val, 0x100);
+            *temp_2 = 0;
+            temp_2 = &temp_2[0x101];
             i_5 = i_6;
             i_6 -= 1;
         } while (i_5 != 1);

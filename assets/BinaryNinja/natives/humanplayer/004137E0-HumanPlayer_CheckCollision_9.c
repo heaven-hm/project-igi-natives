@@ -1,153 +1,153 @@
 // Original IGI.EXE function: HumanPlayer_CheckCollision_9 (VA 0x004137E0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_CheckCollision_9.h"
-void** HumanPlayer_CheckCollision_9(void* a1, float a2)
+void** HumanPlayer_CheckCollision_9(void* context, float param_2)
 
 {
-    void* objC = *(a1 + 0x4ec);
+    void* entity_val = *(context + 0x4ec);
     int32_t flagP = 0;
-    int32_t ctxB = 0;
-    int32_t srcS = 0xffffffff;
-    int32_t dstD = 0xffffffff;
-    float v_8 = 0f;
-    float v_10 = 0.400000006f;
-    float v_c = 0.400000006f;
-    *(a1 + 0xd58) = a2;
+    int32_t context_val = 0;
+    int32_t source_val = 0xffffffff;
+    int32_t dest_val = 0xffffffff;
+    float item_8 = 0.0f;
+    float item_10 = 0.400000006f;
+    float item_c = 0.400000006f;
+    *(context + 0xd58) = param_2;
 
-    if (!a2)
+    if (!param_2)
     {
-        *(a1 + 0xd5c) = 0;
-        return Collision_Reset(a1, 0f);
+        *(context + 0xd5c) = 0;
+        return Collision_Reset(context, 0.0f);
     }
 
     void* result;
-    int32_t objC2;
-    result = Table_GetAt(a1 + 0x4c4, 0);
+    int32_t entity_2;
+    result = Table_GetAt(context + 0x4c4, 0);
 
     if (result)
     {
-        int32_t tmpD;
-        result = HumanPlayer_LoadParameters_13(result, tmpD, objC2, result);
+        int32_t temp_val;
+        result = HumanPlayer_LoadParameters_13(result, temp_val, entity_2, result);
 
-        if (a2 - 1 <= 9)
+        if (param_2 - 1 <= 9)
         {
-            switch (a2)
+            switch (param_2)
             {
                 case 1:
                 case 9:
                 {
-                    srcS = *(result + 0x67c);
-                    dstD = *(result + 0x694);
-                    ctxB = 1;
+                    source_val = *(result + 0x67c);
+                    dest_val = *(result + 0x694);
+                    context_val = 1;
                     flagP = 1;
                     break;
                 }
                 case 2:
                 {
-                    srcS = *(result + 0x680);
-                    dstD = *(result + 0x698);
-                    ctxB = 1;
+                    source_val = *(result + 0x680);
+                    dest_val = *(result + 0x698);
+                    context_val = 1;
                     flagP = 1;
                     break;
                 }
                 case 3:
                 {
-                    srcS = *(result + 0x680);
-                    dstD = *(result + 0x69c);
-                    ctxB = 1;
+                    source_val = *(result + 0x680);
+                    dest_val = *(result + 0x69c);
+                    context_val = 1;
                     flagP = 1;
                     break;
                 }
                 case 4:
                 {
-                    srcS = *(result + 0x67c);
-                    dstD = *(result + 0x6a0);
-                    ctxB = 1;
+                    source_val = *(result + 0x67c);
+                    dest_val = *(result + 0x6a0);
+                    context_val = 1;
                     flagP = 1;
                     break;
                 }
                 case 5:
                 {
-                    srcS = *(result + 0x67c);
-                    dstD = *(result + 0x6a4);
-                    ctxB = 1;
+                    source_val = *(result + 0x67c);
+                    dest_val = *(result + 0x6a4);
+                    context_val = 1;
                     flagP = 1;
                     break;
                 }
                 case 6:
                 {
-                    srcS = *(result + 0x684);
-                    dstD = *(result + 0x6a8);
-                    v_10 = 0f;
-                    v_c = 0f;
+                    source_val = *(result + 0x684);
+                    dest_val = *(result + 0x6a8);
+                    item_10 = 0.0f;
+                    item_c = 0.0f;
                     long double fp0_1;
                     fp0_1 = Sys_AllocateMemory_14(Level_SetMission_5());
-                    v_8 = Render_DrawBoneMesh_5() * fp0_1 * 0.174999997f * 30f;
+                    item_8 = Render_DrawBoneMesh_5() * fp0_1 * 0.174999997f * 30.0f;
                     break;
                 }
                 case 7:
                 {
-                    srcS = *(result + 0x690);
-                    dstD = *(result + 0x6ac);
-                    v_10 = 0f;
-                    v_c = 0f;
+                    source_val = *(result + 0x690);
+                    dest_val = *(result + 0x6ac);
+                    item_10 = 0.0f;
+                    item_c = 0.0f;
                     break;
                 }
                 case 8:
                 {
-                    int32_t objC5 = *(a1 + 0x4e8);
+                    int32_t entity_5 = *(context + 0x4e8);
 
-                    if (!objC5)
+                    if (!entity_5)
                     {
-                        srcS = *(result + 0x684);
-                        dstD = *(result + 0x6a8);
-                        v_10 = 0f;
+                        source_val = *(result + 0x684);
+                        dest_val = *(result + 0x6a8);
+                        item_10 = 0.0f;
                     }
-                    else if (objC5 == 1)
+                    else if (entity_5 == 1)
                     {
-                        srcS = *(result + 0x688);
-                        dstD = *(result + 0x6a8);
-                        v_10 = 0f;
+                        source_val = *(result + 0x688);
+                        dest_val = *(result + 0x6a8);
+                        item_10 = 0.0f;
                     }
-                    else if (objC5 != 2)
-                        v_10 = 0f;
+                    else if (entity_5 != 2)
+                        item_10 = 0.0f;
                     else
                     {
-                        srcS = *(result + 0x68c);
-                        dstD = *(result + 0x6a8);
-                        v_10 = 0f;
+                        source_val = *(result + 0x68c);
+                        dest_val = *(result + 0x6a8);
+                        item_10 = 0.0f;
                     }
 
-                    v_c = 0f;
+                    item_c = 0.0f;
                     break;
                 }
                 case 0xa:
                 {
-                    srcS = *(result + 0x67c);
-                    dstD = *(result + 0x694);
-                    ctxB = 1;
-                    v_10 = 0f;
+                    source_val = *(result + 0x67c);
+                    dest_val = *(result + 0x694);
+                    context_val = 1;
+                    item_10 = 0.0f;
                     flagP = 1;
-                    v_c = 0f;
+                    item_c = 0.0f;
                     break;
                 }
             }
 
-            if (srcS != 0xffffffff)
+            if (source_val != 0xffffffff)
             {
-                result = FX_FireBallUpdate_15(a1, srcS, ctxB, v_10);
-                long double x87_r7_6 = v_8;
-                long double f2_1 = 0f;
-                x87_r7_6 - f2_1;
-                result = (x87_r7_6 < f2_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_6, f2_1) ? 1 : 0) << 0xa
-                    | (x87_r7_6 == f2_1 ? 1 : 0) << 0xe;
+                result = FX_FireBallUpdate_15(context, source_val, context_val, item_10);
+                long double fpu_val_7_6 = item_8;
+                long double f2_1 = 0.0f;
+                fpu_val_7_6 - f2_1;
+                result = (fpu_val_7_6 < f2_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_6, f2_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_6 == f2_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x40))
-                    result = Render_BindTexture_10(objC + 0x68, 0, v_8);
+                    result = Render_BindTexture_10(entity_val + 0x68, 0, item_8);
             }
 
-            if (dstD != 0xffffffff)
-                return FX_TrailUpdate_14(a1, dstD, flagP, v_c);
+            if (dest_val != 0xffffffff)
+                return FX_TrailUpdate_14(context, dest_val, flagP, item_c);
         }
     }
 

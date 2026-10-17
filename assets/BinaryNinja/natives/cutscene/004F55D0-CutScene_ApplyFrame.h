@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004F55D0 CutScene_ApplyFrame | gate PASS | openigi True */
-int* CutScene_ApplyFrame(void * a1, int* a2, int a3, int a4, double a5, char a6);
+int* CutScene_ApplyFrame(void * context, int* param_2, int param_3, int param_4, double param_5, char param_6);

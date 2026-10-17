@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00505850 WeatherLightmap_InvokeOnTick | gate PASS | openigi True */
-void*(void* arg1, int32_t arg2);
+void* WeatherLightmap_InvokeOnTick(void* context, int32_t param_2);

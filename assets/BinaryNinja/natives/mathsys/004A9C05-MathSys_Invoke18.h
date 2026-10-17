@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004A9C05 MathSys_Invoke18 | gate PASS | openigi True */
-long double(int16_t arg1 @ x87control, int16_t arg2 @ x87status, int16_t arg3 @ x87tag, long double arg4 , long double arg5 );
+long double(int16_t context , int16_t param_2 , int16_t param_3 , long double param_4 , long double param_5 );

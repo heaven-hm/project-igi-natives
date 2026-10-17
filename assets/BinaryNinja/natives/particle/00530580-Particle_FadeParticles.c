@@ -1,24 +1,24 @@
 // Original IGI.EXE function: Particle_FadeParticles (VA 0x00530580; static CFG gate PASS, CFG score 1.000).
 #include "Particle_FadeParticles.h"
-int32_t Particle_FadeParticles(int32_t a1, int16_t a2, int16_t a3)
+int32_t Particle_FadeParticles(int32_t context, int16_t param_2, int16_t param_3)
 
 {
-    int32_t objC = a2 * 3;
-    int16_t* srcS = a1 + (objC << 1);
-    int32_t objC2 = *(a1 + (objC << 1)) * 3;
-    void* objC3 = a1 + (objC2 << 1);
+    int32_t entity_val = param_2 * 3;
+    int16_t* source_val = context + (entity_val << 1);
+    int32_t entity_2 = *(context + (entity_val << 1)) * 3;
+    void* entity_3 = context + (entity_2 << 1);
 
-    if (*(a1 + (objC2 << 1) + 2) != a2)
-        *(objC3 + 4) = a3;
+    if (*(context + (entity_2 << 1) + 2) != param_2)
+        *(entity_3 + 4) = param_3;
     else
-        *(objC3 + 2) = a3;
+        *(entity_3 + 2) = param_3;
 
-    int32_t* dstD = srcS;
-    int32_t* objC6 = a1 + a3 * 6;
-    *objC6 = *dstD;
-    objC6[1] = dstD[1];
-    *(a1 + *(objC6 + 2) * 6) = a3;
-    *(a1 + objC6[1] * 6) = a3;
-    *srcS = 0;
-    return a1;
+    int32_t* dest_val = source_val;
+    int32_t* entity_6 = context + param_3 * 6;
+    *entity_6 = *dest_val;
+    entity_6[1] = dest_val[1];
+    *(context + *(entity_6 + 2) * 6) = param_3;
+    *(context + entity_6[1] * 6) = param_3;
+    *source_val = 0;
+    return context;
 }

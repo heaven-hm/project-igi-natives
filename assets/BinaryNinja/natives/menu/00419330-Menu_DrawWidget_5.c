@@ -1,80 +1,80 @@
 // Original IGI.EXE function: Menu_DrawWidget_5 (VA 0x00419330; static CFG gate FAIL, CFG score 0.667).
 #include "Menu_DrawWidget_5.h"
-int32_t Menu_DrawWidget_5(int32_t* a1, float* a2)
+int32_t Menu_DrawWidget_5(int32_t* context, float* param_2)
 
 {
-    void v_2c;
-    int32_t* valA = &v_2c;
+    void item_2c;
+    int32_t* data_val = &item_2c;
     int32_t i_2 = 2;
-    int32_t dstD = 0;
+    int32_t dest_val = 0;
     int32_t i;
 
     do
     {
-        valA[-1] = 0;
-        *valA = 0x3f800000;
-        valA[1] = 0;
-        valA[-2] = 0x3d99999a;
-        valA[-4] = 0;
-        valA[-3] = 0;
-        valA[-5] = 0x3f800000;
-        valA = &valA[9];
+        data_val[-1] = 0;
+        *data_val = 0x3f800000;
+        data_val[1] = 0;
+        data_val[-2] = 0x3d99999a;
+        data_val[-4] = 0;
+        data_val[-3] = 0;
+        data_val[-5] = 0x3f800000;
+        data_val = &data_val[9];
         i = i_2;
         i_2 -= 1;
     } while (i != 1);
-    float v_48;
-    int32_t* v_4c = &v_48;
-    long double x87_r7_1 = a1[2] * *a2;
-    long double x87_r6_1 = a1[3] * a2[2];
+    float item_48;
+    int32_t* item_4c = &item_48;
+    long double fpu_val_7_1 = context[2] * *param_2;
+    long double fpu_val_6_1 = context[3] * param_2[2];
     int32_t i_1 = 0;
-    int32_t v_58 = 0x80000;
-    int32_t v_5c = 1;
-    int32_t v_54 = 0;
-    int32_t v_50 = 2;
-    float v_64 = a1[4] * *a2;
-    float v_68 = a1[4] * a2[1];
-    float v_6c = a1[5] * a2[2];
-    float v_78 = a1[5] * a2[3];
-    float v_60 = x87_r7_1 + x87_r6_1 + a2[4] - (v_6c + v_64) * 0.5f;
-    float v_80 = v_60;
-    long double x87_r7_8 =
-        a1[3] * a2[3] + a1[2] * a2[1] + a2[5] - (v_78 + v_68) * 0.5f;
-    float v_7c_1 = x87_r7_8;
-    float v_84 = v_7c_1;
+    int32_t item_58 = 0x80000;
+    int32_t item_5c = 1;
+    int32_t item_54 = 0;
+    int32_t item_50 = 2;
+    float item_64 = context[4] * *param_2;
+    float item_68 = context[4] * param_2[1];
+    float item_6c = context[5] * param_2[2];
+    float item_78 = context[5] * param_2[3];
+    float item_60 = fpu_val_7_1 + fpu_val_6_1 + param_2[4] - (item_6c + item_64) * 0.5f;
+    float item_80 = item_60;
+    long double fpu_val_7_8 =
+        context[3] * param_2[3] + context[2] * param_2[1] + param_2[5] - (item_78 + item_68) * 0.5f;
+    float item_7c_1 = fpu_val_7_8;
+    float item_84 = item_7c_1;
 
-    if (*a1 >= 0)
+    if (*context >= 0)
     {
         do
         {
-            v_48 = v_80;
-            float v_44_1 = v_84;
-            float v_24_1 = v_80 + v_64;
-            float v_20_1 = v_84 + v_68;
-            v_80 = v_6c * 0.0500000007f + v_80;
-            v_84 = v_78 * 0.0500000007f + v_84;
-            (*((g_a84a54 << 2) + &g_a94e84))(&v_5c);
+            item_48 = item_80;
+            float item_44_1 = item_84;
+            float item_24_1 = item_80 + item_64;
+            float item_20_1 = item_84 + item_68;
+            item_80 = item_6c * 0.0500000007f + item_80;
+            item_84 = item_78 * 0.0500000007f + item_84;
+            (*((g_a84a54 << 2) + &g_a94e84))(&item_5c);
             i_1 += 1;
-        } while (i_1 <= *a1);
+        } while (i_1 <= *context);
     }
 
-    int32_t result = a1[1];
-    float v_80_1 = v_60;
-    float v_84_1 = v_7c_1;
+    int32_t result = context[1];
+    float item_80_1 = item_60;
+    float item_84_1 = item_7c_1;
 
     if (result >= 0)
     {
         do
         {
-            v_48 = v_80_1;
-            float v_44_2 = v_84_1;
-            float v_24_2 = v_80_1 + v_6c;
-            float v_20_2 = v_84_1 + v_78;
-            v_80_1 = v_64 * 0.0500000007f + v_80_1;
-            v_84_1 = v_68 * 0.0500000007f + v_84_1;
-            (*((g_a84a54 << 2) + &g_a94e84))(&v_5c);
-            result = a1[1];
-            dstD += 1;
-        } while (dstD <= result);
+            item_48 = item_80_1;
+            float item_44_2 = item_84_1;
+            float item_24_2 = item_80_1 + item_6c;
+            float item_20_2 = item_84_1 + item_78;
+            item_80_1 = item_64 * 0.0500000007f + item_80_1;
+            item_84_1 = item_68 * 0.0500000007f + item_84_1;
+            (*((g_a84a54 << 2) + &g_a94e84))(&item_5c);
+            result = context[1];
+            dest_val += 1;
+        } while (dest_val <= result);
     }
 
     return result;

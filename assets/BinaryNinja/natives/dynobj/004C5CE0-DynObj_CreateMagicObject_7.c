@@ -1,56 +1,56 @@
 // Original IGI.EXE function: DynObj_CreateMagicObject_7 (VA 0x004C5CE0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_CreateMagicObject_7.h"
-int32_t DynObj_CreateMagicObject_7(int32_t* a1)
+int32_t DynObj_CreateMagicObject_7(int32_t* context)
 
 {
-    int32_t objC;
-    int32_t v_4_1 = objC;
-    int32_t* srcS = a1;
-    void* valA = srcS[0x370];
+    int32_t entity_val;
+    int32_t item_4_1 = entity_val;
+    int32_t* source_val = context;
+    void* data_val = source_val[0x370];
 
-    if (valA)
+    if (data_val)
     {
-        Sys_ExecuteBytecode_2(valA);
-        srcS[0x370] = 0;
+        Sys_ExecuteBytecode_2(data_val);
+        source_val[0x370] = 0;
     }
 
-    void* valA1 = srcS[0x371];
+    void* data_1 = source_val[0x371];
 
-    if (valA1)
+    if (data_1)
     {
-        Sys_ExecuteBytecode_2(valA1);
-        srcS[0x371] = 0;
+        Sys_ExecuteBytecode_2(data_1);
+        source_val[0x371] = 0;
     }
 
-    void* valA2 = srcS[0x36f];
+    void* data_2 = source_val[0x36f];
 
-    if (valA2)
+    if (data_2)
     {
-        Terrain_SampleHeightmap_5(valA2);
-        srcS[0x36f] = 0;
+        Terrain_SampleHeightmap_5(data_2);
+        source_val[0x36f] = 0;
     }
 
-    int32_t* valA3 = srcS[0x37d];
+    int32_t* data_3 = source_val[0x37d];
 
-    if (valA3)
+    if (data_3)
     {
-        Sys_PopStack_21(valA3);
-        Sys_ExecuteBytecode_2(srcS[0x37d]);
-        srcS[0x37d] = 0;
+        Sys_PopStack_21(data_3);
+        Sys_ExecuteBytecode_2(source_val[0x37d]);
+        source_val[0x37d] = 0;
     }
 
-    if (srcS[0x373])
+    if (source_val[0x373])
     {
         void* flagP1 = nullptr;
 
         for (int32_t* i = nullptr; i < 0xc00; )
         {
-            void* valA5 = *(i + srcS[0x373]);
+            void* data_5 = *(i + source_val[0x373]);
 
-            if (valA5 && !*(flagP1 + 0xb81a20))
+            if (data_5 && !*(flagP1 + 0xb81a20))
             {
-                Sys_ExecuteBytecode_2(valA5);
-                *(i + srcS[0x373]) = 0;
+                Sys_ExecuteBytecode_2(data_5);
+                *(i + source_val[0x373]) = 0;
             }
 
             i = &i[3];
@@ -58,18 +58,18 @@ int32_t DynObj_CreateMagicObject_7(int32_t* a1)
         }
     }
 
-    if (srcS[0x374])
+    if (source_val[0x374])
     {
         void* flagP2 = nullptr;
 
         for (int32_t* i_1 = nullptr; i_1 < 0xc00; )
         {
-            void* valA7 = *(i_1 + srcS[0x374]);
+            void* data_7 = *(i_1 + source_val[0x374]);
 
-            if (valA7 && !*(flagP2 + 0xb81920))
+            if (data_7 && !*(flagP2 + 0xb81920))
             {
-                Sys_ExecuteBytecode_2(valA7);
-                *(i_1 + srcS[0x374]) = 0;
+                Sys_ExecuteBytecode_2(data_7);
+                *(i_1 + source_val[0x374]) = 0;
             }
 
             i_1 = &i_1[3];
@@ -77,33 +77,33 @@ int32_t DynObj_CreateMagicObject_7(int32_t* a1)
         }
     }
 
-    int32_t valA8 = srcS[2];
+    int32_t data_8 = source_val[2];
 
-    if (valA8)
-        Resource_Flush(valA8);
+    if (data_8)
+        Resource_Flush(data_8);
 
-    int32_t valA9 = srcS[3];
+    int32_t data_9 = source_val[3];
 
-    if (valA9)
+    if (data_9)
     {
-        Resource_Flush(valA9);
+        Resource_Flush(data_9);
         Render_SetupLighting_3();
     }
 
-    int32_t valA10 = srcS[1];
+    int32_t data_10 = source_val[1];
 
-    if (valA10)
-        Resource_Flush(valA10);
+    if (data_10)
+        Resource_Flush(data_10);
 
-    int32_t valA11 = srcS[0x373];
+    int32_t data_11 = source_val[0x373];
 
-    if (valA11)
-        Resource_Flush(valA11);
+    if (data_11)
+        Resource_Flush(data_11);
 
-    int32_t valA12 = srcS[0x374];
+    int32_t data_12 = source_val[0x374];
 
-    if (valA12)
-        Resource_Flush(valA12);
+    if (data_12)
+        Resource_Flush(data_12);
 
     for (int32_t* i_2 = &g_b81b28; i_2 < 0xb97b28; i_2 = &i_2[0xb])
     {
@@ -111,40 +111,40 @@ int32_t DynObj_CreateMagicObject_7(int32_t* a1)
             Struct_Clear36(i_2);
     }
 
-    int32_t* flagP3 = &srcS[4];
-    int32_t v_4 = 6;
-    a1 = flagP3;
-    bool cond_1_1;
+    int32_t* flagP3 = &source_val[4];
+    int32_t item_4 = 6;
+    context = flagP3;
+    bool flag_1_1;
 
     do
     {
-        int32_t* valA13 = *(*flagP3 + 0x3c);
+        int32_t* data_13 = *(*flagP3 + 0x3c);
 
-        if (valA13)
-            DynCubeObj_Action(valA13);
+        if (data_13)
+            DynCubeObj_Action(data_13);
 
-        int32_t* dstD1 = srcS[0x345];
-        int32_t tmpD3 = *(dstD1 + *flagP3);
-        int32_t valA16 = srcS[0x342] - 1;
-        srcS[0x342] = valA16;
+        int32_t* dest_1 = source_val[0x345];
+        int32_t temp_3 = *(dest_1 + *flagP3);
+        int32_t data_16 = source_val[0x342] - 1;
+        source_val[0x342] = data_16;
 
-        if (tmpD3 != valA16)
+        if (temp_3 != data_16)
         {
-            int32_t objC3 = srcS[0x341];
-            int32_t flagP4 = *(objC3 + (tmpD3 << 2));
-            int32_t valA19 = *(objC3 + (valA16 << 2)) * srcS[0x344] + srcS[0x340];
-            int32_t dstD2 = *(dstD1 + valA19);
-            *(objC3 + (tmpD3 << 2)) = *(objC3 + (dstD2 << 2));
-            *(srcS[0x341] + (dstD2 << 2)) = flagP4;
-            flagP3 = a1;
-            *(srcS[0x345] + valA19) = tmpD3;
+            int32_t entity_3 = source_val[0x341];
+            int32_t flagP4 = *(entity_3 + (temp_3 << 2));
+            int32_t data_19 = *(entity_3 + (data_16 << 2)) * source_val[0x344] + source_val[0x340];
+            int32_t dest_2 = *(dest_1 + data_19);
+            *(entity_3 + (temp_3 << 2)) = *(entity_3 + (dest_2 << 2));
+            *(source_val[0x341] + (dest_2 << 2)) = flagP4;
+            flagP3 = context;
+            *(source_val[0x345] + data_19) = temp_3;
         }
 
         flagP3 = &flagP3[1];
-        cond_1_1 = v_4 != 1;
-        a1 = flagP3;
-        v_4 -= 1;
-    } while (cond_1_1);
-    Sys_OpenFileStream_2(&srcS[0x340]);
-    return Sys_ExecuteBytecode_2(srcS);
+        flag_1_1 = item_4 != 1;
+        context = flagP3;
+        item_4 -= 1;
+    } while (flag_1_1);
+    Sys_OpenFileStream_2(&source_val[0x340]);
+    return Sys_ExecuteBytecode_2(source_val);
 }

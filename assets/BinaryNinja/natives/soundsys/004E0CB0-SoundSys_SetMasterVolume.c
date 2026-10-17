@@ -3,7 +3,7 @@
 uint32_t SoundSys_SetMasterVolume()
 
 {
-    int32_t valA;
-    valA = g_a5e36c;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_a5e36c;
+    return QTask_CloseEvent_2(data_val);
 }

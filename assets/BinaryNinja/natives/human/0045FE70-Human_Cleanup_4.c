@@ -1,46 +1,46 @@
 // Original IGI.EXE function: Human_Cleanup_4 (VA 0x0045FE70; static CFG gate FAIL, CFG score 0.778).
 #include "Human_Cleanup_4.h"
-void Human_Cleanup_4(void* a1, int32_t* a2)
+void Human_Cleanup_4(void* context, int32_t* param_2)
 
 {
-    if (*a2 == a1 || a2[0xc] != *(a1 + 0xfc))
+    if (*param_2 == context || param_2[0xc] != *(context + 0xfc))
         return;
 
-    double* valA2 = a2[1];
-    long double x87_r7_2 = *(a1 + 0x20) - *valA2;
-    double v_38 = x87_r7_2;
-    long double x87_r6_2 = *(a1 + 0x28) - valA2[1];
-    double v_30_1 = x87_r6_2;
-    long double x87_r5_2 = *(a1 + 0x30) - valA2[2];
-    float* valA3 = a2[2];
-    double v_28_1 = x87_r5_2;
-    double v_20 = valA3[6] * x87_r5_2 + valA3[3] * x87_r6_2 + *valA3 * x87_r7_2;
-    double v_18_1 = valA3[7] * x87_r5_2 + valA3[4] * x87_r6_2 + valA3[1] * x87_r7_2;
-    double v_10_1 = valA3[8] * x87_r5_2 + valA3[5] * x87_r6_2 + valA3[2] * x87_r7_2;
-    memcpy(&v_38, &v_20, 0x18);
-    v_30_1 = 0;
-    *(&v_30_1 + 4) = 0;
-    long double fp0_1 = Sys_OpenFileStream_11(&v_38);
-    long double x87_r6_4 = *(a2 + 0x10);
+    double* data_2 = param_2[1];
+    long double fpu_val_7_2 = *(context + 0x20) - *data_2;
+    double item_38 = fpu_val_7_2;
+    long double fpu_val_6_2 = *(context + 0x28) - data_2[1];
+    double item_30_1 = fpu_val_6_2;
+    long double fpu_val_5_2 = *(context + 0x30) - data_2[2];
+    float* data_3 = param_2[2];
+    double item_28_1 = fpu_val_5_2;
+    double item_20 = data_3[6] * fpu_val_5_2 + data_3[3] * fpu_val_6_2 + *data_3 * fpu_val_7_2;
+    double item_18_1 = data_3[7] * fpu_val_5_2 + data_3[4] * fpu_val_6_2 + data_3[1] * fpu_val_7_2;
+    double item_10_1 = data_3[8] * fpu_val_5_2 + data_3[5] * fpu_val_6_2 + data_3[2] * fpu_val_7_2;
+    memcpy(&item_38, &item_20, 0x18);
+    item_30_1 = 0;
+    *(&item_30_1 + 4) = 0;
+    long double fp0_1 = Sys_OpenFileStream_11(&item_38);
+    long double fpu_val_6_4 = *(param_2 + 0x10);
     long double f0_1 = 0.0;
-    x87_r6_4 - f0_1;
+    fpu_val_6_4 - f0_1;
     long double f1_1;
 
-    if (!(*(&((x87_r6_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_4, f0_1) ? 1 : 0) << 0xa
-        | (x87_r6_4 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+    if (!(*(&((fpu_val_6_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_4, f0_1) ? 1 : 0) << 0xa
+        | (fpu_val_6_4 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
     {
-        f1_1 = *(a2 + 0x10);
+        f1_1 = *(param_2 + 0x10);
         fp0_1 - f1_1;
     }
 
-    if (!(*(&((x87_r6_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_4, f0_1) ? 1 : 0) << 0xa
-            | (x87_r6_4 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) && !(*(&(
+    if (!(*(&((fpu_val_6_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_4, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_6_4 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) && !(*(&(
             (fp0_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fp0_1, f1_1) ? 1 : 0) << 0xa
             | (fp0_1 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
         return;
 
-    *(a2 + 0x10) = fp0_1;
-    v_30_1 = v_18_1;
-    *(&v_30_1 + 4) = *(&v_18_1 + 4);
-    memcpy(&a2[6], &v_38, 0x18);
+    *(param_2 + 0x10) = fp0_1;
+    item_30_1 = item_18_1;
+    *(&item_30_1 + 4) = *(&item_18_1 + 4);
+    memcpy(&param_2[6], &item_38, 0x18);
 }

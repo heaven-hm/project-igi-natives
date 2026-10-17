@@ -1,41 +1,41 @@
 // Original IGI.EXE function: Camera_ApplyWideScreen_29 (VA 0x004AE35D; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_29.h"
-int32_t Camera_ApplyWideScreen_29(int32_t a1, int32_t a2)
+int32_t Camera_ApplyWideScreen_29(int32_t context, int32_t param_2)
 
 {
-    int32_t valA;
-    char objC4;
-    char* tmpD1;
+    int32_t data_val;
+    char entity_4;
+    char* temp_1;
 
-    if (a1 < g_c32540)
+    if (context < g_c32540)
     {
-        valA = a1 & 0x1f;
-        int32_t objC3 = (&g_c32440)[a1 >> 5];
-        tmpD1 = objC3 + (valA << 3) + 4;
-        objC4 = *(objC3 + (valA << 3) + 4);
+        data_val = context & 0x1f;
+        int32_t entity_3 = (&g_c32440)[context >> 5];
+        temp_1 = entity_3 + (data_val << 3) + 4;
+        entity_4 = *(entity_3 + (data_val << 3) + 4);
     }
 
-    if (a1 >= g_c32540 || !(objC4 & 1))
+    if (context >= g_c32540 || !(entity_4 & 1))
         g_936064 = 9;
     else
     {
-        valA = objC4;
-        int32_t valA1 = valA & 0x80;
+        data_val = entity_4;
+        int32_t data_1 = data_val & 0x80;
 
-        if (a2 == 0x8000)
+        if (param_2 == 0x8000)
         {
-            objC4 &= 0x7f;
+            entity_4 &= 0x7f;
         label_4ae3aa:
-            int32_t valA2 = -(valA1);
-            int32_t valA3 = valA2 - valA2;
-            *tmpD1 = objC4;
-            valA3 &= 0xc000;
-            return valA3 + 0x8000;
+            int32_t data_2 = -(data_1);
+            int32_t data_3 = data_2 - data_2;
+            *temp_1 = entity_4;
+            data_3 &= 0xc000;
+            return data_3 + 0x8000;
         }
 
-        if (a2 == 0x4000)
+        if (param_2 == 0x4000)
         {
-            objC4 |= 0x80;
+            entity_4 |= 0x80;
             goto label_4ae3aa;
         }
 

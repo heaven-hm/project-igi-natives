@@ -1,108 +1,108 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_20 (VA 0x004AA590; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_20.h"
-char* Camera_ApplyBandFilter_20(char* a1, char* a2)
+char* Camera_ApplyBandFilter_20(char* context, char* param_2)
 
 {
-    char* objC = a1;
-    int32_t* dstD;
+    char* entity_val = context;
+    int32_t* dest_val;
 
-    while (objC & 3)
+    while (entity_val & 3)
     {
-        char valA1 = *objC;
-        objC = &objC[1];
+        char data_1 = *entity_val;
+        entity_val = &entity_val[1];
 
-        if (!valA1)
+        if (!data_1)
         {
         label_4aa5df:
-            dstD = &objC[0xffffffff];
+            dest_val = &entity_val[0xffffffff];
             goto label_4aa5f1;
         }
     }
 
     while (true)
     {
-        int32_t valA2 = *objC;
-        objC = &objC[4];
+        int32_t data_2 = *entity_val;
+        entity_val = &entity_val[4];
 
-        if ((valA2 ^ 0xffffffff ^ (0x7efefeff + valA2)) & 0x81010100)
+        if ((data_2 ^ 0xffffffff ^ (0x7efefeff + data_2)) & 0x81010100)
         {
-            int32_t valA5 = *(objC - 4);
+            int32_t data_5 = *(entity_val - 4);
 
-            if (!valA5)
+            if (!data_5)
             {
-                dstD = &objC[0xfffffffc];
+                dest_val = &entity_val[0xfffffffc];
                 break;
             }
 
-            if (!*(&valA5 + 1))
+            if (!*(&data_5 + 1))
             {
-                dstD = &objC[0xfffffffd];
+                dest_val = &entity_val[0xfffffffd];
                 break;
             }
 
-            if (!(valA5 & 0xff0000))
+            if (!(data_5 & 0xff0000))
             {
-                dstD = &objC[0xfffffffe];
+                dest_val = &entity_val[0xfffffffe];
                 break;
             }
 
-            if (!(valA5 & 0xff000000))
+            if (!(data_5 & 0xff000000))
                 goto label_4aa5df;
         }
     }
 
 label_4aa5f1:
-    char* objC1 = a2;
-    int32_t tmpD1;
+    char* entity_1 = param_2;
+    int32_t temp_1;
 
-    while (objC1 & 3)
+    while (entity_1 & 3)
     {
-        tmpD1 = *objC1;
-        objC1 = &objC1[1];
+        temp_1 = *entity_1;
+        entity_1 = &entity_1[1];
 
-        if (!tmpD1)
+        if (!temp_1)
             goto label_4aa668;
 
-        *dstD = tmpD1;
-        dstD += 1;
+        *dest_val = temp_1;
+        dest_val += 1;
     }
 
     while (true)
     {
-        int32_t valA6 = *objC1;
-        tmpD1 = *objC1;
-        objC1 = &objC1[4];
+        int32_t data_6 = *entity_1;
+        temp_1 = *entity_1;
+        entity_1 = &entity_1[4];
 
-        if ((valA6 ^ 0xffffffff ^ (0x7efefeff + valA6)) & 0x81010100)
+        if ((data_6 ^ 0xffffffff ^ (0x7efefeff + data_6)) & 0x81010100)
         {
-            if (!tmpD1)
+            if (!temp_1)
                 break;
 
-            if (!*(&tmpD1 + 1))
+            if (!*(&temp_1 + 1))
             {
-                *dstD = tmpD1;
-                return a1;
+                *dest_val = temp_1;
+                return context;
             }
 
-            if (!(tmpD1 & 0xff0000))
+            if (!(temp_1 & 0xff0000))
             {
-                *dstD = tmpD1;
-                *(dstD + 2) = 0;
-                return a1;
+                *dest_val = temp_1;
+                *(dest_val + 2) = 0;
+                return context;
             }
 
-            if (!(tmpD1 & 0xff000000))
+            if (!(temp_1 & 0xff000000))
             {
-                *dstD = tmpD1;
-                return a1;
+                *dest_val = temp_1;
+                return context;
             }
         }
 
-        *dstD = tmpD1;
-        dstD = &dstD[1];
+        *dest_val = temp_1;
+        dest_val = &dest_val[1];
     }
 
 label_4aa668:
-    *dstD = tmpD1;
-    return a1;
+    *dest_val = temp_1;
+    return context;
 }

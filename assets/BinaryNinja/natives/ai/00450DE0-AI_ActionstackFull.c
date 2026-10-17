@@ -1,10 +1,10 @@
 // Original IGI.EXE function: AI_ActionstackFull (VA 0x00450DE0; static CFG gate PASS, CFG score 1.000).
 #include "AI_ActionstackFull.h"
-void* AI_ActionstackFull(void* a1)
+void* AI_ActionstackFull(void* context)
 
 {
     int32_t i = 0;
-    void* result = a1 + 0x908;
+    void* result = context + 0x908;
 
     do
     {

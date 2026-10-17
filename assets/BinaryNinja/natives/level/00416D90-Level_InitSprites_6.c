@@ -23,34 +23,34 @@ void* Level_InitSprites_6()
         *(i_1 + g_57babc - 4) = 0;
     }
 
-    void* valA3 = Script_ExecuteLevelScript_4(0);
-    int32_t* valA5 = *(g_57babc + 0xc0);
+    void* data_3 = Script_ExecuteLevelScript_4(0);
+    int32_t* data_5 = *(g_57babc + 0xc0);
 
-    if (valA5)
+    if (data_5)
     {
-        Qtask_UpdateList(valA5);
+        Qtask_UpdateList(data_5);
         *(g_57babc + 0xc0) = 0;
     }
 
-    if (valA3)
-        *(g_57babc + 0xc0) = QTask_LinkEventHandler_2(valA3);
+    if (data_3)
+        *(g_57babc + 0xc0) = QTask_LinkEventHandler_2(data_3);
 
-    void* objC5 = g_57babc;
-    void* valA8 = **(objC5 + 0x54);
-    *(objC5 + 0x58) = 0;
-    *(g_57babc + 0x5c) = FX_SmokeEmit_5(valA8, g_57babc + 0x60);
+    void* entity_5 = g_57babc;
+    void* data_8 = **(entity_5 + 0x54);
+    *(entity_5 + 0x58) = 0;
+    *(g_57babc + 0x5c) = FX_SmokeEmit_5(data_8, g_57babc + 0x60);
 
-    if (valA3)
-        FX_ErrorInHumancameraHu_4(*(g_57babc + 0x5c), valA3);
+    if (data_3)
+        FX_ErrorInHumancameraHu_4(*(g_57babc + 0x5c), data_3);
 
-    int32_t objC9;
+    int32_t entity_9;
     long double fp0;
     fp0 = Config_SaveGameOptions_2();
-    int32_t v_c_5 = objC9;
-    int32_t objC10;
+    int32_t item_c_5 = entity_9;
+    int32_t entity_10;
     long double fp0_1;
     fp0_1 = Config_SaveGameOptions_2();
-    int32_t v_10_3 = objC10;
+    int32_t item_10_3 = entity_10;
     Music_SetVolume(fp0_1, fp0);
     Music_SetSfxVolume(Config_RegisterOptions_2());
     void* result = FX_FragmentSimulate_25();

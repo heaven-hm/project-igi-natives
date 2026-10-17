@@ -1,93 +1,93 @@
 // Original IGI.EXE function: AlarmLight_Parsed (VA 0x0043A450; static CFG gate PASS, CFG score 0.972).
 #include "AlarmLight_Parsed.h"
-int32_t AlarmLight_Parsed(float a1, char* a2)
+int32_t AlarmLight_Parsed(float context, char* param_2)
 
 {
-    DynObj_CreateMagicObject_5(a1, DynObj_Missing(a1 + 0x140));
-    long double fpu7 = *(a1 + 0x9c);
-    long double fpu6 = *(a1 + 0xa0);
+    DynObj_CreateMagicObject_5(context, DynObj_Missing(context + 0x140));
+    long double fpu7 = *(context + 0x9c);
+    long double fpu6 = *(context + 0xa0);
     fpu6 - fpu7;
-    long double x87_r7_1;
+    long double fpu_val_7_1;
 
     if (!(*(&((fpu6 < fpu7 ? 1 : 0) << 8 | (FCMP_UO(fpu6, fpu7) ? 1 : 0) << 0xa
             | (fpu6 == fpu7 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_1 = *(a1 + 0xa0);
+        fpu_val_7_1 = *(context + 0xa0);
     else
-        x87_r7_1 = *(a1 + 0x9c);
+        fpu_val_7_1 = *(context + 0x9c);
 
-    long double x87_r6_1 = *(a1 + 0x98);
-    x87_r6_1 - x87_r7_1;
-    long double x87_r7_3;
+    long double fpu_val_6_1 = *(context + 0x98);
+    fpu_val_6_1 - fpu_val_7_1;
+    long double fpu_val_7_3;
 
-    if (*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-        | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_4 = *(a1 + 0x9c);
-        long double x87_r6_2 = *(a1 + 0xa0);
-        x87_r6_2 - x87_r7_4;
+        long double fpu_val_7_4 = *(context + 0x9c);
+        long double fpu_val_6_2 = *(context + 0xa0);
+        fpu_val_6_2 - fpu_val_7_4;
 
-        if (!(*(&((x87_r6_2 < x87_r7_4 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_4) ? 1 : 0) << 0xa
-                | (x87_r6_2 == x87_r7_4 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_3 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_2 < fpu_val_7_4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_4) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == fpu_val_7_4 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_3 = *(context + 0xa0);
         else
-            x87_r7_3 = *(a1 + 0x9c);
+            fpu_val_7_3 = *(context + 0x9c);
     }
     else
-        x87_r7_3 = *(a1 + 0x98);
+        fpu_val_7_3 = *(context + 0x98);
 
-    long double x87_r7_6 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_3;
-    WorldObject_CommitTransform(*(a1 + 0x68), a1, a1 + 0xf0, x87_r7_6);
-    double* valA5 = DynObj_UpdateDynTree_4(a1);
-    Render_BindTexture_14(*(a1 + 0x68), a1, valA5);
-    int32_t* valA6 = *(a1 + 0xe8);
-    memcpy(a1 + 0x70, a1 + 0x108, 0x28);
+    long double fpu_val_7_6 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_3;
+    WorldObject_CommitTransform(*(context + 0x68), context, context + 0xf0, fpu_val_7_6);
+    double* data_5 = DynObj_UpdateDynTree_4(context);
+    Render_BindTexture_14(*(context + 0x68), context, data_5);
+    int32_t* data_6 = *(context + 0xe8);
+    memcpy(context + 0x70, context + 0x108, 0x28);
 
-    if (valA6)
-        QTask_FindType(valA6);
+    if (data_6)
+        QTask_FindType(data_6);
 
-    struct status_msg* valA7 = CarGun_Create(nullptr, a1);
-    *(a1 + 0xe8) = valA7;
-    Car_GunCreate(valA7, a1, a1);
+    struct status_msg* data_7 = CarGun_Create(nullptr, context);
+    *(context + 0xe8) = data_7;
+    Car_GunCreate(data_7, context, context);
 
-    if (!a2 || !*a2)
+    if (!param_2 || !*param_2)
     {
-        int32_t* i = *(*(a1 + 0xe8) + 8);
+        int32_t* i = *(*(context + 0xe8) + 8);
 
         if (*i && i)
         {
-            int32_t objC2 = g_afa7e0;
+            int32_t entity_2 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD2 = *i;
-                void* valA12;
+                int32_t* temp_2 = *i;
+                void* data_12;
 
-                if (!tmpD2)
-                    valA12 = nullptr;
+                if (!temp_2)
+                    data_12 = nullptr;
                 else
                 {
-                    int32_t valA9 = *tmpD2;
-                    int32_t valA10 = -(valA9);
-                    valA12 = (valA10 - valA10) & tmpD2;
+                    int32_t data_9 = *temp_2;
+                    int32_t data_10 = -(data_9);
+                    data_12 = (data_10 - data_10) & temp_2;
                 }
 
-                *((objC2 << 2) + &g_afa6e0) = valA12;
-                g_afa7e0 = objC2 + 1;
-                uint32_t valA14 = Script_ParseEnumReal32_8();
-                int32_t objC4 = 0;
-                objC4 = i[7];
-                int32_t valA18 = *(((valA14 * 0x180 + objC4) << 2) + &g_a96ae0);
+                *((entity_2 << 2) + &g_afa6e0) = data_12;
+                g_afa7e0 = entity_2 + 1;
+                uint32_t data_14 = Script_ParseEnumReal32_8();
+                int32_t entity_4 = 0;
+                entity_4 = i[7];
+                int32_t data_18 = *(((data_14 * 0x180 + entity_4) << 2) + &g_a96ae0);
 
-                if (valA18)
-                    valA18(i, 0);
+                if (data_18)
+                    data_18(i, 0);
 
-                objC2 = g_afa7e0 - 1;
-                g_afa7e0 = objC2;
-                i = *((objC2 << 2) + &g_afa6e0);
+                entity_2 = g_afa7e0 - 1;
+                g_afa7e0 = entity_2;
+                i = *((entity_2 << 2) + &g_afa6e0);
             } while (i);
         }
     }
 
-    Script_Isexists(a1 + 0x1a4, a1);
+    Script_Isexists(context + 0x1a4, context);
     return 0;
 }

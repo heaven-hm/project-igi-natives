@@ -1,18 +1,18 @@
 // Original IGI.EXE function: RigidDynCubeObj_Action (VA 0x004C3010; static CFG gate PASS, CFG score 0.917).
 #include "RigidDynCubeObj_Action.h"
-void RigidDynCubeObj_Action(int32_t* a1, float a2)
+void RigidDynCubeObj_Action(int32_t* context, float param_2)
 
 {
-    int32_t* srcS = a2;
+    int32_t* source_val = param_2;
 
-    if (!srcS)
+    if (!source_val)
         return;
 
-    void* valA2 = DynObj_Missing(*srcS);
+    void* data_2 = DynObj_Missing(*source_val);
 
-    if (!valA2)
+    if (!data_2)
     {
-        int32_t __saved_ebx_2 = *srcS;
+        int32_t saved_ebx_2 = *source_val;
         Error_Show("VirModel "%s" not available");
 
         while (true)
@@ -21,42 +21,42 @@ void RigidDynCubeObj_Action(int32_t* a1, float a2)
         return;
     }
 
-    DynObj_LookupHashItem_6(srcS[1], a1, valA2);
-    long double x87_r7_1 = a1[0x27];
-    long double x87_r6_1 = a1[0x28];
-    x87_r6_1 - x87_r7_1;
-    long double x87_r7_2;
+    DynObj_LookupHashItem_6(source_val[1], context, data_2);
+    long double fpu_val_7_1 = context[0x27];
+    long double fpu_val_6_1 = context[0x28];
+    fpu_val_6_1 - fpu_val_7_1;
+    long double fpu_val_7_2;
 
-    if (!(*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-            | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_2 = a1[0x28];
+    if (!(*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+            | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_2 = context[0x28];
     else
-        x87_r7_2 = a1[0x27];
+        fpu_val_7_2 = context[0x27];
 
-    long double x87_r6_2 = a1[0x26];
-    x87_r6_2 - x87_r7_2;
-    long double x87_r7_4;
+    long double fpu_val_6_2 = context[0x26];
+    fpu_val_6_2 - fpu_val_7_2;
+    long double fpu_val_7_4;
 
-    if (*(&((x87_r6_2 < x87_r7_2 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_2) ? 1 : 0) << 0xa
-        | (x87_r6_2 == x87_r7_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_2 < fpu_val_7_2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_2) ? 1 : 0) << 0xa
+        | (fpu_val_6_2 == fpu_val_7_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_5 = a1[0x27];
-        long double x87_r6_3 = a1[0x28];
-        x87_r6_3 - x87_r7_5;
+        long double fpu_val_7_5 = context[0x27];
+        long double fpu_val_6_3 = context[0x28];
+        fpu_val_6_3 - fpu_val_7_5;
 
-        if (!(*(&((x87_r6_3 < x87_r7_5 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_3, x87_r7_5) ? 1 : 0) << 0xa
-                | (x87_r6_3 == x87_r7_5 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_4 = a1[0x28];
+        if (!(*(&((fpu_val_6_3 < fpu_val_7_5 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_3, fpu_val_7_5) ? 1 : 0) << 0xa
+                | (fpu_val_6_3 == fpu_val_7_5 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_4 = context[0x28];
         else
-            x87_r7_4 = a1[0x27];
+            fpu_val_7_4 = context[0x27];
     }
     else
-        x87_r7_4 = a1[0x26];
+        fpu_val_7_4 = context[0x26];
 
-    int32_t valA5 = a1[0x35];
-    long double x87_r7_7 = Render_ComputeNormals(a1[0x1b]) * x87_r7_4;
-    DynObj_LinkDynamicCube_8(srcS[1], a1, &srcS[2], x87_r7_7, valA5);
-    memcpy(&a1[0x1c], &srcS[0xe], 0x28);
-    Car_GunCreate(a1, a1, a1);
-    __builtin_memset(&a1[0x30], 0, 0x14);
+    int32_t data_5 = context[0x35];
+    long double fpu_val_7_7 = Render_ComputeNormals(context[0x1b]) * fpu_val_7_4;
+    DynObj_LinkDynamicCube_8(source_val[1], context, &source_val[2], fpu_val_7_7, data_5);
+    memcpy(&context[0x1c], &source_val[0xe], 0x28);
+    Car_GunCreate(context, context, context);
+    memset(&context[0x30], 0, 0x14);
 }

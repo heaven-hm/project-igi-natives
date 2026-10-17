@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Render_CallbackNotFound (VA 0x004D2BD0; static CFG gate PASS, CFG score 1.000).
 #include "Render_CallbackNotFound.h"
-void** Render_CallbackNotFound(int32_t a1)
+void** Render_CallbackNotFound(int32_t context)
 
 {
     void** i = g_a538e4;
@@ -8,7 +8,7 @@ void** Render_CallbackNotFound(int32_t a1)
 
     for (; i; i = *i)
     {
-        if (i[1] == a1)
+        if (i[1] == context)
         {
             if (!i_1)
             {

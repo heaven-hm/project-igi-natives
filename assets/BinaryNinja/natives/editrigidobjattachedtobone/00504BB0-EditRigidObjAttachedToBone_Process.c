@@ -1,44 +1,44 @@
 // Original IGI.EXE function: EditRigidObjAttachedToBone_Process (VA 0x00504BB0; static CFG gate PASS, CFG score 0.889).
 #include "EditRigidObjAttachedToBone_Process.h"
-int32_t EditRigidObjAttachedToBone_Process(void* a1)
+int32_t EditRigidObjAttachedToBone_Process(void* context)
 
 {
-    char valA = *(a1 + 0x128);
+    char data_val = *(context + 0x128);
 
-    if (valA != 0x2a && valA)
+    if (data_val != 0x2a && data_val)
     {
-        void* valA1 = DynObj_Missing(a1 + 0x128);
+        void* data_1 = DynObj_Missing(context + 0x128);
 
-        if (valA1)
+        if (data_1)
         {
-            void* __saved_esi_2 = a1;
-            *(a1 + 0x6c) = valA1;
-            return valA1;
+            void* saved_esi_2 = context;
+            *(context + 0x6c) = data_1;
+            return data_1;
         }
 
-        char* dstD1 = a1 + 0x128;
+        char* dest_1 = context + 0x128;
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD1;
-            dstD1 = &dstD1[1];
+            bool flag_0_1 = 0 != *dest_1;
+            dest_1 = &dest_1[1];
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC1 = ~i;
-        void v_10;
-        int32_t srcS2;
-        int32_t dstD3;
-        dstD3 = memcpy(&v_10, dstD1 - objC1, objC1 & 0xfffffffc);
-        memcpy(dstD3, srcS2, objC1 & 3);
-        void* v_24_1 = &v_10;
-        valA = Game_DataSymbolLoad(a1 + 0x128, "*%s");
+        int32_t entity_1 = ~i;
+        void item_10;
+        int32_t source_2;
+        int32_t dest_3;
+        dest_3 = memcpy(&item_10, dest_1 - entity_1, entity_1 & 0xfffffffc);
+        memcpy(dest_3, source_2, entity_1 & 3);
+        void* item_24_1 = &item_10;
+        data_val = Game_DataSymbolLoad(context + 0x128, "*%s");
     }
 
-    void* __saved_esi_3 = a1;
-    return valA;
+    void* saved_esi_3 = context;
+    return data_val;
 }

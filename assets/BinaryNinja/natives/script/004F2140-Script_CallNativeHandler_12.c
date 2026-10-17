@@ -1,55 +1,55 @@
 // Original IGI.EXE function: Script_CallNativeHandler_12 (VA 0x004F2140; static CFG gate PASS, CFG score 1.000).
 #include "Script_CallNativeHandler_12.h"
-int32_t** Script_CallNativeHandler_12(int32_t a1 @ 0x8, char* a2)
+int32_t** Script_CallNativeHandler_12(int32_t context , char* param_2)
 
 {
-    int32_t** valA = Table_GetAt(a1, a2);
-    int32_t** dstD = valA;
+    int32_t** data_val = Table_GetAt(context, param_2);
+    int32_t** dest_val = data_val;
     int32_t** arg_4;
 
-    if (dstD)
+    if (dest_val)
     {
-        int32_t* srcS = *dstD;
+        int32_t* source_val = *dest_val;
         int32_t** flagP1 = arg_4;
 
-        if (!srcS || !*srcS || !srcS)
+        if (!source_val || !*source_val || !source_val)
         {
-            valA = flagP1[2];
-            int32_t* srcS1 = *valA;
-            int32_t srcS2 = -(srcS1);
-            srcS = (srcS2 - srcS2) & valA;
+            data_val = flagP1[2];
+            int32_t* source_1 = *data_val;
+            int32_t source_2 = -(source_1);
+            source_val = (source_2 - source_2) & data_val;
         }
 
-        while (srcS != dstD)
+        while (source_val != dest_val)
         {
-            int32_t valA4 = 0;
-            int32_t objC2 = 0;
-            valA4 = g_a76c03;
+            int32_t data_4 = 0;
+            int32_t entity_2 = 0;
+            data_4 = g_a76c03;
             arg_4 = nullptr;
-            objC2 = srcS[7];
-            valA = *(((valA4 * 0x180 + objC2) << 2) + &g_a96ae0);
+            entity_2 = source_val[7];
+            data_val = *(((data_4 * 0x180 + entity_2) << 2) + &g_a96ae0);
 
-            if (valA)
+            if (data_val)
             {
-                valA(srcS, &arg_4);
-                valA = arg_4;
+                data_val(source_val, &arg_4);
+                data_val = arg_4;
 
-                if (valA && valA[1] == a2 && !valA[2])
+                if (data_val && data_val[1] == param_2 && !data_val[2])
                 {
-                    void* valA9 = Script_ExecuteLevelScript_12(a1, a2, srcS);
-                    valA9 = 1;
-                    return valA9;
+                    void* data_9 = Script_ExecuteLevelScript_12(context, param_2, source_val);
+                    data_9 = 1;
+                    return data_9;
                 }
             }
 
-            srcS = *srcS;
+            source_val = *source_val;
 
-            if (!srcS || !*srcS || !srcS)
+            if (!source_val || !*source_val || !source_val)
             {
-                valA = flagP1[2];
-                int32_t* srcS4 = *valA;
-                int32_t srcS5 = -(srcS4);
-                srcS = (srcS5 - srcS5) & valA;
+                data_val = flagP1[2];
+                int32_t* source_4 = *data_val;
+                int32_t source_5 = -(source_4);
+                source_val = (source_5 - source_5) & data_val;
             }
         }
     }
@@ -61,23 +61,23 @@ int32_t** Script_CallNativeHandler_12(int32_t a1 @ 0x8, char* a2)
         {
             do
             {
-                int32_t valA1 = 0;
+                int32_t data_1 = 0;
                 arg_4 = nullptr;
-                valA1 = g_a76c03;
-                int32_t valA2 = 0;
-                valA2 = i[7];
-                valA = *(((valA1 * 0x180 + valA2) << 2) + &g_a96ae0);
+                data_1 = g_a76c03;
+                int32_t data_2 = 0;
+                data_2 = i[7];
+                data_val = *(((data_1 * 0x180 + data_2) << 2) + &g_a96ae0);
 
-                if (valA)
+                if (data_val)
                 {
-                    valA(i, &arg_4);
-                    valA = arg_4;
+                    data_val(i, &arg_4);
+                    data_val = arg_4;
 
-                    if (valA && valA[1] == a2 && !valA[2])
+                    if (data_val && data_val[1] == param_2 && !data_val[2])
                     {
-                        void* valA3 = Script_ExecuteLevelScript_12(a1, a2, i);
-                        valA3 = 1;
-                        return valA3;
+                        void* data_3 = Script_ExecuteLevelScript_12(context, param_2, i);
+                        data_3 = 1;
+                        return data_3;
                     }
                 }
 
@@ -91,6 +91,6 @@ int32_t** Script_CallNativeHandler_12(int32_t a1 @ 0x8, char* a2)
             } while (i);
         }
     }
-    valA = 0;
-    return valA;
+    data_val = 0;
+    return data_val;
 }

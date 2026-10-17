@@ -1,10 +1,10 @@
 // Original IGI.EXE function: BinocularOverlay_Cleanup (VA 0x00471400; static CFG gate PASS, CFG score 1.000).
 #include "BinocularOverlay_Cleanup.h"
-int32_t* BinocularOverlay_Cleanup(void* a1)
+int32_t* BinocularOverlay_Cleanup(void* context)
 
 {
-    Script_CallNativeHandler_6(a1 + 0x24);
-    int32_t* result = *(a1 + 0x20);
+    Script_CallNativeHandler_6(context + 0x24);
+    int32_t* result = *(context + 0x20);
 
     if (result)
     {
@@ -13,8 +13,8 @@ int32_t* BinocularOverlay_Cleanup(void* a1)
         if (result)
         {
             QTask_FindType(result);
-            result = Qtask_UpdateList(*(a1 + 0x20));
-            *(a1 + 0x20) = 0;
+            result = Qtask_UpdateList(*(context + 0x20));
+            *(context + 0x20) = 0;
         }
     }
 

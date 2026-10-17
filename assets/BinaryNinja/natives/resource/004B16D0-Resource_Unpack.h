@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004B16D0 Resource_Unpack | gate FAIL | openigi False */
-int Resource_Unpack(int* a1, int a2, int a3);
+int Resource_Unpack(int* context, int param_2, int param_3);

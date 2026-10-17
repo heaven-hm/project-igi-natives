@@ -1,77 +1,77 @@
 // Original IGI.EXE function: ListBox_OnEvent (VA 0x0041F030; static CFG gate PASS, CFG score 1.000).
 #include "ListBox_OnEvent.h"
-int32_t* ListBox_OnEvent(void* a1)
+int32_t* ListBox_OnEvent(void* context)
 
 {
-    Menu_UpdateLanguage_9(a1);
-    g_57bbd8 = a1;
+    Menu_UpdateLanguage_9(context);
+    g_57bbd8 = context;
 
-    if (Script_FormatString_6(a1 + 0xbf8))
-        Script_SpawnNewTask_7(a1 + 0xbf8, a1);
+    if (Script_FormatString_6(context + 0xbf8))
+        Script_SpawnNewTask_7(context + 0xbf8, context);
 
     g_57bbd8 = 0;
-    int32_t* result = Script_FormatString_6(a1 + 0xc48);
+    int32_t* result = Script_FormatString_6(context + 0xc48);
 
     if (result)
     {
-        Script_SpawnNewTask_7(a1 + 0xc48, a1);
-        int32_t objC1 = *(a1 + 0xbe0);
-🚫🚫🚫        int32_t v_8_1 = /* int32_t v_8_1 = (unimplemented  {fistp qword [esp+0x8], fp0}).d */;
-        /* unimplemented  {fistp qword [esp+0x8], fp0} */
+        Script_SpawnNewTask_7(context + 0xc48, context);
+        int32_t entity_1 = *(context + 0xbe0);
+🚫🚫🚫        int32_t item_8_1 = /* int32_t item_8_1 = (unimplemented  {fistp qword [stack_ptr+0x8], fp0}).d */;
+        /* unimplemented  {fistp qword [stack_ptr+0x8], fp0} */
         result = nullptr;
 
-        if (objC1 > 0)
+        if (entity_1 > 0)
         {
-            int32_t* tmpD1 = a1 + 0xe0;
+            int32_t* temp_1 = context + 0xe0;
 
             do
             {
-                if (v_8_1 == *tmpD1)
+                if (item_8_1 == *temp_1)
                 {
-                    *(a1 + 0xbe4) = result;
-                    *(a1 + 0xbe8) = v_8_1;
+                    *(context + 0xbe4) = result;
+                    *(context + 0xbe8) = item_8_1;
                     break;
                 }
 
                 result += 1;
-                tmpD1 = &tmpD1[0xb];
-            } while (result < objC1);
+                temp_1 = &temp_1[0xb];
+            } while (result < entity_1);
         }
     }
 
-    int32_t* i = *(a1 + 8);
+    int32_t* i = *(context + 8);
 
     if (*i && i)
     {
-        int32_t objC2 = g_afa7e0;
+        int32_t entity_2 = g_afa7e0;
 
         do
         {
-            int32_t* tmpD2 = *i;
-            void* valA4;
+            int32_t* temp_2 = *i;
+            void* data_4;
 
-            if (!tmpD2)
-                valA4 = nullptr;
+            if (!temp_2)
+                data_4 = nullptr;
             else
             {
-                int32_t valA1 = *tmpD2;
-                int32_t valA2 = -(valA1);
-                valA4 = (valA2 - valA2) & tmpD2;
+                int32_t data_1 = *temp_2;
+                int32_t data_2 = -(data_1);
+                data_4 = (data_2 - data_2) & temp_2;
             }
 
-            *((objC2 << 2) + &g_afa6e0) = valA4;
-            g_afa7e0 = objC2 + 1;
-            int32_t valA5 = Menu_HandleInput_13();
-            int32_t objC4 = 0;
-            objC4 = i[7];
-            result = *(((valA5 * 0x180 + objC4) << 2) + &g_a96ae0);
+            *((entity_2 << 2) + &g_afa6e0) = data_4;
+            g_afa7e0 = entity_2 + 1;
+            int32_t data_5 = Menu_HandleInput_13();
+            int32_t entity_4 = 0;
+            entity_4 = i[7];
+            result = *(((data_5 * 0x180 + entity_4) << 2) + &g_a96ae0);
 
             if (result)
                 result = result(i);
 
-            objC2 = g_afa7e0 - 1;
-            g_afa7e0 = objC2;
-            i = *((objC2 << 2) + &g_afa6e0);
+            entity_2 = g_afa7e0 - 1;
+            g_afa7e0 = entity_2;
+            i = *((entity_2 << 2) + &g_afa6e0);
         } while (i);
     }
 

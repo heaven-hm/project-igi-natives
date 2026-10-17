@@ -1,56 +1,56 @@
 // Original IGI.EXE function: Gun_MagFill (VA 0x004798C0; static CFG gate PASS, CFG score 1.000).
 #include "Gun_MagFill.h"
-char* Gun_MagFill(int32_t* a1, char* a2)
+char* Gun_MagFill(int32_t* context, char* param_2)
 
 {
-    int32_t* srcS = a1;
-    bool cond_0 = !*a2;
-    void* flagP = srcS[0x4a];
-    int32_t* ctxB = srcS[0x4b];
-    a1 = nullptr;
+    int32_t* source_val = context;
+    bool flag_0 = !*param_2;
+    void* flagP = source_val[0x4a];
+    int32_t* context_val = source_val[0x4b];
+    context = nullptr;
 
-    if (!cond_0)
+    if (!flag_0)
     {
-        srcS[0x51] = *(flagP + 0x648);
-        return a2;
+        source_val[0x51] = *(flagP + 0x648);
+        return param_2;
     }
 
-    void* dstD = srcS[5];
-    uint32_t valA1 = Weapon_ReloadClip_8();
-    int32_t valA2 = 0;
-    valA2 = *(dstD + 0x1c);
-    int32_t valA3 = *(((valA1 * 0x180 + valA2) << 2) + &g_a96ae0);
+    void* dest_val = source_val[5];
+    uint32_t data_1 = Weapon_ReloadClip_8();
+    int32_t data_2 = 0;
+    data_2 = *(dest_val + 0x1c);
+    int32_t data_3 = *(((data_1 * 0x180 + data_2) << 2) + &g_a96ae0);
 
-    if (valA3)
-        valA3(dstD, &a1);
+    if (data_3)
+        data_3(dest_val, &context);
 
-    int32_t* valA5 = Weapon_UpdateMuzzleFlash_8(a1, *ctxB);
+    int32_t* data_5 = Weapon_UpdateMuzzleFlash_8(context, *context_val);
 
-    if (valA5)
+    if (data_5)
     {
-        int32_t objC2 = valA5[1];
+        int32_t entity_2 = data_5[1];
 
-        if (objC2)
+        if (entity_2)
         {
-            int32_t dstD1 = srcS[0x51];
-            int32_t tmpD4 = *(flagP + 0x648);
-            int32_t tmpD5 = tmpD4 - dstD1;
+            int32_t dest_1 = source_val[0x51];
+            int32_t temp_4 = *(flagP + 0x648);
+            int32_t temp_5 = temp_4 - dest_1;
 
-            if (tmpD4 != dstD1)
+            if (temp_4 != dest_1)
             {
-                if (objC2 >= tmpD5)
+                if (entity_2 >= temp_5)
                 {
-                    valA5[1] = objC2 - tmpD5;
-                    int32_t valA7 = srcS[0x51] + tmpD5;
-                    srcS[0x51] = valA7;
-                    return valA7;
+                    data_5[1] = entity_2 - temp_5;
+                    int32_t data_7 = source_val[0x51] + temp_5;
+                    source_val[0x51] = data_7;
+                    return data_7;
                 }
 
-                srcS[0x51] = dstD1 + objC2;
-                valA5[1] = 0;
+                source_val[0x51] = dest_1 + entity_2;
+                data_5[1] = 0;
             }
         }
     }
 
-    return valA5;
+    return data_5;
 }

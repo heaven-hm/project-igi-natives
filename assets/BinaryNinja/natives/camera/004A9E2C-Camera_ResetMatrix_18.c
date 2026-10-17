@@ -1,167 +1,167 @@
 // Original IGI.EXE function: Camera_ResetMatrix_18 (VA 0x004A9E2C; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_18.h"
-int32_t Camera_ResetMatrix_18(double a1, int32_t a2, int32_t a3, double* a4)
+int32_t Camera_ResetMatrix_18(double context, int32_t param_2, int32_t param_3, double* param_4)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
-    int32_t v_c = objC;
-    long double fpu7 = a1;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
+    int32_t item_c = entity_val;
+    long double fpu7 = context;
     long double f0 = 0.0;
     fpu7 - f0;
-    long double x87_r7_1 = a1;
+    long double fpu_val_7_1 = context;
     int32_t result = 0;
 
     if (TEST_BITB(
             *(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
                 | (fpu7 == f0 ? 1 : 0) << 0xe | 0x3800) + 1),
             0))
-        x87_r7_1 = -(x87_r7_1);
+        fpu_val_7_1 = -(fpu_val_7_1);
 
-    v_c = x87_r7_1;
+    item_c = fpu_val_7_1;
 
-    if (a3 == 0x7ff00000)
+    if (param_3 == 0x7ff00000)
     {
-        if (a2)
+        if (param_2)
             goto label_4a9eb7;
 
-        long double x87_r7_2 = v_c;
+        long double fpu_val_7_2 = item_c;
         long double f1_1 = 1.0;
-        x87_r7_2 - f1_1;
-        int16_t valA2 = (x87_r7_2 < f1_1 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r7_2, f1_1) ? 1 : 0) << 0xa | (x87_r7_2 == f1_1 ? 1 : 0) << 0xe;
+        fpu_val_7_2 - f1_1;
+        int16_t data_2 = (fpu_val_7_2 < f1_1 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_7_2, f1_1) ? 1 : 0) << 0xa | (fpu_val_7_2 == f1_1 ? 1 : 0) << 0xe;
 
-        if (!TEST_BITB(*(&valA2 + 1), 6) && !TEST_BITB(*(&valA2 + 1), 0))
-            *a4 = g_544368;
+        if (!TEST_BITB(*(&data_2 + 1), 6) && !TEST_BITB(*(&data_2 + 1), 0))
+            *param_4 = g_544368;
         else
         {
-            long double x87_r7_3 = v_c;
+            long double fpu_val_7_3 = item_c;
             long double f3_1 = 1.0;
-            x87_r7_3 - f3_1;
+            fpu_val_7_3 - f3_1;
 
             if (TEST_BITB(
-                    *(&((x87_r7_3 < f3_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_3, f3_1) ? 1 : 0) << 0xa
-                        | (x87_r7_3 == f3_1 ? 1 : 0) << 0xe) + 1),
+                    *(&((fpu_val_7_3 < f3_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_3, f3_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_3 == f3_1 ? 1 : 0) << 0xe) + 1),
                     0))
-                *a4 = 0;
+                *param_4 = 0;
             else
             {
                 result = 1;
-                *a4 = g_544370;
+                *param_4 = g_544370;
             }
         }
     }
-    else if (a3 != 0xfff00000 || a2)
+    else if (param_3 != 0xfff00000 || param_2)
     {
     label_4a9eb7:
 
-        if (*(&a1 + 4) != 0x7ff00000)
+        if (*(&context + 4) != 0x7ff00000)
         {
-            if (*(&a1 + 4) == 0xfff00000 && !a1)
+            if (*(&context + 4) == 0xfff00000 && !context)
             {
-                int32_t v_14_1 = 0xfff00000;
-                int32_t v_18_1 = 0xfff00000;
-                v_18_1 = a2;
-                int32_t valA6 = Camera_UpdateTransform_19(0x7ff00000, 0, 0xfff00000, v_18_1);
-                long double x87_r7_10 = a2;
+                int32_t item_14_1 = 0xfff00000;
+                int32_t item_18_1 = 0xfff00000;
+                item_18_1 = param_2;
+                int32_t data_6 = Camera_UpdateTransform_19(0x7ff00000, 0, 0xfff00000, item_18_1);
+                long double fpu_val_7_10 = param_2;
                 long double f6_1 = 0.0;
-                x87_r7_10 - f6_1;
-                int16_t valA7 = (x87_r7_10 < f6_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_10, f6_1) ? 1 : 0) << 0xa
-                    | (x87_r7_10 == f6_1 ? 1 : 0) << 0xe;
+                fpu_val_7_10 - f6_1;
+                int16_t data_7 = (fpu_val_7_10 < f6_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_10, f6_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_10 == f6_1 ? 1 : 0) << 0xe;
 
-                if (TEST_BITB(*(&valA7 + 1), 6) || TEST_BITB(*(&valA7 + 1), 0))
+                if (TEST_BITB(*(&data_7 + 1), 6) || TEST_BITB(*(&data_7 + 1), 0))
                 {
-                    long double x87_r7_13 = a2;
+                    long double fpu_val_7_13 = param_2;
                     long double f8_1 = 0.0;
-                    x87_r7_13 - f8_1;
+                    fpu_val_7_13 - f8_1;
 
                     if (!TEST_BITB(
-                            *(&((x87_r7_13 < f8_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_13, f8_1) ? 1 : 0) << 0xa
-                                | (x87_r7_13 == f8_1 ? 1 : 0) << 0xe) + 1),
+                            *(&((fpu_val_7_13 < f8_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_13, f8_1) ? 1 : 0) << 0xa
+                                | (fpu_val_7_13 == f8_1 ? 1 : 0) << 0xe) + 1),
                             0))
-                        *a4 = 1;
+                        *param_4 = 1;
                     else
                     {
-                        long double x87_r7_14;
+                        long double fpu_val_7_14;
 
-                        if (valA6 != 1)
-                            x87_r7_14 = 0;
+                        if (data_6 != 1)
+                            fpu_val_7_14 = 0;
                         else
-                            x87_r7_14 = g_544388;
+                            fpu_val_7_14 = g_544388;
 
-                        a2 = x87_r7_14;
-                        *a4 = a2;
+                        param_2 = fpu_val_7_14;
+                        *param_4 = param_2;
                     }
                 }
                 else
                 {
-                    long double x87_r7_11 = g_544368;
+                    long double fpu_val_7_11 = g_544368;
 
-                    if (valA6 == 1)
-                        x87_r7_11 = -(x87_r7_11);
+                    if (data_6 == 1)
+                        fpu_val_7_11 = -(fpu_val_7_11);
 
-                    a2 = x87_r7_11;
-                    *a4 = a2;
+                    param_2 = fpu_val_7_11;
+                    *param_4 = param_2;
                 }
             }
         }
-        else if (!a1)
+        else if (!context)
         {
-            long double x87_r7_7 = a2;
+            long double fpu_val_7_7 = param_2;
             long double f4_1 = 0.0;
-            x87_r7_7 - f4_1;
-            int16_t valA5 = (x87_r7_7 < f4_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_7, f4_1) ? 1 : 0) << 0xa
-                | (x87_r7_7 == f4_1 ? 1 : 0) << 0xe;
+            fpu_val_7_7 - f4_1;
+            int16_t data_5 = (fpu_val_7_7 < f4_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_7, f4_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_7 == f4_1 ? 1 : 0) << 0xe;
 
-            if (TEST_BITB(*(&valA5 + 1), 6) || TEST_BITB(*(&valA5 + 1), 0))
+            if (TEST_BITB(*(&data_5 + 1), 6) || TEST_BITB(*(&data_5 + 1), 0))
             {
-                long double x87_r7_8 = a2;
+                long double fpu_val_7_8 = param_2;
                 long double f7_1 = 0.0;
-                x87_r7_8 - f7_1;
+                fpu_val_7_8 - f7_1;
 
                 if (!TEST_BITB(
-                        *(&((x87_r7_8 < f7_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_8, f7_1) ? 1 : 0) << 0xa
-                            | (x87_r7_8 == f7_1 ? 1 : 0) << 0xe) + 1),
+                        *(&((fpu_val_7_8 < f7_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_8, f7_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_8 == f7_1 ? 1 : 0) << 0xe) + 1),
                         0))
-                    *a4 = 1;
+                    *param_4 = 1;
                 else
-                    *a4 = 0;
+                    *param_4 = 0;
             }
             else
-                *a4 = g_544368;
+                *param_4 = g_544368;
         }
     }
     else
     {
-        long double x87_r7_5 = v_c;
+        long double fpu_val_7_5 = item_c;
         long double f2_1 = 1.0;
-        x87_r7_5 - f2_1;
-        int16_t valA4 = (x87_r7_5 < f2_1 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r7_5, f2_1) ? 1 : 0) << 0xa | (x87_r7_5 == f2_1 ? 1 : 0) << 0xe;
+        fpu_val_7_5 - f2_1;
+        int16_t data_4 = (fpu_val_7_5 < f2_1 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_7_5, f2_1) ? 1 : 0) << 0xa | (fpu_val_7_5 == f2_1 ? 1 : 0) << 0xe;
 
-        if (!TEST_BITB(*(&valA4 + 1), 6) && !TEST_BITB(*(&valA4 + 1), 0))
-            *a4 = 0;
+        if (!TEST_BITB(*(&data_4 + 1), 6) && !TEST_BITB(*(&data_4 + 1), 0))
+            *param_4 = 0;
         else
         {
-            long double x87_r7_6 = v_c;
+            long double fpu_val_7_6 = item_c;
             long double f5_1 = 1.0;
-            x87_r7_6 - f5_1;
+            fpu_val_7_6 - f5_1;
 
             if (!TEST_BITB(
-                *(&((x87_r7_6 < f5_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f5_1) ? 1 : 0) << 0xa
-                    | (x87_r7_6 == f5_1 ? 1 : 0) << 0xe) + 1),
+                *(&((fpu_val_7_6 < f5_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f5_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_6 == f5_1 ? 1 : 0) << 0xe) + 1),
                 0))
             {
                 result = 1;
-                *a4 = g_544370;
+                *param_4 = g_544370;
             }
             else
-                *a4 = g_544368;
+                *param_4 = g_544368;
         }
     }
 

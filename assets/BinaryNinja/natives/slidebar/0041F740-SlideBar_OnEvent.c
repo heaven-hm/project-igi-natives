@@ -1,143 +1,143 @@
 // Original IGI.EXE function: SlideBar_OnEvent (VA 0x0041F740; static CFG gate PASS, CFG score 0.942).
 #include "SlideBar_OnEvent.h"
-int32_t SlideBar_OnEvent(long double a1 @ fp0, void* a2, int32_t a3)
+int32_t SlideBar_OnEvent(long double context , void* param_2, int32_t param_3)
 
 {
-    void* ctxB = a2;
-    void* flagP = *(ctxB + 0x9c);
-    void* dstD = *(ctxB + 0x98);
-    Script_Isexists(ctxB + 0xb8, ctxB);
-    Script_Isexists(ctxB + 0x108, ctxB);
-    Script_Isexists(ctxB + 0x158, ctxB);
-    Script_Isexists(ctxB + 0x1a8, ctxB);
-    Script_Isexists(ctxB + 0x1f8, ctxB);
+    void* context_val = param_2;
+    void* flagP = *(context_val + 0x9c);
+    void* dest_val = *(context_val + 0x98);
+    Script_Isexists(context_val + 0xb8, context_val);
+    Script_Isexists(context_val + 0x108, context_val);
+    Script_Isexists(context_val + 0x158, context_val);
+    Script_Isexists(context_val + 0x1a8, context_val);
+    Script_Isexists(context_val + 0x1f8, context_val);
 
-    if (!Script_FormatString_6(ctxB + 0x1a8))
-        *(ctxB + 0xa8) = 0x3d4ccccd;
+    if (!Script_FormatString_6(context_val + 0x1a8))
+        *(context_val + 0xa8) = 0x3d4ccccd;
     else
     {
-        Script_SpawnNewTask_7(ctxB + 0x1a8, ctxB);
-        *(ctxB + 0xa8) = a1;
+        Script_SpawnNewTask_7(context_val + 0x1a8, context_val);
+        *(context_val + 0xa8) = context;
     }
 
-    if (*(ctxB + 0x44))
+    if (*(context_val + 0x44))
     {
-        void* v_58_2 = ctxB + 0x54;
-        char v_40[0x40];
-        Game_DataSymbolLoad(&v_40, "%s_1.spr");
-        char (* dstD1)[0x40] = &v_40;
+        void* item_58_2 = context_val + 0x54;
+        char item_40[0x40];
+        Game_DataSymbolLoad(&item_40, "%s_1.spr");
+        char (* dest_1)[0x40] = &item_40;
         int32_t i = 0xffffffff;
-        void* v_64_1 = ctxB + 0x54;
+        void* item_64_1 = context_val + 0x54;
 
         while (i)
         {
-            bool cond_1_1 = 0 != *dstD1;
-            dstD1 = &(*dstD1)[1];
+            bool flag_1_1 = 0 != *dest_1;
+            dest_1 = &(*dest_1)[1];
             i -= 1;
 
-            if (!cond_1_1)
+            if (!flag_1_1)
                 break;
         }
 
-        int32_t objC1 = ~i;
-        int32_t srcS2;
-        int32_t dstD4;
-        dstD4 = memcpy(*(ctxB + 0x98) + 0x54, dstD1 - objC1, objC1 & 0xfffffffc);
-        memcpy(dstD4, srcS2, objC1 & 3);
-        Game_DataSymbolLoad(&v_40, "%s_2.spr");
-        char (* dstD5)[0x40] = &v_40;
+        int32_t entity_1 = ~i;
+        int32_t source_2;
+        int32_t dest_4;
+        dest_4 = memcpy(*(context_val + 0x98) + 0x54, dest_1 - entity_1, entity_1 & 0xfffffffc);
+        memcpy(dest_4, source_2, entity_1 & 3);
+        Game_DataSymbolLoad(&item_40, "%s_2.spr");
+        char (* dest_5)[0x40] = &item_40;
         int32_t i_1 = 0xffffffff;
-        void* v_70_1 = ctxB + 0x54;
+        void* item_70_1 = context_val + 0x54;
 
         while (i_1)
         {
-            bool cond_2_1 = 0 != *dstD5;
-            dstD5 = &(*dstD5)[1];
+            bool flag_2_1 = 0 != *dest_5;
+            dest_5 = &(*dest_5)[1];
             i_1 -= 1;
 
-            if (!cond_2_1)
+            if (!flag_2_1)
                 break;
         }
 
-        int32_t objC5 = ~i_1;
-        int32_t srcS4;
-        int32_t dstD8;
-        dstD8 = memcpy(*(ctxB + 0x9c) + 0x54, dstD5 - objC5, objC5 & 0xfffffffc);
-        memcpy(dstD8, srcS4, objC5 & 3);
-        Game_DataSymbolLoad(&v_40, "%s_3.spr");
-        *(ctxB + 0x94) = Menu_DrawWidget_3(*(ctxB + 0x44), &v_40);
+        int32_t entity_5 = ~i_1;
+        int32_t source_4;
+        int32_t dest_8;
+        dest_8 = memcpy(*(context_val + 0x9c) + 0x54, dest_5 - entity_5, entity_5 & 0xfffffffc);
+        memcpy(dest_8, source_4, entity_5 & 3);
+        Game_DataSymbolLoad(&item_40, "%s_3.spr");
+        *(context_val + 0x94) = Menu_DrawWidget_3(*(context_val + 0x44), &item_40);
     }
 
-    void* srcS5 = *(ctxB + 0x98);
-    uint32_t valA9 = Script_ParseEnumReal32_8();
-    int32_t tmpD5 = 0;
-    tmpD5 = *(srcS5 + 0x1c);
-    (*(((valA9 * 0x180 + tmpD5) << 2) + &g_a96ae0))(srcS5, a3);
-    void* srcS6 = *(ctxB + 0x9c);
-    uint32_t valA12 = Script_ParseEnumReal32_8();
-    int32_t valA13 = 0;
-    valA13 = *(srcS6 + 0x1c);
-    (*(((valA12 * 0x180 + valA13) << 2) + &g_a96ae0))(srcS6, a3);
-    int32_t tmpD9 = *(ctxB + 0xac);
-    int32_t srcS7 = 4;
-    a2 = 4;
+    void* source_5 = *(context_val + 0x98);
+    uint32_t data_9 = Script_ParseEnumReal32_8();
+    int32_t temp_5 = 0;
+    temp_5 = *(source_5 + 0x1c);
+    (*(((data_9 * 0x180 + temp_5) << 2) + &g_a96ae0))(source_5, param_3);
+    void* source_6 = *(context_val + 0x9c);
+    uint32_t data_12 = Script_ParseEnumReal32_8();
+    int32_t data_13 = 0;
+    data_13 = *(source_6 + 0x1c);
+    (*(((data_12 * 0x180 + data_13) << 2) + &g_a96ae0))(source_6, param_3);
+    int32_t temp_9 = *(context_val + 0xac);
+    int32_t source_7 = 4;
+    param_2 = 4;
 
-    if (!*(ctxB + 0xb4))
+    if (!*(context_val + 0xb4))
     {
-        void* tmpD13 = *(ctxB + 0x94);
-        a2 = tmpD9 + *(flagP + 0x2c) + *(dstD + 0x2c) + 6;
+        void* temp_13 = *(context_val + 0x94);
+        param_2 = temp_9 + *(flagP + 0x2c) + *(dest_val + 0x2c) + 6;
 
-        if (tmpD13)
+        if (temp_13)
         {
-            int32_t valA27 = *(dstD + 0x28);
-            int32_t objC20 = *(flagP + 0x28);
-            int32_t srcS8 = valA27;
+            int32_t data_27 = *(dest_val + 0x28);
+            int32_t entity_20 = *(flagP + 0x28);
+            int32_t source_8 = data_27;
 
-            if (valA27 <= objC20)
-                srcS8 = objC20;
+            if (data_27 <= entity_20)
+                source_8 = entity_20;
 
-            int32_t valA29;
+            int32_t data_29;
 
-            if (srcS8 <= Sys_CloseFileStream_17(tmpD13))
-                valA29 = Sys_CloseFileStream_17(*(ctxB + 0x94));
+            if (source_8 <= Sys_CloseFileStream_17(temp_13))
+                data_29 = Sys_CloseFileStream_17(*(context_val + 0x94));
             else
             {
-                int32_t dstD10 = *(dstD + 0x28);
+                int32_t dest_10 = *(dest_val + 0x28);
                 int32_t flagP3 = *(flagP + 0x28);
 
-                valA29 = dstD10 <= flagP3 ? flagP3 : dstD10;
+                data_29 = dest_10 <= flagP3 ? flagP3 : dest_10;
             }
 
-            srcS7 = valA29 + 4;
+            source_7 = data_29 + 4;
         }
     }
     else
     {
-        srcS7 = tmpD9 + *(flagP + 0x28) + *(dstD + 0x28) + 6;
-        void* tmpD11 = *(ctxB + 0x94);
+        source_7 = temp_9 + *(flagP + 0x28) + *(dest_val + 0x28) + 6;
+        void* temp_11 = *(context_val + 0x94);
 
-        if (tmpD11)
+        if (temp_11)
         {
-            void* valA18 = *(dstD + 0x2c);
-            void* objC15 = *(flagP + 0x2c);
-            a2 = valA18;
+            void* data_18 = *(dest_val + 0x2c);
+            void* entity_15 = *(flagP + 0x2c);
+            param_2 = data_18;
 
-            if (valA18 <= objC15)
-                a2 = objC15;
+            if (data_18 <= entity_15)
+                param_2 = entity_15;
 
-            if (a2 <= Sys_ExecuteBytecode_17(tmpD11))
-                a2 = Sys_ExecuteBytecode_17(*(ctxB + 0x94)) + 4;
+            if (param_2 <= Sys_ExecuteBytecode_17(temp_11))
+                param_2 = Sys_ExecuteBytecode_17(*(context_val + 0x94)) + 4;
             else
             {
-                void* dstD9 = *(dstD + 0x2c);
+                void* dest_9 = *(dest_val + 0x2c);
                 void* flagP2 = *(flagP + 0x2c);
 
-                a2 = dstD9 <= flagP2 ? flagP2 + 4 : dstD9 + 4;
+                param_2 = dest_9 <= flagP2 ? flagP2 + 4 : dest_9 + 4;
             }
         }
     }
 
-    *(ctxB + 0x28) = srcS7;
-    *(ctxB + 0x2c) = a2;
-    return (*(((Script_ParseEnumReal32_8() * 0x180 + Menu_PlayMusic_13()) << 2) + &g_a96ae0))(ctxB, a3);
+    *(context_val + 0x28) = source_7;
+    *(context_val + 0x2c) = param_2;
+    return (*(((Script_ParseEnumReal32_8() * 0x180 + Menu_PlayMusic_13()) << 2) + &g_a96ae0))(context_val, param_3);
 }

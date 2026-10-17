@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0050E450 AnimSpline_Invoke13_50E450 | gate PASS | openigi True */
-void(int32_t* arg1, int32_t* arg2);
+void AnimSpline_Invoke13_50E450(int32_t* context, int32_t* param_2);

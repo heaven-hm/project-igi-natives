@@ -3,10 +3,10 @@
 int32_t AI_CheckVisibility_29()
 
 {
-    void* valA2 = g_5be2cc;
+    void* data_2 = g_5be2cc;
 
-    if (!valA2)
+    if (!data_2)
         return 0;
 
-    return *(valA2 + 0x130);
+    return *(data_2 + 0x130);
 }

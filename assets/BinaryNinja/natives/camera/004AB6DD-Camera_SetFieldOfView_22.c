@@ -1,23 +1,23 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_22 (VA 0x004AB6DD; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_22.h"
-BOOL Camera_SetFieldOfView_22(int32_t* a1)
+BOOL Camera_SetFieldOfView_22(int32_t* context)
 
 {
-    BOOL result = VirtualFree(a1[4], 0, MEM_RELEASE);
+    BOOL result = VirtualFree(context[4], 0, MEM_RELEASE);
 
-    if (g_5466d0 == a1)
+    if (g_5466d0 == context)
     {
-        result = a1[1];
+        result = context[1];
         g_5466d0 = result;
     }
 
-    if (a1 == &g_5446b0)
+    if (context == &g_5446b0)
     {
         g_5446c0 = 0xffffffff;
         return result;
     }
 
-    *a1[1] = *a1;
-    *(*a1 + 4) = a1[1];
-    return HeapFree(g_c32428, HEAP_NONE, a1);
+    *context[1] = *context;
+    *(*context + 4) = context[1];
+    return HeapFree(g_c32428, HEAP_NONE, context);
 }

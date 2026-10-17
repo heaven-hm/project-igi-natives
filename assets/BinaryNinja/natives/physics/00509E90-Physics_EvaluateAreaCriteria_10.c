@@ -3,41 +3,41 @@
 int32_t* Physics_EvaluateAreaCriteria_10()
 
 {
-    int32_t* valA3 = g_a7b4f0;
+    int32_t* data_3 = g_a7b4f0;
 
-    if (!valA3)
+    if (!data_3)
     {
         g_a7b638 = 0;
-        return valA3;
+        return data_3;
     }
 
     int32_t i = 0;
 
     if (g_a7b638 > 0)
     {
-        int32_t* srcS1 = &g_a7b4e0;
+        int32_t* source_1 = &g_a7b4e0;
 
         do
         {
-            int32_t* valA = *srcS1;
+            int32_t* data_val = *source_1;
 
-            if (valA)
+            if (data_val)
             {
-                (*(*valA + 0x20))(valA);
-                int32_t* valA1 = *srcS1;
-                (*(*valA1 + 8))(valA1);
-                *srcS1 = 0;
+                (*(*data_val + 0x20))(data_val);
+                int32_t* data_1 = *source_1;
+                (*(*data_1 + 8))(data_1);
+                *source_1 = 0;
             }
 
             i += 1;
-            srcS1 = &srcS1[1];
+            source_1 = &source_1[1];
         } while (i < g_a7b638);
 
-        valA3 = g_a7b4f0;
+        data_3 = g_a7b4f0;
     }
 
-    int32_t valA4 = (*(*valA3 + 8))(valA3);
+    int32_t data_4 = (*(*data_3 + 8))(data_3);
     g_a7b4f0 = 0;
     g_a7b638 = 0;
-    return valA4;
+    return data_4;
 }

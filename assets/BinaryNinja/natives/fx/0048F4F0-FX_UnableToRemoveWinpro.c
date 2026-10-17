@@ -1,13 +1,13 @@
 // Original IGI.EXE function: FX_UnableToRemoveWinpro (VA 0x0048F4F0; static CFG gate PASS, CFG score 1.000).
 #include "FX_UnableToRemoveWinpro.h"
-int32_t* FX_UnableToRemoveWinpro(int32_t a1)
+int32_t* FX_UnableToRemoveWinpro(int32_t context)
 
 {
     int32_t* i_1 = g_5c8df0;
 
     for (int32_t* i = *i_1; i; i = *i)
     {
-        if (i_1[2] == a1)
+        if (i_1[2] == context)
         {
             int32_t* result = Camera_ApplyHandiCam_33(i_1);
             i_1[2] = 0;

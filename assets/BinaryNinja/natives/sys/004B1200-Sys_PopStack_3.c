@@ -5,7 +5,7 @@ int32_t Sys_PopStack_3()
 {
     Sys_AllocateMemory_4();
     g_94396c = 1;
-    __builtin_memset(&g_9436b0, 0, 0x2bc);
+    memset(&g_9436b0, 0, 0x2bc);
     g_943a18 = 0;
     int32_t result = Physics_Local();
     g_943988 = 0;

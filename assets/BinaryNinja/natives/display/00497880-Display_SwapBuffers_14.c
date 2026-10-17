@@ -1,17 +1,17 @@
 // Original IGI.EXE function: Display_SwapBuffers_14 (VA 0x00497880; static CFG gate PASS, CFG score 1.000).
 #include "Display_SwapBuffers_14.h"
-int32_t* Display_SwapBuffers_14(int32_t* a1, int32_t a2)
+int32_t* Display_SwapBuffers_14(int32_t* context, int32_t param_2)
 
 {
-    int32_t* result = a1;
+    int32_t* result = context;
 
-    if (a2)
+    if (param_2)
     {
-        int32_t i_1 = a2 - 1;
+        int32_t i_1 = param_2 - 1;
         *result = 0;
         result[1] = 0xffffffff;
 
-        if (a2 != 1)
+        if (param_2 != 1)
         {
             int32_t i;
 

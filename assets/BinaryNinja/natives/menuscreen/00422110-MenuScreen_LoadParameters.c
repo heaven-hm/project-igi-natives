@@ -1,22 +1,22 @@
 // Original IGI.EXE function: MenuScreen_LoadParameters (VA 0x00422110; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_LoadParameters.h"
-int32_t MenuScreen_LoadParameters(void* a1)
+int32_t MenuScreen_LoadParameters(void* context)
 
 {
-    int32_t valA = *(a1 + 0x44);
+    int32_t data_val = *(context + 0x44);
 
-    if (valA)
+    if (data_val)
     {
-        void* valA1 = Menu_RequestScreen_4(valA);
+        void* data_1 = Menu_RequestScreen_4(data_val);
 
-        if (valA1)
+        if (data_1)
         {
-            if (*(valA1 + 4) && Script_FormatString_6(a1 + 0xac))
-                Script_SpawnNewTask_7(a1 + 0xac, a1);
+            if (*(data_1 + 4) && Script_FormatString_6(context + 0xac))
+                Script_SpawnNewTask_7(context + 0xac, context);
 
-            *(valA1 + 4) = 0;
+            *(data_1 + 4) = 0;
         }
     }
 
-    return (*((Menu_PlayMusic_13() << 2) + &g_a970e0))(a1);
+    return (*((Menu_PlayMusic_13() << 2) + &g_a970e0))(context);
 }

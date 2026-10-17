@@ -1,64 +1,64 @@
 // Original IGI.EXE function: AsciiBox_LoadParameters (VA 0x0041CD20; static CFG gate PASS, CFG score 0.889).
 #include "AsciiBox_LoadParameters.h"
-int32_t AsciiBox_LoadParameters(void* a1)
+int32_t AsciiBox_LoadParameters(void* context)
 
 {
-    if (*(a1 + 0xdc))
+    if (*(context + 0xdc))
     {
-        int32_t valA2 = Menu_FormatScreen_10(*(a1 + 0xf4));
-        int32_t objC1 = *(a1 + 0xe8);
-        bool cond_0_1 = valA2 <= objC1;
-        int32_t tmpD;
+        int32_t data_2 = Menu_FormatScreen_10(*(context + 0xf4));
+        int32_t entity_1 = *(context + 0xe8);
+        bool flag_0_1 = data_2 <= entity_1;
+        int32_t temp_val;
 
-        if (valA2 < objC1)
+        if (data_2 < entity_1)
         {
             do
             {
-                int32_t objC3 = *(a1 + 0xe0) - 1;
-                *(a1 + 0xe0) = objC3;
-                char* objC4 = objC3 - 1;
+                int32_t entity_3 = *(context + 0xe0) - 1;
+                *(context + 0xe0) = entity_3;
+                char* entity_4 = entity_3 - 1;
 
-                if (*objC4)
+                if (*entity_4)
                 {
                     char i;
 
                     do
                     {
-                        *(a1 + 0xe0) = objC4;
-                        i = objC4[0xffffffff];
-                        objC4 -= 1;
+                        *(context + 0xe0) = entity_4;
+                        i = entity_4[0xffffffff];
+                        entity_4 -= 1;
                     } while (i);
                 }
 
-                tmpD = *(a1 + 0xe8) - 1;
-                *(a1 + 0xe8) = tmpD;
-            } while (valA2 < tmpD);
+                temp_val = *(context + 0xe8) - 1;
+                *(context + 0xe8) = temp_val;
+            } while (data_2 < temp_val);
 
-            cond_0_1 = valA2 <= tmpD;
+            flag_0_1 = data_2 <= temp_val;
         }
 
-        if (!cond_0_1)
+        if (!flag_0_1)
         {
             do
             {
-                void* objC7 = *(a1 + 0xe0) + 1;
-                *(a1 + 0xe0) = objC7;
+                void* entity_7 = *(context + 0xe0) + 1;
+                *(context + 0xe0) = entity_7;
 
-                while (*(objC7 - 1))
+                while (*(entity_7 - 1))
                 {
-                    objC7 += 1;
-                    *(a1 + 0xe0) = objC7;
+                    entity_7 += 1;
+                    *(context + 0xe0) = entity_7;
                 }
 
-                tmpD = *(a1 + 0xe8) + 1;
-                *(a1 + 0xe8) = tmpD;
-            } while (valA2 > tmpD);
+                temp_val = *(context + 0xe8) + 1;
+                *(context + 0xe8) = temp_val;
+            } while (data_2 > temp_val);
         }
     }
 
-    void* valA3 = *(a1 + 0xf4);
-    int32_t objC9 = 0;
-    objC9 = *(valA3 + 0x1c);
-    (*((objC9 << 2) + &g_a970e0))(valA3);
-    return (*((Menu_PlayMusic_13() << 2) + &g_a970e0))(a1);
+    void* data_3 = *(context + 0xf4);
+    int32_t entity_9 = 0;
+    entity_9 = *(data_3 + 0x1c);
+    (*((entity_9 << 2) + &g_a970e0))(data_3);
+    return (*((Menu_PlayMusic_13() << 2) + &g_a970e0))(context);
 }

@@ -1,39 +1,39 @@
 // Original IGI.EXE function: Weapon_EjectMagazine_5 (VA 0x00477D10; static CFG gate PASS, CFG score 0.944).
 #include "Weapon_EjectMagazine_5.h"
-struct status_msg* Weapon_EjectMagazine_5(float a1, float a2, int32_t* a3, int32_t a4, char* a5)
+struct status_msg* Weapon_EjectMagazine_5(float context, float param_2, int32_t* param_3, int32_t param_4, char* param_5)
 
 {
     int32_t kind;
     kind = g_5be3c4;
-    struct status_msg* result = QTask_HandleInput(a1, kind, 0);
-    DynObj_CreateMagicObject_5(result, DynObj_Missing(a5));
-    memcpy(&result->head[8], a2, 0x18);
-    int32_t tmpD1 = *a3;
-    result->sprite[0x68] = tmpD1;
-    result->sprite[0x69] = *(&tmpD1 + 1);
-    result->sprite[0x6a] = *(&tmpD1 + 2);
-    result->sprite[0x6b] = *(&tmpD1 + 3);
-    int32_t tmpD2 = a3[1];
-    result->sprite[0x6c] = tmpD2;
-    result->sprite[0x6d] = *(&tmpD2 + 1);
-    result->sprite[0x6e] = *(&tmpD2 + 2);
-    result->sprite[0x6f] = *(&tmpD2 + 3);
-    int32_t objC2 = a3[2];
-    result->sprite[0x70] = objC2;
-    result->sprite[0x71] = *(&objC2 + 1);
-    result->sprite[0x72] = *(&objC2 + 2);
-    result->sprite[0x73] = *(&objC2 + 3);
-    memcpy(&result->head[0x1c], a4, 0x28);
+    struct status_msg* result = QTask_HandleInput(context, kind, 0);
+    DynObj_CreateMagicObject_5(result, DynObj_Missing(param_5));
+    memcpy(&result->head[8], param_2, 0x18);
+    int32_t temp_1 = *param_3;
+    result->sprite[0x68] = temp_1;
+    result->sprite[0x69] = *(&temp_1 + 1);
+    result->sprite[0x6a] = *(&temp_1 + 2);
+    result->sprite[0x6b] = *(&temp_1 + 3);
+    int32_t temp_2 = param_3[1];
+    result->sprite[0x6c] = temp_2;
+    result->sprite[0x6d] = *(&temp_2 + 1);
+    result->sprite[0x6e] = *(&temp_2 + 2);
+    result->sprite[0x6f] = *(&temp_2 + 3);
+    int32_t entity_2 = param_3[2];
+    result->sprite[0x70] = entity_2;
+    result->sprite[0x71] = *(&entity_2 + 1);
+    result->sprite[0x72] = *(&entity_2 + 2);
+    result->sprite[0x73] = *(&entity_2 + 3);
+    memcpy(&result->head[0x1c], param_4, 0x28);
     result->sprite[0x3c] = 0x13;
     result->sprite[0x3d] = 0;
     result->sprite[0x3e] = 0;
     result->sprite[0x3f] = 0;
-    int32_t v_4 = 0;
-    a2 = Sys_FreeMemory_14(Level_SetMission_5(), 2) * 0.0174532924f;
-    int32_t v_4_1 = 0;
-    a5 = Sys_FreeMemory_14(Level_SetMission_5(), 5) * 0.0174532924f;
-    int32_t v_4_2 = 0;
-    Sys_ReadFileBlock_12(&result->sprite[0x40], a2, a5,
+    int32_t item_4 = 0;
+    param_2 = Sys_FreeMemory_14(Level_SetMission_5(), 2) * 0.0174532924f;
+    int32_t item_4_1 = 0;
+    param_5 = Sys_FreeMemory_14(Level_SetMission_5(), 5) * 0.0174532924f;
+    int32_t item_4_2 = 0;
+    Sys_ReadFileBlock_12(&result->sprite[0x40], param_2, param_5,
         Sys_FreeMemory_14(Level_SetMission_5(), 5) * 0.0174532924f);
     return result;
 }

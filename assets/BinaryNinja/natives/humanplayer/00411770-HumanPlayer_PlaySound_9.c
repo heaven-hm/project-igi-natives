@@ -1,27 +1,27 @@
 // Original IGI.EXE function: HumanPlayer_PlaySound_9 (VA 0x00411770; static CFG gate PASS, CFG score 0.966).
 #include "HumanPlayer_PlaySound_9.h"
-int32_t* HumanPlayer_PlaySound_9(float a1)
+int32_t* HumanPlayer_PlaySound_9(float context)
 
 {
-    float flagP = a1;
-    void* valA = AI_CombatTarget_21(flagP);
-    double v_1c;
+    float flagP = context;
+    void* data_val = AI_CombatTarget_21(flagP);
+    double item_1c;
 
     if (!*(flagP + 0xd90))
     {
         if (!*(flagP + 0xd92))
         {
-            int32_t tmpD4 = *(flagP + 0xfc);
-            v_1c = 0xd;
-            *(&v_1c + 4) = tmpD4;
-            int64_t v_14;
-            v_14 = 0x46;
-            *(&v_14 + 4) = 0x46a00000;
-            int64_t v_c;
-            v_c = DynObj_UpdateDynTree_4(flagP);
-            *(&v_c + 4) = flagP;
-            float v_4_1 = flagP;
-            return AI_EventBroadcast(&v_1c);
+            int32_t temp_4 = *(flagP + 0xfc);
+            item_1c = 0xd;
+            *(&item_1c + 4) = temp_4;
+            int64_t item_14;
+            item_14 = 0x46;
+            *(&item_14 + 4) = 0x46a00000;
+            int64_t item_c;
+            item_c = DynObj_UpdateDynTree_4(flagP);
+            *(&item_c + 4) = flagP;
+            float item_4_1 = flagP;
+            return AI_EventBroadcast(&item_1c);
         }
 
         *(flagP + 0xd92) = 0;
@@ -35,67 +35,67 @@ int32_t* HumanPlayer_PlaySound_9(float a1)
         Human_ViewCam(flagP, 1);
         HumanPlayer_LoadParameters_6(flagP);
         AI_UpdatePatrol_21(flagP, nullptr);
-        Human_StateAnimation(flagP, 0, 0f);
+        Human_StateAnimation(flagP, 0, 0.0f);
         int32_t* result = *(flagP + 0x2f4);
 
         if (!(result & 0x20000))
             return result;
 
-        void* objC2 = *(flagP + 0x2f0);
+        void* entity_2 = *(flagP + 0x2f0);
         *(flagP + 0x2f8) = *(flagP + 0x2fc);
         *(flagP + 0x2fc) = 0x2f;
-        int32_t valA10 = *(objC2 + 0xbc);
-        *(flagP + 0x300) = valA10;
-        return valA10(flagP + 0x2ec, flagP);
+        int32_t data_10 = *(entity_2 + 0xbc);
+        *(flagP + 0x300) = data_10;
+        return data_10(flagP + 0x2ec, flagP);
     }
 
-    long double x87_r7_1 = *(flagP + 0x20) - *(valA + 0x20);
-    double v_34 = x87_r7_1;
-    long double x87_r6_1 = *(flagP + 0x28) - *(valA + 0x28);
-    long double x87_r5_1 = *(flagP + 0x30) - *(valA + 0x30);
-    double v_24 = x87_r5_1;
-    v_1c = *(valA + 0x7c) * x87_r6_1 + *(valA + 0x88) * x87_r5_1 + *(valA + 0x70) * x87_r7_1;
-    double v_14_1 =
-        *(valA + 0x80) * x87_r6_1 + *(valA + 0x8c) * x87_r5_1 + *(valA + 0x74) * x87_r7_1;
-    double v_c_1 = *(valA + 0x90) * x87_r5_1 + *(valA + 0x78) * x87_r7_1 + *(valA + 0x84) * x87_r6_1;
-    memcpy(&v_34, &v_1c, 0x18);
-    long double x87_r7_3 = v_14_1;
+    long double fpu_val_7_1 = *(flagP + 0x20) - *(data_val + 0x20);
+    double item_34 = fpu_val_7_1;
+    long double fpu_val_6_1 = *(flagP + 0x28) - *(data_val + 0x28);
+    long double fpu_val_5_1 = *(flagP + 0x30) - *(data_val + 0x30);
+    double item_24 = fpu_val_5_1;
+    item_1c = *(data_val + 0x7c) * fpu_val_6_1 + *(data_val + 0x88) * fpu_val_5_1 + *(data_val + 0x70) * fpu_val_7_1;
+    double item_14_1 =
+        *(data_val + 0x80) * fpu_val_6_1 + *(data_val + 0x8c) * fpu_val_5_1 + *(data_val + 0x74) * fpu_val_7_1;
+    double item_c_1 = *(data_val + 0x90) * fpu_val_5_1 + *(data_val + 0x78) * fpu_val_7_1 + *(data_val + 0x84) * fpu_val_6_1;
+    memcpy(&item_34, &item_1c, 0x18);
+    long double fpu_val_7_3 = item_14_1;
     long double f0 = 0.0;
-    x87_r7_3 - f0;
-    float v_40;
-    double v_2c;
-    long double x87_r7_4;
+    fpu_val_7_3 - f0;
+    float item_40;
+    double item_2c;
+    long double fpu_val_7_4;
 
-    if (!(*(&((x87_r7_3 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f0) ? 1 : 0) << 0xa
-        | (x87_r7_3 == f0 ? 1 : 0) << 0xe) + 1) & 1))
+    if (!(*(&((fpu_val_7_3 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_3 == f0 ? 1 : 0) << 0xe) + 1) & 1))
     {
-        x87_r7_4 = 2457.5999999999999;
-        v_40 = 3.14159274f;
-        v_2c = x87_r7_4;
+        fpu_val_7_4 = 2457.5999999999999;
+        item_40 = 3.14159274f;
+        item_2c = fpu_val_7_4;
     }
     else
     {
-        x87_r7_4 = -2457.5999999999999;
-        v_40 = 0f;
-        v_2c = x87_r7_4;
+        fpu_val_7_4 = -2457.5999999999999;
+        item_40 = 0.0f;
+        item_2c = fpu_val_7_4;
     }
 
-    v_1c = *(valA + 0x74) * x87_r7_4 + *(valA + 0x70) * v_34 + *(valA + 0x78) * 3891.1999999999998;
-    double v_14_2 =
-        *(valA + 0x80) * x87_r7_4 + *(valA + 0x7c) * v_34 + *(valA + 0x84) * 3891.1999999999998;
-    double v_c_2 =
-        *(valA + 0x8c) * x87_r7_4 + *(valA + 0x88) * v_34 + *(valA + 0x90) * 3891.1999999999998;
-    memcpy(&v_34, &v_1c, 0x18);
-    v_34 = v_1c + *(valA + 0x20);
-    double v_2c_1 = v_2c + *(valA + 0x28);
-    double v_24_1 = v_24 + *(valA + 0x30);
-    AI_UpdateOrders_19(flagP, &v_34);
-    float v_3c;
-    float v_38;
-    Sys_Atan2UndefinedInOrig(valA + 0x70, &v_38, &v_3c, &a1);
-    a1 = a1 + v_40;
-    AI_AlertAllies_19(flagP, a1);
-    __builtin_memset(flagP + 0x664, 0, 0x18);
+    item_1c = *(data_val + 0x74) * fpu_val_7_4 + *(data_val + 0x70) * item_34 + *(data_val + 0x78) * 3891.1999999999998;
+    double item_14_2 =
+        *(data_val + 0x80) * fpu_val_7_4 + *(data_val + 0x7c) * item_34 + *(data_val + 0x84) * 3891.1999999999998;
+    double item_c_2 =
+        *(data_val + 0x8c) * fpu_val_7_4 + *(data_val + 0x88) * item_34 + *(data_val + 0x90) * 3891.1999999999998;
+    memcpy(&item_34, &item_1c, 0x18);
+    item_34 = item_1c + *(data_val + 0x20);
+    double item_2c_1 = item_2c + *(data_val + 0x28);
+    double item_24_1 = item_24 + *(data_val + 0x30);
+    AI_UpdateOrders_19(flagP, &item_34);
+    float item_3c;
+    float item_38;
+    Sys_Atan2UndefinedInOrig(data_val + 0x70, &item_38, &item_3c, &context);
+    context = context + item_40;
+    AI_AlertAllies_19(flagP, context);
+    memset(flagP + 0x664, 0, 0x18);
     *(flagP + 0xd90) = 0;
     *(flagP + 0xd91) = 1;
     AI_AlertAllies_20(flagP);
@@ -108,10 +108,10 @@ int32_t* HumanPlayer_PlaySound_9(float a1)
     AI_CheckVisibility_20(flagP);
     Human_ViewCam(flagP, 3);
     HumanPlayer_UpdateAnimation_4(flagP);
-    void* objC1 = *(flagP + 0x2f0);
+    void* entity_1 = *(flagP + 0x2f0);
     *(flagP + 0x2f8) = *(flagP + 0x2fc);
     *(flagP + 0x2fc) = 0x29;
-    int32_t valA7 = *(objC1 + 0xa4);
-    *(flagP + 0x300) = valA7;
-    return valA7(flagP + 0x2ec, flagP);
+    int32_t data_7 = *(entity_1 + 0xa4);
+    *(flagP + 0x300) = data_7;
+    return data_7(flagP + 0x2ec, flagP);
 }

@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00489ED0 FX_TrailUpdate_14 | gate PASS | openigi True */
-int FX_TrailUpdate_14(int a1, int a2, int a3, float a4);
+int FX_TrailUpdate_14(int context, int param_2, int param_3, float param_4);

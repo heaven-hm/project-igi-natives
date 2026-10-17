@@ -1,43 +1,43 @@
 // Original IGI.EXE function: SoundSys_PlaySoundSample_5 (VA 0x004E6550; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_PlaySoundSample_5.h"
-struct status_msg* SoundSys_PlaySoundSample_5(void* a1, int32_t a2)
+struct status_msg* SoundSys_PlaySoundSample_5(void* context, int32_t param_2)
 
 {
     int32_t kind;
     kind = g_54880e;
-    struct status_msg* result = QTask_HandleInput(a1, kind, a2);
-    int32_t dstD = a2;
+    struct status_msg* result = QTask_HandleInput(context, kind, param_2);
+    int32_t dest_val = param_2;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    char objC3 = *(~i - 1 + a2 - 1);
-    char* v_418_1;
-    char* v_414_1;
-    void v_400;
+    char entity_3 = *(~i - 1 + param_2 - 1);
+    char* item_418_1;
+    char* item_414_1;
+    void item_400;
 
-    if (objC3 == 0x2f || objC3 == 0x5c)
+    if (entity_3 == 0x2f || entity_3 == 0x5c)
     {
-        int32_t v_410_2 = a2;
-        v_414_1 = "%ssounds.qsc";
-        v_418_1 = &v_400;
+        int32_t item_410_2 = param_2;
+        item_414_1 = "%ssounds.qsc";
+        item_418_1 = &item_400;
     }
     else
     {
-        int32_t v_410_1 = a2;
-        v_414_1 = "%s/sounds.qsc";
-        v_418_1 = &v_400;
+        int32_t item_410_1 = param_2;
+        item_414_1 = "%s/sounds.qsc";
+        item_418_1 = &item_400;
     }
 
-    Game_DataSymbolLoad(v_418_1, v_414_1);
-    SoundSys_Update3DPosition_5(result, &v_400);
+    Game_DataSymbolLoad(item_418_1, item_414_1);
+    SoundSys_Update3DPosition_5(result, &item_400);
     return result;
 }

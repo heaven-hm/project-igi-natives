@@ -1,14 +1,14 @@
 // Original IGI.EXE function: Qhash_Init (VA 0x004B0D60; static CFG gate PASS, CFG score 1.000).
 #include "Qhash_Init.h"
-void* Qhash_Init(char a1)
+void* Qhash_Init(char context)
 
 // Sig: void Qhash_Init(char hash_val)
 // Note: Init hash table value, Params: hash value 0 or 1.
 {
-    char objC = g_9422fd;
+    char entity_val = g_9422fd;
     void* result = g_a960e0 - 1;
     g_a960e0 = result;
-    g_9422fd = a1;
-    *(result + 0x9422e8) = objC;
+    g_9422fd = context;
+    *(result + 0x9422e8) = entity_val;
     return result;
 }

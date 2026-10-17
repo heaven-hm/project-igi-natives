@@ -1,53 +1,53 @@
 // Original IGI.EXE function: Display_SetDisplayMode_2 (VA 0x00490B80; static CFG gate PASS, CFG score 0.917).
 #include "Display_SetDisplayMode_2.h"
-int32_t Display_SetDisplayMode_2(void* a1, int32_t a2)
+int32_t Display_SetDisplayMode_2(void* context, int32_t param_2)
 
 {
     int32_t result = Display_CheckCapabilities_9();
 
     if (result)
     {
-        int32_t v_814_1 = 0x400;
-        void v_800;
-        Sys_CloseFileStream_7(&v_800, a2);
-        char* dstD1 = ".wav";
+        int32_t item_814_1 = 0x400;
+        void item_800;
+        Sys_CloseFileStream_7(&item_800, param_2);
+        char* dest_1 = ".wav";
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD1;
-            dstD1 = &dstD1[1];
+            bool flag_0_1 = 0 != *dest_1;
+            dest_1 = &dest_1[1];
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC1 = ~i;
-        void* dstD3 = &v_800;
+        int32_t entity_1 = ~i;
+        void* dest_3 = &item_800;
         int32_t i_1 = 0xffffffff;
 
         while (i_1)
         {
-            bool cond_1_1 = 0 != *dstD3;
-            dstD3 += 1;
+            bool flag_1_1 = 0 != *dest_3;
+            dest_3 += 1;
             i_1 -= 1;
 
-            if (!cond_1_1)
+            if (!flag_1_1)
                 break;
         }
 
-        int32_t srcS2;
-        int32_t dstD5;
-        dstD5 = memcpy(dstD3 - 1, dstD1 - objC1, objC1 & 0xfffffffc);
-        memcpy(dstD5, srcS2, objC1 & 3);
-        void v_400;
-        Display_SoundInvalidFilename(&v_400, &v_800);
-        result = Display_SwapBuffers_11(Display_CheckCapabilities_12(&v_400), Display_RestoreDevice_12(&v_400), 1, nullptr);
-        *(a1 + 0x158) = result;
+        int32_t source_2;
+        int32_t dest_5;
+        dest_5 = memcpy(dest_3 - 1, dest_1 - entity_1, entity_1 & 0xfffffffc);
+        memcpy(dest_5, source_2, entity_1 & 3);
+        void item_400;
+        Display_SoundInvalidFilename(&item_400, &item_800);
+        result = Display_SwapBuffers_11(Display_CheckCapabilities_12(&item_400), Display_RestoreDevice_12(&item_400), 1, nullptr);
+        *(context + 0x158) = result;
 
         if (result)
-            *(a1 + 0x29) = 1;
+            *(context + 0x29) = 1;
     }
 
     result = 1;

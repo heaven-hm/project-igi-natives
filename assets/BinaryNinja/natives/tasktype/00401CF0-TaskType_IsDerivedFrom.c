@@ -1,15 +1,15 @@
 // Original IGI.EXE function: TaskType_IsDerivedFrom (VA 0x00401CF0; static CFG gate PASS, CFG score 1.000).
 #include "TaskType_IsDerivedFrom.h"
-int32_t TaskType_IsDerivedFrom(int32_t a1, int16_t a2)
+int32_t TaskType_IsDerivedFrom(int32_t context, int16_t param_2)
 
 // Sig: bool TaskType_IsDerivedFrom(uint16_t typeId, uint16_t baseTypeId)
 // Note: Checks equality and walks the task-type parent chain until the sentinel
 // type. Ghidra/r2 CFG agreement: 5 basic blocks and 6 edges; see
 // assets/IGI1-Native-Name-Evidence.json.
 {
-    int32_t result = a1;
+    int32_t result = context;
 
-    while (result != a2)
+    while (result != param_2)
     {
         result = (result & 0xffff) * 0x30;
         result = *(result + &g_af5ee8);

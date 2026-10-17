@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00436740 WeatherEnv_InvokeGetArg | gate PASS | openigi True */
-int32_t(long double arg1 , int32_t* arg2 );
+int32_t WeatherEnv_InvokeGetArg(long double context , int32_t* param_2);

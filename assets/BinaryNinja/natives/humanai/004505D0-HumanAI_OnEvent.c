@@ -1,69 +1,69 @@
 // Original IGI.EXE function: HumanAI_OnEvent (VA 0x004505D0; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_OnEvent.h"
-int32_t HumanAI_OnEvent(int32_t* a1)
+int32_t HumanAI_OnEvent(int32_t* context)
 
 {
-    int32_t* srcS = a1;
-    g_5bda58 = srcS;
-    srcS[0xf4e] = Sys_CheckHeap_22(srcS + 0x3d15);
-    int32_t* valA2 = srcS[0xf1c];
+    int32_t* source_val = context;
+    g_5bda58 = source_val;
+    source_val[0xf4e] = Sys_CheckHeap_22(source_val + 0x3d15);
+    int32_t* data_2 = source_val[0xf1c];
 
-    if (valA2)
+    if (data_2)
     {
-        Qvm_Cleanup(valA2);
-        srcS[0xf1c] = 0;
+        Qvm_Cleanup(data_2);
+        source_val[0xf1c] = 0;
     }
 
-    if (Script_EvaluateCondition_4(srcS) != 0xffffffff)
+    if (Script_EvaluateCondition_4(source_val) != 0xffffffff)
     {
-        int32_t v_10_1 = Script_EvaluateCondition_4(srcS);
-        Game_DataSymbolLoad(&srcS[0xedc], "MISSION:AI/%d.qsc");
-        srcS[0xf1c] = Qvm_Load(&srcS[0xedc]);
-        srcS[0x237] = 0;
+        int32_t item_10_1 = Script_EvaluateCondition_4(source_val);
+        Game_DataSymbolLoad(&source_val[0xedc], "MISSION:AI/%d.qsc");
+        source_val[0xf1c] = Qvm_Load(&source_val[0xedc]);
+        source_val[0x237] = 0;
     }
 
-    int32_t valA6 = srcS[0xeda];
+    int32_t data_6 = source_val[0xeda];
 
-    if (valA6 != 0xffffffff)
+    if (data_6 != 0xffffffff)
     {
-        void* valA7 = Script_FormatString_22(valA6);
-        srcS[0xedb] = valA7;
+        void* data_7 = Script_FormatString_22(data_6);
+        source_val[0xedb] = data_7;
 
-        if (valA7)
+        if (data_7)
         {
-            double* valA9 = DynObj_UpdateDynTree_4(srcS[5]);
-            Physics_ApplyImpulse_8(&a1, srcS[0xedb], valA9);
-            int32_t* valA11 = a1;
+            double* data_9 = DynObj_UpdateDynTree_4(source_val[5]);
+            Physics_ApplyImpulse_8(&context, source_val[0xedb], data_9);
+            int32_t* data_11 = context;
 
-            if (valA11)
+            if (data_11)
             {
-                if (srcS[0xf8b] != *valA11)
+                if (source_val[0xf8b] != *data_11)
                 {
-                    double* valA13 = DynObj_UpdateDynTree_4(srcS[5]);
-                    srcS[0xfa8] = AI_UpdateOrders_4(&srcS[0xfa9], &srcS[0xfaa], &srcS[0xfac], srcS[0xedb],
-                        *a1, valA13);
-                    valA11 = a1;
+                    double* data_13 = DynObj_UpdateDynTree_4(source_val[5]);
+                    source_val[0xfa8] = AI_UpdateOrders_4(&source_val[0xfa9], &source_val[0xfaa], &source_val[0xfac], source_val[0xedb],
+                        *context, data_13);
+                    data_11 = context;
                 }
 
-                srcS[0xf8b] = *valA11;
+                source_val[0xf8b] = *data_11;
             }
             else
             {
-                int32_t __saved_edi_6 = srcS[0xeda];
-                int32_t v_c_6 = Script_EvaluateCondition_4(srcS);
+                int32_t saved_edi_6 = source_val[0xeda];
+                int32_t item_c_6 = Script_EvaluateCondition_4(source_val);
                 Warning_Show("HumanAI #%d couldn't find closest node in graph #%d");
             }
         }
         else
         {
-            int32_t __saved_edi_4 = srcS[0xeda];
-            int32_t v_c_3 = Script_EvaluateCondition_4(srcS);
+            int32_t saved_edi_4 = source_val[0xeda];
+            int32_t item_c_3 = Script_EvaluateCondition_4(source_val);
             Warning_Show("HumanAI #%d has AIGraph ID (#%d) but no matching AIGraph was found");
         }
     }
 
-    int32_t valA18 = AI_CombatTarget_22();
-    FX_DebrisSpawn_13(&srcS[0x57e], AI_CombatTarget_19(srcS[5]), 6, valA18, 4, 8);
-    srcS[0xe8a] = 1;
-    return AIConfig_NoHumanaiconfigTaskF(srcS);
+    int32_t data_18 = AI_CombatTarget_22();
+    FX_DebrisSpawn_13(&source_val[0x57e], AI_CombatTarget_19(source_val[5]), 6, data_18, 4, 8);
+    source_val[0xe8a] = 1;
+    return AIConfig_NoHumanaiconfigTaskF(source_val);
 }

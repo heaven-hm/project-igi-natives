@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Script_SpawnNewTask_19 (VA 0x004F65E0; static CFG gate PASS, CFG score 1.000).
 #include "Script_SpawnNewTask_19.h"
-double* Script_SpawnNewTask_19(void* a1, float a2)
+double* Script_SpawnNewTask_19(void* context, float param_2)
 
 {
-    double* ctxB = a2;
-    void* v_10 = nullptr;
-    double* result_2 = a1 + 0x68;
-    a2 = *(a1 + 0x2c7c) * 0.5f;
-    bool cond_0_1;
+    double* context_val = param_2;
+    void* item_10 = nullptr;
+    double* result_2 = context + 0x68;
+    param_2 = *(context + 0x2c7c) * 0.5f;
+    bool flag_0_1;
 
     do
     {
@@ -21,29 +21,29 @@ double* Script_SpawnNewTask_19(void* a1, float a2)
 
             do
             {
-                long double x87_r7_4 = fabsl(*result - *ctxB);
-                long double x87_r6_5 = a2;
-                x87_r6_5 - x87_r7_4;
+                long double fpu_val_7_4 = fabsl(*result - *context_val);
+                long double fpu_val_6_5 = param_2;
+                fpu_val_6_5 - fpu_val_7_4;
 
-                if (!(*(&((x87_r6_5 < x87_r7_4 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_5, x87_r7_4) ? 1 : 0) << 0xa
-                    | (x87_r6_5 == x87_r7_4 ? 1 : 0) << 0xe) + 1) & 1))
+                if (!(*(&((fpu_val_6_5 < fpu_val_7_4 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_5, fpu_val_7_4) ? 1 : 0) << 0xa
+                    | (fpu_val_6_5 == fpu_val_7_4 ? 1 : 0) << 0xe) + 1) & 1))
                 {
-                    long double x87_r7_6 = fabsl(result[1] - ctxB[1]);
-                    long double x87_r6_6 = a2;
-                    x87_r6_6 - x87_r7_6;
+                    long double fpu_val_7_6 = fabsl(result[1] - context_val[1]);
+                    long double fpu_val_6_6 = param_2;
+                    fpu_val_6_6 - fpu_val_7_6;
 
-                    if (!(*(&((x87_r6_6 < x87_r7_6 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r6_6, x87_r7_6) ? 1 : 0) << 0xa
-                        | (x87_r6_6 == x87_r7_6 ? 1 : 0) << 0xe) + 1) & 1))
+                    if (!(*(&((fpu_val_6_6 < fpu_val_7_6 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_6_6, fpu_val_7_6) ? 1 : 0) << 0xa
+                        | (fpu_val_6_6 == fpu_val_7_6 ? 1 : 0) << 0xe) + 1) & 1))
                     {
-                        long double x87_r7_8 = fabsl(result[2] - ctxB[2]);
-                        long double x87_r6_7 = a2;
-                        x87_r6_7 - x87_r7_8;
+                        long double fpu_val_7_8 = fabsl(result[2] - context_val[2]);
+                        long double fpu_val_6_7 = param_2;
+                        fpu_val_6_7 - fpu_val_7_8;
 
-                        if (!(*(&((x87_r6_7 < x87_r7_8 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r6_7, x87_r7_8) ? 1 : 0) << 0xa
-                                | (x87_r6_7 == x87_r7_8 ? 1 : 0) << 0xe) + 1) & 1))
+                        if (!(*(&((fpu_val_6_7 < fpu_val_7_8 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_6_7, fpu_val_7_8) ? 1 : 0) << 0xa
+                                | (fpu_val_6_7 == fpu_val_7_8 ? 1 : 0) << 0xe) + 1) & 1))
                             return result;
                     }
                 }
@@ -57,8 +57,8 @@ double* Script_SpawnNewTask_19(void* a1, float a2)
         } while (i < 7);
 
         result_2 = &result_2[0xc4];
-        cond_0_1 = v_10 + 1 < 7;
-        v_10 += 1;
-    } while (cond_0_1);
+        flag_0_1 = item_10 + 1 < 7;
+        item_10 += 1;
+    } while (flag_0_1);
     return 0;
 }

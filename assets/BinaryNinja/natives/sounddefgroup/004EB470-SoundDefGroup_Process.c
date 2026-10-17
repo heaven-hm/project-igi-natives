@@ -1,201 +1,201 @@
 // Original IGI.EXE function: SoundDefGroup_Process (VA 0x004EB470; static CFG gate FAIL, CFG score 0.733).
 #include "SoundDefGroup_Process.h"
-int32_t SoundDefGroup_Process(void* a1, int32_t* a2)
+int32_t SoundDefGroup_Process(void* context, int32_t* param_2)
 
 {
     int32_t i = 0;
 
-    if (a2[1] > 0)
+    if (param_2[1] > 0)
     {
         do
         {
-            void* dstD1 = &g_54da30;
+            void* dest_1 = &g_54da30;
             int32_t j = 0xffffffff;
 
             while (j)
             {
-                bool cond_2_1 = 0 != *dstD1;
-                dstD1 += 1;
+                bool flag_2_1 = 0 != *dest_1;
+                dest_1 += 1;
                 j -= 1;
 
-                if (!cond_2_1)
+                if (!flag_2_1)
                     break;
             }
 
-            int32_t objC1 = ~j;
-            int32_t dstD3 = *a2;
+            int32_t entity_1 = ~j;
+            int32_t dest_3 = *param_2;
             int32_t j_1 = 0xffffffff;
 
             while (j_1)
             {
-                bool cond_3_1 = 0 != *dstD3;
-                dstD3 += 1;
+                bool flag_3_1 = 0 != *dest_3;
+                dest_3 += 1;
                 j_1 -= 1;
 
-                if (!cond_3_1)
+                if (!flag_3_1)
                     break;
             }
 
-            int32_t srcS2;
-            int32_t dstD5;
-            dstD5 = memcpy(dstD3 - 1, dstD1 - objC1, objC1 & 0xfffffffc);
+            int32_t source_2;
+            int32_t dest_5;
+            dest_5 = memcpy(dest_3 - 1, dest_1 - entity_1, entity_1 & 0xfffffffc);
             i += 1;
-            memcpy(dstD5, srcS2, objC1 & 3);
-        } while (i < a2[1]);
+            memcpy(dest_5, source_2, entity_1 & 3);
+        } while (i < param_2[1]);
     }
 
-    void* v_414 = a1 + 0x22;
-    char* v_418 = "DefineGroup";
-    void v_400;
-    Game_DataSymbolLoad(&v_400, "%s("%s"");
-    void* dstD6 = &v_400;
+    void* item_414 = context + 0x22;
+    char* item_418 = "DefineGroup";
+    void item_400;
+    Game_DataSymbolLoad(&item_400, "%s("%s"");
+    void* dest_6 = &item_400;
     int32_t i_1 = 0xffffffff;
 
     while (i_1)
     {
-        bool cond_0_1 = 0 != *dstD6;
-        dstD6 += 1;
+        bool flag_0_1 = 0 != *dest_6;
+        dest_6 += 1;
         i_1 -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC6 = ~i_1;
-    int32_t dstD8 = *a2;
+    int32_t entity_6 = ~i_1;
+    int32_t dest_8 = *param_2;
     int32_t i_2 = 0xffffffff;
 
     while (i_2)
     {
-        bool cond_1_1 = 0 != *dstD8;
-        dstD8 += 1;
+        bool flag_1_1 = 0 != *dest_8;
+        dest_8 += 1;
         i_2 -= 1;
 
-        if (!cond_1_1)
+        if (!flag_1_1)
             break;
     }
 
-    int32_t srcS4;
-    int32_t dstD10;
-    dstD10 = memcpy(dstD8 - 1, dstD6 - objC6, objC6 & 0xfffffffc);
-    memcpy(dstD10, srcS4, objC6 & 3);
-    a2[1] += 1;
-    int32_t* valA2 = *(a1 + 8);
+    int32_t source_4;
+    int32_t dest_10;
+    dest_10 = memcpy(dest_8 - 1, dest_6 - entity_6, entity_6 & 0xfffffffc);
+    memcpy(dest_10, source_4, entity_6 & 3);
+    param_2[1] += 1;
+    int32_t* data_2 = *(context + 8);
 
-    if (*valA2 && valA2)
+    if (*data_2 && data_2)
     {
-        void* dstD11 = &g_54db5c;
+        void* dest_11 = &g_54db5c;
         int32_t i_3 = 0xffffffff;
 
         while (i_3)
         {
-            bool cond_5_1 = 0 != *dstD11;
-            dstD11 += 1;
+            bool flag_5_1 = 0 != *dest_11;
+            dest_11 += 1;
             i_3 -= 1;
 
-            if (!cond_5_1)
+            if (!flag_5_1)
                 break;
         }
 
-        int32_t objC11 = ~i_3;
-        int32_t dstD13 = *a2;
+        int32_t entity_11 = ~i_3;
+        int32_t dest_13 = *param_2;
         int32_t i_4 = 0xffffffff;
 
         while (i_4)
         {
-            bool cond_6_1 = 0 != *dstD13;
-            dstD13 += 1;
+            bool flag_6_1 = 0 != *dest_13;
+            dest_13 += 1;
             i_4 -= 1;
 
-            if (!cond_6_1)
+            if (!flag_6_1)
                 break;
         }
 
-        int32_t srcS6;
-        int32_t dstD15;
-        dstD15 = memcpy(dstD13 - 1, dstD11 - objC11, objC11 & 0xfffffffc);
-        memcpy(dstD15, srcS6, objC11 & 3);
-        int32_t* i_5 = *(a1 + 8);
+        int32_t source_6;
+        int32_t dest_15;
+        dest_15 = memcpy(dest_13 - 1, dest_11 - entity_11, entity_11 & 0xfffffffc);
+        memcpy(dest_15, source_6, entity_11 & 3);
+        int32_t* i_5 = *(context + 8);
 
         if (*i_5 && i_5)
         {
-            int32_t objC16 = g_afa7e0;
+            int32_t entity_16 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD4 = *i_5;
-                void* valA6;
+                int32_t* temp_4 = *i_5;
+                void* data_6;
 
-                if (!tmpD4)
-                    valA6 = nullptr;
+                if (!temp_4)
+                    data_6 = nullptr;
                 else
                 {
-                    int32_t valA3 = *tmpD4;
-                    int32_t valA4 = -(valA3);
-                    valA6 = (valA4 - valA4) & tmpD4;
+                    int32_t data_3 = *temp_4;
+                    int32_t data_4 = -(data_3);
+                    data_6 = (data_4 - data_4) & temp_4;
                 }
 
-                *((objC16 << 2) + &g_afa6e0) = valA6;
-                g_afa7e0 = objC16 + 1;
-                uint32_t valA8 = SoundSys_SetMasterVolume_5();
-                int32_t objC18 = 0;
-                objC18 = i_5[7];
-                int32_t valA12 = *(((valA8 * 0x180 + objC18) << 2) + &g_a96ae0);
+                *((entity_16 << 2) + &g_afa6e0) = data_6;
+                g_afa7e0 = entity_16 + 1;
+                uint32_t data_8 = SoundSys_SetMasterVolume_5();
+                int32_t entity_18 = 0;
+                entity_18 = i_5[7];
+                int32_t data_12 = *(((data_8 * 0x180 + entity_18) << 2) + &g_a96ae0);
 
-                if (valA12)
-                    valA12(i_5, a2);
+                if (data_12)
+                    data_12(i_5, param_2);
 
-                objC16 = g_afa7e0 - 1;
-                g_afa7e0 = objC16;
-                i_5 = *((objC16 << 2) + &g_afa6e0);
+                entity_16 = g_afa7e0 - 1;
+                g_afa7e0 = entity_16;
+                i_5 = *((entity_16 << 2) + &g_afa6e0);
             } while (i_5);
         }
     }
 
-    int32_t valA13 = a2[1];
-    a2[1] = valA13 - 1;
-    char* dstD16;
+    int32_t data_13 = param_2[1];
+    param_2[1] = data_13 - 1;
+    char* dest_16;
 
-    if (valA13 == 1)
-        dstD16 = ");\r\n";
+    if (data_13 == 1)
+        dest_16 = ");\r\n";
     else
     {
-        void* objC20 = *(*(a1 + 0x14) + 0x10);
-        int32_t valA15 = *(objC20 + 4);
-        int32_t valA16 = -(valA15);
+        void* entity_20 = *(*(context + 0x14) + 0x10);
+        int32_t data_15 = *(entity_20 + 4);
+        int32_t data_16 = -(data_15);
 
-        dstD16 = a1 == ((valA16 - valA16) & objC20) ? &g_547a40 : "),\r\n";
+        dest_16 = context == ((data_16 - data_16) & entity_20) ? &g_547a40 : "),\r\n";
     }
 
     int32_t i_6 = 0xffffffff;
 
     while (i_6)
     {
-        bool cond_7_1 = 0 != *dstD16;
-        dstD16 = &dstD16[1];
+        bool flag_7_1 = 0 != *dest_16;
+        dest_16 = &dest_16[1];
         i_6 -= 1;
 
-        if (!cond_7_1)
+        if (!flag_7_1)
             break;
     }
 
-    int32_t objC21 = ~i_6;
-    int32_t dstD18 = *a2;
+    int32_t entity_21 = ~i_6;
+    int32_t dest_18 = *param_2;
     int32_t i_7 = 0xffffffff;
 
     while (i_7)
     {
-        bool cond_8_1 = 0 != *dstD18;
-        dstD18 += 1;
+        bool flag_8_1 = 0 != *dest_18;
+        dest_18 += 1;
         i_7 -= 1;
 
-        if (!cond_8_1)
+        if (!flag_8_1)
             break;
     }
 
-    int32_t srcS8;
-    int32_t dstD20;
-    dstD20 = memcpy(dstD18 - 1, dstD16 - objC21, objC21 & 0xfffffffc);
-    memcpy(dstD20, srcS8, objC21 & 3);
+    int32_t source_8;
+    int32_t dest_20;
+    dest_20 = memcpy(dest_18 - 1, dest_16 - entity_21, entity_21 & 0xfffffffc);
+    memcpy(dest_20, source_8, entity_21 & 3);
     return 0;
 }

@@ -1,6 +1,6 @@
 // Original IGI.EXE function: QFile_DeviceIndex (VA 0x004B11A0; static CFG gate PASS, CFG score 1.000).
 #include "QFile_DeviceIndex.h"
-int32_t QFile_DeviceIndex(void* a1)
+int32_t QFile_DeviceIndex(void* context)
 
 // Sig: int QFile_DeviceIndex(const char* path)
 // Note: Scans the retail QFile device table and returns its 1-based matching
@@ -18,15 +18,15 @@ int32_t QFile_DeviceIndex(void* a1)
 
             while (j)
             {
-                bool cond_0_1 = 0 != *i_1;
+                bool flag_0_1 = 0 != *i_1;
                 i_1 += 1;
                 j -= 1;
 
-                if (!cond_0_1)
+                if (!flag_0_1)
                     break;
             }
 
-            if (!Camera_ApplyLineFilter_21(i, a1, ~j - 1))
+            if (!Camera_ApplyLineFilter_21(i, context, ~j - 1))
                 return result;
         }
 

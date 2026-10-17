@@ -3,7 +3,7 @@
 int32_t Sys_False()
 
 {
-    __builtin_memset(&g_a43e60, 0, 0x18);
+    memset(&g_a43e60, 0, 0x18);
     Sys_PopStack_25();
     Sys_ExecuteBytecode_23(1);
     TaskType_Set("TRUE", 1);

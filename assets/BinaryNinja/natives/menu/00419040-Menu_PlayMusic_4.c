@@ -1,7 +1,7 @@
 // Original IGI.EXE function: Menu_PlayMusic_4 (VA 0x00419040; static CFG gate PASS, CFG score 1.000).
 #include "Menu_PlayMusic_4.h"
-int32_t Menu_PlayMusic_4(void* a1)
+int32_t Menu_PlayMusic_4(void* context)
 
 {
-    return *(a1 + 0x27e0);
+    return *(context + 0x27e0);
 }

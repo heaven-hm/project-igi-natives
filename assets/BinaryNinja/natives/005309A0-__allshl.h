@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 005309A0 __allshl | gate PASS | openigi True */
-int32_t __convention("regparm")(int32_t arg1, int32_t arg2, char arg3) __pure;
+int32_t __allshl(int32_t context, int32_t param_2, char param_3);

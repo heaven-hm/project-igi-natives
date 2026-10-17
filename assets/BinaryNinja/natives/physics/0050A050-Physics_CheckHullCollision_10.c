@@ -1,236 +1,236 @@
 // Original IGI.EXE function: Physics_CheckHullCollision_10 (VA 0x0050A050; static CFG gate FAIL, CFG score 0.738).
 #include "Physics_CheckHullCollision_10.h"
-HANDLE Physics_CheckHullCollision_10(int32_t a1, int32_t a2, int32_t a3, int32_t a4)
+HANDLE Physics_CheckHullCollision_10(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4)
 
 {
     int32_t i = 0xffffffff;
-    int32_t dstD = a2;
+    int32_t dest_val = param_2;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC = ~i;
+    int32_t entity_val = ~i;
     CHAR fileName[0x104];
-    int32_t srcS1;
-    int32_t dstD2;
-    dstD2 = memcpy(&fileName, dstD - objC, objC & 0xfffffffc);
-    memcpy(dstD2, srcS1, objC & 3);
-    int32_t dstD3 = a2;
+    int32_t source_1;
+    int32_t dest_2;
+    dest_2 = memcpy(&fileName, dest_val - entity_val, entity_val & 0xfffffffc);
+    memcpy(dest_2, source_1, entity_val & 3);
+    int32_t dest_3 = param_2;
     int32_t i_1 = 0xffffffff;
 
     while (i_1)
     {
-        bool cond_1_1 = 0 != *dstD3;
-        dstD3 += 1;
+        bool flag_1_1 = 0 != *dest_3;
+        dest_3 += 1;
         i_1 -= 1;
 
-        if (!cond_1_1)
+        if (!flag_1_1)
             break;
     }
 
-    char* ctxB1;
+    char* context_1;
 
-    if (*(~i_1 - 1 + a2 - 1) == 0x2f)
-        ctxB1 = &g_567c74;
+    if (*(~i_1 - 1 + param_2 - 1) == 0x2f)
+        context_1 = &g_567c74;
     else
     {
-        void* dstD4 = &g_54e9b8;
+        void* dest_4 = &g_54e9b8;
         int32_t i_2 = 0xffffffff;
 
         while (i_2)
         {
-            bool cond_2_1 = 0 != *dstD4;
-            dstD4 += 1;
+            bool flag_2_1 = 0 != *dest_4;
+            dest_4 += 1;
             i_2 -= 1;
 
-            if (!cond_2_1)
+            if (!flag_2_1)
                 break;
         }
 
-        int32_t objC6 = ~i_2;
-        CHAR (* dstD6)[0x104] = &fileName;
+        int32_t entity_6 = ~i_2;
+        CHAR (* dest_6)[0x104] = &fileName;
         int32_t i_3 = 0xffffffff;
 
         while (i_3)
         {
-            bool cond_3_1 = 0 != *dstD6;
-            dstD6 = &(*dstD6)[1];
+            bool flag_3_1 = 0 != *dest_6;
+            dest_6 = &(*dest_6)[1];
             i_3 -= 1;
 
-            if (!cond_3_1)
+            if (!flag_3_1)
                 break;
         }
 
-        int32_t srcS3;
-        int32_t dstD8;
-        dstD8 = memcpy(dstD6 - 1, dstD4 - objC6, objC6 & 0xfffffffc);
-        ctxB1 = &g_54e9b8;
-        memcpy(dstD8, srcS3, objC6 & 3);
+        int32_t source_3;
+        int32_t dest_8;
+        dest_8 = memcpy(dest_6 - 1, dest_4 - entity_6, entity_6 & 0xfffffffc);
+        context_1 = &g_54e9b8;
+        memcpy(dest_8, source_3, entity_6 & 3);
     }
 
-    void* dstD9 = &g_54e9b4;
+    void* dest_9 = &g_54e9b4;
     int32_t i_4 = 0xffffffff;
 
     while (i_4)
     {
-        bool cond_11_1 = 0 != *dstD9;
-        dstD9 += 1;
+        bool flag_11_1 = 0 != *dest_9;
+        dest_9 += 1;
         i_4 -= 1;
 
-        if (!cond_11_1)
+        if (!flag_11_1)
             break;
     }
 
-    int32_t objC11 = ~i_4;
-    CHAR (* dstD11)[0x104] = &fileName;
+    int32_t entity_11 = ~i_4;
+    CHAR (* dest_11)[0x104] = &fileName;
     int32_t i_5 = 0xffffffff;
 
     while (i_5)
     {
-        bool cond_12_1 = 0 != *dstD11;
-        dstD11 = &(*dstD11)[1];
+        bool flag_12_1 = 0 != *dest_11;
+        dest_11 = &(*dest_11)[1];
         i_5 -= 1;
 
-        if (!cond_12_1)
+        if (!flag_12_1)
             break;
     }
 
-    int32_t srcS5;
-    int32_t dstD13;
-    dstD13 = memcpy(dstD11 - 1, dstD9 - objC11, objC11 & 0xfffffffc);
-    memcpy(dstD13, srcS5, objC11 & 3);
+    int32_t source_5;
+    int32_t dest_13;
+    dest_13 = memcpy(dest_11 - 1, dest_9 - entity_11, entity_11 & 0xfffffffc);
+    memcpy(dest_13, source_5, entity_11 & 3);
     WIN32_FIND_DATAA findFileData;
     HANDLE hFindFile = FindFirstFileA(&fileName, &findFileData);
-    void v_348;
-    void* v_354 = &v_348;
+    void item_348;
+    void* item_354 = &item_348;
 
     if (hFindFile == 0xffffffff)
         return hFindFile;
 
-    void* dstD14 = Sys_CheckHeap_6(a1);
+    void* dest_14 = Sys_CheckHeap_6(context);
     int32_t i_6 = 0xffffffff;
 
     while (i_6)
     {
-        bool cond_4_1 = 0 != *dstD14;
-        dstD14 += 1;
+        bool flag_4_1 = 0 != *dest_14;
+        dest_14 += 1;
         i_6 -= 1;
 
-        if (!cond_4_1)
+        if (!flag_4_1)
             break;
     }
 
-    int32_t objC16 = ~i_6;
-    int32_t srcS7;
-    int32_t dstD16;
-    dstD16 = memcpy(&v_348, dstD14 - objC16, objC16 & 0xfffffffc);
-    memcpy(dstD16, srcS7, objC16 & 3);
+    int32_t entity_16 = ~i_6;
+    int32_t source_7;
+    int32_t dest_16;
+    dest_16 = memcpy(&item_348, dest_14 - entity_16, entity_16 & 0xfffffffc);
+    memcpy(dest_16, source_7, entity_16 & 3);
     int32_t i_7 = 0xffffffff;
-    int32_t dstD17 = a2;
+    int32_t dest_17 = param_2;
 
     while (i_7)
     {
-        bool cond_5_1 = 0 != *dstD17;
-        dstD17 += 1;
+        bool flag_5_1 = 0 != *dest_17;
+        dest_17 += 1;
         i_7 -= 1;
 
-        if (!cond_5_1)
+        if (!flag_5_1)
             break;
     }
 
-    int32_t objC20 = ~i_7;
-    void* dstD19 = &v_348;
+    int32_t entity_20 = ~i_7;
+    void* dest_19 = &item_348;
     int32_t i_8 = 0xffffffff;
 
     while (i_8)
     {
-        bool cond_6_1 = 0 != *dstD19;
-        dstD19 += 1;
+        bool flag_6_1 = 0 != *dest_19;
+        dest_19 += 1;
         i_8 -= 1;
 
-        if (!cond_6_1)
+        if (!flag_6_1)
             break;
     }
 
-    int32_t srcS9;
-    int32_t dstD21;
-    dstD21 = memcpy(dstD19 - 1, dstD17 - objC20, objC20 & 0xfffffffc);
-    memcpy(dstD21, srcS9, objC20 & 3);
-    char* dstD22 = ctxB1;
+    int32_t source_9;
+    int32_t dest_21;
+    dest_21 = memcpy(dest_19 - 1, dest_17 - entity_20, entity_20 & 0xfffffffc);
+    memcpy(dest_21, source_9, entity_20 & 3);
+    char* dest_22 = context_1;
     int32_t i_9 = 0xffffffff;
 
     while (i_9)
     {
-        bool cond_7_1 = 0 != *dstD22;
-        dstD22 = &dstD22[1];
+        bool flag_7_1 = 0 != *dest_22;
+        dest_22 = &dest_22[1];
         i_9 -= 1;
 
-        if (!cond_7_1)
+        if (!flag_7_1)
             break;
     }
 
-    int32_t objC25 = ~i_9;
-    void* dstD24 = &v_348;
+    int32_t entity_25 = ~i_9;
+    void* dest_24 = &item_348;
     int32_t i_10 = 0xffffffff;
 
     while (i_10)
     {
-        bool cond_8_1 = 0 != *dstD24;
-        dstD24 += 1;
+        bool flag_8_1 = 0 != *dest_24;
+        dest_24 += 1;
         i_10 -= 1;
 
-        if (!cond_8_1)
+        if (!flag_8_1)
             break;
     }
 
-    int32_t srcS11;
-    int32_t dstD26;
-    dstD26 = memcpy(dstD24 - 1, dstD22 - objC25, objC25 & 0xfffffffc);
-    memcpy(dstD26, srcS11, objC25 & 3);
-    v_218;
-    void* dstD27 = &v_218;
+    int32_t source_11;
+    int32_t dest_26;
+    dest_26 = memcpy(dest_24 - 1, dest_22 - entity_25, entity_25 & 0xfffffffc);
+    memcpy(dest_26, source_11, entity_25 & 3);
+    item_218;
+    void* dest_27 = &item_218;
     int32_t i_11 = 0xffffffff;
 
     while (i_11)
     {
-        bool cond_9_1 = 0 != *dstD27;
-        dstD27 += 1;
+        bool flag_9_1 = 0 != *dest_27;
+        dest_27 += 1;
         i_11 -= 1;
 
-        if (!cond_9_1)
+        if (!flag_9_1)
             break;
     }
 
-    int32_t objC30 = ~i_11;
-    void* dstD29 = &v_348;
+    int32_t entity_30 = ~i_11;
+    void* dest_29 = &item_348;
     int32_t i_12 = 0xffffffff;
 
     while (i_12)
     {
-        bool cond_10_1 = 0 != *dstD29;
-        dstD29 += 1;
+        bool flag_10_1 = 0 != *dest_29;
+        dest_29 += 1;
         i_12 -= 1;
 
-        if (!cond_10_1)
+        if (!flag_10_1)
             break;
     }
 
-    int32_t srcS13;
-    int32_t dstD31;
-    dstD31 = memcpy(dstD29 - 1, dstD27 - objC30, objC30 & 0xfffffffc);
+    int32_t source_13;
+    int32_t dest_31;
+    dest_31 = memcpy(dest_29 - 1, dest_27 - entity_30, entity_30 & 0xfffffffc);
     DWORD nFileSizeLow = findFileData.nFileSizeLow;
-    memcpy(dstD31, srcS13, objC30 & 3);
-    uint8_t v_34c_1 = findFileData.dwFileAttributes >> 4 & 1;
+    memcpy(dest_31, source_13, entity_30 & 3);
+    uint8_t item_34c_1 = findFileData.dwFileAttributes >> 4 & 1;
 
     if (findFileData.cFileName[0] != 0x2e)
-        a3(&v_354, a4);
+        param_3(&item_354, param_4);
 
     if (FindNextFileA(hFindFile, &findFileData))
     {
@@ -238,122 +238,122 @@ HANDLE Physics_CheckHullCollision_10(int32_t a1, int32_t a2, int32_t a3, int32_t
 
         do
         {
-            void* dstD32 = Sys_CheckHeap_6(a1);
+            void* dest_32 = Sys_CheckHeap_6(context);
             int32_t j = 0xffffffff;
 
             while (j)
             {
-                bool cond_14_1 = 0 != *dstD32;
-                dstD32 += 1;
+                bool flag_14_1 = 0 != *dest_32;
+                dest_32 += 1;
                 j -= 1;
 
-                if (!cond_14_1)
+                if (!flag_14_1)
                     break;
             }
 
-            int32_t objC38 = ~j;
-            int32_t srcS15;
-            int32_t dstD34;
-            dstD34 = memcpy(&v_348, dstD32 - objC38, objC38 & 0xfffffffc);
-            memcpy(dstD34, srcS15, objC38 & 3);
+            int32_t entity_38 = ~j;
+            int32_t source_15;
+            int32_t dest_34;
+            dest_34 = memcpy(&item_348, dest_32 - entity_38, entity_38 & 0xfffffffc);
+            memcpy(dest_34, source_15, entity_38 & 3);
             int32_t j_1 = 0xffffffff;
-            int32_t dstD35 = a2;
+            int32_t dest_35 = param_2;
 
             while (j_1)
             {
-                bool cond_15_1 = 0 != *dstD35;
-                dstD35 += 1;
+                bool flag_15_1 = 0 != *dest_35;
+                dest_35 += 1;
                 j_1 -= 1;
 
-                if (!cond_15_1)
+                if (!flag_15_1)
                     break;
             }
 
-            int32_t objC42 = ~j_1;
-            void* dstD37 = &v_348;
+            int32_t entity_42 = ~j_1;
+            void* dest_37 = &item_348;
             int32_t j_2 = 0xffffffff;
 
             while (j_2)
             {
-                bool cond_16_1 = 0 != *dstD37;
-                dstD37 += 1;
+                bool flag_16_1 = 0 != *dest_37;
+                dest_37 += 1;
                 j_2 -= 1;
 
-                if (!cond_16_1)
+                if (!flag_16_1)
                     break;
             }
 
-            int32_t srcS17;
-            int32_t dstD39;
-            dstD39 = memcpy(dstD37 - 1, dstD35 - objC42, objC42 & 0xfffffffc);
-            memcpy(dstD39, srcS17, objC42 & 3);
-            char* dstD40 = ctxB1;
+            int32_t source_17;
+            int32_t dest_39;
+            dest_39 = memcpy(dest_37 - 1, dest_35 - entity_42, entity_42 & 0xfffffffc);
+            memcpy(dest_39, source_17, entity_42 & 3);
+            char* dest_40 = context_1;
             int32_t j_3 = 0xffffffff;
 
             while (j_3)
             {
-                bool cond_17_1 = 0 != *dstD40;
-                dstD40 = &dstD40[1];
+                bool flag_17_1 = 0 != *dest_40;
+                dest_40 = &dest_40[1];
                 j_3 -= 1;
 
-                if (!cond_17_1)
+                if (!flag_17_1)
                     break;
             }
 
-            int32_t objC47 = ~j_3;
-            void* dstD42 = &v_348;
+            int32_t entity_47 = ~j_3;
+            void* dest_42 = &item_348;
             int32_t j_4 = 0xffffffff;
 
             while (j_4)
             {
-                bool cond_18_1 = 0 != *dstD42;
-                dstD42 += 1;
+                bool flag_18_1 = 0 != *dest_42;
+                dest_42 += 1;
                 j_4 -= 1;
 
-                if (!cond_18_1)
+                if (!flag_18_1)
                     break;
             }
 
-            int32_t srcS19;
-            int32_t dstD44;
-            dstD44 = memcpy(dstD42 - 1, dstD40 - objC47, objC47 & 0xfffffffc);
-            memcpy(dstD44, srcS19, objC47 & 3);
-            void* dstD45 = &v_218;
+            int32_t source_19;
+            int32_t dest_44;
+            dest_44 = memcpy(dest_42 - 1, dest_40 - entity_47, entity_47 & 0xfffffffc);
+            memcpy(dest_44, source_19, entity_47 & 3);
+            void* dest_45 = &item_218;
             int32_t j_5 = 0xffffffff;
 
             while (j_5)
             {
-                bool cond_19_1 = 0 != *dstD45;
-                dstD45 += 1;
+                bool flag_19_1 = 0 != *dest_45;
+                dest_45 += 1;
                 j_5 -= 1;
 
-                if (!cond_19_1)
+                if (!flag_19_1)
                     break;
             }
 
-            int32_t objC52 = ~j_5;
-            void* dstD47 = &v_348;
+            int32_t entity_52 = ~j_5;
+            void* dest_47 = &item_348;
             int32_t j_6 = 0xffffffff;
 
             while (j_6)
             {
-                bool cond_20_1 = 0 != *dstD47;
-                dstD47 += 1;
+                bool flag_20_1 = 0 != *dest_47;
+                dest_47 += 1;
                 j_6 -= 1;
 
-                if (!cond_20_1)
+                if (!flag_20_1)
                     break;
             }
 
-            int32_t srcS21;
-            int32_t dstD49;
-            dstD49 = memcpy(dstD47 - 1, dstD45 - objC52, objC52 & 0xfffffffc);
+            int32_t source_21;
+            int32_t dest_49;
+            dest_49 = memcpy(dest_47 - 1, dest_45 - entity_52, entity_52 & 0xfffffffc);
             DWORD nFileSizeLow_1 = findFileData.nFileSizeLow;
-            memcpy(dstD49, srcS21, objC52 & 3);
-            uint8_t v_34c_2 = findFileData.dwFileAttributes >> 4 & 1;
+            memcpy(dest_49, source_21, entity_52 & 3);
+            uint8_t item_34c_2 = findFileData.dwFileAttributes >> 4 & 1;
 
             if (findFileData.cFileName[0] != 0x2e)
-                a3(&v_354, a4);
+                param_3(&item_354, param_4);
 
             i_13 = FindNextFileA(hFindFile, &findFileData);
         } while (i_13);

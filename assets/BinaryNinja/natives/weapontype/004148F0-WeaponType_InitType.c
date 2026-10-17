@@ -1,6 +1,6 @@
 // Original IGI.EXE function: WeaponType_InitType (VA 0x004148F0; static CFG gate PASS, CFG score 1.000).
 #include "WeaponType_InitType.h"
-int32_t WeaponType_InitType(int32_t a1 @ 0xc, int32_t a2, double a3)
+int32_t WeaponType_InitType(int32_t context , int32_t param_2, double param_3)
 
 {
     int32_t arg_4 = 0;
@@ -11,11 +11,11 @@ int32_t WeaponType_InitType(int32_t a1 @ 0xc, int32_t a2, double a3)
         return result;
 
     Sys_FreeMemory_11(&arg_4);
-    int32_t v_8 = a2;
-    Sys_ResolveSymbol_9(a1);
-    long double x87_r7_1 = a3;
+    int32_t item_8 = param_2;
+    Sys_ResolveSymbol_9(context);
+    long double fpu_val_7_1 = param_3;
     long double f0 = 0.0;
-    x87_r7_1 - f0;
-    return (x87_r7_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f0) ? 1 : 0) << 0xa
-        | (x87_r7_1 == f0 ? 1 : 0) << 0xe;
+    fpu_val_7_1 - f0;
+    return (fpu_val_7_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_1 == f0 ? 1 : 0) << 0xe;
 }

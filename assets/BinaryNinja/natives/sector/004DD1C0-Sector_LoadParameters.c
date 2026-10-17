@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Sector_LoadParameters (VA 0x004DD1C0; static CFG gate PASS, CFG score 0.933).
 #include "Sector_LoadParameters.h"
-int32_t Sector_LoadParameters(void* a1)
+int32_t Sector_LoadParameters(void* context)
 
 {
-    int32_t objC = g_a5e334;
-    int32_t tmpD = g_a5e330;
-    int32_t v_50 = g_a5e35c;
-    int32_t valA1 = g_a5e310;
-    void* v_54 = a1;
-    int32_t v_4c = objC;
-    int32_t v_48 = tmpD;
-    int32_t v_44 = valA1;
-    (*((DynObj_ParseConfigFile_15() << 2) + &g_a94e84))(&v_54);
-    void* tmpD1 = *(a1 + 0xe8);
-    void v_40;
-    memcpy(&v_40, a1 + 0x20, 0x18);
-    void v_28;
-    memcpy(&v_28, a1 + 0x70, 0x28);
-    int32_t* i = *(tmpD1 + 8);
+    int32_t entity_val = g_a5e334;
+    int32_t temp_val = g_a5e330;
+    int32_t item_50 = g_a5e35c;
+    int32_t data_1 = g_a5e310;
+    void* item_54 = context;
+    int32_t item_4c = entity_val;
+    int32_t item_48 = temp_val;
+    int32_t item_44 = data_1;
+    (*((DynObj_ParseConfigFile_15() << 2) + &g_a94e84))(&item_54);
+    void* temp_1 = *(context + 0xe8);
+    void item_40;
+    memcpy(&item_40, context + 0x20, 0x18);
+    void item_28;
+    memcpy(&item_28, context + 0x70, 0x28);
+    int32_t* i = *(temp_1 + 8);
 
     if (*i && i)
     {
         do
         {
-            uint32_t valA4 = DynObj_FindSymbol_6();
-            int32_t objC1 = 0;
-            objC1 = i[7];
-            (*(((valA4 * 0x180 + objC1) << 2) + &g_a96ae0))(i, &v_40);
+            uint32_t data_4 = DynObj_FindSymbol_6();
+            int32_t entity_1 = 0;
+            entity_1 = i[7];
+            (*(((data_4 * 0x180 + entity_1) << 2) + &g_a96ae0))(i, &item_40);
             i = *i;
 
             if (!i)
@@ -37,19 +37,19 @@ int32_t Sector_LoadParameters(void* a1)
         } while (i);
     }
 
-    int32_t* i_1 = *(a1 + 8);
+    int32_t* i_1 = *(context + 8);
 
     if (*i_1 && i_1)
     {
         do
         {
-            uint32_t valA10 = DynObj_FindSymbol_6();
-            int32_t objC2 = 0;
-            objC2 = i_1[7];
-            int32_t valA14 = *(((valA10 * 0x180 + objC2) << 2) + &g_a96ae0);
+            uint32_t data_10 = DynObj_FindSymbol_6();
+            int32_t entity_2 = 0;
+            entity_2 = i_1[7];
+            int32_t data_14 = *(((data_10 * 0x180 + entity_2) << 2) + &g_a96ae0);
 
-            if (valA14)
-                valA14(i_1, &v_40);
+            if (data_14)
+                data_14(i_1, &item_40);
 
             i_1 = *i_1;
 
@@ -61,24 +61,24 @@ int32_t Sector_LoadParameters(void* a1)
         } while (i_1);
     }
 
-    int32_t result = *(a1 + 0x138);
-    int32_t srcS2 = 0;
+    int32_t result = *(context + 0x138);
+    int32_t source_2 = 0;
 
     if (result > 0)
     {
         do
         {
-            void* valA16 = *(*(*(a1 + 0x134) + (srcS2 << 2)) * *(a1 + 0x140) + *(a1 + 0x130));
-            int32_t objC5 = 0;
-            objC5 = *(valA16 + 0x1c);
-            int32_t objC6 = *((objC5 << 2) + &g_a982e0);
+            void* data_16 = *(*(*(context + 0x134) + (source_2 << 2)) * *(context + 0x140) + *(context + 0x130));
+            int32_t entity_5 = 0;
+            entity_5 = *(data_16 + 0x1c);
+            int32_t entity_6 = *((entity_5 << 2) + &g_a982e0);
 
-            if (objC6)
-                objC6(valA16, 0);
+            if (entity_6)
+                entity_6(data_16, 0);
 
-            result = *(a1 + 0x138);
-            srcS2 += 1;
-        } while (srcS2 < result);
+            result = *(context + 0x138);
+            source_2 += 1;
+        } while (source_2 < result);
     }
 
     return result;

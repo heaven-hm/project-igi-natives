@@ -1,64 +1,64 @@
 // Original IGI.EXE function: Sys_ScriptInternalErrorI (VA 0x004BA880; static CFG gate FAIL, CFG score 0.844).
 #include "Sys_ScriptInternalErrorI.h"
-char* Sys_ScriptInternalErrorI(int32_t a1, int32_t* a2, int32_t a3, char* a4)
+char* Sys_ScriptInternalErrorI(int32_t context, int32_t* param_2, int32_t param_3, char* param_4)
 
 {
-    int32_t objC = 0;
+    int32_t entity_val = 0;
 
-    if (a4)
+    if (param_4)
     {
-        int32_t dstD1 = *(a4 + 8);
+        int32_t dest_1 = *(param_4 + 8);
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_1_1 = 0 != *dstD1;
-            dstD1 += 1;
+            bool flag_1_1 = 0 != *dest_1;
+            dest_1 += 1;
             i -= 1;
 
-            if (!cond_1_1)
+            if (!flag_1_1)
                 break;
         }
 
-        int32_t* dstD2 = a2;
+        int32_t* dest_2 = param_2;
         int32_t i_1 = 0xffffffff;
 
         while (i_1)
         {
-            bool cond_2_1 = 0 != *dstD2;
-            dstD2 += 1;
+            bool flag_2_1 = 0 != *dest_2;
+            dest_2 += 1;
             i_1 -= 1;
 
-            if (!cond_2_1)
+            if (!flag_2_1)
                 break;
         }
 
-        objC = ~i - 1 + ~i_1 - 1 + 1;
+        entity_val = ~i - 1 + ~i_1 - 1 + 1;
     }
-    else if (a1 == 2 || a1 == 5)
+    else if (context == 2 || context == 5)
     {
-        int32_t* dstD3 = a2;
+        int32_t* dest_3 = param_2;
         int32_t i_2 = 0xffffffff;
 
         while (i_2)
         {
-            bool cond_3_1 = 0 != *dstD3;
-            dstD3 += 1;
+            bool flag_3_1 = 0 != *dest_3;
+            dest_3 += 1;
             i_2 -= 1;
 
-            if (!cond_3_1)
+            if (!flag_3_1)
                 break;
         }
 
-        objC = ~i_2;
+        entity_val = ~i_2;
     }
 
-    char* result = Mem_Alloc(objC + 0x28, 4);
-    __builtin_memset(result, 0, 0x28);
-    *result = a1;
-    *(result + 0x24) = a3 + 1;
+    char* result = Mem_Alloc(entity_val + 0x28, 4);
+    memset(result, 0, 0x28);
+    *result = context;
+    *(result + 0x24) = param_3 + 1;
 
-    if (a1 - 1 > 7)
+    if (context - 1 > 7)
     {
         Error_Show("Script: Internal Error: Illegal expression type.");
 
@@ -68,94 +68,94 @@ char* Sys_ScriptInternalErrorI(int32_t a1, int32_t* a2, int32_t a3, char* a4)
         return;
     }
 
-    void* tmpD3;
+    void* temp_3;
 
-    switch (a1)
+    switch (context)
     {
         case 1:
         {
-            *(result + 8) = *a2;
+            *(result + 8) = *param_2;
             return result;
             break;
         }
         case 2:
         {
-            tmpD3 = &result[0x28];
-            *(result + 8) = tmpD3;
+            temp_3 = &result[0x28];
+            *(result + 8) = temp_3;
 
-            if (!a4)
+            if (!param_4)
                 goto label_4baa31;
 
-            int32_t dstD5 = *(a4 + 8);
+            int32_t dest_5 = *(param_4 + 8);
             int32_t i_3 = 0xffffffff;
 
             while (i_3)
             {
-                bool cond_7_1 = 0 != *dstD5;
-                dstD5 += 1;
+                bool flag_7_1 = 0 != *dest_5;
+                dest_5 += 1;
                 i_3 -= 1;
 
-                if (!cond_7_1)
+                if (!flag_7_1)
                     break;
             }
 
-            int32_t objC8 = ~i_3;
-            int32_t srcS2;
-            int32_t dstD8;
-            dstD8 = memcpy(tmpD3, dstD5 - objC8, objC8 & 0xfffffffc);
-            memcpy(dstD8, srcS2, objC8 & 3);
-            int32_t* dstD9 = a2;
+            int32_t entity_8 = ~i_3;
+            int32_t source_2;
+            int32_t dest_8;
+            dest_8 = memcpy(temp_3, dest_5 - entity_8, entity_8 & 0xfffffffc);
+            memcpy(dest_8, source_2, entity_8 & 3);
+            int32_t* dest_9 = param_2;
             int32_t i_4 = 0xffffffff;
 
             while (i_4)
             {
-                bool cond_8_1 = 0 != *dstD9;
-                dstD9 += 1;
+                bool flag_8_1 = 0 != *dest_9;
+                dest_9 += 1;
                 i_4 -= 1;
 
-                if (!cond_8_1)
+                if (!flag_8_1)
                     break;
             }
 
-            int32_t objC12 = ~i_4;
-            int32_t dstD11 = *(result + 8);
+            int32_t entity_12 = ~i_4;
+            int32_t dest_11 = *(result + 8);
             int32_t i_5 = 0xffffffff;
 
             while (i_5)
             {
-                bool cond_9_1 = 0 != *dstD11;
-                dstD11 += 1;
+                bool flag_9_1 = 0 != *dest_11;
+                dest_11 += 1;
                 i_5 -= 1;
 
-                if (!cond_9_1)
+                if (!flag_9_1)
                     break;
             }
 
-            int32_t srcS4;
-            int32_t dstD13;
-            dstD13 = memcpy(dstD11 - 1, dstD9 - objC12, objC12 & 0xfffffffc);
-            memcpy(dstD13, srcS4, objC12 & 3);
-            char* valA9 = *(a4 + 0x20);
+            int32_t source_4;
+            int32_t dest_13;
+            dest_13 = memcpy(dest_11 - 1, dest_9 - entity_12, entity_12 & 0xfffffffc);
+            memcpy(dest_13, source_4, entity_12 & 3);
+            char* data_9 = *(param_4 + 0x20);
 
-            if (valA9)
+            if (data_9)
             {
-                if (*(valA9 + 0x18) == a4)
+                if (*(data_9 + 0x18) == param_4)
                 {
-                    *(valA9 + 0x18) = result;
-                    *(result + 0x20) = *(a4 + 0x20);
-                    Sys_PushStack_24(a4);
+                    *(data_9 + 0x18) = result;
+                    *(result + 0x20) = *(param_4 + 0x20);
+                    Sys_PushStack_24(param_4);
                     return result;
                 }
 
-                if (*(valA9 + 0x1c) == a4)
+                if (*(data_9 + 0x1c) == param_4)
                 {
-                    *(valA9 + 0x1c) = result;
-                    *(result + 0x20) = *(a4 + 0x20);
-                    Sys_PushStack_24(a4);
+                    *(data_9 + 0x1c) = result;
+                    *(result + 0x20) = *(param_4 + 0x20);
+                    Sys_PushStack_24(param_4);
                     return result;
                 }
 
-                if (*valA9 != 6)
+                if (*data_9 != 6)
                 {
                     Error_Show("Internal error!!!");
 
@@ -164,54 +164,54 @@ char* Sys_ScriptInternalErrorI(int32_t a1, int32_t* a2, int32_t a3, char* a4)
                 }
                 else
                 {
-                    *(valA9 + 8) = result;
-                    *(result + 0x20) = *(a4 + 0x20);
+                    *(data_9 + 8) = result;
+                    *(result + 0x20) = *(param_4 + 0x20);
                 }
             }
 
-            Sys_PushStack_24(a4);
+            Sys_PushStack_24(param_4);
             return result;
             break;
         }
         case 3:
         {
-            *(result + 8) = *a2;
-            *(result + 0xc) = a2[1];
+            *(result + 8) = *param_2;
+            *(result + 0xc) = param_2[1];
             return result;
             break;
         }
         case 4:
         case 6:
         {
-            *(result + 8) = a2;
+            *(result + 8) = param_2;
             return result;
             break;
         }
         case 5:
         {
-            tmpD3 = &result[0x28];
+            temp_3 = &result[0x28];
             *(result + 8) = 0;
-            *(result + 0x10) = tmpD3;
+            *(result + 0x10) = temp_3;
             *(result + 0xc) = 0;
         label_4baa31:
-            int32_t* dstD14 = a2;
+            int32_t* dest_14 = param_2;
             int32_t i_6 = 0xffffffff;
 
             while (i_6)
             {
-                bool cond_6_1 = 0 != *dstD14;
-                dstD14 += 1;
+                bool flag_6_1 = 0 != *dest_14;
+                dest_14 += 1;
                 i_6 -= 1;
 
-                if (!cond_6_1)
+                if (!flag_6_1)
                     break;
             }
 
-            int32_t objC19 = ~i_6;
-            int32_t srcS6;
-            int32_t dstD17;
-            dstD17 = memcpy(tmpD3, dstD14 - objC19, objC19 & 0xfffffffc);
-            memcpy(dstD17, srcS6, objC19 & 3);
+            int32_t entity_19 = ~i_6;
+            int32_t source_6;
+            int32_t dest_17;
+            dest_17 = memcpy(temp_3, dest_14 - entity_19, entity_19 & 0xfffffffc);
+            memcpy(dest_17, source_6, entity_19 & 3);
             return result;
             break;
         }
@@ -219,15 +219,15 @@ char* Sys_ScriptInternalErrorI(int32_t a1, int32_t* a2, int32_t a3, char* a4)
         {
             result[1] = 0x1d;
             result[2] = Sys_ScriptInternalErrorU(0x1d);
-            *(result + 8) = a2;
+            *(result + 8) = param_2;
             return result;
             break;
         }
         case 8:
         {
-            char ctxB1 = *a2;
-            result[1] = ctxB1;
-            result[2] = Sys_ScriptInternalErrorU(ctxB1);
+            char context_1 = *param_2;
+            result[1] = context_1;
+            result[2] = Sys_ScriptInternalErrorU(context_1);
             return result;
             break;
         }

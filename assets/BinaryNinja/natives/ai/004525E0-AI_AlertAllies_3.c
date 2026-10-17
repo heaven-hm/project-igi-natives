@@ -1,40 +1,40 @@
 // Original IGI.EXE function: AI_AlertAllies_3 (VA 0x004525E0; static CFG gate PASS, CFG score 1.000).
 #include "AI_AlertAllies_3.h"
-void* AI_AlertAllies_3(int32_t a1)
+void* AI_AlertAllies_3(int32_t context)
 
 {
-    void* srcS = *(a1 + 0x14);
-    int16_t valA = AI_UpdateOrders_16();
-    char valA1;
+    void* source_val = *(context + 0x14);
+    int16_t data_val = AI_UpdateOrders_16();
+    char data_1;
 
-    if (*(srcS + 0x1c) != valA)
+    if (*(source_val + 0x1c) != data_val)
     {
-        int16_t valA2 = AI_SelectTarget_12();
+        int16_t data_2 = AI_SelectTarget_12();
 
-        if (*(srcS + 0x1c) != valA2)
+        if (*(source_val + 0x1c) != data_2)
         {
-            int16_t valA3 = AI_AlertAllies_7();
+            int16_t data_3 = AI_AlertAllies_7();
 
-            if (*(srcS + 0x1c) != valA3)
+            if (*(source_val + 0x1c) != data_3)
             {
-                int16_t valA4 = AI_FireWeapon_9();
+                int16_t data_4 = AI_FireWeapon_9();
 
-                if (*(srcS + 0x1c) != valA4)
-                    valA1 = a1;
+                if (*(source_val + 0x1c) != data_4)
+                    data_1 = context;
                 else
-                    valA1 = *(srcS + 0xd00);
+                    data_1 = *(source_val + 0xd00);
             }
             else
-                valA1 = *(srcS + 0xd00);
+                data_1 = *(source_val + 0xd00);
         }
         else
-            valA1 = *(srcS + 0xd00);
+            data_1 = *(source_val + 0xd00);
     }
     else
-        valA1 = *(srcS + 0xd00);
+        data_1 = *(source_val + 0xd00);
 
-    int32_t objC = 0;
-    objC = !valA1;
-    int32_t v_c = objC;
-    return AI_WriteChannel(a1, 0, objC);
+    int32_t entity_val = 0;
+    entity_val = !data_1;
+    int32_t item_c = entity_val;
+    return AI_WriteChannel(context, 0, entity_val);
 }

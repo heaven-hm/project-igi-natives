@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00503CC0 Physics_VirmodelIsNull | gate PASS | openigi False */
-struct status_msg* Physics_VirmodelIsNull(void * a1, int a2, int a3, int a4, int* a5);
+struct status_msg* Physics_VirmodelIsNull(void * context, int param_2, int param_3, int param_4, int* param_5);

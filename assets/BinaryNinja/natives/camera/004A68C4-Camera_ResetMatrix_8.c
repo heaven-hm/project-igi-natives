@@ -9,10 +9,10 @@ int32_t* Camera_ResetMatrix_8()
     {
     label_4a68e0:
         Camera_ProgramNameUnknown(0xfc);
-        int32_t valA = g_9361bc;
+        int32_t data_val = g_9361bc;
 
-        if (valA)
-            valA();
+        if (data_val)
+            data_val();
 
         result = Camera_ProgramNameUnknown(0xff);
     }

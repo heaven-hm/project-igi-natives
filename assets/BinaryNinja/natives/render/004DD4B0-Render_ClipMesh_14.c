@@ -1,96 +1,96 @@
 // Original IGI.EXE function: Render_ClipMesh_14 (VA 0x004DD4B0; static CFG gate PASS, CFG score 1.000).
 #include "Render_ClipMesh_14.h"
-int32_t* Render_ClipMesh_14(void* a1, float* a2, int32_t* a3, int32_t a4)
+int32_t* Render_ClipMesh_14(void* context, float* param_2, int32_t* param_3, int32_t param_4)
 
 {
-    int32_t tmpD5 = g_a5e340;
-    int32_t ctxB = g_a5e348;
+    int32_t temp_5 = g_a5e340;
+    int32_t context_val = g_a5e348;
     int32_t* result_1 = g_a5e33c;
-    int32_t dstD = 0;
+    int32_t dest_val = 0;
 
-    if (tmpD5 > 0)
+    if (temp_5 > 0)
     {
         int32_t* result = result_1;
 
         do
         {
-            float* objC3 = *result * ctxB + g_a5e338;
+            float* entity_3 = *result * context_val + g_a5e338;
 
-            if (objC3[6] == a1)
+            if (entity_3[6] == context)
             {
-                long double fpu7 = *objC3;
-                long double f0 = *a2;
+                long double fpu7 = *entity_3;
+                long double f0 = *param_2;
                 fpu7 - f0;
                 result = (fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
                     | (fpu7 == f0 ? 1 : 0) << 0xe;
-                long double x87_r7_1;
+                long double fpu_val_7_1;
 
                 if (!(*(&result + 1) & 1))
-                    x87_r7_1 = *a2;
+                    fpu_val_7_1 = *param_2;
                 else
-                    x87_r7_1 = *objC3;
+                    fpu_val_7_1 = *entity_3;
 
-                *objC3 = x87_r7_1;
-                long double x87_r7_2 = objC3[1];
-                long double fpu6 = a2[1];
-                fpu6 - x87_r7_2;
-                result = (fpu6 < x87_r7_2 ? 1 : 0) << 8
-                    | (FCMP_UO(fpu6, x87_r7_2) ? 1 : 0) << 0xa
-                    | (fpu6 == x87_r7_2 ? 1 : 0) << 0xe;
-                long double x87_r7_3;
+                *entity_3 = fpu_val_7_1;
+                long double fpu_val_7_2 = entity_3[1];
+                long double fpu6 = param_2[1];
+                fpu6 - fpu_val_7_2;
+                result = (fpu6 < fpu_val_7_2 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu6, fpu_val_7_2) ? 1 : 0) << 0xa
+                    | (fpu6 == fpu_val_7_2 ? 1 : 0) << 0xe;
+                long double fpu_val_7_3;
 
                 if (*(&result + 1) & 0x41)
-                    x87_r7_3 = a2[1];
+                    fpu_val_7_3 = param_2[1];
                 else
-                    x87_r7_3 = objC3[1];
+                    fpu_val_7_3 = entity_3[1];
 
-                objC3[1] = x87_r7_3;
-                long double x87_r7_4 = objC3[2];
-                long double f1 = *a3;
-                x87_r7_4 - f1;
-                result = (x87_r7_4 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f1) ? 1 : 0) << 0xa
-                    | (x87_r7_4 == f1 ? 1 : 0) << 0xe;
-                long double x87_r7_5;
+                entity_3[1] = fpu_val_7_3;
+                long double fpu_val_7_4 = entity_3[2];
+                long double f1 = *param_3;
+                fpu_val_7_4 - f1;
+                result = (fpu_val_7_4 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_4 == f1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_5;
 
                 if (*(&result + 1) & 0x41)
-                    x87_r7_5 = *a3;
+                    fpu_val_7_5 = *param_3;
                 else
-                    x87_r7_5 = objC3[2];
+                    fpu_val_7_5 = entity_3[2];
 
-                objC3[2] = x87_r7_5;
-                long double x87_r7_6 = objC3[3];
-                long double x87_r6_1 = a3[1];
-                x87_r6_1 - x87_r7_6;
-                result = (x87_r6_1 < x87_r7_6 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_1, x87_r7_6) ? 1 : 0) << 0xa
-                    | (x87_r6_1 == x87_r7_6 ? 1 : 0) << 0xe;
+                entity_3[2] = fpu_val_7_5;
+                long double fpu_val_7_6 = entity_3[3];
+                long double fpu_val_6_1 = param_3[1];
+                fpu_val_6_1 - fpu_val_7_6;
+                result = (fpu_val_6_1 < fpu_val_7_6 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_1, fpu_val_7_6) ? 1 : 0) << 0xa
+                    | (fpu_val_6_1 == fpu_val_7_6 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 1))
                 {
-                    objC3[3] = a3[1];
+                    entity_3[3] = param_3[1];
                     return result;
                 }
 
-                objC3[3] = objC3[3];
+                entity_3[3] = entity_3[3];
                 return result;
             }
 
-            dstD += 1;
+            dest_val += 1;
             result = &result[1];
-        } while (dstD < tmpD5);
+        } while (dest_val < temp_5);
     }
 
-    int32_t* valA3 = result_1[tmpD5] * ctxB + g_a5e338;
-    *(g_a5e34c + valA3) = tmpD5;
-    int32_t* objC6 = a2;
+    int32_t* data_3 = result_1[temp_5] * context_val + g_a5e338;
+    *(g_a5e34c + data_3) = temp_5;
+    int32_t* entity_6 = param_2;
     g_a5e340 += 1;
-    valA3[6] = a1;
-    valA3[5] = a4;
-    *valA3 = *objC6;
-    valA3[1] = objC6[1];
-    valA3[2] = *a3;
-    valA3[3] = a3[1];
-    valA3[4] = g_a5e358 + 1;
-    valA3[7] = 0;
-    return Render_DrawBoneMesh_15(a1, objC6, a3, a4);
+    data_3[6] = context;
+    data_3[5] = param_4;
+    *data_3 = *entity_6;
+    data_3[1] = entity_6[1];
+    data_3[2] = *param_3;
+    data_3[3] = param_3[1];
+    data_3[4] = g_a5e358 + 1;
+    data_3[7] = 0;
+    return Render_DrawBoneMesh_15(context, entity_6, param_3, param_4);
 }

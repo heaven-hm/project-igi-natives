@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004DA300 Hazinglayers_Process | gate PASS | openigi False */
-void ** Hazinglayers_Process(int* a1, int* a2, double* a3, double* a4, void ** a5, int a6);
+void ** Hazinglayers_Process(int* context, int* param_2, double* param_3, double* param_4, void ** param_5, int param_6);

@@ -1,16 +1,16 @@
 // Original IGI.EXE function: Camera_UpdateTransform_14 (VA 0x004A87FC; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_14.h"
-int32_t Camera_UpdateTransform_14(int16_t a1 @ x87control, int32_t a2, int32_t a3)
+int32_t Camera_UpdateTransform_14(int16_t context , int32_t param_2, int32_t param_3)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
     int16_t x87status;
     int16_t f0;
-    f0 = __fnstcw_memmem16(a1);
-    v_8 = f0;
-    int16_t x87control;
+    f0 = __fnstcw_memmem16(context);
+    item_8 = f0;
+    int16_t fpu_control;
     int16_t x87status_1;
-    x87control = __fldcw_memmem16(((~a3 & v_8) | (a3 & a2)));
-    return v_8;
+    fpu_control = __fldcw_memmem16(((~param_3 & item_8) | (param_3 & param_2)));
+    return item_8;
 }

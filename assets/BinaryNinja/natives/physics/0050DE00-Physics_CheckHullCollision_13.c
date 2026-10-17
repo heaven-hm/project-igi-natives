@@ -1,75 +1,75 @@
 // Original IGI.EXE function: Physics_CheckHullCollision_13 (VA 0x0050DE00; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CheckHullCollision_13.h"
-int32_t Physics_CheckHullCollision_13(void* a1)
+int32_t Physics_CheckHullCollision_13(void* context)
 
 {
-    if (!*(a1 + 4))
+    if (!*(context + 4))
     {
-        int32_t* valA15 = g_5ca114;
-        (*(*valA15 + 0x94))(valA15, 0, 4, 3);
-        int32_t* valA16 = g_5ca114;
-        (*(*valA16 + 0x94))(valA16, 0, 5, 2);
-        int32_t* valA17 = g_5ca114;
-        (*(*valA17 + 0x94))(valA17, 0, 6, 0);
-        int32_t* valA18 = g_5ca114;
-        (*(*valA18 + 0x94))(valA18, 0, 1, 3);
-        int32_t* valA19 = g_5ca114;
-        (*(*valA19 + 0x94))(valA19, 0, 2, 2);
-        int32_t* valA20 = g_5ca114;
-        (*(*valA20 + 0x94))(valA20, 0, 3, 0);
-        int32_t* valA21 = g_5ca114;
-        (*(*valA21 + 0x94))(valA21, 1, 1, 1);
-        int32_t* valA22 = g_5ca114;
-        return (*(*valA22 + 0x8c))(valA22, 0, 0);
+        int32_t* data_15 = g_5ca114;
+        (*(*data_15 + 0x94))(data_15, 0, 4, 3);
+        int32_t* data_16 = g_5ca114;
+        (*(*data_16 + 0x94))(data_16, 0, 5, 2);
+        int32_t* data_17 = g_5ca114;
+        (*(*data_17 + 0x94))(data_17, 0, 6, 0);
+        int32_t* data_18 = g_5ca114;
+        (*(*data_18 + 0x94))(data_18, 0, 1, 3);
+        int32_t* data_19 = g_5ca114;
+        (*(*data_19 + 0x94))(data_19, 0, 2, 2);
+        int32_t* data_20 = g_5ca114;
+        (*(*data_20 + 0x94))(data_20, 0, 3, 0);
+        int32_t* data_21 = g_5ca114;
+        (*(*data_21 + 0x94))(data_21, 1, 1, 1);
+        int32_t* data_22 = g_5ca114;
+        return (*(*data_22 + 0x8c))(data_22, 0, 0);
     }
 
-    int32_t* valA1 = g_5ca114;
-    int32_t objC = *valA1;
-    int32_t v_8;
-    int32_t* valA2;
-    int32_t tmpD;
+    int32_t* data_1 = g_5ca114;
+    int32_t entity_val = *data_1;
+    int32_t item_8;
+    int32_t* data_2;
+    int32_t temp_val;
 
-    if (!(*a1 & 0x1000000))
+    if (!(*context & 0x1000000))
     {
-        (*(objC + 0x94))(valA1, 0, 0x11, 1);
-        valA2 = g_5ca114;
-        v_8 = 1;
-        tmpD = *valA2;
+        (*(entity_val + 0x94))(data_1, 0, 0x11, 1);
+        data_2 = g_5ca114;
+        item_8 = 1;
+        temp_val = *data_2;
     }
     else
     {
-        (*(objC + 0x94))(valA1, 0, 0x11, 2);
-        valA2 = g_5ca114;
-        v_8 = 2;
-        tmpD = *valA2;
+        (*(entity_val + 0x94))(data_1, 0, 0x11, 2);
+        data_2 = g_5ca114;
+        item_8 = 2;
+        temp_val = *data_2;
     }
 
-    (*(tmpD + 0x94))(valA2, 0, 0x10, v_8);
-    int32_t* valA3 = g_5ca114;
+    (*(temp_val + 0x94))(data_2, 0, 0x10, item_8);
+    int32_t* data_3 = g_5ca114;
 
-    if (!(*a1 & &__dos_header))
-        (*(*valA3 + 0x94))(valA3, 0, 0xc, 3);
+    if (!(*context & &__dos_header))
+        (*(*data_3 + 0x94))(data_3, 0, 0xc, 3);
     else
-        (*(*valA3 + 0x94))(valA3, 0, 0xc, 1);
+        (*(*data_3 + 0x94))(data_3, 0, 0xc, 1);
 
-    int32_t* valA4 = g_5ca114;
-    (*(*valA4 + 0x94))(valA4, 0, 0x12, 1);
-    int32_t* valA5 = g_5ca114;
-    (*(*valA5 + 0x94))(valA5, 0, 0xb, 0);
-    int32_t* valA6 = g_5ca114;
-    (*(*valA6 + 0x94))(valA6, 0, 4, 4);
-    int32_t* valA7 = g_5ca114;
-    (*(*valA7 + 0x94))(valA7, 0, 5, 2);
-    int32_t* valA8 = g_5ca114;
-    (*(*valA8 + 0x94))(valA8, 0, 6, 0);
-    int32_t* valA9 = g_5ca114;
-    (*(*valA9 + 0x94))(valA9, 0, 1, 4);
-    int32_t* valA10 = g_5ca114;
-    (*(*valA10 + 0x94))(valA10, 0, 2, 2);
-    int32_t* valA11 = g_5ca114;
-    (*(*valA11 + 0x94))(valA11, 0, 3, 0);
-    int32_t* valA12 = g_5ca114;
-    (*(*valA12 + 0x94))(valA12, 1, 1, 1);
-    int32_t* valA13 = g_5ca114;
-    return (*(*valA13 + 0x8c))(valA13, 0, *(*(a1 + 4) + 0x20));
+    int32_t* data_4 = g_5ca114;
+    (*(*data_4 + 0x94))(data_4, 0, 0x12, 1);
+    int32_t* data_5 = g_5ca114;
+    (*(*data_5 + 0x94))(data_5, 0, 0xb, 0);
+    int32_t* data_6 = g_5ca114;
+    (*(*data_6 + 0x94))(data_6, 0, 4, 4);
+    int32_t* data_7 = g_5ca114;
+    (*(*data_7 + 0x94))(data_7, 0, 5, 2);
+    int32_t* data_8 = g_5ca114;
+    (*(*data_8 + 0x94))(data_8, 0, 6, 0);
+    int32_t* data_9 = g_5ca114;
+    (*(*data_9 + 0x94))(data_9, 0, 1, 4);
+    int32_t* data_10 = g_5ca114;
+    (*(*data_10 + 0x94))(data_10, 0, 2, 2);
+    int32_t* data_11 = g_5ca114;
+    (*(*data_11 + 0x94))(data_11, 0, 3, 0);
+    int32_t* data_12 = g_5ca114;
+    (*(*data_12 + 0x94))(data_12, 1, 1, 1);
+    int32_t* data_13 = g_5ca114;
+    return (*(*data_13 + 0x8c))(data_13, 0, *(*(context + 4) + 0x20));
 }

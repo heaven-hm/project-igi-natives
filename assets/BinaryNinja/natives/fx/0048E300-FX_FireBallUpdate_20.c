@@ -1,70 +1,70 @@
 // Original IGI.EXE function: FX_FireBallUpdate_20 (VA 0x0048E300; static CFG gate PASS, CFG score 0.889).
 #include "FX_FireBallUpdate_20.h"
-❓  int32_t* __stdcall FX_FireBallUpdate_20(void* a1 @ 0x1408, int32_t* a2, int32_t a3, int32_t a4, int32_t a5)
+❓  int32_t* __stdcall FX_FireBallUpdate_20(void* context , int32_t* param_2, int32_t param_3, int32_t param_4, int32_t param_5)
 // This function has unresolved stack usage. View graph of stack usage to resolve.
 
 {
     Camera_UpdateTransform_5(0x1404);
-    int32_t* i = a2;
+    int32_t* i = param_2;
     int32_t arg_404;
     int32_t* flagP = &arg_404;
-    __return_addr = nullptr;
+    return_addr = nullptr;
 
-    if (i && a4)
+    if (i && param_4)
     {
-        int32_t tmpD1 = *i;
+        int32_t temp_1 = *i;
         i = nullptr;
-        int32_t ctxB1 = 1;
+        int32_t context_1 = 1;
         char arg_4[0x400];
-        __builtin_memset(&arg_4, 0, 0x400);
-        arg_404 = tmpD1;
+        memset(&arg_4, 0, 0x400);
+        arg_404 = temp_1;
         int32_t arg_408 = 0xffffffff;
-        arg_4[tmpD1] = 1;
+        arg_4[temp_1] = 1;
 
-        if (tmpD1 != 0xffffffff)
+        if (temp_1 != 0xffffffff)
         {
             do
             {
-                void* valA1 = Script_ExecuteLevelScript_23(*(a1 + 0x3b6c), *flagP);
-                int32_t valA2 = a4(a1, valA1, a5);
+                void* data_1 = Script_ExecuteLevelScript_23(*(context + 0x3b6c), *flagP);
+                int32_t data_2 = param_4(context, data_1, param_5);
 
-                if (valA2)
+                if (data_2)
                 {
-                    valA2 = 1;
-                    return valA2;
+                    data_2 = 1;
+                    return data_2;
                 }
 
-                int32_t dstD2 = 0;
-                int32_t saved_dst;
-                int32_t* valA3 = &(&saved_dst)[ctxB1 + 0x105];
-                int32_t* srcS2 = valA1 + 0x13c;
+                int32_t dest_2 = 0;
+                int32_t saved_target;
+                int32_t* data_3 = &(&saved_target)[context_1 + 0x105];
+                int32_t* source_2 = data_1 + 0x13c;
 
-                while (__return_addr < a3)
+                while (return_addr < param_3)
                 {
-                    void* tmpD4 = *srcS2;
+                    void* temp_4 = *source_2;
 
-                    if (tmpD4)
+                    if (temp_4)
                     {
-                        int32_t objC4 = *(tmpD4 + 8);
+                        int32_t entity_4 = *(temp_4 + 8);
 
-                        if (*flagP == objC4)
-                            objC4 = *(tmpD4 + 0xc);
+                        if (*flagP == entity_4)
+                            entity_4 = *(temp_4 + 0xc);
 
-                        if (!arg_4[objC4])
+                        if (!arg_4[entity_4])
                         {
-                            arg_4[objC4] = 1;
-                            *valA3 = objC4;
-                            ctxB1 += 1;
-                            valA3 = &valA3[1];
-                            __return_addr += 1;
-                            *valA3 = 0xffffffff;
+                            arg_4[entity_4] = 1;
+                            *data_3 = entity_4;
+                            context_1 += 1;
+                            data_3 = &data_3[1];
+                            return_addr += 1;
+                            *data_3 = 0xffffffff;
                         }
                     }
 
-                    dstD2 += 1;
-                    srcS2 = &srcS2[1];
+                    dest_2 += 1;
+                    source_2 = &source_2[1];
 
-                    if (dstD2 >= 0x40)
+                    if (dest_2 >= 0x40)
                         break;
                 }
 

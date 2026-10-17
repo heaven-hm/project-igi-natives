@@ -1,34 +1,34 @@
 // Original IGI.EXE function: Graph_LoadParameters (VA 0x004F90B0; static CFG gate PASS, CFG score 0.905).
 #include "Graph_LoadParameters.h"
-int32_t* Graph_LoadParameters(void* a1)
+int32_t* Graph_LoadParameters(void* context)
 
 {
-    __builtin_memset(a1 + 0x20, 0, 0x18);
-    *(a1 + 0x50) = 0xffffffff;
-    *(a1 + 0x54) = 0;
-    *(a1 + 0x58) = 0;
-    *(a1 + 0x5c) = 0;
-    *(a1 + 0x60) = 0;
-    *(a1 + 0x65) = 0;
-    *(a1 + 0x68) = 0;
-    *(a1 + 0x69) = 0;
-    *(a1 + 0x66) = 0;
-    *(a1 + 0x67) = 0;
-    *(a1 + 0x6c) = 0;
-    int32_t* dstD = Mem_Alloc(0xc, 4);
-    dstD[2] = QTask_LinkEventHandler_2(a1);
-    dstD[1] = 0;
-    *dstD = 0;
-    Camera_SetFieldOfView_33(&g_a77248, dstD);
-    dstD = *(*(a1 + 0x14) + 0x1c);
-    __builtin_memset(a1 + 0x20, 0, 0x18);
-    *(a1 + 0x64) = 0;
+    memset(context + 0x20, 0, 0x18);
+    *(context + 0x50) = 0xffffffff;
+    *(context + 0x54) = 0;
+    *(context + 0x58) = 0;
+    *(context + 0x5c) = 0;
+    *(context + 0x60) = 0;
+    *(context + 0x65) = 0;
+    *(context + 0x68) = 0;
+    *(context + 0x69) = 0;
+    *(context + 0x66) = 0;
+    *(context + 0x67) = 0;
+    *(context + 0x6c) = 0;
+    int32_t* dest_val = Mem_Alloc(0xc, 4);
+    dest_val[2] = QTask_LinkEventHandler_2(context);
+    dest_val[1] = 0;
+    *dest_val = 0;
+    Camera_SetFieldOfView_33(&g_a77248, dest_val);
+    dest_val = *(*(context + 0x14) + 0x1c);
+    memset(context + 0x20, 0, 0x18);
+    *(context + 0x64) = 0;
 
-    if (TaskType_IsDerivedFrom(dstD, DynObj_LookupHashItem_5()))
-        *(a1 + 0x64) = 1;
+    if (TaskType_IsDerivedFrom(dest_val, DynObj_LookupHashItem_5()))
+        *(context + 0x64) = 1;
 
-    *(a1 + 0x78) = a1 + 0x70;
-    *(a1 + 0x74) = 0;
-    *(a1 + 0x70) = a1 + 0x74;
-    return a1 + 0x74;
+    *(context + 0x78) = context + 0x70;
+    *(context + 0x74) = 0;
+    *(context + 0x70) = context + 0x74;
+    return context + 0x74;
 }

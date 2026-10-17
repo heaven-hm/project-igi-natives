@@ -1,68 +1,68 @@
 // Original IGI.EXE function: Generator_LoadParameters (VA 0x0043B500; static CFG gate PASS, CFG score 1.000).
 #include "Generator_LoadParameters.h"
-struct status_msg* Generator_LoadParameters(int80_t a1 @ fp0, void* a2)
+struct status_msg* Generator_LoadParameters(long double context , void* param_2)
 
 {
-    int32_t flagP = *(a2 + 0x23c);
-    (*((FX_TrailUpdate() << 2) + &g_a970e0))(a2);
+    int32_t flagP = *(param_2 + 0x23c);
+    (*((FX_TrailUpdate() << 2) + &g_a970e0))(param_2);
 
-    if (*(a2 + 0x190))
-        *(a2 + 0x23c) = 0;
-    else if (Script_FormatString_6(a2 + 0x240))
+    if (*(param_2 + 0x190))
+        *(param_2 + 0x23c) = 0;
+    else if (Script_FormatString_6(param_2 + 0x240))
     {
-        Script_SpawnNewTask_7(a2 + 0x240, a2);
-        *(a2 + 0x23c) = a1;
+        Script_SpawnNewTask_7(param_2 + 0x240, param_2);
+        *(param_2 + 0x23c) = context;
     }
 
-    if (*(a2 + 0x2b4))
+    if (*(param_2 + 0x2b4))
     {
-        if (!*(a2 + 0x23c) && *(a2 + 0x2b8) == 0xffffffff)
+        if (!*(param_2 + 0x23c) && *(param_2 + 0x2b8) == 0xffffffff)
         {
-🚫🚫            /* unimplemented  {fld fp0, dword [srcS+0x2b0]} */
+🚫🚫            /* unimplemented  {fld fp0, dword [source_val+0x2b0]} */
 🚫🚫            /* unimplemented  {fmul fp0, dword [&g_5333bc]} */
-🚫🚫🚫            int32_t v_8_2 = /* int32_t v_8_2 =
-                (unimplemented  {fistp qword [esp+0xc], fp0}).d */;
-            /* unimplemented  {fistp qword [esp+0xc], fp0} */
-            *(a2 + 0x2b8) = v_8_2;
+🚫🚫🚫            int32_t item_8_2 = /* int32_t item_8_2 =
+                (unimplemented  {fistp qword [stack_ptr+0xc], fp0}).d */;
+            /* unimplemented  {fistp qword [stack_ptr+0xc], fp0} */
+            *(param_2 + 0x2b8) = item_8_2;
         }
 
-        int32_t valA9 = *(a2 + 0x2b8);
+        int32_t data_9 = *(param_2 + 0x2b8);
 
-        if (valA9 <= 0)
-            *(a2 + 0x23c) = 1;
+        if (data_9 <= 0)
+            *(param_2 + 0x23c) = 1;
         else
-            *(a2 + 0x2b8) = valA9 - 1;
+            *(param_2 + 0x2b8) = data_9 - 1;
     }
 
-    struct status_msg* result = *(a2 + 0x238);
+    struct status_msg* result = *(param_2 + 0x238);
 
-    if (!*(a2 + 0x23c))
+    if (!*(param_2 + 0x23c))
     {
         if (result)
         {
             result = SoundSys_SetFrequency_7(result);
-            *(a2 + 0x238) = 0;
+            *(param_2 + 0x238) = 0;
         }
 
         if (flagP)
         {
-            result = SoundSys_SetMasterVolume_7(a2, a2 + 0x2a0);
+            result = SoundSys_SetMasterVolume_7(param_2, param_2 + 0x2a0);
 
             if (result)
-                return SoundSys_StopSoundSample_7(result, a2 + 0x20);
+                return SoundSys_StopSoundSample_7(result, param_2 + 0x20);
         }
     }
     else if (!result)
     {
-        result = a2 + 0x290;
+        result = param_2 + 0x290;
 
-        if (*(a2 + 0x290))
+        if (*(param_2 + 0x290))
         {
-            result = SoundSys_SetMasterVolume_7(a2, result);
-            *(a2 + 0x238) = result;
+            result = SoundSys_SetMasterVolume_7(param_2, result);
+            *(param_2 + 0x238) = result;
 
             if (result)
-                return SoundSys_StopSoundSample_7(result, a2 + 0x20);
+                return SoundSys_StopSoundSample_7(result, param_2 + 0x20);
         }
     }
 

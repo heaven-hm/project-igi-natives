@@ -1,22 +1,22 @@
 // Original IGI.EXE function: SoundSys_AttachLipsync_10 (VA 0x004E7AC0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_AttachLipsync_10.h"
-int32_t SoundSys_AttachLipsync_10(void* a1, char a2)
+int32_t SoundSys_AttachLipsync_10(void* context, char param_2)
 
 {
     int32_t kind;
     kind = g_a5ea76;
-    g_a5ea70 = QTask_HandleInput(a1, kind, 0);
+    g_a5ea70 = QTask_HandleInput(context, kind, 0);
     g_a5ea75 = FX_SmokeEmit_24();
-    g_5488d8 = a2;
+    g_5488d8 = param_2;
 
-    if (a2)
+    if (param_2)
     {
-        int32_t v_18 = 0;
-        int32_t v_14_1 = 0;
-        int32_t v_10_1 = 0;
-        int32_t v_c_1 = 0;
+        int32_t item_18 = 0;
+        int32_t item_14_1 = 0;
+        int32_t item_10_1 = 0;
+        int32_t item_c_1 = 0;
         Display_SyncVSync_13(0xa5eb80, 1);
-        Display_CheckCapabilities_13(0xa5eb80, &v_18);
+        Display_CheckCapabilities_13(0xa5eb80, &item_18);
     }
 
     return g_a5ea70;

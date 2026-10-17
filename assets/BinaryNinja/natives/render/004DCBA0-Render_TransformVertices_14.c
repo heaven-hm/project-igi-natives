@@ -1,25 +1,25 @@
 // Original IGI.EXE function: Render_TransformVertices_14 (VA 0x004DCBA0; static CFG gate PASS, CFG score 1.000).
 #include "Render_TransformVertices_14.h"
-void* Render_TransformVertices_14(int32_t* a1, void* a2)
+void* Render_TransformVertices_14(int32_t* context, void* param_2)
 
 {
-    void* result = a2;
+    void* result = param_2;
     int32_t* i = *(result + 8);
 
     if (*i && i)
     {
         do
         {
-            int32_t tmpD2 = a1[2];
-            void* objC2 = *(*(*i[0x1b] + 0xc) + 0xc);
-            int32_t* valA4 = *(a1[1] + (tmpD2 << 2)) * a1[4] + *a1;
-            *(a1[5] + valA4) = tmpD2;
-            a1[2] += 1;
-            *valA4 = *(objC2 + 0x50);
-            valA4[1] = *(objC2 + 0x54);
-            valA4[2] = *(objC2 + 0x58);
-            valA4[3] = *(objC2 + 0x5c);
-            result = Render_TransformVertices_14(a1, i);
+            int32_t temp_2 = context[2];
+            void* entity_2 = *(*(*i[0x1b] + 0xc) + 0xc);
+            int32_t* data_4 = *(context[1] + (temp_2 << 2)) * context[4] + *context;
+            *(context[5] + data_4) = temp_2;
+            context[2] += 1;
+            *data_4 = *(entity_2 + 0x50);
+            data_4[1] = *(entity_2 + 0x54);
+            data_4[2] = *(entity_2 + 0x58);
+            data_4[3] = *(entity_2 + 0x5c);
+            result = Render_TransformVertices_14(context, i);
             i = *i;
 
             if (!i)

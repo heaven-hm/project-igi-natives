@@ -1,48 +1,48 @@
 // Original IGI.EXE function: Sys_PopStack_12 (VA 0x004B3EF0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_PopStack_12.h"
-float* Sys_PopStack_12(float* a1, float a2, float a3)
+float* Sys_PopStack_12(float* context, float param_2, float param_3)
 
 {
-    long double x87_r7_1 = a3 * 0.5f;
-    float* valA = a2;
+    long double fpu_val_7_1 = param_3 * 0.5f;
+    float* data_val = param_2;
     long double fp0;
     bool c1;
     bool c2;
-    fp0 = __fsin(x87_r7_1);
-    float v_14 = fp0 * *valA;
-    float v_10 = fp0 * valA[1];
-    float v_c = fp0 * valA[2];
+    fp0 = __fsin(fpu_val_7_1);
+    float item_14 = fp0 * *data_val;
+    float item_10 = fp0 * data_val[1];
+    float item_c = fp0 * data_val[2];
     long double fp0_1;
     bool c1_1;
     bool c2_1;
-    fp0_1 = __fcos(x87_r7_1);
-    long double x87_r6_4 = v_14 * v_14;
-    long double x87_r6_7 = v_10 * v_14;
-    a3 = x87_r6_7 + x87_r6_7;
-    long double x87_r6_10 = v_c * v_14;
-    float v_2c = x87_r6_10 + x87_r6_10;
-    long double x87_r6_13 = fp0_1 * v_14;
-    float v_20 = x87_r6_13 + x87_r6_13;
-    long double x87_r6_16 = v_10 * v_10;
-    float v_1c = x87_r6_16 + x87_r6_16;
-    long double x87_r6_19 = v_c * v_10;
-    float v_24 = x87_r6_19 + x87_r6_19;
-    long double x87_r6_22 = fp0_1 * v_10;
-    float v_28 = x87_r6_22 + x87_r6_22;
-    long double x87_r6_25 = v_c * v_c;
-    a2 = x87_r6_25 + x87_r6_25;
-    long double x87_r7_3 = fp0_1 * v_c;
-    long double x87_r7_4 = x87_r7_3 + x87_r7_3;
-    *a1 = 1f - v_1c - a2;
-    a1[1] = a3 - x87_r7_4;
-    a1[2] = v_28 + v_2c;
-    a1[3] = x87_r7_4 + a3;
-    long double x87_r7_7 = 1f - (x87_r6_4 + x87_r6_4);
-    a1[4] = x87_r7_7 - a2;
-    a1[5] = v_24 - v_20;
-    a1[9] = 0;
-    a1[6] = v_2c - v_28;
-    a1[7] = v_24 + v_20;
-    a1[8] = x87_r7_7 - v_1c;
-    return a1;
+    fp0_1 = __fcos(fpu_val_7_1);
+    long double fpu_val_6_4 = item_14 * item_14;
+    long double fpu_val_6_7 = item_10 * item_14;
+    param_3 = fpu_val_6_7 + fpu_val_6_7;
+    long double fpu_val_6_10 = item_c * item_14;
+    float item_2c = fpu_val_6_10 + fpu_val_6_10;
+    long double fpu_val_6_13 = fp0_1 * item_14;
+    float item_20 = fpu_val_6_13 + fpu_val_6_13;
+    long double fpu_val_6_16 = item_10 * item_10;
+    float item_1c = fpu_val_6_16 + fpu_val_6_16;
+    long double fpu_val_6_19 = item_c * item_10;
+    float item_24 = fpu_val_6_19 + fpu_val_6_19;
+    long double fpu_val_6_22 = fp0_1 * item_10;
+    float item_28 = fpu_val_6_22 + fpu_val_6_22;
+    long double fpu_val_6_25 = item_c * item_c;
+    param_2 = fpu_val_6_25 + fpu_val_6_25;
+    long double fpu_val_7_3 = fp0_1 * item_c;
+    long double fpu_val_7_4 = fpu_val_7_3 + fpu_val_7_3;
+    *context = 1.0f - item_1c - param_2;
+    context[1] = param_3 - fpu_val_7_4;
+    context[2] = item_28 + item_2c;
+    context[3] = fpu_val_7_4 + param_3;
+    long double fpu_val_7_7 = 1.0f - (fpu_val_6_4 + fpu_val_6_4);
+    context[4] = fpu_val_7_7 - param_2;
+    context[5] = item_24 - item_20;
+    context[9] = 0;
+    context[6] = item_2c - item_28;
+    context[7] = item_24 + item_20;
+    context[8] = fpu_val_7_7 - item_1c;
+    return context;
 }

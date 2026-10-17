@@ -1,15 +1,15 @@
 // Original IGI.EXE function: Render_DrawLightmapMesh (VA 0x004D06C0; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawLightmapMesh.h"
-int32_t Render_DrawLightmapMesh(float a1, int32_t a2)
+int32_t Render_DrawLightmapMesh(float context, int32_t param_2)
 
 {
-    long double x87_r7_1 = *(a1 + 0x20) - g_bcab08;
-    long double x87_r6_1 = *(a1 + 0x28) - g_bcab10;
-    long double x87_r5_1 = *(a1 + 0x30) - g_bcab18;
-    long double x87_r4_5 = g_bcaaf4 * x87_r5_1;
-    long double x87_r3_5 = g_bcaaf0 * x87_r6_1;
-    float v_c = g_bcaae8 * x87_r5_1 + g_bcaae4 * x87_r6_1 + g_bcaae0 * x87_r7_1;
-    float v_8 = x87_r4_5 + x87_r3_5 + g_bcaaec * x87_r7_1;
-    float v_4 = g_bcab00 * x87_r5_1 + g_bcaafc * x87_r6_1 + g_bcaaf8 * x87_r7_1;
-    return Render_DrawBoneMesh(&v_c, *(*(*(**(a1 + 0x74) + 0xc) + 0xc) + 0x3c) * 1.40999997f, a2);
+    long double fpu_val_7_1 = *(context + 0x20) - g_bcab08;
+    long double fpu_val_6_1 = *(context + 0x28) - g_bcab10;
+    long double fpu_val_5_1 = *(context + 0x30) - g_bcab18;
+    long double fpu_val_4_5 = g_bcaaf4 * fpu_val_5_1;
+    long double fpu_val_3_5 = g_bcaaf0 * fpu_val_6_1;
+    float item_c = g_bcaae8 * fpu_val_5_1 + g_bcaae4 * fpu_val_6_1 + g_bcaae0 * fpu_val_7_1;
+    float item_8 = fpu_val_4_5 + fpu_val_3_5 + g_bcaaec * fpu_val_7_1;
+    float item_4 = g_bcab00 * fpu_val_5_1 + g_bcaafc * fpu_val_6_1 + g_bcaaf8 * fpu_val_7_1;
+    return Render_DrawBoneMesh(&item_c, *(*(*(**(context + 0x74) + 0xc) + 0xc) + 0x3c) * 1.40999997f, param_2);
 }

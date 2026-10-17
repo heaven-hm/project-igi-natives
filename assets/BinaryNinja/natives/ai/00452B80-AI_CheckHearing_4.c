@@ -1,24 +1,24 @@
 // Original IGI.EXE function: AI_CheckHearing_4 (VA 0x00452B80; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckHearing_4.h"
-int32_t* AI_CheckHearing_4(void* a1, int32_t a2, int32_t a3, char a4)
+int32_t* AI_CheckHearing_4(void* context, int32_t param_2, int32_t param_3, char param_4)
 
 {
     int32_t* result;
 
     for (int32_t* i = &g_53caa0; i < "IENDLYDETECTION"; i = &i[3])
     {
-        result = i[-2] + a2;
-        int32_t objC2 = i[-1] + a3;
+        result = i[-2] + param_2;
+        int32_t entity_2 = i[-1] + param_3;
 
-        if (result >= 0 && result < *(a1 + 0x14) && objC2 >= 0 && objC2 < *(a1 + 0x18))
+        if (result >= 0 && result < *(context + 0x14) && entity_2 >= 0 && entity_2 < *(context + 0x18))
         {
-            result = a1 + ((objC2 + result * 0x14) << 2) + 0x20;
-            int32_t objC4 = *i;
+            result = context + ((entity_2 + result * 0x14) << 2) + 0x20;
+            int32_t entity_4 = *i;
 
-            if (!a4)
-                *result -= objC4;
+            if (!param_4)
+                *result -= entity_4;
             else
-                *result += objC4;
+                *result += entity_4;
         }
     }
 

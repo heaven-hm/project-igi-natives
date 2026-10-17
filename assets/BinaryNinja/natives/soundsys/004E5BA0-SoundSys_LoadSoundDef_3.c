@@ -1,75 +1,75 @@
 // Original IGI.EXE function: SoundSys_LoadSoundDef_3 (VA 0x004E5BA0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_LoadSoundDef_3.h"
-int32_t SoundSys_LoadSoundDef_3(void* a1, float a2, float a3, float a4, float a5)
+int32_t SoundSys_LoadSoundDef_3(void* context, float param_2, float param_3, float param_4, float param_5)
 
 {
-    int32_t dstD = a2;
-    int32_t srcS = *(a1 + 8);
-    int32_t valA = a3;
-    int32_t tmpD2 = a2 + a4 - dstD + 1;
-    int32_t objC2 = a3 + a5 - valA + 1;
+    int32_t dest_val = param_2;
+    int32_t source_val = *(context + 8);
+    int32_t data_val = param_3;
+    int32_t temp_2 = param_2 + param_4 - dest_val + 1;
+    int32_t entity_2 = param_3 + param_5 - data_val + 1;
 
-    if (dstD < srcS)
+    if (dest_val < source_val)
     {
-        if (dstD >= 0)
+        if (dest_val >= 0)
             goto label_4e5bfc;
 
-        tmpD2 += dstD;
+        temp_2 += dest_val;
 
-        if (tmpD2 > 0)
+        if (temp_2 > 0)
         {
-            dstD = 0;
+            dest_val = 0;
         label_4e5bfc:
 
-            if (valA < srcS)
+            if (data_val < source_val)
             {
-                if (valA >= 0)
+                if (data_val >= 0)
                     goto label_4e5c11;
 
-                objC2 += valA;
+                entity_2 += data_val;
 
-                if (objC2 > 0)
+                if (entity_2 > 0)
                 {
-                    valA = 0;
+                    data_val = 0;
                 label_4e5c11:
 
-                    if (tmpD2 + dstD > srcS)
-                        tmpD2 = srcS - dstD;
+                    if (temp_2 + dest_val > source_val)
+                        temp_2 = source_val - dest_val;
 
-                    if (objC2 + valA > srcS)
-                        objC2 = srcS - valA;
+                    if (entity_2 + data_val > source_val)
+                        entity_2 = source_val - data_val;
 
-                    float objC3 = objC2 + valA;
-                    float srcS2 = valA;
-                    a2 = srcS2;
-                    a3 = objC3;
+                    float entity_3 = entity_2 + data_val;
+                    float source_2 = data_val;
+                    param_2 = source_2;
+                    param_3 = entity_3;
 
-                    if (valA < objC3)
+                    if (data_val < entity_3)
                     {
-                        int32_t tmpD4 = tmpD2 + dstD;
+                        int32_t temp_4 = temp_2 + dest_val;
 
                         do
                         {
-                            int32_t valA1 = dstD;
+                            int32_t data_1 = dest_val;
 
-                            if (dstD < tmpD4)
+                            if (dest_val < temp_4)
                             {
                                 do
                                 {
-                                    if (*((((valA1 & 0xfffffff8) + (srcS2 << (*(a1 + 4) & 0x1f)))
-                                            >> 3) + a1 + 0xc) >> (valA1 & 7) & 1)
+                                    if (*((((data_1 & 0xfffffff8) + (source_2 << (*(context + 4) & 0x1f)))
+                                            >> 3) + context + 0xc) >> (data_1 & 7) & 1)
                                         return 1;
 
-                                    valA1 += 1;
-                                } while (valA1 < tmpD4);
+                                    data_1 += 1;
+                                } while (data_1 < temp_4);
 
-                                srcS2 = a2;
-                                objC3 = a3;
+                                source_2 = param_2;
+                                entity_3 = param_3;
                             }
 
-                            srcS2 += 1;
-                            a2 = srcS2;
-                        } while (srcS2 < objC3);
+                            source_2 += 1;
+                            param_2 = source_2;
+                        } while (source_2 < entity_3);
                     }
                 }
             }

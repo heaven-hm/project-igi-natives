@@ -1,112 +1,112 @@
 // Original IGI.EXE function: Ladder_ClimbTick (VA 0x0040D6B0; static CFG gate PASS, CFG score 1.000).
 #include "Ladder_ClimbTick.h"
-int32_t Ladder_ClimbTick(void* a1, void* a2)
+int32_t Ladder_ClimbTick(void* context, void* param_2)
 
 {
-    void* ctxB = *(a1 + 8);
+    void* context_val = *(context + 8);
 
-    if (*(a2 + 0x538) == 8)
+    if (*(param_2 + 0x538) == 8)
     {
-        long double x87_r7_1 = *(a2 + 0x540);
-        long double f3_1 = *(a2 + 0xd88);
-        x87_r7_1 - f3_1;
+        long double fpu_val_7_1 = *(param_2 + 0x540);
+        long double f3_1 = *(param_2 + 0xd88);
+        fpu_val_7_1 - f3_1;
 
-        if (!(*(&((x87_r7_1 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f3_1) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+        if (!(*(&((fpu_val_7_1 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f3_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x40))
         {
-            Render_SetupLighting_10(a2 + 0x68, 0, 0f);
-            int32_t tmpD1 = *(a2 + 0xd84);
-            int32_t valA3 = *(a2 + 0xd8c);
-            *(a2 + 0xd88) = *(a2 + 0x540);
-            int32_t objC2 = *(a2 + 0xd80);
-            *(a2 + 0xd84) = 0;
-            *(a2 + 0xd80) = objC2 + tmpD1;
-            int32_t v_58_1 = *(((valA3 + 1) << 2) + &g_538c14) + 1;
-            *(a2 + 0xd8c) = COMBINE(0, valA3 + 1) % 0xc;
-            char v_20[0x20];
-            Game_DataSymbolLoad(&v_20, "walk_ladder_%d");
-            struct status_msg* valA6 = SoundSys_SetMasterVolume_7(Script_FormatString(), &v_20);
+            Render_SetupLighting_10(param_2 + 0x68, 0, 0.0f);
+            int32_t temp_1 = *(param_2 + 0xd84);
+            int32_t data_3 = *(param_2 + 0xd8c);
+            *(param_2 + 0xd88) = *(param_2 + 0x540);
+            int32_t entity_2 = *(param_2 + 0xd80);
+            *(param_2 + 0xd84) = 0;
+            *(param_2 + 0xd80) = entity_2 + temp_1;
+            int32_t item_58_1 = *(((data_3 + 1) << 2) + &g_538c14) + 1;
+            *(param_2 + 0xd8c) = COMBINE(0, data_3 + 1) % 0xc;
+            char item_20[0x20];
+            Game_DataSymbolLoad(&item_20, "walk_ladder_%d");
+            struct status_msg* data_6 = SoundSys_SetMasterVolume_7(Script_FormatString(), &item_20);
 
-            if (valA6)
-                SoundSys_StopSoundSample_7(valA6, a2 + 0x20);
+            if (data_6)
+                SoundSys_StopSoundSample_7(data_6, param_2 + 0x20);
 
-            int32_t valA7 = *(a2 + 0xfc);
-            int32_t v_3c = 0xe;
-            int32_t v_38_1 = valA7;
-            int32_t v_34_1 = 0x46;
-            int32_t v_30_1 = 0x46a00000;
-            int32_t v_2c_1 = DynObj_UpdateDynTree_4(a2);
-            void* v_28_1 = a2;
-            void* v_24_1 = a2;
-            AI_EventBroadcast(&v_3c);
+            int32_t data_7 = *(param_2 + 0xfc);
+            int32_t item_3c = 0xe;
+            int32_t item_38_1 = data_7;
+            int32_t item_34_1 = 0x46;
+            int32_t item_30_1 = 0x46a00000;
+            int32_t item_2c_1 = DynObj_UpdateDynTree_4(param_2);
+            void* item_28_1 = param_2;
+            void* item_24_1 = param_2;
+            AI_EventBroadcast(&item_3c);
         }
     }
 
-    int32_t result = *(a2 + 0xd84);
+    int32_t result = *(param_2 + 0xd84);
 
     if (!result)
     {
-        if (ctxB & 0x80)
+        if (context_val & 0x80)
         {
-            if (*(a2 + 0xd80) == *(a2 + 0xd7c) - 6)
+            if (*(param_2 + 0xd80) == *(param_2 + 0xd7c) - 6)
             {
-                void* objC6 = *(a1 + 4);
-                *(a1 + 0xc) = *(a1 + 0x10);
-                *(a1 + 0x10) = 0x27;
-                int32_t valA11 = *(objC6 + 0x9c);
-                *(a1 + 0x14) = valA11;
-                return valA11(a1, a2);
+                void* entity_6 = *(context + 4);
+                *(context + 0xc) = *(context + 0x10);
+                *(context + 0x10) = 0x27;
+                int32_t data_11 = *(entity_6 + 0x9c);
+                *(context + 0x14) = data_11;
+                return data_11(context, param_2);
             }
 
-            *(a2 + 0xd84) = 1;
-            result = Render_SetupLighting_10(a2 + 0x68, 0, 1f);
+            *(param_2 + 0xd84) = 1;
+            result = Render_SetupLighting_10(param_2 + 0x68, 0, 1.0f);
         }
 
-        if (*(&ctxB + 1) & 1)
+        if (*(&context_val + 1) & 1)
         {
-            if (!*(a2 + 0xd80))
+            if (!*(param_2 + 0xd80))
             {
-                *(a2 + 0xd7a) = 1;
-                int32_t* objC7 = *(a1 + 4);
-                *(a1 + 0xc) = *(a1 + 0x10);
-                *(a1 + 0x10) = 0;
-                int32_t valA15 = *objC7;
-                *(a1 + 0x14) = valA15;
-                return valA15(a1, a2);
+                *(param_2 + 0xd7a) = 1;
+                int32_t* entity_7 = *(context + 4);
+                *(context + 0xc) = *(context + 0x10);
+                *(context + 0x10) = 0;
+                int32_t data_15 = *entity_7;
+                *(context + 0x14) = data_15;
+                return data_15(context, param_2);
             }
 
-            *(a2 + 0xd84) = 0xffffffff;
-            result = Render_SetupLighting_10(a2 + 0x68, 0, -1f);
+            *(param_2 + 0xd84) = 0xffffffff;
+            result = Render_SetupLighting_10(param_2 + 0x68, 0, -1.0f);
         }
     }
 
-    long double x87_r7_2 = *(a2 + 0x1d4);
-    long double f4 = 0f;
-    x87_r7_2 - f4;
-    result = (x87_r7_2 < f4 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f4) ? 1 : 0) << 0xa
-        | (x87_r7_2 == f4 ? 1 : 0) << 0xe;
+    long double fpu_val_7_2 = *(param_2 + 0x1d4);
+    long double f4 = 0.0f;
+    fpu_val_7_2 - f4;
+    result = (fpu_val_7_2 < f4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f4) ? 1 : 0) << 0xa
+        | (fpu_val_7_2 == f4 ? 1 : 0) << 0xe;
 
     if (!(*(&result + 1) & 0x40))
     {
-        long double x87_r7_3 = *(a2 + 0x134);
-        long double f5_1 = 0f;
-        x87_r7_3 - f5_1;
-        result = (x87_r7_3 < f5_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f5_1) ? 1 : 0) << 0xa
-            | (x87_r7_3 == f5_1 ? 1 : 0) << 0xe;
+        long double fpu_val_7_3 = *(param_2 + 0x134);
+        long double f5_1 = 0.0f;
+        fpu_val_7_3 - f5_1;
+        result = (fpu_val_7_3 < f5_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f5_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_3 == f5_1 ? 1 : 0) << 0xe;
 
         if (*(&result + 1) & 0x40)
         {
-            void* objC8 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 0x28;
-            int32_t valA18 = *(objC8 + 0xa0);
-            *(a1 + 0x14) = valA18;
-            return valA18(a1, a2);
+            void* entity_8 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 0x28;
+            int32_t data_18 = *(entity_8 + 0xa0);
+            *(context + 0x14) = data_18;
+            return data_18(context, param_2);
         }
     }
 
-    if (ctxB & 0x20000)
-        *(a2 + 0xd7a) = 1;
+    if (context_val & 0x20000)
+        *(param_2 + 0xd7a) = 1;
 
     return result;
 }

@@ -1,16 +1,16 @@
 // Original IGI.EXE function: GunM16A2_Process (VA 0x00473790; static CFG gate PASS, CFG score 1.000).
 #include "GunM16A2_Process.h"
-int32_t GunM16A2_Process(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, int32_t* a4 @ 0x8)
+int32_t GunM16A2_Process(long double context , long double param_2 , long double param_3 , int32_t* param_4 )
 
 {
-    float srcS = a4[2];
-    float* ctxB = *a4;
-    Profile_ValueSet(a4[1], srcS);
-    *ctxB = a1;
-    Profile_ValueSet(a4[1], srcS + 1);
-    ctxB[1] = a2;
-    int32_t result = Profile_ValueSet(a4[1], srcS + 2);
-    ctxB[2] = a3;
-    a4[2] = srcS + 3;
+    float source_val = param_4[2];
+    float* context_val = *param_4;
+    Profile_ValueSet(param_4[1], source_val);
+    *context_val = context;
+    Profile_ValueSet(param_4[1], source_val + 1);
+    context_val[1] = param_2;
+    int32_t result = Profile_ValueSet(param_4[1], source_val + 2);
+    context_val[2] = param_3;
+    param_4[2] = source_val + 3;
     return result;
 }

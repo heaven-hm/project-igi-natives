@@ -1,210 +1,210 @@
 // Original IGI.EXE function: Physics_SolveConstraints_13 (VA 0x0050E7F0; static CFG gate FAIL, CFG score 0.741).
 #include "Physics_SolveConstraints_13.h"
-int32_t Physics_SolveConstraints_13(void* a1)
+int32_t Physics_SolveConstraints_13(void* context)
 
 {
-    void v_80;
-    memcpy(&v_80, a1, 0x14);
-    int32_t v_74 = 3;
-    void v_6c;
-    void* v_70 = &v_6c;
-    float* objC = *(a1 + 0x10);
-    long double fpu7 = *objC;
+    void item_80;
+    memcpy(&item_80, context, 0x14);
+    int32_t item_74 = 3;
+    void item_6c;
+    void* item_70 = &item_6c;
+    float* entity_val = *(context + 0x10);
+    long double fpu7 = *entity_val;
     long double f1 = g_bcabd0;
     fpu7 - f1;
-    int32_t dstD;
+    int32_t dest_val;
 
-    dstD = !(*(&((fpu7 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f1) ? 1 : 0) << 0xa
+    dest_val = !(*(&((fpu7 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f1) ? 1 : 0) << 0xa
         | (fpu7 == f1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-    long double x87_r7_1 = objC[1];
+    long double fpu_val_7_1 = entity_val[1];
     long double f2 = g_bcabd4;
-    x87_r7_1 - f2;
-    int32_t srcS1;
+    fpu_val_7_1 - f2;
+    int32_t source_1;
 
-    srcS1 = !(*(&((x87_r7_1 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f2) ? 1 : 0) << 0xa
-        | (x87_r7_1 == f2 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+    source_1 = !(*(&((fpu_val_7_1 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f2) ? 1 : 0) << 0xa
+        | (fpu_val_7_1 == f2 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-    float v_134 = g_bcabd8 + 1f;
-    long double x87_r7_4 = *objC;
-    long double f3 = v_134;
-    x87_r7_4 - f3;
-    int32_t tmpD;
+    float item_134 = g_bcabd8 + 1.0f;
+    long double fpu_val_7_4 = *entity_val;
+    long double f3 = item_134;
+    fpu_val_7_4 - f3;
+    int32_t temp_val;
 
-    tmpD = *(&((x87_r7_4 < f3 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f3) ? 1 : 0) << 0xa
-        | (x87_r7_4 == f3 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
+    temp_val = *(&((fpu_val_7_4 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f3) ? 1 : 0) << 0xa
+        | (fpu_val_7_4 == f3 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
 
-    long double x87_r7_6 = g_bcabdc + 1f;
-    long double f4 = objC[1];
-    x87_r7_6 - f4;
-    int32_t valA2;
+    long double fpu_val_7_6 = g_bcabdc + 1.0f;
+    long double f4 = entity_val[1];
+    fpu_val_7_6 - f4;
+    int32_t data_2;
 
-    valA2 = !(*(&((x87_r7_6 < f4 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f4) ? 1 : 0) << 0xa
-        | (x87_r7_6 == f4 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    data_2 = !(*(&((fpu_val_7_6 < f4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f4) ? 1 : 0) << 0xa
+        | (fpu_val_7_6 == f4 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double fpu6 = objC[9];
+    long double fpu6 = entity_val[9];
     long double f5 = g_bcabd0;
     fpu6 - f5;
-    int32_t v_fc = (((valA2 * 2) | tmpD) << 1 | srcS1) << 1 | dstD;
-    int32_t dstD1;
+    int32_t item_fc = (((data_2 * 2) | temp_val) << 1 | source_1) << 1 | dest_val;
+    int32_t dest_1;
 
-    dstD1 = !(*(&((fpu6 < f5 ? 1 : 0) << 8 | (FCMP_UO(fpu6, f5) ? 1 : 0) << 0xa
+    dest_1 = !(*(&((fpu6 < f5 ? 1 : 0) << 8 | (FCMP_UO(fpu6, f5) ? 1 : 0) << 0xa
         | (fpu6 == f5 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_1 = objC[1];
+    long double fpu_val_6_1 = entity_val[1];
     long double f6 = g_bcabd4;
-    x87_r6_1 - f6;
-    int32_t srcS2;
+    fpu_val_6_1 - f6;
+    int32_t source_2;
 
-    srcS2 = !(*(&((x87_r6_1 < f6 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, f6) ? 1 : 0) << 0xa
-        | (x87_r6_1 == f6 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    source_2 = !(*(&((fpu_val_6_1 < f6 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, f6) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == f6 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_2 = objC[9];
-    long double f7 = v_134;
-    x87_r6_2 - f7;
-    int32_t tmpD1;
+    long double fpu_val_6_2 = entity_val[9];
+    long double f7 = item_134;
+    fpu_val_6_2 - f7;
+    int32_t temp_1;
 
-    tmpD1 = *(&((x87_r6_2 < f7 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, f7) ? 1 : 0) << 0xa
-        | (x87_r6_2 == f7 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0 : 1;
+    temp_1 = *(&((fpu_val_6_2 < f7 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, f7) ? 1 : 0) << 0xa
+        | (fpu_val_6_2 == f7 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0 : 1;
 
-    long double f8 = objC[1];
-    x87_r7_6 - f8;
-    int32_t valA10;
+    long double f8 = entity_val[1];
+    fpu_val_7_6 - f8;
+    int32_t data_10;
 
-    valA10 = !(*(&((x87_r7_6 < f8 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f8) ? 1 : 0) << 0xa
-        | (x87_r7_6 == f8 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    data_10 = !(*(&((fpu_val_7_6 < f8 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f8) ? 1 : 0) << 0xa
+        | (fpu_val_7_6 == f8 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_3 = *objC;
+    long double fpu_val_6_3 = *entity_val;
     long double f9 = g_bcabd0;
-    x87_r6_3 - f9;
-    int32_t v_d4 = (((valA10 * 2) | tmpD1) << 1 | srcS2) << 1 | dstD1;
-    int32_t dstD2;
+    fpu_val_6_3 - f9;
+    int32_t item_d4 = (((data_10 * 2) | temp_1) << 1 | source_2) << 1 | dest_1;
+    int32_t dest_2;
 
-    dstD2 = !(*(&((x87_r6_3 < f9 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_3, f9) ? 1 : 0) << 0xa
-        | (x87_r6_3 == f9 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    dest_2 = !(*(&((fpu_val_6_3 < f9 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_3, f9) ? 1 : 0) << 0xa
+        | (fpu_val_6_3 == f9 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_4 = objC[0xa];
+    long double fpu_val_6_4 = entity_val[0xa];
     long double f10 = g_bcabd4;
-    x87_r6_4 - f10;
-    int32_t srcS3;
+    fpu_val_6_4 - f10;
+    int32_t source_3;
 
-    srcS3 = !(*(&((x87_r6_4 < f10 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_4, f10) ? 1 : 0) << 0xa
-        | (x87_r6_4 == f10 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    source_3 = !(*(&((fpu_val_6_4 < f10 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_4, f10) ? 1 : 0) << 0xa
+        | (fpu_val_6_4 == f10 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_5 = *objC;
-    long double f11 = v_134;
-    x87_r6_5 - f11;
-    int32_t tmpD2;
+    long double fpu_val_6_5 = *entity_val;
+    long double f11 = item_134;
+    fpu_val_6_5 - f11;
+    int32_t temp_2;
 
-    tmpD2 = *(&((x87_r6_5 < f11 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_5, f11) ? 1 : 0) << 0xa
-        | (x87_r6_5 == f11 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0 : 1;
+    temp_2 = *(&((fpu_val_6_5 < f11 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_5, f11) ? 1 : 0) << 0xa
+        | (fpu_val_6_5 == f11 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0 : 1;
 
-    long double f12 = objC[0xa];
-    x87_r7_6 - f12;
-    int32_t valA18;
+    long double f12 = entity_val[0xa];
+    fpu_val_7_6 - f12;
+    int32_t data_18;
 
-    valA18 = !(*(&((x87_r7_6 < f12 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f12) ? 1 : 0) << 0xa
-        | (x87_r7_6 == f12 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    data_18 = !(*(&((fpu_val_7_6 < f12 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f12) ? 1 : 0) << 0xa
+        | (fpu_val_7_6 == f12 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_6 = objC[9];
+    long double fpu_val_6_6 = entity_val[9];
     long double f13 = g_bcabd0;
-    x87_r6_6 - f13;
-    int32_t v_ac = (((valA18 * 2) | tmpD2) << 1 | srcS3) << 1 | dstD2;
-    int32_t dstD3;
+    fpu_val_6_6 - f13;
+    int32_t item_ac = (((data_18 * 2) | temp_2) << 1 | source_3) << 1 | dest_2;
+    int32_t dest_3;
 
-    dstD3 = !(*(&((x87_r6_6 < f13 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_6, f13) ? 1 : 0) << 0xa
-        | (x87_r6_6 == f13 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    dest_3 = !(*(&((fpu_val_6_6 < f13 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_6, f13) ? 1 : 0) << 0xa
+        | (fpu_val_6_6 == f13 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_7 = objC[0xa];
+    long double fpu_val_6_7 = entity_val[0xa];
     long double f14 = g_bcabd4;
-    x87_r6_7 - f14;
-    int32_t srcS4;
+    fpu_val_6_7 - f14;
+    int32_t source_4;
 
-    srcS4 = !(*(&((x87_r6_7 < f14 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_7, f14) ? 1 : 0) << 0xa
-        | (x87_r6_7 == f14 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+    source_4 = !(*(&((fpu_val_6_7 < f14 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_7, f14) ? 1 : 0) << 0xa
+        | (fpu_val_6_7 == f14 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-    long double x87_r6_8 = objC[9];
-    long double f15 = v_134;
-    x87_r6_8 - f15;
-    int32_t tmpD3;
+    long double fpu_val_6_8 = entity_val[9];
+    long double f15 = item_134;
+    fpu_val_6_8 - f15;
+    int32_t temp_3;
 
-    tmpD3 = *(&((x87_r6_8 < f15 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_8, f15) ? 1 : 0) << 0xa
-        | (x87_r6_8 == f15 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0 : 1;
+    temp_3 = *(&((fpu_val_6_8 < f15 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_8, f15) ? 1 : 0) << 0xa
+        | (fpu_val_6_8 == f15 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0 : 1;
 
-    long double f16 = objC[0xa];
-    x87_r7_6 - f16;
-    int32_t valA26;
+    long double f16 = entity_val[0xa];
+    fpu_val_7_6 - f16;
+    int32_t data_26;
 
-    valA26 = !(*(&((x87_r7_6 < f16 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f16) ? 1 : 0) << 0xa
-        | (x87_r7_6 == f16 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+    data_26 = !(*(&((fpu_val_7_6 < f16 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f16) ? 1 : 0) << 0xa
+        | (fpu_val_7_6 == f16 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-    long double x87_r7_8 = 1f / objC[2];
-    float v_120 = *objC;
-    int32_t v_f8 = objC[9];
-    int32_t v_84 = (((valA26 * 2) | tmpD3) << 1 | srcS4) << 1 | dstD3;
-    int32_t valA33 = objC[1];
-    int32_t v_11c = valA33;
-    int32_t v_f4 = valA33;
-    float v_118 = x87_r7_8;
-    long double x87_r6_10 = x87_r7_8 * objC[3];
-    float v_114 = x87_r6_10;
-    long double x87_r5_1 = x87_r7_8 * objC[4];
-    float v_110 = x87_r5_1;
-    long double x87_r4_1 = x87_r7_8 * objC[5];
-    float v_134_1 = x87_r4_1;
-    float v_10c = x87_r4_1;
-    long double x87_r4_3 = x87_r7_8 * objC[6];
-    float v_e4 = v_134_1;
-    float v_128 = x87_r4_3;
-    float v_108 = x87_r4_3;
-    long double x87_r4_5 = x87_r7_8 * objC[7];
-    float v_e0 = v_128;
-    float v_12c = x87_r4_5;
-    float v_104 = x87_r4_5;
-    long double x87_r4_7 = x87_r7_8 * objC[8];
-    float v_dc = v_12c;
-    float v_d0 = *objC;
-    float v_130 = x87_r4_7;
-    float v_100 = x87_r4_7;
-    float v_bc = v_134_1;
-    float v_f0 = x87_r7_8;
-    long double x87_r4_10 = x87_r7_8 * objC[0xc];
-    float v_d8 = v_130;
-    float v_b4 = v_12c;
-    int32_t v_cc = objC[0xa];
-    float v_124 = x87_r4_10;
-    float v_ec = x87_r4_10;
-    int32_t v_a8 = objC[9];
-    float v_e8 = x87_r5_1;
-    float v_b8 = v_128;
-    float v_c8 = x87_r7_8;
-    float v_b0 = v_130;
-    float v_c4 = x87_r6_10;
-    int32_t v_a4 = objC[0xa];
-    long double x87_r6_12 = x87_r7_8 * objC[0xd];
-    float v_9c = v_124;
-    float v_c0 = x87_r6_12;
-    float v_a0 = x87_r7_8;
-    float v_98 = x87_r6_12;
-    float v_90 = v_128;
-    float v_8c = v_12c;
-    void* v_140 = &v_80;
-    int32_t** (* v_144)(int32_t* a1, int32_t* a2) = sub_50e730;
-    int32_t v_148 = g_bcadc0;
-    float v_94 = v_134_1;
-    float v_88 = v_130;
-    void v_170;
-    memcpy(&v_170, &v_d0, 0x28);
-    void v_198;
-    memcpy(&v_198, &v_f8, 0x28);
-    void v_1c0;
-    memcpy(&v_1c0, &v_120, 0x28);
+    long double fpu_val_7_8 = 1.0f / entity_val[2];
+    float item_120 = *entity_val;
+    int32_t item_f8 = entity_val[9];
+    int32_t item_84 = (((data_26 * 2) | temp_3) << 1 | source_4) << 1 | dest_3;
+    int32_t data_33 = entity_val[1];
+    int32_t item_11c = data_33;
+    int32_t item_f4 = data_33;
+    float item_118 = fpu_val_7_8;
+    long double fpu_val_6_10 = fpu_val_7_8 * entity_val[3];
+    float item_114 = fpu_val_6_10;
+    long double fpu_val_5_1 = fpu_val_7_8 * entity_val[4];
+    float item_110 = fpu_val_5_1;
+    long double fpu_val_4_1 = fpu_val_7_8 * entity_val[5];
+    float item_134_1 = fpu_val_4_1;
+    float item_10c = fpu_val_4_1;
+    long double fpu_val_4_3 = fpu_val_7_8 * entity_val[6];
+    float item_e4 = item_134_1;
+    float item_128 = fpu_val_4_3;
+    float item_108 = fpu_val_4_3;
+    long double fpu_val_4_5 = fpu_val_7_8 * entity_val[7];
+    float item_e0 = item_128;
+    float item_12c = fpu_val_4_5;
+    float item_104 = fpu_val_4_5;
+    long double fpu_val_4_7 = fpu_val_7_8 * entity_val[8];
+    float item_dc = item_12c;
+    float item_d0 = *entity_val;
+    float item_130 = fpu_val_4_7;
+    float item_100 = fpu_val_4_7;
+    float item_bc = item_134_1;
+    float item_f0 = fpu_val_7_8;
+    long double fpu_val_4_10 = fpu_val_7_8 * entity_val[0xc];
+    float item_d8 = item_130;
+    float item_b4 = item_12c;
+    int32_t item_cc = entity_val[0xa];
+    float item_124 = fpu_val_4_10;
+    float item_ec = fpu_val_4_10;
+    int32_t item_a8 = entity_val[9];
+    float item_e8 = fpu_val_5_1;
+    float item_b8 = item_128;
+    float item_c8 = fpu_val_7_8;
+    float item_b0 = item_130;
+    float item_c4 = fpu_val_6_10;
+    int32_t item_a4 = entity_val[0xa];
+    long double fpu_val_6_12 = fpu_val_7_8 * entity_val[0xd];
+    float item_9c = item_124;
+    float item_c0 = fpu_val_6_12;
+    float item_a0 = fpu_val_7_8;
+    float item_98 = fpu_val_6_12;
+    float item_90 = item_128;
+    float item_8c = item_12c;
+    void* item_140 = &item_80;
+    int32_t** (* item_144)(int32_t* context, int32_t* param_2) = sub_50e730;
+    int32_t item_148 = g_bcadc0;
+    float item_94 = item_134_1;
+    float item_88 = item_130;
+    void item_170;
+    memcpy(&item_170, &item_d0, 0x28);
+    void item_198;
+    memcpy(&item_198, &item_f8, 0x28);
+    void item_1c0;
+    memcpy(&item_1c0, &item_120, 0x28);
     Physics_CalculateSplineLength_13();
-    void* v_140_1 = &v_80;
-    int32_t** (* v_144_1)(int32_t* a1, int32_t* a2) = sub_50e730;
-    v_148 = g_bcadc0;
-    memcpy(&v_170, &v_a8, 0x28);
-    memcpy(&v_198, &v_d0, 0x28);
-    memcpy(&v_1c0, &v_f8, 0x28);
+    void* item_140_1 = &item_80;
+    int32_t** (* item_144_1)(int32_t* context, int32_t* param_2) = sub_50e730;
+    item_148 = g_bcadc0;
+    memcpy(&item_170, &item_a8, 0x28);
+    memcpy(&item_198, &item_d0, 0x28);
+    memcpy(&item_1c0, &item_f8, 0x28);
     return Physics_CalculateSplineLength_13();
 }

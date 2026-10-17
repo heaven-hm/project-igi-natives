@@ -1,6 +1,6 @@
 // Original IGI.EXE function: SetActiveMaterial (VA 0x00407DE0; static CFG gate FAIL, CFG score 0.833).
 #include "SetActiveMaterial.h"
-int32_t SetActiveMaterial(int32_t a1, float a2 @ 0xc)
+int32_t SetActiveMaterial(int32_t context, float param_2 )
 
 // Sig: unknown SetActiveMaterial(unknown param1, unknown param2)
 // Note: Registered at 0x407DA6 via registrar 0x4B8890 (push 0x407DE0 +
@@ -13,11 +13,11 @@ int32_t SetActiveMaterial(int32_t a1, float a2 @ 0xc)
 // re-agent reverser/checker loop ran on this native (C decompilation pending
 // ARM64 native port).
 {
-    g_53851c = Script_GetArg(a2, 0);
-    int32_t v_18 = 1;
-    int32_t v_10 = 0;
-    int32_t v_c = 0x3ff00000;
-    char* v_8 = &g_567c74;
-    memcpy(a1, &v_18, 0x18);
-    return a1;
+    g_53851c = Script_GetArg(param_2, 0);
+    int32_t item_18 = 1;
+    int32_t item_10 = 0;
+    int32_t item_c = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
 }

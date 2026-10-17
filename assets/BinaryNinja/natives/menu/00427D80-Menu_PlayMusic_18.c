@@ -3,7 +3,7 @@
 uint32_t Menu_PlayMusic_18()
 
 {
-    int32_t valA;
-    valA = g_53bb3c;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_53bb3c;
+    return QTask_CloseEvent_2(data_val);
 }

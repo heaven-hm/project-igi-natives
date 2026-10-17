@@ -1,100 +1,100 @@
 // Original IGI.EXE function: CameraBase_Cleanup_2 (VA 0x004EF8C0; static CFG gate FAIL, CFG score 0.733).
 #include "CameraBase_Cleanup_2.h"
-int32_t CameraBase_Cleanup_2(float* a1, void* a2)
+int32_t CameraBase_Cleanup_2(float* context, void* param_2)
 
 {
-    char* valA1 = *(a2 + 4);
-    char* v_20 = valA1;
+    char* data_1 = *(param_2 + 4);
+    char* item_20 = data_1;
 
-    if (*valA1)
+    if (*data_1)
     {
         char i;
 
         do
         {
-            i = valA1[1];
-            valA1 = &valA1[1];
+            i = data_1[1];
+            data_1 = &data_1[1];
         } while (i);
-        v_20 = valA1;
+        item_20 = data_1;
     }
 
     int32_t i_1 = 0;
-    float* v_1c = a1;
+    float* item_1c = context;
 
     do
     {
-        double v_38_1 = *v_1c;
-        void v_18;
-        Game_DataSymbolLoad(&v_18, "%f");
-        void* dstD1 = &v_18;
+        double item_38_1 = *item_1c;
+        void item_18;
+        Game_DataSymbolLoad(&item_18, "%f");
+        void* dest_1 = &item_18;
         int32_t j = 0xffffffff;
 
         while (j)
         {
-            bool cond_3_1 = 0 != *dstD1;
-            dstD1 += 1;
+            bool flag_3_1 = 0 != *dest_1;
+            dest_1 += 1;
             j -= 1;
 
-            if (!cond_3_1)
+            if (!flag_3_1)
                 break;
         }
 
-        int32_t objC2 = ~j;
-        char* dstD3 = v_20;
+        int32_t entity_2 = ~j;
+        char* dest_3 = item_20;
         int32_t j_1 = 0xffffffff;
 
         while (j_1)
         {
-            bool cond_4_1 = 0 != *dstD3;
-            dstD3 = &dstD3[1];
+            bool flag_4_1 = 0 != *dest_3;
+            dest_3 = &dest_3[1];
             j_1 -= 1;
 
-            if (!cond_4_1)
+            if (!flag_4_1)
                 break;
         }
 
-        int32_t srcS2;
-        int32_t dstD5;
-        dstD5 = memcpy(dstD3 - 1, dstD1 - objC2, objC2 & 0xfffffffc);
-        memcpy(dstD5, srcS2, objC2 & 3);
+        int32_t source_2;
+        int32_t dest_5;
+        dest_5 = memcpy(dest_3 - 1, dest_1 - entity_2, entity_2 & 0xfffffffc);
+        memcpy(dest_5, source_2, entity_2 & 3);
 
         if (i_1 != 0xa)
         {
-            void* dstD6 = &g_547a44;
+            void* dest_6 = &g_547a44;
             int32_t j_2 = 0xffffffff;
 
             while (j_2)
             {
-                bool cond_1_1 = 0 != *dstD6;
-                dstD6 += 1;
+                bool flag_1_1 = 0 != *dest_6;
+                dest_6 += 1;
                 j_2 -= 1;
 
-                if (!cond_1_1)
+                if (!flag_1_1)
                     break;
             }
 
-            int32_t objC7 = ~j_2;
-            char* dstD8 = v_20;
+            int32_t entity_7 = ~j_2;
+            char* dest_8 = item_20;
             int32_t j_3 = 0xffffffff;
 
             while (j_3)
             {
-                bool cond_2_1 = 0 != *dstD8;
-                dstD8 = &dstD8[1];
+                bool flag_2_1 = 0 != *dest_8;
+                dest_8 = &dest_8[1];
                 j_3 -= 1;
 
-                if (!cond_2_1)
+                if (!flag_2_1)
                     break;
             }
 
-            int32_t srcS4;
-            int32_t dstD10;
-            dstD10 = memcpy(dstD8 - 1, dstD6 - objC7, objC7 & 0xfffffffc);
-            memcpy(dstD10, srcS4, objC7 & 3);
+            int32_t source_4;
+            int32_t dest_10;
+            dest_10 = memcpy(dest_8 - 1, dest_6 - entity_7, entity_7 & 0xfffffffc);
+            memcpy(dest_10, source_4, entity_7 & 3);
         }
 
         i_1 += 1;
-        v_1c = &v_1c[1];
+        item_1c = &item_1c[1];
     } while (i_1 < 0xb);
 
     return 0;

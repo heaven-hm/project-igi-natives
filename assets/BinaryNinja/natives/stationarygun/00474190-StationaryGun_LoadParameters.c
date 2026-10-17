@@ -1,118 +1,118 @@
 // Original IGI.EXE function: StationaryGun_LoadParameters (VA 0x00474190; static CFG gate PASS, CFG score 1.000).
 #include "StationaryGun_LoadParameters.h"
-uint32_t StationaryGun_LoadParameters(float a1)
+uint32_t StationaryGun_LoadParameters(float context)
 
 {
     uint32_t result = Frames_GetUpdateCounter();
 
-    if (*(a1 + 0x218) != result)
+    if (*(context + 0x218) != result)
     {
-        uint32_t valA = Frames_GetUpdateCounter();
-        void* dstD1 = *(a1 + 0x208);
-        *(a1 + 0x218) = valA;
+        uint32_t data_val = Frames_GetUpdateCounter();
+        void* dest_1 = *(context + 0x208);
+        *(context + 0x218) = data_val;
 
-        if (!dstD1)
+        if (!dest_1)
         {
-            long double x87_r7_18 = *(a1 + 0x1e4) * 0.0174532924f;
-            long double f0_1 = *(a1 + 0x1f8);
-            x87_r7_18 - f0_1;
+            long double fpu_val_7_18 = *(context + 0x1e4) * 0.0174532924f;
+            long double f0_1 = *(context + 0x1f8);
+            fpu_val_7_18 - f0_1;
 
-            if (*(&((x87_r7_18 < f0_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_18, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_18 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+            if (*(&((fpu_val_7_18 < f0_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_18, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_18 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
             {
-                long double f2_1 = *(a1 + 0x1f8);
-                x87_r7_18 - f2_1;
+                long double f2_1 = *(context + 0x1f8);
+                fpu_val_7_18 - f2_1;
 
-                if (*(&((x87_r7_18 < f2_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_18, f2_1) ? 1 : 0) << 0xa
-                    | (x87_r7_18 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+                if (*(&((fpu_val_7_18 < f2_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_18, f2_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_18 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
                 {
-                    long double x87_r6_4 = *(a1 + 0x1f8) - 0.0872664675f;
-                    *(a1 + 0x1f8) = x87_r6_4;
-                    x87_r6_4 - x87_r7_18;
+                    long double fpu_val_6_4 = *(context + 0x1f8) - 0.0872664675f;
+                    *(context + 0x1f8) = fpu_val_6_4;
+                    fpu_val_6_4 - fpu_val_7_18;
 
-                    if (*(&((x87_r6_4 < x87_r7_18 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r6_4, x87_r7_18) ? 1 : 0) << 0xa
-                            | (x87_r6_4 == x87_r7_18 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
-                        *(a1 + 0x1f8) = x87_r7_18;
+                    if (*(&((fpu_val_6_4 < fpu_val_7_18 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_6_4, fpu_val_7_18) ? 1 : 0) << 0xa
+                            | (fpu_val_6_4 == fpu_val_7_18 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+                        *(context + 0x1f8) = fpu_val_7_18;
                 }
             }
             else
             {
-                long double x87_r6_2 = *(a1 + 0x1f8) + 0.0872664675f;
-                *(a1 + 0x1f8) = x87_r6_2;
-                x87_r6_2 - x87_r7_18;
+                long double fpu_val_6_2 = *(context + 0x1f8) + 0.0872664675f;
+                *(context + 0x1f8) = fpu_val_6_2;
+                fpu_val_6_2 - fpu_val_7_18;
 
-                if (!(*(&((x87_r6_2 < x87_r7_18 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r6_2, x87_r7_18) ? 1 : 0) << 0xa
-                        | (x87_r6_2 == x87_r7_18 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
-                    *(a1 + 0x1f8) = x87_r7_18;
+                if (!(*(&((fpu_val_6_2 < fpu_val_7_18 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_6_2, fpu_val_7_18) ? 1 : 0) << 0xa
+                        | (fpu_val_6_2 == fpu_val_7_18 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
+                    *(context + 0x1f8) = fpu_val_7_18;
             }
 
-            Gun_SpawnRound(a1, 0);
+            Gun_SpawnRound(context, 0);
         }
         else
         {
-            char ctxB1 = 0;
-            *(a1 + 0x1f8) = *(dstD1 + 0x1b4) * 3.14159274f + *(a1 + 0x1f8);
-            *(a1 + 0x1fc) = -((*(dstD1 + 0x1b0) * 3.14159274f)) + *(a1 + 0x1fc);
-            Weapon_EjectShell_3(a1);
-            long double x87_r7_8 = *(dstD1 + 0x1c8);
-            long double f1_1 = 0f;
-            x87_r7_8 - f1_1;
+            char context_1 = 0;
+            *(context + 0x1f8) = *(dest_1 + 0x1b4) * 3.14159274f + *(context + 0x1f8);
+            *(context + 0x1fc) = -((*(dest_1 + 0x1b0) * 3.14159274f)) + *(context + 0x1fc);
+            Weapon_EjectShell_3(context);
+            long double fpu_val_7_8 = *(dest_1 + 0x1c8);
+            long double f1_1 = 0.0f;
+            fpu_val_7_8 - f1_1;
 
-            if (!(*(&((x87_r7_8 < f1_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_8, f1_1) ? 1 : 0) << 0xa
-                    | (x87_r7_8 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
-                ctxB1 = 1;
+            if (!(*(&((fpu_val_7_8 < f1_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_8, f1_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_8 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                context_1 = 1;
 
-            *(a1 + 0x200) = *(a1 + 0x1f8) + *(a1 + 0x1f0);
-            *(a1 + 0x204) = *(a1 + 0x1fc) + *(a1 + 0x1f4);
-            *(a1 + 0x1f0) = *(a1 + 0x1f0) * 0.899999976f;
-            *(a1 + 0x1f4) = *(a1 + 0x1f4) * 0.899999976f;
-            Gun_SpawnRound(a1, ctxB1);
+            *(context + 0x200) = *(context + 0x1f8) + *(context + 0x1f0);
+            *(context + 0x204) = *(context + 0x1fc) + *(context + 0x1f4);
+            *(context + 0x1f0) = *(context + 0x1f0) * 0.899999976f;
+            *(context + 0x1f4) = *(context + 0x1f4) * 0.899999976f;
+            Gun_SpawnRound(context, context_1);
         }
 
-        int32_t __saved_ebx_1 = a1 + 0x70;
-        Weapon_ComputeAccuracy_3(a1);
-        uint32_t* i = *(a1 + 8);
+        int32_t saved_ebx_1 = context + 0x70;
+        Weapon_ComputeAccuracy_3(context);
+        uint32_t* i = *(context + 8);
         result = *i;
 
         if (result && i)
         {
-            int32_t tmpD1 = g_afa7e0;
+            int32_t temp_1 = g_afa7e0;
 
             do
             {
-                uint32_t srcS1 = *i;
-                int32_t valA8;
+                uint32_t source_1 = *i;
+                int32_t data_8;
 
-                if (!srcS1)
-                    valA8 = 0;
+                if (!source_1)
+                    data_8 = 0;
                 else
                 {
-                    int32_t valA5 = *srcS1;
-                    int32_t valA6 = -(valA5);
-                    valA8 = (valA6 - valA6) & srcS1;
+                    int32_t data_5 = *source_1;
+                    int32_t data_6 = -(data_5);
+                    data_8 = (data_6 - data_6) & source_1;
                 }
 
-                *((tmpD1 << 2) + &g_afa6e0) = valA8;
-                int32_t tmpD2 = tmpD1 + 1;
-                int32_t valA9 = 0;
-                g_afa7e0 = tmpD2;
-                valA9 = i[7];
-                result = *((valA9 << 2) + &g_a970e0);
+                *((temp_1 << 2) + &g_afa6e0) = data_8;
+                int32_t temp_2 = temp_1 + 1;
+                int32_t data_9 = 0;
+                g_afa7e0 = temp_2;
+                data_9 = i[7];
+                result = *((data_9 << 2) + &g_a970e0);
 
                 if (result)
                 {
                     result = result(i);
-                    tmpD2 = g_afa7e0;
+                    temp_2 = g_afa7e0;
                 }
 
-                i = *((tmpD2 << 2) + &g_afa6dc);
-                tmpD1 = tmpD2 - 1;
-                g_afa7e0 = tmpD1;
+                i = *((temp_2 << 2) + &g_afa6dc);
+                temp_1 = temp_2 - 1;
+                g_afa7e0 = temp_1;
             } while (i);
         }
     }

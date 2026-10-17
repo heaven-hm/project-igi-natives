@@ -1,14 +1,14 @@
 // Original IGI.EXE function: Sys_AllocateMemory_20 (VA 0x004B7540; static CFG gate PASS, CFG score 1.000).
 #include "Sys_AllocateMemory_20.h"
-void Sys_AllocateMemory_20(int32_t* a1, int32_t* a2, void* a3)
+void Sys_AllocateMemory_20(int32_t* context, int32_t* param_2, void* param_3)
 
 {
-    if (!a3)
+    if (!param_3)
         return;
 
-    if (a1)
-        *a1 = *(a3 + 4);
+    if (context)
+        *context = *(param_3 + 4);
 
-    if (a2)
-        *a2 = *(a3 + 8);
+    if (param_2)
+        *param_2 = *(param_3 + 8);
 }

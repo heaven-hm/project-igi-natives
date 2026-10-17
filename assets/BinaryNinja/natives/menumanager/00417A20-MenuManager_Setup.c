@@ -1,41 +1,41 @@
 // Original IGI.EXE function: MenuManager_Setup (VA 0x00417A20; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_Setup.h"
-int32_t MenuManager_Setup(void* a1)
+int32_t MenuManager_Setup(void* context)
 
 {
-    if (*(a1 + 0x282c))
+    if (*(context + 0x282c))
         SoundSys_EvaluateTrigger_8();
 
-    if (*(a1 + 0x26be))
+    if (*(context + 0x26be))
     {
         FX_TrailUpdate_16();
-        *(a1 + 0x26be) = 0;
+        *(context + 0x26be) = 0;
     }
 
-    Menu_FormatScreen_3(*(a1 + 0x27c8));
-    Menu_LocalMenusystemSound(a1);
-    Display_SwapBuffers_13(a1 + 0x266c);
+    Menu_FormatScreen_3(*(context + 0x27c8));
+    Menu_LocalMenusystemSound(context);
+    Display_SwapBuffers_13(context + 0x266c);
 
-    if (*(a1 + 0x26b8) > 0xffffffff)
+    if (*(context + 0x26b8) > 0xffffffff)
     {
-        char ctxB1 = g_bcadf4;
+        char context_1 = g_bcadf4;
         char flagP1 = g_bcadf8;
-        char dstD1 = g_bcadf0;
+        char dest_1 = g_bcadf0;
         Display_SetBackgroundColourFn(0, 0, 0);
         Display_CreateSurface_3();
-        Display_SetBackgroundColourFn(dstD1, ctxB1, flagP1);
-        Frames_Set(*(a1 + 0x26b8));
+        Display_SetBackgroundColourFn(dest_1, context_1, flagP1);
+        Frames_Set(*(context + 0x26b8));
     }
 
-    if (Script_EvaluateCondition_4(a1) >= 0)
+    if (Script_EvaluateCondition_4(context) >= 0)
     {
-        int32_t valA4 = Script_SpawnNewTask_6();
-        int32_t objC1 = 0;
-        objC1 = *(a1 + 0x1c);
-        int32_t valA8 = *(((valA4 * 0x180 + objC1) << 2) + &g_a96ae0);
+        int32_t data_4 = Script_SpawnNewTask_6();
+        int32_t entity_1 = 0;
+        entity_1 = *(context + 0x1c);
+        int32_t data_8 = *(((data_4 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-        if (valA8)
-            valA8(a1);
+        if (data_8)
+            data_8(context);
     }
 
     Sys_CloseFileStream_23("MenuManager_RequestScreen");

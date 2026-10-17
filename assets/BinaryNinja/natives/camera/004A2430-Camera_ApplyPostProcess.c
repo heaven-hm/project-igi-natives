@@ -1,19 +1,19 @@
 // Original IGI.EXE function: Camera_ApplyPostProcess (VA 0x004A2430; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess.h"
-struct status_msg* Camera_ApplyPostProcess(void* a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8, uint32_t a9, uint32_t a10)
+struct status_msg* Camera_ApplyPostProcess(void* context, uint32_t param_2, uint32_t param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8, uint32_t param_9, uint32_t param_10)
 
 {
     int32_t kind;
     kind = g_543d4e;
-    struct status_msg* result = QTask_HandleInput(a1, kind, 0);
-    result->head[8] = a2;
-    result->head[9] = a3;
-    result->head[0xa] = a4;
-    result->head[0xb] = a5;
-    result->head[0xc] = a6;
-    result->head[0xd] = a7;
-    result->head[0xe] = a8;
-    result->head[0xf] = a9;
-    result->head[0x10] = a10;
+    struct status_msg* result = QTask_HandleInput(context, kind, 0);
+    result->head[8] = param_2;
+    result->head[9] = param_3;
+    result->head[0xa] = param_4;
+    result->head[0xb] = param_5;
+    result->head[0xc] = param_6;
+    result->head[0xd] = param_7;
+    result->head[0xe] = param_8;
+    result->head[0xf] = param_9;
+    result->head[0x10] = param_10;
     return result;
 }

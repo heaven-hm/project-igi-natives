@@ -1,40 +1,40 @@
 // Original IGI.EXE function: SetCombat_Run (VA 0x0048E560; static CFG gate PASS, CFG score 1.000).
 #include "SetCombat_Run.h"
-int32_t* SetCombat_Run(void* a1, int32_t* a2)
+int32_t* SetCombat_Run(void* context, int32_t* param_2)
 
 {
-    void* dstD = *(a1 + 0x14);
-    char* v_30 = "Set Combat";
-    int32_t v_34 = 0xffffffff;
-    void* v_38 = a1;
-    void* srcS1 = a2[0xa] + 8;
-    int32_t v_1c = 7;
-    int32_t v_18 = AI_CombatTarget_19(dstD);
-    int32_t v_14 = 0;
-    int32_t v_10 = 0;
-    void* v_c = srcS1;
-    int32_t v_4 = 0;
-    int32_t v_8 = 0;
-    int32_t* valA1 = *(srcS1 + 0x1c);
+    void* dest_val = *(context + 0x14);
+    char* item_30 = "Set Combat";
+    int32_t item_34 = 0xffffffff;
+    void* item_38 = context;
+    void* source_1 = param_2[0xa] + 8;
+    int32_t item_1c = 7;
+    int32_t item_18 = AI_CombatTarget_19(dest_val);
+    int32_t item_14 = 0;
+    int32_t item_10 = 0;
+    void* item_c = source_1;
+    int32_t item_4 = 0;
+    int32_t item_8 = 0;
+    int32_t* data_1 = *(source_1 + 0x1c);
 
-    if (valA1)
+    if (data_1)
     {
-        int32_t valA2 = *valA1;
+        int32_t data_2 = *data_1;
 
-        if (valA2)
-            int32_t v_4_1 = valA2;
+        if (data_2)
+            int32_t item_4_1 = data_2;
     }
 
-    int32_t* srcS2 = *(srcS1 + 0x18);
+    int32_t* source_2 = *(source_1 + 0x18);
 
-    if (srcS2)
+    if (source_2)
     {
-        int32_t srcS3 = *srcS2;
+        int32_t source_3 = *source_2;
 
-        if (srcS3)
-            int32_t v_8_1 = srcS3;
+        if (source_3)
+            int32_t item_8_1 = source_3;
     }
 
-    AI_TakeCover(a1, &v_1c);
-    return AI_CombatTarget_2(a1, a2);
+    AI_TakeCover(context, &item_1c);
+    return AI_CombatTarget_2(context, param_2);
 }

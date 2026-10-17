@@ -1,50 +1,50 @@
 // Original IGI.EXE function: AI_CombatTarget_14 (VA 0x0045B530; static CFG gate PASS, CFG score 1.000).
 #include "AI_CombatTarget_14.h"
-int32_t* AI_CombatTarget_14(void* a1, void* a2)
+int32_t* AI_CombatTarget_14(void* context, void* param_2)
 
 {
-    int32_t ctxB = *(a1 + 8);
-    void* flagP = *(a2 + 0x800);
+    int32_t context_val = *(context + 8);
+    void* flagP = *(param_2 + 0x800);
 
-    if (!(ctxB & 4))
+    if (!(context_val & 4))
     {
-        void* objC = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0x1d;
-        int32_t valA1 = *(objC + 0x74);
-        *(a1 + 0x14) = valA1;
-        return valA1(a1, a2);
+        void* entity_val = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0x1d;
+        int32_t data_1 = *(entity_val + 0x74);
+        *(context + 0x14) = data_1;
+        return data_1(context, param_2);
     }
 
-    if (ctxB & 0x10000)
+    if (context_val & 0x10000)
     {
-        void* valA3 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0x1e;
-        int32_t valA4 = *(valA3 + 0x78);
-        *(a1 + 0x14) = valA4;
-        return valA4(a1, a2);
+        void* data_3 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0x1e;
+        int32_t data_4 = *(data_3 + 0x78);
+        *(context + 0x14) = data_4;
+        return data_4(context, param_2);
     }
 
-    if (ctxB & 0x20000)
+    if (context_val & 0x20000)
     {
-        void* tmpD2 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0x20;
-        int32_t valA6 = *(tmpD2 + 0x80);
-        *(a1 + 0x14) = valA6;
-        return valA6(a1, a2);
+        void* temp_2 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0x20;
+        int32_t data_6 = *(temp_2 + 0x80);
+        *(context + 0x14) = data_6;
+        return data_6(context, param_2);
     }
 
-    int32_t* result = Render_DrawSplineMesh_10(a2 + 0x68, 0);
+    int32_t* result = Render_DrawSplineMesh_10(param_2 + 0x68, 0);
 
-    if (*(a2 + 0x53c) == result && *(a2 + 0x538) == 0xc)
+    if (*(param_2 + 0x53c) == result && *(param_2 + 0x538) == 0xc)
     {
-        result = *(a2 + 0xd19);
+        result = *(param_2 + 0xd19);
 
         if (!result)
         {
-            *(a2 + 0xd19) = 1;
+            *(param_2 + 0xd19) = 1;
             long double fp0_1;
             fp0_1 = Sys_AllocateMemory_14(Level_SetMission_5());
             long double f0_1 = *(flagP + 0x3da8);
@@ -62,30 +62,30 @@ int32_t* AI_CombatTarget_14(void* a1, void* a2)
 
                     if (result && *result)
                     {
-                        void* tmpD3 = *(flagP + 0x3aa8);
-                        int32_t v_8 = *(flagP + 0x3dac);
-                        void* v_4_1 = a2;
-                        void* flagP1 = **(tmpD3 + 0xc);
-                        uint32_t valA12 = AI_CheckSector_17();
-                        int32_t tmpD4 = 0;
-                        tmpD4 = *(flagP1 + 0x1c);
-                        result = *(((valA12 * 0x180 + tmpD4) << 2) + &g_a96ae0);
+                        void* temp_3 = *(flagP + 0x3aa8);
+                        int32_t item_8 = *(flagP + 0x3dac);
+                        void* item_4_1 = param_2;
+                        void* flagP1 = **(temp_3 + 0xc);
+                        uint32_t data_12 = AI_CheckSector_17();
+                        int32_t temp_4 = 0;
+                        temp_4 = *(flagP1 + 0x1c);
+                        result = *(((data_12 * 0x180 + temp_4) << 2) + &g_a96ae0);
 
                         if (result)
-                            result = result(flagP1, &v_8);
+                            result = result(flagP1, &item_8);
                     }
                 }
             }
         }
     }
 
-    if (!(ctxB & 1))
+    if (!(context_val & 1))
         return result;
 
-    int32_t* valA13 = *(a1 + 4);
-    *(a1 + 0xc) = *(a1 + 0x10);
-    *(a1 + 0x10) = 0;
-    int32_t valA14 = *valA13;
-    *(a1 + 0x14) = valA14;
-    return valA14(a1, a2);
+    int32_t* data_13 = *(context + 4);
+    *(context + 0xc) = *(context + 0x10);
+    *(context + 0x10) = 0;
+    int32_t data_14 = *data_13;
+    *(context + 0x14) = data_14;
+    return data_14(context, param_2);
 }

@@ -1,6 +1,6 @@
 // Original IGI.EXE function: PatrolPath_Find (VA 0x00453840; static CFG gate PASS, CFG score 1.000).
 #include "PatrolPath_Find.h"
-void* const PatrolPath_Find(int32_t a1)
+void* const PatrolPath_Find(int32_t context)
 
 {
     int32_t* i_1 = g_5bda70;
@@ -9,7 +9,7 @@ void* const PatrolPath_Find(int32_t a1)
     {
         void* const result = AI_CheckVisibility_5(i_1);
 
-        if (*(result + 0x28) == a1)
+        if (*(result + 0x28) == context)
             return result;
 
         i_1 = i;

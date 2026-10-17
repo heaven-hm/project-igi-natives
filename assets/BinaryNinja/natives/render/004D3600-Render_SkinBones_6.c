@@ -1,18 +1,18 @@
 // Original IGI.EXE function: Render_SkinBones_6 (VA 0x004D3600; static CFG gate PASS, CFG score 1.000).
 #include "Render_SkinBones_6.h"
-int32_t* Render_SkinBones_6(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10, int32_t a11, int32_t a12)
+int32_t* Render_SkinBones_6(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10, int32_t param_11, int32_t param_12)
 
 {
-    *a1 = a2;
-    a1[7] = a3;
-    a1[8] = a4;
-    a1[9] = a5;
-    a1[0xa] = a6;
-    a1[1] = a7;
-    a1[2] = a8;
-    a1[3] = a9;
-    a1[4] = a10;
-    a1[5] = a11;
-    a1[6] = a12;
-    return a1;
+    *context = param_2;
+    context[7] = param_3;
+    context[8] = param_4;
+    context[9] = param_5;
+    context[0xa] = param_6;
+    context[1] = param_7;
+    context[2] = param_8;
+    context[3] = param_9;
+    context[4] = param_10;
+    context[5] = param_11;
+    context[6] = param_12;
+    return context;
 }

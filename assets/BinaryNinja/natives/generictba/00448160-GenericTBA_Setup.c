@@ -1,29 +1,29 @@
 // Original IGI.EXE function: GenericTBA_Setup (VA 0x00448160; static CFG gate PASS, CFG score 1.000).
 #include "GenericTBA_Setup.h"
-char* GenericTBA_Setup(void* a1)
+char* GenericTBA_Setup(void* context)
 
 {
-    void* valA = *(a1 + 0x250);
+    void* data_val = *(context + 0x250);
 
-    if (valA)
+    if (data_val)
     {
-        Sys_ExecuteBytecode_2(valA);
-        *(a1 + 0x250) = 0;
+        Sys_ExecuteBytecode_2(data_val);
+        *(context + 0x250) = 0;
     }
 
-    DynObj_TryingToRemoveUnrigi(Level_StartMission_3(), a1);
-    (*((FX_TrailUpdate() << 2) + &g_a976e0))(a1);
+    DynObj_TryingToRemoveUnrigi(Level_StartMission_3(), context);
+    (*((FX_TrailUpdate() << 2) + &g_a976e0))(context);
 
-    if (Script_EvaluateCondition_4(a1) >= 0)
+    if (Script_EvaluateCondition_4(context) >= 0)
     {
-        int32_t valA6 = Script_SpawnNewTask_6();
-        int32_t objC1 = 0;
-        objC1 = *(a1 + 0x1c);
-        int32_t valA10 = *(((valA6 * 0x180 + objC1) << 2) + &g_a96ae0);
+        int32_t data_6 = Script_SpawnNewTask_6();
+        int32_t entity_1 = 0;
+        entity_1 = *(context + 0x1c);
+        int32_t data_10 = *(((data_6 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-        if (valA10)
-            valA10(a1);
+        if (data_10)
+            data_10(context);
     }
 
-    return Script_CallNativeHandler_6(a1 + 0x258);
+    return Script_CallNativeHandler_6(context + 0x258);
 }

@@ -1,88 +1,88 @@
 // Original IGI.EXE function: Terrain_RenderQuadtree_4 (VA 0x005169B0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_RenderQuadtree_4.h"
-char* Terrain_RenderQuadtree_4(char* a1, char* a2, int32_t a3)
+char* Terrain_RenderQuadtree_4(char* context, char* param_2, int32_t param_3)
 
 {
-    int32_t i_3 = a3;
+    int32_t i_3 = param_3;
 
     if (i_3)
     {
-        char* dstD1 = a1;
-        int32_t* dstD2;
+        char* dest_1 = context;
+        int32_t* dest_2;
 
-        while (dstD1 & 3)
+        while (dest_1 & 3)
         {
-            char valA1 = *dstD1;
-            dstD1 = &dstD1[1];
+            char data_1 = *dest_1;
+            dest_1 = &dest_1[1];
 
-            if (!valA1)
+            if (!data_1)
             {
             label_516a0b:
-                dstD2 = dstD1 - 1;
+                dest_2 = dest_1 - 1;
                 goto label_516a1b;
             }
         }
 
         while (true)
         {
-            int32_t valA2 = *dstD1;
-            dstD1 = &dstD1[4];
+            int32_t data_2 = *dest_1;
+            dest_1 = &dest_1[4];
 
-            if ((valA2 ^ 0xffffffff ^ (0x7efefeff + valA2)) & 0x81010100)
+            if ((data_2 ^ 0xffffffff ^ (0x7efefeff + data_2)) & 0x81010100)
             {
-                int32_t valA5 = *(dstD1 - 4);
+                int32_t data_5 = *(dest_1 - 4);
 
-                if (!valA5)
+                if (!data_5)
                 {
-                    dstD2 = dstD1 - 4;
+                    dest_2 = dest_1 - 4;
                     break;
                 }
 
-                if (!*(&valA5 + 1))
+                if (!*(&data_5 + 1))
                 {
-                    dstD2 = dstD1 - 3;
+                    dest_2 = dest_1 - 3;
                     break;
                 }
 
-                if (!(valA5 & 0xff0000))
+                if (!(data_5 & 0xff0000))
                 {
-                    dstD2 = dstD1 - 2;
+                    dest_2 = dest_1 - 2;
                     break;
                 }
 
-                if (!(valA5 & 0xff000000))
+                if (!(data_5 & 0xff000000))
                     goto label_516a0b;
             }
         }
 
     label_516a1b:
-        char* srcS1 = a2;
+        char* source_1 = param_2;
         int32_t i_4;
         uint32_t i_2;
-        int32_t tmpD1;
+        int32_t temp_1;
 
-        if (srcS1 & 3)
+        if (source_1 & 3)
         {
             do
             {
-                tmpD1 = *srcS1;
-                srcS1 = &srcS1[1];
+                temp_1 = *source_1;
+                source_1 = &source_1[1];
 
-                if (!tmpD1)
+                if (!temp_1)
                 {
                 label_516a6a:
-                    *dstD2 = tmpD1;
-                    return a1;
+                    *dest_2 = temp_1;
+                    return context;
                 }
 
-                *dstD2 = tmpD1;
-                dstD2 += 1;
+                *dest_2 = temp_1;
+                dest_2 += 1;
                 int32_t i_5 = i_3;
                 i_3 -= 1;
 
                 if (i_5 == 1)
                     goto label_516a60;
-            } while (srcS1 & 3);
+            } while (source_1 & 3);
 
             i_4 = i_3;
             i_2 = i_3 >> 2;
@@ -102,37 +102,37 @@ char* Terrain_RenderQuadtree_4(char* a1, char* a2, int32_t a3)
 
                 do
                 {
-                    int32_t valA8 = *srcS1;
-                    tmpD1 = *srcS1;
-                    srcS1 = &srcS1[4];
+                    int32_t data_8 = *source_1;
+                    temp_1 = *source_1;
+                    source_1 = &source_1[4];
 
-                    if ((valA8 ^ 0xffffffff ^ (0x7efefeff + valA8)) & 0x81010100)
+                    if ((data_8 ^ 0xffffffff ^ (0x7efefeff + data_8)) & 0x81010100)
                     {
-                        if (!tmpD1)
+                        if (!temp_1)
                             goto label_516a6a;
 
-                        if (!*(&tmpD1 + 1))
+                        if (!*(&temp_1 + 1))
                         {
-                            *dstD2 = tmpD1;
-                            return a1;
+                            *dest_2 = temp_1;
+                            return context;
                         }
 
-                        if (!(tmpD1 & 0xff0000))
+                        if (!(temp_1 & 0xff0000))
                         {
-                            *dstD2 = tmpD1;
-                            *(dstD2 + 2) = 0;
-                            return a1;
+                            *dest_2 = temp_1;
+                            *(dest_2 + 2) = 0;
+                            return context;
                         }
 
-                        if (!(tmpD1 & 0xff000000))
+                        if (!(temp_1 & 0xff000000))
                         {
-                            *dstD2 = tmpD1;
-                            return a1;
+                            *dest_2 = temp_1;
+                            return context;
                         }
                     }
 
-                    *dstD2 = tmpD1;
-                    dstD2 = &dstD2[1];
+                    *dest_2 = temp_1;
+                    dest_2 = &dest_2[1];
                     i = i_2;
                     i_2 -= 1;
                 } while (i != 1);
@@ -146,13 +146,13 @@ char* Terrain_RenderQuadtree_4(char* a1, char* a2, int32_t a3)
 
             do
             {
-                char tmpD2 = *srcS1;
-                srcS1 = &srcS1[1];
-                *dstD2 = tmpD2;
-                dstD2 += 1;
+                char temp_2 = *source_1;
+                source_1 = &source_1[1];
+                *dest_2 = temp_2;
+                dest_2 += 1;
 
-                if (!tmpD2)
-                    return a1;
+                if (!temp_2)
+                    return context;
 
                 i_1 = i_3;
                 i_3 -= 1;
@@ -160,8 +160,8 @@ char* Terrain_RenderQuadtree_4(char* a1, char* a2, int32_t a3)
         }
 
     label_516a60:
-        *dstD2 = i_3;
+        *dest_2 = i_3;
     }
 
-    return a1;
+    return context;
 }

@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Define_GameMaterial (VA 0x00407F50; static CFG gate PASS, CFG score 0.980).
 #include "Define_GameMaterial.h"
-int32_t Define_GameMaterial(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, int32_t a5, float a6 @ 0xc)
+int32_t Define_GameMaterial(long double context , long double param_2 , long double param_3 , long double param_4 , int32_t param_5, float param_6 )
 
 // Sig: void Define_GameMaterial(...)
 // Note: Defines a GameMaterial entry during a game-material definition block
@@ -8,129 +8,129 @@ int32_t Define_GameMaterial(long double a1 @ fp0, long double a2 @ fp1, long dou
 // contexts; arg layout follows the Define block grammar (registration argc
 // unknown).
 {
-    float dstD = a6;
-    char* v_28 = 0x20;
-    int32_t valA1 = g_53851c * 0x268;
-    *(valA1 + &g_569474) = 1;
-    int32_t v_30 = 0;
-    Sys_ResolveSymbol_23(dstD, v_30, valA1 + 0x569230, v_28);
-    Profile_ValueSet(dstD, 1.40129846e-45f);
-    *(g_53851c * 0x268 + &g_569250) = a1;
-    Profile_ValueSet(dstD, 2.80259693e-45f);
-    *(g_53851c * 0x268 + &g_569254) = a2;
-    Profile_ValueSet(dstD, 4.20389539e-45f);
-    *(g_53851c * 0x268 + &g_569258) = a3;
-    int32_t srcS = 6;
-    *(g_53851c * 0x268 + &g_56925c) = Script_GetArg(dstD, 4);
-    Profile_ValueSet(dstD, 7.00649232e-45f);
-    int32_t valA10 = g_53851c;
+    float dest_val = param_6;
+    char* item_28 = 0x20;
+    int32_t data_1 = g_53851c * 0x268;
+    *(data_1 + &g_569474) = 1;
+    int32_t item_30 = 0;
+    Sys_ResolveSymbol_23(dest_val, item_30, data_1 + 0x569230, item_28);
+    Profile_ValueSet(dest_val, 1.40129846e-45.0f);
+    *(g_53851c * 0x268 + &g_569250) = context;
+    Profile_ValueSet(dest_val, 2.80259693e-45.0f);
+    *(g_53851c * 0x268 + &g_569254) = param_2;
+    Profile_ValueSet(dest_val, 4.20389539e-45.0f);
+    *(g_53851c * 0x268 + &g_569258) = param_3;
+    int32_t source_val = 6;
+    *(g_53851c * 0x268 + &g_56925c) = Script_GetArg(dest_val, 4);
+    Profile_ValueSet(dest_val, 7.00649232e-45.0f);
+    int32_t data_10 = g_53851c;
     int32_t flagP = 0;
-    *(valA10 * 0x268 + &g_569260) = a4;
+    *(data_10 * 0x268 + &g_569260) = param_4;
 
     while (true)
     {
-        int32_t objC7 = srcS;
-        char* v_28_1 = 0x20;
-        srcS += 1;
-        v_30 = objC7;
-        Sys_ResolveSymbol_23(dstD, v_30, flagP + valA10 * 0x268 + 0x569264, v_28_1);
+        int32_t entity_7 = source_val;
+        char* item_28_1 = 0x20;
+        source_val += 1;
+        item_30 = entity_7;
+        Sys_ResolveSymbol_23(dest_val, item_30, flagP + data_10 * 0x268 + 0x569264, item_28_1);
         flagP += 0x20;
 
-        if (srcS - 6 >= 6)
+        if (source_val - 6 >= 6)
             break;
 
-        valA10 = g_53851c;
+        data_10 = g_53851c;
     }
 
-    int32_t valA13 = g_53851c;
-    char* v_28_2 = 0x20;
-    v_30 = srcS;
-    Sys_ResolveSymbol_23(dstD, v_30, valA13 * 0x268 + &g_569324, v_28_2);
-    int32_t srcS2 = srcS + 2;
-    Sys_ResolveSymbol_23(dstD, srcS + 1, g_53851c * 0x268 + &g_569344, 0x20);
+    int32_t data_13 = g_53851c;
+    char* item_28_2 = 0x20;
+    item_30 = source_val;
+    Sys_ResolveSymbol_23(dest_val, item_30, data_13 * 0x268 + &g_569324, item_28_2);
+    int32_t source_2 = source_val + 2;
+    Sys_ResolveSymbol_23(dest_val, source_val + 1, g_53851c * 0x268 + &g_569344, 0x20);
 
     for (int32_t i = 0; i < 0xc0; i += 0x20)
     {
-        int32_t valA17 = g_53851c;
-        int32_t objC10 = srcS2;
-        char* v_28_3 = 0x20;
-        srcS2 += 1;
-        v_30 = objC10;
-        Sys_ResolveSymbol_23(dstD, v_30, i + valA17 * 0x268 + 0x569364, v_28_3);
+        int32_t data_17 = g_53851c;
+        int32_t entity_10 = source_2;
+        char* item_28_3 = 0x20;
+        source_2 += 1;
+        item_30 = entity_10;
+        Sys_ResolveSymbol_23(dest_val, item_30, i + data_17 * 0x268 + 0x569364, item_28_3);
     }
 
     for (int32_t i_1 = 0; i_1 < 0x40; i_1 += 0x20)
     {
-        int32_t valA19 = g_53851c;
-        int32_t objC11 = srcS2;
-        char* v_28_4 = 0x20;
-        srcS2 += 1;
-        v_30 = objC11;
-        Sys_ResolveSymbol_23(dstD, v_30, i_1 + valA19 * 0x268 + 0x569424, v_28_4);
+        int32_t data_19 = g_53851c;
+        int32_t entity_11 = source_2;
+        char* item_28_4 = 0x20;
+        source_2 += 1;
+        item_30 = entity_11;
+        Sys_ResolveSymbol_23(dest_val, item_30, i_1 + data_19 * 0x268 + 0x569424, item_28_4);
     }
 
-    int32_t srcS3 = srcS2 + 1;
+    int32_t source_3 = source_2 + 1;
     int32_t flagP2 = g_53851c * 0x268;
-    *(flagP2 + 0x569464) = Script_GetArg(dstD, srcS2);
-    uint32_t valA24 = *g_538518;
-    int32_t objC13 = 0;
+    *(flagP2 + 0x569464) = Script_GetArg(dest_val, source_2);
+    uint32_t data_24 = *g_538518;
+    int32_t entity_13 = 0;
     *(flagP2 + 0x569468) = 0;
-    objC13 = *(flagP2 + 0x569464);
-    int32_t valA28 = *(((valA24 * 0x180 + objC13) << 2) + &g_a96ae0);
-    void* v_18;
+    entity_13 = *(flagP2 + 0x569464);
+    int32_t data_28 = *(((data_24 * 0x180 + entity_13) << 2) + &g_a96ae0);
+    void* item_18;
 
-    if (valA28)
+    if (data_28)
     {
-        valA28(0, &a6);
-        float valA29 = a6;
-        v_30 = 4;
-        void* valA30 = Mem_Alloc(valA29, v_30);
-        int32_t objC14 = g_53851c;
-        v_18 = valA30;
-        float v_14_1 = dstD;
-        int32_t v_10_1 = srcS3;
-        int32_t objC16 = objC14 * 0x268;
-        *(objC16 + 0x569468) = valA30;
-        int32_t valA31 = 0;
-        valA31 = *(objC16 + 0x569464);
-        int32_t valA32 = 0;
-        valA32 = g_538519;
-        (*(((valA31 + valA32 * 0x180) << 2) + &g_a96ae0))(0, &v_18);
-        int32_t v_c;
-        srcS3 += v_c;
+        data_28(0, &param_6);
+        float data_29 = param_6;
+        item_30 = 4;
+        void* data_30 = Mem_Alloc(data_29, item_30);
+        int32_t entity_14 = g_53851c;
+        item_18 = data_30;
+        float item_14_1 = dest_val;
+        int32_t item_10_1 = source_3;
+        int32_t entity_16 = entity_14 * 0x268;
+        *(entity_16 + 0x569468) = data_30;
+        int32_t data_31 = 0;
+        data_31 = *(entity_16 + 0x569464);
+        int32_t data_32 = 0;
+        data_32 = g_538519;
+        (*(((data_31 + data_32 * 0x180) << 2) + &g_a96ae0))(0, &item_18);
+        int32_t item_c;
+        source_3 += item_c;
     }
 
     int32_t flagP4 = g_53851c * 0x268;
-    *(flagP4 + 0x56946c) = Script_GetArg(dstD, srcS3);
-    uint32_t valA37 = *g_538518;
-    int32_t objC20 = 0;
+    *(flagP4 + 0x56946c) = Script_GetArg(dest_val, source_3);
+    uint32_t data_37 = *g_538518;
+    int32_t entity_20 = 0;
     *(flagP4 + &g_569470) = 0;
-    objC20 = *(flagP4 + 0x56946c);
-    int32_t valA41 = *(((valA37 * 0x180 + objC20) << 2) + &g_a96ae0);
+    entity_20 = *(flagP4 + 0x56946c);
+    int32_t data_41 = *(((data_37 * 0x180 + entity_20) << 2) + &g_a96ae0);
 
-    if (valA41)
+    if (data_41)
     {
-        valA41(0, &a6);
-        float valA42 = a6;
-        v_30 = 4;
-        void* valA43 = Mem_Alloc(valA42, v_30);
-        int32_t objC21 = g_53851c;
-        v_18 = valA43;
-        float v_14_2 = dstD;
-        int32_t objC23 = objC21 * 0x268;
-        *(objC23 + &g_569470) = valA43;
-        int32_t valA44 = 0;
-        valA44 = *(objC23 + 0x56946c);
-        int32_t v_10_2 = srcS3 + 1;
-        int32_t valA45 = 0;
-        valA45 = g_538519;
-        (*(((valA44 + valA45 * 0x180) << 2) + &g_a96ae0))(0, &v_18);
+        data_41(0, &param_6);
+        float data_42 = param_6;
+        item_30 = 4;
+        void* data_43 = Mem_Alloc(data_42, item_30);
+        int32_t entity_21 = g_53851c;
+        item_18 = data_43;
+        float item_14_2 = dest_val;
+        int32_t entity_23 = entity_21 * 0x268;
+        *(entity_23 + &g_569470) = data_43;
+        int32_t data_44 = 0;
+        data_44 = *(entity_23 + 0x56946c);
+        int32_t item_10_2 = source_3 + 1;
+        int32_t data_45 = 0;
+        data_45 = g_538519;
+        (*(((data_44 + data_45 * 0x180) << 2) + &g_a96ae0))(0, &item_18);
     }
 
-    v_18 = 1;
-    int32_t v_10_3 = 0;
-    int32_t v_c_1 = 0x3ff00000;
-    char* v_8 = &g_567c74;
-    memcpy(a5, &v_18, 0x18);
-    return a5;
+    item_18 = 1;
+    int32_t item_10_3 = 0;
+    int32_t item_c_1 = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(param_5, &item_18, 0x18);
+    return param_5;
 }

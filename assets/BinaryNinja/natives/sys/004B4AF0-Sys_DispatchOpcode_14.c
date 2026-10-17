@@ -1,24 +1,24 @@
 // Original IGI.EXE function: Sys_DispatchOpcode_14 (VA 0x004B4AF0; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_DispatchOpcode_14.h"
-int32_t Sys_DispatchOpcode_14(float a1, float a2, float a3, float a4, float a5, float a6, float a7, int32_t a8, int32_t a9, int32_t a10, int32_t a11)
+int32_t Sys_DispatchOpcode_14(float context, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, int32_t param_8, int32_t param_9, int32_t param_10, int32_t param_11)
 
 {
-    long double x87_r7_1 = a5 * 0.0078125f;
-    float v_30 = x87_r7_1;
-    float v_c = x87_r7_1;
-    long double x87_r7_3 = a6 * 0.0078125f;
-    float v_2c = x87_r7_3;
-    float v_8 = x87_r7_3;
-    long double x87_r7_5 = a7 * 0.0078125f;
-    float v_48 = a1;
-    int32_t v_5c = 0;
-    int32_t* v_4c = &v_48;
-    float v_28 = x87_r7_5;
-    float v_4 = x87_r7_5;
+    long double fpu_val_7_1 = param_5 * 0.0078125f;
+    float item_30 = fpu_val_7_1;
+    float item_c = fpu_val_7_1;
+    long double fpu_val_7_3 = param_6 * 0.0078125f;
+    float item_2c = fpu_val_7_3;
+    float item_8 = fpu_val_7_3;
+    long double fpu_val_7_5 = param_7 * 0.0078125f;
+    float item_48 = context;
+    int32_t item_5c = 0;
+    int32_t* item_4c = &item_48;
+    float item_28 = fpu_val_7_5;
+    float item_4 = fpu_val_7_5;
     g_a84a50 = 0;
     g_a84a58 = 0;
-    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&v_5c, v_5c, a10, a11, 2,
-        v_4c, v_48, a2, a9, 0, 0, a8, v_30, v_2c, v_28, a1 + a3, a2 + a4,
-        a9, 0x3f800000, 0x3f800000, a8, v_c, v_8, v_4);
+    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&item_5c, item_5c, param_10, param_11, 2,
+        item_4c, item_48, param_2, param_9, 0, 0, param_8, item_30, item_2c, item_28, context + param_3, param_2 + param_4,
+        param_9, 0x3f800000, 0x3f800000, param_8, item_c, item_8, item_4);
     return result;
 }

@@ -1,39 +1,39 @@
 // Original IGI.EXE function: Bones_PlayAnimation (VA 0x004D61D0; static CFG gate PASS, CFG score 1.000).
 #include "Bones_PlayAnimation.h"
-int32_t Bones_PlayAnimation(float a1, int32_t a2, int32_t a3, int32_t a4, float a5)
+int32_t Bones_PlayAnimation(float context, int32_t param_2, int32_t param_3, int32_t param_4, float param_5)
 
 {
-    int32_t* objC = a1;
-    void* srcS3 = objC[2] + a2 * 0x84;
-    void* dstD = *(srcS3 + 0x80);
-    a1 = a5 * 4800f / g_a54658;
-    int32_t* ctxB = Render_DrawSplineMesh_8(*objC, a2, a3, a4);
+    int32_t* entity_val = context;
+    void* source_3 = entity_val[2] + param_2 * 0x84;
+    void* dest_val = *(source_3 + 0x80);
+    context = param_5 * 4800.0f / g_a54658;
+    int32_t* context_val = Render_DrawSplineMesh_8(*entity_val, param_2, param_3, param_4);
 
-    if (dstD || *(srcS3 + 0x74))
+    if (dest_val || *(source_3 + 0x74))
     {
-        long double x87_r7_2 = a1;
-        long double f0_1 = 1f;
-        x87_r7_2 - f0_1;
+        long double fpu_val_7_2 = context;
+        long double f0_1 = 1.0f;
+        fpu_val_7_2 - f0_1;
 
-        if (!(*(&((x87_r7_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_2 == f0_1 ? 1 : 0) << 0xe) + 1) & 1))
+        if (!(*(&((fpu_val_7_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_2 == f0_1 ? 1 : 0) << 0xe) + 1) & 1))
         {
-            Render_DrawLightmapMesh_9(srcS3, ctxB, a1, 0);
-            int32_t valA7 = *(srcS3 + 4) | 0x20000;
-            *(srcS3 + 4) = valA7;
-            return valA7;
+            Render_DrawLightmapMesh_9(source_3, context_val, context, 0);
+            int32_t data_7 = *(source_3 + 4) | 0x20000;
+            *(source_3 + 4) = data_7;
+            return data_7;
         }
 
-        if (dstD)
-            Render_DrawBoneMesh_6(dstD);
+        if (dest_val)
+            Render_DrawBoneMesh_6(dest_val);
     }
 
-    int32_t* valA3 = Render_DrawLightmapMesh_6();
-    Render_SkinBones_6(valA3, 0, 1, ctxB, 0xffffffff, 0, 0, 0, 0, 0, 0, 0);
-    int32_t objC5 = *(srcS3 + 4) & 0xfffafeff;
-    *(srcS3 + 0x80) = valA3;
-    *(srcS3 + 4) = objC5;
-    int32_t valA5 = objC5 | 0x20000;
-    *(srcS3 + 4) = valA5;
-    return valA5;
+    int32_t* data_3 = Render_DrawLightmapMesh_6();
+    Render_SkinBones_6(data_3, 0, 1, context_val, 0xffffffff, 0, 0, 0, 0, 0, 0, 0);
+    int32_t entity_5 = *(source_3 + 4) & 0xfffafeff;
+    *(source_3 + 0x80) = data_3;
+    *(source_3 + 4) = entity_5;
+    int32_t data_5 = entity_5 | 0x20000;
+    *(source_3 + 4) = data_5;
+    return data_5;
 }

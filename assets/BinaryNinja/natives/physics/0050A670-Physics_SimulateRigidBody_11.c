@@ -1,15 +1,15 @@
 // Original IGI.EXE function: Physics_SimulateRigidBody_11 (VA 0x0050A670; static CFG gate FAIL, CFG score 0.833).
 #include "Physics_SimulateRigidBody_11.h"
-void* Physics_SimulateRigidBody_11(int32_t* a1)
+void* Physics_SimulateRigidBody_11(int32_t* context)
 
 {
-    void* dstD = *a1;
+    void* dest_val = *context;
     void* result = Mem_Alloc(0x400, 4);
-    *(dstD + 8) = result;
-    int32_t srcS1 = a1[2];
+    *(dest_val + 8) = result;
+    int32_t source_1 = context[2];
 
-    if (srcS1)
-        memcpy(result, srcS1, 0x400);
+    if (source_1)
+        memcpy(result, source_1, 0x400);
 
     return result;
 }

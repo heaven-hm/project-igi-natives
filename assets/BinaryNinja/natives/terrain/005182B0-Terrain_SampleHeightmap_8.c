@@ -1,59 +1,59 @@
 // Original IGI.EXE function: Terrain_SampleHeightmap_8 (VA 0x005182B0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SampleHeightmap_8.h"
-int32_t Terrain_SampleHeightmap_8(int32_t* a1, float* a2, float* a3)
+int32_t Terrain_SampleHeightmap_8(int32_t* context, float* param_2, float* param_3)
 
 {
-    long double x87_r7_1 = *a2 - g_bcabb8;
-    float v_1c = g_bcabc0 - (x87_r7_1 + x87_r7_1);
-    long double x87_r7_5 = a2[1] - g_bcabbc;
-    float v_18 = g_bcabc4 - (x87_r7_5 + x87_r7_5);
-    long double x87_r7_9 = *a2 - 16f;
-    long double x87_r6_1 = g_bcabb8 + g_bcabc0;
-    x87_r6_1 - x87_r7_9;
-    int16_t result = (x87_r6_1 < x87_r7_9 ? 1 : 0) << 8
-        | (FCMP_UO(x87_r6_1, x87_r7_9) ? 1 : 0) << 0xa | (x87_r6_1 == x87_r7_9 ? 1 : 0) << 0xe;
+    long double fpu_val_7_1 = *param_2 - g_bcabb8;
+    float item_1c = g_bcabc0 - (fpu_val_7_1 + fpu_val_7_1);
+    long double fpu_val_7_5 = param_2[1] - g_bcabbc;
+    float item_18 = g_bcabc4 - (fpu_val_7_5 + fpu_val_7_5);
+    long double fpu_val_7_9 = *param_2 - 16.0f;
+    long double fpu_val_6_1 = g_bcabb8 + g_bcabc0;
+    fpu_val_6_1 - fpu_val_7_9;
+    int16_t result = (fpu_val_6_1 < fpu_val_7_9 ? 1 : 0) << 8
+        | (FCMP_UO(fpu_val_6_1, fpu_val_7_9) ? 1 : 0) << 0xa | (fpu_val_6_1 == fpu_val_7_9 ? 1 : 0) << 0xe;
 
     if (!(*(&result + 1) & 0x41))
     {
-        long double x87_r7_11 = *a2 + 16f;
+        long double fpu_val_7_11 = *param_2 + 16.0f;
         long double f0_1 = g_bcabb8;
-        x87_r7_11 - f0_1;
-        result = (x87_r7_11 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_11, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_11 == f0_1 ? 1 : 0) << 0xe;
+        fpu_val_7_11 - f0_1;
+        result = (fpu_val_7_11 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_11, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_11 == f0_1 ? 1 : 0) << 0xe;
 
         if (!(*(&result + 1) & 0x41))
         {
-            long double x87_r7_13 = a2[1] - 16f;
-            long double x87_r6_3 = g_bcabbc + g_bcabc4;
-            x87_r6_3 - x87_r7_13;
-            result = (x87_r6_3 < x87_r7_13 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_3, x87_r7_13) ? 1 : 0) << 0xa
-                | (x87_r6_3 == x87_r7_13 ? 1 : 0) << 0xe;
+            long double fpu_val_7_13 = param_2[1] - 16.0f;
+            long double fpu_val_6_3 = g_bcabbc + g_bcabc4;
+            fpu_val_6_3 - fpu_val_7_13;
+            result = (fpu_val_6_3 < fpu_val_7_13 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_3, fpu_val_7_13) ? 1 : 0) << 0xa
+                | (fpu_val_6_3 == fpu_val_7_13 ? 1 : 0) << 0xe;
 
             if (!(*(&result + 1) & 0x41))
             {
-                long double x87_r7_15 = a2[1] + 16f;
+                long double fpu_val_7_15 = param_2[1] + 16.0f;
                 long double f1_1 = g_bcabbc;
-                x87_r7_15 - f1_1;
-                result = (x87_r7_15 < f1_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_15, f1_1) ? 1 : 0) << 0xa
-                    | (x87_r7_15 == f1_1 ? 1 : 0) << 0xe;
+                fpu_val_7_15 - f1_1;
+                result = (fpu_val_7_15 < f1_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_15, f1_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_15 == f1_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x41))
                 {
-                    int32_t* i_1 = a1;
+                    int32_t* i_1 = context;
 
                     for (int32_t* i = *i_1; i; i = *i_1)
                         i_1 = i;
 
                     do
                     {
-                        float v_14 = v_1c * i_1[2] + *a2;
-                        float v_10_1 = v_18 * i_1[2] + a2[1];
-                        float v_c = i_1[4] * *a3;
-                        float v_8_1 = i_1[5] * a3[1];
-                        float v_4_1 = i_1[6] * a3[2];
-                        result = i_1[8](&v_c, &v_14, i_1);
+                        float item_14 = item_1c * i_1[2] + *param_2;
+                        float item_10_1 = item_18 * i_1[2] + param_2[1];
+                        float item_c = i_1[4] * *param_3;
+                        float item_8_1 = i_1[5] * param_3[1];
+                        float item_4_1 = i_1[6] * param_3[2];
+                        result = i_1[8](&item_c, &item_14, i_1);
                         i_1 = i_1[1];
                     } while (i_1);
                 }

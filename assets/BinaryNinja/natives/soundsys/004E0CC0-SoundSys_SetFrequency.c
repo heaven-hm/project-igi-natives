@@ -1,20 +1,20 @@
 // Original IGI.EXE function: SoundSys_SetFrequency (VA 0x004E0CC0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetFrequency.h"
-struct status_msg* SoundSys_SetFrequency(void* a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8, uint32_t a9)
+struct status_msg* SoundSys_SetFrequency(void* context, uint32_t param_2, uint32_t param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8, uint32_t param_9)
 
 {
     int32_t kind;
     kind = g_a5e36c;
-    struct status_msg* result = QTask_HandleInput(a1, kind, 0);
+    struct status_msg* result = QTask_HandleInput(context, kind, 0);
     result->head[8] = g_a44344;
-    result->head[9] = a2;
-    result->head[0xa] = a3;
-    result->head[0xb] = a4;
-    result->head[0xc] = a5;
-    result->head[0xd] = a6;
-    result->head[0xe] = a7;
-    result->head[0xf] = a8;
-    result->head[0x1c] = a9;
+    result->head[9] = param_2;
+    result->head[0xa] = param_3;
+    result->head[0xb] = param_4;
+    result->head[0xc] = param_5;
+    result->head[0xd] = param_6;
+    result->head[0xe] = param_7;
+    result->head[0xf] = param_8;
+    result->head[0x1c] = param_9;
     result->head[0x1d] = Display_RestoreDevice_18(result->head[8], nullptr, result->head[9], 0x548718,
         &result->head[0x1e], 2, 0, 0, 0, nullptr, 0);
     result->head[0x21] = &result->sprite[0x64];

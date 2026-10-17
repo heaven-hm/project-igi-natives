@@ -1,17 +1,17 @@
 // Original IGI.EXE function: MenuTextConditional_Process (VA 0x004205F0; static CFG gate PASS, CFG score 1.000).
 #include "MenuTextConditional_Process.h"
-char* MenuTextConditional_Process(void* a1)
+char* MenuTextConditional_Process(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x114);
+    int32_t* data_val = *(context + 0x114);
 
-    if (valA)
+    if (data_val)
     {
-        Sys_ReadFileBlock_18(valA);
-        *(a1 + 0x114) = 0;
+        Sys_ReadFileBlock_18(data_val);
+        *(context + 0x114) = 0;
     }
 
-    Script_CallNativeHandler_6(a1 + 0x11c);
-    Script_CallNativeHandler_6(a1 + 0x16c);
-    return Script_CallNativeHandler_6(a1 + 0x1bc);
+    Script_CallNativeHandler_6(context + 0x11c);
+    Script_CallNativeHandler_6(context + 0x16c);
+    return Script_CallNativeHandler_6(context + 0x1bc);
 }

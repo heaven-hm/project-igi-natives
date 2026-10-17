@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004F9EB0 Script_CallNativeHandler_24 | gate PASS | openigi False */
-int Script_CallNativeHandler_24(void * a1, char * a2, int a3, int* a4, int a5);
+int Script_CallNativeHandler_24(void * context, char * param_2, int param_3, int* param_4, int param_5);

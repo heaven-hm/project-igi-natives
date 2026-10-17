@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00517FD0 Terrain_RenderWaterSurface_7 | gate PASS | openigi True */
-void * Terrain_RenderWaterSurface_7(void * a1, int a2, int a3, int a4, char * a5, int a6, int* a7, int a8, int* a9);
+void * Terrain_RenderWaterSurface_7(void * context, int param_2, int param_3, int param_4, char * param_5, int param_6, int* param_7, int param_8, int* param_9);

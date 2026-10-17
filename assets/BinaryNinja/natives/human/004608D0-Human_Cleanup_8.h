@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004608D0 Human_Cleanup_8 | gate PASS | openigi False */
-int Human_Cleanup_8(void * a1);
+int Human_Cleanup_8(void * context);

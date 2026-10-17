@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00521960 Light_ComputeDirectionalLight_2 | gate PASS | openigi False */
-float* Light_ComputeDirectionalLight_2(int a1, int a2, int a3, int a4, void * a5, float* a6, int a7, float* a8, int a9, float* a10, float a11, float a12, float a13, float a14, float* a15, float* a16, float* a17, int a18, float* a19, int a20, int a21);
+float* Light_ComputeDirectionalLight_2(int context, int param_2, int param_3, int param_4, void * param_5, float* param_6, int param_7, float* param_8, int param_9, float* param_10, float param_11, float param_12, float param_13, float param_14, float* param_15, float* param_16, float* param_17, int param_18, float* param_19, int param_20, int param_21);

@@ -1,43 +1,43 @@
 // Original IGI.EXE function: Env_InitLadder_8 (VA 0x004463B0; static CFG gate PASS, CFG score 1.000).
 #include "Env_InitLadder_8.h"
-int32_t Env_InitLadder_8(void* a1)
+int32_t Env_InitLadder_8(void* context)
 
 {
-    void v_8;
-    int32_t result = Env_TriggerAlarm_8(&v_8, a1);
-    int32_t* i = *(a1 + 8);
+    void item_8;
+    int32_t result = Env_TriggerAlarm_8(&item_8, context);
+    int32_t* i = *(context + 8);
 
     if (*i && i)
     {
-        int32_t objC1 = g_afa7e0;
+        int32_t entity_1 = g_afa7e0;
 
         do
         {
-            int32_t* tmpD1 = *i;
-            void* valA3;
+            int32_t* temp_1 = *i;
+            void* data_3;
 
-            if (!tmpD1)
-                valA3 = nullptr;
+            if (!temp_1)
+                data_3 = nullptr;
             else
             {
-                int32_t valA = *tmpD1;
-                int32_t valA1 = -(valA);
-                valA3 = (valA1 - valA1) & tmpD1;
+                int32_t data_val = *temp_1;
+                int32_t data_1 = -(data_val);
+                data_3 = (data_1 - data_1) & temp_1;
             }
 
-            *((objC1 << 2) + &g_afa6e0) = valA3;
-            g_afa7e0 = objC1 + 1;
-            uint32_t valA5 = DynObj_CreateMagicObject_6();
-            int32_t tmpD2 = 0;
-            tmpD2 = i[7];
-            result = *(((valA5 * 0x180 + tmpD2) << 2) + &g_a96ae0);
+            *((entity_1 << 2) + &g_afa6e0) = data_3;
+            g_afa7e0 = entity_1 + 1;
+            uint32_t data_5 = DynObj_CreateMagicObject_6();
+            int32_t temp_2 = 0;
+            temp_2 = i[7];
+            result = *(((data_5 * 0x180 + temp_2) << 2) + &g_a96ae0);
 
             if (result)
-                result = result(i, &v_8);
+                result = result(i, &item_8);
 
-            objC1 = g_afa7e0 - 1;
-            g_afa7e0 = objC1;
-            i = *((objC1 << 2) + &g_afa6e0);
+            entity_1 = g_afa7e0 - 1;
+            g_afa7e0 = entity_1;
+            i = *((entity_1 << 2) + &g_afa6e0);
         } while (i);
     }
 

@@ -4,18 +4,18 @@
 char* EnvironmentSound_Init_2(void* pThis)
 
 {
-    void* eax = Level_StartMission_4();
-    Display_OpenDevice_17(*(pThis + 0x20), eax);
+    void* result_val = Level_StartMission_4();
+    Display_OpenDevice_17(*(pThis + 0x20), result_val);
 
     if (Script_EvaluateCondition_4(pThis) >= 0)
     {
-        int32_t eax_3 = Script_SpawnNewTask_6();
-        int32_t edx_1 = 0;
-        edx_1 = *(pThis + 0x1c);
-        int32_t eax_4 = *(((eax_3 * 0x180 + edx_1) << 2) + &g_a96ae0);
+        int32_t result_val_3 = Script_SpawnNewTask_6();
+        int32_t scratch_val_1 = 0;
+        scratch_val_1 = *(pThis + 0x1c);
+        int32_t result_val_4 = *(((result_val_3 * 0x180 + scratch_val_1) << 2) + &g_a96ae0);
 
-        if (eax_4)
-            eax_4(pThis);
+        if (result_val_4)
+            result_val_4(pThis);
     }
 
     return Script_CallNativeHandler_6(pThis + 0x38);

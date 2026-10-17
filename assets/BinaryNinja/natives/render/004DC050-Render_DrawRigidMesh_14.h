@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004DC050 Render_DrawRigidMesh_14 | gate PASS | openigi True */
-void Render_DrawRigidMesh_14(int* a1, int a2, int* a3, int a4);
+void Render_DrawRigidMesh_14(int* context, int param_2, int* param_3, int param_4);

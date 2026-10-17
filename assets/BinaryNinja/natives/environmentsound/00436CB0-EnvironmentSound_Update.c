@@ -1,22 +1,22 @@
 // Original IGI.EXE function: EnvironmentSound_Update (VA 0x00436CB0; static CFG gate PASS, CFG score 1.000).
 #include "EnvironmentSound_Update.h"
-int32_t* EnvironmentSound_Update(void* a1)
+int32_t* EnvironmentSound_Update(void* context)
 
 {
-    void* valA = *(a1 + 0x38);
-    *(a1 + 0x34) = 0;
+    void* data_val = *(context + 0x38);
+    *(context + 0x34) = 0;
 
-    if (valA)
+    if (data_val)
     {
-        SoundSys_SetFrequency_7(valA);
-        *(a1 + 0x38) = 0;
+        SoundSys_SetFrequency_7(data_val);
+        *(context + 0x38) = 0;
     }
 
-    struct status_msg* valA2 = SoundSys_SetMasterVolume_7(a1, a1 + 0x24);
-    int32_t objC = *(a1 + 0x34);
-    *(a1 + 0x38) = valA2;
-    SoundSys_LoadSoundDef_7(valA2, 0xbf800000, objC);
-    int32_t* result = a1 + 0x4c;
+    struct status_msg* data_2 = SoundSys_SetMasterVolume_7(context, context + 0x24);
+    int32_t entity_val = *(context + 0x34);
+    *(context + 0x38) = data_2;
+    SoundSys_LoadSoundDef_7(data_2, 0xbf800000, entity_val);
+    int32_t* result = context + 0x4c;
     int32_t i_1 = 4;
     int32_t i;
 

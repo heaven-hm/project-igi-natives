@@ -1,89 +1,89 @@
 // Original IGI.EXE function: Terrain_ConnectGraphNode_4 (VA 0x00516C91; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_ConnectGraphNode_4.h"
-uint32_t Terrain_ConnectGraphNode_4(char* a1, int32_t a2, uint32_t a3, int32_t* a4)
+uint32_t Terrain_ConnectGraphNode_4(char* context, int32_t param_2, uint32_t param_3, int32_t* param_4)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
-    char* dstD1 = a2 * a3;
-    char* ctxB = a1;
-    char* objC1 = dstD1;
-    char* v_8_1 = dstD1;
-    a1 = objC1;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
+    char* dest_1 = param_2 * param_3;
+    char* context_val = context;
+    char* entity_1 = dest_1;
+    char* item_8_1 = dest_1;
+    context = entity_1;
 
-    if (!dstD1)
+    if (!dest_1)
         return 0;
 
-    int32_t* srcS1 = a4;
+    int32_t* source_1 = param_4;
 
-    if (!(srcS1[3] & 0x10c))
-        a4 = 0x1000;
+    if (!(source_1[3] & 0x10c))
+        param_4 = 0x1000;
     else
-        a4 = srcS1[6];
+        param_4 = source_1[6];
 
     while (true)
     {
-        char* valA3;
+        char* data_3;
 
-        if (srcS1[3] & 0x10c)
-            valA3 = srcS1[1];
+        if (source_1[3] & 0x10c)
+            data_3 = source_1[1];
 
-        if (srcS1[3] & 0x10c && valA3)
+        if (source_1[3] & 0x10c && data_3)
         {
-            char* dstD2 = objC1;
+            char* dest_2 = entity_1;
 
-            if (objC1 >= valA3)
-                dstD2 = valA3;
+            if (entity_1 >= data_3)
+                dest_2 = data_3;
 
-            Camera_ResetMatrix_20(ctxB, *srcS1, dstD2);
-            a1 -= dstD2;
-            srcS1[1] -= dstD2;
-            *srcS1 = &dstD2[*srcS1];
-            ctxB += dstD2;
-            dstD1 = v_8_1;
+            Camera_ResetMatrix_20(context_val, *source_1, dest_2);
+            context -= dest_2;
+            source_1[1] -= dest_2;
+            *source_1 = &dest_2[*source_1];
+            context_val += dest_2;
+            dest_1 = item_8_1;
         }
-        else if (objC1 < a4)
+        else if (entity_1 < param_4)
         {
-            uint32_t valA7 = Camera_UpdateViewCone_9(srcS1);
+            uint32_t data_7 = Camera_UpdateViewCone_9(source_1);
 
-            if (valA7 == 0xffffffff)
+            if (data_7 == 0xffffffff)
                 break;
 
-            *ctxB = valA7;
-            ctxB = &ctxB[1];
-            a1 -= 1;
-            a4 = srcS1[6];
+            *context_val = data_7;
+            context_val = &context_val[1];
+            context -= 1;
+            param_4 = source_1[6];
         }
         else
         {
-            char* valA4 = objC1;
+            char* data_4 = entity_1;
 
-            if (a4)
-                valA4 = objC1 - COMBINE(0, valA4) % a4;
+            if (param_4)
+                data_4 = entity_1 - COMBINE(0, data_4) % param_4;
 
-            void* valA6 = Camera_UpdateViewCone_23(srcS1[4], ctxB, valA4);
+            void* data_6 = Camera_UpdateViewCone_23(source_1[4], context_val, data_4);
 
-            if (!valA6)
+            if (!data_6)
             {
-                srcS1[3] |= 0x10;
+                source_1[3] |= 0x10;
                 break;
             }
 
-            if (valA6 == 0xffffffff)
+            if (data_6 == 0xffffffff)
             {
-                srcS1[3] |= 0x20;
+                source_1[3] |= 0x20;
                 break;
             }
 
-            a1 -= valA6;
-            ctxB += valA6;
+            context -= data_6;
+            context_val += data_6;
         }
 
-        if (!a1)
-            return a3;
+        if (!context)
+            return param_3;
 
-        objC1 = a1;
+        entity_1 = context;
     }
 
-    return COMBINE(0, dstD1 - a1) / a2;
+    return COMBINE(0, dest_1 - context) / param_2;
 }

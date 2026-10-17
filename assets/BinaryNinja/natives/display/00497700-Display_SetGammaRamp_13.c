@@ -9,10 +9,10 @@ void Display_SetGammaRamp_13()
     for (int32_t* i = *i_1; i; i = *i)
     {
         memcpy(0xbcaba0, i_1, 0x4c);
-        int32_t valA1 = i_1[2];
+        int32_t data_1 = i_1[2];
 
-        if (valA1 != 0xffffffff)
-            Sys_ExecuteBytecode_3(valA1);
+        if (data_1 != 0xffffffff)
+            Sys_ExecuteBytecode_3(data_1);
 
         Display_SyncVSync_14(&i_1[3]);
         Display_SetDisplayMode_14(i_1[0x11] + i_1[0x10] * 0xc - 0xc);

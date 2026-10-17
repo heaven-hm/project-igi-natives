@@ -1,23 +1,23 @@
 // Original IGI.EXE function: AI_TakeCover_2 (VA 0x00451230; static CFG gate PASS, CFG score 1.000).
 #include "AI_TakeCover_2.h"
-int32_t AI_TakeCover_2(void* a1, void* a2)
+int32_t AI_TakeCover_2(void* context, void* param_2)
 
 {
-    int32_t valA = 0;
-    int32_t objC = *(a1 + 0x128);
+    int32_t data_val = 0;
+    int32_t entity_val = *(context + 0x128);
 
-    if (objC > 0)
+    if (entity_val > 0)
     {
-        int32_t* tmpD1 = a1 + 0x10;
+        int32_t* temp_1 = context + 0x10;
 
         do
         {
-            if (*(a2 + 0x14) == *tmpD1)
-                return *(a1 + (valA << 2) + 0x90);
+            if (*(param_2 + 0x14) == *temp_1)
+                return *(context + (data_val << 2) + 0x90);
 
-            valA += 1;
-            tmpD1 = &tmpD1[1];
-        } while (valA < objC);
+            data_val += 1;
+            temp_1 = &temp_1[1];
+        } while (data_val < entity_val);
     }
 
     return 0xffffffff;

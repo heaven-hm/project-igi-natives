@@ -1,108 +1,108 @@
 // Original IGI.EXE function: Terrain_RenderQuadtree_7 (VA 0x00517C90; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_RenderQuadtree_7.h"
-int16_t* Terrain_RenderQuadtree_7(char* a1, int32_t a2, int16_t* a3, int16_t* a4, int32_t a5, int32_t a6, int32_t* a7)
+int16_t* Terrain_RenderQuadtree_7(char* context, int32_t param_2, int16_t* param_3, int16_t* param_4, int32_t param_5, int32_t param_6, int32_t* param_7)
 
 {
-    int32_t objC;
-    int32_t v_4 = objC;
-    int32_t valA;
-    int32_t objC1;
-    int32_t srcS;
+    int32_t entity_val;
+    int32_t item_4 = entity_val;
+    int32_t data_val;
+    int32_t entity_1;
+    int32_t source_val;
 
-    if (!a7)
+    if (!param_7)
     {
-        objC1 = a5;
-        srcS = 0;
-        valA = 0;
-        a5 = objC1;
-        a6 = a6;
+        entity_1 = param_5;
+        source_val = 0;
+        data_val = 0;
+        param_5 = entity_1;
+        param_6 = param_6;
     }
     else
     {
-        objC1 = a5;
-        srcS = *a7;
-        int32_t ctxB1 = a7[2];
-        valA = a7[1];
-        a5 = ctxB1;
-        int32_t dstD2 = objC1 - srcS;
+        entity_1 = param_5;
+        source_val = *param_7;
+        int32_t context_1 = param_7[2];
+        data_val = param_7[1];
+        param_5 = context_1;
+        int32_t dest_2 = entity_1 - source_val;
 
-        if (ctxB1 >= dstD2)
-            a5 = dstD2;
+        if (context_1 >= dest_2)
+            param_5 = dest_2;
 
-        int32_t tmpD1 = a7[3];
-        int32_t dstD4 = a6 - valA;
+        int32_t temp_1 = param_7[3];
+        int32_t dest_4 = param_6 - data_val;
 
-        a6 = tmpD1 < dstD4 ? tmpD1 : dstD4;
+        param_6 = temp_1 < dest_4 ? temp_1 : dest_4;
     }
 
-    a7 = nullptr;
-    int16_t* result = &a4[valA * objC1 + srcS];
+    param_7 = nullptr;
+    int16_t* result = &param_4[data_val * entity_1 + source_val];
 
-    if (a3 > 0)
+    if (param_3 > 0)
     {
-        int32_t tmpD4 = a2;
+        int32_t temp_4 = param_2;
         int16_t* result_1 = result;
-        char* srcS1 = &a1[2];
-        a4 = result_1;
-        a1 = srcS1;
-        bool cond_0_1;
+        char* source_1 = &context[2];
+        param_4 = result_1;
+        context = source_1;
+        bool flag_0_1;
 
         do
         {
             int32_t flagP1 = 0;
 
-            if (tmpD4 > 0)
+            if (temp_4 > 0)
             {
                 do
                 {
-                    int32_t objC3;
+                    int32_t entity_3;
 
-                    if (flagP1 < a5)
-                        objC3 = a6;
+                    if (flagP1 < param_5)
+                        entity_3 = param_6;
 
-                    char valA9;
-                    char objC5;
-                    char tmpD7;
-                    char ctxB4;
+                    char data_9;
+                    char entity_5;
+                    char temp_7;
+                    char context_4;
 
-                    if (flagP1 >= a5 || a7 >= objC3)
+                    if (flagP1 >= param_5 || param_7 >= entity_3)
                     {
-                        objC5 = 0;
-                        tmpD7 = 0;
-                        ctxB4 = 0;
-                        valA9 = 0;
+                        entity_5 = 0;
+                        temp_7 = 0;
+                        context_4 = 0;
+                        data_9 = 0;
                     }
                     else
                     {
-                        objC3 = *result_1;
-                        int32_t valA6 = objC3 & 0x8000;
-                        int32_t valA7 = -(valA6);
-                        valA9 = valA7 - valA7;
-                        ctxB4 = objC3 >> 7 & 0xf8;
-                        tmpD7 = objC3 >> 2 & 0xf8;
-                        objC5 = (objC3 & 0x1f) << 3;
+                        entity_3 = *result_1;
+                        int32_t data_6 = entity_3 & 0x8000;
+                        int32_t data_7 = -(data_6);
+                        data_9 = data_7 - data_7;
+                        context_4 = entity_3 >> 7 & 0xf8;
+                        temp_7 = entity_3 >> 2 & 0xf8;
+                        entity_5 = (entity_3 & 0x1f) << 3;
                     }
 
-                    srcS1[1] = valA9;
-                    *srcS1 = ctxB4;
-                    srcS1[0xffffffff] = tmpD7;
-                    srcS1[0xfffffffe] = objC5;
+                    source_1[1] = data_9;
+                    *source_1 = context_4;
+                    source_1[0xffffffff] = temp_7;
+                    source_1[0xfffffffe] = entity_5;
                     flagP1 += 1;
                     result_1 = &result_1[1];
-                    srcS1 = &srcS1[4];
-                } while (flagP1 < a2);
+                    source_1 = &source_1[4];
+                } while (flagP1 < param_2);
 
-                tmpD4 = a2;
+                temp_4 = param_2;
             }
 
-            srcS1 = &a1[tmpD4 << 2];
-            result = a3;
-            result_1 = &a4[objC1];
-            cond_0_1 = a7 + 1 < result;
-            a7 += 1;
-            a4 = result_1;
-            a1 = srcS1;
-        } while (cond_0_1);
+            source_1 = &context[temp_4 << 2];
+            result = param_3;
+            result_1 = &param_4[entity_1];
+            flag_0_1 = param_7 + 1 < result;
+            param_7 += 1;
+            param_4 = result_1;
+            context = source_1;
+        } while (flag_0_1);
     }
 
     return result;

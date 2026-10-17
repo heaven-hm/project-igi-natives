@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0043AF90 Radio_LoadParameters | gate PASS | openigi False */
-int* Radio_LoadParameters(int80_t a1, void * a2);
+int* Radio_LoadParameters(long double context, void * param_2);

@@ -1,79 +1,79 @@
 // Original IGI.EXE function: GenericPhysicsObj_Process (VA 0x0043EC80; static CFG gate PASS, CFG score 0.923).
 #include "GenericPhysicsObj_Process.h"
-int32_t GenericPhysicsObj_Process(void* a1)
+int32_t GenericPhysicsObj_Process(void* context)
 
 {
-    memcpy(a1 + 0x70, a1 + 0x18c, 0x28);
-    void* valA = DynObj_Missing(a1 + 0x154);
+    memcpy(context + 0x70, context + 0x18c, 0x28);
+    void* data_val = DynObj_Missing(context + 0x154);
 
-    if (valA)
+    if (data_val)
     {
-        DynObj_CreateMagicObject_5(a1, valA);
-        Script_ParseEnumReal32_28(a1, SoundSys_EvaluateTrigger_18(a1 + 0x154));
+        DynObj_CreateMagicObject_5(context, data_val);
+        Script_ParseEnumReal32_28(context, SoundSys_EvaluateTrigger_18(context + 0x154));
     }
-    else if (*(a1 + 0x154) && *(a1 + 0x155) != 0x2a)
+    else if (*(context + 0x154) && *(context + 0x155) != 0x2a)
     {
-        char* v_118_2 = a1 + 0x154;
-        void v_80;
-        Game_DataSymbolLoad(&v_80, "Model "%s" not available");
-        char* dstD1 = a1 + 0x154;
+        char* item_118_2 = context + 0x154;
+        void item_80;
+        Game_DataSymbolLoad(&item_80, "Model "%s" not available");
+        char* dest_1 = context + 0x154;
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD1;
-            dstD1 = &dstD1[1];
+            bool flag_0_1 = 0 != *dest_1;
+            dest_1 = &dest_1[1];
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC1 = ~i;
-        void v_100;
-        int32_t srcS2;
-        int32_t dstD3;
-        dstD3 = memcpy(&v_100, dstD1 - objC1, objC1 & 0xfffffffc);
-        memcpy(dstD3, srcS2, objC1 & 3);
-        void* v_124_2 = &v_100;
-        Game_DataSymbolLoad(a1 + 0x154, "** %s **");
+        int32_t entity_1 = ~i;
+        void item_100;
+        int32_t source_2;
+        int32_t dest_3;
+        dest_3 = memcpy(&item_100, dest_1 - entity_1, entity_1 & 0xfffffffc);
+        memcpy(dest_3, source_2, entity_1 & 3);
+        void* item_124_2 = &item_100;
+        Game_DataSymbolLoad(context + 0x154, "** %s **");
     }
 
-    *(a1 + 0x108) = *(a1 + 0x180);
-    *(a1 + 0x10c) = *(a1 + 0x184);
-    *(a1 + 0x110) = *(a1 + 0x188);
-    SoundSys_InitSoundSys_17(a1 + 0xf0);
-    long double fpu7 = *(a1 + 0x9c);
-    long double fpu6 = *(a1 + 0xa0);
+    *(context + 0x108) = *(context + 0x180);
+    *(context + 0x10c) = *(context + 0x184);
+    *(context + 0x110) = *(context + 0x188);
+    SoundSys_InitSoundSys_17(context + 0xf0);
+    long double fpu7 = *(context + 0x9c);
+    long double fpu6 = *(context + 0xa0);
     fpu6 - fpu7;
-    long double x87_r7_1;
+    long double fpu_val_7_1;
 
     if (!(*(&((fpu6 < fpu7 ? 1 : 0) << 8 | (FCMP_UO(fpu6, fpu7) ? 1 : 0) << 0xa
             | (fpu6 == fpu7 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_1 = *(a1 + 0xa0);
+        fpu_val_7_1 = *(context + 0xa0);
     else
-        x87_r7_1 = *(a1 + 0x9c);
+        fpu_val_7_1 = *(context + 0x9c);
 
-    long double x87_r6_1 = *(a1 + 0x98);
-    x87_r6_1 - x87_r7_1;
-    long double x87_r7_3;
+    long double fpu_val_6_1 = *(context + 0x98);
+    fpu_val_6_1 - fpu_val_7_1;
+    long double fpu_val_7_3;
 
-    if (*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-        | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_4 = *(a1 + 0x9c);
-        long double x87_r6_2 = *(a1 + 0xa0);
-        x87_r6_2 - x87_r7_4;
+        long double fpu_val_7_4 = *(context + 0x9c);
+        long double fpu_val_6_2 = *(context + 0xa0);
+        fpu_val_6_2 - fpu_val_7_4;
 
-        if (!(*(&((x87_r6_2 < x87_r7_4 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_4) ? 1 : 0) << 0xa
-                | (x87_r6_2 == x87_r7_4 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_3 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_2 < fpu_val_7_4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_4) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == fpu_val_7_4 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_3 = *(context + 0xa0);
         else
-            x87_r7_3 = *(a1 + 0x9c);
+            fpu_val_7_3 = *(context + 0x9c);
     }
     else
-        x87_r7_3 = *(a1 + 0x98);
+        fpu_val_7_3 = *(context + 0x98);
 
-    float v_118_5 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_3;
-    return WorldObject_CommitTransform(Level_StartMission_4(), a1, a1 + 0x168, v_118_5);
+    float item_118_5 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_3;
+    return WorldObject_CommitTransform(Level_StartMission_4(), context, context + 0x168, item_118_5);
 }

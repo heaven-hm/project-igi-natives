@@ -1,20 +1,20 @@
 // Original IGI.EXE function: Script_SpawnNewTask_21 (VA 0x004F80F0; static CFG gate PASS, CFG score 1.000).
 #include "Script_SpawnNewTask_21.h"
-long double Script_SpawnNewTask_21(float a1)
+long double Script_SpawnNewTask_21(float context)
 
 {
     for (int32_t* i = &g_a76ca4; i < &g_a76cc4; i = &i[1])
     {
-        void* valA1 = *i;
+        void* data_1 = *i;
 
-        if (valA1)
+        if (data_1)
         {
-            double* valA2 = Script_SpawnNewTask_19(valA1, a1);
+            double* data_2 = Script_SpawnNewTask_19(data_1, context);
 
-            if (valA2 && *(valA2 + 0x1c))
-                return 1f;
+            if (data_2 && *(data_2 + 0x1c))
+                return 1.0f;
         }
     }
 
-    return 0f;
+    return 0.0f;
 }

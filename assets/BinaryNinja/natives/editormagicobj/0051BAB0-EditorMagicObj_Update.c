@@ -3,7 +3,7 @@
 uint32_t EditorMagicObj_Update()
 
 {
-    int32_t valA;
-    valA = g_a8376c;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_a8376c;
+    return QTask_CloseEvent_2(data_val);
 }

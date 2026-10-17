@@ -1,15 +1,13 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_13 (VA 0x004A87DF; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_13.h"
-int32_t Camera_UpdateViewCone_13() __pure
-
-{
-    int32_t objC;
-    int32_t v_8 = objC;
+int32_t Camera_UpdateViewCone_13() {
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
     bool c0;
     bool c1;
     bool c2;
     bool c3;
-    *(&v_8 + 2) =
+    *(&item_8 + 2) =
         (c0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9 | (c2 ? 1 : 0) << 0xa | (c3 ? 1 : 0) << 0xe;
-    return *(&v_8 + 2);
+    return *(&item_8 + 2);
 }

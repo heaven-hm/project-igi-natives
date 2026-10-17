@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_16 (VA 0x004A94A6; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_16.h"
-long double __convention("regparm") Camera_UpdateViewCone_16(int32_t a1, int32_t a2, int16_t a3 @ x87control, long double a4, int32_t a5 @ 0xa, long double a6, long double a7)
+long double Camera_UpdateViewCone_16(int32_t context, int32_t param_2, int16_t param_3 , long double param_4, int32_t param_5 , long double param_6, long double param_7)
 
 {
-    int32_t valA1 = a5 ^ 0x700;
+    int32_t data_1 = param_5 ^ 0x700;
     int16_t arg_28;
     long double result;
     bool c0;
@@ -11,12 +11,12 @@ long double __convention("regparm") Camera_UpdateViewCone_16(int32_t a1, int32_t
     bool c2_3;
     bool c3;
 
-    if (valA1 & 0x700 || !*((valA1 >> 0xb & 0xf) + 0x5443fc) || (a5 & 0x7fff0000) == 0x7fff0000)
+    if (data_1 & 0x700 || !*((data_1 >> 0xb & 0xf) + 0x5443fc) || (param_5 & 0x7fff0000) == 0x7fff0000)
     {
     label_4a9648:
         long double result_1;
         uint8_t f0_7;
-        result_1 = __fprem(a7, a4);
+        result_1 = __fprem(param_7, param_4);
         result = result_1;
 
         if (!c2_3)
@@ -28,33 +28,33 @@ long double __convention("regparm") Camera_UpdateViewCone_16(int32_t a1, int32_t
     }
     else
     {
-        int32_t valA7 = *(&a7 + 6) & 0x7fff0000;
+        int32_t data_7 = *(&param_7 + 6) & 0x7fff0000;
 
-        if (!valA7 || valA7 == 0x7fff0000)
+        if (!data_7 || data_7 == 0x7fff0000)
             goto label_4a9648;
 
-        int32_t valA8 = *(&a7 + 4);
+        int32_t data_8 = *(&param_7 + 4);
 
-        if (valA8 != -(valA8))
+        if (data_8 != -(data_8))
             goto label_4a9648;
 
-        int32_t valA10 = *(&a4 + 4);
+        int32_t data_10 = *(&param_4 + 4);
 
-        if (valA10 != -(valA10))
+        if (data_10 != -(data_10))
             goto label_4a9648;
 
-        if ((*(&a7 + 8) & 0x7fff) <= (*(&a5 + 2) & 0x7fff) + 0x3f)
+        if ((*(&param_7 + 8) & 0x7fff) <= (*(&param_5 + 2) & 0x7fff) + 0x3f)
         {
-            while ((*(&a7 + 8) & 0x7fff) - ((*(&a5 + 2) & 0x7fff) + 0xa) >= 0)
+            while ((*(&param_7 + 8) & 0x7fff) - ((*(&param_5 + 2) & 0x7fff) + 0xa) >= 0)
             {
-                int32_t valA18 = *(&a5 + 2);
-                int32_t ctxB8 = *(&a7 + 8) & 0x7fff;
-                *(&a5 + 2) = (ctxB8 - (((ctxB8 - valA18) & 7) | 4)) | (valA18 & 0x8000);
-                *(&a5 + 2) = valA18;
+                int32_t data_18 = *(&param_5 + 2);
+                int32_t context_8 = *(&param_7 + 8) & 0x7fff;
+                *(&param_5 + 2) = (context_8 - (((context_8 - data_18) & 7) | 4)) | (data_18 & 0x8000);
+                *(&param_5 + 2) = data_18;
                 long double fp0_1;
                 uint8_t f0_2;
                 bool c2_1;
-                fp0_1 = __fprem(a7, a4);
+                fp0_1 = __fprem(param_7, param_4);
 
                 if (!c2_1)
                 {
@@ -63,49 +63,49 @@ long double __convention("regparm") Camera_UpdateViewCone_16(int32_t a1, int32_t
                     c3 = f0_2 & 2;
                 }
 
-                a7 = fp0_1;
+                param_7 = fp0_1;
             }
 
             goto label_4a9648;
         }
 
-        if (!(a2 & 2))
-            a6 = a4;
+        if (!(param_2 & 2))
+            param_6 = param_4;
 
         int16_t x87status_1;
         char f0_3;
-        f0_3 = __fnstcw_memmem16(a3);
+        f0_3 = __fnstcw_memmem16(param_3);
         arg_28 = f0_3;
-        int16_t x87control;
+        int16_t fpu_control;
         int16_t x87status_2;
-        x87control = __fldcw_memmem16(arg_28 | 0x33f);
-        int32_t i_1 = ((((*(&a7 + 8) & 0x7fff) - (*(&a5 + 2) & 0x7fff)) & 0x3f) | 0x20) + 1;
-        int32_t valA24 = *(&a5 + 2) & 0x8000;
-        *(&a5 + 2) = (*(&a7 + 8) & 0x7fff) | valA24;
-        long double x87_r7_6 = fabsl(a4);
-        long double result_2 = fabsl(a7);
+        fpu_control = __fldcw_memmem16(arg_28 | 0x33f);
+        int32_t i_1 = ((((*(&param_7 + 8) & 0x7fff) - (*(&param_5 + 2) & 0x7fff)) & 0x3f) | 0x20) + 1;
+        int32_t data_24 = *(&param_5 + 2) & 0x8000;
+        *(&param_5 + 2) = (*(&param_7 + 8) & 0x7fff) | data_24;
+        long double fpu_val_7_6 = fabsl(param_4);
+        long double result_2 = fabsl(param_7);
         int32_t i;
 
         do
         {
-            result_2 - x87_r7_6;
-            c0 = result_2 < x87_r7_6;
+            result_2 - fpu_val_7_6;
+            c0 = result_2 < fpu_val_7_6;
             c1 = false;
-            c3 = result_2 == x87_r7_6;
-            valA24 = (c0 ? 1 : 0) << 8 | (FCMP_UO(result_2, x87_r7_6) ? 1 : 0) << 0xa
+            c3 = result_2 == fpu_val_7_6;
+            data_24 = (c0 ? 1 : 0) << 8 | (FCMP_UO(result_2, fpu_val_7_6) ? 1 : 0) << 0xa
                 | (c3 ? 1 : 0) << 0xe | 0x3000;
-            valA24 &= 0x100;
+            data_24 &= 0x100;
 
-            if (!valA24)
-                result_2 = result_2 - x87_r7_6;
+            if (!data_24)
+                result_2 = result_2 - fpu_val_7_6;
 
-            x87_r7_6 = x87_r7_6 * g_54442c;
+            fpu_val_7_6 = fpu_val_7_6 * g_54442c;
             i = i_1;
             i_1 -= 1;
         } while (i != 1);
         long double fp0_2;
         uint8_t f0_6;
-        fp0_2 = __fprem(g_544434, a6);
+        fp0_2 = __fprem(g_544434, param_6);
 
         if (!c2_3)
         {
@@ -116,22 +116,22 @@ long double __convention("regparm") Camera_UpdateViewCone_16(int32_t a1, int32_t
 
         result = result_2;
         int16_t x87status_3;
-        a3 = __fldcw_memmem16(arg_28);
+        param_3 = __fldcw_memmem16(arg_28);
 
-        if (*(&a7 + 8) & 0x8000)
+        if (*(&param_7 + 8) & 0x8000)
         {
             result = -(result);
             c1 = false;
         }
     }
 
-    if (a2 & 3)
+    if (param_2 & 3)
     {
-        if (a2 & 1)
+        if (param_2 & 1)
         {
             int16_t x87status_4;
             char f0_8;
-            f0_8 = __fnstcw_memmem16(a3);
+            f0_8 = __fnstcw_memmem16(param_3);
             arg_28 = f0_8;
             int16_t x87control_1;
             int16_t x87status_5;
@@ -145,11 +145,11 @@ long double __convention("regparm") Camera_UpdateViewCone_16(int32_t a1, int32_t
         int16_t x87status_7;
         char f0_11;
         f0_11 = __fnstenv_memmem28();
-        uint224_t v_28_1 = f0_11;
-        *(&v_28_1 + 4) &= 0xbcff;
-        *(&v_28_1 + 4) |= ((c0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9 | (c2_3 ? 1 : 0) << 0xa
+        uint224_t item_28_1 = f0_11;
+        *(&item_28_1 + 4) &= 0xbcff;
+        *(&item_28_1 + 4) |= ((c0 ? 1 : 0) << 8 | (c1 ? 1 : 0) << 9 | (c2_3 ? 1 : 0) << 0xa
             | (c3 ? 1 : 0) << 0xe | 0x3000) & 0x4300;
-        __fldenv_memmem28(v_28_1);
+        __fldenv_memmem28(item_28_1);
     }
 
     return result;

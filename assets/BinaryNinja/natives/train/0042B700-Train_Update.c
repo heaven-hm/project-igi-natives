@@ -1,66 +1,66 @@
 // Original IGI.EXE function: Train_Update (VA 0x0042B700; static CFG gate PASS, CFG score 1.000).
 #include "Train_Update.h"
-uint32_t Train_Update(int80_t a1 @ fp0, void* a2)
+uint32_t Train_Update(long double context , void* param_2)
 
 {
-    void* dstD = a2;
+    void* dest_val = param_2;
     uint32_t result = Frames_GetUpdateCounter();
 
-    if (*(dstD + 0x888) != result)
+    if (*(dest_val + 0x888) != result)
     {
-        *(dstD + 0x888) = Frames_GetUpdateCounter();
-        char valA1 = Script_FormatString_6(dstD + 0x890);
+        *(dest_val + 0x888) = Frames_GetUpdateCounter();
+        char data_1 = Script_FormatString_6(dest_val + 0x890);
         int16_t idx;
 
-        if (valA1)
+        if (data_1)
         {
-            Script_SpawnNewTask_7(dstD + 0x890, dstD);
+            Script_SpawnNewTask_7(dest_val + 0x890, dest_val);
             idx = 1;
         }
 
-        if (valA1 && !a1)
+        if (data_1 && !context)
         {
-            int32_t* valA7 = *(dstD + 0x88c);
+            int32_t* data_7 = *(dest_val + 0x88c);
 
-            if (valA7)
+            if (data_7)
             {
-                QTask_FindType(valA7);
-                *(dstD + 0x88c) = 0;
+                QTask_FindType(data_7);
+                *(dest_val + 0x88c) = 0;
             }
         }
-        else if (!*(dstD + 0x88c))
+        else if (!*(dest_val + 0x88c))
         {
-            char* valA5 = "train_loop_1";
+            char* data_5 = "train_loop_1";
 
-            if (!*(dstD + 0x778))
-                valA5 = "train_loop_2";
+            if (!*(dest_val + 0x778))
+                data_5 = "train_loop_2";
 
-            struct status_msg* valA6 = SoundSys_SetMasterVolume_7(dstD, valA5);
+            struct status_msg* data_6 = SoundSys_SetMasterVolume_7(dest_val, data_5);
 
-            if (valA6)
-                *(dstD + 0x88c) = valA6;
+            if (data_6)
+                *(dest_val + 0x88c) = data_6;
         }
 
-        void* objC1 = *(dstD + 0x884);
+        void* entity_1 = *(dest_val + 0x884);
 
-        if (objC1)
+        if (entity_1)
         {
-            void* valA8 = *(dstD + 0x14);
+            void* data_8 = *(dest_val + 0x14);
             int16_t top_1;
 
-            if (*(valA8 + 0x1c) != g_57bcb8)
+            if (*(data_8 + 0x1c) != g_57bcb8)
             {
 🚫🚫                top_1 = idx - 1;
-                /* unimplemented  {fld fp0, dword [dstD+0x720]} */
+                /* unimplemented  {fld fp0, dword [dest_val+0x720]} */
 🚫🚫                /* unimplemented  {fmul fp0, dword [&g_5336d0]} */
-                a2 = *(dstD + 0x720);
+                param_2 = *(dest_val + 0x720);
             }
             else
             {
 🚫🚫                top_1 = idx - 1;
-                /* unimplemented  {fld fp0, dword [valA+0x720]} */
+                /* unimplemented  {fld fp0, dword [data_val+0x720]} */
 🚫🚫                /* unimplemented  {fmul fp0, dword [&g_5336d0]} */
-                a2 = *(valA8 + 0x720);
+                param_2 = *(data_8 + 0x720);
             }
 
 🚫🚫            /* unimplemented  {fld fp0, dword [&g_5336cc]} */
@@ -115,9 +115,9 @@ uint32_t Train_Update(int80_t a1 @ fp0, void* a2)
                 /* unimplemented  {fld fp0, dword [&g_5336cc]} */
             }
 
-🚫🚫🚫            *(objC1 + 4) =
-            /* unimplemented  {fstp dword [objC+0x4], fp0} */
-🚫🚫            /* unimplemented  {fld fp0, dword [esp+0x14]} */
+🚫🚫🚫            *(entity_1 + 4) =
+            /* unimplemented  {fstp dword [entity_val+0x4], fp0} */
+🚫🚫            /* unimplemented  {fld fp0, dword [stack_ptr+0x14]} */
 ⋯            long double f1_1 = 0.00100000005f;
             /* unimplemented  {fcomp fp0, dword [&g_5336c0]} f- f1_1 */ - f1_1;
             bool c0_3 = /* bool c0_3 =
@@ -128,19 +128,19 @@ uint32_t Train_Update(int80_t a1 @ fp0, void* a2)
             bool c3_3 = /* bool c3_3 =
                 unimplemented  {fcomp fp0, dword [&g_5336c0]} f== f1_1 */ == f1_1;
             /* unimplemented  {fcomp fp0, dword [&g_5336c0]} */
-            a2 = 1;
+            param_2 = 1;
 
             if (*(&((c0_3 ? 1 : 0) << 8 | (c2_3 ? 1 : 0) << 0xa | (c3_3 ? 1 : 0) << 0xe
                     | ((top_5 + 1) & 7) << 0xb) + 1) & 0x41)
-                a2 = nullptr;
+                param_2 = nullptr;
 
-🚫🚫            /* unimplemented  {fild fp0, dword [esp+0x14]} */
-🚫🚫🚫            *(*(dstD + 0x884) + 8) = /* *(*(dstD + 0x884) + 8) =
-                unimplemented  {fstp dword [valA+0x8], fp0} */;
-            /* unimplemented  {fstp dword [valA+0x8], fp0} */
+🚫🚫            /* unimplemented  {fild fp0, dword [stack_ptr+0x14]} */
+🚫🚫🚫            *(*(dest_val + 0x884) + 8) = /* *(*(dest_val + 0x884) + 8) =
+                unimplemented  {fstp dword [data_val+0x8], fp0} */;
+            /* unimplemented  {fstp dword [data_val+0x8], fp0} */
         }
 
-        int32_t* i = *(dstD + 8);
+        int32_t* i = *(dest_val + 8);
 
         if (!*i || !i)
             result = g_afa7e0;
@@ -150,74 +150,74 @@ uint32_t Train_Update(int80_t a1 @ fp0, void* a2)
 
             do
             {
-                int32_t* srcS2 = *i;
-                void* objC5;
+                int32_t* source_2 = *i;
+                void* entity_5;
 
-                if (!srcS2)
-                    objC5 = nullptr;
+                if (!source_2)
+                    entity_5 = nullptr;
                 else
                 {
-                    int32_t objC2 = *srcS2;
-                    int32_t objC3 = -(objC2);
-                    objC5 = (objC3 - objC3) & srcS2;
+                    int32_t entity_2 = *source_2;
+                    int32_t entity_3 = -(entity_2);
+                    entity_5 = (entity_3 - entity_3) & source_2;
                 }
 
-                *((result << 2) + &g_afa6e0) = objC5;
-                int32_t valA11 = result + 1;
-                int32_t objC6 = 0;
-                g_afa7e0 = valA11;
-                objC6 = i[7];
-                int32_t objC7 = *((objC6 << 2) + &g_a970e0);
+                *((result << 2) + &g_afa6e0) = entity_5;
+                int32_t data_11 = result + 1;
+                int32_t entity_6 = 0;
+                g_afa7e0 = data_11;
+                entity_6 = i[7];
+                int32_t entity_7 = *((entity_6 << 2) + &g_a970e0);
 
-                if (objC7)
+                if (entity_7)
                 {
-                    objC7(i);
-                    valA11 = g_afa7e0;
+                    entity_7(i);
+                    data_11 = g_afa7e0;
                 }
 
-                i = *((valA11 << 2) + &g_afa6dc);
-                result = valA11 - 1;
+                i = *((data_11 << 2) + &g_afa6dc);
+                result = data_11 - 1;
                 g_afa7e0 = result;
             } while (i);
         }
 
-        void* objC8 = *(dstD + 0xe8);
+        void* entity_8 = *(dest_val + 0xe8);
 
-        if (objC8 && !*(dstD + 0x778))
+        if (entity_8 && !*(dest_val + 0x778))
         {
-            int32_t* i_1 = *(objC8 + 8);
+            int32_t* i_1 = *(entity_8 + 8);
 
             if (*i_1 && i_1)
             {
                 do
                 {
-                    int32_t* srcS3 = *i_1;
-                    void* objC12;
+                    int32_t* source_3 = *i_1;
+                    void* entity_12;
 
-                    if (!srcS3)
-                        objC12 = nullptr;
+                    if (!source_3)
+                        entity_12 = nullptr;
                     else
                     {
-                        int32_t objC9 = *srcS3;
-                        int32_t objC10 = -(objC9);
-                        objC12 = (objC10 - objC10) & srcS3;
+                        int32_t entity_9 = *source_3;
+                        int32_t entity_10 = -(entity_9);
+                        entity_12 = (entity_10 - entity_10) & source_3;
                     }
 
-                    *((result << 2) + &g_afa6e0) = objC12;
-                    int32_t valA12 = result + 1;
-                    int32_t objC13 = 0;
-                    g_afa7e0 = valA12;
-                    objC13 = i_1[7];
-                    int32_t objC14 = *((objC13 << 2) + &g_a970e0);
+                    *((result << 2) + &g_afa6e0) = entity_12;
+                    int32_t data_12 = result + 1;
+                    int32_t entity_13 = 0;
+                    g_afa7e0 = data_12;
+                    entity_13 = i_1[7];
+                    int32_t entity_14 = *((entity_13 << 2) + &g_a970e0);
 
-                    if (objC14)
+                    if (entity_14)
                     {
-                        objC14(i_1);
-                        valA12 = g_afa7e0;
+                        entity_14(i_1);
+                        data_12 = g_afa7e0;
                     }
 
-                    i_1 = *((valA12 << 2) + &g_afa6dc);
-                    result = valA12 - 1;
+                    i_1 = *((data_12 << 2) + &g_afa6dc);
+                    result = data_12 - 1;
                     g_afa7e0 = result;
                 } while (i_1);
             }

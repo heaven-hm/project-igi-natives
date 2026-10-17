@@ -1,29 +1,29 @@
 // Original IGI.EXE function: Level_CheckQTaskID_5 (VA 0x00416C90; static CFG gate PASS, CFG score 1.000).
 #include "Level_CheckQTaskID_5.h"
-long double Level_CheckQTaskID_5(float a1, double* a2 @ 0xc, float a3)
+long double Level_CheckQTaskID_5(float context, double* param_2 , float param_3)
 
 {
-    float srcS = a1;
-    double* valA = *(srcS + 4);
-    double v_18 = *valA - *a2;
-    double v_10 = valA[1] - a2[1];
-    double v_8 = valA[2] - a2[2];
-    long double x87_r7_8 = Sys_OpenFileStream_11(&v_18) - a3 - *(srcS + 0xc);
-    a1 = x87_r7_8;
-    long double f0 = 0f;
-    x87_r7_8 - f0;
+    float source_val = context;
+    double* data_val = *(source_val + 4);
+    double item_18 = *data_val - *param_2;
+    double item_10 = data_val[1] - param_2[1];
+    double item_8 = data_val[2] - param_2[2];
+    long double fpu_val_7_8 = Sys_OpenFileStream_11(&item_18) - param_3 - *(source_val + 0xc);
+    context = fpu_val_7_8;
+    long double f0 = 0.0f;
+    fpu_val_7_8 - f0;
 
-    if (*(&((x87_r7_8 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_8, f0) ? 1 : 0) << 0xa
-            | (x87_r7_8 == f0 ? 1 : 0) << 0xe) + 1) & 1)
-        return *(srcS + 8);
+    if (*(&((fpu_val_7_8 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_8, f0) ? 1 : 0) << 0xa
+            | (fpu_val_7_8 == f0 ? 1 : 0) << 0xe) + 1) & 1)
+        return *(source_val + 8);
 
-    long double x87_r7_10 = a1;
-    long double f1 = *(srcS + 0x10);
-    x87_r7_10 - f1;
+    long double fpu_val_7_10 = context;
+    long double f1 = *(source_val + 0x10);
+    fpu_val_7_10 - f1;
 
-    if (!(*(&((x87_r7_10 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_10, f1) ? 1 : 0) << 0xa
-            | (x87_r7_10 == f1 ? 1 : 0) << 0xe) + 1) & 1))
-        return 0f;
+    if (!(*(&((fpu_val_7_10 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_10, f1) ? 1 : 0) << 0xa
+            | (fpu_val_7_10 == f1 ? 1 : 0) << 0xe) + 1) & 1))
+        return 0.0f;
 
-    return (*(srcS + 0x10) - a1) * *(srcS + 8) / *(srcS + 0x10);
+    return (*(source_val + 0x10) - context) * *(source_val + 8) / *(source_val + 0x10);
 }

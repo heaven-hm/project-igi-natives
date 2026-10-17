@@ -1,11 +1,11 @@
 // Original IGI.EXE function: Script_FormatString_31 (VA 0x004FE730; static CFG gate PASS, CFG score 1.000).
 #include "Script_FormatString_31.h"
-int32_t* Script_FormatString_31(void* a1, char* a2)
+int32_t* Script_FormatString_31(void* context, char* param_2)
 
 {
-    int32_t ctxB;
-    int32_t v_4 = ctxB;
-    int32_t* result_1 = *(a1 + 8);
+    int32_t context_val;
+    int32_t item_4 = context_val;
+    int32_t* result_1 = *(context + 8);
 
     if (*result_1)
     {
@@ -15,56 +15,56 @@ int32_t* Script_FormatString_31(void* a1, char* a2)
         {
             while (true)
             {
-                int32_t tmpD;
-                tmpD = result[7];
-                char valA;
-                int16_t objC;
-                valA = TaskType_IsDerivedFrom(tmpD, g_a7a4fc);
+                int32_t temp_val;
+                temp_val = result[7];
+                char data_val;
+                int16_t entity_val;
+                data_val = TaskType_IsDerivedFrom(temp_val, g_a7a4fc);
 
-                if (valA)
+                if (data_val)
                 {
-                    char* srcS1 = a2;
-                    char* valA1 = &result[8];
-                    int32_t valA3;
+                    char* source_1 = param_2;
+                    char* data_1 = &result[8];
+                    int32_t data_3;
 
                     while (true)
                     {
-                        tmpD = *valA1;
-                        char ctxB1 = *srcS1;
-                        objC = tmpD;
-                        bool c_1 = tmpD < ctxB1;
+                        temp_val = *data_1;
+                        char context_1 = *source_1;
+                        entity_val = temp_val;
+                        bool c_1 = temp_val < context_1;
 
-                        if (tmpD == ctxB1)
+                        if (temp_val == context_1)
                         {
-                            if (!objC)
+                            if (!entity_val)
                             {
-                                valA3 = 0;
+                                data_3 = 0;
                                 break;
                             }
 
-                            tmpD = valA1[1];
-                            ctxB1 = srcS1[1];
-                            objC = tmpD;
-                            c_1 = tmpD < ctxB1;
+                            temp_val = data_1[1];
+                            context_1 = source_1[1];
+                            entity_val = temp_val;
+                            c_1 = temp_val < context_1;
 
-                            if (tmpD == ctxB1)
+                            if (temp_val == context_1)
                             {
-                                valA1 = &valA1[2];
-                                srcS1 = &srcS1[2];
+                                data_1 = &data_1[2];
+                                source_1 = &source_1[2];
 
-                                if (objC)
+                                if (entity_val)
                                     continue;
 
-                                valA3 = 0;
+                                data_3 = 0;
                                 break;
                             }
                         }
 
-                        valA3 = valA1 - valA1 + 1;
+                        data_3 = data_1 - data_1 + 1;
                         break;
                     }
 
-                    if (!valA3)
+                    if (!data_3)
                         return result;
                 }
 

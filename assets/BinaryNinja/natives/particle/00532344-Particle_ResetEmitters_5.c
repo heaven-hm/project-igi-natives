@@ -1,26 +1,26 @@
 // Original IGI.EXE function: Particle_ResetEmitters_5 (VA 0x00532344; static CFG gate PASS, CFG score 1.000).
 #include "Particle_ResetEmitters_5.h"
-char* Particle_ResetEmitters_5(char* a1, char* a2, int32_t a3, int32_t a4)
+char* Particle_ResetEmitters_5(char* context, char* param_2, int32_t param_3, int32_t param_4)
 
 {
-    char* result = a1;
-    char* dstD = a2;
+    char* result = context;
+    char* dest_val = param_2;
 
-    if (dstD > result)
+    if (dest_val > result)
     {
         do
         {
-            char* i_1 = a1;
+            char* i_1 = context;
 
-            for (char* i = &result[a3]; i <= dstD; i = &i[a3])
+            for (char* i = &result[param_3]; i <= dest_val; i = &i[param_3])
             {
-                if (a4(i, i_1) > 0)
+                if (param_4(i, i_1) > 0)
                     i_1 = i;
             }
 
-            result = Particle_EmitParticles_6(i_1, dstD, a3);
-            dstD -= a3;
-        } while (dstD > a1);
+            result = Particle_EmitParticles_6(i_1, dest_val, param_3);
+            dest_val -= param_3;
+        } while (dest_val > context);
     }
 
     return result;

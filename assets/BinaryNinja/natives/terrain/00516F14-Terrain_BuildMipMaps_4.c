@@ -1,54 +1,54 @@
 // Original IGI.EXE function: Terrain_BuildMipMaps_4 (VA 0x00516F14; static CFG gate FAIL, CFG score 0.778).
 #include "Terrain_BuildMipMaps_4.h"
-char* Terrain_BuildMipMaps_4(char* a1, char* a2, int32_t a3)
+char* Terrain_BuildMipMaps_4(char* context, char* param_2, int32_t param_3)
 
 {
-    char* dstD = a1;
-    a1 = dstD;
+    char* dest_val = context;
+    context = dest_val;
 
     if (!g_c3221c)
-        return Camera_ApplyLineFilter_5(dstD, a2, a3);
+        return Camera_ApplyLineFilter_5(dest_val, param_2, param_3);
 
-    int32_t i = a3;
+    int32_t i = param_3;
 
     if (i)
     {
-        char* objC1 = a2;
+        char* entity_1 = param_2;
 
         do
         {
-            char valA2 = *objC1;
+            char data_2 = *entity_1;
             i -= 1;
-            bool cond_2_1 = !(*(valA2 + 0xc32321) & 4);
-            *dstD = valA2;
+            bool flag_2_1 = !(*(data_2 + 0xc32321) & 4);
+            *dest_val = data_2;
 
-            if (cond_2_1)
+            if (flag_2_1)
             {
-                dstD = &dstD[1];
-                objC1 = &objC1[1];
+                dest_val = &dest_val[1];
+                entity_1 = &entity_1[1];
 
-                if (!valA2)
+                if (!data_2)
                     break;
             }
             else
             {
-                dstD = &dstD[1];
+                dest_val = &dest_val[1];
 
                 if (!i)
                 {
-                    dstD[0xffffffff] = 0;
+                    dest_val[0xffffffff] = 0;
                     break;
                 }
 
-                valA2 = objC1[1];
+                data_2 = entity_1[1];
                 i -= 1;
-                *dstD = valA2;
-                dstD = &dstD[1];
-                objC1 = &objC1[2];
+                *dest_val = data_2;
+                dest_val = &dest_val[1];
+                entity_1 = &entity_1[2];
 
-                if (!valA2)
+                if (!data_2)
                 {
-                    dstD[0xfffffffe] = 0;
+                    dest_val[0xfffffffe] = 0;
                     break;
                 }
             }
@@ -56,7 +56,7 @@ char* Terrain_BuildMipMaps_4(char* a1, char* a2, int32_t a3)
     }
 
     if (i)
-        __builtin_memset(__builtin_memset(dstD, 0, i & 0xfffffffc), 0, i & 3);
+        memset(memset(dest_val, 0, i & 0xfffffffc), 0, i & 3);
 
-    return a1;
+    return context;
 }

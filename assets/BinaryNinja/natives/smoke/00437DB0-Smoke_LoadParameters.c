@@ -1,75 +1,75 @@
 // Original IGI.EXE function: Smoke_LoadParameters (VA 0x00437DB0; static CFG gate PASS, CFG score 0.958).
 #include "Smoke_LoadParameters.h"
-int32_t Smoke_LoadParameters(long double a1 @ fp0, void* a2)
+int32_t Smoke_LoadParameters(long double context , void* param_2)
 
 {
-    double v_20;
-    double v_10;
+    double item_20;
+    double item_10;
     int16_t idx;
 
-    if (*(a2 + 0x171) && *(a2 + 0x170))
+    if (*(param_2 + 0x171) && *(param_2 + 0x170))
     {
-        void* objC1 = *(a2 + 0xf4);
-        v_20 = *(a2 + 0x40) - *(a2 + 0x58);
-        double v_18_1 = *(a2 + 0x48) - *(a2 + 0x60);
-        v_10 = *(a2 + 0x50) - *(a2 + 0x68);
+        void* entity_1 = *(param_2 + 0xf4);
+        item_20 = *(param_2 + 0x40) - *(param_2 + 0x58);
+        double item_18_1 = *(param_2 + 0x48) - *(param_2 + 0x60);
+        item_10 = *(param_2 + 0x50) - *(param_2 + 0x68);
         idx = 0;
-        Script_ExecuteLevelScript_31(objC1, &v_20);
+        Script_ExecuteLevelScript_31(entity_1, &item_20);
     }
 
-    *(a2 + 0x171) = 1;
-    memcpy(a2 + 0x58, a2 + 0x40, 0x18);
-    int32_t* i = *(a2 + 8);
+    *(param_2 + 0x171) = 1;
+    memcpy(param_2 + 0x58, param_2 + 0x40, 0x18);
+    int32_t* i = *(param_2 + 8);
 
     if (*i && i)
     {
-        int32_t tmpD1 = g_afa7e0;
+        int32_t temp_1 = g_afa7e0;
 
         do
         {
-            int32_t* srcS1 = *i;
-            void* valA4;
+            int32_t* source_1 = *i;
+            void* data_4;
 
-            if (!srcS1)
-                valA4 = nullptr;
+            if (!source_1)
+                data_4 = nullptr;
             else
             {
-                int32_t valA1 = *srcS1;
-                int32_t valA2 = -(valA1);
-                valA4 = (valA2 - valA2) & srcS1;
+                int32_t data_1 = *source_1;
+                int32_t data_2 = -(data_1);
+                data_4 = (data_2 - data_2) & source_1;
             }
 
-            *((tmpD1 << 2) + &g_afa6e0) = valA4;
-            int32_t tmpD2 = tmpD1 + 1;
-            int32_t valA5 = 0;
-            g_afa7e0 = tmpD2;
-            valA5 = i[7];
-            int32_t valA6 = *((valA5 << 2) + &g_a970e0);
+            *((temp_1 << 2) + &g_afa6e0) = data_4;
+            int32_t temp_2 = temp_1 + 1;
+            int32_t data_5 = 0;
+            g_afa7e0 = temp_2;
+            data_5 = i[7];
+            int32_t data_6 = *((data_5 << 2) + &g_a970e0);
 
-            if (valA6)
+            if (data_6)
             {
-                valA6(i);
-                tmpD2 = g_afa7e0;
+                data_6(i);
+                temp_2 = g_afa7e0;
             }
 
-            i = *((tmpD2 << 2) + &g_afa6dc);
-            tmpD1 = tmpD2 - 1;
-            g_afa7e0 = tmpD1;
+            i = *((temp_2 << 2) + &g_afa6dc);
+            temp_1 = temp_2 - 1;
+            g_afa7e0 = temp_1;
         } while (i);
     }
 
-    if (Script_FormatString_6(a2 + 0xa4))
+    if (Script_FormatString_6(param_2 + 0xa4))
     {
-        Script_SpawnNewTask_7(a2 + 0xa4, a2);
-        *(a2 + 0x98) = a1;
+        Script_SpawnNewTask_7(param_2 + 0xa4, param_2);
+        *(param_2 + 0x98) = context;
         idx = 1;
     }
 
-🚫🚫    /* unimplemented  {fld fp0, qword [ctxB+0x98]} */
-🚫🚫    /* unimplemented  {fadd dword [ctxB+0xa0]} */
-    void* dstD1 = *(a2 + 0xf4);
-🚫🚫    *(a2 + 0xa0) =
-⋯    long double f0 = 30f;
+🚫🚫    /* unimplemented  {fld fp0, qword [context_val+0x98]} */
+🚫🚫    /* unimplemented  {fadd dword [context_val+0xa0]} */
+    void* dest_1 = *(param_2 + 0xf4);
+🚫🚫    *(param_2 + 0xa0) =
+⋯    long double f0 = 30.0f;
     /* unimplemented  {fcomp fp0, dword [&g_5333bc]} f- f0 */ - f0;
     bool c0 = /* bool c0 = unimplemented  {fcomp fp0, dword [&g_5333bc]} f< f0 */ < f0;
     bool c2 = FCMP_UO(/* bool c2 =
@@ -84,75 +84,75 @@ int32_t Smoke_LoadParameters(long double a1 @ fp0, void* a2)
 🚫🚫        Sys_AllocateMemory_14(0x57bde8);
         /* unimplemented  {call Sys_AllocateMemory_14} */
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_5334a8]} */
-🚫🚫🚫        float v_30_1 = /* float v_30_1 = unimplemented  {fstp dword [esp+0x18], fp0} */;
-        /* unimplemented  {fstp dword [esp+0x18], fp0} */
+🚫🚫🚫        float item_30_1 = /* float item_30_1 = unimplemented  {fstp dword [stack_ptr+0x18], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr+0x18], fp0} */
 🚫🚫        Sys_AllocateMemory_14(0x57bde8);
         /* unimplemented  {call Sys_AllocateMemory_14} */
-🚫🚫        /* unimplemented  {fmul fp0, dword [ctxB+0x94]} */
+🚫🚫        /* unimplemented  {fmul fp0, dword [context_val+0x94]} */
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_5333b8]} */
-🚫🚫🚫        int32_t v_2c_1 = /* int32_t v_2c_1 = unimplemented  {fstp dword [esp+0x20], fp0} */;
-        /* unimplemented  {fstp dword [esp+0x20], fp0} */
+🚫🚫🚫        int32_t item_2c_1 = /* int32_t item_2c_1 = unimplemented  {fstp dword [stack_ptr+0x20], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr+0x20], fp0} */
 🚫🚫        Sys_AllocateMemory_14(0x57bde8);
         /* unimplemented  {call Sys_AllocateMemory_14} */
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0x11c]} */
-🚫🚫        /* unimplemented  {fsub fp0, dword [ctxB+0x120]} */
-        int32_t valA7 = *(a2 + 0x124);
-        int32_t v_24_1 = valA7;
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0x11c]} */
+🚫🚫        /* unimplemented  {fsub fp0, dword [context_val+0x120]} */
+        int32_t data_7 = *(param_2 + 0x124);
+        int32_t item_24_1 = data_7;
 🚫🚫🚫        /* unimplemented  {fmulp fp1, fp0} */
         /* unimplemented  {fmulp fp1, fp0} */
-        v_10 = *(a2 + 0x50);
-        *(&v_10 + 4) = *(a2 + 0x54);
-🚫🚫        /* unimplemented  {fadd dword [ctxB+0x120]} */
-🚫🚫        /* unimplemented  {fld fp0, dword [esp+0x10]} */
+        item_10 = *(param_2 + 0x50);
+        *(&item_10 + 4) = *(param_2 + 0x54);
+🚫🚫        /* unimplemented  {fadd dword [context_val+0x120]} */
+🚫🚫        /* unimplemented  {fld fp0, dword [stack_ptr+0x10]} */
 🚫🚫🚫        long double fp0_1;
         bool c1_1;
         bool c2_1;
         fp0_1 = __fcos(/* fp0_1, c1_1, c2_1 = __fcos(unimplemented  {fcos }) */);
         /* unimplemented  {fcos } */
-🚫🚫        /* unimplemented  {fmul fp0, dword [esp+0x14]} */
-🚫🚫        /* unimplemented  {fadd qword [ctxB+0x40]} */
-🚫🚫🚫        v_20 = /* v_20 = unimplemented  {fstp qword [esp+0x20], fp0} */;
-        /* unimplemented  {fstp qword [esp+0x20], fp0} */
-🚫🚫        /* unimplemented  {fld fp0, dword [esp+0x10]} */
+🚫🚫        /* unimplemented  {fmul fp0, dword [stack_ptr+0x14]} */
+🚫🚫        /* unimplemented  {fadd qword [context_val+0x40]} */
+🚫🚫🚫        item_20 = /* item_20 = unimplemented  {fstp qword [stack_ptr+0x20], fp0} */;
+        /* unimplemented  {fstp qword [stack_ptr+0x20], fp0} */
+🚫🚫        /* unimplemented  {fld fp0, dword [stack_ptr+0x10]} */
 🚫🚫🚫        long double fp0_2;
         bool c1_2;
         bool c2_2;
         fp0_2 = __fsin(/* fp0_2, c1_2, c2_2 = __fsin(unimplemented  {fsin }) */);
         /* unimplemented  {fsin } */
-🚫🚫        /* unimplemented  {fmul fp0, dword [esp+0x14]} */
-🚫🚫        /* unimplemented  {fadd qword [ctxB+0x48]} */
-🚫🚫🚫        double v_18_2 = /* double v_18_2 = unimplemented  {fstp qword [esp+0x28], fp0} */;
-        /* unimplemented  {fstp qword [esp+0x28], fp0} */
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0x100]} */
+🚫🚫        /* unimplemented  {fmul fp0, dword [stack_ptr+0x14]} */
+🚫🚫        /* unimplemented  {fadd qword [context_val+0x48]} */
+🚫🚫🚫        double item_18_2 = /* double item_18_2 = unimplemented  {fstp qword [stack_ptr+0x28], fp0} */;
+        /* unimplemented  {fstp qword [stack_ptr+0x28], fp0} */
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0x100]} */
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_5333bc]} */
-🚫🚫        /* unimplemented  {fdiv fp0, dword [esp+0x1c]} */
-🚫🚫🚫        v_2c_1 = /* v_2c_1.q = unimplemented  {fistp qword [esp+0x14], fp0} */;
-        /* unimplemented  {fistp qword [esp+0x14], fp0} */
-        int32_t objC3 = v_2c_1;
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0xfc]} */
+🚫🚫        /* unimplemented  {fdiv fp0, dword [stack_ptr+0x1c]} */
+🚫🚫🚫        item_2c_1 = /* item_2c_1.q = unimplemented  {fistp qword [stack_ptr+0x14], fp0} */;
+        /* unimplemented  {fistp qword [stack_ptr+0x14], fp0} */
+        int32_t entity_3 = item_2c_1;
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0xfc]} */
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_5333bc]} */
-🚫🚫🚫        v_2c_1 = /* v_2c_1.q = unimplemented  {fistp qword [esp+0x18], fp0} */;
-        /* unimplemented  {fistp qword [esp+0x18], fp0} */
-        int32_t v_54_1 = objC3;
+🚫🚫🚫        item_2c_1 = /* item_2c_1.q = unimplemented  {fistp qword [stack_ptr+0x18], fp0} */;
+        /* unimplemented  {fistp qword [stack_ptr+0x18], fp0} */
+        int32_t item_54_1 = entity_3;
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_533678]} */
-🚫🚫🚫        float v_54_2 = /* float v_54_2 = unimplemented  {fstp dword [esp], fp0} */;
-        /* unimplemented  {fstp dword [esp], fp0} */
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0x88]} */
+🚫🚫🚫        float item_54_2 = /* float item_54_2 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr], fp0} */
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0x88]} */
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_5337e8]} */
-        int32_t v_5c_1 = objC3;
-🚫🚫🚫        float v_5c_2 = /* float v_5c_2 = unimplemented  {fstp dword [esp], fp0} */;
-        /* unimplemented  {fstp dword [esp], fp0} */
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0x8c]} */
+        int32_t item_5c_1 = entity_3;
+🚫🚫🚫        float item_5c_2 = /* float item_5c_2 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr], fp0} */
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0x8c]} */
 🚫🚫        /* unimplemented  {fmul fp0, dword [&g_5337e8]} */
-        int32_t v_60_1 = objC3;
-🚫🚫🚫        float v_60_2 = /* float v_60_2 = unimplemented  {fstp dword [esp], fp0} */;
-        /* unimplemented  {fstp dword [esp], fp0} */
-        Script_ParseEnumInt32_31(dstD1, &v_20, a2 + 0x70, *(a2 + 0x90), v_60_2, v_5c_2, valA7,
-            v_54_2, 0, 0x3f800000, v_2c_1, objC3);
-🚫🚫        /* unimplemented  {fld fp0, dword [ctxB+0xa0]} */
+        int32_t item_60_1 = entity_3;
+🚫🚫🚫        float item_60_2 = /* float item_60_2 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+        /* unimplemented  {fstp dword [stack_ptr], fp0} */
+        Script_ParseEnumInt32_31(dest_1, &item_20, param_2 + 0x70, *(param_2 + 0x90), item_60_2, item_5c_2, data_7,
+            item_54_2, 0, 0x3f800000, item_2c_1, entity_3);
+🚫🚫        /* unimplemented  {fld fp0, dword [context_val+0xa0]} */
 🚫🚫        /* unimplemented  {fsub fp0, dword [&g_5333bc]} */
-🚫🚫        *(a2 + 0xa0) =
-⋯        long double f1_1 = 30f;
+🚫🚫        *(param_2 + 0xa0) =
+⋯        long double f1_1 = 30.0f;
         /* unimplemented  {fcomp fp0, dword [&g_5333bc]} f- f1_1 */ - f1_1;
         bool c0_1 = /* bool c0_1 =
             unimplemented  {fcomp fp0, dword [&g_5333bc]} f< f1_1 */ < f1_1;

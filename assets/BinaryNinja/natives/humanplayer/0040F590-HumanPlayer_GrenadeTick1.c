@@ -1,41 +1,41 @@
 // Original IGI.EXE function: HumanPlayer_GrenadeTick1 (VA 0x0040F590; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_GrenadeTick1.h"
-struct status_msg* HumanPlayer_GrenadeTick1(void* a1, void* a2)
+struct status_msg* HumanPlayer_GrenadeTick1(void* context, void* param_2)
 
 {
-    void* dstD = *(a2 + 0x4ec);
-    void* valA1;
-    int32_t objC;
-    valA1 = Table_GetAt(a2 + 0x4c4, 0);
-    int32_t tmpD;
-    void* valA2 = HumanPlayer_LoadParameters_13(valA1, tmpD, objC, valA1);
-    struct status_msg* result = *(dstD + 0x20c);
+    void* dest_val = *(param_2 + 0x4ec);
+    void* data_1;
+    int32_t entity_val;
+    data_1 = Table_GetAt(param_2 + 0x4c4, 0);
+    int32_t temp_val;
+    void* data_2 = HumanPlayer_LoadParameters_13(data_1, temp_val, entity_val, data_1);
+    struct status_msg* result = *(dest_val + 0x20c);
 
     if (result == 4)
     {
-        void* objC1 = *(a2 + 0x4ec);
-        *(a2 + 0x4d8) = 1;
-        result = SoundSys_SetMasterVolume_7(objC1, "grenade_tick_1");
-        *(a2 + 0x4e4) = result;
+        void* entity_1 = *(param_2 + 0x4ec);
+        *(param_2 + 0x4d8) = 1;
+        result = SoundSys_SetMasterVolume_7(entity_1, "grenade_tick_1");
+        *(param_2 + 0x4e4) = result;
     }
 
-    result = *(a2 + 0x4d8);
+    result = *(param_2 + 0x4d8);
 
     if (result)
-        *(a2 + 0x4e0) += 1;
+        *(param_2 + 0x4e0) += 1;
 
-    if (*(a1 + 8) & 1)
+    if (*(context + 8) & 1)
     {
-        long double x87_r7_1 = *(a2 + 0x1c8);
-        long double f0_1 = 0f;
-        x87_r7_1 - f0_1;
-        result = (x87_r7_1 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f0_1 ? 1 : 0) << 0xe;
+        long double fpu_val_7_1 = *(param_2 + 0x1c8);
+        long double f0_1 = 0.0f;
+        fpu_val_7_1 - f0_1;
+        result = (fpu_val_7_1 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f0_1 ? 1 : 0) << 0xe;
 
         if (*(&result + 1) & 0x40)
         {
-            result = Bones_PlayAnimation(dstD + 0x68, 0, *(valA2 + 0x688), 0, 0f);
-            *(a1 + 0x14) = HumanPlayer_UpdateStamina_8;
+            result = Bones_PlayAnimation(dest_val + 0x68, 0, *(data_2 + 0x688), 0, 0.0f);
+            *(context + 0x14) = HumanPlayer_UpdateStamina_8;
         }
     }
 

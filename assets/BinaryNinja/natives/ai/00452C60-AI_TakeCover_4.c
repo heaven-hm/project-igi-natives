@@ -1,9 +1,9 @@
 // Original IGI.EXE function: AI_TakeCover_4 (VA 0x00452C60; static CFG gate PASS, CFG score 1.000).
 #include "AI_TakeCover_4.h"
-int32_t* AI_TakeCover_4(void* a1, int32_t a2, int32_t a3, int32_t a4)
+int32_t* AI_TakeCover_4(void* context, int32_t param_2, int32_t param_3, int32_t param_4)
 
 {
-    int32_t* result = AI_FireWeapon_4(*(a1 + 0x50), a2);
+    int32_t* result = AI_FireWeapon_4(*(context + 0x50), param_2);
 
     if (!result)
     {
@@ -15,12 +15,12 @@ int32_t* AI_TakeCover_4(void* a1, int32_t a2, int32_t a3, int32_t a4)
             result[1] = 0;
             *result = 0;
             Camera_SetFieldOfView_33(&g_57d768, result);
-            void* valA2 = Script_ExecuteLevelScript_23(a1, a2);
+            void* data_2 = Script_ExecuteLevelScript_23(context, param_2);
             result[4] = 0;
-            result[2] = *(a1 + 0x50);
-            result[3] = a2;
-            result[5] = *(valA2 + 0x28) * 0.5f;
-            result[6] = *(valA2 + 0x28) * 0.5f;
+            result[2] = *(context + 0x50);
+            result[3] = param_2;
+            result[5] = *(data_2 + 0x28) * 0.5f;
+            result[6] = *(data_2 + 0x28) * 0.5f;
         }
 
         if (!*result || !result)
@@ -28,6 +28,6 @@ int32_t* AI_TakeCover_4(void* a1, int32_t a2, int32_t a3, int32_t a4)
     }
 
     result[4] += 1;
-    AI_CheckHearing_4(result, a3, a4, 1);
+    AI_CheckHearing_4(result, param_3, param_4, 1);
     return result;
 }

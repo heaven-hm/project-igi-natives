@@ -1,56 +1,56 @@
 // Original IGI.EXE function: Sys_UnexpectedEndOfFile (VA 0x004BF1F0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnexpectedEndOfFile.h"
-int32_t Sys_UnexpectedEndOfFile(int32_t* a1, void** a2)
+int32_t Sys_UnexpectedEndOfFile(int32_t* context, void** param_2)
 
 {
-    *a2 = 0;
-    int32_t* valA = Mem_Alloc(0x18, 4);
-    int32_t* ctxB = a1;
-    valA[2] = 1;
-    valA[1] = 0;
-    *valA = 0;
-    valA[3] = &valA[4];
-    valA[5] = &valA[3];
-    valA[4] = 0;
+    *param_2 = 0;
+    int32_t* data_val = Mem_Alloc(0x18, 4);
+    int32_t* context_val = context;
+    data_val[2] = 1;
+    data_val[1] = 0;
+    *data_val = 0;
+    data_val[3] = &data_val[4];
+    data_val[5] = &data_val[3];
+    data_val[4] = 0;
 
-    if (Sys_While(ctxB) != 1)
-        a1 = 1;
+    if (Sys_While(context_val) != 1)
+        context = 1;
     else
     {
-        if (!Sys_CloseFileStream_31(ctxB, &ctxB[2]))
+        if (!Sys_CloseFileStream_31(context_val, &context_val[2]))
         {
             Sys_FreeMemory_22("Unexpected end of file.");
-            Sys_UnknownBlockType(valA);
+            Sys_UnknownBlockType(data_val);
             return 0;
         }
 
-        a1 = nullptr;
+        context = nullptr;
     }
 
     while (true)
     {
-        int32_t valA5 = Sys_While(ctxB);
-        char* v_4;
+        int32_t data_5 = Sys_While(context_val);
+        char* item_4;
 
-        if (!valA5)
+        if (!data_5)
         {
-            if (Sys_ResolveSymbol_24(ctxB, &v_4, 0, 0))
+            if (Sys_ResolveSymbol_24(context_val, &item_4, 0, 0))
             {
-                int32_t* valA9 = Mem_Alloc(0x10, 4);
-                valA9[2] = 7;
-                valA9[1] = 0;
-                *valA9 = 0;
-                valA9[3] = v_4;
-                Camera_SetFieldOfView_33(&valA[3], valA9);
+                int32_t* data_9 = Mem_Alloc(0x10, 4);
+                data_9[2] = 7;
+                data_9[1] = 0;
+                *data_9 = 0;
+                data_9[3] = item_4;
+                Camera_SetFieldOfView_33(&data_val[3], data_9);
             label_4bf2eb:
 
-                if (a1)
+                if (context)
                 {
-                    *a2 = valA;
+                    *param_2 = data_val;
                     return 1;
                 }
 
-                if (Sys_CloseFileStream_31(ctxB, &ctxB[2]))
+                if (Sys_CloseFileStream_31(context_val, &context_val[2]))
                     continue;
 
                 Sys_FreeMemory_22("Unexpected end of file.");
@@ -60,29 +60,29 @@ int32_t Sys_UnexpectedEndOfFile(int32_t* a1, void** a2)
         }
         else
         {
-            if (valA5 == 2)
+            if (data_5 == 2)
                 break;
 
-            void** v_8;
+            void** item_8;
 
-            if (Sys_SyntaxErrorInLineD(ctxB, &v_8))
+            if (Sys_SyntaxErrorInLineD(context_val, &item_8))
             {
-                Camera_SetFieldOfView_33(&valA[3], v_8);
+                Camera_SetFieldOfView_33(&data_val[3], item_8);
                 goto label_4bf2eb;
             }
         }
-        Sys_UnknownBlockType(valA);
+        Sys_UnknownBlockType(data_val);
         return 0;
     }
 
-    if (!a1)
+    if (!context)
     {
-        *a2 = valA;
+        *param_2 = data_val;
         return 1;
     }
 
-    int32_t v_20_6 = Sys_AllocateMemory_31(ctxB);
+    int32_t item_20_6 = Sys_AllocateMemory_31(context_val);
     Sys_FreeMemory_22("Unexpected '}' in line %d");
-    Sys_UnknownBlockType(valA);
+    Sys_UnknownBlockType(data_val);
     return 0;
 }

@@ -1,53 +1,53 @@
 // Original IGI.EXE function: Weapon_ComputeAccuracy_9 (VA 0x0047E9A0; static CFG gate PASS, CFG score 0.967).
 #include "Weapon_ComputeAccuracy_9.h"
-struct status_msg* Weapon_ComputeAccuracy_9(int32_t* a1, int32_t* a2, uint32_t a3, uint32_t a4)
+struct status_msg* Weapon_ComputeAccuracy_9(int32_t* context, int32_t* param_2, uint32_t param_3, uint32_t param_4)
 
 {
     int32_t kind;
     kind = g_5c1144;
     struct status_msg* result = QTask_HandleInput(Script_FormatString(), kind, 0);
-    int32_t* v_10 = a1;
-    result->head[0x10] = a3;
-    result->head[0xf] = a4;
-    memcpy(&result->head[8], a1, 0x18);
-    uint32_t v_c = a3;
+    int32_t* item_10 = context;
+    result->head[0x10] = param_3;
+    result->head[0xf] = param_4;
+    memcpy(&result->head[8], context, 0x18);
+    uint32_t item_c = param_3;
     int32_t i = 0;
 
     if (*AI_CombatTarget_18() > 0)
     {
-        int32_t srcS1 = 8;
-        int32_t* valA10;
+        int32_t source_1 = 8;
+        int32_t* data_10;
 
         do
         {
-            int32_t tmpD1 = 0;
-            tmpD1 = *(*(AI_CombatTarget_18() + srcS1) + 0x1c);
-            uint32_t valA6 = Weapon_ReloadClip_9();
-            (*(((tmpD1 + valA6 * 0x180) << 2) + &g_a96ae0))(*(AI_CombatTarget_18() + srcS1), &v_10);
+            int32_t temp_1 = 0;
+            temp_1 = *(*(AI_CombatTarget_18() + source_1) + 0x1c);
+            uint32_t data_6 = Weapon_ReloadClip_9();
+            (*(((temp_1 + data_6 * 0x180) << 2) + &g_a96ae0))(*(AI_CombatTarget_18() + source_1), &item_10);
             i += 1;
-            srcS1 += 4;
-            valA10 = AI_CombatTarget_18();
-        } while (i < *valA10);
+            source_1 += 4;
+            data_10 = AI_CombatTarget_18();
+        } while (i < *data_10);
     }
 
-    if (a2 && *a2)
+    if (param_2 && *param_2)
     {
-        uint32_t valA12 = Weapon_CheckAmmo_8();
-        int32_t tmpD3 = 0;
-        tmpD3 = *(*a2 + 0x1c);
+        uint32_t data_12 = Weapon_CheckAmmo_8();
+        int32_t temp_3 = 0;
+        temp_3 = *(*param_2 + 0x1c);
 
-        if (*(((valA12 * 0x180 + tmpD3) << 2) + &g_a96ae0))
+        if (*(((data_12 * 0x180 + temp_3) << 2) + &g_a96ae0))
         {
-            int32_t valA16 = g_5c1148;
-            v_10 = a2;
-            int32_t srcS3 = *a2;
-            int32_t v_8_1 = valA16 + 0x18;
-            int32_t v_c_1 = 0;
-            int32_t v_4_1 = 0x45000000;
-            uint32_t valA19 = Weapon_CheckAmmo_8();
-            int32_t tmpD4 = 0;
-            tmpD4 = *(srcS3 + 0x1c);
-            (*(((valA19 * 0x180 + tmpD4) << 2) + &g_a96ae0))(srcS3, &v_10);
+            int32_t data_16 = g_5c1148;
+            item_10 = param_2;
+            int32_t source_3 = *param_2;
+            int32_t item_8_1 = data_16 + 0x18;
+            int32_t item_c_1 = 0;
+            int32_t item_4_1 = 0x45000000;
+            uint32_t data_19 = Weapon_CheckAmmo_8();
+            int32_t temp_4 = 0;
+            temp_4 = *(source_3 + 0x1c);
+            (*(((data_19 * 0x180 + temp_4) << 2) + &g_a96ae0))(source_3, &item_10);
         }
     }
 

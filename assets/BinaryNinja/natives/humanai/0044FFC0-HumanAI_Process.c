@@ -1,64 +1,64 @@
 // Original IGI.EXE function: HumanAI_Process (VA 0x0044FFC0; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_Process.h"
-int32_t* HumanAI_Process(void* a1)
+int32_t* HumanAI_Process(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x3e4c);
+    int32_t* data_val = *(context + 0x3e4c);
 
-    if (valA)
+    if (data_val)
     {
-        Qtask_UpdateList(valA);
-        *(a1 + 0x3e4c) = 0;
+        Qtask_UpdateList(data_val);
+        *(context + 0x3e4c) = 0;
     }
 
-    int32_t* valA1 = *(a1 + 0x3c70);
+    int32_t* data_1 = *(context + 0x3c70);
 
-    if (valA1)
-        Qvm_Cleanup(valA1);
+    if (data_1)
+        Qvm_Cleanup(data_1);
 
-    int32_t* objC = *(a1 + 0x3ea0);
+    int32_t* entity_val = *(context + 0x3ea0);
 
-    if (objC)
+    if (entity_val)
     {
-        int32_t valA2 = *(a1 + 0x3ea4);
-        AI_MoveToNode_4(objC, valA2, valA2);
+        int32_t data_2 = *(context + 0x3ea4);
+        AI_MoveToNode_4(entity_val, data_2, data_2);
     }
 
-    Env_UpdateCameraLens_13(a1);
-    AI_CombatTarget(a1);
-    void* valA3 = *(a1 + 0x3ab0);
+    Env_UpdateCameraLens_13(context);
+    AI_CombatTarget(context);
+    void* data_3 = *(context + 0x3ab0);
 
-    if (valA3)
-        AI_CombatTarget_5(valA3);
+    if (data_3)
+        AI_CombatTarget_5(data_3);
 
-    void* valA4 = *(a1 + 0x3ab4);
+    void* data_4 = *(context + 0x3ab4);
 
-    if (valA4)
-        AI_CombatTarget_5(valA4);
+    if (data_4)
+        AI_CombatTarget_5(data_4);
 
-    if (Script_EvaluateCondition_4(a1) >= 0)
+    if (Script_EvaluateCondition_4(context) >= 0)
     {
-        int32_t valA6 = Script_SpawnNewTask_6();
-        int32_t objC1 = 0;
-        objC1 = *(a1 + 0x1c);
-        int32_t valA10 = *(((valA6 * 0x180 + objC1) << 2) + &g_a96ae0);
+        int32_t data_6 = Script_SpawnNewTask_6();
+        int32_t entity_1 = 0;
+        entity_1 = *(context + 0x1c);
+        int32_t data_10 = *(((data_6 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-        if (valA10)
-            valA10(a1);
+        if (data_10)
+            data_10(context);
     }
 
-    int32_t* result = *(a1 + 0x8fc);
+    int32_t* result = *(context + 0x8fc);
 
     for (int32_t* i = *result; i; i = *i)
     {
-        AI_CombatTarget_2(a1, result);
+        AI_CombatTarget_2(context, result);
         result = i;
     }
 
-    result = *(a1 + 0x3a28);
+    result = *(context + 0x3a28);
 
     if (!result)
         return result;
 
-    return FX_TrailUpdate_13(a1 + 0x15f8);
+    return FX_TrailUpdate_13(context + 0x15f8);
 }

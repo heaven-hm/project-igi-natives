@@ -1,15 +1,15 @@
 // Original IGI.EXE function: Menu_UpdateLanguage_12 (VA 0x00423770; static CFG gate PASS, CFG score 1.000).
 #include "Menu_UpdateLanguage_12.h"
-void* Menu_UpdateLanguage_12(void* a1, void* a2, int32_t a3)
+void* Menu_UpdateLanguage_12(void* context, void* param_2, int32_t param_3)
 
 {
-    void* srcS = a1;
-    int32_t* dstD = *(srcS + (a2 << 2) + 0x154);
-    *(srcS + (a2 << 2) + 0x254) = a3;
+    void* source_val = context;
+    int32_t* dest_val = *(source_val + (param_2 << 2) + 0x154);
+    *(source_val + (param_2 << 2) + 0x254) = param_3;
 
-    if (!dstD)
-        return a2;
+    if (!dest_val)
+        return param_2;
 
-    KEY_ANGLE(a3, nullptr, &a1);
-    return Sys_FreeMemory_18(dstD, Menu_LocalSS(*(srcS + 0x44), a1));
+    KEY_ANGLE(param_3, nullptr, &context);
+    return Sys_FreeMemory_18(dest_val, Menu_LocalSS(*(source_val + 0x44), context));
 }

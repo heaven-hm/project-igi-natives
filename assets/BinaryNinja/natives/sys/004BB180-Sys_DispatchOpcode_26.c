@@ -1,86 +1,86 @@
 // Original IGI.EXE function: Sys_DispatchOpcode_26 (VA 0x004BB180; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_DispatchOpcode_26.h"
-int32_t Sys_DispatchOpcode_26(int32_t* a1, char* a2)
+int32_t Sys_DispatchOpcode_26(int32_t* context, char* param_2)
 
 {
-    int32_t* valA = &a1[0xb];
-    int32_t* dstD = *valA;
+    int32_t* data_val = &context[0xb];
+    int32_t* dest_val = *data_val;
     int32_t result = 0;
-    int32_t* flagP = *dstD;
+    int32_t* flagP = *dest_val;
 
     if (!flagP)
     {
     label_4bb1e4:
-        int32_t* valA4 = Mem_Alloc(0x88, 4);
-        valA4[1] = 0;
-        *valA4 = 0;
-        Camera_SetFieldOfView_33(valA, valA4);
-        char* dstD1 = a2;
+        int32_t* data_4 = Mem_Alloc(0x88, 4);
+        data_4[1] = 0;
+        *data_4 = 0;
+        Camera_SetFieldOfView_33(data_val, data_4);
+        char* dest_1 = param_2;
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD1;
-            dstD1 = &dstD1[1];
+            bool flag_0_1 = 0 != *dest_1;
+            dest_1 = &dest_1[1];
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC2 = ~i;
-        int32_t srcS4;
-        int32_t dstD4;
-        dstD4 = memcpy(&valA4[2], dstD1 - objC2, objC2 & 0xfffffffc);
-        memcpy(dstD4, srcS4, objC2 & 3);
+        int32_t entity_2 = ~i;
+        int32_t source_4;
+        int32_t dest_4;
+        dest_4 = memcpy(&data_4[2], dest_1 - entity_2, entity_2 & 0xfffffffc);
+        memcpy(dest_4, source_4, entity_2 & 3);
     }
     else
     {
         while (true)
         {
-            char* srcS1 = a2;
-            char* valA1 = &dstD[2];
-            int32_t valA3;
+            char* source_1 = param_2;
+            char* data_1 = &dest_val[2];
+            int32_t data_3;
 
             while (true)
             {
-                char tmpD1 = *valA1;
-                char f0_1 = *srcS1;
-                bool c_1 = tmpD1 < f0_1;
+                char temp_1 = *data_1;
+                char f0_1 = *source_1;
+                bool c_1 = temp_1 < f0_1;
 
-                if (tmpD1 == f0_1)
+                if (temp_1 == f0_1)
                 {
-                    if (!tmpD1)
+                    if (!temp_1)
                     {
-                        valA3 = 0;
+                        data_3 = 0;
                         break;
                     }
 
-                    tmpD1 = valA1[1];
-                    char f3_1 = srcS1[1];
-                    c_1 = tmpD1 < f3_1;
+                    temp_1 = data_1[1];
+                    char f3_1 = source_1[1];
+                    c_1 = temp_1 < f3_1;
 
-                    if (tmpD1 == f3_1)
+                    if (temp_1 == f3_1)
                     {
-                        valA1 = &valA1[2];
-                        srcS1 = &srcS1[2];
+                        data_1 = &data_1[2];
+                        source_1 = &source_1[2];
 
-                        if (tmpD1)
+                        if (temp_1)
                             continue;
 
-                        valA3 = 0;
+                        data_3 = 0;
                         break;
                     }
                 }
 
-                valA3 = valA1 - valA1 + 1;
+                data_3 = data_1 - data_1 + 1;
                 break;
             }
 
-            if (!valA3)
+            if (!data_3)
                 break;
 
-            dstD = flagP;
+            dest_val = flagP;
             flagP = *flagP;
             result += 1;
 
@@ -88,7 +88,7 @@ int32_t Sys_DispatchOpcode_26(int32_t* a1, char* a2)
                 goto label_4bb1e4;
         }
 
-        if (!dstD)
+        if (!dest_val)
             goto label_4bb1e4;
     }
 

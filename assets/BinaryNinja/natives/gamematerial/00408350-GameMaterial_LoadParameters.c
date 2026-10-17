@@ -7,15 +7,15 @@ int32_t GameMaterial_LoadParameters()
 // "GameMaterial_LoadParameters: Couldn't load script \"%s\"". Loads
 // game-material parameters from its script.
 {
-    int32_t* valA = Qvm_Load("LOCAL:material/material.qsc");
+    int32_t* data_val = Qvm_Load("LOCAL:material/material.qsc");
 
-    if (valA)
+    if (data_val)
     {
-        Qvm_Execute(valA);
-        return Qvm_Cleanup(valA);
+        Qvm_Execute(data_val);
+        return Qvm_Cleanup(data_val);
     }
 
-    char* v_8_1 = "LOCAL:material/material.qsc";
+    char* item_8_1 = "LOCAL:material/material.qsc";
     Error_Show("GameMaterial_LoadParameters: Couldn't load script "%s"");
 
     while (true)

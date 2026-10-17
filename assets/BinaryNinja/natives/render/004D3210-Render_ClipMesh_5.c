@@ -1,36 +1,36 @@
 // Original IGI.EXE function: Render_ClipMesh_5 (VA 0x004D3210; static CFG gate PASS, CFG score 1.000).
 #include "Render_ClipMesh_5.h"
-int32_t Render_ClipMesh_5(int32_t a1, int32_t* a2)
+int32_t Render_ClipMesh_5(int32_t context, int32_t* param_2)
 
 {
     int32_t result = 0;
-    int32_t __saved_ecx_1 = *(*a2 * 0xc + &g_a542f0);
+    int32_t __saved_ecx_1 = *(*param_2 * 0xc + &g_a542f0);
 
     if (__saved_ecx_1 <= 0)
         return 0;
 
-    int32_t ctxB = 0;
+    int32_t context_val = 0;
     int32_t saved_ctx = __saved_ecx_1;
-    bool cond_0_1;
+    bool flag_0_1;
 
     do
     {
-        void* srcS2 = ctxB + a2[2];
-        void* valA2 = *(srcS2 + 0x80);
+        void* source_2 = context_val + param_2[2];
+        void* data_2 = *(source_2 + 0x80);
 
-        if (valA2)
+        if (data_2)
         {
-            *(srcS2 + 4) &= 0xfffeffff;
-            result = Render_DrawRigidMesh_6(a1, result, srcS2, valA2);
-            Render_BindTexture_6(srcS2);
+            *(source_2 + 4) &= 0xfffeffff;
+            result = Render_DrawRigidMesh_6(context, result, source_2, data_2);
+            Render_BindTexture_6(source_2);
 
-            if (!*(srcS2 + 0x80))
-                *(srcS2 + 4) &= 0xfff87eff;
+            if (!*(source_2 + 0x80))
+                *(source_2 + 4) &= 0xfff87eff;
         }
 
-        ctxB += 0x84;
-        cond_0_1 = saved_ctx != 1;
+        context_val += 0x84;
+        flag_0_1 = saved_ctx != 1;
         saved_ctx -= 1;
-    } while (cond_0_1);
+    } while (flag_0_1);
     return result;
 }

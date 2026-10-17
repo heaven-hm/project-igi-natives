@@ -14,12 +14,12 @@ uint32_t LINEUPMODE_NONE()
     Sys_CloseFileStream_23("LINEUPMODE_HOR_FILLOUT");
     QTask_CreateTask_2(g_53b910);
     QTask_CreateTask_2(g_53b914);
-    int32_t tmpD = g_53b918;
-    QTask_CreateTask_2(tmpD);
+    int32_t temp_val = g_53b918;
+    QTask_CreateTask_2(temp_val);
     QTask_CreateTask_2(g_53b91c);
     QTask_InitContext(g_53b920);
-    tmpD = g_53b921;
-    QTask_InitContext(tmpD);
+    temp_val = g_53b921;
+    QTask_InitContext(temp_val);
     uint32_t result = QTask_CloseEvent_2(g_53b90c);
     g_53b90c = 0x181;
     return result;

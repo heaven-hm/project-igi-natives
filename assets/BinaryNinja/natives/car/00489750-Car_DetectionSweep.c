@@ -1,40 +1,40 @@
 // Original IGI.EXE function: Car_DetectionSweep (VA 0x00489750; static CFG gate PASS, CFG score 1.000).
 #include "Car_DetectionSweep.h"
-void* Car_DetectionSweep(void* a1, double* a2, float a3, int32_t a4)
+void* Car_DetectionSweep(void* context, double* param_2, float param_3, int32_t param_4)
 
 {
-    int32_t dstD = **&g_5c8ac0;
-    int32_t v_2c = dstD;
+    int32_t dest_val = **&g_5c8ac0;
+    int32_t item_2c = dest_val;
     void* result = Frames_GetUpdateCounter() & 0x80000003;
 
     if (result < 0)
         result = ((result - 1) | 0xfffffffc) + 1;
 
-    void* ctxB = a1;
+    void* context_val = context;
 
-    if (*(ctxB + 0xc) == result)
+    if (*(context_val + 0xc) == result)
     {
-        a1 = nullptr;
+        context = nullptr;
 
-        if (dstD > 0)
+        if (dest_val > 0)
         {
-            int32_t* v_30_1 = 8;
-            int32_t* flagP1 = ctxB + 0x30;
+            int32_t* item_30_1 = 8;
+            int32_t* flagP1 = context_val + 0x30;
 
             do
             {
-                void* srcS1 = *(v_30_1 + g_5c8ac0);
+                void* source_1 = *(item_30_1 + g_5c8ac0);
 
-                if (srcS1 != a3)
+                if (source_1 != param_3)
                 {
-                    uint32_t valA6 = FX_ExplosionSpawn_13();
-                    int32_t objC2 = 0;
-                    objC2 = *(srcS1 + 0x1c);
-                    int32_t v_28;
-                    (*(((valA6 * 0x180 + objC2) << 2) + &g_a96ae0))(srcS1, &v_28);
-                    int16_t v_4;
+                    uint32_t data_6 = FX_ExplosionSpawn_13();
+                    int32_t entity_2 = 0;
+                    entity_2 = *(source_1 + 0x1c);
+                    int32_t item_28;
+                    (*(((data_6 * 0x180 + entity_2) << 2) + &g_a96ae0))(source_1, &item_28);
+                    int16_t item_4;
 
-                    if (!*(&v_4 + 1) || !(v_28 & *(ctxB + 0x14)))
+                    if (!*(&item_4 + 1) || !(item_28 & *(context_val + 0x14)))
                     {
                     label_489893:
 
@@ -43,70 +43,70 @@ void* Car_DetectionSweep(void* a1, double* a2, float a3, int32_t a4)
                     }
                     else
                     {
-                        int32_t valA11 = *(ctxB + 0x10);
-                        int32_t v_8;
-                        void* dstD1;
+                        int32_t data_11 = *(context_val + 0x10);
+                        int32_t item_8;
+                        void* dest_1;
 
-                        if (v_8 != a4)
+                        if (item_8 != param_4)
                         {
-                            if (!(valA11 & 0xc))
+                            if (!(data_11 & 0xc))
                                 goto label_489893;
 
-                            if (v_4)
+                            if (item_4)
                             {
-                                if (!(valA11 & 4))
+                                if (!(data_11 & 4))
                                     goto label_489893;
 
                                 goto label_489838;
                             }
 
-                            if (!(valA11 & 8))
+                            if (!(data_11 & 8))
                                 goto label_489893;
 
                         label_489838:
-                            dstD1 = ctxB + 0x18;
+                            dest_1 = context_val + 0x18;
                             goto label_489840;
                         }
 
-                        if (!(valA11 & 3))
+                        if (!(data_11 & 3))
                             goto label_489893;
 
-                        if (v_4)
+                        if (item_4)
                         {
-                            if (!(valA11 & 1))
+                            if (!(data_11 & 1))
                                 goto label_489893;
 
-                            dstD1 = ctxB + 0x24;
+                            dest_1 = context_val + 0x24;
                             goto label_489840;
                         }
 
-                        if (!(valA11 & 2))
+                        if (!(data_11 & 2))
                             goto label_489893;
 
-                        dstD1 = ctxB + 0x24;
+                        dest_1 = context_val + 0x24;
                     label_489840:
 
                         if (!*(flagP1 + 0x2a))
-                            FX_FragmentSimulate_12(ctxB, dstD1, srcS1, a1);
-                        else if (*flagP1[2] != srcS1)
+                            FX_FragmentSimulate_12(context_val, dest_1, source_1, context);
+                        else if (*flagP1[2] != source_1)
                         {
                             FX_FireBallUpdate_12(flagP1);
-                            FX_FragmentSimulate_12(ctxB, dstD1, srcS1, a1);
+                            FX_FragmentSimulate_12(context_val, dest_1, source_1, context);
                         }
 
-                        double v_20[0x3];
-                        AI_TestCandidate(ctxB, flagP1, &v_20, a2, a3);
-                        dstD = v_2c;
+                        double item_20[0x3];
+                        AI_TestCandidate(context_val, flagP1, &item_20, param_2, param_3);
+                        dest_val = item_2c;
                     }
                 }
                 else if (*(flagP1 + 0x2a))
                     FX_FireBallUpdate_12(flagP1);
 
-                result = a1 + 1;
+                result = context + 1;
                 flagP1 = &flagP1[0xc];
-                a1 = result;
-                v_30_1 = &v_30_1[1];
-            } while (result < dstD);
+                context = result;
+                item_30_1 = &item_30_1[1];
+            } while (result < dest_val);
         }
     }
 

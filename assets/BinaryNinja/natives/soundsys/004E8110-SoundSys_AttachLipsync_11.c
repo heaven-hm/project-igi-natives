@@ -1,9 +1,9 @@
 // Original IGI.EXE function: SoundSys_AttachLipsync_11 (VA 0x004E8110; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_AttachLipsync_11.h"
-struct status_msg* SoundSys_AttachLipsync_11(void* a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5, uint32_t a6, uint32_t a7, uint32_t a8 @ 0x24, uint32_t a9, uint32_t a10, uint32_t a11)
+struct status_msg* SoundSys_AttachLipsync_11(void* context, uint32_t param_2, uint32_t param_3, uint32_t param_4, uint32_t param_5, uint32_t param_6, uint32_t param_7, uint32_t param_8 , uint32_t param_9, uint32_t param_10, uint32_t param_11)
 
 {
-    struct status_msg* result = QTask_HandleInput(a1, SoundSys_EvaluateTrigger_11(), 0);
+    struct status_msg* result = QTask_HandleInput(context, SoundSys_EvaluateTrigger_11(), 0);
     result->sprite[0xc] = 1;
     result->sprite[0xd] = 0;
     result->sprite[0xe] = 0;
@@ -21,21 +21,21 @@ struct status_msg* SoundSys_AttachLipsync_11(void* a1, uint32_t a2, uint32_t a3,
     Terrain_BuildMipMaps_7(&result->head[0x2b]);
     g_a5ec60;
     g_a5ec60 += 1;
-    result->head[9] = a3;
-    result->head[8] = a2;
-    result->head[0x28] = a8;
-    result->head[0xa] = a4;
-    result->head[0xb] = a5;
-    result->head[0xc] = a11;
-    result->head[0x29] = a9;
-    result->head[0x2a] = a10;
-    result->head[0x13] = a6;
-    result->head[0x14] = a7;
+    result->head[9] = param_3;
+    result->head[8] = param_2;
+    result->head[0x28] = param_8;
+    result->head[0xa] = param_4;
+    result->head[0xb] = param_5;
+    result->head[0xc] = param_11;
+    result->head[0x29] = param_9;
+    result->head[0x2a] = param_10;
+    result->head[0x13] = param_6;
+    result->head[0x14] = param_7;
     Display_SyncVSync_13(&result->head[0x15], 0x100);
-    int32_t* valA7 = Sys_FreeMemory_19(0x1388);
-    result->sprite[0x10] = valA7;
-    result->sprite[0x11] = *(&valA7 + 1);
-    result->sprite[0x12] = *(&valA7 + 2);
-    result->sprite[0x13] = *(&valA7 + 3);
+    int32_t* data_7 = Sys_FreeMemory_19(0x1388);
+    result->sprite[0x10] = data_7;
+    result->sprite[0x11] = *(&data_7 + 1);
+    result->sprite[0x12] = *(&data_7 + 2);
+    result->sprite[0x13] = *(&data_7 + 3);
     return result;
 }

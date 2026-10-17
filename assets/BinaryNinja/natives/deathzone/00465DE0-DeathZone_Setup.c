@@ -1,97 +1,97 @@
 // Original IGI.EXE function: DeathZone_Setup (VA 0x00465DE0; static CFG gate PASS, CFG score 1.000).
 #include "DeathZone_Setup.h"
-int32_t DeathZone_Setup(void* a1)
+int32_t DeathZone_Setup(void* context)
 
 {
-    int32_t valA = *(a1 + 0x130);
+    int32_t data_val = *(context + 0x130);
 
-    if (valA)
+    if (data_val)
     {
-        int16_t valA1 = Script_ExecuteLevelScript_16();
-        int32_t objC;
-        objC = *(*(a1 + 0x130) + 0x1c);
-        valA = TaskType_IsDerivedFrom(objC, valA1);
+        int16_t data_1 = Script_ExecuteLevelScript_16();
+        int32_t entity_val;
+        entity_val = *(*(context + 0x130) + 0x1c);
+        data_val = TaskType_IsDerivedFrom(entity_val, data_1);
 
-        if (valA)
+        if (data_val)
         {
-            void* srcS1 = *(a1 + 0x130);
-            int16_t valA3 = Menu_PlayMusic_21();
-            void* v_8;
+            void* source_1 = *(context + 0x130);
+            int16_t data_3 = Menu_PlayMusic_21();
+            void* item_8;
 
-            if (*(srcS1 + 0x1c) != valA3)
+            if (*(source_1 + 0x1c) != data_3)
             {
-                valA = Script_ParseEnumReal32_29(srcS1);
+                data_val = Script_ParseEnumReal32_29(source_1);
 
-                if (!valA)
+                if (!data_val)
                 {
-                    v_8 = a1;
-                    void* v_4_2 = srcS1 + 0x108;
+                    item_8 = context;
+                    void* item_4_2 = source_1 + 0x108;
                     int32_t i = 0;
-                    valA = AI_CombatTarget_18();
+                    data_val = AI_CombatTarget_18();
 
-                    if (*valA > 0)
+                    if (*data_val > 0)
                     {
-                        int32_t srcS4 = 8;
+                        int32_t source_4 = 8;
 
                         do
                         {
-                            int32_t tmpD2 = 0;
-                            tmpD2 = *(*(AI_CombatTarget_18() + srcS4) + 0x1c);
-                            uint32_t valA13 = AI_CheckHearing_24();
-                            (*(((tmpD2 + valA13 * 0x180) << 2) + &g_a96ae0))(
-                                *(AI_CombatTarget_18() + srcS4), &v_8);
+                            int32_t temp_2 = 0;
+                            temp_2 = *(*(AI_CombatTarget_18() + source_4) + 0x1c);
+                            uint32_t data_13 = AI_CheckHearing_24();
+                            (*(((temp_2 + data_13 * 0x180) << 2) + &g_a96ae0))(
+                                *(AI_CombatTarget_18() + source_4), &item_8);
                             i += 1;
-                            srcS4 += 4;
-                            valA = AI_CombatTarget_18();
-                        } while (i < *valA);
+                            source_4 += 4;
+                            data_val = AI_CombatTarget_18();
+                        } while (i < *data_val);
                     }
                 }
             }
             else
             {
-                void* ctxB1 = *(srcS1 + 0x14);
-                valA = Menu_PlayMusic_21();
+                void* context_1 = *(source_1 + 0x14);
+                data_val = Menu_PlayMusic_21();
 
-                if (*(ctxB1 + 0x1c) == valA)
-                    srcS1 = ctxB1;
+                if (*(context_1 + 0x1c) == data_val)
+                    source_1 = context_1;
 
-                long double x87_r7_1 = *(srcS1 + 0x108);
-                long double f0_1 = 0f;
-                x87_r7_1 - f0_1;
-                valA = (x87_r7_1 < f0_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_1, f0_1) ? 1 : 0) << 0xa
-                    | (x87_r7_1 == f0_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_1 = *(source_1 + 0x108);
+                long double f0_1 = 0.0f;
+                fpu_val_7_1 - f0_1;
+                data_val = (fpu_val_7_1 < f0_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_1, f0_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_1 == f0_1 ? 1 : 0) << 0xe;
 
-                if (!(*(&valA + 1) & 0x40))
+                if (!(*(&data_val + 1) & 0x40))
                 {
-                    v_8 = a1;
-                    void* v_4_1 = srcS1 + 0x108;
+                    item_8 = context;
+                    void* item_4_1 = source_1 + 0x108;
                     int32_t i_1 = 0;
-                    valA = AI_CombatTarget_18();
+                    data_val = AI_CombatTarget_18();
 
-                    if (*valA > 0)
+                    if (*data_val > 0)
                     {
-                        int32_t srcS2 = 8;
-                        int32_t* valA10;
+                        int32_t source_2 = 8;
+                        int32_t* data_10;
 
                         do
                         {
-                            int32_t valA5 = 0;
-                            valA5 = *(*(AI_CombatTarget_18() + srcS2) + 0x1c);
-                            uint32_t valA7 = AI_CheckHearing_24();
-                            (*(((valA5 + valA7 * 0x180) << 2) + &g_a96ae0))(
-                                *(AI_CombatTarget_18() + srcS2), &v_8);
+                            int32_t data_5 = 0;
+                            data_5 = *(*(AI_CombatTarget_18() + source_2) + 0x1c);
+                            uint32_t data_7 = AI_CheckHearing_24();
+                            (*(((data_5 + data_7 * 0x180) << 2) + &g_a96ae0))(
+                                *(AI_CombatTarget_18() + source_2), &item_8);
                             i_1 += 1;
-                            srcS2 += 4;
-                            valA10 = AI_CombatTarget_18();
-                        } while (i_1 < *valA10);
+                            source_2 += 4;
+                            data_10 = AI_CombatTarget_18();
+                        } while (i_1 < *data_10);
 
-                        return valA10;
+                        return data_10;
                     }
                 }
             }
         }
     }
 
-    return valA;
+    return data_val;
 }

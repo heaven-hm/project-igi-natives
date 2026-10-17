@@ -7,29 +7,29 @@ char* Camera_ResetMatrix_7()
         Camera_SetFieldOfView_20();
 
     char* result = g_c32554;
-    char valA1 = *result;
+    char data_1 = *result;
 
-    if (valA1 == 0x22)
+    if (data_1 == 0x22)
     {
         while (true)
         {
-            valA1 = result[1];
+            data_1 = result[1];
             result = &result[1];
 
-            if (valA1 == 0x22)
+            if (data_1 == 0x22)
                 break;
 
-            if (!valA1)
+            if (!data_1)
                 break;
 
-            if (Camera_ApplyBandFilter_19(valA1))
+            if (Camera_ApplyBandFilter_19(data_1))
                 result = &result[1];
         }
 
         if (*result == 0x22)
             goto label_4a6014;
     }
-    else if (valA1 > 0x20)
+    else if (data_1 > 0x20)
     {
         do
             result = &result[1];
@@ -38,9 +38,9 @@ char* Camera_ResetMatrix_7()
 
     while (true)
     {
-        valA1 = *result;
+        data_1 = *result;
 
-        if (!valA1 || valA1 > 0x20)
+        if (!data_1 || data_1 > 0x20)
             return result;
 
     label_4a6014:

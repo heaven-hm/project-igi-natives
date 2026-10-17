@@ -1,115 +1,115 @@
 // Original IGI.EXE function: Script_SpawnNewTask_25 (VA 0x004FA160; static CFG gate PASS, CFG score 1.000).
 #include "Script_SpawnNewTask_25.h"
-int32_t Script_SpawnNewTask_25(void* a1, void* a2)
+int32_t Script_SpawnNewTask_25(void* context, void* param_2)
 
 {
-    int32_t v_258;
-    Script_FormatString_26(a2, &v_258);
-    Script_FormatString_26(a2, a1 + 0x58);
-    int32_t v_254;
-    Script_FormatString_26(a2, &v_254);
-    void* valA = *(a1 + 0x6c);
+    int32_t item_258;
+    Script_FormatString_26(param_2, &item_258);
+    Script_FormatString_26(param_2, context + 0x58);
+    int32_t item_254;
+    Script_FormatString_26(param_2, &item_254);
+    void* data_val = *(context + 0x6c);
 
-    if (valA)
+    if (data_val)
     {
-        Sys_ExecuteBytecode_2(valA);
-        *(a1 + 0x6c) = 0;
+        Sys_ExecuteBytecode_2(data_val);
+        *(context + 0x6c) = 0;
     }
 
-    void* valA3 = Mem_Alloc(Script_UndefinedGraphnodeda(a1) * *(a1 + 0x58), 4);
-    int32_t tmpD = *(a1 + 0x58);
-    *(a1 + 0x6c) = valA3;
-    Script_ParseEnumString_23(a1, tmpD);
-    uint32_t valA5 = Script_EvaluateCondition_22();
-    int32_t objC = 0;
-    objC = *(a1 + 0x1c);
-    int32_t valA9 = *(((valA5 * 0x180 + objC) << 2) + &g_a96ae0);
+    void* data_3 = Mem_Alloc(Script_UndefinedGraphnodeda(context) * *(context + 0x58), 4);
+    int32_t temp_val = *(context + 0x58);
+    *(context + 0x6c) = data_3;
+    Script_ParseEnumString_23(context, temp_val);
+    uint32_t data_5 = Script_EvaluateCondition_22();
+    int32_t entity_val = 0;
+    entity_val = *(context + 0x1c);
+    int32_t data_9 = *(((data_5 * 0x180 + entity_val) << 2) + &g_a96ae0);
 
-    if (valA9)
-        valA9(a1, 0);
+    if (data_9)
+        data_9(context, 0);
 
-    int32_t ctxB1 = 0;
-    int32_t v_25c;
-    int32_t v_250;
-    int32_t* v_24c;
+    int32_t context_1 = 0;
+    int32_t item_25c;
+    int32_t item_250;
+    int32_t* item_24c;
 
-    if (v_258 > 0)
+    if (item_258 > 0)
     {
         do
         {
-            v_25c = 0xffffffff;
-            int32_t v_240;
-            Script_FormatString_26(a2, &v_240);
-            void v_238;
-            Script_ParseEnumReal32_27(a2, &v_238);
-            float v_220;
-            Script_SpawnNewTask_27(a2, &v_220);
-            float v_21c[0x4];
-            Script_SpawnNewTask_27(a2, &v_21c);
+            item_25c = 0xffffffff;
+            int32_t item_240;
+            Script_FormatString_26(param_2, &item_240);
+            void item_238;
+            Script_ParseEnumReal32_27(param_2, &item_238);
+            float item_220;
+            Script_SpawnNewTask_27(param_2, &item_220);
+            float item_21c[0x4];
+            Script_SpawnNewTask_27(param_2, &item_21c);
 
-            if (Script_CallNativeHandler_27(a2) == 6)
-                Script_SpawnNewTask_27(a2, &v_250);
+            if (Script_CallNativeHandler_27(param_2) == 6)
+                Script_SpawnNewTask_27(param_2, &item_250);
 
-            if (Script_CallNativeHandler_27(a2) == 5)
-                Script_FormatString_26(a2, &v_25c);
+            if (Script_CallNativeHandler_27(param_2) == 5)
+                Script_FormatString_26(param_2, &item_25c);
 
-            int32_t valA13 = v_25c;
-            int32_t v_108;
+            int32_t data_13 = item_25c;
+            int32_t item_108;
 
-            if (valA13 != 0xffffffff)
-                v_108 = DynObj_RemoveSymbol_11(g_a44344, valA13);
+            if (data_13 != 0xffffffff)
+                item_108 = DynObj_RemoveSymbol_11(g_a44344, data_13);
 
-            int32_t v_26c_7 = 0x100;
-            void v_20c;
-            Script_ParseEnumString_27(a2, &v_20c);
-            int32_t v_278_3 = 0;
-            int32_t* valA17 =
-                Script_GraphnodeIdAlreadyUs(a1, v_240, &v_238, v_220, v_21c[0], v_108, &v_20c);
+            int32_t item_26c_7 = 0x100;
+            void item_20c;
+            Script_ParseEnumString_27(param_2, &item_20c);
+            int32_t item_278_3 = 0;
+            int32_t* data_17 =
+                Script_GraphnodeIdAlreadyUs(context, item_240, &item_238, item_220, item_21c[0], item_108, &item_20c);
 
-            if (valA17)
+            if (data_17)
             {
-                void* v_248_1 = a2;
-                v_24c = valA17;
-                uint32_t valA19 = Script_ParseEnumReal32_22();
-                int32_t tmpD3 = 0;
-                tmpD3 = *(a1 + 0x1c);
-                int32_t valA20 = *(((valA19 * 0x180 + tmpD3) << 2) + &g_a96ae0);
+                void* item_248_1 = param_2;
+                item_24c = data_17;
+                uint32_t data_19 = Script_ParseEnumReal32_22();
+                int32_t temp_3 = 0;
+                temp_3 = *(context + 0x1c);
+                int32_t data_20 = *(((data_19 * 0x180 + temp_3) << 2) + &g_a96ae0);
 
-                if (valA20)
-                    valA20(a1, &v_24c);
+                if (data_20)
+                    data_20(context, &item_24c);
             }
 
-            ctxB1 += 1;
-        } while (ctxB1 < v_258);
+            context_1 += 1;
+        } while (context_1 < item_258);
     }
 
-    int32_t valA23 = v_254;
-    int32_t ctxB2 = 0;
+    int32_t data_23 = item_254;
+    int32_t context_2 = 0;
 
-    if (valA23 > 0)
+    if (data_23 > 0)
     {
         do
         {
-            Script_FormatString_26(a2, &v_250);
-            Script_FormatString_26(a2, &v_24c);
-            Script_FormatString_26(a2, &v_25c);
-            Script_SpawnNewTask_24(a1, v_250, v_24c, v_25c);
-            valA23 = v_254;
-            ctxB2 += 1;
-        } while (ctxB2 < valA23);
+            Script_FormatString_26(param_2, &item_250);
+            Script_FormatString_26(param_2, &item_24c);
+            Script_FormatString_26(param_2, &item_25c);
+            Script_SpawnNewTask_24(context, item_250, item_24c, item_25c);
+            data_23 = item_254;
+            context_2 += 1;
+        } while (context_2 < data_23);
     }
 
-    int32_t tmpD5 = v_258;
-    *(a1 + 0x60) = valA23;
-    *(a1 + 0x5c) = tmpD5;
-    void* v_244 = a2;
-    uint32_t valA25 = Script_SpawnNewTask_22();
-    int32_t objC6 = 0;
-    objC6 = *(a1 + 0x1c);
-    int32_t result = *(((valA25 * 0x180 + objC6) << 2) + &g_a96ae0);
+    int32_t temp_5 = item_258;
+    *(context + 0x60) = data_23;
+    *(context + 0x5c) = temp_5;
+    void* item_244 = param_2;
+    uint32_t data_25 = Script_SpawnNewTask_22();
+    int32_t entity_6 = 0;
+    entity_6 = *(context + 0x1c);
+    int32_t result = *(((data_25 * 0x180 + entity_6) << 2) + &g_a96ae0);
 
     if (!result)
         return result;
 
-    return result(a1, &v_244);
+    return result(context, &item_244);
 }

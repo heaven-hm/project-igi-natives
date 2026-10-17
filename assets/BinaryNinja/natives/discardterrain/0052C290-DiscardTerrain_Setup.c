@@ -1,52 +1,52 @@
 // Original IGI.EXE function: DiscardTerrain_Setup (VA 0x0052C290; static CFG gate FAIL, CFG score 0.833).
 #include "DiscardTerrain_Setup.h"
-int32_t DiscardTerrain_Setup(int32_t a1, char* a2)
+int32_t DiscardTerrain_Setup(int32_t context, char* param_2)
 
 {
-    void* valA = *(a1 + 0x68);
-    int32_t flagP = 0x40000000 >> (*(a1 + 0x150) & 0x1f);
-    memcpy(a1 + 0x138, a1 + 0xf0, 0x18);
-    *(a1 + 0x138) = *(valA + 0xde0) + *(a1 + 0x138);
+    void* data_val = *(context + 0x68);
+    int32_t flagP = 0x40000000 >> (*(context + 0x150) & 0x1f);
+    memcpy(context + 0x138, context + 0xf0, 0x18);
+    *(context + 0x138) = *(data_val + 0xde0) + *(context + 0x138);
     int32_t flagP1 = flagP << 1;
-    int32_t objC2 = -(flagP1);
-    *(a1 + 0x140) = *(valA + 0xde4) + *(a1 + 0x140);
-    *(a1 + 0x148) = *(valA + 0xde8) + *(a1 + 0x148);
-    long double x87_r7_7 = *(a1 + 0x138) & objC2;
-    *(a1 + 0x108) = x87_r7_7;
-    long double x87_r6_1 = *(a1 + 0x140) & objC2;
-    *(a1 + 0x110) = x87_r6_1;
-    long double x87_r6_3 = *(a1 + 0x148) & objC2;
-    *(a1 + 0x118) = x87_r6_3;
-    long double x87_r6_4 = flagP1;
-    memcpy(a1 + 0x138, a1 + 0x108, 0x18);
-    *(a1 + 0x120) = x87_r7_7 + x87_r6_4;
-    *(a1 + 0x128) = x87_r6_1 + x87_r6_4;
-    *(a1 + 0x130) = x87_r6_3 + x87_r6_4;
-    long double x87_r7_9 = x87_r6_4 * 0.5;
-    long double x87_r6_12 = x87_r7_9 + *(a1 + 0x138);
-    *(a1 + 0x138) = x87_r6_12;
-    long double x87_r6_14 = x87_r7_9 + *(a1 + 0x140);
-    *(a1 + 0x140) = x87_r6_14;
-    long double x87_r7_10 = x87_r7_9 + *(a1 + 0x148);
-    *(a1 + 0x148) = x87_r7_10;
-    *(a1 + 0x138) = x87_r6_12 - *(valA + 0xde0);
-    *(a1 + 0x140) = x87_r6_14 - *(valA + 0xde4);
-    *(a1 + 0x148) = x87_r7_10 - *(valA + 0xde8);
-    *(a1 + 0x108) = *(a1 + 0x108) - *(valA + 0xde0);
-    *(a1 + 0x110) = *(a1 + 0x110) - *(valA + 0xde4);
-    *(a1 + 0x118) = *(a1 + 0x118) - *(valA + 0xde8);
-    *(a1 + 0x120) = *(a1 + 0x120) - *(valA + 0xde0);
-    *(a1 + 0x128) = *(a1 + 0x128) - *(valA + 0xde4);
-    *(a1 + 0x130) = *(a1 + 0x130) - *(valA + 0xde8);
-    long double x87_r7_25 = flagP1 * 0.000116257448f;
-    *(a1 + 0x98) = x87_r7_25;
-    *(a1 + 0x9c) = x87_r7_25;
-    *(a1 + 0xa0) = x87_r7_25;
-    int32_t result = DynObj_UpdateDynTree_8(valA, a1, a1 + 0x138, a1 + 0x108, a1 + 0x120);
+    int32_t entity_2 = -(flagP1);
+    *(context + 0x140) = *(data_val + 0xde4) + *(context + 0x140);
+    *(context + 0x148) = *(data_val + 0xde8) + *(context + 0x148);
+    long double fpu_val_7_7 = *(context + 0x138) & entity_2;
+    *(context + 0x108) = fpu_val_7_7;
+    long double fpu_val_6_1 = *(context + 0x140) & entity_2;
+    *(context + 0x110) = fpu_val_6_1;
+    long double fpu_val_6_3 = *(context + 0x148) & entity_2;
+    *(context + 0x118) = fpu_val_6_3;
+    long double fpu_val_6_4 = flagP1;
+    memcpy(context + 0x138, context + 0x108, 0x18);
+    *(context + 0x120) = fpu_val_7_7 + fpu_val_6_4;
+    *(context + 0x128) = fpu_val_6_1 + fpu_val_6_4;
+    *(context + 0x130) = fpu_val_6_3 + fpu_val_6_4;
+    long double fpu_val_7_9 = fpu_val_6_4 * 0.5;
+    long double fpu_val_6_12 = fpu_val_7_9 + *(context + 0x138);
+    *(context + 0x138) = fpu_val_6_12;
+    long double fpu_val_6_14 = fpu_val_7_9 + *(context + 0x140);
+    *(context + 0x140) = fpu_val_6_14;
+    long double fpu_val_7_10 = fpu_val_7_9 + *(context + 0x148);
+    *(context + 0x148) = fpu_val_7_10;
+    *(context + 0x138) = fpu_val_6_12 - *(data_val + 0xde0);
+    *(context + 0x140) = fpu_val_6_14 - *(data_val + 0xde4);
+    *(context + 0x148) = fpu_val_7_10 - *(data_val + 0xde8);
+    *(context + 0x108) = *(context + 0x108) - *(data_val + 0xde0);
+    *(context + 0x110) = *(context + 0x110) - *(data_val + 0xde4);
+    *(context + 0x118) = *(context + 0x118) - *(data_val + 0xde8);
+    *(context + 0x120) = *(context + 0x120) - *(data_val + 0xde0);
+    *(context + 0x128) = *(context + 0x128) - *(data_val + 0xde4);
+    *(context + 0x130) = *(context + 0x130) - *(data_val + 0xde8);
+    long double fpu_val_7_25 = flagP1 * 0.000116257448f;
+    *(context + 0x98) = fpu_val_7_25;
+    *(context + 0x9c) = fpu_val_7_25;
+    *(context + 0xa0) = fpu_val_7_25;
+    int32_t result = DynObj_UpdateDynTree_8(data_val, context, context + 0x138, context + 0x108, context + 0x120);
 
-    if (!a2 || !*a2)
+    if (!param_2 || !*param_2)
     {
-        int32_t* i_1 = *(a1 + 8);
+        int32_t* i_1 = *(context + 8);
 
         if (*i_1)
         {
@@ -54,35 +54,35 @@ int32_t DiscardTerrain_Setup(int32_t a1, char* a2)
 
             if (i)
             {
-                int32_t objC4 = g_afa7e0;
+                int32_t entity_4 = g_afa7e0;
 
                 do
                 {
-                    int32_t* tmpD1 = *i;
-                    void* valA4;
+                    int32_t* temp_1 = *i;
+                    void* data_4;
 
-                    if (!tmpD1)
-                        valA4 = nullptr;
+                    if (!temp_1)
+                        data_4 = nullptr;
                     else
                     {
-                        int32_t valA1 = *tmpD1;
-                        int32_t valA2 = -(valA1);
-                        valA4 = (valA2 - valA2) & tmpD1;
+                        int32_t data_1 = *temp_1;
+                        int32_t data_2 = -(data_1);
+                        data_4 = (data_2 - data_2) & temp_1;
                     }
 
-                    *((objC4 << 2) + &g_afa6e0) = valA4;
-                    g_afa7e0 = objC4 + 1;
-                    uint32_t valA6 = Script_ParseEnumReal32_8();
-                    int32_t objC6 = 0;
-                    objC6 = i[7];
-                    result = *(((valA6 * 0x180 + objC6) << 2) + &g_a96ae0);
+                    *((entity_4 << 2) + &g_afa6e0) = data_4;
+                    g_afa7e0 = entity_4 + 1;
+                    uint32_t data_6 = Script_ParseEnumReal32_8();
+                    int32_t entity_6 = 0;
+                    entity_6 = i[7];
+                    result = *(((data_6 * 0x180 + entity_6) << 2) + &g_a96ae0);
 
                     if (result)
-                        result = result(i, a2);
+                        result = result(i, param_2);
 
-                    objC4 = g_afa7e0 - 1;
-                    g_afa7e0 = objC4;
-                    i = *((objC4 << 2) + &g_afa6e0);
+                    entity_4 = g_afa7e0 - 1;
+                    g_afa7e0 = entity_4;
+                    i = *((entity_4 << 2) + &g_afa6e0);
                 } while (i);
             }
         }

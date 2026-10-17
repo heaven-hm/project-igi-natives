@@ -1,162 +1,162 @@
 // Original IGI.EXE function: Physics_EvaluateAreaCriteria_13 (VA 0x0050D7E0; static CFG gate FAIL, CFG score 0.667).
 #include "Physics_EvaluateAreaCriteria_13.h"
-❓  int32_t Physics_EvaluateAreaCriteria_13(void* a1)
+❓  int32_t Physics_EvaluateAreaCriteria_13(void* context)
 // This function has unresolved stack usage. View graph of stack usage to resolve.
 
 {
-    int32_t ctxB;
-    int32_t v_10 = ctxB;
-    void* ctxB1 = a1;
+    int32_t context_val;
+    int32_t item_10 = context_val;
+    void* context_1 = context;
     int32_t flagP;
-    int32_t v_14 = flagP;
-    int32_t srcS1 = *(ctxB1 + 0x14);
-    int32_t dstD;
-    int32_t v_1c = dstD;
-    int32_t dstD1 = g_a7da00;
-    int32_t objC1 = dstD1 & 0x8000003c;
-    void* flagP1 = *(ctxB1 + 0x24);
-    int32_t objC2 = -(objC1);
-    int32_t tmpD1 = srcS1 & 0x8000003c;
-    void* v_4 = *(ctxB1 + 0xc);
-    int32_t tmpD2 = -(tmpD1);
-    int32_t v_8 = srcS1;
+    int32_t item_14 = flagP;
+    int32_t source_1 = *(context_1 + 0x14);
+    int32_t dest_val;
+    int32_t item_1c = dest_val;
+    int32_t dest_1 = g_a7da00;
+    int32_t entity_1 = dest_1 & 0x8000003c;
+    void* flagP1 = *(context_1 + 0x24);
+    int32_t entity_2 = -(entity_1);
+    int32_t temp_1 = source_1 & 0x8000003c;
+    void* item_4 = *(context_1 + 0xc);
+    int32_t temp_2 = -(temp_1);
+    int32_t item_8 = source_1;
 
-    if (objC2 - objC2 + 1 != tmpD2 - tmpD2 + 1 || (dstD1 ^ srcS1) & 0x60000)
+    if (entity_2 - entity_2 + 1 != temp_2 - temp_2 + 1 || (dest_1 ^ source_1) & 0x60000)
     {
         *(g_bcadac + 4) = 0xffffffff;
-        srcS1 = v_8;
-        dstD1 = g_a7da00;
+        source_1 = item_8;
+        dest_1 = g_a7da00;
     }
 
-    if ((dstD1 ^ srcS1) & 0x8000003c)
+    if ((dest_1 ^ source_1) & 0x8000003c)
     {
         *(g_bcad7c + 4) = 0xffffffff;
-        srcS1 = v_8;
-        dstD1 = g_a7da00;
+        source_1 = item_8;
+        dest_1 = g_a7da00;
     }
 
-    int32_t valA1 = 0;
-    valA1 = !g_a7da04;
-    int32_t objC11 = 0;
-    objC11 = !v_4;
+    int32_t data_1 = 0;
+    data_1 = !g_a7da04;
+    int32_t entity_11 = 0;
+    entity_11 = !item_4;
 
-    if (valA1 != objC11 || (dstD1 ^ srcS1) & 0x1400000)
+    if (data_1 != entity_11 || (dest_1 ^ source_1) & 0x1400000)
     {
         *(g_bcade8 + 4) = 0xffffffff;
-        srcS1 = v_8;
+        source_1 = item_8;
     }
 
-    int32_t objC12 = g_a7ced8;
-    g_a7da04 = v_4;
-    void* valA4 = g_bcade8;
-    g_a7da00 = srcS1;
+    int32_t entity_12 = g_a7ced8;
+    g_a7da04 = item_4;
+    void* data_4 = g_bcade8;
+    g_a7da00 = source_1;
 
-    if (*(valA4 + 4) != objC12)
+    if (*(data_4 + 4) != entity_12)
     {
-        *(valA4 + 4) = objC12;
-        (*(g_bcade8 + (g_a7ced8 << 2) + 0x14))(&v_8);
+        *(data_4 + 4) = entity_12;
+        (*(g_bcade8 + (g_a7ced8 << 2) + 0x14))(&item_8);
     }
 
-    void* valA6 = g_bcad7c;
-    int32_t objC13 = g_a7d9f8;
+    void* data_6 = g_bcad7c;
+    int32_t entity_13 = g_a7d9f8;
 
-    if (*(valA6 + 4) != objC13)
+    if (*(data_6 + 4) != entity_13)
     {
-        *(valA6 + 4) = objC13;
-        (*(g_bcad7c + (g_a7d9f8 << 2) + 0x14))(&v_8);
+        *(data_6 + 4) = entity_13;
+        (*(g_bcad7c + (g_a7d9f8 << 2) + 0x14))(&item_8);
     }
 
-    void* valA8 = g_bcadac;
-    int32_t objC14 = g_a7d9f4;
+    void* data_8 = g_bcadac;
+    int32_t entity_14 = g_a7d9f4;
 
-    if (*(valA8 + 4) != objC14)
+    if (*(data_8 + 4) != entity_14)
     {
-        *(valA8 + 4) = objC14;
-        (*(g_bcadac + (g_a7d9f4 << 2) + 0x14))(&v_8);
+        *(data_8 + 4) = entity_14;
+        (*(g_bcadac + (g_a7d9f4 << 2) + 0x14))(&item_8);
     }
 
-    void* valA10 = g_bcadc4;
-    int32_t objC15 = g_bcacec;
+    void* data_10 = g_bcadc4;
+    int32_t entity_15 = g_bcacec;
 
-    if (*(valA10 + 4) != objC15)
+    if (*(data_10 + 4) != entity_15)
     {
-        *(valA10 + 4) = objC15;
-        (*(g_bcadc4 + (g_bcacec << 2) + 0x14))(&v_8);
+        *(data_10 + 4) = entity_15;
+        (*(g_bcadc4 + (g_bcacec << 2) + 0x14))(&item_8);
     }
 
-    void** v_24;
+    void** item_24;
 
-    if (v_4)
+    if (item_4)
     {
-        int32_t* valA13 = g_5ca114;
-        int32_t tmpD14 = *(*(ctxB1 + 0xc) + 0x20);
-        int32_t objC16 = *valA13;
-        v_24 = nullptr;
-        (*(objC16 + 0x8c))(valA13, v_24, tmpD14);
+        int32_t* data_13 = g_5ca114;
+        int32_t temp_14 = *(*(context_1 + 0xc) + 0x20);
+        int32_t entity_16 = *data_13;
+        item_24 = nullptr;
+        (*(entity_16 + 0x8c))(data_13, item_24, temp_14);
     }
 
-    int32_t valA15 = *(ctxB1 + 0x1c);
+    int32_t data_15 = *(context_1 + 0x1c);
     int32_t result;
-    void*** esp;
-    void** v_30;
+    void*** stack_ptr;
+    void** item_30;
 
-    if (!*(ctxB1 + 0x20))
+    if (!*(context_1 + 0x20))
     {
-        int32_t tmpD21 = g_bcad08;
-        int32_t* valA26;
+        int32_t temp_21 = g_bcad08;
+        int32_t* data_26;
 
-        if (valA15 <= 2)
+        if (data_15 <= 2)
         {
-            bool cond_2_1 = tmpD21 + 4 > g_bcad04;
-            int32_t* valA28 = g_bcad00;
-            int32_t v_20_8 = 0;
-            int32_t objC46 = *valA28;
-            v_24 = &a1;
-            void* tmpD30;
-            void** ctxB3;
+            bool flag_2_1 = temp_21 + 4 > g_bcad04;
+            int32_t* data_28 = g_bcad00;
+            int32_t item_20_8 = 0;
+            int32_t entity_46 = *data_28;
+            item_24 = &context;
+            void* temp_30;
+            void** context_3;
 
-            if (cond_2_1)
+            if (flag_2_1)
             {
-                result = (*(objC46 + 0xc))(valA28, 0x2020);
-                esp = &v_24;
-                ctxB3 = nullptr;
+                result = (*(entity_46 + 0xc))(data_28, 0x2020);
+                stack_ptr = &item_24;
+                context_3 = nullptr;
                 g_bcad08 = 4;
 
                 if (!result)
                 {
-                    tmpD30 = v_4;
+                    temp_30 = item_4;
                 label_50db91:
 
-                    if (tmpD30)
+                    if (temp_30)
                     {
-                        memcpy(tmpD30, flagP1, 0x1c);
-                        memcpy(v_4 + 0x54, flagP1 + 0x1c, 0x1c);
-                        memcpy(v_4 + 0x1c, flagP1, 0x1c);
-                        *(v_4 + 0x1c) = *(flagP1 + 0x1c);
-                        *(v_4 + 0x30) = *(flagP1 + 0x30);
-                        memcpy(v_4 + 0x38, flagP1, 0x1c);
-                        *(v_4 + 0x3c) = *(flagP1 + 0x20);
-                        *(v_4 + 0x50) = *(flagP1 + 0x34);
-                        int32_t* valA33 = g_bcad00;
-                        (*(*valA33 + 0x10))(valA33);
-                        valA26 = g_5ca114;
-                        int32_t v_28_12 = 0;
-                        int32_t v_2c_8 = 4;
-                        v_30 = ctxB3;
-                        result = (*(*valA26 + 0x7c))(valA26, 5, g_bcad00);
-                        esp = &v_30;
+                        memcpy(temp_30, flagP1, 0x1c);
+                        memcpy(item_4 + 0x54, flagP1 + 0x1c, 0x1c);
+                        memcpy(item_4 + 0x1c, flagP1, 0x1c);
+                        *(item_4 + 0x1c) = *(flagP1 + 0x1c);
+                        *(item_4 + 0x30) = *(flagP1 + 0x30);
+                        memcpy(item_4 + 0x38, flagP1, 0x1c);
+                        *(item_4 + 0x3c) = *(flagP1 + 0x20);
+                        *(item_4 + 0x50) = *(flagP1 + 0x34);
+                        int32_t* data_33 = g_bcad00;
+                        (*(*data_33 + 0x10))(data_33);
+                        data_26 = g_5ca114;
+                        int32_t item_28_12 = 0;
+                        int32_t item_2c_8 = 4;
+                        item_30 = context_3;
+                        result = (*(*data_26 + 0x7c))(data_26, 5, g_bcad00);
+                        stack_ptr = &item_30;
                     }
                 }
             }
             else
             {
-                result = (*(objC46 + 0xc))(valA28, 0x20);
-                esp = &v_24;
-                void** objC47 = g_bcad08;
-                ctxB3 = objC47;
-                g_bcad08 = &objC47[1];
-                tmpD30 = v_4 + objC47 * 0x1c;
-                v_4 = tmpD30;
+                result = (*(entity_46 + 0xc))(data_28, 0x20);
+                stack_ptr = &item_24;
+                void** entity_47 = g_bcad08;
+                context_3 = entity_47;
+                g_bcad08 = &entity_47[1];
+                temp_30 = item_4 + entity_47 * 0x1c;
+                item_4 = temp_30;
 
                 if (!result)
                     goto label_50db91;
@@ -164,54 +164,54 @@
         }
         else
         {
-            bool cond_3_1 = valA15 + tmpD21 > g_bcad04;
-            int32_t* valA23 = g_bcad00;
-            int32_t v_20_7 = 0;
-            int32_t objC33 = *valA23;
-            v_24 = &a1;
-            void** v_14_3;
-            void* tmpD24;
+            bool flag_3_1 = data_15 + temp_21 > g_bcad04;
+            int32_t* data_23 = g_bcad00;
+            int32_t item_20_7 = 0;
+            int32_t entity_33 = *data_23;
+            item_24 = &context;
+            void** item_14_3;
+            void* temp_24;
 
-            if (cond_3_1)
+            if (flag_3_1)
             {
-                result = (*(objC33 + 0xc))(valA23, 0x2020);
-                esp = &v_24;
-                v_14_3 = nullptr;
-                g_bcad08 = *(ctxB1 + 0x1c);
+                result = (*(entity_33 + 0xc))(data_23, 0x2020);
+                stack_ptr = &item_24;
+                item_14_3 = nullptr;
+                g_bcad08 = *(context_1 + 0x1c);
 
                 if (!result)
                 {
-                    tmpD24 = v_4;
+                    temp_24 = item_4;
                 label_50dad7:
 
-                    if (tmpD24)
+                    if (temp_24)
                     {
-                        int32_t objC39 = *(ctxB1 + 0x1c) * 0x1c;
-                        int32_t srcS6;
-                        int32_t dstD11;
-                        dstD11 = memcpy(tmpD24, flagP1, objC39 & 0xfffffffc);
-                        memcpy(dstD11, srcS6, objC39 & 3);
-                        int32_t* valA25 = g_bcad00;
-                        (*(*valA25 + 0x10))(valA25);
-                        valA26 = g_5ca114;
-                        int32_t v_28_8 = 0;
-                        int32_t v_2c_5 = *(ctxB1 + 0x1c);
-                        int32_t tmpD26 = *valA26;
-                        v_30 = v_14_3;
-                        result = (*(tmpD26 + 0x7c))(valA26, 5, g_bcad00);
-                        esp = &v_30;
+                        int32_t entity_39 = *(context_1 + 0x1c) * 0x1c;
+                        int32_t source_6;
+                        int32_t dest_11;
+                        dest_11 = memcpy(temp_24, flagP1, entity_39 & 0xfffffffc);
+                        memcpy(dest_11, source_6, entity_39 & 3);
+                        int32_t* data_25 = g_bcad00;
+                        (*(*data_25 + 0x10))(data_25);
+                        data_26 = g_5ca114;
+                        int32_t item_28_8 = 0;
+                        int32_t item_2c_5 = *(context_1 + 0x1c);
+                        int32_t temp_26 = *data_26;
+                        item_30 = item_14_3;
+                        result = (*(temp_26 + 0x7c))(data_26, 5, g_bcad00);
+                        stack_ptr = &item_30;
                     }
                 }
             }
             else
             {
-                result = (*(objC33 + 0xc))(valA23, 0x20);
-                esp = &v_24;
-                void** objC34 = g_bcad08;
-                v_14_3 = objC34;
-                tmpD24 = v_4 + objC34 * 0x1c;
-                void* v_4_2 = tmpD24;
-                g_bcad08 = objC34 + *(ctxB1 + 0x1c);
+                result = (*(entity_33 + 0xc))(data_23, 0x20);
+                stack_ptr = &item_24;
+                void** entity_34 = g_bcad08;
+                item_14_3 = entity_34;
+                temp_24 = item_4 + entity_34 * 0x1c;
+                void* item_4_2 = temp_24;
+                g_bcad08 = entity_34 + *(context_1 + 0x1c);
 
                 if (!result)
                     goto label_50dad7;
@@ -220,60 +220,60 @@
     }
     else
     {
-        bool cond_1_1 = valA15 + g_bcad08 > g_bcad04;
-        int32_t* valA17 = g_bcad00;
-        int32_t v_20_6 = 0;
-        v_24 = &a1;
-        int32_t objC18 = *valA17;
-        void* tmpD18;
+        bool flag_1_1 = data_15 + g_bcad08 > g_bcad04;
+        int32_t* data_17 = g_bcad00;
+        int32_t item_20_6 = 0;
+        item_24 = &context;
+        int32_t entity_18 = *data_17;
+        void* temp_18;
 
-        if (cond_1_1)
+        if (flag_1_1)
         {
-            result = (*(objC18 + 0xc))(valA17, 0x2020);
-            esp = &v_24;
-            int32_t v_14_2 = 0;
-            g_bcad08 = *(ctxB1 + 0x1c);
+            result = (*(entity_18 + 0xc))(data_17, 0x2020);
+            stack_ptr = &item_24;
+            int32_t item_14_2 = 0;
+            g_bcad08 = *(context_1 + 0x1c);
 
             if (!result)
             {
-                tmpD18 = v_4;
+                temp_18 = item_4;
             label_50d9f9:
 
-                if (tmpD18)
+                if (temp_18)
                 {
-                    int32_t objC24 = *(ctxB1 + 0x1c) * 0x1c;
-                    int32_t srcS3;
-                    int32_t dstD6;
-                    dstD6 = memcpy(tmpD18, flagP1, objC24 & 0xfffffffc);
-                    memcpy(dstD6, srcS3, objC24 & 3);
-                    int32_t* valA19 = g_bcad00;
-                    (*(*valA19 + 0x10))(valA19);
-                    int32_t* valA20 = g_5ca114;
-                    int32_t v_2c_2 = 0;
-                    v_30 = *(ctxB1 + 0x1c);
-                    int32_t srcS;
-                    int32_t v_34_1 = srcS;
-                    return (*(*valA20 + 0x7c))(valA20, 3, g_bcad00);
+                    int32_t entity_24 = *(context_1 + 0x1c) * 0x1c;
+                    int32_t source_3;
+                    int32_t dest_6;
+                    dest_6 = memcpy(temp_18, flagP1, entity_24 & 0xfffffffc);
+                    memcpy(dest_6, source_3, entity_24 & 3);
+                    int32_t* data_19 = g_bcad00;
+                    (*(*data_19 + 0x10))(data_19);
+                    int32_t* data_20 = g_5ca114;
+                    int32_t item_2c_2 = 0;
+                    item_30 = *(context_1 + 0x1c);
+                    int32_t source_val;
+                    int32_t item_34_1 = source_val;
+                    return (*(*data_20 + 0x7c))(data_20, 3, g_bcad00);
                 }
             }
         }
         else
         {
-            result = (*(objC18 + 0xc))(valA17, 0x20);
-            esp = &v_24;
-            int32_t objC19 = g_bcad08;
-            int32_t v_14_1 = objC19;
-            tmpD18 = v_4 + objC19 * 0x1c;
-            void* v_4_1 = tmpD18;
-            g_bcad08 = objC19 + *(ctxB1 + 0x1c);
+            result = (*(entity_18 + 0xc))(data_17, 0x20);
+            stack_ptr = &item_24;
+            int32_t entity_19 = g_bcad08;
+            int32_t item_14_1 = entity_19;
+            temp_18 = item_4 + entity_19 * 0x1c;
+            void* item_4_1 = temp_18;
+            g_bcad08 = entity_19 + *(context_1 + 0x1c);
 
             if (!result)
                 goto label_50d9f9;
         }
     }
-❓️    *esp;
-    esp[1];
-    esp[2];
-    esp[3];
+❓️    *stack_ptr;
+    stack_ptr[1];
+    stack_ptr[2];
+    stack_ptr[3];
     return result;
 }

@@ -3,7 +3,7 @@
 long double Display_ClearSurfaces_4()
 
 {
-    int32_t objC;
-    int32_t v_4_1 = objC;
-    return g_c28b48 * 4f / (g_c28b44 * 3f);
+    int32_t entity_val;
+    int32_t item_4_1 = entity_val;
+    return g_c28b48 * 4.0f / (g_c28b44 * 3.0f);
 }

@@ -13,11 +13,11 @@ int32_t* Display_OpenDevice_10()
         if (result)
         {
             Sys_ReadFileBlock_4(result);
-            int32_t* valA = g_5ca190;
+            int32_t* data_val = g_5ca190;
             g_5ca194 = 0;
-            (*(*valA + 0x48))(valA);
-            int32_t* valA1 = g_5ca190;
-            result = (*(*valA1 + 8))(valA1);
+            (*(*data_val + 0x48))(data_val);
+            int32_t* data_1 = g_5ca190;
+            result = (*(*data_1 + 8))(data_1);
             g_5ca190 = 0;
         }
     }

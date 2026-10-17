@@ -1,106 +1,106 @@
 // Original IGI.EXE function: Terrain_SelectTerrainLOD_7 (VA 0x00517DD0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SelectTerrainLOD_7.h"
-int16_t* Terrain_SelectTerrainLOD_7(char* a1, int32_t a2, int16_t* a3, int16_t* a4, int32_t a5, int32_t a6, int32_t* a7)
+int16_t* Terrain_SelectTerrainLOD_7(char* context, int32_t param_2, int16_t* param_3, int16_t* param_4, int32_t param_5, int32_t param_6, int32_t* param_7)
 
 {
-    int32_t objC;
-    int32_t v_4 = objC;
-    int32_t valA;
-    int32_t objC1;
-    int32_t srcS;
+    int32_t entity_val;
+    int32_t item_4 = entity_val;
+    int32_t data_val;
+    int32_t entity_1;
+    int32_t source_val;
 
-    if (!a7)
+    if (!param_7)
     {
-        objC1 = a5;
-        srcS = 0;
-        valA = 0;
-        a5 = objC1;
-        a6 = a6;
+        entity_1 = param_5;
+        source_val = 0;
+        data_val = 0;
+        param_5 = entity_1;
+        param_6 = param_6;
     }
     else
     {
-        objC1 = a5;
-        srcS = *a7;
-        int32_t ctxB1 = a7[2];
-        valA = a7[1];
-        a5 = ctxB1;
-        int32_t dstD2 = objC1 - srcS;
+        entity_1 = param_5;
+        source_val = *param_7;
+        int32_t context_1 = param_7[2];
+        data_val = param_7[1];
+        param_5 = context_1;
+        int32_t dest_2 = entity_1 - source_val;
 
-        if (ctxB1 >= dstD2)
-            a5 = dstD2;
+        if (context_1 >= dest_2)
+            param_5 = dest_2;
 
-        int32_t tmpD1 = a7[3];
-        int32_t dstD4 = a6 - valA;
+        int32_t temp_1 = param_7[3];
+        int32_t dest_4 = param_6 - data_val;
 
-        a6 = tmpD1 < dstD4 ? tmpD1 : dstD4;
+        param_6 = temp_1 < dest_4 ? temp_1 : dest_4;
     }
 
-    a7 = nullptr;
-    int16_t* result = &a4[valA * objC1 + srcS];
+    param_7 = nullptr;
+    int16_t* result = &param_4[data_val * entity_1 + source_val];
 
-    if (a3 > 0)
+    if (param_3 > 0)
     {
-        int32_t tmpD4 = a2;
+        int32_t temp_4 = param_2;
         int16_t* result_1 = result;
-        char* srcS1 = &a1[2];
-        a4 = result_1;
-        a1 = srcS1;
-        bool cond_0_1;
+        char* source_1 = &context[2];
+        param_4 = result_1;
+        context = source_1;
+        bool flag_0_1;
 
         do
         {
             int32_t flagP1 = 0;
 
-            if (tmpD4 > 0)
+            if (temp_4 > 0)
             {
                 do
                 {
-                    int32_t* valA4;
+                    int32_t* data_4;
 
-                    if (flagP1 < a5)
-                        valA4 = a7;
+                    if (flagP1 < param_5)
+                        data_4 = param_7;
 
-                    char valA6;
-                    char objC6;
-                    char tmpD6;
-                    char ctxB2;
+                    char data_6;
+                    char entity_6;
+                    char temp_6;
+                    char context_2;
 
-                    if (flagP1 >= a5 || valA4 >= a6)
+                    if (flagP1 >= param_5 || data_4 >= param_6)
                     {
-                        valA6 = 0;
-                        objC6 = 0;
-                        tmpD6 = 0;
-                        ctxB2 = 0;
+                        data_6 = 0;
+                        entity_6 = 0;
+                        temp_6 = 0;
+                        context_2 = 0;
                     }
                     else
                     {
-                        valA4 = *result_1;
-                        tmpD6 = *(&valA4 + 1) & 0xf8;
-                        objC6 = valA4 >> 3 & 0xfc;
-                        ctxB2 = -1;
-                        valA6 = (valA4 & 0x1f) << 3;
+                        data_4 = *result_1;
+                        temp_6 = *(&data_4 + 1) & 0xf8;
+                        entity_6 = data_4 >> 3 & 0xfc;
+                        context_2 = -1;
+                        data_6 = (data_4 & 0x1f) << 3;
                     }
 
-                    srcS1[1] = ctxB2;
-                    *srcS1 = tmpD6;
-                    srcS1[0xffffffff] = objC6;
-                    srcS1[0xfffffffe] = valA6;
+                    source_1[1] = context_2;
+                    *source_1 = temp_6;
+                    source_1[0xffffffff] = entity_6;
+                    source_1[0xfffffffe] = data_6;
                     flagP1 += 1;
                     result_1 = &result_1[1];
-                    srcS1 = &srcS1[4];
-                } while (flagP1 < a2);
+                    source_1 = &source_1[4];
+                } while (flagP1 < param_2);
 
-                tmpD4 = a2;
+                temp_4 = param_2;
             }
 
-            srcS1 = &a1[tmpD4 << 2];
-            result = a3;
-            result_1 = &a4[objC1];
-            cond_0_1 = a7 + 1 < result;
-            a7 += 1;
-            a4 = result_1;
-            a1 = srcS1;
-        } while (cond_0_1);
+            source_1 = &context[temp_4 << 2];
+            result = param_3;
+            result_1 = &param_4[entity_1];
+            flag_0_1 = param_7 + 1 < result;
+            param_7 += 1;
+            param_4 = result_1;
+            context = source_1;
+        } while (flag_0_1);
     }
 
     return result;

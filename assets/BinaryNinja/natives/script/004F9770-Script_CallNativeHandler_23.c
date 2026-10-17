@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Script_CallNativeHandler_23 (VA 0x004F9770; static CFG gate FAIL, CFG score 0.667).
 #include "Script_CallNativeHandler_23.h"
-double* Script_CallNativeHandler_23(double* a1, void* a2)
+double* Script_CallNativeHandler_23(double* context, void* param_2)
 
 {
-    void* valA = *(a2 + 0x134);
+    void* data_val = *(param_2 + 0x134);
 
-    if (!*(valA + 0x64))
+    if (!*(data_val + 0x64))
     {
-        memcpy(a1, a2 + 8, 0x18);
-        *a1 = *(*(a2 + 0x134) + 0x20) + *a1;
-        a1[1] = *(*(a2 + 0x134) + 0x28) + a1[1];
-        a1[2] = *(*(a2 + 0x134) + 0x30) + a1[2];
-        return a1;
+        memcpy(context, param_2 + 8, 0x18);
+        *context = *(*(param_2 + 0x134) + 0x20) + *context;
+        context[1] = *(*(param_2 + 0x134) + 0x28) + context[1];
+        context[2] = *(*(param_2 + 0x134) + 0x30) + context[2];
+        return context;
     }
 
-    void* tmpD = *(valA + 0x14);
-    memcpy(a1, a2 + 8, 0x18);
-    *a1 = *(*(a2 + 0x134) + 0x20) + *a1;
-    a1[1] = *(*(a2 + 0x134) + 0x28) + a1[1];
-    long double x87_r7_5 = *(*(a2 + 0x134) + 0x30) + a1[2];
-    a1[2] = x87_r7_5;
-    double v_20 = *(tmpD + 0x78) * x87_r7_5 + *(tmpD + 0x74) * a1[1] + *(tmpD + 0x70) * *a1;
-    double v_18 = *(tmpD + 0x84) * x87_r7_5 + *(tmpD + 0x80) * a1[1] + *(tmpD + 0x7c) * *a1;
-    double v_10 = *(tmpD + 0x90) * x87_r7_5 + *(tmpD + 0x8c) * a1[1] + *(tmpD + 0x88) * *a1;
-    memcpy(a1, &v_20, 0x18);
-    *a1 = *(tmpD + 0x20) + *a1;
-    a1[1] = *(tmpD + 0x28) + a1[1];
-    a1[2] = *(tmpD + 0x30) + a1[2];
-    return a1;
+    void* temp_val = *(data_val + 0x14);
+    memcpy(context, param_2 + 8, 0x18);
+    *context = *(*(param_2 + 0x134) + 0x20) + *context;
+    context[1] = *(*(param_2 + 0x134) + 0x28) + context[1];
+    long double fpu_val_7_5 = *(*(param_2 + 0x134) + 0x30) + context[2];
+    context[2] = fpu_val_7_5;
+    double item_20 = *(temp_val + 0x78) * fpu_val_7_5 + *(temp_val + 0x74) * context[1] + *(temp_val + 0x70) * *context;
+    double item_18 = *(temp_val + 0x84) * fpu_val_7_5 + *(temp_val + 0x80) * context[1] + *(temp_val + 0x7c) * *context;
+    double item_10 = *(temp_val + 0x90) * fpu_val_7_5 + *(temp_val + 0x8c) * context[1] + *(temp_val + 0x88) * *context;
+    memcpy(context, &item_20, 0x18);
+    *context = *(temp_val + 0x20) + *context;
+    context[1] = *(temp_val + 0x28) + context[1];
+    context[2] = *(temp_val + 0x30) + context[2];
+    return context;
 }

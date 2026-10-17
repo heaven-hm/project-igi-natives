@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Terrain_UpdateWaterWaves_6 (VA 0x00517980; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_UpdateWaterWaves_6.h"
-int32_t* Terrain_UpdateWaterWaves_6(int32_t* a1, int32_t a2)
+int32_t* Terrain_UpdateWaterWaves_6(int32_t* context, int32_t param_2)
 
 {
-    int32_t* result = a1;
+    int32_t* result = context;
 
     if (result)
     {
@@ -15,23 +15,23 @@ int32_t* Terrain_UpdateWaterWaves_6(int32_t* a1, int32_t a2)
                 result = result_1;
             else
             {
-                int32_t* valA = result[1];
+                int32_t* data_val = result[1];
 
-                if (!valA)
+                if (!data_val)
                     break;
 
-                void* valA1 = *valA;
+                void* data_1 = *data_val;
 
-                if (!valA1)
+                if (!data_1)
                     break;
 
-                result = *(valA1 + 8);
+                result = *(data_1 + 8);
             }
 
             if (!result)
                 break;
 
-            if (result[4] == a2)
+            if (result[4] == param_2)
                 return result;
         }
     }

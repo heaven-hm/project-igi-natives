@@ -1,61 +1,61 @@
 // Original IGI.EXE function: Menu_FormatScreen (VA 0x00417590; static CFG gate PASS, CFG score 1.000).
 #include "Menu_FormatScreen.h"
-int32_t Menu_FormatScreen(void* a1, int32_t a2)
+int32_t Menu_FormatScreen(void* context, int32_t param_2)
 
 {
-    if (!a2)
+    if (!param_2)
     {
-        void* srcS = *(a1 + 0x30);
-        int32_t valA10 = Menu_LeaveMenus_14();
-        int32_t valA11 = 0;
-        valA11 = *(srcS + 0x1c);
-        int32_t valA12 = *(((valA10 * 0x180 + valA11) << 2) + &g_a96ae0);
+        void* source_val = *(context + 0x30);
+        int32_t data_10 = Menu_LeaveMenus_14();
+        int32_t data_11 = 0;
+        data_11 = *(source_val + 0x1c);
+        int32_t data_12 = *(((data_10 * 0x180 + data_11) << 2) + &g_a96ae0);
 
-        if (valA12)
-            valA12(srcS);
+        if (data_12)
+            data_12(source_val);
     }
     else
     {
-        int32_t* i = *(a1 + 8);
+        int32_t* i = *(context + 8);
 
         if (*i && i)
         {
-            int32_t objC = g_afa7e0;
+            int32_t entity_val = g_afa7e0;
 
             do
             {
-                int32_t* tmpD1 = *i;
-                void* valA3;
+                int32_t* temp_1 = *i;
+                void* data_3;
 
-                if (!tmpD1)
-                    valA3 = nullptr;
+                if (!temp_1)
+                    data_3 = nullptr;
                 else
                 {
-                    int32_t valA = *tmpD1;
-                    int32_t valA1 = -(valA);
-                    valA3 = (valA1 - valA1) & tmpD1;
+                    int32_t data_val = *temp_1;
+                    int32_t data_1 = -(data_val);
+                    data_3 = (data_1 - data_1) & temp_1;
                 }
 
-                *((objC << 2) + &g_afa6e0) = valA3;
-                g_afa7e0 = objC + 1;
-                int32_t valA4 = Menu_LeaveMenus_14();
-                int32_t objC2 = 0;
-                objC2 = i[7];
-                int32_t valA8 = *(((valA4 * 0x180 + objC2) << 2) + &g_a96ae0);
+                *((entity_val << 2) + &g_afa6e0) = data_3;
+                g_afa7e0 = entity_val + 1;
+                int32_t data_4 = Menu_LeaveMenus_14();
+                int32_t entity_2 = 0;
+                entity_2 = i[7];
+                int32_t data_8 = *(((data_4 * 0x180 + entity_2) << 2) + &g_a96ae0);
 
-                if (valA8)
-                    valA8(i);
+                if (data_8)
+                    data_8(i);
 
-                objC = g_afa7e0 - 1;
-                g_afa7e0 = objC;
-                i = *((objC << 2) + &g_afa6e0);
+                entity_val = g_afa7e0 - 1;
+                g_afa7e0 = entity_val;
+                i = *((entity_val << 2) + &g_afa6e0);
             } while (i);
 
-            void* v_10 = a1;
-            return Menu_PlayMusic(*(a1 + 0x30));
+            void* item_10 = context;
+            return Menu_PlayMusic(*(context + 0x30));
         }
     }
 
-    void* v_10_1 = a1;
-    return Menu_PlayMusic(*(a1 + 0x30));
+    void* item_10_1 = context;
+    return Menu_PlayMusic(*(context + 0x30));
 }

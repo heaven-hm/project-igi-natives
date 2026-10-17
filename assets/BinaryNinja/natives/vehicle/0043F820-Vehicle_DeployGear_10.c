@@ -1,22 +1,22 @@
 // Original IGI.EXE function: Vehicle_DeployGear_10 (VA 0x0043F820; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_DeployGear_10.h"
-float* Vehicle_DeployGear_10(float* a1, double* a2)
+float* Vehicle_DeployGear_10(float* context, double* param_2)
 
 {
-    double v_18;
-    WeaponType_UpdateAnim(&v_18, a2, 0);
-    double v_30;
-    WeaponType_UpdateAnim(&v_30, a2, 1);
-    double v_48 = v_30 - v_18;
-    double v_28;
-    double v_10;
-    double v_40 = v_28 - v_10;
-    double v_20;
-    double v_8;
-    double v_38 = v_20 - v_8;
-    Sys_FreeMemory_11(&v_48);
-    float v_54 = v_48;
-    float v_50 = v_40;
-    float v_4c = v_38;
-    return WeaponType_SetCategory(a1, &v_54);
+    double item_18;
+    WeaponType_UpdateAnim(&item_18, param_2, 0);
+    double item_30;
+    WeaponType_UpdateAnim(&item_30, param_2, 1);
+    double item_48 = item_30 - item_18;
+    double item_28;
+    double item_10;
+    double item_40 = item_28 - item_10;
+    double item_20;
+    double item_8;
+    double item_38 = item_20 - item_8;
+    Sys_FreeMemory_11(&item_48);
+    float item_54 = item_48;
+    float item_50 = item_40;
+    float item_4c = item_38;
+    return WeaponType_SetCategory(context, &item_54);
 }

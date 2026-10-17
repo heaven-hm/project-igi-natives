@@ -1,205 +1,205 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_21 (VA 0x004AAAFC; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_21.h"
-int32_t Camera_SetFieldOfView_21(char* a1, void** a2, int32_t a3, int32_t a4)
+int32_t Camera_SetFieldOfView_21(char* context, void** param_2, int32_t param_3, int32_t param_4)
 
 {
     int32_t result = 0;
-    char ctxB = *a1;
-    char* srcS = &a1[1];
-    char* v_8 = srcS;
+    char context_val = *context;
+    char* source_val = &context[1];
+    char* item_8 = source_val;
 
     while (true)
     {
-        BOOL valA2;
-        wchar16 (* objC)[0x21];
+        BOOL data_2;
+        wchar16 (* entity_val)[0x21];
 
         if (g_54427c <= 1)
         {
-            objC = g_544070;
-            uint32_t valA3 = ctxB;
-            valA3 = (*objC)[valA3];
-            valA2 = valA3 & 8;
+            entity_val = g_544070;
+            uint32_t data_3 = context_val;
+            data_3 = (*entity_val)[data_3];
+            data_2 = data_3 & 8;
         }
         else
         {
-            uint32_t valA1 = ctxB;
-            uint32_t v_24_1 = valA1;
-            int32_t tmpD;
-            valA2 = Camera_ApplyBandFilter_12(valA1, tmpD, objC, 8);
-            objC = 8;
+            uint32_t data_1 = context_val;
+            uint32_t item_24_1 = data_1;
+            int32_t temp_val;
+            data_2 = Camera_ApplyBandFilter_12(data_1, temp_val, entity_val, 8);
+            entity_val = 8;
         }
 
-        if (!valA2)
+        if (!data_2)
             break;
 
-        ctxB = *srcS;
-        srcS = &srcS[1];
+        context_val = *source_val;
+        source_val = &source_val[1];
     }
 
-    char* v_8_1 = srcS;
+    char* item_8_1 = source_val;
 
-    if (ctxB == 0x2d)
+    if (context_val == 0x2d)
     {
-        a4 |= 2;
+        param_4 |= 2;
     label_4aab57:
-        ctxB = *srcS;
-        srcS = &srcS[1];
-        v_8_1 = srcS;
+        context_val = *source_val;
+        source_val = &source_val[1];
+        item_8_1 = source_val;
     }
-    else if (ctxB == 0x2b)
+    else if (context_val == 0x2b)
         goto label_4aab57;
 
-    if (a3 < 0 || a3 == 1 || a3 > 0x24)
+    if (param_3 < 0 || param_3 == 1 || param_3 > 0x24)
     {
-        char** valA20 = a2;
+        char** data_20 = param_2;
 
-        if (valA20)
-            *valA20 = a1;
+        if (data_20)
+            *data_20 = context;
 
         return 0;
     }
 
-    int32_t objC1 = 0x10;
+    int32_t entity_1 = 0x10;
 
-    if (a3)
+    if (param_3)
         goto label_4aaba5;
 
-    if (ctxB == 0x30)
+    if (context_val == 0x30)
     {
-        char valA5 = *srcS;
+        char data_5 = *source_val;
 
-        if (valA5 == 0x78 || valA5 == 0x58)
+        if (data_5 == 0x78 || data_5 == 0x58)
         {
-            a3 = 0x10;
+            param_3 = 0x10;
         label_4aaba5:
 
-            if (a3 == 0x10 && ctxB == 0x30)
+            if (param_3 == 0x10 && context_val == 0x30)
             {
-                valA5 = *srcS;
+                data_5 = *source_val;
 
-                if (valA5 == 0x78 || valA5 == 0x58)
+                if (data_5 == 0x78 || data_5 == 0x58)
                 {
-                    ctxB = srcS[1];
-                    v_8_1 = &srcS[2];
+                    context_val = source_val[1];
+                    item_8_1 = &source_val[2];
                 }
             }
         }
         else
-            a3 = 8;
+            param_3 = 8;
     }
     else
-        a3 = 0xa;
+        param_3 = 0xa;
 
-    int32_t valA6 = 0xffffffff;
-    int32_t tmpD1 = 0;
-    char* valA7 = COMBINE(tmpD1, valA6) / a3;
-    uint32_t tmpD2 = COMBINE(tmpD1, valA6) % a3;
-    char* v_10_1 = valA7;
+    int32_t data_6 = 0xffffffff;
+    int32_t temp_1 = 0;
+    char* data_7 = COMBINE(temp_1, data_6) / param_3;
+    uint32_t temp_2 = COMBINE(temp_1, data_6) % param_3;
+    char* item_10_1 = data_7;
 
     while (true)
     {
-        uint32_t srcS3 = ctxB;
-        BOOL valA8;
+        uint32_t source_3 = context_val;
+        BOOL data_8;
 
         if (g_54427c <= 1)
         {
-            wchar16 (* valA9)[0x21] = g_544070;
-            valA9 = (*valA9)[srcS3];
-            valA8 = valA9 & 4;
+            wchar16 (* data_9)[0x21] = g_544070;
+            data_9 = (*data_9)[source_3];
+            data_8 = data_9 & 4;
         }
         else
         {
-            uint32_t v_24_2 = srcS3;
-            valA8 = Camera_ApplyBandFilter_12(valA7, tmpD2, objC1, 4);
-            objC1 = 4;
+            uint32_t item_24_2 = source_3;
+            data_8 = Camera_ApplyBandFilter_12(data_7, temp_2, entity_1, 4);
+            entity_1 = 4;
         }
 
-        if (!valA8)
+        if (!data_8)
         {
-            BOOL valA10;
+            BOOL data_10;
 
             if (g_54427c <= 1)
             {
-                wchar16 (* valA11)[0x21] = g_544070;
-                valA11 = (*valA11)[srcS3];
-                valA10 = valA11 & 0x103;
+                wchar16 (* data_11)[0x21] = g_544070;
+                data_11 = (*data_11)[source_3];
+                data_10 = data_11 & 0x103;
             }
             else
             {
-                uint32_t v_24_3 = srcS3;
-                valA10 = Camera_ApplyBandFilter_12(valA8, tmpD2, objC1, 0x103);
-                objC1 = 0x103;
+                uint32_t item_24_3 = source_3;
+                data_10 = Camera_ApplyBandFilter_12(data_8, temp_2, entity_1, 0x103);
+                entity_1 = 0x103;
             }
 
-            if (!valA10)
+            if (!data_10)
                 break;
 
-            int32_t v_20_1 = ctxB;
-            uint32_t valA13;
-            valA13 = Camera_ApplyWideScreen_28(objC1);
-            objC1 = valA13 - 0x37;
+            int32_t item_20_1 = context_val;
+            uint32_t data_13;
+            data_13 = Camera_ApplyWideScreen_28(entity_1);
+            entity_1 = data_13 - 0x37;
         }
         else
-            objC1 = ctxB - 0x30;
+            entity_1 = context_val - 0x30;
 
-        if (objC1 >= a3)
+        if (entity_1 >= param_3)
             break;
 
-        a4 |= 8;
+        param_4 |= 8;
 
-        if (result >= v_10_1 && result == v_10_1)
-            tmpD2 = COMBINE(0, 0xffffffff) % a3;
+        if (result >= item_10_1 && result == item_10_1)
+            temp_2 = COMBINE(0, 0xffffffff) % param_3;
 
-        if (result < v_10_1 || (result == v_10_1 && objC1 <= tmpD2))
-            result = result * a3 + objC1;
+        if (result < item_10_1 || (result == item_10_1 && entity_1 <= temp_2))
+            result = result * param_3 + entity_1;
         else
-            a4 |= 4;
+            param_4 |= 4;
 
-        valA7 = v_8_1;
-        v_8_1 = &v_8_1[1];
-        ctxB = *valA7;
+        data_7 = item_8_1;
+        item_8_1 = &item_8_1[1];
+        context_val = *data_7;
     }
 
-    char* v_8_2 = v_8_1 - 1;
+    char* item_8_2 = item_8_1 - 1;
 
-    if (!(a4 & 8))
+    if (!(param_4 & 8))
     {
-        if (a2)
-            v_8_2 = a1;
+        if (param_2)
+            item_8_2 = context;
 
         result = 0;
     }
-    else if (a4 & 4)
+    else if (param_4 & 4)
     {
     label_4aacb5:
         g_936064 = 0x22;
 
-        if (!(a4 & 1))
+        if (!(param_4 & 1))
         {
-            int32_t objC6 = a4;
-            objC6 &= 2;
-            char f4_1 = objC6;
-            objC6 = -(objC6);
-            result = -((objC6 - objC6)) + 0x7fffffff;
+            int32_t entity_6 = param_4;
+            entity_6 &= 2;
+            char f4_1 = entity_6;
+            entity_6 = -(entity_6);
+            result = -((entity_6 - entity_6)) + 0x7fffffff;
         }
         else
             result = 0xffffffff;
     }
-    else if (!(a4 & 1))
+    else if (!(param_4 & 1))
     {
-        int32_t objC5 = a4 & 2;
+        int32_t entity_5 = param_4 & 2;
 
-        if (objC5 && result > 0x80000000)
+        if (entity_5 && result > 0x80000000)
             goto label_4aacb5;
 
-        if (!objC5 && result > 0x7fffffff)
+        if (!entity_5 && result > 0x7fffffff)
             goto label_4aacb5;
     }
 
-    if (a2)
-        *a2 = v_8_2;
+    if (param_2)
+        *param_2 = item_8_2;
 
-    if (!(a4 & 2))
+    if (!(param_4 & 2))
         return result;
 
     return -(result);

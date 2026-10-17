@@ -1,30 +1,30 @@
 // Original IGI.EXE function: Sys_CheckHeap_11 (VA 0x004B33A0; static CFG gate FAIL, CFG score 0.833).
 #include "Sys_CheckHeap_11.h"
-int32_t Sys_CheckHeap_11(int32_t a1, float* a2, float a3, float a4, float a5)
+int32_t Sys_CheckHeap_11(int32_t context, float* param_2, float param_3, float param_4, float param_5)
 
 {
-    float v_50;
-    Sys_ReadFileBlock_12(&v_50, a3, a4, a5);
-    float v_4c;
-    float v_48;
-    float v_28 = v_50 * *a2 + v_48 * a2[6] + v_4c * a2[3];
-    float v_24 = v_50 * a2[1] + v_48 * a2[7] + v_4c * a2[4];
-    float v_20 = v_50 * a2[2] + v_48 * a2[8] + v_4c * a2[5];
-    float v_44;
-    float v_40;
-    float v_3c;
-    float v_1c = v_44 * *a2 + v_3c * a2[6] + v_40 * a2[3];
-    float v_18 = v_44 * a2[1] + v_3c * a2[7] + v_40 * a2[4];
-    float v_14 = v_44 * a2[2] + v_3c * a2[8] + v_40 * a2[5];
-    float v_38;
-    float v_34;
-    float v_30;
-    float v_10 = v_38 * *a2 + v_30 * a2[6] + v_34 * a2[3];
-    float v_c = v_38 * a2[1] + v_30 * a2[7] + v_34 * a2[4];
-    int32_t v_2c;
-    int32_t result = a2[9] + v_2c + 1;
+    float item_50;
+    Sys_ReadFileBlock_12(&item_50, param_3, param_4, param_5);
+    float item_4c;
+    float item_48;
+    float item_28 = item_50 * *param_2 + item_48 * param_2[6] + item_4c * param_2[3];
+    float item_24 = item_50 * param_2[1] + item_48 * param_2[7] + item_4c * param_2[4];
+    float item_20 = item_50 * param_2[2] + item_48 * param_2[8] + item_4c * param_2[5];
+    float item_44;
+    float item_40;
+    float item_3c;
+    float item_1c = item_44 * *param_2 + item_3c * param_2[6] + item_40 * param_2[3];
+    float item_18 = item_44 * param_2[1] + item_3c * param_2[7] + item_40 * param_2[4];
+    float item_14 = item_44 * param_2[2] + item_3c * param_2[8] + item_40 * param_2[5];
+    float item_38;
+    float item_34;
+    float item_30;
+    float item_10 = item_38 * *param_2 + item_30 * param_2[6] + item_34 * param_2[3];
+    float item_c = item_38 * param_2[1] + item_30 * param_2[7] + item_34 * param_2[4];
+    int32_t item_2c;
+    int32_t result = param_2[9] + item_2c + 1;
     int32_t result_1 = result;
-    float v_8 = v_38 * a2[2] + v_30 * a2[8] + v_34 * a2[5];
-    memcpy(a1, &v_28, 0x28);
+    float item_8 = item_38 * param_2[2] + item_30 * param_2[8] + item_34 * param_2[5];
+    memcpy(context, &item_28, 0x28);
     return result;
 }

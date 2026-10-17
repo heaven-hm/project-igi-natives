@@ -1,145 +1,145 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_10 (VA 0x004A6F6F; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_10.h"
-int32_t* Camera_SetFieldOfView_10(PSTR a1, char* a2, int32_t a3, int32_t* a4)
+int32_t* Camera_SetFieldOfView_10(PSTR context, char* param_2, int32_t param_3, int32_t* param_4)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
-    int32_t v_c = objC;
-    int32_t srcS = g_936214;
-    char* dstD = a2;
-    int32_t v_c_1 = 0;
-    int32_t v_8_1 = 0;
-    char valA = *dstD;
-    int32_t objC1;
-    int32_t srcS1;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
+    int32_t item_c = entity_val;
+    int32_t source_val = g_936214;
+    char* dest_val = param_2;
+    int32_t item_c_1 = 0;
+    int32_t item_8_1 = 0;
+    char data_val = *dest_val;
+    int32_t entity_1;
+    int32_t source_1;
 
-    if (valA == 0x61)
+    if (data_val == 0x61)
     {
-        objC1 = 0x109;
+        entity_1 = 0x109;
     label_4a6fad:
-        srcS1 = srcS | 2;
+        source_1 = source_val | 2;
     label_4a6fb2:
-        int32_t tmpD1 = 1;
+        int32_t temp_1 = 1;
 
         while (true)
         {
-            valA = dstD[1];
-            dstD = &dstD[1];
+            data_val = dest_val[1];
+            dest_val = &dest_val[1];
 
-            if (!valA)
+            if (!data_val)
                 break;
 
-            if (!tmpD1)
+            if (!temp_1)
                 break;
 
-            int32_t valA1 = valA;
+            int32_t data_1 = data_val;
 
-            if (valA1 > 0x54)
+            if (data_1 > 0x54)
             {
-                if (valA1 == 0x62)
+                if (data_1 == 0x62)
                 {
-                    if (!(*(&objC1 + 1) & 0xc0))
+                    if (!(*(&entity_1 + 1) & 0xc0))
                     {
-                        *(&objC1 + 1) |= 0x80;
+                        *(&entity_1 + 1) |= 0x80;
                         continue;
                     }
                 }
-                else if (valA1 == 0x63)
+                else if (data_1 == 0x63)
                 {
-                    if (!v_c_1)
+                    if (!item_c_1)
                     {
-                        v_c_1 = 1;
-                        srcS1 |= 0x4000;
+                        item_c_1 = 1;
+                        source_1 |= 0x4000;
                         continue;
                     }
                 }
-                else if (valA1 == 0x6e)
+                else if (data_1 == 0x6e)
                 {
-                    if (!v_c_1)
+                    if (!item_c_1)
                     {
-                        v_c_1 = 1;
-                        srcS1 &= 0xffffbfff;
+                        item_c_1 = 1;
+                        source_1 &= 0xffffbfff;
                         continue;
                     }
                 }
-                else if (valA1 == 0x74 && !(*(&objC1 + 1) & 0xc0))
+                else if (data_1 == 0x74 && !(*(&entity_1 + 1) & 0xc0))
                 {
-                    *(&objC1 + 1) |= 0x40;
+                    *(&entity_1 + 1) |= 0x40;
                     continue;
                 }
             }
-            else if (valA1 == 0x54)
+            else if (data_1 == 0x54)
             {
-                if (!(0x1000 & objC1))
+                if (!(0x1000 & entity_1))
                 {
-                    objC1 |= 0x1000;
+                    entity_1 |= 0x1000;
                     continue;
                 }
             }
-            else if (valA1 == 0x2b)
+            else if (data_1 == 0x2b)
             {
-                if (!(objC1 & 2))
+                if (!(entity_1 & 2))
                 {
-                    objC1 = (objC1 & 0xfffffffe) | 2;
-                    srcS1 = (srcS1 & 0xfffffffc) | 0x80;
+                    entity_1 = (entity_1 & 0xfffffffe) | 2;
+                    source_1 = (source_1 & 0xfffffffc) | 0x80;
                     continue;
                 }
             }
-            else if (valA1 == 0x44)
+            else if (data_1 == 0x44)
             {
-                if (!(objC1 & 0x40))
+                if (!(entity_1 & 0x40))
                 {
-                    objC1 |= 0x40;
+                    entity_1 |= 0x40;
                     continue;
                 }
             }
-            else if (valA1 == 0x52)
+            else if (data_1 == 0x52)
             {
-                if (!v_8_1)
+                if (!item_8_1)
                 {
-                    v_8_1 = 1;
-                    objC1 |= 0x10;
+                    item_8_1 = 1;
+                    entity_1 |= 0x10;
                     continue;
                 }
             }
-            else if (valA1 == 0x53 && !v_8_1)
+            else if (data_1 == 0x53 && !item_8_1)
             {
-                v_8_1 = 1;
-                objC1 |= 0x20;
+                item_8_1 = 1;
+                entity_1 |= 0x20;
                 continue;
             }
 
-            tmpD1 = 0;
+            temp_1 = 0;
         }
 
-        int32_t v_20_1 = a3;
-        int32_t valA3 = Camera_UpdateTransform_24(a1, objC1, 0xa4);
+        int32_t item_20_1 = param_3;
+        int32_t data_3 = Camera_UpdateTransform_24(context, entity_1, 0xa4);
 
-        if (valA3 >= 0)
+        if (data_3 >= 0)
         {
             g_936210 += 1;
-            a4[3] = srcS1;
-            a4[1] = 0;
-            *a4 = 0;
-            a4[2] = 0;
-            a4[7] = 0;
-            a4[4] = valA3;
-            return a4;
+            param_4[3] = source_1;
+            param_4[1] = 0;
+            *param_4 = 0;
+            param_4[2] = 0;
+            param_4[7] = 0;
+            param_4[4] = data_3;
+            return param_4;
         }
     }
     else
     {
-        if (valA == 0x72)
+        if (data_val == 0x72)
         {
-            objC1 = 0;
-            srcS1 = srcS | 1;
+            entity_1 = 0;
+            source_1 = source_val | 1;
             goto label_4a6fb2;
         }
 
-        if (valA == 0x77)
+        if (data_val == 0x77)
         {
-            objC1 = 0x301;
+            entity_1 = 0x301;
             goto label_4a6fad;
         }
     }

@@ -1,52 +1,52 @@
 // Original IGI.EXE function: Render_DrawRigidMesh_6 (VA 0x004D32A0; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawRigidMesh_6.h"
-int32_t Render_DrawRigidMesh_6(int32_t a1, int32_t a2, void* a3, void* a4)
+int32_t Render_DrawRigidMesh_6(int32_t context, int32_t param_2, void* param_3, void* param_4)
 
 {
-    void* v_14 = a4;
-    int32_t* valA = Render_SetupLighting_6(a4, 0);
-    int32_t* valA1 = Render_SetupLighting_6(a4, 1);
-    int32_t valA2 = *(a4 + 0x14);
+    void* item_14 = param_4;
+    int32_t* data_val = Render_SetupLighting_6(param_4, 0);
+    int32_t* data_1 = Render_SetupLighting_6(param_4, 1);
+    int32_t data_2 = *(param_4 + 0x14);
 
-    if (!valA2)
+    if (!data_2)
     {
-        int32_t valA17;
+        int32_t data_17;
 
-        if (*valA == 0xffffffff)
-            valA17 = a2;
+        if (*data_val == 0xffffffff)
+            data_17 = param_2;
         else
-            valA17 = Render_BlendbranchToIllegal(a1, a2, a3, valA);
+            data_17 = Render_BlendbranchToIllegal(context, param_2, param_3, data_val);
 
-        if (*valA1 == 0xffffffff)
-            return valA17;
+        if (*data_1 == 0xffffffff)
+            return data_17;
 
-        return Render_BlendbranchToIllegal(a1, valA17, a3, valA1);
+        return Render_BlendbranchToIllegal(context, data_17, param_3, data_1);
     }
 
-    int32_t valA3 = valA2(*(a4 + 0x18));
+    int32_t data_3 = data_2(*(param_4 + 0x18));
 
-    if (valA3 != 0xffffffff)
-        Render_ComputeNormals_6(a4);
+    if (data_3 != 0xffffffff)
+        Render_ComputeNormals_6(param_4);
 
-    if (!valA3)
+    if (!data_3)
     {
-        Render_BoneobjDeleteblendno(a4, 0);
-        return Render_BlendbranchToIllegal(a1, a2, a3, valA1);
+        Render_BoneobjDeleteblendno(param_4, 0);
+        return Render_BlendbranchToIllegal(context, param_2, param_3, data_1);
     }
 
-    if (valA3 == 1)
+    if (data_3 == 1)
     {
-        Render_BoneobjDeleteblendno(a4, 1);
-        return Render_BlendbranchToIllegal(a1, a2, a3, valA);
+        Render_BoneobjDeleteblendno(param_4, 1);
+        return Render_BlendbranchToIllegal(context, param_2, param_3, data_val);
     }
 
-    if (valA3 != 2)
+    if (data_3 != 2)
     {
-        *(a3 + 4) |= 0x10000;
-        return Render_BlendbranchToIllegal(a1, Render_BlendbranchToIllegal(a1, a2, a3, valA), a3, valA1);
+        *(param_3 + 4) |= 0x10000;
+        return Render_BlendbranchToIllegal(context, Render_BlendbranchToIllegal(context, param_2, param_3, data_val), param_3, data_1);
     }
 
-    Render_BoneobjDeleteblendno(a4, 0);
-    Render_BoneobjDeleteblendno(a4, 1);
-    return a2;
+    Render_BoneobjDeleteblendno(param_4, 0);
+    Render_BoneobjDeleteblendno(param_4, 1);
+    return param_2;
 }

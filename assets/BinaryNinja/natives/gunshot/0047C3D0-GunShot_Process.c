@@ -1,23 +1,23 @@
 // Original IGI.EXE function: GunShot_Process (VA 0x0047C3D0; static CFG gate PASS, CFG score 1.000).
 #include "GunShot_Process.h"
-void* GunShot_Process(void* a1)
+void* GunShot_Process(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x6c);
+    int32_t* data_val = *(context + 0x6c);
 
-    if (valA)
+    if (data_val)
     {
-        Qtask_UpdateList(valA);
-        *(a1 + 0x6c) = 0;
+        Qtask_UpdateList(data_val);
+        *(context + 0x6c) = 0;
     }
 
-    int32_t* valA1 = *(a1 + 0x70);
+    int32_t* data_1 = *(context + 0x70);
 
-    if (valA1)
+    if (data_1)
     {
-        Qtask_UpdateList(valA1);
-        *(a1 + 0x70) = 0;
+        Qtask_UpdateList(data_1);
+        *(context + 0x70) = 0;
     }
 
-    return DynObj_RemoveSymbol_7(Level_StartMission_4(), a1, 0);
+    return DynObj_RemoveSymbol_7(Level_StartMission_4(), context, 0);
 }

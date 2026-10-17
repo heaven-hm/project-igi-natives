@@ -1,76 +1,76 @@
 // Original IGI.EXE function: Physics_UpdateForces_11 (VA 0x0050A830; static CFG gate PASS, CFG score 1.000).
 #include "Physics_UpdateForces_11.h"
-int32_t* Physics_UpdateForces_11(int32_t* a1)
+int32_t* Physics_UpdateForces_11(int32_t* context)
 
 {
-    int32_t valA = g_bcac90;
-    int32_t v_c = valA;
+    int32_t data_val = g_bcac90;
+    int32_t item_c = data_val;
 
-    if (valA >= 0x100)
-        v_c = 0x100;
+    if (data_val >= 0x100)
+        item_c = 0x100;
 
-    int32_t srcS = *a1;
-    int32_t dstD = a1[1];
+    int32_t source_val = *context;
+    int32_t dest_val = context[1];
 
-    if ((~(srcS - 1) & srcS) != srcS)
+    if ((~(source_val - 1) & source_val) != source_val)
     {
         int32_t eflags_1;
-        char valA5;
-        valA5 = __bsr_gprv_memv(srcS);
-        srcS = 1 << ((valA5 + 1) & 0x1f);
+        char data_5;
+        data_5 = __bsr_gprv_memv(source_val);
+        source_val = 1 << ((data_5 + 1) & 0x1f);
     }
 
-    if ((~(dstD - 1) & dstD) != dstD)
+    if ((~(dest_val - 1) & dest_val) != dest_val)
     {
         int32_t eflags_2;
-        char valA6;
-        valA6 = __bsr_gprv_memv(dstD);
-        dstD = 1 << ((valA6 + 1) & 0x1f);
+        char data_6;
+        data_6 = __bsr_gprv_memv(dest_val);
+        dest_val = 1 << ((data_6 + 1) & 0x1f);
     }
 
-    int32_t valA8 = g_bcac7c;
+    int32_t data_8 = g_bcac7c;
 
-    if (valA8 <= 1)
-        valA8 = 1;
+    if (data_8 <= 1)
+        data_8 = 1;
 
-    int32_t objC4 = g_bcac80;
-    int32_t tmpD3 = g_bcac84;
+    int32_t entity_4 = g_bcac80;
+    int32_t temp_3 = g_bcac84;
 
-    if (objC4 <= 1)
-        objC4 = 1;
+    if (entity_4 <= 1)
+        entity_4 = 1;
 
-    int32_t ctxB = g_bcac88;
+    int32_t context_val = g_bcac88;
 
-    if (srcS < valA8)
-        srcS = valA8;
-    else if (srcS > tmpD3)
-        srcS = tmpD3;
+    if (source_val < data_8)
+        source_val = data_8;
+    else if (source_val > temp_3)
+        source_val = temp_3;
 
-    if (dstD < objC4)
-        dstD = objC4;
-    else if (dstD > ctxB)
-        dstD = ctxB;
+    if (dest_val < entity_4)
+        dest_val = entity_4;
+    else if (dest_val > context_val)
+        dest_val = context_val;
 
-    if (srcS <= dstD)
+    if (source_val <= dest_val)
     {
-        uint32_t f0_2 = COMBINE(0, dstD) / srcS;
+        uint32_t f0_2 = COMBINE(0, dest_val) / source_val;
 
-        if (f0_2 > v_c && v_c)
-            srcS = COMBINE(0, f0_2 * srcS) / v_c;
+        if (f0_2 > item_c && item_c)
+            source_val = COMBINE(0, f0_2 * source_val) / item_c;
     }
     else
     {
-        uint32_t f0 = COMBINE(0, srcS) / dstD;
+        uint32_t f0 = COMBINE(0, source_val) / dest_val;
 
-        if (f0 > v_c && v_c)
+        if (f0 > item_c && item_c)
         {
-            a1[3] = COMBINE(0, f0 * dstD) / v_c;
-            a1[2] = srcS;
-            return a1;
+            context[3] = COMBINE(0, f0 * dest_val) / item_c;
+            context[2] = source_val;
+            return context;
         }
     }
 
-    a1[3] = dstD;
-    a1[2] = srcS;
-    return a1;
+    context[3] = dest_val;
+    context[2] = source_val;
+    return context;
 }

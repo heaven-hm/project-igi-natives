@@ -1,11 +1,11 @@
 // Original IGI.EXE function: Script_ParseEnumReal32_20 (VA 0x004F7C20; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumReal32_20.h"
-int32_t Script_ParseEnumReal32_20(void* a1)
+int32_t Script_ParseEnumReal32_20(void* context)
 
 {
     int32_t result = 0;
-    long double x87_r7_1 = *(a1 + 0x2c7c) * 0.5f;
-    double* objC = a1 + 0x78;
+    long double fpu_val_7_1 = *(context + 0x2c7c) * 0.5f;
+    double* entity_val = context + 0x78;
     int32_t i_1 = 7;
     int32_t i;
 
@@ -21,31 +21,31 @@ int32_t Script_ParseEnumReal32_20(void* a1)
 
             do
             {
-                long double x87_r6_3 = fabsl(objC[-2] - *(a1 + 0x2c08));
-                x87_r7_1 - x87_r6_3;
+                long double fpu_val_6_3 = fabsl(entity_val[-2] - *(context + 0x2c08));
+                fpu_val_7_1 - fpu_val_6_3;
 
-                if (!(*(&((x87_r7_1 < x87_r6_3 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_1, x87_r6_3) ? 1 : 0) << 0xa
-                    | (x87_r7_1 == x87_r6_3 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                if (!(*(&((fpu_val_7_1 < fpu_val_6_3 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_1, fpu_val_6_3) ? 1 : 0) << 0xa
+                    | (fpu_val_7_1 == fpu_val_6_3 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
                 {
-                    long double x87_r6_5 = fabsl(objC[-1] - *(a1 + 0x2c10));
-                    x87_r7_1 - x87_r6_5;
+                    long double fpu_val_6_5 = fabsl(entity_val[-1] - *(context + 0x2c10));
+                    fpu_val_7_1 - fpu_val_6_5;
 
-                    if (!(*(&((x87_r7_1 < x87_r6_5 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_1, x87_r6_5) ? 1 : 0) << 0xa
-                        | (x87_r7_1 == x87_r6_5 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                    if (!(*(&((fpu_val_7_1 < fpu_val_6_5 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_1, fpu_val_6_5) ? 1 : 0) << 0xa
+                        | (fpu_val_7_1 == fpu_val_6_5 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
                     {
-                        long double x87_r6_7 = fabsl(*objC - *(a1 + 0x2c18));
-                        x87_r7_1 - x87_r6_7;
+                        long double fpu_val_6_7 = fabsl(*entity_val - *(context + 0x2c18));
+                        fpu_val_7_1 - fpu_val_6_7;
 
-                        if (!(*(&((x87_r7_1 < x87_r6_7 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_1, x87_r6_7) ? 1 : 0) << 0xa
-                                | (x87_r7_1 == x87_r6_7 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
-                            result |= *(objC + 0xc);
+                        if (!(*(&((fpu_val_7_1 < fpu_val_6_7 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_1, fpu_val_6_7) ? 1 : 0) << 0xa
+                                | (fpu_val_7_1 == fpu_val_6_7 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                            result |= *(entity_val + 0xc);
                     }
                 }
 
-                objC = &objC[4];
+                entity_val = &entity_val[4];
                 k = k_1;
                 k_1 -= 1;
             } while (k != 1);

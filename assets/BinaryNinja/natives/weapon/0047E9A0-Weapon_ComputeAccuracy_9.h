@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0047E9A0 Weapon_ComputeAccuracy_9 | gate PASS | openigi True */
-struct status_msg* Weapon_ComputeAccuracy_9(int* a1, int* a2, unsigned int a3, unsigned int a4);
+struct status_msg* Weapon_ComputeAccuracy_9(int* context, int* param_2, unsigned int param_3, unsigned int param_4);

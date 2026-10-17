@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Script_CallNativeHandler_21 (VA 0x004F8FE0; static CFG gate PASS, CFG score 0.952).
 #include "Script_CallNativeHandler_21.h"
-struct status_msg* Script_CallNativeHandler_21(void* a1, void* a2, int32_t a3)
+struct status_msg* Script_CallNativeHandler_21(void* context, void* param_2, int32_t param_3)
 
 {
     int32_t kind = QHash_ValueGet();
@@ -10,50 +10,50 @@ struct status_msg* Script_CallNativeHandler_21(void* a1, void* a2, int32_t a3)
     {
         int32_t kind_1;
         kind_1 = g_a76cdc;
-        result = QTask_HandleInput(a1, kind_1, 0);
+        result = QTask_HandleInput(context, kind_1, 0);
     }
     else
     {
         QHash_ValueSet();
         kind = g_a76cdc;
-        result = QTask_HandleInput(a1, kind, 0);
+        result = QTask_HandleInput(context, kind, 0);
         Sys_DispatchOpcode_2();
     }
 
     result->sprite[0x16] = 1;
-    int32_t objC2 = *(a2 + 0xb8);
-    result->sprite[4] = objC2;
-    result->sprite[5] = *(&objC2 + 1);
-    result->sprite[6] = *(&objC2 + 2);
-    result->sprite[7] = *(&objC2 + 3);
-    int32_t tmpD = *(a2 + 0xd8);
-    result->sprite[0x24] = tmpD;
-    result->sprite[0x25] = *(&tmpD + 1);
-    result->sprite[0x26] = *(&tmpD + 2);
-    result->sprite[0x27] = *(&tmpD + 3);
-    int32_t objC3 = *(a2 + 0xd4);
-    result->sprite[0x20] = objC3;
-    result->sprite[0x21] = *(&objC3 + 1);
-    result->sprite[0x22] = *(&objC3 + 2);
-    result->sprite[0x23] = *(&objC3 + 3);
-    int32_t tmpD1 = *(a2 + 0xbc);
-    result->sprite[8] = tmpD1;
-    result->sprite[9] = *(&tmpD1 + 1);
-    result->sprite[0xa] = *(&tmpD1 + 2);
-    result->sprite[0xb] = *(&tmpD1 + 3);
-    int32_t valA4 = *(a2 + 0x108);
-    result->sprite[0x54] = valA4;
-    result->sprite[0x55] = *(&valA4 + 1);
-    result->sprite[0x56] = *(&valA4 + 2);
-    result->sprite[0x57] = *(&valA4 + 3);
-    memcpy(&result->head[0x1c], a3, 0x18);
-    uint32_t valA6 = Script_ParseEnumReal32_8();
-    int32_t tmpD2 = 0;
-    tmpD2 = result->head[7];
-    int32_t valA7 = *(((valA6 * 0x180 + tmpD2) << 2) + &g_a96ae0);
+    int32_t entity_2 = *(param_2 + 0xb8);
+    result->sprite[4] = entity_2;
+    result->sprite[5] = *(&entity_2 + 1);
+    result->sprite[6] = *(&entity_2 + 2);
+    result->sprite[7] = *(&entity_2 + 3);
+    int32_t temp_val = *(param_2 + 0xd8);
+    result->sprite[0x24] = temp_val;
+    result->sprite[0x25] = *(&temp_val + 1);
+    result->sprite[0x26] = *(&temp_val + 2);
+    result->sprite[0x27] = *(&temp_val + 3);
+    int32_t entity_3 = *(param_2 + 0xd4);
+    result->sprite[0x20] = entity_3;
+    result->sprite[0x21] = *(&entity_3 + 1);
+    result->sprite[0x22] = *(&entity_3 + 2);
+    result->sprite[0x23] = *(&entity_3 + 3);
+    int32_t temp_1 = *(param_2 + 0xbc);
+    result->sprite[8] = temp_1;
+    result->sprite[9] = *(&temp_1 + 1);
+    result->sprite[0xa] = *(&temp_1 + 2);
+    result->sprite[0xb] = *(&temp_1 + 3);
+    int32_t data_4 = *(param_2 + 0x108);
+    result->sprite[0x54] = data_4;
+    result->sprite[0x55] = *(&data_4 + 1);
+    result->sprite[0x56] = *(&data_4 + 2);
+    result->sprite[0x57] = *(&data_4 + 3);
+    memcpy(&result->head[0x1c], param_3, 0x18);
+    uint32_t data_6 = Script_ParseEnumReal32_8();
+    int32_t temp_2 = 0;
+    temp_2 = result->head[7];
+    int32_t data_7 = *(((data_6 * 0x180 + temp_2) << 2) + &g_a96ae0);
 
-    if (valA7)
-        valA7(result, 0);
+    if (data_7)
+        data_7(result, 0);
 
     return result;
 }

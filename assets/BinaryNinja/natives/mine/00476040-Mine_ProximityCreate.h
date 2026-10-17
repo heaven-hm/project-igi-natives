@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00476040 Mine_ProximityCreate | gate PASS | openigi False */
-struct status_msg* Mine_ProximityCreate(void * a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, char a9);
+struct status_msg* Mine_ProximityCreate(void * context, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, char param_9);

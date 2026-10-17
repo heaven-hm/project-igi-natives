@@ -1,22 +1,22 @@
 // Original IGI.EXE function: MenuScreen_Setup (VA 0x00421A10; static CFG gate PASS, CFG score 1.000).
 #include "MenuScreen_Setup.h"
-int32_t MenuScreen_Setup(void* a1)
+int32_t MenuScreen_Setup(void* context)
 
 {
-    Script_CallNativeHandler_6(a1 + 0xac);
-    Script_CallNativeHandler_6(a1 + 0xfc);
-    Script_CallNativeHandler_6(a1 + 0x14c);
-    int32_t result = Script_EvaluateCondition_4(a1);
+    Script_CallNativeHandler_6(context + 0xac);
+    Script_CallNativeHandler_6(context + 0xfc);
+    Script_CallNativeHandler_6(context + 0x14c);
+    int32_t result = Script_EvaluateCondition_4(context);
 
     if (result >= 0)
     {
-        int32_t valA1 = Script_SpawnNewTask_6();
-        int32_t objC1 = 0;
-        objC1 = *(a1 + 0x1c);
-        result = *(((valA1 * 0x180 + objC1) << 2) + &g_a96ae0);
+        int32_t data_1 = Script_SpawnNewTask_6();
+        int32_t entity_1 = 0;
+        entity_1 = *(context + 0x1c);
+        result = *(((data_1 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
         if (result)
-            return result(a1);
+            return result(context);
     }
 
     return result;

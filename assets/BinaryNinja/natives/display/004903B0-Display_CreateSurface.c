@@ -1,116 +1,116 @@
 // Original IGI.EXE function: Display_CreateSurface (VA 0x004903B0; static CFG gate PASS, CFG score 0.978).
 #include "Display_CreateSurface.h"
-int32_t Display_CreateSurface(void* a1)
+int32_t Display_CreateSurface(void* context)
 
 {
-    void* dstD = a1;
+    void* dest_val = context;
 
-    if (*(dstD + 0x2a))
+    if (*(dest_val + 0x2a))
         FX_UnableToRemoveWinpro(sub_490530);
 
-    if (*(dstD + 0x168))
+    if (*(dest_val + 0x168))
     {
         int32_t i = 0;
-        a1 = nullptr;
+        context = nullptr;
 
-        if (*(dstD + 0x1148) > 0)
+        if (*(dest_val + 0x1148) > 0)
         {
-            int32_t* srcS1 = dstD + 0x1ec;
-            bool cond_1_1;
+            int32_t* source_1 = dest_val + 0x1ec;
+            bool flag_1_1;
 
             do
             {
-                Sys_ExecuteBytecode_2(srcS1[4]);
-                srcS1[4] = 0;
+                Sys_ExecuteBytecode_2(source_1[4]);
+                source_1[4] = 0;
 
-                if (*srcS1 > 0)
+                if (*source_1 > 0)
                 {
-                    int32_t* ctxB1 = &srcS1[0xd];
+                    int32_t* context_1 = &source_1[0xd];
 
                     do
                     {
-                        Sys_ReadFileBlock_18(*ctxB1);
+                        Sys_ReadFileBlock_18(*context_1);
                         i += 1;
-                        ctxB1 = &ctxB1[1];
-                    } while (i < *srcS1);
+                        context_1 = &context_1[1];
+                    } while (i < *source_1);
 
                     i = 0;
                 }
 
-                srcS1 = &srcS1[0x1f];
-                cond_1_1 = a1 + 1 < *(dstD + 0x1148);
-                a1 += 1;
-            } while (cond_1_1);
+                source_1 = &source_1[0x1f];
+                flag_1_1 = context + 1 < *(dest_val + 0x1148);
+                context += 1;
+            } while (flag_1_1);
         }
 
-        int32_t* srcS2 = dstD + 0x1b8;
+        int32_t* source_2 = dest_val + 0x1b8;
         int32_t i_2 = 4;
         int32_t i_1;
 
         do
         {
-            int32_t* valA7 = *srcS2;
+            int32_t* data_7 = *source_2;
 
-            if (valA7)
-                Heap_FreeEntry(valA7);
+            if (data_7)
+                Heap_FreeEntry(data_7);
 
-            srcS2 = &srcS2[1];
+            source_2 = &source_2[1];
             i_1 = i_2;
             i_2 -= 1;
         } while (i_1 != 1);
-        Display_SwapBuffers_13(dstD + 0x16c);
+        Display_SwapBuffers_13(dest_val + 0x16c);
     }
 
-    void* valA8 = *(dstD + 0x158);
+    void* data_8 = *(dest_val + 0x158);
 
-    if (valA8 && *(dstD + 0x29))
+    if (data_8 && *(dest_val + 0x29))
     {
-        Display_SetDisplayMode_12(valA8);
-        Display_CloseDevice_11(*(dstD + 0x158));
+        Display_SetDisplayMode_12(data_8);
+        Display_CloseDevice_11(*(dest_val + 0x158));
     }
 
-    void* valA10 = *(dstD + 0x160);
+    void* data_10 = *(dest_val + 0x160);
 
-    if (valA10)
+    if (data_10)
     {
-        Sys_ExecuteBytecode_2(valA10);
-        *(dstD + 0x160) = 0;
+        Sys_ExecuteBytecode_2(data_10);
+        *(dest_val + 0x160) = 0;
     }
 
-    void* valA11 = *(dstD + 0x164);
+    void* data_11 = *(dest_val + 0x164);
 
-    if (valA11)
+    if (data_11)
     {
-        Sys_ExecuteBytecode_2(valA11);
-        *(dstD + 0x164) = 0;
+        Sys_ExecuteBytecode_2(data_11);
+        *(dest_val + 0x164) = 0;
     }
 
-    void* valA12 = *(dstD + 0x154);
+    void* data_12 = *(dest_val + 0x154);
 
-    if (valA12)
+    if (data_12)
     {
-        Sys_ExecuteBytecode_2(valA12);
-        *(dstD + 0x154) = 0;
+        Sys_ExecuteBytecode_2(data_12);
+        *(dest_val + 0x154) = 0;
     }
 
-    HIC hic = *(dstD + 0x15c);
+    HIC hic = *(dest_val + 0x15c);
 
     if (hic)
     {
         ICSendMessage(hic, 0x400e, 0, 0);
-        ICClose(*(dstD + 0x15c));
+        ICClose(*(dest_val + 0x15c));
     }
 
-    struct IAVIStream pavi = *(dstD + 0x9c);
+    struct IAVIStream pavi = *(dest_val + 0x9c);
 
     if (pavi)
         AVIStreamRelease(pavi);
 
-    struct IAVIFile pfile = *(dstD + 0x2c);
+    struct IAVIFile pfile = *(dest_val + 0x2c);
 
     if (pfile)
         AVIFileRelease(pfile);
 
-    __builtin_memset(dstD, 0, 0x1150);
+    memset(dest_val, 0, 0x1150);
     return 0;
 }

@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Script_NoFreeNodesizeElemen (VA 0x004F9460; static CFG gate PASS, CFG score 1.000).
 #include "Script_NoFreeNodesizeElemen.h"
-int16_t* Script_NoFreeNodesizeElemen(int16_t a1, int32_t a2)
+int16_t* Script_NoFreeNodesizeElemen(int16_t context, int32_t param_2)
 
 {
-    int32_t tmpD = 0xffffffff;
-    int32_t objC = 0;
+    int32_t temp_val = 0xffffffff;
+    int32_t entity_val = 0;
     int16_t* i;
 
     for (i = &g_a77228; i < &g_a77248; )
     {
-        if (tmpD == 0xffffffff && *i == 0x181)
-            tmpD = objC;
+        if (temp_val == 0xffffffff && *i == 0x181)
+            temp_val = entity_val;
 
-        if (*i == a1)
+        if (*i == context)
         {
-            *((objC << 3) + &g_a7722c) = a2;
-            return a2;
+            *((entity_val << 3) + &g_a7722c) = param_2;
+            return param_2;
         }
 
         i = &i[4];
-        objC += 1;
+        entity_val += 1;
     }
 
-    if (tmpD != 0xffffffff)
+    if (temp_val != 0xffffffff)
     {
-        *((tmpD << 3) + &g_a77228) = a1;
-        *((tmpD << 3) + &g_a7722c) = a2;
+        *((temp_val << 3) + &g_a77228) = context;
+        *((temp_val << 3) + &g_a7722c) = param_2;
         return i;
     }
 

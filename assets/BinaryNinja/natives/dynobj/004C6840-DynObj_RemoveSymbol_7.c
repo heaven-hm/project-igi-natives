@@ -1,24 +1,24 @@
 // Original IGI.EXE function: DynObj_RemoveSymbol_7 (VA 0x004C6840; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_RemoveSymbol_7.h"
-void* DynObj_RemoveSymbol_7(void* a1, void* a2, int32_t a3)
+void* DynObj_RemoveSymbol_7(void* context, void* param_2, int32_t param_3)
 
 {
-    void* result = a2;
-    void* objC = *(result + 0x54);
+    void* result = param_2;
+    void* entity_val = *(result + 0x54);
 
-    if (objC)
-        *(objC + 0x58) = *(result + 0x58);
-    else if (a3 != 0xffffffff)
-        *(a1 + (a3 << 2) + 0xd1c) = *(result + 0x58);
+    if (entity_val)
+        *(entity_val + 0x58) = *(result + 0x58);
+    else if (param_3 != 0xffffffff)
+        *(context + (param_3 << 2) + 0xd1c) = *(result + 0x58);
     else
-        *(a1 + 0xd18) = *(result + 0x58);
+        *(context + 0xd18) = *(result + 0x58);
 
-    void* objC3 = *(result + 0x58);
+    void* entity_3 = *(result + 0x58);
 
-    if (objC3)
+    if (entity_3)
     {
         result = *(result + 0x54);
-        *(objC3 + 0x54) = result;
+        *(entity_3 + 0x54) = result;
     }
 
     return result;

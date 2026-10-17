@@ -1,50 +1,50 @@
 // Original IGI.EXE function: Sys_ReadFileBlock_28 (VA 0x004BCE40; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_ReadFileBlock_28.h"
-int32_t Sys_ReadFileBlock_28(void* a1, int32_t a2, int32_t a3)
+int32_t Sys_ReadFileBlock_28(void* context, int32_t param_2, int32_t param_3)
 
 {
-    int32_t dstD = a2;
+    int32_t dest_val = param_2;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t dstD1 = *(a1 + 0x28);
-    int32_t valA1 = *(a1 + 0x1c) - 1;
-    *(a1 + 0x1c) = valA1;
-    *(dstD1 + (valA1 << 2)) = a3;
-    int32_t objC3 = *(a1 + 0x24);
-    uint32_t ctxB2 = ((~i + 3) & 0xfffffffc) >> 2;
-    int32_t dstD3 = *(a1 + 0x18) - ctxB2;
-    *(a1 + 0x18) = dstD3;
-    int32_t dstD4 = a2;
+    int32_t dest_1 = *(context + 0x28);
+    int32_t data_1 = *(context + 0x1c) - 1;
+    *(context + 0x1c) = data_1;
+    *(dest_1 + (data_1 << 2)) = param_3;
+    int32_t entity_3 = *(context + 0x24);
+    uint32_t context_2 = ((~i + 3) & 0xfffffffc) >> 2;
+    int32_t dest_3 = *(context + 0x18) - context_2;
+    *(context + 0x18) = dest_3;
+    int32_t dest_4 = param_2;
     int32_t i_1 = 0xffffffff;
 
     while (i_1)
     {
-        bool cond_1_1 = 0 != *dstD4;
-        dstD4 += 1;
+        bool flag_1_1 = 0 != *dest_4;
+        dest_4 += 1;
         i_1 -= 1;
 
-        if (!cond_1_1)
+        if (!flag_1_1)
             break;
     }
 
-    int32_t objC4 = ~i_1;
-    int32_t srcS2;
-    int32_t dstD7;
-    dstD7 = memcpy(objC3 + (dstD3 << 2), dstD4 - objC4, objC4 & 0xfffffffc);
-    memcpy(dstD7, srcS2, objC4 & 3);
-    int32_t objC8 = *(a1 + 0x24);
-    int32_t result = *(a1 + 0x18) - 1;
-    *(a1 + 0x18) = result;
-    *(objC8 + (result << 2)) = ctxB2;
+    int32_t entity_4 = ~i_1;
+    int32_t source_2;
+    int32_t dest_7;
+    dest_7 = memcpy(entity_3 + (dest_3 << 2), dest_4 - entity_4, entity_4 & 0xfffffffc);
+    memcpy(dest_7, source_2, entity_4 & 3);
+    int32_t entity_8 = *(context + 0x24);
+    int32_t result = *(context + 0x18) - 1;
+    *(context + 0x18) = result;
+    *(entity_8 + (result << 2)) = context_2;
     return result;
 }

@@ -1,67 +1,67 @@
 // Original IGI.EXE function: Env_CameraBeepS (VA 0x00441AE0; static CFG gate PASS, CFG score 1.000).
 #include "Env_CameraBeepS.h"
-struct status_msg* Env_CameraBeepS(void* a1)
+struct status_msg* Env_CameraBeepS(void* context)
 
 {
-    void* dstD = nullptr;
-    int32_t* valA = *(a1 + 0x25c4);
-    void* flagP = *(a1 + 0x25d0);
+    void* dest_val = nullptr;
+    int32_t* data_val = *(context + 0x25c4);
+    void* flagP = *(context + 0x25d0);
 
-    if (valA)
+    if (data_val)
     {
-        dstD = *valA;
+        dest_val = *data_val;
 
-        if (!dstD)
+        if (!dest_val)
         {
-            Qtask_UpdateList(valA);
-            *(a1 + 0x25c4) = dstD;
+            Qtask_UpdateList(data_val);
+            *(context + 0x25c4) = dest_val;
         }
     }
 
     if (!*(flagP + 0x16c))
     {
-        if (dstD)
+        if (dest_val)
         {
-            SoundSys_SetFrequency_7(dstD);
-            Qtask_UpdateList(*(a1 + 0x25c4));
-            *(a1 + 0x25c4) = 0;
+            SoundSys_SetFrequency_7(dest_val);
+            Qtask_UpdateList(*(context + 0x25c4));
+            *(context + 0x25c4) = 0;
         }
     }
-    else if (!dstD)
+    else if (!dest_val)
     {
-        struct status_msg* valA2 = SoundSys_SetMasterVolume_7(Script_FormatString(), "camera_beep_s");
+        struct status_msg* data_2 = SoundSys_SetMasterVolume_7(Script_FormatString(), "camera_beep_s");
 
-        if (valA2)
+        if (data_2)
         {
-            SoundSys_StopSoundSample_7(valA2, a1 + 0x20);
-            *(a1 + 0x25c4) = QTask_LinkEventHandler_2(valA2);
+            SoundSys_StopSoundSample_7(data_2, context + 0x20);
+            *(context + 0x25c4) = QTask_LinkEventHandler_2(data_2);
         }
     }
 
-    struct status_msg* result = *(a1 + 0x25c8);
+    struct status_msg* result = *(context + 0x25c8);
 
     if (!*(flagP + 0x169))
     {
         if (result)
         {
             result = SoundSys_SetFrequency_7(result);
-            *(a1 + 0x25c8) = 0;
+            *(context + 0x25c8) = 0;
         }
     }
     else if (!result)
     {
-        char* v_10_4;
+        char* item_10_4;
 
         if (!*(flagP + 0x164))
-            v_10_4 = "camera_beep_l";
+            item_10_4 = "camera_beep_l";
         else
-            v_10_4 = "camera_beep_al";
+            item_10_4 = "camera_beep_al";
 
-        result = SoundSys_SetMasterVolume_7(Script_FormatString(), v_10_4);
-        *(a1 + 0x25c8) = result;
+        result = SoundSys_SetMasterVolume_7(Script_FormatString(), item_10_4);
+        *(context + 0x25c8) = result;
 
         if (result)
-            return SoundSys_StopSoundSample_7(result, a1 + 0x20);
+            return SoundSys_StopSoundSample_7(result, context + 0x20);
     }
 
     return result;

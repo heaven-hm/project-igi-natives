@@ -1,22 +1,22 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_22 (VA 0x004AB7F5; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_22.h"
-int32_t Camera_ApplyBandFilter_22(int32_t a1, void*** a2, int32_t* a3)
+int32_t Camera_ApplyBandFilter_22(int32_t context, void*** param_2, int32_t* param_3)
 
 {
     void** i = &g_5446b0;
 
     do
     {
-        if (a1 > i[4] && a1 < i[5])
+        if (context > i[4] && context < i[5])
         {
-            if (a1 & 0xf || (a1 & 0xfff) < 0x100)
+            if (context & 0xf || (context & 0xfff) < 0x100)
                 break;
 
-            *a2 = i;
-            int32_t objC = a1;
-            objC &= 0xf000;
-            *a3 = objC;
-            return ((a1 - objC - 0x100) >> 4) + objC + 8;
+            *param_2 = i;
+            int32_t entity_val = context;
+            entity_val &= 0xf000;
+            *param_3 = entity_val;
+            return ((context - entity_val - 0x100) >> 4) + entity_val + 8;
         }
 
         i = *i;

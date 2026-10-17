@@ -1,6 +1,6 @@
 // Original IGI.EXE function: SoundSys_AttachLipsync_8 (VA 0x004E7180; static CFG gate PASS, CFG score 0.933).
 #include "SoundSys_AttachLipsync_8.h"
-int32_t SoundSys_AttachLipsync_8(char* a1, int32_t a2, int32_t a3)
+int32_t SoundSys_AttachLipsync_8(char* context, int32_t param_2, int32_t param_3)
 
 {
     char result = g_a5e60a;
@@ -8,20 +8,20 @@ int32_t SoundSys_AttachLipsync_8(char* a1, int32_t a2, int32_t a3)
     if (result)
         return result;
 
-    uint32_t valA = Display_CheckCapabilities_12(a1);
-    int32_t valA1 = Display_RestoreDevice_12(a1);
-    void v_58;
+    uint32_t data_val = Display_CheckCapabilities_12(context);
+    int32_t data_1 = Display_RestoreDevice_12(context);
+    void item_58;
 
-    if (!a3)
-        Display_SetGammaRamp_12(&v_58);
+    if (!param_3)
+        Display_SetGammaRamp_12(&item_58);
     else
-        memcpy(&v_58, a3, 0x20);
+        memcpy(&item_58, param_3, 0x20);
 
-    int32_t valA2 = g_a5e5f8;
-    g_a5e5f8 = valA2 + 1;
-    int32_t valA4 = a2;
-    valA4 |= 1;
-    float* __saved_edi_3 = &v_58;
-    int32_t v_78 = valA2;
-    return SoundSys_SetMasterVolume_8(v_78, valA, valA1, valA4, __saved_edi_3);
+    int32_t data_2 = g_a5e5f8;
+    g_a5e5f8 = data_2 + 1;
+    int32_t data_4 = param_2;
+    data_4 |= 1;
+    float* saved_edi_3 = &item_58;
+    int32_t item_78 = data_2;
+    return SoundSys_SetMasterVolume_8(item_78, data_val, data_1, data_4, saved_edi_3);
 }

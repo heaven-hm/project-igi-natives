@@ -1,43 +1,43 @@
 // Original IGI.EXE function: Sys_PushStack_14 (VA 0x004B4BE0; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_PushStack_14.h"
-int32_t Sys_PushStack_14(float a1, float a2, float a3, float a4, float a5, float a6, float a7, float a8, float a9, float a10, float a11, float a12, float a13, float a14, float a15, float a16, int32_t a17, int32_t a18, int32_t a19, int32_t a20, int32_t a21, int32_t a22, int32_t a23)
+int32_t Sys_PushStack_14(float context, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, float param_9, float param_10, float param_11, float param_12, float param_13, float param_14, float param_15, float param_16, int32_t param_17, int32_t param_18, int32_t param_19, int32_t param_20, int32_t param_21, int32_t param_22, int32_t param_23)
 
 {
-    float v_78 = a5 * 0.0078125f;
-    float v_54 = a8 * 0.0078125f;
-    float v_30 = a11 * 0.0078125f;
-    float v_90 = a1;
-    float v_c = a14 * 0.0078125f;
-    int32_t v_84 = 0;
-    int32_t v_80 = 0;
-    int32_t v_60 = 0x3f800000;
-    int32_t v_5c = 0;
-    int32_t v_3c = 0;
-    int32_t v_38 = 0x3f800000;
-    float v_74 = a6 * 0.0078125f;
-    int32_t v_18 = 0x3f800000;
-    int32_t v_14 = 0x3f800000;
-    int32_t* v_94 = &v_90;
-    float v_50 = a9 * 0.0078125f;
-    float v_2c = a12 * 0.0078125f;
-    float v_8 = a15 * 0.0078125f;
-    float v_70 = a7 * 0.0078125f;
-    float v_4c = a10 * 0.0078125f;
-    float v_28 = a13 * 0.0078125f;
-    float v_4 = a16 * 0.0078125f;
-    long double x87_r7_25 = a1 + a3;
-    float v_6c = x87_r7_25;
-    long double x87_r6_1 = a2 + a4;
-    float v_a8 = x87_r6_1;
-    float v_44 = x87_r6_1;
-    float v_24 = x87_r7_25;
-    int32_t v_a4 = 0;
+    float item_78 = param_5 * 0.0078125f;
+    float item_54 = param_8 * 0.0078125f;
+    float item_30 = param_11 * 0.0078125f;
+    float item_90 = context;
+    float item_c = param_14 * 0.0078125f;
+    int32_t item_84 = 0;
+    int32_t item_80 = 0;
+    int32_t item_60 = 0x3f800000;
+    int32_t item_5c = 0;
+    int32_t item_3c = 0;
+    int32_t item_38 = 0x3f800000;
+    float item_74 = param_6 * 0.0078125f;
+    int32_t item_18 = 0x3f800000;
+    int32_t item_14 = 0x3f800000;
+    int32_t* item_94 = &item_90;
+    float item_50 = param_9 * 0.0078125f;
+    float item_2c = param_12 * 0.0078125f;
+    float item_8 = param_15 * 0.0078125f;
+    float item_70 = param_7 * 0.0078125f;
+    float item_4c = param_10 * 0.0078125f;
+    float item_28 = param_13 * 0.0078125f;
+    float item_4 = param_16 * 0.0078125f;
+    long double fpu_val_7_25 = context + param_3;
+    float item_6c = fpu_val_7_25;
+    long double fpu_val_6_1 = param_2 + param_4;
+    float item_a8 = fpu_val_6_1;
+    float item_44 = fpu_val_6_1;
+    float item_24 = fpu_val_7_25;
+    int32_t item_a4 = 0;
     g_a84a50 = 0;
     g_a84a58 = 0;
-    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&v_a4, v_a8, v_a4, a22, a23,
-        4, v_94, v_90, a2, a21, v_84, v_80, a17, v_78, v_74, v_70, v_6c,
-        a2, a21, v_60, v_5c, a18, v_54, v_50, v_4c, a1, v_44, a21, v_3c,
-        v_38, a19, v_30, v_2c, v_28, v_24, v_a8, a21, v_18, v_14, a20, v_c,
-        v_8, v_4);
+    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&item_a4, item_a8, item_a4, param_22, param_23,
+        4, item_94, item_90, param_2, param_21, item_84, item_80, param_17, item_78, item_74, item_70, item_6c,
+        param_2, param_21, item_60, item_5c, param_18, item_54, item_50, item_4c, context, item_44, param_21, item_3c,
+        item_38, param_19, item_30, item_2c, item_28, item_24, item_a8, param_21, item_18, item_14, param_20, item_c,
+        item_8, item_4);
     return result;
 }

@@ -1,35 +1,35 @@
 // Original IGI.EXE function: Human_Update (VA 0x0045F800; static CFG gate PASS, CFG score 1.000).
 #include "Human_Update.h"
-char* Human_Update(float a1, int32_t* a2)
+char* Human_Update(float context, int32_t* param_2)
 
 {
-    char valA = a2[2];
-    double* ctxB = *a2;
-    double* flagP = a2[1];
+    char data_val = param_2[2];
+    double* context_val = *param_2;
+    double* flagP = param_2[1];
     char* result;
 
-    if (valA == 0xff)
+    if (data_val == 0xff)
     {
     label_45f84d:
-        result = AI_MoveToNode_17(a1, ctxB, flagP, 1);
+        result = AI_MoveToNode_17(context, context_val, flagP, 1);
 
         if (result)
         {
-            AI_FireWeapon_17(a1);
-            return (*((Render_DrawRigidMesh_12() << 2) + &g_a99ae0))(a1, a2);
+            AI_FireWeapon_17(context);
+            return (*((Render_DrawRigidMesh_12() << 2) + &g_a99ae0))(context, param_2);
         }
     }
     else
     {
-        int32_t objC1 = 0;
-        objC1 = *(a1 + 0x1c);
-        int32_t valA5 = *(((valA * 0x180 + objC1) << 2) + &g_a96ae0);
+        int32_t entity_1 = 0;
+        entity_1 = *(context + 0x1c);
+        int32_t data_5 = *(((data_val * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-        if (!valA5)
+        if (!data_5)
             goto label_45f84d;
 
-        valA5(a1, a2[3]);
-        result = a2[3];
+        data_5(context, param_2[3]);
+        result = param_2[3];
 
         if (*result)
             goto label_45f84d;

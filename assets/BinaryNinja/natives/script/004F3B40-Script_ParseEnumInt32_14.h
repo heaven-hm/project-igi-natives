@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004F3B40 Script_ParseEnumInt32_14 | gate PASS | openigi False */
-char Script_ParseEnumInt32_14(int80_t a1, int a2);
+char Script_ParseEnumInt32_14(long double context, int param_2);

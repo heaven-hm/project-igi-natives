@@ -1,56 +1,56 @@
 // Original IGI.EXE function: CockpitShield_LoadParameters (VA 0x00435300; static CFG gate PASS, CFG score 0.933).
 #include "CockpitShield_LoadParameters.h"
-int32_t CockpitShield_LoadParameters(void* a1, float a2)
+int32_t CockpitShield_LoadParameters(void* context, float param_2)
 
 {
-    int32_t* flagP = a2;
-    float* valA = flagP[1];
-    double v_18 = valA[2] * *(a1 + 0x100) + valA[1] * *(a1 + 0xf8) + *valA * *(a1 + 0xf0);
-    double v_10 = valA[5] * *(a1 + 0x100) + valA[4] * *(a1 + 0xf8) + valA[3] * *(a1 + 0xf0);
-    double* valA1 = *flagP;
-    double v_8 = valA[8] * *(a1 + 0x100) + valA[7] * *(a1 + 0xf8) + valA[6] * *(a1 + 0xf0);
-    long double x87_r7_12 = v_18;
-    double v_30;
-    memcpy(&v_30, &v_18, 0x18);
-    v_30 = x87_r7_12 + *valA1;
-    double v_28;
-    double v_28_1 = v_28 + valA1[1];
-    double v_20;
-    double v_20_1 = v_20 + valA1[2];
-    long double x87_r7_18 = *(a1 + 0x9c);
-    long double x87_r6_12 = *(a1 + 0xa0);
-    x87_r6_12 - x87_r7_18;
-    long double x87_r7_19;
+    int32_t* flagP = param_2;
+    float* data_val = flagP[1];
+    double item_18 = data_val[2] * *(context + 0x100) + data_val[1] * *(context + 0xf8) + *data_val * *(context + 0xf0);
+    double item_10 = data_val[5] * *(context + 0x100) + data_val[4] * *(context + 0xf8) + data_val[3] * *(context + 0xf0);
+    double* data_1 = *flagP;
+    double item_8 = data_val[8] * *(context + 0x100) + data_val[7] * *(context + 0xf8) + data_val[6] * *(context + 0xf0);
+    long double fpu_val_7_12 = item_18;
+    double item_30;
+    memcpy(&item_30, &item_18, 0x18);
+    item_30 = fpu_val_7_12 + *data_1;
+    double item_28;
+    double item_28_1 = item_28 + data_1[1];
+    double item_20;
+    double item_20_1 = item_20 + data_1[2];
+    long double fpu_val_7_18 = *(context + 0x9c);
+    long double fpu_val_6_12 = *(context + 0xa0);
+    fpu_val_6_12 - fpu_val_7_18;
+    long double fpu_val_7_19;
 
-    if (!(*(&((x87_r6_12 < x87_r7_18 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, x87_r7_18) ? 1 : 0) << 0xa
-            | (x87_r6_12 == x87_r7_18 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_19 = *(a1 + 0xa0);
+    if (!(*(&((fpu_val_6_12 < fpu_val_7_18 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, fpu_val_7_18) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == fpu_val_7_18 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_19 = *(context + 0xa0);
     else
-        x87_r7_19 = *(a1 + 0x9c);
+        fpu_val_7_19 = *(context + 0x9c);
 
-    long double x87_r6_13 = *(a1 + 0x98);
-    x87_r6_13 - x87_r7_19;
-    long double x87_r7_21;
+    long double fpu_val_6_13 = *(context + 0x98);
+    fpu_val_6_13 - fpu_val_7_19;
+    long double fpu_val_7_21;
 
-    if (*(&((x87_r6_13 < x87_r7_19 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_13, x87_r7_19) ? 1 : 0) << 0xa
-        | (x87_r6_13 == x87_r7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_13 < fpu_val_7_19 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_13, fpu_val_7_19) ? 1 : 0) << 0xa
+        | (fpu_val_6_13 == fpu_val_7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_22 = *(a1 + 0x9c);
-        long double x87_r6_14 = *(a1 + 0xa0);
-        x87_r6_14 - x87_r7_22;
+        long double fpu_val_7_22 = *(context + 0x9c);
+        long double fpu_val_6_14 = *(context + 0xa0);
+        fpu_val_6_14 - fpu_val_7_22;
 
-        if (!(*(&((x87_r6_14 < x87_r7_22 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_14, x87_r7_22) ? 1 : 0) << 0xa
-                | (x87_r6_14 == x87_r7_22 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_21 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_14 < fpu_val_7_22 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_14, fpu_val_7_22) ? 1 : 0) << 0xa
+                | (fpu_val_6_14 == fpu_val_7_22 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_21 = *(context + 0xa0);
         else
-            x87_r7_21 = *(a1 + 0x9c);
+            fpu_val_7_21 = *(context + 0x9c);
     }
     else
-        x87_r7_21 = *(a1 + 0x98);
+        fpu_val_7_21 = *(context + 0x98);
 
-    float v_44_1 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_21;
-    double* v_48 = &v_30;
-    WorldObject_CommitTransform(Level_StartMission_4(), a1, v_48, v_44_1);
-    return Vehicle_UpdateCockpit_4(a1, flagP[1]);
+    float item_44_1 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_21;
+    double* item_48 = &item_30;
+    WorldObject_CommitTransform(Level_StartMission_4(), context, item_48, item_44_1);
+    return Vehicle_UpdateCockpit_4(context, flagP[1]);
 }

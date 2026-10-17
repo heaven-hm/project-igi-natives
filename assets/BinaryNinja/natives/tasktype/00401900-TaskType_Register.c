@@ -1,6 +1,6 @@
 // Original IGI.EXE function: TaskType_Register (VA 0x00401900; static CFG gate PASS, CFG score 1.000).
 #include "TaskType_Register.h"
-int32_t TaskType_Register(int32_t a1, int32_t a2, int16_t a3, int32_t a4)
+int32_t TaskType_Register(int32_t context, int32_t param_2, int16_t param_3, int32_t param_4)
 
 // Sig: uint16_t TaskType_Register(uint32_t p1, uint32_t p2, uint16_t
 // parentType, uint32_t p4)
@@ -14,60 +14,60 @@ int32_t TaskType_Register(int32_t a1, int32_t a2, int16_t a3, int32_t a4)
     {
         if (!*i)
         {
-            int32_t srcS1 = flagP * 0x30;
-            *(srcS1 + &g_af5f05) = 1;
-            *(srcS1 + 0xaf5ee4) = a2;
-            *(srcS1 + &g_af5ee0) = a1;
-            *(srcS1 + &g_af5ee8) = a3;
+            int32_t source_1 = flagP * 0x30;
+            *(source_1 + &g_af5f05) = 1;
+            *(source_1 + 0xaf5ee4) = param_2;
+            *(source_1 + &g_af5ee0) = context;
+            *(source_1 + &g_af5ee8) = param_3;
 
-            if (a3 == 0x181)
-                *(srcS1 + 0xaf5f0c) = 0x20000000;
+            if (param_3 == 0x181)
+                *(source_1 + 0xaf5f0c) = 0x20000000;
             else
-                *(srcS1 + 0xaf5f0c) = *(a3 * 0x30 + 0xaf5f0c);
+                *(source_1 + 0xaf5f0c) = *(param_3 * 0x30 + 0xaf5f0c);
 
-            if (!a4)
-                *(srcS1 + 0xaf5f04) = 0;
+            if (!param_4)
+                *(source_1 + 0xaf5f04) = 0;
             else
             {
-                Sys_FreeMemory_2(srcS1 + 0xaf5eec, a2, a4, 0);
-                *(srcS1 + 0xaf5f04) = 1;
+                Sys_FreeMemory_2(source_1 + 0xaf5eec, param_2, param_4, 0);
+                *(source_1 + 0xaf5f04) = 1;
             }
 
-            if (a3 == 0x181)
+            if (param_3 == 0x181)
             {
-                int32_t* valA7 = (flagP << 2) + &g_a96ae0;
+                int32_t* data_7 = (flagP << 2) + &g_a96ae0;
                 int32_t j_2 = 0xfe;
                 int32_t j;
 
                 do
                 {
-                    *valA7 = 0;
-                    valA7 = &valA7[0x180];
+                    *data_7 = 0;
+                    data_7 = &data_7[0x180];
                     j = j_2;
                     j_2 -= 1;
                 } while (j != 1);
-                int32_t valA8 = QTask_DeleteTask();
-                valA8 = flagP;
-                return valA8;
+                int32_t data_8 = QTask_DeleteTask();
+                data_8 = flagP;
+                return data_8;
             }
 
-            int32_t* objC2 = (flagP << 2) + &g_a96ae0;
+            int32_t* entity_2 = (flagP << 2) + &g_a96ae0;
             int32_t j_3 = 0xfe;
-            int32_t* valA5 = (a3 << 2) + &g_a96ae0;
+            int32_t* data_5 = (param_3 << 2) + &g_a96ae0;
             int32_t j_1;
 
             do
             {
-                int32_t srcS2 = *valA5;
-                valA5 = &valA5[0x180];
-                *objC2 = srcS2;
-                objC2 = &objC2[0x180];
+                int32_t source_2 = *data_5;
+                data_5 = &data_5[0x180];
+                *entity_2 = source_2;
+                entity_2 = &entity_2[0x180];
                 j_1 = j_3;
                 j_3 -= 1;
             } while (j_1 != 1);
-            int32_t valA6 = QTask_DeleteTask();
-            valA6 = flagP;
-            return valA6;
+            int32_t data_6 = QTask_DeleteTask();
+            data_6 = flagP;
+            return data_6;
         }
 
         i = &i[0x30];

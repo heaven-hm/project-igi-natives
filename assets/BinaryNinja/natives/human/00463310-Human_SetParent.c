@@ -1,48 +1,48 @@
 // Original IGI.EXE function: Human_SetParent (VA 0x00463310; static CFG gate FAIL, CFG score 0.778).
 #include "Human_SetParent.h"
-void* Human_SetParent(void* a1, void* a2)
+void* Human_SetParent(void* context, void* param_2)
 
 {
-    long double fpu7 = *(a1 + 0x20);
-    *(a1 + 0x76c) = a2;
-    long double x87_r7_1 = fpu7 - *(a2 + 0x20);
-    long double x87_r6_1 = *(a1 + 0x28) - *(a2 + 0x28);
-    long double x87_r5_1 = *(a1 + 0x30) - *(a2 + 0x30);
-    double v_50 =
-        *(a2 + 0x7c) * x87_r6_1 + *(a2 + 0x88) * x87_r5_1 + *(a2 + 0x70) * x87_r7_1;
-    int32_t v_48 =
-        *(a2 + 0x80) * x87_r6_1 + *(a2 + 0x8c) * x87_r5_1 + *(a2 + 0x74) * x87_r7_1;
-    double v_40 =
-        *(a2 + 0x84) * x87_r6_1 + *(a2 + 0x90) * x87_r5_1 + *(a2 + 0x78) * x87_r7_1;
-    memcpy(a1 + 0x770, &v_50, 0x18);
-    long double x87_r7_3 = *(a2 + 0x70);
-    long double x87_r6_3 = *(a2 + 0x74);
-    long double x87_r5_3 = *(a2 + 0x78);
-    long double x87_r4_14 = x87_r6_3 * *(a1 + 0x7c) + x87_r5_3 * *(a1 + 0x80);
-    long double x87_r3_15 = x87_r7_3 * *(a1 + 0x78);
-    *(&v_50 + 4) = *(a2 + 0x7c);
-    int32_t objC1 = *(a2 + 0x88);
-    v_40 = *(a2 + 0x80);
-    *(&v_40 + 4) = *(a2 + 0x8c);
-    float objC4 = *(a2 + 0x84);
-    float v_28 = x87_r4_14 + x87_r3_15;
-    float objC5 = *(a2 + 0x90);
-    float v_24 =
-        v_40 * *(a1 + 0x7c) + objC4 * *(a1 + 0x80) + *(&v_50 + 4) * *(a1 + 0x78);
-    int32_t v_4 = *(a1 + 0x9c) + *(a2 + 0x94) + 1;
-    float v_20 =
-        *(&v_40 + 4) * *(a1 + 0x7c) + objC5 * *(a1 + 0x80) + objC1 * *(a1 + 0x78);
-    float v_1c =
-        x87_r5_3 * *(a1 + 0x8c) + x87_r7_3 * *(a1 + 0x84) + x87_r6_3 * *(a1 + 0x88);
-    float v_18 =
-        objC4 * *(a1 + 0x8c) + *(&v_50 + 4) * *(a1 + 0x84) + v_40 * *(a1 + 0x88);
-    float v_14 =
-        objC5 * *(a1 + 0x8c) + objC1 * *(a1 + 0x84) + *(&v_40 + 4) * *(a1 + 0x88);
-    float v_10 =
-        x87_r6_3 * *(a1 + 0x94) + x87_r5_3 * *(a1 + 0x98) + x87_r7_3 * *(a1 + 0x90);
-    float v_c =
-        v_40 * *(a1 + 0x94) + objC4 * *(a1 + 0x98) + *(&v_50 + 4) * *(a1 + 0x90);
-    float v_8 = *(&v_40 + 4) * *(a1 + 0x94) + objC5 * *(a1 + 0x98) + objC1 * *(a1 + 0x90);
-    memcpy(a1 + 0x788, &v_28, 0x28);
-    return AI_SelectTarget_21(a1);
+    long double fpu7 = *(context + 0x20);
+    *(context + 0x76c) = param_2;
+    long double fpu_val_7_1 = fpu7 - *(param_2 + 0x20);
+    long double fpu_val_6_1 = *(context + 0x28) - *(param_2 + 0x28);
+    long double fpu_val_5_1 = *(context + 0x30) - *(param_2 + 0x30);
+    double item_50 =
+        *(param_2 + 0x7c) * fpu_val_6_1 + *(param_2 + 0x88) * fpu_val_5_1 + *(param_2 + 0x70) * fpu_val_7_1;
+    int32_t item_48 =
+        *(param_2 + 0x80) * fpu_val_6_1 + *(param_2 + 0x8c) * fpu_val_5_1 + *(param_2 + 0x74) * fpu_val_7_1;
+    double item_40 =
+        *(param_2 + 0x84) * fpu_val_6_1 + *(param_2 + 0x90) * fpu_val_5_1 + *(param_2 + 0x78) * fpu_val_7_1;
+    memcpy(context + 0x770, &item_50, 0x18);
+    long double fpu_val_7_3 = *(param_2 + 0x70);
+    long double fpu_val_6_3 = *(param_2 + 0x74);
+    long double fpu_val_5_3 = *(param_2 + 0x78);
+    long double fpu_val_4_14 = fpu_val_6_3 * *(context + 0x7c) + fpu_val_5_3 * *(context + 0x80);
+    long double fpu_val_3_15 = fpu_val_7_3 * *(context + 0x78);
+    *(&item_50 + 4) = *(param_2 + 0x7c);
+    int32_t entity_1 = *(param_2 + 0x88);
+    item_40 = *(param_2 + 0x80);
+    *(&item_40 + 4) = *(param_2 + 0x8c);
+    float entity_4 = *(param_2 + 0x84);
+    float item_28 = fpu_val_4_14 + fpu_val_3_15;
+    float entity_5 = *(param_2 + 0x90);
+    float item_24 =
+        item_40 * *(context + 0x7c) + entity_4 * *(context + 0x80) + *(&item_50 + 4) * *(context + 0x78);
+    int32_t item_4 = *(context + 0x9c) + *(param_2 + 0x94) + 1;
+    float item_20 =
+        *(&item_40 + 4) * *(context + 0x7c) + entity_5 * *(context + 0x80) + entity_1 * *(context + 0x78);
+    float item_1c =
+        fpu_val_5_3 * *(context + 0x8c) + fpu_val_7_3 * *(context + 0x84) + fpu_val_6_3 * *(context + 0x88);
+    float item_18 =
+        entity_4 * *(context + 0x8c) + *(&item_50 + 4) * *(context + 0x84) + item_40 * *(context + 0x88);
+    float item_14 =
+        entity_5 * *(context + 0x8c) + entity_1 * *(context + 0x84) + *(&item_40 + 4) * *(context + 0x88);
+    float item_10 =
+        fpu_val_6_3 * *(context + 0x94) + fpu_val_5_3 * *(context + 0x98) + fpu_val_7_3 * *(context + 0x90);
+    float item_c =
+        item_40 * *(context + 0x94) + entity_4 * *(context + 0x98) + *(&item_50 + 4) * *(context + 0x90);
+    float item_8 = *(&item_40 + 4) * *(context + 0x94) + entity_5 * *(context + 0x98) + entity_1 * *(context + 0x90);
+    memcpy(context + 0x788, &item_28, 0x28);
+    return AI_SelectTarget_21(context);
 }

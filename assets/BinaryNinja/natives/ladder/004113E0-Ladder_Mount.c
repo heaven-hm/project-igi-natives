@@ -1,115 +1,115 @@
 // Original IGI.EXE function: Ladder_Mount (VA 0x004113E0; static CFG gate PASS, CFG score 0.989).
 #include "Ladder_Mount.h"
-double* Ladder_Mount(float a1)
+double* Ladder_Mount(float context)
 
 {
-    float srcS = a1;
-    double* result = AI_CombatTarget_21(srcS);
+    float source_val = context;
+    double* result = AI_CombatTarget_21(source_val);
     double* result_1 = result;
-    result = *(srcS + 0xd78);
-    int32_t valA6;
+    result = *(source_val + 0xd78);
+    int32_t data_6;
 
     if (!result)
     {
-        if (*(srcS + 0xd7a))
+        if (*(source_val + 0xd7a))
         {
-            *(srcS + 0xd7a) = 0;
-            *(srcS + 0xd79) = 0;
-            AI_SelectTarget_20(srcS);
-            AI_UpdateOrders_20(srcS);
-            AI_TakeCover_22(*(srcS + 0x4ec));
-            AI_UpdateSensors_21(srcS);
-            AI_CombatTarget_20(srcS);
-            AI_CheckHearing_20(srcS);
-            Human_ViewCam(srcS, 1);
-            HumanPlayer_LoadParameters_6(srcS);
-            Human_StateAnimation(srcS, 0, 0f);
-            result = *(srcS + 0x2f4);
+            *(source_val + 0xd7a) = 0;
+            *(source_val + 0xd79) = 0;
+            AI_SelectTarget_20(source_val);
+            AI_UpdateOrders_20(source_val);
+            AI_TakeCover_22(*(source_val + 0x4ec));
+            AI_UpdateSensors_21(source_val);
+            AI_CombatTarget_20(source_val);
+            AI_CheckHearing_20(source_val);
+            Human_ViewCam(source_val, 1);
+            HumanPlayer_LoadParameters_6(source_val);
+            Human_StateAnimation(source_val, 0, 0.0f);
+            result = *(source_val + 0x2f4);
         }
 
-        if (!*(srcS + 0xd7a) || !(result & 0x20000))
+        if (!*(source_val + 0xd7a) || !(result & 0x20000))
             return result;
 
-        void* objC4 = *(srcS + 0x2f0);
-        *(srcS + 0x2f8) = *(srcS + 0x2fc);
-        *(srcS + 0x2fc) = 0x2f;
-        valA6 = *(objC4 + 0xbc);
+        void* entity_4 = *(source_val + 0x2f0);
+        *(source_val + 0x2f8) = *(source_val + 0x2fc);
+        *(source_val + 0x2fc) = 0x2f;
+        data_6 = *(entity_4 + 0xbc);
     }
     else
     {
-        float v_38;
-        float v_34;
-        double v_30;
-        double v_28;
-        double v_20;
+        float item_38;
+        float item_34;
+        double item_30;
+        double item_28;
+        double item_20;
 
-        if (!*(srcS + 0xd7b))
+        if (!*(source_val + 0xd7b))
         {
-            WeaponType_UpdateAnim(&v_30, result_1, 2);
-            double v_28_3 = v_28 + result_1[5];
-            double v_20_3 = v_20 + result_1[6];
-            double v_10_2 = result_1[0x10] * 1515.52 + *(result_1 + 0x84) * 3915.7759999999998;
-            double v_8_2 = *(result_1 + 0x8c) * 1515.52 + result_1[0x12] * 3915.7759999999998;
-            v_30 = *(result_1 + 0x74) * 1515.52 + result_1[0xf] * 3915.7759999999998 + v_30
+            WeaponType_UpdateAnim(&item_30, result_1, 2);
+            double item_28_3 = item_28 + result_1[5];
+            double item_20_3 = item_20 + result_1[6];
+            double item_10_2 = result_1[0x10] * 1515.52 + *(result_1 + 0x84) * 3915.7759999999998;
+            double item_8_2 = *(result_1 + 0x8c) * 1515.52 + result_1[0x12] * 3915.7759999999998;
+            item_30 = *(result_1 + 0x74) * 1515.52 + result_1[0xf] * 3915.7759999999998 + item_30
                 + result_1[4];
-            double v_28_4 = v_10_2 + v_28_3;
-            double v_20_4 = v_8_2 + v_20_3;
-            AI_UpdateOrders_19(srcS, &v_30);
-            Sys_Atan2UndefinedInOrig(&result_1[0xe], &v_34, &v_38, &a1);
-            a1 = a1 + 3.14159274f;
-            AI_AlertAllies_19(srcS, a1);
-            *(srcS + 0xd80) = 0;
+            double item_28_4 = item_10_2 + item_28_3;
+            double item_20_4 = item_8_2 + item_20_3;
+            AI_UpdateOrders_19(source_val, &item_30);
+            Sys_Atan2UndefinedInOrig(&result_1[0xe], &item_34, &item_38, &context);
+            context = context + 3.14159274f;
+            AI_AlertAllies_19(source_val, context);
+            *(source_val + 0xd80) = 0;
         }
         else
         {
-            WeaponType_UpdateAnim(&v_30, result_1, 3);
-            double v_28_1 = v_28 + result_1[5];
-            double v_20_1 = v_20 + result_1[6];
-            double v_10_1 =
+            WeaponType_UpdateAnim(&item_30, result_1, 3);
+            double item_28_1 = item_28 + result_1[5];
+            double item_20_1 = item_20 + result_1[6];
+            double item_10_1 =
                 *(result_1 + 0x84) * 3481.5999999999999 - result_1[0x10] * 1638.4000000000001;
-            double v_8_1 =
+            double item_8_1 =
                 result_1[0x12] * 3481.5999999999999 - *(result_1 + 0x8c) * 1638.4000000000001;
-            v_30 = result_1[0xf] * 3481.5999999999999 - *(result_1 + 0x74) * 1638.4000000000001
-                + v_30 + result_1[4];
-            double v_28_2 = v_10_1 + v_28_1;
-            double v_20_2 = v_8_1 + v_20_1;
-            AI_UpdateOrders_19(srcS, &v_30);
-            Sys_Atan2UndefinedInOrig(&result_1[0xe], &v_34, &v_38, &a1);
-            a1 = a1 + 3.14159274f;
-            AI_AlertAllies_19(srcS, a1);
-            *(srcS + 0xd80) = result_1[0x27] - 6;
+            item_30 = result_1[0xf] * 3481.5999999999999 - *(result_1 + 0x74) * 1638.4000000000001
+                + item_30 + result_1[4];
+            double item_28_2 = item_10_1 + item_28_1;
+            double item_20_2 = item_8_1 + item_20_1;
+            AI_UpdateOrders_19(source_val, &item_30);
+            Sys_Atan2UndefinedInOrig(&result_1[0xe], &item_34, &item_38, &context);
+            context = context + 3.14159274f;
+            AI_AlertAllies_19(source_val, context);
+            *(source_val + 0xd80) = result_1[0x27] - 6;
         }
-        __builtin_memset(srcS + 0x664, 0, 0x18);
-        *(srcS + 0xd78) = 0;
-        *(srcS + 0xd79) = 1;
-        AI_AlertAllies_20(srcS);
-        AI_TakeCover_20(srcS);
-        AI_MoveToNode_22(*(srcS + 0x4ec));
-        AI_UpdateOrders_22(*(srcS + 0x4ec));
-        AI_UpdatePatrol_20(srcS);
-        AI_SelectTarget_21(srcS);
-        AI_UpdateSensors_19(srcS);
-        AI_CheckVisibility_20(srcS);
-        Human_ViewCam(srcS, 3);
-        HumanPlayer_UpdateAnimation_4(srcS);
-        *(srcS + 0xd7c) = result_1[0x27];
+        memset(source_val + 0x664, 0, 0x18);
+        *(source_val + 0xd78) = 0;
+        *(source_val + 0xd79) = 1;
+        AI_AlertAllies_20(source_val);
+        AI_TakeCover_20(source_val);
+        AI_MoveToNode_22(*(source_val + 0x4ec));
+        AI_UpdateOrders_22(*(source_val + 0x4ec));
+        AI_UpdatePatrol_20(source_val);
+        AI_SelectTarget_21(source_val);
+        AI_UpdateSensors_19(source_val);
+        AI_CheckVisibility_20(source_val);
+        Human_ViewCam(source_val, 3);
+        HumanPlayer_UpdateAnimation_4(source_val);
+        *(source_val + 0xd7c) = result_1[0x27];
 
-        if (!*(srcS + 0xd7b))
+        if (!*(source_val + 0xd7b))
         {
-            void* objC3 = *(srcS + 0x2f0);
-            *(srcS + 0x2f8) = *(srcS + 0x2fc);
-            *(srcS + 0x2fc) = 0x25;
-            valA6 = *(objC3 + 0x94);
+            void* entity_3 = *(source_val + 0x2f0);
+            *(source_val + 0x2f8) = *(source_val + 0x2fc);
+            *(source_val + 0x2fc) = 0x25;
+            data_6 = *(entity_3 + 0x94);
         }
         else
         {
-            void* tmpD3 = *(srcS + 0x2f0);
-            *(srcS + 0x2f8) = *(srcS + 0x2fc);
-            *(srcS + 0x2fc) = 0x26;
-            valA6 = *(tmpD3 + 0x98);
+            void* temp_3 = *(source_val + 0x2f0);
+            *(source_val + 0x2f8) = *(source_val + 0x2fc);
+            *(source_val + 0x2fc) = 0x26;
+            data_6 = *(temp_3 + 0x98);
         }
     }
 
-    *(srcS + 0x300) = valA6;
-    return valA6(srcS + 0x2ec, srcS);
+    *(source_val + 0x300) = data_6;
+    return data_6(source_val + 0x2ec, source_val);
 }

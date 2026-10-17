@@ -1,22 +1,22 @@
 // Original IGI.EXE function: Render_ComputeNormals_4 (VA 0x004D27F0; static CFG gate PASS, CFG score 1.000).
 #include "Render_ComputeNormals_4.h"
-void Render_ComputeNormals_4(void* a1)
+void Render_ComputeNormals_4(void* context)
 
 {
-    for (void* i = a1; i; i = *(i + 0x58))
+    for (void* i = context; i; i = *(i + 0x58))
     {
-        int32_t valA = 0;
-        valA = *(i + 0x1c);
-        int32_t dstD1 = *((valA << 2) + &g_a982e0);
+        int32_t data_val = 0;
+        data_val = *(i + 0x1c);
+        int32_t dest_1 = *((data_val << 2) + &g_a982e0);
 
-        if (dstD1)
-            dstD1(i, Qtask_GetCallbackData(i));
+        if (dest_1)
+            dest_1(i, Qtask_GetCallbackData(i));
 
-        int32_t objC1 = 0;
-        objC1 = *(i + 0x1c);
-        int32_t dstD2 = *((objC1 << 2) + &g_a988e0);
+        int32_t entity_1 = 0;
+        entity_1 = *(i + 0x1c);
+        int32_t dest_2 = *((entity_1 << 2) + &g_a988e0);
 
-        if (dstD2)
-            dstD2(i, Qtask_GetCallbackData(i));
+        if (dest_2)
+            dest_2(i, Qtask_GetCallbackData(i));
     }
 }

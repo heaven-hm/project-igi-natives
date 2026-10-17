@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Render_BindTexture (VA 0x004D09E0; static CFG gate PASS, CFG score 1.000).
 #include "Render_BindTexture.h"
-void** Render_BindTexture(void** a1, void* a2, int32_t a3, char* a4)
+void** Render_BindTexture(void** context, void* param_2, int32_t param_3, char* param_4)
 
 {
-    void** result = DynObj_Missing(a4);
+    void** result = DynObj_Missing(param_4);
 
     if (result)
     {
@@ -11,14 +11,14 @@ void** Render_BindTexture(void** a1, void* a2, int32_t a3, char* a4)
 
         if (result)
         {
-            int32_t* objC3 = *(*(result[3] + 0xc) + 0x88) + (a3 << 4);
-            result = a1;
-            *result = *objC3;
-            result[1] = objC3[1];
-            result[2] = objC3[2];
-            *result = *(a2 + 0x98) * *result;
-            result[1] = *(a2 + 0x9c) * result[1];
-            result[2] = *(a2 + 0xa0) * result[2];
+            int32_t* entity_3 = *(*(result[3] + 0xc) + 0x88) + (param_3 << 4);
+            result = context;
+            *result = *entity_3;
+            result[1] = entity_3[1];
+            result[2] = entity_3[2];
+            *result = *(param_2 + 0x98) * *result;
+            result[1] = *(param_2 + 0x9c) * result[1];
+            result[2] = *(param_2 + 0xa0) * result[2];
         }
     }
 

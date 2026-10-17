@@ -1,35 +1,35 @@
 // Original IGI.EXE function: Physics_MenuitemMoveCalledWi (VA 0x00505AD0; static CFG gate PASS, CFG score 0.963).
 #include "Physics_MenuitemMoveCalledWi.h"
-int32_t Physics_MenuitemMoveCalledWi(void* a1, int32_t a2)
+int32_t Physics_MenuitemMoveCalledWi(void* context, int32_t param_2)
 
 {
-    void* valA = Physics_ApplyImpulse_4(a1);
-    void* srcS;
+    void* data_val = Physics_ApplyImpulse_4(context);
+    void* source_val;
 
-    if (a2 > 0)
+    if (param_2 > 0)
     {
-        srcS = Physics_CheckHullCollision_4(a1, a2);
+        source_val = Physics_CheckHullCollision_4(context, param_2);
 
-        if (!*(srcS + 0x4c))
+        if (!*(source_val + 0x4c))
         {
         label_505b79:
 
-            if (srcS)
+            if (source_val)
             {
-                int32_t v_1c;
-                __builtin_memset(&v_1c, 0, 0x1c);
-                v_1c = *(srcS + 0x38);
-                uint32_t valA11 = Physics_InterpolateWaypoint_5();
-                int32_t tmpD = 0;
-                tmpD = *(srcS + 0x1c);
-                (*(((valA11 * 0x180 + tmpD) << 2) + &g_a96ae0))(srcS, &v_1c);
+                int32_t item_1c;
+                memset(&item_1c, 0, 0x1c);
+                item_1c = *(source_val + 0x38);
+                uint32_t data_11 = Physics_InterpolateWaypoint_5();
+                int32_t temp_val = 0;
+                temp_val = *(source_val + 0x1c);
+                (*(((data_11 * 0x180 + temp_val) << 2) + &g_a96ae0))(source_val, &item_1c);
 
-                if (valA)
+                if (data_val)
                 {
-                    uint32_t valA14 = Physics_InterpolateWaypoint_5();
-                    int32_t valA15 = 0;
-                    valA15 = *(valA + 0x1c);
-                    (*(((valA14 * 0x180 + valA15) << 2) + &g_a96ae0))(valA, &v_1c);
+                    uint32_t data_14 = Physics_InterpolateWaypoint_5();
+                    int32_t data_15 = 0;
+                    data_15 = *(data_val + 0x1c);
+                    (*(((data_14 * 0x180 + data_15) << 2) + &g_a96ae0))(data_val, &item_1c);
                 }
 
                 return 1;
@@ -39,15 +39,15 @@ int32_t Physics_MenuitemMoveCalledWi(void* a1, int32_t a2)
         return 0;
     }
 
-    srcS = Physics_ApplyImpulse_4(a1);
+    source_val = Physics_ApplyImpulse_4(context);
 
-    if (!srcS)
-        srcS = Physics_UpdateForces_4(a1);
+    if (!source_val)
+        source_val = Physics_UpdateForces_4(context);
     else
     {
-        int32_t valA5 = a2 + 4;
+        int32_t data_5 = param_2 + 4;
 
-        if (a2 + 4 > 3)
+        if (param_2 + 4 > 3)
         {
         label_505b64:
             Error_Show("MenuItem_Move() called with illegal direction parameter.");
@@ -59,46 +59,46 @@ int32_t Physics_MenuitemMoveCalledWi(void* a1, int32_t a2)
         {
             while (true)
             {
-                int32_t srcS1;
+                int32_t source_1;
 
-                switch (valA5)
+                switch (data_5)
                 {
                     case 0:
                     {
-                        srcS1 = *(srcS + 0x40);
+                        source_1 = *(source_val + 0x40);
                         break;
                     }
                     case 1:
                     {
-                        srcS1 = *(srcS + 0x3c);
+                        source_1 = *(source_val + 0x3c);
                         break;
                     }
                     case 2:
                     {
-                        srcS1 = *(srcS + 0x48);
+                        source_1 = *(source_val + 0x48);
                         break;
                     }
                     case 3:
                     {
-                        srcS1 = *(srcS + 0x44);
+                        source_1 = *(source_val + 0x44);
                         break;
                     }
                 }
 
-                if (!srcS1)
+                if (!source_1)
                     return 0;
 
-                srcS = Physics_CheckHullCollision_4(a1, srcS1);
+                source_val = Physics_CheckHullCollision_4(context, source_1);
 
-                if (!*(srcS + 0x4c))
+                if (!*(source_val + 0x4c))
                     break;
 
-                if (!srcS)
+                if (!source_val)
                     return 0;
 
-                valA5 = a2 + 4;
+                data_5 = param_2 + 4;
 
-                if (a2 + 4 > 3)
+                if (param_2 + 4 > 3)
                     goto label_505b64;
             }
         }

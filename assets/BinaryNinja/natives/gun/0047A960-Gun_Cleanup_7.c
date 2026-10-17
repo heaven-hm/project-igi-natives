@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Gun_Cleanup_7 (VA 0x0047A960; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Cleanup_7.h"
-int32_t* Gun_Cleanup_7(void* a1, int32_t a2)
+int32_t* Gun_Cleanup_7(void* context, int32_t param_2)
 
 {
-    int32_t* result = *(a1 + 0x194);
+    int32_t* result = *(context + 0x194);
 
     if (result)
     {
@@ -12,17 +12,17 @@ int32_t* Gun_Cleanup_7(void* a1, int32_t a2)
         if (result)
         {
             QTask_FindType(result);
-            result = Qtask_UpdateList(*(a1 + 0x194));
-            *(a1 + 0x194) = 0;
+            result = Qtask_UpdateList(*(context + 0x194));
+            *(context + 0x194) = 0;
         }
     }
 
-    result = *(a1 + 0xf0);
+    result = *(context + 0xf0);
 
     if (result)
     {
-        result = (*(((DynObj_LinkDynamicCube_12() * 0x180 + DynObj_LookupHashItem_5()) << 2) + &g_a96ae0))(a1, a2);
-        *(a1 + 0xf0) = 0;
+        result = (*(((DynObj_LinkDynamicCube_12() * 0x180 + DynObj_LookupHashItem_5()) << 2) + &g_a96ae0))(context, param_2);
+        *(context + 0xf0) = 0;
     }
 
     return result;

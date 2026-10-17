@@ -3,7 +3,7 @@
 uint32_t Vehicle_CheckFlightDynamics_6()
 
 {
-    int32_t valA;
-    valA = g_57be78;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_57be78;
+    return QTask_CloseEvent_2(data_val);
 }

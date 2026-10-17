@@ -1,63 +1,63 @@
 // Original IGI.EXE function: Script_ParseEnumString_20 (VA 0x004F7CC0; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumString_20.h"
-long double Script_ParseEnumString_20(void* a1, float a2, float a3)
+long double Script_ParseEnumString_20(void* context, float param_2, float param_3)
 
 {
-    double* srcS = a2;
-    double v_18 = *srcS - *(a1 + 0x2c08);
-    double v_10 = srcS[1] - *(a1 + 0x2c10);
-    double v_8 = srcS[2] - *(a1 + 0x2c18);
+    double* source_val = param_2;
+    double item_18 = *source_val - *(context + 0x2c08);
+    double item_10 = source_val[1] - *(context + 0x2c10);
+    double item_8 = source_val[2] - *(context + 0x2c18);
     Camera_ApplyHandiCam_5();
-    long double x87_r6_2 = *srcS - (v_18 - a3);
-    *srcS = x87_r6_2;
+    long double fpu_val_6_2 = *source_val - (item_18 - param_3);
+    *source_val = fpu_val_6_2;
     Camera_ApplyHandiCam_5();
-    long double x87_r5_2 = srcS[1] - (v_10 - a3);
-    srcS[1] = x87_r5_2;
+    long double fpu_val_5_2 = source_val[1] - (item_10 - param_3);
+    source_val[1] = fpu_val_5_2;
     Camera_ApplyHandiCam_5();
-    long double x87_r4_1 = v_8;
-    long double x87_r3_2 = srcS[2] - (x87_r4_1 - a3);
-    srcS[2] = x87_r3_2;
-    long double x87_r2_1 = a3 * 0.5f;
-    long double f1 = v_18;
-    x87_r2_1 - f1;
+    long double fpu_val_4_1 = item_8;
+    long double fpu_val_3_2 = source_val[2] - (fpu_val_4_1 - param_3);
+    source_val[2] = fpu_val_3_2;
+    long double fpu_val_2_1 = param_3 * 0.5f;
+    long double f1 = item_18;
+    fpu_val_2_1 - f1;
 
-    if (*(&((x87_r2_1 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r2_1, f1) ? 1 : 0) << 0xa
-            | (x87_r2_1 == f1 ? 1 : 0) << 0xe | 0x1000) + 1) & 1)
-        *srcS = x87_r6_2 - a3;
+    if (*(&((fpu_val_2_1 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_2_1, f1) ? 1 : 0) << 0xa
+            | (fpu_val_2_1 == f1 ? 1 : 0) << 0xe | 0x1000) + 1) & 1)
+        *source_val = fpu_val_6_2 - param_3;
 
-    long double f2 = v_10;
-    x87_r2_1 - f2;
+    long double f2 = item_10;
+    fpu_val_2_1 - f2;
 
-    if (*(&((x87_r2_1 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r2_1, f2) ? 1 : 0) << 0xa
-            | (x87_r2_1 == f2 ? 1 : 0) << 0xe | 0x1000) + 1) & 1)
-        srcS[1] = x87_r5_2 - a3;
+    if (*(&((fpu_val_2_1 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_2_1, f2) ? 1 : 0) << 0xa
+            | (fpu_val_2_1 == f2 ? 1 : 0) << 0xe | 0x1000) + 1) & 1)
+        source_val[1] = fpu_val_5_2 - param_3;
 
-    x87_r4_1 - x87_r2_1;
+    fpu_val_4_1 - fpu_val_2_1;
 
-    if (!(*(&((x87_r4_1 < x87_r2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_1, x87_r2_1) ? 1 : 0) << 0xa
-            | (x87_r4_1 == x87_r2_1 ? 1 : 0) << 0xe | 0x1800) + 1) & 0x41))
-        srcS[2] = x87_r3_2 - a3;
+    if (!(*(&((fpu_val_4_1 < fpu_val_2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_1, fpu_val_2_1) ? 1 : 0) << 0xa
+            | (fpu_val_4_1 == fpu_val_2_1 ? 1 : 0) << 0xe | 0x1800) + 1) & 0x41))
+        source_val[2] = fpu_val_3_2 - param_3;
 
-    long double x87_r3_5 = a3 * -0.5f;
-    long double f3 = v_18;
-    x87_r3_5 - f3;
+    long double fpu_val_3_5 = param_3 * -0.5f;
+    long double f3 = item_18;
+    fpu_val_3_5 - f3;
 
-    if (!(*(&((x87_r3_5 < f3 ? 1 : 0) << 8 | (FCMP_UO(x87_r3_5, f3) ? 1 : 0) << 0xa
-            | (x87_r3_5 == f3 ? 1 : 0) << 0xe | 0x1800) + 1) & 0x41))
-        *srcS = a3 + *srcS;
+    if (!(*(&((fpu_val_3_5 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_3_5, f3) ? 1 : 0) << 0xa
+            | (fpu_val_3_5 == f3 ? 1 : 0) << 0xe | 0x1800) + 1) & 0x41))
+        *source_val = param_3 + *source_val;
 
-    long double f4 = v_10;
-    x87_r3_5 - f4;
+    long double f4 = item_10;
+    fpu_val_3_5 - f4;
 
-    if (!(*(&((x87_r3_5 < f4 ? 1 : 0) << 8 | (FCMP_UO(x87_r3_5, f4) ? 1 : 0) << 0xa
-            | (x87_r3_5 == f4 ? 1 : 0) << 0xe | 0x1800) + 1) & 0x41))
-        srcS[1] = a3 + srcS[1];
+    if (!(*(&((fpu_val_3_5 < f4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_3_5, f4) ? 1 : 0) << 0xa
+            | (fpu_val_3_5 == f4 ? 1 : 0) << 0xe | 0x1800) + 1) & 0x41))
+        source_val[1] = param_3 + source_val[1];
 
-    x87_r4_1 - x87_r3_5;
+    fpu_val_4_1 - fpu_val_3_5;
 
-    if (*(&((x87_r4_1 < x87_r3_5 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_1, x87_r3_5) ? 1 : 0) << 0xa
-            | (x87_r4_1 == x87_r3_5 ? 1 : 0) << 0xe | 0x2800) + 1) & 1)
-        srcS[2] = a3 + srcS[2];
+    if (*(&((fpu_val_4_1 < fpu_val_3_5 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_1, fpu_val_3_5) ? 1 : 0) << 0xa
+            | (fpu_val_4_1 == fpu_val_3_5 ? 1 : 0) << 0xe | 0x2800) + 1) & 1)
+        source_val[2] = param_3 + source_val[2];
 
-    return v_8;
+    return item_8;
 }

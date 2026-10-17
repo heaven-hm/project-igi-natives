@@ -1,122 +1,122 @@
 // Original IGI.EXE function: AI_ExpandRoute (VA 0x004518E0; static CFG gate PASS, CFG score 0.979).
 #include "AI_ExpandRoute.h"
-int32_t* AI_ExpandRoute(void* a1, int32_t a2, double* a3, char a4)
+int32_t* AI_ExpandRoute(void* context, int32_t param_2, double* param_3, char param_4)
 
 {
 label_4518f2:
-    int32_t dstD2 = a2;
-    void* srcS1 = *(a1 + 0x3b6c);
-    int32_t v_12c_1 = 0xffffffff;
+    int32_t dest_2 = param_2;
+    void* source_1 = *(context + 0x3b6c);
+    int32_t item_12c_1 = 0xffffffff;
     int32_t i_1;
     int16_t idx;
 
-    if (*(a1 + 0x3e30) != dstD2)
+    if (*(context + 0x3e30) != dest_2)
     {
-        if (a4)
+        if (param_4)
         {
-            int32_t* objC1 = *(a1 + 0x3ea0);
+            int32_t* entity_1 = *(context + 0x3ea0);
 
-            if (objC1)
+            if (entity_1)
             {
-                int32_t valA3 = *(a1 + 0x3ea4);
-                AI_MoveToNode_4(objC1, valA3, valA3);
-                *(a1 + 0x3ea0) = 0;
+                int32_t data_3 = *(context + 0x3ea4);
+                AI_MoveToNode_4(entity_1, data_3, data_3);
+                *(context + 0x3ea0) = 0;
             }
 
-            int32_t* valA6;
+            int32_t* data_6;
 
-            if (!a3)
+            if (!param_3)
             {
-                double v_20[0x3];
-                Script_CallNativeHandler_23(&v_20, Script_ExecuteLevelScript_23(*(a1 + 0x3b6c), dstD2));
-                valA6 =
-                    AI_UpdateOrders_4(a1 + 0x3ea4, a1 + 0x3ea8, a1 + 0x3eb0, srcS1, dstD2, &v_20);
+                double item_20[0x3];
+                Script_CallNativeHandler_23(&item_20, Script_ExecuteLevelScript_23(*(context + 0x3b6c), dest_2));
+                data_6 =
+                    AI_UpdateOrders_4(context + 0x3ea4, context + 0x3ea8, context + 0x3eb0, source_1, dest_2, &item_20);
             }
             else
-                valA6 = AI_UpdateOrders_4(a1 + 0x3ea4, a1 + 0x3ea8, a1 + 0x3eb0, srcS1, dstD2, a3);
+                data_6 = AI_UpdateOrders_4(context + 0x3ea4, context + 0x3ea8, context + 0x3eb0, source_1, dest_2, param_3);
 
-            *(a1 + 0x3ea0) = valA6;
+            *(context + 0x3ea0) = data_6;
         }
 
-        int32_t valA10 = *(a1 + 0x3e2c);
-        int32_t* v_128;
-        double v_118;
+        int32_t data_10 = *(context + 0x3e2c);
+        int32_t* item_128;
+        double item_118;
 
-        if (valA10 != 0xffffffff)
+        if (data_10 != 0xffffffff)
         {
-            void* valA12 = Script_ExecuteLevelScript_23(*(a1 + 0x3b6c), valA10);
+            void* data_12 = Script_ExecuteLevelScript_23(*(context + 0x3b6c), data_10);
 
-            if (valA12)
+            if (data_12)
             {
-                int32_t v_140_5 = 0x3fd33333;
+                int32_t item_140_5 = 0x3fd33333;
 
-                if (!Script_FormatString_23(DynObj_UpdateDynTree_4(*(a1 + 0x14)), valA12, 4.17232506e-08f, 0))
+                if (!Script_FormatString_23(DynObj_UpdateDynTree_4(*(context + 0x14)), data_12, 4.17232506e-08.0f, 0))
                 {
-                    double v_68[0x3];
-                    Script_CallNativeHandler_23(&v_68, valA12);
-                    long double fp0_1 = Sys_DispatchOpcode_11(&v_68, DynObj_UpdateDynTree_4(*(a1 + 0x14)));
-                    int32_t* i_2 = *(a1 + 0xe0);
-                    v_118 = fp0_1;
+                    double item_68[0x3];
+                    Script_CallNativeHandler_23(&item_68, data_12);
+                    long double fp0_1 = Sys_DispatchOpcode_11(&item_68, DynObj_UpdateDynTree_4(*(context + 0x14)));
+                    int32_t* i_2 = *(context + 0xe0);
+                    item_118 = fp0_1;
                     idx = 0;
                     int32_t* i = *i_2;
-                    v_12c_1 = *(a1 + 0x3e2c);
+                    item_12c_1 = *(context + 0x3e2c);
 
                     for (; i; i = *i)
                     {
-                        if (i_2[9] != v_12c_1)
+                        if (i_2[9] != item_12c_1)
                         {
-                            int32_t srcS4 = i_2[9];
+                            int32_t source_4 = i_2[9];
 
-                            if (srcS4 != 0xffffffff)
+                            if (source_4 != 0xffffffff)
                             {
-                                int32_t* valA18 = Script_ExecuteLevelScript_23(*(a1 + 0x3b6c), srcS4);
-                                v_128 = valA18;
+                                int32_t* data_18 = Script_ExecuteLevelScript_23(*(context + 0x3b6c), source_4);
+                                item_128 = data_18;
 
-                                if (valA18)
+                                if (data_18)
                                 {
-                                    int32_t v_140_8 = 0x3fd33333;
+                                    int32_t item_140_8 = 0x3fd33333;
 
-                                    if (Script_FormatString_23(DynObj_UpdateDynTree_4(*(a1 + 0x14)), valA18,
-                                            4.17232506e-08f, 0))
-                                        v_12c_1 = srcS4;
-                                    else if (srcS4 != dstD2)
+                                    if (Script_FormatString_23(DynObj_UpdateDynTree_4(*(context + 0x14)), data_18,
+                                            4.17232506e-08.0f, 0))
+                                        item_12c_1 = source_4;
+                                    else if (source_4 != dest_2)
                                     {
-                                        void* valA25 = Physics_CheckHullCollision_8(*(a1 + 0x3b6c), srcS4, dstD2);
+                                        void* data_25 = Physics_CheckHullCollision_8(*(context + 0x3b6c), source_4, dest_2);
 
-                                        if (valA25)
+                                        if (data_25)
                                         {
-                                            long double x87_r7_3 = *(valA25 + 4);
-                                            long double f4_1 = v_118;
-                                            x87_r7_3 - f4_1;
+                                            long double fpu_val_7_3 = *(data_25 + 4);
+                                            long double f4_1 = item_118;
+                                            fpu_val_7_3 - f4_1;
                                             idx = 0;
 
-                                            if (*(&((x87_r7_3 < f4_1 ? 1 : 0) << 8
-                                                    | (FCMP_UO(x87_r7_3, f4_1) ? 1 : 0) << 0xa
-                                                    | (x87_r7_3 == f4_1 ? 1 : 0) << 0xe) + 1) & 1)
-                                                v_12c_1 = srcS4;
+                                            if (*(&((fpu_val_7_3 < f4_1 ? 1 : 0) << 8
+                                                    | (FCMP_UO(fpu_val_7_3, f4_1) ? 1 : 0) << 0xa
+                                                    | (fpu_val_7_3 == f4_1 ? 1 : 0) << 0xe) + 1) & 1)
+                                                item_12c_1 = source_4;
                                         }
                                         else
                                         {
-                                            int32_t v_13c_9 = dstD2;
-                                            int32_t v_140_11 = srcS4;
-                                            int32_t v_144_7 = dstD2;
-                                            int32_t v_148_7 = v_12c_1;
+                                            int32_t item_13c_9 = dest_2;
+                                            int32_t item_140_11 = source_4;
+                                            int32_t item_144_7 = dest_2;
+                                            int32_t item_148_7 = item_12c_1;
                                             Warning_Show("ERROR IN ROUTENET: %d to %d or %d to %d");
                                         }
                                     }
                                     else
                                     {
-                                        Script_CallNativeHandler_23(&v_68, v_128);
+                                        Script_CallNativeHandler_23(&item_68, item_128);
                                         long double fp0_2 =
-                                            Sys_DispatchOpcode_11(&v_68, DynObj_UpdateDynTree_4(*(a1 + 0x14)));
-                                        long double f3_1 = v_118;
+                                            Sys_DispatchOpcode_11(&item_68, DynObj_UpdateDynTree_4(*(context + 0x14)));
+                                        long double f3_1 = item_118;
                                         fp0_2 - f3_1;
                                         idx = 0;
 
                                         if (*(&((fp0_2 < f3_1 ? 1 : 0) << 8
                                                 | (FCMP_UO(fp0_2, f3_1) ? 1 : 0) << 0xa
                                                 | (fp0_2 == f3_1 ? 1 : 0) << 0xe) + 1) & 1)
-                                            v_12c_1 = srcS4;
+                                            item_12c_1 = source_4;
                                     }
                                 }
                             }
@@ -130,253 +130,253 @@ label_4518f2:
             }
         }
 
-        Env_UpdateCameraLens_13(a1);
-        *(a1 + 0x3e30) = dstD2;
-        int32_t srcS5;
+        Env_UpdateCameraLens_13(context);
+        *(context + 0x3e30) = dest_2;
+        int32_t source_5;
 
-        if (v_12c_1 != 0xffffffff)
+        if (item_12c_1 != 0xffffffff)
         {
-            int32_t* valA28 = AI_CheckHearing_3(a1);
-            int32_t* valA30 = Script_ExecuteLevelScript_23(*(a1 + 0x3b6c), v_12c_1);
-            v_128 = valA30;
+            int32_t* data_28 = AI_CheckHearing_3(context);
+            int32_t* data_30 = Script_ExecuteLevelScript_23(*(context + 0x3b6c), item_12c_1);
+            item_128 = data_30;
 
-            if (valA28)
+            if (data_28)
             {
-                double v_98;
-                Script_CallNativeHandler_23(&v_98, valA30);
-                int32_t valA31 = DynObj_UpdateDynTree_4(*(a1 + 0x14));
-                long double x87_r7_4 = v_98;
-                int32_t* tmpD8 = v_128;
-                double v_38;
-                memcpy(&v_38, valA31, 0x18);
-                double v_c8 = x87_r7_4 - v_38;
-                double v_90;
-                double v_30;
-                double v_c0_1 = v_90 - v_30;
+                double item_98;
+                Script_CallNativeHandler_23(&item_98, data_30);
+                int32_t data_31 = DynObj_UpdateDynTree_4(*(context + 0x14));
+                long double fpu_val_7_4 = item_98;
+                int32_t* temp_8 = item_128;
+                double item_38;
+                memcpy(&item_38, data_31, 0x18);
+                double item_c8 = fpu_val_7_4 - item_38;
+                double item_90;
+                double item_30;
+                double item_c0_1 = item_90 - item_30;
                 idx = 0;
-                int32_t v_b8_1 = 0;
-                int32_t v_b4_1 = 0;
-                AI_FireWeapon_3(&valA28[2], tmpD8, &v_98, &v_c8, 0);
-                srcS5 = v_12c_1;
-                valA28[8] = 0;
-                valA28[9] = srcS5;
-                dstD2 = a2;
+                int32_t item_b8_1 = 0;
+                int32_t item_b4_1 = 0;
+                AI_FireWeapon_3(&data_28[2], temp_8, &item_98, &item_c8, 0);
+                source_5 = item_12c_1;
+                data_28[8] = 0;
+                data_28[9] = source_5;
+                dest_2 = param_2;
                 goto label_451c18;
             }
         }
         else
         {
-            srcS5 = *(a1 + 0x3e2c);
+            source_5 = *(context + 0x3e2c);
         label_451c18:
 
-            if (srcS5 != dstD2)
+            if (source_5 != dest_2)
             {
                 while (true)
                 {
-                    int32_t* valA38 = Physics_CheckHullCollision_8(srcS1, srcS5, dstD2);
+                    int32_t* data_38 = Physics_CheckHullCollision_8(source_1, source_5, dest_2);
 
-                    if (!valA38)
+                    if (!data_38)
                     {
-                        int32_t v_13c_27 = dstD2;
-                        int32_t v_140_26 = srcS5;
-                        int32_t v_144_17 = *(a1 + 0x3b68);
-                        int32_t valA71 =
+                        int32_t item_13c_27 = dest_2;
+                        int32_t item_140_26 = source_5;
+                        int32_t item_144_17 = *(context + 0x3b68);
+                        int32_t data_71 =
                             Warning_Show("Error in graph %d routenet, Node #%d to #%d");
-                        valA71 = 0;
-                        return valA71;
+                        data_71 = 0;
+                        return data_71;
                     }
 
-                    void* valA39 = Script_ExecuteLevelScript_23(srcS1, srcS5);
-                    v_118 = valA39;
-                    void* valA41 = Script_ExecuteLevelScript_23(srcS1, *valA38);
+                    void* data_39 = Script_ExecuteLevelScript_23(source_1, source_5);
+                    item_118 = data_39;
+                    void* data_41 = Script_ExecuteLevelScript_23(source_1, *data_38);
 
-                    if (!valA41)
+                    if (!data_41)
                     {
-                        int32_t v_13c_28 = *valA38;
-                        int32_t v_140_27 = *(a1 + 0x3b68);
-                        int32_t valA73 =
+                        int32_t item_13c_28 = *data_38;
+                        int32_t item_140_27 = *(context + 0x3b68);
+                        int32_t data_73 =
                             Warning_Show("Error in graph %d nodenet, Node #%d not found");
-                        valA73 = 0;
-                        return valA73;
+                        data_73 = 0;
+                        return data_73;
                     }
 
-                    if (*valA38 != a2)
+                    if (*data_38 != param_2)
                     {
-                        double v_e0;
-                        Script_CallNativeHandler_23(&v_e0, valA39);
-                        double v_b0;
-                        Script_CallNativeHandler_23(&v_b0, valA41);
-                        bool cond_2_1 = srcS5 != *(a1 + 0x3e2c);
-                        double v_f8 = v_b0 - v_e0;
-                        double v_d8;
-                        double v_a8;
-                        double v_f0_1 = v_a8 - v_d8;
-                        double v_d0;
-                        double v_a0;
-                        double v_e8_1 = v_a0 - v_d0;
+                        double item_e0;
+                        Script_CallNativeHandler_23(&item_e0, data_39);
+                        double item_b0;
+                        Script_CallNativeHandler_23(&item_b0, data_41);
+                        bool flag_2_1 = source_5 != *(context + 0x3e2c);
+                        double item_f8 = item_b0 - item_e0;
+                        double item_d8;
+                        double item_a8;
+                        double item_f0_1 = item_a8 - item_d8;
+                        double item_d0;
+                        double item_a0;
+                        double item_e8_1 = item_a0 - item_d0;
                         idx = 0;
 
-                        if (cond_2_1)
+                        if (flag_2_1)
                         {
-                            int32_t* valA61 = AI_CheckHearing_3(a1);
-                            v_128 = valA61;
+                            int32_t* data_61 = AI_CheckHearing_3(context);
+                            item_128 = data_61;
 
-                            if (!valA61)
+                            if (!data_61)
                                 break;
 
-                            AI_FireWeapon_3(&valA61[2], valA39, &v_e0, &v_f8, 1);
-                            int32_t* valA63 = v_128;
-                            valA63[8] = 0;
-                            valA63[9] = srcS5;
-                            int32_t valA64 = Physics_UpdateForces_8();
+                            AI_FireWeapon_3(&data_61[2], data_39, &item_e0, &item_f8, 1);
+                            int32_t* data_63 = item_128;
+                            data_63[8] = 0;
+                            data_63[9] = source_5;
+                            int32_t data_64 = Physics_UpdateForces_8();
 
-                            if (*(valA39 + 0x30) & valA64)
+                            if (*(data_39 + 0x30) & data_64)
                             {
-                                int32_t valA65 = Physics_UpdateForces_8();
+                                int32_t data_65 = Physics_UpdateForces_8();
 
-                                if (*(valA41 + 0x30) & valA65)
-                                    v_128[8] = 1;
+                                if (*(data_41 + 0x30) & data_65)
+                                    item_128[8] = 1;
                             }
                         }
                         else
                         {
-                            int32_t v_140_22 = 0x3fd33333;
+                            int32_t item_140_22 = 0x3fd33333;
 
-                            if (Script_FormatString_23(a1 + 0x20, valA39, 4.17232506e-08f, 0))
+                            if (Script_FormatString_23(context + 0x20, data_39, 4.17232506e-08.0f, 0))
                             {
-                                int32_t* valA56 = AI_CheckHearing_3(a1);
-                                v_128 = valA56;
+                                int32_t* data_56 = AI_CheckHearing_3(context);
+                                item_128 = data_56;
 
-                                if (!valA56)
+                                if (!data_56)
                                     break;
 
-                                AI_FireWeapon_3(&valA56[2], valA39, &v_e0, &v_f8, 1);
-                                int32_t* valA58 = v_128;
-                                valA58[8] = 0;
-                                valA58[9] = srcS5;
-                                int32_t valA59 = Physics_UpdateForces_8();
+                                AI_FireWeapon_3(&data_56[2], data_39, &item_e0, &item_f8, 1);
+                                int32_t* data_58 = item_128;
+                                data_58[8] = 0;
+                                data_58[9] = source_5;
+                                int32_t data_59 = Physics_UpdateForces_8();
 
-                                if (*(valA39 + 0x30) & valA59)
+                                if (*(data_39 + 0x30) & data_59)
                                 {
-                                    int32_t valA60 = Physics_UpdateForces_8();
+                                    int32_t data_60 = Physics_UpdateForces_8();
 
-                                    if (*(valA41 + 0x30) & valA60)
-                                        v_128[8] = 1;
+                                    if (*(data_41 + 0x30) & data_60)
+                                        item_128[8] = 1;
                                 }
                             }
                         }
 
-                        int32_t* valA66 = AI_CheckHearing_3(a1);
+                        int32_t* data_66 = AI_CheckHearing_3(context);
 
-                        if (!valA66)
+                        if (!data_66)
                             break;
 
-                        AI_FireWeapon_3(&valA66[2], valA41, &v_b0, &v_f8, 0);
-                        valA66[8] = 0;
-                        valA66[9] = *valA38;
+                        AI_FireWeapon_3(&data_66[2], data_41, &item_b0, &item_f8, 0);
+                        data_66[8] = 0;
+                        data_66[9] = *data_38;
                     }
                     else
                     {
-                        bool v_121_1 = false;
-                        double v_110;
-                        Script_CallNativeHandler_23(&v_110, valA41);
-                        double v_100;
+                        bool item_121_1 = false;
+                        double item_110;
+                        Script_CallNativeHandler_23(&item_110, data_41);
+                        double item_100;
 
-                        if (a3)
+                        if (param_3)
                         {
-                            int32_t* valA43 = AI_CheckHearing_3(a1);
+                            int32_t* data_43 = AI_CheckHearing_3(context);
 
-                            if (!valA43)
+                            if (!data_43)
                                 break;
 
-                            double v_50;
-                            Script_CallNativeHandler_23(&v_50, valA39);
-                            double v_80 = v_110 - v_50;
-                            double v_108;
-                            double v_48;
-                            double v_78_1 = v_108 - v_48;
-                            double v_40;
-                            double v_70_1 = v_100 - v_40;
+                            double item_50;
+                            Script_CallNativeHandler_23(&item_50, data_39);
+                            double item_80 = item_110 - item_50;
+                            double item_108;
+                            double item_48;
+                            double item_78_1 = item_108 - item_48;
+                            double item_40;
+                            double item_70_1 = item_100 - item_40;
                             idx = 0;
-                            AI_FireWeapon_3(&valA43[2], valA41, &v_110, &v_80, 0);
-                            int32_t valA44 = Physics_UpdateForces_8();
-                            int32_t valA45;
+                            AI_FireWeapon_3(&data_43[2], data_41, &item_110, &item_80, 0);
+                            int32_t data_44 = Physics_UpdateForces_8();
+                            int32_t data_45;
 
-                            if (*(valA39 + 0x30) & valA44)
-                                valA45 = Physics_UpdateForces_8();
+                            if (*(data_39 + 0x30) & data_44)
+                                data_45 = Physics_UpdateForces_8();
 
-                            if (!(*(valA39 + 0x30) & valA44) || !(*(valA41 + 0x30) & valA45))
-                                valA43[8] = 0;
+                            if (!(*(data_39 + 0x30) & data_44) || !(*(data_41 + 0x30) & data_45))
+                                data_43[8] = 0;
                             else
-                                valA43[8] = 1;
+                                data_43[8] = 1;
 
-                            int32_t v_140_20 = 0x3fd33333;
-                            valA43[9] = *valA38;
-                            v_121_1 = Script_FormatString_23(a3, valA41, 4.17232506e-08f, 0);
+                            int32_t item_140_20 = 0x3fd33333;
+                            data_43[9] = *data_38;
+                            item_121_1 = Script_FormatString_23(param_3, data_41, 4.17232506e-08.0f, 0);
                         }
 
-                        int32_t* valA48 = AI_CheckHearing_3(a1);
-                        v_128 = valA48;
+                        int32_t* data_48 = AI_CheckHearing_3(context);
+                        item_128 = data_48;
 
-                        if (!valA48)
+                        if (!data_48)
                             break;
 
-                        valA48[8] = 0;
+                        data_48[8] = 0;
 
-                        if (!v_121_1)
+                        if (!item_121_1)
                         {
-                            memcpy(&valA48[2], &v_110, 0x18);
-                            int32_t valA49 = Physics_UpdateForces_8();
+                            memcpy(&data_48[2], &item_110, 0x18);
+                            int32_t data_49 = Physics_UpdateForces_8();
 
-                            if (*(v_118 + 0x30) & valA49)
+                            if (*(item_118 + 0x30) & data_49)
                             {
-                                int32_t valA50 = Physics_UpdateForces_8();
+                                int32_t data_50 = Physics_UpdateForces_8();
 
-                                if (*(valA41 + 0x30) & valA50)
-                                    v_128[8] = 1;
+                                if (*(data_41 + 0x30) & data_50)
+                                    item_128[8] = 1;
                             }
 
-                            v_128[9] = *valA38;
+                            item_128[9] = *data_38;
                         }
                         else
                         {
-                            memcpy(&valA48[2], a3, 0x18);
-                            valA48[6] = v_100;
-                            valA48[7] = *(&v_100 + 4);
-                            valA48[9] = *valA38;
+                            memcpy(&data_48[2], param_3, 0x18);
+                            data_48[6] = item_100;
+                            data_48[7] = *(&item_100 + 4);
+                            data_48[9] = *data_38;
                         }
                     }
 
-                    srcS5 = *valA38;
+                    source_5 = *data_38;
 
-                    if (srcS5 == a2)
+                    if (source_5 == param_2)
                         goto label_4518f2;
 
-                    dstD2 = a2;
+                    dest_2 = param_2;
                 }
             }
-            else if (!a3)
+            else if (!param_3)
             {
-                int32_t* valA35 = AI_CheckHearing_3(a1);
-                void* valA36 = Script_ExecuteLevelScript_23(*(a1 + 0x3b6c), dstD2);
+                int32_t* data_35 = AI_CheckHearing_3(context);
+                void* data_36 = Script_ExecuteLevelScript_23(*(context + 0x3b6c), dest_2);
 
-                if (valA35)
+                if (data_35)
                 {
-                    Script_CallNativeHandler_23(&valA35[2], valA36);
-                    valA35[8] = 0;
-                    valA35[9] = dstD2;
+                    Script_CallNativeHandler_23(&data_35[2], data_36);
+                    data_35[8] = 0;
+                    data_35[9] = dest_2;
                     goto label_4518f2;
                 }
             }
             else
             {
-                int32_t* valA34 = AI_CheckHearing_3(a1);
+                int32_t* data_34 = AI_CheckHearing_3(context);
 
-                if (valA34)
+                if (data_34)
                 {
-                    memcpy(&valA34[2], a3, 0x18);
-                    valA34[8] = 0;
-                    valA34[9] = a2;
+                    memcpy(&data_34[2], param_3, 0x18);
+                    data_34[8] = 0;
+                    data_34[9] = param_2;
                     goto label_4518f2;
                 }
             }
@@ -389,7 +389,7 @@ label_4518f2:
 
 🚫🚫    while (true)
     {
-        i_1 = AI_SteerHuman(a1);
+        i_1 = AI_SteerHuman(context);
         idx += 2;
 
         while (i_1)
@@ -399,10 +399,10 @@ label_4518f2:
 
             if (i_1 == 2)
             {
-                int32_t* valA70 = Env_UpdateCameraLens_13(a1);
-                *(a1 + 0x3e30) = 0xffffffff;
-                valA70 = 1;
-                return valA70;
+                int32_t* data_70 = Env_UpdateCameraLens_13(context);
+                *(context + 0x3e30) = 0xffffffff;
+                data_70 = 1;
+                return data_70;
             }
         }
     }

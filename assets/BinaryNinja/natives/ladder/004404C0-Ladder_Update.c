@@ -1,95 +1,95 @@
 // Original IGI.EXE function: Ladder_Update (VA 0x004404C0; static CFG gate PASS, CFG score 1.000).
 #include "Ladder_Update.h"
-int32_t Ladder_Update(double* a1, int32_t* a2)
+int32_t Ladder_Update(double* context, int32_t* param_2)
 
 {
-    long double x87_r7_1 = *(a2 + 8) - a1[4];
-    long double x87_r6_1 = *(a2 + 0x10) - a1[5];
-    long double x87_r5_1 = *(a2 + 0x18) - a1[6];
-    void* ctxB = *a2;
-    double v_38 = a1[0x11] * x87_r5_1 + *(a1 + 0x7c) * x87_r6_1 + a1[0xe] * x87_r7_1;
-    long double x87_r7_2 =
-        *(a1 + 0x8c) * x87_r5_1 + *(a1 + 0x74) * x87_r7_1 + a1[0x10] * x87_r6_1;
+    long double fpu_val_7_1 = *(param_2 + 8) - context[4];
+    long double fpu_val_6_1 = *(param_2 + 0x10) - context[5];
+    long double fpu_val_5_1 = *(param_2 + 0x18) - context[6];
+    void* context_val = *param_2;
+    double item_38 = context[0x11] * fpu_val_5_1 + *(context + 0x7c) * fpu_val_6_1 + context[0xe] * fpu_val_7_1;
+    long double fpu_val_7_2 =
+        *(context + 0x8c) * fpu_val_5_1 + *(context + 0x74) * fpu_val_7_1 + context[0x10] * fpu_val_6_1;
     long double f0 = 0.0;
-    x87_r7_2 - f0;
-    long double x87_r6_3 = x87_r7_2;
+    fpu_val_7_2 - f0;
+    long double fpu_val_6_3 = fpu_val_7_2;
 
-    if (*(&((x87_r7_2 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f0) ? 1 : 0) << 0xa
-            | (x87_r7_2 == f0 ? 1 : 0) << 0xe | 0x3000) + 1) & 1)
-        x87_r6_3 = -(x87_r6_3);
+    if (*(&((fpu_val_7_2 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f0) ? 1 : 0) << 0xa
+            | (fpu_val_7_2 == f0 ? 1 : 0) << 0xe | 0x3000) + 1) & 1)
+        fpu_val_6_3 = -(fpu_val_6_3);
 
-    long double f1 = *(a2 + 0x78);
-    x87_r6_3 - f1;
+    long double f1 = *(param_2 + 0x78);
+    fpu_val_6_3 - f1;
 
-    if (*(&((x87_r6_3 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_3, f1) ? 1 : 0) << 0xa
-        | (x87_r6_3 == f1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+    if (*(&((fpu_val_6_3 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_3, f1) ? 1 : 0) << 0xa
+        | (fpu_val_6_3 == f1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
     {
-        long double x87_r6_4 = v_38;
+        long double fpu_val_6_4 = item_38;
         long double f2_1 = -2867.1999999999998;
-        x87_r6_4 - f2_1;
+        fpu_val_6_4 - f2_1;
 
-        if (!(*(&((x87_r6_4 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_4, f2_1) ? 1 : 0) << 0xa
-            | (x87_r6_4 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
+        if (!(*(&((fpu_val_6_4 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_4, f2_1) ? 1 : 0) << 0xa
+            | (fpu_val_6_4 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
         {
-            long double x87_r6_5 = v_38;
+            long double fpu_val_6_5 = item_38;
             long double f4_1 = 2867.1999999999998;
-            x87_r6_5 - f4_1;
+            fpu_val_6_5 - f4_1;
 
-            if (*(&((x87_r6_5 < f4_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_5, f4_1) ? 1 : 0) << 0xa
-                | (x87_r6_5 == f4_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+            if (*(&((fpu_val_6_5 < f4_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_5, f4_1) ? 1 : 0) << 0xa
+                | (fpu_val_6_5 == f4_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
             {
-                int32_t objC1 = a2[0xc];
+                int32_t entity_1 = param_2[0xc];
                 long double f5_1 = 0.0;
-                x87_r7_2 - f5_1;
-                int32_t tmpD1 = a2[0xf];
-                int32_t v_44 = a2[9];
-                int32_t v_40_1 = objC1;
-                float objC2 = a1[0x10];
-                float v_50 = *(a1 + 0x74);
-                int32_t v_3c_1 = tmpD1;
-                float tmpD2 = *(a1 + 0x8c);
+                fpu_val_7_2 - f5_1;
+                int32_t temp_1 = param_2[0xf];
+                int32_t item_44 = param_2[9];
+                int32_t item_40_1 = entity_1;
+                float entity_2 = context[0x10];
+                float item_50 = *(context + 0x74);
+                int32_t item_3c_1 = temp_1;
+                float temp_2 = *(context + 0x8c);
 
-                if (!(*(&((x87_r7_2 < f5_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_2, f5_1) ? 1 : 0) << 0xa
-                    | (x87_r7_2 == f5_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+                if (!(*(&((fpu_val_7_2 < f5_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_2, f5_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_2 == f5_1 ? 1 : 0) << 0xe) + 1) & 0x41))
                 {
-                    v_50 = -(v_50);
-                    float v_4c_2 = -(objC2);
-                    float v_48_2 = -(tmpD2);
+                    item_50 = -(item_50);
+                    float item_4c_2 = -(entity_2);
+                    float item_48_2 = -(temp_2);
                 }
 
-                float v_54_1 = Sys_PushStack_10(&v_44, &v_50);
-                double v_20[0x2];
-                WeaponType_UpdateAnim(&v_20, a1, 1);
-                double v_10;
-                x87_r7_2 = v_10 + a1[6];
-                long double x87_r6_6 = v_54_1;
+                float item_54_1 = Sys_PushStack_10(&item_44, &item_50);
+                double item_20[0x2];
+                WeaponType_UpdateAnim(&item_20, context, 1);
+                double item_10;
+                fpu_val_7_2 = item_10 + context[6];
+                long double fpu_val_6_6 = item_54_1;
                 long double f6_1 = 0.785398185f;
-                x87_r6_6 - f6_1;
+                fpu_val_6_6 - f6_1;
 
-                if (*(&((x87_r6_6 < f6_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_6, f6_1) ? 1 : 0) << 0xa
-                    | (x87_r6_6 == f6_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+                if (*(&((fpu_val_6_6 < f6_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_6, f6_1) ? 1 : 0) << 0xa
+                    | (fpu_val_6_6 == f6_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
                 {
-                    long double f7_1 = *(a2 + 0x18);
-                    x87_r7_2 - f7_1;
+                    long double f7_1 = *(param_2 + 0x18);
+                    fpu_val_7_2 - f7_1;
 
-                    if (!(*(&((x87_r7_2 < f7_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_2, f7_1) ? 1 : 0) << 0xa
-                        | (x87_r7_2 == f7_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+                    if (!(*(&((fpu_val_7_2 < f7_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_2, f7_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_2 == f7_1 ? 1 : 0) << 0xe) + 1) & 0x41))
                     {
-                        long double x87_r7_11 = *(a2 + 0x18);
-                        long double f8_1 = a1[6];
-                        x87_r7_11 - f8_1;
+                        long double fpu_val_7_11 = *(param_2 + 0x18);
+                        long double f8_1 = context[6];
+                        fpu_val_7_11 - f8_1;
 
-                        if (!(*(&((x87_r7_11 < f8_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_11, f8_1) ? 1 : 0) << 0xa
-                            | (x87_r7_11 == f8_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+                        if (!(*(&((fpu_val_7_11 < f8_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_11, f8_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_11 == f8_1 ? 1 : 0) << 0xe) + 1) & 0x41))
                         {
-                            a2[0x20] = a1;
-                            a2[0x1c] = 0;
-                            a2[0x1d] = 0;
-                            *(ctxB + 0xd7b) = 0;
+                            param_2[0x20] = context;
+                            param_2[0x1c] = 0;
+                            param_2[0x1d] = 0;
+                            *(context_val + 0xd7b) = 0;
                         }
                     }
                 }
@@ -97,29 +97,29 @@ int32_t Ladder_Update(double* a1, int32_t* a2)
         }
     }
 
-    WeaponType_UpdateAnim(&v_38, a1, 1);
-    long double x87_r7_14 = v_38 + a1[4];
-    v_38 = x87_r7_14;
-    double v_28;
-    long double x87_r4_10 = *(a1 + 0x8c) * (*(a2 + 0x18) - (v_28 + a1[6]))
-        + *(a1 + 0x74) * (*(a2 + 8) - x87_r7_14);
-    double v_30;
-    long double x87_r3_11 = a1[0x10] * (*(a2 + 0x10) - (v_30 + a1[5]));
-    long double x87_r4_11 = x87_r4_10 + x87_r3_11;
+    WeaponType_UpdateAnim(&item_38, context, 1);
+    long double fpu_val_7_14 = item_38 + context[4];
+    item_38 = fpu_val_7_14;
+    double item_28;
+    long double fpu_val_4_10 = *(context + 0x8c) * (*(param_2 + 0x18) - (item_28 + context[6]))
+        + *(context + 0x74) * (*(param_2 + 8) - fpu_val_7_14);
+    double item_30;
+    long double fpu_val_3_11 = context[0x10] * (*(param_2 + 0x10) - (item_30 + context[5]));
+    long double fpu_val_4_11 = fpu_val_4_10 + fpu_val_3_11;
     long double f3 = 0.0;
-    x87_r4_11 - f3;
-    int16_t result = (x87_r4_11 < f3 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_11, f3) ? 1 : 0) << 0xa
-        | (x87_r4_11 == f3 ? 1 : 0) << 0xe;
+    fpu_val_4_11 - f3;
+    int16_t result = (fpu_val_4_11 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_11, f3) ? 1 : 0) << 0xa
+        | (fpu_val_4_11 == f3 ? 1 : 0) << 0xe;
 
     if (*(&result + 1) & 1)
     {
         long double fpu0;
         long double fpu1;
         long double fpu2;
-        result = Level_InitSprites_5(fpu0, fpu1, fpu2, x87_r3_11, a2, a1, &v_38);
+        result = Level_InitSprites_5(fpu0, fpu1, fpu2, fpu_val_3_11, param_2, context, &item_38);
 
         if (result)
-            *(ctxB + 0xd7b) = 1;
+            *(context_val + 0xd7b) = 1;
     }
 
     return result;

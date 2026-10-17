@@ -1,50 +1,50 @@
 // Original IGI.EXE function: Menu_UpdateLanguage_17 (VA 0x00426260; static CFG gate PASS, CFG score 1.000).
 #include "Menu_UpdateLanguage_17.h"
-int32_t* Menu_UpdateLanguage_17(float* a1, int32_t* a2, void* a3)
+int32_t* Menu_UpdateLanguage_17(float* context, int32_t* param_2, void* param_3)
 
 {
-    void* valA = *(a3 + 0x4c);
-    long double x87_r7_2 = *(a3 + 0x64) - *(valA + 0xf8) * 0.0263671875f;
-    long double x87_r6_1 = *(valA + 0x720) + x87_r7_2 * 0.00999999978f;
-    *a1 = x87_r6_1;
-    long double f0 = 0f;
-    x87_r6_1 - f0;
-    valA = (x87_r6_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, f0) ? 1 : 0) << 0xa
-        | (x87_r6_1 == f0 ? 1 : 0) << 0xe | 0x3000;
+    void* data_val = *(param_3 + 0x4c);
+    long double fpu_val_7_2 = *(param_3 + 0x64) - *(data_val + 0xf8) * 0.0263671875f;
+    long double fpu_val_6_1 = *(data_val + 0x720) + fpu_val_7_2 * 0.00999999978f;
+    *context = fpu_val_6_1;
+    long double f0 = 0.0f;
+    fpu_val_6_1 - f0;
+    data_val = (fpu_val_6_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, f0) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == f0 ? 1 : 0) << 0xe | 0x3000;
 
-    if (!(*(&valA + 1) & 1))
+    if (!(*(&data_val + 1) & 1))
     {
-        long double f1_1 = 1f;
-        x87_r6_1 - f1_1;
-        valA = (x87_r6_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, f1_1) ? 1 : 0) << 0xa
-            | (x87_r6_1 == f1_1 ? 1 : 0) << 0xe | 0x3800;
+        long double f1_1 = 1.0f;
+        fpu_val_6_1 - f1_1;
+        data_val = (fpu_val_6_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_6_1 == f1_1 ? 1 : 0) << 0xe | 0x3800;
 
-        if (!(*(&valA + 1) & 0x41))
-            *a1 = 1f;
+        if (!(*(&data_val + 1) & 0x41))
+            *context = 1.0f;
     }
     else
-        *a1 = 0f;
+        *context = 0.0f;
 
-    long double x87_r6_3 = *(a3 + 0x70);
-    long double f2 = 0f;
-    x87_r6_3 - f2;
-    valA = (x87_r6_3 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_3, f2) ? 1 : 0) << 0xa
-        | (x87_r6_3 == f2 ? 1 : 0) << 0xe | 0x3800;
+    long double fpu_val_6_3 = *(param_3 + 0x70);
+    long double f2 = 0.0f;
+    fpu_val_6_3 - f2;
+    data_val = (fpu_val_6_3 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_3, f2) ? 1 : 0) << 0xa
+        | (fpu_val_6_3 == f2 ? 1 : 0) << 0xe | 0x3800;
 
-    if (*(&valA + 1) & 0x40)
+    if (*(&data_val + 1) & 0x40)
     {
         long double f3_1 = -5.0;
-        x87_r7_2 - f3_1;
-        valA = (x87_r7_2 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f3_1) ? 1 : 0) << 0xa
-            | (x87_r7_2 == f3_1 ? 1 : 0) << 0xe;
+        fpu_val_7_2 - f3_1;
+        data_val = (fpu_val_7_2 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f3_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_2 == f3_1 ? 1 : 0) << 0xe;
 
-        if (!(*(&valA + 1) & 1))
+        if (!(*(&data_val + 1) & 1))
         {
-            *a2 = 0;
-            return a2;
+            *param_2 = 0;
+            return param_2;
         }
     }
 
-    *a2 = 0x3f800000;
-    return valA;
+    *param_2 = 0x3f800000;
+    return data_val;
 }

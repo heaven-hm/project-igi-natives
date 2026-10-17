@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004A0340 Camera_SetFieldOfView | gate FAIL | openigi False */
-int Camera_SetFieldOfView(float a1, int a2, float a3, int a4, float a5, int a6, float* a7, float a8);
+int Camera_SetFieldOfView(float context, int param_2, float param_3, int param_4, float param_5, int param_6, float* param_7, float param_8);

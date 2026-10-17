@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00419860 BackgroundFX_OnEvent | gate PASS | openigi False */
-int BackgroundFX_OnEvent(float a1);
+int BackgroundFX_OnEvent(float context);

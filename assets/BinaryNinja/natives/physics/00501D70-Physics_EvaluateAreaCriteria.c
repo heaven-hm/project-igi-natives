@@ -1,80 +1,80 @@
 // Original IGI.EXE function: Physics_EvaluateAreaCriteria (VA 0x00501D70; static CFG gate FAIL, CFG score 0.778).
 #include "Physics_EvaluateAreaCriteria.h"
-float* Physics_EvaluateAreaCriteria(void* a1)
+float* Physics_EvaluateAreaCriteria(void* context)
 
 {
-    int16_t valA = DynObj_LookupHashItem_5();
-    void* v_48 = *(a1 + 0x14);
-    void* valA2 = QTask_FindType_2(v_48, valA);
+    int16_t data_val = DynObj_LookupHashItem_5();
+    void* item_48 = *(context + 0x14);
+    void* data_2 = QTask_FindType_2(item_48, data_val);
 
-    if (!valA2)
+    if (!data_2)
     {
-        __builtin_memset(a1 + 0x138, 0, 0x18);
-        *(a1 + 0x150) = 0x3f800000;
-        *(a1 + 0x154) = 0;
-        *(a1 + 0x158) = 0;
-        *(a1 + 0x15c) = 0;
-        *(a1 + 0x160) = 0x3f800000;
-        *(a1 + 0x164) = 0;
-        *(a1 + 0x168) = 0;
-        *(a1 + 0x16c) = 0;
-        *(a1 + 0x170) = 0x3f800000;
-        *(a1 + 0x174) = 0;
+        memset(context + 0x138, 0, 0x18);
+        *(context + 0x150) = 0x3f800000;
+        *(context + 0x154) = 0;
+        *(context + 0x158) = 0;
+        *(context + 0x15c) = 0;
+        *(context + 0x160) = 0x3f800000;
+        *(context + 0x164) = 0;
+        *(context + 0x168) = 0;
+        *(context + 0x16c) = 0;
+        *(context + 0x170) = 0x3f800000;
+        *(context + 0x174) = 0;
         return 0x3f800000;
     }
 
-    *(a1 + 0x138) = *(a1 + 0xf8) - *(valA2 + 0x20);
-    *(a1 + 0x140) = *(a1 + 0x100) - *(valA2 + 0x28);
-    long double x87_r7_5 = *(a1 + 0x108) - *(valA2 + 0x30);
-    *(a1 + 0x148) = x87_r7_5;
-    double v_30 = *(valA2 + 0x88) * x87_r7_5 + *(valA2 + 0x70) * *(a1 + 0x138)
-        + *(valA2 + 0x7c) * *(a1 + 0x140);
-    double v_28 = *(valA2 + 0x74) * *(a1 + 0x138) + *(valA2 + 0x80) * *(a1 + 0x140)
-        + *(valA2 + 0x8c) * x87_r7_5;
-    double v_20 = *(valA2 + 0x78) * *(a1 + 0x138) + *(valA2 + 0x84) * *(a1 + 0x140)
-        + *(valA2 + 0x90) * x87_r7_5;
-    memcpy(a1 + 0x138, &v_30, 0x18);
-    int32_t tmpD = *(valA2 + 0x7c);
-    v_30 = *(valA2 + 0x70);
-    int32_t objC1 = *(valA2 + 0x88);
-    *(&v_30 + 4) = tmpD;
-    v_28 = objC1;
-    *(&v_28 + 4) = *(valA2 + 0x74);
-    v_20 = *(valA2 + 0x80);
-    *(&v_20 + 4) = *(valA2 + 0x8c);
-    int32_t v_18 = *(valA2 + 0x78);
-    int32_t v_14 = *(valA2 + 0x84);
-    int32_t v_10 = *(valA2 + 0x90);
-    int32_t v_c = *(valA2 + 0x94);
-    memcpy(a1 + 0x150, &v_30, 0x28);
-    long double x87_r7_10 = *(a1 + 0x168) * *(a1 + 0x118) + *(a1 + 0x114) * *(a1 + 0x15c)
-        + *(a1 + 0x110) * *(a1 + 0x150);
-    v_30 = x87_r7_10;
-    long double x87_r7_14 = *(a1 + 0x114) * *(a1 + 0x160) + *(a1 + 0x154) * *(a1 + 0x110)
-        + *(a1 + 0x16c) * *(a1 + 0x118);
-    int32_t v_c_1 = *(a1 + 0x174) + *(a1 + 0x134) + 1;
-    *(&v_30 + 4) = x87_r7_14;
-    long double x87_r7_18 = *(a1 + 0x158) * *(a1 + 0x110) + *(a1 + 0x170) * *(a1 + 0x118)
-        + *(a1 + 0x114) * *(a1 + 0x164);
-    v_28 = x87_r7_18;
-    long double x87_r7_22 = *(a1 + 0x168) * *(a1 + 0x124) + *(a1 + 0x150) * *(a1 + 0x11c)
-        + *(a1 + 0x15c) * *(a1 + 0x120);
-    *(&v_28 + 4) = x87_r7_22;
-    long double x87_r7_26 = *(a1 + 0x16c) * *(a1 + 0x124) + *(a1 + 0x160) * *(a1 + 0x120)
-        + *(a1 + 0x154) * *(a1 + 0x11c);
-    v_20 = x87_r7_26;
-    long double x87_r7_30 = *(a1 + 0x170) * *(a1 + 0x124) + *(a1 + 0x164) * *(a1 + 0x120)
-        + *(a1 + 0x158) * *(a1 + 0x11c);
-    *(&v_20 + 4) = x87_r7_30;
-    long double x87_r7_34 = *(a1 + 0x12c) * *(a1 + 0x15c) + *(a1 + 0x168) * *(a1 + 0x130)
-        + *(a1 + 0x150) * *(a1 + 0x128);
-    float v_18_1 = x87_r7_34;
-    long double x87_r7_38 = *(a1 + 0x130) * *(a1 + 0x16c) + *(a1 + 0x12c) * *(a1 + 0x160)
-        + *(a1 + 0x154) * *(a1 + 0x128);
-    float v_14_1 = x87_r7_38;
-    long double x87_r7_42 = *(a1 + 0x158) * *(a1 + 0x128) + *(a1 + 0x130) * *(a1 + 0x170)
-        + *(a1 + 0x12c) * *(a1 + 0x164);
-    float v_10_1 = x87_r7_42;
-    memcpy(a1 + 0x150, &v_30, 0x28);
-    return a1 + 0x150;
+    *(context + 0x138) = *(context + 0xf8) - *(data_2 + 0x20);
+    *(context + 0x140) = *(context + 0x100) - *(data_2 + 0x28);
+    long double fpu_val_7_5 = *(context + 0x108) - *(data_2 + 0x30);
+    *(context + 0x148) = fpu_val_7_5;
+    double item_30 = *(data_2 + 0x88) * fpu_val_7_5 + *(data_2 + 0x70) * *(context + 0x138)
+        + *(data_2 + 0x7c) * *(context + 0x140);
+    double item_28 = *(data_2 + 0x74) * *(context + 0x138) + *(data_2 + 0x80) * *(context + 0x140)
+        + *(data_2 + 0x8c) * fpu_val_7_5;
+    double item_20 = *(data_2 + 0x78) * *(context + 0x138) + *(data_2 + 0x84) * *(context + 0x140)
+        + *(data_2 + 0x90) * fpu_val_7_5;
+    memcpy(context + 0x138, &item_30, 0x18);
+    int32_t temp_val = *(data_2 + 0x7c);
+    item_30 = *(data_2 + 0x70);
+    int32_t entity_1 = *(data_2 + 0x88);
+    *(&item_30 + 4) = temp_val;
+    item_28 = entity_1;
+    *(&item_28 + 4) = *(data_2 + 0x74);
+    item_20 = *(data_2 + 0x80);
+    *(&item_20 + 4) = *(data_2 + 0x8c);
+    int32_t item_18 = *(data_2 + 0x78);
+    int32_t item_14 = *(data_2 + 0x84);
+    int32_t item_10 = *(data_2 + 0x90);
+    int32_t item_c = *(data_2 + 0x94);
+    memcpy(context + 0x150, &item_30, 0x28);
+    long double fpu_val_7_10 = *(context + 0x168) * *(context + 0x118) + *(context + 0x114) * *(context + 0x15c)
+        + *(context + 0x110) * *(context + 0x150);
+    item_30 = fpu_val_7_10;
+    long double fpu_val_7_14 = *(context + 0x114) * *(context + 0x160) + *(context + 0x154) * *(context + 0x110)
+        + *(context + 0x16c) * *(context + 0x118);
+    int32_t item_c_1 = *(context + 0x174) + *(context + 0x134) + 1;
+    *(&item_30 + 4) = fpu_val_7_14;
+    long double fpu_val_7_18 = *(context + 0x158) * *(context + 0x110) + *(context + 0x170) * *(context + 0x118)
+        + *(context + 0x114) * *(context + 0x164);
+    item_28 = fpu_val_7_18;
+    long double fpu_val_7_22 = *(context + 0x168) * *(context + 0x124) + *(context + 0x150) * *(context + 0x11c)
+        + *(context + 0x15c) * *(context + 0x120);
+    *(&item_28 + 4) = fpu_val_7_22;
+    long double fpu_val_7_26 = *(context + 0x16c) * *(context + 0x124) + *(context + 0x160) * *(context + 0x120)
+        + *(context + 0x154) * *(context + 0x11c);
+    item_20 = fpu_val_7_26;
+    long double fpu_val_7_30 = *(context + 0x170) * *(context + 0x124) + *(context + 0x164) * *(context + 0x120)
+        + *(context + 0x158) * *(context + 0x11c);
+    *(&item_20 + 4) = fpu_val_7_30;
+    long double fpu_val_7_34 = *(context + 0x12c) * *(context + 0x15c) + *(context + 0x168) * *(context + 0x130)
+        + *(context + 0x150) * *(context + 0x128);
+    float item_18_1 = fpu_val_7_34;
+    long double fpu_val_7_38 = *(context + 0x130) * *(context + 0x16c) + *(context + 0x12c) * *(context + 0x160)
+        + *(context + 0x154) * *(context + 0x128);
+    float item_14_1 = fpu_val_7_38;
+    long double fpu_val_7_42 = *(context + 0x158) * *(context + 0x128) + *(context + 0x130) * *(context + 0x170)
+        + *(context + 0x12c) * *(context + 0x164);
+    float item_10_1 = fpu_val_7_42;
+    memcpy(context + 0x150, &item_30, 0x28);
+    return context + 0x150;
 }

@@ -1,26 +1,26 @@
 // Original IGI.EXE function: Light_ApplyLightmap_9 (VA 0x0052CE90; static CFG gate PASS, CFG score 1.000).
 #include "Light_ApplyLightmap_9.h"
-int32_t Light_ApplyLightmap_9(float* a1, float* a2, float* a3, float* a4, float a5, float a6)
+int32_t Light_ApplyLightmap_9(float* context, float* param_2, float* param_3, float* param_4, float param_5, float param_6)
 
 {
-    long double x87_r7_3 = (*a2 - *a1) * a5 + *a1;
-    float v_20 = (a2[1] - a1[1]) * a5 + a1[1];
-    float v_1c = (a2[2] - a1[2]) * a5 + a1[2];
-    int32_t valA2 = (x87_r7_3 + ((*a4 - *a3) * a5 + *a3 - x87_r7_3) * a6) * 255f;
+    long double fpu_val_7_3 = (*param_2 - *context) * param_5 + *context;
+    float item_20 = (param_2[1] - context[1]) * param_5 + context[1];
+    float item_1c = (param_2[2] - context[2]) * param_5 + context[2];
+    int32_t data_2 = (fpu_val_7_3 + ((*param_4 - *param_3) * param_5 + *param_3 - fpu_val_7_3) * param_6) * 255.0f;
 
-    if (valA2 >= 0xff)
-        valA2 = 0xff;
+    if (data_2 >= 0xff)
+        data_2 = 0xff;
 
-    int32_t v_24_1 = (((a4[1] - a3[1]) * a5 + a3[1] - v_20) * a6 + v_20) * 255f;
-    int32_t tmpD = v_24_1;
+    int32_t item_24_1 = (((param_4[1] - param_3[1]) * param_5 + param_3[1] - item_20) * param_6 + item_20) * 255.0f;
+    int32_t temp_val = item_24_1;
 
-    if (v_24_1 >= 0xff)
-        tmpD = 0xff;
+    if (item_24_1 >= 0xff)
+        temp_val = 0xff;
 
-    int32_t objC3 = (((a4[2] - a3[2]) * a5 + a3[2] - v_1c) * a6 + v_1c) * 255f;
+    int32_t entity_3 = (((param_4[2] - param_3[2]) * param_5 + param_3[2] - item_1c) * param_6 + item_1c) * 255.0f;
 
-    if (objC3 >= 0xff)
-        objC3 = 0xff;
+    if (entity_3 >= 0xff)
+        entity_3 = 0xff;
 
-    return (valA2 << 8 | tmpD) << 8 | objC3;
+    return (data_2 << 8 | temp_val) << 8 | entity_3;
 }

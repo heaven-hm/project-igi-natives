@@ -1,75 +1,75 @@
 // Original IGI.EXE function: HumanSoldierRPG_Process (VA 0x004572D0; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldierRPG_Process.h"
-int32_t HumanSoldierRPG_Process(void* a1, int32_t* a2)
+int32_t HumanSoldierRPG_Process(void* context, int32_t* param_2)
 
 {
-    void* srcS = a1;
-    a1 = 0;
-    void* valA = *(srcS + 0x800);
+    void* source_val = context;
+    context = 0;
+    void* data_val = *(source_val + 0x800);
 
-    if (valA)
-        a1 = *(valA + 0x3abd);
+    if (data_val)
+        context = *(data_val + 0x3abd);
 
-    if (!valA || !*(valA + 0x3abc))
+    if (!data_val || !*(data_val + 0x3abc))
     {
-        int32_t valA2 = FX_000011(srcS, a2);
-        *(srcS + 0x2e8) = valA2;
-        FX_FragmentSimulate_14(srcS + 0x254, valA2);
-        long double x87_r7_1;
+        int32_t data_2 = FX_000011(source_val, param_2);
+        *(source_val + 0x2e8) = data_2;
+        FX_FragmentSimulate_14(source_val + 0x254, data_2);
+        long double fpu_val_7_1;
 
-        if (valA2 == 0xf)
+        if (data_2 == 0xf)
         {
-            if (!a1)
-                x87_r7_1 = (srcS + 0x254)[valA2 * 2 + 4] * a2[1];
+            if (!context)
+                fpu_val_7_1 = (source_val + 0x254)[data_2 * 2 + 4] * param_2[1];
             else
-                x87_r7_1 = a2[1];
+                fpu_val_7_1 = param_2[1];
         }
-        else if (valA2 != 0x10 || !a1)
-            x87_r7_1 = (srcS + 0x254)[valA2 * 2 + 4] * a2[1];
+        else if (data_2 != 0x10 || !context)
+            fpu_val_7_1 = (source_val + 0x254)[data_2 * 2 + 4] * param_2[1];
         else
-            x87_r7_1 = a2[1];
+            fpu_val_7_1 = param_2[1];
 
-        (srcS + 0x254)[valA2 * 2 + 3] = x87_r7_1 + (srcS + 0x254)[valA2 * 2 + 3];
-        *(srcS + 0x254) = x87_r7_1 + *(srcS + 0x254);
-        AI_UpdateOrders_21(srcS, &a2[2], *a2);
-        long double x87_r7_4 = *(srcS + 0x254);
-        long double f0_1 = *(srcS + 0x258);
-        x87_r7_4 - f0_1;
-        int32_t objC3 = *(srcS + 0x2f4);
-        void* objC5;
+        (source_val + 0x254)[data_2 * 2 + 3] = fpu_val_7_1 + (source_val + 0x254)[data_2 * 2 + 3];
+        *(source_val + 0x254) = fpu_val_7_1 + *(source_val + 0x254);
+        AI_UpdateOrders_21(source_val, &param_2[2], *param_2);
+        long double fpu_val_7_4 = *(source_val + 0x254);
+        long double f0_1 = *(source_val + 0x258);
+        fpu_val_7_4 - f0_1;
+        int32_t entity_3 = *(source_val + 0x2f4);
+        void* entity_5;
 
-        if (!(*(&((x87_r7_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_4 == f0_1 ? 1 : 0) << 0xe) + 1) & 1))
+        if (!(*(&((fpu_val_7_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_4 == f0_1 ? 1 : 0) << 0xe) + 1) & 1))
         {
-            *(srcS + 0xd10) = a2[2];
-            *(srcS + 0xd18) = a2[3];
-            *(srcS + 0xd20) = a2[4];
+            *(source_val + 0xd10) = param_2[2];
+            *(source_val + 0xd18) = param_2[3];
+            *(source_val + 0xd20) = param_2[4];
 
-            if (*(a2[6] + 0x610) != 2)
-                *(srcS + 0xd08) = 2;
+            if (*(param_2[6] + 0x610) != 2)
+                *(source_val + 0xd08) = 2;
             else
-                *(srcS + 0xd08) = 1;
+                *(source_val + 0xd08) = 1;
 
-            objC5 = objC3 | 0x20000;
-            *(srcS + 0xcf5) = 1;
+            entity_5 = entity_3 | 0x20000;
+            *(source_val + 0xcf5) = 1;
         }
         else
         {
-            AI_MoveToNode_21(srcS, "ai_hit_", 3);
-            objC5 = objC3 | 0x10000;
+            AI_MoveToNode_21(source_val, "ai_hit_", 3);
+            entity_5 = entity_3 | 0x10000;
         }
 
-        *(srcS + 0x2f4) = objC5;
+        *(source_val + 0x2f4) = entity_5;
     }
 
-    void* tmpD2 = *(srcS + 0x800);
-    int32_t ctxB1 = a2[5];
-    int32_t v_1c = 0xf;
-    int32_t v_18 = 1;
-    int32_t v_14 = 0;
-    int32_t v_8 = ctxB1;
-    int32_t v_4 = ctxB1;
-    void v_34;
-    void* v_c = &v_34;
-    return AI_TakeCover(tmpD2, &v_1c);
+    void* temp_2 = *(source_val + 0x800);
+    int32_t context_1 = param_2[5];
+    int32_t item_1c = 0xf;
+    int32_t item_18 = 1;
+    int32_t item_14 = 0;
+    int32_t item_8 = context_1;
+    int32_t item_4 = context_1;
+    void item_34;
+    void* item_c = &item_34;
+    return AI_TakeCover(temp_2, &item_1c);
 }

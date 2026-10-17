@@ -1,16 +1,16 @@
 // Original IGI.EXE function: Script_ParseEnumReal32_26 (VA 0x004FA6E0; static CFG gate PASS, CFG score 0.889).
 #include "Script_ParseEnumReal32_26.h"
-int32_t Script_ParseEnumReal32_26(void* a1, int32_t a2)
+int32_t Script_ParseEnumReal32_26(void* context, int32_t param_2)
 
 {
-    char v_1c = 8;
-    void v_1b;
-    memcpy(&v_1b, a2, 0x18);
-    Sys_ResolveSymbol_4(*(a1 + 4));
-    int32_t v_2c = 0x19;
-    char* v_30 = &v_1c;
-    int32_t* v_34 = *(a1 + 4);
-    int32_t result = Sys_CloseFileStream_4(v_34, v_30, v_2c);
+    char item_1c = 8;
+    void item_1b;
+    memcpy(&item_1b, param_2, 0x18);
+    Sys_ResolveSymbol_4(*(context + 4));
+    int32_t item_2c = 0x19;
+    char* item_30 = &item_1c;
+    int32_t* item_34 = *(context + 4);
+    int32_t result = Sys_CloseFileStream_4(item_34, item_30, item_2c);
     result = 1;
     return result;
 }

@@ -1,27 +1,27 @@
 // Original IGI.EXE function: SplinePathDynCubeObj_OnEvent (VA 0x0051A280; static CFG gate FAIL, CFG score 0.667).
 #include "SplinePathDynCubeObj_OnEvent.h"
-int32_t SplinePathDynCubeObj_OnEvent(int32_t a1, float a2, int32_t a3, float a4)
+int32_t SplinePathDynCubeObj_OnEvent(int32_t context, float param_2, int32_t param_3, float param_4)
 
 {
-    long double x87_r7_1 = a4 * a4;
-    void* valA = *(a2 + (a3 << 2) + 0x68);
-    void* objC1 = *(a2 + (a3 << 2) + 0x6c);
-    float v_20 = x87_r7_1 * a4;
-    float v_1c = v_20 - (x87_r7_1 + x87_r7_1) + a4;
-    a2 = x87_r7_1 * 3f;
-    long double x87_r6_8 = v_20;
-    a4 = x87_r6_8 + x87_r6_8 - a2 + 1f;
-    long double x87_r7_2 = v_20 - x87_r7_1;
-    long double x87_r6_14 = v_20 * -2f + a2;
-    long double x87_r5_4 = x87_r6_14 * *(objC1 + 0x20) + x87_r7_2 * *(objC1 + 0x78)
-        + a4 * *(valA + 0x20) + v_1c * *(valA + 0x78);
-    double v_18 = x87_r5_4;
-    long double x87_r5_9 = x87_r6_14 * *(objC1 + 0x28) + x87_r7_2 * *(objC1 + 0x80)
-        + a4 * *(valA + 0x28) + v_1c * *(valA + 0x80);
-    double v_10 = x87_r5_9;
-    long double x87_r7_6 = x87_r6_14 * *(objC1 + 0x30) + x87_r7_2 * *(objC1 + 0x88)
-        + a4 * *(valA + 0x30) + v_1c * *(valA + 0x88);
-    double v_8 = x87_r7_6;
-    memcpy(a1, &v_18, 0x18);
-    return a1;
+    long double fpu_val_7_1 = param_4 * param_4;
+    void* data_val = *(param_2 + (param_3 << 2) + 0x68);
+    void* entity_1 = *(param_2 + (param_3 << 2) + 0x6c);
+    float item_20 = fpu_val_7_1 * param_4;
+    float item_1c = item_20 - (fpu_val_7_1 + fpu_val_7_1) + param_4;
+    param_2 = fpu_val_7_1 * 3.0f;
+    long double fpu_val_6_8 = item_20;
+    param_4 = fpu_val_6_8 + fpu_val_6_8 - param_2 + 1.0f;
+    long double fpu_val_7_2 = item_20 - fpu_val_7_1;
+    long double fpu_val_6_14 = item_20 * -2.0f + param_2;
+    long double fpu_val_5_4 = fpu_val_6_14 * *(entity_1 + 0x20) + fpu_val_7_2 * *(entity_1 + 0x78)
+        + param_4 * *(data_val + 0x20) + item_1c * *(data_val + 0x78);
+    double item_18 = fpu_val_5_4;
+    long double fpu_val_5_9 = fpu_val_6_14 * *(entity_1 + 0x28) + fpu_val_7_2 * *(entity_1 + 0x80)
+        + param_4 * *(data_val + 0x28) + item_1c * *(data_val + 0x80);
+    double item_10 = fpu_val_5_9;
+    long double fpu_val_7_6 = fpu_val_6_14 * *(entity_1 + 0x30) + fpu_val_7_2 * *(entity_1 + 0x88)
+        + param_4 * *(data_val + 0x30) + item_1c * *(data_val + 0x88);
+    double item_8 = fpu_val_7_6;
+    memcpy(context, &item_18, 0x18);
+    return context;
 }

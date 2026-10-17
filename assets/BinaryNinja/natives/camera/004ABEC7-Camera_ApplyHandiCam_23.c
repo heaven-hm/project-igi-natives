@@ -1,20 +1,20 @@
 // Original IGI.EXE function: Camera_ApplyHandiCam_23 (VA 0x004ABEC7; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyHandiCam_23.h"
-int32_t Camera_ApplyHandiCam_23(enum WIN32_ERROR a1, char* a2, uint32_t a3)
+int32_t Camera_ApplyHandiCam_23(enum WIN32_ERROR context, char* param_2, uint32_t param_3)
 
 {
-    char valA4;
-    int32_t* ctxB1;
-    int32_t srcS3;
+    char data_4;
+    int32_t* context_1;
+    int32_t source_3;
 
-    if (a1 < g_c32540)
+    if (context < g_c32540)
     {
-        ctxB1 = &(&g_c32440)[a1 >> 5];
-        srcS3 = (a1 & ERROR_GEN_FAILURE) << 3;
-        valA4 = *(*ctxB1 + srcS3 + 4);
+        context_1 = &(&g_c32440)[context >> 5];
+        source_3 = (context & ERROR_GEN_FAILURE) << 3;
+        data_4 = *(*context_1 + source_3 + 4);
     }
 
-    if (a1 >= g_c32540 || !(valA4 & 1))
+    if (context >= g_c32540 || !(data_4 & 1))
     {
         g_936068 = 0;
         g_936064 = 9;
@@ -22,37 +22,37 @@ int32_t Camera_ApplyHandiCam_23(enum WIN32_ERROR a1, char* a2, uint32_t a3)
     else
     {
         uint32_t numberOfBytesWritten_1 = 0;
-        int32_t v_14_1 = 0;
+        int32_t item_14_1 = 0;
 
-        if (!a3)
+        if (!param_3)
             return 0;
 
-        if (valA4 & 0x20)
-            Camera_ResetMatrix_9(a1, 0, FILE_END);
+        if (data_4 & 0x20)
+            Camera_ResetMatrix_9(context, 0, FILE_END);
 
-        int32_t* valA6 = *ctxB1 + srcS3;
+        int32_t* data_6 = *context_1 + source_3;
         uint32_t numberOfBytesWritten;
 
-        if (!(valA6[1] & 0x80))
+        if (!(data_6[1] & 0x80))
         {
-            if (!WriteFile(*valA6, a2, a3, &numberOfBytesWritten, nullptr))
-                a1 = GetLastError();
+            if (!WriteFile(*data_6, param_2, param_3, &numberOfBytesWritten, nullptr))
+                context = GetLastError();
             else
             {
-                a1 = NO_ERROR;
+                context = NO_ERROR;
                 numberOfBytesWritten_1 = numberOfBytesWritten;
             }
 
         label_4abfc3:
 
             if (numberOfBytesWritten_1)
-                return numberOfBytesWritten_1 - v_14_1;
+                return numberOfBytesWritten_1 - item_14_1;
 
-            if (!a1)
+            if (!context)
                 goto label_4ac031;
 
-            if (a1 != ERROR_ACCESS_DENIED)
-                Camera_UpdateViewCone_22(a1);
+            if (context != ERROR_ACCESS_DENIED)
+                Camera_UpdateViewCone_22(context);
             else
             {
                 g_936064 = 9;
@@ -61,42 +61,42 @@ int32_t Camera_ApplyHandiCam_23(enum WIN32_ERROR a1, char* a2, uint32_t a3)
         }
         else
         {
-            char* v_8_1 = a2;
-            a1 = NO_ERROR;
+            char* item_8_1 = param_2;
+            context = NO_ERROR;
 
-            if (a3 > 0)
+            if (param_3 > 0)
             {
                 do
                 {
                     uint8_t buffer[0x404];
-                    uint8_t (* valA8)[0x404] = &buffer;
+                    uint8_t (* data_8)[0x404] = &buffer;
 
-                    while (v_8_1 - a2 < a3)
+                    while (item_8_1 - param_2 < param_3)
                     {
-                        char* objC3 = v_8_1;
-                        v_8_1 = &v_8_1[1];
-                        char objC4 = *objC3;
+                        char* entity_3 = item_8_1;
+                        item_8_1 = &item_8_1[1];
+                        char entity_4 = *entity_3;
 
-                        if (objC4 == 0xa)
+                        if (entity_4 == 0xa)
                         {
-                            v_14_1 += 1;
-                            *valA8 = 0xd;
-                            valA8 = &(*valA8)[1];
+                            item_14_1 += 1;
+                            *data_8 = 0xd;
+                            data_8 = &(*data_8)[1];
                         }
 
-                        *valA8 = objC4;
-                        valA8 = &(*valA8)[1];
+                        *data_8 = entity_4;
+                        data_8 = &(*data_8)[1];
 
-                        if (valA8 - &buffer >= 0x400)
+                        if (data_8 - &buffer >= 0x400)
                             break;
                     }
 
-                    uint32_t nNumberOfBytesToWrite = valA8 - &buffer;
+                    uint32_t nNumberOfBytesToWrite = data_8 - &buffer;
 
-                    if (!WriteFile((*ctxB1)[(a1 & 0x1f) * 2], &buffer, nNumberOfBytesToWrite,
+                    if (!WriteFile((*context_1)[(context & 0x1f) * 2], &buffer, nNumberOfBytesToWrite,
                         &numberOfBytesWritten, nullptr))
                     {
-                        a1 = GetLastError();
+                        context = GetLastError();
                         break;
                     }
 
@@ -105,14 +105,14 @@ int32_t Camera_ApplyHandiCam_23(enum WIN32_ERROR a1, char* a2, uint32_t a3)
 
                     if (numberOfBytesWritten_2 < nNumberOfBytesToWrite)
                         break;
-                } while (v_8_1 - a2 < a3);
+                } while (item_8_1 - param_2 < param_3);
 
                 goto label_4abfc3;
             }
 
         label_4ac031:
 
-            if (*(*ctxB1 + srcS3 + 4) & 0x40 && *a2 == 0x1a)
+            if (*(*context_1 + source_3 + 4) & 0x40 && *param_2 == 0x1a)
                 return 0;
 
             g_936064 = 0x1c;

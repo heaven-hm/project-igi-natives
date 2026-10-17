@@ -3,7 +3,7 @@
 uint32_t Light_SetLightColor_7()
 
 {
-    int32_t valA;
-    valA = g_54f498;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_54f498;
+    return QTask_CloseEvent_2(data_val);
 }

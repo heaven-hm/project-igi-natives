@@ -1,20 +1,20 @@
 // Original IGI.EXE function: AIAction_PlaySound_Run (VA 0x0048DF80; static CFG gate PASS, CFG score 1.000).
 #include "AIAction_PlaySound_Run.h"
-int32_t* AIAction_PlaySound_Run(void* a1, int32_t* a2)
+int32_t* AIAction_PlaySound_Run(void* context, int32_t* param_2)
 
 {
-    char* valA1 = a2[0xa] + 8;
+    char* data_1 = param_2[0xa] + 8;
 
-    if (valA1[0x20])
+    if (data_1[0x20])
     {
-        SoundSys_SetMasterVolume_7(*(a1 + 0x14), valA1);
-        return AI_CombatTarget_2(a1, a2);
+        SoundSys_SetMasterVolume_7(*(context + 0x14), data_1);
+        return AI_CombatTarget_2(context, param_2);
     }
 
-    struct status_msg* valA5 = SoundSys_SetMasterVolume_7(Script_FormatString(), valA1);
+    struct status_msg* data_5 = SoundSys_SetMasterVolume_7(Script_FormatString(), data_1);
 
-    if (valA5)
-        SoundSys_StopSoundSample_7(valA5, a1 + 0x20);
+    if (data_5)
+        SoundSys_StopSoundSample_7(data_5, context + 0x20);
 
-    return AI_CombatTarget_2(a1, a2);
+    return AI_CombatTarget_2(context, param_2);
 }

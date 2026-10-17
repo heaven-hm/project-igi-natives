@@ -1,66 +1,66 @@
 // Original IGI.EXE function: Menu_RequestScreen_20 (VA 0x00428B60; static CFG gate FAIL, CFG score 0.833).
 #include "Menu_RequestScreen_20.h"
-int32_t Menu_RequestScreen_20(long double a1 @ fp0, long double a2 @ fp1, void* a3, double* a4)
+int32_t Menu_RequestScreen_20(long double context , long double param_2 , void* param_3, double* param_4)
 
 {
-    long double x87_r7_1 = *a4 - *(a3 + 0x20);
-    long double x87_r6_1 = a4[1] - *(a3 + 0x28);
-    long double x87_r5_1 = a4[2] - *(a3 + 0x30);
-    double v_20 =
-        *(a3 + 0x88) * x87_r5_1 + *(a3 + 0x7c) * x87_r6_1 + *(a3 + 0x70) * x87_r7_1;
-    double v_18 =
-        *(a3 + 0x8c) * x87_r5_1 + *(a3 + 0x80) * x87_r6_1 + *(a3 + 0x74) * x87_r7_1;
-    double v_10 =
-        *(a3 + 0x90) * x87_r5_1 + *(a3 + 0x84) * x87_r6_1 + *(a3 + 0x78) * x87_r7_1;
-    void v_50;
-    memcpy(&v_50, &v_20, 0x18);
+    long double fpu_val_7_1 = *param_4 - *(param_3 + 0x20);
+    long double fpu_val_6_1 = param_4[1] - *(param_3 + 0x28);
+    long double fpu_val_5_1 = param_4[2] - *(param_3 + 0x30);
+    double item_20 =
+        *(param_3 + 0x88) * fpu_val_5_1 + *(param_3 + 0x7c) * fpu_val_6_1 + *(param_3 + 0x70) * fpu_val_7_1;
+    double item_18 =
+        *(param_3 + 0x8c) * fpu_val_5_1 + *(param_3 + 0x80) * fpu_val_6_1 + *(param_3 + 0x74) * fpu_val_7_1;
+    double item_10 =
+        *(param_3 + 0x90) * fpu_val_5_1 + *(param_3 + 0x84) * fpu_val_6_1 + *(param_3 + 0x78) * fpu_val_7_1;
+    void item_50;
+    memcpy(&item_50, &item_20, 0x18);
     WeaponType_InitType();
-    double v_28 = a1;
-    memcpy(&v_50, &v_20, 0x18);
+    double item_28 = context;
+    memcpy(&item_50, &item_20, 0x18);
     WeaponType_GetConfig();
     long double fpu0 = -1.0;
-    long double f0 = v_28;
+    long double f0 = item_28;
     fpu0 - f0;
 
     if (*(&((fpu0 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu0, f0) ? 1 : 0) << 0xa
         | (fpu0 == f0 ? 1 : 0) << 0xe | 0x800) + 1) & 0x41)
     {
-        long double x87_r0_1 = 1.0;
-        long double f1_1 = v_28;
-        x87_r0_1 - f1_1;
+        long double fpu_val_0_1 = 1.0;
+        long double f1_1 = item_28;
+        fpu_val_0_1 - f1_1;
 
-        if (*(&((x87_r0_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r0_1, f1_1) ? 1 : 0) << 0xa
-            | (x87_r0_1 == f1_1 ? 1 : 0) << 0xe | 0x800) + 1) & 1)
+        if (*(&((fpu_val_0_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_0_1, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_0_1 == f1_1 ? 1 : 0) << 0xe | 0x800) + 1) & 1)
         {
-            v_28 = 0;
-            *(&v_28 + 4) = 0x3ff00000;
+            item_28 = 0;
+            *(&item_28 + 4) = 0x3ff00000;
         }
     }
     else
     {
-        v_28 = 0;
-        *(&v_28 + 4) = 0xbff00000;
+        item_28 = 0;
+        *(&item_28 + 4) = 0xbff00000;
     }
 
-    long double x87_r0_2 = -1.0;
-    x87_r0_2 - a2;
-    int16_t result = (x87_r0_2 < a2 ? 1 : 0) << 8 | (FCMP_UO(x87_r0_2, a2) ? 1 : 0) << 0xa
-        | (x87_r0_2 == a2 ? 1 : 0) << 0xe | 0x800;
+    long double fpu_val_0_2 = -1.0;
+    fpu_val_0_2 - param_2;
+    int16_t result = (fpu_val_0_2 < param_2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_0_2, param_2) ? 1 : 0) << 0xa
+        | (fpu_val_0_2 == param_2 ? 1 : 0) << 0xe | 0x800;
 
     if (*(&result + 1) & 0x41)
     {
-        long double x87_r0_3 = 1.0;
-        x87_r0_3 - a2;
-        result = (x87_r0_3 < a2 ? 1 : 0) << 8 | (FCMP_UO(x87_r0_3, a2) ? 1 : 0) << 0xa
-            | (x87_r0_3 == a2 ? 1 : 0) << 0xe | 0x800;
+        long double fpu_val_0_3 = 1.0;
+        fpu_val_0_3 - param_2;
+        result = (fpu_val_0_3 < param_2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_0_3, param_2) ? 1 : 0) << 0xa
+            | (fpu_val_0_3 == param_2 ? 1 : 0) << 0xe | 0x800;
 
         if (*(&result + 1) & 1)
-            a2 = 1.0;
+            param_2 = 1.0;
     }
     else
-        a2 = -1.0;
+        param_2 = -1.0;
 
-    *(a3 + 0x734) = v_28;
-    *(a3 + 0x73c) = a2;
+    *(param_3 + 0x734) = item_28;
+    *(param_3 + 0x73c) = param_2;
     return result;
 }

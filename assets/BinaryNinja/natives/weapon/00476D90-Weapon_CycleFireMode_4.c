@@ -1,26 +1,24 @@
 // Original IGI.EXE function: Weapon_CycleFireMode_4 (VA 0x00476D90; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_CycleFireMode_4.h"
-float Weapon_CycleFireMode_4(float a1) __location("valA")
-
-{
-    float result = Script_ParseEnumReal32_29(a1);
+float Weapon_CycleFireMode_4(float context) {
+    float result = Script_ParseEnumReal32_29(context);
 
     if (!result)
     {
-        float v_10_1 = a1;
-        int32_t valA = Level_LoadObjects_4();
-        void v_14;
-        Script_FormatString_28(a1, 44.6008873f, 1f, 0.920000017f, Level_StartMission_4(), valA, &v_14);
-        result = *(a1 + 0x1b8);
+        float item_10_1 = context;
+        int32_t data_val = Level_LoadObjects_4();
+        void item_14;
+        Script_FormatString_28(context, 44.6008873f, 1.0f, 0.920000017f, Level_StartMission_4(), data_val, &item_14);
+        result = *(context + 0x1b8);
 
         if (!result)
         {
-            float objC2 = *(a1 + 0x110);
-            long double x87_r7_4 = *(a1 + 0x10c) * 0.985000014f;
-            *(a1 + 0x108) = *(a1 + 0x108) * 0.985000014f;
-            *(a1 + 0x10c) = x87_r7_4;
-            *(a1 + 0x110) = objC2 * 0.985000014f;
-            return SoundSys_InitSoundSys_17(a1 + 0xf0);
+            float entity_2 = *(context + 0x110);
+            long double fpu_val_7_4 = *(context + 0x10c) * 0.985000014f;
+            *(context + 0x108) = *(context + 0x108) * 0.985000014f;
+            *(context + 0x10c) = fpu_val_7_4;
+            *(context + 0x110) = entity_2 * 0.985000014f;
+            return SoundSys_InitSoundSys_17(context + 0xf0);
         }
     }
 

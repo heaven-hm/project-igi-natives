@@ -1,27 +1,27 @@
 // Original IGI.EXE function: InputPort_Action (VA 0x004ED5E0; static CFG gate PASS, CFG score 1.000).
 #include "InputPort_Action.h"
-int32_t InputPort_Action(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8 @ 0x24, int32_t a9, int32_t a10, int32_t a11, int32_t a12, int32_t a13, int32_t a14, int32_t a15)
+int32_t InputPort_Action(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8 , int32_t param_9, int32_t param_10, int32_t param_11, int32_t param_12, int32_t param_13, int32_t param_14, int32_t param_15)
 
 {
-    int32_t valA1 = a1 * 0xb0;
-    *(valA1 + 0xbc20a4) = a2;
-    *(valA1 + 0xbc20a8) = a3;
-    *(valA1 + 0xbc20ac) = a4;
-    *(valA1 + 0xbc20b0) = 0;
-    *(valA1 + 0xbc20b4) = 0;
-    *(valA1 + 0xbc20b8) = 0;
-    *(valA1 + 0xbc20c0) = a5;
-    *(valA1 + 0xbc20c4) = a5;
-    *(valA1 + 0xbc20c8) = a10;
-    *(valA1 + 0xbc20cc) = a13;
-    *(valA1 + 0xbc20d0) = a6;
-    *(valA1 + 0xbc20d4) = a8;
-    *(valA1 + 0xbc20d8) = a11;
-    *(valA1 + 0xbc20dc) = a14;
-    *(valA1 + 0xbc20e0) = a7;
-    *(valA1 + 0xbc20e4) = a9;
-    *(valA1 + 0xbc20e8) = a12;
-    *(valA1 + 0xbc20ec) = a15;
-    Physics_ApplyImpulse_6(valA1 + &g_bc20f0, SoundSys_StopSoundSample_17);
+    int32_t data_1 = context * 0xb0;
+    *(data_1 + 0xbc20a4) = param_2;
+    *(data_1 + 0xbc20a8) = param_3;
+    *(data_1 + 0xbc20ac) = param_4;
+    *(data_1 + 0xbc20b0) = 0;
+    *(data_1 + 0xbc20b4) = 0;
+    *(data_1 + 0xbc20b8) = 0;
+    *(data_1 + 0xbc20c0) = param_5;
+    *(data_1 + 0xbc20c4) = param_5;
+    *(data_1 + 0xbc20c8) = param_10;
+    *(data_1 + 0xbc20cc) = param_13;
+    *(data_1 + 0xbc20d0) = param_6;
+    *(data_1 + 0xbc20d4) = param_8;
+    *(data_1 + 0xbc20d8) = param_11;
+    *(data_1 + 0xbc20dc) = param_14;
+    *(data_1 + 0xbc20e0) = param_7;
+    *(data_1 + 0xbc20e4) = param_9;
+    *(data_1 + 0xbc20e8) = param_12;
+    *(data_1 + 0xbc20ec) = param_15;
+    Physics_ApplyImpulse_6(data_1 + &g_bc20f0, SoundSys_StopSoundSample_17);
     return 0;
 }

@@ -1,74 +1,74 @@
 // Original IGI.EXE function: AlarmLight_Cleanup_2 (VA 0x00439B70; static CFG gate FAIL, CFG score 0.833).
 #include "AlarmLight_Cleanup_2.h"
-int32_t AlarmLight_Cleanup_2(float a1)
+int32_t AlarmLight_Cleanup_2(float context)
 
 {
-    void* srcS = *(a1 + 0x130);
+    void* source_val = *(context + 0x130);
     int32_t result;
-    result = *(srcS + 0x1a0);
+    result = *(source_val + 0x1a0);
 
     if (result)
     {
-        result = *(srcS + 0x1a1);
+        result = *(source_val + 0x1a1);
 
         if (!result)
         {
-            long double x87_r7_2 = *(a1 + 0x138) + 0.104719758f;
-            *(a1 + 0x138) = x87_r7_2;
-            float v_50;
-            Sys_CloseFileStream_12(&v_50, x87_r7_2);
-            float v_44;
-            float v_38;
-            long double x87_r7_6 =
-                v_44 * *(a1 + 0x10c) + v_38 * *(a1 + 0x110) + v_50 * *(a1 + 0x108);
-            float v_4c;
-            float v_40;
-            float v_34;
-            float v_24_1 =
-                v_40 * *(a1 + 0x10c) + v_34 * *(a1 + 0x110) + v_4c * *(a1 + 0x108);
-            float v_48;
-            float v_3c;
-            float v_30;
-            float v_20_1 =
-                v_3c * *(a1 + 0x10c) + v_30 * *(a1 + 0x110) + v_48 * *(a1 + 0x108);
-            long double x87_r6_16 =
-                v_38 * *(a1 + 0x11c) + v_50 * *(a1 + 0x114) + v_44 * *(a1 + 0x118);
-            float v_18_1 =
-                v_34 * *(a1 + 0x11c) + v_4c * *(a1 + 0x114) + v_40 * *(a1 + 0x118);
-            float v_14_1 =
-                v_30 * *(a1 + 0x11c) + v_48 * *(a1 + 0x114) + v_3c * *(a1 + 0x118);
-            long double x87_r5_24 =
-                v_44 * *(a1 + 0x124) + v_38 * *(a1 + 0x128) + v_50 * *(a1 + 0x120);
-            int32_t v_2c;
-            result = *(a1 + 0x12c) + v_2c + 1;
-            float v_c_1 =
-                v_40 * *(a1 + 0x124) + v_34 * *(a1 + 0x128) + v_4c * *(a1 + 0x120);
-            float v_8_1 =
-                v_3c * *(a1 + 0x124) + v_30 * *(a1 + 0x128) + v_48 * *(a1 + 0x120);
-            v_50 =
-                x87_r7_6 * *(srcS + 0x70) + x87_r5_24 * *(srcS + 0x78) + x87_r6_16 * *(srcS + 0x74);
-            float v_4c_1 =
-                v_24_1 * *(srcS + 0x70) + v_c_1 * *(srcS + 0x78) + v_18_1 * *(srcS + 0x74);
-            float v_48_1 =
-                v_20_1 * *(srcS + 0x70) + v_8_1 * *(srcS + 0x78) + v_14_1 * *(srcS + 0x74);
-            float v_44_1 =
-                x87_r7_6 * *(srcS + 0x7c) + x87_r5_24 * *(srcS + 0x84) + x87_r6_16 * *(srcS + 0x80);
-            float v_40_1 =
-                v_24_1 * *(srcS + 0x7c) + v_c_1 * *(srcS + 0x84) + v_18_1 * *(srcS + 0x80);
-            float v_3c_1 =
-                v_20_1 * *(srcS + 0x7c) + v_8_1 * *(srcS + 0x84) + v_14_1 * *(srcS + 0x80);
-            int32_t v_2c_1 = *(srcS + 0x94) + result + 1;
-            float v_38_1 =
-                x87_r5_24 * *(srcS + 0x90) + x87_r6_16 * *(srcS + 0x8c) + x87_r7_6 * *(srcS + 0x88);
-            float v_34_1 =
-                v_c_1 * *(srcS + 0x90) + v_18_1 * *(srcS + 0x8c) + v_24_1 * *(srcS + 0x88);
-            float v_30_1 =
-                v_8_1 * *(srcS + 0x90) + v_14_1 * *(srcS + 0x8c) + v_20_1 * *(srcS + 0x88);
-            memcpy(a1 + 0x70, &v_50, 0x28);
+            long double fpu_val_7_2 = *(context + 0x138) + 0.104719758f;
+            *(context + 0x138) = fpu_val_7_2;
+            float item_50;
+            Sys_CloseFileStream_12(&item_50, fpu_val_7_2);
+            float item_44;
+            float item_38;
+            long double fpu_val_7_6 =
+                item_44 * *(context + 0x10c) + item_38 * *(context + 0x110) + item_50 * *(context + 0x108);
+            float item_4c;
+            float item_40;
+            float item_34;
+            float item_24_1 =
+                item_40 * *(context + 0x10c) + item_34 * *(context + 0x110) + item_4c * *(context + 0x108);
+            float item_48;
+            float item_3c;
+            float item_30;
+            float item_20_1 =
+                item_3c * *(context + 0x10c) + item_30 * *(context + 0x110) + item_48 * *(context + 0x108);
+            long double fpu_val_6_16 =
+                item_38 * *(context + 0x11c) + item_50 * *(context + 0x114) + item_44 * *(context + 0x118);
+            float item_18_1 =
+                item_34 * *(context + 0x11c) + item_4c * *(context + 0x114) + item_40 * *(context + 0x118);
+            float item_14_1 =
+                item_30 * *(context + 0x11c) + item_48 * *(context + 0x114) + item_3c * *(context + 0x118);
+            long double fpu_val_5_24 =
+                item_44 * *(context + 0x124) + item_38 * *(context + 0x128) + item_50 * *(context + 0x120);
+            int32_t item_2c;
+            result = *(context + 0x12c) + item_2c + 1;
+            float item_c_1 =
+                item_40 * *(context + 0x124) + item_34 * *(context + 0x128) + item_4c * *(context + 0x120);
+            float item_8_1 =
+                item_3c * *(context + 0x124) + item_30 * *(context + 0x128) + item_48 * *(context + 0x120);
+            item_50 =
+                fpu_val_7_6 * *(source_val + 0x70) + fpu_val_5_24 * *(source_val + 0x78) + fpu_val_6_16 * *(source_val + 0x74);
+            float item_4c_1 =
+                item_24_1 * *(source_val + 0x70) + item_c_1 * *(source_val + 0x78) + item_18_1 * *(source_val + 0x74);
+            float item_48_1 =
+                item_20_1 * *(source_val + 0x70) + item_8_1 * *(source_val + 0x78) + item_14_1 * *(source_val + 0x74);
+            float item_44_1 =
+                fpu_val_7_6 * *(source_val + 0x7c) + fpu_val_5_24 * *(source_val + 0x84) + fpu_val_6_16 * *(source_val + 0x80);
+            float item_40_1 =
+                item_24_1 * *(source_val + 0x7c) + item_c_1 * *(source_val + 0x84) + item_18_1 * *(source_val + 0x80);
+            float item_3c_1 =
+                item_20_1 * *(source_val + 0x7c) + item_8_1 * *(source_val + 0x84) + item_14_1 * *(source_val + 0x80);
+            int32_t item_2c_1 = *(source_val + 0x94) + result + 1;
+            float item_38_1 =
+                fpu_val_5_24 * *(source_val + 0x90) + fpu_val_6_16 * *(source_val + 0x8c) + fpu_val_7_6 * *(source_val + 0x88);
+            float item_34_1 =
+                item_c_1 * *(source_val + 0x90) + item_18_1 * *(source_val + 0x8c) + item_24_1 * *(source_val + 0x88);
+            float item_30_1 =
+                item_8_1 * *(source_val + 0x90) + item_14_1 * *(source_val + 0x8c) + item_20_1 * *(source_val + 0x88);
+            memcpy(context + 0x70, &item_50, 0x28);
         }
     }
 
-    int32_t* i_1 = *(a1 + 8);
+    int32_t* i_1 = *(context + 8);
 
     if (*i_1)
     {
@@ -76,38 +76,38 @@ int32_t AlarmLight_Cleanup_2(float a1)
 
         if (i)
         {
-            int32_t tmpD3 = g_afa7e0;
+            int32_t temp_3 = g_afa7e0;
 
             do
             {
-                int32_t* srcS1 = *i;
-                void* valA5;
+                int32_t* source_1 = *i;
+                void* data_5;
 
-                if (!srcS1)
-                    valA5 = nullptr;
+                if (!source_1)
+                    data_5 = nullptr;
                 else
                 {
-                    int32_t valA2 = *srcS1;
-                    int32_t valA3 = -(valA2);
-                    valA5 = (valA3 - valA3) & srcS1;
+                    int32_t data_2 = *source_1;
+                    int32_t data_3 = -(data_2);
+                    data_5 = (data_3 - data_3) & source_1;
                 }
 
-                *((tmpD3 << 2) + &g_afa6e0) = valA5;
-                int32_t tmpD4 = tmpD3 + 1;
-                int32_t valA6 = 0;
-                g_afa7e0 = tmpD4;
-                valA6 = i[7];
-                result = *((valA6 << 2) + &g_a970e0);
+                *((temp_3 << 2) + &g_afa6e0) = data_5;
+                int32_t temp_4 = temp_3 + 1;
+                int32_t data_6 = 0;
+                g_afa7e0 = temp_4;
+                data_6 = i[7];
+                result = *((data_6 << 2) + &g_a970e0);
 
                 if (result)
                 {
                     result = result(i);
-                    tmpD4 = g_afa7e0;
+                    temp_4 = g_afa7e0;
                 }
 
-                i = *((tmpD4 << 2) + &g_afa6dc);
-                tmpD3 = tmpD4 - 1;
-                g_afa7e0 = tmpD3;
+                i = *((temp_4 << 2) + &g_afa6dc);
+                temp_3 = temp_4 - 1;
+                g_afa7e0 = temp_3;
             } while (i);
         }
     }

@@ -1,86 +1,86 @@
 // Original IGI.EXE function: HumanSoldierFemale_OnEvent (VA 0x00455780; static CFG gate PASS, CFG score 0.970).
 #include "HumanSoldierFemale_OnEvent.h"
-int32_t HumanSoldierFemale_OnEvent(void* a1, float* a2)
+int32_t HumanSoldierFemale_OnEvent(void* context, float* param_2)
 
 {
-    void* valA = *(a1 + 0x800);
-    double v_34;
+    void* data_val = *(context + 0x800);
+    double item_34;
 
-    if (!valA || !*(valA + 0x3abc))
+    if (!data_val || !*(data_val + 0x3abc))
     {
-        v_34 = *(a1 + 0x7c) * 4096.0;
-        double v_2c_1 = *(a1 + 0x88) * 4096.0;
-        double v_24_1 = *(a1 + 0x94) * 4096.0;
-        double* valA2 = DynObj_UpdateDynTree_4(a1);
-        char* v_64 = a2[1];
-        double* valA4 = DynObj_UpdateDynTree_4(v_64);
-        double v_4c = *valA2 - *valA4;
-        void* valA5 = DynObj_UpdateDynTree_4(a1);
-        void* valA6 = DynObj_UpdateDynTree_4(a2[1]);
-        double v_44_1 = *(valA5 + 8) - *(valA6 + 8);
-        void* valA7 = DynObj_UpdateDynTree_4(a1);
-        void* valA8 = DynObj_UpdateDynTree_4(a2[1]);
-        double v_3c_1 = *(valA7 + 0x10) - *(valA8 + 0x10);
-        Sys_FreeMemory_11(&v_4c);
-        int32_t dstD4 = 0xe;
-        long double x87_r7_16 = v_3c_1 * v_24_1 + v_44_1 * v_2c_1 + v_4c * v_34;
+        item_34 = *(context + 0x7c) * 4096.0;
+        double item_2c_1 = *(context + 0x88) * 4096.0;
+        double item_24_1 = *(context + 0x94) * 4096.0;
+        double* data_2 = DynObj_UpdateDynTree_4(context);
+        char* item_64 = param_2[1];
+        double* data_4 = DynObj_UpdateDynTree_4(item_64);
+        double item_4c = *data_2 - *data_4;
+        void* data_5 = DynObj_UpdateDynTree_4(context);
+        void* data_6 = DynObj_UpdateDynTree_4(param_2[1]);
+        double item_44_1 = *(data_5 + 8) - *(data_6 + 8);
+        void* data_7 = DynObj_UpdateDynTree_4(context);
+        void* data_8 = DynObj_UpdateDynTree_4(param_2[1]);
+        double item_3c_1 = *(data_7 + 0x10) - *(data_8 + 0x10);
+        Sys_FreeMemory_11(&item_4c);
+        int32_t dest_4 = 0xe;
+        long double fpu_val_7_16 = item_3c_1 * item_24_1 + item_44_1 * item_2c_1 + item_4c * item_34;
         long double f0_1 = 0.0;
-        x87_r7_16 - f0_1;
+        fpu_val_7_16 - f0_1;
 
-        if (*(&((x87_r7_16 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_16, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_16 == f0_1 ? 1 : 0) << 0xe) + 1) & 1)
-            dstD4 = 0xd;
+        if (*(&((fpu_val_7_16 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_16, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_16 == f0_1 ? 1 : 0) << 0xe) + 1) & 1)
+            dest_4 = 0xd;
 
-        v_64 = a1 + 0x254;
-        *(a1 + 0x2e8) = dstD4;
-        FX_FragmentSimulate_14(v_64, dstD4);
-        long double x87_r7_18 = (a1 + 0x254)[dstD4 * 2 + 4] * *a2;
-        (a1 + 0x254)[dstD4 * 2 + 3] = x87_r7_18 + (a1 + 0x254)[dstD4 * 2 + 3];
-        *(a1 + 0x254) = x87_r7_18 + *(a1 + 0x254);
-        void* tmpD3 = *(a1 + 0x2f4);
-        long double x87_r7_19 = x87_r7_18 + *(a1 + 0xd08);
-        *(a1 + 0xd08) = x87_r7_19;
-        long double x87_r6_9 = *(a1 + 0x254);
-        long double f1_1 = *(a1 + 0x258);
-        x87_r6_9 - f1_1;
-        void* tmpD4;
+        item_64 = context + 0x254;
+        *(context + 0x2e8) = dest_4;
+        FX_FragmentSimulate_14(item_64, dest_4);
+        long double fpu_val_7_18 = (context + 0x254)[dest_4 * 2 + 4] * *param_2;
+        (context + 0x254)[dest_4 * 2 + 3] = fpu_val_7_18 + (context + 0x254)[dest_4 * 2 + 3];
+        *(context + 0x254) = fpu_val_7_18 + *(context + 0x254);
+        void* temp_3 = *(context + 0x2f4);
+        long double fpu_val_7_19 = fpu_val_7_18 + *(context + 0xd08);
+        *(context + 0xd08) = fpu_val_7_19;
+        long double fpu_val_6_9 = *(context + 0x254);
+        long double f1_1 = *(context + 0x258);
+        fpu_val_6_9 - f1_1;
+        void* temp_4;
 
-        if (!(*(&((x87_r6_9 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_9, f1_1) ? 1 : 0) << 0xa
-            | (x87_r6_9 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+        if (!(*(&((fpu_val_6_9 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_9, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_6_9 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
         {
-            *(a1 + 0xd18) = 2;
-            memcpy(a1 + 0xd20, &v_4c, 0x18);
-            tmpD4 = tmpD3 | 0x20000;
-            *(a1 + 0xcf5) = 1;
+            *(context + 0xd18) = 2;
+            memcpy(context + 0xd20, &item_4c, 0x18);
+            temp_4 = temp_3 | 0x20000;
+            *(context + 0xcf5) = 1;
         }
         else
         {
-            long double f2_1 = *(a1 + 0xd04);
-            x87_r7_19 - f2_1;
+            long double f2_1 = *(context + 0xd04);
+            fpu_val_7_19 - f2_1;
 
-            if (!(*(&((x87_r7_19 < f2_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_19, f2_1) ? 1 : 0) << 0xa
-                    | (x87_r7_19 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-                *(a1 + 0xd08) = 0;
+            if (!(*(&((fpu_val_7_19 < f2_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_19, f2_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_19 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+                *(context + 0xd08) = 0;
 
-            int32_t v_60_3 = 3;
-            v_64 = "ai_hit_";
-            AI_MoveToNode_21(a1, v_64, v_60_3);
-            tmpD4 = tmpD3;
+            int32_t item_60_3 = 3;
+            item_64 = "ai_hit_";
+            AI_MoveToNode_21(context, item_64, item_60_3);
+            temp_4 = temp_3;
         }
 
-        *(a1 + 0x2f4) = tmpD4;
+        *(context + 0x2f4) = temp_4;
     }
 
-    int32_t valA13 = a2[1];
-    int32_t v_8 = valA13;
-    int32_t v_4 = valA13;
-    void* valA14 = *(a1 + 0x800);
-    int32_t v_1c;
-    int32_t* saved_dst = &v_1c;
-    v_1c = 0xf;
-    int32_t v_18 = 1;
-    int32_t v_14 = 0;
-    double* v_c = &v_34;
-    return AI_TakeCover(valA14, saved_dst);
+    int32_t data_13 = param_2[1];
+    int32_t item_8 = data_13;
+    int32_t item_4 = data_13;
+    void* data_14 = *(context + 0x800);
+    int32_t item_1c;
+    int32_t* saved_target = &item_1c;
+    item_1c = 0xf;
+    int32_t item_18 = 1;
+    int32_t item_14 = 0;
+    double* item_c = &item_34;
+    return AI_TakeCover(data_14, saved_target);
 }

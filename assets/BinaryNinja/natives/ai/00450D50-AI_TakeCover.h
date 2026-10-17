@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00450D50 AI_TakeCover | gate PASS | openigi False */
-int AI_TakeCover(void * a1, int a2);
+int AI_TakeCover(void * context, int param_2);

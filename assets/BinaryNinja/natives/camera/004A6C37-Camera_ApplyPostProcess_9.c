@@ -1,35 +1,35 @@
 // Original IGI.EXE function: Camera_ApplyPostProcess_9 (VA 0x004A6C37; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess_9.h"
-int32_t Camera_ApplyPostProcess_9(int32_t a1)
+int32_t Camera_ApplyPostProcess_9(int32_t context)
 
 {
     int32_t i = 0;
-    int32_t ctxB = 0;
-    int32_t dstD = 0;
+    int32_t context_val = 0;
+    int32_t dest_val = 0;
 
     if (g_c321e0 > 0)
     {
         do
         {
-            int32_t* valA2 = *(g_c311dc + (i << 2));
+            int32_t* data_2 = *(g_c311dc + (i << 2));
 
-            if (valA2)
+            if (data_2)
             {
-                char objC1 = valA2[3];
+                char entity_1 = data_2[3];
 
-                if (objC1 & 0x83)
+                if (entity_1 & 0x83)
                 {
-                    if (a1 == 1)
+                    if (context == 1)
                     {
-                        if (Camera_ApplyBandFilter_9(valA2) != 0xffffffff)
-                            ctxB += 1;
+                        if (Camera_ApplyBandFilter_9(data_2) != 0xffffffff)
+                            context_val += 1;
                     }
-                    else if (!a1 && objC1 & 2)
+                    else if (!context && entity_1 & 2)
                     {
-                        int32_t valA4 = Camera_ApplyBandFilter_9(valA2);
+                        int32_t data_4 = Camera_ApplyBandFilter_9(data_2);
 
-                        if (valA4 == 0xffffffff)
-                            dstD |= valA4;
+                        if (data_4 == 0xffffffff)
+                            dest_val |= data_4;
                     }
                 }
             }
@@ -38,8 +38,8 @@ int32_t Camera_ApplyPostProcess_9(int32_t a1)
         } while (i < g_c321e0);
     }
 
-    if (a1 == 1)
-        return ctxB;
+    if (context == 1)
+        return context_val;
 
-    return dstD;
+    return dest_val;
 }

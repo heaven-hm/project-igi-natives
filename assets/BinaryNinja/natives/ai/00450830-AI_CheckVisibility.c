@@ -5,20 +5,20 @@ int32_t* AI_CheckVisibility()
 {
     DynObj_CreateMagicObject_4(g_58a9d4);
     QTask_CloseEvent_2(g_53c920);
-    char valA = g_53c922;
+    char data_val = g_53c922;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_53c923;
+    data_val = g_53c923;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_53c924;
+    data_val = g_53c924;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
     for (int32_t* i = &g_57d844; i < 0x57e1c4; i = &i[0x4c])
     {

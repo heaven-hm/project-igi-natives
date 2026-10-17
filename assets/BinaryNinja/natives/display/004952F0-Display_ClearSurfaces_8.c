@@ -6,139 +6,139 @@ int32_t Display_ClearSurfaces_8()
     g_6840e9 = 0;
     Display_CheckCapabilities_8(0x5ca1b8);
     g_67a4a0 = 0xffffd8f0;
-    int32_t v_b8 = 0x2710;
+    int32_t item_b8 = 0x2710;
 
     for (int32_t* i = &g_6840e0; i > &g_67a4a0; )
     {
         long double fp1_1;
         bool c1_1;
-        fp1_1 = __fyl2x(v_b8 * 0.0001, 0.69314718048553914 + 7.4406171098029793e-11);
-        int32_t valA1 = fp1_1 * 1442.6950408888495;
+        fp1_1 = __fyl2x(item_b8 * 0.0001, 0.69314718048553914 + 7.4406171098029793e-11);
+        int32_t data_1 = fp1_1 * 1442.6950408888495;
 
-        if (valA1 < 0xffffd8f0)
-            valA1 = 0xffffd8f0;
-        else if (valA1 > 0)
-            valA1 = 0;
+        if (data_1 < 0xffffd8f0)
+            data_1 = 0xffffd8f0;
+        else if (data_1 > 0)
+            data_1 = 0;
 
-        *i = valA1;
+        *i = data_1;
         i -= 4;
-        v_b8 -= 1;
+        item_b8 -= 1;
     }
 
-    int32_t valA2 = Ordinal_DSOUND_1(0, &g_67a498, 0);
+    int32_t data_2 = Ordinal_DSOUND_1(0, &g_67a498, 0);
 
-    if (!valA2)
+    if (!data_2)
     {
-        int32_t srcS3 = **&g_67a498;
-        int32_t valA4 = FX_ExplosionSpawn_22();
+        int32_t source_3 = **&g_67a498;
+        int32_t data_4 = FX_ExplosionSpawn_22();
 
-        if (!(*(srcS3 + 0x18))(g_67a498, valA4, 3))
+        if (!(*(source_3 + 0x18))(g_67a498, data_4, 3))
         {
-            int32_t* valA6 = g_67a498;
-            int32_t v_60 = 0x60;
+            int32_t* data_6 = g_67a498;
+            int32_t item_60 = 0x60;
 
-            if ((*(*valA6 + 0x10))(valA6, &v_60))
+            if ((*(*data_6 + 0x10))(data_6, &item_60))
             {
-                int32_t* valA8 = g_67a498;
-                int32_t valA9 = (*(*valA8 + 8))(valA8);
+                int32_t* data_8 = g_67a498;
+                int32_t data_9 = (*(*data_8 + 8))(data_8);
                 g_67a498 = 0;
-                return valA9;
+                return data_9;
             }
 
-            int32_t v_84;
-            __builtin_memset(&v_84, 0, 0x24);
+            int32_t item_84;
+            memset(&item_84, 0, 0x24);
             g_6840ea = 0;
-            __builtin_memset(&v_84, 0, 0x24);
-            int32_t* valA10 = g_67a498;
-            int32_t v_5c;
-            g_543900 = v_5c >> 1 & 1;
-            v_84 = 0x24;
-            int32_t v_80_1 = 9;
+            memset(&item_84, 0, 0x24);
+            int32_t* data_10 = g_67a498;
+            int32_t item_5c;
+            g_543900 = item_5c >> 1 & 1;
+            item_84 = 0x24;
+            int32_t item_80_1 = 9;
 
-            if ((*(*valA10 + 0xc))(valA10, &v_84, &g_5ca154, 0))
+            if ((*(*data_10 + 0xc))(data_10, &item_84, &g_5ca154, 0))
             {
-                int32_t* valA12 = g_67a498;
-                int32_t valA13 = (*(*valA12 + 8))(valA12);
+                int32_t* data_12 = g_67a498;
+                int32_t data_13 = (*(*data_12 + 8))(data_12);
                 g_67a498 = 0;
-                return valA13;
+                return data_13;
             }
 
-            int32_t* valA14 = g_5ca154;
-            int32_t v_a0 = 0;
-            v_a0 = 0x14;
-            int32_t v_9c_1 = 0;
-            int32_t v_98_1 = 0;
-            int32_t v_94_1 = 0;
-            int32_t v_90_1 = 0;
-            int32_t valA15 = (*(*valA14 + 0xc))(valA14, &v_a0);
+            int32_t* data_14 = g_5ca154;
+            int32_t item_a0 = 0;
+            item_a0 = 0x14;
+            int32_t item_9c_1 = 0;
+            int32_t item_98_1 = 0;
+            int32_t item_94_1 = 0;
+            int32_t item_90_1 = 0;
+            int32_t data_15 = (*(*data_14 + 0xc))(data_14, &item_a0);
 
-            if (!valA15)
+            if (!data_15)
             {
-                int32_t v_b0_1 = 0x5622;
-                valA15 = g_543900;
+                int32_t item_b0_1 = 0x5622;
+                data_15 = g_543900;
                 g_676e50 = 1;
-                int32_t valA17 = v_5c;
-                valA17 &= 8;
+                int32_t data_17 = item_5c;
+                data_17 &= 8;
                 g_5ca134 = 0x20;
-                char f1_1 = valA17;
-                valA17 = -(valA17);
-                int16_t v_a4_1 = 0x12;
-                int16_t v_b4 = 1;
-                uint16_t v_a6_1 = ((valA17 - valA17) & 8) + 8;
-                int16_t v_a8 = ((((valA17 - valA17) & 8) + 8) >> 3) * (valA15 + 1);
-                int32_t* valA26 = g_5ca154;
-                uint32_t v_ac_1 = v_a8 * 0x5622;
-                bool cond_1_1 = !(*(*valA26 + 0x38))(valA26, &v_b4);
-                int32_t* valA28 = g_5ca154;
-                int32_t tmpD5 = *valA28;
+                char f1_1 = data_17;
+                data_17 = -(data_17);
+                int16_t item_a4_1 = 0x12;
+                int16_t item_b4 = 1;
+                uint16_t item_a6_1 = ((data_17 - data_17) & 8) + 8;
+                int16_t item_a8 = ((((data_17 - data_17) & 8) + 8) >> 3) * (data_15 + 1);
+                int32_t* data_26 = g_5ca154;
+                uint32_t item_ac_1 = item_a8 * 0x5622;
+                bool flag_1_1 = !(*(*data_26 + 0x38))(data_26, &item_b4);
+                int32_t* data_28 = g_5ca154;
+                int32_t temp_5 = *data_28;
 
-                if (!cond_1_1)
+                if (!flag_1_1)
                 {
-                    (*(tmpD5 + 8))(valA28);
-                    int32_t* valA29 = g_67a498;
-                    int32_t valA30 = (*(*valA29 + 8))(valA29);
+                    (*(temp_5 + 8))(data_28);
+                    int32_t* data_29 = g_67a498;
+                    int32_t data_30 = (*(*data_29 + 8))(data_29);
                     g_67a498 = 0;
-                    return valA30;
+                    return data_30;
                 }
 
-                if (!(*(tmpD5 + 0x30))(valA28, 0, 0, 1))
+                if (!(*(temp_5 + 0x30))(data_28, 0, 0, 1))
                 {
-                    void* valA35 = Mem_Alloc(g_5ca134 * 0x4c, 4);
-                    int32_t valA36 = g_5ca134;
-                    g_6840f0 = valA35;
-                    int32_t srcS4 = 0;
-                    int32_t valA37 = 0;
-                    int32_t objC18 = valA36 * 0x4c;
-                    __builtin_memset(__builtin_memset(valA35, 0, objC18 & 0xfffffffc), 0,
-                        objC18 & 3);
+                    void* data_35 = Mem_Alloc(g_5ca134 * 0x4c, 4);
+                    int32_t data_36 = g_5ca134;
+                    g_6840f0 = data_35;
+                    int32_t source_4 = 0;
+                    int32_t data_37 = 0;
+                    int32_t entity_18 = data_36 * 0x4c;
+                    memset(memset(data_35, 0, entity_18 & 0xfffffffc), 0,
+                        entity_18 & 3);
 
                     if (g_5ca134 > 0)
                     {
-                        void* dstD2 = nullptr;
+                        void* dest_2 = nullptr;
 
                         do
                         {
-                            Display_SetGammaRamp_8(dstD2 + g_6840f0, &g_6840f8);
-                            valA37 = g_5ca134;
-                            srcS4 += 1;
-                            dstD2 += 0x4c;
-                        } while (srcS4 < valA37);
+                            Display_SetGammaRamp_8(dest_2 + g_6840f0, &g_6840f8);
+                            data_37 = g_5ca134;
+                            source_4 += 1;
+                            dest_2 += 0x4c;
+                        } while (source_4 < data_37);
                     }
 
                     g_6840f4 = 0;
                     g_6840e9 = 1;
-                    return valA37;
+                    return data_37;
                 }
             }
 
-            int32_t* valA32 = g_5ca154;
-            (*(*valA32 + 8))(valA32);
+            int32_t* data_32 = g_5ca154;
+            (*(*data_32 + 8))(data_32);
         }
 
-        int32_t* valA33 = g_67a498;
-        valA2 = (*(*valA33 + 8))(valA33);
+        int32_t* data_33 = g_67a498;
+        data_2 = (*(*data_33 + 8))(data_33);
     }
 
     g_67a498 = 0;
-    return valA2;
+    return data_2;
 }

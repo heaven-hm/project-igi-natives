@@ -4,109 +4,109 @@ int32_t SoundSys_LoadSoundDef_2()
 
 {
     int32_t result = g_a5e400;
-    void* ctxB = (&g_a5e374)[result];
-    void* v_10 = ctxB;
-    *(ctxB + 0xc) = 0;
-    int32_t srcS1 = g_a5e400 + 1;
-    g_a5e400 = srcS1;
-    result = *(ctxB + 0x14);
+    void* context_val = (&g_a5e374)[result];
+    void* item_10 = context_val;
+    *(context_val + 0xc) = 0;
+    int32_t source_1 = g_a5e400 + 1;
+    g_a5e400 = source_1;
+    result = *(context_val + 0x14);
 
     if (result)
     {
-        void* dstD1 = **&g_a5e3f0 + (result & 0xffff) * 0x18;
-        (&g_a5e374)[srcS1] = dstD1;
+        void* dest_1 = **&g_a5e3f0 + (result & 0xffff) * 0x18;
+        (&g_a5e374)[source_1] = dest_1;
         result = SoundSys_LoadSoundDef_2();
-        result = *(dstD1 + 0x16);
+        result = *(dest_1 + 0x16);
 
         while (result)
         {
-            void* srcS2 = **&g_a5e3f0 + (result & 0xffff) * 0x18;
-            (&g_a5e374)[g_a5e400] = srcS2;
+            void* source_2 = **&g_a5e3f0 + (result & 0xffff) * 0x18;
+            (&g_a5e374)[g_a5e400] = source_2;
             result = SoundSys_LoadSoundDef_2();
-            result = *(srcS2 + 0x16);
+            result = *(source_2 + 0x16);
         }
 
-        srcS1 = g_a5e400;
+        source_1 = g_a5e400;
     }
 
-    result = *(ctxB + 0x12);
+    result = *(context_val + 0x12);
 
     if (result)
     {
         int32_t i = 0;
-        i = *(ctxB + 0x10);
+        i = *(context_val + 0x10);
         result = (result & 0xffff) + i;
 
         if (i < result)
         {
-            int32_t tmpD3 = g_a5e3ec;
-            int32_t objC8;
+            int32_t temp_3 = g_a5e3ec;
+            int32_t entity_8;
 
             do
             {
-                int32_t dstD2 = 0;
-                int32_t objC4 = *(g_a5e3f8 + 0x10);
-                int32_t valA6 = 0;
-                valA6 = *(objC4 + (i << 3));
-                void* objC5 = objC4 + (i << 3);
-                int32_t v_c = tmpD3 + valA6 * 0xc;
-                int32_t valA9 = 0;
-                valA9 = *(objC5 + 2);
-                int32_t v_8_1 = tmpD3 + valA9 * 0xc;
-                int32_t valA12 = 0;
-                valA12 = *(objC5 + 4);
-                int32_t v_4_1 = tmpD3 + valA12 * 0xc;
+                int32_t dest_2 = 0;
+                int32_t entity_4 = *(g_a5e3f8 + 0x10);
+                int32_t data_6 = 0;
+                data_6 = *(entity_4 + (i << 3));
+                void* entity_5 = entity_4 + (i << 3);
+                int32_t item_c = temp_3 + data_6 * 0xc;
+                int32_t data_9 = 0;
+                data_9 = *(entity_5 + 2);
+                int32_t item_8_1 = temp_3 + data_9 * 0xc;
+                int32_t data_12 = 0;
+                data_12 = *(entity_5 + 4);
+                int32_t item_4_1 = temp_3 + data_12 * 0xc;
 
-                if (srcS1 > 0)
+                if (source_1 > 0)
                 {
-                    int32_t* ctxB1 = &g_a5e374;
+                    int32_t* context_1 = &g_a5e374;
 
                     do
                     {
-                        float* objC7 = *ctxB1;
-                        int32_t* tmpD4 = &v_c;
+                        float* entity_7 = *context_1;
+                        int32_t* temp_4 = &item_c;
                         int32_t j_1 = 3;
                         int32_t j;
 
                         do
                         {
-                            float* valA14 = *tmpD4;
-                            long double x87_r7_2 = valA14[2] - objC7[2];
-                            long double x87_r6_2 = valA14[1] - objC7[1];
-                            long double x87_r5_2 = *valA14 - *objC7;
-                            long double x87_r7_3 = sqrtl(x87_r5_2 * x87_r5_2 + x87_r6_2 * x87_r6_2
-                                + x87_r7_2 * x87_r7_2);
-                            long double x87_r6_4 = objC7[3];
-                            x87_r6_4 - x87_r7_3;
+                            float* data_14 = *temp_4;
+                            long double fpu_val_7_2 = data_14[2] - entity_7[2];
+                            long double fpu_val_6_2 = data_14[1] - entity_7[1];
+                            long double fpu_val_5_2 = *data_14 - *entity_7;
+                            long double fpu_val_7_3 = sqrtl(fpu_val_5_2 * fpu_val_5_2 + fpu_val_6_2 * fpu_val_6_2
+                                + fpu_val_7_2 * fpu_val_7_2);
+                            long double fpu_val_6_4 = entity_7[3];
+                            fpu_val_6_4 - fpu_val_7_3;
 
-                            if (!(*(&((x87_r6_4 < x87_r7_3 ? 1 : 0) << 8
-                                    | (FCMP_UO(x87_r6_4, x87_r7_3) ? 1 : 0) << 0xa
-                                    | (x87_r6_4 == x87_r7_3 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
-                                x87_r7_3 = objC7[3];
+                            if (!(*(&((fpu_val_6_4 < fpu_val_7_3 ? 1 : 0) << 8
+                                    | (FCMP_UO(fpu_val_6_4, fpu_val_7_3) ? 1 : 0) << 0xa
+                                    | (fpu_val_6_4 == fpu_val_7_3 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
+                                fpu_val_7_3 = entity_7[3];
 
-                            objC7[3] = x87_r7_3;
-                            tmpD4 = &tmpD4[1];
+                            entity_7[3] = fpu_val_7_3;
+                            temp_4 = &temp_4[1];
                             j = j_1;
                             j_1 -= 1;
                         } while (j != 1);
-                        srcS1 = g_a5e400;
-                        dstD2 += 1;
-                        ctxB1 = &ctxB1[1];
-                    } while (dstD2 < srcS1);
+                        source_1 = g_a5e400;
+                        dest_2 += 1;
+                        context_1 = &context_1[1];
+                    } while (dest_2 < source_1);
 
-                    tmpD3 = g_a5e3ec;
-                    ctxB = v_10;
+                    temp_3 = g_a5e3ec;
+                    context_val = item_10;
                 }
 
-                objC8 = 0;
+                entity_8 = 0;
                 result = 0;
-                objC8 = *(ctxB + 0x12);
-                result = *(ctxB + 0x10);
+                entity_8 = *(context_val + 0x12);
+                result = *(context_val + 0x10);
                 i += 1;
-            } while (i < objC8 + result);
+            } while (i < entity_8 + result);
         }
     }
 
-    g_a5e400 = srcS1 - 1;
+    g_a5e400 = source_1 - 1;
     return result;
 }

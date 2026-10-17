@@ -3,10 +3,10 @@
 int32_t DefineComputerLimit_OnEvent()
 
 {
-    int32_t valA2 = g_5bdc68;
+    int32_t data_2 = g_5bdc68;
 
-    if (!valA2)
+    if (!data_2)
         return 0;
 
-    return valA2 + 0x20;
+    return data_2 + 0x20;
 }

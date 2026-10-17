@@ -1,60 +1,60 @@
 // Original IGI.EXE function: Camera_ApplyLineFilter_20 (VA 0x004AA580; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyLineFilter_20.h"
-char* Camera_ApplyLineFilter_20(char* a1, char* a2)
+char* Camera_ApplyLineFilter_20(char* context, char* param_2)
 
 {
-    char* dstD = a1;
-    char* objC = a2;
-    int32_t tmpD1;
+    char* dest_val = context;
+    char* entity_val = param_2;
+    int32_t temp_1;
 
-    while (objC & 3)
+    while (entity_val & 3)
     {
-        tmpD1 = *objC;
-        objC = &objC[1];
+        temp_1 = *entity_val;
+        entity_val = &entity_val[1];
 
-        if (!tmpD1)
+        if (!temp_1)
             goto label_4aa668;
 
-        *dstD = tmpD1;
-        dstD = &dstD[1];
+        *dest_val = temp_1;
+        dest_val = &dest_val[1];
     }
 
     while (true)
     {
-        int32_t valA1 = *objC;
-        tmpD1 = *objC;
-        objC = &objC[4];
+        int32_t data_1 = *entity_val;
+        temp_1 = *entity_val;
+        entity_val = &entity_val[4];
 
-        if ((valA1 ^ 0xffffffff ^ (0x7efefeff + valA1)) & 0x81010100)
+        if ((data_1 ^ 0xffffffff ^ (0x7efefeff + data_1)) & 0x81010100)
         {
-            if (!tmpD1)
+            if (!temp_1)
                 break;
 
-            if (!*(&tmpD1 + 1))
+            if (!*(&temp_1 + 1))
             {
-                *dstD = tmpD1;
-                return a1;
+                *dest_val = temp_1;
+                return context;
             }
 
-            if (!(tmpD1 & 0xff0000))
+            if (!(temp_1 & 0xff0000))
             {
-                *dstD = tmpD1;
-                dstD[2] = 0;
-                return a1;
+                *dest_val = temp_1;
+                dest_val[2] = 0;
+                return context;
             }
 
-            if (!(tmpD1 & 0xff000000))
+            if (!(temp_1 & 0xff000000))
             {
-                *dstD = tmpD1;
-                return a1;
+                *dest_val = temp_1;
+                return context;
             }
         }
 
-        *dstD = tmpD1;
-        dstD = &dstD[4];
+        *dest_val = temp_1;
+        dest_val = &dest_val[4];
     }
 
 label_4aa668:
-    *dstD = tmpD1;
-    return a1;
+    *dest_val = temp_1;
+    return context;
 }

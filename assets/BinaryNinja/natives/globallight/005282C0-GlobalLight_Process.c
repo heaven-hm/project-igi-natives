@@ -1,22 +1,22 @@
 // Original IGI.EXE function: GlobalLight_Process (VA 0x005282C0; static CFG gate PASS, CFG score 1.000).
 #include "GlobalLight_Process.h"
-int32_t GlobalLight_Process(void* a1)
+int32_t GlobalLight_Process(void* context)
 
 {
-    void* srcS = a1;
+    void* source_val = context;
 
-    if (*(srcS + 0x1a0))
+    if (*(source_val + 0x1a0))
     {
-        if (!*(srcS + 0xd0))
+        if (!*(source_val + 0xd0))
         {
-            int32_t* valA2 = srcS + 0x8c;
+            int32_t* data_2 = source_val + 0x8c;
             int32_t i_3 = 5;
             int32_t i;
 
             do
             {
-                *valA2 = 0xffffffff;
-                valA2 = &valA2[0x11];
+                *data_2 = 0xffffffff;
+                data_2 = &data_2[0x11];
                 i = i_3;
                 i_3 -= 1;
             } while (i != 1);
@@ -24,72 +24,72 @@ int32_t GlobalLight_Process(void* a1)
         else
         {
             int32_t i_1 = 0;
-            int32_t* objC1 = srcS + 0x8c;
+            int32_t* entity_1 = source_val + 0x8c;
 
             do
             {
-                int32_t tmpD1 = i_1 - 1;
+                int32_t temp_1 = i_1 - 1;
                 i_1 += 1;
-                *objC1 = tmpD1;
-                objC1 = &objC1[0x11];
+                *entity_1 = temp_1;
+                entity_1 = &entity_1[0x11];
             } while (i_1 < 5);
         }
 
-        *(srcS + 0x1a0) = 0;
+        *(source_val + 0x1a0) = 0;
     }
 
     if (!g_a84380)
-        g_a84380 = srcS;
+        g_a84380 = source_val;
 
-    long double fpu7 = *(srcS + 0x44);
-    *(srcS + 0x48) = fpu7;
+    long double fpu7 = *(source_val + 0x44);
+    *(source_val + 0x48) = fpu7;
     g_a83ea0 = fpu7;
-    void* valA4 = *(srcS + 0x14);
+    void* data_4 = *(source_val + 0x14);
 
-    if (valA4 && *(valA4 + 0x1c) == g_a8408c)
+    if (data_4 && *(data_4 + 0x1c) == g_a8408c)
     {
-        void* dstD1 = *(srcS + 0x14);
-        uint32_t valA7 = Script_ParseEnumReal32_8();
-        int32_t tmpD2 = 0;
-        tmpD2 = *(dstD1 + 0x1c);
-        (*(((valA7 * 0x180 + tmpD2) << 2) + &g_a96ae0))(dstD1, srcS);
+        void* dest_1 = *(source_val + 0x14);
+        uint32_t data_7 = Script_ParseEnumReal32_8();
+        int32_t temp_2 = 0;
+        temp_2 = *(dest_1 + 0x1c);
+        (*(((data_7 * 0x180 + temp_2) << 2) + &g_a96ae0))(dest_1, source_val);
     }
 
-    a1 = 5;
-    bool cond_0_1;
+    context = 5;
+    bool flag_0_1;
 
     do
     {
-        int32_t* valA9 = srcS + 0x4c;
+        int32_t* data_9 = source_val + 0x4c;
         int32_t i_4 = 5;
         int32_t i_2;
 
         do
         {
-            int32_t objC5 = valA9[0x10];
+            int32_t entity_5 = data_9[0x10];
 
-            if (objC5 >= 0 && objC5 < 5)
+            if (entity_5 >= 0 && entity_5 < 5)
             {
-                void* objC6 = srcS + objC5 * 0x44;
-                *valA9 = *(objC6 + 0x4c);
-                valA9[1] = *(objC6 + 0x50);
-                valA9[2] = *(objC6 + 0x54);
-                valA9[3] = *(objC6 + 0x58);
-                valA9[4] = *(objC6 + 0x5c);
-                valA9[5] = *(objC6 + 0x60);
-                valA9[6] = *(objC6 + 0x64);
+                void* entity_6 = source_val + entity_5 * 0x44;
+                *data_9 = *(entity_6 + 0x4c);
+                data_9[1] = *(entity_6 + 0x50);
+                data_9[2] = *(entity_6 + 0x54);
+                data_9[3] = *(entity_6 + 0x58);
+                data_9[4] = *(entity_6 + 0x5c);
+                data_9[5] = *(entity_6 + 0x60);
+                data_9[6] = *(entity_6 + 0x64);
             }
 
-            valA9 = &valA9[0x11];
+            data_9 = &data_9[0x11];
             i_2 = i_4;
             i_4 -= 1;
         } while (i_2 != 1);
-        cond_0_1 = a1 != 1;
-        a1 -= 1;
-    } while (cond_0_1);
+        flag_0_1 = context != 1;
+        context -= 1;
+    } while (flag_0_1);
     int32_t result = g_a84380;
 
-    if (result == srcS)
+    if (result == source_val)
         g_a84380 = 0;
 
     return result;

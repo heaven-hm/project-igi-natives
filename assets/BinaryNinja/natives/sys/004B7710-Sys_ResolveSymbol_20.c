@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Sys_ResolveSymbol_20 (VA 0x004B7710; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_20.h"
-void* Sys_ResolveSymbol_20(void* a1, int32_t a2, int32_t a3)
+void* Sys_ResolveSymbol_20(void* context, int32_t param_2, int32_t param_3)
 
 {
-    void* result = a1;
-    result = *(*(result + 4) * a3 + result + a2 + 0x10);
+    void* result = context;
+    result = *(*(result + 4) * param_3 + result + param_2 + 0x10);
     return result;
 }

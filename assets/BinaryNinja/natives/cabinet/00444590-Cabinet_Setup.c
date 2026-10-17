@@ -1,65 +1,65 @@
 // Original IGI.EXE function: Cabinet_Setup (VA 0x00444590; static CFG gate FAIL, CFG score 0.667).
 #include "Cabinet_Setup.h"
-void* Cabinet_Setup(void* a1)
+void* Cabinet_Setup(void* context)
 
 {
-    int32_t* i = *(a1 + 8);
+    int32_t* i = *(context + 8);
 
     if (*i && i)
     {
-        int32_t tmpD1 = g_afa7e0;
+        int32_t temp_1 = g_afa7e0;
 
         do
         {
-            int32_t* srcS1 = *i;
-            void* valA4;
+            int32_t* source_1 = *i;
+            void* data_4;
 
-            if (!srcS1)
-                valA4 = nullptr;
+            if (!source_1)
+                data_4 = nullptr;
             else
             {
-                int32_t valA1 = *srcS1;
-                int32_t valA2 = -(valA1);
-                valA4 = (valA2 - valA2) & srcS1;
+                int32_t data_1 = *source_1;
+                int32_t data_2 = -(data_1);
+                data_4 = (data_2 - data_2) & source_1;
             }
 
-            *((tmpD1 << 2) + &g_afa6e0) = valA4;
-            int32_t tmpD2 = tmpD1 + 1;
-            int32_t valA5 = 0;
-            g_afa7e0 = tmpD2;
-            valA5 = i[7];
-            int32_t valA6 = *((valA5 << 2) + &g_a970e0);
+            *((temp_1 << 2) + &g_afa6e0) = data_4;
+            int32_t temp_2 = temp_1 + 1;
+            int32_t data_5 = 0;
+            g_afa7e0 = temp_2;
+            data_5 = i[7];
+            int32_t data_6 = *((data_5 << 2) + &g_a970e0);
 
-            if (valA6)
+            if (data_6)
             {
-                valA6(i);
-                tmpD2 = g_afa7e0;
+                data_6(i);
+                temp_2 = g_afa7e0;
             }
 
-            i = *((tmpD2 << 2) + &g_afa6dc);
-            tmpD1 = tmpD2 - 1;
-            g_afa7e0 = tmpD1;
+            i = *((temp_2 << 2) + &g_afa6dc);
+            temp_1 = temp_2 - 1;
+            g_afa7e0 = temp_1;
         } while (i);
     }
 
-    void* valA7 = *(a1 + 0xe8);
+    void* data_7 = *(context + 0xe8);
 
-    if (valA7 && *(a1 + 0x130))
+    if (data_7 && *(context + 0x130))
     {
-        int32_t objC1 = 0;
-        objC1 = *(valA7 + 0x1c);
-        (*((objC1 << 2) + &g_a970e0))(valA7);
+        int32_t entity_1 = 0;
+        entity_1 = *(data_7 + 0x1c);
+        (*((entity_1 << 2) + &g_a970e0))(data_7);
     }
 
     void* result = g_bc2360;
 
-    if (*(result + 0x68) <= *(a1 + 0x124) + 2)
+    if (*(result + 0x68) <= *(context + 0x124) + 2)
     {
-        *(a1 + 0x120) = *(a1 + 0x11f);
+        *(context + 0x120) = *(context + 0x11f);
         return result;
     }
 
-    *(a1 + 0x11f) = 0;
-    *(a1 + 0x120) = *(a1 + 0x11f);
+    *(context + 0x11f) = 0;
+    *(context + 0x120) = *(context + 0x11f);
     return result;
 }

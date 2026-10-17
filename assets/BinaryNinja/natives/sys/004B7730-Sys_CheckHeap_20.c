@@ -1,69 +1,69 @@
 // Original IGI.EXE function: Sys_CheckHeap_20 (VA 0x004B7730; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CheckHeap_20.h"
-void* Sys_CheckHeap_20(int32_t* a1, void* a2)
+void* Sys_CheckHeap_20(int32_t* context, void* param_2)
 
 {
-    int32_t objC;
-    int32_t v_4_1 = objC;
-    void* valA = a1[2];
-    int32_t dstD = a1[1];
-    int32_t objC1 = *(valA + 8);
-    int32_t srcS = 0;
+    int32_t entity_val;
+    int32_t item_4_1 = entity_val;
+    void* data_val = context[2];
+    int32_t dest_val = context[1];
+    int32_t entity_1 = *(data_val + 8);
+    int32_t source_val = 0;
     int16_t flagP = 0;
-    int32_t objC3 = *a1;
+    int32_t entity_3 = *context;
 
-    if (!objC3)
+    if (!entity_3)
     {
-        int32_t valA1 = Sys_CloseFileStream_17(valA);
-        char* objC4 = nullptr;
+        int32_t data_1 = Sys_CloseFileStream_17(data_val);
+        char* entity_4 = nullptr;
 
-        if (dstD > 0)
+        if (dest_val > 0)
         {
             do
             {
-                if (!*(objC4 + dstD * a2 + a1 + 0x10))
-                    srcS += valA1;
+                if (!*(entity_4 + dest_val * param_2 + context + 0x10))
+                    source_val += data_1;
                 else
                 {
-                    srcS += valA1;
-                    flagP = srcS;
+                    source_val += data_1;
+                    flagP = source_val;
                 }
 
-                objC4 = &objC4[1];
-            } while (objC4 < dstD);
+                entity_4 = &entity_4[1];
+            } while (entity_4 < dest_val);
         }
 
-        int32_t valA2 = a1[3];
-        *(valA2 + (a2 << 1)) = flagP;
-        return valA2;
+        int32_t data_2 = context[3];
+        *(data_2 + (param_2 << 1)) = flagP;
+        return data_2;
     }
 
-    if (objC3 == 1)
+    if (entity_3 == 1)
     {
-        int32_t valA3 = Sys_DispatchOpcode_17(valA);
-        char* tmpD3 = nullptr;
+        int32_t data_3 = Sys_DispatchOpcode_17(data_val);
+        char* temp_3 = nullptr;
 
-        if (dstD > 0)
+        if (dest_val > 0)
         {
             do
             {
-                char objC8 = *(tmpD3 + dstD * a2 + a1 + 0x10);
+                char entity_8 = *(temp_3 + dest_val * param_2 + context + 0x10);
 
-                if (!objC8)
-                    srcS += valA3;
+                if (!entity_8)
+                    source_val += data_3;
                 else
                 {
-                    srcS += *(objC1 + objC8 * 0x24 - 0x14);
-                    flagP = srcS;
+                    source_val += *(entity_1 + entity_8 * 0x24 - 0x14);
+                    flagP = source_val;
                 }
 
-                tmpD3 = &tmpD3[1];
-            } while (tmpD3 < dstD);
+                temp_3 = &temp_3[1];
+            } while (temp_3 < dest_val);
         }
 
-        valA = a2;
-        *(a1[3] + (valA << 1)) = flagP;
+        data_val = param_2;
+        *(context[3] + (data_val << 1)) = flagP;
     }
 
-    return valA;
+    return data_val;
 }

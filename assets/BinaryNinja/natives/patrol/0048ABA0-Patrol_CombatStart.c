@@ -1,44 +1,44 @@
 // Original IGI.EXE function: Patrol_CombatStart (VA 0x0048ABA0; static CFG gate PASS, CFG score 1.000).
 #include "Patrol_CombatStart.h"
-int32_t* Patrol_CombatStart(void* a1, void* a2)
+int32_t* Patrol_CombatStart(void* context, void* param_2)
 
 {
-    int32_t* ctxB1 = *(a2 + 0x28) + 8;
+    int32_t* context_1 = *(param_2 + 0x28) + 8;
 
-    if (!AI_MoveToNode_19(*(a1 + 0x14)))
+    if (!AI_MoveToNode_19(*(context + 0x14)))
     {
-        if (!Locomotion_GetState(a1, 2))
-            *(a2 + 0x18) = Combat_MobileC;
+        if (!Locomotion_GetState(context, 2))
+            *(param_2 + 0x18) = Combat_MobileC;
         else
-            *(a2 + 0x18) = 0x48c510;
+            *(param_2 + 0x18) = 0x48c510;
     }
     else
-        *(a2 + 0x18) = Combat_MobileA;
+        *(param_2 + 0x18) = Combat_MobileA;
 
-    *(a2 + 0x20) = FX_SmokeEmit_19;
-    int32_t objC = *(a1 + 0x3d44);
-    *(a1 + 0x3dd0) = 0xffffffff;
-    *(a1 + 0x3dd4) = objC;
-    *(a1 + 0x3dd8) = 0xffffffff;
-    *(a1 + 0x3e64) = 0;
-    *(a1 + 0x3de8) = 0xffffffff;
-    int32_t* result_1 = **ctxB1;
+    *(param_2 + 0x20) = FX_SmokeEmit_19;
+    int32_t entity_val = *(context + 0x3d44);
+    *(context + 0x3dd0) = 0xffffffff;
+    *(context + 0x3dd4) = entity_val;
+    *(context + 0x3dd8) = 0xffffffff;
+    *(context + 0x3e64) = 0;
+    *(context + 0x3de8) = 0xffffffff;
+    int32_t* result_1 = **context_1;
     int32_t* result = *result_1;
 
     if (result)
     {
         while (true)
         {
-            int32_t* objC1 = result_1[0xb];
+            int32_t* entity_1 = result_1[0xb];
 
-            if (objC1)
+            if (entity_1)
             {
-                void* objC2 = *objC1;
+                void* entity_2 = *entity_1;
 
-                if (objC2)
+                if (entity_2)
                 {
-                    result = AI_FireWeapon_2(a1, objC2);
-                    *(a1 + 0x3aa8) = result;
+                    result = AI_FireWeapon_2(context, entity_2);
+                    *(context + 0x3aa8) = result;
                     break;
                 }
             }
@@ -48,16 +48,16 @@ int32_t* Patrol_CombatStart(void* a1, void* a2)
 
             if (!result)
             {
-                ctxB1[6] = 0;
-                ctxB1[5] = 0;
-                *ctxB1 = 0;
+                context_1[6] = 0;
+                context_1[5] = 0;
+                *context_1 = 0;
                 return result;
             }
         }
     }
 
-    ctxB1[6] = 0;
-    ctxB1[5] = 0;
-    *ctxB1 = 0;
+    context_1[6] = 0;
+    context_1[5] = 0;
+    *context_1 = 0;
     return result;
 }

@@ -3,9 +3,9 @@
 int32_t* Render_DrawLightmapMesh_6()
 
 {
-    int32_t objC2 = g_a54668;
-    int32_t* result = *(g_a54664 + (objC2 << 2)) * g_a54670 + g_a54660;
-    *(g_a54674 + result) = objC2;
+    int32_t entity_2 = g_a54668;
+    int32_t* result = *(g_a54664 + (entity_2 << 2)) * g_a54670 + g_a54660;
+    *(g_a54674 + result) = entity_2;
     g_a54668 += 1;
     *result = 0;
     result[7] = 0xffffffff;

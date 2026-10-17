@@ -1,26 +1,26 @@
 // Original IGI.EXE function: Camera_ResetMatrix_23 (VA 0x004AC323; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_23.h"
-int32_t Camera_ResetMatrix_23(int32_t* a1)
+int32_t Camera_ResetMatrix_23(int32_t* context)
 
 {
     g_936210 += 1;
-    void* valA = Camera_ApplyHandiCam_20(0x1000);
-    a1[2] = valA;
+    void* data_val = Camera_ApplyHandiCam_20(0x1000);
+    context[2] = data_val;
 
-    if (!valA)
+    if (!data_val)
     {
-        a1[3] |= 4;
-        a1[2] = &a1[5];
-        a1[6] = 2;
+        context[3] |= 4;
+        context[2] = &context[5];
+        context[6] = 2;
     }
     else
     {
-        a1[3] |= 8;
-        a1[6] = 0x1000;
+        context[3] |= 8;
+        context[6] = 0x1000;
     }
 
-    int32_t result = a1[2];
-    a1[1] = 0;
-    *a1 = result;
+    int32_t result = context[2];
+    context[1] = 0;
+    *context = result;
     return result;
 }

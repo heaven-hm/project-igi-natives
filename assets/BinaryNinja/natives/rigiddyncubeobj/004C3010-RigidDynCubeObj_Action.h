@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004C3010 RigidDynCubeObj_Action | gate PASS | openigi False */
-void RigidDynCubeObj_Action(int* a1, float a2);
+void RigidDynCubeObj_Action(int* context, float param_2);

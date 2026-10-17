@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004513F0 AI_AFCaF | gate PASS | openigi False */
-int AI_AFCaF(long double a1, float a2);
+int AI_AFCaF(long double context, float param_2);

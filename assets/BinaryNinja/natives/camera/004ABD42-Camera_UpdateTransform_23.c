@@ -1,21 +1,21 @@
 // Original IGI.EXE function: Camera_UpdateTransform_23 (VA 0x004ABD42; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_23.h"
-int32_t Camera_UpdateTransform_23(int32_t a1, HANDLE a2)
+int32_t Camera_UpdateTransform_23(int32_t context, HANDLE param_2)
 
 {
-    if (a1 < g_c32540 && (&g_c32440)[a1 >> 5][(a1 & 0x1f) * 2] == 0xffffffff)
+    if (context < g_c32540 && (&g_c32440)[context >> 5][(context & 0x1f) * 2] == 0xffffffff)
     {
         if (g_543e80 == 1)
         {
-            if (!a1)
-                SetStdHandle(STD_INPUT_HANDLE, a2);
-            else if (a1 == 1)
-                SetStdHandle(STD_OUTPUT_HANDLE, a2);
-            else if (a1 == 2)
-                SetStdHandle(STD_ERROR_HANDLE, a2);
+            if (!context)
+                SetStdHandle(STD_INPUT_HANDLE, param_2);
+            else if (context == 1)
+                SetStdHandle(STD_OUTPUT_HANDLE, param_2);
+            else if (context == 2)
+                SetStdHandle(STD_ERROR_HANDLE, param_2);
         }
 
-        (&g_c32440)[a1 >> 5][(a1 & 0x1f) * 2] = a2;
+        (&g_c32440)[context >> 5][(context & 0x1f) * 2] = param_2;
         return 0;
     }
 

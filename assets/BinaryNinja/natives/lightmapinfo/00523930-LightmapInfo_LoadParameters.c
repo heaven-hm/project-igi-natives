@@ -1,42 +1,42 @@
 // Original IGI.EXE function: LightmapInfo_LoadParameters (VA 0x00523930; static CFG gate PASS, CFG score 1.000).
 #include "LightmapInfo_LoadParameters.h"
-int32_t LightmapInfo_LoadParameters(void* a1)
+int32_t LightmapInfo_LoadParameters(void* context)
 
 {
-    void* srcS = a1;
+    void* source_val = context;
     int32_t i_1 = 0;
-    void* ctxB = *(srcS + 0x14);
-    int32_t dstD = 0;
-    bool cond_0 = *(srcS + 0xcc);
-    *(srcS + 0x8c) = 0x3f800000;
-    a1 = nullptr;
-    int32_t v_18 = 0;
+    void* context_val = *(source_val + 0x14);
+    int32_t dest_val = 0;
+    bool flag_0 = *(source_val + 0xcc);
+    *(source_val + 0x8c) = 0x3f800000;
+    context = nullptr;
+    int32_t item_18 = 0;
 
-    if (!cond_0 && *(srcS + 0x98) != 0x3f800000)
-        dstD = 1;
+    if (!flag_0 && *(source_val + 0x98) != 0x3f800000)
+        dest_val = 1;
 
-    if (*(srcS + 0x70) || *(srcS + 0x6f) || *(srcS + 0x71))
+    if (*(source_val + 0x70) || *(source_val + 0x6f) || *(source_val + 0x71))
     {
-        int32_t* valA2 = *(srcS + 0x88);
-        v_18 = 1;
+        int32_t* data_2 = *(source_val + 0x88);
+        item_18 = 1;
 
-        if (valA2)
+        if (data_2)
         {
-            int32_t i_5 = *valA2;
+            int32_t i_5 = *data_2;
 
             if (i_5 > 0)
             {
-                int32_t* objC1 = &valA2[6];
+                int32_t* entity_1 = &data_2[6];
                 int32_t i;
 
                 do
                 {
-                    void* valA3 = *objC1;
+                    void* data_3 = *entity_1;
 
-                    if (valA3 && !*(valA3 + 0x38))
-                        a1 = 1;
+                    if (data_3 && !*(data_3 + 0x38))
+                        context = 1;
 
-                    objC1 = &objC1[9];
+                    entity_1 = &entity_1[9];
                     i = i_5;
                     i_5 -= 1;
                 } while (i != 1);
@@ -44,200 +44,200 @@ int32_t LightmapInfo_LoadParameters(void* a1)
         }
     }
 
-    *(srcS + 0xcc) = 0;
-    void* valA5 = a1 | dstD;
-    int32_t v_8 = *(srcS + 0x88);
-    uint32_t valA8 = DynObj_InsertHashItem_16();
-    int32_t tmpD1 = 0;
-    tmpD1 = *(ctxB + 0x1c);
-    (*(((valA8 * 0x180 + tmpD1) << 2) + &g_a96ae0))(ctxB, &v_8);
-    int32_t v_4;
-    long double x87_r7_1;
+    *(source_val + 0xcc) = 0;
+    void* data_5 = context | dest_val;
+    int32_t item_8 = *(source_val + 0x88);
+    uint32_t data_8 = DynObj_InsertHashItem_16();
+    int32_t temp_1 = 0;
+    temp_1 = *(context_val + 0x1c);
+    (*(((data_8 * 0x180 + temp_1) << 2) + &g_a96ae0))(context_val, &item_8);
+    int32_t item_4;
+    long double fpu_val_7_1;
     long double f0_1;
 
-    if (v_4)
+    if (item_4)
     {
-        x87_r7_1 = *(srcS + 0x98);
-        f0_1 = *(srcS + 0x8c);
-        x87_r7_1 - f0_1;
+        fpu_val_7_1 = *(source_val + 0x98);
+        f0_1 = *(source_val + 0x8c);
+        fpu_val_7_1 - f0_1;
     }
 
-    if (!v_4 || !(*(&((x87_r7_1 < f0_1 ? 1 : 0) << 8
-        | (FCMP_UO(x87_r7_1, f0_1) ? 1 : 0) << 0xa | (x87_r7_1 == f0_1 ? 1 : 0) << 0xe) + 1)
-        & 0x40) || valA5 || *(srcS + 0xdc))
+    if (!item_4 || !(*(&((fpu_val_7_1 < f0_1 ? 1 : 0) << 8
+        | (FCMP_UO(fpu_val_7_1, f0_1) ? 1 : 0) << 0xa | (fpu_val_7_1 == f0_1 ? 1 : 0) << 0xe) + 1)
+        & 0x40) || data_5 || *(source_val + 0xdc))
     {
-        int32_t* dstD1 = *(srcS + 0x88);
+        int32_t* dest_1 = *(source_val + 0x88);
 
-        if (dstD1 && *dstD1 > 0)
+        if (dest_1 && *dest_1 > 0)
         {
-            int32_t ctxB1 = 0;
+            int32_t context_1 = 0;
 
             do
             {
-                void* valA12 = *(ctxB1 + dstD1 + 0x18);
+                void* data_12 = *(context_1 + dest_1 + 0x18);
 
-                if (valA12)
+                if (data_12)
                 {
-                    Light_SampleLightmap_2(valA12);
-                    *(ctxB1 + dstD1 + 0x18) = 0;
+                    Light_SampleLightmap_2(data_12);
+                    *(context_1 + dest_1 + 0x18) = 0;
                 }
 
-                dstD1 = *(srcS + 0x88);
+                dest_1 = *(source_val + 0x88);
                 i_1 += 1;
-                ctxB1 += 0x24;
-            } while (i_1 < *dstD1);
+                context_1 += 0x24;
+            } while (i_1 < *dest_1);
         }
 
-        int32_t* valA13 = *(srcS + 0xc8);
+        int32_t* data_13 = *(source_val + 0xc8);
 
-        if (valA13)
+        if (data_13)
         {
-            Light_SetLightColor_2(valA13);
-            *(srcS + 0xc8) = 0;
+            Light_SetLightColor_2(data_13);
+            *(source_val + 0xc8) = 0;
         }
 
-        int32_t v_14 = *(srcS + 0x88);
+        int32_t item_14 = *(source_val + 0x88);
 
         if (FX_FireBallUpdate_25())
         {
-            uint32_t valA16 = DynObj_RegisterSymbol_16();
-            int32_t objC5 = 0;
-            objC5 = *(ctxB + 0x1c);
-            (*(((valA16 * 0x180 + objC5) << 2) + &g_a96ae0))(ctxB, &v_14);
+            uint32_t data_16 = DynObj_RegisterSymbol_16();
+            int32_t entity_5 = 0;
+            entity_5 = *(context_val + 0x1c);
+            (*(((data_16 * 0x180 + entity_5) << 2) + &g_a96ae0))(context_val, &item_14);
         }
 
-        int32_t valA21 = v_14;
-        *(srcS + 0x88) = valA21;
+        int32_t data_21 = item_14;
+        *(source_val + 0x88) = data_21;
 
-        if (valA21)
+        if (data_21)
         {
-            *(srcS + 0xa8) = 0;
-            *(srcS + 0xac) = 0;
+            *(source_val + 0xa8) = 0;
+            *(source_val + 0xac) = 0;
             g_a83b4c = 0;
             g_a839f4 = 0;
-            int32_t* dstD2 = *(srcS + 0x88);
+            int32_t* dest_2 = *(source_val + 0x88);
             int32_t i_2 = 0;
             int32_t i_4 = 0;
 
-            if (*dstD2 > 0)
+            if (*dest_2 > 0)
             {
                 int32_t flagP = 0;
 
                 do
                 {
-                    int32_t valA25;
+                    int32_t data_25;
 
-                    if (valA5 || *(srcS + 0xdc) || v_18)
-                        valA25 = 1;
+                    if (data_5 || *(source_val + 0xdc) || item_18)
+                        data_25 = 1;
                     else
-                        valA25 = 0;
+                        data_25 = 0;
 
-                    int32_t objC6 = *(dstD2 + flagP + 0x30);
-                    int32_t v_2c_4 = *(srcS + 0x94);
-                    int32_t v_30_2 = v_18;
-                    int32_t v_40_1 = objC6;
-                    float v_40_2 = (1 << (objC6 & 0x1f)) * *(srcS + 0x8c) * 4096f;
-                    int32_t* valA28 =
-                        Light_RenderLensflare_3(*(dstD2 + flagP + 0x1c), objC6, srcS + 0x78, i_2, valA25);
+                    int32_t entity_6 = *(dest_2 + flagP + 0x30);
+                    int32_t item_2c_4 = *(source_val + 0x94);
+                    int32_t item_30_2 = item_18;
+                    int32_t item_40_1 = entity_6;
+                    float item_40_2 = (1 << (entity_6 & 0x1f)) * *(source_val + 0x8c) * 4096.0f;
+                    int32_t* data_28 =
+                        Light_RenderLensflare_3(*(dest_2 + flagP + 0x1c), entity_6, source_val + 0x78, i_2, data_25);
                     int32_t j = 0;
-                    *(dstD2 + flagP + 0x18) = valA28;
-                    *(dstD2 + flagP + 0x38) = 0;
+                    *(dest_2 + flagP + 0x18) = data_28;
+                    *(dest_2 + flagP + 0x38) = 0;
 
-                    if (valA28 && valA28[0xb] > 0)
+                    if (data_28 && data_28[0xb] > 0)
                     {
-                        int32_t* objC8 = valA28;
-                        int32_t valA29 = 0;
+                        int32_t* entity_8 = data_28;
+                        int32_t data_29 = 0;
 
                         do
                         {
-                            *(srcS + 0xac) += *(valA29 + objC8 + 0x66) * *(valA29 + objC8 + 0x64);
-                            void* objC13 = *(dstD2 + flagP + 0x18) + valA29;
-                            valA29 += 0x2c;
+                            *(source_val + 0xac) += *(data_29 + entity_8 + 0x66) * *(data_29 + entity_8 + 0x64);
+                            void* entity_13 = *(dest_2 + flagP + 0x18) + data_29;
+                            data_29 += 0x2c;
                             j += 1;
-                            *(srcS + 0xa8) += *(objC13 + 0x66) * *(objC13 + 0x64);
-                            objC8 = *(dstD2 + flagP + 0x18);
-                        } while (j < objC8[0xb]);
+                            *(source_val + 0xa8) += *(entity_13 + 0x66) * *(entity_13 + 0x64);
+                            entity_8 = *(dest_2 + flagP + 0x18);
+                        } while (j < entity_8[0xb]);
 
                         i_2 = i_4;
                     }
 
-                    dstD2 = *(srcS + 0x88);
+                    dest_2 = *(source_val + 0x88);
                     i_2 += 1;
                     flagP += 0x24;
                     i_4 = i_2;
-                } while (i_2 < *dstD2);
+                } while (i_2 < *dest_2);
             }
 
             int32_t i_3 = 0;
-            *(srcS + 0xc0) = g_a83b4c;
-            *(srcS + 0xc4) = g_a839f4;
-            int32_t* valA31 = *(srcS + 0x88);
+            *(source_val + 0xc0) = g_a83b4c;
+            *(source_val + 0xc4) = g_a839f4;
+            int32_t* data_31 = *(source_val + 0x88);
 
-            if (*valA31 > 0)
+            if (*data_31 > 0)
             {
                 int32_t flagP1 = 0;
 
                 do
                 {
-                    if (valA31 + flagP1 + 0x18)
+                    if (data_31 + flagP1 + 0x18)
                     {
-                        void* dstD3 = *(valA31 + flagP1 + 0x20);
-                        uint32_t valA34 = DynObj_LookupHashItem_16();
-                        int32_t tmpD6 = 0;
-                        tmpD6 = *(dstD3 + 0x1c);
-                        (*(((valA34 * 0x180 + tmpD6) << 2) + &g_a96ae0))(dstD3, 0);
+                        void* dest_3 = *(data_31 + flagP1 + 0x20);
+                        uint32_t data_34 = DynObj_LookupHashItem_16();
+                        int32_t temp_6 = 0;
+                        temp_6 = *(dest_3 + 0x1c);
+                        (*(((data_34 * 0x180 + temp_6) << 2) + &g_a96ae0))(dest_3, 0);
                     }
 
-                    valA31 = *(srcS + 0x88);
+                    data_31 = *(source_val + 0x88);
                     i_3 += 1;
                     flagP1 += 0x24;
-                } while (i_3 < *valA31);
+                } while (i_3 < *data_31);
             }
 
-            int32_t v_2c_5 = *(srcS + 0x88);
+            int32_t item_2c_5 = *(source_val + 0x88);
         }
     }
 
-    int32_t result = *(srcS + 0x88);
-    *(srcS + 0x98) = *(srcS + 0x8c);
-    *(srcS + 0xdc) = 0;
+    int32_t result = *(source_val + 0x88);
+    *(source_val + 0x98) = *(source_val + 0x8c);
+    *(source_val + 0xdc) = 0;
 
     if (result)
     {
-        result = *(srcS + 0x6f);
+        result = *(source_val + 0x6f);
 
         if (result)
         {
         label_523c91:
-            *(srcS + 0xbc) = Light_ApplyLightmap_2(*(srcS + 0xa4));
-            int32_t* valA38 = *(srcS + 0xc8);
+            *(source_val + 0xbc) = Light_ApplyLightmap_2(*(source_val + 0xa4));
+            int32_t* data_38 = *(source_val + 0xc8);
 
-            if (valA38)
+            if (data_38)
             {
-                Light_SetLightColor_2(valA38);
-                *(srcS + 0xc8) = 0;
+                Light_SetLightColor_2(data_38);
+                *(source_val + 0xc8) = 0;
             }
 
-            void* v_2c_8 = srcS;
-            *(srcS + 0xc8) = 0;
-            *(srcS + 0xb0) = 0;
-            result = Light_UpdateGlobalLight_2(*(srcS + 0xbc));
-            *(srcS + 0xbc) = 0;
+            void* item_2c_8 = source_val;
+            *(source_val + 0xc8) = 0;
+            *(source_val + 0xb0) = 0;
+            result = Light_UpdateGlobalLight_2(*(source_val + 0xbc));
+            *(source_val + 0xbc) = 0;
         }
         else
         {
-            result = *(srcS + 0x70);
+            result = *(source_val + 0x70);
 
             if (result)
                 goto label_523c91;
         }
 
-        result = *(srcS + 0x71);
+        result = *(source_val + 0x71);
 
         if (result)
         {
-            int32_t v_2c_10 = *(srcS + 0xb4);
-            void* v_30_4 = srcS;
+            int32_t item_2c_10 = *(source_val + 0xb4);
+            void* item_30_4 = source_val;
         }
     }
 

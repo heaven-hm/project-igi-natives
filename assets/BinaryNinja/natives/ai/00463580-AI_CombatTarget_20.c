@@ -1,8 +1,8 @@
 // Original IGI.EXE function: AI_CombatTarget_20 (VA 0x00463580; static CFG gate PASS, CFG score 1.000).
 #include "AI_CombatTarget_20.h"
-void* AI_CombatTarget_20(void* a1)
+void* AI_CombatTarget_20(void* context)
 
 {
-    *(a1 + 0x694) = 0;
-    return a1;
+    *(context + 0x694) = 0;
+    return context;
 }

@@ -1,57 +1,57 @@
 // Original IGI.EXE function: Camera_ResetMatrix_16 (VA 0x004A96AC; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_16.h"
-long double Camera_ResetMatrix_16(int16_t a1 @ x87control, long double a2 @ fp0, long double a3 @ fp1)
+long double Camera_ResetMatrix_16(int16_t context , long double param_2 , long double param_3 )
 
 {
-    long double v_1c = a2;
-    int32_t valA = *(&a3 + 6);
+    long double item_1c = param_2;
+    int32_t data_val = *(&param_3 + 6);
 
-    if (valA & 0x7fff0000)
-        return Camera_UpdateViewCone_16(valA, 0, a1, a3);
+    if (data_val & 0x7fff0000)
+        return Camera_UpdateViewCone_16(data_val, 0, context, param_3);
 
-    if (!(a3 | *(&a3 + 4)))
+    if (!(param_3 | *(&param_3 + 4)))
     {
         long double result;
-        int80_t f0_4;
+        long double f0_4;
         bool c2;
-        result = __fprem(v_1c, a3);
+        result = __fprem(item_1c, param_3);
         return result;
     }
 
-    int32_t tmpD = 2;
+    int32_t temp_val = 2;
     int16_t x87status;
     int16_t f0_2;
-    f0_2 = __fnstcw_memmem16(a1);
-    int16_t v_10 = f0_2;
-    int32_t v_c = v_10 | 0x33f;
-    int16_t x87control;
+    f0_2 = __fnstcw_memmem16(context);
+    int16_t item_10 = f0_2;
+    int32_t item_c = item_10 | 0x33f;
+    int16_t fpu_control;
     int16_t x87status_1;
-    x87control = __fldcw_memmem16(v_c);
-    int32_t valA6 = *(&v_1c + 8) & 0x7fff;
-    long double v_34_1;
+    fpu_control = __fldcw_memmem16(item_c);
+    int32_t data_6 = *(&item_1c + 8) & 0x7fff;
+    long double item_34_1;
 
-    if (valA6 > 0x7fbe)
+    if (data_6 > 0x7fbe)
     {
         int16_t x87status_2;
         int16_t f0_3;
-        f0_3 = __fnstcw_memmem16(x87control);
-        v_10 = f0_3;
-        valA6 = v_10 | 0x300;
-        v_c = valA6;
+        f0_3 = __fnstcw_memmem16(fpu_control);
+        item_10 = f0_3;
+        data_6 = item_10 | 0x300;
+        item_c = data_6;
         int16_t x87control_1;
         int16_t x87status_3;
-        x87control_1 = __fldcw_memmem16(v_c);
-        v_34_1 = a3 * g_544414;
+        x87control_1 = __fldcw_memmem16(item_c);
+        item_34_1 = param_3 * g_544414;
     }
     else
     {
-        tmpD = 3;
-        v_1c = v_1c * g_544414;
-        v_34_1 = a3 * g_544414;
+        temp_val = 3;
+        item_1c = item_1c * g_544414;
+        item_34_1 = param_3 * g_544414;
     }
 
     int16_t x87control_2;
     int16_t x87status_4;
-    x87control_2 = __fldcw_memmem16(v_10);
-    return Camera_UpdateViewCone_16(valA6, tmpD, x87control_2, v_34_1, a3, v_1c, v_10, v_c);
+    x87control_2 = __fldcw_memmem16(item_10);
+    return Camera_UpdateViewCone_16(data_6, temp_val, x87control_2, item_34_1, param_3, item_1c, item_10, item_c);
 }

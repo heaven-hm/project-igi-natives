@@ -1,52 +1,52 @@
 // Original IGI.EXE function: Hatch_LoadParameters (VA 0x00435F60; static CFG gate PASS, CFG score 1.000).
 #include "Hatch_LoadParameters.h"
-int32_t Hatch_LoadParameters(void* a1, float a2)
+int32_t Hatch_LoadParameters(void* context, float param_2)
 
 {
-    int32_t* dstD = a2;
-    float* valA = dstD[1];
-    long double x87_r6_7 =
-        valA[5] * *(a1 + 0x100) + valA[4] * *(a1 + 0xf8) + valA[3] * *(a1 + 0xf0);
-    double* valA1 = *dstD;
-    long double x87_r6_11 =
-        valA[8] * *(a1 + 0x100) + valA[7] * *(a1 + 0xf8) + valA[6] * *(a1 + 0xf0);
-    double v_18 =
-        valA[2] * *(a1 + 0x100) + valA[1] * *(a1 + 0xf8) + *valA * *(a1 + 0xf0) + *valA1;
-    double v_10 = x87_r6_7 + valA1[1];
-    double v_8 = x87_r6_11 + valA1[2];
-    long double x87_r7_9 = *(a1 + 0x9c);
-    long double x87_r6_12 = *(a1 + 0xa0);
-    x87_r6_12 - x87_r7_9;
-    long double x87_r7_10;
+    int32_t* dest_val = param_2;
+    float* data_val = dest_val[1];
+    long double fpu_val_6_7 =
+        data_val[5] * *(context + 0x100) + data_val[4] * *(context + 0xf8) + data_val[3] * *(context + 0xf0);
+    double* data_1 = *dest_val;
+    long double fpu_val_6_11 =
+        data_val[8] * *(context + 0x100) + data_val[7] * *(context + 0xf8) + data_val[6] * *(context + 0xf0);
+    double item_18 =
+        data_val[2] * *(context + 0x100) + data_val[1] * *(context + 0xf8) + *data_val * *(context + 0xf0) + *data_1;
+    double item_10 = fpu_val_6_7 + data_1[1];
+    double item_8 = fpu_val_6_11 + data_1[2];
+    long double fpu_val_7_9 = *(context + 0x9c);
+    long double fpu_val_6_12 = *(context + 0xa0);
+    fpu_val_6_12 - fpu_val_7_9;
+    long double fpu_val_7_10;
 
-    if (!(*(&((x87_r6_12 < x87_r7_9 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, x87_r7_9) ? 1 : 0) << 0xa
-            | (x87_r6_12 == x87_r7_9 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_10 = *(a1 + 0xa0);
+    if (!(*(&((fpu_val_6_12 < fpu_val_7_9 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, fpu_val_7_9) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == fpu_val_7_9 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_10 = *(context + 0xa0);
     else
-        x87_r7_10 = *(a1 + 0x9c);
+        fpu_val_7_10 = *(context + 0x9c);
 
-    long double x87_r6_13 = *(a1 + 0x98);
-    x87_r6_13 - x87_r7_10;
-    long double x87_r7_12;
+    long double fpu_val_6_13 = *(context + 0x98);
+    fpu_val_6_13 - fpu_val_7_10;
+    long double fpu_val_7_12;
 
-    if (*(&((x87_r6_13 < x87_r7_10 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_13, x87_r7_10) ? 1 : 0) << 0xa
-        | (x87_r6_13 == x87_r7_10 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_13 < fpu_val_7_10 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_13, fpu_val_7_10) ? 1 : 0) << 0xa
+        | (fpu_val_6_13 == fpu_val_7_10 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_13 = *(a1 + 0x9c);
-        long double x87_r6_14 = *(a1 + 0xa0);
-        x87_r6_14 - x87_r7_13;
+        long double fpu_val_7_13 = *(context + 0x9c);
+        long double fpu_val_6_14 = *(context + 0xa0);
+        fpu_val_6_14 - fpu_val_7_13;
 
-        if (!(*(&((x87_r6_14 < x87_r7_13 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_14, x87_r7_13) ? 1 : 0) << 0xa
-                | (x87_r6_14 == x87_r7_13 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_12 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_14 < fpu_val_7_13 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_14, fpu_val_7_13) ? 1 : 0) << 0xa
+                | (fpu_val_6_14 == fpu_val_7_13 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_12 = *(context + 0xa0);
         else
-            x87_r7_12 = *(a1 + 0x9c);
+            fpu_val_7_12 = *(context + 0x9c);
     }
     else
-        x87_r7_12 = *(a1 + 0x98);
+        fpu_val_7_12 = *(context + 0x98);
 
-    float v_3c_1 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_12;
-    WorldObject_CommitTransform(Level_StartMission_4(), a1, &v_18, v_3c_1);
-    return Vehicle_UpdateCockpit_4(a1, dstD[1]);
+    float item_3c_1 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_12;
+    WorldObject_CommitTransform(Level_StartMission_4(), context, &item_18, item_3c_1);
+    return Vehicle_UpdateCockpit_4(context, dest_val[1]);
 }

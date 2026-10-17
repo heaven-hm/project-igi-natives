@@ -1,44 +1,44 @@
 // Original IGI.EXE function: HumanPlayer_CheckGround_2 (VA 0x00408FE0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_CheckGround_2.h"
-int32_t HumanPlayer_CheckGround_2(void* a1, float a2)
+int32_t HumanPlayer_CheckGround_2(void* context, float param_2)
 
 {
-    float dstD = a2;
-    *(dstD + 0x33d) = 0;
-    a2 = Render_TransformVertices_10(dstD + 0x68, 0f);
-    int32_t v_14_1;
-    float v_10;
+    float dest_val = param_2;
+    *(dest_val + 0x33d) = 0;
+    param_2 = Render_TransformVertices_10(dest_val + 0x68, 0.0f);
+    int32_t item_14_1;
+    float item_10;
 
-    if (*(a1 + 0xc) != 0x1c)
+    if (*(context + 0xc) != 0x1c)
     {
-        v_10 = 0.200000003f;
-        v_14_1 = *(a1 + 0x10);
+        item_10 = 0.200000003f;
+        item_14_1 = *(context + 0x10);
     }
     else
     {
-        v_10 = 0f;
-        v_14_1 = *(a1 + 0x10);
+        item_10 = 0.0f;
+        item_14_1 = *(context + 0x10);
     }
 
-    Human_StateAnimation(dstD, v_14_1, v_10);
-    int32_t valA3 = *(a1 + 0xc) - 5;
+    Human_StateAnimation(dest_val, item_14_1, item_10);
+    int32_t data_3 = *(context + 0xc) - 5;
 
-    if (valA3 <= 0x12)
+    if (data_3 <= 0x12)
     {
-        int32_t tmpD1 = 0;
-        tmpD1 = lookup_table_40907c[valA3];
+        int32_t temp_1 = 0;
+        temp_1 = lookup_table_40907c[data_3];
 
-        switch (tmpD1)
+        switch (temp_1)
         {
             case 0:
             {
-                Render_BindTexture_10(dstD + 0x68, 0, Render_DrawLightmapMesh_10(dstD + 0x68, 0) * a2);
+                Render_BindTexture_10(dest_val + 0x68, 0, Render_DrawLightmapMesh_10(dest_val + 0x68, 0) * param_2);
                 break;
             }
         }
     }
 
-    int32_t result = HumanPlayer_ApplyRecoil_9(dstD, 3);
-    *(a1 + 0x14) = HumanPlayer_UpdateStamina_2;
+    int32_t result = HumanPlayer_ApplyRecoil_9(dest_val, 3);
+    *(context + 0x14) = HumanPlayer_UpdateStamina_2;
     return result;
 }

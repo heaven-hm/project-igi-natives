@@ -1,78 +1,78 @@
 // Original IGI.EXE function: Train_Process (VA 0x0042B500; static CFG gate FAIL, CFG score 0.800).
 #include "Train_Process.h"
-int32_t Train_Process(float a1, void* a2)
+int32_t Train_Process(float context, void* param_2)
 
 {
-    memcpy(a2, a1 + 0x20, 0x18);
-    *(a2 + 0x18) = 0;
-    *(a2 + 0x1c) = 0;
-    *(a2 + 0x20) = 0;
-    memcpy(a2 + 0x24, a1 + 0x70, 0x28);
-    float v_50;
-    Sys_DispatchOpcode_12(&v_50, -1.57079637f);
-    float v_44;
-    float v_38;
-    float v_28 = v_44 * *(a2 + 0x28) + v_38 * *(a2 + 0x2c) + v_50 * *(a2 + 0x24);
-    float v_4c;
-    float v_40;
-    float v_34;
-    float v_24 = v_40 * *(a2 + 0x28) + v_34 * *(a2 + 0x2c) + v_4c * *(a2 + 0x24);
-    float v_48;
-    float v_3c;
-    float v_30;
-    float v_20 = v_3c * *(a2 + 0x28) + v_30 * *(a2 + 0x2c) + v_48 * *(a2 + 0x24);
-    float v_1c = v_44 * *(a2 + 0x34) + v_38 * *(a2 + 0x38) + v_50 * *(a2 + 0x30);
-    float v_18 = v_40 * *(a2 + 0x34) + v_34 * *(a2 + 0x38) + v_4c * *(a2 + 0x30);
-    float v_14 = v_3c * *(a2 + 0x34) + v_30 * *(a2 + 0x38) + v_48 * *(a2 + 0x30);
-    int32_t v_2c;
-    int32_t v_4 = *(a2 + 0x48) + v_2c + 1;
-    float v_10 = v_38 * *(a2 + 0x44) + v_50 * *(a2 + 0x3c) + v_44 * *(a2 + 0x40);
-    float v_c = v_34 * *(a2 + 0x44) + v_4c * *(a2 + 0x3c) + v_40 * *(a2 + 0x40);
-    float v_8 = v_30 * *(a2 + 0x44) + v_48 * *(a2 + 0x3c) + v_3c * *(a2 + 0x40);
-    memcpy(a2 + 0x24, &v_28, 0x28);
-    long double x87_r7_36 = *(a1 + 0x9c);
-    long double x87_r6_36 = *(a1 + 0xa0);
-    x87_r6_36 - x87_r7_36;
-    long double x87_r7_37;
+    memcpy(param_2, context + 0x20, 0x18);
+    *(param_2 + 0x18) = 0;
+    *(param_2 + 0x1c) = 0;
+    *(param_2 + 0x20) = 0;
+    memcpy(param_2 + 0x24, context + 0x70, 0x28);
+    float item_50;
+    Sys_DispatchOpcode_12(&item_50, -1.57079637f);
+    float item_44;
+    float item_38;
+    float item_28 = item_44 * *(param_2 + 0x28) + item_38 * *(param_2 + 0x2c) + item_50 * *(param_2 + 0x24);
+    float item_4c;
+    float item_40;
+    float item_34;
+    float item_24 = item_40 * *(param_2 + 0x28) + item_34 * *(param_2 + 0x2c) + item_4c * *(param_2 + 0x24);
+    float item_48;
+    float item_3c;
+    float item_30;
+    float item_20 = item_3c * *(param_2 + 0x28) + item_30 * *(param_2 + 0x2c) + item_48 * *(param_2 + 0x24);
+    float item_1c = item_44 * *(param_2 + 0x34) + item_38 * *(param_2 + 0x38) + item_50 * *(param_2 + 0x30);
+    float item_18 = item_40 * *(param_2 + 0x34) + item_34 * *(param_2 + 0x38) + item_4c * *(param_2 + 0x30);
+    float item_14 = item_3c * *(param_2 + 0x34) + item_30 * *(param_2 + 0x38) + item_48 * *(param_2 + 0x30);
+    int32_t item_2c;
+    int32_t item_4 = *(param_2 + 0x48) + item_2c + 1;
+    float item_10 = item_38 * *(param_2 + 0x44) + item_50 * *(param_2 + 0x3c) + item_44 * *(param_2 + 0x40);
+    float item_c = item_34 * *(param_2 + 0x44) + item_4c * *(param_2 + 0x3c) + item_40 * *(param_2 + 0x40);
+    float item_8 = item_30 * *(param_2 + 0x44) + item_48 * *(param_2 + 0x3c) + item_3c * *(param_2 + 0x40);
+    memcpy(param_2 + 0x24, &item_28, 0x28);
+    long double fpu_val_7_36 = *(context + 0x9c);
+    long double fpu_val_6_36 = *(context + 0xa0);
+    fpu_val_6_36 - fpu_val_7_36;
+    long double fpu_val_7_37;
 
-    if (!(*(&((x87_r6_36 < x87_r7_36 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_36, x87_r7_36) ? 1 : 0) << 0xa
-            | (x87_r6_36 == x87_r7_36 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_37 = *(a1 + 0xa0);
+    if (!(*(&((fpu_val_6_36 < fpu_val_7_36 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_36, fpu_val_7_36) ? 1 : 0) << 0xa
+            | (fpu_val_6_36 == fpu_val_7_36 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_37 = *(context + 0xa0);
     else
-        x87_r7_37 = *(a1 + 0x9c);
+        fpu_val_7_37 = *(context + 0x9c);
 
-    long double x87_r6_37 = *(a1 + 0x98);
-    x87_r6_37 - x87_r7_37;
-    long double x87_r7_39;
+    long double fpu_val_6_37 = *(context + 0x98);
+    fpu_val_6_37 - fpu_val_7_37;
+    long double fpu_val_7_39;
 
-    if (*(&((x87_r6_37 < x87_r7_37 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_37, x87_r7_37) ? 1 : 0) << 0xa
-        | (x87_r6_37 == x87_r7_37 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_37 < fpu_val_7_37 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_37, fpu_val_7_37) ? 1 : 0) << 0xa
+        | (fpu_val_6_37 == fpu_val_7_37 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_40 = *(a1 + 0x9c);
-        long double x87_r6_38 = *(a1 + 0xa0);
-        x87_r6_38 - x87_r7_40;
+        long double fpu_val_7_40 = *(context + 0x9c);
+        long double fpu_val_6_38 = *(context + 0xa0);
+        fpu_val_6_38 - fpu_val_7_40;
 
-        if (!(*(&((x87_r6_38 < x87_r7_40 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_38, x87_r7_40) ? 1 : 0) << 0xa
-                | (x87_r6_38 == x87_r7_40 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_39 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_38 < fpu_val_7_40 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_38, fpu_val_7_40) ? 1 : 0) << 0xa
+                | (fpu_val_6_38 == fpu_val_7_40 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_39 = *(context + 0xa0);
         else
-            x87_r7_39 = *(a1 + 0x9c);
+            fpu_val_7_39 = *(context + 0x9c);
     }
     else
-        x87_r7_39 = *(a1 + 0x98);
+        fpu_val_7_39 = *(context + 0x98);
 
     int16_t result;
     long double fp0;
-    fp0 = Render_ComputeNormals(*(a1 + 0x6c));
-    *(a2 + 0x4c) = fp0 * x87_r7_39;
-    int32_t* ctxB1 = *(a2 + 0x50);
+    fp0 = Render_ComputeNormals(*(context + 0x6c));
+    *(param_2 + 0x4c) = fp0 * fpu_val_7_39;
+    int32_t* context_1 = *(param_2 + 0x50);
 
-    if (ctxB1)
+    if (context_1)
     {
-        *ctxB1 = g_53bd1c[0];
+        *context_1 = g_53bd1c[0];
         result = g_53bd1c[4][0];
-        ctxB1[1] = result;
+        context_1[1] = result;
     }
 
     return result;

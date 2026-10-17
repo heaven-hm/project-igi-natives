@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Script_ParseEnumReal32_29 (VA 0x004FC7B0; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumReal32_29.h"
-int32_t Script_ParseEnumReal32_29(void* a1)
+int32_t Script_ParseEnumReal32_29(void* context)
 
 {
-    int32_t valA = *(a1 + 0x690);
-    bool cond_0 = *(a1 + 0x1b8) <= 0;
-    *(a1 + 0x690) = 0;
+    int32_t data_val = *(context + 0x690);
+    bool flag_0 = *(context + 0x1b8) <= 0;
+    *(context + 0x690) = 0;
 
-    if (!cond_0 && !valA && !*(a1 + 0x14c))
+    if (!flag_0 && !data_val && !*(context + 0x14c))
     {
-        void* tmpD1 = *(a1 + 0x1b4);
-        long double x87_r7_1 = *(a1 + 0xf8);
-        long double f0_1 = *(tmpD1 + 0x2cc);
-        x87_r7_1 - f0_1;
+        void* temp_1 = *(context + 0x1b4);
+        long double fpu_val_7_1 = *(context + 0xf8);
+        long double f0_1 = *(temp_1 + 0x2cc);
+        fpu_val_7_1 - f0_1;
 
-        if (*(&((x87_r7_1 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f0_1 ? 1 : 0) << 0xe) + 1) & 1)
+        if (*(&((fpu_val_7_1 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f0_1 ? 1 : 0) << 0xe) + 1) & 1)
         {
-            long double x87_r7_2 = *(a1 + 0x140);
-            long double x87_r6_1 = *(a1 + 0x13c);
-            long double x87_r5_1 = *(a1 + 0x138);
-            long double x87_r4_4 = x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_2 * x87_r7_2;
-            long double f1_1 = *(tmpD1 + 0x2d0);
-            x87_r4_4 - f1_1;
+            long double fpu_val_7_2 = *(context + 0x140);
+            long double fpu_val_6_1 = *(context + 0x13c);
+            long double fpu_val_5_1 = *(context + 0x138);
+            long double fpu_val_4_4 = fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_2 * fpu_val_7_2;
+            long double f1_1 = *(temp_1 + 0x2d0);
+            fpu_val_4_4 - f1_1;
 
-            if (*(&((x87_r4_4 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_4, f1_1) ? 1 : 0) << 0xa
-                    | (x87_r4_4 == f1_1 ? 1 : 0) << 0xe) + 1) & 1)
+            if (*(&((fpu_val_4_4 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_4, f1_1) ? 1 : 0) << 0xa
+                    | (fpu_val_4_4 == f1_1 ? 1 : 0) << 0xe) + 1) & 1)
                 return 1;
         }
     }

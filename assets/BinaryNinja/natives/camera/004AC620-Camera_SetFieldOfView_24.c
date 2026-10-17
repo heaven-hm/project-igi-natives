@@ -1,17 +1,17 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_24 (VA 0x004AC620; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_24.h"
-int32_t Camera_SetFieldOfView_24(int16_t a1 @ x87control, int32_t a2, int32_t a3)
+int32_t Camera_SetFieldOfView_24(int16_t context , int32_t param_2, int32_t param_3)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
     int16_t x87status;
     int16_t f0;
-    f0 = __fnstcw_memmem16(a1);
-    v_8 = f0;
-    int32_t result = (Camera_ApplyBandFilter_24(v_8) & ~a3) | (a2 & a3);
-    int16_t x87control;
+    f0 = __fnstcw_memmem16(context);
+    item_8 = f0;
+    int32_t result = (Camera_ApplyBandFilter_24(item_8) & ~param_3) | (param_2 & param_3);
+    int16_t fpu_control;
     int16_t x87status_1;
-    x87control = __fldcw_memmem16(Camera_ApplyWideScreen_24(result));
+    fpu_control = __fldcw_memmem16(Camera_ApplyWideScreen_24(result));
     return result;
 }

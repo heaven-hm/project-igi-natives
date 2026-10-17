@@ -1,10 +1,10 @@
 // Original IGI.EXE function: GOStart (VA 0x00403660; static CFG gate FAIL, CFG score 0.833).
 #include "GOStart.h"
-int32_t GOStart(int32_t a1, float a2 @ 0xc)
+int32_t GOStart(int32_t context, float param_2 )
 
 // Sig: unknown GOStart(unknown param1, unknown* out_buffer)
 // Note: Registered at 0x403006 via registrar 0x4B8890 (push 0x403660 + name
-// string 'GOStart'). Init counterpart of cataloged GOPlayer @0x4036B0: zeroes
+// string 'GOStart'). Init counterpart of cataloged GOPlayer : zeroes
 // global 0xBC2380 and stores fcn.004B8A20 result to 0xBC2384; GOPlayer
 // reads/increments 0xBC2380. Copies 6 dwords (24 bytes) into second param
 // buffer, embedding pointer 0x567C74.  Verified: r2 forced-analysis confirmed
@@ -14,13 +14,13 @@ int32_t GOStart(int32_t a1, float a2 @ 0xc)
 // re-agent reverser/checker loop ran on this native (C decompilation pending
 // ARM64 native port).
 {
-    int32_t v_24 = 0;
+    int32_t item_24 = 0;
     g_bc2380 = 0;
-    g_bc2384 = Script_GetArg(a2, v_24);
-    int32_t v_18 = 0;
-    int32_t v_10 = 0;
-    int32_t v_c = 0;
-    char* v_8 = &g_567c74;
-    memcpy(a1, &v_18, 0x18);
-    return a1;
+    g_bc2384 = Script_GetArg(param_2, item_24);
+    int32_t item_18 = 0;
+    int32_t item_10 = 0;
+    int32_t item_c = 0;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
 }

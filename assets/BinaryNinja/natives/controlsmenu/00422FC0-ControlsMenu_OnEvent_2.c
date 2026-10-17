@@ -8,9 +8,9 @@ void* ControlsMenu_OnEvent_2(void* pThis)
         return pThis;
 
     *(pThis + 0x54) = 1;
-    void var_c0;
-    Script_ParseEnumString_6(&var_c0, pThis);
-    void* buf_cc = &var_c0;
-    void var_80;
-    return Game_DataSymbolLoad(&var_80, "%s.isOn");
+    void local_c0;
+    Script_ParseEnumString_6(&local_c0, pThis);
+    void* buf_cc = &local_c0;
+    void local_80;
+    return Game_DataSymbolLoad(&local_80, "%s.isOn");
 }

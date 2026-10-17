@@ -1,72 +1,70 @@
 // Original IGI.EXE function: Script_FormatString_29 (VA 0x004FC8E0; static CFG gate PASS, CFG score 1.000).
 #include "Script_FormatString_29.h"
-float Script_FormatString_29(float a1, float* a2, float a3, float* a4, float a5, float a6 @ 0x1c) __location("valA")
-
-{
-    float srcS = a1;
-    float valA = *(srcS + 4);
-    float v_28;
-    Sys_PushStack_12(&v_28, *(srcS + 0xc), *(srcS + 0x10), *(srcS + 0x14));
-    float* tmpD1 = a3;
-    long double x87_r7_2 = a4[1] * tmpD1[2] - tmpD1[1] * a4[2];
-    long double x87_r6_5 = -((*a4 * tmpD1[2] - *tmpD1 * a4[2]));
-    long double x87_r5_4 = tmpD1[1] * *a4 - *tmpD1 * a4[1];
-    float v_34 = x87_r7_2 * *a2 + x87_r5_4 * a2[6] + x87_r6_5 * a2[3];
-    float v_30 = x87_r7_2 * a2[1] + x87_r5_4 * a2[7] + x87_r6_5 * a2[4];
-    long double x87_r7_6 = x87_r7_2 * a2[2] + x87_r5_4 * a2[8] + x87_r6_5 * a2[5];
-    float v_24;
-    float v_20;
-    float v_40 = v_20 * x87_r7_6 + v_24 * v_30 + v_28 * v_34;
-    float v_1c;
-    float v_18;
-    float v_14;
-    float v_3c = v_14 * x87_r7_6 + v_18 * v_30 + v_1c * v_34;
-    float v_10;
-    float v_c;
-    float v_8;
-    long double x87_r7_9 = x87_r7_6 * v_8 + v_c * v_30 + v_10 * v_34;
-    float v_34_1 = v_3c * a2[1] + v_40 * *a2 + x87_r7_9 * a2[2];
-    float v_30_1 = v_3c * a2[4] + v_40 * a2[3] + x87_r7_9 * a2[5];
-    long double x87_r7_11 = v_3c * a2[7] + v_40 * a2[6] + x87_r7_9 * a2[8];
-    long double x87_r5_37 = -((v_34_1 * a4[2] - x87_r7_11 * *a4)) * tmpD1[1]
-        + (v_30_1 * a4[2] - x87_r7_11 * a4[1]) * *tmpD1;
-    long double x87_r7_16 = -(((a6 + 1f) * a5))
-        / (x87_r5_37 + (v_34_1 * a4[1] - v_30_1 * *a4) * tmpD1[2] + valA);
-    float v_40_3 = *tmpD1 * x87_r7_16;
-    float v_3c_2 = tmpD1[1] * x87_r7_16;
-    float v_38_1 = tmpD1[2] * x87_r7_16;
-    long double x87_r7_20 = v_38_1 * a4[1] - v_3c_2 * a4[2];
-    long double x87_r6_56 = -((v_38_1 * *a4 - v_40_3 * a4[2]));
-    long double x87_r5_44 = v_3c_2 * *a4 - v_40_3 * a4[1];
-    float v_30_2 = x87_r5_44 * a2[7] + x87_r6_56 * a2[4] + x87_r7_20 * a2[1];
-    long double x87_r7_24 = x87_r7_20 * a2[2] + x87_r5_44 * a2[8] + x87_r6_56 * a2[5];
-    long double x87_r6_59 =
-        x87_r5_44 * a2[6] + x87_r6_56 * a2[3] + x87_r7_20 * *a2 + *(srcS + 0x30);
-    a3 = x87_r6_59;
-    *(srcS + 0x30) = x87_r6_59;
-    long double x87_r6_61 = v_30_2 + *(srcS + 0x34);
-    a1 = x87_r6_61;
-    *(srcS + 0x34) = x87_r6_61;
-    long double x87_r7_25 = x87_r7_24 + *(srcS + 0x38);
-    *(srcS + 0x38) = x87_r7_25;
-    *(srcS + 0x48) = x87_r7_25 * v_20 + a1 * v_24 + a3 * v_28;
-    *(srcS + 0x4c) = x87_r7_25 * v_14 + a1 * v_18 + a3 * v_1c;
-    *(srcS + 0x50) = x87_r7_25 * v_8 + a1 * v_c + a3 * v_10;
-    long double x87_r7_36 =
-        a2[4] * *(srcS + 0x4c) + *(srcS + 0x50) * a2[5] + *(srcS + 0x48) * a2[3];
-    long double x87_r7_39 = a2[7] * *(srcS + 0x4c) + *(srcS + 0x50) * a2[8];
-    long double x87_r6_85 = *(srcS + 0x48) * a2[6];
-    *(srcS + 0x48) = a2[1] * *(srcS + 0x4c) + *a2 * *(srcS + 0x48) + a2[2] * *(srcS + 0x50);
-    *(srcS + 0x4c) = x87_r7_36;
-    long double x87_r7_42 = v_40_3 * *(srcS + 4);
-    long double x87_r6_87 = v_3c_2 * *(srcS + 4);
-    *(srcS + 0x50) = x87_r7_39 + x87_r6_85;
-    float v_34_5 = v_40_3;
-    float v_2c_3 = v_38_1 * *(srcS + 4);
-    float objC5 = *(srcS + 0x20);
-    long double x87_r7_45 = *(srcS + 0x1c) + x87_r6_87;
-    *(srcS + 0x18) = *(srcS + 0x18) + x87_r7_42;
-    *(srcS + 0x1c) = x87_r7_45;
-    *(srcS + 0x20) = objC5 + v_2c_3;
-    return SoundSys_InitSoundSys_17(srcS);
+float Script_FormatString_29(float context, float* param_2, float param_3, float* param_4, float param_5, float param_6 ) {
+    float source_val = context;
+    float data_val = *(source_val + 4);
+    float item_28;
+    Sys_PushStack_12(&item_28, *(source_val + 0xc), *(source_val + 0x10), *(source_val + 0x14));
+    float* temp_1 = param_3;
+    long double fpu_val_7_2 = param_4[1] * temp_1[2] - temp_1[1] * param_4[2];
+    long double fpu_val_6_5 = -((*param_4 * temp_1[2] - *temp_1 * param_4[2]));
+    long double fpu_val_5_4 = temp_1[1] * *param_4 - *temp_1 * param_4[1];
+    float item_34 = fpu_val_7_2 * *param_2 + fpu_val_5_4 * param_2[6] + fpu_val_6_5 * param_2[3];
+    float item_30 = fpu_val_7_2 * param_2[1] + fpu_val_5_4 * param_2[7] + fpu_val_6_5 * param_2[4];
+    long double fpu_val_7_6 = fpu_val_7_2 * param_2[2] + fpu_val_5_4 * param_2[8] + fpu_val_6_5 * param_2[5];
+    float item_24;
+    float item_20;
+    float item_40 = item_20 * fpu_val_7_6 + item_24 * item_30 + item_28 * item_34;
+    float item_1c;
+    float item_18;
+    float item_14;
+    float item_3c = item_14 * fpu_val_7_6 + item_18 * item_30 + item_1c * item_34;
+    float item_10;
+    float item_c;
+    float item_8;
+    long double fpu_val_7_9 = fpu_val_7_6 * item_8 + item_c * item_30 + item_10 * item_34;
+    float item_34_1 = item_3c * param_2[1] + item_40 * *param_2 + fpu_val_7_9 * param_2[2];
+    float item_30_1 = item_3c * param_2[4] + item_40 * param_2[3] + fpu_val_7_9 * param_2[5];
+    long double fpu_val_7_11 = item_3c * param_2[7] + item_40 * param_2[6] + fpu_val_7_9 * param_2[8];
+    long double fpu_val_5_37 = -((item_34_1 * param_4[2] - fpu_val_7_11 * *param_4)) * temp_1[1]
+        + (item_30_1 * param_4[2] - fpu_val_7_11 * param_4[1]) * *temp_1;
+    long double fpu_val_7_16 = -(((param_6 + 1.0f) * param_5))
+        / (fpu_val_5_37 + (item_34_1 * param_4[1] - item_30_1 * *param_4) * temp_1[2] + data_val);
+    float item_40_3 = *temp_1 * fpu_val_7_16;
+    float item_3c_2 = temp_1[1] * fpu_val_7_16;
+    float item_38_1 = temp_1[2] * fpu_val_7_16;
+    long double fpu_val_7_20 = item_38_1 * param_4[1] - item_3c_2 * param_4[2];
+    long double fpu_val_6_56 = -((item_38_1 * *param_4 - item_40_3 * param_4[2]));
+    long double fpu_val_5_44 = item_3c_2 * *param_4 - item_40_3 * param_4[1];
+    float item_30_2 = fpu_val_5_44 * param_2[7] + fpu_val_6_56 * param_2[4] + fpu_val_7_20 * param_2[1];
+    long double fpu_val_7_24 = fpu_val_7_20 * param_2[2] + fpu_val_5_44 * param_2[8] + fpu_val_6_56 * param_2[5];
+    long double fpu_val_6_59 =
+        fpu_val_5_44 * param_2[6] + fpu_val_6_56 * param_2[3] + fpu_val_7_20 * *param_2 + *(source_val + 0x30);
+    param_3 = fpu_val_6_59;
+    *(source_val + 0x30) = fpu_val_6_59;
+    long double fpu_val_6_61 = item_30_2 + *(source_val + 0x34);
+    context = fpu_val_6_61;
+    *(source_val + 0x34) = fpu_val_6_61;
+    long double fpu_val_7_25 = fpu_val_7_24 + *(source_val + 0x38);
+    *(source_val + 0x38) = fpu_val_7_25;
+    *(source_val + 0x48) = fpu_val_7_25 * item_20 + context * item_24 + param_3 * item_28;
+    *(source_val + 0x4c) = fpu_val_7_25 * item_14 + context * item_18 + param_3 * item_1c;
+    *(source_val + 0x50) = fpu_val_7_25 * item_8 + context * item_c + param_3 * item_10;
+    long double fpu_val_7_36 =
+        param_2[4] * *(source_val + 0x4c) + *(source_val + 0x50) * param_2[5] + *(source_val + 0x48) * param_2[3];
+    long double fpu_val_7_39 = param_2[7] * *(source_val + 0x4c) + *(source_val + 0x50) * param_2[8];
+    long double fpu_val_6_85 = *(source_val + 0x48) * param_2[6];
+    *(source_val + 0x48) = param_2[1] * *(source_val + 0x4c) + *param_2 * *(source_val + 0x48) + param_2[2] * *(source_val + 0x50);
+    *(source_val + 0x4c) = fpu_val_7_36;
+    long double fpu_val_7_42 = item_40_3 * *(source_val + 4);
+    long double fpu_val_6_87 = item_3c_2 * *(source_val + 4);
+    *(source_val + 0x50) = fpu_val_7_39 + fpu_val_6_85;
+    float item_34_5 = item_40_3;
+    float item_2c_3 = item_38_1 * *(source_val + 4);
+    float entity_5 = *(source_val + 0x20);
+    long double fpu_val_7_45 = *(source_val + 0x1c) + fpu_val_6_87;
+    *(source_val + 0x18) = *(source_val + 0x18) + fpu_val_7_42;
+    *(source_val + 0x1c) = fpu_val_7_45;
+    *(source_val + 0x20) = entity_5 + item_2c_3;
+    return SoundSys_InitSoundSys_17(source_val);
 }

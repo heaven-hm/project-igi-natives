@@ -1,27 +1,27 @@
 // Original IGI.EXE function: AlarmLight_Setup (VA 0x0043A3C0; static CFG gate PASS, CFG score 1.000).
 #include "AlarmLight_Setup.h"
-void* AlarmLight_Setup(void* a1)
+void* AlarmLight_Setup(void* context)
 
 {
-    DynObj_TryingToRemoveUnrigi(Level_InitTextures_4(), a1);
-    Script_CallNativeHandler_6(a1 + 0x1a4);
+    DynObj_TryingToRemoveUnrigi(Level_InitTextures_4(), context);
+    Script_CallNativeHandler_6(context + 0x1a4);
 
-    if (Script_EvaluateCondition_4(a1) >= 0)
+    if (Script_EvaluateCondition_4(context) >= 0)
     {
-        int32_t valA3 = Script_SpawnNewTask_6();
-        int32_t tmpD1 = 0;
-        tmpD1 = *(a1 + 0x1c);
-        int32_t valA4 = *(((valA3 * 0x180 + tmpD1) << 2) + &g_a96ae0);
+        int32_t data_3 = Script_SpawnNewTask_6();
+        int32_t temp_1 = 0;
+        temp_1 = *(context + 0x1c);
+        int32_t data_4 = *(((data_3 * 0x180 + temp_1) << 2) + &g_a96ae0);
 
-        if (valA4)
-            valA4(a1);
+        if (data_4)
+            data_4(context);
     }
 
-    int32_t* valA5 = *(a1 + 0xe8);
+    int32_t* data_5 = *(context + 0xe8);
 
-    if (valA5)
-        QTask_FindType(valA5);
+    if (data_5)
+        QTask_FindType(data_5);
 
-    Render_SetupLighting_14(a1);
-    return DynObj_RegisterSymbol_9(*(a1 + 0x68), a1);
+    Render_SetupLighting_14(context);
+    return DynObj_RegisterSymbol_9(*(context + 0x68), context);
 }

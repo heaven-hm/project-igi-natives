@@ -1,15 +1,13 @@
 // Original IGI.EXE function: Script_FormatString_17 (VA 0x004F4910; static CFG gate PASS, CFG score 1.000).
 #include "Script_FormatString_17.h"
-int32_t Script_FormatString_17(int32_t a1, int32_t a2, int32_t a3) __pure
+int32_t Script_FormatString_17(int32_t context, int32_t param_2, int32_t param_3) {
+    int32_t data_val = param_3;
 
-{
-    int32_t valA = a3;
+    if (data_val < 0)
+        data_val = 0;
 
-    if (valA < 0)
-        valA = 0;
+    if (data_val < param_2)
+        return context + (data_val << 3);
 
-    if (valA < a2)
-        return a1 + (valA << 3);
-
-    return a1 + (a2 << 3) - 8;
+    return context + (param_2 << 3) - 8;
 }

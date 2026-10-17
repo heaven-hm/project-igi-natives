@@ -3,7 +3,7 @@
 uint32_t SoundSys_InitSoundSys_16()
 
 {
-    int32_t valA;
-    valA = g_a5ef88;
-    return QTask_InitContext(valA);
+    int32_t data_val;
+    data_val = g_a5ef88;
+    return QTask_InitContext(data_val);
 }

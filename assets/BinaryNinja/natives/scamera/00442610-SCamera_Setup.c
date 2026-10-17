@@ -1,63 +1,63 @@
 // Original IGI.EXE function: SCamera_Setup (VA 0x00442610; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Setup.h"
-int32_t* SCamera_Setup(int80_t a1 @ fp0, void* a2)
+int32_t* SCamera_Setup(long double context , void* param_2)
 
 {
-    int32_t* i = *(a2 + 8);
-    int32_t* valA;
+    int32_t* i = *(param_2 + 8);
+    int32_t* data_val;
 
     if (*i && i)
     {
-        int32_t tmpD1 = g_afa7e0;
+        int32_t temp_1 = g_afa7e0;
 
         do
         {
-            int32_t* srcS1 = *i;
-            void* valA4;
+            int32_t* source_1 = *i;
+            void* data_4;
 
-            if (!srcS1)
-                valA4 = nullptr;
+            if (!source_1)
+                data_4 = nullptr;
             else
             {
-                int32_t valA1 = *srcS1;
-                int32_t valA2 = -(valA1);
-                valA4 = (valA2 - valA2) & srcS1;
+                int32_t data_1 = *source_1;
+                int32_t data_2 = -(data_1);
+                data_4 = (data_2 - data_2) & source_1;
             }
 
-            *((tmpD1 << 2) + &g_afa6e0) = valA4;
-            int32_t tmpD2 = tmpD1 + 1;
-            int32_t valA5 = 0;
-            g_afa7e0 = tmpD2;
-            valA5 = i[7];
-            valA = *((valA5 << 2) + &g_a970e0);
+            *((temp_1 << 2) + &g_afa6e0) = data_4;
+            int32_t temp_2 = temp_1 + 1;
+            int32_t data_5 = 0;
+            g_afa7e0 = temp_2;
+            data_5 = i[7];
+            data_val = *((data_5 << 2) + &g_a970e0);
 
-            if (valA)
+            if (data_val)
             {
-                valA = valA(i);
-                tmpD2 = g_afa7e0;
+                data_val = data_val(i);
+                temp_2 = g_afa7e0;
             }
 
-            i = *((tmpD2 << 2) + &g_afa6dc);
-            tmpD1 = tmpD2 - 1;
-            g_afa7e0 = tmpD1;
+            i = *((temp_2 << 2) + &g_afa6dc);
+            temp_1 = temp_2 - 1;
+            g_afa7e0 = temp_1;
         } while (i);
     }
 
-    valA = *(a2 + 0x170);
+    data_val = *(param_2 + 0x170);
 
-    if (valA)
-        *(a2 + 0x168) = 0;
+    if (data_val)
+        *(param_2 + 0x168) = 0;
     else
     {
-        valA = Script_FormatString_6(a2 + 0x174);
+        data_val = Script_FormatString_6(param_2 + 0x174);
 
-        if (valA)
+        if (data_val)
         {
-            int32_t valA6 = Script_SpawnNewTask_7(a2 + 0x174, a2);
-            *(a2 + 0x168) = a1;
-            return valA6;
+            int32_t data_6 = Script_SpawnNewTask_7(param_2 + 0x174, param_2);
+            *(param_2 + 0x168) = context;
+            return data_6;
         }
     }
 
-    return valA;
+    return data_val;
 }

@@ -3,7 +3,7 @@
 uint32_t HumanAttach_OnEvent()
 
 {
-    int32_t valA;
-    valA = g_5bdc48;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_5bdc48;
+    return QTask_CloseEvent_2(data_val);
 }

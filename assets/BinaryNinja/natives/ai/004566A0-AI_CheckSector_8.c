@@ -1,48 +1,48 @@
 // Original IGI.EXE function: AI_CheckSector_8 (VA 0x004566A0; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckSector_8.h"
-int32_t AI_CheckSector_8(void* a1, void* a2)
+int32_t AI_CheckSector_8(void* context, void* param_2)
 
 {
-    AI_FireWeapon_21(a2);
-    int32_t valA = *(a1 + 8);
+    AI_FireWeapon_21(param_2);
+    int32_t data_val = *(context + 8);
 
-    if (!(valA & 4))
+    if (!(data_val & 4))
     {
-        void* objC1 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0xb;
-        int32_t valA2 = *(objC1 + 0x2c);
-        *(a1 + 0x14) = valA2;
-        return valA2(a1, a2);
+        void* entity_1 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0xb;
+        int32_t data_2 = *(entity_1 + 0x2c);
+        *(context + 0x14) = data_2;
+        return data_2(context, param_2);
     }
 
-    if (valA & 0x20000)
+    if (data_val & 0x20000)
     {
-        void* valA4 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0xd;
-        int32_t valA5 = *(valA4 + 0x34);
-        *(a1 + 0x14) = valA5;
-        return valA5(a1, a2);
+        void* data_4 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0xd;
+        int32_t data_5 = *(data_4 + 0x34);
+        *(context + 0x14) = data_5;
+        return data_5(context, param_2);
     }
 
-    void* valA7 = *(a2 + 0x6ec);
+    void* data_7 = *(param_2 + 0x6ec);
 
-    if (valA7)
+    if (data_7)
     {
-        struct status_msg* valA10 = SoundSys_SetMasterVolume_7(Script_FormatString(), valA7 + 0x114);
+        struct status_msg* data_10 = SoundSys_SetMasterVolume_7(Script_FormatString(), data_7 + 0x114);
 
-        if (valA10)
-            SoundSys_StopSoundSample_7(valA10, a2 + 0x6a8);
+        if (data_10)
+            SoundSys_StopSoundSample_7(data_10, param_2 + 0x6a8);
     }
 
-    *(a2 + 0x664) = 0;
-    *(a2 + 0x668) = 0;
-    *(a2 + 0x66c) = 0;
-    int32_t* valA11 = *(a1 + 4);
-    *(a1 + 0xc) = *(a1 + 0x10);
-    *(a1 + 0x10) = 0;
-    int32_t valA12 = *valA11;
-    *(a1 + 0x14) = valA12;
-    return valA12(a1, a2);
+    *(param_2 + 0x664) = 0;
+    *(param_2 + 0x668) = 0;
+    *(param_2 + 0x66c) = 0;
+    int32_t* data_11 = *(context + 4);
+    *(context + 0xc) = *(context + 0x10);
+    *(context + 0x10) = 0;
+    int32_t data_12 = *data_11;
+    *(context + 0x14) = data_12;
+    return data_12(context, param_2);
 }

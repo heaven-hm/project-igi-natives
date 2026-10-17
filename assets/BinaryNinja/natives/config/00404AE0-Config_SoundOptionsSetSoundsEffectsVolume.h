@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00404AE0 Config_SoundOptionsSetSoundsEffectsVolume | gate PASS | openigi False */
-int Config_SoundOptionsSetSoundsEffectsVolume(long double a1, int a2, float a3);
+int Config_SoundOptionsSetSoundsEffectsVolume(long double context, int param_2, float param_3);

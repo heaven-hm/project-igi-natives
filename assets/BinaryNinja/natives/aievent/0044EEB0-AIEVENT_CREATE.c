@@ -31,13 +31,13 @@ void* AIEVENT_CREATE()
     TaskType_Set("AIACTIONFLAG_PUSHABLE", 1);
     TaskType_Set("HUMANAI_DETECTIONEVENT_GUNSHOT_RANGE", 0x1e000);
     TaskType_Set("HUMANAI_DETECTIONEVENT_GUNSHOT_SILENCED_RANGE", 0x1000);
-    int32_t dstD = 0;
+    int32_t dest_val = 0;
 
     for (char (** i)[0xb] = &g_53c9c0; i < &g_53ca34; )
     {
-        TaskType_Set(*i, dstD);
+        TaskType_Set(*i, dest_val);
         i = &i[1];
-        dstD += 1;
+        dest_val += 1;
     }
 
     TaskType_Set("AIALARMACCESS_BEFORECOMBAT", 0);

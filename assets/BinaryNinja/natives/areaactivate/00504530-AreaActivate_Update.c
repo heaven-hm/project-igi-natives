@@ -1,18 +1,18 @@
 // Original IGI.EXE function: AreaActivate_Update (VA 0x00504530; static CFG gate PASS, CFG score 1.000).
 #include "AreaActivate_Update.h"
-int32_t AreaActivate_Update(void* a1)
+int32_t AreaActivate_Update(void* context)
 
 {
-    char result = *(a1 + 0xb5);
+    char result = *(context + 0xb5);
 
     if (result)
         return result;
 
-    *(a1 + 0xb5) = 1;
-    void v_c0;
-    Script_ParseEnumString_6(&v_c0, a1);
-    void* v_d0_1 = &v_c0;
-    void v_80;
-    Game_DataSymbolLoad(&v_80, "%s.nActive");
-    return SymbolRegister_Int16(&v_80, a1 + 0xa8);
+    *(context + 0xb5) = 1;
+    void item_c0;
+    Script_ParseEnumString_6(&item_c0, context);
+    void* item_d0_1 = &item_c0;
+    void item_80;
+    Game_DataSymbolLoad(&item_80, "%s.nActive");
+    return SymbolRegister_Int16(&item_80, context + 0xa8);
 }

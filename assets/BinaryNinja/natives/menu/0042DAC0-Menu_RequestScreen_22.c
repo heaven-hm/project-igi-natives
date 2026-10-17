@@ -3,8 +3,8 @@
 int32_t Menu_RequestScreen_22()
 
 {
-    int32_t valA = SoundSys_Update3DPosition_18();
-    QTask_RemoveEventCallback(Menu_LeaveMenus_23(), valA, Menu_LeaveMenus_22);
-    int32_t valA2 = SoundSys_SetMasterVolume_18();
-    return QTask_RemoveEventCallback(Menu_LeaveMenus_23(), valA2, sub_42dce0);
+    int32_t data_val = SoundSys_Update3DPosition_18();
+    QTask_RemoveEventCallback(Menu_LeaveMenus_23(), data_val, Menu_LeaveMenus_22);
+    int32_t data_2 = SoundSys_SetMasterVolume_18();
+    return QTask_RemoveEventCallback(Menu_LeaveMenus_23(), data_2, sub_42dce0);
 }

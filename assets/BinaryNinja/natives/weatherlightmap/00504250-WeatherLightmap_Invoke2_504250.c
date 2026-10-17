@@ -1,7 +1,7 @@
 // Original IGI.EXE function: WeatherLightmap_Invoke2_504250 (VA 0x00504250; static CFG gate PASS, CFG score 1.000).
 #include "WeatherLightmap_Invoke2_504250.h"
 
-int32_t(void* arg1, char* arg2)
+int32_t WeatherLightmap_Invoke2_504250(void* context, char* param_2)
 {
     // Native implementation (0x504250-0x504278, 4 blocks)
     return 0;

@@ -1,6 +1,6 @@
 // Original IGI.EXE function: AIFunction_IsEventBehind (VA 0x0044E860; static CFG gate FAIL, CFG score 0.667).
 #include "AIFunction_IsEventBehind.h"
-int32_t AIFunction_IsEventBehind(int32_t a1)
+int32_t AIFunction_IsEventBehind(int32_t context)
 
 // Sig: int AIFunction_IsEventBehind()
 // Note: RETURNS non-zero if the current event came from BEHIND the AI
@@ -10,29 +10,29 @@ int32_t AIFunction_IsEventBehind(int32_t a1)
 {
     int32_t* i_1 = **&g_5bda60;
     int32_t* i = *i_1;
-    int32_t v_20;
+    int32_t item_20;
 
     if (i)
     {
-        void* tmpD1 = g_5bda58;
+        void* temp_1 = g_5bda58;
 
         do
         {
-            long double x87_r4_3 = *(tmpD1 + 0x94) * (*(i_1 + 0x20) - *(tmpD1 + 0x48))
-                + *(tmpD1 + 0x7c) * (*(i_1 + 0x10) - *(tmpD1 + 0x38));
-            long double x87_r4_4 = x87_r4_3 + *(tmpD1 + 0x88) * (*(i_1 + 0x18) - *(tmpD1 + 0x40));
+            long double fpu_val_4_3 = *(temp_1 + 0x94) * (*(i_1 + 0x20) - *(temp_1 + 0x48))
+                + *(temp_1 + 0x7c) * (*(i_1 + 0x10) - *(temp_1 + 0x38));
+            long double fpu_val_4_4 = fpu_val_4_3 + *(temp_1 + 0x88) * (*(i_1 + 0x18) - *(temp_1 + 0x40));
             long double f0_1 = 0.0;
-            x87_r4_4 - f0_1;
+            fpu_val_4_4 - f0_1;
 
-            if (*(&((x87_r4_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_4, f0_1) ? 1 : 0) << 0xa
-                | (x87_r4_4 == f0_1 ? 1 : 0) << 0xe) + 1) & 1)
+            if (*(&((fpu_val_4_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_4, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_4_4 == f0_1 ? 1 : 0) << 0xe) + 1) & 1)
             {
-                v_20 = 1;
-                int32_t v_18_1 = 0;
-                int32_t v_14_1 = 0x3ff00000;
-                char* v_10_1 = &g_567c74;
-                memcpy(a1, &v_20, 0x18);
-                return a1;
+                item_20 = 1;
+                int32_t item_18_1 = 0;
+                int32_t item_14_1 = 0x3ff00000;
+                char* item_10_1 = &g_567c74;
+                memcpy(context, &item_20, 0x18);
+                return context;
             }
 
             i_1 = i;
@@ -40,10 +40,10 @@ int32_t AIFunction_IsEventBehind(int32_t a1)
         } while (i);
     }
 
-    v_20 = 0;
-    int32_t v_18 = 0;
-    int32_t v_14 = 0;
-    char* v_10 = &g_567c74;
-    memcpy(a1, &v_20, 0x18);
-    return a1;
+    item_20 = 0;
+    int32_t item_18 = 0;
+    int32_t item_14 = 0;
+    char* item_10 = &g_567c74;
+    memcpy(context, &item_20, 0x18);
+    return context;
 }

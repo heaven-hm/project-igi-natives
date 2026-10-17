@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004227A0 Menu_PlayMusic_11 | gate PASS | openigi True */
-int Menu_PlayMusic_11(void * a1, int a2, int a3, int a4, float a5, int a6, int a7, int a8);
+int Menu_PlayMusic_11(void * context, int param_2, int param_3, int param_4, float param_5, int param_6, int param_7, int param_8);

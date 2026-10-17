@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00418AA0 Menu_TaskNew | gate PASS | openigi True */
-void*(void* arg1);
+void* Menu_TaskNew(void* context);

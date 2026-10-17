@@ -5,15 +5,15 @@ int32_t AI_HumanTeamGood()
 {
     DynObj_CreateMagicObject_4(g_5bdc24);
     DynObj_CreateMagicObject_4(g_5bdc18);
-    char valA = g_53f314;
+    char data_val = g_53f314;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
-    valA = g_53f315;
+    data_val = g_53f315;
 
-    if (valA != 0xff)
-        QTask_InitContext(valA);
+    if (data_val != 0xff)
+        QTask_InitContext(data_val);
 
     QTask_InitContext(g_53f316);
     QTask_InitContext(g_53f317);

@@ -1,11 +1,11 @@
 // Original IGI.EXE function: AI_CheckSector_23 (VA 0x00465970; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckSector_23.h"
-void* AI_CheckSector_23(void* a1, int32_t a2, int32_t a3, int32_t a4)
+void* AI_CheckSector_23(void* context, int32_t param_2, int32_t param_3, int32_t param_4)
 
 {
-    *(a1 + 0x1b4) = 0x3f800000;
-    *(a1 + 0x1b8) = a2;
-    *(a1 + 0x1bc) = a3;
-    *(a1 + 0x1c0) = 1.0 / a4;
-    return a1;
+    *(context + 0x1b4) = 0x3f800000;
+    *(context + 0x1b8) = param_2;
+    *(context + 0x1bc) = param_3;
+    *(context + 0x1c0) = 1.0 / param_4;
+    return context;
 }

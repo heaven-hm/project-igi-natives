@@ -3,10 +3,10 @@
 int32_t Display_CloseDevice_9()
 
 {
-    bool cond_0 = !g_6840e9;
+    bool flag_0 = !g_6840e9;
     g_5ca1b4 = 0;
 
-    if (!cond_0)
+    if (!flag_0)
     {
         g_5ca194 = 0;
         g_5ca190 = 0;

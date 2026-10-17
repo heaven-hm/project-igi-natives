@@ -1,39 +1,39 @@
 // Original IGI.EXE function: AmbientArea_Process (VA 0x0044C740; static CFG gate PASS, CFG score 1.000).
 #include "AmbientArea_Process.h"
-int32_t AmbientArea_Process(void* a1)
+int32_t AmbientArea_Process(void* context)
 
 {
-    char objC = 0;
-    char* dstD = a1 + 0x94;
-    *(a1 + 0x1b4) = 0;
-    char* flagP = dstD;
+    char entity_val = 0;
+    char* dest_val = context + 0x94;
+    *(context + 0x1b4) = 0;
+    char* flagP = dest_val;
 
     while (true)
     {
-        char valA1 = *dstD;
+        char data_1 = *dest_val;
 
-        if (valA1 != 0x20 && valA1 != 0x3b && valA1 != 0x2c && valA1)
+        if (data_1 != 0x20 && data_1 != 0x3b && data_1 != 0x2c && data_1)
         {
-            if (!objC)
-                flagP = dstD;
+            if (!entity_val)
+                flagP = dest_val;
 
-            objC = 1;
+            entity_val = 1;
         }
-        else if (objC)
+        else if (entity_val)
         {
-            Camera_ApplyLineFilter_5((*(a1 + 0x1b4) << 5) + a1 + 0xb4, flagP, dstD - flagP);
-            *((*(a1 + 0x1b4) << 5) - flagP + dstD + a1 + 0xb4) = 0;
-            objC = 0;
-            *(a1 + 0x1b4) += 1;
+            Camera_ApplyLineFilter_5((*(context + 0x1b4) << 5) + context + 0xb4, flagP, dest_val - flagP);
+            *((*(context + 0x1b4) << 5) - flagP + dest_val + context + 0xb4) = 0;
+            entity_val = 0;
+            *(context + 0x1b4) += 1;
         }
 
-        if (!*dstD)
+        if (!*dest_val)
             break;
 
-        dstD = &dstD[1];
+        dest_val = &dest_val[1];
     }
 
-    *(a1 + 0x90) = (Sys_AllocateMemory_14(Level_SetMission_5()) * *(a1 + 0x88) + *(a1 + 0x80)) * 30.0;
-    Script_Isexists(a1 + 0x1bc, a1);
+    *(context + 0x90) = (Sys_AllocateMemory_14(Level_SetMission_5()) * *(context + 0x88) + *(context + 0x80)) * 30.0;
+    Script_Isexists(context + 0x1bc, context);
     return 0;
 }

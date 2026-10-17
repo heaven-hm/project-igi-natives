@@ -3,35 +3,35 @@
 int32_t Terrain_SampleHeightmap_2()
 
 {
-    int32_t valA2 = g_a800ec;
-    int32_t dstD = 0;
+    int32_t data_2 = g_a800ec;
+    int32_t dest_val = 0;
 
-    if (valA2 <= 0)
+    if (data_2 <= 0)
     {
         g_a800ec = 0;
-        return valA2;
+        return data_2;
     }
 
-    int32_t* srcS = &g_afa844;
-    int32_t valA1;
+    int32_t* source_val = &g_afa844;
+    int32_t data_1;
 
     do
     {
-        int32_t* valA = Display_CloseDevice_14(0x28);
-        valA[1] = g_a7dc60;
-        valA[3] = srcS[-1];
-        valA[4] = *srcS;
-        valA[5] = srcS[1];
-        valA[6] = srcS[2];
-        valA[7] = srcS[3];
-        valA[8] = srcS[4];
-        valA[9] = srcS[5];
-        Display_ClearSurfaces_14(0, valA);
-        valA1 = g_a800ec;
-        dstD += 1;
-        srcS = &srcS[7];
-    } while (dstD < valA1);
+        int32_t* data_val = Display_CloseDevice_14(0x28);
+        data_val[1] = g_a7dc60;
+        data_val[3] = source_val[-1];
+        data_val[4] = *source_val;
+        data_val[5] = source_val[1];
+        data_val[6] = source_val[2];
+        data_val[7] = source_val[3];
+        data_val[8] = source_val[4];
+        data_val[9] = source_val[5];
+        Display_ClearSurfaces_14(0, data_val);
+        data_1 = g_a800ec;
+        dest_val += 1;
+        source_val = &source_val[7];
+    } while (dest_val < data_1);
 
     g_a800ec = 0;
-    return valA1;
+    return data_1;
 }

@@ -1,11 +1,11 @@
 // Original IGI.EXE function: AI_SelectTarget_10 (VA 0x00458920; static CFG gate PASS, CFG score 1.000).
 #include "AI_SelectTarget_10.h"
-int32_t AI_SelectTarget_10(void* a1, void* a2)
+int32_t AI_SelectTarget_10(void* context, void* param_2)
 
 {
-    *(a2 + 0x33d) = 0;
-    *(a2 + 0x696) = 0;
-    int32_t result = Human_StateAnimation(a2, *(a1 + 0x10), 0f);
-    *(a1 + 0x14) = sub_458950;
+    *(param_2 + 0x33d) = 0;
+    *(param_2 + 0x696) = 0;
+    int32_t result = Human_StateAnimation(param_2, *(context + 0x10), 0.0f);
+    *(context + 0x14) = sub_458950;
     return result;
 }

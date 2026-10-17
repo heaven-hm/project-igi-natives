@@ -1,87 +1,87 @@
 // Original IGI.EXE function: FX_FireBallUpdate_5 (VA 0x004849B0; static CFG gate FAIL, CFG score 0.821).
 #include "FX_FireBallUpdate_5.h"
-int32_t FX_FireBallUpdate_5(void* a1)
+int32_t FX_FireBallUpdate_5(void* context)
 
 {
-    void* ctxB = **(a1 + 0x68);
-    double v_e8;
-    memcpy(&v_e8, ctxB + 0x20, 0x18);
-    double v_90;
-    memcpy(&v_90, **(ctxB + 0xde8) + 0x20, 0x18);
-    double v_80 = v_80 + 4096.0;
-    double v_a8;
-    memcpy(&v_a8, &v_e8, 0x18);
-    double v_d8;
-    double v_98 = v_d8 + 4096.0;
-    double v_c0 = v_90 - v_e8;
-    double v_e0;
-    double v_88;
-    double v_b8 = v_88 - v_e0;
-    double v_b0 = v_80 - v_d8;
-    long double fp0 = Sys_OpenFileStream_11(&v_c0);
+    void* context_val = **(context + 0x68);
+    double item_e8;
+    memcpy(&item_e8, context_val + 0x20, 0x18);
+    double item_90;
+    memcpy(&item_90, **(context_val + 0xde8) + 0x20, 0x18);
+    double item_80 = item_80 + 4096.0;
+    double item_a8;
+    memcpy(&item_a8, &item_e8, 0x18);
+    double item_d8;
+    double item_98 = item_d8 + 4096.0;
+    double item_c0 = item_90 - item_e8;
+    double item_e0;
+    double item_88;
+    double item_b8 = item_88 - item_e0;
+    double item_b0 = item_80 - item_d8;
+    long double fp0 = Sys_OpenFileStream_11(&item_c0);
     long double f0 = 0.0;
     fp0 - f0;
 
     if (!(*(&((fp0 < f0 ? 1 : 0) << 8 | (FCMP_UO(fp0, f0) ? 1 : 0) << 0xa
         | (fp0 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
     {
-        long double x87_r7_11 = 10240.0 / fp0;
-        void* v_74_1 = ctxB;
-        v_c0 = x87_r7_11 * v_c0;
-        double v_b8_1 = x87_r7_11 * v_b8;
-        long double x87_r7_12 = x87_r7_11 * v_b0;
-        double v_b0_1 = x87_r7_12;
-        v_e8 = v_a8 - v_c0;
-        double v_a0;
-        v_e0 = v_a0 - v_b8_1;
-        v_d8 = v_98 - x87_r7_12;
-        char valA3 = Level_LoadObjects_4();
-        void v_78;
-        void v_70;
-        DynObj_FindSymbol_11(Level_StartMission_4(), &v_70, &v_a8, &v_e8, 1, valA3, &v_78,
+        long double fpu_val_7_11 = 10240.0 / fp0;
+        void* item_74_1 = context_val;
+        item_c0 = fpu_val_7_11 * item_c0;
+        double item_b8_1 = fpu_val_7_11 * item_b8;
+        long double fpu_val_7_12 = fpu_val_7_11 * item_b0;
+        double item_b0_1 = fpu_val_7_12;
+        item_e8 = item_a8 - item_c0;
+        double item_a0;
+        item_e0 = item_a0 - item_b8_1;
+        item_d8 = item_98 - fpu_val_7_12;
+        char data_3 = Level_LoadObjects_4();
+        void item_78;
+        void item_70;
+        DynObj_FindSymbol_11(Level_StartMission_4(), &item_70, &item_a8, &item_e8, 1, data_3, &item_78,
             0xffffffff);
-        int32_t v_18;
-        void v_68;
+        int32_t item_18;
+        void item_68;
 
-        if (v_18)
-            memcpy(&v_a8, &v_68, 0x18);
+        if (item_18)
+            memcpy(&item_a8, &item_68, 0x18);
         else
-            memcpy(&v_a8, &v_e8, 0x18);
+            memcpy(&item_a8, &item_e8, 0x18);
     }
 
-    float v_138;
-    FX_DebrisSpawn_3(&v_138, &v_a8, &v_90);
-    memcpy(a1 + 0x20, &v_a8, 0x18);
-    float v_110;
-    Sys_CloseFileStream_12(&v_110, -1.57079637f);
-    float v_134;
-    float v_130;
-    float v_104;
-    float v_f8;
-    v_e8 = v_f8 * v_130 + v_104 * v_134 + v_110 * v_138;
-    float v_10c;
-    float v_100;
-    float v_f4;
-    *(&v_e8 + 4) = v_f4 * v_130 + v_100 * v_134 + v_10c * v_138;
-    float v_108;
-    float v_fc;
-    float v_f0;
-    v_e0 = v_f0 * v_130 + v_fc * v_134 + v_108 * v_138;
-    float v_12c;
-    float v_128;
-    float v_124;
-    *(&v_e0 + 4) = v_124 * v_f8 + v_128 * v_104 + v_12c * v_110;
-    v_d8 = v_124 * v_f4 + v_128 * v_100 + v_12c * v_10c;
-    *(&v_d8 + 4) = v_124 * v_f0 + v_128 * v_fc + v_12c * v_108;
-    int32_t v_114;
+    float item_138;
+    FX_DebrisSpawn_3(&item_138, &item_a8, &item_90);
+    memcpy(context + 0x20, &item_a8, 0x18);
+    float item_110;
+    Sys_CloseFileStream_12(&item_110, -1.57079637f);
+    float item_134;
+    float item_130;
+    float item_104;
+    float item_f8;
+    item_e8 = item_f8 * item_130 + item_104 * item_134 + item_110 * item_138;
+    float item_10c;
+    float item_100;
+    float item_f4;
+    *(&item_e8 + 4) = item_f4 * item_130 + item_100 * item_134 + item_10c * item_138;
+    float item_108;
+    float item_fc;
+    float item_f0;
+    item_e0 = item_f0 * item_130 + item_fc * item_134 + item_108 * item_138;
+    float item_12c;
+    float item_128;
+    float item_124;
+    *(&item_e0 + 4) = item_124 * item_f8 + item_128 * item_104 + item_12c * item_110;
+    item_d8 = item_124 * item_f4 + item_128 * item_100 + item_12c * item_10c;
+    *(&item_d8 + 4) = item_124 * item_f0 + item_128 * item_fc + item_12c * item_108;
+    int32_t item_114;
     int32_t result;
-    int32_t v_c4 = result + v_114 + 1;
-    float v_120;
-    float v_11c;
-    float v_118;
-    float v_d0 = v_118 * v_f8 + v_11c * v_104 + v_120 * v_110;
-    float v_cc = v_118 * v_f4 + v_11c * v_100 + v_120 * v_10c;
-    float v_c8 = v_118 * v_f0 + v_11c * v_fc + v_120 * v_108;
-    memcpy(a1 + 0x38, &v_e8, 0x28);
+    int32_t item_c4 = result + item_114 + 1;
+    float item_120;
+    float item_11c;
+    float item_118;
+    float item_d0 = item_118 * item_f8 + item_11c * item_104 + item_120 * item_110;
+    float item_cc = item_118 * item_f4 + item_11c * item_100 + item_120 * item_10c;
+    float item_c8 = item_118 * item_f0 + item_11c * item_fc + item_120 * item_108;
+    memcpy(context + 0x38, &item_e8, 0x28);
     return result;
 }

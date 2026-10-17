@@ -1,16 +1,16 @@
 // Original IGI.EXE function: HumanPlayer_UpdateMotion_8 (VA 0x0040F4A0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_UpdateMotion_8.h"
-int32_t HumanPlayer_UpdateMotion_8(void* a1, void* a2)
+int32_t HumanPlayer_UpdateMotion_8(void* context, void* param_2)
 
 {
-    int32_t dstD = *(a2 + 0x4ec);
-    void* valA1;
-    int32_t objC;
-    valA1 = Table_GetAt(a2 + 0x4c4, 0);
-    int32_t tmpD;
-    void* valA2 = HumanPlayer_LoadParameters_13(valA1, tmpD, objC, valA1);
-    *(a2 + 0x4d2) = 1;
-    int32_t result = Bones_PlayAnimation(dstD + 0x68, 0, *(valA2 + 0x688), 0, 0f);
-    *(a1 + 0x14) = sub_40fd70;
+    int32_t dest_val = *(param_2 + 0x4ec);
+    void* data_1;
+    int32_t entity_val;
+    data_1 = Table_GetAt(param_2 + 0x4c4, 0);
+    int32_t temp_val;
+    void* data_2 = HumanPlayer_LoadParameters_13(data_1, temp_val, entity_val, data_1);
+    *(param_2 + 0x4d2) = 1;
+    int32_t result = Bones_PlayAnimation(dest_val + 0x68, 0, *(data_2 + 0x688), 0, 0.0f);
+    *(context + 0x14) = sub_40fd70;
     return result;
 }

@@ -1,52 +1,52 @@
 // Original IGI.EXE function: Lensflare_LoadParameters (VA 0x00520F50; static CFG gate PASS, CFG score 1.000).
 #include "Lensflare_LoadParameters.h"
-void* Lensflare_LoadParameters(void* a1)
+void* Lensflare_LoadParameters(void* context)
 
 {
-    void* valA = *(a1 + 0x84);
+    void* data_val = *(context + 0x84);
 
-    if (valA == 0xffffffff)
+    if (data_val == 0xffffffff)
     {
-        void* dstD2 = *(a1 + 0x14);
+        void* dest_2 = *(context + 0x14);
 
-        if (dstD2)
+        if (dest_2)
         {
-            valA = Light_SampleLightmap_5();
+            data_val = Light_SampleLightmap_5();
 
-            if (*(dstD2 + 0x1c) == valA)
+            if (*(dest_2 + 0x1c) == data_val)
             {
-                *(a1 + 0x6c) = *(dstD2 + 0x24);
-                *(a1 + 0x70) = *(dstD2 + 0x28);
-                *(a1 + 0x74) = *(dstD2 + 0x2c);
-                *(a1 + 0x78) = *(dstD2 + 0x30);
-                valA = *(dstD2 + 0x34);
-                *(a1 + 0x7c) = valA;
-                *(a1 + 0x80) = *(dstD2 + 0x38);
+                *(context + 0x6c) = *(dest_2 + 0x24);
+                *(context + 0x70) = *(dest_2 + 0x28);
+                *(context + 0x74) = *(dest_2 + 0x2c);
+                *(context + 0x78) = *(dest_2 + 0x30);
+                data_val = *(dest_2 + 0x34);
+                *(context + 0x7c) = data_val;
+                *(context + 0x80) = *(dest_2 + 0x38);
             }
         }
     }
     else
     {
-        valA = Script_ExecuteLevelScript_4(valA);
-        void* dstD = valA;
+        data_val = Script_ExecuteLevelScript_4(data_val);
+        void* dest_val = data_val;
 
-        if (dstD)
+        if (dest_val)
         {
-            valA = Light_SampleLightmap_5();
+            data_val = Light_SampleLightmap_5();
 
-            if (*(dstD + 0x1c) == valA)
+            if (*(dest_val + 0x1c) == data_val)
             {
-                *(a1 + 0x6c) = *(dstD + 0x24);
-                *(a1 + 0x70) = *(dstD + 0x28);
-                *(a1 + 0x74) = *(dstD + 0x2c);
-                *(a1 + 0x78) = *(dstD + 0x30);
-                *(a1 + 0x7c) = *(dstD + 0x34);
-                int32_t valA3 = *(dstD + 0x38);
-                *(a1 + 0x80) = valA3;
-                return valA3;
+                *(context + 0x6c) = *(dest_val + 0x24);
+                *(context + 0x70) = *(dest_val + 0x28);
+                *(context + 0x74) = *(dest_val + 0x2c);
+                *(context + 0x78) = *(dest_val + 0x30);
+                *(context + 0x7c) = *(dest_val + 0x34);
+                int32_t data_3 = *(dest_val + 0x38);
+                *(context + 0x80) = data_3;
+                return data_3;
             }
         }
     }
 
-    return valA;
+    return data_val;
 }

@@ -3,8 +3,8 @@
 int32_t Camera_UpdateTransform_16()
 
 {
-    char objC;
+    char entity_val;
     void* flagP;
     /* tailcall */
-    return sub_4a8c78(objC, flagP);
+    return sub_4a8c78(entity_val, flagP);
 }

@@ -1,35 +1,35 @@
 // Original IGI.EXE function: FX_DebrisSpawn_13 (VA 0x004896C0; static CFG gate PASS, CFG score 1.000).
 #include "FX_DebrisSpawn_13.h"
-char* FX_DebrisSpawn_13(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6)
+char* FX_DebrisSpawn_13(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6)
 
 {
-    *a1 = a2;
-    a1[4] = a3;
-    a1[5] = a4;
-    a1[3] = g_5c8b08;
-    int32_t valA4 = (g_5c8b08 + 1) & 0x80000003;
+    *context = param_2;
+    context[4] = param_3;
+    context[5] = param_4;
+    context[3] = g_5c8b08;
+    int32_t data_4 = (g_5c8b08 + 1) & 0x80000003;
 
-    if (valA4 < 0)
-        valA4 = ((valA4 - 1) | 0xfffffffc) + 1;
+    if (data_4 < 0)
+        data_4 = ((data_4 - 1) | 0xfffffffc) + 1;
 
-    g_5c8b08 = valA4;
-    int32_t valA8;
-    int32_t tmpD2;
-    tmpD2 = HIGHD(a5);
-    valA8 = LOWD(a5);
-    a1[7] = 0;
-    a1[0xa] = 0;
-    a1[1] = (valA8 + (tmpD2 & 3)) >> 2;
-    int32_t valA12;
-    int32_t tmpD4;
-    tmpD4 = HIGHD(a6);
-    valA12 = LOWD(a6);
-    a1[2] = (valA12 + (tmpD4 & 3)) >> 2;
-    a1[6] = &a1[7];
-    a1[8] = &a1[6];
-    a1[0xb] = &a1[9];
-    a1[9] = &a1[0xa];
-    char* result = a1 + 0x5a;
+    g_5c8b08 = data_4;
+    int32_t data_8;
+    int32_t temp_2;
+    temp_2 = HIGHD(param_5);
+    data_8 = LOWD(param_5);
+    context[7] = 0;
+    context[0xa] = 0;
+    context[1] = (data_8 + (temp_2 & 3)) >> 2;
+    int32_t data_12;
+    int32_t temp_4;
+    temp_4 = HIGHD(param_6);
+    data_12 = LOWD(param_6);
+    context[2] = (data_12 + (temp_4 & 3)) >> 2;
+    context[6] = &context[7];
+    context[8] = &context[6];
+    context[0xb] = &context[9];
+    context[9] = &context[0xa];
+    char* result = context + 0x5a;
     int32_t i_1 = 0xc0;
     int32_t i;
 

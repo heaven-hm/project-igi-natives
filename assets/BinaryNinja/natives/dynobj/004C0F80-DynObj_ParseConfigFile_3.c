@@ -1,87 +1,87 @@
 // Original IGI.EXE function: DynObj_ParseConfigFile_3 (VA 0x004C0F80; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_ParseConfigFile_3.h"
-void** DynObj_ParseConfigFile_3(void** a1, int32_t* a2)
+void** DynObj_ParseConfigFile_3(void** context, int32_t* param_2)
 
 {
-    void v_2c8;
-    void** valA1 = Sys_PushStack_26(&v_2c8, a2[6]);
+    void item_2c8;
+    void** data_1 = Sys_PushStack_26(&item_2c8, param_2[6]);
 
-    if (valA1)
+    if (data_1)
     {
-        void** v_4;
-        valA1 = v_4;
-        int32_t dstD1 = *a2;
-        int32_t ctxB1 = 0;
-        int32_t v_2cc = 0;
+        void** item_4;
+        data_1 = item_4;
+        int32_t dest_1 = *param_2;
+        int32_t context_1 = 0;
+        int32_t item_2cc = 0;
 
-        if (valA1 == 7)
+        if (data_1 == 7)
         {
-            int32_t* valA2 = a2[4];
-            char v_2cd = 0x18;
-            Sys_CloseFileStream_4(valA2, &v_2cd, 1);
-            Sys_CloseFileStream_4(a2[4], &v_2cc, 4);
-            valA1 = Sys_PushStack_26(&v_2c8, a2[6]);
+            int32_t* data_2 = param_2[4];
+            char item_2cd = 0x18;
+            Sys_CloseFileStream_4(data_2, &item_2cd, 1);
+            Sys_CloseFileStream_4(param_2[4], &item_2cc, 4);
+            data_1 = Sys_PushStack_26(&item_2c8, param_2[6]);
 
-            if (valA1)
+            if (data_1)
             {
-                int32_t dstD2 = dstD1 + 5;
+                int32_t dest_2 = dest_1 + 5;
 
                 while (true)
                 {
-                    valA1 = v_4;
+                    data_1 = item_4;
 
-                    if (valA1 == 9)
+                    if (data_1 == 9)
                     {
-                        void v_2c0;
-                        valA1 = Sys_ReadFileBlock_26(a2, &v_2c0);
+                        void item_2c0;
+                        data_1 = Sys_ReadFileBlock_26(param_2, &item_2c0);
 
-                        if (!valA1)
+                        if (!data_1)
                             break;
 
-                        valA1[2] = dstD2;
-                        valA1[3] = 0;
+                        data_1[2] = dest_2;
+                        data_1[3] = 0;
                         goto label_4c1055;
                     }
 
-                    if (valA1 == 0xc)
+                    if (data_1 == 0xc)
                     {
-                        void v_2bf;
-                        v_2cc = DynObj_FindSymbol_3(&v_2bf);
+                        void item_2bf;
+                        item_2cc = DynObj_FindSymbol_3(&item_2bf);
                     label_4c1055:
-                        Sys_CloseFileStream_4(a2[4], &v_2cc, 4);
-                        ctxB1 += 1;
-                        dstD2 += 4;
-                        valA1 = Sys_PushStack_26(&v_2c8, a2[6]);
+                        Sys_CloseFileStream_4(param_2[4], &item_2cc, 4);
+                        context_1 += 1;
+                        dest_2 += 4;
+                        data_1 = Sys_PushStack_26(&item_2c8, param_2[6]);
 
-                        if (!valA1)
+                        if (!data_1)
                             break;
 
-                        valA1 = v_4;
+                        data_1 = item_4;
 
-                        if (valA1 == 6)
+                        if (data_1 == 6)
                         {
-                            valA1 = Sys_PushStack_26(&v_2c8, a2[6]);
+                            data_1 = Sys_PushStack_26(&item_2c8, param_2[6]);
 
-                            if (!valA1)
+                            if (!data_1)
                                 break;
 
                             continue;
                         }
-                        else if (valA1 != 8)
+                        else if (data_1 != 8)
                             break;
                     }
-                    else if (valA1 != 8)
+                    else if (data_1 != 8)
                         break;
 
-                    *a1 = (ctxB1 << 2) + 5;
-                    int32_t* valA8 = Sys_AllocateMemory_26(a2, *a2 + 1);
-                    valA8[3] = ctxB1;
-                    return valA8;
+                    *context = (context_1 << 2) + 5;
+                    int32_t* data_8 = Sys_AllocateMemory_26(param_2, *param_2 + 1);
+                    data_8[3] = context_1;
+                    return data_8;
                 }
             }
         }
     }
 
-    a2[1] = 1;
-    return valA1;
+    param_2[1] = 1;
+    return data_1;
 }

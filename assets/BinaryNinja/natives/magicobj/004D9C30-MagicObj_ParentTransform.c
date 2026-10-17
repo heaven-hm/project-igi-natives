@@ -1,122 +1,122 @@
 // Original IGI.EXE function: MagicObj_ParentTransform (VA 0x004D9C30; static CFG gate PASS, CFG score 0.867).
 #include "MagicObj_ParentTransform.h"
-void* MagicObj_ParentTransform(void* a1, float a2)
+void* MagicObj_ParentTransform(void* context, float param_2)
 
 {
-    int32_t* flagP = a2;
-    float* valA = flagP[1];
-    double v_40 = valA[2] * *(a1 + 0x100) + valA[1] * *(a1 + 0xf8) + *valA * *(a1 + 0xf0);
-    double v_38 = valA[5] * *(a1 + 0x100) + valA[4] * *(a1 + 0xf8) + valA[3] * *(a1 + 0xf0);
-    double* valA1 = *flagP;
-    double v_30 = valA[8] * *(a1 + 0x100) + valA[7] * *(a1 + 0xf8) + valA[6] * *(a1 + 0xf0);
-    long double x87_r7_12 = v_40;
-    double v_18;
-    memcpy(&v_18, &v_40, 0x18);
-    v_18 = x87_r7_12 + *valA1;
-    double v_10;
-    double v_10_1 = v_10 + valA1[1];
-    double v_8;
-    double v_8_1 = v_8 + valA1[2];
-    long double x87_r7_18 = *(a1 + 0x9c);
-    long double x87_r6_12 = *(a1 + 0xa0);
-    x87_r6_12 - x87_r7_18;
-    long double x87_r7_19;
+    int32_t* flagP = param_2;
+    float* data_val = flagP[1];
+    double item_40 = data_val[2] * *(context + 0x100) + data_val[1] * *(context + 0xf8) + *data_val * *(context + 0xf0);
+    double item_38 = data_val[5] * *(context + 0x100) + data_val[4] * *(context + 0xf8) + data_val[3] * *(context + 0xf0);
+    double* data_1 = *flagP;
+    double item_30 = data_val[8] * *(context + 0x100) + data_val[7] * *(context + 0xf8) + data_val[6] * *(context + 0xf0);
+    long double fpu_val_7_12 = item_40;
+    double item_18;
+    memcpy(&item_18, &item_40, 0x18);
+    item_18 = fpu_val_7_12 + *data_1;
+    double item_10;
+    double item_10_1 = item_10 + data_1[1];
+    double item_8;
+    double item_8_1 = item_8 + data_1[2];
+    long double fpu_val_7_18 = *(context + 0x9c);
+    long double fpu_val_6_12 = *(context + 0xa0);
+    fpu_val_6_12 - fpu_val_7_18;
+    long double fpu_val_7_19;
 
-    if (!(*(&((x87_r6_12 < x87_r7_18 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, x87_r7_18) ? 1 : 0) << 0xa
-            | (x87_r6_12 == x87_r7_18 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_19 = *(a1 + 0xa0);
+    if (!(*(&((fpu_val_6_12 < fpu_val_7_18 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, fpu_val_7_18) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == fpu_val_7_18 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_19 = *(context + 0xa0);
     else
-        x87_r7_19 = *(a1 + 0x9c);
+        fpu_val_7_19 = *(context + 0x9c);
 
-    long double x87_r6_13 = *(a1 + 0x98);
-    x87_r6_13 - x87_r7_19;
-    long double x87_r7_21;
+    long double fpu_val_6_13 = *(context + 0x98);
+    fpu_val_6_13 - fpu_val_7_19;
+    long double fpu_val_7_21;
 
-    if (*(&((x87_r6_13 < x87_r7_19 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_13, x87_r7_19) ? 1 : 0) << 0xa
-        | (x87_r6_13 == x87_r7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_13 < fpu_val_7_19 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_13, fpu_val_7_19) ? 1 : 0) << 0xa
+        | (fpu_val_6_13 == fpu_val_7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_22 = *(a1 + 0x9c);
-        long double x87_r6_14 = *(a1 + 0xa0);
-        x87_r6_14 - x87_r7_22;
+        long double fpu_val_7_22 = *(context + 0x9c);
+        long double fpu_val_6_14 = *(context + 0xa0);
+        fpu_val_6_14 - fpu_val_7_22;
 
-        if (!(*(&((x87_r6_14 < x87_r7_22 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_14, x87_r7_22) ? 1 : 0) << 0xa
-                | (x87_r6_14 == x87_r7_22 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_21 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_14 < fpu_val_7_22 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_14, fpu_val_7_22) ? 1 : 0) << 0xa
+                | (fpu_val_6_14 == fpu_val_7_22 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_21 = *(context + 0xa0);
         else
-            x87_r7_21 = *(a1 + 0x9c);
+            fpu_val_7_21 = *(context + 0x9c);
     }
     else
-        x87_r7_21 = *(a1 + 0x98);
+        fpu_val_7_21 = *(context + 0x98);
 
-    long double x87_r7_24 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_21;
-    void* tmpD = *(a1 + 0x68);
-    float v_54_1 = x87_r7_24;
-    double* i_1 = &v_18;
-    WorldObject_CommitTransform(tmpD, a1, i_1, v_54_1);
-    float* valA4 = flagP[1];
-    v_40 = *(a1 + 0x114) * valA4[1] + *valA4 * *(a1 + 0x108) + valA4[2] * *(a1 + 0x120);
-    *(&v_40 + 4) =
-        *(a1 + 0x118) * valA4[1] + *valA4 * *(a1 + 0x10c) + valA4[2] * *(a1 + 0x124);
-    v_38 = *(a1 + 0x11c) * valA4[1] + *valA4 * *(a1 + 0x110) + valA4[2] * *(a1 + 0x128);
-    *(&v_38 + 4) =
-        *(a1 + 0x114) * valA4[4] + valA4[5] * *(a1 + 0x120) + valA4[3] * *(a1 + 0x108);
-    v_30 = *(a1 + 0x118) * valA4[4] + valA4[5] * *(a1 + 0x124) + valA4[3] * *(a1 + 0x10c);
-    *(&v_30 + 4) =
-        *(a1 + 0x11c) * valA4[4] + valA4[5] * *(a1 + 0x128) + valA4[3] * *(a1 + 0x110);
-    float v_28 =
-        *(a1 + 0x114) * valA4[7] + valA4[8] * *(a1 + 0x120) + valA4[6] * *(a1 + 0x108);
-    float v_24 =
-        *(a1 + 0x118) * valA4[7] + valA4[8] * *(a1 + 0x124) + valA4[6] * *(a1 + 0x10c);
-    void* result = a1 + 0x70;
-    float v_20 =
-        *(a1 + 0x11c) * valA4[7] + valA4[8] * *(a1 + 0x128) + valA4[6] * *(a1 + 0x110);
-    int32_t v_1c = valA4[9] + *(a1 + 0x12c) + 1;
-    memcpy(result, &v_40, 0x28);
-    double* i = *(a1 + 8);
+    long double fpu_val_7_24 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_21;
+    void* temp_val = *(context + 0x68);
+    float item_54_1 = fpu_val_7_24;
+    double* i_1 = &item_18;
+    WorldObject_CommitTransform(temp_val, context, i_1, item_54_1);
+    float* data_4 = flagP[1];
+    item_40 = *(context + 0x114) * data_4[1] + *data_4 * *(context + 0x108) + data_4[2] * *(context + 0x120);
+    *(&item_40 + 4) =
+        *(context + 0x118) * data_4[1] + *data_4 * *(context + 0x10c) + data_4[2] * *(context + 0x124);
+    item_38 = *(context + 0x11c) * data_4[1] + *data_4 * *(context + 0x110) + data_4[2] * *(context + 0x128);
+    *(&item_38 + 4) =
+        *(context + 0x114) * data_4[4] + data_4[5] * *(context + 0x120) + data_4[3] * *(context + 0x108);
+    item_30 = *(context + 0x118) * data_4[4] + data_4[5] * *(context + 0x124) + data_4[3] * *(context + 0x10c);
+    *(&item_30 + 4) =
+        *(context + 0x11c) * data_4[4] + data_4[5] * *(context + 0x128) + data_4[3] * *(context + 0x110);
+    float item_28 =
+        *(context + 0x114) * data_4[7] + data_4[8] * *(context + 0x120) + data_4[6] * *(context + 0x108);
+    float item_24 =
+        *(context + 0x118) * data_4[7] + data_4[8] * *(context + 0x124) + data_4[6] * *(context + 0x10c);
+    void* result = context + 0x70;
+    float item_20 =
+        *(context + 0x11c) * data_4[7] + data_4[8] * *(context + 0x128) + data_4[6] * *(context + 0x110);
+    int32_t item_1c = data_4[9] + *(context + 0x12c) + 1;
+    memcpy(result, &item_40, 0x28);
+    double* i = *(context + 8);
     void* result_1 = *i;
 
     if (result_1 && i)
     {
-        *(&v_40 + 4) = result;
+        *(&item_40 + 4) = result;
         result = result_1;
-        v_40 = a1 + 0x20;
+        item_40 = context + 0x20;
 
         if (result && i)
         {
-            int32_t objC1 = g_afa7e0;
+            int32_t entity_1 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD2 = *i;
-                void* valA9;
+                int32_t* temp_2 = *i;
+                void* data_9;
 
-                if (!tmpD2)
-                    valA9 = nullptr;
+                if (!temp_2)
+                    data_9 = nullptr;
                 else
                 {
-                    int32_t valA6 = *tmpD2;
-                    int32_t valA7 = -(valA6);
-                    valA9 = (valA7 - valA7) & tmpD2;
+                    int32_t data_6 = *temp_2;
+                    int32_t data_7 = -(data_6);
+                    data_9 = (data_7 - data_7) & temp_2;
                 }
 
-                *((objC1 << 2) + &g_afa6e0) = valA9;
-                g_afa7e0 = objC1 + 1;
-                uint32_t valA11 = MagicObj_GetEventId();
-                int32_t objC3 = 0;
-                objC3 = *(i + 0x1c);
-                result = *(((valA11 * 0x180 + objC3) << 2) + &g_a96ae0);
+                *((entity_1 << 2) + &g_afa6e0) = data_9;
+                g_afa7e0 = entity_1 + 1;
+                uint32_t data_11 = MagicObj_GetEventId();
+                int32_t entity_3 = 0;
+                entity_3 = *(i + 0x1c);
+                result = *(((data_11 * 0x180 + entity_3) << 2) + &g_a96ae0);
 
                 if (result)
                 {
-                    double* v_54_2 = &v_40;
+                    double* item_54_2 = &item_40;
                     i_1 = i;
-                    result = result(i_1, v_54_2);
+                    result = result(i_1, item_54_2);
                 }
 
-                objC1 = g_afa7e0 - 1;
-                g_afa7e0 = objC1;
-                i = *((objC1 << 2) + &g_afa6e0);
+                entity_1 = g_afa7e0 - 1;
+                g_afa7e0 = entity_1;
+                i = *((entity_1 << 2) + &g_afa6e0);
             } while (i);
         }
     }

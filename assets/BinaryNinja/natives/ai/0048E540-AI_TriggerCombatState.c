@@ -1,7 +1,7 @@
 // Original IGI.EXE function: AI_TriggerCombatState (VA 0x0048E540; static CFG gate PASS, CFG score 1.000).
 #include "AI_TriggerCombatState.h"
 
-void* AI_TriggerCombatState(void* pThis @ 0x8)
+void* AI_TriggerCombatState(void* pThis )
 
 {
     *(pThis + 0x18) = SetCombat_Run;

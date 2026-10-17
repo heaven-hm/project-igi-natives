@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Qsprite_Register4Az (VA 0x004B53B0; static CFG gate FAIL, CFG score 0.667).
 #include "Qsprite_Register4Az.h"
-int32_t Qsprite_Register4Az(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9, float a10, float a11, float a12, int32_t a13, int32_t a14, int32_t a15, int32_t a16, int32_t a17)
+int32_t Qsprite_Register4Az(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8, int32_t param_9, float param_10, float param_11, float param_12, int32_t param_13, int32_t param_14, int32_t param_15, int32_t param_16, int32_t param_17)
 
 // Sig: void Qsprite_Register4Az(/*14 args*/)
 // Note: Registers a QUAD-SPRITE with full transform data: 14 args, float
@@ -8,39 +8,39 @@ int32_t Qsprite_Register4Az(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int
 // 0xA84A50/0xA84A58 (verified). Low-level renderer API - map arg layout from
 // callers before use.
 {
-    int32_t* valA4 = a1[2] + a15 * 0x24;
-    long double x87_r7_1 = a10 * 0.0078125f;
-    int32_t tmpD3 = valA4[5];
-    int32_t tmpD4 = valA4[6];
-    int32_t tmpD5 = valA4[7];
-    int32_t tmpD6 = valA4[6];
-    int32_t tmpD7 = valA4[5];
-    int32_t tmpD8 = valA4[8];
-    int32_t tmpD9 = valA4[7];
-    int32_t tmpD10 = valA4[8];
-    int32_t v_90 = a2;
-    float v_78 = x87_r7_1;
-    float v_54 = x87_r7_1;
-    float v_30 = x87_r7_1;
-    float v_c = x87_r7_1;
-    long double x87_r7_3 = a11 * 0.0078125f;
-    float v_74 = x87_r7_3;
-    float v_50 = x87_r7_3;
-    float v_2c = x87_r7_3;
-    float v_8 = x87_r7_3;
-    long double x87_r7_5 = a12 * 0.0078125f;
-    int32_t* v_94 = &v_90;
-    float v_70 = x87_r7_5;
-    float v_4c = x87_r7_5;
-    float v_28 = x87_r7_5;
-    float v_4 = x87_r7_5;
-    int32_t v_a4 = 0;
-    int32_t v_98 = 4;
-    g_a84a50 = *valA4;
-    g_a84a58 = *a1;
-    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&v_a4, v_a4, a16, a17, v_98,
-        v_94, v_90, a3, a13, tmpD3, tmpD4, a14, v_78, v_74, v_70, a4, a5,
-        a13, tmpD5, tmpD6, a14, v_54, v_50, v_4c, a6, a7, a13, tmpD7, tmpD8, a14,
-        v_30, v_2c, v_28, a8, a9, a13, tmpD9, tmpD10, a14, v_c, v_8, v_4);
+    int32_t* data_4 = context[2] + param_15 * 0x24;
+    long double fpu_val_7_1 = param_10 * 0.0078125f;
+    int32_t temp_3 = data_4[5];
+    int32_t temp_4 = data_4[6];
+    int32_t temp_5 = data_4[7];
+    int32_t temp_6 = data_4[6];
+    int32_t temp_7 = data_4[5];
+    int32_t temp_8 = data_4[8];
+    int32_t temp_9 = data_4[7];
+    int32_t temp_10 = data_4[8];
+    int32_t item_90 = param_2;
+    float item_78 = fpu_val_7_1;
+    float item_54 = fpu_val_7_1;
+    float item_30 = fpu_val_7_1;
+    float item_c = fpu_val_7_1;
+    long double fpu_val_7_3 = param_11 * 0.0078125f;
+    float item_74 = fpu_val_7_3;
+    float item_50 = fpu_val_7_3;
+    float item_2c = fpu_val_7_3;
+    float item_8 = fpu_val_7_3;
+    long double fpu_val_7_5 = param_12 * 0.0078125f;
+    int32_t* item_94 = &item_90;
+    float item_70 = fpu_val_7_5;
+    float item_4c = fpu_val_7_5;
+    float item_28 = fpu_val_7_5;
+    float item_4 = fpu_val_7_5;
+    int32_t item_a4 = 0;
+    int32_t item_98 = 4;
+    g_a84a50 = *data_4;
+    g_a84a58 = *context;
+    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&item_a4, item_a4, param_16, param_17, item_98,
+        item_94, item_90, param_3, param_13, temp_3, temp_4, param_14, item_78, item_74, item_70, param_4, param_5,
+        param_13, temp_5, temp_6, param_14, item_54, item_50, item_4c, param_6, param_7, param_13, temp_7, temp_8, param_14,
+        item_30, item_2c, item_28, param_8, param_9, param_13, temp_9, temp_10, param_14, item_c, item_8, item_4);
     return result;
 }

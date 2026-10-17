@@ -1,68 +1,68 @@
 // Original IGI.EXE function: ComputerButtonItem_Process_2 (VA 0x0046B660; static CFG gate PASS, CFG score 1.000).
 #include "ComputerButtonItem_Process_2.h"
-struct status_msg* ComputerButtonItem_Process_2(float a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, char a7, float a8, float a9, char a10, void* a11, char* a12, uint32_t a13, uint32_t a14, uint32_t a15, int32_t a16)
+struct status_msg* ComputerButtonItem_Process_2(float context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, char param_7, float param_8, float param_9, char param_10, void* param_11, char* param_12, uint32_t param_13, uint32_t param_14, uint32_t param_15, int32_t param_16)
 
 {
     int32_t kind;
     kind = g_5be2b4;
-    struct status_msg* result = QTask_HandleInput(a1, kind, 0);
-    Physics_SolveConstraints_4(result, a2, a3, a4, a5, a6, a7, a16);
-    result->head[0x20] = a10;
-    result->head[0x22] = a13;
-    result->head[0x23] = a14;
-    result->head[0x24] = a15;
-    a7 = Sys_CloseFileStream_17(a13);
-    a10 = a7;
-    a7 = Sys_ExecuteBytecode_17(a13);
-    char* dstD1 = a12;
+    struct status_msg* result = QTask_HandleInput(context, kind, 0);
+    Physics_SolveConstraints_4(result, param_2, param_3, param_4, param_5, param_6, param_7, param_16);
+    result->head[0x20] = param_10;
+    result->head[0x22] = param_13;
+    result->head[0x23] = param_14;
+    result->head[0x24] = param_15;
+    param_7 = Sys_CloseFileStream_17(param_13);
+    param_10 = param_7;
+    param_7 = Sys_ExecuteBytecode_17(param_13);
+    char* dest_1 = param_12;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD1;
-        dstD1 = &dstD1[1];
+        bool flag_0_1 = 0 != *dest_1;
+        dest_1 = &dest_1[1];
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    a1 = a7;
-    int32_t objC4 = ~i;
-    long double x87_r7_6;
+    context = param_7;
+    int32_t entity_4 = ~i;
+    long double fpu_val_7_6;
 
-    if (objC4 == 1)
+    if (entity_4 == 1)
     {
-        x87_r7_6 = 0f;
+        fpu_val_7_6 = 0.0f;
         result->head[0x21] = 0;
-        a7 = 0;
+        param_7 = 0;
     }
     else
     {
-        int32_t v_10_1 = objC4 - 1;
-        int32_t v_14_1 = objC4 - 1;
-        int32_t** valA7 = Sys_OpenFileStream_18(a11, a10 + a8, a9, a12);
-        result->head[0x21] = valA7;
-        valA7[9] |= 0x40000;
+        int32_t item_10_1 = entity_4 - 1;
+        int32_t item_14_1 = entity_4 - 1;
+        int32_t** data_7 = Sys_OpenFileStream_18(param_11, param_10 + param_8, param_9, param_12);
+        result->head[0x21] = data_7;
+        data_7[9] |= 0x40000;
         *(result->head[0x21] + 0xc) = 0x44029eb8;
-        a7 = Sys_CheckHeap_21(result->head[0x21]);
-        a7 = a7;
-        x87_r7_6 = Sys_AllocateMemory_22(result->head[0x21]);
+        param_7 = Sys_CheckHeap_21(result->head[0x21]);
+        param_7 = param_7;
+        fpu_val_7_6 = Sys_AllocateMemory_22(result->head[0x21]);
     }
 
-    result->head[0x1e] = a8;
-    result->head[0x17] = a8;
-    result->head[0x19] = a7 + a10;
-    long double x87_r6_2 = a1;
-    x87_r6_2 - x87_r7_6;
-    result->head[0x1f] = a9;
+    result->head[0x1e] = param_8;
+    result->head[0x17] = param_8;
+    result->head[0x19] = param_7 + param_10;
+    long double fpu_val_6_2 = context;
+    fpu_val_6_2 - fpu_val_7_6;
+    result->head[0x1f] = param_9;
     result->head[0x1d] = result;
-    result->head[0x18] = a9;
+    result->head[0x18] = param_9;
 
-    if (!(*(&((x87_r6_2 < x87_r7_6 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_6) ? 1 : 0) << 0xa
-            | (x87_r6_2 == x87_r7_6 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
-        x87_r7_6 = a1;
+    if (!(*(&((fpu_val_6_2 < fpu_val_7_6 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_6) ? 1 : 0) << 0xa
+            | (fpu_val_6_2 == fpu_val_7_6 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
+        fpu_val_7_6 = context;
 
-    result->head[0x1a] = x87_r7_6;
+    result->head[0x1a] = fpu_val_7_6;
     return result;
 }

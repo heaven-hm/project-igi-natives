@@ -1,91 +1,91 @@
 // Original IGI.EXE function: DeathZone_Process (VA 0x00465F50; static CFG gate PASS, CFG score 0.875).
 #include "DeathZone_Process.h"
-int32_t DeathZone_Process(float a1, double** a2)
+int32_t DeathZone_Process(float context, double** param_2)
 
 {
-    int16_t valA = Script_ExecuteLevelScript_16();
-    int32_t objC;
-    objC = *(*(a1 + 0x130) + 0x1c);
-    int32_t result = TaskType_IsDerivedFrom(objC, valA);
+    int16_t data_val = Script_ExecuteLevelScript_16();
+    int32_t entity_val;
+    entity_val = *(*(context + 0x130) + 0x1c);
+    int32_t result = TaskType_IsDerivedFrom(entity_val, data_val);
 
     if (result)
     {
-        float* valA2 = a2[1];
-        long double x87_r7_1 = valA2[2];
-        double v_58;
-        memcpy(&v_58, a1 + 0xf0, 0x18);
-        double v_50;
-        double v_48;
-        double v_28 = x87_r7_1 * v_48 + valA2[1] * v_50 + *valA2 * v_58;
-        double v_20_1 = valA2[5] * v_48 + valA2[4] * v_50 + valA2[3] * v_58;
-        double* valA3 = *a2;
-        double v_18_1 = valA2[8] * v_48 + valA2[7] * v_50 + valA2[6] * v_58;
-        long double x87_r7_13 = v_28;
-        double v_40;
-        memcpy(&v_40, &v_28, 0x18);
-        v_40 = x87_r7_13 + *valA3;
-        double v_38;
-        double v_38_1 = v_38 + valA3[1];
-        double v_30;
-        double v_30_1 = v_30 + valA3[2];
-        long double x87_r7_19 = *(a1 + 0x9c);
-        long double x87_r6_13 = *(a1 + 0xa0);
-        x87_r6_13 - x87_r7_19;
-        long double x87_r7_20;
+        float* data_2 = param_2[1];
+        long double fpu_val_7_1 = data_2[2];
+        double item_58;
+        memcpy(&item_58, context + 0xf0, 0x18);
+        double item_50;
+        double item_48;
+        double item_28 = fpu_val_7_1 * item_48 + data_2[1] * item_50 + *data_2 * item_58;
+        double item_20_1 = data_2[5] * item_48 + data_2[4] * item_50 + data_2[3] * item_58;
+        double* data_3 = *param_2;
+        double item_18_1 = data_2[8] * item_48 + data_2[7] * item_50 + data_2[6] * item_58;
+        long double fpu_val_7_13 = item_28;
+        double item_40;
+        memcpy(&item_40, &item_28, 0x18);
+        item_40 = fpu_val_7_13 + *data_3;
+        double item_38;
+        double item_38_1 = item_38 + data_3[1];
+        double item_30;
+        double item_30_1 = item_30 + data_3[2];
+        long double fpu_val_7_19 = *(context + 0x9c);
+        long double fpu_val_6_13 = *(context + 0xa0);
+        fpu_val_6_13 - fpu_val_7_19;
+        long double fpu_val_7_20;
 
-        if (!(*(&((x87_r6_13 < x87_r7_19 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_13, x87_r7_19) ? 1 : 0) << 0xa
-                | (x87_r6_13 == x87_r7_19 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_20 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_13 < fpu_val_7_19 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_13, fpu_val_7_19) ? 1 : 0) << 0xa
+                | (fpu_val_6_13 == fpu_val_7_19 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_20 = *(context + 0xa0);
         else
-            x87_r7_20 = *(a1 + 0x9c);
+            fpu_val_7_20 = *(context + 0x9c);
 
-        long double x87_r6_14 = *(a1 + 0x98);
-        x87_r6_14 - x87_r7_20;
-        long double x87_r7_22;
+        long double fpu_val_6_14 = *(context + 0x98);
+        fpu_val_6_14 - fpu_val_7_20;
+        long double fpu_val_7_22;
 
-        if (*(&((x87_r6_14 < x87_r7_20 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r6_14, x87_r7_20) ? 1 : 0) << 0xa
-            | (x87_r6_14 == x87_r7_20 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+        if (*(&((fpu_val_6_14 < fpu_val_7_20 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_6_14, fpu_val_7_20) ? 1 : 0) << 0xa
+            | (fpu_val_6_14 == fpu_val_7_20 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
         {
-            long double x87_r7_23 = *(a1 + 0x9c);
-            long double x87_r6_15 = *(a1 + 0xa0);
-            x87_r6_15 - x87_r7_23;
+            long double fpu_val_7_23 = *(context + 0x9c);
+            long double fpu_val_6_15 = *(context + 0xa0);
+            fpu_val_6_15 - fpu_val_7_23;
 
-            if (!(*(&((x87_r6_15 < x87_r7_23 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_15, x87_r7_23) ? 1 : 0) << 0xa
-                    | (x87_r6_15 == x87_r7_23 ? 1 : 0) << 0xe) + 1) & 1))
-                x87_r7_22 = *(a1 + 0xa0);
+            if (!(*(&((fpu_val_6_15 < fpu_val_7_23 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_15, fpu_val_7_23) ? 1 : 0) << 0xa
+                    | (fpu_val_6_15 == fpu_val_7_23 ? 1 : 0) << 0xe) + 1) & 1))
+                fpu_val_7_22 = *(context + 0xa0);
             else
-                x87_r7_22 = *(a1 + 0x9c);
+                fpu_val_7_22 = *(context + 0x9c);
         }
         else
-            x87_r7_22 = *(a1 + 0x98);
+            fpu_val_7_22 = *(context + 0x98);
 
-        float v_6c_2 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_22;
-        double* v_70 = &v_40;
-        WorldObject_CommitTransform(Level_StartMission_4(), a1, v_70, v_6c_2);
-        float* valA6 = a2[1];
-        v_28 = *valA6 * *(a1 + 0x108) + *(a1 + 0x114) * valA6[1] + valA6[2] * *(a1 + 0x120);
-        *(&v_28 + 4) =
-            *valA6 * *(a1 + 0x10c) + *(a1 + 0x118) * valA6[1] + valA6[2] * *(a1 + 0x124);
-        v_20_1 =
-            *valA6 * *(a1 + 0x110) + *(a1 + 0x11c) * valA6[1] + valA6[2] * *(a1 + 0x128);
-        *(&v_20_1 + 4) =
-            valA6[5] * *(a1 + 0x120) + valA6[3] * *(a1 + 0x108) + valA6[4] * *(a1 + 0x114);
-        v_18_1 =
-            valA6[5] * *(a1 + 0x124) + valA6[3] * *(a1 + 0x10c) + valA6[4] * *(a1 + 0x118);
-        *(&v_18_1 + 4) =
-            valA6[5] * *(a1 + 0x128) + valA6[3] * *(a1 + 0x110) + valA6[4] * *(a1 + 0x11c);
-        float v_10_1 =
-            valA6[8] * *(a1 + 0x120) + valA6[6] * *(a1 + 0x108) + valA6[7] * *(a1 + 0x114);
-        float v_c_1 =
-            valA6[8] * *(a1 + 0x124) + valA6[6] * *(a1 + 0x10c) + valA6[7] * *(a1 + 0x118);
-        result = valA6[9] + *(a1 + 0x12c) + 1;
+        float item_6c_2 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_22;
+        double* item_70 = &item_40;
+        WorldObject_CommitTransform(Level_StartMission_4(), context, item_70, item_6c_2);
+        float* data_6 = param_2[1];
+        item_28 = *data_6 * *(context + 0x108) + *(context + 0x114) * data_6[1] + data_6[2] * *(context + 0x120);
+        *(&item_28 + 4) =
+            *data_6 * *(context + 0x10c) + *(context + 0x118) * data_6[1] + data_6[2] * *(context + 0x124);
+        item_20_1 =
+            *data_6 * *(context + 0x110) + *(context + 0x11c) * data_6[1] + data_6[2] * *(context + 0x128);
+        *(&item_20_1 + 4) =
+            data_6[5] * *(context + 0x120) + data_6[3] * *(context + 0x108) + data_6[4] * *(context + 0x114);
+        item_18_1 =
+            data_6[5] * *(context + 0x124) + data_6[3] * *(context + 0x10c) + data_6[4] * *(context + 0x118);
+        *(&item_18_1 + 4) =
+            data_6[5] * *(context + 0x128) + data_6[3] * *(context + 0x110) + data_6[4] * *(context + 0x11c);
+        float item_10_1 =
+            data_6[8] * *(context + 0x120) + data_6[6] * *(context + 0x108) + data_6[7] * *(context + 0x114);
+        float item_c_1 =
+            data_6[8] * *(context + 0x124) + data_6[6] * *(context + 0x10c) + data_6[7] * *(context + 0x118);
+        result = data_6[9] + *(context + 0x12c) + 1;
         int32_t result_1 = result;
-        float v_8_1 =
-            valA6[8] * *(a1 + 0x128) + valA6[6] * *(a1 + 0x110) + valA6[7] * *(a1 + 0x11c);
-        memcpy(a1 + 0x70, &v_28, 0x28);
+        float item_8_1 =
+            data_6[8] * *(context + 0x128) + data_6[6] * *(context + 0x110) + data_6[7] * *(context + 0x11c);
+        memcpy(context + 0x70, &item_28, 0x28);
     }
 
     return result;

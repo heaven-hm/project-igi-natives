@@ -1,96 +1,96 @@
 // Original IGI.EXE function: Display_ClearSurfaces_11 (VA 0x00496860; static CFG gate PASS, CFG score 0.939).
 #include "Display_ClearSurfaces_11.h"
-int32_t Display_ClearSurfaces_11(int32_t a1, int32_t a2, int32_t a3)
+int32_t Display_ClearSurfaces_11(int32_t context, int32_t param_2, int32_t param_3)
 
 {
     if (g_6840e9)
     {
-        int32_t* valA1 = Display_RestoreDevice_10(a1, a2);
+        int32_t* data_1 = Display_RestoreDevice_10(context, param_2);
 
-        if (valA1)
+        if (data_1)
         {
             int32_t result = g_6840f8;
 
             if (result)
             {
                 Display_SetDisplayMode_11(result, &g_6840f8);
-                *(result + 0xc) = valA1;
-                *(result + 8) = a3;
-                int32_t valA2 = valA1[5];
+                *(result + 0xc) = data_1;
+                *(result + 8) = param_3;
+                int32_t data_2 = data_1[5];
 
-                if (valA2 > 3)
+                if (data_2 > 3)
                 {
                     Display_SetGammaRamp_8(result, &g_6840f4);
                     return result;
                 }
 
-                switch (valA2)
+                switch (data_2)
                 {
                     case 0:
                     case 2:
                     {
-                        int16_t objC3 = valA1[6];
-                        int16_t valA3 = *(valA1 + 0x16);
-                        int16_t v_36_1 = objC3;
-                        int16_t v_2a_1 = valA3;
-                        int32_t valA6;
-                        int32_t tmpD2;
-                        tmpD2 = HIGHD(valA3 * objC3);
-                        valA6 = LOWD(valA3 * objC3);
-                        int32_t dstD1 = valA1[7];
-                        int32_t v_34_1 = dstD1;
-                        int16_t valA8 = (valA6 + (tmpD2 & 7)) >> 3;
-                        int32_t tmpD6 = valA8 * valA1[7];
-                        int32_t v_30_1 = valA8 * dstD1;
-                        int32_t v_24;
-                        __builtin_memset(&v_24, 0, 0x24);
-                        int16_t v_38;
-                        int16_t* v_14_1 = &v_38;
-                        int16_t v_28_1 = 0x12;
-                        v_38 = 1;
-                        v_24 = 0x24;
-                        int32_t v_20_1 = 0x100e8;
-                        int32_t* valA16 = g_67a498;
-                        int32_t v_1c_1 = tmpD6 * 0xfa0 / 0x3e8;
+                        int16_t entity_3 = data_1[6];
+                        int16_t data_3 = *(data_1 + 0x16);
+                        int16_t item_36_1 = entity_3;
+                        int16_t item_2a_1 = data_3;
+                        int32_t data_6;
+                        int32_t temp_2;
+                        temp_2 = HIGHD(data_3 * entity_3);
+                        data_6 = LOWD(data_3 * entity_3);
+                        int32_t dest_1 = data_1[7];
+                        int32_t item_34_1 = dest_1;
+                        int16_t data_8 = (data_6 + (temp_2 & 7)) >> 3;
+                        int32_t temp_6 = data_8 * data_1[7];
+                        int32_t item_30_1 = data_8 * dest_1;
+                        int32_t item_24;
+                        memset(&item_24, 0, 0x24);
+                        int16_t item_38;
+                        int16_t* item_14_1 = &item_38;
+                        int16_t item_28_1 = 0x12;
+                        item_38 = 1;
+                        item_24 = 0x24;
+                        int32_t item_20_1 = 0x100e8;
+                        int32_t* data_16 = g_67a498;
+                        int32_t item_1c_1 = temp_6 * 0xfa0 / 0x3e8;
 
-                        if ((*(*valA16 + 0xc))(valA16, &v_24, result + 0x10, 0))
+                        if ((*(*data_16 + 0xc))(data_16, &item_24, result + 0x10, 0))
                             Display_SetGammaRamp_8(result, &g_6840f8);
                         else
                         {
-                            Display_ClearSurfaces_10(result + 0x40, valA1[6]);
-                            int32_t* valA19 = QFile_ReadWrite(valA1[0xa], "r");
-                            *(result + 0x18) = valA19;
+                            Display_ClearSurfaces_10(result + 0x40, data_1[6]);
+                            int32_t* data_19 = QFile_ReadWrite(data_1[0xa], "r");
+                            *(result + 0x18) = data_19;
 
-                            if (valA19)
+                            if (data_19)
                             {
-                                Sys_ExecuteBytecode_4(valA19, 0x14, 0);
+                                Sys_ExecuteBytecode_4(data_19, 0x14, 0);
                                 Sys_ResolveSymbol_4(*(result + 0x18));
                                 *(result + 0x3c) = 0;
-                                __builtin_memset(result + 0x20, 0, 0x14);
+                                memset(result + 0x20, 0, 0x14);
                                 *(result + 0x38) = 0;
                                 *(result + 0x1c) = g_c28c5c;
-                                int32_t valA25;
-                                int32_t tmpD12;
-                                tmpD12 = HIGHD(0x10624dd3 * valA1[7] * 0xfa0);
-                                valA25 = LOWD(0x10624dd3 * valA1[7] * 0xfa0);
-                                int32_t valA27 = tmpD12 >> 6;
-                                int32_t valA29;
-                                int32_t tmpD13;
-                                tmpD13 = HIGHD(valA27 + (valA27 >> 0x1f));
-                                valA29 = LOWD(valA27 + (valA27 >> 0x1f));
-                                *(result + 0x34) = (valA29 - tmpD13) >> 1;
-                                int32_t valA34;
-                                int32_t tmpD14;
-                                tmpD14 = HIGHD(0x10624dd3 * valA1[7] * 0xfa0);
-                                valA34 = LOWD(0x10624dd3 * valA1[7] * 0xfa0);
-                                int32_t tmpD15 = tmpD14 >> 6;
-                                Display_RestoreDevice_11(result, (tmpD15 + (tmpD15 >> 0x1f)) * 9 / 0xa);
+                                int32_t data_25;
+                                int32_t temp_12;
+                                temp_12 = HIGHD(0x10624dd3 * data_1[7] * 0xfa0);
+                                data_25 = LOWD(0x10624dd3 * data_1[7] * 0xfa0);
+                                int32_t data_27 = temp_12 >> 6;
+                                int32_t data_29;
+                                int32_t temp_13;
+                                temp_13 = HIGHD(data_27 + (data_27 >> 0x1f));
+                                data_29 = LOWD(data_27 + (data_27 >> 0x1f));
+                                *(result + 0x34) = (data_29 - temp_13) >> 1;
+                                int32_t data_34;
+                                int32_t temp_14;
+                                temp_14 = HIGHD(0x10624dd3 * data_1[7] * 0xfa0);
+                                data_34 = LOWD(0x10624dd3 * data_1[7] * 0xfa0);
+                                int32_t temp_15 = temp_14 >> 6;
+                                Display_RestoreDevice_11(result, (temp_15 + (temp_15 >> 0x1f)) * 9 / 0xa);
                                 Display_SetGammaRamp_8(result, &g_6840f4);
                                 return result;
                             }
 
-                            int32_t* dstD3 = *(result + 0x10);
-                            (*(*dstD3 + 8))(dstD3);
+                            int32_t* dest_3 = *(result + 0x10);
+                            (*(*dest_3 + 8))(dest_3);
                             Display_SetGammaRamp_8(result, &g_6840f8);
                         }
                         break;
@@ -98,9 +98,9 @@ int32_t Display_ClearSurfaces_11(int32_t a1, int32_t a2, int32_t a3)
                     case 1:
                     case 3:
                     {
-                        int32_t* valA38 = g_67a498;
+                        int32_t* data_38 = g_67a498;
 
-                        if (!(*(*valA38 + 0x14))(valA38, valA1[9], result + 0x10))
+                        if (!(*(*data_38 + 0x14))(data_38, data_1[9], result + 0x10))
                         {
                             Display_SetGammaRamp_8(result, &g_6840f4);
                             return result;

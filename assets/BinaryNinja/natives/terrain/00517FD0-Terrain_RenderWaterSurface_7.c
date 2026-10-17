@@ -1,120 +1,120 @@
 // Original IGI.EXE function: Terrain_RenderWaterSurface_7 (VA 0x00517FD0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_RenderWaterSurface_7.h"
-void* Terrain_RenderWaterSurface_7(void* a1, int32_t a2, int32_t a3, int32_t a4, char* a5, int32_t a6, int32_t* a7, int32_t a8, int32_t* a9)
+void* Terrain_RenderWaterSurface_7(void* context, int32_t param_2, int32_t param_3, int32_t param_4, char* param_5, int32_t param_6, int32_t* param_7, int32_t param_8, int32_t* param_9)
 
 {
-    int32_t* tmpD12 = a9;
-    int32_t valA;
-    int32_t objC;
-    int32_t* ctxB;
+    int32_t* temp_12 = param_9;
+    int32_t data_val;
+    int32_t entity_val;
+    int32_t* context_val;
 
-    if (!tmpD12)
+    if (!temp_12)
     {
-        ctxB = a7;
-        objC = 0;
-        valA = 0;
-        a9 = ctxB;
-        a8 = a8;
+        context_val = param_7;
+        entity_val = 0;
+        data_val = 0;
+        param_9 = context_val;
+        param_8 = param_8;
     }
     else
     {
-        ctxB = a7;
-        objC = *tmpD12;
-        int32_t* dstD1 = tmpD12[2];
-        valA = tmpD12[1];
-        a9 = dstD1;
-        int32_t* srcS2 = ctxB - objC;
+        context_val = param_7;
+        entity_val = *temp_12;
+        int32_t* dest_1 = temp_12[2];
+        data_val = temp_12[1];
+        param_9 = dest_1;
+        int32_t* source_2 = context_val - entity_val;
 
-        if (dstD1 >= srcS2)
-            a9 = srcS2;
+        if (dest_1 >= source_2)
+            param_9 = source_2;
 
-        int32_t tmpD = tmpD12[3];
-        int32_t dstD3 = a8 - valA;
+        int32_t temp_val = temp_12[3];
+        int32_t dest_3 = param_8 - data_val;
 
-        a8 = tmpD < dstD3 ? tmpD : dstD3;
+        param_8 = temp_val < dest_3 ? temp_val : dest_3;
     }
 
-    int32_t flagP = a4;
-    void* v_8;
+    int32_t flagP = param_4;
+    void* item_8;
 
     if (flagP)
-        v_8 = valA * ctxB + objC + flagP;
+        item_8 = data_val * context_val + entity_val + flagP;
 
-    int32_t tmpD5 = 0;
-    int32_t v_4 = 0;
-    char* objC1 = valA * ctxB + objC + a5;
-    void* result = a1;
-    a5 = objC1;
-    a1 = result;
+    int32_t temp_5 = 0;
+    int32_t item_4 = 0;
+    char* entity_1 = data_val * context_val + entity_val + param_5;
+    void* result = context;
+    param_5 = entity_1;
+    context = result;
 
-    if (a3 > 0)
+    if (param_3 > 0)
     {
         do
         {
-            int32_t dstD5 = 0;
+            int32_t dest_5 = 0;
 
-            if (a2 > 0)
+            if (param_2 > 0)
             {
-                char* valA4 = result + 3;
-                void* flagP2 = v_8 - objC1;
+                char* data_4 = result + 3;
+                void* flagP2 = item_8 - entity_1;
 
                 do
                 {
-                    if (dstD5 >= a9 || tmpD5 >= a8)
+                    if (dest_5 >= param_9 || temp_5 >= param_8)
                     {
-                        *valA4 = 0;
-                        valA4[0xffffffff] = 0;
-                        valA4[0xfffffffe] = 0;
-                        valA4[0xfffffffd] = 0;
+                        *data_4 = 0;
+                        data_4[0xffffffff] = 0;
+                        data_4[0xfffffffe] = 0;
+                        data_4[0xfffffffd] = 0;
                     }
                     else
                     {
-                        char tmpD7;
+                        char temp_7;
 
-                        if (!a4)
+                        if (!param_4)
                         {
-                            char tmpD8 = *objC1;
-                            char f0_1 = tmpD8;
-                            tmpD8 = -(tmpD8);
-                            tmpD7 = (tmpD8 - tmpD8) & 0xff;
+                            char temp_8 = *entity_1;
+                            char f0_1 = temp_8;
+                            temp_8 = -(temp_8);
+                            temp_7 = (temp_8 - temp_8) & 0xff;
                         }
                         else
-                            tmpD7 = *(objC1 + flagP2);
+                            temp_7 = *(entity_1 + flagP2);
 
-                        *valA4 = tmpD7;
-                        int32_t tmpD9 = 0;
-                        tmpD9 = *objC1;
-                        valA4[0xffffffff] = *(a6 + (tmpD9 << 2) + 2);
-                        int32_t ctxB3 = 0;
-                        ctxB3 = *objC1;
-                        valA4[0xfffffffe] = *(a6 + (ctxB3 << 2) + 1);
-                        int32_t ctxB5 = 0;
-                        ctxB5 = *objC1;
-                        valA4[0xfffffffd] = *(a6 + (ctxB5 << 2));
-                        tmpD5 = v_4;
+                        *data_4 = temp_7;
+                        int32_t temp_9 = 0;
+                        temp_9 = *entity_1;
+                        data_4[0xffffffff] = *(param_6 + (temp_9 << 2) + 2);
+                        int32_t context_3 = 0;
+                        context_3 = *entity_1;
+                        data_4[0xfffffffe] = *(param_6 + (context_3 << 2) + 1);
+                        int32_t context_5 = 0;
+                        context_5 = *entity_1;
+                        data_4[0xfffffffd] = *(param_6 + (context_5 << 2));
+                        temp_5 = item_4;
                     }
 
-                    dstD5 += 1;
-                    objC1 = &objC1[1];
-                    valA4 = &valA4[4];
-                } while (dstD5 < a2);
+                    dest_5 += 1;
+                    entity_1 = &entity_1[1];
+                    data_4 = &data_4[4];
+                } while (dest_5 < param_2);
 
-                ctxB = a7;
-                flagP = a4;
-                objC1 = a5;
-                result = a1;
+                context_val = param_7;
+                flagP = param_4;
+                entity_1 = param_5;
+                result = context;
             }
 
             if (flagP)
-                v_8 += ctxB;
+                item_8 += context_val;
 
-            objC1 += ctxB;
-            tmpD5 += 1;
-            result += a2 << 2;
-            a5 = objC1;
-            a1 = result;
-            v_4 = tmpD5;
-        } while (tmpD5 < a3);
+            entity_1 += context_val;
+            temp_5 += 1;
+            result += param_2 << 2;
+            param_5 = entity_1;
+            context = result;
+            item_4 = temp_5;
+        } while (temp_5 < param_3);
     }
 
     return result;

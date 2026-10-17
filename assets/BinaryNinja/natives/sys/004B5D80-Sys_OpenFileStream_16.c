@@ -1,69 +1,69 @@
 // Original IGI.EXE function: Sys_OpenFileStream_16 (VA 0x004B5D80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_16.h"
-void* Sys_OpenFileStream_16(void* a1, int32_t a2, void* a3)
+void* Sys_OpenFileStream_16(void* context, int32_t param_2, void* param_3)
 
 {
-    void* v_210;
+    void* item_210;
 
-    if (Is_ResourceLoaded(a1, &v_210))
+    if (Is_ResourceLoaded(context, &item_210))
     {
-        void* valA1 = v_210;
+        void* data_1 = item_210;
 
-        if (*(valA1 + 0x24) == 4)
+        if (*(data_1 + 0x24) == 4)
         {
-            char* flagP1 = *(valA1 + 0x34);
-            char v_200[0x200];
-            char (* v_20c)[0x200] = &v_200;
-            char v_204_1 = 0;
+            char* flagP1 = *(data_1 + 0x34);
+            char item_200[0x200];
+            char (* item_20c)[0x200] = &item_200;
+            char item_204_1 = 0;
             char i = *flagP1;
 
             if (!i)
-                return valA1;
+                return data_1;
 
-            int32_t valA3;
+            int32_t data_3;
 
             do
             {
-                int32_t srcS1 = 0;
-                int32_t dstD1 = 0;
+                int32_t source_1 = 0;
+                int32_t dest_1 = 0;
 
                 if (i)
                 {
-                    char* valA2 = flagP1;
+                    char* data_2 = flagP1;
 
                     do
                     {
                         if (i == 0x3b)
                         {
-                            srcS1 += 1;
+                            source_1 += 1;
                             break;
                         }
 
-                        srcS1 += 1;
-                        *(&v_200 - flagP1 + valA2) = *valA2;
-                        i = valA2[1];
-                        valA2 = &valA2[1];
-                        dstD1 += 1;
+                        source_1 += 1;
+                        *(&item_200 - flagP1 + data_2) = *data_2;
+                        i = data_2[1];
+                        data_2 = &data_2[1];
+                        dest_1 += 1;
                     } while (i);
                 }
 
-                v_200[dstD1] = 0;
-                void* v_214;
-                valA3 = Is_ResourceLoaded(&v_200, &v_214);
+                item_200[dest_1] = 0;
+                void* item_214;
+                data_3 = Is_ResourceLoaded(&item_200, &item_214);
 
-                if (valA3)
+                if (data_3)
                 {
-                    int32_t v_208_1 = *(v_214 + 0x28);
-                    valA3 = a2(&v_20c, a3);
+                    int32_t item_208_1 = *(item_214 + 0x28);
+                    data_3 = param_2(&item_20c, param_3);
                 }
 
-                i = flagP1[srcS1];
-                flagP1 = &flagP1[srcS1];
+                i = flagP1[source_1];
+                flagP1 = &flagP1[source_1];
             } while (i);
 
-            return valA3;
+            return data_3;
         }
     }
 
-    return Sys_IllegalDeviceNameInP(a1, a2, a3);
+    return Sys_IllegalDeviceNameInP(context, param_2, param_3);
 }

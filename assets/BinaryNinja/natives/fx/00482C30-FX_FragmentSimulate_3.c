@@ -1,61 +1,61 @@
 // Original IGI.EXE function: FX_FragmentSimulate_3 (VA 0x00482C30; static CFG gate PASS, CFG score 1.000).
 #include "FX_FragmentSimulate_3.h"
-int32_t FX_FragmentSimulate_3(void* a1)
+int32_t FX_FragmentSimulate_3(void* context)
 
 {
     if (WeaponType_GetConfig_2(0x49))
-        *(a1 + 0x110) = *(a1 + 0x110) - 512f;
+        *(context + 0x110) = *(context + 0x110) - 512.0f;
 
     if (WeaponType_GetConfig_2(0x51))
-        *(a1 + 0x110) = *(a1 + 0x110) + 512f;
+        *(context + 0x110) = *(context + 0x110) + 512.0f;
 
-    long double x87_r7_5 = *(a1 + 0x110);
-    long double f0 = 1024f;
-    x87_r7_5 - f0;
+    long double fpu_val_7_5 = *(context + 0x110);
+    long double f0 = 1024.0f;
+    fpu_val_7_5 - f0;
 
-    if (!(*(&((x87_r7_5 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f0) ? 1 : 0) << 0xa
-        | (x87_r7_5 == f0 ? 1 : 0) << 0xe) + 1) & 1))
+    if (!(*(&((fpu_val_7_5 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_5 == f0 ? 1 : 0) << 0xe) + 1) & 1))
     {
-        long double x87_r7_6 = *(a1 + 0x110);
-        long double f1_1 = 409600f;
-        x87_r7_6 - f1_1;
+        long double fpu_val_7_6 = *(context + 0x110);
+        long double f1_1 = 409600.0f;
+        fpu_val_7_6 - f1_1;
 
-        if (!(*(&((x87_r7_6 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_6 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-            *(a1 + 0x110) = 0x48c80000;
+        if (!(*(&((fpu_val_7_6 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_6 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+            *(context + 0x110) = 0x48c80000;
     }
     else
-        *(a1 + 0x110) = 0x44800000;
+        *(context + 0x110) = 0x44800000;
 
     if (WeaponType_GetConfig_2(0x48))
-        *(a1 + 0x108) = *(a1 + 0x108) - 0.0872664675f;
+        *(context + 0x108) = *(context + 0x108) - 0.0872664675f;
 
     if (WeaponType_GetConfig_2(0x50))
-        *(a1 + 0x108) = *(a1 + 0x108) + 0.0872664675f;
+        *(context + 0x108) = *(context + 0x108) + 0.0872664675f;
 
-    long double x87_r7_11 = *(a1 + 0x108);
+    long double fpu_val_7_11 = *(context + 0x108);
     long double f2 = -1.55334306f;
-    x87_r7_11 - f2;
+    fpu_val_7_11 - f2;
 
-    if (*(&((x87_r7_11 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_11, f2) ? 1 : 0) << 0xa
-            | (x87_r7_11 == f2 ? 1 : 0) << 0xe) + 1) & 1)
-        *(a1 + 0x108) = 0xbfc6d3f2;
+    if (*(&((fpu_val_7_11 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_11, f2) ? 1 : 0) << 0xa
+            | (fpu_val_7_11 == f2 ? 1 : 0) << 0xe) + 1) & 1)
+        *(context + 0x108) = 0xbfc6d3f2;
 
-    long double x87_r7_12 = *(a1 + 0x108);
+    long double fpu_val_7_12 = *(context + 0x108);
     long double f3 = 1.55334306f;
-    x87_r7_12 - f3;
+    fpu_val_7_12 - f3;
 
-    if (!(*(&((x87_r7_12 < f3 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_12, f3) ? 1 : 0) << 0xa
-            | (x87_r7_12 == f3 ? 1 : 0) << 0xe) + 1) & 0x41))
-        *(a1 + 0x108) = 0x3fc6d3f2;
+    if (!(*(&((fpu_val_7_12 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_12, f3) ? 1 : 0) << 0xa
+            | (fpu_val_7_12 == f3 ? 1 : 0) << 0xe) + 1) & 0x41))
+        *(context + 0x108) = 0x3fc6d3f2;
 
     if (WeaponType_GetConfig_2(0x4b))
-        *(a1 + 0x10c) = *(a1 + 0x10c) - 0.0872664675f;
+        *(context + 0x10c) = *(context + 0x10c) - 0.0872664675f;
 
     int32_t result = WeaponType_GetConfig_2(0x4d);
 
     if (result)
-        *(a1 + 0x10c) = *(a1 + 0x10c) + 0.0872664675f;
+        *(context + 0x10c) = *(context + 0x10c) + 0.0872664675f;
 
     return result;
 }

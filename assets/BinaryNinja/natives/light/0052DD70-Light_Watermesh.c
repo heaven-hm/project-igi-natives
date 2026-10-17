@@ -3,7 +3,7 @@
 int32_t Light_Watermesh()
 
 {
-    int32_t valA = Display_RestoreDevice_14("WaterMesh");
-    g_a84578 = valA;
-    return Display_SetGammaRamp_14(valA, Light_ComputeDirectionalLight_12);
+    int32_t data_val = Display_RestoreDevice_14("WaterMesh");
+    g_a84578 = data_val;
+    return Display_SetGammaRamp_14(data_val, Light_ComputeDirectionalLight_12);
 }

@@ -1,47 +1,47 @@
 // Original IGI.EXE function: Elevator_Update (VA 0x0043E0A0; static CFG gate PASS, CFG score 1.000).
 #include "Elevator_Update.h"
-int32_t Elevator_Update(void* a1)
+int32_t Elevator_Update(void* context)
 
 {
-    char result = *(a1 + 0x1c0);
+    char result = *(context + 0x1c0);
 
     if (result)
     {
-        void v_c0;
-        Script_ParseEnumString_6(&v_c0, a1);
-        void* v_d4_1 = &v_c0;
-        *(a1 + 0x1c0) = 0;
-        void v_80;
-        Game_DataSymbolLoad(&v_80, "%s.vFloor");
-        Game_DataSymbolRemoveThunk(&v_80);
-        void* v_e4_1 = &v_c0;
-        Game_DataSymbolLoad(&v_80, "%s.vLastFloor");
-        Game_DataSymbolRemoveThunk(&v_80);
+        void item_c0;
+        Script_ParseEnumString_6(&item_c0, context);
+        void* item_d4_1 = &item_c0;
+        *(context + 0x1c0) = 0;
+        void item_80;
+        Game_DataSymbolLoad(&item_80, "%s.vFloor");
+        Game_DataSymbolRemoveThunk(&item_80);
+        void* item_e4_1 = &item_c0;
+        Game_DataSymbolLoad(&item_80, "%s.vLastFloor");
+        Game_DataSymbolRemoveThunk(&item_80);
 
         for (int32_t i = 0; i < 0xa; i += 1)
         {
             int32_t i_1 = i;
-            void* v_d0_2 = &v_c0;
-            Game_DataSymbolLoad(&v_80, "%s.isWantedFloor%d");
-            Game_DataSymbolRemoveThunk(&v_80);
+            void* item_d0_2 = &item_c0;
+            Game_DataSymbolLoad(&item_80, "%s.isWantedFloor%d");
+            Game_DataSymbolRemoveThunk(&item_80);
         }
 
-        void* v_cc_2 = &v_c0;
-        Game_DataSymbolLoad(&v_80, "%s.nInactive");
-        Game_DataSymbolRemoveThunk(&v_80);
-        void* v_dc_3 = &v_c0;
-        Game_DataSymbolLoad(&v_80, "%s.nWantedFloor");
-        Game_DataSymbolRemoveThunk(&v_80);
-        void* v_ec_2 = &v_c0;
-        Game_DataSymbolLoad(&v_80, "%s.isMoving");
-        Game_DataSymbolRemoveThunk(&v_80);
-        void* v_fc_1 = &v_c0;
-        Game_DataSymbolLoad(&v_80, "%s.isStart");
-        Game_DataSymbolRemoveThunk(&v_80);
-        void* v_cc_3 = &v_c0;
-        Game_DataSymbolLoad(&v_80, "%s.isStop");
-        result = Game_DataSymbolRemoveThunk(&v_80);
-        *(a1 + 0x1c0) = 0;
+        void* item_cc_2 = &item_c0;
+        Game_DataSymbolLoad(&item_80, "%s.nInactive");
+        Game_DataSymbolRemoveThunk(&item_80);
+        void* item_dc_3 = &item_c0;
+        Game_DataSymbolLoad(&item_80, "%s.nWantedFloor");
+        Game_DataSymbolRemoveThunk(&item_80);
+        void* item_ec_2 = &item_c0;
+        Game_DataSymbolLoad(&item_80, "%s.isMoving");
+        Game_DataSymbolRemoveThunk(&item_80);
+        void* item_fc_1 = &item_c0;
+        Game_DataSymbolLoad(&item_80, "%s.isStart");
+        Game_DataSymbolRemoveThunk(&item_80);
+        void* item_cc_3 = &item_c0;
+        Game_DataSymbolLoad(&item_80, "%s.isStop");
+        result = Game_DataSymbolRemoveThunk(&item_80);
+        *(context + 0x1c0) = 0;
     }
 
     return result;

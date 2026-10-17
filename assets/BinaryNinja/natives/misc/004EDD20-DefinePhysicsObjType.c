@@ -1,6 +1,6 @@
 // Original IGI.EXE function: DefinePhysicsObjType (VA 0x004EDD20; static CFG gate PASS, CFG score 1.000).
 #include "DefinePhysicsObjType.h"
-int32_t DefinePhysicsObjType(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, int32_t a5, char* a6 @ 0xc)
+int32_t DefinePhysicsObjType(long double context , long double param_2 , long double param_3 , long double param_4 , int32_t param_5, char* param_6 )
 
 // Sig: unknown DefinePhysicsObjType(unknown param1, unknown param2)
 // Note: Registered at 0x4EDD12 via registrar 0x4B8890 (push 0x4EDD20 +
@@ -13,72 +13,72 @@ int32_t DefinePhysicsObjType(long double a1 @ fp0, long double a2 @ fp1, long do
 // re-agent reverser/checker loop ran on this native (C decompilation pending
 // ARM64 native port).
 {
-    int32_t valA = g_a5efd8;
-    int32_t objC = valA * 5;
-    float dstD = a6;
-    int32_t v_30 = 0;
-    *(((valA + objC * 0x12) << 3) + 0xa5f2b4) = 0;
-    *(((valA + objC * 0x12) << 3) + &g_a5efe0) = Script_GetArg(dstD, v_30);
-    *(((valA + objC * 0x12) << 3) + 0xa5efe4) = Script_GetArg(dstD, 1);
-    Profile_ValueSet(dstD, 2.80259693e-45f);
-    *(((valA + objC * 0x12) << 3) + 0xa5efe8) = a1;
-    Profile_ValueSet(dstD, 4.20389539e-45f);
-    *(((valA + objC * 0x12) << 3) + 0xa5efec) = a2;
-    Profile_ValueSet(dstD, 5.60519386e-45f);
-    *(((valA + objC * 0x12) << 3) + 0xa5eff0) = a3;
-    Profile_ValueSet(dstD, 7.00649232e-45f);
-    *(((valA + objC * 0x12) << 3) + 0xa5eff4) = a4;
+    int32_t data_val = g_a5efd8;
+    int32_t entity_val = data_val * 5;
+    float dest_val = param_6;
+    int32_t item_30 = 0;
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5f2b4) = 0;
+    *(((data_val + entity_val * 0x12) << 3) + &g_a5efe0) = Script_GetArg(dest_val, item_30);
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5efe4) = Script_GetArg(dest_val, 1);
+    Profile_ValueSet(dest_val, 2.80259693e-45.0f);
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5efe8) = context;
+    Profile_ValueSet(dest_val, 4.20389539e-45.0f);
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5efec) = param_2;
+    Profile_ValueSet(dest_val, 5.60519386e-45.0f);
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5eff0) = param_3;
+    Profile_ValueSet(dest_val, 7.00649232e-45.0f);
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5eff4) = param_4;
     int16_t idx = 4;
-    Sys_ResolveSymbol_23(dstD, 6, ((valA + objC * 0x12) << 3) + 0xa5eff8, 0x20);
-    v_30 = 0x100;
-    Sys_ResolveSymbol_23(dstD, 7, ((valA + objC * 0x12) << 3) + 0xa5f018, v_30);
-    char* srcS = ((valA + objC * 0x12) << 3) + &g_a5f118;
-    char* v_1c = srcS;
-    Sys_ResolveSymbol_23(dstD, 8, srcS, 0x10);
-    int32_t valA4 = g_a5efd8;
-    int32_t objC3 = 0;
+    Sys_ResolveSymbol_23(dest_val, 6, ((data_val + entity_val * 0x12) << 3) + 0xa5eff8, 0x20);
+    item_30 = 0x100;
+    Sys_ResolveSymbol_23(dest_val, 7, ((data_val + entity_val * 0x12) << 3) + 0xa5f018, item_30);
+    char* source_val = ((data_val + entity_val * 0x12) << 3) + &g_a5f118;
+    char* item_1c = source_val;
+    Sys_ResolveSymbol_23(dest_val, 8, source_val, 0x10);
+    int32_t data_4 = g_a5efd8;
+    int32_t entity_3 = 0;
 
-    if (valA4 > 0)
+    if (data_4 > 0)
     {
         char* flagP1 = &g_a5f118;
-        a6 = &g_a5f118;
+        param_6 = &g_a5f118;
 
         while (true)
         {
-            char tmpD1 = *srcS;
-            valA4 = tmpD1;
+            char temp_1 = *source_val;
+            data_4 = temp_1;
             char f0_1 = *flagP1;
-            bool c_1 = tmpD1 < f0_1;
-            int32_t valA6;
+            bool c_1 = temp_1 < f0_1;
+            int32_t data_6;
 
-            if (tmpD1 != f0_1)
-                valA6 = valA4 - valA4 + 1;
-            else if (!valA4)
-                valA6 = 0;
+            if (temp_1 != f0_1)
+                data_6 = data_4 - data_4 + 1;
+            else if (!data_4)
+                data_6 = 0;
             else
             {
-                tmpD1 = srcS[1];
-                valA4 = tmpD1;
+                temp_1 = source_val[1];
+                data_4 = temp_1;
                 char f3_1 = flagP1[1];
-                c_1 = tmpD1 < f3_1;
+                c_1 = temp_1 < f3_1;
 
-                if (tmpD1 != f3_1)
-                    valA6 = valA4 - valA4 + 1;
+                if (temp_1 != f3_1)
+                    data_6 = data_4 - data_4 + 1;
                 else
                 {
-                    srcS = &srcS[2];
+                    source_val = &source_val[2];
                     flagP1 = &flagP1[2];
 
-                    if (valA4)
+                    if (data_4)
                         continue;
 
-                    valA6 = 0;
+                    data_6 = 0;
                 }
             }
 
-            if (!valA6)
+            if (!data_6)
             {
-                v_30 = v_1c;
+                item_30 = item_1c;
                 Error_Show("Physics obj model %s is defined multiple times.");
 
                 while (true)
@@ -86,91 +86,91 @@ int32_t DefinePhysicsObjType(long double a1 @ fp0, long double a2 @ fp1, long do
             }
             else
             {
-                valA4 = g_a5efd8;
-                objC3 += 1;
-                flagP1 = &a6[0x2d8];
-                a6 = flagP1;
+                data_4 = g_a5efd8;
+                entity_3 += 1;
+                flagP1 = &param_6[0x2d8];
+                param_6 = flagP1;
 
-                if (objC3 >= valA4)
+                if (entity_3 >= data_4)
                     break;
 
-                srcS = v_1c;
+                source_val = item_1c;
             }
         }
     }
 
-    v_30 = 9;
-    int32_t srcS1 = 0xa;
-    int32_t valA7 = Script_GetArg(dstD, v_30);
-    *(((valA + objC * 0x12) << 3) + 0xa5f128) = valA7;
-    a6 = nullptr;
+    item_30 = 9;
+    int32_t source_1 = 0xa;
+    int32_t data_7 = Script_GetArg(dest_val, item_30);
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5f128) = data_7;
+    param_6 = nullptr;
 
-    if (valA7 > 0)
+    if (data_7 > 0)
     {
-        int32_t* flagP3 = ((valA + objC * 0x12) << 3) + 0xa5f130;
-        bool cond_1_1;
+        int32_t* flagP3 = ((data_val + entity_val * 0x12) << 3) + 0xa5f130;
+        bool flag_1_1;
 
         do
         {
-            v_30 = srcS1;
-            flagP3[-1] = Script_GetArg(dstD, v_30);
-            *flagP3 = Script_GetArg(dstD, srcS1 + 1);
-            flagP3[1] = Script_GetArg(dstD, srcS1 + 2);
-            Profile_ValueSet(dstD, srcS1 + 3);
+            item_30 = source_1;
+            flagP3[-1] = Script_GetArg(dest_val, item_30);
+            *flagP3 = Script_GetArg(dest_val, source_1 + 1);
+            flagP3[1] = Script_GetArg(dest_val, source_1 + 2);
+            Profile_ValueSet(dest_val, source_1 + 3);
 🚫🚫🚫            flagP3[2] = /* flagP3[2] = unimplemented  {fstp dword [flagP+0x8], fp0} */;
             /* unimplemented  {fstp dword [flagP+0x8], fp0} */
-            float srcS6 = srcS1 + 5;
-            Profile_ValueSet(dstD, srcS1 + 4);
+            float source_6 = source_1 + 5;
+            Profile_ValueSet(dest_val, source_1 + 4);
 🚫🚫🚫            flagP3[3] = /* flagP3[3] = unimplemented  {fstp dword [flagP+0xc], fp0} */;
             /* unimplemented  {fstp dword [flagP+0xc], fp0} */
-            srcS1 = srcS6 + 1;
-            Profile_ValueSet(dstD, srcS6);
-            char* valA17 = a6;
+            source_1 = source_6 + 1;
+            Profile_ValueSet(dest_val, source_6);
+            char* data_17 = param_6;
 🚫🚫🚫            flagP3[4] = /* flagP3[4] = unimplemented  {fstp dword [flagP+0x10], fp0} */;
             /* unimplemented  {fstp dword [flagP+0x10], fp0} */
             idx += 3;
             flagP3 = &flagP3[6];
-            cond_1_1 = &valA17[1] < *(((valA + objC * 0x12) << 3) + 0xa5f128);
-            a6 = &valA17[1];
-        } while (cond_1_1);
+            flag_1_1 = &data_17[1] < *(((data_val + entity_val * 0x12) << 3) + 0xa5f128);
+            param_6 = &data_17[1];
+        } while (flag_1_1);
     }
 
-    v_30 = srcS1;
-    Profile_ValueSet(dstD, v_30);
-🚫🚫🚫    *(((valA + objC * 0x12) << 3) + 0xa5f2ac) = /* *(((valA + objC * 0x12) << 3) + 0xa5f2ac) =
-        unimplemented  {fstp dword [ctxB+0x2cc], fp0} */;
-    /* unimplemented  {fstp dword [ctxB+0x2cc], fp0} */
-    Profile_ValueSet(dstD, srcS1 + 1);
-🚫🚫🚫    *(((valA + objC * 0x12) << 3) + 0xa5f2b0) = /* *(((valA + objC * 0x12) << 3) + 0xa5f2b0) =
-        unimplemented  {fstp dword [ctxB+0x2d0], fp0} */;
-    /* unimplemented  {fstp dword [ctxB+0x2d0], fp0} */
-    int32_t valA20 = 0;
-    *(((valA + objC * 0x12) << 3) + 0xa5f2b4) = 0;
-    valA20 = g_54dc31;
-    int32_t tmpD2 = 0;
-    tmpD2 = *(((valA + objC * 0x12) << 3) + &g_a5efe0);
-    int32_t valA21 = *(((valA20 * 0x180 + tmpD2) << 2) + &g_a96ae0);
-    void* v_18;
+    item_30 = source_1;
+    Profile_ValueSet(dest_val, item_30);
+🚫🚫🚫    *(((data_val + entity_val * 0x12) << 3) + 0xa5f2ac) = /* *(((data_val + entity_val * 0x12) << 3) + 0xa5f2ac) =
+        unimplemented  {fstp dword [context_val+0x2cc], fp0} */;
+    /* unimplemented  {fstp dword [context_val+0x2cc], fp0} */
+    Profile_ValueSet(dest_val, source_1 + 1);
+🚫🚫🚫    *(((data_val + entity_val * 0x12) << 3) + 0xa5f2b0) = /* *(((data_val + entity_val * 0x12) << 3) + 0xa5f2b0) =
+        unimplemented  {fstp dword [context_val+0x2d0], fp0} */;
+    /* unimplemented  {fstp dword [context_val+0x2d0], fp0} */
+    int32_t data_20 = 0;
+    *(((data_val + entity_val * 0x12) << 3) + 0xa5f2b4) = 0;
+    data_20 = g_54dc31;
+    int32_t temp_2 = 0;
+    temp_2 = *(((data_val + entity_val * 0x12) << 3) + &g_a5efe0);
+    int32_t data_21 = *(((data_20 * 0x180 + temp_2) << 2) + &g_a96ae0);
+    void* item_18;
 
-    if (valA21)
+    if (data_21)
     {
-        v_30 = &a6;
-        valA21(0, v_30);
-        void* valA22 = Mem_Alloc(a6, 4);
-        *(((valA + objC * 0x12) << 3) + 0xa5f2b4) = valA22;
-        v_18 = valA22;
-        int32_t objC8 = 0;
-        objC8 = *(((valA + objC * 0x12) << 3) + &g_a5efe0);
-        float v_14_1 = dstD;
-        int32_t v_10_1 = srcS1 + 2;
-        (*(((*g_54dc30 * 0x180 + objC8) << 2) + &g_a96ae0))(0, &v_18);
+        item_30 = &param_6;
+        data_21(0, item_30);
+        void* data_22 = Mem_Alloc(param_6, 4);
+        *(((data_val + entity_val * 0x12) << 3) + 0xa5f2b4) = data_22;
+        item_18 = data_22;
+        int32_t entity_8 = 0;
+        entity_8 = *(((data_val + entity_val * 0x12) << 3) + &g_a5efe0);
+        float item_14_1 = dest_val;
+        int32_t item_10_1 = source_1 + 2;
+        (*(((*g_54dc30 * 0x180 + entity_8) << 2) + &g_a96ae0))(0, &item_18);
     }
 
     g_a5efd8 += 1;
-    v_18 = 1;
-    int32_t v_10_2 = 0;
-    int32_t v_c = 0x3ff00000;
-    char* v_8 = &g_567c74;
-    memcpy(a5, &v_18, 0x18);
-    return a5;
+    item_18 = 1;
+    int32_t item_10_2 = 0;
+    int32_t item_c = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(param_5, &item_18, 0x18);
+    return param_5;
 }

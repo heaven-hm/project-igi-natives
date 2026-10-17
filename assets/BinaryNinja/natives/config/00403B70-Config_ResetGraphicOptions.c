@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Config_ResetGraphicOptions (VA 0x00403B70; static CFG gate PASS, CFG score 0.970).
 #include "Config_ResetGraphicOptions.h"
-int32_t Config_ResetGraphicOptions(int32_t a1)
+int32_t Config_ResetGraphicOptions(int32_t context)
 
 // Sig: void Config_ResetGraphicOptions()
 // Note: Resets graphic options to FACTORY DEFAULTS - machine-verified field
@@ -19,10 +19,10 @@ int32_t Config_ResetGraphicOptions(int32_t a1)
     *(Config_GetActivePlayerProfileRecord() + 0x1f) = 0;
     *(Config_GetActivePlayerProfileRecord() + 0x220) = 0x3f800000;
     *(Config_GetActivePlayerProfileRecord() + 0x18) = 0;
-    int32_t v_18 = 0;
-    int32_t v_10 = 0;
-    int32_t v_c = 0;
-    char* v_8 = &g_567c74;
-    memcpy(a1, &v_18, 0x18);
-    return a1;
+    int32_t item_18 = 0;
+    int32_t item_10 = 0;
+    int32_t item_c = 0;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
 }

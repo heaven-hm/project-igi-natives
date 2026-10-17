@@ -1,48 +1,48 @@
 // Original IGI.EXE function: Light_LightsourceNotFound (VA 0x00526920; static CFG gate PASS, CFG score 1.000).
 #include "Light_LightsourceNotFound.h"
-int32_t Light_LightsourceNotFound(int32_t a1)
+int32_t Light_LightsourceNotFound(int32_t context)
 
 {
-    int32_t objC;
-    int32_t v_4_1 = objC;
-    int32_t objC1 = g_a83d00;
-    int32_t v_4 = 0;
+    int32_t entity_val;
+    int32_t item_4_1 = entity_val;
+    int32_t entity_1 = g_a83d00;
+    int32_t item_4 = 0;
 
-    if (objC1 > 0)
+    if (entity_1 > 0)
     {
-        int32_t* srcS1 = g_a83cfc;
-        int32_t dstD1 = g_a83d08;
-        int32_t ctxB1 = g_a83cf8;
-        int32_t* tmpD1 = srcS1;
-        bool cond_1_1;
+        int32_t* source_1 = g_a83cfc;
+        int32_t dest_1 = g_a83d08;
+        int32_t context_1 = g_a83cf8;
+        int32_t* temp_1 = source_1;
+        bool flag_1_1;
 
         do
         {
-            int32_t* valA3 = *tmpD1 * dstD1 + ctxB1;
+            int32_t* data_3 = *temp_1 * dest_1 + context_1;
 
-            if (*valA3 == a1)
+            if (*data_3 == context)
             {
-                int32_t* tmpD2 = g_a83d0c;
-                int32_t result = *(tmpD2 + valA3);
-                g_a83d00 = objC1 - 1;
+                int32_t* temp_2 = g_a83d0c;
+                int32_t result = *(temp_2 + data_3);
+                g_a83d00 = entity_1 - 1;
 
-                if (result != objC1 - 1)
+                if (result != entity_1 - 1)
                 {
-                    int32_t dstD2 = srcS1[result];
-                    int32_t objC5 = srcS1[objC1 - 1] * dstD1 + ctxB1;
-                    int32_t tmpD3 = *(tmpD2 + objC5);
-                    srcS1[result] = srcS1[tmpD3];
-                    *(g_a83cfc + (tmpD3 << 2)) = dstD2;
-                    *(g_a83d0c + objC5) = result;
+                    int32_t dest_2 = source_1[result];
+                    int32_t entity_5 = source_1[entity_1 - 1] * dest_1 + context_1;
+                    int32_t temp_3 = *(temp_2 + entity_5);
+                    source_1[result] = source_1[temp_3];
+                    *(g_a83cfc + (temp_3 << 2)) = dest_2;
+                    *(g_a83d0c + entity_5) = result;
                 }
 
                 return result;
             }
 
-            tmpD1 = &tmpD1[1];
-            cond_1_1 = v_4 + 1 < objC1;
-            v_4 += 1;
-        } while (cond_1_1);
+            temp_1 = &temp_1[1];
+            flag_1_1 = item_4 + 1 < entity_1;
+            item_4 += 1;
+        } while (flag_1_1);
     }
 
     Error_Show("Lightsource not found");

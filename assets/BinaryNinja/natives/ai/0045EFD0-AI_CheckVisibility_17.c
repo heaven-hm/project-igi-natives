@@ -1,37 +1,37 @@
 // Original IGI.EXE function: AI_CheckVisibility_17 (VA 0x0045EFD0; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckVisibility_17.h"
-int32_t* AI_CheckVisibility_17(void* a1)
+int32_t* AI_CheckVisibility_17(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x768);
+    int32_t* data_val = *(context + 0x768);
 
-    if (valA)
-        Qtask_UpdateList(valA);
+    if (data_val)
+        Qtask_UpdateList(data_val);
 
-    int32_t* valA1 = *(a1 + 0x7b0);
+    int32_t* data_1 = *(context + 0x7b0);
 
-    if (valA1)
-        Qtask_UpdateList(valA1);
+    if (data_1)
+        Qtask_UpdateList(data_1);
 
-    int32_t* valA2 = *(a1 + 0x7b4);
+    int32_t* data_2 = *(context + 0x7b4);
 
-    if (valA2)
-        Qtask_UpdateList(valA2);
+    if (data_2)
+        Qtask_UpdateList(data_2);
 
-    int32_t* valA3 = *(a1 + 0x838);
+    int32_t* data_3 = *(context + 0x838);
 
-    if (valA3)
-        Qtask_UpdateList(valA3);
+    if (data_3)
+        Qtask_UpdateList(data_3);
 
-    int32_t* result = *(a1 + 0x83c);
+    int32_t* result = *(context + 0x83c);
 
     if (result)
         result = Qtask_UpdateList(result);
 
-    int32_t* srcS1 = *(a1 + 0x840);
+    int32_t* source_1 = *(context + 0x840);
 
-    if (!srcS1)
+    if (!source_1)
         return result;
 
-    return Qtask_UpdateList(srcS1);
+    return Qtask_UpdateList(source_1);
 }

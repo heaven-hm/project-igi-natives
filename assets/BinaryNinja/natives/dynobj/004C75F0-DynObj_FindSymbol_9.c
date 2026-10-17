@@ -1,26 +1,26 @@
 // Original IGI.EXE function: DynObj_FindSymbol_9 (VA 0x004C75F0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_FindSymbol_9.h"
-void* const DynObj_FindSymbol_9(int32_t a1, void* a2)
+void* const DynObj_FindSymbol_9(int32_t context, void* param_2)
 
 {
-    void* const result = a2;
-    int32_t srcS;
-    int32_t v_14 = srcS;
+    void* const result = param_2;
+    int32_t source_val;
+    int32_t item_14 = source_val;
     void* i = *(result + 0x2c);
     void* const result_1 = nullptr;
-    int32_t tmpD = 0x8000;
+    int32_t temp_val = 0x8000;
 
     while (i)
     {
-        srcS = *(i + 0x5c);
+        source_val = *(i + 0x5c);
         i = *(i + 0x58);
-        tmpD |= srcS;
+        temp_val |= source_val;
     }
 
-    if (tmpD != *(result + 0x38))
+    if (temp_val != *(result + 0x38))
         result_1 = 1;
 
-    *(result + 0x38) = tmpD;
+    *(result + 0x38) = temp_val;
 
     while (true)
     {
@@ -38,52 +38,52 @@ void* const DynObj_FindSymbol_9(int32_t a1, void* a2)
                 break;
 
         label_4c76ff:
-            int32_t ctxB6 = 0x8000;
-            int32_t* objC7 = result_2 + 0xc;
+            int32_t context_6 = 0x8000;
+            int32_t* entity_7 = result_2 + 0xc;
             int32_t i_2 = 8;
             int32_t i_1;
 
             do
             {
-                void* valA9 = *objC7;
+                void* data_9 = *entity_7;
 
-                if (valA9)
+                if (data_9)
                 {
-                    flagP4 = *(valA9 + 0x3a);
-                    flagP4 |= *(valA9 + 0x38);
-                    ctxB6 |= flagP4;
+                    flagP4 = *(data_9 + 0x3a);
+                    flagP4 |= *(data_9 + 0x38);
+                    context_6 |= flagP4;
                 }
 
-                objC7 = &objC7[1];
+                entity_7 = &entity_7[1];
                 i_1 = i_2;
                 i_2 -= 1;
             } while (i_1 != 1);
 
-            if (*(result_2 + 0x3a) == ctxB6)
+            if (*(result_2 + 0x3a) == context_6)
                 result_1 = nullptr;
 
-            *(result_2 + 0x3a) = ctxB6;
+            *(result_2 + 0x3a) = context_6;
         }
         else
         {
-            int32_t* valA1 = *(*(result_2 + (flagP4 << 2) + 0xc) + 0x3c);
+            int32_t* data_1 = *(*(result_2 + (flagP4 << 2) + 0xc) + 0x3c);
 
-            if (valA1)
-                DynCubeObj_Action(valA1);
+            if (data_1)
+                DynCubeObj_Action(data_1);
 
-            int32_t tmpD1 = *(*(result_2 + (flagP4 << 2) + 0xc) + *(a1 + 0xd14));
-            int32_t valA4 = *(a1 + 0xd08) - 1;
-            *(a1 + 0xd08) = valA4;
+            int32_t temp_1 = *(*(result_2 + (flagP4 << 2) + 0xc) + *(context + 0xd14));
+            int32_t data_4 = *(context + 0xd08) - 1;
+            *(context + 0xd08) = data_4;
 
-            if (tmpD1 != valA4)
+            if (temp_1 != data_4)
             {
-                int32_t objC4 = *(a1 + 0xd04);
-                void* flagP1 = *(objC4 + (tmpD1 << 2));
-                valA4 = *(objC4 + (valA4 << 2)) * *(a1 + 0xd10) + *(a1 + 0xd00);
-                int32_t ctxB5 = *(*(a1 + 0xd14) + valA4);
-                *(objC4 + (tmpD1 << 2)) = *(objC4 + (ctxB5 << 2));
-                *(*(a1 + 0xd04) + (ctxB5 << 2)) = flagP1;
-                *(*(a1 + 0xd14) + valA4) = tmpD1;
+                int32_t entity_4 = *(context + 0xd04);
+                void* flagP1 = *(entity_4 + (temp_1 << 2));
+                data_4 = *(entity_4 + (data_4 << 2)) * *(context + 0xd10) + *(context + 0xd00);
+                int32_t context_5 = *(*(context + 0xd14) + data_4);
+                *(entity_4 + (temp_1 << 2)) = *(entity_4 + (context_5 << 2));
+                *(*(context + 0xd04) + (context_5 << 2)) = flagP1;
+                *(*(context + 0xd14) + data_4) = temp_1;
             }
 
             *(result_2 + (flagP4 << 2) + 0xc) = 0;

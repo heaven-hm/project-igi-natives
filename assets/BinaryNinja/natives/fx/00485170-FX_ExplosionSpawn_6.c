@@ -1,23 +1,23 @@
 // Original IGI.EXE function: FX_ExplosionSpawn_6 (VA 0x00485170; static CFG gate PASS, CFG score 1.000).
 #include "FX_ExplosionSpawn_6.h"
-void* FX_ExplosionSpawn_6(int32_t a1)
+void* FX_ExplosionSpawn_6(int32_t context)
 
 {
-    int32_t tmpD1 = g_5c89fc;
-    int32_t valA = 0;
+    int32_t temp_1 = g_5c89fc;
+    int32_t data_val = 0;
 
-    if (tmpD1 > 0)
+    if (temp_1 > 0)
     {
-        int32_t* objC1 = &g_5c1590;
+        int32_t* entity_1 = &g_5c1590;
 
         do
         {
-            if (*objC1 == a1)
-                return valA * 0x4a8 + &g_5c1590;
+            if (*entity_1 == context)
+                return data_val * 0x4a8 + &g_5c1590;
 
-            valA += 1;
-            objC1 = &objC1[0x12a];
-        } while (valA < tmpD1);
+            data_val += 1;
+            entity_1 = &entity_1[0x12a];
+        } while (data_val < temp_1);
     }
 
     return 0;

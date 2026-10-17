@@ -1,45 +1,45 @@
 // Original IGI.EXE function: DynObj_RegisterSymbol_8 (VA 0x004C6890; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_RegisterSymbol_8.h"
-void* DynObj_RegisterSymbol_8(void* a1, void* a2, int32_t a3)
+void* DynObj_RegisterSymbol_8(void* context, void* param_2, int32_t param_3)
 
 {
-    if (a3 == 0xffffffff)
+    if (param_3 == 0xffffffff)
     {
-        void* objC = *(a1 + 0xd18);
+        void* entity_val = *(context + 0xd18);
 
-        if (!objC)
+        if (!entity_val)
         {
-            *(a1 + 0xd18) = a2;
-            *(a2 + 0x58) = 0;
-            *(*(a1 + 0xd18) + 0x54) = 0;
-            return a1;
+            *(context + 0xd18) = param_2;
+            *(param_2 + 0x58) = 0;
+            *(*(context + 0xd18) + 0x54) = 0;
+            return context;
         }
 
-        *(objC + 0x54) = a2;
-        void* objC1 = *(a1 + 0xd18);
-        *(*(objC1 + 0x54) + 0x58) = objC1;
-        void* objC3 = *(*(a1 + 0xd18) + 0x54);
-        *(a1 + 0xd18) = objC3;
-        *(objC3 + 0x54) = 0;
-        return a1;
+        *(entity_val + 0x54) = param_2;
+        void* entity_1 = *(context + 0xd18);
+        *(*(entity_1 + 0x54) + 0x58) = entity_1;
+        void* entity_3 = *(*(context + 0xd18) + 0x54);
+        *(context + 0xd18) = entity_3;
+        *(entity_3 + 0x54) = 0;
+        return context;
     }
 
-    void* tmpD3 = *(a1 + (a3 << 2) + 0xd1c);
+    void* temp_3 = *(context + (param_3 << 2) + 0xd1c);
 
-    if (!tmpD3)
+    if (!temp_3)
     {
-        *(a1 + (a3 << 2) + 0xd1c) = a2;
-        *(a2 + 0x58) = 0;
-        void* valA1 = *(a1 + (a3 << 2) + 0xd1c);
-        *(valA1 + 0x54) = 0;
-        return valA1;
+        *(context + (param_3 << 2) + 0xd1c) = param_2;
+        *(param_2 + 0x58) = 0;
+        void* data_1 = *(context + (param_3 << 2) + 0xd1c);
+        *(data_1 + 0x54) = 0;
+        return data_1;
     }
 
-    *(tmpD3 + 0x54) = a2;
-    void* tmpD4 = *(a1 + (a3 << 2) + 0xd1c);
-    *(*(tmpD4 + 0x54) + 0x58) = tmpD4;
-    void* tmpD6 = *(*(a1 + (a3 << 2) + 0xd1c) + 0x54);
-    *(a1 + (a3 << 2) + 0xd1c) = tmpD6;
-    *(tmpD6 + 0x54) = 0;
-    return a3;
+    *(temp_3 + 0x54) = param_2;
+    void* temp_4 = *(context + (param_3 << 2) + 0xd1c);
+    *(*(temp_4 + 0x54) + 0x58) = temp_4;
+    void* temp_6 = *(*(context + (param_3 << 2) + 0xd1c) + 0x54);
+    *(context + (param_3 << 2) + 0xd1c) = temp_6;
+    *(temp_6 + 0x54) = 0;
+    return param_3;
 }

@@ -1,56 +1,56 @@
 // Original IGI.EXE function: Weapon_EjectMagazine_4 (VA 0x00476670; static CFG gate PASS, CFG score 0.926).
 #include "Weapon_EjectMagazine_4.h"
-struct status_msg* Weapon_EjectMagazine_4(void* a1, void* a2, void* a3, int32_t a4, int32_t a5, int32_t* a6, char* a7, int32_t a8, int32_t a9)
+struct status_msg* Weapon_EjectMagazine_4(void* context, void* param_2, void* param_3, int32_t param_4, int32_t param_5, int32_t* param_6, char* param_7, int32_t param_8, int32_t param_9)
 
 {
     int32_t kind = Qhash_Init(1);
     kind = g_5be3b0;
-    struct status_msg* result = QTask_HandleInput(a1, kind, 0);
+    struct status_msg* result = QTask_HandleInput(context, kind, 0);
 
-    if (a2)
+    if (param_2)
     {
-        int32_t* valA1 = QTask_LinkEventHandler_2(a2);
-        result->sprite[0x60] = valA1;
-        result->sprite[0x61] = *(&valA1 + 1);
-        result->sprite[0x62] = *(&valA1 + 2);
-        result->sprite[0x63] = *(&valA1 + 3);
+        int32_t* data_1 = QTask_LinkEventHandler_2(param_2);
+        result->sprite[0x60] = data_1;
+        result->sprite[0x61] = *(&data_1 + 1);
+        result->sprite[0x62] = *(&data_1 + 2);
+        result->sprite[0x63] = *(&data_1 + 3);
     }
 
-    if (a3)
+    if (param_3)
     {
-        int32_t* valA3 = QTask_LinkEventHandler_2(a3);
-        result->sprite[0x64] = valA3;
-        result->sprite[0x65] = *(&valA3 + 1);
-        result->sprite[0x66] = *(&valA3 + 2);
-        result->sprite[0x67] = *(&valA3 + 3);
+        int32_t* data_3 = QTask_LinkEventHandler_2(param_3);
+        result->sprite[0x64] = data_3;
+        result->sprite[0x65] = *(&data_3 + 1);
+        result->sprite[0x66] = *(&data_3 + 2);
+        result->sprite[0x67] = *(&data_3 + 3);
     }
 
-    memcpy(&result->sprite[0x3c], a4, 0x18);
-    memcpy(&result->head[0x1c], a5, 0x28);
-    int32_t objC1 = *a6;
-    result->sprite[0x54] = objC1;
-    result->sprite[0x55] = *(&objC1 + 1);
-    result->sprite[0x56] = *(&objC1 + 2);
-    result->sprite[0x57] = *(&objC1 + 3);
-    int32_t objC2 = a6[1];
-    result->sprite[0x58] = objC2;
-    result->sprite[0x59] = *(&objC2 + 1);
-    result->sprite[0x5a] = *(&objC2 + 2);
-    result->sprite[0x5b] = *(&objC2 + 3);
-    int32_t valA5 = a6[2];
-    result->sprite[0x5c] = valA5;
-    result->sprite[0x5d] = *(&valA5 + 1);
-    result->sprite[0x5e] = *(&valA5 + 2);
-    result->sprite[0x5f] = *(&valA5 + 3);
-    DynObj_CreateMagicObject_5(result, DynObj_Missing(a7));
-    result->sprite[0x6c] = a8;
-    result->sprite[0x6d] = *(&a8 + 1);
-    result->sprite[0x6e] = *(&a8 + 2);
-    result->sprite[0x6f] = *(&a8 + 3);
-    result->sprite[0x70] = a9;
-    result->sprite[0x71] = *(&a9 + 1);
-    result->sprite[0x72] = *(&a9 + 2);
-    result->sprite[0x73] = *(&a9 + 3);
+    memcpy(&result->sprite[0x3c], param_4, 0x18);
+    memcpy(&result->head[0x1c], param_5, 0x28);
+    int32_t entity_1 = *param_6;
+    result->sprite[0x54] = entity_1;
+    result->sprite[0x55] = *(&entity_1 + 1);
+    result->sprite[0x56] = *(&entity_1 + 2);
+    result->sprite[0x57] = *(&entity_1 + 3);
+    int32_t entity_2 = param_6[1];
+    result->sprite[0x58] = entity_2;
+    result->sprite[0x59] = *(&entity_2 + 1);
+    result->sprite[0x5a] = *(&entity_2 + 2);
+    result->sprite[0x5b] = *(&entity_2 + 3);
+    int32_t data_5 = param_6[2];
+    result->sprite[0x5c] = data_5;
+    result->sprite[0x5d] = *(&data_5 + 1);
+    result->sprite[0x5e] = *(&data_5 + 2);
+    result->sprite[0x5f] = *(&data_5 + 3);
+    DynObj_CreateMagicObject_5(result, DynObj_Missing(param_7));
+    result->sprite[0x6c] = param_8;
+    result->sprite[0x6d] = *(&param_8 + 1);
+    result->sprite[0x6e] = *(&param_8 + 2);
+    result->sprite[0x6f] = *(&param_8 + 3);
+    result->sprite[0x70] = param_9;
+    result->sprite[0x71] = *(&param_9 + 1);
+    result->sprite[0x72] = *(&param_9 + 2);
+    result->sprite[0x73] = *(&param_9 + 3);
     Qhash_Reset();
     return result;
 }

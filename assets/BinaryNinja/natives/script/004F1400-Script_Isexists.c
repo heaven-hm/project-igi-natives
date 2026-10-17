@@ -1,231 +1,231 @@
 // Original IGI.EXE function: Script_Isexists (VA 0x004F1400; static CFG gate PASS, CFG score 0.926).
 #include "Script_Isexists.h"
-int32_t Script_Isexists(int32_t* a1, void* a2)
+int32_t Script_Isexists(int32_t* context, void* param_2)
 
 {
     int32_t i = 0;
-    char* valA = *a1;
-    bool cond_0 = a1[0x13] <= 0;
-    char* v_584 = valA;
-    char v_400;
-    char* ctxB = &v_400;
-    v_400 = 0;
+    char* data_val = *context;
+    bool flag_0 = context[0x13] <= 0;
+    char* item_584 = data_val;
+    char item_400;
+    char* context_val = &item_400;
+    item_400 = 0;
 
-    if (!cond_0)
+    if (!flag_0)
     {
-        int32_t* srcS1 = &a1[3];
+        int32_t* source_1 = &context[3];
 
         do
         {
-            Qtask_UpdateList(*srcS1);
-            *srcS1 = 0;
+            Qtask_UpdateList(*source_1);
+            *source_1 = 0;
             i += 1;
-            srcS1 = &srcS1[1];
-        } while (i < a1[0x13]);
+            source_1 = &source_1[1];
+        } while (i < context[0x13]);
 
-        valA = v_584;
+        data_val = item_584;
     }
 
-    char* objC1 = a1[2];
+    char* entity_1 = context[2];
 
-    if (objC1)
+    if (entity_1)
     {
-        Sys_PushStack_24(objC1);
-        valA = v_584;
+        Sys_PushStack_24(entity_1);
+        data_val = item_584;
     }
 
-    a1[0x13] = 0;
+    context[0x13] = 0;
 
-    if (valA)
+    if (data_val)
     {
-        while (*valA)
+        while (*data_val)
         {
-            char v_580;
+            char item_580;
 
-            if (!Terrain_SelectTerrainLOD_5(valA, &v_584, &v_580, 0x7f))
+            if (!Terrain_SelectTerrainLOD_5(data_val, &item_584, &item_580, 0x7f))
             {
-                char objC19 = *v_584;
-                ctxB[1] = 0;
-                *ctxB = objC19;
-                valA = v_584;
+                char entity_19 = *item_584;
+                context_val[1] = 0;
+                *context_val = entity_19;
+                data_val = item_584;
 
-                if (*valA)
+                if (*data_val)
                 {
-                    ctxB = &ctxB[1];
-                    valA = &valA[1];
-                    v_584 = valA;
+                    context_val = &context_val[1];
+                    data_val = &data_val[1];
+                    item_584 = data_val;
                 }
             }
             else
             {
-                int32_t valA4 = Script_ParseEnumString_7(&v_580);
+                int32_t data_4 = Script_ParseEnumString_7(&item_580);
 
-                if (valA4 >= 0)
+                if (data_4 >= 0)
                 {
-                    char objC4 = v_580;
+                    char entity_4 = item_580;
 
-                    if (objC4 < 0x30 || objC4 > 0x39)
+                    if (entity_4 < 0x30 || entity_4 > 0x39)
                     {
-                        void* valA5 = Script_ExecuteLevelScript_4(valA4);
+                        void* data_5 = Script_ExecuteLevelScript_4(data_4);
 
-                        if (!valA5)
-                            v_580 = g_54e0e0;
+                        if (!data_5)
+                            item_580 = g_54e0e0;
                         else
                         {
-                            void* v_598_5 = a2;
-                            Script_EvaluateCondition_6(a1, valA5);
+                            void* item_598_5 = param_2;
+                            Script_EvaluateCondition_6(context, data_5);
                         }
                     }
                 }
 
-                char v_57f;
-                char v_57e;
-                char v_57d;
-                char v_57c;
+                char item_57f;
+                char item_57e;
+                char item_57d;
+                char item_57c;
 
-                if (v_580 == 0x74 && v_57f == 0x68 && v_57e == 0x69 && v_57d == 0x73
-                    && v_57c == 0x2e)
+                if (item_580 == 0x74 && item_57f == 0x68 && item_57e == 0x69 && item_57d == 0x73
+                    && item_57c == 0x2e)
                 {
-                    void v_57b;
-                    void* dstD = &v_57b;
+                    void item_57b;
+                    void* dest_val = &item_57b;
                     int32_t i_1 = 0xffffffff;
 
                     while (i_1)
                     {
-                        bool cond_7_1 = 0 != *dstD;
-                        dstD += 1;
+                        bool flag_7_1 = 0 != *dest_val;
+                        dest_val += 1;
                         i_1 -= 1;
 
-                        if (!cond_7_1)
+                        if (!flag_7_1)
                             break;
                     }
 
-                    int32_t objC6 = ~i_1;
-                    void v_500;
-                    int32_t srcS3;
-                    int32_t dstD2;
-                    dstD2 = memcpy(&v_500, dstD - objC6, objC6 & 0xfffffffc);
-                    memcpy(dstD2, srcS3, objC6 & 3);
-                    void v_480;
-                    Script_ParseEnumString_6(&v_480, a2);
-                    void* v_5a0_3 = &v_500;
-                    void* v_5a4_2 = &v_480;
-                    Game_DataSymbolLoad(&v_580, "%s.%s");
+                    int32_t entity_6 = ~i_1;
+                    void item_500;
+                    int32_t source_3;
+                    int32_t dest_2;
+                    dest_2 = memcpy(&item_500, dest_val - entity_6, entity_6 & 0xfffffffc);
+                    memcpy(dest_2, source_3, entity_6 & 3);
+                    void item_480;
+                    Script_ParseEnumString_6(&item_480, param_2);
+                    void* item_5a0_3 = &item_500;
+                    void* item_5a4_2 = &item_480;
+                    Game_DataSymbolLoad(&item_580, "%s.%s");
                 }
 
-                if (Camera_UpdateViewCone_6(&v_580, ".isExists"))
-                    v_580 = g_54e0c8;
+                if (Camera_UpdateViewCone_6(&item_580, ".isExists"))
+                    item_580 = g_54e0c8;
 
-                char* dstD3 = &v_580;
+                char* dest_3 = &item_580;
                 int32_t i_2 = 0xffffffff;
 
                 while (i_2)
                 {
-                    bool cond_5_1 = 0 != *dstD3;
-                    dstD3 = &dstD3[1];
+                    bool flag_5_1 = 0 != *dest_3;
+                    dest_3 = &dest_3[1];
                     i_2 -= 1;
 
-                    if (!cond_5_1)
+                    if (!flag_5_1)
                         break;
                 }
 
-                int32_t objC13 = ~i_2;
-                int32_t srcS5;
-                int32_t dstD6;
-                dstD6 = memcpy(ctxB, dstD3 - objC13, objC13 & 0xfffffffc);
-                memcpy(dstD6, srcS5, objC13 & 3);
-                char* dstD7 = ctxB;
+                int32_t entity_13 = ~i_2;
+                int32_t source_5;
+                int32_t dest_6;
+                dest_6 = memcpy(context_val, dest_3 - entity_13, entity_13 & 0xfffffffc);
+                memcpy(dest_6, source_5, entity_13 & 3);
+                char* dest_7 = context_val;
                 int32_t i_3 = 0xffffffff;
 
                 while (i_3)
                 {
-                    bool cond_6_1 = 0 != *dstD7;
-                    dstD7 = &dstD7[1];
+                    bool flag_6_1 = 0 != *dest_7;
+                    dest_7 = &dest_7[1];
                     i_3 -= 1;
 
-                    if (!cond_6_1)
+                    if (!flag_6_1)
                         break;
                 }
 
-                valA = v_584;
-                ctxB = &ctxB[~i_3 - 1];
+                data_val = item_584;
+                context_val = &context_val[~i_3 - 1];
             }
 
-            if (!valA)
+            if (!data_val)
                 break;
         }
     }
 
-    *ctxB = 0x3b;
-    ctxB[1] = 0;
-    void* valA9 = a1[1];
+    *context_val = 0x3b;
+    context_val[1] = 0;
+    void* data_9 = context[1];
 
-    if (valA9)
+    if (data_9)
     {
-        Sys_ExecuteBytecode_2(valA9);
-        a1[1] = 0;
+        Sys_ExecuteBytecode_2(data_9);
+        context[1] = 0;
     }
 
     if (!QHash_ValueGet())
     {
         QHash_ValueSet();
         Sys_ScriptStackUnderflow(0);
-        char* dstD9 = &v_400;
+        char* dest_9 = &item_400;
         int32_t i_4 = 0xffffffff;
 
         while (i_4)
         {
-            bool cond_2_1 = 0 != *dstD9;
-            dstD9 = &dstD9[1];
+            bool flag_2_1 = 0 != *dest_9;
+            dest_9 = &dest_9[1];
             i_4 -= 1;
 
-            if (!cond_2_1)
+            if (!flag_2_1)
                 break;
         }
 
-        a1[1] = Mem_Alloc(~i_4, 4);
-        a1[2] = Sys_ResolveSymbol_22(&v_400);
+        context[1] = Mem_Alloc(~i_4, 4);
+        context[2] = Sys_ResolveSymbol_22(&item_400);
         Sys_ScriptStackOverflow();
         Sys_DispatchOpcode_2();
     }
     else
     {
         Sys_ScriptStackUnderflow(0);
-        char* dstD8 = &v_400;
+        char* dest_8 = &item_400;
         int32_t i_5 = 0xffffffff;
 
         while (i_5)
         {
-            bool cond_3_1 = 0 != *dstD8;
-            dstD8 = &dstD8[1];
+            bool flag_3_1 = 0 != *dest_8;
+            dest_8 = &dest_8[1];
             i_5 -= 1;
 
-            if (!cond_3_1)
+            if (!flag_3_1)
                 break;
         }
 
-        a1[1] = Mem_Alloc(~i_5, 4);
-        a1[2] = Sys_ResolveSymbol_22(&v_400);
+        context[1] = Mem_Alloc(~i_5, 4);
+        context[2] = Sys_ResolveSymbol_22(&item_400);
         Sys_ScriptStackOverflow();
     }
 
-    char* dstD10 = &v_400;
+    char* dest_10 = &item_400;
     int32_t i_6 = 0xffffffff;
 
     while (i_6)
     {
-        bool cond_4_1 = 0 != *dstD10;
-        dstD10 = &dstD10[1];
+        bool flag_4_1 = 0 != *dest_10;
+        dest_10 = &dest_10[1];
         i_6 -= 1;
 
-        if (!cond_4_1)
+        if (!flag_4_1)
             break;
     }
 
-    int32_t objC22 = ~i_6;
-    int32_t srcS7;
-    int32_t dstD13;
-    dstD13 = memcpy(a1[1], dstD10 - objC22, objC22 & 0xfffffffc);
-    memcpy(dstD13, srcS7, objC22 & 3);
+    int32_t entity_22 = ~i_6;
+    int32_t source_7;
+    int32_t dest_13;
+    dest_13 = memcpy(context[1], dest_10 - entity_22, entity_22 & 0xfffffffc);
+    memcpy(dest_13, source_7, entity_22 & 3);
     return 0;
 }

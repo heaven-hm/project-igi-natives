@@ -1,141 +1,141 @@
 // Original IGI.EXE function: Env_333333333 (VA 0x0044A1D0; static CFG gate PASS, CFG score 0.917).
 #include "Env_333333333.h"
-struct status_msg* Env_333333333(uint32_t a1, int32_t* a2, double* a3, float* a4, void* a5)
+struct status_msg* Env_333333333(uint32_t context, int32_t* param_2, double* param_3, float* param_4, void* param_5)
 
 {
-    int32_t* kind = a1;
-    void* objC = *kind;
+    int32_t* kind = context;
+    void* entity_val = *kind;
     kind = g_57c240;
-    void* srcS = *(*(objC + 0xc) + 0xc);
-    struct status_msg* valA1 = QTask_HandleInput(Script_FormatString(), kind, 0);
+    void* source_val = *(*(entity_val + 0xc) + 0xc);
+    struct status_msg* data_1 = QTask_HandleInput(Script_FormatString(), kind, 0);
     g_57c244 = 0;
-    int32_t* srcS1 = *(srcS + 0x2c);
-    struct status_msg* result = *srcS1;
+    int32_t* source_1 = *(source_val + 0x2c);
+    struct status_msg* result = *source_1;
 
     if (!result)
         return result;
 
-    valA1->head[0x1b] = *a2;
-    valA1->head[0x1c] = a2[1];
-    valA1->head[0x1d] = a2[2];
-    long double x87_r7_1 = valA1->head[0x1d];
-    long double x87_r6_1 = valA1->head[0x1c];
-    long double x87_r5_1 = valA1->head[0x1b];
-    long double x87_r7_3 =
-        10f / sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_1 * x87_r7_1);
-    long double x87_r6_4 = valA1->head[0x1b] * x87_r7_3;
-    float v_20_1 = x87_r6_4;
-    valA1->head[0x1b] = x87_r6_4;
-    long double x87_r6_6 = valA1->head[0x1c] * x87_r7_3;
-    float v_1c_1 = x87_r6_6;
-    valA1->head[0x1c] = x87_r6_6;
-    long double x87_r7_4 = x87_r7_3 * valA1->head[0x1d];
-    valA1->head[0x1d] = x87_r7_4;
-    float v_14_1 = x87_r7_4 * a4[7] + v_1c_1 * a4[4] + v_20_1 * a4[1];
-    long double x87_r7_6 = v_20_1 * a4[2] + x87_r7_4 * a4[8];
-    long double x87_r6_20 = v_1c_1 * a4[5];
-    valA1->head[0x1b] = x87_r7_4 * a4[6] + v_1c_1 * a4[3] + v_20_1 * *a4;
-    valA1->head[0x1c] = v_14_1;
-    valA1->head[0x1d] = x87_r7_6 + x87_r6_20;
-    double* tmpD4 = a3;
-    memcpy(&valA1->head[0x1e], tmpD4, 0x18);
-    memcpy(&valA1->head[0x24], a4, 0x28);
-    valA1->head[0x1a] = a1;
-    valA1->sprite[8] = 0x1e;
-    valA1->sprite[9] = 0;
-    valA1->sprite[0xa] = 0;
-    valA1->sprite[0xb] = 0;
-    g_57c270 = *(a5 + 8) - *tmpD4;
-    g_57c274 = *(a5 + 0x10) - tmpD4[1];
-    long double x87_r7_13 = *(a5 + 0x18) - tmpD4[2];
-    g_57c278 = x87_r7_13;
-    float v_14_2 = g_57c278 * a4[7] + g_57c274 * a4[4] + g_57c270 * a4[1];
-    long double x87_r7_23 = g_57c270 * a4[2] + g_57c278 * a4[8];
-    long double x87_r6_32 = g_57c274 * a4[5];
-    g_57c270 = x87_r7_13 * a4[6] + g_57c274 * a4[3] + g_57c270 * *a4;
-    g_57c274 = v_14_2;
-    g_57c278 = x87_r7_23 + x87_r6_32;
-    g_57c250 = *(a5 + 8) - *tmpD4;
-    g_57c254 = *(a5 + 0x10) - tmpD4[1];
-    long double x87_r7_30 = *(a5 + 0x18) - tmpD4[2];
-    g_57c258 = x87_r7_30;
-    float v_14_3 = g_57c258 * a4[7] + g_57c254 * a4[4] + g_57c250 * a4[1];
-    long double x87_r7_40 = g_57c250 * a4[2] + g_57c258 * a4[8];
-    long double x87_r6_44 = g_57c254 * a4[5];
-    g_57c250 = x87_r7_30 * a4[6] + g_57c254 * a4[3] + g_57c250 * *a4;
-    g_57c254 = v_14_3;
-    g_57c258 = x87_r7_40 + x87_r6_44;
-    long double x87_r7_45 =
-        *(a5 + 0x40) * a4[6] + *(a5 + 0x3c) * a4[3] + *a4 * *(a5 + 0x38);
-    long double x87_r7_52 = a4[2] * *(a5 + 0x38) + *(a5 + 0x40) * a4[8];
-    long double x87_r6_56 = *(a5 + 0x3c) * a4[5];
-    g_57c264 = *(a5 + 0x40) * a4[7] + *(a5 + 0x3c) * a4[4] + *(a5 + 0x38) * a4[1];
-    g_57c260 = x87_r7_45;
-    g_57c27c = &valA1->sprite[0xc];
-    int32_t* objC12 = srcS1;
+    data_1->head[0x1b] = *param_2;
+    data_1->head[0x1c] = param_2[1];
+    data_1->head[0x1d] = param_2[2];
+    long double fpu_val_7_1 = data_1->head[0x1d];
+    long double fpu_val_6_1 = data_1->head[0x1c];
+    long double fpu_val_5_1 = data_1->head[0x1b];
+    long double fpu_val_7_3 =
+        10.0f / sqrtl(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_1 * fpu_val_7_1);
+    long double fpu_val_6_4 = data_1->head[0x1b] * fpu_val_7_3;
+    float item_20_1 = fpu_val_6_4;
+    data_1->head[0x1b] = fpu_val_6_4;
+    long double fpu_val_6_6 = data_1->head[0x1c] * fpu_val_7_3;
+    float item_1c_1 = fpu_val_6_6;
+    data_1->head[0x1c] = fpu_val_6_6;
+    long double fpu_val_7_4 = fpu_val_7_3 * data_1->head[0x1d];
+    data_1->head[0x1d] = fpu_val_7_4;
+    float item_14_1 = fpu_val_7_4 * param_4[7] + item_1c_1 * param_4[4] + item_20_1 * param_4[1];
+    long double fpu_val_7_6 = item_20_1 * param_4[2] + fpu_val_7_4 * param_4[8];
+    long double fpu_val_6_20 = item_1c_1 * param_4[5];
+    data_1->head[0x1b] = fpu_val_7_4 * param_4[6] + item_1c_1 * param_4[3] + item_20_1 * *param_4;
+    data_1->head[0x1c] = item_14_1;
+    data_1->head[0x1d] = fpu_val_7_6 + fpu_val_6_20;
+    double* temp_4 = param_3;
+    memcpy(&data_1->head[0x1e], temp_4, 0x18);
+    memcpy(&data_1->head[0x24], param_4, 0x28);
+    data_1->head[0x1a] = context;
+    data_1->sprite[8] = 0x1e;
+    data_1->sprite[9] = 0;
+    data_1->sprite[0xa] = 0;
+    data_1->sprite[0xb] = 0;
+    g_57c270 = *(param_5 + 8) - *temp_4;
+    g_57c274 = *(param_5 + 0x10) - temp_4[1];
+    long double fpu_val_7_13 = *(param_5 + 0x18) - temp_4[2];
+    g_57c278 = fpu_val_7_13;
+    float item_14_2 = g_57c278 * param_4[7] + g_57c274 * param_4[4] + g_57c270 * param_4[1];
+    long double fpu_val_7_23 = g_57c270 * param_4[2] + g_57c278 * param_4[8];
+    long double fpu_val_6_32 = g_57c274 * param_4[5];
+    g_57c270 = fpu_val_7_13 * param_4[6] + g_57c274 * param_4[3] + g_57c270 * *param_4;
+    g_57c274 = item_14_2;
+    g_57c278 = fpu_val_7_23 + fpu_val_6_32;
+    g_57c250 = *(param_5 + 8) - *temp_4;
+    g_57c254 = *(param_5 + 0x10) - temp_4[1];
+    long double fpu_val_7_30 = *(param_5 + 0x18) - temp_4[2];
+    g_57c258 = fpu_val_7_30;
+    float item_14_3 = g_57c258 * param_4[7] + g_57c254 * param_4[4] + g_57c250 * param_4[1];
+    long double fpu_val_7_40 = g_57c250 * param_4[2] + g_57c258 * param_4[8];
+    long double fpu_val_6_44 = g_57c254 * param_4[5];
+    g_57c250 = fpu_val_7_30 * param_4[6] + g_57c254 * param_4[3] + g_57c250 * *param_4;
+    g_57c254 = item_14_3;
+    g_57c258 = fpu_val_7_40 + fpu_val_6_44;
+    long double fpu_val_7_45 =
+        *(param_5 + 0x40) * param_4[6] + *(param_5 + 0x3c) * param_4[3] + *param_4 * *(param_5 + 0x38);
+    long double fpu_val_7_52 = param_4[2] * *(param_5 + 0x38) + *(param_5 + 0x40) * param_4[8];
+    long double fpu_val_6_56 = *(param_5 + 0x3c) * param_4[5];
+    g_57c264 = *(param_5 + 0x40) * param_4[7] + *(param_5 + 0x3c) * param_4[4] + *(param_5 + 0x38) * param_4[1];
+    g_57c260 = fpu_val_7_45;
+    g_57c27c = &data_1->sprite[0xc];
+    int32_t* entity_12 = source_1;
     g_57c23c = 0x41200000;
     g_57c228 = "333?333?333?";
-    g_57c25c = valA1;
-    g_57c268 = x87_r7_52 + x87_r6_56;
-    g_57c26c = &valA1->head[0x5df0];
-    valA1->sprite[4] = 0;
-    valA1->sprite[5] = 0;
-    valA1->sprite[6] = 0;
-    valA1->sprite[7] = 0;
-    a1 = 0;
+    g_57c25c = data_1;
+    g_57c268 = fpu_val_7_52 + fpu_val_6_56;
+    g_57c26c = &data_1->head[0x5df0];
+    data_1->sprite[4] = 0;
+    data_1->sprite[5] = 0;
+    data_1->sprite[6] = 0;
+    data_1->sprite[7] = 0;
+    context = 0;
 
-    if (*objC12 > 0)
+    if (*entity_12 > 0)
     {
         while (true)
         {
-            int32_t valA8 = objC12[4];
-            int32_t dstD3 = objC12[5];
-            int32_t objC13 = 0;
-            objC13 = *(valA8 + (a1 << 3));
-            void* valA9 = valA8 + (a1 << 3);
-            int32_t srcS8 = 0;
-            srcS8 = *(valA9 + 2);
-            float* objC15 = (objC13 << 4) + dstD3;
-            float* srcS10 = (srcS8 << 4) + dstD3;
-            int32_t dstD4 = 0;
-            dstD4 = *(valA9 + 4);
-            float* dstD6 = (dstD4 << 4) + srcS1[5];
-            long double x87_r7_55 = *dstD6 - *objC15;
-            long double x87_r6_58 = dstD6[1] - objC15[1];
-            long double x87_r5_12 = dstD6[2] - objC15[2];
-            float v_18_5 = *srcS10 - *objC15;
-            float v_14_5 = srcS10[1] - objC15[1];
-            long double x87_r4_11 = srcS10[2] - objC15[2];
-            long double x87_r7_60 = (x87_r4_11 * x87_r6_58 - v_14_5 * x87_r5_12) * *a2
-                + (x87_r7_55 * v_14_5 - v_18_5 * x87_r6_58) * a2[2] +
-                -((x87_r4_11 * x87_r7_55 - v_18_5 * x87_r5_12)) * a2[1];
-            long double f1_1 = 0f;
-            x87_r7_60 - f1_1;
+            int32_t data_8 = entity_12[4];
+            int32_t dest_3 = entity_12[5];
+            int32_t entity_13 = 0;
+            entity_13 = *(data_8 + (context << 3));
+            void* data_9 = data_8 + (context << 3);
+            int32_t source_8 = 0;
+            source_8 = *(data_9 + 2);
+            float* entity_15 = (entity_13 << 4) + dest_3;
+            float* source_10 = (source_8 << 4) + dest_3;
+            int32_t dest_4 = 0;
+            dest_4 = *(data_9 + 4);
+            float* dest_6 = (dest_4 << 4) + source_1[5];
+            long double fpu_val_7_55 = *dest_6 - *entity_15;
+            long double fpu_val_6_58 = dest_6[1] - entity_15[1];
+            long double fpu_val_5_12 = dest_6[2] - entity_15[2];
+            float item_18_5 = *source_10 - *entity_15;
+            float item_14_5 = source_10[1] - entity_15[1];
+            long double fpu_val_4_11 = source_10[2] - entity_15[2];
+            long double fpu_val_7_60 = (fpu_val_4_11 * fpu_val_6_58 - item_14_5 * fpu_val_5_12) * *param_2
+                + (fpu_val_7_55 * item_14_5 - item_18_5 * fpu_val_6_58) * param_2[2] +
+                -((fpu_val_4_11 * fpu_val_7_55 - item_18_5 * fpu_val_5_12)) * param_2[1];
+            long double f1_1 = 0.0f;
+            fpu_val_7_60 - f1_1;
 
-            if (*(&((x87_r7_60 < f1_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_60, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_60 == f1_1 ? 1 : 0) << 0xe) + 1) & 1)
+            if (*(&((fpu_val_7_60 < f1_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_60, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_60 == f1_1 ? 1 : 0) << 0xe) + 1) & 1)
             {
-                Env_ActivateEntity_11(objC15, srcS10, dstD6);
-                tmpD4 = a3;
+                Env_ActivateEntity_11(entity_15, source_10, dest_6);
+                temp_4 = param_3;
             }
 
-            uint32_t valA14 = a1 + 1;
-            a1 = valA14;
+            uint32_t data_14 = context + 1;
+            context = data_14;
 
-            if (valA14 >= *srcS1)
+            if (data_14 >= *source_1)
                 break;
 
-            objC12 = srcS1;
+            entity_12 = source_1;
         }
     }
 
-    uint32_t valA15;
-    valA15 = valA1->sprite[4];
-    *(&valA15 + 1) = valA1->sprite[5];
-    *(&valA15 + 2) = valA1->sprite[6];
-    *(&valA15 + 3) = valA1->sprite[7];
-    *(valA1 + 0x2b040) = Display_RestoreDevice_18(Level_StartMission_4(), nullptr, tmpD4, a4,
-        &valA1->head[0x5df0], valA15, 0, 1, 0, nullptr, 0);
-    return Env_GlassCrush1(a3);
+    uint32_t data_15;
+    data_15 = data_1->sprite[4];
+    *(&data_15 + 1) = data_1->sprite[5];
+    *(&data_15 + 2) = data_1->sprite[6];
+    *(&data_15 + 3) = data_1->sprite[7];
+    *(data_1 + 0x2b040) = Display_RestoreDevice_18(Level_StartMission_4(), nullptr, temp_4, param_4,
+        &data_1->head[0x5df0], data_15, 0, 1, 0, nullptr, 0);
+    return Env_GlassCrush1(param_3);
 }

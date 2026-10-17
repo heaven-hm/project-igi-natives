@@ -1,55 +1,55 @@
 // Original IGI.EXE function: Sync_Setup (VA 0x00508E40; static CFG gate PASS, CFG score 0.889).
 #include "Sync_Setup.h"
-int32_t Sync_Setup(int32_t* a1)
+int32_t Sync_Setup(int32_t* context)
 
 {
-    int32_t* ctxB = a1;
-    int32_t valA = ctxB[8];
-    int32_t* srcS;
+    int32_t* context_val = context;
+    int32_t data_val = context_val[8];
+    int32_t* source_val;
 
-    if (!valA)
+    if (!data_val)
     {
-        a1 = &ctxB[0x19b];
-        srcS = &ctxB[0x19b];
+        context = &context_val[0x19b];
+        source_val = &context_val[0x19b];
     }
     else
     {
-        srcS = &ctxB[0xd2];
-        a1 = srcS;
+        source_val = &context_val[0xd2];
+        context = source_val;
     }
 
     int32_t i = 0;
-    ctxB[8] = valA ^ 1;
-    int32_t valA2 = *srcS;
+    context_val[8] = data_val ^ 1;
+    int32_t data_2 = *source_val;
 
-    if (valA2 <= 0)
+    if (data_2 <= 0)
     {
-        *srcS = 0;
-        return valA2;
+        *source_val = 0;
+        return data_2;
     }
 
-    int32_t* srcS1 = &srcS[2];
-    int32_t valA8;
+    int32_t* source_1 = &source_val[2];
+    int32_t data_8;
 
     do
     {
-        int32_t* valA3 = ctxB[0x264];
-        int32_t objC2 = valA3[2] + ((*srcS1 * *valA3 + srcS1[-1]) << 1);
-        void v_28;
-        __builtin_memset(&v_28, 0, 0x28);
-        int32_t v_24_1 = Display_CreateSurface_4();
-        int32_t v_4_1 = 0;
-        int32_t v_8_1 = objC2;
-        int32_t v_14_1 = *srcS1;
-        int32_t v_1c_1 = *ctxB[0x264] << 2;
-        int32_t v_18_1 = srcS1[-1];
-        int32_t v_10_1 = srcS1[1];
-        int32_t v_c_1 = srcS1[2];
-        valA8 = Display_RestoreDevice_4(&v_28);
+        int32_t* data_3 = context_val[0x264];
+        int32_t entity_2 = data_3[2] + ((*source_1 * *data_3 + source_1[-1]) << 1);
+        void item_28;
+        memset(&item_28, 0, 0x28);
+        int32_t item_24_1 = Display_CreateSurface_4();
+        int32_t item_4_1 = 0;
+        int32_t item_8_1 = entity_2;
+        int32_t item_14_1 = *source_1;
+        int32_t item_1c_1 = *context_val[0x264] << 2;
+        int32_t item_18_1 = source_1[-1];
+        int32_t item_10_1 = source_1[1];
+        int32_t item_c_1 = source_1[2];
+        data_8 = Display_RestoreDevice_4(&item_28);
         i += 1;
-        srcS1 = &srcS1[4];
-    } while (i < *a1);
+        source_1 = &source_1[4];
+    } while (i < *context);
 
-    *a1 = 0;
-    return valA8;
+    *context = 0;
+    return data_8;
 }

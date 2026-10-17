@@ -1,36 +1,36 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_3 (VA 0x004A507C; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_3.h"
-int32_t Camera_ApplyBandFilter_3(int32_t* a1, int32_t a2)
+int32_t Camera_ApplyBandFilter_3(int32_t* context, int32_t param_2)
 
 {
-    void* flagP = *a1;
-    void* srcS = a1[6];
+    void* flagP = *context;
+    void* source_val = context[6];
     TEB* fsbase;
 
-    if (srcS != fsbase->NtTib.ExceptionList)
-        Camera_UpdateTransform_7(srcS);
+    if (source_val != fsbase->NtTib.ExceptionList)
+        Camera_UpdateTransform_7(source_val);
 
-    if (srcS)
+    if (source_val)
     {
-        void* v_4_2 = &a1[8];
+        void* item_4_2 = &context[8];
         Camera_ApplyBandFilter_7();
 
-        if (a1[8] != 0x56433230)
-            Camera_SetFieldOfView_7(srcS, a1[7]);
+        if (context[8] != 0x56433230)
+            Camera_SetFieldOfView_7(source_val, context[7]);
         else
         {
-            int32_t valA3 = a1[9];
+            int32_t data_3 = context[9];
 
-            if (valA3)
-                valA3(a1);
+            if (data_3)
+                data_3(context);
         }
     }
 
-    int32_t v_4_5 = 0;
-    Camera_ApplyLineFilter_7(a1[5], flagP);
-    a1[1];
-    a1[2];
-    a1[3];
-    a1[4];
-❓    /* jump -> *(a1 + 0x14) */
+    int32_t item_4_5 = 0;
+    Camera_ApplyLineFilter_7(context[5], flagP);
+    context[1];
+    context[2];
+    context[3];
+    context[4];
+❓    /* jump -> *(context + 0x14) */
 }

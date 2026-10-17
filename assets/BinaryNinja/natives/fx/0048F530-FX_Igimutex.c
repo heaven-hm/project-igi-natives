@@ -1,6 +1,6 @@
 // Original IGI.EXE function: FX_Igimutex (VA 0x0048F530; static CFG gate PASS, CFG score 0.951).
 #include "FX_Igimutex.h"
-WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
+WPARAM __stdcall FX_Igimutex(HINSTANCE context, int32_t param_2 )
 
 {
     HANDLE hMutex = CreateMutexA(nullptr, 1, "IGIMUTEX");
@@ -31,17 +31,17 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
         wndClass.lpfnWndProc = sub_48f970;
         wndClass.cbClsExtra = 0;
         wndClass.cbWndExtra = 0;
-        wndClass.hInstance = a1;
-        wndClass.hIcon = LoadIconA(a1, 0x7f00);
-        HCURSOR valA3 = LoadCursorA(nullptr, 0x7f00);
+        wndClass.hInstance = context;
+        wndClass.hIcon = LoadIconA(context, 0x7f00);
+        HCURSOR data_3 = LoadCursorA(nullptr, 0x7f00);
         wndClass.hbrBackground = 7;
-        wndClass.hCursor = valA3;
-        char (* valA4)[0xa] = g_541d68;
-        wndClass.lpszMenuName = valA4;
-        wndClass.lpszClassName = valA4;
+        wndClass.hCursor = data_3;
+        char (* data_4)[0xa] = g_541d68;
+        wndClass.lpszMenuName = data_4;
+        wndClass.lpszClassName = data_4;
         RegisterClassA(&wndClass);
-        FX_FragmentSimulate_22(a2);
-        FX_SmokeEmit_22(a1);
+        FX_FragmentSimulate_22(param_2);
+        FX_SmokeEmit_22(context);
         FX_TrailUpdate_22("filesys.cfg");
         FX_ExplosionSpawn_23("Innerloop");
         FX_SmokeEmit_23(1);
@@ -58,7 +58,7 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
         FX_FireBallUpdate_26(0);
         FX_TrailUpdate_26(&g_567c74);
         FX_DebrisSpawn_24(0);
-        __builtin_memset(0x5c8d28, 0, 0xc0);
+        memset(0x5c8d28, 0, 0xc0);
         g_5c8df0 = &g_5c8df4;
         g_5c8df8 = &g_5c8df0;
         g_5c8df4 = 0;
@@ -66,14 +66,14 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
         FX_FragmentSimulate_27("WinInput", sub_48f920);
         FX_FragmentSimulate_27("Germany", sub_48f930);
         FX_FragmentSimulate_27("USA", sub_48f950);
-        float v_464;
+        float item_464;
         HWND hWnd;
-        Display_DinputDll(&v_464, &hWnd);
+        Display_DinputDll(&item_464, &hWnd);
         int32_t lpParam = 0;
 
-        if (v_464 < 0x700)
+        if (item_464 < 0x700)
         {
-            int32_t v_47c_2 = 7;
+            int32_t item_47c_2 = 7;
             void text;
             Game_DataSymbolLoad(&text,
                 "This application requires DirectX version %d.%d or greater to run.");
@@ -82,20 +82,20 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
             Camera_ApplyBandFilter_6(1);
         }
 
-        int32_t valA8;
-        int32_t tmpD1;
-        tmpD1 = HIGHD(GetSystemMetrics(SM_CYSCREEN) - 0x1e0);
-        valA8 = LOWD(GetSystemMetrics(SM_CYSCREEN) - 0x1e0);
-        int32_t valA13;
-        int32_t tmpD2;
-        tmpD2 = HIGHD(GetSystemMetrics(SM_CXSCREEN) - 0x280);
-        valA13 = LOWD(GetSystemMetrics(SM_CXSCREEN) - 0x280);
-        int32_t valA16 = FX_FragmentSimulate_23();
-        int32_t valA17 = -(valA16);
-        PSTR valA21 = g_541d68;
-        HWND hWnd_2 = CreateWindowExA(WS_EX_LEFT, valA21, valA21,
-            ((valA17 - valA17) & 0x5e380000) + 0x37c80000, (valA13 - tmpD2) >> 1,
-            (valA8 - tmpD1) >> 1, 0x280, 0x1e0, nullptr, nullptr, a1, lpParam);
+        int32_t data_8;
+        int32_t temp_1;
+        temp_1 = HIGHD(GetSystemMetrics(SM_CYSCREEN) - 0x1e0);
+        data_8 = LOWD(GetSystemMetrics(SM_CYSCREEN) - 0x1e0);
+        int32_t data_13;
+        int32_t temp_2;
+        temp_2 = HIGHD(GetSystemMetrics(SM_CXSCREEN) - 0x280);
+        data_13 = LOWD(GetSystemMetrics(SM_CXSCREEN) - 0x280);
+        int32_t data_16 = FX_FragmentSimulate_23();
+        int32_t data_17 = -(data_16);
+        PSTR data_21 = g_541d68;
+        HWND hWnd_2 = CreateWindowExA(WS_EX_LEFT, data_21, data_21,
+            ((data_17 - data_17) & 0x5e380000) + 0x37c80000, (data_13 - temp_2) >> 1,
+            (data_8 - temp_1) >> 1, 0x280, 0x1e0, nullptr, nullptr, context, lpParam);
         uType = MB_OK;
         hWnd = hWnd_2;
 
@@ -104,21 +104,21 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
             ShowCursor(0);
             ShowWindow(hWnd_2, SW_SHOWDEFAULT);
             FX_DebrisSpawn_22(hWnd_2);
-            int16_t x87control;
-            Display_ClearSurfaces_16(x87control);
-            char valA22;
+            int16_t fpu_control;
+            Display_ClearSurfaces_16(fpu_control);
+            char data_22;
             int16_t x87control_1;
-            valA22 = QTask_CreateTask();
-            g_5c8de8 = valA22;
+            data_22 = QTask_CreateTask();
+            g_5c8de8 = data_22;
             FX_FragmentSimulate_27("HardcoreGerman", sub_48f960);
 
             if (g_5c8de8)
             {
                 while (true)
                 {
-                    v_464 = -1.75f;
+                    item_464 = -1.75f;
 
-                    if (v_464 != 0xffffffff)
+                    if (item_464 != 0xffffffff)
                     {
                         Error_Show("Invalid FPU rounding mode. May be caused by running a debug "
                         "session with ftol optimize turned on.");
@@ -133,7 +133,7 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
                         if (!FX_DebrisSpawn_23())
                             Sleep(0x1f4);
                         else
-                            QTask_OpenEvent(a1);
+                            QTask_OpenEvent(context);
 
                         if (!g_5c8de8)
                             DestroyWindow(hWnd);
@@ -168,7 +168,7 @@ WPARAM __stdcall FX_Igimutex(HINSTANCE a1, int32_t a2 @ 0xc)
 
         label_48f8ac:
             SetForegroundWindow(hWnd_1);
-            UnregisterClassA(g_541d68, a1);
+            UnregisterClassA(g_541d68, context);
             CoUninitialize();
             ReleaseMutex(hMutex);
             return result;

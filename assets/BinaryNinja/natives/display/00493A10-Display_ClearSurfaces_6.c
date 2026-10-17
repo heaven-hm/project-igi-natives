@@ -3,19 +3,19 @@
 int32_t* Display_ClearSurfaces_6()
 
 {
-    int32_t* valA1 = g_bcad00;
+    int32_t* data_1 = g_bcad00;
 
-    if (valA1)
+    if (data_1)
     {
-        (*(*valA1 + 8))(valA1);
+        (*(*data_1 + 8))(data_1);
         g_bcad00 = 0;
     }
 
-    int32_t* valA = g_bcad80;
+    int32_t* data_val = g_bcad80;
 
-    if (valA)
+    if (data_val)
     {
-        (*(*valA + 8))(valA);
+        (*(*data_val + 8))(data_val);
         g_bcad80 = 0;
     }
 

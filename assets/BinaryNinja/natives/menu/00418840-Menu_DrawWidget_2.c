@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Menu_DrawWidget_2 (VA 0x00418840; static CFG gate PASS, CFG score 1.000).
 #include "Menu_DrawWidget_2.h"
-int32_t Menu_DrawWidget_2(void* a1, void* a2)
+int32_t Menu_DrawWidget_2(void* context, void* param_2)
 
 {
-    int32_t valA = Menu_PlayMusic_13();
-    int16_t v_c = valA;
-    valA = *(a2 + 0x1c);
-    char valA1 = TaskType_IsDerivedFrom(valA, v_c);
+    int32_t data_val = Menu_PlayMusic_13();
+    int16_t item_c = data_val;
+    data_val = *(param_2 + 0x1c);
+    char data_1 = TaskType_IsDerivedFrom(data_val, item_c);
 
-    if (valA1)
+    if (data_1)
     {
-        valA1 = *(a2 + 0x4c);
+        data_1 = *(param_2 + 0x4c);
 
-        if (valA1)
+        if (data_1)
         {
-            *(a1 + (*(a1 + 0xbc) << 2) + 0x3c) = a2;
-            *(a1 + 0xbc) += 1;
-            return a1;
+            *(context + (*(context + 0xbc) << 2) + 0x3c) = param_2;
+            *(context + 0xbc) += 1;
+            return context;
         }
     }
 
-    int32_t* i = *(a2 + 8);
+    int32_t* i = *(param_2 + 8);
 
     if (*i && i)
     {
         do
         {
-            valA1 = Menu_DrawWidget_2(a1, i);
+            data_1 = Menu_DrawWidget_2(context, i);
             i = *i;
 
             if (!i)
@@ -37,5 +37,5 @@ int32_t Menu_DrawWidget_2(void* a1, void* a2)
         } while (i);
     }
 
-    return valA1;
+    return data_1;
 }

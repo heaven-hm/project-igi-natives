@@ -1,217 +1,217 @@
 // Original IGI.EXE function: Weapon_UpdateZoom_8 (VA 0x0047D920; static CFG gate PASS, CFG score 0.852).
 #include "Weapon_UpdateZoom_8.h"
-int32_t Weapon_UpdateZoom_8(double* a1, float* a2, void* a3, int32_t* a4, void* a5, int32_t a6, int32_t a7, float a8)
+int32_t Weapon_UpdateZoom_8(double* context, float* param_2, void* param_3, int32_t* param_4, void* param_5, int32_t param_6, int32_t param_7, float param_8)
 
 {
-    a4[0x12] = a6;
-    a4[0x13] = a7;
-    a4[0x15] = 0;
-    a4[0x14] = a8;
-    a4[3] = *(a5 + 0x20);
-    a4[4] = *(a5 + 0x24);
-    a4[5] = *(a5 + 0x28);
-    *a4 = *(a5 + 0x2c);
-    a4[1] = *(a5 + 0x30);
-    a4[2] = *(a5 + 0x34);
-    long double fpu7 = *a4;
-    long double f0 = 0f;
+    param_4[0x12] = param_6;
+    param_4[0x13] = param_7;
+    param_4[0x15] = 0;
+    param_4[0x14] = param_8;
+    param_4[3] = *(param_5 + 0x20);
+    param_4[4] = *(param_5 + 0x24);
+    param_4[5] = *(param_5 + 0x28);
+    *param_4 = *(param_5 + 0x2c);
+    param_4[1] = *(param_5 + 0x30);
+    param_4[2] = *(param_5 + 0x34);
+    long double fpu7 = *param_4;
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (!(*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 0x40))
     {
     label_47d9b2:
-        long double x87_r7_3 = a4[2];
-        long double x87_r6_1 = a4[1];
-        long double x87_r5_1 = *a4;
-        long double x87_r7_5 =
-            1.0 / sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_3 * x87_r7_3);
-        *a4 = *a4 * x87_r7_5;
-        a4[1] = a4[1] * x87_r7_5;
-        a4[2] = a4[2] * x87_r7_5;
+        long double fpu_val_7_3 = param_4[2];
+        long double fpu_val_6_1 = param_4[1];
+        long double fpu_val_5_1 = *param_4;
+        long double fpu_val_7_5 =
+            1.0 / sqrtl(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_3 * fpu_val_7_3);
+        *param_4 = *param_4 * fpu_val_7_5;
+        param_4[1] = param_4[1] * fpu_val_7_5;
+        param_4[2] = param_4[2] * fpu_val_7_5;
     }
     else
     {
-        long double x87_r7_1 = a4[1];
-        long double f1_1 = 0f;
-        x87_r7_1 - f1_1;
+        long double fpu_val_7_1 = param_4[1];
+        long double f1_1 = 0.0f;
+        fpu_val_7_1 - f1_1;
 
-        if (!(*(&((x87_r7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+        if (!(*(&((fpu_val_7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
             goto label_47d9b2;
 
-        long double x87_r7_2 = a4[2];
-        long double f2_1 = 0f;
-        x87_r7_2 - f2_1;
+        long double fpu_val_7_2 = param_4[2];
+        long double f2_1 = 0.0f;
+        fpu_val_7_2 - f2_1;
 
-        if (!(*(&((x87_r7_2 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+        if (!(*(&((fpu_val_7_2 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
             goto label_47d9b2;
     }
 
-    a4[6] = a8;
-    a4[8] = 0x41449ba6;
-    a4[0xb] = 0x41449ba6;
-    a4[0xe] = 0x41449ba6;
-    a4[0x11] = 0x41449ba6;
-    long double x87_r7_8 = -(a8);
-    a4[9] = x87_r7_8;
-    a4[0xd] = x87_r7_8;
-    a4[0xf] = x87_r7_8;
-    a4[0x10] = x87_r7_8;
-    a4[7] = a8;
-    a4[0xa] = a8;
-    a4[0xc] = a8;
-    float v_d0;
-    Sys_ResolveSymbol_12(&v_d0, a5 + 0x2c);
-    float v_cc;
-    float v_c0;
-    float v_b4;
-    float v_f0 = v_c0 * a4[7] + v_b4 * a4[8] + v_cc * a4[6];
-    float v_bc;
-    float v_b0;
-    long double x87_r7_19 = v_bc * a4[7] + v_b0 * a4[8];
-    float v_c8;
-    long double x87_r6_20 = v_c8 * a4[6];
-    float v_c4;
-    float v_b8;
-    a4[6] = v_c4 * a4[7] + v_b8 * a4[8] + v_d0 * a4[6];
-    a4[7] = v_f0;
-    long double x87_r7_22 = v_c4 * a4[0xa];
-    long double x87_r6_22 = v_b8 * a4[0xb];
-    a4[8] = x87_r7_19 + x87_r6_20;
-    float v_f0_1 = v_c0 * a4[0xa] + v_b4 * a4[0xb] + v_cc * a4[9];
-    long double x87_r7_32 = v_bc * a4[0xa] + v_b0 * a4[0xb] + v_c8 * a4[9];
-    a4[9] = x87_r7_22 + x87_r6_22 + v_d0 * a4[9];
-    a4[0xa] = v_f0_1;
-    long double x87_r7_34 = v_b8 * a4[0xe];
-    long double x87_r6_34 = v_d0 * a4[0xc];
-    a4[0xb] = x87_r7_32;
-    float v_f0_2 = v_b4 * a4[0xe] + v_cc * a4[0xc] + v_c0 * a4[0xd];
-    long double x87_r7_43 = v_b0 * a4[0xe] + v_c8 * a4[0xc];
-    long double x87_r6_44 = v_bc * a4[0xd];
-    a4[0xc] = x87_r7_34 + x87_r6_34 + v_c4 * a4[0xd];
-    a4[0xd] = v_f0_2;
-    long double x87_r7_46 = v_c4 * a4[0x10];
-    long double x87_r6_46 = v_b8 * a4[0x11];
-    a4[0xe] = x87_r7_43 + x87_r6_44;
-    float v_f0_3 = v_c0 * a4[0x10] + v_b4 * a4[0x11] + v_cc * a4[0xf];
-    long double x87_r7_55 = v_bc * a4[0x10] + v_b0 * a4[0x11];
-    long double x87_r6_56 = v_c8 * a4[0xf];
-    a4[0xf] = x87_r7_46 + x87_r6_46 + v_d0 * a4[0xf];
-    a4[0x10] = v_f0_3;
-    long double x87_r7_57 = a4[6];
-    a4[0x11] = x87_r7_55 + x87_r6_56;
-    a4[6] = x87_r7_57 + *(a5 + 0x20);
-    a4[7] = a4[7] + *(a5 + 0x24);
-    a4[8] = a4[8] + *(a5 + 0x28);
-    a4[9] = a4[9] + *(a5 + 0x20);
-    a4[0xa] = a4[0xa] + *(a5 + 0x24);
-    a4[0xb] = *(a5 + 0x28) + a4[0xb];
-    a4[0xc] = a4[0xc] + *(a5 + 0x20);
-    a4[0xd] = *(a5 + 0x24) + a4[0xd];
-    a4[0xe] = a4[0xe] + *(a5 + 0x28);
-    a4[0xf] = a4[0xf] + *(a5 + 0x20);
-    a4[0x10] = a4[0x10] + *(a5 + 0x24);
-    a4[0x11] = *(a5 + 0x28) + a4[0x11];
-    *(a3 + 0xe138) = 1;
-    float objC10 = *(a5 + 0x38);
-    float tmpD13 = *(a5 + 0x3c);
-    float valA9 = *(a5 + 0x40);
-    long double x87_r7_81 = valA9;
-    long double x87_r6_57 = tmpD13;
-    long double x87_r5_3 = objC10;
-    long double x87_r7_83 =
-        24.5760002f / sqrtl(x87_r5_3 * x87_r5_3 + x87_r6_57 * x87_r6_57 + x87_r7_81 * x87_r7_81);
-    float v_f4_5 = objC10 * x87_r7_83;
-    float v_f0_5 = tmpD13 * x87_r7_83;
-    long double x87_r7_84 = x87_r7_83 * valA9;
-    long double x87_r6_63 = a4[6];
-    long double x87_r5_5 = a4[7];
-    double v_70 = x87_r5_5;
-    long double x87_r4_11 = a4[8];
-    double v_68 = x87_r4_11;
-    double v_e8 = a2[1] * x87_r5_5 + a2[2] * x87_r4_11 + *a2 * x87_r6_63;
-    double v_e0 = a2[3] * x87_r6_63 + a2[4] * x87_r5_5 + a2[5] * x87_r4_11;
-    double v_d8 = a2[7] * x87_r5_5 + a2[8] * x87_r4_11 + a2[6] * x87_r6_63;
-    double v_78;
-    memcpy(&v_78, &v_e8, 0x18);
-    long double x87_r6_66 = v_e8 + *a1;
-    v_78 = x87_r6_66;
-    double v_70_1 = v_70 + a1[1];
-    double v_68_1 = v_68 + a1[2];
-    long double x87_r5_11 = a4[9];
-    long double x87_r4_13 = a4[0xa];
-    double v_88 = x87_r4_13;
-    long double x87_r3_21 = a4[0xb];
-    double v_80 = x87_r3_21;
-    v_e8 = a2[1] * x87_r4_13 + a2[2] * x87_r3_21 + *a2 * x87_r5_11;
-    double v_e0_1 = a2[4] * x87_r4_13 + a2[5] * x87_r3_21 + a2[3] * x87_r5_11;
-    double v_d8_1 = a2[7] * x87_r4_13 + a2[8] * x87_r3_21 + a2[6] * x87_r5_11;
-    long double x87_r5_14 = v_e8 + *a1;
-    double v_90;
-    memcpy(&v_90, &v_e8, 0x18);
-    v_90 = x87_r5_14;
-    double v_88_1 = v_88 + a1[1];
-    double v_80_1 = v_80 + a1[2];
-    long double x87_r5_19 = a4[0xc];
-    long double x87_r4_15 = a4[0xd];
-    double v_a0 = x87_r4_15;
-    long double x87_r3_23 = a4[0xe];
-    double v_98 = x87_r3_23;
-    v_e8 = a2[1] * x87_r4_15 + a2[2] * x87_r3_23 + *a2 * x87_r5_19;
-    double v_e0_2 = a2[4] * x87_r4_15 + a2[5] * x87_r3_23 + a2[3] * x87_r5_19;
-    double v_d8_2 = a2[7] * x87_r4_15 + a2[8] * x87_r3_23 + a2[6] * x87_r5_19;
-    double v_a8;
-    memcpy(&v_a8, &v_e8, 0x18);
-    v_a8 = v_e8 + *a1;
-    double v_a0_1 = v_a0 + a1[1];
-    double v_98_1 = v_98 + a1[2];
-    long double x87_r5_27 = a4[0xf];
-    long double x87_r4_17 = a4[0x10];
-    double v_e0_3 = x87_r4_17;
-    long double x87_r3_25 = a4[0x11];
-    double v_d8_3 = x87_r3_25;
-    double v_60 = a2[1] * x87_r4_17 + a2[2] * x87_r3_25 + *a2 * x87_r5_27;
-    double v_58 = a2[4] * x87_r4_17 + a2[5] * x87_r3_25 + a2[3] * x87_r5_27;
-    float valA11 = g_a44344;
-    double v_50 = a2[8] * x87_r3_25 + a2[6] * x87_r5_27 + a2[7] * x87_r4_17;
-    memcpy(&v_e8, &v_60, 0x18);
-    v_e8 = v_60 + *a1;
-    double v_e0_4 = v_e0_3 + a1[1];
-    double v_d8_4 = v_d8_3 + a1[2];
-    v_60 = x87_r6_66 - v_f4_5;
-    double v_58_1 = v_70_1 - v_f0_5;
-    double v_50_1 = v_68_1 - x87_r7_84;
-    double v_18 = v_90 - v_f4_5;
-    double v_10 = v_88_1 - v_f0_5;
-    double v_8 = v_80_1 - x87_r7_84;
-    double v_48 = v_a8 - v_f4_5;
-    double v_40 = v_a0_1 - v_f0_5;
-    double v_38 = v_98_1 - x87_r7_84;
-    double v_30 = v_e8 - v_f4_5;
-    double v_28 = v_e0_4 - v_f0_5;
-    double v_20 = v_d8_4 - x87_r7_84;
-    int32_t valA12 =
-        DynObj_RegisterSymbol_12(valA11, &v_78, &v_60, 0xff, 0f, 0xffffffff, 0xffffffff, nullptr);
-    char f3 = valA12;
-    valA12 = -(valA12);
-    int32_t valA16 =
-        DynObj_RegisterSymbol_12(g_a44344, &v_90, &v_18, 0xff, 0f, 0xffffffff, 0xffffffff, nullptr);
-    char f4 = valA16;
-    valA16 = -(valA16);
-    int32_t valA20 =
-        DynObj_RegisterSymbol_12(g_a44344, &v_a8, &v_48, 0xff, 0f, 0xffffffff, 0xffffffff, nullptr);
-    char f5 = valA20;
-    valA20 = -(valA20);
-    int32_t valA24 =
-        DynObj_RegisterSymbol_12(g_a44344, &v_e8, &v_30, 0xff, 0f, 0xffffffff, 0xffffffff, nullptr);
-    char f6 = valA24;
-    valA24 = -(valA24);
+    param_4[6] = param_8;
+    param_4[8] = 0x41449ba6;
+    param_4[0xb] = 0x41449ba6;
+    param_4[0xe] = 0x41449ba6;
+    param_4[0x11] = 0x41449ba6;
+    long double fpu_val_7_8 = -(param_8);
+    param_4[9] = fpu_val_7_8;
+    param_4[0xd] = fpu_val_7_8;
+    param_4[0xf] = fpu_val_7_8;
+    param_4[0x10] = fpu_val_7_8;
+    param_4[7] = param_8;
+    param_4[0xa] = param_8;
+    param_4[0xc] = param_8;
+    float item_d0;
+    Sys_ResolveSymbol_12(&item_d0, param_5 + 0x2c);
+    float item_cc;
+    float item_c0;
+    float item_b4;
+    float item_f0 = item_c0 * param_4[7] + item_b4 * param_4[8] + item_cc * param_4[6];
+    float item_bc;
+    float item_b0;
+    long double fpu_val_7_19 = item_bc * param_4[7] + item_b0 * param_4[8];
+    float item_c8;
+    long double fpu_val_6_20 = item_c8 * param_4[6];
+    float item_c4;
+    float item_b8;
+    param_4[6] = item_c4 * param_4[7] + item_b8 * param_4[8] + item_d0 * param_4[6];
+    param_4[7] = item_f0;
+    long double fpu_val_7_22 = item_c4 * param_4[0xa];
+    long double fpu_val_6_22 = item_b8 * param_4[0xb];
+    param_4[8] = fpu_val_7_19 + fpu_val_6_20;
+    float item_f0_1 = item_c0 * param_4[0xa] + item_b4 * param_4[0xb] + item_cc * param_4[9];
+    long double fpu_val_7_32 = item_bc * param_4[0xa] + item_b0 * param_4[0xb] + item_c8 * param_4[9];
+    param_4[9] = fpu_val_7_22 + fpu_val_6_22 + item_d0 * param_4[9];
+    param_4[0xa] = item_f0_1;
+    long double fpu_val_7_34 = item_b8 * param_4[0xe];
+    long double fpu_val_6_34 = item_d0 * param_4[0xc];
+    param_4[0xb] = fpu_val_7_32;
+    float item_f0_2 = item_b4 * param_4[0xe] + item_cc * param_4[0xc] + item_c0 * param_4[0xd];
+    long double fpu_val_7_43 = item_b0 * param_4[0xe] + item_c8 * param_4[0xc];
+    long double fpu_val_6_44 = item_bc * param_4[0xd];
+    param_4[0xc] = fpu_val_7_34 + fpu_val_6_34 + item_c4 * param_4[0xd];
+    param_4[0xd] = item_f0_2;
+    long double fpu_val_7_46 = item_c4 * param_4[0x10];
+    long double fpu_val_6_46 = item_b8 * param_4[0x11];
+    param_4[0xe] = fpu_val_7_43 + fpu_val_6_44;
+    float item_f0_3 = item_c0 * param_4[0x10] + item_b4 * param_4[0x11] + item_cc * param_4[0xf];
+    long double fpu_val_7_55 = item_bc * param_4[0x10] + item_b0 * param_4[0x11];
+    long double fpu_val_6_56 = item_c8 * param_4[0xf];
+    param_4[0xf] = fpu_val_7_46 + fpu_val_6_46 + item_d0 * param_4[0xf];
+    param_4[0x10] = item_f0_3;
+    long double fpu_val_7_57 = param_4[6];
+    param_4[0x11] = fpu_val_7_55 + fpu_val_6_56;
+    param_4[6] = fpu_val_7_57 + *(param_5 + 0x20);
+    param_4[7] = param_4[7] + *(param_5 + 0x24);
+    param_4[8] = param_4[8] + *(param_5 + 0x28);
+    param_4[9] = param_4[9] + *(param_5 + 0x20);
+    param_4[0xa] = param_4[0xa] + *(param_5 + 0x24);
+    param_4[0xb] = *(param_5 + 0x28) + param_4[0xb];
+    param_4[0xc] = param_4[0xc] + *(param_5 + 0x20);
+    param_4[0xd] = *(param_5 + 0x24) + param_4[0xd];
+    param_4[0xe] = param_4[0xe] + *(param_5 + 0x28);
+    param_4[0xf] = param_4[0xf] + *(param_5 + 0x20);
+    param_4[0x10] = param_4[0x10] + *(param_5 + 0x24);
+    param_4[0x11] = *(param_5 + 0x28) + param_4[0x11];
+    *(param_3 + 0xe138) = 1;
+    float entity_10 = *(param_5 + 0x38);
+    float temp_13 = *(param_5 + 0x3c);
+    float data_9 = *(param_5 + 0x40);
+    long double fpu_val_7_81 = data_9;
+    long double fpu_val_6_57 = temp_13;
+    long double fpu_val_5_3 = entity_10;
+    long double fpu_val_7_83 =
+        24.5760002f / sqrtl(fpu_val_5_3 * fpu_val_5_3 + fpu_val_6_57 * fpu_val_6_57 + fpu_val_7_81 * fpu_val_7_81);
+    float item_f4_5 = entity_10 * fpu_val_7_83;
+    float item_f0_5 = temp_13 * fpu_val_7_83;
+    long double fpu_val_7_84 = fpu_val_7_83 * data_9;
+    long double fpu_val_6_63 = param_4[6];
+    long double fpu_val_5_5 = param_4[7];
+    double item_70 = fpu_val_5_5;
+    long double fpu_val_4_11 = param_4[8];
+    double item_68 = fpu_val_4_11;
+    double item_e8 = param_2[1] * fpu_val_5_5 + param_2[2] * fpu_val_4_11 + *param_2 * fpu_val_6_63;
+    double item_e0 = param_2[3] * fpu_val_6_63 + param_2[4] * fpu_val_5_5 + param_2[5] * fpu_val_4_11;
+    double item_d8 = param_2[7] * fpu_val_5_5 + param_2[8] * fpu_val_4_11 + param_2[6] * fpu_val_6_63;
+    double item_78;
+    memcpy(&item_78, &item_e8, 0x18);
+    long double fpu_val_6_66 = item_e8 + *context;
+    item_78 = fpu_val_6_66;
+    double item_70_1 = item_70 + context[1];
+    double item_68_1 = item_68 + context[2];
+    long double fpu_val_5_11 = param_4[9];
+    long double fpu_val_4_13 = param_4[0xa];
+    double item_88 = fpu_val_4_13;
+    long double fpu_val_3_21 = param_4[0xb];
+    double item_80 = fpu_val_3_21;
+    item_e8 = param_2[1] * fpu_val_4_13 + param_2[2] * fpu_val_3_21 + *param_2 * fpu_val_5_11;
+    double item_e0_1 = param_2[4] * fpu_val_4_13 + param_2[5] * fpu_val_3_21 + param_2[3] * fpu_val_5_11;
+    double item_d8_1 = param_2[7] * fpu_val_4_13 + param_2[8] * fpu_val_3_21 + param_2[6] * fpu_val_5_11;
+    long double fpu_val_5_14 = item_e8 + *context;
+    double item_90;
+    memcpy(&item_90, &item_e8, 0x18);
+    item_90 = fpu_val_5_14;
+    double item_88_1 = item_88 + context[1];
+    double item_80_1 = item_80 + context[2];
+    long double fpu_val_5_19 = param_4[0xc];
+    long double fpu_val_4_15 = param_4[0xd];
+    double item_a0 = fpu_val_4_15;
+    long double fpu_val_3_23 = param_4[0xe];
+    double item_98 = fpu_val_3_23;
+    item_e8 = param_2[1] * fpu_val_4_15 + param_2[2] * fpu_val_3_23 + *param_2 * fpu_val_5_19;
+    double item_e0_2 = param_2[4] * fpu_val_4_15 + param_2[5] * fpu_val_3_23 + param_2[3] * fpu_val_5_19;
+    double item_d8_2 = param_2[7] * fpu_val_4_15 + param_2[8] * fpu_val_3_23 + param_2[6] * fpu_val_5_19;
+    double item_a8;
+    memcpy(&item_a8, &item_e8, 0x18);
+    item_a8 = item_e8 + *context;
+    double item_a0_1 = item_a0 + context[1];
+    double item_98_1 = item_98 + context[2];
+    long double fpu_val_5_27 = param_4[0xf];
+    long double fpu_val_4_17 = param_4[0x10];
+    double item_e0_3 = fpu_val_4_17;
+    long double fpu_val_3_25 = param_4[0x11];
+    double item_d8_3 = fpu_val_3_25;
+    double item_60 = param_2[1] * fpu_val_4_17 + param_2[2] * fpu_val_3_25 + *param_2 * fpu_val_5_27;
+    double item_58 = param_2[4] * fpu_val_4_17 + param_2[5] * fpu_val_3_25 + param_2[3] * fpu_val_5_27;
+    float data_11 = g_a44344;
+    double item_50 = param_2[8] * fpu_val_3_25 + param_2[6] * fpu_val_5_27 + param_2[7] * fpu_val_4_17;
+    memcpy(&item_e8, &item_60, 0x18);
+    item_e8 = item_60 + *context;
+    double item_e0_4 = item_e0_3 + context[1];
+    double item_d8_4 = item_d8_3 + context[2];
+    item_60 = fpu_val_6_66 - item_f4_5;
+    double item_58_1 = item_70_1 - item_f0_5;
+    double item_50_1 = item_68_1 - fpu_val_7_84;
+    double item_18 = item_90 - item_f4_5;
+    double item_10 = item_88_1 - item_f0_5;
+    double item_8 = item_80_1 - fpu_val_7_84;
+    double item_48 = item_a8 - item_f4_5;
+    double item_40 = item_a0_1 - item_f0_5;
+    double item_38 = item_98_1 - fpu_val_7_84;
+    double item_30 = item_e8 - item_f4_5;
+    double item_28 = item_e0_4 - item_f0_5;
+    double item_20 = item_d8_4 - fpu_val_7_84;
+    int32_t data_12 =
+        DynObj_RegisterSymbol_12(data_11, &item_78, &item_60, 0xff, 0.0f, 0xffffffff, 0xffffffff, nullptr);
+    char f3 = data_12;
+    data_12 = -(data_12);
+    int32_t data_16 =
+        DynObj_RegisterSymbol_12(g_a44344, &item_90, &item_18, 0xff, 0.0f, 0xffffffff, 0xffffffff, nullptr);
+    char f4 = data_16;
+    data_16 = -(data_16);
+    int32_t data_20 =
+        DynObj_RegisterSymbol_12(g_a44344, &item_a8, &item_48, 0xff, 0.0f, 0xffffffff, 0xffffffff, nullptr);
+    char f5 = data_20;
+    data_20 = -(data_20);
+    int32_t data_24 =
+        DynObj_RegisterSymbol_12(g_a44344, &item_e8, &item_30, 0xff, 0.0f, 0xffffffff, 0xffffffff, nullptr);
+    char f6 = data_24;
+    data_24 = -(data_24);
 
-    if (!((valA12 - valA12 + 1) & (valA16 - valA16 + 1) & (valA20 - valA20 + 1)
-            & (valA24 - valA24 + 1)))
-        a4[0x12] = 0xffffffff;
+    if (!((data_12 - data_12 + 1) & (data_16 - data_16 + 1) & (data_20 - data_20 + 1)
+            & (data_24 - data_24 + 1)))
+        param_4[0x12] = 0xffffffff;
 
-    return valA24 - valA24 + 1;
+    return data_24 - data_24 + 1;
 }

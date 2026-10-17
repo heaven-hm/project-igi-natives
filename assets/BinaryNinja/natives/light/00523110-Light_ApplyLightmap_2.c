@@ -1,145 +1,145 @@
 // Original IGI.EXE function: Light_ApplyLightmap_2 (VA 0x00523110; static CFG gate PASS, CFG score 1.000).
 #include "Light_ApplyLightmap_2.h"
-int32_t* Light_ApplyLightmap_2(int32_t a1)
+int32_t* Light_ApplyLightmap_2(int32_t context)
 
 {
     Qhash_Init(1);
     int32_t* result = Mem_Alloc(0xec, 4);
-    int32_t ctxB2 = (a1 * a1) << 2;
-    int32_t dstD1 = a1 >> 1;
-    *result = a1;
-    result[1] = dstD1;
-    result[2] = Mem_Alloc(ctxB2, 4);
-    result[7] = Mem_Alloc(ctxB2, 4);
-    int32_t dstD3 = (dstD1 * a1) << 2;
-    result[0xc] = Mem_Alloc(ctxB2, 4);
-    result[0xd] = Mem_Alloc(dstD3, 4);
-    int32_t* ctxB3 = &result[8];
+    int32_t context_2 = (context * context) << 2;
+    int32_t dest_1 = context >> 1;
+    *result = context;
+    result[1] = dest_1;
+    result[2] = Mem_Alloc(context_2, 4);
+    result[7] = Mem_Alloc(context_2, 4);
+    int32_t dest_3 = (dest_1 * context) << 2;
+    result[0xc] = Mem_Alloc(context_2, 4);
+    result[0xd] = Mem_Alloc(dest_3, 4);
+    int32_t* context_3 = &result[8];
     int32_t i_3 = 4;
     int32_t i;
 
     do
     {
-        ctxB3[-5] = Mem_Alloc(dstD3, 4);
-        *ctxB3 = Mem_Alloc(dstD3, 4);
-        ctxB3 = &ctxB3[1];
+        context_3[-5] = Mem_Alloc(dest_3, 4);
+        *context_3 = Mem_Alloc(dest_3, 4);
+        context_3 = &context_3[1];
         i = i_3;
         i_3 -= 1;
     } while (i != 1);
-    int32_t valA6 = *result;
-    int32_t tmpD = 0;
-    long double fpu7 = 0f;
-    int32_t v_4 = 0;
-    a1 = valA6;
+    int32_t data_6 = *result;
+    int32_t temp_val = 0;
+    long double fpu7 = 0.0f;
+    int32_t item_4 = 0;
+    context = data_6;
 
-    if (valA6 > 0)
+    if (data_6 > 0)
     {
         do
         {
-            int32_t objC1 = 0;
-            int32_t v_8_1 = 0;
+            int32_t entity_1 = 0;
+            int32_t item_8_1 = 0;
 
-            if (valA6 > 0)
+            if (data_6 > 0)
             {
                 do
                 {
-                    long double x87_r5_1 = a1;
-                    long double x87_r4_2 = x87_r5_1 * 0.5f;
-                    float v_4_1 = (v_8_1 - x87_r4_2 + 0.5f) / x87_r4_2;
-                    a1 = (v_4 - x87_r4_2 + 0.5f) / x87_r4_2;
-                    long double x87_r5_2 = 2f / x87_r5_1;
-                    long double x87_r4_7 = a1 * a1 + v_4_1 * v_4_1 + 1f;
-                    long double x87_r3_15 =
-                        1f / (x87_r4_7 * x87_r4_7 * 3.14159274f) * x87_r5_2 * x87_r5_2;
-                    *(result[0xc] + ((valA6 * tmpD + objC1) << 2)) = x87_r3_15;
-                    fpu7 = fpu7 + x87_r3_15;
-                    long double x87_r4_10 = g_a83b40;
-                    x87_r4_10 - x87_r3_15;
+                    long double fpu_val_5_1 = context;
+                    long double fpu_val_4_2 = fpu_val_5_1 * 0.5f;
+                    float item_4_1 = (item_8_1 - fpu_val_4_2 + 0.5f) / fpu_val_4_2;
+                    context = (item_4 - fpu_val_4_2 + 0.5f) / fpu_val_4_2;
+                    long double fpu_val_5_2 = 2.0f / fpu_val_5_1;
+                    long double fpu_val_4_7 = context * context + item_4_1 * item_4_1 + 1.0f;
+                    long double fpu_val_3_15 =
+                        1.0f / (fpu_val_4_7 * fpu_val_4_7 * 3.14159274f) * fpu_val_5_2 * fpu_val_5_2;
+                    *(result[0xc] + ((data_6 * temp_val + entity_1) << 2)) = fpu_val_3_15;
+                    fpu7 = fpu7 + fpu_val_3_15;
+                    long double fpu_val_4_10 = g_a83b40;
+                    fpu_val_4_10 - fpu_val_3_15;
 
-                    if (*(&((x87_r4_10 < x87_r3_15 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r4_10, x87_r3_15) ? 1 : 0) << 0xa
-                            | (x87_r4_10 == x87_r3_15 ? 1 : 0) << 0xe | 0x2800) + 1) & 0x41)
-                        g_a83b40 = x87_r3_15;
+                    if (*(&((fpu_val_4_10 < fpu_val_3_15 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_4_10, fpu_val_3_15) ? 1 : 0) << 0xa
+                            | (fpu_val_4_10 == fpu_val_3_15 ? 1 : 0) << 0xe | 0x2800) + 1) & 0x41)
+                        g_a83b40 = fpu_val_3_15;
 
-                    valA6 = *result;
-                    objC1 += 1;
-                    v_8_1 = objC1;
-                    a1 = valA6;
-                } while (objC1 < valA6);
+                    data_6 = *result;
+                    entity_1 += 1;
+                    item_8_1 = entity_1;
+                    context = data_6;
+                } while (entity_1 < data_6);
             }
 
-            valA6 = *result;
-            tmpD += 1;
-            v_4 = tmpD;
-            a1 = valA6;
-        } while (tmpD < valA6);
+            data_6 = *result;
+            temp_val += 1;
+            item_4 = temp_val;
+            context = data_6;
+        } while (temp_val < data_6);
     }
 
-    int32_t objC2 = *result;
+    int32_t entity_2 = *result;
     int32_t i_1 = 0;
     int32_t i_2 = 0;
-    int32_t valA12;
-    int32_t tmpD1;
-    tmpD1 = HIGHD(objC2);
-    valA12 = LOWD(objC2);
-    a1 = objC2;
+    int32_t data_12;
+    int32_t temp_1;
+    temp_1 = HIGHD(entity_2);
+    data_12 = LOWD(entity_2);
+    context = entity_2;
 
-    if ((valA12 - tmpD1) >> 1 > 0)
+    if ((data_12 - temp_1) >> 1 > 0)
     {
-        int32_t valA18;
-        int32_t tmpD3;
+        int32_t data_18;
+        int32_t temp_3;
 
         do
         {
-            int32_t tmpD2 = 0;
-            int32_t v_8_2 = 0;
+            int32_t temp_2 = 0;
+            int32_t item_8_2 = 0;
 
-            if (objC2 > 0)
+            if (entity_2 > 0)
             {
                 do
                 {
-                    long double x87_r5_5 = a1;
-                    long double x87_r4_12 = x87_r5_5 * 0.5f;
-                    float v_4_2 = (v_8_2 - x87_r4_12 + 0.5f) / x87_r4_12;
-                    a1 = (i_2 - x87_r4_12 + 0.5f) / x87_r4_12;
-                    long double x87_r5_6 = 2f / x87_r5_5;
-                    long double x87_r4_15 = a1;
-                    long double f1_1 = 0f;
-                    x87_r4_15 - f1_1;
-                    long double x87_r4_16 = a1;
+                    long double fpu_val_5_5 = context;
+                    long double fpu_val_4_12 = fpu_val_5_5 * 0.5f;
+                    float item_4_2 = (item_8_2 - fpu_val_4_12 + 0.5f) / fpu_val_4_12;
+                    context = (i_2 - fpu_val_4_12 + 0.5f) / fpu_val_4_12;
+                    long double fpu_val_5_6 = 2.0f / fpu_val_5_5;
+                    long double fpu_val_4_15 = context;
+                    long double f1_1 = 0.0f;
+                    fpu_val_4_15 - f1_1;
+                    long double fpu_val_4_16 = context;
 
-                    if (*(&((x87_r4_15 < f1_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r4_15, f1_1) ? 1 : 0) << 0xa
-                            | (x87_r4_15 == f1_1 ? 1 : 0) << 0xe | 0x2000) + 1) & 1)
-                        x87_r4_16 = -(x87_r4_16);
+                    if (*(&((fpu_val_4_15 < f1_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_4_15, f1_1) ? 1 : 0) << 0xa
+                            | (fpu_val_4_15 == f1_1 ? 1 : 0) << 0xe | 0x2000) + 1) & 1)
+                        fpu_val_4_16 = -(fpu_val_4_16);
 
-                    long double x87_r3_27 = a1 * a1 + v_4_2 * v_4_2 + 1f;
-                    long double x87_r5_8 =
-                        x87_r5_6 * x87_r5_6 * x87_r4_16 / (x87_r3_27 * x87_r3_27 * 3.14159274f);
-                    *(result[0xd] + ((objC2 * i_1 + tmpD2) << 2)) = x87_r5_8;
-                    fpu7 = fpu7 + x87_r5_8 * 4f;
-                    long double x87_r4_20 = g_a83b2c;
-                    x87_r4_20 - x87_r5_8;
+                    long double fpu_val_3_27 = context * context + item_4_2 * item_4_2 + 1.0f;
+                    long double fpu_val_5_8 =
+                        fpu_val_5_6 * fpu_val_5_6 * fpu_val_4_16 / (fpu_val_3_27 * fpu_val_3_27 * 3.14159274f);
+                    *(result[0xd] + ((entity_2 * i_1 + temp_2) << 2)) = fpu_val_5_8;
+                    fpu7 = fpu7 + fpu_val_5_8 * 4.0f;
+                    long double fpu_val_4_20 = g_a83b2c;
+                    fpu_val_4_20 - fpu_val_5_8;
 
-                    if (*(&((x87_r4_20 < x87_r5_8 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r4_20, x87_r5_8) ? 1 : 0) << 0xa
-                            | (x87_r4_20 == x87_r5_8 ? 1 : 0) << 0xe | 0x2800) + 1) & 0x41)
-                        g_a83b2c = x87_r5_8;
+                    if (*(&((fpu_val_4_20 < fpu_val_5_8 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_4_20, fpu_val_5_8) ? 1 : 0) << 0xa
+                            | (fpu_val_4_20 == fpu_val_5_8 ? 1 : 0) << 0xe | 0x2800) + 1) & 0x41)
+                        g_a83b2c = fpu_val_5_8;
 
-                    objC2 = *result;
-                    tmpD2 += 1;
-                    v_8_2 = tmpD2;
-                    a1 = objC2;
-                } while (tmpD2 < objC2);
+                    entity_2 = *result;
+                    temp_2 += 1;
+                    item_8_2 = temp_2;
+                    context = entity_2;
+                } while (temp_2 < entity_2);
             }
 
-            objC2 = *result;
+            entity_2 = *result;
             i_1 += 1;
             i_2 = i_1;
-            tmpD3 = HIGHD(objC2);
-            valA18 = LOWD(objC2);
-            a1 = objC2;
-        } while (i_1 < (valA18 - tmpD3) >> 1);
+            temp_3 = HIGHD(entity_2);
+            data_18 = LOWD(entity_2);
+            context = entity_2;
+        } while (i_1 < (data_18 - temp_3) >> 1);
     }
 
     Qhash_Reset();

@@ -1,114 +1,114 @@
 // Original IGI.EXE function: FX_FindfreepositionStac (VA 0x0048B050; static CFG gate PASS, CFG score 0.967).
 #include "FX_FindfreepositionStac.h"
-❓  void* __stdcall FX_FindfreepositionStac(void** a1 @ 0x1430, int32_t* a2, char a3, void* a4)
+❓  void* __stdcall FX_FindfreepositionStac(void** context , int32_t* param_2, char param_3, void* param_4)
 // This function has unresolved stack usage. View graph of stack usage to resolve.
 
 {
     Camera_UpdateTransform_5(0x142c);
-    int32_t* dstD = a1;
+    int32_t* dest_val = context;
     int32_t arg_42c;
-    int32_t* ctxB = &arg_42c;
-    __return_addr = nullptr;
-    *dstD = 0;
+    int32_t* context_val = &arg_42c;
+    return_addr = nullptr;
+    *dest_val = 0;
     int32_t* arg_10 = &arg_42c;
 
-    if (*(a2[0xedb] + 0x5c) >= 0x400)
+    if (*(param_2[0xedb] + 0x5c) >= 0x400)
         return Warning_Show("FindFreePosition stack not large enough");
 
-    int32_t* valA2 = AI_SelectTarget_4(a2);
+    int32_t* data_2 = AI_SelectTarget_4(param_2);
 
-    if (!valA2)
+    if (!data_2)
         return Warning_Show("No nodes near target");
 
     void arg_14;
-    AI_UpdatePatrol_3(&arg_14, a2);
-    char v_1c = 1;
-    g_5c8bb4 = *valA2;
-    g_5c8bac = a2[0xf8b];
-    void* valA5 = FX_SmokeEmit_18(a2, valA2, a3, v_1c);
+    AI_UpdatePatrol_3(&arg_14, param_2);
+    char item_1c = 1;
+    g_5c8bb4 = *data_2;
+    g_5c8bac = param_2[0xf8b];
+    void* data_5 = FX_SmokeEmit_18(param_2, data_2, param_3, item_1c);
 
-    if (valA5)
+    if (data_5)
     {
-        *dstD = valA2;
-        return valA5;
+        *dest_val = data_2;
+        return data_5;
     }
 
-    int32_t srcS1 = *valA2;
-    void* valA6 = nullptr;
+    int32_t source_1 = *data_2;
+    void* data_6 = nullptr;
     char arg_2c[0x400];
-    __builtin_memset(&arg_2c, 0, 0x400);
-    arg_42c = srcS1;
+    memset(&arg_2c, 0, 0x400);
+    arg_42c = source_1;
     int32_t arg_4 = 1;
     int32_t arg_430 = 0xffffffff;
-    arg_2c[srcS1] = 1;
+    arg_2c[source_1] = 1;
 
-    if (srcS1 != 0xffffffff)
+    if (source_1 != 0xffffffff)
     {
     label_48b151:
-        valA6 = a4;
+        data_6 = param_4;
 
-        if (__return_addr < valA6)
+        if (return_addr < data_6)
         {
-            int32_t* valA9 = Script_ExecuteLevelScript_23(a2[0xedb], *ctxB) + 0x13c;
+            int32_t* data_9 = Script_ExecuteLevelScript_23(param_2[0xedb], *context_val) + 0x13c;
             int32_t arg_c = 0;
-            int32_t saved_dst;
-            int32_t* dstD1 = &(&saved_dst)[arg_4 + 0x10f];
-            int32_t* arg_8 = valA9;
+            int32_t saved_target;
+            int32_t* dest_1 = &(&saved_target)[arg_4 + 0x10f];
+            int32_t* arg_8 = data_9;
 
             while (true)
             {
-                if (__return_addr < a4)
+                if (return_addr < param_4)
                 {
-                    void* valA10 = *valA9;
+                    void* data_10 = *data_9;
 
-                    if (valA10)
+                    if (data_10)
                     {
-                        int32_t srcS2 = *(valA10 + 8);
+                        int32_t source_2 = *(data_10 + 8);
 
-                        if (*ctxB == srcS2)
-                            srcS2 = *(valA10 + 0xc);
+                        if (*context_val == source_2)
+                            source_2 = *(data_10 + 0xc);
 
-                        if (!arg_2c[srcS2])
+                        if (!arg_2c[source_2])
                         {
-                            int32_t* valA12 = Script_ExecuteLevelScript_23(a2[0xedb], srcS2);
-                            valA6 = FX_SmokeEmit_18(a2, valA12, a3, 1);
+                            int32_t* data_12 = Script_ExecuteLevelScript_23(param_2[0xedb], source_2);
+                            data_6 = FX_SmokeEmit_18(param_2, data_12, param_3, 1);
 
-                            if (valA6)
+                            if (data_6)
                             {
-                                *a1 = valA12;
+                                *context = data_12;
                                 break;
                             }
 
-                            ctxB = arg_10;
-                            *dstD1 = srcS2;
-                            dstD1 = &dstD1[1];
-                            arg_2c[srcS2] = 1;
+                            context_val = arg_10;
+                            *dest_1 = source_2;
+                            dest_1 = &dest_1[1];
+                            arg_2c[source_2] = 1;
                             arg_4 += 1;
-                            *dstD1 = 0xffffffff;
-                            __return_addr += 1;
+                            *dest_1 = 0xffffffff;
+                            return_addr += 1;
                         }
                     }
 
-                    valA9 = &arg_8[1];
-                    bool cond_2_1 = arg_c + 1 < 0x40;
+                    data_9 = &arg_8[1];
+                    bool flag_2_1 = arg_c + 1 < 0x40;
                     arg_c += 1;
-                    arg_8 = valA9;
+                    arg_8 = data_9;
 
-                    if (cond_2_1)
+                    if (flag_2_1)
                         continue;
                 }
 
-                int32_t valA17 = ctxB[1];
-                ctxB = &ctxB[1];
-                arg_10 = ctxB;
+                int32_t data_17 = context_val[1];
+                context_val = &context_val[1];
+                arg_10 = context_val;
 
-                if (valA17 != 0xffffffff)
+                if (data_17 != 0xffffffff)
                     goto label_48b151;
 
-                return valA17;
+                return data_17;
             }
         }
     }
 
-    return valA6;
+    return data_6;
 }

@@ -1,57 +1,57 @@
 // Original IGI.EXE function: Camera_SubmitFrame (VA 0x004D9870; static CFG gate PASS, CFG score 0.905).
 #include "Camera_SubmitFrame.h"
-int32_t* Camera_SubmitFrame(void* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t* a6 @ 0x1c, int32_t a7, int32_t a8, float a9)
+int32_t* Camera_SubmitFrame(void* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t* param_6 , int32_t param_7, int32_t param_8, float param_9)
 
 // Sig: void Camera_SubmitFrame(CameraContext* camCtx)
 // Note: Submits/presents the camera frame: increments frame counters at
 // camCtx+0x50 against limit at +0x4C. IGI-MP hooks this as Camera_Submit for
 // the lobby camera.
 {
-    int32_t* result = a6;
-    bool cond_0 = result <= *(a1 + 0x4c);
-    *(a1 + 0x50) += 1;
+    int32_t* result = param_6;
+    bool flag_0 = result <= *(context + 0x4c);
+    *(context + 0x50) += 1;
 
-    if (!cond_0)
+    if (!flag_0)
     {
-        *(a1 + 0x4c) = result;
-        *(a1 + 0x48) = 0xbf800000;
+        *(context + 0x4c) = result;
+        *(context + 0x48) = 0xbf800000;
     }
 
     float arg_18;
     long double fpu7 = arg_18;
-    long double f0 = *(a1 + 0x48);
+    long double f0 = *(context + 0x48);
     fpu7 - f0;
     result = (fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe;
 
     if (!(*(&result + 1) & 1))
     {
-        memcpy(a1 + 0x28, a2, 0x18);
-        memcpy(a1, a3, 0x28);
-        *(a1 + 0x40) = a4;
-        *(a1 + 0x44) = a5;
-        *(a1 + 0x54) = a7;
-        *(a1 + 0x58) = a8;
-        float objC3 = arg_18;
-        *(a1 + 0x5c) = a9;
-        *(a1 + 0x48) = objC3;
-        arg_18 = a9;
+        memcpy(context + 0x28, param_2, 0x18);
+        memcpy(context, param_3, 0x28);
+        *(context + 0x40) = param_4;
+        *(context + 0x44) = param_5;
+        *(context + 0x54) = param_7;
+        *(context + 0x58) = param_8;
+        float entity_3 = arg_18;
+        *(context + 0x5c) = param_9;
+        *(context + 0x48) = entity_3;
+        arg_18 = param_9;
         int32_t i = 0;
         result = Qtask_GetList();
 
         if (*result > 0)
         {
-            int32_t srcS4 = 8;
+            int32_t source_4 = 8;
 
             do
             {
-                int32_t valA4 = 0;
-                valA4 = *(*(Qtask_GetList() + srcS4) + 0x1c);
-                uint32_t valA6 = Qtask_GetEventId();
-                (*(((valA4 + valA6 * 0x180) << 2) + &g_a96ae0))(*(Qtask_GetList() + srcS4),
+                int32_t data_4 = 0;
+                data_4 = *(*(Qtask_GetList() + source_4) + 0x1c);
+                uint32_t data_6 = Qtask_GetEventId();
+                (*(((data_4 + data_6 * 0x180) << 2) + &g_a96ae0))(*(Qtask_GetList() + source_4),
                     &arg_18);
                 i += 1;
-                srcS4 += 4;
+                source_4 += 4;
                 result = Qtask_GetList();
             } while (i < *result);
         }

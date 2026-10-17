@@ -1,99 +1,99 @@
 // Original IGI.EXE function: Sys_CloseFileStream_31 (VA 0x004BFC70; static CFG gate PASS, CFG score 0.939).
 #include "Sys_CloseFileStream_31.h"
-int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
+int32_t Sys_CloseFileStream_31(int32_t* context, int32_t* param_2)
 
 {
-    int32_t* flagP = a2;
-    int32_t* ctxB = *flagP;
+    int32_t* flagP = param_2;
+    int32_t* context_val = *flagP;
 
-    if (*ctxB)
+    if (*context_val)
     {
-        flagP[3] = ctxB[2];
-        flagP[4] = ctxB[3];
-        flagP[8] = ctxB[8];
-        flagP[6] = ctxB[6];
-        flagP[7] = ctxB[7];
-        int32_t dstD = ctxB[4];
+        flagP[3] = context_val[2];
+        flagP[4] = context_val[3];
+        flagP[8] = context_val[8];
+        flagP[6] = context_val[6];
+        flagP[7] = context_val[7];
+        int32_t dest_val = context_val[4];
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD;
-            dstD += 1;
+            bool flag_0_1 = 0 != *dest_val;
+            dest_val += 1;
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC3 = ~i;
-        int32_t srcS1;
-        int32_t dstD3;
-        dstD3 = memcpy(flagP[5], dstD - objC3, objC3 & 0xfffffffc);
-        memcpy(dstD3, srcS1, objC3 & 3);
-        Camera_ApplyHandiCam_33(ctxB);
-        Sys_ExecuteBytecode_2(ctxB);
+        int32_t entity_3 = ~i;
+        int32_t source_1;
+        int32_t dest_3;
+        dest_3 = memcpy(flagP[5], dest_val - entity_3, entity_3 & 0xfffffffc);
+        memcpy(dest_3, source_1, entity_3 & 3);
+        Camera_ApplyHandiCam_33(context_val);
+        Sys_ExecuteBytecode_2(context_val);
         return 1;
     }
 
-    a2 = 1;
-    void* const srcS2 = nullptr;
-    int32_t* dstD4 = *a1;
+    param_2 = 1;
+    void* const source_2 = nullptr;
+    int32_t* dest_4 = *context;
 
     while (true)
     {
-        char* objC7 = *dstD4;
-        char valA4 = *objC7;
+        char* entity_7 = *dest_4;
+        char data_4 = *entity_7;
 
-        if (valA4 != 0x20 && valA4 != 9 && valA4 != 0xa && valA4 != 0xd)
+        if (data_4 != 0x20 && data_4 != 9 && data_4 != 0xa && data_4 != 0xd)
         {
-            while (!**dstD4)
+            while (!**dest_4)
             {
-                if (!Sys_CheckHeap_30(dstD4))
+                if (!Sys_CheckHeap_30(dest_4))
                     return 0;
 
                 while (true)
                 {
-                    char* objC10 = *dstD4;
-                    char valA6 = *objC10;
+                    char* entity_10 = *dest_4;
+                    char data_6 = *entity_10;
 
-                    if (valA6 != 0x20 && valA6 != 9 && valA6 != 0xa && valA6 != 0xd)
+                    if (data_6 != 0x20 && data_6 != 9 && data_6 != 0xa && data_6 != 0xd)
                         break;
 
-                    *dstD4 = &objC10[1];
+                    *dest_4 = &entity_10[1];
                 }
             }
 
-            char* valA7 = flagP[5];
+            char* data_7 = flagP[5];
             flagP[3] = 8;
             flagP[4] = 0;
-            *valA7 = 0;
-            char* valA8 = *dstD4;
-            int32_t objC13 = *valA8 - 0x21;
+            *data_7 = 0;
+            char* data_8 = *dest_4;
+            int32_t entity_13 = *data_8 - 0x21;
 
-            if (objC13 > 0x5d)
+            if (entity_13 > 0x5d)
             {
             label_4c0065:
 
-                if (Terrain_SelectTerrainLOD_5(valA8, dstD4, flagP[5], flagP[9]))
+                if (Terrain_SelectTerrainLOD_5(data_8, dest_4, flagP[5], flagP[9]))
                 {
                     flagP[3] = 5;
-                    a2 = nullptr;
+                    param_2 = nullptr;
                 }
             }
             else
             {
-                int32_t tmpD4 = 0;
-                tmpD4 = lookup_table_4c0108[objC13];
+                int32_t temp_4 = 0;
+                temp_4 = lookup_table_4c0108[entity_13];
                 char* i_4;
 
-                switch (tmpD4)
+                switch (temp_4)
                 {
                     case 0:
                     {
                         flagP[3] = 1;
 
-                        if (*(*dstD4 + 1) != 0x3d)
+                        if (*(*dest_4 + 1) != 0x3d)
                         {
                             i_4 = 2;
                             flagP[4] = 0x14;
@@ -104,17 +104,17 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                             i_4 = 2;
                             flagP[3] = 1;
                             flagP[4] = 0xf;
-                            a2 = 2;
+                            param_2 = 2;
                         }
 
                         goto label_4bfecc;
                     }
                     case 1:
                     {
-                        if (Terrain_SelectTerrainLOD_5(valA8, dstD4, flagP[5], flagP[9]))
+                        if (Terrain_SelectTerrainLOD_5(data_8, dest_4, flagP[5], flagP[9]))
                         {
                             flagP[3] = 4;
-                            a2 = nullptr;
+                            param_2 = nullptr;
                         }
                         break;
                     }
@@ -124,11 +124,11 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                         flagP[4] = 0xa;
                         i_4 = 1;
 
-                        if (*(*dstD4 + 1) == 0x26)
+                        if (*(*dest_4 + 1) == 0x26)
                         {
                             i_4 = 2;
                             flagP[4] = 0x1c;
-                            a2 = 2;
+                            param_2 = 2;
                         }
 
                         goto label_4bfecc;
@@ -157,7 +157,7 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                             do
                             {
                                 if (i_4 < flagP[9])
-                                    i_4[flagP[5] - 1] = i_4[*dstD4 - 1];
+                                    i_4[flagP[5] - 1] = i_4[*dest_4 - 1];
 
                                 i_1 = i_4;
                                 i_4 -= 1;
@@ -216,21 +216,21 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                     }
                     case 0xc:
                     {
-                        char valA11 = valA8[1];
+                        char data_11 = data_8[1];
 
-                        if (valA11 == 0x3c)
+                        if (data_11 == 0x3c)
                         {
                             flagP[3] = 1;
                             flagP[4] = 0xb;
                         label_4bfeba:
-                            a2 = 2;
-                            srcS2 = 1;
+                            param_2 = 2;
+                            source_2 = 1;
                             goto label_4bfec4;
                         }
 
                         flagP[3] = 1;
 
-                        if (valA11 != 0x3d)
+                        if (data_11 != 0x3d)
                         {
                             flagP[4] = 0x10;
                             goto label_4bfec4;
@@ -241,10 +241,10 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                     }
                     case 0xd:
                     {
-                        char objC20 = valA8[1];
+                        char entity_20 = data_8[1];
                         flagP[3] = 1;
 
-                        if (objC20 == 0x3d)
+                        if (entity_20 == 0x3d)
                         {
                             flagP[4] = 0xe;
                             goto label_4bfeba;
@@ -252,7 +252,7 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
 
                         flagP[4] = 0x19;
                     label_4bfec4:
-                        i_4 = srcS2 + 1;
+                        i_4 = source_2 + 1;
 
                         if (i_4)
                             goto label_4bfecc;
@@ -260,9 +260,9 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                     }
                     case 0xe:
                     {
-                        char valA21 = valA8[1];
+                        char data_21 = data_8[1];
 
-                        if (valA21 == 0x3e)
+                        if (data_21 == 0x3e)
                         {
                             flagP[3] = 1;
                             flagP[4] = 0xc;
@@ -271,15 +271,15 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
 
                         flagP[3] = 1;
 
-                        if (valA21 == 0x3d)
+                        if (data_21 == 0x3d)
                         {
                             flagP[4] = 0x13;
                             goto label_4bfeba;
                         }
 
-                        char* objC19 = flagP[5];
+                        char* entity_19 = flagP[5];
                         flagP[4] = 0x11;
-                        *objC19 = **dstD4;
+                        *entity_19 = **dest_4;
                         goto label_4bfec4;
                     }
                     case 0xf:
@@ -309,11 +309,11 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                         flagP[4] = 8;
                         i_4 = 1;
 
-                        if (*(*dstD4 + 1) == 0x7c)
+                        if (*(*dest_4 + 1) == 0x7c)
                         {
                             i_4 = 2;
                             flagP[4] = 0x1b;
-                            a2 = 2;
+                            param_2 = 2;
                         }
 
                         goto label_4bfecc;
@@ -339,17 +339,17 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
                 }
             }
 
-            if (a2)
+            if (param_2)
             {
-                void* i_3 = a2;
+                void* i_3 = param_2;
                 void* i_2;
 
                 do
                 {
-                    char* valA14 = *dstD4;
+                    char* data_14 = *dest_4;
 
-                    if (*valA14)
-                        *dstD4 = &valA14[1];
+                    if (*data_14)
+                        *dest_4 = &data_14[1];
 
                     i_2 = i_3;
                     i_3 -= 1;
@@ -360,24 +360,24 @@ int32_t Sys_CloseFileStream_31(int32_t* a1, int32_t* a2)
             {
                 if (DynObj_InsertHashItem(flagP))
                 {
-                    int32_t valA19 = Terrain_UpdateWaterWaves_5(flagP[5]);
+                    int32_t data_19 = Terrain_UpdateWaterWaves_5(flagP[5]);
                     flagP[3] = 7;
-                    int32_t objC18 = flagP[3];
-                    flagP[8] = valA19;
-                    int32_t valA20 = 0;
-                    valA20 = objC18 != 8;
-                    return valA20;
+                    int32_t entity_18 = flagP[3];
+                    flagP[8] = data_19;
+                    int32_t data_20 = 0;
+                    data_20 = entity_18 != 8;
+                    return data_20;
                 }
 
                 *(flagP + 0x18) = Terrain_RenderWaterSurface_5(flagP[5]);
                 flagP[3] = 6;
             }
 
-            int32_t valA25 = 0;
-            valA25 = flagP[3] != 8;
-            return valA25;
+            int32_t data_25 = 0;
+            data_25 = flagP[3] != 8;
+            return data_25;
         }
 
-        *dstD4 = &objC7[1];
+        *dest_4 = &entity_7[1];
     }
 }

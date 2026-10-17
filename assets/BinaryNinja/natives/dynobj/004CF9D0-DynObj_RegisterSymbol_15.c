@@ -1,83 +1,83 @@
 // Original IGI.EXE function: DynObj_RegisterSymbol_15 (VA 0x004CF9D0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_RegisterSymbol_15.h"
-int32_t* DynObj_RegisterSymbol_15(int32_t* a1)
+int32_t* DynObj_RegisterSymbol_15(int32_t* context)
 
 {
-    Camera_ApplyHandiCam_33(a1);
+    Camera_ApplyHandiCam_33(context);
     int32_t i = 0;
 
-    if (a1[0x11] > 0)
+    if (context[0x11] > 0)
     {
-        void* ctxB1 = nullptr;
+        void* context_1 = nullptr;
 
         do
         {
-            Sys_PopStack_21(ctxB1 + a1[0xf]);
+            Sys_PopStack_21(context_1 + context[0xf]);
             i += 1;
-            ctxB1 += 0xc;
-        } while (i < a1[0x11]);
+            context_1 += 0xc;
+        } while (i < context[0x11]);
     }
 
-    void* valA4 = a1[0xf];
+    void* data_4 = context[0xf];
 
-    if (valA4)
+    if (data_4)
     {
-        Sys_ExecuteBytecode_2(valA4);
-        a1[0xf] = 0;
+        Sys_ExecuteBytecode_2(data_4);
+        context[0xf] = 0;
     }
 
     int32_t i_1 = 0;
 
-    if (a1[0x10] > 0)
+    if (context[0x10] > 0)
     {
-        void* dstD = nullptr;
+        void* dest_val = nullptr;
 
         do
         {
-            int32_t objC1 = a1[0xe];
+            int32_t entity_1 = context[0xe];
 
-            if (*(dstD + objC1 + 4))
-                Sys_PopStack_21(dstD + objC1);
+            if (*(dest_val + entity_1 + 4))
+                Sys_PopStack_21(dest_val + entity_1);
 
             i_1 += 1;
-            dstD += 0xc;
-        } while (i_1 < a1[0x10]);
+            dest_val += 0xc;
+        } while (i_1 < context[0x10]);
     }
 
-    void* valA8 = a1[0xe];
+    void* data_8 = context[0xe];
 
-    if (valA8)
+    if (data_8)
     {
-        Sys_ExecuteBytecode_2(valA8);
-        a1[0xe] = 0;
+        Sys_ExecuteBytecode_2(data_8);
+        context[0xe] = 0;
     }
 
-    int32_t i_10 = a1[0x10];
+    int32_t i_10 = context[0x10];
 
     if (i_10 - 1 >= 0)
     {
         int32_t i_8 = i_10;
-        int32_t dstD2 = (i_10 - 1) * 0x24;
+        int32_t dest_2 = (i_10 - 1) * 0x24;
         int32_t i_2;
 
         do
         {
-            Struct_Clear36(dstD2 + a1[0xd]);
-            dstD2 -= 0x24;
+            Struct_Clear36(dest_2 + context[0xd]);
+            dest_2 -= 0x24;
             i_2 = i_8;
             i_8 -= 1;
         } while (i_2 != 1);
     }
 
-    void* valA10 = a1[0xd];
+    void* data_10 = context[0xd];
 
-    if (valA10)
+    if (data_10)
     {
-        Sys_ExecuteBytecode_2(valA10);
-        a1[0xd] = 0;
+        Sys_ExecuteBytecode_2(data_10);
+        context[0xd] = 0;
     }
 
-    int32_t* i_6 = a1[9];
+    int32_t* i_6 = context[9];
 
     for (int32_t* i_3 = i_6[1]; i_3; i_3 = i_3[1])
     {
@@ -85,7 +85,7 @@ int32_t* DynObj_RegisterSymbol_15(int32_t* a1)
         i_6 = i_3;
     }
 
-    int32_t* i_7 = a1[6];
+    int32_t* i_7 = context[6];
 
     for (int32_t* i_4 = i_7[1]; i_4; i_4 = i_4[1])
     {
@@ -93,7 +93,7 @@ int32_t* DynObj_RegisterSymbol_15(int32_t* a1)
         i_7 = i_4;
     }
 
-    int32_t* i_9 = a1[0xc];
+    int32_t* i_9 = context[0xc];
 
     for (int32_t* i_5 = i_9[1]; i_5; i_5 = i_5[1])
     {
@@ -102,11 +102,11 @@ int32_t* DynObj_RegisterSymbol_15(int32_t* a1)
         i_9 = i_5;
     }
 
-    Resource_Flush(a1[3]);
+    Resource_Flush(context[3]);
 
-    if (!a1[0x12])
-        Resource_Flush(a1[2]);
+    if (!context[0x12])
+        Resource_Flush(context[2]);
 
-    Sys_ExecuteBytecode_2(a1);
+    Sys_ExecuteBytecode_2(context);
     return DynObj_FindSymbol_14();
 }

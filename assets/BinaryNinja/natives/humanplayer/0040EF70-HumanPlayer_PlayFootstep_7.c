@@ -1,85 +1,85 @@
 // Original IGI.EXE function: HumanPlayer_PlayFootstep_7 (VA 0x0040EF70; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_PlayFootstep_7.h"
-void** HumanPlayer_PlayFootstep_7(void* a1, void* a2)
+void** HumanPlayer_PlayFootstep_7(void* context, void* param_2)
 
 {
-    void* valA1;
-    int32_t objC;
-    valA1 = Table_GetAt(a2 + 0x4c4, 0);
-    int32_t tmpD;
-    void* valA2 = HumanPlayer_LoadParameters_13(valA1, tmpD, objC, valA1);
+    void* data_1;
+    int32_t entity_val;
+    data_1 = Table_GetAt(param_2 + 0x4c4, 0);
+    int32_t temp_val;
+    void* data_2 = HumanPlayer_LoadParameters_13(data_1, temp_val, entity_val, data_1);
     void** result_1;
-    Script_ParseEnumReal32_13(valA1, &result_1);
-    int16_t valA4;
-    valA4 = *(a2 + 0xd44);
-    int16_t ctxB = *(a1 + 8);
+    Script_ParseEnumReal32_13(data_1, &result_1);
+    int16_t data_4;
+    data_4 = *(param_2 + 0xd44);
+    int16_t context_val = *(context + 8);
 
-    if (valA4)
+    if (data_4)
     {
-        int32_t* valA5 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0;
-        int32_t valA6 = *valA5;
-        *(a1 + 0x14) = valA6;
-        return valA6(a1, a2);
+        int32_t* data_5 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0;
+        int32_t data_6 = *data_5;
+        *(context + 0x14) = data_6;
+        return data_6(context, param_2);
     }
 
-    long double fpu7 = *(a2 + 0x1c8);
-    long double f0 = 0f;
+    long double fpu7 = *(param_2 + 0x1c8);
+    long double f0 = 0.0f;
     fpu7 - f0;
     void** result;
 
     if (*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 0x40)
     {
-        long double x87_r7_1 = *(a2 + 0x1d0);
-        long double f1_1 = 0f;
-        x87_r7_1 - f1_1;
+        long double fpu_val_7_1 = *(param_2 + 0x1d0);
+        long double f1_1 = 0.0f;
+        fpu_val_7_1 - f1_1;
         result = result_1;
-        int32_t v_4;
+        int32_t item_4;
 
-        if ((!(*(&((x87_r7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40) || !result) && v_4
-            && result < *(valA2 + 0x648))
+        if ((!(*(&((fpu_val_7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40) || !result) && item_4
+            && result < *(data_2 + 0x648))
         {
-            Human_TaskViewReset(*(a2 + 0x4ec));
-            void* tmpD3 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 3;
-            int32_t valA13 = *(tmpD3 + 0xc);
-            *(a1 + 0x14) = valA13;
-            return valA13(a1, a2);
+            Human_TaskViewReset(*(param_2 + 0x4ec));
+            void* temp_3 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 3;
+            int32_t data_13 = *(temp_3 + 0xc);
+            *(context + 0x14) = data_13;
+            return data_13(context, param_2);
         }
     }
     else
     {
         result = result_1;
 
-        if (!result && ctxB & 1)
+        if (!result && context_val & 1)
         {
-            void* tmpD2 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 0xc;
-            int32_t valA8 = *(tmpD2 + 0x30);
-            *(a1 + 0x14) = valA8;
-            return valA8(a1, a2);
+            void* temp_2 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 0xc;
+            int32_t data_8 = *(temp_2 + 0x30);
+            *(context + 0x14) = data_8;
+            return data_8(context, param_2);
         }
 
-        *(a2 + 0x4d1) = 1;
+        *(param_2 + 0x4d1) = 1;
     }
 
-    result = *(a2 + 0x4d3);
+    result = *(param_2 + 0x4d3);
 
     if (result)
-        result = HumanPlayer_CheckCollision_9(a2, 8.40779079e-45f);
+        result = HumanPlayer_CheckCollision_9(param_2, 8.40779079e-45.0f);
 
-    if (!(ctxB & 1) || *(&ctxB + 1) & 2)
+    if (!(context_val & 1) || *(&context_val + 1) & 2)
         return result;
 
-    void* objC2 = *(a1 + 4);
-    *(a1 + 0xc) = *(a1 + 0x10);
-    *(a1 + 0x10) = 1;
-    int32_t valA11 = *(objC2 + 4);
-    *(a1 + 0x14) = valA11;
-    return valA11(a1, a2);
+    void* entity_2 = *(context + 4);
+    *(context + 0xc) = *(context + 0x10);
+    *(context + 0x10) = 1;
+    int32_t data_11 = *(entity_2 + 4);
+    *(context + 0x14) = data_11;
+    return data_11(context, param_2);
 }

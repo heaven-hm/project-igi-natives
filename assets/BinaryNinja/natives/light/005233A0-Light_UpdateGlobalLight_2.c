@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Light_UpdateGlobalLight_2 (VA 0x005233A0; static CFG gate PASS, CFG score 1.000).
 #include "Light_UpdateGlobalLight_2.h"
-int32_t Light_UpdateGlobalLight_2(void* a1)
+int32_t Light_UpdateGlobalLight_2(void* context)
 
 {
-    Sys_ExecuteBytecode_2(*(a1 + 0x34));
-    void* objC = *(a1 + 0x30);
-    *(a1 + 0x34) = 0;
-    Sys_ExecuteBytecode_2(objC);
-    void* tmpD = *(a1 + 0x1c);
-    *(a1 + 0x30) = 0;
-    Sys_ExecuteBytecode_2(tmpD);
-    void* valA1 = *(a1 + 8);
-    *(a1 + 0x1c) = 0;
-    Sys_ExecuteBytecode_2(valA1);
-    *(a1 + 8) = 0;
-    int32_t* srcS = a1 + 0xc;
+    Sys_ExecuteBytecode_2(*(context + 0x34));
+    void* entity_val = *(context + 0x30);
+    *(context + 0x34) = 0;
+    Sys_ExecuteBytecode_2(entity_val);
+    void* temp_val = *(context + 0x1c);
+    *(context + 0x30) = 0;
+    Sys_ExecuteBytecode_2(temp_val);
+    void* data_1 = *(context + 8);
+    *(context + 0x1c) = 0;
+    Sys_ExecuteBytecode_2(data_1);
+    *(context + 8) = 0;
+    int32_t* source_val = context + 0xc;
     int32_t i_1 = 4;
     int32_t i;
 
     do
     {
-        Sys_ExecuteBytecode_2(srcS[5]);
-        srcS[5] = 0;
-        Sys_ExecuteBytecode_2(*srcS);
-        *srcS = 0;
-        srcS = &srcS[1];
+        Sys_ExecuteBytecode_2(source_val[5]);
+        source_val[5] = 0;
+        Sys_ExecuteBytecode_2(*source_val);
+        *source_val = 0;
+        source_val = &source_val[1];
         i = i_1;
         i_1 -= 1;
     } while (i != 1);
-    return Sys_ExecuteBytecode_2(a1);
+    return Sys_ExecuteBytecode_2(context);
 }

@@ -3,7 +3,7 @@
 int32_t DynObj_Initmodels()
 
 {
-    __builtin_memset(&g_a443a0, 0, 0xa8c0);
+    memset(&g_a443a0, 0, 0xa8c0);
     g_a4ec60 = &g_a4ec64;
     g_a4ec68 = &g_a4ec60;
     g_a4ec64 = 0;

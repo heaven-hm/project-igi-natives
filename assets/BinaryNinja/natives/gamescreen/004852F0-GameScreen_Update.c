@@ -3,7 +3,7 @@
 uint32_t GameScreen_Update()
 
 {
-    int32_t valA;
-    valA = g_5c8a28;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_5c8a28;
+    return QTask_CloseEvent_2(data_val);
 }

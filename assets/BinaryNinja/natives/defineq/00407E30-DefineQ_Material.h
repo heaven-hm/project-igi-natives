@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00407E30 DefineQ_Material | gate PASS | openigi False */
-int DefineQ_Material(long double a1, long double a2, long double a3, int a4, int a5);
+int DefineQ_Material(long double context, long double param_2, long double param_3, int param_4, int param_5);

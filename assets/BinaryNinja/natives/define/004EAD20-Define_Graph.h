@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004EAD20 Define_Graph | gate PASS | openigi True */
-int Define_Graph(long double a1, long double a2, long double a3, long double a4, long double a5, long double a6, int a7, void * a8, float a9);
+int Define_Graph(long double context, long double param_2, long double param_3, long double param_4, long double param_5, long double param_6, int param_7, void * param_8, float param_9);

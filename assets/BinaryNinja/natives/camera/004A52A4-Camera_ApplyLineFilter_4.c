@@ -1,39 +1,39 @@
 // Original IGI.EXE function: Camera_ApplyLineFilter_4 (VA 0x004A52A4; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyLineFilter_4.h"
-int32_t Camera_ApplyLineFilter_4(int32_t* a1, void* a2, enum SET_FILE_POINTER_MOVE_METHOD a3)
+int32_t Camera_ApplyLineFilter_4(int32_t* context, void* param_2, enum SET_FILE_POINTER_MOVE_METHOD param_3)
 
 {
-    int32_t valA = a1[3];
+    int32_t data_val = context[3];
 
-    if (valA & 0x83)
+    if (data_val & 0x83)
     {
-        enum SET_FILE_POINTER_MOVE_METHOD dstD1 = a3;
+        enum SET_FILE_POINTER_MOVE_METHOD dest_1 = param_3;
 
-        if (!dstD1 || dstD1 == FILE_CURRENT || dstD1 == FILE_END)
+        if (!dest_1 || dest_1 == FILE_CURRENT || dest_1 == FILE_END)
         {
-            valA &= 0xef;
-            a1[3] = valA;
+            data_val &= 0xef;
+            context[3] = data_val;
 
-            if (dstD1 == FILE_CURRENT)
+            if (dest_1 == FILE_CURRENT)
             {
-                a2 += Camera_UpdateTransform_10(a1);
-                dstD1 = FILE_BEGIN;
+                param_2 += Camera_UpdateTransform_10(context);
+                dest_1 = FILE_BEGIN;
             }
 
-            Camera_ApplyHandiCam_9(a1);
-            int32_t valA2 = a1[3];
+            Camera_ApplyHandiCam_9(context);
+            int32_t data_2 = context[3];
 
-            if (valA2 & 0x80)
+            if (data_2 & 0x80)
             {
-                valA2 &= 0xfc;
-                a1[3] = valA2;
+                data_2 &= 0xfc;
+                context[3] = data_2;
             }
-            else if (valA2 & 1 && valA2 & 8 && !(*(&valA2 + 1) & 4))
-                a1[6] = 0x200;
+            else if (data_2 & 1 && data_2 & 8 && !(*(&data_2 + 1) & 4))
+                context[6] = 0x200;
 
-            int32_t objC3 = 0;
-            objC3 = Camera_ResetMatrix_9(a1[4], a2, dstD1) != 0xffffffff;
-            return objC3 - 1;
+            int32_t entity_3 = 0;
+            entity_3 = Camera_ResetMatrix_9(context[4], param_2, dest_1) != 0xffffffff;
+            return entity_3 - 1;
         }
     }
 

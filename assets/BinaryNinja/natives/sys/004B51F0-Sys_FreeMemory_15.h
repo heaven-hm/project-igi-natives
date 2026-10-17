@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004B51F0 Sys_FreeMemory_15 | gate FAIL | openigi False */
-int Sys_FreeMemory_15(int* a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, float a10, float a11, float a12, int a13, int a14, int a15);
+int Sys_FreeMemory_15(int* context, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9, float param_10, float param_11, float param_12, int param_13, int param_14, int param_15);

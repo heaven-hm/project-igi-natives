@@ -3,117 +3,117 @@
 int32_t FX_FailedGetMouseStateS()
 
 {
-    int32_t* valA11 = g_5c8e1c;
-    int32_t srcS = 0;
-    int32_t v_14;
+    int32_t* data_11 = g_5c8e1c;
+    int32_t source_val = 0;
+    int32_t item_14;
     int32_t result;
 
-    if (!(*(*valA11 + 0x24))(valA11, 0x14, &v_14))
+    if (!(*(*data_11 + 0x24))(data_11, 0x14, &item_14))
     {
     label_48fc85:
-        g_c28f84 = v_14 * 0.0039215686274509803;
-        int32_t v_10;
-        g_c28f88 = v_10 * 0.0039215686274509803;
+        g_c28f84 = item_14 * 0.0039215686274509803;
+        int32_t item_10;
+        g_c28f88 = item_10 * 0.0039215686274509803;
 
         if (!FX_SmokeEmit_25())
         {
-            char v_8;
+            char item_8;
 
-            if (v_8)
-                srcS = 1;
+            if (item_8)
+                source_val = 1;
 
-            char v_7;
+            char item_7;
 
-            if (v_7)
-                srcS |= 2;
+            if (item_7)
+                source_val |= 2;
 
-            char v_6;
+            char item_6;
 
-            if (v_6)
-                srcS |= 4;
+            if (item_6)
+                source_val |= 4;
 
-            char v_5;
+            char item_5;
 
-            if (v_5)
-                srcS |= 8;
+            if (item_5)
+                source_val |= 8;
 
-            char v_4;
+            char item_4;
 
-            if (v_4)
-                srcS |= 0x10;
+            if (item_4)
+                source_val |= 0x10;
 
-            char v_3;
+            char item_3;
 
-            if (v_3)
-                srcS |= 0x20;
+            if (item_3)
+                source_val |= 0x20;
 
-            char v_2;
+            char item_2;
 
-            if (v_2)
-                srcS |= 0x40;
+            if (item_2)
+                source_val |= 0x40;
 
-            char v_1;
+            char item_1;
 
-            if (v_1)
-                srcS |= 0x80;
+            if (item_1)
+                source_val |= 0x80;
 
             int32_t result_1;
             result = result_1;
 
             if (result > 0)
             {
-                *g_c28f8c = srcS | 0x100;
+                *g_c28f8c = source_val | 0x100;
                 return result;
             }
 
             if (result < 0)
-                srcS |= 0x200;
+                source_val |= 0x200;
         }
         else
         {
             if (g_5c8e10)
-                srcS = 1;
+                source_val = 1;
 
             if (g_5c8e0c)
-                srcS |= 2;
+                source_val |= 2;
 
             if (g_5c8e18)
-                srcS |= 4;
+                source_val |= 4;
 
             result = g_5c8e08;
-            bool cond_0_1 = result >= 0;
+            bool flag_0_1 = result >= 0;
 
             if (result > 0)
             {
-                srcS |= 0x100;
+                source_val |= 0x100;
                 result -= 1;
                 g_5c8e08 = result;
-                cond_0_1 = result >= 0;
+                flag_0_1 = result >= 0;
             }
 
-            if (!cond_0_1)
+            if (!flag_0_1)
             {
                 g_5c8e08 = result + 1;
-                *g_c28f8c = srcS | 0x200;
+                *g_c28f8c = source_val | 0x200;
                 return result + 1;
             }
         }
 
-        *g_c28f8c = srcS;
+        *g_c28f8c = source_val;
     }
     else
     {
-        int32_t* valA1 = g_5c8e1c;
-        result = (*(*valA1 + 0x1c))(valA1);
+        int32_t* data_1 = g_5c8e1c;
+        result = (*(*data_1 + 0x1c))(data_1);
 
         if (!result)
         {
-            int32_t* valA2 = g_5c8e1c;
-            int32_t valA3 = (*(*valA2 + 0x24))(valA2, 0x14, &v_14);
+            int32_t* data_2 = g_5c8e1c;
+            int32_t data_3 = (*(*data_2 + 0x24))(data_2, 0x14, &item_14);
 
-            if (valA3)
+            if (data_3)
             {
-                int32_t v_20 = DIERR_GENERIC(valA3);
+                int32_t item_20 = DIERR_GENERIC(data_3);
                 Error_Show("Failed get mouse state: %s");
 
                 while (true)

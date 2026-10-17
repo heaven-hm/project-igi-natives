@@ -1,115 +1,115 @@
 // Original IGI.EXE function: Sys_InternalErrorUnknown (VA 0x004BBF80; static CFG gate PASS, CFG score 1.000).
 #include "Sys_InternalErrorUnknown.h"
-int32_t Sys_InternalErrorUnknown(int32_t* a1, int32_t* a2)
+int32_t Sys_InternalErrorUnknown(int32_t* context, int32_t* param_2)
 
 {
-    int32_t valA1 = a2[2] - 1;
-    void v_40;
+    int32_t data_1 = param_2[2] - 1;
+    void item_40;
 
-    switch (valA1)
+    switch (data_1)
     {
         case 0:
         {
-            int32_t* i_3 = a2[3];
+            int32_t* i_3 = param_2[3];
             int32_t* i = *i_3;
 
             if (!i)
-                return valA1;
+                return data_1;
 
-            int32_t valA2;
+            int32_t data_2;
 
             do
             {
-                valA2 = Sys_InternalErrorUnknown(a1, i_3);
+                data_2 = Sys_InternalErrorUnknown(context, i_3);
                 i_3 = i;
                 i = *i;
             } while (i);
 
-            return valA2;
+            return data_2;
             break;
         }
         case 1:
         {
-            Sys_UnknownExpressionTyp(a1, a2[3]);
-            Sys_FreeMemory_27(0x15, a1);
-            Sys_ReadFileBlock_27(&v_40, 0x5479f0, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_OpenFileStream_27(a1);
-            Sys_InternalErrorUnknown(a1, a2[4]);
-            Sys_FreeMemory_27(0x14, a1);
-            Sys_ReadFileBlock_27(&v_40, 0x5479ec, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_OpenFileStream_27(a1);
-            int32_t* i_2 = a2[5];
-            int32_t* i_4 = a2;
+            Sys_UnknownExpressionTyp(context, param_2[3]);
+            Sys_FreeMemory_27(0x15, context);
+            Sys_ReadFileBlock_27(&item_40, 0x5479f0, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_OpenFileStream_27(context);
+            Sys_InternalErrorUnknown(context, param_2[4]);
+            Sys_FreeMemory_27(0x14, context);
+            Sys_ReadFileBlock_27(&item_40, 0x5479ec, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_OpenFileStream_27(context);
+            int32_t* i_2 = param_2[5];
+            int32_t* i_4 = param_2;
 
             for (int32_t* i_1 = *i_2; i_1; i_1 = *i_1)
             {
-                Sys_ReadFileBlock_27(&v_40, 0x5479f0, i_4);
-                Sys_CloseFileStream_27(a1, &v_40);
-                Sys_CloseFileStream_27(a1, 0x5479e8);
-                Sys_OpenFileStream_27(a1);
-                Sys_UnknownExpressionTyp(a1, i_2[3]);
-                Sys_FreeMemory_27(0x15, a1);
-                Sys_ReadFileBlock_27(&v_40, 0x5479f0, i_2);
-                Sys_CloseFileStream_27(a1, &v_40);
-                Sys_OpenFileStream_27(a1);
-                Sys_InternalErrorUnknown(a1, i_2[4]);
-                Sys_FreeMemory_27(0x14, a1);
-                Sys_ReadFileBlock_27(&v_40, 0x5479ec, a2);
-                Sys_CloseFileStream_27(a1, &v_40);
-                Sys_OpenFileStream_27(a1);
+                Sys_ReadFileBlock_27(&item_40, 0x5479f0, i_4);
+                Sys_CloseFileStream_27(context, &item_40);
+                Sys_CloseFileStream_27(context, 0x5479e8);
+                Sys_OpenFileStream_27(context);
+                Sys_UnknownExpressionTyp(context, i_2[3]);
+                Sys_FreeMemory_27(0x15, context);
+                Sys_ReadFileBlock_27(&item_40, 0x5479f0, i_2);
+                Sys_CloseFileStream_27(context, &item_40);
+                Sys_OpenFileStream_27(context);
+                Sys_InternalErrorUnknown(context, i_2[4]);
+                Sys_FreeMemory_27(0x14, context);
+                Sys_ReadFileBlock_27(&item_40, 0x5479ec, param_2);
+                Sys_CloseFileStream_27(context, &item_40);
+                Sys_OpenFileStream_27(context);
                 i_4 = i_2;
                 i_2 = i_1;
             }
 
-            Sys_ReadFileBlock_27(&v_40, 0x5479f0, i_4);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_CloseFileStream_27(a1, 0x5479e8);
-            Sys_OpenFileStream_27(a1);
-            int32_t* valA5 = a2[8];
+            Sys_ReadFileBlock_27(&item_40, 0x5479f0, i_4);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_CloseFileStream_27(context, 0x5479e8);
+            Sys_OpenFileStream_27(context);
+            int32_t* data_5 = param_2[8];
 
-            if (valA5)
-                Sys_InternalErrorUnknown(a1, valA5);
+            if (data_5)
+                Sys_InternalErrorUnknown(context, data_5);
 
-            Sys_ReadFileBlock_27(&v_40, 0x5479ec, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_CloseFileStream_27(a1, 0x5479e8);
-            return Sys_OpenFileStream_27(a1);
+            Sys_ReadFileBlock_27(&item_40, 0x5479ec, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_CloseFileStream_27(context, 0x5479e8);
+            return Sys_OpenFileStream_27(context);
             break;
         }
         case 3:
         {
-            Sys_ReadFileBlock_27(&v_40, 0x5479e4, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_CloseFileStream_27(a1, 0x5479e8);
-            Sys_OpenFileStream_27(a1);
-            Sys_UnknownExpressionTyp(a1, a2[3]);
-            Sys_FreeMemory_27(0x15, a1);
-            Sys_ReadFileBlock_27(&v_40, 0x5479e0, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_OpenFileStream_27(a1);
-            Sys_InternalErrorUnknown(a1, a2[4]);
-            Sys_FreeMemory_27(0x14, a1);
-            Sys_ReadFileBlock_27(&v_40, 0x5479e4, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_OpenFileStream_27(a1);
-            Sys_ReadFileBlock_27(&v_40, 0x5479e0, a2);
-            Sys_CloseFileStream_27(a1, &v_40);
-            Sys_CloseFileStream_27(a1, 0x5479e8);
-            return Sys_OpenFileStream_27(a1);
+            Sys_ReadFileBlock_27(&item_40, 0x5479e4, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_CloseFileStream_27(context, 0x5479e8);
+            Sys_OpenFileStream_27(context);
+            Sys_UnknownExpressionTyp(context, param_2[3]);
+            Sys_FreeMemory_27(0x15, context);
+            Sys_ReadFileBlock_27(&item_40, 0x5479e0, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_OpenFileStream_27(context);
+            Sys_InternalErrorUnknown(context, param_2[4]);
+            Sys_FreeMemory_27(0x14, context);
+            Sys_ReadFileBlock_27(&item_40, 0x5479e4, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_OpenFileStream_27(context);
+            Sys_ReadFileBlock_27(&item_40, 0x5479e0, param_2);
+            Sys_CloseFileStream_27(context, &item_40);
+            Sys_CloseFileStream_27(context, 0x5479e8);
+            return Sys_OpenFileStream_27(context);
             break;
         }
         case 6:
         {
-            char* dstD1 = a2[3];
+            char* dest_1 = param_2[3];
 
-            if (!dstD1)
-                return valA1;
+            if (!dest_1)
+                return data_1;
 
-            Sys_UnknownExpressionTyp(a1, dstD1);
-            Sys_FreeMemory_27(0x12, a1);
-            return Sys_OpenFileStream_27(a1);
+            Sys_UnknownExpressionTyp(context, dest_1);
+            Sys_FreeMemory_27(0x12, context);
+            return Sys_OpenFileStream_27(context);
             break;
         }
     }

@@ -18,74 +18,74 @@ struct status_msg* StatusMessage_ShowFull(void* ctx, char* message, char* sprite
 
     while (i)
     {
-        bool cond_0_1 = 0 != *message_1;
+        bool flag_0_1 = 0 != *message_1;
         message_1 = &message_1[1];
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    char* valA = Mem_Alloc(~i, 4);
+    char* data_val = Mem_Alloc(~i, 4);
     char* message_2 = message;
     int32_t i_1 = 0xffffffff;
-    result->text = valA;
+    result->text = data_val;
 
     while (i_1)
     {
-        bool cond_1_1 = 0 != *message_2;
+        bool flag_1_1 = 0 != *message_2;
         message_2 = &message_2[1];
         i_1 -= 1;
 
-        if (!cond_1_1)
+        if (!flag_1_1)
             break;
     }
 
-    int32_t objC2 = ~i_1;
-    int32_t srcS2;
-    int32_t dstD2;
-    dstD2 = memcpy(valA, message_2 - objC2, objC2 & 0xfffffffc);
-    memcpy(dstD2, srcS2, objC2 & 3);
+    int32_t entity_2 = ~i_1;
+    int32_t source_2;
+    int32_t dest_2;
+    dest_2 = memcpy(data_val, message_2 - entity_2, entity_2 & 0xfffffffc);
+    memcpy(dest_2, source_2, entity_2 & 3);
     char* sprite_1 = sprite;
     int32_t i_2 = 0xffffffff;
 
     while (i_2)
     {
-        bool cond_2_1 = 0 != *sprite_1;
+        bool flag_2_1 = 0 != *sprite_1;
         sprite_1 = &sprite_1[1];
         i_2 -= 1;
 
-        if (!cond_2_1)
+        if (!flag_2_1)
             break;
     }
 
-    int32_t objC6 = ~i_2;
-    int32_t srcS4;
-    int32_t dstD5;
-    dstD5 = memcpy(&result->sprite, sprite_1 - objC6, objC6 & 0xfffffffc);
-    memcpy(dstD5, srcS4, objC6 & 3);
+    int32_t entity_6 = ~i_2;
+    int32_t source_4;
+    int32_t dest_5;
+    dest_5 = memcpy(&result->sprite, sprite_1 - entity_6, entity_6 & 0xfffffffc);
+    memcpy(dest_5, source_4, entity_6 & 3);
     char* style_1 = style;
     int32_t i_3 = 0xffffffff;
 
     while (i_3)
     {
-        bool cond_3_1 = 0 != *style_1;
+        bool flag_3_1 = 0 != *style_1;
         style_1 = &style_1[1];
         i_3 -= 1;
 
-        if (!cond_3_1)
+        if (!flag_3_1)
             break;
     }
 
-    int32_t objC10 = ~i_3;
-    int32_t srcS6;
-    int32_t dstD8;
-    dstD8 = memcpy(&result->style, style_1 - objC10, objC10 & 0xfffffffc);
-    memcpy(dstD8, srcS6, objC10 & 3);
+    int32_t entity_10 = ~i_3;
+    int32_t source_6;
+    int32_t dest_8;
+    dest_8 = memcpy(&result->style, style_1 - entity_10, entity_10 & 0xfffffffc);
+    memcpy(dest_8, source_6, entity_10 & 3);
     result->style[0x10] = 1;
     result->style[0x11] = 1;
     Qhash_Reset();
-    int32_t v_28 = 0;
+    int32_t item_28 = 0;
     StatusMessage_Enqueue(result);
     return result;
 }

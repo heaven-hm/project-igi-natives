@@ -1,7 +1,7 @@
 // Original IGI.EXE function: Script_CallNativeHandler_28 (VA 0x004FBF50; static CFG gate PASS, CFG score 1.000).
 #include "Script_CallNativeHandler_28.h"
-int32_t Script_CallNativeHandler_28(void* a1, float a2 @ 0xc, float a3, int32_t a4, float a5 @ 0x1c)
+int32_t Script_CallNativeHandler_28(void* context, float param_2 , float param_3, int32_t param_4, float param_5 )
 
 {
-    return Script_SpawnNewTask_30(a1 + 0xf0, a2, a3, *(a1 + a4 * 0x38 + 0x1dc), a5);
+    return Script_SpawnNewTask_30(context + 0xf0, param_2, param_3, *(context + param_4 * 0x38 + 0x1dc), param_5);
 }

@@ -1,22 +1,22 @@
 // Original IGI.EXE function: Render_BoneobjDeleteblendno (VA 0x004D3440; static CFG gate PASS, CFG score 1.000).
 #include "Render_BoneobjDeleteblendno.h"
-int32_t Render_BoneobjDeleteblendno(int32_t a1, int32_t a2)
+int32_t Render_BoneobjDeleteblendno(int32_t context, int32_t param_2)
 
 {
-    int32_t* valA = Render_SetupLighting_6(a1, a2);
-    int32_t valA1 = *valA;
+    int32_t* data_val = Render_SetupLighting_6(context, param_2);
+    int32_t data_1 = *data_val;
 
-    if (valA1 != 0xffffffff)
+    if (data_1 != 0xffffffff)
     {
-        if (!valA1)
-            valA1 = Render_DrawBoneMesh_6(valA[1]);
+        if (!data_1)
+            data_1 = Render_DrawBoneMesh_6(data_val[1]);
         else
         {
-            if (valA1 == 1)
+            if (data_1 == 1)
             {
-                int32_t valA2 = Render_TransformVertices_6(valA[1]);
-                *valA = 0xffffffff;
-                return valA2;
+                int32_t data_2 = Render_TransformVertices_6(data_val[1]);
+                *data_val = 0xffffffff;
+                return data_2;
             }
 
             Error_Show("BoneObj_DeleteBlendNodeBranch: Illegal child type");
@@ -26,6 +26,6 @@ int32_t Render_BoneobjDeleteblendno(int32_t a1, int32_t a2)
         }
     }
 
-    *valA = 0xffffffff;
-    return valA1;
+    *data_val = 0xffffffff;
+    return data_1;
 }

@@ -1,115 +1,115 @@
 // Original IGI.EXE function: Car_ExplosionTick (VA 0x0042E5A0; static CFG gate PASS, CFG score 1.000).
 #include "Car_ExplosionTick.h"
-int32_t* Car_ExplosionTick(double* a1)
+int32_t* Car_ExplosionTick(double* context)
 
 {
-    int32_t* valA;
-    valA = *(a1 + 0x91c);
+    int32_t* data_val;
+    data_val = *(context + 0x91c);
 
-    if (valA)
+    if (data_val)
     {
-        long double x87_r7_1 = *(a1 + 0x9c);
-        long double x87_r6_1 = a1[0x14];
-        x87_r6_1 - x87_r7_1;
-        long double x87_r7_2;
+        long double fpu_val_7_1 = *(context + 0x9c);
+        long double fpu_val_6_1 = context[0x14];
+        fpu_val_6_1 - fpu_val_7_1;
+        long double fpu_val_7_2;
 
-        if (!(*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-                | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_2 = a1[0x14];
+        if (!(*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+                | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_2 = context[0x14];
         else
-            x87_r7_2 = *(a1 + 0x9c);
+            fpu_val_7_2 = *(context + 0x9c);
 
-        long double x87_r6_2 = a1[0x13];
-        x87_r6_2 - x87_r7_2;
-        long double x87_r7_4;
+        long double fpu_val_6_2 = context[0x13];
+        fpu_val_6_2 - fpu_val_7_2;
+        long double fpu_val_7_4;
 
-        if (*(&((x87_r6_2 < x87_r7_2 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_2) ? 1 : 0) << 0xa
-            | (x87_r6_2 == x87_r7_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+        if (*(&((fpu_val_6_2 < fpu_val_7_2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_2) ? 1 : 0) << 0xa
+            | (fpu_val_6_2 == fpu_val_7_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
         {
-            long double x87_r7_5 = *(a1 + 0x9c);
-            long double x87_r6_3 = a1[0x14];
-            x87_r6_3 - x87_r7_5;
+            long double fpu_val_7_5 = *(context + 0x9c);
+            long double fpu_val_6_3 = context[0x14];
+            fpu_val_6_3 - fpu_val_7_5;
 
-            if (!(*(&((x87_r6_3 < x87_r7_5 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_3, x87_r7_5) ? 1 : 0) << 0xa
-                    | (x87_r6_3 == x87_r7_5 ? 1 : 0) << 0xe) + 1) & 1))
-                x87_r7_4 = a1[0x14];
+            if (!(*(&((fpu_val_6_3 < fpu_val_7_5 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_3, fpu_val_7_5) ? 1 : 0) << 0xa
+                    | (fpu_val_6_3 == fpu_val_7_5 ? 1 : 0) << 0xe) + 1) & 1))
+                fpu_val_7_4 = context[0x14];
             else
-                x87_r7_4 = *(a1 + 0x9c);
+                fpu_val_7_4 = *(context + 0x9c);
         }
         else
-            x87_r7_4 = a1[0x13];
+            fpu_val_7_4 = context[0x13];
 
-        int32_t* valA2 = *(a1 + 0x6c);
-        float i_1 = x87_r7_4;
-        long double fp0_1 = Render_ComputeNormals(valA2);
-        void* tmpD1 = *(*(a1 + 0x1b4) + 0x2d4);
-        void* objC2 = a1[0x124];
-        float i_2 = *(tmpD1 + 0x2ac);
+        int32_t* data_2 = *(context + 0x6c);
+        float i_1 = fpu_val_7_4;
+        long double fp0_1 = Render_ComputeNormals(data_2);
+        void* temp_1 = *(*(context + 0x1b4) + 0x2d4);
+        void* entity_2 = context[0x124];
+        float i_2 = *(temp_1 + 0x2ac);
         i_1 = fp0_1 * i_1;
-        int32_t v_20;
+        int32_t item_20;
 
-        if (objC2 == 0xffffffff)
+        if (entity_2 == 0xffffffff)
         {
             if (!i_2)
             {
-                void* v_68_1 = objC2;
-                void* v_6c = objC2;
-                void* v_70 = objC2;
-                struct status_msg* valA5 = FX_SmokeEmit(&a1[4], 1, 0, 0x3f800000, i_1 * 0.25f,
+                void* item_68_1 = entity_2;
+                void* item_6c = entity_2;
+                void* item_70 = entity_2;
+                struct status_msg* data_5 = FX_SmokeEmit(&context[4], 1, 0, 0x3f800000, i_1 * 0.25f,
                     i_1 * 0.0500000007f, i_1 * 0.00499999989f, 3, 1, nullptr, "1009_01_1",
                     "explo_03_l", 0x15, 2, 0x47c80000, 0);
-                a1[0x124] = 0xa;
-                return valA5;
+                context[0x124] = 0xa;
+                return data_5;
             }
 
             if (i_2 > 0)
             {
-                int32_t* ctxB1 = tmpD1 + 0x284;
+                int32_t* context_1 = temp_1 + 0x284;
                 i_1 = i_2;
                 float i;
 
                 do
                 {
-                    uint32_t valA4 = Sys_FreeMemory_14(Level_SetMission_5(), 0x1e);
-                    WeaponType_UpdateAnim(&v_20, a1, *ctxB1);
-                    v_20 = v_20 + a1[4];
-                    int32_t v_18;
-                    v_18 = v_18 + a1[5];
-                    double v_10 = v_10 + a1[6];
-                    FX_SmokeEmit(&v_20, 1, valA4, 0x3f800000, 0x46400000, 0x45400000, 0x45400000,
+                    uint32_t data_4 = Sys_FreeMemory_14(Level_SetMission_5(), 0x1e);
+                    WeaponType_UpdateAnim(&item_20, context, *context_1);
+                    item_20 = item_20 + context[4];
+                    int32_t item_18;
+                    item_18 = item_18 + context[5];
+                    double item_10 = item_10 + context[6];
+                    FX_SmokeEmit(&item_20, 1, data_4, 0x3f800000, 0x46400000, 0x45400000, 0x45400000,
                         3, 2, nullptr, "1009_01_1", "explo_03_l", 0x15, 2, 0x47c80000, 0);
                     i = i_1;
-                    ctxB1 = &ctxB1[1];
+                    context_1 = &context_1[1];
                     i_2 = i - 1;
                     i_1 = i_2;
                 } while (i != 1);
             }
 
-            a1[0x124] = 0x1e;
+            context[0x124] = 0x1e;
             return i_2;
         }
 
-        valA = objC2 - 1;
-        a1[0x124] = valA;
+        data_val = entity_2 - 1;
+        context[0x124] = data_val;
 
-        if (!valA)
+        if (!data_val)
         {
-            int32_t* v_2c = valA;
-            int32_t* v_28_1 = valA;
-            int32_t* v_24_1 = valA;
-            v_20 = 0x3f800000;
-            int32_t v_1c_1 = 0x3f800000;
-            int32_t v_18_1 = 0x3f800000;
-            Script_EvaluateCondition_13(Script_FormatString(), tmpD1 + 0x2b0, &a1[4], &a1[0xe], &v_20, &v_2c);
+            int32_t* item_2c = data_val;
+            int32_t* item_28_1 = data_val;
+            int32_t* item_24_1 = data_val;
+            item_20 = 0x3f800000;
+            int32_t item_1c_1 = 0x3f800000;
+            int32_t item_18_1 = 0x3f800000;
+            Script_EvaluateCondition_13(Script_FormatString(), temp_1 + 0x2b0, &context[4], &context[0xe], &item_20, &item_2c);
             i_1 = Level_StartMission_4();
-            QTask_CleanupTypes(a1);
-            a1[0xe9] = 0;
-            Script_ParseEnumInt32_17(a1);
-            valA = Car_Cleanup(a1, &i_1);
-            *(a1 + 0x2ed5) = 1;
+            QTask_CleanupTypes(context);
+            context[0xe9] = 0;
+            Script_ParseEnumInt32_17(context);
+            data_val = Car_Cleanup(context, &i_1);
+            *(context + 0x2ed5) = 1;
         }
     }
 
-    return valA;
+    return data_val;
 }

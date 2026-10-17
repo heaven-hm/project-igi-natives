@@ -1,112 +1,112 @@
 // Original IGI.EXE function: Camera_1Snan (VA 0x004AE0CA; static CFG gate PASS, CFG score 1.000).
 #include "Camera_1Snan.h"
-int32_t Camera_1Snan(int16_t a1 @ 0xc, char* a2, char a3, char* a4)
+int32_t Camera_1Snan(int16_t context , char* param_2, char param_3, char* param_4)
 
 {
-    int16_t* ctxB = a4;
-    int16_t objC1 = a1 & 0x8000;
-    int16_t valA1 = a1 & 0x7fff;
-    char v_20 = 0xcc;
-    char v_1f = 0xcc;
-    char v_1e = 0xcc;
-    char v_1d = 0xcc;
-    char v_1c = 0xcc;
-    char v_1b = 0xcc;
-    char v_1a = 0xcc;
-    char v_19 = 0xcc;
-    char v_18 = 0xcc;
-    char v_17 = 0xcc;
-    char v_16 = 0xfb;
-    char v_15 = 0x3f;
+    int16_t* context_val = param_4;
+    int16_t entity_1 = context & 0x8000;
+    int16_t data_1 = context & 0x7fff;
+    char item_20 = 0xcc;
+    char item_1f = 0xcc;
+    char item_1e = 0xcc;
+    char item_1d = 0xcc;
+    char item_1c = 0xcc;
+    char item_1b = 0xcc;
+    char item_1a = 0xcc;
+    char item_19 = 0xcc;
+    char item_18 = 0xcc;
+    char item_17 = 0xcc;
+    char item_16 = 0xfb;
+    char item_15 = 0x3f;
     int32_t result = 1;
 
-    if (!objC1)
-        ctxB[1] = 0x20;
+    if (!entity_1)
+        context_val[1] = 0x20;
     else
-        ctxB[1] = 0x2d;
+        context_val[1] = 0x2d;
 
     int32_t arg_8;
-    int32_t dstD = arg_8;
+    int32_t dest_val = arg_8;
     int32_t arg_4;
 
-    if (valA1 || dstD || arg_4 != dstD)
+    if (data_1 || dest_val || arg_4 != dest_val)
     {
-        if (valA1 == 0x7fff)
+        if (data_1 == 0x7fff)
         {
-            *ctxB = 1;
+            *context_val = 1;
 
-            if ((dstD != 0x80000000 || arg_4) && !(dstD & 0x40000000))
+            if ((dest_val != 0x80000000 || arg_4) && !(dest_val & 0x40000000))
             {
-                Camera_ApplyLineFilter_20(&ctxB[2], "1#SNAN");
-                *(ctxB + 3) = 6;
+                Camera_ApplyLineFilter_20(&context_val[2], "1#SNAN");
+                *(context_val + 3) = 6;
             }
-            else if (objC1 && dstD == 0xc0000000)
+            else if (entity_1 && dest_val == 0xc0000000)
             {
                 if (arg_4)
                     goto label_4ae1bf;
 
-                Camera_ApplyLineFilter_20(&ctxB[2], "1#IND");
-                *(ctxB + 3) = 5;
+                Camera_ApplyLineFilter_20(&context_val[2], "1#IND");
+                *(context_val + 3) = 5;
             }
-            else if (dstD != 0x80000000 || arg_4)
+            else if (dest_val != 0x80000000 || arg_4)
             {
             label_4ae1bf:
-                Camera_ApplyLineFilter_20(&ctxB[2], "1#QNAN");
-                *(ctxB + 3) = 6;
+                Camera_ApplyLineFilter_20(&context_val[2], "1#QNAN");
+                *(context_val + 3) = 6;
             }
             else
             {
-                Camera_ApplyLineFilter_20(&ctxB[2], "1#INF");
-                *(ctxB + 3) = 5;
+                Camera_ApplyLineFilter_20(&context_val[2], "1#INF");
+                *(context_val + 3) = 5;
             }
 
             return 0;
         }
 
-        uint32_t valA4 = valA1;
-        int16_t v_14 = 0;
-        int32_t v_e_1 = dstD;
-        int32_t srcS4 =
-            (((valA4 >> 8) + (dstD >> 0x18 << 1)) * 0x4d + valA4 * 0x4d10 - 0x134312f4) >> 0x10;
-        int32_t v_12 = arg_4;
-        Camera_UpdateViewCone_29(&v_14, -(srcS4), 1);
+        uint32_t data_4 = data_1;
+        int16_t item_14 = 0;
+        int32_t item_e_1 = dest_val;
+        int32_t source_4 =
+            (((data_4 >> 8) + (dest_val >> 0x18 << 1)) * 0x4d + data_4 * 0x4d10 - 0x134312f4) >> 0x10;
+        int32_t item_12 = arg_4;
+        Camera_UpdateViewCone_29(&item_14, -(source_4), 1);
 
-        if (valA1 >= 0x3fff)
+        if (data_1 >= 0x3fff)
         {
-            srcS4 += 1;
-            Camera_ApplyPostProcess_29(&v_14, &v_20);
+            source_4 += 1;
+            Camera_ApplyPostProcess_29(&item_14, &item_20);
         }
 
-        *ctxB = srcS4;
-        char* dstD2;
+        *context_val = source_4;
+        char* dest_2;
 
-        if (!(a3 & 1))
-            dstD2 = a2;
+        if (!(param_3 & 1))
+            dest_2 = param_2;
         else
         {
-            dstD2 = &a2[srcS4];
+            dest_2 = &param_2[source_4];
 
-            if (dstD2 <= 0)
+            if (dest_2 <= 0)
                 goto label_4ae141;
         }
 
-        if (dstD2 > 0x15)
-            dstD2 = 0x15;
+        if (dest_2 > 0x15)
+            dest_2 = 0x15;
 
-        int16_t v_a_2 = 0;
-        a4 = 8;
+        int16_t item_a_2 = 0;
+        param_4 = 8;
         char* i;
 
         do
         {
-            Camera_SetFieldOfView_29(&v_14);
-            i = a4;
-            a4 -= 1;
+            Camera_SetFieldOfView_29(&item_14);
+            i = param_4;
+            param_4 -= 1;
         } while (i != 1);
 
-        if (valA1 - 0x3ffe < 0)
+        if (data_1 - 0x3ffe < 0)
         {
-            uint32_t i_3 = -((valA1 - 0x3ffe));
+            uint32_t i_3 = -((data_1 - 0x3ffe));
 
             if (i_3 > 0)
             {
@@ -114,104 +114,104 @@ int32_t Camera_1Snan(int16_t a1 @ 0xc, char* a2, char a3, char* a4)
 
                 do
                 {
-                    Camera_ApplyLineFilter_29(&v_14);
+                    Camera_ApplyLineFilter_29(&item_14);
                     i_1 = i_3;
                     i_3 -= 1;
                 } while (i_1 != 1);
             }
         }
 
-        char* valA10 = &ctxB[2];
-        a4 = valA10;
+        char* data_10 = &context_val[2];
+        param_4 = data_10;
 
-        if (&dstD2[1] > 0)
+        if (&dest_2[1] > 0)
         {
-            a2 = &dstD2[1];
+            param_2 = &dest_2[1];
             char* i_2;
 
             do
             {
-                arg_4 = v_14;
-                int32_t* dstD3 = &arg_8;
-                int32_t* srcS8 = (&v_12 + 2);
-                *dstD3 = *srcS8;
-                dstD3[1] = srcS8[1];
-                Camera_SetFieldOfView_29(&v_14);
-                Camera_SetFieldOfView_29(&v_14);
-                Camera_UpdateTransform_29(&v_14, &arg_4);
-                Camera_SetFieldOfView_29(&v_14);
-                char valA12 = *(&v_a_2 + 1);
-                char* objC11 = a4;
-                *(&v_a_2 + 1) = 0;
-                a4 = &a4[1];
-                i_2 = a2;
-                a2 -= 1;
-                *objC11 = valA12 + 0x30;
+                arg_4 = item_14;
+                int32_t* dest_3 = &arg_8;
+                int32_t* source_8 = (&item_12 + 2);
+                *dest_3 = *source_8;
+                dest_3[1] = source_8[1];
+                Camera_SetFieldOfView_29(&item_14);
+                Camera_SetFieldOfView_29(&item_14);
+                Camera_UpdateTransform_29(&item_14, &arg_4);
+                Camera_SetFieldOfView_29(&item_14);
+                char data_12 = *(&item_a_2 + 1);
+                char* entity_11 = param_4;
+                *(&item_a_2 + 1) = 0;
+                param_4 = &param_4[1];
+                i_2 = param_2;
+                param_2 -= 1;
+                *entity_11 = data_12 + 0x30;
             } while (i_2 != 1);
-            valA10 = a4;
+            data_10 = param_4;
         }
 
-        char* valA14 = valA10 - 2;
+        char* data_14 = data_10 - 2;
 
-        if (valA10[0xffffffff] >= 0x35)
+        if (data_10[0xffffffff] >= 0x35)
         {
             while (true)
             {
-                if (valA14 >= &ctxB[2])
+                if (data_14 >= &context_val[2])
                 {
-                    if (*valA14 == 0x39)
+                    if (*data_14 == 0x39)
                     {
-                        *valA14 = 0x30;
-                        valA14 -= 1;
+                        *data_14 = 0x30;
+                        data_14 -= 1;
                         continue;
                     }
-                    else if (valA14 >= &ctxB[2])
+                    else if (data_14 >= &context_val[2])
                         break;
                 }
 
-                valA14 = &valA14[1];
-                *ctxB += 1;
+                data_14 = &data_14[1];
+                *context_val += 1;
                 break;
             }
 
-            *valA14 += 1;
+            *data_14 += 1;
             goto label_4ae322;
         }
 
         while (true)
         {
-            if (valA14 < &ctxB[2])
+            if (data_14 < &context_val[2])
                 goto label_4ae345;
 
-            if (*valA14 != 0x30)
+            if (*data_14 != 0x30)
                 break;
 
-            valA14 -= 1;
+            data_14 -= 1;
         }
 
-        if (valA14 >= &ctxB[2])
+        if (data_14 >= &context_val[2])
         {
         label_4ae322:
-            *(ctxB + 3) = valA14 - ctxB - 3;
-            *(valA14 - ctxB - 3 + ctxB + 4) = 0;
+            *(context_val + 3) = data_14 - context_val - 3;
+            *(data_14 - context_val - 3 + context_val + 4) = 0;
             return result;
         }
 
     label_4ae345:
-        *ctxB = 0;
-        ctxB[1] = 0x20;
-        *(ctxB + 3) = 1;
-        ctxB[2] = 0x30;
+        *context_val = 0;
+        context_val[1] = 0x20;
+        *(context_val + 3) = 1;
+        context_val[2] = 0x30;
     }
     else
     {
     label_4ae141:
-        *ctxB = 0;
-        ctxB[1] = 0x20;
-        *(ctxB + 3) = 1;
-        ctxB[2] = 0x30;
+        *context_val = 0;
+        context_val[1] = 0x20;
+        *(context_val + 3) = 1;
+        context_val[2] = 0x30;
     }
 
-    *(ctxB + 5) = 0;
+    *(context_val + 5) = 0;
     return 1;
 }

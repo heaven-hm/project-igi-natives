@@ -1,116 +1,116 @@
 // Original IGI.EXE function: Menu_LeaveMenus_7 (VA 0x0041AFB0; static CFG gate PASS, CFG score 0.852).
 #include "Menu_LeaveMenus_7.h"
-int32_t Menu_LeaveMenus_7(int32_t a1, int32_t a2, int32_t a3 @ 0x10, char* a4 @ 0x18, void* a5, int32_t* a6, int32_t a7)
+int32_t Menu_LeaveMenus_7(int32_t context, int32_t param_2, int32_t param_3 , char* param_4 , void* param_5, int32_t* param_6, int32_t param_7)
 
 {
-    int32_t v_20c = a1;
-    int32_t v_208 = a2;
-    int32_t ctxB = a3;
-    int32_t objC2 = a6[9] | 0x80000;
+    int32_t item_20c = context;
+    int32_t item_208 = param_2;
+    int32_t context_val = param_3;
+    int32_t entity_2 = param_6[9] | 0x80000;
     int32_t* i = nullptr;
-    char v_100 = 0;
-    a6[9] = objC2;
-    a6[4] = a7;
+    char item_100 = 0;
+    param_6[9] = entity_2;
+    param_6[4] = param_7;
 
     do
     {
-        int32_t objC3 = 0;
-        char v_200 = 0;
+        int32_t entity_3 = 0;
+        char item_200 = 0;
 
         while (true)
         {
-            char valA2 = *a4;
-            a4 = &a4[1];
+            char data_2 = *param_4;
+            param_4 = &param_4[1];
 
-            if (!valA2)
+            if (!data_2)
             {
                 i = 1;
-                (&v_200)[objC3] = 0;
+                (&item_200)[entity_3] = 0;
                 break;
             }
 
-            if (valA2 == 0x20)
+            if (data_2 == 0x20)
             {
-                (&v_200)[objC3] = 0x20;
-                char v_1ff[0xff];
-                v_1ff[objC3] = 0;
+                (&item_200)[entity_3] = 0x20;
+                char item_1ff[0xff];
+                item_1ff[entity_3] = 0;
                 break;
             }
 
-            (&v_200)[objC3] = valA2;
-            objC3 += 1;
+            (&item_200)[entity_3] = data_2;
+            entity_3 += 1;
         }
 
-        int32_t valA3 = Sys_PopStack_18(a5, &v_200);
+        int32_t data_3 = Sys_PopStack_18(param_5, &item_200);
 
-        if (ctxB <= valA3)
+        if (context_val <= data_3)
         {
-            char* v_220_2 = &v_100;
-            v_20c = a1;
+            char* item_220_2 = &item_100;
+            item_20c = context;
             int32_t j = 0xffffffff;
-            v_208 += Sys_ResolveSymbol_18(a5);
-            char* dstD8 = &v_200;
+            item_208 += Sys_ResolveSymbol_18(param_5);
+            char* dest_8 = &item_200;
 
             while (j)
             {
-                bool cond_0_1 = 0 != *dstD8;
-                dstD8 = &dstD8[1];
+                bool flag_0_1 = 0 != *dest_8;
+                dest_8 = &dest_8[1];
                 j -= 1;
 
-                if (!cond_0_1)
+                if (!flag_0_1)
                     break;
             }
 
-            int32_t objC9 = ~j;
-            int32_t srcS5;
-            int32_t dstD10;
-            dstD10 = memcpy(&v_100, dstD8 - objC9, objC9 & 0xfffffffc);
-            ctxB = a3 - valA3;
-            memcpy(dstD10, srcS5, objC9 & 3);
+            int32_t entity_9 = ~j;
+            int32_t source_5;
+            int32_t dest_10;
+            dest_10 = memcpy(&item_100, dest_8 - entity_9, entity_9 & 0xfffffffc);
+            context_val = param_3 - data_3;
+            memcpy(dest_10, source_5, entity_9 & 3);
         }
         else
         {
-            char* dstD1 = &v_200;
+            char* dest_1 = &item_200;
             int32_t j_1 = 0xffffffff;
-            ctxB -= valA3;
+            context_val -= data_3;
 
             while (j_1)
             {
-                bool cond_1_1 = 0 != *dstD1;
-                dstD1 = &dstD1[1];
+                bool flag_1_1 = 0 != *dest_1;
+                dest_1 = &dest_1[1];
                 j_1 -= 1;
 
-                if (!cond_1_1)
+                if (!flag_1_1)
                     break;
             }
 
-            int32_t objC4 = ~j_1;
-            char* dstD3 = &v_100;
+            int32_t entity_4 = ~j_1;
+            char* dest_3 = &item_100;
             int32_t j_2 = 0xffffffff;
 
             while (j_2)
             {
-                bool cond_2_1 = 0 != *dstD3;
-                dstD3 = &dstD3[1];
+                bool flag_2_1 = 0 != *dest_3;
+                dest_3 = &dest_3[1];
                 j_2 -= 1;
 
-                if (!cond_2_1)
+                if (!flag_2_1)
                     break;
             }
 
-            int32_t srcS3;
-            int32_t dstD5;
-            dstD5 = memcpy(dstD3 - 1, dstD1 - objC4, objC4 & 0xfffffffc);
-            memcpy(dstD5, srcS3, objC4 & 3);
+            int32_t source_3;
+            int32_t dest_5;
+            dest_5 = memcpy(dest_3 - 1, dest_1 - entity_4, entity_4 & 0xfffffffc);
+            memcpy(dest_5, source_3, entity_4 & 3);
         }
 
-        Sys_FreeMemory_18(a6, &v_200);
-        a6[1] = v_20c;
-        a6[2] = v_208;
-        Sys_CloseFileStream_18(a6);
-        v_20c += valA3;
+        Sys_FreeMemory_18(param_6, &item_200);
+        param_6[1] = item_20c;
+        param_6[2] = item_208;
+        Sys_CloseFileStream_18(param_6);
+        item_20c += data_3;
     } while (!i);
 
-    char* v_220_4 = &v_100;
-    return Sys_ResolveSymbol_18(a5) + v_208;
+    char* item_220_4 = &item_100;
+    return Sys_ResolveSymbol_18(param_5) + item_208;
 }

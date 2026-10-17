@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004EAB90 Sound_ProcessStep_4EAB90 | gate PASS | openigi True */
-char*(void* arg1, char** arg2);
+char* Sound_ProcessStep_4EAB90(void* context, char** param_2);

@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004B8030 Sys_PushStack_22 | gate PASS | openigi False */
-void * Sys_PushStack_22(int* a1, int a2, int a3);
+void * Sys_PushStack_22(int* context, int param_2, int param_3);

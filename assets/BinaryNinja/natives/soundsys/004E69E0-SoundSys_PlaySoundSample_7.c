@@ -1,89 +1,89 @@
 // Original IGI.EXE function: SoundSys_PlaySoundSample_7 (VA 0x004E69E0; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_PlaySoundSample_7.h"
-int32_t* SoundSys_PlaySoundSample_7(int32_t* a1)
+int32_t* SoundSys_PlaySoundSample_7(int32_t* context)
 
 {
-    int32_t ctxB;
-    int32_t v_10 = ctxB;
+    int32_t context_val;
+    int32_t item_10 = context_val;
     int32_t* result;
-    result = a1[2];
+    result = context[2];
 
     if (!result)
     {
-        void v_c;
-        Sys_OpenFileStream_7(&v_c, 0xa, *a1);
-        Terrain_ConnectGraphNode_5(&v_c);
-        char* srcS1 = ".RES";
-        char* valA1 = &v_c;
-        int32_t valA3;
-        char tmpD1;
-        char ctxB1;
+        void item_c;
+        Sys_OpenFileStream_7(&item_c, 0xa, *context);
+        Terrain_ConnectGraphNode_5(&item_c);
+        char* source_1 = ".RES";
+        char* data_1 = &item_c;
+        int32_t data_3;
+        char temp_1;
+        char context_1;
 
         while (true)
         {
-            tmpD1 = *valA1;
-            ctxB1 = *srcS1;
-            bool c_1 = tmpD1 < ctxB1;
+            temp_1 = *data_1;
+            context_1 = *source_1;
+            bool c_1 = temp_1 < context_1;
 
-            if (tmpD1 == ctxB1)
+            if (temp_1 == context_1)
             {
-                if (!tmpD1)
+                if (!temp_1)
                 {
-                    valA3 = 0;
+                    data_3 = 0;
                     break;
                 }
 
-                tmpD1 = valA1[1];
-                ctxB1 = srcS1[1];
-                c_1 = tmpD1 < ctxB1;
+                temp_1 = data_1[1];
+                context_1 = source_1[1];
+                c_1 = temp_1 < context_1;
 
-                if (tmpD1 == ctxB1)
+                if (temp_1 == context_1)
                 {
-                    valA1 = &valA1[2];
-                    srcS1 = &srcS1[2];
+                    data_1 = &data_1[2];
+                    source_1 = &source_1[2];
 
-                    if (tmpD1)
+                    if (temp_1)
                         continue;
 
-                    valA3 = 0;
+                    data_3 = 0;
                     break;
                 }
             }
 
-            valA3 = valA1 - valA1 + 1;
+            data_3 = data_1 - data_1 + 1;
             break;
         }
 
-        if (!valA3)
-            return SoundSys_LoadSoundDef_6(*a1);
+        if (!data_3)
+            return SoundSys_LoadSoundDef_6(*context);
 
-        char* srcS2 = ".WAV";
-        char* valA6 = &v_c;
+        char* source_2 = ".WAV";
+        char* data_6 = &item_c;
 
         while (true)
         {
-            tmpD1 = *valA6;
-            ctxB1 = *srcS2;
-            bool c_3 = tmpD1 < ctxB1;
+            temp_1 = *data_6;
+            context_1 = *source_2;
+            bool c_3 = temp_1 < context_1;
 
-            if (tmpD1 == ctxB1)
+            if (temp_1 == context_1)
             {
-                if (!tmpD1)
+                if (!temp_1)
                 {
                     result = nullptr;
                     break;
                 }
 
-                tmpD1 = valA6[1];
-                ctxB1 = srcS2[1];
-                c_3 = tmpD1 < ctxB1;
+                temp_1 = data_6[1];
+                context_1 = source_2[1];
+                c_3 = temp_1 < context_1;
 
-                if (tmpD1 == ctxB1)
+                if (temp_1 == context_1)
                 {
-                    valA6 = &valA6[2];
-                    srcS2 = &srcS2[2];
+                    data_6 = &data_6[2];
+                    source_2 = &source_2[2];
 
-                    if (tmpD1)
+                    if (temp_1)
                         continue;
 
                     result = nullptr;
@@ -91,12 +91,12 @@ int32_t* SoundSys_PlaySoundSample_7(int32_t* a1)
                 }
             }
 
-            result = valA6 - valA6 + 1;
+            result = data_6 - data_6 + 1;
             break;
         }
 
         if (!result)
-            return Display_CreateSurface_10(*a1);
+            return Display_CreateSurface_10(*context);
     }
 
     return result;

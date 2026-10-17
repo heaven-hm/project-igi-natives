@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00453630 HumanAI_GetContext_453630 | gate PASS | openigi True */
-void*(void* arg1);
+void* HumanAI_GetContext_453630(void* context);

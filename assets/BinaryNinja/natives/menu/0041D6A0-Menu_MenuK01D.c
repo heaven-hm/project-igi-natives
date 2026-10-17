@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Menu_MenuK01D (VA 0x0041D6A0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_MenuK01D.h"
-int32_t Menu_MenuK01D(void* a1, int32_t a2, char a3)
+int32_t Menu_MenuK01D(void* context, int32_t param_2, char param_3)
 
 {
     int32_t i = 0xffffffff;
-    void* dstD = a1 + 0x54;
+    void* dest_val = context + 0x54;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    for (int32_t i_1 = ~i - 1; i_1 >= a2; i_1 -= 1)
-        *(a1 + i_1 + 0x55) = *(a1 + i_1 + 0x54);
+    for (int32_t i_1 = ~i - 1; i_1 >= param_2; i_1 -= 1)
+        *(context + i_1 + 0x55) = *(context + i_1 + 0x54);
 
-    *(a1 + a2 + 0x54) = a3;
-    *(a1 + 0x1a0) = a2 + 1;
-    int32_t valA4;
-    int32_t tmpD;
-    tmpD = HIGHD(a3);
-    valA4 = LOWD(a3);
-    int32_t v_4c = ((valA4 ^ tmpD) - tmpD) % 7 + 1;
-    void v_40;
-    Game_DataSymbolLoad(&v_40, "menu_k0%.1d");
-    return SoundSys_AttachLipsync_8(&v_40, 0, 0);
+    *(context + param_2 + 0x54) = param_3;
+    *(context + 0x1a0) = param_2 + 1;
+    int32_t data_4;
+    int32_t temp_val;
+    temp_val = HIGHD(param_3);
+    data_4 = LOWD(param_3);
+    int32_t item_4c = ((data_4 ^ temp_val) - temp_val) % 7 + 1;
+    void item_40;
+    Game_DataSymbolLoad(&item_40, "menu_k0%.1d");
+    return SoundSys_AttachLipsync_8(&item_40, 0, 0);
 }

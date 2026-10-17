@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Light_SetLightColor_6 (VA 0x00528930; static CFG gate FAIL, CFG score 0.741).
 #include "Light_SetLightColor_6.h"
-void* Light_SetLightColor_6(void* a1)
+void* Light_SetLightColor_6(void* context)
 
 {
-    void* result = *(a1 + 0x108);
-    float v_118 = 1f;
-    float v_114 = 0f;
-    float v_110 = 0f;
-    float v_10c = 0f;
-    float v_108 = 1f;
-    float v_104 = 0f;
-    float v_100 = 0f;
-    float v_fc = 0f;
-    float v_f8 = 1f;
-    int32_t v_f4 = 0;
-    float v_b0 = 1f;
-    float v_ac = 0f;
-    float v_a8 = 0f;
-    float v_a4 = 0f;
-    float v_a0 = 1f;
-    float v_9c = 0f;
-    float v_98 = 0f;
-    float v_94 = 0f;
-    float v_90 = 1f;
-    int32_t v_c8;
-    __builtin_memset(&v_c8, 0, 0x18);
-    double v_e0;
+    void* result = *(context + 0x108);
+    float item_118 = 1.0f;
+    float item_114 = 0.0f;
+    float item_110 = 0.0f;
+    float item_10c = 0.0f;
+    float item_108 = 1.0f;
+    float item_104 = 0.0f;
+    float item_100 = 0.0f;
+    float item_fc = 0.0f;
+    float item_f8 = 1.0f;
+    int32_t item_f4 = 0;
+    float item_b0 = 1.0f;
+    float item_ac = 0.0f;
+    float item_a8 = 0.0f;
+    float item_a4 = 0.0f;
+    float item_a0 = 1.0f;
+    float item_9c = 0.0f;
+    float item_98 = 0.0f;
+    float item_94 = 0.0f;
+    float item_90 = 1.0f;
+    int32_t item_c8;
+    memset(&item_c8, 0, 0x18);
+    double item_e0;
 
     if (result >= 0)
     {
@@ -33,64 +33,64 @@ void* Light_SetLightColor_6(void* a1)
 
         if (result)
         {
-            int32_t objC1 = 0;
-            int32_t v_10_1 = 0;
-            objC1 = *(result + 0x1c);
-            int32_t objC2 = *((objC1 << 2) + &g_a994e0);
+            int32_t entity_1 = 0;
+            int32_t item_10_1 = 0;
+            entity_1 = *(result + 0x1c);
+            int32_t entity_2 = *((entity_1 << 2) + &g_a994e0);
 
-            if (objC2)
+            if (entity_2)
             {
-                void v_60;
-                objC2(result, &v_60);
-                memcpy(&v_c8, &v_60, 0x18);
-                float v_134_1 = -1.57079637f;
-                void v_3c;
-                memcpy(&v_b0, &v_3c, 0x28);
-                float v_f0;
-                int32_t* v_138_1 = &v_f0;
-                memcpy(&v_118, &v_3c, 0x28);
-                Sys_CloseFileStream_12(v_138_1, v_134_1);
-                int64_t v_e8;
-                float v_d8;
-                float v_88 = v_d8 * v_110 + *(&v_e8 + 4) * v_114 + v_f0 * v_118;
-                float v_ec;
-                float v_d4;
-                float v_84_1 = v_d4 * v_110 + v_e0 * v_114 + v_ec * v_118;
-                float v_d0;
-                float v_80_1 = v_d0 * v_110 + *(&v_e0 + 4) * v_114 + v_e8 * v_118;
-                float v_7c_1 = v_d8 * v_104 + *(&v_e8 + 4) * v_108 + v_f0 * v_10c;
-                float v_78 = v_d4 * v_104 + v_e0 * v_108 + v_ec * v_10c;
-                float v_74_1 = v_d0 * v_104 + *(&v_e0 + 4) * v_108 + v_e8 * v_10c;
-                long double x87_r7_27 = v_d8 * v_f8 + *(&v_e8 + 4) * v_fc;
-                long double x87_r6_28 = v_f0 * v_100;
-                int32_t v_cc;
-                result = v_cc + v_f4 + 1;
+                void item_60;
+                entity_2(result, &item_60);
+                memcpy(&item_c8, &item_60, 0x18);
+                float item_134_1 = -1.57079637f;
+                void item_3c;
+                memcpy(&item_b0, &item_3c, 0x28);
+                float item_f0;
+                int32_t* item_138_1 = &item_f0;
+                memcpy(&item_118, &item_3c, 0x28);
+                Sys_CloseFileStream_12(item_138_1, item_134_1);
+                int64_t item_e8;
+                float item_d8;
+                float item_88 = item_d8 * item_110 + *(&item_e8 + 4) * item_114 + item_f0 * item_118;
+                float item_ec;
+                float item_d4;
+                float item_84_1 = item_d4 * item_110 + item_e0 * item_114 + item_ec * item_118;
+                float item_d0;
+                float item_80_1 = item_d0 * item_110 + *(&item_e0 + 4) * item_114 + item_e8 * item_118;
+                float item_7c_1 = item_d8 * item_104 + *(&item_e8 + 4) * item_108 + item_f0 * item_10c;
+                float item_78 = item_d4 * item_104 + item_e0 * item_108 + item_ec * item_10c;
+                float item_74_1 = item_d0 * item_104 + *(&item_e0 + 4) * item_108 + item_e8 * item_10c;
+                long double fpu_val_7_27 = item_d8 * item_f8 + *(&item_e8 + 4) * item_fc;
+                long double fpu_val_6_28 = item_f0 * item_100;
+                int32_t item_cc;
+                result = item_cc + item_f4 + 1;
                 void* result_1 = result;
-                float v_70_1 = x87_r7_27 + x87_r6_28;
-                float v_6c_1 = v_d4 * v_f8 + v_e0 * v_fc + v_ec * v_100;
-                float v_68_1 = v_d0 * v_f8 + *(&v_e0 + 4) * v_fc + v_e8 * v_100;
-                memcpy(&v_118, &v_88, 0x28);
+                float item_70_1 = fpu_val_7_27 + fpu_val_6_28;
+                float item_6c_1 = item_d4 * item_f8 + item_e0 * item_fc + item_ec * item_100;
+                float item_68_1 = item_d0 * item_f8 + *(&item_e0 + 4) * item_fc + item_e8 * item_100;
+                memcpy(&item_118, &item_88, 0x28);
             }
         }
     }
 
-    long double x87_r7_38 = v_ac * *(a1 + 0x150);
-    long double x87_r6_38 = v_b0 * *(a1 + 0x148);
-    *(a1 + 0xd0) = 0x3f800000;
-    long double x87_r6_40 = v_a8 * *(a1 + 0x158);
-    memcpy(a1 + 0x8c, &v_118, 0x28);
-    double v_e8_1 =
-        v_a0 * *(a1 + 0x150) + v_a4 * *(a1 + 0x148) + v_9c * *(a1 + 0x158);
-    v_e0 = v_94 * *(a1 + 0x150) + v_98 * *(a1 + 0x148) + v_90 * *(a1 + 0x158);
-    v_c8 = x87_r7_38 + x87_r6_38 + x87_r6_40 + v_c8;
-    int32_t v_c0;
-    v_c0 = v_e8_1 + v_c0;
-    int32_t v_b8;
-    v_b8 = v_e0 + v_b8;
-    long double x87_r7_47 = *(a1 + 0x160) + *(a1 + 0x148);
-    memcpy(a1 + 0xb8, &v_c8, 0x18);
-    *(a1 + 0x148) = x87_r7_47;
-    *(a1 + 0x150) = *(a1 + 0x168) + *(a1 + 0x150);
-    *(a1 + 0x158) = *(a1 + 0x170) + *(a1 + 0x158);
+    long double fpu_val_7_38 = item_ac * *(context + 0x150);
+    long double fpu_val_6_38 = item_b0 * *(context + 0x148);
+    *(context + 0xd0) = 0x3f800000;
+    long double fpu_val_6_40 = item_a8 * *(context + 0x158);
+    memcpy(context + 0x8c, &item_118, 0x28);
+    double item_e8_1 =
+        item_a0 * *(context + 0x150) + item_a4 * *(context + 0x148) + item_9c * *(context + 0x158);
+    item_e0 = item_94 * *(context + 0x150) + item_98 * *(context + 0x148) + item_90 * *(context + 0x158);
+    item_c8 = fpu_val_7_38 + fpu_val_6_38 + fpu_val_6_40 + item_c8;
+    int32_t item_c0;
+    item_c0 = item_e8_1 + item_c0;
+    int32_t item_b8;
+    item_b8 = item_e0 + item_b8;
+    long double fpu_val_7_47 = *(context + 0x160) + *(context + 0x148);
+    memcpy(context + 0xb8, &item_c8, 0x18);
+    *(context + 0x148) = fpu_val_7_47;
+    *(context + 0x150) = *(context + 0x168) + *(context + 0x150);
+    *(context + 0x158) = *(context + 0x170) + *(context + 0x158);
     return result;
 }

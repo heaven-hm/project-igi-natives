@@ -1,91 +1,91 @@
 // Original IGI.EXE function: AIStationaryGunHolder_Process (VA 0x0046E7F0; static CFG gate PASS, CFG score 0.976).
 #include "AIStationaryGunHolder_Process.h"
-char* AIStationaryGunHolder_Process(float a1)
+char* AIStationaryGunHolder_Process(float context)
 
 {
-    DynObj_CreateMagicObject_5(a1, DynObj_Missing(a1 + 0x25d8));
-    long double fpu7 = *(a1 + 0x9c);
-    long double fpu6 = *(a1 + 0xa0);
+    DynObj_CreateMagicObject_5(context, DynObj_Missing(context + 0x25d8));
+    long double fpu7 = *(context + 0x9c);
+    long double fpu6 = *(context + 0xa0);
     fpu6 - fpu7;
-    long double x87_r7_1;
+    long double fpu_val_7_1;
 
     if (!(*(&((fpu6 < fpu7 ? 1 : 0) << 8 | (FCMP_UO(fpu6, fpu7) ? 1 : 0) << 0xa
             | (fpu6 == fpu7 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_1 = *(a1 + 0xa0);
+        fpu_val_7_1 = *(context + 0xa0);
     else
-        x87_r7_1 = *(a1 + 0x9c);
+        fpu_val_7_1 = *(context + 0x9c);
 
-    long double x87_r6_1 = *(a1 + 0x98);
-    x87_r6_1 - x87_r7_1;
-    long double x87_r7_3;
+    long double fpu_val_6_1 = *(context + 0x98);
+    fpu_val_6_1 - fpu_val_7_1;
+    long double fpu_val_7_3;
 
-    if (*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-        | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_4 = *(a1 + 0x9c);
-        long double x87_r6_2 = *(a1 + 0xa0);
-        x87_r6_2 - x87_r7_4;
+        long double fpu_val_7_4 = *(context + 0x9c);
+        long double fpu_val_6_2 = *(context + 0xa0);
+        fpu_val_6_2 - fpu_val_7_4;
 
-        if (!(*(&((x87_r6_2 < x87_r7_4 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_4) ? 1 : 0) << 0xa
-                | (x87_r6_2 == x87_r7_4 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_3 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_2 < fpu_val_7_4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_4) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == fpu_val_7_4 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_3 = *(context + 0xa0);
         else
-            x87_r7_3 = *(a1 + 0x9c);
+            fpu_val_7_3 = *(context + 0x9c);
     }
     else
-        x87_r7_3 = *(a1 + 0x98);
+        fpu_val_7_3 = *(context + 0x98);
 
-    float v_10_2 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_3;
-    WorldObject_CommitTransform(Level_StartMission_4(), a1, a1 + 0x2598, v_10_2);
-    int32_t* valA5 = *(a1 + 0xe8);
-    memcpy(a1 + 0x70, a1 + 0x25b0, 0x28);
+    float item_10_2 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_3;
+    WorldObject_CommitTransform(Level_StartMission_4(), context, context + 0x2598, item_10_2);
+    int32_t* data_5 = *(context + 0xe8);
+    memcpy(context + 0x70, context + 0x25b0, 0x28);
 
-    if (valA5)
-        QTask_FindType(valA5);
+    if (data_5)
+        QTask_FindType(data_5);
 
-    struct status_msg* valA6 = CarGun_Create(nullptr, a1);
-    *(a1 + 0xe8) = valA6;
-    Car_GunCreate(valA6, a1, a1);
-    int32_t* i = *(*(a1 + 0xe8) + 8);
+    struct status_msg* data_6 = CarGun_Create(nullptr, context);
+    *(context + 0xe8) = data_6;
+    Car_GunCreate(data_6, context, context);
+    int32_t* i = *(*(context + 0xe8) + 8);
 
     if (*i && i)
     {
-        int32_t objC1 = g_afa7e0;
+        int32_t entity_1 = g_afa7e0;
 
         do
         {
-            int32_t* tmpD1 = *i;
-            void* valA11;
+            int32_t* temp_1 = *i;
+            void* data_11;
 
-            if (!tmpD1)
-                valA11 = nullptr;
+            if (!temp_1)
+                data_11 = nullptr;
             else
             {
-                int32_t valA8 = *tmpD1;
-                int32_t valA9 = -(valA8);
-                valA11 = (valA9 - valA9) & tmpD1;
+                int32_t data_8 = *temp_1;
+                int32_t data_9 = -(data_8);
+                data_11 = (data_9 - data_9) & temp_1;
             }
 
-            *((objC1 << 2) + &g_afa6e0) = valA11;
-            g_afa7e0 = objC1 + 1;
-            uint32_t valA13 = Script_ParseEnumReal32_8();
-            int32_t tmpD2 = 0;
-            tmpD2 = i[7];
-            int32_t valA14 = *(((valA13 * 0x180 + tmpD2) << 2) + &g_a96ae0);
+            *((entity_1 << 2) + &g_afa6e0) = data_11;
+            g_afa7e0 = entity_1 + 1;
+            uint32_t data_13 = Script_ParseEnumReal32_8();
+            int32_t temp_2 = 0;
+            temp_2 = i[7];
+            int32_t data_14 = *(((data_13 * 0x180 + temp_2) << 2) + &g_a96ae0);
 
-            if (valA14)
-                valA14(i, 0);
+            if (data_14)
+                data_14(i, 0);
 
-            objC1 = g_afa7e0 - 1;
-            g_afa7e0 = objC1;
-            i = *((objC1 << 2) + &g_afa6e0);
+            entity_1 = g_afa7e0 - 1;
+            g_afa7e0 = entity_1;
+            i = *((entity_1 << 2) + &g_afa6e0);
         } while (i);
     }
 
-    Script_Isexists(a1 + 0x25f4, a1);
-    Script_Isexists(a1 + 0x2644, a1);
-    *(a1 + 0x130) = *(a1 + 0x25e8) * 0.0174532924f;
-    *(a1 + 0x138) = *(a1 + 0x25ec) * 0.0174532924f;
-    *(a1 + 0x140) = *(a1 + 0x25f0) * 4096f;
-    return FX_DebrisSpawn_13(a1 + 0x168, 1, 4, AI_CombatTarget_22(), 4, 8);
+    Script_Isexists(context + 0x25f4, context);
+    Script_Isexists(context + 0x2644, context);
+    *(context + 0x130) = *(context + 0x25e8) * 0.0174532924f;
+    *(context + 0x138) = *(context + 0x25ec) * 0.0174532924f;
+    *(context + 0x140) = *(context + 0x25f0) * 4096.0f;
+    return FX_DebrisSpawn_13(context + 0x168, 1, 4, AI_CombatTarget_22(), 4, 8);
 }

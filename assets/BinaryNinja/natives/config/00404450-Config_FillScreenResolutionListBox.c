@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Config_FillScreenResolutionListBox (VA 0x00404450; static CFG gate PASS, CFG score 0.917).
 #include "Config_FillScreenResolutionListBox.h"
-int32_t Config_FillScreenResolutionListBox(int32_t a1, float a2 @ 0xc)
+int32_t Config_FillScreenResolutionListBox(int32_t context, float param_2 )
 
 // Sig: void Config_FillScreenResolutionListBox(int deviceIndex)
 // Note: Fills the currently-active menu list box with the screen resolutions
@@ -9,28 +9,28 @@ int32_t Config_FillScreenResolutionListBox(int32_t a1, float a2 @ 0xc)
 // control.
 {
     int32_t i = 0;
-    int32_t dstD3 = Script_GetArg(a2, 0) * 0x404;
-    int32_t* srcS = dstD3 + 0x567d98;
+    int32_t dest_3 = Script_GetArg(param_2, 0) * 0x404;
+    int32_t* source_val = dest_3 + 0x567d98;
 
-    if (*(dstD3 + &g_568098) > 0)
+    if (*(dest_3 + &g_568098) > 0)
     {
         do
         {
-            int32_t v_128_1 = srcS[2];
-            int32_t v_12c_1 = srcS[1];
-            int32_t v_130 = *srcS;
-            void v_100;
-            Game_DataSymbolLoad(&v_100, "%dx%dx%d");
-            Menu_DrawWidget_9(&v_100, (srcS[2] << 0xd | *srcS) << 0xd | srcS[1]);
-            srcS = &srcS[3];
+            int32_t item_128_1 = source_val[2];
+            int32_t item_12c_1 = source_val[1];
+            int32_t item_130 = *source_val;
+            void item_100;
+            Game_DataSymbolLoad(&item_100, "%word_data%word_data%d");
+            Menu_DrawWidget_9(&item_100, (source_val[2] << 0xd | *source_val) << 0xd | source_val[1]);
+            source_val = &source_val[3];
             i += 1;
-        } while (i < *(dstD3 + &g_568098));
+        } while (i < *(dest_3 + &g_568098));
     }
 
-    int32_t v_118 = 0;
-    int32_t v_110 = 0;
-    int32_t v_10c = 0;
-    char* v_108 = &g_567c74;
-    memcpy(a1, &v_118, 0x18);
-    return a1;
+    int32_t item_118 = 0;
+    int32_t item_110 = 0;
+    int32_t item_10c = 0;
+    char* item_108 = &g_567c74;
+    memcpy(context, &item_118, 0x18);
+    return context;
 }

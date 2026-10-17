@@ -1,121 +1,121 @@
 // Original IGI.EXE function: Render_SkinBones_15 (VA 0x004DE040; static CFG gate PASS, CFG score 1.000).
 #include "Render_SkinBones_15.h"
-void* Render_SkinBones_15(void* a1)
+void* Render_SkinBones_15(void* context)
 
 {
-    void* tmpD = a1;
-    int32_t objC = g_a5e31c;
-    void* i = *(tmpD + 0x138);
-    int32_t dstD = g_a5e320;
+    void* temp_val = context;
+    int32_t entity_val = g_a5e31c;
+    void* i = *(temp_val + 0x138);
+    int32_t dest_val = g_a5e320;
 
-    for (; i > 0; i = *(tmpD + 0x138))
+    for (; i > 0; i = *(temp_val + 0x138))
     {
-        int32_t srcS1 = *(tmpD + 0x130);
+        int32_t source_1 = *(temp_val + 0x130);
         int32_t flagP1 = 0;
-        int32_t v_c_1 = 0;
-        int32_t* ctxB2 = **(tmpD + 0x134) * *(tmpD + 0x140);
-        void* valA1 = *(ctxB2 + srcS1);
-        void* ctxB3 = ctxB2 + srcS1;
+        int32_t item_c_1 = 0;
+        int32_t* context_2 = **(temp_val + 0x134) * *(temp_val + 0x140);
+        void* data_1 = *(context_2 + source_1);
+        void* context_3 = context_2 + source_1;
         int32_t j = 0;
-        void* v_8_1 = ctxB3;
+        void* item_8_1 = context_3;
 
-        if (dstD > 0)
+        if (dest_val > 0)
         {
             while (!j)
             {
-                int32_t* valA4 = *(objC + (flagP1 << 2)) * g_a5e328 + g_a5e318;
-                int32_t tmpD2 = *valA4;
+                int32_t* data_4 = *(entity_val + (flagP1 << 2)) * g_a5e328 + g_a5e318;
+                int32_t temp_2 = *data_4;
 
-                if (tmpD2 == ctxB3)
+                if (temp_2 == context_3)
                 {
-                    void* objC1 = valA4[1];
-                    int32_t dstD1 = *(*(objC1 + 0x144) + tmpD2);
-                    *(objC1 + 0x138) -= 1;
-                    void* tmpD3 = valA4[1];
-                    int32_t objC2 = *(tmpD3 + 0x138);
+                    void* entity_1 = data_4[1];
+                    int32_t dest_1 = *(*(entity_1 + 0x144) + temp_2);
+                    *(entity_1 + 0x138) -= 1;
+                    void* temp_3 = data_4[1];
+                    int32_t entity_2 = *(temp_3 + 0x138);
 
-                    if (dstD1 != objC2)
+                    if (dest_1 != entity_2)
                     {
-                        int32_t srcS3 = *(tmpD3 + 0x134);
-                        int32_t objC5 =
-                            *(srcS3 + (objC2 << 2)) * *(tmpD3 + 0x140) + *(tmpD3 + 0x130);
-                        int32_t ctxB5 = *(srcS3 + (dstD1 << 2));
-                        int32_t tmpD5 = *(*(tmpD3 + 0x144) + objC5);
-                        *(srcS3 + (dstD1 << 2)) = *(srcS3 + (tmpD5 << 2));
-                        *(*(valA4[1] + 0x134) + (tmpD5 << 2)) = ctxB5;
-                        ctxB3 = v_8_1;
-                        *(*(valA4[1] + 0x144) + objC5) = dstD1;
+                        int32_t source_3 = *(temp_3 + 0x134);
+                        int32_t entity_5 =
+                            *(source_3 + (entity_2 << 2)) * *(temp_3 + 0x140) + *(temp_3 + 0x130);
+                        int32_t context_5 = *(source_3 + (dest_1 << 2));
+                        int32_t temp_5 = *(*(temp_3 + 0x144) + entity_5);
+                        *(source_3 + (dest_1 << 2)) = *(source_3 + (temp_5 << 2));
+                        *(*(data_4[1] + 0x134) + (temp_5 << 2)) = context_5;
+                        context_3 = item_8_1;
+                        *(*(data_4[1] + 0x144) + entity_5) = dest_1;
                     }
 
-                    int32_t* srcS6 = g_a5e32c;
-                    int32_t objC7 = g_a5e320 - 1;
-                    int32_t valA5 = *(srcS6 + valA4);
-                    g_a5e320 = objC7;
+                    int32_t* source_6 = g_a5e32c;
+                    int32_t entity_7 = g_a5e320 - 1;
+                    int32_t data_5 = *(source_6 + data_4);
+                    g_a5e320 = entity_7;
 
-                    if (valA5 != objC7)
+                    if (data_5 != entity_7)
                     {
-                        int32_t tmpD8 = g_a5e31c;
-                        int32_t objC10 = *(tmpD8 + (objC7 << 2)) * g_a5e328 + g_a5e318;
-                        int32_t dstD3 = *(tmpD8 + (valA5 << 2));
-                        int32_t srcS7 = *(srcS6 + objC10);
-                        *(tmpD8 + (valA5 << 2)) = *(tmpD8 + (srcS7 << 2));
-                        *(g_a5e31c + (srcS7 << 2)) = dstD3;
-                        *(g_a5e32c + objC10) = valA5;
+                        int32_t temp_8 = g_a5e31c;
+                        int32_t entity_10 = *(temp_8 + (entity_7 << 2)) * g_a5e328 + g_a5e318;
+                        int32_t dest_3 = *(temp_8 + (data_5 << 2));
+                        int32_t source_7 = *(source_6 + entity_10);
+                        *(temp_8 + (data_5 << 2)) = *(temp_8 + (source_7 << 2));
+                        *(g_a5e31c + (source_7 << 2)) = dest_3;
+                        *(g_a5e32c + entity_10) = data_5;
                     }
 
-                    flagP1 = v_c_1;
+                    flagP1 = item_c_1;
                     j = 1;
-                    *(valA1 + 0x60) = 0;
-                    objC = g_a5e31c;
-                    dstD = g_a5e320;
+                    *(data_1 + 0x60) = 0;
+                    entity_val = g_a5e31c;
+                    dest_val = g_a5e320;
                 }
 
-                tmpD = a1;
+                temp_val = context;
                 flagP1 += 1;
-                v_c_1 = flagP1;
+                item_c_1 = flagP1;
 
-                if (flagP1 >= dstD)
+                if (flagP1 >= dest_val)
                     break;
             }
         }
     }
 
-    int32_t ctxB6 = dstD - 1;
+    int32_t context_6 = dest_val - 1;
 
-    if (ctxB6 >= 0)
+    if (context_6 >= 0)
     {
-        int32_t* srcS8 = g_a5e32c;
+        int32_t* source_8 = g_a5e32c;
         int32_t f0_1;
 
         do
         {
             int32_t flagP6 = g_a5e318;
-            i = *(objC + (ctxB6 << 2)) * g_a5e328 + flagP6;
+            i = *(entity_val + (context_6 << 2)) * g_a5e328 + flagP6;
 
-            if (*(i + 4) == tmpD)
+            if (*(i + 4) == temp_val)
             {
-                int32_t tmpD11 = *(srcS8 + i);
-                dstD -= 1;
-                g_a5e320 = dstD;
+                int32_t temp_11 = *(source_8 + i);
+                dest_val -= 1;
+                g_a5e320 = dest_val;
 
-                if (tmpD11 != dstD)
+                if (temp_11 != dest_val)
                 {
-                    int32_t dstD4 = *(objC + (tmpD11 << 2));
-                    i = *(objC + (dstD << 2)) * g_a5e328 + flagP6;
-                    int32_t srcS9 = *(srcS8 + i);
-                    *(objC + (tmpD11 << 2)) = *(objC + (srcS9 << 2));
-                    *(g_a5e31c + (srcS9 << 2)) = dstD4;
-                    *(g_a5e32c + i) = tmpD11;
-                    srcS8 = g_a5e32c;
-                    objC = g_a5e31c;
-                    dstD = g_a5e320;
+                    int32_t dest_4 = *(entity_val + (temp_11 << 2));
+                    i = *(entity_val + (dest_val << 2)) * g_a5e328 + flagP6;
+                    int32_t source_9 = *(source_8 + i);
+                    *(entity_val + (temp_11 << 2)) = *(entity_val + (source_9 << 2));
+                    *(g_a5e31c + (source_9 << 2)) = dest_4;
+                    *(g_a5e32c + i) = temp_11;
+                    source_8 = g_a5e32c;
+                    entity_val = g_a5e31c;
+                    dest_val = g_a5e320;
                 }
 
-                tmpD = a1;
+                temp_val = context;
             }
 
-            f0_1 = ctxB6;
-            ctxB6 -= 1;
+            f0_1 = context_6;
+            context_6 -= 1;
         } while (f0_1 - 1 >= 0);
     }
 

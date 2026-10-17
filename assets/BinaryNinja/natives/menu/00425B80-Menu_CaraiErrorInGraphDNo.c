@@ -1,26 +1,26 @@
 // Original IGI.EXE function: Menu_CaraiErrorInGraphDNo (VA 0x00425B80; static CFG gate PASS, CFG score 1.000).
 #include "Menu_CaraiErrorInGraphDNo.h"
-double* Menu_CaraiErrorInGraphDNo(double* a1, void* a2, int32_t* a3, int32_t a4, void* a5)
+double* Menu_CaraiErrorInGraphDNo(double* context, void* param_2, int32_t* param_3, int32_t param_4, void* param_5)
 
 {
-    double* result = Physics_ApplyImpulse_8(&a3, a2, a3);
-    int32_t* objC = a3;
+    double* result = Physics_ApplyImpulse_8(&param_3, param_2, param_3);
+    int32_t* entity_val = param_3;
 
-    if (!objC)
+    if (!entity_val)
         return result;
 
-    int32_t valA = *objC;
+    int32_t data_val = *entity_val;
 
-    if (valA == a4)
-        return Script_CallNativeHandler_23(a1, objC);
+    if (data_val == param_4)
+        return Script_CallNativeHandler_23(context, entity_val);
 
-    int32_t* valA1 = Physics_CheckHullCollision_8(a2, valA, a4);
+    int32_t* data_1 = Physics_CheckHullCollision_8(param_2, data_val, param_4);
 
-    if (valA1)
-        return Script_CallNativeHandler_23(a1, Script_ExecuteLevelScript_23(a2, *valA1));
+    if (data_1)
+        return Script_CallNativeHandler_23(context, Script_ExecuteLevelScript_23(param_2, *data_1));
 
-    int32_t v_c_3 = a4;
-    int32_t v_10_3 = *a3;
-    int32_t v_14_3 = *(a5 + 0x20);
+    int32_t item_c_3 = param_4;
+    int32_t item_10_3 = *param_3;
+    int32_t item_14_3 = *(param_5 + 0x20);
     return Warning_Show("CarAI: Error in graph %d. No link between nodes %d and %d.");
 }

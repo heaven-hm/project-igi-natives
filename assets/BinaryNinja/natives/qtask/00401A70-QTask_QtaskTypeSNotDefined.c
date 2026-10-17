@@ -1,43 +1,43 @@
 // Original IGI.EXE function: QTask_QtaskTypeSNotDefined (VA 0x00401A70; static CFG gate PASS, CFG score 1.000).
 #include "QTask_QtaskTypeSNotDefined.h"
-int32_t QTask_QtaskTypeSNotDefined(char* a1)
+int32_t QTask_QtaskTypeSNotDefined(char* context)
 
 {
     int32_t flagP = 0;
-    char* dstD = &g_af5f05;
+    char* dest_val = &g_af5f05;
 
     while (true)
     {
-        if (*dstD)
+        if (*dest_val)
         {
-            char* srcS1 = a1;
-            char* valA1 = QTask_RegisterEventCallback_2(flagP);
+            char* source_1 = context;
+            char* data_1 = QTask_RegisterEventCallback_2(flagP);
             int32_t result;
 
             while (true)
             {
-                char tmpD1 = *valA1;
-                char f0_1 = *srcS1;
-                bool c_1 = tmpD1 < f0_1;
+                char temp_1 = *data_1;
+                char f0_1 = *source_1;
+                bool c_1 = temp_1 < f0_1;
 
-                if (tmpD1 == f0_1)
+                if (temp_1 == f0_1)
                 {
-                    if (!tmpD1)
+                    if (!temp_1)
                     {
                         result = 0;
                         break;
                     }
 
-                    tmpD1 = valA1[1];
-                    char f3_1 = srcS1[1];
-                    c_1 = tmpD1 < f3_1;
+                    temp_1 = data_1[1];
+                    char f3_1 = source_1[1];
+                    c_1 = temp_1 < f3_1;
 
-                    if (tmpD1 == f3_1)
+                    if (temp_1 == f3_1)
                     {
-                        valA1 = &valA1[2];
-                        srcS1 = &srcS1[2];
+                        data_1 = &data_1[2];
+                        source_1 = &source_1[2];
 
-                        if (tmpD1)
+                        if (temp_1)
                             continue;
 
                         result = 0;
@@ -45,7 +45,7 @@ int32_t QTask_QtaskTypeSNotDefined(char* a1)
                     }
                 }
 
-                result = valA1 - valA1 + 1;
+                result = data_1 - data_1 + 1;
                 break;
             }
 
@@ -56,14 +56,14 @@ int32_t QTask_QtaskTypeSNotDefined(char* a1)
             }
         }
 
-        dstD = &dstD[0x30];
+        dest_val = &dest_val[0x30];
         flagP += 1;
 
-        if (dstD >= 0xafa705)
+        if (dest_val >= 0xafa705)
             break;
     }
 
-    char* v_14_2 = a1;
+    char* item_14_2 = context;
     Error_Show("QTask type "%s" not defined");
 
     while (true)

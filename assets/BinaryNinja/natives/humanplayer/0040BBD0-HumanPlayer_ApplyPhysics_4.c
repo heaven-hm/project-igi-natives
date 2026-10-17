@@ -1,115 +1,115 @@
 // Original IGI.EXE function: HumanPlayer_ApplyPhysics_4 (VA 0x0040BBD0; static CFG gate PASS, CFG score 0.933).
 #include "HumanPlayer_ApplyPhysics_4.h"
-int32_t HumanPlayer_ApplyPhysics_4(void* a1, float a2)
+int32_t HumanPlayer_ApplyPhysics_4(void* context, float param_2)
 
 {
-    int32_t result = FallLanding(a2);
-    int16_t ctxB = *(a1 + 8);
+    int32_t result = FallLanding(param_2);
+    int16_t context_val = *(context + 8);
 
-    if (!(ctxB & 4))
+    if (!(context_val & 4))
         return result;
 
-    void* valA = *(a2 + 0x6ec);
+    void* data_val = *(param_2 + 0x6ec);
 
-    if (valA)
+    if (data_val)
     {
-        struct status_msg* valA3 = SoundSys_SetMasterVolume_7(Script_FormatString(), valA + 0x114);
+        struct status_msg* data_3 = SoundSys_SetMasterVolume_7(Script_FormatString(), data_val + 0x114);
 
-        if (valA3)
-            SoundSys_StopSoundSample_7(valA3, a2 + 0x6a8);
+        if (data_3)
+            SoundSys_StopSoundSample_7(data_3, param_2 + 0x6a8);
     }
 
-    __builtin_memset(a2 + 0x664, 0, 0x18);
+    memset(param_2 + 0x664, 0, 0x18);
 
-    if (!(*(a1 + 8) & 0x40000))
+    if (!(*(context + 8) & 0x40000))
     {
-        if (ctxB & 0x80)
+        if (context_val & 0x80)
         {
-            void* tmpD3 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 1;
-            int32_t valA15 = *(tmpD3 + 4);
-            *(a1 + 0x14) = valA15;
-            return valA15(a1, a2);
+            void* temp_3 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 1;
+            int32_t data_15 = *(temp_3 + 4);
+            *(context + 0x14) = data_15;
+            return data_15(context, param_2);
         }
 
-        if (*(&ctxB + 1) & 1)
+        if (*(&context_val + 1) & 1)
         {
-            void* objC5 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 4;
-            int32_t valA18 = *(objC5 + 0x10);
-            *(a1 + 0x14) = valA18;
-            return valA18(a1, a2);
+            void* entity_5 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 4;
+            int32_t data_18 = *(entity_5 + 0x10);
+            *(context + 0x14) = data_18;
+            return data_18(context, param_2);
         }
 
-        if (ctxB & 0x40)
+        if (context_val & 0x40)
         {
-            void* valA20 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 7;
-            int32_t valA21 = *(valA20 + 0x1c);
-            *(a1 + 0x14) = valA21;
-            return valA21(a1, a2);
+            void* data_20 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 7;
+            int32_t data_21 = *(data_20 + 0x1c);
+            *(context + 0x14) = data_21;
+            return data_21(context, param_2);
         }
 
-        if (ctxB & 0x20)
+        if (context_val & 0x20)
         {
-            void* tmpD5 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 8;
-            int32_t valA23 = *(tmpD5 + 0x20);
-            *(a1 + 0x14) = valA23;
-            return valA23(a1, a2);
+            void* temp_5 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 8;
+            int32_t data_23 = *(temp_5 + 0x20);
+            *(context + 0x14) = data_23;
+            return data_23(context, param_2);
         }
     }
     else
     {
-        if (ctxB & 0x80)
+        if (context_val & 0x80)
         {
-            void* valA4 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 9;
-            int32_t valA5 = *(valA4 + 0x24);
-            *(a1 + 0x14) = valA5;
-            return valA5(a1, a2);
+            void* data_4 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 9;
+            int32_t data_5 = *(data_4 + 0x24);
+            *(context + 0x14) = data_5;
+            return data_5(context, param_2);
         }
 
-        if (*(&ctxB + 1) & 1)
+        if (*(&context_val + 1) & 1)
         {
-            void* tmpD1 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 0xc;
-            int32_t valA7 = *(tmpD1 + 0x30);
-            *(a1 + 0x14) = valA7;
-            return valA7(a1, a2);
+            void* temp_1 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 0xc;
+            int32_t data_7 = *(temp_1 + 0x30);
+            *(context + 0x14) = data_7;
+            return data_7(context, param_2);
         }
 
-        if (ctxB & 0x40)
+        if (context_val & 0x40)
         {
-            void* objC3 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 0xf;
-            int32_t valA10 = *(objC3 + 0x3c);
-            *(a1 + 0x14) = valA10;
-            return valA10(a1, a2);
+            void* entity_3 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 0xf;
+            int32_t data_10 = *(entity_3 + 0x3c);
+            *(context + 0x14) = data_10;
+            return data_10(context, param_2);
         }
 
-        if (ctxB & 0x20)
+        if (context_val & 0x20)
         {
-            void* valA12 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 0x10;
-            int32_t valA13 = *(valA12 + 0x40);
-            *(a1 + 0x14) = valA13;
-            return valA13(a1, a2);
+            void* data_12 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 0x10;
+            int32_t data_13 = *(data_12 + 0x40);
+            *(context + 0x14) = data_13;
+            return data_13(context, param_2);
         }
     }
 
-    int32_t* objC7 = *(a1 + 4);
-    *(a1 + 0xc) = *(a1 + 0x10);
-    *(a1 + 0x10) = 0;
-    int32_t valA26 = *objC7;
-    *(a1 + 0x14) = valA26;
-    return valA26(a1, a2);
+    int32_t* entity_7 = *(context + 4);
+    *(context + 0xc) = *(context + 0x10);
+    *(context + 0x10) = 0;
+    int32_t data_26 = *entity_7;
+    *(context + 0x14) = data_26;
+    return data_26(context, param_2);
 }

@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00525380 LightmapInfo_Update | gate PASS | openigi False */
-int* LightmapInfo_Update(void * a1);
+int* LightmapInfo_Update(void * context);

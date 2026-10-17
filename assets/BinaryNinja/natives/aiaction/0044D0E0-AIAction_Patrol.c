@@ -1,6 +1,6 @@
 // Original IGI.EXE function: AIAction_Patrol (VA 0x0044D0E0; static CFG gate PASS, CFG score 0.944).
 #include "AIAction_Patrol.h"
-int32_t AIAction_Patrol(int32_t a1, float a2 @ 0xc)
+int32_t AIAction_Patrol(int32_t context, float param_2 )
 
 // Sig: void AIAction_Patrol(int target, int mustBeZero, int flags)
 // Note: Orders the AI into PATROL behaviour. Params: target = patrol goal/node
@@ -9,16 +9,16 @@ int32_t AIAction_Patrol(int32_t a1, float a2 @ 0xc)
 // higher priority). Use inside AI event handlers e.g. AIEVENT_IDLE branch.
 // Template in igi.exe: AIAction_Patrol(xxxx, 0, AIACTIONFLAG_NONE).
 {
-    int32_t* valA1 = AI_CheckVisibility_2(g_5bda58);
-    int32_t valA2 = Script_GetArg(a2, 0);
-    int32_t v_30 = 1;
-    valA1[2] = valA2;
-    valA1[3] = Script_GetArg(a2, v_30);
-    AI_SelectTarget(sub_48e8c0, valA1, Script_GetArg(a2, 2));
-    int32_t v_18 = 3;
-    int32_t v_10 = 0;
-    int32_t v_c = 0x40080000;
-    char* v_8 = &g_567c74;
-    memcpy(a1, &v_18, 0x18);
-    return a1;
+    int32_t* data_1 = AI_CheckVisibility_2(g_5bda58);
+    int32_t data_2 = Script_GetArg(param_2, 0);
+    int32_t item_30 = 1;
+    data_1[2] = data_2;
+    data_1[3] = Script_GetArg(param_2, item_30);
+    AI_SelectTarget(sub_48e8c0, data_1, Script_GetArg(param_2, 2));
+    int32_t item_18 = 3;
+    int32_t item_10 = 0;
+    int32_t item_c = 0x40080000;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
 }

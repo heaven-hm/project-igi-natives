@@ -1,48 +1,48 @@
 // Original IGI.EXE function: FX_DebrisSpawn_20 (VA 0x0048E7D0; static CFG gate PASS, CFG score 1.000).
 #include "FX_DebrisSpawn_20.h"
-int32_t* FX_DebrisSpawn_20(int32_t a1, int32_t* a2)
+int32_t* FX_DebrisSpawn_20(int32_t context, int32_t* param_2)
 
 {
-    if (!*(a2[0xa] + 0x14))
-        AI_AlertAllies_3(a1);
+    if (!*(param_2[0xa] + 0x14))
+        AI_AlertAllies_3(context);
     else
-        AI_SelectTarget_3(a1);
+        AI_SelectTarget_3(context);
 
-    void* valA1 = a2[0xa];
-    int32_t objC1 = *(valA1 + 0xc);
-    int32_t* valA2;
+    void* data_1 = param_2[0xa];
+    int32_t entity_1 = *(data_1 + 0xc);
+    int32_t* data_2;
 
-    if (objC1 != 0xffffffff)
+    if (entity_1 != 0xffffffff)
     {
     label_48e80e:
-        valA2 = AI_MoveToNode_3(a1, objC1, nullptr, 0);
+        data_2 = AI_MoveToNode_3(context, entity_1, nullptr, 0);
 
-        if (!valA2)
-            return valA2;
+        if (!data_2)
+            return data_2;
 
-        void* objC2 = a2[0xa];
-        void* v_c_1 = objC2;
-        void* valA3 = AI_WriteChannel(a1, 4, *(objC2 + 8));
-        *(a2[0xa] + 0xc) = 0xffffffff;
-        return valA3;
+        void* entity_2 = param_2[0xa];
+        void* item_c_1 = entity_2;
+        void* data_3 = AI_WriteChannel(context, 4, *(entity_2 + 8));
+        *(param_2[0xa] + 0xc) = 0xffffffff;
+        return data_3;
     }
 
-    if (*(valA1 + 0x10) == objC1)
-        return AI_CombatTarget_2(a1, a2);
+    if (*(data_1 + 0x10) == entity_1)
+        return AI_CombatTarget_2(context, param_2);
 
-    if (objC1 != objC1)
+    if (entity_1 != entity_1)
         goto label_48e80e;
 
-    valA2 = *(valA1 + 0x10);
+    data_2 = *(data_1 + 0x10);
 
-    if (valA2 == 0xffffffff)
-        return valA2;
+    if (data_2 == 0xffffffff)
+        return data_2;
 
-    valA2 = AI_MoveToNode_3(a1, valA2, nullptr, 0);
+    data_2 = AI_MoveToNode_3(context, data_2, nullptr, 0);
 
-    if (!valA2)
-        return valA2;
+    if (!data_2)
+        return data_2;
 
-    *(a2[0xa] + 0x10) = 0xffffffff;
-    return AI_CombatTarget_2(a1, a2);
+    *(param_2[0xa] + 0x10) = 0xffffffff;
+    return AI_CombatTarget_2(context, param_2);
 }

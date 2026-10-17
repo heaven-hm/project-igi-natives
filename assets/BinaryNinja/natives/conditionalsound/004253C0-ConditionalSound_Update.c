@@ -1,27 +1,27 @@
 // Original IGI.EXE function: ConditionalSound_Update (VA 0x004253C0; static CFG gate PASS, CFG score 1.000).
 #include "ConditionalSound_Update.h"
-int32_t ConditionalSound_Update(void* a1)
+int32_t ConditionalSound_Update(void* context)
 
 {
-    char result = *(a1 + 0xb4);
+    char result = *(context + 0xb4);
 
     if (result)
         return result;
 
-    *(a1 + 0xb4) = 1;
-    void v_c0;
-    Script_ParseEnumString_6(&v_c0, a1);
-    void* v_d0_1 = &v_c0;
-    void v_80;
-    Game_DataSymbolLoad(&v_80, "%s.isRun");
-    SymbolRegister_Bool8(&v_80, a1 + 0xb0);
-    void* v_e4_1 = &v_c0;
-    Game_DataSymbolLoad(&v_80, "%s.isLastRun");
-    SymbolRegister_Bool8(&v_80, a1 + 0xb1);
-    void* v_f8_1 = &v_c0;
-    Game_DataSymbolLoad(&v_80, "%s.isPlaying");
-    SymbolRegister_Bool8(&v_80, a1 + 0xb2);
-    void* v_c8_2 = &v_c0;
-    Game_DataSymbolLoad(&v_80, "%s.nPlayTick");
-    return SymbolRegister_Int32(&v_80, a1 + 0xac);
+    *(context + 0xb4) = 1;
+    void item_c0;
+    Script_ParseEnumString_6(&item_c0, context);
+    void* item_d0_1 = &item_c0;
+    void item_80;
+    Game_DataSymbolLoad(&item_80, "%s.isRun");
+    SymbolRegister_Bool8(&item_80, context + 0xb0);
+    void* item_e4_1 = &item_c0;
+    Game_DataSymbolLoad(&item_80, "%s.isLastRun");
+    SymbolRegister_Bool8(&item_80, context + 0xb1);
+    void* item_f8_1 = &item_c0;
+    Game_DataSymbolLoad(&item_80, "%s.isPlaying");
+    SymbolRegister_Bool8(&item_80, context + 0xb2);
+    void* item_c8_2 = &item_c0;
+    Game_DataSymbolLoad(&item_80, "%s.nPlayTick");
+    return SymbolRegister_Int32(&item_80, context + 0xac);
 }

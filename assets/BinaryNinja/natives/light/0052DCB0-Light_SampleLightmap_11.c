@@ -1,50 +1,50 @@
 // Original IGI.EXE function: Light_SampleLightmap_11 (VA 0x0052DCB0; static CFG gate PASS, CFG score 1.000).
 #include "Light_SampleLightmap_11.h"
-long double Light_SampleLightmap_11(float a1, float a2, int32_t a3)
+long double Light_SampleLightmap_11(float context, float param_2, int32_t param_3)
 
 {
-    float valA1 = a1;
-    double* objC = a2;
-    long double x87_r7_2 = fabsl(*(valA1 + 0x4870) - *objC);
-    a1 = fabsl(*(valA1 + 0x4878) - objC[1]);
-    a2 = fabsl(*(valA1 + 0x4880) - *(valA1 + 0x4a94));
-    long double x87_r6_6 = a1;
-    long double f0 = a2;
-    x87_r6_6 - f0;
-    long double x87_r6_7;
+    float data_1 = context;
+    double* entity_val = param_2;
+    long double fpu_val_7_2 = fabsl(*(data_1 + 0x4870) - *entity_val);
+    context = fabsl(*(data_1 + 0x4878) - entity_val[1]);
+    param_2 = fabsl(*(data_1 + 0x4880) - *(data_1 + 0x4a94));
+    long double fpu_val_6_6 = context;
+    long double f0 = param_2;
+    fpu_val_6_6 - f0;
+    long double fpu_val_6_7;
 
-    x87_r6_7 = *(&((x87_r6_6 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_6, f0) ? 1 : 0) << 0xa
-        | (x87_r6_6 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? a2 : a1;
+    fpu_val_6_7 = *(&((fpu_val_6_6 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_6, f0) ? 1 : 0) << 0xa
+        | (fpu_val_6_6 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? param_2 : context;
 
-    x87_r7_2 - x87_r6_7;
+    fpu_val_7_2 - fpu_val_6_7;
 
-    if (*(&((x87_r7_2 < x87_r6_7 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, x87_r6_7) ? 1 : 0) << 0xa
-        | (x87_r7_2 == x87_r6_7 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41)
+    if (*(&((fpu_val_7_2 < fpu_val_6_7 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, fpu_val_6_7) ? 1 : 0) << 0xa
+        | (fpu_val_7_2 == fpu_val_6_7 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41)
     {
-        long double x87_r7_4 = a1;
-        long double f1_1 = a2;
-        x87_r7_4 - f1_1;
+        long double fpu_val_7_4 = context;
+        long double f1_1 = param_2;
+        fpu_val_7_4 - f1_1;
 
-        x87_r7_2 = *(&((x87_r7_4 < f1_1 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r7_4, f1_1) ? 1 : 0) << 0xa | (x87_r7_4 == f1_1 ? 1 : 0) << 0xe) + 1)
-            & 0x41 ? a2 : a1;
+        fpu_val_7_2 = *(&((fpu_val_7_4 < f1_1 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_7_4, f1_1) ? 1 : 0) << 0xa | (fpu_val_7_4 == f1_1 ? 1 : 0) << 0xe) + 1)
+            & 0x41 ? param_2 : context;
     }
 
-    long double x87_r6_9 = a3;
-    long double result = (x87_r6_9 * 1.5f - x87_r7_2) / (x87_r6_9 * 0.5f);
-    long double x87_r6_11 = 0f;
-    x87_r6_11 - result;
+    long double fpu_val_6_9 = param_3;
+    long double result = (fpu_val_6_9 * 1.5f - fpu_val_7_2) / (fpu_val_6_9 * 0.5f);
+    long double fpu_val_6_11 = 0.0f;
+    fpu_val_6_11 - result;
 
-    if (!(*(&((x87_r6_11 < result ? 1 : 0) << 8 | (FCMP_UO(x87_r6_11, result) ? 1 : 0) << 0xa
-            | (x87_r6_11 == result ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
-        return 0f;
+    if (!(*(&((fpu_val_6_11 < result ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_11, result) ? 1 : 0) << 0xa
+            | (fpu_val_6_11 == result ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41))
+        return 0.0f;
 
-    long double x87_r6_12 = 1f;
-    x87_r6_12 - result;
+    long double fpu_val_6_12 = 1.0f;
+    fpu_val_6_12 - result;
 
-    if (!(*(&((x87_r6_12 < result ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, result) ? 1 : 0) << 0xa
-            | (x87_r6_12 == result ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+    if (!(*(&((fpu_val_6_12 < result ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, result) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == result ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
         return result;
 
-    return 1f;
+    return 1.0f;
 }

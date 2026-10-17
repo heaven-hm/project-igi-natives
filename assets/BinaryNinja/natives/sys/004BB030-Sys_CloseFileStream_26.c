@@ -1,91 +1,91 @@
 // Original IGI.EXE function: Sys_CloseFileStream_26 (VA 0x004BB030; static CFG gate PASS, CFG score 0.867).
 #include "Sys_CloseFileStream_26.h"
-int32_t Sys_CloseFileStream_26(void* a1, void* a2)
+int32_t Sys_CloseFileStream_26(void* context, void* param_2)
 
 {
     int32_t result = 0;
-    void v_800;
-    Sys_ExecuteBytecode_26(&v_800, a2);
-    int32_t* flagP = *(a1 + 0x38);
-    int32_t* dstD = *flagP;
+    void item_800;
+    Sys_ExecuteBytecode_26(&item_800, param_2);
+    int32_t* flagP = *(context + 0x38);
+    int32_t* dest_val = *flagP;
 
-    if (!dstD)
+    if (!dest_val)
     {
     label_4bb0b3:
-        int32_t* valA5 = Mem_Alloc(0x808, 4);
-        valA5[1] = 0;
-        *valA5 = 0;
-        Camera_SetFieldOfView_33(a1 + 0x38, valA5);
-        void* dstD1 = &v_800;
+        int32_t* data_5 = Mem_Alloc(0x808, 4);
+        data_5[1] = 0;
+        *data_5 = 0;
+        Camera_SetFieldOfView_33(context + 0x38, data_5);
+        void* dest_1 = &item_800;
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD1;
-            dstD1 += 1;
+            bool flag_0_1 = 0 != *dest_1;
+            dest_1 += 1;
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC2 = ~i;
-        int32_t srcS4;
-        int32_t dstD4;
-        dstD4 = memcpy(&valA5[2], dstD1 - objC2, objC2 & 0xfffffffc);
-        memcpy(dstD4, srcS4, objC2 & 3);
+        int32_t entity_2 = ~i;
+        int32_t source_4;
+        int32_t dest_4;
+        dest_4 = memcpy(&data_5[2], dest_1 - entity_2, entity_2 & 0xfffffffc);
+        memcpy(dest_4, source_4, entity_2 & 3);
     }
     else
     {
         while (true)
         {
-            char* srcS1 = &v_800;
-            char* valA2 = &flagP[2];
-            int32_t valA4;
+            char* source_1 = &item_800;
+            char* data_2 = &flagP[2];
+            int32_t data_4;
 
             while (true)
             {
-                char tmpD1 = *valA2;
-                char f0_1 = *srcS1;
-                bool c_1 = tmpD1 < f0_1;
+                char temp_1 = *data_2;
+                char f0_1 = *source_1;
+                bool c_1 = temp_1 < f0_1;
 
-                if (tmpD1 == f0_1)
+                if (temp_1 == f0_1)
                 {
-                    if (!tmpD1)
+                    if (!temp_1)
                     {
-                        valA4 = 0;
+                        data_4 = 0;
                         break;
                     }
 
-                    tmpD1 = valA2[1];
-                    char f3_1 = srcS1[1];
-                    c_1 = tmpD1 < f3_1;
+                    temp_1 = data_2[1];
+                    char f3_1 = source_1[1];
+                    c_1 = temp_1 < f3_1;
 
-                    if (tmpD1 == f3_1)
+                    if (temp_1 == f3_1)
                     {
-                        valA2 = &valA2[2];
-                        srcS1 = &srcS1[2];
+                        data_2 = &data_2[2];
+                        source_1 = &source_1[2];
 
-                        if (tmpD1)
+                        if (temp_1)
                             continue;
 
-                        valA4 = 0;
+                        data_4 = 0;
                         break;
                     }
                 }
 
-                valA4 = valA2 - valA2 + 1;
+                data_4 = data_2 - data_2 + 1;
                 break;
             }
 
-            if (!valA4)
+            if (!data_4)
                 break;
 
-            flagP = dstD;
-            dstD = *dstD;
+            flagP = dest_val;
+            dest_val = *dest_val;
             result += 1;
 
-            if (!dstD)
+            if (!dest_val)
                 goto label_4bb0b3;
         }
 

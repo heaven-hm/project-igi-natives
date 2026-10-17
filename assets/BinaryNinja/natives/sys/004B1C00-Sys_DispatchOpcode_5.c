@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Sys_DispatchOpcode_5 (VA 0x004B1C00; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_5.h"
-int32_t Sys_DispatchOpcode_5(int32_t a1, int32_t a2)
+int32_t Sys_DispatchOpcode_5(int32_t context, int32_t param_2)
 
 {
-    int32_t result = a1 * 0x23;
-    *((result << 2) + &g_9436b4) = a2;
+    int32_t result = context * 0x23;
+    *((result << 2) + &g_9436b4) = param_2;
     return result;
 }

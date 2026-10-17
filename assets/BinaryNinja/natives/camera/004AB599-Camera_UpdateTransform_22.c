@@ -39,19 +39,19 @@ void** Camera_UpdateTransform_22()
                 }
 
                 lpMem[5] = lpAddress + &__dos_header;
-                int32_t* valA7 = &lpMem[6];
+                int32_t* data_7 = &lpMem[6];
                 lpMem[3] = &lpMem[0x26];
                 lpMem[4] = lpAddress;
-                lpMem[2] = valA7;
+                lpMem[2] = data_7;
 
                 for (int32_t i = 0; i < 0x400; )
                 {
-                    int32_t tmpD1 = 0;
-                    tmpD1 = i >= 0x10;
+                    int32_t temp_1 = 0;
+                    temp_1 = i >= 0x10;
                     i += 1;
-                    *valA7 = ((tmpD1 - 1) & 0xf1) - 1;
-                    valA7[1] = 0xf1;
-                    valA7 = &valA7[2];
+                    *data_7 = ((temp_1 - 1) & 0xf1) - 1;
+                    data_7[1] = 0xf1;
+                    data_7 = &data_7[2];
                 }
 
                 Camera_ApplyBandFilter_26(lpAddress, 0, 0x10000);

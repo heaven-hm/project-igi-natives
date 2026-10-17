@@ -10,12 +10,12 @@ int32_t QTask_CreateTask()
 
     if (FX_ExplosionSpawn_25())
     {
-        int32_t valA2 = Flow_SetState(2);
-        valA2 = 1;
-        return valA2;
+        int32_t data_2 = Flow_SetState(2);
+        data_2 = 1;
+        return data_2;
     }
 
-    int32_t valA1 = Flow_SetState(4);
-    valA1 = 1;
-    return valA1;
+    int32_t data_1 = Flow_SetState(4);
+    data_1 = 1;
+    return data_1;
 }

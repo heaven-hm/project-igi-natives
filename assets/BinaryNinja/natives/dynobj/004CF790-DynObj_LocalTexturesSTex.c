@@ -1,63 +1,63 @@
 // Original IGI.EXE function: DynObj_LocalTexturesSTex (VA 0x004CF790; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_LocalTexturesSTex.h"
-int32_t* DynObj_LocalTexturesSTex(void* a1)
+int32_t* DynObj_LocalTexturesSTex(void* context)
 
 {
-    void* ctxB = a1;
+    void* context_val = context;
     int32_t flagP = 0;
-    int32_t* valA1 = DynObj_CreateMagicObject_13(*(ctxB + 8), 0x54455846, nullptr);
-    int32_t* srcS = valA1;
-    int32_t __saved_ecx_2 = *srcS;
-    *(ctxB + 0x40) = __saved_ecx_2;
+    int32_t* data_1 = DynObj_CreateMagicObject_13(*(context_val + 8), 0x54455846, nullptr);
+    int32_t* source_val = data_1;
+    int32_t __saved_ecx_2 = *source_val;
+    *(context_val + 0x40) = __saved_ecx_2;
 
     if (__saved_ecx_2 <= 0)
     {
-        *(ctxB + 0x34) = 0;
-        *(ctxB + 0x38) = 0;
+        *(context_val + 0x34) = 0;
+        *(context_val + 0x38) = 0;
     }
     else
     {
-        *(ctxB + 0x34) = Mem_Alloc(__saved_ecx_2 * 0x24, 4);
-        valA1 = Mem_Alloc(__saved_ecx_2 * 0xc, 4);
-        void* srcS1 = &srcS[1];
-        *(ctxB + 0x38) = valA1;
+        *(context_val + 0x34) = Mem_Alloc(__saved_ecx_2 * 0x24, 4);
+        data_1 = Mem_Alloc(__saved_ecx_2 * 0xc, 4);
+        void* source_1 = &source_val[1];
+        *(context_val + 0x38) = data_1;
 
         if (__saved_ecx_2 > 0)
         {
-            a1 = nullptr;
+            context = nullptr;
             int32_t saved_ctx = __saved_ecx_2;
             int32_t __saved_ecx_1;
-            bool cond_3_1;
+            bool flag_3_1;
 
             do
             {
-                void* v_18_1 = srcS1;
-                *(*(ctxB + 0x38) + flagP + 4) = 0;
+                void* item_18_1 = source_1;
+                *(*(context_val + 0x38) + flagP + 4) = 0;
                 Game_DataSymbolLoad(0xa4ec6c, "LOCAL:textures/%s.tex");
-                Sys_SIsNotAValidTextureF(*(ctxB + 0x34) + a1, flagP + *(ctxB + 0x38), 0xa4ec6c);
-                void* dstD1 = srcS1;
+                Sys_SIsNotAValidTextureF(*(context_val + 0x34) + context, flagP + *(context_val + 0x38), 0xa4ec6c);
+                void* dest_1 = source_1;
                 int32_t i = 0xffffffff;
 
                 while (i)
                 {
-                    bool cond_2_1 = 0 != *dstD1;
-                    dstD1 += 1;
+                    bool flag_2_1 = 0 != *dest_1;
+                    dest_1 += 1;
                     i -= 1;
 
-                    if (!cond_2_1)
+                    if (!flag_2_1)
                         break;
                 }
 
                 flagP += 0xc;
-                srcS1 = srcS1 + ~i - 1 + 1;
+                source_1 = source_1 + ~i - 1 + 1;
                 __saved_ecx_1 = saved_ctx - 1;
-                cond_3_1 = saved_ctx != 1;
-                a1 += 0x24;
+                flag_3_1 = saved_ctx != 1;
+                context += 0x24;
                 saved_ctx = __saved_ecx_1;
-            } while (cond_3_1);
+            } while (flag_3_1);
             return __saved_ecx_1;
         }
     }
 
-    return valA1;
+    return data_1;
 }

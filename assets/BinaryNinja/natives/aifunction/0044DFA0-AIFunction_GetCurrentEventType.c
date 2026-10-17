@@ -1,6 +1,6 @@
 // Original IGI.EXE function: AIFunction_GetCurrentEventType (VA 0x0044DFA0; static CFG gate FAIL, CFG score 0.833).
 #include "AIFunction_GetCurrentEventType.h"
-int32_t AIFunction_GetCurrentEventType(int32_t a1)
+int32_t AIFunction_GetCurrentEventType(int32_t context)
 
 // Sig: int AIFunction_GetCurrentEventType()
 // Note: RETURNS the AIEVENT_* value currently being handled - the backbone of
@@ -11,16 +11,16 @@ int32_t AIFunction_GetCurrentEventType(int32_t a1)
 // GUNSHOTMISS=20, EXPLOSION=21, ENEMYDETECTION=22, FRIENDLYDETECTION=23. Takes
 // no args.
 {
-    int32_t* valA = **&g_5bda60;
+    int32_t* data_val = **&g_5bda60;
 
-    if (*valA)
+    if (*data_val)
     {
-        int32_t valA1 = valA[2];
-        int32_t v_18 = valA1;
-        double v_10 = valA1;
-        char* v_8 = &g_567c74;
-        memcpy(a1, &v_18, 0x18);
-        return a1;
+        int32_t data_1 = data_val[2];
+        int32_t item_18 = data_1;
+        double item_10 = data_1;
+        char* item_8 = &g_567c74;
+        memcpy(context, &item_18, 0x18);
+        return context;
     }
 
     Error_Show("EventStack empty");

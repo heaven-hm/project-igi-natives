@@ -3,10 +3,10 @@
 int32_t FX_SmokeEmit_26()
 
 {
-    int32_t valA;
-    int32_t objC;
-    int32_t tmpD;
-    int32_t valA1 = Camera_UpdateTransform_6(valA, tmpD, objC, &g_5c8c20, "USA");
-    int32_t valA2 = -(valA1);
-    return valA2 - valA2 + 1;
+    int32_t data_val;
+    int32_t entity_val;
+    int32_t temp_val;
+    int32_t data_1 = Camera_UpdateTransform_6(data_val, temp_val, entity_val, &g_5c8c20, "USA");
+    int32_t data_2 = -(data_1);
+    return data_2 - data_2 + 1;
 }

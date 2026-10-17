@@ -1,15 +1,15 @@
 // Original IGI.EXE function: MenuText_Process (VA 0x00420F00; static CFG gate PASS, CFG score 1.000).
 #include "MenuText_Process.h"
-char* MenuText_Process(void* a1)
+char* MenuText_Process(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x114);
+    int32_t* data_val = *(context + 0x114);
 
-    if (valA)
+    if (data_val)
     {
-        Sys_ReadFileBlock_18(valA);
-        *(a1 + 0x114) = 0;
+        Sys_ReadFileBlock_18(data_val);
+        *(context + 0x114) = 0;
     }
 
-    return Script_CallNativeHandler_6(a1 + 0x11c);
+    return Script_CallNativeHandler_6(context + 0x11c);
 }

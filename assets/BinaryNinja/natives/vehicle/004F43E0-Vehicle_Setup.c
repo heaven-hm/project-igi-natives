@@ -1,47 +1,47 @@
 // Original IGI.EXE function: Vehicle_Setup (VA 0x004F43E0; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_Setup.h"
-int32_t Vehicle_Setup(void* a1, int32_t a2)
+int32_t Vehicle_Setup(void* context, int32_t param_2)
 
 {
-    *(a1 + 0x745) = 1;
-    int32_t result = (*(((DynObj_UpdateDynTree_12() * 0x180 + DynObj_LookupHashItem_5()) << 2) + &g_a96ae0))(a1, a2);
-    void* srcS1 = *(a1 + 0xe8);
+    *(context + 0x745) = 1;
+    int32_t result = (*(((DynObj_UpdateDynTree_12() * 0x180 + DynObj_LookupHashItem_5()) << 2) + &g_a96ae0))(context, param_2);
+    void* source_1 = *(context + 0xe8);
 
-    if (srcS1)
+    if (source_1)
     {
-        int32_t* i = *(srcS1 + 8);
+        int32_t* i = *(source_1 + 8);
 
         if (*i && i)
         {
-            int32_t objC1 = g_afa7e0;
+            int32_t entity_1 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD1 = *i;
-                void* valA8;
+                int32_t* temp_1 = *i;
+                void* data_8;
 
-                if (!tmpD1)
-                    valA8 = nullptr;
+                if (!temp_1)
+                    data_8 = nullptr;
                 else
                 {
-                    int32_t valA5 = *tmpD1;
-                    int32_t valA6 = -(valA5);
-                    valA8 = (valA6 - valA6) & tmpD1;
+                    int32_t data_5 = *temp_1;
+                    int32_t data_6 = -(data_5);
+                    data_8 = (data_6 - data_6) & temp_1;
                 }
 
-                *((objC1 << 2) + &g_afa6e0) = valA8;
-                g_afa7e0 = objC1 + 1;
-                uint32_t valA10 = DynObj_UpdateDynTree_12();
-                int32_t objC3 = 0;
-                objC3 = i[7];
-                result = *(((valA10 * 0x180 + objC3) << 2) + &g_a96ae0);
+                *((entity_1 << 2) + &g_afa6e0) = data_8;
+                g_afa7e0 = entity_1 + 1;
+                uint32_t data_10 = DynObj_UpdateDynTree_12();
+                int32_t entity_3 = 0;
+                entity_3 = i[7];
+                result = *(((data_10 * 0x180 + entity_3) << 2) + &g_a96ae0);
 
                 if (result)
-                    result = result(i, a2);
+                    result = result(i, param_2);
 
-                objC1 = g_afa7e0 - 1;
-                g_afa7e0 = objC1;
-                i = *((objC1 << 2) + &g_afa6e0);
+                entity_1 = g_afa7e0 - 1;
+                g_afa7e0 = entity_1;
+                i = *((entity_1 << 2) + &g_afa6e0);
             } while (i);
         }
     }

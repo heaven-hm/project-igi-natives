@@ -1,22 +1,22 @@
 // Original IGI.EXE function: DynObj_InsertHashItem (VA 0x004C01D0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_InsertHashItem.h"
-int32_t DynObj_InsertHashItem(void* a1)
+int32_t DynObj_InsertHashItem(void* context)
 
 {
-    char* objC = *(a1 + 0x14);
-    char valA = *objC;
+    char* entity_val = *(context + 0x14);
+    char data_val = *entity_val;
 
-    if (valA)
+    if (data_val)
     {
         while (true)
         {
-            if (valA == 0x2e || valA == 0x65 || valA == 0x45)
+            if (data_val == 0x2e || data_val == 0x65 || data_val == 0x45)
                 return 0;
 
-            valA = objC[1];
-            objC = &objC[1];
+            data_val = entity_val[1];
+            entity_val = &entity_val[1];
 
-            if (!valA)
+            if (!data_val)
                 break;
 
             continue;

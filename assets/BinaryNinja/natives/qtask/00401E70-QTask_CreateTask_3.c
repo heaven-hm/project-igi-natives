@@ -1,55 +1,55 @@
 // Original IGI.EXE function: QTask_CreateTask_3 (VA 0x00401E70; static CFG gate PASS, CFG score 1.000).
 #include "QTask_CreateTask_3.h"
-int32_t QTask_CreateTask_3(void* a1, int32_t a2, int32_t a3, int32_t a4)
+int32_t QTask_CreateTask_3(void* context, int32_t param_2, int32_t param_3, int32_t param_4)
 
 {
-    int32_t valA4 = g_afa7e0;
-    *((valA4 << 2) + &g_afa6e0) = a1;
-    int32_t valA = valA4 + 1;
-    g_afa7e0 = valA;
-    int16_t objC = *(a1 + 0x1c);
+    int32_t data_4 = g_afa7e0;
+    *((data_4 << 2) + &g_afa6e0) = context;
+    int32_t data_val = data_4 + 1;
+    g_afa7e0 = data_val;
+    int16_t entity_val = *(context + 0x1c);
 
-    if (objC == a3)
+    if (entity_val == param_3)
     {
-        int32_t objC2 = *(((a2 * 0x180 + objC) << 2) + &g_a96ae0);
+        int32_t entity_2 = *(((param_2 * 0x180 + entity_val) << 2) + &g_a96ae0);
 
-        if (objC2)
+        if (entity_2)
         {
-            objC2(a1, a4);
-            valA = g_afa7e0;
+            entity_2(context, param_4);
+            data_val = g_afa7e0;
         }
     }
 
-    if (a1 == *((valA << 2) + &g_afa6dc))
+    if (context == *((data_val << 2) + &g_afa6dc))
     {
-        int32_t* i = *(a1 + 8);
+        int32_t* i = *(context + 8);
 
         if (*i && i)
         {
             do
             {
-                int32_t* srcS1 = *i;
-                void* tmpD9;
+                int32_t* source_1 = *i;
+                void* temp_9;
 
-                if (!srcS1)
-                    tmpD9 = nullptr;
+                if (!source_1)
+                    temp_9 = nullptr;
                 else
                 {
-                    int32_t tmpD6 = *srcS1;
-                    int32_t tmpD7 = -(tmpD6);
-                    tmpD9 = (tmpD7 - tmpD7) & srcS1;
+                    int32_t temp_6 = *source_1;
+                    int32_t temp_7 = -(temp_6);
+                    temp_9 = (temp_7 - temp_7) & source_1;
                 }
 
-                *((valA << 2) + &g_afa6e0) = tmpD9;
-                g_afa7e0 = valA + 1;
-                QTask_CreateTask_3(i, a2, a3, a4);
-                valA = g_afa7e0 - 1;
-                g_afa7e0 = valA;
-                i = *((valA << 2) + &g_afa6e0);
+                *((data_val << 2) + &g_afa6e0) = temp_9;
+                g_afa7e0 = data_val + 1;
+                QTask_CreateTask_3(i, param_2, param_3, param_4);
+                data_val = g_afa7e0 - 1;
+                g_afa7e0 = data_val;
+                i = *((data_val << 2) + &g_afa6e0);
             } while (i);
         }
     }
 
-    g_afa7e0 = valA - 1;
-    return valA - 1;
+    g_afa7e0 = data_val - 1;
+    return data_val - 1;
 }

@@ -1,29 +1,29 @@
 // Original IGI.EXE function: Render_DrawBoneMesh (VA 0x004D03D0; static CFG gate PASS, CFG score 0.944).
 #include "Render_DrawBoneMesh.h"
-int32_t Render_DrawBoneMesh(int32_t a1, int32_t a2, int32_t a3)
+int32_t Render_DrawBoneMesh(int32_t context, int32_t param_2, int32_t param_3)
 
 {
-    int32_t valA = Display_SyncVSync_15();
-    int32_t valA1;
+    int32_t data_val = Display_SyncVSync_15();
+    int32_t data_1;
 
-    if (g_a4eea0 == valA)
-        valA1 = Display_RestoreDevice_13();
+    if (g_a4eea0 == data_val)
+        data_1 = Display_RestoreDevice_13();
 
-    float v_18;
-    float v_14;
+    float item_18;
+    float item_14;
 
-    if (g_a4eea0 != valA || g_a4ee9c != valA1)
+    if (g_a4eea0 != data_val || g_a4ee9c != data_1)
     {
-        v_18 = g_bcabb8 + g_bcabc8;
-        v_14 = g_bcabbc + g_bcabcc;
+        item_18 = g_bcabb8 + g_bcabc8;
+        item_14 = g_bcabbc + g_bcabcc;
         g_a4eea0 = Display_SyncVSync_15();
-        int32_t valA3 = Display_RestoreDevice_13();
-        long double x87_r7_6 = g_bcabd0 - v_18;
-        g_a4ee9c = valA3;
-        g_b46ce4 = x87_r7_6 / g_bcabc8 * g_bcab20;
-        g_b46d1c = (g_bcabd8 - v_18) / g_bcabc8 * g_bcab20;
-        g_b816fc = (g_bcabd4 - v_14) / g_bcabcc * g_bcab24;
-        g_b8179c = (g_bcabdc - v_14) / g_bcabcc * g_bcab24;
+        int32_t data_3 = Display_RestoreDevice_13();
+        long double fpu_val_7_6 = g_bcabd0 - item_18;
+        g_a4ee9c = data_3;
+        g_b46ce4 = fpu_val_7_6 / g_bcabc8 * g_bcab20;
+        g_b46d1c = (g_bcabd8 - item_18) / g_bcabc8 * g_bcab20;
+        g_b816fc = (g_bcabd4 - item_14) / g_bcabcc * g_bcab24;
+        g_b8179c = (g_bcabdc - item_14) / g_bcabcc * g_bcab24;
         long double fp1_1;
         bool c1_1;
         fp1_1 = __fpatan(1, g_b46ce4);
@@ -58,9 +58,9 @@ int32_t Render_DrawBoneMesh(int32_t a1, int32_t a2, int32_t a3)
         g_b46ce8 = fp0_4;
     }
 
-    int32_t v_10 = a1;
-    int32_t valA5 = DynObj_RemoveSymbol_15();
-    (*((valA5 << 2) + &g_a94e84))(&v_10, v_18, v_14, v_10, a2, a3);
+    int32_t item_10 = context;
+    int32_t data_5 = DynObj_RemoveSymbol_15();
+    (*((data_5 << 2) + &g_a94e84))(&item_10, item_18, item_14, item_10, param_2, param_3);
     int32_t result;
     return result;
 }

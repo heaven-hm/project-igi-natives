@@ -1,36 +1,36 @@
 // Original IGI.EXE function: Sys_CheckHeap_14 (VA 0x004B4F40; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_CheckHeap_14.h"
-int32_t Sys_CheckHeap_14(int32_t* a1, float a2, float a3, float a4, float a5, float a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10)
+int32_t Sys_CheckHeap_14(int32_t* context, float param_2, float param_3, float param_4, float param_5, float param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10)
 
 {
-    int32_t v_34 = 0x3f800000;
-    int32_t v_10 = 0x3f800000;
-    int32_t* valA3 = a1[2] + a7 * 0x24;
-    long double x87_r7_1 = a4 * 0.0078125f;
-    int32_t tmpD1 = valA3[5];
-    int32_t tmpD2 = valA3[6];
-    int32_t tmpD3 = valA3[7];
-    int32_t tmpD4 = valA3[8];
-    float v_30 = x87_r7_1;
-    float v_c = x87_r7_1;
-    long double x87_r7_3 = a5 * 0.0078125f;
-    float v_2c = x87_r7_3;
-    float v_8 = x87_r7_3;
-    long double x87_r7_5 = a6 * 0.0078125f;
-    float v_28 = x87_r7_5;
-    float v_4 = x87_r7_5;
-    float v_48 = valA3[2] + a2;
-    float v_44 = *(valA3 + 0xa) + a3;
-    float v_24 = valA3[3] + valA3[2] + a2;
-    long double x87_r7_14 = *(valA3 + 0xe) + *(valA3 + 0xa);
-    float* v_4c = &v_48;
-    int32_t v_5c = 0;
-    int32_t v_50 = 2;
-    float v_20 = x87_r7_14 + a3;
-    g_a84a50 = *valA3;
-    int32_t valA5 = g_a84a54;
-    g_a84a58 = *a1;
-    return (*((valA5 << 2) + &g_a94e84))(&v_5c, v_5c, a8, a9, v_50, v_4c, v_48,
-        v_44, a10, tmpD1, tmpD2, v_34, v_30, v_2c, v_28, v_24, v_20, a10, tmpD3,
-        tmpD4, v_10, v_c, v_8, v_4);
+    int32_t item_34 = 0x3f800000;
+    int32_t item_10 = 0x3f800000;
+    int32_t* data_3 = context[2] + param_7 * 0x24;
+    long double fpu_val_7_1 = param_4 * 0.0078125f;
+    int32_t temp_1 = data_3[5];
+    int32_t temp_2 = data_3[6];
+    int32_t temp_3 = data_3[7];
+    int32_t temp_4 = data_3[8];
+    float item_30 = fpu_val_7_1;
+    float item_c = fpu_val_7_1;
+    long double fpu_val_7_3 = param_5 * 0.0078125f;
+    float item_2c = fpu_val_7_3;
+    float item_8 = fpu_val_7_3;
+    long double fpu_val_7_5 = param_6 * 0.0078125f;
+    float item_28 = fpu_val_7_5;
+    float item_4 = fpu_val_7_5;
+    float item_48 = data_3[2] + param_2;
+    float item_44 = *(data_3 + 0xa) + param_3;
+    float item_24 = data_3[3] + data_3[2] + param_2;
+    long double fpu_val_7_14 = *(data_3 + 0xe) + *(data_3 + 0xa);
+    float* item_4c = &item_48;
+    int32_t item_5c = 0;
+    int32_t item_50 = 2;
+    float item_20 = fpu_val_7_14 + param_3;
+    g_a84a50 = *data_3;
+    int32_t data_5 = g_a84a54;
+    g_a84a58 = *context;
+    return (*((data_5 << 2) + &g_a94e84))(&item_5c, item_5c, param_8, param_9, item_50, item_4c, item_48,
+        item_44, param_10, temp_1, temp_2, item_34, item_30, item_2c, item_28, item_24, item_20, param_10, temp_3,
+        temp_4, item_10, item_c, item_8, item_4);
 }

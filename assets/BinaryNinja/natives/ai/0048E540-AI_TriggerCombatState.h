@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0048E540 AI_TriggerCombatState | gate PASS | openigi True */
-void*(void* arg1 );
+void* AI_TriggerCombatState(void* context);

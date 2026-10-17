@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Weapon_UpdateZoom_5 (VA 0x004785F0; static CFG gate FAIL, CFG score 0.667).
 #include "Weapon_UpdateZoom_5.h"
-void* Weapon_UpdateZoom_5(void* a1)
+void* Weapon_UpdateZoom_5(void* context)
 
 {
-    *(a1 + 0xf0) = 0;
-    *(a1 + 0x134) = 0;
-    *(a1 + 0x13c) = 0;
-    *(a1 + 0x140) = 0;
-    *(a1 + 0x148) = 0;
-    __builtin_memset(a1 + 0x198, 0, 0x18);
-    return a1;
+    *(context + 0xf0) = 0;
+    *(context + 0x134) = 0;
+    *(context + 0x13c) = 0;
+    *(context + 0x140) = 0;
+    *(context + 0x148) = 0;
+    memset(context + 0x198, 0, 0x18);
+    return context;
 }

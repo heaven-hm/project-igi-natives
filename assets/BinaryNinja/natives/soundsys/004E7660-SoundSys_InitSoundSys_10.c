@@ -1,15 +1,15 @@
 // Original IGI.EXE function: SoundSys_InitSoundSys_10 (VA 0x004E7660; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_InitSoundSys_10.h"
-int32_t SoundSys_InitSoundSys_10(int32_t* a1)
+int32_t SoundSys_InitSoundSys_10(int32_t* context)
 
 {
-    void* valA = *a1;
+    void* data_val = *context;
 
-    if (valA)
+    if (data_val)
     {
-        Sys_PushStack_20(valA);
-        *a1 = 0;
+        Sys_PushStack_20(data_val);
+        *context = 0;
     }
 
-    return Sys_ExecuteBytecode_2(a1);
+    return Sys_ExecuteBytecode_2(context);
 }

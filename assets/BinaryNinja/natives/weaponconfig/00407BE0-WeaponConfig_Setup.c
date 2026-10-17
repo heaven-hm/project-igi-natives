@@ -1,42 +1,42 @@
 // Original IGI.EXE function: WeaponConfig_Setup (VA 0x00407BE0; static CFG gate PASS, CFG score 0.917).
 #include "WeaponConfig_Setup.h"
-int32_t* WeaponConfig_Setup(void* a1)
+int32_t* WeaponConfig_Setup(void* context)
 
 {
-    int32_t* result = HumanPlayer_CheckCollision_10(*(a1 + 0x20));
+    int32_t* result = HumanPlayer_CheckCollision_10(*(context + 0x20));
 
     if (result)
     {
-        int32_t tmpD1 = result[0x1b8];
-        void* v_8 = nullptr;
+        int32_t temp_1 = result[0x1b8];
+        void* item_8 = nullptr;
         int32_t flagP1 = result[0x1b9];
-        int32_t v_4_1 = 0;
-        v_8 = a1;
-        memcpy(result, a1 + 0x20, 0x6e8);
-        result[0x1b8] = tmpD1;
+        int32_t item_4_1 = 0;
+        item_8 = context;
+        memcpy(result, context + 0x20, 0x6e8);
+        result[0x1b8] = temp_1;
         result[0x1b9] = flagP1;
         int32_t* result_1 = result;
 
-        if (AIConfig_RegisterConfig_2(*(a1 + 0x6f8)))
+        if (AIConfig_RegisterConfig_2(*(context + 0x6f8)))
         {
-            int32_t objC1 = 0;
-            objC1 = *(a1 + 0x6f8);
-            int32_t valA7 = *(((*g_5690d8 * 0x180 + objC1) << 2) + &g_a96ae0);
+            int32_t entity_1 = 0;
+            entity_1 = *(context + 0x6f8);
+            int32_t data_7 = *(((*g_5690d8 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-            if (valA7)
-                valA7(0, &v_8);
+            if (data_7)
+                data_7(0, &item_8);
         }
 
-        result = AIConfig_RegisterConfig_2(*(a1 + 0x6f4));
+        result = AIConfig_RegisterConfig_2(*(context + 0x6f4));
 
         if (result)
         {
-            int32_t tmpD3 = 0;
-            tmpD3 = *(a1 + 0x6f4);
-            result = *(((*g_5690d8 * 0x180 + tmpD3) << 2) + &g_a96ae0);
+            int32_t temp_3 = 0;
+            temp_3 = *(context + 0x6f4);
+            result = *(((*g_5690d8 * 0x180 + temp_3) << 2) + &g_a96ae0);
 
             if (result)
-                return result(0, &v_8);
+                return result(0, &item_8);
         }
     }
 

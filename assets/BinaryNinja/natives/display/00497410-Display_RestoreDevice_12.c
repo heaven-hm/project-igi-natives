@@ -1,22 +1,22 @@
 // Original IGI.EXE function: Display_RestoreDevice_12 (VA 0x00497410; static CFG gate PASS, CFG score 1.000).
 #include "Display_RestoreDevice_12.h"
-int32_t Display_RestoreDevice_12(char* a1)
+int32_t Display_RestoreDevice_12(char* context)
 
 {
-    char* tmpD = a1;
+    char* temp_val = context;
     int32_t result = 0;
-    uint32_t srcS = 1;
-    char i = *tmpD;
+    uint32_t source_val = 1;
+    char i = *temp_val;
 
     while (i)
     {
         if (i >= 0x61 && i <= 0x7a)
-            *tmpD = i - 0x20;
+            *temp_val = i - 0x20;
 
-        result += *tmpD * srcS;
-        i = tmpD[1];
-        tmpD = &tmpD[1];
-        srcS = srcS + 0x13d;
+        result += *temp_val * source_val;
+        i = temp_val[1];
+        temp_val = &temp_val[1];
+        source_val = source_val + 0x13d;
     }
 
     return result;

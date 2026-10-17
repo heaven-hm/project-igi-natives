@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Light_RenderLensflare_9 (VA 0x0052C610; static CFG gate PASS, CFG score 0.952).
 #include "Light_RenderLensflare_9.h"
-struct status_msg* Light_RenderLensflare_9(void* a1, int32_t a2, int32_t a3)
+struct status_msg* Light_RenderLensflare_9(void* context, int32_t param_2, int32_t param_3)
 
 {
     int32_t kind = QHash_ValueGet();
@@ -10,28 +10,28 @@ struct status_msg* Light_RenderLensflare_9(void* a1, int32_t a2, int32_t a3)
     {
         int32_t kind_1;
         kind_1 = g_a8454c;
-        result = QTask_HandleInput(a1, kind_1, 0);
+        result = QTask_HandleInput(context, kind_1, 0);
     }
     else
     {
         QHash_ValueSet();
         kind = g_a8454c;
-        result = QTask_HandleInput(a1, kind, 0);
+        result = QTask_HandleInput(context, kind, 0);
         Sys_DispatchOpcode_2();
     }
 
-    result->sprite[0x9c] = a3;
-    result->sprite[0x9d] = *(&a3 + 1);
-    result->sprite[0x9e] = *(&a3 + 2);
-    result->sprite[0x9f] = *(&a3 + 3);
-    memcpy(&result->sprite[0x3c], a2, 0x18);
-    uint32_t valA4 = Script_ParseEnumReal32_8();
-    int32_t valA5 = 0;
-    valA5 = result->head[7];
-    int32_t valA6 = *(((valA4 * 0x180 + valA5) << 2) + &g_a96ae0);
+    result->sprite[0x9c] = param_3;
+    result->sprite[0x9d] = *(&param_3 + 1);
+    result->sprite[0x9e] = *(&param_3 + 2);
+    result->sprite[0x9f] = *(&param_3 + 3);
+    memcpy(&result->sprite[0x3c], param_2, 0x18);
+    uint32_t data_4 = Script_ParseEnumReal32_8();
+    int32_t data_5 = 0;
+    data_5 = result->head[7];
+    int32_t data_6 = *(((data_4 * 0x180 + data_5) << 2) + &g_a96ae0);
 
-    if (valA6)
-        valA6(result, 0);
+    if (data_6)
+        data_6(result, 0);
 
     return result;
 }

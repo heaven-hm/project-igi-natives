@@ -1,131 +1,131 @@
 // Original IGI.EXE function: Human_Cleanup_2 (VA 0x0045FA80; static CFG gate PASS, CFG score 0.889).
 #include "Human_Cleanup_2.h"
-void* Human_Cleanup_2(void* a1, int32_t* a2)
+void* Human_Cleanup_2(void* context, int32_t* param_2)
 
 {
-    void* result = DynObj_UpdateDynTree_4(a1);
+    void* result = DynObj_UpdateDynTree_4(context);
     void* result_2 = result;
-    void* tmpD = *a2;
-    result = *(a1 + 0xcf6);
-    double v_a0;
-    memcpy(&v_a0, result_2, 0x18);
-    double v_b8;
-    memcpy(&v_b8, tmpD + 0x20, 0x18);
-    double v_88 = v_b8 - v_a0;
-    double v_b0;
-    double v_98;
-    double v_80 = v_b0 - v_98;
-    double v_a8;
-    double v_90;
-    double v_78 = v_a8 - v_90;
+    void* temp_val = *param_2;
+    result = *(context + 0xcf6);
+    double item_a0;
+    memcpy(&item_a0, result_2, 0x18);
+    double item_b8;
+    memcpy(&item_b8, temp_val + 0x20, 0x18);
+    double item_88 = item_b8 - item_a0;
+    double item_b0;
+    double item_98;
+    double item_80 = item_b0 - item_98;
+    double item_a8;
+    double item_90;
+    double item_78 = item_a8 - item_90;
 
     if (result)
     {
-        long double x87_r7_6 = *(tmpD + 0x9c);
-        long double x87_r6_1 = *(tmpD + 0xa0);
-        x87_r6_1 - x87_r7_6;
-        long double x87_r7_7;
+        long double fpu_val_7_6 = *(temp_val + 0x9c);
+        long double fpu_val_6_1 = *(temp_val + 0xa0);
+        fpu_val_6_1 - fpu_val_7_6;
+        long double fpu_val_7_7;
 
-        if (!(*(&((x87_r6_1 < x87_r7_6 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_6) ? 1 : 0) << 0xa
-                | (x87_r6_1 == x87_r7_6 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_7 = *(tmpD + 0xa0);
+        if (!(*(&((fpu_val_6_1 < fpu_val_7_6 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_6) ? 1 : 0) << 0xa
+                | (fpu_val_6_1 == fpu_val_7_6 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_7 = *(temp_val + 0xa0);
         else
-            x87_r7_7 = *(tmpD + 0x9c);
+            fpu_val_7_7 = *(temp_val + 0x9c);
 
-        long double x87_r6_2 = *(tmpD + 0x98);
-        x87_r6_2 - x87_r7_7;
-        long double x87_r7_9;
+        long double fpu_val_6_2 = *(temp_val + 0x98);
+        fpu_val_6_2 - fpu_val_7_7;
+        long double fpu_val_7_9;
 
-        if (*(&((x87_r6_2 < x87_r7_7 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_7) ? 1 : 0) << 0xa
-            | (x87_r6_2 == x87_r7_7 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+        if (*(&((fpu_val_6_2 < fpu_val_7_7 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_7) ? 1 : 0) << 0xa
+            | (fpu_val_6_2 == fpu_val_7_7 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
         {
-            long double x87_r7_10 = *(tmpD + 0x9c);
-            long double x87_r6_3 = *(tmpD + 0xa0);
-            x87_r6_3 - x87_r7_10;
+            long double fpu_val_7_10 = *(temp_val + 0x9c);
+            long double fpu_val_6_3 = *(temp_val + 0xa0);
+            fpu_val_6_3 - fpu_val_7_10;
 
-            if (!(*(&((x87_r6_3 < x87_r7_10 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_3, x87_r7_10) ? 1 : 0) << 0xa
-                    | (x87_r6_3 == x87_r7_10 ? 1 : 0) << 0xe) + 1) & 1))
-                x87_r7_9 = *(tmpD + 0xa0);
+            if (!(*(&((fpu_val_6_3 < fpu_val_7_10 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_3, fpu_val_7_10) ? 1 : 0) << 0xa
+                    | (fpu_val_6_3 == fpu_val_7_10 ? 1 : 0) << 0xe) + 1) & 1))
+                fpu_val_7_9 = *(temp_val + 0xa0);
             else
-                x87_r7_9 = *(tmpD + 0x9c);
+                fpu_val_7_9 = *(temp_val + 0x9c);
         }
         else
-            x87_r7_9 = *(tmpD + 0x98);
+            fpu_val_7_9 = *(temp_val + 0x98);
 
-        float v_e4_1 = x87_r7_9;
-        v_e4_1 = Render_ComputeNormals(*(tmpD + 0x6c)) * v_e4_1;
+        float item_e4_1 = fpu_val_7_9;
+        item_e4_1 = Render_ComputeNormals(*(temp_val + 0x6c)) * item_e4_1;
         long double fp0_2;
-        fp0_2 = Sys_OpenFileStream_11(&v_88);
-        long double f0_1 = v_e4_1;
+        fp0_2 = Sys_OpenFileStream_11(&item_88);
+        long double f0_1 = item_e4_1;
         fp0_2 - f0_1;
         result = (fp0_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fp0_2, f0_1) ? 1 : 0) << 0xa
             | (fp0_2 == f0_1 ? 1 : 0) << 0xe;
 
         if (*(&result + 1) & 0x41)
         {
-            double* v_dc = &v_a0;
-            double* v_d8_1 = &v_b8;
-            char v_d0 = 0xff;
-            int32_t v_cc_1 = 0;
-            void v_70;
-            void* v_bc_1 = &v_70;
-            int32_t v_d4_1 = 1;
-            int32_t v_c8_1 = 0;
-            int32_t v_c4_1 = 0;
-            int32_t v_c0;
-            __builtin_strncpy(&v_c0, "DCBA", 4);
+            double* item_dc = &item_a0;
+            double* item_d8_1 = &item_b8;
+            char item_d0 = 0xff;
+            int32_t item_cc_1 = 0;
+            void item_70;
+            void* item_bc_1 = &item_70;
+            int32_t item_d4_1 = 1;
+            int32_t item_c8_1 = 0;
+            int32_t item_c4_1 = 0;
+            int32_t item_c0;
+            strncpy(&item_c0, "DCBA", 4);
             void* result_1 = nullptr;
-            int32_t v_24_1 = 0;
-            int32_t v_20_1 = 0;
-            int16_t valA2 = DynObj_LookupHashItem_5();
-            (*((valA2 << 2) + &g_a9a0e0))(*a2, &v_dc);
+            int32_t item_24_1 = 0;
+            int32_t item_20_1 = 0;
+            int16_t data_2 = DynObj_LookupHashItem_5();
+            (*((data_2 << 2) + &g_a9a0e0))(*param_2, &item_dc);
             result = result_1;
 
-            if (!result || v_20_1)
+            if (!result || item_20_1)
             {
-                float* valA5 = a2[1];
-                float v_e4_2 = 0f;
-                long double x87_r7_14 = valA5[2];
-                long double x87_r6_4 = valA5[1];
-                long double x87_r5_1 = *valA5;
-                long double x87_r4_5 =
-                    sqrtl(x87_r6_4 * x87_r6_4 + x87_r7_14 * x87_r7_14 + x87_r5_1 * x87_r5_1);
-                long double f1_1 = 50f;
-                x87_r4_5 - f1_1;
+                float* data_5 = param_2[1];
+                float item_e4_2 = 0.0f;
+                long double fpu_val_7_14 = data_5[2];
+                long double fpu_val_6_4 = data_5[1];
+                long double fpu_val_5_1 = *data_5;
+                long double fpu_val_4_5 =
+                    sqrtl(fpu_val_6_4 * fpu_val_6_4 + fpu_val_7_14 * fpu_val_7_14 + fpu_val_5_1 * fpu_val_5_1);
+                long double f1_1 = 50.0f;
+                fpu_val_4_5 - f1_1;
 
-                if (!(*(&((x87_r4_5 < f1_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r4_5, f1_1) ? 1 : 0) << 0xa
-                        | (x87_r4_5 == f1_1 ? 1 : 0) << 0xe) + 1) & 1))
-                    v_e4_2 = 10000f;
+                if (!(*(&((fpu_val_4_5 < f1_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_4_5, f1_1) ? 1 : 0) << 0xa
+                        | (fpu_val_4_5 == f1_1 ? 1 : 0) << 0xe) + 1) & 1))
+                    item_e4_2 = 10000.0f;
 
-                *(a1 + 0x2e8) = 0xd;
-                char valA7 = AI_CheckHearing_19(a1);
+                *(context + 0x2e8) = 0xd;
+                char data_7 = AI_CheckHearing_19(context);
 
-                if (valA7)
+                if (data_7)
                     result = Human_HitDamage();
 
-                if (!valA7 || !result)
+                if (!data_7 || !result)
                 {
-                    result = *(a1 + 0x800);
+                    result = *(context + 0x800);
 
                     if (!result || !*(result + 0x3abc))
                     {
-                        *(a1 + 0x2c8) = v_e4_2 + *(a1 + 0x2c8);
-                        long double x87_r7_19 = v_e4_2 + *(a1 + 0x254);
-                        *(a1 + 0x254) = x87_r7_19;
-                        long double f2_1 = *(a1 + 0x258);
-                        x87_r7_19 - f2_1;
-                        result = (x87_r7_19 < f2_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_19, f2_1) ? 1 : 0) << 0xa
-                            | (x87_r7_19 == f2_1 ? 1 : 0) << 0xe;
+                        *(context + 0x2c8) = item_e4_2 + *(context + 0x2c8);
+                        long double fpu_val_7_19 = item_e4_2 + *(context + 0x254);
+                        *(context + 0x254) = fpu_val_7_19;
+                        long double f2_1 = *(context + 0x258);
+                        fpu_val_7_19 - f2_1;
+                        result = (fpu_val_7_19 < f2_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_19, f2_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_19 == f2_1 ? 1 : 0) << 0xe;
 
                         if (!(*(&result + 1) & 1))
                         {
-                            int32_t valA8 = *(a1 + 0x2f4);
-                            *(a1 + 0xcf5) = 1;
-                            result = valA8 | 0x20000;
-                            *(a1 + 0x2f4) = result;
+                            int32_t data_8 = *(context + 0x2f4);
+                            *(context + 0xcf5) = 1;
+                            result = data_8 | 0x20000;
+                            *(context + 0x2f4) = result;
                         }
                     }
                 }

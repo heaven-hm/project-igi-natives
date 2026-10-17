@@ -1,70 +1,70 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_19 (VA 0x004A9FC1; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_19.h"
-uint32_t __fastcall Camera_SetFieldOfView_19(int32_t a1)
+uint32_t __fastcall Camera_SetFieldOfView_19(int32_t context)
 
 {
-    int32_t v_8 = a1;
+    int32_t item_8 = context;
     uint32_t arg_4;
 
     if (!g_9361e4)
     {
-        uint32_t valA1 = arg_4;
+        uint32_t data_1 = arg_4;
 
-        if (valA1 >= 0x41 && valA1 <= 0x5a)
-            return valA1 + 0x20;
+        if (data_1 >= 0x41 && data_1 <= 0x5a)
+            return data_1 + 0x20;
 
-        return valA1;
+        return data_1;
     }
 
-    uint32_t ctxB1 = arg_4;
-    BOOL valA2;
+    uint32_t context_1 = arg_4;
+    BOOL data_2;
 
-    if (ctxB1 < 0x100)
+    if (context_1 < 0x100)
     {
         if (g_54427c <= 1)
         {
-            wchar16 (* valA3)[0x21] = g_544070;
-            valA3 = (*valA3)[ctxB1];
-            valA2 = valA3 & 1;
+            wchar16 (* data_3)[0x21] = g_544070;
+            data_3 = (*data_3)[context_1];
+            data_2 = data_3 & 1;
         }
         else
         {
-            uint32_t v_1c_1 = ctxB1;
-            int32_t valA;
+            uint32_t item_1c_1 = context_1;
+            int32_t data_val;
             int32_t entry_edx;
-            valA2 = Camera_ApplyBandFilter_12(valA, entry_edx, a1, 1);
+            data_2 = Camera_ApplyBandFilter_12(data_val, entry_edx, context, 1);
         }
     }
 
-    if (ctxB1 >= 0x100 || valA2)
+    if (context_1 >= 0x100 || data_2)
     {
-        char valA5 = ctxB1 >> 8;
-        void* valA6;
+        char data_5 = context_1 >> 8;
+        void* data_6;
 
-        if (!(*(&(**&g_544070)[valA5] + 1) & 0x80))
+        if (!(*(&(**&g_544070)[data_5] + 1) & 0x80))
         {
             *(&arg_4 + 1) = 0;
-            arg_4 = ctxB1;
-            valA6 = 1;
+            arg_4 = context_1;
+            data_6 = 1;
         }
         else
         {
             *(&arg_4 + 2) = 0;
-            arg_4 = valA5;
-            *(&arg_4 + 1) = ctxB1;
-            valA6 = 2;
+            arg_4 = data_5;
+            *(&arg_4 + 1) = context_1;
+            data_6 = 2;
         }
 
-        int32_t valA7 = Camera_UpdateViewCone_27(g_9361e4, 0x100, &arg_4, valA6, &v_8, 3, 0, 1);
+        int32_t data_7 = Camera_UpdateViewCone_27(g_9361e4, 0x100, &arg_4, data_6, &item_8, 3, 0, 1);
 
-        if (valA7)
+        if (data_7)
         {
-            if (valA7 != 1)
-                return *(&v_8 + 1) << 8 | v_8;
+            if (data_7 != 1)
+                return *(&item_8 + 1) << 8 | item_8;
 
-            return v_8;
+            return item_8;
         }
     }
 
-    return ctxB1;
+    return context_1;
 }

@@ -7,10 +7,10 @@ int32_t Camera_Kernel32()
 
     if (hModule)
     {
-        int32_t valA = GetProcAddress(hModule, "IsProcessorFeaturePresent");
+        int32_t data_val = GetProcAddress(hModule, "IsProcessorFeaturePresent");
 
-        if (valA)
-            return valA(0);
+        if (data_val)
+            return data_val(0);
     }
 
     /* tailcall */

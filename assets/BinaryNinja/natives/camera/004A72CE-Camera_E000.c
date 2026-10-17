@@ -1,85 +1,85 @@
 // Original IGI.EXE function: Camera_E000 (VA 0x004A72CE; static CFG gate PASS, CFG score 1.000).
 #include "Camera_E000.h"
-char* Camera_E000(double* a1, char* a2, void* a3, int32_t a4)
+char* Camera_E000(double* context, char* param_2, void* param_3, int32_t param_4)
 
 {
-    void* ctxB;
-    int32_t* srcS;
+    void* context_val;
+    int32_t* source_val;
 
     if (!g_9361c4)
     {
-        int32_t __saved_edi_2;
-        int32_t __saved_edi_1 = __saved_edi_2;
-        int32_t __saved_edi_3 = __saved_edi_2;
-        __saved_edi_3 = *a1;
+        int32_t saved_edi_2;
+        int32_t saved_edi_1 = saved_edi_2;
+        int32_t saved_edi_3 = saved_edi_2;
+        saved_edi_3 = *context;
         Camera_SetFieldOfView_26();
-        ctxB = a3;
-        srcS = &g_936238;
-        int32_t valA3 = 0;
-        valA3 = g_936238 == 0x2d;
-        void* objC4 = nullptr;
-        objC4 = ctxB > 0;
-        Camera_UpdateTransform_26(objC4 + &a2[valA3], ctxB + 1, &g_936238);
+        context_val = param_3;
+        source_val = &g_936238;
+        int32_t data_3 = 0;
+        data_3 = g_936238 == 0x2d;
+        void* entity_4 = nullptr;
+        entity_4 = context_val > 0;
+        Camera_UpdateTransform_26(entity_4 + &param_2[data_3], context_val + 1, &g_936238);
     }
     else
     {
-        ctxB = a3;
-        int32_t* valA = g_9361c0;
-        int32_t objC = 0;
-        srcS = valA;
-        objC = ctxB > 0;
-        void* objC1 = nullptr;
-        objC1 = *valA == 0x2d;
-        Camera_ApplyBandFilter_11(objC1 + a2, objC);
+        context_val = param_3;
+        int32_t* data_val = g_9361c0;
+        int32_t entity_val = 0;
+        source_val = data_val;
+        entity_val = context_val > 0;
+        void* entity_1 = nullptr;
+        entity_1 = *data_val == 0x2d;
+        Camera_ApplyBandFilter_11(entity_1 + param_2, entity_val);
     }
 
-    char* valA4 = a2;
+    char* data_4 = param_2;
 
-    if (*srcS == 0x2d)
+    if (*source_val == 0x2d)
     {
-        *valA4 = 0x2d;
-        valA4 = &valA4[1];
+        *data_4 = 0x2d;
+        data_4 = &data_4[1];
     }
 
-    if (ctxB > 0)
+    if (context_val > 0)
     {
-        *valA4 = valA4[1];
-        valA4 = &valA4[1];
-        *valA4 = g_544280;
+        *data_4 = data_4[1];
+        data_4 = &data_4[1];
+        *data_4 = g_544280;
     }
 
-    void* const objC7 = nullptr;
-    objC7 = !g_9361c4;
-    char* valA5 = Camera_ApplyLineFilter_20(objC7 + valA4 + ctxB, "e+000");
+    void* const entity_7 = nullptr;
+    entity_7 = !g_9361c4;
+    char* data_5 = Camera_ApplyLineFilter_20(entity_7 + data_4 + context_val, "e+000");
 
-    if (a4)
-        *valA5 = 0x45;
+    if (param_4)
+        *data_5 = 0x45;
 
-    if (*srcS[3] != 0x30)
+    if (*source_val[3] != 0x30)
     {
-        int32_t ctxB1 = srcS[1];
-        int32_t ctxB2 = ctxB1 - 1;
+        int32_t context_1 = source_val[1];
+        int32_t context_2 = context_1 - 1;
 
-        if (ctxB1 - 1 < 0)
+        if (context_1 - 1 < 0)
         {
-            ctxB2 = -(ctxB2);
-            valA5[1] = 0x2d;
+            context_2 = -(context_2);
+            data_5[1] = 0x2d;
         }
 
-        if (ctxB2 >= 0x64)
+        if (context_2 >= 0x64)
         {
-            valA5[2] += ctxB2 / 0x64;
-            ctxB2 = ctxB2 % 0x64;
+            data_5[2] += context_2 / 0x64;
+            context_2 = context_2 % 0x64;
         }
 
-        if (ctxB2 >= 0xa)
+        if (context_2 >= 0xa)
         {
-            valA5[3] += ctxB2 / 0xa;
-            ctxB2 = ctxB2 % 0xa;
+            data_5[3] += context_2 / 0xa;
+            context_2 = context_2 % 0xa;
         }
 
-        valA5[4] += ctxB2;
+        data_5[4] += context_2;
     }
 
-    return a2;
+    return param_2;
 }

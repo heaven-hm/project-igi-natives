@@ -5,7 +5,7 @@ int32_t SoundSys_PlaySoundSample_4()
 {
     g_b015c8 = QTask_UnableToAllocateEvent(0);
     int32_t i = 0;
-    __builtin_memset(0xa5e464, 0, 0x180);
+    memset(0xa5e464, 0, 0x180);
     int32_t flagP = 0;
 
     do
@@ -48,15 +48,15 @@ int32_t SoundSys_PlaySoundSample_4()
             {
                 result = 1;
                 result = 1 << (j_1[0xffffffff] & 0x1f);
-                char tmpD4 = 1 << (j_1[2] & 0x1f) | result;
+                char temp_4 = 1 << (j_1[2] & 0x1f) | result;
                 result = 1;
                 result = 1 << (j_1[1] & 0x1f);
-                tmpD4 |= result;
+                temp_4 |= result;
                 result = 1;
                 result = 1 << (*j_1 & 0x1f);
-                tmpD4 |= result;
+                temp_4 |= result;
                 result = *(i_1 + 0xa5e424);
-                result |= tmpD4;
+                result |= temp_4;
                 *(i_1 + 0xa5e424) = result;
             }
 

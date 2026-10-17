@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_8 (VA 0x004A60E8; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_8.h"
-int32_t __fastcall Camera_SetFieldOfView_8(int32_t a1)
+int32_t __fastcall Camera_SetFieldOfView_8(int32_t context)
 
 {
-    int32_t v_8 = a1;
-    int32_t v_c = a1;
+    int32_t item_8 = context;
+    int32_t item_c = context;
 
     if (!g_c32548)
         Camera_SetFieldOfView_20();
 
     GetModuleFileNameA(nullptr, &g_9360b4, 0x104);
-    char* valA = g_c32554;
+    char* data_val = g_c32554;
     g_93609c = &g_9360b4;
-    char* dstD = &g_9360b4;
+    char* dest_val = &g_9360b4;
 
-    if (*valA)
-        dstD = valA;
+    if (*data_val)
+        dest_val = data_val;
 
-    Camera_ApplyLineFilter_8(dstD, nullptr, nullptr, &v_8, &v_c);
-    int32_t* valA3 = Camera_ApplyHandiCam_20(v_c + (v_8 << 2));
+    Camera_ApplyLineFilter_8(dest_val, nullptr, nullptr, &item_8, &item_c);
+    int32_t* data_3 = Camera_ApplyHandiCam_20(item_c + (item_8 << 2));
 
-    if (!valA3)
+    if (!data_3)
         Camera_UpdateViewCone_3(8);
 
-    Camera_ApplyLineFilter_8(dstD, valA3, &valA3[v_8], &v_8, &v_c);
-    int32_t result = v_8 - 1;
-    g_936084 = valA3;
+    Camera_ApplyLineFilter_8(dest_val, data_3, &data_3[item_8], &item_8, &item_c);
+    int32_t result = item_8 - 1;
+    g_936084 = data_3;
     g_936080 = result;
     return result;
 }

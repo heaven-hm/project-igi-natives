@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004092A0 HumanPlayer_HandleInput_2 | gate PASS | openigi False */
-int HumanPlayer_HandleInput_2(void * a1, void * a2);
+int HumanPlayer_HandleInput_2(void * context, void * param_2);

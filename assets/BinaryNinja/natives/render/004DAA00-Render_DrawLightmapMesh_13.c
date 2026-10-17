@@ -4,10 +4,10 @@ int32_t Render_DrawLightmapMesh_13()
 
 {
     int32_t result = g_b03f90;
-    int32_t objC = g_b03df0;
+    int32_t entity_val = g_b03df0;
 
-    if (result == objC)
-        g_b03df0 = objC - 1;
+    if (result == entity_val)
+        g_b03df0 = entity_val - 1;
 
     g_b03f90 -= 1;
     return result;

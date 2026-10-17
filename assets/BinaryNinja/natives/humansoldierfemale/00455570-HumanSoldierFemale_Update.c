@@ -1,111 +1,111 @@
 // Original IGI.EXE function: HumanSoldierFemale_Update (VA 0x00455570; static CFG gate PASS, CFG score 1.000).
 #include "HumanSoldierFemale_Update.h"
-uint32_t HumanSoldierFemale_Update(void* a1, float a2)
+uint32_t HumanSoldierFemale_Update(void* context, float param_2)
 
 {
-    void* valA = *(a1 + 0x800);
+    void* data_val = *(context + 0x800);
 
-    if (*(a1 + 0xcf6) && (!valA || !*(valA + 0x3abc)))
+    if (*(context + 0xcf6) && (!data_val || !*(data_val + 0x3abc)))
     {
-        double v_30;
-        int32_t objC1 = AI_FireWeapon_23(&v_30, *(a1 + 0x4ec));
-        double* valA2 = *(a2 + 4);
-        double v_18 = *valA2 - v_30;
-        double v_28;
-        double v_10_1 = valA2[1] - v_28;
-        double v_20;
-        double v_8_1 = valA2[2] - v_20;
-        long double x87_r7_8 = Sys_OpenFileStream_11(&v_18) - *(a2 + 0xc) * 3f;
-        long double f0_1 = 0f;
-        x87_r7_8 - f0_1;
-        long double x87_r7_10;
+        double item_30;
+        int32_t entity_1 = AI_FireWeapon_23(&item_30, *(context + 0x4ec));
+        double* data_2 = *(param_2 + 4);
+        double item_18 = *data_2 - item_30;
+        double item_28;
+        double item_10_1 = data_2[1] - item_28;
+        double item_20;
+        double item_8_1 = data_2[2] - item_20;
+        long double fpu_val_7_8 = Sys_OpenFileStream_11(&item_18) - *(param_2 + 0xc) * 3.0f;
+        long double f0_1 = 0.0f;
+        fpu_val_7_8 - f0_1;
+        long double fpu_val_7_10;
 
-        if (!(*(&((x87_r7_8 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_8, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_8 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+        if (!(*(&((fpu_val_7_8 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_8, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_8 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
         {
-            x87_r7_10 = 1f - x87_r7_8 / (*(a2 + 0xc) * 6f);
-            long double f1_1 = 0f;
-            x87_r7_10 - f1_1;
+            fpu_val_7_10 = 1.0f - fpu_val_7_8 / (*(param_2 + 0xc) * 6.0f);
+            long double f1_1 = 0.0f;
+            fpu_val_7_10 - f1_1;
 
-            if (!(*(&((x87_r7_10 < f1_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_10, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_10 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+            if (!(*(&((fpu_val_7_10 < f1_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_10, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_10 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
             {
-                long double f2_1 = 0f;
-                x87_r7_10 - f2_1;
+                long double f2_1 = 0.0f;
+                fpu_val_7_10 - f2_1;
 
-                if (!(*(&((x87_r7_10 < f2_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_10, f2_1) ? 1 : 0) << 0xa
-                        | (x87_r7_10 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x40))
+                if (!(*(&((fpu_val_7_10 < f2_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_10, f2_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_10 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x40))
                     goto label_455645;
             }
         }
         else
         {
-            x87_r7_10 = 1f;
+            fpu_val_7_10 = 1.0f;
         label_455645:
-            int32_t v_48_2 = objC1;
-            int32_t v_4c_2 = objC1;
-            AI_CheckSector_23(*(a1 + 0x4ec), x87_r7_10 * 204.800003f, x87_r7_10 * 0.0261799395f,
-                *(a2 + 0x14));
+            int32_t item_48_2 = entity_1;
+            int32_t item_4c_2 = entity_1;
+            AI_CheckSector_23(*(context + 0x4ec), fpu_val_7_10 * 204.800003f, fpu_val_7_10 * 0.0261799395f,
+                *(param_2 + 0x14));
         }
-        *(a1 + 0x2e8) = 0xd;
-        int32_t v_44_3 = 1;
-        int32_t v_48_5 = FX_FragmentSimulate_14(a1 + 0x254, 0xd);
-        void* v_50_2 = a1;
+        *(context + 0x2e8) = 0xd;
+        int32_t item_44_3 = 1;
+        int32_t item_48_5 = FX_FragmentSimulate_14(context + 0x254, 0xd);
+        void* item_50_2 = context;
         long double fp0_2;
-        fp0_2 = Level_CheckQTaskID_5(a2, a1 + 0x20, *(a1 + 0xa0) * 0.333333343f);
-        long double f3_1 = 0f;
+        fp0_2 = Level_CheckQTaskID_5(param_2, context + 0x20, *(context + 0xa0) * 0.333333343f);
+        long double f3_1 = 0.0f;
         fp0_2 - f3_1;
-        valA = (fp0_2 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fp0_2, f3_1) ? 1 : 0) << 0xa
+        data_val = (fp0_2 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fp0_2, f3_1) ? 1 : 0) << 0xa
             | (fp0_2 == f3_1 ? 1 : 0) << 0xe | 0x3800;
 
-        if (!(*(&valA + 1) & 0x40))
+        if (!(*(&data_val + 1) & 0x40))
         {
-            long double x87_r7_17 = fp0_2 * *(a1 + 0x2cc);
-            *(a1 + 0x2c8) = x87_r7_17 + *(a1 + 0x2c8);
-            *(a1 + 0x254) = x87_r7_17 + *(a1 + 0x254);
-            void* objC4 = *(a1 + 0x2f4);
-            long double x87_r7_18 = x87_r7_17 + *(a1 + 0xd08);
-            *(a1 + 0xd08) = x87_r7_18;
-            long double x87_r6_11 = *(a1 + 0x254);
-            long double f4 = *(a1 + 0x258);
-            x87_r6_11 - f4;
-            valA = (x87_r6_11 < f4 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_11, f4) ? 1 : 0) << 0xa
-                | (x87_r6_11 == f4 ? 1 : 0) << 0xe | 0x3800;
+            long double fpu_val_7_17 = fp0_2 * *(context + 0x2cc);
+            *(context + 0x2c8) = fpu_val_7_17 + *(context + 0x2c8);
+            *(context + 0x254) = fpu_val_7_17 + *(context + 0x254);
+            void* entity_4 = *(context + 0x2f4);
+            long double fpu_val_7_18 = fpu_val_7_17 + *(context + 0xd08);
+            *(context + 0xd08) = fpu_val_7_18;
+            long double fpu_val_6_11 = *(context + 0x254);
+            long double f4 = *(context + 0x258);
+            fpu_val_6_11 - f4;
+            data_val = (fpu_val_6_11 < f4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_11, f4) ? 1 : 0) << 0xa
+                | (fpu_val_6_11 == f4 ? 1 : 0) << 0xe | 0x3800;
 
-            if (!(*(&valA + 1) & 1))
+            if (!(*(&data_val + 1) & 1))
             {
-                long double x87_r7_20 = *(a1 + 0x20);
-                *(a1 + 0xd18) = 0;
-                objC4 |= 0x20000;
-                *(a1 + 0xd20) = x87_r7_20 - **(a2 + 4);
-                valA = *(a2 + 4);
-                *(a1 + 0xd28) = *(a1 + 0x28) - *(valA + 8);
-                long double x87_r7_25 = *(a1 + 0x30) - *(*(a2 + 4) + 0x10);
-                *(a1 + 0xcf5) = 1;
-                *(a1 + 0xd30) = x87_r7_25;
+                long double fpu_val_7_20 = *(context + 0x20);
+                *(context + 0xd18) = 0;
+                entity_4 |= 0x20000;
+                *(context + 0xd20) = fpu_val_7_20 - **(param_2 + 4);
+                data_val = *(param_2 + 4);
+                *(context + 0xd28) = *(context + 0x28) - *(data_val + 8);
+                long double fpu_val_7_25 = *(context + 0x30) - *(*(param_2 + 4) + 0x10);
+                *(context + 0xcf5) = 1;
+                *(context + 0xd30) = fpu_val_7_25;
             }
             else
             {
-                long double f5_1 = *(a1 + 0xd04);
-                x87_r7_18 - f5_1;
-                valA = (x87_r7_18 < f5_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_18, f5_1) ? 1 : 0) << 0xa
-                    | (x87_r7_18 == f5_1 ? 1 : 0) << 0xe;
+                long double f5_1 = *(context + 0xd04);
+                fpu_val_7_18 - f5_1;
+                data_val = (fpu_val_7_18 < f5_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_18, f5_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_18 == f5_1 ? 1 : 0) << 0xe;
 
-                if (!(*(&valA + 1) & 0x41))
+                if (!(*(&data_val + 1) & 0x41))
                 {
-                    uint32_t valA6 = AI_MoveToNode_21(a1, "ai_xplhit_", 3);
-                    *(a1 + 0xd08) = 0;
-                    *(a1 + 0x2f4) = objC4;
-                    return valA6;
+                    uint32_t data_6 = AI_MoveToNode_21(context, "ai_xplhit_", 3);
+                    *(context + 0xd08) = 0;
+                    *(context + 0x2f4) = entity_4;
+                    return data_6;
                 }
             }
 
-            *(a1 + 0x2f4) = objC4;
+            *(context + 0x2f4) = entity_4;
         }
     }
 
-    return valA;
+    return data_val;
 }

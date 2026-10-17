@@ -1,863 +1,863 @@
 // Original IGI.EXE function: Physics_CalculateSplineLength_13 (VA 0x0050BF20; static CFG gate FAIL, CFG score 0.754).
 #include "Physics_CalculateSplineLength_13.h"
-int32_t Physics_CalculateSplineLength_13(float a1 @ 0xc, int32_t a2 @ 0x28, float a3 @ 0x34, int32_t a4 @ 0x50, float a5 @ 0x5c, int32_t a6 @ 0x78, int32_t a7, int32_t a8, int32_t a9)
+int32_t Physics_CalculateSplineLength_13(float context , int32_t param_2 , float param_3 , int32_t param_4 , float param_5 , int32_t param_6 , int32_t param_7, int32_t param_8, int32_t param_9)
 
 {
     void arg_54;
-    void* v_a8 = &arg_54;
-    int32_t tmpD = a2;
+    void* item_a8 = &arg_54;
+    int32_t temp_val = param_2;
     void arg_2c;
-    void* v_ac = &arg_2c;
-    int32_t objC = a4;
+    void* item_ac = &arg_2c;
+    int32_t entity_val = param_4;
     g_a7da08 += 1;
     void arg_4;
-    void* v_b0 = &arg_4;
-    int32_t valA = a6;
-    char ctxB4 = tmpD | objC | valA;
-    int32_t srcS2 = tmpD & objC & valA;
-    int32_t v_dc = srcS2;
+    void* item_b0 = &arg_4;
+    int32_t data_val = param_6;
+    char context_4 = temp_val | entity_val | data_val;
+    int32_t source_2 = temp_val & entity_val & data_val;
+    int32_t item_dc = source_2;
 
-    if (!srcS2 && !(ctxB4 & 0x10))
+    if (!source_2 && !(context_4 & 0x10))
     {
-        void v_170;
-        void v_148;
-        void v_120;
-        float v_d8;
-        float v_d4;
-        float v_d0;
-        float v_cc;
-        float v_c8;
-        float v_c4;
-        float v_c0;
-        float v_bc;
-        float v_b8;
-        int32_t v_b4;
+        void item_170;
+        void item_148;
+        void item_120;
+        float item_d8;
+        float item_d4;
+        float item_d0;
+        float item_cc;
+        float item_c8;
+        float item_c4;
+        float item_c0;
+        float item_bc;
+        float item_b8;
+        int32_t item_b4;
 
-        if (ctxB4 & 1)
+        if (context_4 & 1)
         {
-            int32_t tmpD1 = tmpD & 1;
-            int32_t objC1 = objC & 1;
+            int32_t temp_1 = temp_val & 1;
+            int32_t entity_1 = entity_val & 1;
 
-            if ((valA & 1) + tmpD1 + objC1 != 2)
+            if ((data_val & 1) + temp_1 + entity_1 != 2)
             {
-                float* valA19;
-                float* tmpD4;
+                float* data_19;
+                float* temp_4;
                 float* flagP1;
 
-                if (tmpD1)
+                if (temp_1)
                 {
-                    valA19 = &arg_2c;
-                    tmpD4 = &arg_54;
+                    data_19 = &arg_2c;
+                    temp_4 = &arg_54;
                     flagP1 = &arg_4;
                 }
-                else if (!objC1)
+                else if (!entity_1)
                 {
-                    valA19 = &arg_4;
-                    tmpD4 = &arg_2c;
+                    data_19 = &arg_4;
+                    temp_4 = &arg_2c;
                     flagP1 = &arg_54;
                 }
                 else
                 {
-                    valA19 = &arg_54;
-                    tmpD4 = &arg_4;
+                    data_19 = &arg_54;
+                    temp_4 = &arg_4;
                     flagP1 = &arg_2c;
                 }
 
-                long double x87_r7_84 = *flagP1 - *valA19;
-                long double x87_r6_9 = (g_bcabd0 - *valA19) / x87_r7_84;
-                memcpy(&v_d8, flagP1, 0x28);
-                float v_dc_3 = x87_r6_9;
-                *flagP1 = x87_r7_84 * v_dc_3 + *valA19;
-                flagP1[1] = (flagP1[1] - valA19[1]) * v_dc_3 + valA19[1];
-                flagP1[2] = (flagP1[2] - valA19[2]) * v_dc_3 + valA19[2];
-                flagP1[6] = (flagP1[6] - valA19[6]) * v_dc_3 + valA19[6];
-                flagP1[7] = (flagP1[7] - valA19[7]) * v_dc_3 + valA19[7];
-                flagP1[8] = (flagP1[8] - valA19[8]) * v_dc_3 + valA19[8];
-                flagP1[3] = (flagP1[3] - valA19[3]) * v_dc_3 + valA19[3];
-                flagP1[4] = (flagP1[4] - valA19[4]) * v_dc_3 + valA19[4];
-                flagP1[5] = (flagP1[5] - valA19[5]) * v_dc_3 + valA19[5];
-                long double x87_r7_119 = flagP1[1];
+                long double fpu_val_7_84 = *flagP1 - *data_19;
+                long double fpu_val_6_9 = (g_bcabd0 - *data_19) / fpu_val_7_84;
+                memcpy(&item_d8, flagP1, 0x28);
+                float item_dc_3 = fpu_val_6_9;
+                *flagP1 = fpu_val_7_84 * item_dc_3 + *data_19;
+                flagP1[1] = (flagP1[1] - data_19[1]) * item_dc_3 + data_19[1];
+                flagP1[2] = (flagP1[2] - data_19[2]) * item_dc_3 + data_19[2];
+                flagP1[6] = (flagP1[6] - data_19[6]) * item_dc_3 + data_19[6];
+                flagP1[7] = (flagP1[7] - data_19[7]) * item_dc_3 + data_19[7];
+                flagP1[8] = (flagP1[8] - data_19[8]) * item_dc_3 + data_19[8];
+                flagP1[3] = (flagP1[3] - data_19[3]) * item_dc_3 + data_19[3];
+                flagP1[4] = (flagP1[4] - data_19[4]) * item_dc_3 + data_19[4];
+                flagP1[5] = (flagP1[5] - data_19[5]) * item_dc_3 + data_19[5];
+                long double fpu_val_7_119 = flagP1[1];
                 long double f3_1 = g_bcabd4;
-                x87_r7_119 - f3_1;
-                int32_t srcS8;
+                fpu_val_7_119 - f3_1;
+                int32_t source_8;
 
-                srcS8 = !(*(&((x87_r7_119 < f3_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_119, f3_1) ? 1 : 0) << 0xa
-                    | (x87_r7_119 == f3_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                source_8 = !(*(&((fpu_val_7_119 < f3_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_119, f3_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_119 == f3_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_121 = g_bcabd8 + 1f;
+                long double fpu_val_7_121 = g_bcabd8 + 1.0f;
                 long double f8_1 = *flagP1;
-                x87_r7_121 - f8_1;
-                int32_t objC3;
+                fpu_val_7_121 - f8_1;
+                int32_t entity_3;
 
-                objC3 = !(*(&((x87_r7_121 < f8_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_121, f8_1) ? 1 : 0) << 0xa
-                    | (x87_r7_121 == f8_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                entity_3 = !(*(&((fpu_val_7_121 < f8_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_121, f8_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_121 == f8_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_123 = g_bcabdc + 1f;
+                long double fpu_val_7_123 = g_bcabdc + 1.0f;
                 long double f15_1 = flagP1[1];
-                x87_r7_123 - f15_1;
-                int32_t valA21;
+                fpu_val_7_123 - f15_1;
+                int32_t data_21;
 
-                valA21 = !(*(&((x87_r7_123 < f15_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_123, f15_1) ? 1 : 0) << 0xa
-                    | (x87_r7_123 == f15_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                data_21 = !(*(&((fpu_val_7_123 < f15_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_123, f15_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_123 == f15_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_124 = v_d8;
-                flagP1[9] = (((valA21 * 2) | objC3) << 1 | srcS8) << 1;
-                long double x87_r7_125 = x87_r7_124 - *tmpD4;
-                float v_dc_4 = (g_bcabd0 - *tmpD4) / x87_r7_125;
-                long double x87_r7_127 = x87_r7_125 * v_dc_4 + *tmpD4;
-                v_d8 = x87_r7_127;
-                long double x87_r6_16 = (v_d4 - tmpD4[1]) * v_dc_4 + tmpD4[1];
-                v_d4 = x87_r6_16;
-                v_d0 = (v_d0 - tmpD4[2]) * v_dc_4 + tmpD4[2];
-                v_c0 = (v_c0 - tmpD4[6]) * v_dc_4 + tmpD4[6];
-                v_bc = (v_bc - tmpD4[7]) * v_dc_4 + tmpD4[7];
-                v_b8 = (v_b8 - tmpD4[8]) * v_dc_4 + tmpD4[8];
-                v_cc = (v_cc - tmpD4[3]) * v_dc_4 + tmpD4[3];
-                v_c8 = (v_c8 - tmpD4[4]) * v_dc_4 + tmpD4[4];
-                v_c4 = (v_c4 - tmpD4[5]) * v_dc_4 + tmpD4[5];
+                long double fpu_val_7_124 = item_d8;
+                flagP1[9] = (((data_21 * 2) | entity_3) << 1 | source_8) << 1;
+                long double fpu_val_7_125 = fpu_val_7_124 - *temp_4;
+                float item_dc_4 = (g_bcabd0 - *temp_4) / fpu_val_7_125;
+                long double fpu_val_7_127 = fpu_val_7_125 * item_dc_4 + *temp_4;
+                item_d8 = fpu_val_7_127;
+                long double fpu_val_6_16 = (item_d4 - temp_4[1]) * item_dc_4 + temp_4[1];
+                item_d4 = fpu_val_6_16;
+                item_d0 = (item_d0 - temp_4[2]) * item_dc_4 + temp_4[2];
+                item_c0 = (item_c0 - temp_4[6]) * item_dc_4 + temp_4[6];
+                item_bc = (item_bc - temp_4[7]) * item_dc_4 + temp_4[7];
+                item_b8 = (item_b8 - temp_4[8]) * item_dc_4 + temp_4[8];
+                item_cc = (item_cc - temp_4[3]) * item_dc_4 + temp_4[3];
+                item_c8 = (item_c8 - temp_4[4]) * item_dc_4 + temp_4[4];
+                item_c4 = (item_c4 - temp_4[5]) * item_dc_4 + temp_4[5];
                 long double f20_1 = g_bcabd4;
-                x87_r6_16 - f20_1;
-                int32_t srcS9;
+                fpu_val_6_16 - f20_1;
+                int32_t source_9;
 
-                srcS9 = !(*(&((x87_r6_16 < f20_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_16, f20_1) ? 1 : 0) << 0xa
-                    | (x87_r6_16 == f20_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+                source_9 = !(*(&((fpu_val_6_16 < f20_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_16, f20_1) ? 1 : 0) << 0xa
+                    | (fpu_val_6_16 == f20_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-                long double x87_r6_18 = g_bcabd8 + 1f;
-                x87_r7_127 - x87_r6_18;
-                int32_t objC4;
+                long double fpu_val_6_18 = g_bcabd8 + 1.0f;
+                fpu_val_7_127 - fpu_val_6_18;
+                int32_t entity_4;
 
-                objC4 = *(&((x87_r7_127 < x87_r6_18 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_127, x87_r6_18) ? 1 : 0) << 0xa
-                    | (x87_r7_127 == x87_r6_18 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
+                entity_4 = *(&((fpu_val_7_127 < fpu_val_6_18 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_127, fpu_val_6_18) ? 1 : 0) << 0xa
+                    | (fpu_val_7_127 == fpu_val_6_18 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
 
-                long double x87_r7_130 = g_bcabdc + 1f;
-                long double f23_1 = v_d4;
-                x87_r7_130 - f23_1;
-                int32_t valA28;
+                long double fpu_val_7_130 = g_bcabdc + 1.0f;
+                long double f23_1 = item_d4;
+                fpu_val_7_130 - f23_1;
+                int32_t data_28;
 
-                valA28 = !(*(&((x87_r7_130 < f23_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_130, f23_1) ? 1 : 0) << 0xa
-                    | (x87_r7_130 == f23_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                data_28 = !(*(&((fpu_val_7_130 < f23_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_130, f23_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_130 == f23_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                v_b4 = (((valA28 * 2) | objC4) << 1 | srcS9) << 1;
-                int32_t v_f0_1 = a9;
-                ctxB4 = a2 | a4 | a6;
-                int32_t v_f4_1 = a8;
-                int32_t v_f8_1 = a7;
-                memcpy(&v_120, flagP1, 0x28);
-                memcpy(&v_148, &v_d8, 0x28);
-                memcpy(&v_170, tmpD4, 0x28);
+                item_b4 = (((data_28 * 2) | entity_4) << 1 | source_9) << 1;
+                int32_t item_f0_1 = param_9;
+                context_4 = param_2 | param_4 | param_6;
+                int32_t item_f4_1 = param_8;
+                int32_t item_f8_1 = param_7;
+                memcpy(&item_120, flagP1, 0x28);
+                memcpy(&item_148, &item_d8, 0x28);
+                memcpy(&item_170, temp_4, 0x28);
                 Physics_CalculateSplineLength_13();
-                valA = a6;
-                objC = a4;
-                tmpD = a2;
-                srcS2 = a2 & a4 & a6;
+                data_val = param_6;
+                entity_val = param_4;
+                temp_val = param_2;
+                source_2 = param_2 & param_4 & param_6;
             }
             else
             {
-                float* valA4;
-                float* objC2;
-                float* tmpD2;
-                float* srcS3;
+                float* data_4;
+                float* entity_2;
+                float* temp_2;
+                float* source_3;
 
-                if (!tmpD1)
+                if (!temp_1)
                 {
-                    valA4 = &arg_4;
-                    tmpD2 = &arg_4;
-                    srcS3 = &arg_2c;
-                    objC2 = &arg_54;
+                    data_4 = &arg_4;
+                    temp_2 = &arg_4;
+                    source_3 = &arg_2c;
+                    entity_2 = &arg_54;
                 }
-                else if (objC1)
+                else if (entity_1)
                 {
-                    valA4 = &arg_54;
-                    tmpD2 = &arg_54;
-                    srcS3 = &arg_4;
-                    objC2 = &arg_2c;
+                    data_4 = &arg_54;
+                    temp_2 = &arg_54;
+                    source_3 = &arg_4;
+                    entity_2 = &arg_2c;
                 }
                 else
                 {
-                    valA4 = &arg_2c;
-                    tmpD2 = &arg_2c;
-                    srcS3 = &arg_54;
-                    objC2 = &arg_4;
+                    data_4 = &arg_2c;
+                    temp_2 = &arg_2c;
+                    source_3 = &arg_54;
+                    entity_2 = &arg_4;
                 }
 
-                long double x87_r7_2 = *srcS3 - *valA4;
-                float v_dc_1 = (g_bcabd0 - *valA4) / x87_r7_2;
-                *srcS3 = x87_r7_2 * v_dc_1 + *valA4;
-                srcS3[1] = (srcS3[1] - valA4[1]) * v_dc_1 + valA4[1];
-                srcS3[2] = (srcS3[2] - valA4[2]) * v_dc_1 + valA4[2];
-                srcS3[6] = (srcS3[6] - valA4[6]) * v_dc_1 + valA4[6];
-                srcS3[7] = (srcS3[7] - valA4[7]) * v_dc_1 + valA4[7];
-                srcS3[8] = (srcS3[8] - valA4[8]) * v_dc_1 + valA4[8];
-                srcS3[3] = (srcS3[3] - valA4[3]) * v_dc_1 + valA4[3];
-                srcS3[4] = (srcS3[4] - valA4[4]) * v_dc_1 + valA4[4];
-                srcS3[5] = (srcS3[5] - valA4[5]) * v_dc_1 + valA4[5];
-                long double x87_r7_37 = srcS3[1];
+                long double fpu_val_7_2 = *source_3 - *data_4;
+                float item_dc_1 = (g_bcabd0 - *data_4) / fpu_val_7_2;
+                *source_3 = fpu_val_7_2 * item_dc_1 + *data_4;
+                source_3[1] = (source_3[1] - data_4[1]) * item_dc_1 + data_4[1];
+                source_3[2] = (source_3[2] - data_4[2]) * item_dc_1 + data_4[2];
+                source_3[6] = (source_3[6] - data_4[6]) * item_dc_1 + data_4[6];
+                source_3[7] = (source_3[7] - data_4[7]) * item_dc_1 + data_4[7];
+                source_3[8] = (source_3[8] - data_4[8]) * item_dc_1 + data_4[8];
+                source_3[3] = (source_3[3] - data_4[3]) * item_dc_1 + data_4[3];
+                source_3[4] = (source_3[4] - data_4[4]) * item_dc_1 + data_4[4];
+                source_3[5] = (source_3[5] - data_4[5]) * item_dc_1 + data_4[5];
+                long double fpu_val_7_37 = source_3[1];
                 long double f1_1 = g_bcabd4;
-                x87_r7_37 - f1_1;
-                int32_t ctxB5;
+                fpu_val_7_37 - f1_1;
+                int32_t context_5;
 
-                ctxB5 = !(*(&((x87_r7_37 < f1_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_37, f1_1) ? 1 : 0) << 0xa
-                    | (x87_r7_37 == f1_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                context_5 = !(*(&((fpu_val_7_37 < f1_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_37, f1_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_37 == f1_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_39 = g_bcabd8 + 1f;
-                long double f4_1 = *srcS3;
-                x87_r7_39 - f4_1;
-                int32_t dstD1;
+                long double fpu_val_7_39 = g_bcabd8 + 1.0f;
+                long double f4_1 = *source_3;
+                fpu_val_7_39 - f4_1;
+                int32_t dest_1;
 
-                dstD1 = !(*(&((x87_r7_39 < f4_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_39, f4_1) ? 1 : 0) << 0xa
-                    | (x87_r7_39 == f4_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                dest_1 = !(*(&((fpu_val_7_39 < f4_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_39, f4_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_39 == f4_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_41 = g_bcabdc + 1f;
-                long double f9_1 = srcS3[1];
-                x87_r7_41 - f9_1;
-                int32_t valA6;
+                long double fpu_val_7_41 = g_bcabdc + 1.0f;
+                long double f9_1 = source_3[1];
+                fpu_val_7_41 - f9_1;
+                int32_t data_6;
 
-                valA6 = !(*(&((x87_r7_41 < f9_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_41, f9_1) ? 1 : 0) << 0xa
-                    | (x87_r7_41 == f9_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                data_6 = !(*(&((fpu_val_7_41 < f9_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_41, f9_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_41 == f9_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                srcS3[9] = (((valA6 * 2) | dstD1) << 1 | ctxB5) << 1;
-                long double x87_r7_43 = *objC2 - *tmpD2;
-                float v_dc_2 = (g_bcabd0 - *tmpD2) / x87_r7_43;
-                *objC2 = x87_r7_43 * v_dc_2 + *tmpD2;
-                objC2[1] = (objC2[1] - tmpD2[1]) * v_dc_2 + tmpD2[1];
-                objC2[2] = (objC2[2] - tmpD2[2]) * v_dc_2 + tmpD2[2];
-                objC2[6] = (objC2[6] - tmpD2[6]) * v_dc_2 + tmpD2[6];
-                objC2[7] = (objC2[7] - tmpD2[7]) * v_dc_2 + tmpD2[7];
-                objC2[8] = (objC2[8] - tmpD2[8]) * v_dc_2 + tmpD2[8];
-                objC2[3] = (objC2[3] - tmpD2[3]) * v_dc_2 + tmpD2[3];
-                objC2[4] = (objC2[4] - tmpD2[4]) * v_dc_2 + tmpD2[4];
-                objC2[5] = (objC2[5] - tmpD2[5]) * v_dc_2 + tmpD2[5];
-                long double x87_r7_78 = objC2[1];
+                source_3[9] = (((data_6 * 2) | dest_1) << 1 | context_5) << 1;
+                long double fpu_val_7_43 = *entity_2 - *temp_2;
+                float item_dc_2 = (g_bcabd0 - *temp_2) / fpu_val_7_43;
+                *entity_2 = fpu_val_7_43 * item_dc_2 + *temp_2;
+                entity_2[1] = (entity_2[1] - temp_2[1]) * item_dc_2 + temp_2[1];
+                entity_2[2] = (entity_2[2] - temp_2[2]) * item_dc_2 + temp_2[2];
+                entity_2[6] = (entity_2[6] - temp_2[6]) * item_dc_2 + temp_2[6];
+                entity_2[7] = (entity_2[7] - temp_2[7]) * item_dc_2 + temp_2[7];
+                entity_2[8] = (entity_2[8] - temp_2[8]) * item_dc_2 + temp_2[8];
+                entity_2[3] = (entity_2[3] - temp_2[3]) * item_dc_2 + temp_2[3];
+                entity_2[4] = (entity_2[4] - temp_2[4]) * item_dc_2 + temp_2[4];
+                entity_2[5] = (entity_2[5] - temp_2[5]) * item_dc_2 + temp_2[5];
+                long double fpu_val_7_78 = entity_2[1];
                 long double f16_1 = g_bcabd4;
-                x87_r7_78 - f16_1;
-                int32_t srcS4;
+                fpu_val_7_78 - f16_1;
+                int32_t source_4;
 
-                srcS4 = !(*(&((x87_r7_78 < f16_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_78, f16_1) ? 1 : 0) << 0xa
-                    | (x87_r7_78 == f16_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                source_4 = !(*(&((fpu_val_7_78 < f16_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_78, f16_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_78 == f16_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_80 = g_bcabd8 + 1f;
-                long double f21_1 = *objC2;
-                x87_r7_80 - f21_1;
-                int32_t tmpD3;
+                long double fpu_val_7_80 = g_bcabd8 + 1.0f;
+                long double f21_1 = *entity_2;
+                fpu_val_7_80 - f21_1;
+                int32_t temp_3;
 
-                tmpD3 = !(*(&((x87_r7_80 < f21_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_80, f21_1) ? 1 : 0) << 0xa
-                    | (x87_r7_80 == f21_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                temp_3 = !(*(&((fpu_val_7_80 < f21_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_80, f21_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_80 == f21_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                long double x87_r7_82 = g_bcabdc + 1f;
-                long double f22_1 = objC2[1];
-                x87_r7_82 - f22_1;
-                int32_t valA13;
+                long double fpu_val_7_82 = g_bcabdc + 1.0f;
+                long double f22_1 = entity_2[1];
+                fpu_val_7_82 - f22_1;
+                int32_t data_13;
 
-                valA13 = !(*(&((x87_r7_82 < f22_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_82, f22_1) ? 1 : 0) << 0xa
-                    | (x87_r7_82 == f22_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                data_13 = !(*(&((fpu_val_7_82 < f22_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_82, f22_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_82 == f22_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                objC2[9] = (((valA13 * 2) | tmpD3) << 1 | srcS4) << 1;
-                tmpD = a2;
-                objC = a4;
-                valA = a6;
-                ctxB4 = tmpD | objC | valA;
-                srcS2 = tmpD & objC & valA;
+                entity_2[9] = (((data_13 * 2) | temp_3) << 1 | source_4) << 1;
+                temp_val = param_2;
+                entity_val = param_4;
+                data_val = param_6;
+                context_4 = temp_val | entity_val | data_val;
+                source_2 = temp_val & entity_val & data_val;
             }
         }
 
-        if (!srcS2)
+        if (!source_2)
         {
-            if (!(ctxB4 & 2))
+            if (!(context_4 & 2))
             {
             label_50ca39:
 
-                if (!(ctxB4 & 4))
+                if (!(context_4 & 4))
                 {
                 label_50cf06:
                     int32_t flagP6;
 
-                    if (ctxB4 & 8)
+                    if (context_4 & 8)
                     {
-                        int32_t tmpD13 = tmpD & 8;
-                        int32_t objC20 = objC & 8;
-                        int32_t valA89 = (valA & 8) + tmpD13 + objC20;
-                        valA89 &= 0xf8;
+                        int32_t temp_13 = temp_val & 8;
+                        int32_t entity_20 = entity_val & 8;
+                        int32_t data_89 = (data_val & 8) + temp_13 + entity_20;
+                        data_89 &= 0xf8;
 
-                        if (valA89 != 0x10)
+                        if (data_89 != 0x10)
                         {
-                            float* valA92;
-                            float* tmpD15;
-                            float* ctxB18;
+                            float* data_92;
+                            float* temp_15;
+                            float* context_18;
 
-                            if (tmpD13)
+                            if (temp_13)
                             {
-                                tmpD15 = &arg_2c;
-                                ctxB18 = &arg_54;
-                                valA92 = &arg_4;
+                                temp_15 = &arg_2c;
+                                context_18 = &arg_54;
+                                data_92 = &arg_4;
                             }
-                            else if (!objC20)
+                            else if (!entity_20)
                             {
-                                tmpD15 = &arg_4;
-                                ctxB18 = &arg_2c;
-                                valA92 = &arg_54;
+                                temp_15 = &arg_4;
+                                context_18 = &arg_2c;
+                                data_92 = &arg_54;
                             }
                             else
                             {
-                                tmpD15 = &arg_54;
-                                ctxB18 = &arg_4;
-                                valA92 = &arg_2c;
+                                temp_15 = &arg_54;
+                                context_18 = &arg_4;
+                                data_92 = &arg_2c;
                             }
 
-                            long double x87_r7_295 = g_bcabdc + 1f - tmpD15[1];
-                            long double x87_r6_298 = valA92[1] - tmpD15[1];
-                            memcpy(&v_d8, valA92, 0x28);
-                            long double x87_r7_296 = x87_r7_295 / x87_r6_298;
-                            *valA92 = (*valA92 - *tmpD15) * x87_r7_296 + *tmpD15;
-                            valA92[1] = (valA92[1] - tmpD15[1]) * x87_r7_296 + tmpD15[1];
-                            valA92[2] = (valA92[2] - tmpD15[2]) * x87_r7_296 + tmpD15[2];
-                            valA92[6] = (valA92[6] - tmpD15[6]) * x87_r7_296 + tmpD15[6];
-                            valA92[7] = (valA92[7] - tmpD15[7]) * x87_r7_296 + tmpD15[7];
-                            valA92[8] = (valA92[8] - tmpD15[8]) * x87_r7_296 + tmpD15[8];
-                            valA92[3] = (valA92[3] - tmpD15[3]) * x87_r7_296 + tmpD15[3];
-                            valA92[4] = (valA92[4] - tmpD15[4]) * x87_r7_296 + tmpD15[4];
-                            long double x87_r6_334 =
-                                (valA92[5] - tmpD15[5]) * x87_r7_296 + tmpD15[5];
-                            valA92[9] = 0;
-                            valA92[5] = x87_r6_334;
-                            long double x87_r7_299 = v_d4 - ctxB18[1];
-                            float v_dc_13 = (g_bcabdc + 1f - ctxB18[1]) / x87_r7_299;
-                            long double x87_r6_342 = (v_d8 - *ctxB18) * v_dc_13 + *ctxB18;
-                            v_b4 = 0;
-                            v_d8 = x87_r6_342;
-                            int32_t v_f0_4 = a9;
-                            int32_t v_f4_4 = a8;
-                            int32_t v_f8_4 = a7;
-                            long double x87_r7_301 = x87_r7_299 * v_dc_13 + ctxB18[1];
-                            flagP6 = a2 & a4 & a6;
-                            memcpy(&v_120, valA92, 0x28);
-                            float v_d4_1 = x87_r7_301;
-                            float v_d0_1 = (v_d0 - ctxB18[2]) * v_dc_13 + ctxB18[2];
-                            float v_c0_1 = (v_c0 - ctxB18[6]) * v_dc_13 + ctxB18[6];
-                            float v_bc_1 = (v_bc - ctxB18[7]) * v_dc_13 + ctxB18[7];
-                            float v_b8_1 = (v_b8 - ctxB18[8]) * v_dc_13 + ctxB18[8];
-                            float v_cc_1 = (v_cc - ctxB18[3]) * v_dc_13 + ctxB18[3];
-                            float v_c8_1 = (v_c8 - ctxB18[4]) * v_dc_13 + ctxB18[4];
-                            float v_c4_1 = (v_c4 - ctxB18[5]) * v_dc_13 + ctxB18[5];
-                            memcpy(&v_148, &v_d8, 0x28);
-                            memcpy(&v_170, ctxB18, 0x28);
+                            long double fpu_val_7_295 = g_bcabdc + 1.0f - temp_15[1];
+                            long double fpu_val_6_298 = data_92[1] - temp_15[1];
+                            memcpy(&item_d8, data_92, 0x28);
+                            long double fpu_val_7_296 = fpu_val_7_295 / fpu_val_6_298;
+                            *data_92 = (*data_92 - *temp_15) * fpu_val_7_296 + *temp_15;
+                            data_92[1] = (data_92[1] - temp_15[1]) * fpu_val_7_296 + temp_15[1];
+                            data_92[2] = (data_92[2] - temp_15[2]) * fpu_val_7_296 + temp_15[2];
+                            data_92[6] = (data_92[6] - temp_15[6]) * fpu_val_7_296 + temp_15[6];
+                            data_92[7] = (data_92[7] - temp_15[7]) * fpu_val_7_296 + temp_15[7];
+                            data_92[8] = (data_92[8] - temp_15[8]) * fpu_val_7_296 + temp_15[8];
+                            data_92[3] = (data_92[3] - temp_15[3]) * fpu_val_7_296 + temp_15[3];
+                            data_92[4] = (data_92[4] - temp_15[4]) * fpu_val_7_296 + temp_15[4];
+                            long double fpu_val_6_334 =
+                                (data_92[5] - temp_15[5]) * fpu_val_7_296 + temp_15[5];
+                            data_92[9] = 0;
+                            data_92[5] = fpu_val_6_334;
+                            long double fpu_val_7_299 = item_d4 - context_18[1];
+                            float item_dc_13 = (g_bcabdc + 1.0f - context_18[1]) / fpu_val_7_299;
+                            long double fpu_val_6_342 = (item_d8 - *context_18) * item_dc_13 + *context_18;
+                            item_b4 = 0;
+                            item_d8 = fpu_val_6_342;
+                            int32_t item_f0_4 = param_9;
+                            int32_t item_f4_4 = param_8;
+                            int32_t item_f8_4 = param_7;
+                            long double fpu_val_7_301 = fpu_val_7_299 * item_dc_13 + context_18[1];
+                            flagP6 = param_2 & param_4 & param_6;
+                            memcpy(&item_120, data_92, 0x28);
+                            float item_d4_1 = fpu_val_7_301;
+                            float item_d0_1 = (item_d0 - context_18[2]) * item_dc_13 + context_18[2];
+                            float item_c0_1 = (item_c0 - context_18[6]) * item_dc_13 + context_18[6];
+                            float item_bc_1 = (item_bc - context_18[7]) * item_dc_13 + context_18[7];
+                            float item_b8_1 = (item_b8 - context_18[8]) * item_dc_13 + context_18[8];
+                            float item_cc_1 = (item_cc - context_18[3]) * item_dc_13 + context_18[3];
+                            float item_c8_1 = (item_c8 - context_18[4]) * item_dc_13 + context_18[4];
+                            float item_c4_1 = (item_c4 - context_18[5]) * item_dc_13 + context_18[5];
+                            memcpy(&item_148, &item_d8, 0x28);
+                            memcpy(&item_170, context_18, 0x28);
                             Physics_CalculateSplineLength_13();
                         }
                         else
                         {
-                            float* valA90;
-                            float* objC21;
-                            float* tmpD14;
-                            float* srcS29;
+                            float* data_90;
+                            float* entity_21;
+                            float* temp_14;
+                            float* source_29;
 
-                            if (!tmpD13)
+                            if (!temp_13)
                             {
-                                valA90 = &arg_4;
-                                objC21 = &arg_4;
-                                tmpD14 = &arg_2c;
-                                srcS29 = &arg_54;
+                                data_90 = &arg_4;
+                                entity_21 = &arg_4;
+                                temp_14 = &arg_2c;
+                                source_29 = &arg_54;
                             }
-                            else if (objC20)
+                            else if (entity_20)
                             {
-                                valA90 = &arg_54;
-                                objC21 = &arg_54;
-                                tmpD14 = &arg_4;
-                                srcS29 = &arg_2c;
+                                data_90 = &arg_54;
+                                entity_21 = &arg_54;
+                                temp_14 = &arg_4;
+                                source_29 = &arg_2c;
                             }
                             else
                             {
-                                valA90 = &arg_2c;
-                                objC21 = &arg_2c;
-                                tmpD14 = &arg_54;
-                                srcS29 = &arg_4;
+                                data_90 = &arg_2c;
+                                entity_21 = &arg_2c;
+                                temp_14 = &arg_54;
+                                source_29 = &arg_4;
                             }
 
-                            long double x87_r7_286 =
-                                (g_bcabdc + 1f - valA90[1]) / (tmpD14[1] - valA90[1]);
-                            *tmpD14 = (*tmpD14 - *valA90) * x87_r7_286 + *valA90;
-                            tmpD14[1] = (tmpD14[1] - valA90[1]) * x87_r7_286 + valA90[1];
-                            tmpD14[2] = (tmpD14[2] - valA90[2]) * x87_r7_286 + valA90[2];
-                            tmpD14[6] = (tmpD14[6] - valA90[6]) * x87_r7_286 + valA90[6];
-                            tmpD14[7] = (tmpD14[7] - valA90[7]) * x87_r7_286 + valA90[7];
-                            tmpD14[8] = (tmpD14[8] - valA90[8]) * x87_r7_286 + valA90[8];
-                            tmpD14[3] = (tmpD14[3] - valA90[3]) * x87_r7_286 + valA90[3];
-                            tmpD14[4] = (tmpD14[4] - valA90[4]) * x87_r7_286 + valA90[4];
-                            long double x87_r6_258 =
-                                (tmpD14[5] - valA90[5]) * x87_r7_286 + valA90[5];
-                            tmpD14[9] = 0;
-                            tmpD14[5] = x87_r6_258;
-                            long double x87_r7_291 =
-                                (g_bcabdc + 1f - objC21[1]) / (srcS29[1] - objC21[1]);
-                            *srcS29 = (*srcS29 - *objC21) * x87_r7_291 + *objC21;
-                            srcS29[1] = (srcS29[1] - objC21[1]) * x87_r7_291 + objC21[1];
-                            srcS29[2] = (srcS29[2] - objC21[2]) * x87_r7_291 + objC21[2];
-                            srcS29[6] = (srcS29[6] - objC21[6]) * x87_r7_291 + objC21[6];
-                            srcS29[7] = (srcS29[7] - objC21[7]) * x87_r7_291 + objC21[7];
-                            srcS29[8] = (srcS29[8] - objC21[8]) * x87_r7_291 + objC21[8];
-                            srcS29[3] = (srcS29[3] - objC21[3]) * x87_r7_291 + objC21[3];
-                            srcS29[4] = (srcS29[4] - objC21[4]) * x87_r7_291 + objC21[4];
-                            long double x87_r6_296 =
-                                (srcS29[5] - objC21[5]) * x87_r7_291 + objC21[5];
-                            srcS29[9] = 0;
-                            srcS29[5] = x87_r6_296;
-                            flagP6 = a2 & a4 & a6;
+                            long double fpu_val_7_286 =
+                                (g_bcabdc + 1.0f - data_90[1]) / (temp_14[1] - data_90[1]);
+                            *temp_14 = (*temp_14 - *data_90) * fpu_val_7_286 + *data_90;
+                            temp_14[1] = (temp_14[1] - data_90[1]) * fpu_val_7_286 + data_90[1];
+                            temp_14[2] = (temp_14[2] - data_90[2]) * fpu_val_7_286 + data_90[2];
+                            temp_14[6] = (temp_14[6] - data_90[6]) * fpu_val_7_286 + data_90[6];
+                            temp_14[7] = (temp_14[7] - data_90[7]) * fpu_val_7_286 + data_90[7];
+                            temp_14[8] = (temp_14[8] - data_90[8]) * fpu_val_7_286 + data_90[8];
+                            temp_14[3] = (temp_14[3] - data_90[3]) * fpu_val_7_286 + data_90[3];
+                            temp_14[4] = (temp_14[4] - data_90[4]) * fpu_val_7_286 + data_90[4];
+                            long double fpu_val_6_258 =
+                                (temp_14[5] - data_90[5]) * fpu_val_7_286 + data_90[5];
+                            temp_14[9] = 0;
+                            temp_14[5] = fpu_val_6_258;
+                            long double fpu_val_7_291 =
+                                (g_bcabdc + 1.0f - entity_21[1]) / (source_29[1] - entity_21[1]);
+                            *source_29 = (*source_29 - *entity_21) * fpu_val_7_291 + *entity_21;
+                            source_29[1] = (source_29[1] - entity_21[1]) * fpu_val_7_291 + entity_21[1];
+                            source_29[2] = (source_29[2] - entity_21[2]) * fpu_val_7_291 + entity_21[2];
+                            source_29[6] = (source_29[6] - entity_21[6]) * fpu_val_7_291 + entity_21[6];
+                            source_29[7] = (source_29[7] - entity_21[7]) * fpu_val_7_291 + entity_21[7];
+                            source_29[8] = (source_29[8] - entity_21[8]) * fpu_val_7_291 + entity_21[8];
+                            source_29[3] = (source_29[3] - entity_21[3]) * fpu_val_7_291 + entity_21[3];
+                            source_29[4] = (source_29[4] - entity_21[4]) * fpu_val_7_291 + entity_21[4];
+                            long double fpu_val_6_296 =
+                                (source_29[5] - entity_21[5]) * fpu_val_7_291 + entity_21[5];
+                            source_29[9] = 0;
+                            source_29[5] = fpu_val_6_296;
+                            flagP6 = param_2 & param_4 & param_6;
                         }
                     }
 
-                    if (!(ctxB4 & 8) || !flagP6)
+                    if (!(context_4 & 8) || !flagP6)
                     {
-                        void* v_9c = &arg_4;
-                        void* v_98_1 = &arg_2c;
-                        void* v_94_1 = &arg_54;
-                        a8(&v_9c, a9);
+                        void* item_9c = &arg_4;
+                        void* item_98_1 = &arg_2c;
+                        void* item_94_1 = &arg_54;
+                        param_8(&item_9c, param_9);
 
                         if (0x80 & g_c28c7f && g_c28c8c & 0x80 && g_c28c69 & 0x80)
                         {
-                            void** tmpD18 = &v_b0;
-                            void v_8c;
-                            void* valA95 = &v_8c;
+                            void** temp_18 = &item_b0;
+                            void item_8c;
+                            void* data_95 = &item_8c;
                             int32_t i_3 = 3;
-                            a1 = 1f / a1;
-                            a3 = 1f / a3;
-                            a5 = 1f / a5;
+                            context = 1.0f / context;
+                            param_3 = 1.0f / param_3;
+                            param_5 = 1.0f / param_5;
                             int32_t i;
 
                             do
                             {
-                                int32_t* objC27 = *tmpD18;
-                                tmpD18 = &tmpD18[1];
-                                valA95 += 0x24;
-                                *(valA95 - 0x28) = *objC27;
-                                *(valA95 - 0x24) = objC27[1];
+                                int32_t* entity_27 = *temp_18;
+                                temp_18 = &temp_18[1];
+                                data_95 += 0x24;
+                                *(data_95 - 0x28) = *entity_27;
+                                *(data_95 - 0x24) = entity_27[1];
                                 i = i_3;
                                 i_3 -= 1;
-                                *(valA95 - 0x20) = objC27[2] * 0.99000001f - 4.09600019f;
-                                *(valA95 - 0x10) = 0x3f000000;
-                                *(valA95 - 0xc) = 0x3f000000;
-                                *(valA95 - 8) = 0x3f800000;
-                                *(valA95 - 0x14) = 0x3f800000;
-                                *(valA95 - 0x1c) = 0;
-                                *(valA95 - 0x18) = 0;
+                                *(data_95 - 0x20) = entity_27[2] * 0.99000001f - 4.09600019f;
+                                *(data_95 - 0x10) = 0x3f000000;
+                                *(data_95 - 0xc) = 0x3f000000;
+                                *(data_95 - 8) = 0x3f800000;
+                                *(data_95 - 0x14) = 0x3f800000;
+                                *(data_95 - 0x1c) = 0;
+                                *(data_95 - 0x18) = 0;
                             } while (i != 1);
-                            void** v_f0_6 = &v_b0;
-                            void v_90;
-                            void* v_a0_1 = &v_90;
-                            int32_t v_ac_1 = 0x40060000;
-                            v_b0 = nullptr;
-                            int32_t v_a8_1 = 0xffffffff;
-                            int32_t v_a4_1 = 3;
+                            void** item_f0_6 = &item_b0;
+                            void item_90;
+                            void* item_a0_1 = &item_90;
+                            int32_t item_ac_1 = 0x40060000;
+                            item_b0 = nullptr;
+                            int32_t item_a8_1 = 0xffffffff;
+                            int32_t item_a4_1 = 3;
                             g_a84a50 = 0;
-                            Physics_InterpolateWaypoint_13(v_f0_6);
-                            void v_88;
-                            float* valA96 = &v_88;
+                            Physics_InterpolateWaypoint_13(item_f0_6);
+                            void item_88;
+                            float* data_96 = &item_88;
                             int32_t i_2 = 3;
                             int32_t i_1;
 
                             do
                             {
-                                long double x87_r7_340 = *valA96 * 0.99000001f;
-                                valA96 = &valA96[9];
+                                long double fpu_val_7_340 = *data_96 * 0.99000001f;
+                                data_96 = &data_96[9];
                                 i_1 = i_2;
                                 i_2 -= 1;
-                                valA96[-9] = x87_r7_340;
-                                valA96[-5] = 0;
-                                valA96[-4] = 0;
-                                valA96[-3] = 0x3f800000;
+                                data_96[-9] = fpu_val_7_340;
+                                data_96[-5] = 0;
+                                data_96[-4] = 0;
+                                data_96[-3] = 0x3f800000;
                             } while (i_1 != 1);
-                            void v_24;
-                            memcpy(&v_24, &v_90, 0x24);
-                            void** v_f0_7 = &v_b0;
-                            v_b0 = 1;
-                            int32_t v_a4_2 = 4;
-                            Physics_InterpolateWaypoint_13(v_f0_7);
+                            void item_24;
+                            memcpy(&item_24, &item_90, 0x24);
+                            void** item_f0_7 = &item_b0;
+                            item_b0 = 1;
+                            int32_t item_a4_2 = 4;
+                            Physics_InterpolateWaypoint_13(item_f0_7);
                         }
                     }
                 }
                 else
                 {
-                    int32_t tmpD9 = tmpD & 4;
-                    int32_t objC15 = objC & 4;
-                    int32_t valA69 = (valA & 4) + tmpD9 + objC15;
-                    valA69 &= 0xfc;
-                    int32_t srcS24;
+                    int32_t temp_9 = temp_val & 4;
+                    int32_t entity_15 = entity_val & 4;
+                    int32_t data_69 = (data_val & 4) + temp_9 + entity_15;
+                    data_69 &= 0xfc;
+                    int32_t source_24;
 
-                    if (valA69 != 8)
+                    if (data_69 != 8)
                     {
-                        float* valA76;
-                        float* tmpD12;
+                        float* data_76;
+                        float* temp_12;
                         float* flagP3;
 
-                        if (tmpD9)
+                        if (temp_9)
                         {
-                            valA76 = &arg_2c;
+                            data_76 = &arg_2c;
                             flagP3 = &arg_54;
-                            tmpD12 = &arg_4;
+                            temp_12 = &arg_4;
                         }
-                        else if (!objC15)
+                        else if (!entity_15)
                         {
-                            valA76 = &arg_4;
+                            data_76 = &arg_4;
                             flagP3 = &arg_2c;
-                            tmpD12 = &arg_54;
+                            temp_12 = &arg_54;
                         }
                         else
                         {
-                            valA76 = &arg_54;
+                            data_76 = &arg_54;
                             flagP3 = &arg_4;
-                            tmpD12 = &arg_2c;
+                            temp_12 = &arg_2c;
                         }
 
-                        long double x87_r7_237 = *tmpD12 - *valA76;
-                        long double x87_r6_184 = g_bcabd8 + 1f - *valA76;
-                        memcpy(&v_d8, tmpD12, 0x28);
-                        float v_dc_10 = x87_r6_184 / x87_r7_237;
-                        *tmpD12 = x87_r7_237 * v_dc_10 + *valA76;
-                        tmpD12[1] = (tmpD12[1] - valA76[1]) * v_dc_10 + valA76[1];
-                        tmpD12[2] = (tmpD12[2] - valA76[2]) * v_dc_10 + valA76[2];
-                        tmpD12[6] = (tmpD12[6] - valA76[6]) * v_dc_10 + valA76[6];
-                        tmpD12[7] = (tmpD12[7] - valA76[7]) * v_dc_10 + valA76[7];
-                        tmpD12[8] = (tmpD12[8] - valA76[8]) * v_dc_10 + valA76[8];
-                        tmpD12[3] = (tmpD12[3] - valA76[3]) * v_dc_10 + valA76[3];
-                        tmpD12[4] = (tmpD12[4] - valA76[4]) * v_dc_10 + valA76[4];
-                        tmpD12[5] = (tmpD12[5] - valA76[5]) * v_dc_10 + valA76[5];
-                        long double x87_r7_273 = g_bcabdc + 1f;
-                        long double f11_1 = tmpD12[1];
-                        x87_r7_273 - f11_1;
-                        int32_t valA78;
+                        long double fpu_val_7_237 = *temp_12 - *data_76;
+                        long double fpu_val_6_184 = g_bcabd8 + 1.0f - *data_76;
+                        memcpy(&item_d8, temp_12, 0x28);
+                        float item_dc_10 = fpu_val_6_184 / fpu_val_7_237;
+                        *temp_12 = fpu_val_7_237 * item_dc_10 + *data_76;
+                        temp_12[1] = (temp_12[1] - data_76[1]) * item_dc_10 + data_76[1];
+                        temp_12[2] = (temp_12[2] - data_76[2]) * item_dc_10 + data_76[2];
+                        temp_12[6] = (temp_12[6] - data_76[6]) * item_dc_10 + data_76[6];
+                        temp_12[7] = (temp_12[7] - data_76[7]) * item_dc_10 + data_76[7];
+                        temp_12[8] = (temp_12[8] - data_76[8]) * item_dc_10 + data_76[8];
+                        temp_12[3] = (temp_12[3] - data_76[3]) * item_dc_10 + data_76[3];
+                        temp_12[4] = (temp_12[4] - data_76[4]) * item_dc_10 + data_76[4];
+                        temp_12[5] = (temp_12[5] - data_76[5]) * item_dc_10 + data_76[5];
+                        long double fpu_val_7_273 = g_bcabdc + 1.0f;
+                        long double f11_1 = temp_12[1];
+                        fpu_val_7_273 - f11_1;
+                        int32_t data_78;
 
-                        valA78 = !(*(&((x87_r7_273 < f11_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_273, f11_1) ? 1 : 0) << 0xa
-                            | (x87_r7_273 == f11_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                        data_78 = !(*(&((fpu_val_7_273 < f11_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_273, f11_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_273 == f11_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                        long double x87_r7_274 = v_d8;
-                        tmpD12[9] = valA78 << 3;
-                        long double x87_r7_275 = x87_r7_274 - *flagP3;
-                        float v_dc_11 = (g_bcabd8 + 1f - *flagP3) / x87_r7_275;
-                        v_d8 = x87_r7_275 * v_dc_11 + *flagP3;
-                        long double x87_r7_281 = (v_d4 - flagP3[1]) * v_dc_11 + flagP3[1];
-                        v_d4 = x87_r7_281;
-                        v_d0 = (v_d0 - flagP3[2]) * v_dc_11 + flagP3[2];
-                        v_c0 = (v_c0 - flagP3[6]) * v_dc_11 + flagP3[6];
-                        v_bc = (v_bc - flagP3[7]) * v_dc_11 + flagP3[7];
-                        v_b8 = (v_b8 - flagP3[8]) * v_dc_11 + flagP3[8];
-                        v_cc = (v_cc - flagP3[3]) * v_dc_11 + flagP3[3];
-                        v_c8 = (v_c8 - flagP3[4]) * v_dc_11 + flagP3[4];
-                        v_c4 = (v_c4 - flagP3[5]) * v_dc_11 + flagP3[5];
-                        long double x87_r6_219 = g_bcabdc + 1f;
-                        x87_r7_281 - x87_r6_219;
-                        int32_t valA81;
+                        long double fpu_val_7_274 = item_d8;
+                        temp_12[9] = data_78 << 3;
+                        long double fpu_val_7_275 = fpu_val_7_274 - *flagP3;
+                        float item_dc_11 = (g_bcabd8 + 1.0f - *flagP3) / fpu_val_7_275;
+                        item_d8 = fpu_val_7_275 * item_dc_11 + *flagP3;
+                        long double fpu_val_7_281 = (item_d4 - flagP3[1]) * item_dc_11 + flagP3[1];
+                        item_d4 = fpu_val_7_281;
+                        item_d0 = (item_d0 - flagP3[2]) * item_dc_11 + flagP3[2];
+                        item_c0 = (item_c0 - flagP3[6]) * item_dc_11 + flagP3[6];
+                        item_bc = (item_bc - flagP3[7]) * item_dc_11 + flagP3[7];
+                        item_b8 = (item_b8 - flagP3[8]) * item_dc_11 + flagP3[8];
+                        item_cc = (item_cc - flagP3[3]) * item_dc_11 + flagP3[3];
+                        item_c8 = (item_c8 - flagP3[4]) * item_dc_11 + flagP3[4];
+                        item_c4 = (item_c4 - flagP3[5]) * item_dc_11 + flagP3[5];
+                        long double fpu_val_6_219 = g_bcabdc + 1.0f;
+                        fpu_val_7_281 - fpu_val_6_219;
+                        int32_t data_81;
 
-                        valA81 = *(&((x87_r7_281 < x87_r6_219 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_281, x87_r6_219) ? 1 : 0) << 0xa
-                            | (x87_r7_281 == x87_r6_219 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
+                        data_81 = *(&((fpu_val_7_281 < fpu_val_6_219 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_281, fpu_val_6_219) ? 1 : 0) << 0xa
+                            | (fpu_val_7_281 == fpu_val_6_219 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
 
-                        v_b4 = valA81 << 3;
-                        int32_t v_f0_3 = a9;
-                        int32_t v_f4_3 = a8;
-                        int32_t v_f8_3 = a7;
-                        ctxB4 = a2 | a4 | a6;
-                        memcpy(&v_120, tmpD12, 0x28);
-                        memcpy(&v_148, &v_d8, 0x28);
-                        memcpy(&v_170, flagP3, 0x28);
+                        item_b4 = data_81 << 3;
+                        int32_t item_f0_3 = param_9;
+                        int32_t item_f4_3 = param_8;
+                        int32_t item_f8_3 = param_7;
+                        context_4 = param_2 | param_4 | param_6;
+                        memcpy(&item_120, temp_12, 0x28);
+                        memcpy(&item_148, &item_d8, 0x28);
+                        memcpy(&item_170, flagP3, 0x28);
                         Physics_CalculateSplineLength_13();
-                        valA = a6;
-                        objC = a4;
-                        tmpD = a2;
-                        srcS24 = a2 & a4 & a6;
+                        data_val = param_6;
+                        entity_val = param_4;
+                        temp_val = param_2;
+                        source_24 = param_2 & param_4 & param_6;
                     }
                     else
                     {
-                        float* valA70;
-                        float* objC16;
-                        float* tmpD10;
-                        float* srcS21;
+                        float* data_70;
+                        float* entity_16;
+                        float* temp_10;
+                        float* source_21;
 
-                        if (!tmpD9)
+                        if (!temp_9)
                         {
-                            valA70 = &arg_4;
-                            tmpD10 = &arg_4;
-                            srcS21 = &arg_2c;
-                            objC16 = &arg_54;
+                            data_70 = &arg_4;
+                            temp_10 = &arg_4;
+                            source_21 = &arg_2c;
+                            entity_16 = &arg_54;
                         }
-                        else if (objC15)
+                        else if (entity_15)
                         {
-                            valA70 = &arg_54;
-                            tmpD10 = &arg_54;
-                            srcS21 = &arg_4;
-                            objC16 = &arg_2c;
+                            data_70 = &arg_54;
+                            temp_10 = &arg_54;
+                            source_21 = &arg_4;
+                            entity_16 = &arg_2c;
                         }
                         else
                         {
-                            valA70 = &arg_2c;
-                            tmpD10 = &arg_2c;
-                            srcS21 = &arg_54;
-                            objC16 = &arg_4;
+                            data_70 = &arg_2c;
+                            temp_10 = &arg_2c;
+                            source_21 = &arg_54;
+                            entity_16 = &arg_4;
                         }
 
-                        long double x87_r7_161 = *srcS21 - *valA70;
-                        float v_dc_8 = (g_bcabd8 + 1f - *valA70) / x87_r7_161;
-                        *srcS21 = x87_r7_161 * v_dc_8 + *valA70;
-                        srcS21[1] = (srcS21[1] - valA70[1]) * v_dc_8 + valA70[1];
-                        srcS21[2] = (srcS21[2] - valA70[2]) * v_dc_8 + valA70[2];
-                        srcS21[6] = (srcS21[6] - valA70[6]) * v_dc_8 + valA70[6];
-                        srcS21[7] = (srcS21[7] - valA70[7]) * v_dc_8 + valA70[7];
-                        srcS21[8] = (srcS21[8] - valA70[8]) * v_dc_8 + valA70[8];
-                        srcS21[3] = (srcS21[3] - valA70[3]) * v_dc_8 + valA70[3];
-                        srcS21[4] = (srcS21[4] - valA70[4]) * v_dc_8 + valA70[4];
-                        srcS21[5] = (srcS21[5] - valA70[5]) * v_dc_8 + valA70[5];
-                        long double x87_r7_197 = g_bcabdc + 1f;
-                        long double f5_1 = srcS21[1];
-                        x87_r7_197 - f5_1;
-                        int32_t valA72;
+                        long double fpu_val_7_161 = *source_21 - *data_70;
+                        float item_dc_8 = (g_bcabd8 + 1.0f - *data_70) / fpu_val_7_161;
+                        *source_21 = fpu_val_7_161 * item_dc_8 + *data_70;
+                        source_21[1] = (source_21[1] - data_70[1]) * item_dc_8 + data_70[1];
+                        source_21[2] = (source_21[2] - data_70[2]) * item_dc_8 + data_70[2];
+                        source_21[6] = (source_21[6] - data_70[6]) * item_dc_8 + data_70[6];
+                        source_21[7] = (source_21[7] - data_70[7]) * item_dc_8 + data_70[7];
+                        source_21[8] = (source_21[8] - data_70[8]) * item_dc_8 + data_70[8];
+                        source_21[3] = (source_21[3] - data_70[3]) * item_dc_8 + data_70[3];
+                        source_21[4] = (source_21[4] - data_70[4]) * item_dc_8 + data_70[4];
+                        source_21[5] = (source_21[5] - data_70[5]) * item_dc_8 + data_70[5];
+                        long double fpu_val_7_197 = g_bcabdc + 1.0f;
+                        long double f5_1 = source_21[1];
+                        fpu_val_7_197 - f5_1;
+                        int32_t data_72;
 
-                        valA72 = !(*(&((x87_r7_197 < f5_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_197, f5_1) ? 1 : 0) << 0xa
-                            | (x87_r7_197 == f5_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                        data_72 = !(*(&((fpu_val_7_197 < f5_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_197, f5_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_197 == f5_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                        srcS21[9] = valA72 << 3;
-                        long double x87_r7_199 = *objC16 - *tmpD10;
-                        float v_dc_9 = (g_bcabd8 + 1f - *tmpD10) / x87_r7_199;
-                        *objC16 = x87_r7_199 * v_dc_9 + *tmpD10;
-                        objC16[1] = (objC16[1] - tmpD10[1]) * v_dc_9 + tmpD10[1];
-                        objC16[2] = (objC16[2] - tmpD10[2]) * v_dc_9 + tmpD10[2];
-                        objC16[6] = (objC16[6] - tmpD10[6]) * v_dc_9 + tmpD10[6];
-                        objC16[7] = (objC16[7] - tmpD10[7]) * v_dc_9 + tmpD10[7];
-                        objC16[8] = (objC16[8] - tmpD10[8]) * v_dc_9 + tmpD10[8];
-                        objC16[3] = (objC16[3] - tmpD10[3]) * v_dc_9 + tmpD10[3];
-                        objC16[4] = (objC16[4] - tmpD10[4]) * v_dc_9 + tmpD10[4];
-                        objC16[5] = (objC16[5] - tmpD10[5]) * v_dc_9 + tmpD10[5];
-                        long double x87_r7_235 = g_bcabdc + 1f;
-                        long double f12_1 = objC16[1];
-                        x87_r7_235 - f12_1;
-                        int32_t valA75;
+                        source_21[9] = data_72 << 3;
+                        long double fpu_val_7_199 = *entity_16 - *temp_10;
+                        float item_dc_9 = (g_bcabd8 + 1.0f - *temp_10) / fpu_val_7_199;
+                        *entity_16 = fpu_val_7_199 * item_dc_9 + *temp_10;
+                        entity_16[1] = (entity_16[1] - temp_10[1]) * item_dc_9 + temp_10[1];
+                        entity_16[2] = (entity_16[2] - temp_10[2]) * item_dc_9 + temp_10[2];
+                        entity_16[6] = (entity_16[6] - temp_10[6]) * item_dc_9 + temp_10[6];
+                        entity_16[7] = (entity_16[7] - temp_10[7]) * item_dc_9 + temp_10[7];
+                        entity_16[8] = (entity_16[8] - temp_10[8]) * item_dc_9 + temp_10[8];
+                        entity_16[3] = (entity_16[3] - temp_10[3]) * item_dc_9 + temp_10[3];
+                        entity_16[4] = (entity_16[4] - temp_10[4]) * item_dc_9 + temp_10[4];
+                        entity_16[5] = (entity_16[5] - temp_10[5]) * item_dc_9 + temp_10[5];
+                        long double fpu_val_7_235 = g_bcabdc + 1.0f;
+                        long double f12_1 = entity_16[1];
+                        fpu_val_7_235 - f12_1;
+                        int32_t data_75;
 
-                        valA75 = !(*(&((x87_r7_235 < f12_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_235, f12_1) ? 1 : 0) << 0xa
-                            | (x87_r7_235 == f12_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                        data_75 = !(*(&((fpu_val_7_235 < f12_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_235, f12_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_235 == f12_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                        objC16[9] = valA75 << 3;
-                        tmpD = a2;
-                        objC = a4;
-                        valA = a6;
-                        ctxB4 = tmpD | objC | valA;
-                        srcS24 = tmpD & objC & valA;
+                        entity_16[9] = data_75 << 3;
+                        temp_val = param_2;
+                        entity_val = param_4;
+                        data_val = param_6;
+                        context_4 = temp_val | entity_val | data_val;
+                        source_24 = temp_val & entity_val & data_val;
                     }
 
-                    if (!srcS24)
+                    if (!source_24)
                         goto label_50cf06;
                 }
             }
             else
             {
-                int32_t tmpD5 = tmpD & 2;
-                int32_t objC8 = objC & 2;
-                int32_t valA40 = (valA & 2) + tmpD5 + objC8;
-                valA40 &= 0xfe;
-                int32_t srcS16;
+                int32_t temp_5 = temp_val & 2;
+                int32_t entity_8 = entity_val & 2;
+                int32_t data_40 = (data_val & 2) + temp_5 + entity_8;
+                data_40 &= 0xfe;
+                int32_t source_16;
 
-                if (valA40 != 4)
+                if (data_40 != 4)
                 {
-                    float* valA52;
-                    float* tmpD8;
+                    float* data_52;
+                    float* temp_8;
                     float* flagP2;
 
-                    if (tmpD5)
+                    if (temp_5)
                     {
-                        valA52 = &arg_2c;
-                        tmpD8 = &arg_54;
+                        data_52 = &arg_2c;
+                        temp_8 = &arg_54;
                         flagP2 = &arg_4;
                     }
-                    else if (!objC8)
+                    else if (!entity_8)
                     {
-                        valA52 = &arg_4;
-                        tmpD8 = &arg_2c;
+                        data_52 = &arg_4;
+                        temp_8 = &arg_2c;
                         flagP2 = &arg_54;
                     }
                     else
                     {
-                        valA52 = &arg_54;
-                        tmpD8 = &arg_4;
+                        data_52 = &arg_54;
+                        temp_8 = &arg_4;
                         flagP2 = &arg_2c;
                     }
 
-                    long double x87_r7_149 = (g_bcabd4 - valA52[1]) / (flagP2[1] - valA52[1]);
-                    memcpy(&v_d8, flagP2, 0x28);
-                    *flagP2 = (*flagP2 - *valA52) * x87_r7_149 + *valA52;
-                    flagP2[1] = (flagP2[1] - valA52[1]) * x87_r7_149 + valA52[1];
-                    flagP2[2] = (flagP2[2] - valA52[2]) * x87_r7_149 + valA52[2];
-                    flagP2[6] = (flagP2[6] - valA52[6]) * x87_r7_149 + valA52[6];
-                    flagP2[7] = (flagP2[7] - valA52[7]) * x87_r7_149 + valA52[7];
-                    flagP2[8] = (flagP2[8] - valA52[8]) * x87_r7_149 + valA52[8];
-                    flagP2[3] = (flagP2[3] - valA52[3]) * x87_r7_149 + valA52[3];
-                    flagP2[4] = (flagP2[4] - valA52[4]) * x87_r7_149 + valA52[4];
-                    flagP2[5] = (flagP2[5] - valA52[5]) * x87_r7_149 + valA52[5];
-                    long double x87_r7_152 = g_bcabd8 + 1f;
+                    long double fpu_val_7_149 = (g_bcabd4 - data_52[1]) / (flagP2[1] - data_52[1]);
+                    memcpy(&item_d8, flagP2, 0x28);
+                    *flagP2 = (*flagP2 - *data_52) * fpu_val_7_149 + *data_52;
+                    flagP2[1] = (flagP2[1] - data_52[1]) * fpu_val_7_149 + data_52[1];
+                    flagP2[2] = (flagP2[2] - data_52[2]) * fpu_val_7_149 + data_52[2];
+                    flagP2[6] = (flagP2[6] - data_52[6]) * fpu_val_7_149 + data_52[6];
+                    flagP2[7] = (flagP2[7] - data_52[7]) * fpu_val_7_149 + data_52[7];
+                    flagP2[8] = (flagP2[8] - data_52[8]) * fpu_val_7_149 + data_52[8];
+                    flagP2[3] = (flagP2[3] - data_52[3]) * fpu_val_7_149 + data_52[3];
+                    flagP2[4] = (flagP2[4] - data_52[4]) * fpu_val_7_149 + data_52[4];
+                    flagP2[5] = (flagP2[5] - data_52[5]) * fpu_val_7_149 + data_52[5];
+                    long double fpu_val_7_152 = g_bcabd8 + 1.0f;
                     long double f6_1 = *flagP2;
-                    x87_r7_152 - f6_1;
-                    int32_t objC10;
+                    fpu_val_7_152 - f6_1;
+                    int32_t entity_10;
 
-                    objC10 = !(*(&((x87_r7_152 < f6_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_152, f6_1) ? 1 : 0) << 0xa
-                        | (x87_r7_152 == f6_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                    entity_10 = !(*(&((fpu_val_7_152 < f6_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_152, f6_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_152 == f6_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                    long double x87_r7_154 = g_bcabdc + 1f;
+                    long double fpu_val_7_154 = g_bcabdc + 1.0f;
                     long double f13_1 = flagP2[1];
-                    x87_r7_154 - f13_1;
-                    int32_t valA54;
+                    fpu_val_7_154 - f13_1;
+                    int32_t data_54;
 
-                    valA54 = !(*(&((x87_r7_154 < f13_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_154, f13_1) ? 1 : 0) << 0xa
-                        | (x87_r7_154 == f13_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                    data_54 = !(*(&((fpu_val_7_154 < f13_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_154, f13_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_154 == f13_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                    flagP2[9] = ((valA54 * 2) | objC10) << 2;
-                    long double x87_r7_156 = v_d4 - tmpD8[1];
-                    float v_dc_6 = (g_bcabd4 - tmpD8[1]) / x87_r7_156;
-                    v_d8 = (v_d8 - *tmpD8) * v_dc_6 + *tmpD8;
-                    long double x87_r7_158 = x87_r7_156 * v_dc_6 + tmpD8[1];
-                    v_d4 = x87_r7_158;
-                    v_d0 = (v_d0 - tmpD8[2]) * v_dc_6 + tmpD8[2];
-                    v_c0 = (v_c0 - tmpD8[6]) * v_dc_6 + tmpD8[6];
-                    v_bc = (v_bc - tmpD8[7]) * v_dc_6 + tmpD8[7];
-                    v_b8 = (v_b8 - tmpD8[8]) * v_dc_6 + tmpD8[8];
-                    v_cc = (v_cc - tmpD8[3]) * v_dc_6 + tmpD8[3];
-                    v_c8 = (v_c8 - tmpD8[4]) * v_dc_6 + tmpD8[4];
-                    v_c4 = (v_c4 - tmpD8[5]) * v_dc_6 + tmpD8[5];
-                    long double x87_r6_170 = g_bcabd8 + 1f;
-                    long double f18_1 = v_d8;
-                    x87_r6_170 - f18_1;
-                    int32_t objC11;
+                    flagP2[9] = ((data_54 * 2) | entity_10) << 2;
+                    long double fpu_val_7_156 = item_d4 - temp_8[1];
+                    float item_dc_6 = (g_bcabd4 - temp_8[1]) / fpu_val_7_156;
+                    item_d8 = (item_d8 - *temp_8) * item_dc_6 + *temp_8;
+                    long double fpu_val_7_158 = fpu_val_7_156 * item_dc_6 + temp_8[1];
+                    item_d4 = fpu_val_7_158;
+                    item_d0 = (item_d0 - temp_8[2]) * item_dc_6 + temp_8[2];
+                    item_c0 = (item_c0 - temp_8[6]) * item_dc_6 + temp_8[6];
+                    item_bc = (item_bc - temp_8[7]) * item_dc_6 + temp_8[7];
+                    item_b8 = (item_b8 - temp_8[8]) * item_dc_6 + temp_8[8];
+                    item_cc = (item_cc - temp_8[3]) * item_dc_6 + temp_8[3];
+                    item_c8 = (item_c8 - temp_8[4]) * item_dc_6 + temp_8[4];
+                    item_c4 = (item_c4 - temp_8[5]) * item_dc_6 + temp_8[5];
+                    long double fpu_val_6_170 = g_bcabd8 + 1.0f;
+                    long double f18_1 = item_d8;
+                    fpu_val_6_170 - f18_1;
+                    int32_t entity_11;
 
-                    objC11 = !(*(&((x87_r6_170 < f18_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r6_170, f18_1) ? 1 : 0) << 0xa
-                        | (x87_r6_170 == f18_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
+                    entity_11 = !(*(&((fpu_val_6_170 < f18_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_6_170, f18_1) ? 1 : 0) << 0xa
+                        | (fpu_val_6_170 == f18_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1) ? 0 : 1;
 
-                    long double x87_r6_172 = g_bcabdc + 1f;
-                    x87_r7_158 - x87_r6_172;
-                    int32_t valA59;
+                    long double fpu_val_6_172 = g_bcabdc + 1.0f;
+                    fpu_val_7_158 - fpu_val_6_172;
+                    int32_t data_59;
 
-                    valA59 = *(&((x87_r7_158 < x87_r6_172 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_158, x87_r6_172) ? 1 : 0) << 0xa
-                        | (x87_r7_158 == x87_r6_172 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
+                    data_59 = *(&((fpu_val_7_158 < fpu_val_6_172 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_158, fpu_val_6_172) ? 1 : 0) << 0xa
+                        | (fpu_val_7_158 == fpu_val_6_172 ? 1 : 0) << 0xe) + 1) & 0x41 ? 0 : 1;
 
-                    v_b4 = ((valA59 * 2) | objC11) << 2;
-                    int32_t v_f0_2 = a9;
-                    ctxB4 = a2 | a4 | a6;
-                    int32_t v_f4_2 = a8;
-                    int32_t v_f8_2 = a7;
-                    memcpy(&v_120, flagP2, 0x28);
-                    memcpy(&v_148, &v_d8, 0x28);
-                    memcpy(&v_170, tmpD8, 0x28);
+                    item_b4 = ((data_59 * 2) | entity_11) << 2;
+                    int32_t item_f0_2 = param_9;
+                    context_4 = param_2 | param_4 | param_6;
+                    int32_t item_f4_2 = param_8;
+                    int32_t item_f8_2 = param_7;
+                    memcpy(&item_120, flagP2, 0x28);
+                    memcpy(&item_148, &item_d8, 0x28);
+                    memcpy(&item_170, temp_8, 0x28);
                     Physics_CalculateSplineLength_13();
-                    valA = a6;
-                    objC = a4;
-                    tmpD = a2;
-                    srcS16 = a2 & a4 & a6;
+                    data_val = param_6;
+                    entity_val = param_4;
+                    temp_val = param_2;
+                    source_16 = param_2 & param_4 & param_6;
                 }
                 else
                 {
-                    float* valA41;
-                    float* objC9;
-                    float* tmpD6;
-                    float* srcS13;
+                    float* data_41;
+                    float* entity_9;
+                    float* temp_6;
+                    float* source_13;
 
-                    if (!tmpD5)
+                    if (!temp_5)
                     {
-                        valA41 = &arg_4;
-                        tmpD6 = &arg_4;
-                        srcS13 = &arg_2c;
-                        objC9 = &arg_54;
+                        data_41 = &arg_4;
+                        temp_6 = &arg_4;
+                        source_13 = &arg_2c;
+                        entity_9 = &arg_54;
                     }
-                    else if (objC8)
+                    else if (entity_8)
                     {
-                        valA41 = &arg_54;
-                        tmpD6 = &arg_54;
-                        srcS13 = &arg_4;
-                        objC9 = &arg_2c;
+                        data_41 = &arg_54;
+                        temp_6 = &arg_54;
+                        source_13 = &arg_4;
+                        entity_9 = &arg_2c;
                     }
                     else
                     {
-                        valA41 = &arg_2c;
-                        tmpD6 = &arg_2c;
-                        srcS13 = &arg_54;
-                        objC9 = &arg_4;
+                        data_41 = &arg_2c;
+                        temp_6 = &arg_2c;
+                        source_13 = &arg_54;
+                        entity_9 = &arg_4;
                     }
 
-                    long double x87_r7_133 = (g_bcabd4 - valA41[1]) / (srcS13[1] - valA41[1]);
-                    *srcS13 = (*srcS13 - *valA41) * x87_r7_133 + *valA41;
-                    srcS13[1] = (srcS13[1] - valA41[1]) * x87_r7_133 + valA41[1];
-                    srcS13[2] = (srcS13[2] - valA41[2]) * x87_r7_133 + valA41[2];
-                    srcS13[6] = (srcS13[6] - valA41[6]) * x87_r7_133 + valA41[6];
-                    srcS13[7] = (srcS13[7] - valA41[7]) * x87_r7_133 + valA41[7];
-                    srcS13[8] = (srcS13[8] - valA41[8]) * x87_r7_133 + valA41[8];
-                    srcS13[3] = (srcS13[3] - valA41[3]) * x87_r7_133 + valA41[3];
-                    srcS13[4] = (srcS13[4] - valA41[4]) * x87_r7_133 + valA41[4];
-                    srcS13[5] = (srcS13[5] - valA41[5]) * x87_r7_133 + valA41[5];
-                    long double x87_r7_136 = g_bcabd8 + 1f;
-                    long double f2_1 = *srcS13;
-                    x87_r7_136 - f2_1;
-                    int32_t dstD2;
+                    long double fpu_val_7_133 = (g_bcabd4 - data_41[1]) / (source_13[1] - data_41[1]);
+                    *source_13 = (*source_13 - *data_41) * fpu_val_7_133 + *data_41;
+                    source_13[1] = (source_13[1] - data_41[1]) * fpu_val_7_133 + data_41[1];
+                    source_13[2] = (source_13[2] - data_41[2]) * fpu_val_7_133 + data_41[2];
+                    source_13[6] = (source_13[6] - data_41[6]) * fpu_val_7_133 + data_41[6];
+                    source_13[7] = (source_13[7] - data_41[7]) * fpu_val_7_133 + data_41[7];
+                    source_13[8] = (source_13[8] - data_41[8]) * fpu_val_7_133 + data_41[8];
+                    source_13[3] = (source_13[3] - data_41[3]) * fpu_val_7_133 + data_41[3];
+                    source_13[4] = (source_13[4] - data_41[4]) * fpu_val_7_133 + data_41[4];
+                    source_13[5] = (source_13[5] - data_41[5]) * fpu_val_7_133 + data_41[5];
+                    long double fpu_val_7_136 = g_bcabd8 + 1.0f;
+                    long double f2_1 = *source_13;
+                    fpu_val_7_136 - f2_1;
+                    int32_t dest_2;
 
-                    dstD2 = !(*(&((x87_r7_136 < f2_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_136, f2_1) ? 1 : 0) << 0xa
-                        | (x87_r7_136 == f2_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                    dest_2 = !(*(&((fpu_val_7_136 < f2_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_136, f2_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_136 == f2_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                    long double x87_r7_138 = g_bcabdc + 1f;
-                    long double f7_1 = srcS13[1];
-                    x87_r7_138 - f7_1;
-                    int32_t valA43;
+                    long double fpu_val_7_138 = g_bcabdc + 1.0f;
+                    long double f7_1 = source_13[1];
+                    fpu_val_7_138 - f7_1;
+                    int32_t data_43;
 
-                    valA43 = !(*(&((x87_r7_138 < f7_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_138, f7_1) ? 1 : 0) << 0xa
-                        | (x87_r7_138 == f7_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                    data_43 = !(*(&((fpu_val_7_138 < f7_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_138, f7_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_138 == f7_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                    srcS13[9] = ((valA43 * 2) | dstD2) << 2;
-                    long double x87_r7_141 = (g_bcabd4 - tmpD6[1]) / (objC9[1] - tmpD6[1]);
-                    *objC9 = (*objC9 - *tmpD6) * x87_r7_141 + *tmpD6;
-                    objC9[1] = (objC9[1] - tmpD6[1]) * x87_r7_141 + tmpD6[1];
-                    objC9[2] = (objC9[2] - tmpD6[2]) * x87_r7_141 + tmpD6[2];
-                    objC9[6] = (objC9[6] - tmpD6[6]) * x87_r7_141 + tmpD6[6];
-                    objC9[7] = (objC9[7] - tmpD6[7]) * x87_r7_141 + tmpD6[7];
-                    objC9[8] = (objC9[8] - tmpD6[8]) * x87_r7_141 + tmpD6[8];
-                    objC9[3] = (objC9[3] - tmpD6[3]) * x87_r7_141 + tmpD6[3];
-                    objC9[4] = (objC9[4] - tmpD6[4]) * x87_r7_141 + tmpD6[4];
-                    objC9[5] = (objC9[5] - tmpD6[5]) * x87_r7_141 + tmpD6[5];
-                    long double x87_r7_144 = g_bcabd8 + 1f;
-                    long double f14_1 = *objC9;
-                    x87_r7_144 - f14_1;
-                    int32_t tmpD7;
+                    source_13[9] = ((data_43 * 2) | dest_2) << 2;
+                    long double fpu_val_7_141 = (g_bcabd4 - temp_6[1]) / (entity_9[1] - temp_6[1]);
+                    *entity_9 = (*entity_9 - *temp_6) * fpu_val_7_141 + *temp_6;
+                    entity_9[1] = (entity_9[1] - temp_6[1]) * fpu_val_7_141 + temp_6[1];
+                    entity_9[2] = (entity_9[2] - temp_6[2]) * fpu_val_7_141 + temp_6[2];
+                    entity_9[6] = (entity_9[6] - temp_6[6]) * fpu_val_7_141 + temp_6[6];
+                    entity_9[7] = (entity_9[7] - temp_6[7]) * fpu_val_7_141 + temp_6[7];
+                    entity_9[8] = (entity_9[8] - temp_6[8]) * fpu_val_7_141 + temp_6[8];
+                    entity_9[3] = (entity_9[3] - temp_6[3]) * fpu_val_7_141 + temp_6[3];
+                    entity_9[4] = (entity_9[4] - temp_6[4]) * fpu_val_7_141 + temp_6[4];
+                    entity_9[5] = (entity_9[5] - temp_6[5]) * fpu_val_7_141 + temp_6[5];
+                    long double fpu_val_7_144 = g_bcabd8 + 1.0f;
+                    long double f14_1 = *entity_9;
+                    fpu_val_7_144 - f14_1;
+                    int32_t temp_7;
 
-                    tmpD7 = !(*(&((x87_r7_144 < f14_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_144, f14_1) ? 1 : 0) << 0xa
-                        | (x87_r7_144 == f14_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                    temp_7 = !(*(&((fpu_val_7_144 < f14_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_144, f14_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_144 == f14_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                    long double x87_r7_146 = g_bcabdc + 1f;
-                    long double f19_1 = objC9[1];
-                    x87_r7_146 - f19_1;
-                    int32_t valA48;
+                    long double fpu_val_7_146 = g_bcabdc + 1.0f;
+                    long double f19_1 = entity_9[1];
+                    fpu_val_7_146 - f19_1;
+                    int32_t data_48;
 
-                    valA48 = !(*(&((x87_r7_146 < f19_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_146, f19_1) ? 1 : 0) << 0xa
-                        | (x87_r7_146 == f19_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
+                    data_48 = !(*(&((fpu_val_7_146 < f19_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_146, f19_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_146 == f19_1 ? 1 : 0) << 0xe) + 1) & 1) ? 0 : 1;
 
-                    objC9[9] = ((valA48 * 2) | tmpD7) << 2;
-                    tmpD = a2;
-                    objC = a4;
-                    valA = a6;
-                    ctxB4 = tmpD | objC | valA;
-                    srcS16 = tmpD & objC & valA;
+                    entity_9[9] = ((data_48 * 2) | temp_7) << 2;
+                    temp_val = param_2;
+                    entity_val = param_4;
+                    data_val = param_6;
+                    context_4 = temp_val | entity_val | data_val;
+                    source_16 = temp_val & entity_val & data_val;
                 }
 
-                if (!srcS16)
+                if (!source_16)
                     goto label_50ca39;
             }
         }

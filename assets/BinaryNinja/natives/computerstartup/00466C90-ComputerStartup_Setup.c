@@ -1,37 +1,37 @@
 // Original IGI.EXE function: ComputerStartup_Setup (VA 0x00466C90; static CFG gate PASS, CFG score 1.000).
 #include "ComputerStartup_Setup.h"
-void ComputerStartup_Setup(void* a1)
+void ComputerStartup_Setup(void* context)
 
 {
-    if (!(*(a1 + 0x70) & 1))
+    if (!(*(context + 0x70) & 1))
         return;
 
-    long double x87_r7_2 = *(a1 + 0x40) + 1f;
-    int32_t objC1 = *(a1 + 0x20);
-    *(a1 + 0x40) = x87_r7_2;
-    long double f0_1 = *(a1 + (objC1 << 2) + 0x44);
-    x87_r7_2 - f0_1;
+    long double fpu_val_7_2 = *(context + 0x40) + 1.0f;
+    int32_t entity_1 = *(context + 0x20);
+    *(context + 0x40) = fpu_val_7_2;
+    long double f0_1 = *(context + (entity_1 << 2) + 0x44);
+    fpu_val_7_2 - f0_1;
 
-    if (*(&((x87_r7_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f0_1) ? 1 : 0) << 0xa
-            | (x87_r7_2 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+    if (*(&((fpu_val_7_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_2 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x41)
         return;
 
-    int32_t valA2 = *(a1 + (objC1 << 2) + 0x74);
+    int32_t data_2 = *(context + (entity_1 << 2) + 0x74);
 
-    if (valA2)
-        valA2(*(a1 + 0x14), objC1);
+    if (data_2)
+        data_2(*(context + 0x14), entity_1);
 
-    int32_t valA3 = *(a1 + 0x20);
+    int32_t data_3 = *(context + 0x20);
 
-    if (valA3 < *(a1 + 0x24) - 1)
+    if (data_3 < *(context + 0x24) - 1)
     {
-        *(a1 + 0x40) = 0;
-        *(a1 + 0x20) = valA3 + 1;
+        *(context + 0x40) = 0;
+        *(context + 0x20) = data_3 + 1;
         return;
     }
 
-    int32_t valA5 = *(a1 + 0x70);
-    valA5 &= 0xfe;
-    valA5 |= 2;
-    *(a1 + 0x70) = valA5;
+    int32_t data_5 = *(context + 0x70);
+    data_5 &= 0xfe;
+    data_5 |= 2;
+    *(context + 0x70) = data_5;
 }

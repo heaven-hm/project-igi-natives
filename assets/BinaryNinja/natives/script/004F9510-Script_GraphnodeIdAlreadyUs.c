@@ -1,59 +1,59 @@
 // Original IGI.EXE function: Script_GraphnodeIdAlreadyUs (VA 0x004F9510; static CFG gate PASS, CFG score 0.852).
 #include "Script_GraphnodeIdAlreadyUs.h"
-int32_t* Script_GraphnodeIdAlreadyUs(void* a1, int32_t a2, int32_t a3, int32_t a4, float a5, int32_t a6, int32_t a7)
+int32_t* Script_GraphnodeIdAlreadyUs(void* context, int32_t param_2, int32_t param_3, int32_t param_4, float param_5, int32_t param_6, int32_t param_7)
 
 {
-    if (a2 >= 0x3e8)
+    if (param_2 >= 0x3e8)
         return 0;
 
-    if (a2 >= *(a1 + 0x58))
-        Script_ParseEnumReal32_23(a1, a2);
+    if (param_2 >= *(context + 0x58))
+        Script_ParseEnumReal32_23(context, param_2);
 
-    if (!Script_ExecuteLevelScript_23(a1, a2))
+    if (!Script_ExecuteLevelScript_23(context, param_2))
     {
-        int32_t valA2 = Script_UndefinedGraphnodeda(a1);
-        int32_t objC = *(a1 + 0x6c);
-        void* ctxB1 = valA2 * a2;
-        long double fpu7 = a5;
-        *(ctxB1 + objC + 0x28) = fpu7 + fpu7;
-        int32_t dstD = a7;
-        int32_t* result = ctxB1 + objC;
-        result[9] = a5;
-        result[8] = a4;
+        int32_t data_2 = Script_UndefinedGraphnodeda(context);
+        int32_t entity_val = *(context + 0x6c);
+        void* context_1 = data_2 * param_2;
+        long double fpu7 = param_5;
+        *(context_1 + entity_val + 0x28) = fpu7 + fpu7;
+        int32_t dest_val = param_7;
+        int32_t* result = context_1 + entity_val;
+        result[9] = param_5;
+        result[8] = param_4;
         int32_t i = 0xffffffff;
-        *result = a2;
+        *result = param_2;
         result[0xb] = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD;
-            dstD += 1;
+            bool flag_0_1 = 0 != *dest_val;
+            dest_val += 1;
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC2 = ~i;
-        int32_t srcS2;
-        int32_t dstD3;
-        dstD3 = memcpy(&result[0xd], dstD - objC2, objC2 & 0xfffffffc);
-        memcpy(dstD3, srcS2, objC2 & 3);
-        memcpy(&result[2], a3, 0x18);
-        result[0x4d] = a1;
+        int32_t entity_2 = ~i;
+        int32_t source_2;
+        int32_t dest_3;
+        dest_3 = memcpy(&result[0xd], dest_val - entity_2, entity_2 & 0xfffffffc);
+        memcpy(dest_3, source_2, entity_2 & 3);
+        memcpy(&result[2], param_3, 0x18);
+        result[0x4d] = context;
         result[0xc] = Sys_CheckHeap_22(&result[0xd]);
-        result[0x4e] = a6;
-        int32_t valA6 = 0;
-        __builtin_memset(&result[0x4f], 0, 0x100);
-        valA6 = g_54e36f;
-        int32_t valA7 = 0;
-        valA7 = *(a1 + 0x1c);
-        int32_t valA8 = *(((valA6 * 0x180 + valA7) << 2) + &g_a96ae0);
+        result[0x4e] = param_6;
+        int32_t data_6 = 0;
+        memset(&result[0x4f], 0, 0x100);
+        data_6 = g_54e36f;
+        int32_t data_7 = 0;
+        data_7 = *(context + 0x1c);
+        int32_t data_8 = *(((data_6 * 0x180 + data_7) << 2) + &g_a96ae0);
 
-        if (valA8)
-            valA8(a1, result);
+        if (data_8)
+            data_8(context, result);
 
-        *(a1 + 0x5c) += 1;
+        *(context + 0x5c) += 1;
         return result;
     }
 

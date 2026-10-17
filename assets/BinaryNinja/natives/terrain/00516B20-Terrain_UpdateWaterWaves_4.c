@@ -1,110 +1,110 @@
 // Original IGI.EXE function: Terrain_UpdateWaterWaves_4 (VA 0x00516B20; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_UpdateWaterWaves_4.h"
-char* Terrain_UpdateWaterWaves_4(char* a1, char* a2, char* a3, char* a4, char* a5)
+char* Terrain_UpdateWaterWaves_4(char* context, char* param_2, char* param_3, char* param_4, char* param_5)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
     char* result_1 = nullptr;
-    char* result_2 = a1;
+    char* result_2 = context;
 
     if (Camera_UpdateViewCone_20(result_2) >= 1 && result_2[1] == 0x3a)
     {
-        if (a2)
+        if (param_2)
         {
-            Terrain_BuildMipMaps_4(a2, result_2, 2);
-            a2[2] = 0;
+            Terrain_BuildMipMaps_4(param_2, result_2, 2);
+            param_2[2] = 0;
         }
 
         result_2 = &result_2[2];
     }
-    else if (a2)
-        *a2 = 0;
+    else if (param_2)
+        *param_2 = 0;
 
-    a2 = nullptr;
+    param_2 = nullptr;
     char* result = result_2;
-    char* srcS2 = 0xff;
-    a1 = result;
+    char* source_2 = 0xff;
+    context = result;
 
     if (*result_2)
     {
         do
         {
-            char objC2 = *result;
+            char entity_2 = *result;
 
-            if (*(objC2 + 0xc32321) & 4)
+            if (*(entity_2 + 0xc32321) & 4)
                 result = &result[1];
-            else if (objC2 == 0x2f || objC2 == 0x5c)
-                a2 = &result[1];
-            else if (objC2 == 0x2e)
+            else if (entity_2 == 0x2f || entity_2 == 0x5c)
+                param_2 = &result[1];
+            else if (entity_2 == 0x2e)
                 result_1 = result;
 
             result = &result[1];
         } while (*result);
 
-        a1 = result;
+        context = result;
     }
 
-    if (*result_2 && a2)
+    if (*result_2 && param_2)
     {
-        if (a3)
+        if (param_3)
         {
-            char* dstD2 = a2 - result_2;
+            char* dest_2 = param_2 - result_2;
 
-            if (dstD2 >= 0xff)
-                dstD2 = 0xff;
+            if (dest_2 >= 0xff)
+                dest_2 = 0xff;
 
-            Terrain_BuildMipMaps_4(a3, result_2, dstD2);
-            *(dstD2 + a3) = 0;
-            result = a1;
+            Terrain_BuildMipMaps_4(param_3, result_2, dest_2);
+            *(dest_2 + param_3) = 0;
+            result = context;
         }
 
-        result_2 = a2;
+        result_2 = param_2;
     }
-    else if (a3)
-        *a3 = 0;
+    else if (param_3)
+        *param_3 = 0;
 
     if (!result_1 || result_1 < result_2)
     {
-        if (a4)
+        if (param_4)
         {
-            char* valA5 = result - result_2;
+            char* data_5 = result - result_2;
 
-            if (valA5 < 0xff)
-                srcS2 = valA5;
+            if (data_5 < 0xff)
+                source_2 = data_5;
 
-            Terrain_BuildMipMaps_4(a4, result_2, srcS2);
-            *(srcS2 + a4) = 0;
+            Terrain_BuildMipMaps_4(param_4, result_2, source_2);
+            *(source_2 + param_4) = 0;
         }
 
-        result = a5;
+        result = param_5;
 
         if (result)
             *result = 0;
     }
     else
     {
-        if (a4)
+        if (param_4)
         {
-            char* dstD4 = result_1 - result_2;
+            char* dest_4 = result_1 - result_2;
 
-            if (dstD4 >= 0xff)
-                dstD4 = 0xff;
+            if (dest_4 >= 0xff)
+                dest_4 = 0xff;
 
-            Terrain_BuildMipMaps_4(a4, result_2, dstD4);
-            *(dstD4 + a4) = 0;
-            result = a1;
+            Terrain_BuildMipMaps_4(param_4, result_2, dest_4);
+            *(dest_4 + param_4) = 0;
+            result = context;
         }
 
-        if (a5)
+        if (param_5)
         {
-            char* valA4 = result - result_1;
+            char* data_4 = result - result_1;
 
-            if (valA4 < 0xff)
-                srcS2 = valA4;
+            if (data_4 < 0xff)
+                source_2 = data_4;
 
-            result = Terrain_BuildMipMaps_4(a5, result_1, srcS2);
-            *(srcS2 + a5) = 0;
+            result = Terrain_BuildMipMaps_4(param_5, result_1, source_2);
+            *(source_2 + param_5) = 0;
         }
     }
 

@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Gun_Setup (VA 0x00478840; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Setup.h"
-int32_t Gun_Setup(void* a1)
+int32_t Gun_Setup(void* context)
 
 {
-    DynObj_TryingToRemoveUnrigi(Qtask_GetList(), a1);
-    Weapon_CycleFireMode_5(a1);
-    int32_t* valA2 = **(a1 + 0x130);
+    DynObj_TryingToRemoveUnrigi(Qtask_GetList(), context);
+    Weapon_CycleFireMode_5(context);
+    int32_t* data_2 = **(context + 0x130);
 
-    if (valA2)
-        Weapon_UpdateZoom_6(valA2, 1);
+    if (data_2)
+        Weapon_UpdateZoom_6(data_2, 1);
 
-    Qtask_UpdateList(*(a1 + 0x130));
-    int32_t* valA3 = *(a1 + 0x194);
+    Qtask_UpdateList(*(context + 0x130));
+    int32_t* data_3 = *(context + 0x194);
 
-    if (valA3)
+    if (data_3)
     {
-        int32_t* dstD1 = *valA3;
-        Qtask_UpdateList(valA3);
+        int32_t* dest_1 = *data_3;
+        Qtask_UpdateList(data_3);
 
-        if (dstD1)
-            QTask_FindType(dstD1);
+        if (dest_1)
+            QTask_FindType(dest_1);
     }
 
-    int32_t* valA4 = *(a1 + 0x190);
+    int32_t* data_4 = *(context + 0x190);
 
-    if (valA4)
-        Qtask_UpdateList(valA4);
+    if (data_4)
+        Qtask_UpdateList(data_4);
 
-    return QTask_FindType(*(a1 + 0xe8));
+    return QTask_FindType(*(context + 0xe8));
 }

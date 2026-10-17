@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Camera_UpdateTransform_19 (VA 0x004A9F5C; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_19.h"
-int32_t __convention("regparm") Camera_UpdateTransform_19(int32_t a1, int32_t a2, int32_t a3, double a4)
+int32_t Camera_UpdateTransform_19(int32_t context, int32_t param_2, int32_t param_3, double param_4)
 
 {
-    int32_t v_c = a3;
-    int32_t v_14 = a3;
-    v_14 = a4;
+    int32_t item_c = param_3;
+    int32_t item_14 = param_3;
+    item_14 = param_4;
 
-    if (!(Camera_ApplyPostProcess_27(v_14, a3, v_c, a3) & 0x90))
+    if (!(Camera_ApplyPostProcess_27(item_14, param_3, item_c, param_3) & 0x90))
     {
-        int32_t v_14_1 = a3;
-        v_14_1 = a4;
-        v_c = Camera_ApplyBandFilter_13(v_14_1);
-        long double x87_r7_3 = v_c;
-        long double f0_1 = a4;
-        x87_r7_3 - f0_1;
+        int32_t item_14_1 = param_3;
+        item_14_1 = param_4;
+        item_c = Camera_ApplyBandFilter_13(item_14_1);
+        long double fpu_val_7_3 = item_c;
+        long double f0_1 = param_4;
+        fpu_val_7_3 - f0_1;
 
         if (TEST_BITB(
-            *(&((x87_r7_3 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_3 == f0_1 ? 1 : 0) << 0xe) + 1),
+            *(&((fpu_val_7_3 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_3 == f0_1 ? 1 : 0) << 0xe) + 1),
             6))
         {
-            int32_t v_10_2 = a3;
-            int32_t v_14_2 = a3;
-            a4 = a4 / 2.0;
-            v_14_2 = a4;
-            long double fp0_2 = Camera_ApplyBandFilter_13(v_14_2);
-            long double f1 = a4;
+            int32_t item_10_2 = param_3;
+            int32_t item_14_2 = param_3;
+            param_4 = param_4 / 2.0;
+            item_14_2 = param_4;
+            long double fp0_2 = Camera_ApplyBandFilter_13(item_14_2);
+            long double f1 = param_4;
             fp0_2 - f1;
 
             if (!TEST_BITB(

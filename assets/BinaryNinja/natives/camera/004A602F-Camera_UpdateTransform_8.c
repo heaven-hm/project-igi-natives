@@ -6,60 +6,60 @@ int32_t Camera_UpdateTransform_8()
     if (!g_c32548)
         Camera_SetFieldOfView_20();
 
-    char* srcS = g_93604c;
-    int32_t dstD = 0;
+    char* source_val = g_93604c;
+    int32_t dest_val = 0;
 
     while (true)
     {
-        char valA1 = *srcS;
+        char data_1 = *source_val;
 
-        if (!valA1)
+        if (!data_1)
             break;
 
-        if (valA1 != 0x3d)
-            dstD += 1;
+        if (data_1 != 0x3d)
+            dest_val += 1;
 
-        srcS = srcS + Camera_UpdateViewCone_20(srcS) + 1;
+        source_val = source_val + Camera_UpdateViewCone_20(source_val) + 1;
     }
 
-    void** srcS1 = Camera_ApplyHandiCam_20((dstD << 2) + 4);
-    int32_t* objC2 = (dstD << 2) + 4;
-    g_93608c = srcS1;
+    void** source_1 = Camera_ApplyHandiCam_20((dest_val << 2) + 4);
+    int32_t* entity_2 = (dest_val << 2) + 4;
+    g_93608c = source_1;
 
-    if (!srcS1)
+    if (!source_1)
     {
         Camera_UpdateViewCone_3(9);
-        objC2 = 9;
+        entity_2 = 9;
     }
 
-    char* dstD1 = g_93604c;
+    char* dest_1 = g_93604c;
 
-    while (*dstD1)
+    while (*dest_1)
     {
-        objC2 = dstD1;
-        int32_t* flagP2 = Camera_UpdateViewCone_20(dstD1) + 1;
+        entity_2 = dest_1;
+        int32_t* flagP2 = Camera_UpdateViewCone_20(dest_1) + 1;
 
-        if (*dstD1 != 0x3d)
+        if (*dest_1 != 0x3d)
         {
-            void* valA5 = Camera_ApplyHandiCam_20(flagP2);
-            *srcS1 = valA5;
+            void* data_5 = Camera_ApplyHandiCam_20(flagP2);
+            *source_1 = data_5;
 
-            if (!valA5)
+            if (!data_5)
                 Camera_UpdateViewCone_3(9);
 
-            int32_t* v_14_3 = dstD1;
-            Camera_ApplyLineFilter_20(*srcS1, v_14_3);
-            srcS1 = &srcS1[1];
-            objC2 = v_14_3;
+            int32_t* item_14_3 = dest_1;
+            Camera_ApplyLineFilter_20(*source_1, item_14_3);
+            source_1 = &source_1[1];
+            entity_2 = item_14_3;
         }
 
-        dstD1 += flagP2;
+        dest_1 += flagP2;
     }
 
-    int32_t __saved_ebp_3 = g_93604c;
-    int32_t result = Camera_UpdateTransform_9(objC2);
+    int32_t saved_ebp_3 = g_93604c;
+    int32_t result = Camera_UpdateTransform_9(entity_2);
     g_93604c = 0;
-    *srcS1 = nullptr;
+    *source_1 = nullptr;
     g_c32544 = 1;
     return result;
 }

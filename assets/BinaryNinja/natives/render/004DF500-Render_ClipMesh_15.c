@@ -1,44 +1,44 @@
 // Original IGI.EXE function: Render_ClipMesh_15 (VA 0x004DF500; static CFG gate PASS, CFG score 1.000).
 #include "Render_ClipMesh_15.h"
-int32_t* Render_ClipMesh_15(float a1, int32_t* a2, int32_t* a3)
+int32_t* Render_ClipMesh_15(float context, int32_t* param_2, int32_t* param_3)
 
 {
-    void* valA = *(a1 + 0x148);
+    void* data_val = *(context + 0x148);
 
-    if (valA)
+    if (data_val)
     {
-        int32_t* valA1 = *(valA + 8);
+        int32_t* data_1 = *(data_val + 8);
 
-        if (*valA1 && valA1)
+        if (*data_1 && data_1)
         {
-            int32_t v_18;
-            Sys_FreeMemory_2(&v_18, 0x10, 0x3e8, 0);
-            void* valA5 = *(a1 + 0x148);
-            int32_t* v_14;
+            int32_t item_18;
+            Sys_FreeMemory_2(&item_18, 0x10, 0x3e8, 0);
+            void* data_5 = *(context + 0x148);
+            int32_t* item_14;
             int32_t i_2;
-            int32_t v_8;
-            int32_t* v_4;
+            int32_t item_8;
+            int32_t* item_4;
 
-            if (valA5)
+            if (data_5)
             {
-                int32_t* i = *(valA5 + 8);
+                int32_t* i = *(data_5 + 8);
 
                 if (*i && i)
                 {
                     do
                     {
-                        void* objC5 = *(*(*i[0x1b] + 0xc) + 0xc);
-                        int32_t* valA10 = v_14[i_2] * v_8 + v_18;
-                        *(v_4 + valA10) = i_2;
+                        void* entity_5 = *(*(*i[0x1b] + 0xc) + 0xc);
+                        int32_t* data_10 = item_14[i_2] * item_8 + item_18;
+                        *(item_4 + data_10) = i_2;
                         i_2 += 1;
-                        *valA10 = *(objC5 + 0x50);
-                        valA10[1] = *(objC5 + 0x54);
-                        valA10[2] = *(objC5 + 0x58);
-                        valA10[3] = *(objC5 + 0x5c);
-                        valA5 = i[0x3a];
+                        *data_10 = *(entity_5 + 0x50);
+                        data_10[1] = *(entity_5 + 0x54);
+                        data_10[2] = *(entity_5 + 0x58);
+                        data_10[3] = *(entity_5 + 0x5c);
+                        data_5 = i[0x3a];
 
-                        if (valA5)
-                            Render_TransformVertices_14(&v_18, valA5);
+                        if (data_5)
+                            Render_TransformVertices_14(&item_18, data_5);
 
                         i = *i;
 
@@ -52,244 +52,244 @@ int32_t* Render_ClipMesh_15(float a1, int32_t* a2, int32_t* a3)
             }
 
             int32_t i_1 = i_2;
-            int32_t* dstD4 = v_14;
+            int32_t* dest_4 = item_14;
 
             if (i_1 > 1)
             {
-                int32_t* ctxB3 = a2;
-                int32_t* flagP1 = a2;
+                int32_t* context_3 = param_2;
+                int32_t* flagP1 = param_2;
 
                 do
                 {
-                    a1 = 3.40282347e+38f;
-                    int32_t v_54_1 = 0;
-                    long double x87_r7_5;
+                    context = 3.40282347e+38.0f;
+                    int32_t item_54_1 = 0;
+                    long double fpu_val_7_5;
                     long double f3_1;
 
                     if (i_1 > 0)
                     {
-                        int32_t* v_50_1 = dstD4;
-                        bool cond_2_1;
+                        int32_t* item_50_1 = dest_4;
+                        bool flag_2_1;
 
                         do
                         {
-                            int32_t valA12 = 0;
-                            int32_t* v_58_1 = dstD4;
-                            int32_t v_4c_1 = 0;
+                            int32_t data_12 = 0;
+                            int32_t* item_58_1 = dest_4;
+                            int32_t item_4c_1 = 0;
 
                             do
                             {
-                                if (v_54_1 != valA12)
+                                if (item_54_1 != data_12)
                                 {
-                                    int32_t* objC9 = *v_50_1 * v_8 + v_18;
-                                    int32_t* tmpD13 = *v_58_1 * v_8 + v_18;
-                                    long double x87_r7_2 = tmpD13[2] - objC9[2];
-                                    long double x87_r6_2 = tmpD13[1] - objC9[1];
-                                    long double x87_r5_2 = *tmpD13 - *objC9;
-                                    long double x87_r4_5 = sqrtl(x87_r5_2 * x87_r5_2
-                                        + x87_r6_2 * x87_r6_2 + x87_r7_2 * x87_r7_2);
-                                    long double f2_1 = a1;
-                                    x87_r4_5 - f2_1;
+                                    int32_t* entity_9 = *item_50_1 * item_8 + item_18;
+                                    int32_t* temp_13 = *item_58_1 * item_8 + item_18;
+                                    long double fpu_val_7_2 = temp_13[2] - entity_9[2];
+                                    long double fpu_val_6_2 = temp_13[1] - entity_9[1];
+                                    long double fpu_val_5_2 = *temp_13 - *entity_9;
+                                    long double fpu_val_4_5 = sqrtl(fpu_val_5_2 * fpu_val_5_2
+                                        + fpu_val_6_2 * fpu_val_6_2 + fpu_val_7_2 * fpu_val_7_2);
+                                    long double f2_1 = context;
+                                    fpu_val_4_5 - f2_1;
 
-                                    if (*(&((x87_r4_5 < f2_1 ? 1 : 0) << 8
-                                        | (FCMP_UO(x87_r4_5, f2_1) ? 1 : 0) << 0xa
-                                        | (x87_r4_5 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+                                    if (*(&((fpu_val_4_5 < f2_1 ? 1 : 0) << 8
+                                        | (FCMP_UO(fpu_val_4_5, f2_1) ? 1 : 0) << 0xa
+                                        | (fpu_val_4_5 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
                                     {
-                                        a1 = x87_r4_5;
-                                        ctxB3 = objC9;
-                                        flagP1 = tmpD13;
+                                        context = fpu_val_4_5;
+                                        context_3 = entity_9;
+                                        flagP1 = temp_13;
                                     }
                                 }
 
-                                valA12 = v_4c_1 + 1;
-                                v_4c_1 = valA12;
-                                v_58_1 = &v_58_1[1];
-                            } while (valA12 < i_1);
+                                data_12 = item_4c_1 + 1;
+                                item_4c_1 = data_12;
+                                item_58_1 = &item_58_1[1];
+                            } while (data_12 < i_1);
 
-                            cond_2_1 = v_54_1 + 1 < i_1;
-                            v_54_1 += 1;
-                            v_50_1 = &v_50_1[1];
-                        } while (cond_2_1);
-                        x87_r7_5 = a1;
-                        f3_1 = 0f;
-                        x87_r7_5 - f3_1;
+                            flag_2_1 = item_54_1 + 1 < i_1;
+                            item_54_1 += 1;
+                            item_50_1 = &item_50_1[1];
+                        } while (flag_2_1);
+                        fpu_val_7_5 = context;
+                        f3_1 = 0.0f;
+                        fpu_val_7_5 - f3_1;
                     }
 
-                    if (i_1 <= 0 || !(*(&((x87_r7_5 < f3_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_5, f3_1) ? 1 : 0) << 0xa
-                        | (x87_r7_5 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                    if (i_1 <= 0 || !(*(&((fpu_val_7_5 < f3_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_5, f3_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_5 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                     {
-                        long double x87_r7_9 = a1 + flagP1[3];
-                        long double f0_1 = ctxB3[3];
-                        x87_r7_9 - f0_1;
-                        int32_t* valA20;
+                        long double fpu_val_7_9 = context + flagP1[3];
+                        long double f0_1 = context_3[3];
+                        fpu_val_7_9 - f0_1;
+                        int32_t* data_20;
 
-                        if (!(*(&((x87_r7_9 < f0_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_9, f0_1) ? 1 : 0) << 0xa
-                            | (x87_r7_9 == f0_1 ? 1 : 0) << 0xe) + 1) & 1))
+                        if (!(*(&((fpu_val_7_9 < f0_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_9, f0_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_9 == f0_1 ? 1 : 0) << 0xe) + 1) & 1))
                         {
-                            long double x87_r7_11 = a1 + ctxB3[3];
+                            long double fpu_val_7_11 = context + context_3[3];
                             long double f1_1 = flagP1[3];
-                            x87_r7_11 - f1_1;
+                            fpu_val_7_11 - f1_1;
 
-                            if (!(*(&((x87_r7_11 < f1_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_11, f1_1) ? 1 : 0) << 0xa
-                                | (x87_r7_11 == f1_1 ? 1 : 0) << 0xe) + 1) & 1))
+                            if (!(*(&((fpu_val_7_11 < f1_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_11, f1_1) ? 1 : 0) << 0xa
+                                | (fpu_val_7_11 == f1_1 ? 1 : 0) << 0xe) + 1) & 1))
                             {
-                                float v_30_1 = *flagP1 - *ctxB3;
-                                float v_48_1 = v_30_1;
-                                float v_3c_1 = v_30_1;
-                                float v_2c_1 = flagP1[1] - ctxB3[1];
-                                float v_28_1 = flagP1[2] - ctxB3[2];
-                                long double x87_r7_18 = v_28_1;
-                                long double x87_r6_5 = v_2c_1;
-                                long double x87_r5_4 = v_30_1;
-                                long double x87_r4_10 = sqrtl(x87_r5_4 * x87_r5_4
-                                    + x87_r6_5 * x87_r6_5 + x87_r7_18 * x87_r7_18);
-                                long double x87_r6_8 = ctxB3[3] / x87_r4_10;
-                                float v_48_4 = -((v_30_1 * x87_r6_8)) + *ctxB3;
-                                float v_44_4 = -((v_2c_1 * x87_r6_8)) + ctxB3[1];
-                                float v_40_2 = -((x87_r6_8 * v_28_1)) + ctxB3[2];
-                                long double x87_r7_20 = flagP1[3] / x87_r4_10;
-                                float v_3c_3 = v_30_1 * x87_r7_20 + *flagP1;
-                                float v_38_3 = v_2c_1 * x87_r7_20 + flagP1[1];
-                                long double x87_r7_22 = x87_r7_20 * v_28_1 + flagP1[2];
-                                float v_24_1 = (v_3c_3 - v_48_4) * 0.5f + v_48_4;
-                                *ctxB3 = v_24_1;
-                                float v_20_1 = (v_38_3 - v_44_4) * 0.5f + v_44_4;
-                                ctxB3[1] = v_20_1;
-                                float v_1c_1 = (x87_r7_22 - v_40_2) * 0.5f + v_40_2;
-                                long double x87_r7_23 = x87_r7_22 - v_1c_1;
-                                ctxB3[2] = v_1c_1;
-                                long double x87_r6_33 = v_38_3 - v_20_1;
-                                long double x87_r5_19 = v_3c_3 - v_24_1;
-                                ctxB3[3] = sqrtl(x87_r5_19 * x87_r5_19 + x87_r6_33 * x87_r6_33
-                                    + x87_r7_23 * x87_r7_23);
-                                int32_t** tmpD30 = v_4;
+                                float item_30_1 = *flagP1 - *context_3;
+                                float item_48_1 = item_30_1;
+                                float item_3c_1 = item_30_1;
+                                float item_2c_1 = flagP1[1] - context_3[1];
+                                float item_28_1 = flagP1[2] - context_3[2];
+                                long double fpu_val_7_18 = item_28_1;
+                                long double fpu_val_6_5 = item_2c_1;
+                                long double fpu_val_5_4 = item_30_1;
+                                long double fpu_val_4_10 = sqrtl(fpu_val_5_4 * fpu_val_5_4
+                                    + fpu_val_6_5 * fpu_val_6_5 + fpu_val_7_18 * fpu_val_7_18);
+                                long double fpu_val_6_8 = context_3[3] / fpu_val_4_10;
+                                float item_48_4 = -((item_30_1 * fpu_val_6_8)) + *context_3;
+                                float item_44_4 = -((item_2c_1 * fpu_val_6_8)) + context_3[1];
+                                float item_40_2 = -((fpu_val_6_8 * item_28_1)) + context_3[2];
+                                long double fpu_val_7_20 = flagP1[3] / fpu_val_4_10;
+                                float item_3c_3 = item_30_1 * fpu_val_7_20 + *flagP1;
+                                float item_38_3 = item_2c_1 * fpu_val_7_20 + flagP1[1];
+                                long double fpu_val_7_22 = fpu_val_7_20 * item_28_1 + flagP1[2];
+                                float item_24_1 = (item_3c_3 - item_48_4) * 0.5f + item_48_4;
+                                *context_3 = item_24_1;
+                                float item_20_1 = (item_38_3 - item_44_4) * 0.5f + item_44_4;
+                                context_3[1] = item_20_1;
+                                float item_1c_1 = (fpu_val_7_22 - item_40_2) * 0.5f + item_40_2;
+                                long double fpu_val_7_23 = fpu_val_7_22 - item_1c_1;
+                                context_3[2] = item_1c_1;
+                                long double fpu_val_6_33 = item_38_3 - item_20_1;
+                                long double fpu_val_5_19 = item_3c_3 - item_24_1;
+                                context_3[3] = sqrtl(fpu_val_5_19 * fpu_val_5_19 + fpu_val_6_33 * fpu_val_6_33
+                                    + fpu_val_7_23 * fpu_val_7_23);
+                                int32_t** temp_30 = item_4;
                                 i_1 = i_2 - 1;
-                                valA20 = *(tmpD30 + flagP1);
+                                data_20 = *(temp_30 + flagP1);
                                 i_2 = i_1;
 
-                                if (valA20 == i_1)
-                                    dstD4 = v_14;
+                                if (data_20 == i_1)
+                                    dest_4 = item_14;
                                 else
                                 {
-                                    int32_t* srcS16 = v_14[i_1] * v_8 + v_18;
-                                    int32_t dstD12 = v_14[valA20];
-                                    int32_t tmpD31 = *(srcS16 + tmpD30);
-                                    v_14[valA20] = v_14[tmpD31];
-                                    v_14[tmpD31] = dstD12;
-                                    *(srcS16 + v_4) = valA20;
+                                    int32_t* source_16 = item_14[i_1] * item_8 + item_18;
+                                    int32_t dest_12 = item_14[data_20];
+                                    int32_t temp_31 = *(source_16 + temp_30);
+                                    item_14[data_20] = item_14[temp_31];
+                                    item_14[temp_31] = dest_12;
+                                    *(source_16 + item_4) = data_20;
                                     i_1 = i_2;
-                                    dstD4 = v_14;
+                                    dest_4 = item_14;
                                 }
                             }
                             else
                             {
                                 i_1 -= 1;
-                                valA20 = *(ctxB3 + v_4);
+                                data_20 = *(context_3 + item_4);
                                 i_2 = i_1;
 
-                                if (valA20 != i_1)
+                                if (data_20 != i_1)
                                 {
-                                    int32_t* srcS12 = dstD4[i_1] * v_8 + v_18;
-                                    int32_t tmpD25 = dstD4[valA20];
-                                    int32_t objC17 = *(srcS12 + v_4);
-                                    dstD4[valA20] = dstD4[objC17];
-                                    v_14[objC17] = tmpD25;
-                                    *(srcS12 + v_4) = valA20;
+                                    int32_t* source_12 = dest_4[i_1] * item_8 + item_18;
+                                    int32_t temp_25 = dest_4[data_20];
+                                    int32_t entity_17 = *(source_12 + item_4);
+                                    dest_4[data_20] = dest_4[entity_17];
+                                    item_14[entity_17] = temp_25;
+                                    *(source_12 + item_4) = data_20;
                                     i_1 = i_2;
-                                    dstD4 = v_14;
+                                    dest_4 = item_14;
                                 }
                             }
                         }
                         else
                         {
                             i_1 -= 1;
-                            valA20 = *(v_4 + flagP1);
+                            data_20 = *(item_4 + flagP1);
                             i_2 = i_1;
 
-                            if (valA20 != i_1)
+                            if (data_20 != i_1)
                             {
-                                int32_t tmpD21 = dstD4[valA20];
-                                int32_t* srcS9 = dstD4[i_1] * v_8 + v_18;
-                                int32_t objC13 = *(srcS9 + v_4);
-                                dstD4[valA20] = dstD4[objC13];
-                                v_14[objC13] = tmpD21;
-                                *(srcS9 + v_4) = valA20;
+                                int32_t temp_21 = dest_4[data_20];
+                                int32_t* source_9 = dest_4[i_1] * item_8 + item_18;
+                                int32_t entity_13 = *(source_9 + item_4);
+                                dest_4[data_20] = dest_4[entity_13];
+                                item_14[entity_13] = temp_21;
+                                *(source_9 + item_4) = data_20;
                                 i_1 = i_2;
-                                dstD4 = v_14;
+                                dest_4 = item_14;
                             }
                         }
                     }
                     else
                     {
-                        long double x87_r7_6 = ctxB3[3];
-                        long double x87_r6_4 = flagP1[3];
-                        x87_r6_4 - x87_r7_6;
-                        long double x87_r7_7;
+                        long double fpu_val_7_6 = context_3[3];
+                        long double fpu_val_6_4 = flagP1[3];
+                        fpu_val_6_4 - fpu_val_7_6;
+                        long double fpu_val_7_7;
 
-                        if (!(*(&((x87_r6_4 < x87_r7_6 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r6_4, x87_r7_6) ? 1 : 0) << 0xa
-                                | (x87_r6_4 == x87_r7_6 ? 1 : 0) << 0xe) + 1) & 1))
-                            x87_r7_7 = flagP1[3];
+                        if (!(*(&((fpu_val_6_4 < fpu_val_7_6 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_6_4, fpu_val_7_6) ? 1 : 0) << 0xa
+                                | (fpu_val_6_4 == fpu_val_7_6 ? 1 : 0) << 0xe) + 1) & 1))
+                            fpu_val_7_7 = flagP1[3];
                         else
-                            x87_r7_7 = ctxB3[3];
+                            fpu_val_7_7 = context_3[3];
 
-                        ctxB3[3] = x87_r7_7;
+                        context_3[3] = fpu_val_7_7;
                         i_1 = i_2 - 1;
-                        int32_t objC10 = *(v_4 + flagP1);
+                        int32_t entity_10 = *(item_4 + flagP1);
                         i_2 = i_1;
 
-                        if (objC10 == i_1)
-                            dstD4 = v_14;
+                        if (entity_10 == i_1)
+                            dest_4 = item_14;
                         else
                         {
-                            int32_t* srcS6 = v_14[i_1] * v_8 + v_18;
-                            int32_t dstD6 = v_14[objC10];
-                            int32_t tmpD19 = *(srcS6 + v_4);
-                            v_14[objC10] = v_14[tmpD19];
-                            v_14[tmpD19] = dstD6;
-                            *(srcS6 + v_4) = objC10;
+                            int32_t* source_6 = item_14[i_1] * item_8 + item_18;
+                            int32_t dest_6 = item_14[entity_10];
+                            int32_t temp_19 = *(source_6 + item_4);
+                            item_14[entity_10] = item_14[temp_19];
+                            item_14[temp_19] = dest_6;
+                            *(source_6 + item_4) = entity_10;
                             i_1 = i_2;
-                            dstD4 = v_14;
+                            dest_4 = item_14;
                         }
                     }
                 } while (i_1 > 1);
             }
 
-            int32_t* valA28 = *dstD4 * v_8 + v_18;
-            *a2 = *valA28;
-            a2[1] = valA28[1];
-            a2[2] = valA28[2];
-            *a3 = valA28[3];
-            int32_t valA29 = *(valA28 + v_4);
-            int32_t v_10 = i_1 - 1;
+            int32_t* data_28 = *dest_4 * item_8 + item_18;
+            *param_2 = *data_28;
+            param_2[1] = data_28[1];
+            param_2[2] = data_28[2];
+            *param_3 = data_28[3];
+            int32_t data_29 = *(data_28 + item_4);
+            int32_t item_10 = i_1 - 1;
 
-            if (valA29 != i_1 - 1)
+            if (data_29 != i_1 - 1)
             {
-                int32_t* srcS20 = dstD4[i_1 - 1] * v_8 + v_18;
-                int32_t tmpD35 = dstD4[valA29];
-                int32_t objC28 = *(srcS20 + v_4);
-                dstD4[valA29] = dstD4[objC28];
-                v_14[objC28] = tmpD35;
-                *(srcS20 + v_4) = valA29;
+                int32_t* source_20 = dest_4[i_1 - 1] * item_8 + item_18;
+                int32_t temp_35 = dest_4[data_29];
+                int32_t entity_28 = *(source_20 + item_4);
+                dest_4[data_29] = dest_4[entity_28];
+                item_14[entity_28] = temp_35;
+                *(source_20 + item_4) = data_29;
             }
 
-            return Sys_OpenFileStream_2(&v_18);
+            return Sys_OpenFileStream_2(&item_18);
         }
     }
 
-    int32_t* valA30 = *(a1 + 0x6c);
+    int32_t* data_30 = *(context + 0x6c);
 
-    if (!valA30)
-        return valA30;
+    if (!data_30)
+        return data_30;
 
-    void* valA3 = *(*(*valA30 + 0xc) + 0xc);
-    *a2 = *(valA3 + 0x50);
-    a2[1] = *(valA3 + 0x54);
-    a2[2] = *(valA3 + 0x58);
-    int32_t valA4 = *(valA3 + 0x5c);
-    *a3 = valA4;
-    return valA4;
+    void* data_3 = *(*(*data_30 + 0xc) + 0xc);
+    *param_2 = *(data_3 + 0x50);
+    param_2[1] = *(data_3 + 0x54);
+    param_2[2] = *(data_3 + 0x58);
+    int32_t data_4 = *(data_3 + 0x5c);
+    *param_3 = data_4;
+    return data_4;
 }

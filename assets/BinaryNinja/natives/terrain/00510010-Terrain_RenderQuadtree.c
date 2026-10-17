@@ -4,15 +4,15 @@ int32_t Terrain_RenderQuadtree()
 
 {
     int32_t flagP;
-    int32_t v_4 = flagP;
-    int32_t valA = g_54eba0;
-    int32_t* v_c30 = &v_4;
+    int32_t item_4 = flagP;
+    int32_t data_val = g_54eba0;
+    int32_t* item_c30 = &item_4;
     int32_t result = g_b16ca4;
-    int32_t v_b84 = g_54eba4;
+    int32_t item_b84 = g_54eba4;
     void* flagP1 = &g_b16ce0;
-    int32_t v_a90 = 0;
-    int32_t v_b48 = 0xffffffff;
-    void* v_b98 = &g_b16ce0;
+    int32_t item_a90 = 0;
+    int32_t item_b48 = 0xffffffff;
+    void* item_b98 = &g_b16ce0;
     int32_t result_2 = result;
     g_c31090 += result;
     int32_t result_1 = 0;
@@ -21,386 +21,386 @@ int32_t Terrain_RenderQuadtree()
     {
         do
         {
-            int32_t tmpD1 = *(flagP1 + 0x18);
-            int24_t ctxB1 = *(flagP1 + 0x24);
-            int32_t tmpD2 = *(flagP1 + 0x1c);
-            double v_b24;
-            memcpy(&v_b24, flagP1, 0x18);
-            void* valA1 = *(flagP1 + 0x2c);
-            int32_t tmpD3 = tmpD2 & 1;
-            int32_t objC1 = 0;
-            objC1 = *(&ctxB1 + 2);
-            uint32_t ctxB2 = ctxB1;
-            int32_t tmpD5 = g_b12b68;
-            int32_t v_c20_1 = objC1;
+            int32_t temp_1 = *(flagP1 + 0x18);
+            int24_t context_1 = *(flagP1 + 0x24);
+            int32_t temp_2 = *(flagP1 + 0x1c);
+            double item_b24;
+            memcpy(&item_b24, flagP1, 0x18);
+            void* data_1 = *(flagP1 + 0x2c);
+            int32_t temp_3 = temp_2 & 1;
+            int32_t entity_1 = 0;
+            entity_1 = *(&context_1 + 2);
+            uint32_t context_2 = context_1;
+            int32_t temp_5 = g_b12b68;
+            int32_t item_c20_1 = entity_1;
 
-            if (tmpD5 <= g_b12b6c - 3)
+            if (temp_5 <= g_b12b6c - 3)
             {
-                int32_t objC16 = *(g_b12b64 + (tmpD5 << 2)) * g_b12b70 + g_b12b60;
-                *(g_b12b74 + objC16) = tmpD5;
+                int32_t entity_16 = *(g_b12b64 + (temp_5 << 2)) * g_b12b70 + g_b12b60;
+                *(g_b12b74 + entity_16) = temp_5;
                 g_b12b68 += 1;
-                *(valA1 + 0x18) = objC16;
-                *(valA1 + 0x14) = 0;
+                *(data_1 + 0x18) = entity_16;
+                *(data_1 + 0x14) = 0;
             label_5101bf:
-                int32_t objC17 = g_b16c9c;
-                int16_t* srcS9 = *(flagP1 + 0x20);
-                *((objC17 << 2) + &g_b12c60) = *(valA1 + 0x18);
-                g_b16c9c = objC17 + 1;
-                void* tmpD17 = *(valA1 + 0x18);
-                int32_t* valA3 = srcS9[1] + &srcS9[4];
-                int32_t* v_bc8_1 = valA3;
-                int32_t v_bd8_2 = 0;
-                float v_b5c;
-                float v_b44;
-                int32_t v_afc;
-                float v_af8;
-                float v_af4;
+                int32_t entity_17 = g_b16c9c;
+                int16_t* source_9 = *(flagP1 + 0x20);
+                *((entity_17 << 2) + &g_b12c60) = *(data_1 + 0x18);
+                g_b16c9c = entity_17 + 1;
+                void* temp_17 = *(data_1 + 0x18);
+                int32_t* data_3 = source_9[1] + &source_9[4];
+                int32_t* item_bc8_1 = data_3;
+                int32_t item_bd8_2 = 0;
+                float item_b5c;
+                float item_b44;
+                int32_t item_afc;
+                float item_af8;
+                float item_af4;
 
-                if (ctxB2 != 0xffff)
+                if (context_2 != 0xffff)
                 {
-                    v_bd8_2 = 1;
-                    uint32_t valA5 = ctxB2 * 0x30;
-                    v_b44 = *(valA5 + 0xba80b0) * 0.00390625f;
-                    v_af4 = *(valA5 + 0xba80b8);
-                    v_af8 = *(valA5 + 0xba80c0);
-                    v_afc = *(valA5 + 0xba80c8);
-                    v_b5c = *(valA5 + 0xba80b4) * 0.00390625f;
+                    item_bd8_2 = 1;
+                    uint32_t data_5 = context_2 * 0x30;
+                    item_b44 = *(data_5 + 0xba80b0) * 0.00390625f;
+                    item_af4 = *(data_5 + 0xba80b8);
+                    item_af8 = *(data_5 + 0xba80c0);
+                    item_afc = *(data_5 + 0xba80c8);
+                    item_b5c = *(data_5 + 0xba80b4) * 0.00390625f;
                 }
 
-                void* v_bbc;
-                char v_ba8;
-                float v_ba0;
-                float v_b50;
-                float v_b4c;
+                void* item_bbc;
+                char item_ba8;
+                float item_ba0;
+                float item_b50;
+                float item_b4c;
 
-                if (tmpD1 < 0xe)
-                    v_c20_1 = 0;
-                else if (objC1)
+                if (temp_1 < 0xe)
+                    item_c20_1 = 0;
+                else if (entity_1)
                 {
-                    int32_t objC21 = objC1 * 0x30;
-                    v_b50 = *(objC21 + 0xba2048);
-                    v_bbc = (&g_ba2058)[objC1 * 0xc];
-                    v_b4c = *(objC21 + 0xba2050);
-                    v_ba0 = (&g_ba2040)[objC1 * 6];
-                    v_ba8 = *(objC21 + 0xba203c) + 3;
+                    int32_t entity_21 = entity_1 * 0x30;
+                    item_b50 = *(entity_21 + 0xba2048);
+                    item_bbc = (&g_ba2058)[entity_1 * 0xc];
+                    item_b4c = *(entity_21 + 0xba2050);
+                    item_ba0 = (&g_ba2040)[entity_1 * 6];
+                    item_ba8 = *(entity_21 + 0xba203c) + 3;
                 }
 
-                int32_t ctxB3 = *(flagP1 + 0x28);
+                int32_t context_3 = *(flagP1 + 0x28);
 
-                if (v_b48 != ctxB3)
+                if (item_b48 != context_3)
                 {
-                    v_b48 = ctxB3;
-                    void v_ad8;
-                    void* valA9 = &v_ad8;
-                    int32_t v_bc0_1 = 4;
-                    bool cond_6_1;
+                    item_b48 = context_3;
+                    void item_ad8;
+                    void* data_9 = &item_ad8;
+                    int32_t item_bc0_1 = 4;
+                    bool flag_6_1;
 
                     do
                     {
-                        uint32_t objC27 = ctxB3;
-                        ctxB3 s>>= 8;
-                        int32_t* valA15;
+                        uint32_t entity_27 = context_3;
+                        context_3 s>>= 8;
+                        int32_t* data_15;
 
-                        if (!objC27)
+                        if (!entity_27)
                         {
-                            valA15 = valA9 - 0x18;
-                            *valA15 = 0;
+                            data_15 = data_9 - 0x18;
+                            *data_15 = 0;
                         }
                         else
                         {
-                            uint32_t objC29 = objC27 * 0x30;
-                            *(valA9 - 4) = *(objC29 + 0xba5050);
-                            long double x87_r7_9 = *(objC29 + 0xba5070);
-                            *(valA9 - 8) = *(objC29 + 0xba5078);
-                            int32_t dstD4 = *(objC29 + 0xba5060);
-                            *(valA9 - 0xc) = x87_r7_9;
-                            *(valA9 - 0x10) = *(objC29 + 0xba5068);
-                            int32_t objC31 = *(objC29 + 0xba505c);
-                            *(valA9 - 0x14) = dstD4;
-                            valA15 = valA9 - 0x18;
-                            *valA15 = objC31;
+                            uint32_t entity_29 = entity_27 * 0x30;
+                            *(data_9 - 4) = *(entity_29 + 0xba5050);
+                            long double fpu_val_7_9 = *(entity_29 + 0xba5070);
+                            *(data_9 - 8) = *(entity_29 + 0xba5078);
+                            int32_t dest_4 = *(entity_29 + 0xba5060);
+                            *(data_9 - 0xc) = fpu_val_7_9;
+                            *(data_9 - 0x10) = *(entity_29 + 0xba5068);
+                            int32_t entity_31 = *(entity_29 + 0xba505c);
+                            *(data_9 - 0x14) = dest_4;
+                            data_15 = data_9 - 0x18;
+                            *data_15 = entity_31;
                         }
 
-                        valA9 = &valA15[0xc];
-                        cond_6_1 = v_bc0_1 != 1;
-                        v_bc0_1 -= 1;
-                    } while (cond_6_1);
+                        data_9 = &data_15[0xc];
+                        flag_6_1 = item_bc0_1 != 1;
+                        item_bc0_1 -= 1;
+                    } while (flag_6_1);
                 }
 
-                int32_t objC34 = srcS9[2];
-                int32_t ctxB5 = srcS9[3] + objC34;
-                int32_t valA18 = ctxB5 * 0x14 - (objC34 << 3);
-                memcpy(tmpD17, flagP1, 0x18);
-                *(tmpD17 + 0x18) = objC34 << 0x10 | ctxB5;
-                *(tmpD17 + 0x1c) = tmpD1;
-                void* dstD6 = v_bbc;
-                void* valA23 = tmpD17 + 0x30;
-                int32_t flagP3 = tmpD2 & 4;
-                int32_t v_be0_1 = 0;
-                int32_t v_c04_1 = flagP3;
-                double v_be8_1 = 1 << ((0x1b - tmpD1) & 0x1f);
-                double v_b1c;
-                double v_b14;
+                int32_t entity_34 = source_9[2];
+                int32_t context_5 = source_9[3] + entity_34;
+                int32_t data_18 = context_5 * 0x14 - (entity_34 << 3);
+                memcpy(temp_17, flagP1, 0x18);
+                *(temp_17 + 0x18) = entity_34 << 0x10 | context_5;
+                *(temp_17 + 0x1c) = temp_1;
+                void* dest_6 = item_bbc;
+                void* data_23 = temp_17 + 0x30;
+                int32_t flagP3 = temp_2 & 4;
+                int32_t item_be0_1 = 0;
+                int32_t item_c04_1 = flagP3;
+                double item_be8_1 = 1 << ((0x1b - temp_1) & 0x1f);
+                double item_b1c;
+                double item_b14;
 
                 while (true)
                 {
-                    int32_t objC38 = *v_bc8_1;
-                    int32_t v_c14_2 = (objC38 >> 0xe & 0x3f) - 0x18;
-                    int32_t tmpD28 = (objC38 >> 0x1a & 0x3f) - 0x18;
-                    int32_t v_c1c_1 = tmpD28;
-                    int32_t v_c24_1 = (objC38 >> 0x14 & 0x3f) - 0x18;
+                    int32_t entity_38 = *item_bc8_1;
+                    int32_t item_c14_2 = (entity_38 >> 0xe & 0x3f) - 0x18;
+                    int32_t temp_28 = (entity_38 >> 0x1a & 0x3f) - 0x18;
+                    int32_t item_c1c_1 = temp_28;
+                    int32_t item_c24_1 = (entity_38 >> 0x14 & 0x3f) - 0x18;
 
                     if (flagP3)
                     {
-                        tmpD28 = -(tmpD28);
-                        v_c1c_1 = tmpD28;
+                        temp_28 = -(temp_28);
+                        item_c1c_1 = temp_28;
                     }
 
-                    char objC43 = tmpD2;
+                    char entity_43 = temp_2;
 
-                    if (!tmpD3)
+                    if (!temp_3)
                     {
-                        if (objC43 & 2)
+                        if (entity_43 & 2)
                         {
-                            v_c1c_1 = -(tmpD28);
-                            v_c24_1 = -(((objC38 >> 0x14 & 0x3f) - 0x18));
+                            item_c1c_1 = -(temp_28);
+                            item_c24_1 = -(((entity_38 >> 0x14 & 0x3f) - 0x18));
                         }
 
-                        dstD6 = v_bbc;
+                        dest_6 = item_bbc;
                     }
-                    else if (!(objC43 & 2))
+                    else if (!(entity_43 & 2))
                     {
-                        v_c1c_1 = -(((objC38 >> 0x14 & 0x3f) - 0x18));
-                        v_c24_1 = tmpD28;
+                        item_c1c_1 = -(((entity_38 >> 0x14 & 0x3f) - 0x18));
+                        item_c24_1 = temp_28;
                     }
                     else
                     {
-                        v_c1c_1 = (objC38 >> 0x14 & 0x3f) - 0x18;
-                        v_c24_1 = -(tmpD28);
+                        item_c1c_1 = (entity_38 >> 0x14 & 0x3f) - 0x18;
+                        item_c24_1 = -(temp_28);
                     }
 
-                    long double x87_r7_15 = v_c1c_1 * v_be8_1 / valA + v_b24;
-                    long double x87_r6_4 = v_c24_1 * v_be8_1 / valA + v_b1c;
-                    long double x87_r5_4 = v_c14_2 * v_be8_1 / valA + v_b14;
-                    long double x87_r4_1 = 0f;
+                    long double fpu_val_7_15 = item_c1c_1 * item_be8_1 / data_val + item_b24;
+                    long double fpu_val_6_4 = item_c24_1 * item_be8_1 / data_val + item_b1c;
+                    long double fpu_val_5_4 = item_c14_2 * item_be8_1 / data_val + item_b14;
+                    long double fpu_val_4_1 = 0.0f;
 
-                    if (v_c20_1)
+                    if (item_c20_1)
                     {
-                        long double x87_r3_3 = (x87_r7_15 - v_b50) * v_ba0;
-                        float v_c24_2 = (x87_r6_4 - v_b4c) * v_ba0;
-                        v_c14_2 = x87_r3_3;
-                        v_c1c_1 = v_c24_2;
-                        long double x87_r3_4 = x87_r3_3 - v_c14_2;
-                        int32_t objC46 = v_c1c_1 + (v_c1c_1 << (v_ba8 & 0x1f));
-                        long double x87_r1_1 = *(dstD6 + objC46 + v_c14_2);
+                        long double fpu_val_3_3 = (fpu_val_7_15 - item_b50) * item_ba0;
+                        float item_c24_2 = (fpu_val_6_4 - item_b4c) * item_ba0;
+                        item_c14_2 = fpu_val_3_3;
+                        item_c1c_1 = item_c24_2;
+                        long double fpu_val_3_4 = fpu_val_3_3 - item_c14_2;
+                        int32_t entity_46 = item_c1c_1 + (item_c1c_1 << (item_ba8 & 0x1f));
+                        long double fpu_val_1_1 = *(dest_6 + entity_46 + item_c14_2);
                         int32_t flagP11 =
-                            ((v_c1c_1 + 1) << (v_ba8 & 0x1f)) + v_c1c_1 + 1 + v_c14_2 + 1;
-                        float v_c24_3 = *(dstD6 + flagP11 - 1);
-                        float v_c1c_4 =
-                            (*(objC46 + v_c14_2 + 1 + dstD6) - x87_r1_1) * x87_r3_4 + x87_r1_1;
-                        float v_c24_4 = ((x87_r3_4 * (*(dstD6 + flagP11) - v_c24_3) + v_c24_3
-                            - v_c1c_4) * (v_c24_2 - v_c1c_1) + v_c1c_4 - 64.0) * 256f;
+                            ((item_c1c_1 + 1) << (item_ba8 & 0x1f)) + item_c1c_1 + 1 + item_c14_2 + 1;
+                        float item_c24_3 = *(dest_6 + flagP11 - 1);
+                        float item_c1c_4 =
+                            (*(entity_46 + item_c14_2 + 1 + dest_6) - fpu_val_1_1) * fpu_val_3_4 + fpu_val_1_1;
+                        float item_c24_4 = ((fpu_val_3_4 * (*(dest_6 + flagP11) - item_c24_3) + item_c24_3
+                            - item_c1c_4) * (item_c24_2 - item_c1c_1) + item_c1c_4 - 64.0) * 256.0f;
 
-                        if (tmpD1 <= 0xe)
-                            x87_r4_1 = v_c24_4;
+                        if (temp_1 <= 0xe)
+                            fpu_val_4_1 = item_c24_4;
                         else
-                            x87_r5_4 = x87_r5_4 + v_c24_4;
+                            fpu_val_5_4 = fpu_val_5_4 + item_c24_4;
                     }
 
-                    *(valA23 - 4) = x87_r4_1;
-                    *(valA23 - 8) = x87_r5_4;
-                    v_bc8_1 = &v_bc8_1[1];
-                    *(valA23 - 0xc) = x87_r6_4;
-                    int32_t objC54 = v_be0_1 + 1;
-                    v_be0_1 = objC54;
-                    *(valA23 - 0x10) = x87_r7_15;
-                    valA23 += 0x10;
+                    *(data_23 - 4) = fpu_val_4_1;
+                    *(data_23 - 8) = fpu_val_5_4;
+                    item_bc8_1 = &item_bc8_1[1];
+                    *(data_23 - 0xc) = fpu_val_6_4;
+                    int32_t entity_54 = item_be0_1 + 1;
+                    item_be0_1 = entity_54;
+                    *(data_23 - 0x10) = fpu_val_7_15;
+                    data_23 += 0x10;
 
-                    if (objC54 >= objC34)
+                    if (entity_54 >= entity_34)
                         break;
 
-                    flagP3 = v_c04_1;
+                    flagP3 = item_c04_1;
                 }
 
-                if (ctxB5 != objC34)
+                if (context_5 != entity_34)
                 {
-                    int32_t objC71;
+                    int32_t entity_71;
 
                     do
                     {
-                        int32_t objC55 = *v_bc8_1;
-                        *(valA23 - 4) = objC55 & 0x3f;
-                        int32_t v_c14_8 = (objC55 >> 0xe & 0x3f) - 0x18;
-                        int32_t tmpD47 = (objC55 >> 0x1a & 0x3f) - 0x18;
-                        int32_t v_c24_5 = (objC55 >> 0x14 & 0x3f) - 0x18;
-                        int32_t v_c1c_5 = tmpD47;
+                        int32_t entity_55 = *item_bc8_1;
+                        *(data_23 - 4) = entity_55 & 0x3f;
+                        int32_t item_c14_8 = (entity_55 >> 0xe & 0x3f) - 0x18;
+                        int32_t temp_47 = (entity_55 >> 0x1a & 0x3f) - 0x18;
+                        int32_t item_c24_5 = (entity_55 >> 0x14 & 0x3f) - 0x18;
+                        int32_t item_c1c_5 = temp_47;
 
-                        if (v_c04_1)
+                        if (item_c04_1)
                         {
-                            tmpD47 = -(tmpD47);
-                            v_c1c_5 = tmpD47;
+                            temp_47 = -(temp_47);
+                            item_c1c_5 = temp_47;
                         }
 
-                        char objC61 = tmpD2;
+                        char entity_61 = temp_2;
 
-                        if (!tmpD3)
+                        if (!temp_3)
                         {
-                            if (objC61 & 2)
+                            if (entity_61 & 2)
                             {
-                                v_c1c_5 = -(tmpD47);
-                                v_c24_5 = -(((objC55 >> 0x14 & 0x3f) - 0x18));
+                                item_c1c_5 = -(temp_47);
+                                item_c24_5 = -(((entity_55 >> 0x14 & 0x3f) - 0x18));
                             }
 
-                            dstD6 = v_bbc;
+                            dest_6 = item_bbc;
                         }
-                        else if (!(objC61 & 2))
+                        else if (!(entity_61 & 2))
                         {
-                            v_c1c_5 = -(((objC55 >> 0x14 & 0x3f) - 0x18));
-                            v_c24_5 = tmpD47;
+                            item_c1c_5 = -(((entity_55 >> 0x14 & 0x3f) - 0x18));
+                            item_c24_5 = temp_47;
                         }
                         else
                         {
-                            v_c1c_5 = (objC55 >> 0x14 & 0x3f) - 0x18;
-                            v_c24_5 = -(tmpD47);
+                            item_c1c_5 = (entity_55 >> 0x14 & 0x3f) - 0x18;
+                            item_c24_5 = -(temp_47);
                         }
 
-                        long double x87_r7_19 = v_c1c_5 * v_be8_1 / valA + v_b24;
-                        long double x87_r6_8 = v_c24_5 * v_be8_1 / valA + v_b1c;
-                        long double x87_r5_8 = v_c14_8 * v_be8_1 / valA + v_b14;
+                        long double fpu_val_7_19 = item_c1c_5 * item_be8_1 / data_val + item_b24;
+                        long double fpu_val_6_8 = item_c24_5 * item_be8_1 / data_val + item_b1c;
+                        long double fpu_val_5_8 = item_c14_8 * item_be8_1 / data_val + item_b14;
 
-                        if (v_c20_1)
+                        if (item_c20_1)
                         {
-                            long double x87_r4_5 = (x87_r7_19 - v_b50) * v_ba0;
-                            float v_c24_6 = (x87_r6_8 - v_b4c) * v_ba0;
-                            v_c14_8 = x87_r4_5;
-                            v_c1c_5 = v_c24_6;
-                            long double x87_r4_6 = x87_r4_5 - v_c14_8;
-                            int32_t objC64 = v_c1c_5 + (v_c1c_5 << (v_ba8 & 0x1f));
-                            long double x87_r2_16 = *(dstD6 + objC64 + v_c14_8);
-                            int32_t flagP19 = ((v_c1c_5 + 1) << (v_ba8 & 0x1f)) + v_c1c_5 + 1
-                                + v_c14_8 + 1;
-                            float v_c24_7 = *(dstD6 + flagP19 - 1);
-                            float v_c1c_7 =
-                                (*(objC64 + v_c14_8 + 1 + dstD6) - x87_r2_16) * x87_r4_6
-                                + x87_r2_16;
-                            x87_r5_8 = x87_r5_8 + ((x87_r4_6 * (*(dstD6 + flagP19) - v_c24_7)
-                                + v_c24_7 - v_c1c_7) * (v_c24_6 - v_c1c_5) + v_c1c_7 - 64.0)
-                                * 256f;
+                            long double fpu_val_4_5 = (fpu_val_7_19 - item_b50) * item_ba0;
+                            float item_c24_6 = (fpu_val_6_8 - item_b4c) * item_ba0;
+                            item_c14_8 = fpu_val_4_5;
+                            item_c1c_5 = item_c24_6;
+                            long double fpu_val_4_6 = fpu_val_4_5 - item_c14_8;
+                            int32_t entity_64 = item_c1c_5 + (item_c1c_5 << (item_ba8 & 0x1f));
+                            long double fpu_val_2_16 = *(dest_6 + entity_64 + item_c14_8);
+                            int32_t flagP19 = ((item_c1c_5 + 1) << (item_ba8 & 0x1f)) + item_c1c_5 + 1
+                                + item_c14_8 + 1;
+                            float item_c24_7 = *(dest_6 + flagP19 - 1);
+                            float item_c1c_7 =
+                                (*(entity_64 + item_c14_8 + 1 + dest_6) - fpu_val_2_16) * fpu_val_4_6
+                                + fpu_val_2_16;
+                            fpu_val_5_8 = fpu_val_5_8 + ((fpu_val_4_6 * (*(dest_6 + flagP19) - item_c24_7)
+                                + item_c24_7 - item_c1c_7) * (item_c24_6 - item_c1c_5) + item_c1c_7 - 64.0)
+                                * 256.0f;
                         }
 
-                        *(valA23 - 8) = x87_r5_8;
-                        *(valA23 - 0xc) = x87_r6_8;
-                        objC71 = v_be0_1 + 1;
-                        v_be0_1 = objC71;
-                        v_bc8_1 = &v_bc8_1[1];
-                        *(valA23 - 0x10) = x87_r7_19;
-                        valA23 += 0x10;
-                    } while (objC71 < ctxB5);
+                        *(data_23 - 8) = fpu_val_5_8;
+                        *(data_23 - 0xc) = fpu_val_6_8;
+                        entity_71 = item_be0_1 + 1;
+                        item_be0_1 = entity_71;
+                        item_bc8_1 = &item_bc8_1[1];
+                        *(data_23 - 0x10) = fpu_val_7_19;
+                        data_23 += 0x10;
+                    } while (entity_71 < context_5);
                 }
 
-                float* flagP22 = tmpD17 + 0x20;
-                int32_t* valA32 = valA23 - 0x10;
-                int32_t objC72 = 0;
-                int32_t* v_c1c_8 = valA32;
-                int32_t v_be0_2 = 0;
+                float* flagP22 = temp_17 + 0x20;
+                int32_t* data_32 = data_23 - 0x10;
+                int32_t entity_72 = 0;
+                int32_t* item_c1c_8 = data_32;
+                int32_t item_be0_2 = 0;
                 int32_t i_1 = 0;
-                void v_908;
-                int32_t* srcS22 = &v_908;
+                void item_908;
+                int32_t* source_22 = &item_908;
                 int32_t i;
 
                 do
                 {
-                    long double x87_r7_20 = *flagP22;
-                    float tmpD53 = flagP22[1];
-                    float tmpD54 = flagP22[2];
-                    int32_t tmpD55 = 0;
-                    int32_t dstD7 = 0xff;
-                    srcS22[7] = (x87_r7_20 - v_af4) * v_b44 + v_b5c;
-                    srcS22[8] = (tmpD53 - v_af8) * v_b44 + v_b5c;
-                    int32_t v_af0;
+                    long double fpu_val_7_20 = *flagP22;
+                    float temp_53 = flagP22[1];
+                    float temp_54 = flagP22[2];
+                    int32_t temp_55 = 0;
+                    int32_t dest_7 = 0xff;
+                    source_22[7] = (fpu_val_7_20 - item_af4) * item_b44 + item_b5c;
+                    source_22[8] = (temp_53 - item_af8) * item_b44 + item_b5c;
+                    int32_t item_af0;
 
-                    if (v_af0)
+                    if (item_af0)
                     {
-                        void v_adc;
-                        int32_t* valA33 = &v_adc;
-                        float v_aec;
-                        float v_ae8;
-                        int32_t v_be8_2 = v_aec * (x87_r7_20 - v_ae8);
-                        float v_ae4;
-                        int32_t v_ae0;
+                        void item_adc;
+                        int32_t* data_33 = &item_adc;
+                        float item_aec;
+                        float item_ae8;
+                        int32_t item_be8_2 = item_aec * (fpu_val_7_20 - item_ae8);
+                        float item_ae4;
+                        int32_t item_ae0;
 
-                        if (*((v_be8_2 >> 3) + v_ae0
-                            + ((v_aec * (tmpD53 - v_ae4)) << (v_af0 & 0x1f))) >> (v_be8_2 & 7)
+                        if (*((item_be8_2 >> 3) + item_ae0
+                            + ((item_aec * (temp_53 - item_ae4)) << (item_af0 & 0x1f))) >> (item_be8_2 & 7)
                             & 1)
                         {
                         label_510930:
-                            tmpD55 = *valA33;
+                            temp_55 = *data_33;
                         }
                         else
                         {
                             while (true)
                             {
-                                int32_t objC75 = valA33[1];
+                                int32_t entity_75 = data_33[1];
 
-                                if (!objC75)
+                                if (!entity_75)
                                     break;
 
-                                long double x87_r6_22 = valA33[2];
-                                long double x87_r5_14 = x87_r7_20 - valA33[3];
-                                float v_c20_3 = tmpD53 - valA33[4];
-                                int32_t dstD12 = valA33[5];
-                                valA33 = &valA33[6];
-                                int32_t v_be8_4 = x87_r5_14 * x87_r6_22;
+                                long double fpu_val_6_22 = data_33[2];
+                                long double fpu_val_5_14 = fpu_val_7_20 - data_33[3];
+                                float item_c20_3 = temp_53 - data_33[4];
+                                int32_t dest_12 = data_33[5];
+                                data_33 = &data_33[6];
+                                int32_t item_be8_4 = fpu_val_5_14 * fpu_val_6_22;
 
-                                if (*((v_be8_4 >> 3) + dstD12
-                                        + ((v_c20_3 * x87_r6_22) << (objC75 & 0x1f))) >> (v_be8_4 & 7)
+                                if (*((item_be8_4 >> 3) + dest_12
+                                        + ((item_c20_3 * fpu_val_6_22) << (entity_75 & 0x1f))) >> (item_be8_4 & 7)
                                         & 1)
                                     goto label_510930;
                             }
                         }
 
-                        if (v_be0_2 < objC34)
+                        if (item_be0_2 < entity_34)
                         {
-                            valA32 = v_c1c_8;
-                            dstD7 = 0xff;
+                            data_32 = item_c1c_8;
+                            dest_7 = 0xff;
                         }
                         else
                         {
-                            int32_t valA40 = flagP22[3];
-                            *srcS22 = valA40;
-                            int32_t v_8f4[0x23b];
-                            dstD7 = v_8f4[valA40 * 9] >> 0x10;
+                            int32_t data_40 = flagP22[3];
+                            *source_22 = data_40;
+                            int32_t item_8f4[0x23b];
+                            dest_7 = item_8f4[data_40 * 9] >> 0x10;
 
-                            if (dstD7 == tmpD55)
-                                dstD7 = 0xff;
+                            if (dest_7 == temp_55)
+                                dest_7 = 0xff;
 
-                            valA32 = v_c1c_8;
+                            data_32 = item_c1c_8;
                         }
                     }
-                    else if (objC72 >= objC34)
-                        *srcS22 = flagP22[3];
+                    else if (entity_72 >= entity_34)
+                        *source_22 = flagP22[3];
 
-                    srcS22[1] = x87_r7_20 - v_b24;
-                    srcS22[2] = tmpD53 - v_b1c;
-                    i = i_1 | 1 << (tmpD55 & 0x1f);
+                    source_22[1] = fpu_val_7_20 - item_b24;
+                    source_22[2] = temp_53 - item_b1c;
+                    i = i_1 | 1 << (temp_55 & 0x1f);
                     flagP22 = &flagP22[4];
-                    srcS22[3] = tmpD54 - v_b14;
-                    srcS22[5] = tmpD55 << 0x10 | dstD7;
-                    objC72 = v_be0_2 + 1;
-                    srcS22 = &srcS22[9];
+                    source_22[3] = temp_54 - item_b14;
+                    source_22[5] = temp_55 << 0x10 | dest_7;
+                    entity_72 = item_be0_2 + 1;
+                    source_22 = &source_22[9];
                     i_1 = i;
-                    v_be0_2 = objC72;
-                } while (objC72 < ctxB5);
+                    item_be0_2 = entity_72;
+                } while (entity_72 < context_5);
 
-                long double x87_r7_27 = v_b24 + g_b12ba0;
-                int32_t tmpD58 = 0;
-                int32_t srcS23 = 0;
-                int32_t v_c24_10 = 0;
-                int32_t v_a78 = 0;
-                double v_be8_6 = x87_r7_27;
-                int32_t* objC83 = &v_a78;
-                v_bc8_1 = v_b1c + g_b12ba8;
-                v_be0_2 = v_b14 + g_b12bb0;
+                long double fpu_val_7_27 = item_b24 + g_b12ba0;
+                int32_t temp_58 = 0;
+                int32_t source_23 = 0;
+                int32_t item_c24_10 = 0;
+                int32_t item_a78 = 0;
+                double item_be8_6 = fpu_val_7_27;
+                int32_t* entity_83 = &item_a78;
+                item_bc8_1 = item_b1c + g_b12ba8;
+                item_be0_2 = item_b14 + g_b12bb0;
 
                 if (i)
                 {
@@ -408,498 +408,498 @@ int32_t Terrain_RenderQuadtree()
                     {
                         if (i & 1)
                         {
-                            *objC83 = tmpD58;
-                            objC83 = &objC83[1];
-                            srcS23 += 1;
+                            *entity_83 = temp_58;
+                            entity_83 = &entity_83[1];
+                            source_23 += 1;
                         }
 
-                        tmpD58 += 1;
+                        temp_58 += 1;
                         i s>>= 1;
                     } while (i);
 
-                    v_c24_10 = srcS23;
+                    item_c24_10 = source_23;
                 }
 
-                if (valA18 + (((valA18 + 4) * srcS23 + (ctxB5 << 3)) << 1) + 0x3c < 0x640)
+                if (data_18 + (((data_18 + 4) * source_23 + (context_5 << 3)) << 1) + 0x3c < 0x640)
                     goto label_510d13;
 
-                int32_t i_2 = *(valA1 + 0x14);
+                int32_t i_2 = *(data_1 + 0x14);
                 i_1 = i_2;
 
                 if (i_2 != 1)
                 {
-                    if (i_2 == 2 && valA18 + (((valA18 + 4) * srcS23 + (ctxB5 << 3)) << 1) + 0x3c
+                    if (i_2 == 2 && data_18 + (((data_18 + 4) * source_23 + (context_5 << 3)) << 1) + 0x3c
                             < 0x1f40)
                         goto label_510d13;
                 }
-                else if (valA18 + (((valA18 + 4) * srcS23 + (ctxB5 << 3)) << 1) + 0x3c < 0xc80)
+                else if (data_18 + (((data_18 + 4) * source_23 + (context_5 << 3)) << 1) + 0x3c < 0xc80)
                     goto label_510d13;
 
-                int32_t srcS24 = g_b12c48;
-                int32_t v_c20_4 = 0;
-                int32_t flagP26 = *(valA1 + 0x18);
+                int32_t source_24 = g_b12c48;
+                int32_t item_c20_4 = 0;
+                int32_t flagP26 = *(data_1 + 0x18);
 
-                if (i_2 < 1 && valA18 + (((valA18 + 4) * srcS23 + (ctxB5 << 3)) << 1) + 0x3c < 0xc80
-                    && srcS24 < g_b12c4c - 2)
+                if (i_2 < 1 && data_18 + (((data_18 + 4) * source_23 + (context_5 << 3)) << 1) + 0x3c < 0xc80
+                    && source_24 < g_b12c4c - 2)
                 {
-                    void* valA41 = valA32 - flagP26;
-                    int32_t* dstD18 = *(g_b12c44 + (srcS24 << 2)) * g_b12c50 + g_b12c40;
-                    *(dstD18 + g_b12c54) = srcS24;
+                    void* data_41 = data_32 - flagP26;
+                    int32_t* dest_18 = *(g_b12c44 + (source_24 << 2)) * g_b12c50 + g_b12c40;
+                    *(dest_18 + g_b12c54) = source_24;
                     g_b12c48 += 1;
-                    *(valA1 + 0x18) = dstD18;
-                    int32_t srcS28;
-                    int32_t dstD19;
-                    dstD19 = memcpy(dstD18, flagP26, valA41 & 0xfffffffc);
-                    memcpy(dstD19, srcS28, valA41 & 3);
-                    int32_t objC95 = *(valA1 + 0x18);
-                    *(valA1 + 0x14) = 1;
-                    valA32 = valA41 + objC95;
-                    v_c20_4 = 1;
-                    *((g_b16c9c << 2) + &g_b12c5c) = objC95;
+                    *(data_1 + 0x18) = dest_18;
+                    int32_t source_28;
+                    int32_t dest_19;
+                    dest_19 = memcpy(dest_18, flagP26, data_41 & 0xfffffffc);
+                    memcpy(dest_19, source_28, data_41 & 3);
+                    int32_t entity_95 = *(data_1 + 0x18);
+                    *(data_1 + 0x14) = 1;
+                    data_32 = data_41 + entity_95;
+                    item_c20_4 = 1;
+                    *((g_b16c9c << 2) + &g_b12c5c) = entity_95;
                     goto label_510bba;
                 }
 
-                int32_t objC97;
+                int32_t entity_97;
 
                 if (i_2 >= 2
-                        || valA18 + (((valA18 + 4) * srcS23 + (ctxB5 << 3)) << 1) + 0x3c >= 0x1f40)
-                    objC97 = g_b16cc8;
+                        || data_18 + (((data_18 + 4) * source_23 + (context_5 << 3)) << 1) + 0x3c >= 0x1f40)
+                    entity_97 = g_b16cc8;
                 else
                 {
-                    objC97 = g_b16cc8;
+                    entity_97 = g_b16cc8;
 
-                    if (objC97 < g_b16ccc - 2)
+                    if (entity_97 < g_b16ccc - 2)
                     {
-                        void* valA42 = valA32 - flagP26;
-                        v_c20_4 = 1;
-                        int32_t* dstD23 =
-                            *(g_b16cc4 + (objC97 << 2)) * g_b16cd0 + g_b16cc0;
-                        *(dstD23 + g_b16cd4) = objC97;
+                        void* data_42 = data_32 - flagP26;
+                        item_c20_4 = 1;
+                        int32_t* dest_23 =
+                            *(g_b16cc4 + (entity_97 << 2)) * g_b16cd0 + g_b16cc0;
+                        *(dest_23 + g_b16cd4) = entity_97;
                         g_b16cc8 += 1;
-                        *(valA1 + 0x18) = dstD23;
-                        int32_t srcS34;
-                        int32_t dstD24;
-                        dstD24 = memcpy(dstD23, flagP26, valA42 & 0xfffffffc);
-                        memcpy(dstD24, srcS34, valA42 & 3);
-                        int32_t objC102 = *(valA1 + 0x18);
-                        *(valA1 + 0x14) = 2;
-                        valA32 = valA42 + objC102;
-                        *((g_b16c9c << 2) + &g_b12c5c) = objC102;
+                        *(data_1 + 0x18) = dest_23;
+                        int32_t source_34;
+                        int32_t dest_24;
+                        dest_24 = memcpy(dest_23, flagP26, data_42 & 0xfffffffc);
+                        memcpy(dest_24, source_34, data_42 & 3);
+                        int32_t entity_102 = *(data_1 + 0x18);
+                        *(data_1 + 0x14) = 2;
+                        data_32 = data_42 + entity_102;
+                        *((g_b16c9c << 2) + &g_b12c5c) = entity_102;
                     label_510bba:
-                        srcS24 = g_b12c48;
-                        objC97 = g_b16cc8;
+                        source_24 = g_b12c48;
+                        entity_97 = g_b16cc8;
                         i_2 = i_1;
                     }
                 }
 
-                int32_t* objC107;
+                int32_t* entity_107;
                 int32_t flagP27;
 
                 if (!i_2)
                 {
-                    int32_t* dstD25 = g_b12b74;
-                    int32_t objC104 = g_b12b68 - 1;
-                    flagP27 = *(dstD25 + flagP26);
-                    g_b12b68 = objC104;
+                    int32_t* dest_25 = g_b12b74;
+                    int32_t entity_104 = g_b12b68 - 1;
+                    flagP27 = *(dest_25 + flagP26);
+                    g_b12b68 = entity_104;
 
-                    if (flagP27 != objC104)
+                    if (flagP27 != entity_104)
                     {
-                        int32_t srcS36 = g_b12b64;
-                        objC107 = *(srcS36 + (objC104 << 2)) * g_b12b70 + g_b12b60;
-                        int32_t ctxB27 = *(srcS36 + (flagP27 << 2));
-                        int32_t dstD26 = *(objC107 + dstD25);
-                        *(srcS36 + (flagP27 << 2)) = *(srcS36 + (dstD26 << 2));
-                        *(g_b12b64 + (dstD26 << 2)) = ctxB27;
-                        *(objC107 + g_b12b74) = flagP27;
+                        int32_t source_36 = g_b12b64;
+                        entity_107 = *(source_36 + (entity_104 << 2)) * g_b12b70 + g_b12b60;
+                        int32_t context_27 = *(source_36 + (flagP27 << 2));
+                        int32_t dest_26 = *(entity_107 + dest_25);
+                        *(source_36 + (flagP27 << 2)) = *(source_36 + (dest_26 << 2));
+                        *(g_b12b64 + (dest_26 << 2)) = context_27;
+                        *(entity_107 + g_b12b74) = flagP27;
                     }
                 }
                 else if (i_2 == 1)
                 {
-                    int32_t* ctxB30 = g_b12c54;
-                    flagP27 = *(ctxB30 + flagP26);
-                    g_b12c48 = srcS24 - 1;
+                    int32_t* context_30 = g_b12c54;
+                    flagP27 = *(context_30 + flagP26);
+                    g_b12c48 = source_24 - 1;
 
-                    if (flagP27 != srcS24 - 1)
+                    if (flagP27 != source_24 - 1)
                     {
-                        int32_t dstD27 = g_b12c44;
-                        objC107 = *(dstD27 + ((srcS24 - 1) << 2)) * g_b12c50 + g_b12c40;
-                        int32_t srcS41 = *(objC107 + ctxB30);
-                        int32_t ctxB31 = *(dstD27 + (flagP27 << 2));
-                        *(dstD27 + (flagP27 << 2)) = *(dstD27 + (srcS41 << 2));
-                        *(g_b12c44 + (srcS41 << 2)) = ctxB31;
-                        *(objC107 + g_b12c54) = flagP27;
+                        int32_t dest_27 = g_b12c44;
+                        entity_107 = *(dest_27 + ((source_24 - 1) << 2)) * g_b12c50 + g_b12c40;
+                        int32_t source_41 = *(entity_107 + context_30);
+                        int32_t context_31 = *(dest_27 + (flagP27 << 2));
+                        *(dest_27 + (flagP27 << 2)) = *(dest_27 + (source_41 << 2));
+                        *(g_b12c44 + (source_41 << 2)) = context_31;
+                        *(entity_107 + g_b12c54) = flagP27;
                     }
                 }
                 else if (i_2 == 2)
                 {
-                    int32_t* dstD29 = g_b16cd4;
-                    flagP27 = *(dstD29 + flagP26);
-                    g_b16cc8 = objC97 - 1;
+                    int32_t* dest_29 = g_b16cd4;
+                    flagP27 = *(dest_29 + flagP26);
+                    g_b16cc8 = entity_97 - 1;
 
-                    if (flagP27 != objC97 - 1)
+                    if (flagP27 != entity_97 - 1)
                     {
-                        int32_t srcS42 = g_b16cc4;
-                        objC107 = *(srcS42 + ((objC97 - 1) << 2)) * g_b16cd0 + g_b16cc0;
-                        int32_t ctxB35 = *(srcS42 + (flagP27 << 2));
-                        int32_t dstD30 = *(objC107 + dstD29);
-                        *(srcS42 + (flagP27 << 2)) = *(srcS42 + (dstD30 << 2));
-                        *(g_b16cc4 + (dstD30 << 2)) = ctxB35;
-                        *(objC107 + g_b16cd4) = flagP27;
+                        int32_t source_42 = g_b16cc4;
+                        entity_107 = *(source_42 + ((entity_97 - 1) << 2)) * g_b16cd0 + g_b16cc0;
+                        int32_t context_35 = *(source_42 + (flagP27 << 2));
+                        int32_t dest_30 = *(entity_107 + dest_29);
+                        *(source_42 + (flagP27 << 2)) = *(source_42 + (dest_30 << 2));
+                        *(g_b16cc4 + (dest_30 << 2)) = context_35;
+                        *(entity_107 + g_b16cd4) = flagP27;
                     }
                 }
 
-                if (v_c20_4)
+                if (item_c20_4)
                 {
-                    srcS23 = v_c24_10;
+                    source_23 = item_c24_10;
                 label_510d13:
-                    *valA32 = tmpD2;
-                    int32_t v_c0c_2 = 0;
-                    valA32[1] = &srcS9[4];
-                    valA32[2] = srcS23;
-                    valA32[3] = *srcS9;
-                    int32_t flagP28 = 0x17 - tmpD1;
-                    int32_t ctxB40 = tmpD1 * 0x1c;
-                    int32_t* v_c1c_9 = &valA32[4];
-                    int32_t* tmpD63 = &v_a78;
-                    void v_9d0;
-                    void* valA47 = &v_9d0;
-                    int32_t v_c08_5 = ctxB40;
-                    int32_t v_bf0_3 = flagP28;
-                    long double x87_r7_32 = 0x40000000 >> (tmpD1 & 0x1f);
+                    *data_32 = temp_2;
+                    int32_t item_c0c_2 = 0;
+                    data_32[1] = &source_9[4];
+                    data_32[2] = source_23;
+                    data_32[3] = *source_9;
+                    int32_t flagP28 = 0x17 - temp_1;
+                    int32_t context_40 = temp_1 * 0x1c;
+                    int32_t* item_c1c_9 = &data_32[4];
+                    int32_t* temp_63 = &item_a78;
+                    void item_9d0;
+                    void* data_47 = &item_9d0;
+                    int32_t item_c08_5 = context_40;
+                    int32_t item_bf0_3 = flagP28;
+                    long double fpu_val_7_32 = 0x40000000 >> (temp_1 & 0x1f);
 
                     while (true)
                     {
-                        int32_t tmpD65 = *tmpD63 * 0xe1;
-                        float objC120 = *(ctxB40 + (tmpD65 << 2) + 0xc28ff8);
-                        char objC121 = flagP28;
-                        long double x87_r6_26 = *(ctxB40 + (tmpD65 << 2) + 0xc28ff0);
-                        i_1 = x87_r6_26 * v_be8_6;
-                        int32_t tmpD68 = i_1 >> (objC121 & 0x1f) & 0x7ff;
-                        i_1 = x87_r6_26 * v_bc8_1;
-                        int32_t srcS48 = i_1 >> (objC121 & 0x1f) & 0x7ff;
-                        i_1 = objC120 * v_be8_6;
-                        int32_t dstD33 = i_1 >> ((0x16 - tmpD1) & 0x1f) & 0x7ff;
-                        i_1 = objC120 * v_bc8_1;
-                        i_1 = i_1 >> ((0x16 - tmpD1) & 0x1f) & 0x7ff;
-                        int32_t objC124 = 0;
-                        objC124 = *((tmpD68 >> 8)
-                            + (((srcS48 >> 8) + (*(ctxB40 + (tmpD65 << 2) + 0xc28ff4) << 3)) << 3)
+                        int32_t temp_65 = *temp_63 * 0xe1;
+                        float entity_120 = *(context_40 + (temp_65 << 2) + 0xc28ff8);
+                        char entity_121 = flagP28;
+                        long double fpu_val_6_26 = *(context_40 + (temp_65 << 2) + 0xc28ff0);
+                        i_1 = fpu_val_6_26 * item_be8_6;
+                        int32_t temp_68 = i_1 >> (entity_121 & 0x1f) & 0x7ff;
+                        i_1 = fpu_val_6_26 * item_bc8_1;
+                        int32_t source_48 = i_1 >> (entity_121 & 0x1f) & 0x7ff;
+                        i_1 = entity_120 * item_be8_6;
+                        int32_t dest_33 = i_1 >> ((0x16 - temp_1) & 0x1f) & 0x7ff;
+                        i_1 = entity_120 * item_bc8_1;
+                        i_1 = i_1 >> ((0x16 - temp_1) & 0x1f) & 0x7ff;
+                        int32_t entity_124 = 0;
+                        entity_124 = *((temp_68 >> 8)
+                            + (((source_48 >> 8) + (*(context_40 + (temp_65 << 2) + 0xc28ff4) << 3)) << 3)
                             + 0xc30080);
-                        *(valA47 - 4) = objC124;
-                        int32_t objC127 = 0;
-                        objC127 = *((dstD33 >> 8)
-                            + (((i_1 >> 8) + (*(ctxB40 + (tmpD65 << 2) + 0xc28ffc) << 3)) << 3)
+                        *(data_47 - 4) = entity_124;
+                        int32_t entity_127 = 0;
+                        entity_127 = *((dest_33 >> 8)
+                            + (((i_1 >> 8) + (*(context_40 + (temp_65 << 2) + 0xc28ffc) << 3)) << 3)
                             + 0xc30080);
-                        *(valA47 - 8) = objC127;
-                        *(valA47 - 0xc) = x87_r6_26 * 0.5f / x87_r7_32;
-                        int32_t v_bfc_4 = srcS48 & 0xff;
-                        *(valA47 - 0x10) = ((tmpD68 & 0xff) + 1f) * 0.00390625f;
-                        *(valA47 - 0x14) = (v_bfc_4 + 1f) * 0.00390625f;
-                        flagP28 = v_bf0_3;
-                        v_bfc_4 = x87_r6_26 * v_be0_2;
-                        valA47 += 0x28;
-                        *(valA47 - 0x40) = ((v_bfc_4 >> (flagP28 & 0x1f)) + 1f) * 0.00390625f;
-                        *(valA47 - 0x44) = objC120 / x87_r7_32;
-                        int32_t v_bfc_7 = i_1;
-                        *(valA47 - 0x48) = ((dstD33 & 0xff) + 1f) * 0.00390625f;
-                        *(valA47 - 0x4c) = (v_bfc_7 + 1f) * 0.00390625f;
-                        v_bfc_7 = objC120 * v_be0_2;
-                        bool cond_16_1 = v_c0c_2 + 1 < v_c24_10;
-                        v_c0c_2 += 1;
-                        *(valA47 - 0x50) =
-                            ((v_bfc_7 >> ((0x16 - tmpD1) & 0x1f)) + 1f) * 0.00390625f;
+                        *(data_47 - 8) = entity_127;
+                        *(data_47 - 0xc) = fpu_val_6_26 * 0.5f / fpu_val_7_32;
+                        int32_t item_bfc_4 = source_48 & 0xff;
+                        *(data_47 - 0x10) = ((temp_68 & 0xff) + 1.0f) * 0.00390625f;
+                        *(data_47 - 0x14) = (item_bfc_4 + 1.0f) * 0.00390625f;
+                        flagP28 = item_bf0_3;
+                        item_bfc_4 = fpu_val_6_26 * item_be0_2;
+                        data_47 += 0x28;
+                        *(data_47 - 0x40) = ((item_bfc_4 >> (flagP28 & 0x1f)) + 1.0f) * 0.00390625f;
+                        *(data_47 - 0x44) = entity_120 / fpu_val_7_32;
+                        int32_t item_bfc_7 = i_1;
+                        *(data_47 - 0x48) = ((dest_33 & 0xff) + 1.0f) * 0.00390625f;
+                        *(data_47 - 0x4c) = (item_bfc_7 + 1.0f) * 0.00390625f;
+                        item_bfc_7 = entity_120 * item_be0_2;
+                        bool flag_16_1 = item_c0c_2 + 1 < item_c24_10;
+                        item_c0c_2 += 1;
+                        *(data_47 - 0x50) =
+                            ((item_bfc_7 >> ((0x16 - temp_1) & 0x1f)) + 1.0f) * 0.00390625f;
 
-                        if (!cond_16_1)
+                        if (!flag_16_1)
                             break;
 
-                        ctxB40 = v_c08_5;
-                        tmpD63 = &tmpD63[1];
+                        context_40 = item_c08_5;
+                        temp_63 = &temp_63[1];
                     }
 
-                    void v_9f8;
-                    float* valA58 = &v_9f8;
+                    void item_9f8;
+                    float* data_58 = &item_9f8;
                     int32_t flagP38;
 
-                    if (v_c24_10 <= 0)
-                        flagP38 = objC34;
+                    if (item_c24_10 <= 0)
+                        flagP38 = entity_34;
                     else
                     {
-                        void* ctxB50 = valA18 + 4;
-                        int32_t* dstD35 = v_c1c_9;
-                        int32_t v_c0c_3 = v_c24_10;
-                        int32_t* v_c20_6 = &v_a78;
+                        void* context_50 = data_18 + 4;
+                        int32_t* dest_35 = item_c1c_9;
+                        int32_t item_c0c_3 = item_c24_10;
+                        int32_t* item_c20_6 = &item_a78;
 
                         while (true)
                         {
-                            long double x87_r7_34 = *valA58;
-                            long double x87_r6_44 = valA58[1];
-                            int32_t v_be0_3 = 0;
-                            long double x87_r5_35 = valA58[2];
-                            long double x87_r4_13 = valA58[3];
-                            long double x87_r3_25 = valA58[4];
-                            float tmpD77 = valA58[5];
-                            float objC134 = valA58[6];
-                            float tmpD78 = valA58[7];
-                            int32_t v_c24_11 = ctxB5;
-                            int32_t objC136 = *v_c20_6;
-                            int32_t tmpD80 = g_c30060;
-                            int32_t objC137 = valA58[8];
-                            valA58 = &valA58[0xa];
-                            int32_t objC139 = valA58[-1];
-                            *dstD35 = tmpD80 + objC137 * 0x24 + 0xc;
-                            int32_t* v_bc8_2 = valA3;
-                            int32_t* objC142 = ctxB50 + dstD35;
-                            int32_t* dstD36 = &dstD35[1];
-                            v_c1c_9 = ctxB50 + objC142;
-                            void v_904;
-                            int32_t* ctxB52 = &v_904;
-                            *objC142 = tmpD80 + objC139 * 0x24 + 0xc;
-                            void* objC143 = &objC142[1];
-                            int32_t* v_bf4_2 = &v_904;
-                            bool cond_23_1;
+                            long double fpu_val_7_34 = *data_58;
+                            long double fpu_val_6_44 = data_58[1];
+                            int32_t item_be0_3 = 0;
+                            long double fpu_val_5_35 = data_58[2];
+                            long double fpu_val_4_13 = data_58[3];
+                            long double fpu_val_3_25 = data_58[4];
+                            float temp_77 = data_58[5];
+                            float entity_134 = data_58[6];
+                            float temp_78 = data_58[7];
+                            int32_t item_c24_11 = context_5;
+                            int32_t entity_136 = *item_c20_6;
+                            int32_t temp_80 = g_c30060;
+                            int32_t entity_137 = data_58[8];
+                            data_58 = &data_58[0xa];
+                            int32_t entity_139 = data_58[-1];
+                            *dest_35 = temp_80 + entity_137 * 0x24 + 0xc;
+                            int32_t* item_bc8_2 = data_3;
+                            int32_t* entity_142 = context_50 + dest_35;
+                            int32_t* dest_36 = &dest_35[1];
+                            item_c1c_9 = context_50 + entity_142;
+                            void item_904;
+                            int32_t* context_52 = &item_904;
+                            *entity_142 = temp_80 + entity_139 * 0x24 + 0xc;
+                            void* entity_143 = &entity_142[1];
+                            int32_t* item_bf4_2 = &item_904;
+                            bool flag_23_1;
 
                             do
                             {
-                                int32_t srcS51 = ctxB52[4];
-                                int32_t tmpD83 = *v_bc8_2;
-                                int32_t tmpD85 = tmpD83 >> 8 & 3;
-                                float tmpD88 = *ctxB52;
-                                int32_t srcS52 = srcS51 & 0xff;
-                                float tmpD89 = ctxB52[1];
-                                float tmpD90 = ctxB52[2];
-                                int32_t flagP36 = tmpD83 >> 6 & 3;
-                                int32_t v_c04_2;
-                                int32_t* tmpD95;
+                                int32_t source_51 = context_52[4];
+                                int32_t temp_83 = *item_bc8_2;
+                                int32_t temp_85 = temp_83 >> 8 & 3;
+                                float temp_88 = *context_52;
+                                int32_t source_52 = source_51 & 0xff;
+                                float temp_89 = context_52[1];
+                                float temp_90 = context_52[2];
+                                int32_t flagP36 = temp_83 >> 6 & 3;
+                                int32_t item_c04_2;
+                                int32_t* temp_95;
 
-                                if (v_be0_3 < objC34)
+                                if (item_be0_3 < entity_34)
                                 {
-                                    v_c04_2 = v_be0_3;
-                                    tmpD95 = v_bf4_2;
+                                    item_c04_2 = item_be0_3;
+                                    temp_95 = item_bf4_2;
                                 }
                                 else
                                 {
-                                    int32_t tmpD93 = v_bf4_2[-1];
-                                    v_c04_2 = tmpD93;
-                                    int32_t saved_dst;
-                                    tmpD95 = &(&saved_dst)[tmpD93 * 9 + 0xcd];
+                                    int32_t temp_93 = item_bf4_2[-1];
+                                    item_c04_2 = temp_93;
+                                    int32_t saved_target;
+                                    temp_95 = &(&saved_target)[temp_93 * 9 + 0xcd];
                                 }
 
-                                float ctxB54 = *tmpD95;
-                                float ctxB55 = tmpD95[1];
-                                float tmpD96 = tmpD95[2];
-                                float v_b70_1;
-                                float v_b40_1;
-                                long double x87_r1_18;
-                                long double x87_r2_23;
+                                float context_54 = *temp_95;
+                                float context_55 = temp_95[1];
+                                float temp_96 = temp_95[2];
+                                float item_b70_1;
+                                float item_b40_1;
+                                long double fpu_val_1_18;
+                                long double fpu_val_2_23;
 
-                                if (!tmpD85)
+                                if (!temp_85)
                                 {
-                                    x87_r2_23 = tmpD89 * x87_r4_13 + x87_r6_44;
-                                    v_b40_1 = tmpD88 * x87_r4_13 + x87_r5_35;
-                                    v_b70_1 = ctxB55 * x87_r4_13 + x87_r6_44 - x87_r2_23;
-                                    x87_r1_18 = ctxB54 * x87_r4_13 + x87_r5_35;
+                                    fpu_val_2_23 = temp_89 * fpu_val_4_13 + fpu_val_6_44;
+                                    item_b40_1 = temp_88 * fpu_val_4_13 + fpu_val_5_35;
+                                    item_b70_1 = context_55 * fpu_val_4_13 + fpu_val_6_44 - fpu_val_2_23;
+                                    fpu_val_1_18 = context_54 * fpu_val_4_13 + fpu_val_5_35;
                                 }
                                 else
                                 {
-                                    float v_bb8_1;
-                                    float v_b54_1;
-                                    long double x87_r2_20;
+                                    float item_bb8_1;
+                                    float item_b54_1;
+                                    long double fpu_val_2_20;
 
-                                    if (!((tmpD85 ^ tmpD3) & 1))
+                                    if (!((temp_85 ^ temp_3) & 1))
                                     {
-                                        v_b54_1 = tmpD88;
-                                        v_bb8_1 = ctxB54;
-                                        x87_r2_20 = x87_r5_35;
+                                        item_b54_1 = temp_88;
+                                        item_bb8_1 = context_54;
+                                        fpu_val_2_20 = fpu_val_5_35;
                                     }
                                     else
                                     {
-                                        v_b54_1 = tmpD89;
-                                        v_bb8_1 = ctxB55;
-                                        x87_r2_20 = x87_r6_44;
+                                        item_b54_1 = temp_89;
+                                        item_bb8_1 = context_55;
+                                        fpu_val_2_20 = fpu_val_6_44;
                                     }
 
-                                    float v_bd0_1 = x87_r2_20;
-                                    x87_r2_23 = tmpD90 * x87_r4_13 + x87_r7_34;
-                                    v_b40_1 = v_b54_1 * x87_r4_13 + v_bd0_1;
-                                    v_b70_1 = tmpD96 * x87_r4_13 + x87_r7_34 - x87_r2_23;
-                                    x87_r1_18 = v_bb8_1 * x87_r4_13 + v_bd0_1;
+                                    float item_bd0_1 = fpu_val_2_20;
+                                    fpu_val_2_23 = temp_90 * fpu_val_4_13 + fpu_val_7_34;
+                                    item_b40_1 = item_b54_1 * fpu_val_4_13 + item_bd0_1;
+                                    item_b70_1 = temp_96 * fpu_val_4_13 + fpu_val_7_34 - fpu_val_2_23;
+                                    fpu_val_1_18 = item_bb8_1 * fpu_val_4_13 + item_bd0_1;
                                 }
 
-                                float v_b6c_1;
-                                float v_b34_1;
-                                long double x87_r0_17;
-                                long double x87_r1_31;
+                                float item_b6c_1;
+                                float item_b34_1;
+                                long double fpu_val_0_17;
+                                long double fpu_val_1_31;
 
                                 if (!flagP36)
                                 {
-                                    x87_r1_31 = tmpD88 * tmpD78 + objC134;
-                                    v_b34_1 = tmpD89 * tmpD78 + tmpD77;
-                                    v_b6c_1 = ctxB54 * tmpD78 + objC134 - x87_r1_31;
-                                    x87_r0_17 = ctxB55 * tmpD78 + tmpD77;
+                                    fpu_val_1_31 = temp_88 * temp_78 + entity_134;
+                                    item_b34_1 = temp_89 * temp_78 + temp_77;
+                                    item_b6c_1 = context_54 * temp_78 + entity_134 - fpu_val_1_31;
+                                    fpu_val_0_17 = context_55 * temp_78 + temp_77;
                                 }
                                 else
                                 {
-                                    float v_bb8_2;
-                                    float tmpD106;
-                                    long double x87_r1_29;
+                                    float item_bb8_2;
+                                    float temp_106;
+                                    long double fpu_val_1_29;
 
-                                    if (!((flagP36 ^ tmpD3) & 1))
+                                    if (!((flagP36 ^ temp_3) & 1))
                                     {
-                                        x87_r1_29 = tmpD88;
-                                        v_bb8_2 = ctxB54;
-                                        tmpD106 = objC134;
+                                        fpu_val_1_29 = temp_88;
+                                        item_bb8_2 = context_54;
+                                        temp_106 = entity_134;
                                     }
                                     else
                                     {
-                                        x87_r1_29 = tmpD89;
-                                        v_bb8_2 = ctxB55;
-                                        tmpD106 = tmpD77;
+                                        fpu_val_1_29 = temp_89;
+                                        item_bb8_2 = context_55;
+                                        temp_106 = temp_77;
                                     }
 
-                                    x87_r1_31 = x87_r1_29 * tmpD78 + tmpD106;
-                                    v_b34_1 = tmpD90 * tmpD78 + x87_r3_25;
-                                    v_b6c_1 = v_bb8_2 * tmpD78 + tmpD106 - x87_r1_31;
-                                    x87_r0_17 = tmpD96 * tmpD78 + x87_r3_25;
+                                    fpu_val_1_31 = fpu_val_1_29 * temp_78 + temp_106;
+                                    item_b34_1 = temp_90 * temp_78 + fpu_val_3_25;
+                                    item_b6c_1 = item_bb8_2 * temp_78 + temp_106 - fpu_val_1_31;
+                                    fpu_val_0_17 = temp_96 * temp_78 + fpu_val_3_25;
                                 }
 
-                                int32_t ctxB56 = 0;
+                                int32_t context_56 = 0;
 
-                                if (objC136 == srcS52)
-                                    ctxB56 = 8;
-                                else if (objC136 == srcS51 >> 0x10)
+                                if (entity_136 == source_52)
+                                    context_56 = 8;
+                                else if (entity_136 == source_51 >> 0x10)
                                 {
-                                    int32_t srcS54 = -((srcS52 - 0xff));
-                                    ctxB56 = ((srcS54 - srcS54) & 0xfffffff8) + 0x18;
+                                    int32_t source_54 = -((source_52 - 0xff));
+                                    context_56 = ((source_54 - source_54) & 0xfffffff8) + 0x18;
                                 }
 
-                                int32_t tmpD112 = ((v_c04_2 << 5) + ctxB56) | v_c04_2 << 0x10;
-                                *dstD36 = tmpD112;
-                                dstD36[1] = v_b40_1;
-                                dstD36[2] = x87_r2_23;
-                                flagP38 = objC34;
-                                *objC143 = tmpD112 + 4;
-                                *(objC143 + 4) = x87_r1_31;
-                                dstD36 = &dstD36[3];
-                                *(objC143 + 8) = v_b34_1;
-                                objC143 += 0xc;
+                                int32_t temp_112 = ((item_c04_2 << 5) + context_56) | item_c04_2 << 0x10;
+                                *dest_36 = temp_112;
+                                dest_36[1] = item_b40_1;
+                                dest_36[2] = fpu_val_2_23;
+                                flagP38 = entity_34;
+                                *entity_143 = temp_112 + 4;
+                                *(entity_143 + 4) = fpu_val_1_31;
+                                dest_36 = &dest_36[3];
+                                *(entity_143 + 8) = item_b34_1;
+                                entity_143 += 0xc;
 
-                                if (v_be0_3 >= flagP38)
+                                if (item_be0_3 >= flagP38)
                                 {
-                                    *dstD36 = x87_r1_18 - v_b40_1;
-                                    dstD36[1] = v_b70_1;
-                                    *objC143 = v_b6c_1;
-                                    dstD36 = &dstD36[2];
-                                    *(objC143 + 4) = x87_r0_17 - v_b34_1;
-                                    objC143 += 8;
+                                    *dest_36 = fpu_val_1_18 - item_b40_1;
+                                    dest_36[1] = item_b70_1;
+                                    *entity_143 = item_b6c_1;
+                                    dest_36 = &dest_36[2];
+                                    *(entity_143 + 4) = fpu_val_0_17 - item_b34_1;
+                                    entity_143 += 8;
                                 }
 
-                                ctxB52 = &v_bf4_2[9];
-                                v_bf4_2 = ctxB52;
-                                v_bc8_2 = &v_bc8_2[1];
-                                v_be0_3 += 1;
-                                cond_23_1 = v_c24_11 != 1;
-                                v_c24_11 -= 1;
-                            } while (cond_23_1);
-                            bool cond_24_1 = v_c0c_3 != 1;
-                            v_c20_6 = &v_c20_6[1];
-                            v_c0c_3 -= 1;
+                                context_52 = &item_bf4_2[9];
+                                item_bf4_2 = context_52;
+                                item_bc8_2 = &item_bc8_2[1];
+                                item_be0_3 += 1;
+                                flag_23_1 = item_c24_11 != 1;
+                                item_c24_11 -= 1;
+                            } while (flag_23_1);
+                            bool flag_24_1 = item_c0c_3 != 1;
+                            item_c20_6 = &item_c20_6[1];
+                            item_c0c_3 -= 1;
 
-                            if (!cond_24_1)
+                            if (!flag_24_1)
                                 break;
 
-                            dstD35 = v_c1c_9;
-                            ctxB50 = valA18 + 4;
+                            dest_35 = item_c1c_9;
+                            context_50 = data_18 + 4;
                         }
                     }
 
-                    if (!v_bd8_2)
-                        *v_c1c_9 = 0;
+                    if (!item_bd8_2)
+                        *item_c1c_9 = 0;
                     else
                     {
-                        *v_c1c_9 = v_afc;
-                        float* valA69 = &v_c1c_9[1];
-                        int32_t v_bd8_3 = ctxB5;
-                        int32_t* srcS69 = &v_908;
-                        int32_t tmpD121 = 0;
-                        bool cond_20_1;
+                        *item_c1c_9 = item_afc;
+                        float* data_69 = &item_c1c_9[1];
+                        int32_t item_bd8_3 = context_5;
+                        int32_t* source_69 = &item_908;
+                        int32_t temp_121 = 0;
+                        bool flag_20_1;
 
                         do
                         {
-                            float objC151 = srcS69[7];
-                            float objC152 = srcS69[8];
-                            int32_t objC153;
+                            float entity_151 = source_69[7];
+                            float entity_152 = source_69[8];
+                            int32_t entity_153;
 
-                            if (tmpD121 < flagP38)
-                                objC153 = tmpD121;
+                            if (temp_121 < flagP38)
+                                entity_153 = temp_121;
                             else
-                                objC153 = *srcS69;
+                                entity_153 = *source_69;
 
-                            int32_t dstD40 = objC153 * 9;
-                            v_8ec;
-                            float ctxB58 = *(&v_8ec + (dstD40 << 2));
-                            valA69 = &valA69[3];
-                            v_8e8;
-                            long double x87_r7_37 = *(&v_8e8 + (dstD40 << 2)) - objC152;
-                            valA69[-3] = objC153 << 5 | objC153 << 0x10;
-                            valA69[-2] = objC151;
-                            valA69[-1] = objC152;
+                            int32_t dest_40 = entity_153 * 9;
+                            item_8ec;
+                            float context_58 = *(&item_8ec + (dest_40 << 2));
+                            data_69 = &data_69[3];
+                            item_8e8;
+                            long double fpu_val_7_37 = *(&item_8e8 + (dest_40 << 2)) - entity_152;
+                            data_69[-3] = entity_153 << 5 | entity_153 << 0x10;
+                            data_69[-2] = entity_151;
+                            data_69[-1] = entity_152;
 
-                            if (tmpD121 >= flagP38)
+                            if (temp_121 >= flagP38)
                             {
-                                *valA69 = ctxB58 - objC151;
-                                valA69[1] = x87_r7_37;
-                                valA69 = &valA69[2];
+                                *data_69 = context_58 - entity_151;
+                                data_69[1] = fpu_val_7_37;
+                                data_69 = &data_69[2];
                             }
 
-                            srcS69 = &srcS69[9];
-                            tmpD121 += 1;
-                            cond_20_1 = v_bd8_3 != 1;
-                            v_bd8_3 -= 1;
-                        } while (cond_20_1);
+                            source_69 = &source_69[9];
+                            temp_121 += 1;
+                            flag_20_1 = item_bd8_3 != 1;
+                            item_bd8_3 -= 1;
+                        } while (flag_20_1);
                     }
                 }
                 else
                 {
-                    *(valA1 + 0x18) = 0;
-                    *(valA1 + 0x10) = 0xffffffff;
+                    *(data_1 + 0x18) = 0;
+                    *(data_1 + 0x10) = 0xffffffff;
                     g_b16c9c -= 1;
                 }
 
-                flagP1 = v_b98;
+                flagP1 = item_b98;
             }
             else
             {
-                int32_t tmpD7 = g_b12c48;
+                int32_t temp_7 = g_b12c48;
 
-                if (tmpD7 <= g_b12c4c - 3)
+                if (temp_7 <= g_b12c4c - 3)
                 {
-                    int32_t objC12 = *(g_b12c44 + (tmpD7 << 2)) * g_b12c50 + g_b12c40;
-                    *(g_b12c54 + objC12) = tmpD7;
+                    int32_t entity_12 = *(g_b12c44 + (temp_7 << 2)) * g_b12c50 + g_b12c40;
+                    *(g_b12c54 + entity_12) = temp_7;
                     g_b12c48 += 1;
-                    *(valA1 + 0x18) = objC12;
-                    *(valA1 + 0x14) = 1;
+                    *(data_1 + 0x18) = entity_12;
+                    *(data_1 + 0x14) = 1;
                     goto label_5101bf;
                 }
 
-                int32_t tmpD9 = g_b16cc8;
+                int32_t temp_9 = g_b16cc8;
 
-                if (tmpD9 <= g_b16ccc - 3)
+                if (temp_9 <= g_b16ccc - 3)
                 {
-                    int32_t objC8 = *(g_b16cc4 + (tmpD9 << 2)) * g_b16cd0 + g_b16cc0;
-                    *(g_b16cd4 + objC8) = tmpD9;
+                    int32_t entity_8 = *(g_b16cc4 + (temp_9 << 2)) * g_b16cd0 + g_b16cc0;
+                    *(g_b16cd4 + entity_8) = temp_9;
                     g_b16cc8 += 1;
-                    *(valA1 + 0x18) = objC8;
-                    *(valA1 + 0x14) = 2;
+                    *(data_1 + 0x18) = entity_8;
+                    *(data_1 + 0x14) = 2;
                     goto label_5101bf;
                 }
 
-                *(valA1 + 0x10) = 0xffffffff;
+                *(data_1 + 0x10) = 0xffffffff;
             }
 
             result = result_1 + 1;
             flagP1 += 0x30;
             result_1 = result;
-            v_b98 = flagP1;
+            item_b98 = flagP1;
         } while (result < result_2);
     }
 

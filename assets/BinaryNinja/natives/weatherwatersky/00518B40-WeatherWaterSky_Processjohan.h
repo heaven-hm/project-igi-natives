@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00518B40 WeatherWaterSky_Processjohan | gate PASS | openigi True */
-void*();
+void* WeatherWaterSky_Processjohan();

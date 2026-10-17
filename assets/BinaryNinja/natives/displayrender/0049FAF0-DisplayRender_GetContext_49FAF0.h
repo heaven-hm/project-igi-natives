@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0049FAF0 DisplayRender_GetContext_49FAF0 | gate PASS | openigi True */
-void*(void* arg1);
+void* DisplayRender_GetContext_49FAF0(void* context);

@@ -1,25 +1,25 @@
 // Original IGI.EXE function: Combat_SetAimMode (VA 0x004511F0; static CFG gate PASS, CFG score 1.000).
 #include "Combat_SetAimMode.h"
-int32_t Combat_SetAimMode(void* a1, void* a2, int32_t a3)
+int32_t Combat_SetAimMode(void* context, void* param_2, int32_t param_3)
 
 {
     int32_t result = 0;
-    int32_t objC = *(a1 + 0x128);
+    int32_t entity_val = *(context + 0x128);
 
-    if (objC > 0)
+    if (entity_val > 0)
     {
-        int32_t* tmpD1 = a1 + 0x10;
+        int32_t* temp_1 = context + 0x10;
 
-        while (*(a2 + 0x14) != *tmpD1)
+        while (*(param_2 + 0x14) != *temp_1)
         {
             result += 1;
-            tmpD1 = &tmpD1[1];
+            temp_1 = &temp_1[1];
 
-            if (result >= objC)
+            if (result >= entity_val)
                 return result;
         }
 
-        *(a1 + (result << 2) + 0x90) = a3;
+        *(context + (result << 2) + 0x90) = param_3;
     }
 
     return result;

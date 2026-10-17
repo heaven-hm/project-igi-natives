@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004CA010 DynObj_InsertHashItem_10 | gate PASS | openigi True */
-int DynObj_InsertHashItem_10(short* a1, double* a2, double* a3, double* a4, char a5, int* a6, int a7, int a8, float* a9);
+int DynObj_InsertHashItem_10(short* context, double* param_2, double* param_3, double* param_4, char param_5, int* param_6, int param_7, int param_8, float* param_9);

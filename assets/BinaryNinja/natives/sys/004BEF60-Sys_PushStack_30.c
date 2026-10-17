@@ -1,19 +1,19 @@
 // Original IGI.EXE function: Sys_PushStack_30 (VA 0x004BEF60; static CFG gate FAIL, CFG score 0.778).
 #include "Sys_PushStack_30.h"
-int32_t* Sys_PushStack_30(int32_t* a1, int32_t a2, int32_t a3, int32_t a4)
+int32_t* Sys_PushStack_30(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4)
 
 {
-    void* valA = Mem_Alloc(g_a969c4, 4);
-    a1[1] = valA;
-    int32_t objC = g_a969c4;
-    __builtin_memset(__builtin_memset(valA, 0, objC & 0xfffffffc), 0, objC & 3);
-    int32_t objC4 = a1[1];
-    a1[7] = a2;
-    a1[4] = a3;
-    *a1 = objC4;
-    a1[2] = 0;
-    a1[3] = 0;
-    a1[5] = 0;
-    a1[6] = a4;
-    return a1;
+    void* data_val = Mem_Alloc(g_a969c4, 4);
+    context[1] = data_val;
+    int32_t entity_val = g_a969c4;
+    memset(memset(data_val, 0, entity_val & 0xfffffffc), 0, entity_val & 3);
+    int32_t entity_4 = context[1];
+    context[7] = param_2;
+    context[4] = param_3;
+    *context = entity_4;
+    context[2] = 0;
+    context[3] = 0;
+    context[5] = 0;
+    context[6] = param_4;
+    return context;
 }

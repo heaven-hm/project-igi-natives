@@ -1,16 +1,16 @@
 // Original IGI.EXE function: CameraBase_OnEvent (VA 0x004EFBA0; static CFG gate PASS, CFG score 1.000).
 #include "CameraBase_OnEvent.h"
-int32_t CameraBase_OnEvent(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, float* a4, float a5)
+int32_t CameraBase_OnEvent(long double context , long double param_2 , long double param_3 , float* param_4, float param_5)
 
 {
-    int32_t* srcS = a5;
-    float dstD = *srcS;
-    Script_TooFewParametersInLi(srcS, 3);
-    Profile_ValueSet(srcS[1], dstD);
-    Profile_ValueSet(srcS[1], dstD + 1);
-    Profile_ValueSet(srcS[1], dstD + 2);
-    Sys_ReadFileBlock_12(a4, a1, a2, a3);
-    int32_t result = *srcS + 3;
-    *srcS = result;
+    int32_t* source_val = param_5;
+    float dest_val = *source_val;
+    Script_TooFewParametersInLi(source_val, 3);
+    Profile_ValueSet(source_val[1], dest_val);
+    Profile_ValueSet(source_val[1], dest_val + 1);
+    Profile_ValueSet(source_val[1], dest_val + 2);
+    Sys_ReadFileBlock_12(param_4, context, param_2, param_3);
+    int32_t result = *source_val + 3;
+    *source_val = result;
     return result;
 }

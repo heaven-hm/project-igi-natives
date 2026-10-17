@@ -1,143 +1,143 @@
 // Original IGI.EXE function: Display_RestoreDevice_11 (VA 0x00496AB0; static CFG gate PASS, CFG score 0.905).
 #include "Display_RestoreDevice_11.h"
-int32_t Display_RestoreDevice_11(int32_t a1, int32_t a2)
+int32_t Display_RestoreDevice_11(int32_t context, int32_t param_2)
 
 {
-    int32_t srcS = a1;
-    int32_t valA = 0;
-    int32_t dstD = *(srcS + 0x3c);
-    void* objC = *(srcS + 0xc);
-    valA = dstD == 1;
-    int32_t v_c = valA;
-    a1 = a2;
-    int32_t valA4;
-    int32_t tmpD2;
-    tmpD2 = HIGHD(0x10624dd3 * *(objC + 0x1c) * 0xfa0);
-    valA4 = LOWD(0x10624dd3 * *(objC + 0x1c) * 0xfa0);
-    int32_t tmpD3 = tmpD2 >> 6;
-    int32_t tmpD4 = tmpD3 + (tmpD3 >> 0x1f);
-    int32_t valA9;
-    int32_t tmpD5;
-    tmpD5 = HIGHD(*(objC + 0x18) * *(objC + 0x16));
-    valA9 = LOWD(*(objC + 0x18) * *(objC + 0x16));
-    int32_t valA10 = valA9 + (tmpD5 & 7);
-    int32_t ctxB1 = valA10 >> 3;
+    int32_t source_val = context;
+    int32_t data_val = 0;
+    int32_t dest_val = *(source_val + 0x3c);
+    void* entity_val = *(source_val + 0xc);
+    data_val = dest_val == 1;
+    int32_t item_c = data_val;
+    context = param_2;
+    int32_t data_4;
+    int32_t temp_2;
+    temp_2 = HIGHD(0x10624dd3 * *(entity_val + 0x1c) * 0xfa0);
+    data_4 = LOWD(0x10624dd3 * *(entity_val + 0x1c) * 0xfa0);
+    int32_t temp_3 = temp_2 >> 6;
+    int32_t temp_4 = temp_3 + (temp_3 >> 0x1f);
+    int32_t data_9;
+    int32_t temp_5;
+    temp_5 = HIGHD(*(entity_val + 0x18) * *(entity_val + 0x16));
+    data_9 = LOWD(*(entity_val + 0x18) * *(entity_val + 0x16));
+    int32_t data_10 = data_9 + (temp_5 & 7);
+    int32_t context_1 = data_10 >> 3;
 
-    if (dstD != 2)
+    if (dest_val != 2)
     {
-        int32_t* valA11 = *(srcS + 0x10);
-        int32_t v_8;
-        int32_t v_4;
-        int32_t valA12 = (*(*valA11 + 0x2c))(valA11, 0, 0, &v_8, &v_4, 0, 0, 2);
+        int32_t* data_11 = *(source_val + 0x10);
+        int32_t item_8;
+        int32_t item_4;
+        int32_t data_12 = (*(*data_11 + 0x2c))(data_11, 0, 0, &item_8, &item_4, 0, 0, 2);
 
-        if (valA12)
+        if (data_12)
         {
-            *(srcS + 0x3c) = 0xffffffff;
-            return valA12;
+            *(source_val + 0x3c) = 0xffffffff;
+            return data_12;
         }
 
-        if (a2)
+        if (param_2)
         {
-            bool cond_2_1;
+            bool flag_2_1;
 
             do
             {
                 int32_t flagP1;
 
-                if (a1 >= 0)
+                if (context >= 0)
                 {
-                    flagP1 = tmpD4 - *(srcS + 0x28);
+                    flagP1 = temp_4 - *(source_val + 0x28);
 
-                    if (flagP1 >= a1)
-                        flagP1 = a1;
+                    if (flagP1 >= context)
+                        flagP1 = context;
                 }
                 else
                     flagP1 = 0;
 
-                char* dstD3 = *(srcS + 0x28) * ctxB1 + v_8;
+                char* dest_3 = *(source_val + 0x28) * context_1 + item_8;
 
-                if (!v_c)
+                if (!item_c)
                 {
                     if (flagP1 >= 0)
                     {
-                        void* objC8 = *(srcS + 0xc);
-                        int32_t valA17 = *(objC8 + 0x20) - *(srcS + 0x24);
+                        void* entity_8 = *(source_val + 0xc);
+                        int32_t data_17 = *(entity_8 + 0x20) - *(source_val + 0x24);
 
-                        if (valA17 < flagP1)
-                            flagP1 = valA17;
+                        if (data_17 < flagP1)
+                            flagP1 = data_17;
 
                         if (flagP1)
                         {
-                            if (*(objC8 + 0x14) != 2)
-                                Display_CreateSurface_11(dstD3, srcS, flagP1, ctxB1);
+                            if (*(entity_8 + 0x14) != 2)
+                                Display_CreateSurface_11(dest_3, source_val, flagP1, context_1);
                             else
-                                Display_CheckCapabilities_11(dstD3, srcS, flagP1);
+                                Display_CheckCapabilities_11(dest_3, source_val, flagP1);
                         }
                     }
                     else
                         flagP1 = 0;
 
-                    *(srcS + 0x24) += flagP1;
+                    *(source_val + 0x24) += flagP1;
                 }
                 else
                 {
-                    int32_t objC4 = flagP1 * ctxB1;
-                    __builtin_memset(__builtin_memset(dstD3, 0, objC4 & 0xfffffffc), 0, objC4 & 3);
+                    int32_t entity_4 = flagP1 * context_1;
+                    memset(memset(dest_3, 0, entity_4 & 0xfffffffc), 0, entity_4 & 3);
                 }
 
-                int32_t tmpD12 = *(srcS + 0x28) + flagP1;
-                *(srcS + 0x28) = tmpD12;
+                int32_t temp_12 = *(source_val + 0x28) + flagP1;
+                *(source_val + 0x28) = temp_12;
 
-                if (tmpD12 >= tmpD4)
-                    *(srcS + 0x28) = 0;
+                if (temp_12 >= temp_4)
+                    *(source_val + 0x28) = 0;
 
-                if (*(srcS + 0x24) >= *(*(srcS + 0xc) + 0x20))
+                if (*(source_val + 0x24) >= *(*(source_val + 0xc) + 0x20))
                 {
-                    if (*(srcS + 8) & 0x10)
+                    if (*(source_val + 8) & 0x10)
                     {
-                        Sys_ExecuteBytecode_4(*(srcS + 0x18), 0x14, 0);
-                        Sys_ResolveSymbol_4(*(srcS + 0x18));
-                        void* objC15 = *(srcS + 0xc);
-                        *(srcS + 0x24) = 0;
-                        Display_ClearSurfaces_10(srcS + 0x40, *(objC15 + 0x18));
+                        Sys_ExecuteBytecode_4(*(source_val + 0x18), 0x14, 0);
+                        Sys_ResolveSymbol_4(*(source_val + 0x18));
+                        void* entity_15 = *(source_val + 0xc);
+                        *(source_val + 0x24) = 0;
+                        Display_ClearSurfaces_10(source_val + 0x40, *(entity_15 + 0x18));
                     }
-                    else if (!v_c)
+                    else if (!item_c)
                     {
-                        v_c = 1;
-                        int32_t valA23;
-                        int32_t tmpD14;
-                        tmpD14 = HIGHD(0x10624dd3 * g_limit_b * 0xfa0);
-                        valA23 = LOWD(0x10624dd3 * g_limit_b * 0xfa0);
-                        int32_t tmpD15 = tmpD14 >> 6;
-                        int32_t valA26 = tmpD15 + (tmpD15 >> 0x1f) + g_c28c5c;
-                        int32_t objC14 = *(srcS + 0x20);
-                        *(srcS + 0x2c) = valA26;
+                        item_c = 1;
+                        int32_t data_23;
+                        int32_t temp_14;
+                        temp_14 = HIGHD(0x10624dd3 * g_limit_b * 0xfa0);
+                        data_23 = LOWD(0x10624dd3 * g_limit_b * 0xfa0);
+                        int32_t temp_15 = temp_14 >> 6;
+                        int32_t data_26 = temp_15 + (temp_15 >> 0x1f) + g_c28c5c;
+                        int32_t entity_14 = *(source_val + 0x20);
+                        *(source_val + 0x2c) = data_26;
 
-                        if (objC14 - valA26 >= 0)
-                            *(srcS + 0x30) = objC14 - valA26;
+                        if (entity_14 - data_26 >= 0)
+                            *(source_val + 0x30) = entity_14 - data_26;
                         else
-                            *(srcS + 0x30) = valA26 - objC14;
+                            *(source_val + 0x30) = data_26 - entity_14;
                     }
                 }
 
-                cond_2_1 = a1 != flagP1;
-                a1 -= flagP1;
-            } while (cond_2_1);
+                flag_2_1 = context != flagP1;
+                context -= flagP1;
+            } while (flag_2_1);
         }
 
-        int32_t* valA33 = *(srcS + 0x10);
-        int32_t valA34 = (*(*valA33 + 0x4c))(valA33, v_8, v_4, 0, 0);
+        int32_t* data_33 = *(source_val + 0x10);
+        int32_t data_34 = (*(*data_33 + 0x4c))(data_33, item_8, item_4, 0, 0);
 
-        if (valA34)
+        if (data_34)
         {
-            *(srcS + 0x3c) = 0xffffffff;
-            return valA34;
+            *(source_val + 0x3c) = 0xffffffff;
+            return data_34;
         }
 
-        valA10 = 0;
-        valA10 = v_c;
-        *(srcS + 0x3c) = valA10;
+        data_10 = 0;
+        data_10 = item_c;
+        *(source_val + 0x3c) = data_10;
     }
 
-    return valA10;
+    return data_10;
 }

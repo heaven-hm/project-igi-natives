@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Sector_Cleanup_4 (VA 0x004DE4E0; static CFG gate PASS, CFG score 1.000).
 #include "Sector_Cleanup_4.h"
-int32_t Sector_Cleanup_4(void* a1)
+int32_t Sector_Cleanup_4(void* context)
 
 {
-    int32_t* i = *(a1 + 8);
+    int32_t* i = *(context + 8);
     int32_t result;
 
     if (!*i || !i)
@@ -14,86 +14,86 @@ int32_t Sector_Cleanup_4(void* a1)
 
         do
         {
-            int32_t* srcS1 = *i;
-            void* objC4;
+            int32_t* source_1 = *i;
+            void* entity_4;
 
-            if (!srcS1)
-                objC4 = nullptr;
+            if (!source_1)
+                entity_4 = nullptr;
             else
             {
-                int32_t objC1 = *srcS1;
-                int32_t objC2 = -(objC1);
-                objC4 = (objC2 - objC2) & srcS1;
+                int32_t entity_1 = *source_1;
+                int32_t entity_2 = -(entity_1);
+                entity_4 = (entity_2 - entity_2) & source_1;
             }
 
-            *((result << 2) + &g_afa6e0) = objC4;
-            int32_t valA = result + 1;
-            int32_t objC5 = 0;
-            g_afa7e0 = valA;
-            objC5 = i[7];
-            int32_t objC6 = *((objC5 << 2) + &g_a970e0);
+            *((result << 2) + &g_afa6e0) = entity_4;
+            int32_t data_val = result + 1;
+            int32_t entity_5 = 0;
+            g_afa7e0 = data_val;
+            entity_5 = i[7];
+            int32_t entity_6 = *((entity_5 << 2) + &g_a970e0);
 
-            if (objC6)
+            if (entity_6)
             {
-                objC6(i);
-                valA = g_afa7e0;
+                entity_6(i);
+                data_val = g_afa7e0;
             }
 
-            i = *((valA << 2) + &g_afa6dc);
-            result = valA - 1;
+            i = *((data_val << 2) + &g_afa6dc);
+            result = data_val - 1;
             g_afa7e0 = result;
         } while (i);
     }
 
-    void* objC7 = *(a1 + 0xe8);
+    void* entity_7 = *(context + 0xe8);
 
-    if (objC7)
+    if (entity_7)
     {
-        int32_t* i_1 = *(objC7 + 8);
+        int32_t* i_1 = *(entity_7 + 8);
 
         if (*i_1 && i_1)
         {
             do
             {
-                int32_t* srcS2 = *i_1;
-                void* objC11;
+                int32_t* source_2 = *i_1;
+                void* entity_11;
 
-                if (!srcS2)
-                    objC11 = nullptr;
+                if (!source_2)
+                    entity_11 = nullptr;
                 else
                 {
-                    int32_t objC8 = *srcS2;
-                    int32_t objC9 = -(objC8);
-                    objC11 = (objC9 - objC9) & srcS2;
+                    int32_t entity_8 = *source_2;
+                    int32_t entity_9 = -(entity_8);
+                    entity_11 = (entity_9 - entity_9) & source_2;
                 }
 
-                *((result << 2) + &g_afa6e0) = objC11;
-                int32_t valA1 = result + 1;
-                int32_t objC12 = 0;
-                g_afa7e0 = valA1;
-                objC12 = i_1[7];
-                int32_t objC13 = *((objC12 << 2) + &g_a970e0);
+                *((result << 2) + &g_afa6e0) = entity_11;
+                int32_t data_1 = result + 1;
+                int32_t entity_12 = 0;
+                g_afa7e0 = data_1;
+                entity_12 = i_1[7];
+                int32_t entity_13 = *((entity_12 << 2) + &g_a970e0);
 
-                if (objC13)
+                if (entity_13)
                 {
-                    objC13(i_1);
-                    valA1 = g_afa7e0;
+                    entity_13(i_1);
+                    data_1 = g_afa7e0;
                 }
 
-                i_1 = *((valA1 << 2) + &g_afa6dc);
-                result = valA1 - 1;
+                i_1 = *((data_1 << 2) + &g_afa6dc);
+                result = data_1 - 1;
                 g_afa7e0 = result;
             } while (i_1);
         }
     }
 
-    if (*(a1 + 0x6c))
+    if (*(context + 0x6c))
     {
-        void* objC15 = *(a1 + 0x148);
+        void* entity_15 = *(context + 0x148);
 
-        if (objC15)
+        if (entity_15)
         {
-            int32_t* i_3 = *(objC15 + 8);
+            int32_t* i_3 = *(entity_15 + 8);
 
             if (*i_3)
             {
@@ -107,74 +107,74 @@ int32_t Sector_Cleanup_4(void* a1)
                     {
                         do
                         {
-                            int32_t* srcS3 = *j;
-                            void* objC19;
+                            int32_t* source_3 = *j;
+                            void* entity_19;
 
-                            if (!srcS3)
-                                objC19 = nullptr;
+                            if (!source_3)
+                                entity_19 = nullptr;
                             else
                             {
-                                int32_t objC16 = *srcS3;
-                                int32_t objC17 = -(objC16);
-                                objC19 = (objC17 - objC17) & srcS3;
+                                int32_t entity_16 = *source_3;
+                                int32_t entity_17 = -(entity_16);
+                                entity_19 = (entity_17 - entity_17) & source_3;
                             }
 
-                            *((result << 2) + &g_afa6e0) = objC19;
-                            int32_t valA2 = result + 1;
-                            int32_t objC20 = 0;
-                            g_afa7e0 = valA2;
-                            objC20 = j[7];
-                            int32_t objC21 = *((objC20 << 2) + &g_a970e0);
+                            *((result << 2) + &g_afa6e0) = entity_19;
+                            int32_t data_2 = result + 1;
+                            int32_t entity_20 = 0;
+                            g_afa7e0 = data_2;
+                            entity_20 = j[7];
+                            int32_t entity_21 = *((entity_20 << 2) + &g_a970e0);
 
-                            if (objC21)
+                            if (entity_21)
                             {
-                                objC21(j);
-                                valA2 = g_afa7e0;
+                                entity_21(j);
+                                data_2 = g_afa7e0;
                             }
 
-                            j = *((valA2 << 2) + &g_afa6dc);
-                            result = valA2 - 1;
+                            j = *((data_2 << 2) + &g_afa6dc);
+                            result = data_2 - 1;
                             g_afa7e0 = result;
                         } while (j);
                     }
 
-                    void* objC22 = i_2[0x3a];
+                    void* entity_22 = i_2[0x3a];
 
-                    if (objC22)
+                    if (entity_22)
                     {
-                        int32_t* j_1 = *(objC22 + 8);
+                        int32_t* j_1 = *(entity_22 + 8);
 
                         if (*j_1 && j_1)
                         {
                             do
                             {
-                                int32_t* srcS4 = *j_1;
-                                void* objC26;
+                                int32_t* source_4 = *j_1;
+                                void* entity_26;
 
-                                if (!srcS4)
-                                    objC26 = nullptr;
+                                if (!source_4)
+                                    entity_26 = nullptr;
                                 else
                                 {
-                                    int32_t objC23 = *srcS4;
-                                    int32_t objC24 = -(objC23);
-                                    objC26 = (objC24 - objC24) & srcS4;
+                                    int32_t entity_23 = *source_4;
+                                    int32_t entity_24 = -(entity_23);
+                                    entity_26 = (entity_24 - entity_24) & source_4;
                                 }
 
-                                *((result << 2) + &g_afa6e0) = objC26;
-                                int32_t valA3 = result + 1;
-                                int32_t objC27 = 0;
-                                g_afa7e0 = valA3;
-                                objC27 = j_1[7];
-                                int32_t objC28 = *((objC27 << 2) + &g_a970e0);
+                                *((result << 2) + &g_afa6e0) = entity_26;
+                                int32_t data_3 = result + 1;
+                                int32_t entity_27 = 0;
+                                g_afa7e0 = data_3;
+                                entity_27 = j_1[7];
+                                int32_t entity_28 = *((entity_27 << 2) + &g_a970e0);
 
-                                if (objC28)
+                                if (entity_28)
                                 {
-                                    objC28(j_1);
-                                    valA3 = g_afa7e0;
+                                    entity_28(j_1);
+                                    data_3 = g_afa7e0;
                                 }
 
-                                j_1 = *((valA3 << 2) + &g_afa6dc);
-                                result = valA3 - 1;
+                                j_1 = *((data_3 << 2) + &g_afa6dc);
+                                result = data_3 - 1;
                                 g_afa7e0 = result;
                             } while (j_1);
                         }

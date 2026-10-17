@@ -1,121 +1,121 @@
 // Original IGI.EXE function: ProximityMine_Setup (VA 0x004755A0; static CFG gate PASS, CFG score 0.958).
 #include "ProximityMine_Setup.h"
-void* ProximityMine_Setup(void* a1, char* a2)
+void* ProximityMine_Setup(void* context, char* param_2)
 
 {
-    void* tmpD = *(a1 + 0x128);
-    int32_t srcS = *(a2 + 4);
-    float* v_d0 = *(tmpD + 0x6e4);
+    void* temp_val = *(context + 0x128);
+    int32_t source_val = *(param_2 + 4);
+    float* item_d0 = *(temp_val + 0x6e4);
 
-    if (srcS)
-        memcpy(a1 + 0x150, srcS, 0x18);
+    if (source_val)
+        memcpy(context + 0x150, source_val, 0x18);
 
-    void* valA1 = *(a2 + 8);
+    void* data_1 = *(param_2 + 8);
     void* result;
-    int32_t objC2;
+    int32_t entity_2;
 
-    if (!valA1)
+    if (!data_1)
     {
-        objC2 = *(a1 + 0x80);
-        *(a1 + 0x168) = *(a1 + 0x74);
-        result = *(a1 + 0x8c);
-        *(a1 + 0x16c) = objC2;
-        *(a1 + 0x170) = result;
+        entity_2 = *(context + 0x80);
+        *(context + 0x168) = *(context + 0x74);
+        result = *(context + 0x8c);
+        *(context + 0x16c) = entity_2;
+        *(context + 0x170) = result;
     }
     else
     {
-        *(a1 + 0x168) = *(valA1 + 4);
-        *(a1 + 0x16c) = *(*(a2 + 8) + 0x10);
-        result = *(a2 + 8);
-        *(a1 + 0x170) = *(result + 0x1c);
+        *(context + 0x168) = *(data_1 + 4);
+        *(context + 0x16c) = *(*(param_2 + 8) + 0x10);
+        result = *(param_2 + 8);
+        *(context + 0x170) = *(result + 0x1c);
     }
 
-    if (*a2)
+    if (*param_2)
     {
-        result = *(a1 + 0x134);
+        result = *(context + 0x134);
 
         if (!result)
         {
-            long double x87_r7_2 = *(tmpD + 0x650) * 4096f;
-            float valA4 = *(a1 + 0x16c);
-            float v_e8 = *(a1 + 0x168);
-            float objC4 = *(a1 + 0x170);
-            int32_t tmpD1 = *(a1 + 0x14);
-            v_e8 = x87_r7_2 * v_e8;
-            double v_58;
-            memcpy(&v_58, a1 + 0x150, 0x18);
-            float v_e4_2 = x87_r7_2 * valA4;
-            double v_40 = v_e8 + v_58;
-            void* v_e4_3 = a1;
-            int32_t v_e0_2 = tmpD1;
-            int32_t v_dc_1 = 0;
-            int32_t v_d8_1 = 0x3f800000;
-            double v_50;
-            double v_38_1 = v_e4_2 + v_50;
-            double v_48;
-            double v_30_1 = x87_r7_2 * objC4 + v_48;
-            char valA5 = Level_StartMission_2();
-            int32_t v_c8;
-            int32_t tmpD2 = DynObj_FindSymbol_11(Level_StartMission_4(), &v_c8, &v_58, &v_40, 1, valA5,
-                &v_e8, 0xffffffff);
+            long double fpu_val_7_2 = *(temp_val + 0x650) * 4096.0f;
+            float data_4 = *(context + 0x16c);
+            float item_e8 = *(context + 0x168);
+            float entity_4 = *(context + 0x170);
+            int32_t temp_1 = *(context + 0x14);
+            item_e8 = fpu_val_7_2 * item_e8;
+            double item_58;
+            memcpy(&item_58, context + 0x150, 0x18);
+            float item_e4_2 = fpu_val_7_2 * data_4;
+            double item_40 = item_e8 + item_58;
+            void* item_e4_3 = context;
+            int32_t item_e0_2 = temp_1;
+            int32_t item_dc_1 = 0;
+            int32_t item_d8_1 = 0x3f800000;
+            double item_50;
+            double item_38_1 = item_e4_2 + item_50;
+            double item_48;
+            double item_30_1 = fpu_val_7_2 * entity_4 + item_48;
+            char data_5 = Level_StartMission_2();
+            int32_t item_c8;
+            int32_t temp_2 = DynObj_FindSymbol_11(Level_StartMission_4(), &item_c8, &item_58, &item_40, 1, data_5,
+                &item_e8, 0xffffffff);
             void* result_1;
             result = result_1;
 
             if (result)
             {
-                int32_t dstD2;
+                int32_t dest_2;
 
-                if (!v_c8)
-                    dstD2 = 0;
+                if (!item_c8)
+                    dest_2 = 0;
                 else
                 {
-                    int16_t valA8 = AI_UpdateOrders_17();
-                    tmpD2 = *(v_c8 + 0x1c);
+                    int16_t data_8 = AI_UpdateOrders_17();
+                    temp_2 = *(item_c8 + 0x1c);
 
-                    if (!TaskType_IsDerivedFrom(tmpD2, valA8))
-                        dstD2 = 0;
+                    if (!TaskType_IsDerivedFrom(temp_2, data_8))
+                        dest_2 = 0;
                     else
-                        dstD2 = 1;
+                        dest_2 = 1;
                 }
 
-                int32_t valA10 = v_c8;
-                char valA13;
+                int32_t data_10 = item_c8;
+                char data_13;
 
-                if (valA10 && *(valA10 + 0x14))
+                if (data_10 && *(data_10 + 0x14))
                 {
-                    int16_t valA11 = AI_UpdateOrders_17();
-                    tmpD2 = *(*(v_c8 + 0x14) + 0x1c);
-                    valA13 = TaskType_IsDerivedFrom(tmpD2, valA11);
+                    int16_t data_11 = AI_UpdateOrders_17();
+                    temp_2 = *(*(item_c8 + 0x14) + 0x1c);
+                    data_13 = TaskType_IsDerivedFrom(temp_2, data_11);
                 }
 
-                int32_t srcS2;
+                int32_t source_2;
 
-                if (!valA10 || !*(valA10 + 0x14) || !valA13)
-                    srcS2 = 0;
+                if (!data_10 || !*(data_10 + 0x14) || !data_13)
+                    source_2 = 0;
                 else
-                    srcS2 = 1;
+                    source_2 = 1;
 
-                if (!v_c8)
+                if (!item_c8)
                     result = nullptr;
                 else
                 {
-                    int16_t valA15 = Env_CheckAmbientArea_11();
-                    objC2 = v_c8;
+                    int16_t data_15 = Env_CheckAmbientArea_11();
+                    entity_2 = item_c8;
 
-                    if (*(objC2 + 0x1c) == valA15)
+                    if (*(entity_2 + 0x1c) == data_15)
                         result = 1;
                     else
                     {
-                        int16_t valA16 = Env_ScanViewCone_8();
+                        int16_t data_16 = Env_ScanViewCone_8();
 
-                        if (*(v_c8 + 0x1c) == valA16)
+                        if (*(item_c8 + 0x1c) == data_16)
                             result = 1;
                         else
                         {
-                            int16_t valA17 = Script_ExecuteLevelScript_16();
-                            objC2 = *(v_c8 + 0x1c);
+                            int16_t data_17 = Script_ExecuteLevelScript_16();
+                            entity_2 = *(item_c8 + 0x1c);
 
-                            if (!TaskType_IsDerivedFrom(objC2, valA17))
+                            if (!TaskType_IsDerivedFrom(entity_2, data_17))
                                 result = nullptr;
                             else
                                 result = 1;
@@ -123,72 +123,72 @@ void* ProximityMine_Setup(void* a1, char* a2)
                     }
                 }
 
-                if (!dstD2 && !srcS2 && !result)
+                if (!dest_2 && !source_2 && !result)
                 {
-                    float v_90;
-                    long double x87_r7_5 = v_90;
-                    long double f0_1 = 0f;
-                    x87_r7_5 - f0_1;
-                    float v_8c;
-                    float v_88;
+                    float item_90;
+                    long double fpu_val_7_5 = item_90;
+                    long double f0_1 = 0.0f;
+                    fpu_val_7_5 - f0_1;
+                    float item_8c;
+                    float item_88;
 
-                    if (!(*(&((x87_r7_5 < f0_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_5, f0_1) ? 1 : 0) << 0xa
-                        | (x87_r7_5 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                    if (!(*(&((fpu_val_7_5 < f0_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_5, f0_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_5 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                     {
                     label_47581e:
-                        long double x87_r7_8 = v_88;
-                        long double x87_r6_9 = v_8c;
-                        long double x87_r5_1 = v_90;
-                        long double x87_r7_10 = 1.0 /
-                            sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_9 * x87_r6_9 + x87_r7_8 * x87_r7_8);
-                        v_90 = v_90 * x87_r7_10;
-                        float v_8c_1 = v_8c * x87_r7_10;
-                        float v_88_1 = v_88 * x87_r7_10;
+                        long double fpu_val_7_8 = item_88;
+                        long double fpu_val_6_9 = item_8c;
+                        long double fpu_val_5_1 = item_90;
+                        long double fpu_val_7_10 = 1.0 /
+                            sqrtl(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_9 * fpu_val_6_9 + fpu_val_7_8 * fpu_val_7_8);
+                        item_90 = item_90 * fpu_val_7_10;
+                        float item_8c_1 = item_8c * fpu_val_7_10;
+                        float item_88_1 = item_88 * fpu_val_7_10;
                     }
                     else
                     {
-                        long double x87_r7_6 = v_8c;
-                        long double f1_1 = 0f;
-                        x87_r7_6 - f1_1;
+                        long double fpu_val_7_6 = item_8c;
+                        long double f1_1 = 0.0f;
+                        fpu_val_7_6 - f1_1;
 
-                        if (!(*(&((x87_r7_6 < f1_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_6, f1_1) ? 1 : 0) << 0xa
-                                | (x87_r7_6 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                        if (!(*(&((fpu_val_7_6 < f1_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_6, f1_1) ? 1 : 0) << 0xa
+                                | (fpu_val_7_6 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                             goto label_47581e;
 
-                        long double x87_r7_7 = v_88;
-                        long double f2_1 = 0f;
-                        x87_r7_7 - f2_1;
+                        long double fpu_val_7_7 = item_88;
+                        long double f2_1 = 0.0f;
+                        fpu_val_7_7 - f2_1;
 
-                        if (!(*(&((x87_r7_7 < f2_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_7, f2_1) ? 1 : 0) << 0xa
-                                | (x87_r7_7 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                        if (!(*(&((fpu_val_7_7 < f2_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_7, f2_1) ? 1 : 0) << 0xa
+                                | (fpu_val_7_7 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                             goto label_47581e;
                     }
-                    float v_28[0xa];
-                    WeaponType_SetCategory(&v_28, &v_90);
-                    int32_t tmpD4 = v_d0[3];
-                    int32_t objC8 = v_d0[2];
-                    int32_t tmpD5 = v_d0[1];
-                    v_d0 = *v_d0 * 30f;
-                    void v_c0;
-                    Mine_ProximityCreate(Script_FormatString(), &v_c0, &v_28, tmpD + 0x61c, v_d0,
-                        tmpD5, objC8, tmpD4, a2[0x18]);
-                    result = *(a1 + 0x144);
+                    float item_28[0xa];
+                    WeaponType_SetCategory(&item_28, &item_90);
+                    int32_t temp_4 = item_d0[3];
+                    int32_t entity_8 = item_d0[2];
+                    int32_t temp_5 = item_d0[1];
+                    item_d0 = *item_d0 * 30.0f;
+                    void item_c0;
+                    Mine_ProximityCreate(Script_FormatString(), &item_c0, &item_28, temp_val + 0x61c, item_d0,
+                        temp_5, entity_8, temp_4, param_2[0x18]);
+                    result = *(context + 0x144);
 
                     if (result > 0)
                     {
                         result -= 1;
-                        *(a1 + 0x144) = result;
+                        *(context + 0x144) = result;
                     }
 
-                    a2[1] = 1;
+                    param_2[1] = 1;
                 }
             }
         }
     }
 
-    *(a1 + 0x134) = *a2;
+    *(context + 0x134) = *param_2;
     return result;
 }

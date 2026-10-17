@@ -1,70 +1,70 @@
 // Original IGI.EXE function: Sys_UnknownDataType (VA 0x004BC960; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnknownDataType.h"
-int32_t Sys_UnknownDataType(void* a1)
+int32_t Sys_UnknownDataType(void* context)
 
 {
     int32_t flagP;
-    int32_t v_4 = flagP;
+    int32_t item_4 = flagP;
     Camera_UpdateTransform_5(0x1008);
     int32_t result_1 = 0;
-    int32_t i = *(a1 + 0x1c);
-    int32_t result = *(a1 + 0xc);
-    int32_t srcS = *(a1 + 0x18);
+    int32_t i = *(context + 0x1c);
+    int32_t result = *(context + 0xc);
+    int32_t source_val = *(context + 0x18);
     int32_t i_1 = i;
 
     if (i < result)
     {
         do
         {
-            char* v_1c;
+            char* item_1c;
 
-            switch (*(*(a1 + 0x28) + (i << 2)) - 1)
+            switch (*(*(context + 0x28) + (i << 2)) - 1)
             {
                 case 0:
                 {
-                    int32_t v_18_1 = *(*(a1 + 0x24) + (srcS << 2));
-                    v_1c = &g_53fde4;
-                    Game_DataSymbolLoad(&__return_addr, "%d");
-                    srcS += 1;
+                    int32_t item_18_1 = *(*(context + 0x24) + (source_val << 2));
+                    item_1c = &g_53fde4;
+                    Game_DataSymbolLoad(&return_addr, "%d");
+                    source_val += 1;
                     break;
                 }
                 case 1:
                 {
-                    v_1c = *(*(a1 + 0x24) + (srcS << 2));
-                    Game_DataSymbolLoad(&__return_addr, "%f");
-                    srcS += 1;
+                    item_1c = *(*(context + 0x24) + (source_val << 2));
+                    Game_DataSymbolLoad(&return_addr, "%f");
+                    source_val += 1;
                     break;
                 }
                 case 2:
                 {
-                    int32_t v_18_3 = *(a1 + 0x24) + (srcS << 2) + 4;
-                    v_1c = ""%s"";
-                    Game_DataSymbolLoad(&__return_addr, ""%s"");
-                    srcS = srcS + *(*(a1 + 0x24) + (srcS << 2)) + 1;
+                    int32_t item_18_3 = *(context + 0x24) + (source_val << 2) + 4;
+                    item_1c = ""%s"";
+                    Game_DataSymbolLoad(&return_addr, ""%s"");
+                    source_val = source_val + *(*(context + 0x24) + (source_val << 2)) + 1;
                     break;
                 }
                 case 3:
                 {
-                    int32_t v_18_2 = *(a1 + 0x24) + (srcS << 2) + 4;
-                    v_1c = &g_53f730;
-                    Game_DataSymbolLoad(&__return_addr, "%s");
-                    srcS = srcS + *(*(a1 + 0x24) + (srcS << 2)) + 1;
+                    int32_t item_18_2 = *(context + 0x24) + (source_val << 2) + 4;
+                    item_1c = &g_53f730;
+                    Game_DataSymbolLoad(&return_addr, "%s");
+                    source_val = source_val + *(*(context + 0x24) + (source_val << 2)) + 1;
                     break;
                 }
                 case 6:
                 {
-                    int32_t ctxB = *(*(a1 + 0x24) + (srcS << 2));
-                    int32_t v_18_4 = ctxB;
-                    v_1c = "%d words of data.";
-                    Game_DataSymbolLoad(&__return_addr, "%d words of data.");
-                    srcS = srcS + ctxB + 1;
+                    int32_t context_val = *(*(context + 0x24) + (source_val << 2));
+                    int32_t item_18_4 = context_val;
+                    item_1c = "%d words of data.";
+                    Game_DataSymbolLoad(&return_addr, "%d words of data.");
+                    source_val = source_val + context_val + 1;
                     i = i_1;
                     break;
                 }
                 default:
                 {
-                    v_1c = &__return_addr;
-                    Game_DataSymbolLoad(v_1c, "UNKNOWN DATA TYPE");
+                    item_1c = &return_addr;
+                    Game_DataSymbolLoad(item_1c, "UNKNOWN DATA TYPE");
                     result_1 = 1;
                 }
             }
@@ -75,7 +75,7 @@ int32_t Sys_UnknownDataType(void* a1)
 
             if (result)
                 break;
-        } while (i < *(a1 + 0xc));
+        } while (i < *(context + 0xc));
     }
 
     return result;

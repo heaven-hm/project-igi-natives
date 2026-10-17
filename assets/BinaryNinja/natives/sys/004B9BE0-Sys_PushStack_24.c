@@ -1,60 +1,60 @@
 // Original IGI.EXE function: Sys_PushStack_24 (VA 0x004B9BE0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_PushStack_24.h"
-void Sys_PushStack_24(char* a1)
+void Sys_PushStack_24(char* context)
 
 {
-    if (!a1)
+    if (!context)
         return;
 
-    Sys_PushStack_24(*(a1 + 0x18));
-    Sys_PushStack_24(*(a1 + 0x1c));
-    char valA3 = *a1;
+    Sys_PushStack_24(*(context + 0x18));
+    Sys_PushStack_24(*(context + 0x1c));
+    char data_3 = *context;
 
-    if (valA3 == 6 || valA3 == 7)
-        Sys_PushStack_24(*(a1 + 8));
+    if (data_3 == 6 || data_3 == 7)
+        Sys_PushStack_24(*(context + 8));
 
-    valA3 = *a1;
+    data_3 = *context;
 
-    if (valA3 == 4 || valA3 == 5)
+    if (data_3 == 4 || data_3 == 5)
     {
-        int32_t* valA4 = *(a1 + 8);
+        int32_t* data_4 = *(context + 8);
 
-        if (valA4)
-            Sys_PushStack_25(valA4);
+        if (data_4)
+            Sys_PushStack_25(data_4);
 
-        int32_t* valA5 = *(a1 + 0xc);
+        int32_t* data_5 = *(context + 0xc);
 
-        if (valA5)
+        if (data_5)
         {
-            if (*valA5)
+            if (*data_5)
             {
-                char* i = *valA5[2];
+                char* i = *data_5[2];
 
                 if (i)
                 {
-                    int32_t dstD1 = 0;
+                    int32_t dest_1 = 0;
 
                     do
                     {
                         Sys_PushStack_24(i);
-                        dstD1 += 4;
-                        i = *(*(*(a1 + 0xc) + 8) + dstD1);
+                        dest_1 += 4;
+                        i = *(*(*(context + 0xc) + 8) + dest_1);
                     } while (i);
                 }
             }
 
-            void* valA8 = *(*(a1 + 0xc) + 8);
+            void* data_8 = *(*(context + 0xc) + 8);
 
-            if (valA8)
+            if (data_8)
             {
-                Sys_ExecuteBytecode_2(valA8);
-                *(*(a1 + 0xc) + 8) = 0;
+                Sys_ExecuteBytecode_2(data_8);
+                *(*(context + 0xc) + 8) = 0;
             }
 
-            Sys_ExecuteBytecode_2(*(a1 + 0xc));
-            *(a1 + 0xc) = 0;
+            Sys_ExecuteBytecode_2(*(context + 0xc));
+            *(context + 0xc) = 0;
         }
     }
 
-    Sys_ExecuteBytecode_2(a1);
+    Sys_ExecuteBytecode_2(context);
 }

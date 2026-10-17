@@ -1,37 +1,37 @@
 // Original IGI.EXE function: Camera_ResetMatrix_20 (VA 0x004AA7B0; static CFG gate FAIL, CFG score 0.583).
 #include "Camera_ResetMatrix_20.h"
-char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
+char* Camera_ResetMatrix_20(char* context, char* param_2, void* param_3)
 
 {
-    char* srcS = a2;
-    char* dstD = a1;
+    char* source_val = param_2;
+    char* dest_val = context;
 
-    if (dstD > srcS && dstD < a3 + srcS)
+    if (dest_val > source_val && dest_val < param_3 + source_val)
     {
-        void* srcS1 = a3 + srcS - 4;
-        void* dstD1 = a3 + dstD - 4;
-        uint32_t objC4;
+        void* source_1 = param_3 + source_val - 4;
+        void* dest_1 = param_3 + dest_val - 4;
+        uint32_t entity_4;
 
-        if (!(dstD1 & 3))
+        if (!(dest_1 & 3))
         {
-            objC4 = a3 >> 2;
+            entity_4 = param_3 >> 2;
 
-            if (objC4 < 8)
-❓                /* jump -> (&jump_table_4aaa40)[-(objC4)] */
+            if (entity_4 < 8)
+❓                /* jump -> (&jump_table_4aaa40)[-(entity_4)] */
 
-            dstD1 = memcpy(dstD1 - (objC4 << 2), srcS1 - (objC4 << 2), objC4 << 2);
+            dest_1 = memcpy(dest_1 - (entity_4 << 2), source_1 - (entity_4 << 2), entity_4 << 2);
 
-            switch (a3 & 3)
+            switch (param_3 & 3)
             {
                 case nullptr:
                 {
-                    return a1;
+                    return context;
                     break;
                 }
                 case 1:
                 {
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    return a1;
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    return context;
                     break;
                 }
                 case 2:
@@ -44,67 +44,67 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
                 }
             }
         }
-        else if (a3 < 4)
-            switch (a3)
+        else if (param_3 < 4)
+            switch (param_3)
             {
                 case nullptr:
                 {
-                    return a1;
+                    return context;
                     break;
                 }
                 case 1:
                 {
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    return a1;
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    return context;
                     break;
                 }
                 case 2:
                 {
                 label_4aaabb:
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    *(dstD1 + 2) = *(srcS1 + 2);
-                    return a1;
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    *(dest_1 + 2) = *(source_1 + 2);
+                    return context;
                     break;
                 }
                 case 3:
                 {
                 label_4aaacf:
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    *(dstD1 + 2) = *(srcS1 + 2);
-                    *(dstD1 + 1) = *(srcS1 + 1);
-                    return a1;
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    *(dest_1 + 2) = *(source_1 + 2);
+                    *(dest_1 + 1) = *(source_1 + 1);
+                    return context;
                     break;
                 }
             }
         else
         {
-            void* valA21 = dstD1 & 3;
-            void* objC6 = a3 - valA21;
+            void* data_21 = dest_1 & 3;
+            void* entity_6 = param_3 - data_21;
 
-            switch (jump_table_4aa998[valA21])
+            switch (jump_table_4aa998[data_21])
             {
                 case 0x4aa9a8:
                 {
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    objC4 = objC6 >> 2;
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    entity_4 = entity_6 >> 2;
 
-                    if (objC4 < 8)
-                        /* jump -> (&jump_table_4aaa40)[-(objC4)] */
+                    if (entity_4 < 8)
+                        /* jump -> (&jump_table_4aaa40)[-(entity_4)] */
 
-                    dstD1 = memcpy(dstD1 - 1 - (objC4 << 2), srcS1 - 1 - (objC4 << 2),
-                        objC4 << 2);
+                    dest_1 = memcpy(dest_1 - 1 - (entity_4 << 2), source_1 - 1 - (entity_4 << 2),
+                        entity_4 << 2);
 
-                    switch (3 & objC6)
+                    switch (3 & entity_6)
                     {
                         case nullptr:
                         {
-                            return a1;
+                            return context;
                             break;
                         }
                         case 1:
                         {
-                            *(dstD1 + 3) = *(srcS1 + 3);
-                            return a1;
+                            *(dest_1 + 3) = *(source_1 + 3);
+                            return context;
                             break;
                         }
                         case 2:
@@ -120,27 +120,27 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
                 }
                 case 0x4aa9c8:
                 {
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    objC4 = objC6 >> 2;
-                    *(dstD1 + 2) = *(srcS1 + 2);
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    entity_4 = entity_6 >> 2;
+                    *(dest_1 + 2) = *(source_1 + 2);
 
-                    if (objC4 < 8)
-                        /* jump -> (&jump_table_4aaa40)[-(objC4)] */
+                    if (entity_4 < 8)
+                        /* jump -> (&jump_table_4aaa40)[-(entity_4)] */
 
-                    dstD1 = memcpy(dstD1 - 2 - (objC4 << 2), srcS1 - 2 - (objC4 << 2),
-                        objC4 << 2);
+                    dest_1 = memcpy(dest_1 - 2 - (entity_4 << 2), source_1 - 2 - (entity_4 << 2),
+                        entity_4 << 2);
 
-                    switch (3 & objC6)
+                    switch (3 & entity_6)
                     {
                         case nullptr:
                         {
-                            return a1;
+                            return context;
                             break;
                         }
                         case 1:
                         {
-                            *(dstD1 + 3) = *(srcS1 + 3);
-                            return a1;
+                            *(dest_1 + 3) = *(source_1 + 3);
+                            return context;
                             break;
                         }
                         case 2:
@@ -156,28 +156,28 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
                 }
                 case 0x4aa9f0:
                 {
-                    *(dstD1 + 3) = *(srcS1 + 3);
-                    *(dstD1 + 2) = *(srcS1 + 2);
-                    objC4 = objC6 >> 2;
-                    *(dstD1 + 1) = *(srcS1 + 1);
+                    *(dest_1 + 3) = *(source_1 + 3);
+                    *(dest_1 + 2) = *(source_1 + 2);
+                    entity_4 = entity_6 >> 2;
+                    *(dest_1 + 1) = *(source_1 + 1);
 
-                    if (objC4 < 8)
-                        /* jump -> (&jump_table_4aaa40)[-(objC4)] */
+                    if (entity_4 < 8)
+                        /* jump -> (&jump_table_4aaa40)[-(entity_4)] */
 
-                    dstD1 = memcpy(dstD1 - 3 - (objC4 << 2), srcS1 - 3 - (objC4 << 2),
-                        objC4 << 2);
+                    dest_1 = memcpy(dest_1 - 3 - (entity_4 << 2), source_1 - 3 - (entity_4 << 2),
+                        entity_4 << 2);
 
-                    switch (3 & objC6)
+                    switch (3 & entity_6)
                     {
                         case nullptr:
                         {
-                            return a1;
+                            return context;
                             break;
                         }
                         case 1:
                         {
-                            *(dstD1 + 3) = *(srcS1 + 3);
-                            return a1;
+                            *(dest_1 + 3) = *(source_1 + 3);
+                            return context;
                             break;
                         }
                         case 2:
@@ -195,44 +195,44 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
         }
     }
 
-    uint32_t objC1;
-    void* tmpD1;
+    uint32_t entity_1;
+    void* temp_1;
 
-    if (dstD & 3)
+    if (dest_val & 3)
     {
-        if (a3 < 4)
-❓            /* jump -> *(((a3 - 4) << 2) + &g_4aa908) */
+        if (param_3 < 4)
+❓            /* jump -> *(((param_3 - 4) << 2) + &g_4aa908) */
 
-        void* valA3 = dstD & 3;
-        void* objC3 = a3 - 4 + valA3;
+        void* data_3 = dest_val & 3;
+        void* entity_3 = param_3 - 4 + data_3;
 
-        switch (jump_table_4aa810[valA3])
+        switch (jump_table_4aa810[data_3])
         {
             case 0x4aa820:
             {
-                tmpD1 = 3 & objC3;
-                *dstD = *srcS;
-                dstD[1] = srcS[1];
-                objC1 = objC3 >> 2;
-                dstD[2] = srcS[2];
-                srcS = &srcS[3];
-                dstD = &dstD[3];
+                temp_1 = 3 & entity_3;
+                *dest_val = *source_val;
+                dest_val[1] = source_val[1];
+                entity_1 = entity_3 >> 2;
+                dest_val[2] = source_val[2];
+                source_val = &source_val[3];
+                dest_val = &dest_val[3];
 
-                if (objC1 >= 8)
+                if (entity_1 >= 8)
                 {
-                    dstD = memcpy(dstD, srcS, objC1 << 2);
+                    dest_val = memcpy(dest_val, source_val, entity_1 << 2);
 
-                    switch (tmpD1)
+                    switch (temp_1)
                     {
                         case nullptr:
                         {
-                            return a1;
+                            return context;
                             break;
                         }
                         case 1:
                         {
-                            *dstD = *srcS;
-                            return a1;
+                            *dest_val = *source_val;
+                            return context;
                             break;
                         }
                         case 2:
@@ -249,28 +249,28 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
             }
             case 0x4aa84c:
             {
-                tmpD1 = 3 & objC3;
-                *dstD = *srcS;
-                objC1 = objC3 >> 2;
-                dstD[1] = srcS[1];
-                srcS = &srcS[2];
-                dstD = &dstD[2];
+                temp_1 = 3 & entity_3;
+                *dest_val = *source_val;
+                entity_1 = entity_3 >> 2;
+                dest_val[1] = source_val[1];
+                source_val = &source_val[2];
+                dest_val = &dest_val[2];
 
-                if (objC1 >= 8)
+                if (entity_1 >= 8)
                 {
-                    dstD = memcpy(dstD, srcS, objC1 << 2);
+                    dest_val = memcpy(dest_val, source_val, entity_1 << 2);
 
-                    switch (tmpD1)
+                    switch (temp_1)
                     {
                         case nullptr:
                         {
-                            return a1;
+                            return context;
                             break;
                         }
                         case 1:
                         {
-                            *dstD = *srcS;
-                            return a1;
+                            *dest_val = *source_val;
+                            return context;
                             break;
                         }
                         case 2:
@@ -287,27 +287,27 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
             }
             case 0x4aa870:
             {
-                tmpD1 = 3 & objC3;
-                *dstD = *srcS;
-                srcS = &srcS[1];
-                objC1 = objC3 >> 2;
-                dstD = &dstD[1];
+                temp_1 = 3 & entity_3;
+                *dest_val = *source_val;
+                source_val = &source_val[1];
+                entity_1 = entity_3 >> 2;
+                dest_val = &dest_val[1];
 
-                if (objC1 >= 8)
+                if (entity_1 >= 8)
                 {
-                    dstD = memcpy(dstD, srcS, objC1 << 2);
+                    dest_val = memcpy(dest_val, source_val, entity_1 << 2);
 
-                    switch (tmpD1)
+                    switch (temp_1)
                     {
                         case nullptr:
                         {
-                            return a1;
+                            return context;
                             break;
                         }
                         case 1:
                         {
-                            *dstD = *srcS;
-                            return a1;
+                            *dest_val = *source_val;
+                            return context;
                             break;
                         }
                         case 2:
@@ -326,24 +326,24 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
     }
     else
     {
-        objC1 = a3 >> 2;
-        tmpD1 = a3 & 3;
+        entity_1 = param_3 >> 2;
+        temp_1 = param_3 & 3;
 
-        if (objC1 >= 8)
+        if (entity_1 >= 8)
         {
-            dstD = memcpy(dstD, srcS, objC1 << 2);
+            dest_val = memcpy(dest_val, source_val, entity_1 << 2);
 
-            switch (tmpD1)
+            switch (temp_1)
             {
                 case nullptr:
                 {
-                    return a1;
+                    return context;
                     break;
                 }
                 case 1:
                 {
-                    *dstD = *srcS;
-                    return a1;
+                    *dest_val = *source_val;
+                    return context;
                     break;
                 }
                 case 2:
@@ -358,7 +358,7 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
         }
     }
 
-    switch (objC1)
+    switch (entity_1)
     {
         case 0:
         {
@@ -390,52 +390,52 @@ char* Camera_ResetMatrix_20(char* a1, char* a2, void* a3)
         }
         case 7:
         {
-            *(dstD + (objC1 << 2) - 0x1c) = *(srcS + (objC1 << 2) - 0x1c);
+            *(dest_val + (entity_1 << 2) - 0x1c) = *(source_val + (entity_1 << 2) - 0x1c);
         label_4aa8b8:
-            *(dstD + (objC1 << 2) - 0x18) = *(srcS + (objC1 << 2) - 0x18);
+            *(dest_val + (entity_1 << 2) - 0x18) = *(source_val + (entity_1 << 2) - 0x18);
         label_4aa8c0:
-            *(dstD + (objC1 << 2) - 0x14) = *(srcS + (objC1 << 2) - 0x14);
+            *(dest_val + (entity_1 << 2) - 0x14) = *(source_val + (entity_1 << 2) - 0x14);
         label_4aa8c8:
-            *(dstD + (objC1 << 2) - 0x10) = *(srcS + (objC1 << 2) - 0x10);
+            *(dest_val + (entity_1 << 2) - 0x10) = *(source_val + (entity_1 << 2) - 0x10);
         label_4aa8d0:
-            *(dstD + (objC1 << 2) - 0xc) = *(srcS + (objC1 << 2) - 0xc);
+            *(dest_val + (entity_1 << 2) - 0xc) = *(source_val + (entity_1 << 2) - 0xc);
         label_4aa8d8:
-            *(dstD + (objC1 << 2) - 8) = *(srcS + (objC1 << 2) - 8);
+            *(dest_val + (entity_1 << 2) - 8) = *(source_val + (entity_1 << 2) - 8);
         label_4aa8e0:
-            *(dstD + (objC1 << 2) - 4) = *(srcS + (objC1 << 2) - 4);
-            uint32_t valA15 = objC1 << 2;
-            srcS = &srcS[valA15];
-            dstD = &dstD[valA15];
+            *(dest_val + (entity_1 << 2) - 4) = *(source_val + (entity_1 << 2) - 4);
+            uint32_t data_15 = entity_1 << 2;
+            source_val = &source_val[data_15];
+            dest_val = &dest_val[data_15];
         label_4aa8ef:
 
-            switch (tmpD1)
+            switch (temp_1)
             {
                 case nullptr:
                 {
-                    return a1;
+                    return context;
                     break;
                 }
                 case 1:
                 {
-                    *dstD = *srcS;
-                    return a1;
+                    *dest_val = *source_val;
+                    return context;
                     break;
                 }
                 case 2:
                 {
                 label_4aa91e:
-                    *dstD = *srcS;
-                    dstD[1] = srcS[1];
-                    return a1;
+                    *dest_val = *source_val;
+                    dest_val[1] = source_val[1];
+                    return context;
                     break;
                 }
                 case 3:
                 {
                 label_4aa932:
-                    *dstD = *srcS;
-                    dstD[1] = srcS[1];
-                    dstD[2] = srcS[2];
-                    return a1;
+                    *dest_val = *source_val;
+                    dest_val[1] = source_val[1];
+                    dest_val[2] = source_val[2];
+                    return context;
                     break;
                 }
             }

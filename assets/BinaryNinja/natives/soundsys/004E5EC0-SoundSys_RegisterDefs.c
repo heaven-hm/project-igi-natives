@@ -17,11 +17,11 @@ int32_t* SoundSys_RegisterDefs(int32_t pThis, void* param)
             break;
     }
 
-    int32_t ecx = ~i;
-    int32_t esi_1;
-    int32_t edi_2;
-    edi_2 = __builtin_memcpy(pThis + 0x20, param_1 - ecx, ecx & 0xfffffffc);
-    __builtin_memcpy(edi_2, esi_1, ecx & 3);
+    int32_t counter_val = ~i;
+    int32_t source_ptr_1;
+    int32_t dest_ptr_2;
+    dest_ptr_2 = memcpy(pThis + 0x20, param_1 - counter_val, counter_val & 0xfffffffc);
+    memcpy(dest_ptr_2, source_ptr_1, counter_val & 3);
     DynObj_QtasklistIsFull(g_a5e610, pThis);
     Script_SetSymbolContext("DefineGroup", pThis);
     Script_SetSymbolContext("DefineSound", pThis);

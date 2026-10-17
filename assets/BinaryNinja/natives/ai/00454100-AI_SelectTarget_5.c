@@ -1,60 +1,60 @@
 // Original IGI.EXE function: AI_SelectTarget_5 (VA 0x00454100; static CFG gate PASS, CFG score 1.000).
 #include "AI_SelectTarget_5.h"
-void* AI_SelectTarget_5(void* a1, int32_t a2)
+void* AI_SelectTarget_5(void* context, int32_t param_2)
 
 {
-    void* result = Table_GetAt(a2 + 0x4c4, 0);
-    int32_t ctxB = *(a1 + 8);
+    void* result = Table_GetAt(param_2 + 0x4c4, 0);
+    int32_t context_val = *(context + 8);
 
-    if (!(ctxB & 4))
+    if (!(context_val & 4))
     {
-        void* tmpD = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 8;
-        int32_t valA1 = *(tmpD + 0x20);
-        *(a1 + 0x14) = valA1;
-        return valA1(a1, a2);
+        void* temp_val = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 8;
+        int32_t data_1 = *(temp_val + 0x20);
+        *(context + 0x14) = data_1;
+        return data_1(context, param_2);
     }
 
-    if (ctxB & 0x10000)
+    if (context_val & 0x10000)
     {
-        void* objC2 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 9;
-        int32_t valA4 = *(objC2 + 0x24);
-        *(a1 + 0x14) = valA4;
-        return valA4(a1, a2);
+        void* entity_2 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 9;
+        int32_t data_4 = *(entity_2 + 0x24);
+        *(context + 0x14) = data_4;
+        return data_4(context, param_2);
     }
 
-    if (ctxB & 0x20000)
+    if (context_val & 0x20000)
     {
-        void* valA6 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0xa;
-        int32_t valA7 = *(valA6 + 0x28);
-        *(a1 + 0x14) = valA7;
-        return valA7(a1, a2);
+        void* data_6 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0xa;
+        int32_t data_7 = *(data_6 + 0x28);
+        *(context + 0x14) = data_7;
+        return data_7(context, param_2);
     }
 
-    if (!(ctxB & 1))
+    if (!(context_val & 1))
         return result;
 
     Script_SpawnNewTask_13(result, 1);
 
-    if (!(ctxB & 0x200000))
+    if (!(context_val & 0x200000))
     {
-        int32_t* objC4 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0;
-        int32_t valA12 = *objC4;
-        *(a1 + 0x14) = valA12;
-        return valA12(a1, a2);
+        int32_t* entity_4 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0;
+        int32_t data_12 = *entity_4;
+        *(context + 0x14) = data_12;
+        return data_12(context, param_2);
     }
 
-    void* tmpD2 = *(a1 + 4);
-    *(a1 + 0xc) = *(a1 + 0x10);
-    *(a1 + 0x10) = 5;
-    int32_t valA9 = *(tmpD2 + 0x14);
-    *(a1 + 0x14) = valA9;
-    return valA9(a1, a2);
+    void* temp_2 = *(context + 4);
+    *(context + 0xc) = *(context + 0x10);
+    *(context + 0x10) = 5;
+    int32_t data_9 = *(temp_2 + 0x14);
+    *(context + 0x14) = data_9;
+    return data_9(context, param_2);
 }

@@ -3,7 +3,7 @@
 uint32_t Weapon_ComputeAccuracy()
 
 {
-    int32_t valA;
-    valA = g_53fec0;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_53fec0;
+    return QTask_CloseEvent_2(data_val);
 }

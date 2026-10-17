@@ -1,21 +1,21 @@
 // Original IGI.EXE function: Render_TransformVertices_5 (VA 0x004D2FB0; static CFG gate PASS, CFG score 1.000).
 #include "Render_TransformVertices_5.h"
-int32_t* Render_TransformVertices_5(int32_t* a1, int32_t* a2, void* a3)
+int32_t* Render_TransformVertices_5(int32_t* context, int32_t* param_2, void* param_3)
 
 {
-    float valA = *(*(a3 + 8) + 0x80);
+    float data_val = *(*(param_3 + 8) + 0x80);
     int32_t* result;
 
-    if (!valA)
+    if (!data_val)
     {
-        if (a1)
+        if (context)
         {
-            *a1 = 0;
-            a1[1] = 0;
-            a1[2] = 0;
+            *context = 0;
+            context[1] = 0;
+            context[2] = 0;
         }
 
-        result = a2;
+        result = param_2;
 
         if (result)
         {
@@ -27,22 +27,22 @@ int32_t* Render_TransformVertices_5(int32_t* a1, int32_t* a2, void* a3)
     else
     {
         long double fpu0;
-        result = Render_ComputeNormals_5(fpu0, a1, a2, valA);
+        result = Render_ComputeNormals_5(fpu0, context, param_2, data_val);
 
         if (!result)
         {
-            if (a1)
+            if (context)
             {
-                *a1 = 0;
-                a1[1] = 0;
-                a1[2] = 0;
+                *context = 0;
+                context[1] = 0;
+                context[2] = 0;
             }
 
-            if (a2)
+            if (param_2)
             {
-                *a2 = 0;
-                a2[1] = 0;
-                a2[2] = 0;
+                *param_2 = 0;
+                param_2[1] = 0;
+                param_2[2] = 0;
             }
         }
     }

@@ -1,69 +1,69 @@
 // Original IGI.EXE function: CutScene_PostLoad (VA 0x004F63C0; static CFG gate PASS, CFG score 1.000).
 #include "CutScene_PostLoad.h"
-int32_t CutScene_PostLoad(void* a1, char* a2)
+int32_t CutScene_PostLoad(void* context, char* param_2)
 
 {
-    long double fpu7 = *(a1 + 0x74);
-    long double f0 = 0f;
+    long double fpu7 = *(context + 0x74);
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
             | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 1)
-        *(a1 + 0x74) = 0;
+        *(context + 0x74) = 0;
 
-    long double x87_r7_1 = *(a1 + 0x78);
-    long double f1 = 0f;
-    x87_r7_1 - f1;
+    long double fpu_val_7_1 = *(context + 0x78);
+    long double f1 = 0.0f;
+    fpu_val_7_1 - f1;
 
-    if (*(&((x87_r7_1 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f1) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f1 ? 1 : 0) << 0xe) + 1) & 1)
-        *(a1 + 0x78) = 0;
+    if (*(&((fpu_val_7_1 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f1) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f1 ? 1 : 0) << 0xe) + 1) & 1)
+        *(context + 0x78) = 0;
 
-    *(a1 + 0x64) = g_a76c54 * *(a1 + 0x68);
+    *(context + 0x64) = g_a76c54 * *(context + 0x68);
 
-    if (!a2 || !*a2)
+    if (!param_2 || !*param_2)
     {
-        int32_t* i = *(a1 + 8);
+        int32_t* i = *(context + 8);
 
         if (*i && i)
         {
-            int32_t objC1 = g_afa7e0;
+            int32_t entity_1 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD1 = *i;
-                void* valA6;
+                int32_t* temp_1 = *i;
+                void* data_6;
 
-                if (!tmpD1)
-                    valA6 = nullptr;
+                if (!temp_1)
+                    data_6 = nullptr;
                 else
                 {
-                    int32_t valA3 = *tmpD1;
-                    int32_t valA4 = -(valA3);
-                    valA6 = (valA4 - valA4) & tmpD1;
+                    int32_t data_3 = *temp_1;
+                    int32_t data_4 = -(data_3);
+                    data_6 = (data_4 - data_4) & temp_1;
                 }
 
-                *((objC1 << 2) + &g_afa6e0) = valA6;
-                g_afa7e0 = objC1 + 1;
-                uint32_t valA8 = Script_ParseEnumReal32_8();
-                int32_t tmpD2 = 0;
-                tmpD2 = i[7];
-                int32_t valA9 = *(((valA8 * 0x180 + tmpD2) << 2) + &g_a96ae0);
+                *((entity_1 << 2) + &g_afa6e0) = data_6;
+                g_afa7e0 = entity_1 + 1;
+                uint32_t data_8 = Script_ParseEnumReal32_8();
+                int32_t temp_2 = 0;
+                temp_2 = i[7];
+                int32_t data_9 = *(((data_8 * 0x180 + temp_2) << 2) + &g_a96ae0);
 
-                if (valA9)
-                    valA9(i, 0);
+                if (data_9)
+                    data_9(i, 0);
 
-                objC1 = g_afa7e0 - 1;
-                g_afa7e0 = objC1;
-                i = *((objC1 << 2) + &g_afa6e0);
+                entity_1 = g_afa7e0 - 1;
+                g_afa7e0 = entity_1;
+                i = *((entity_1 << 2) + &g_afa6e0);
             } while (i);
         }
     }
 
-    Script_Isexists(a1 + 0x7c, a1);
-    Script_Isexists(a1 + 0xcc, a1);
-    Script_Isexists(a1 + 0x11c, a1);
-    Script_Isexists(a1 + 0x16c, a1);
-    Script_Isexists(a1 + 0x1bc, a1);
+    Script_Isexists(context + 0x7c, context);
+    Script_Isexists(context + 0xcc, context);
+    Script_Isexists(context + 0x11c, context);
+    Script_Isexists(context + 0x16c, context);
+    Script_Isexists(context + 0x1bc, context);
     return 0;
 }

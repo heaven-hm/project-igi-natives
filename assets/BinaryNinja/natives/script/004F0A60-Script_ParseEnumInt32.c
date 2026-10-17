@@ -45,13 +45,13 @@ int32_t* Script_ParseEnumInt32()
     QTask_CreateTask_2(g_54dda8);
     QTask_CreateTask_2(g_54ddac);
     QTask_CreateTask_2(g_54ddb0);
-    int16_t objC10 = g_54dd0e;
+    int16_t entity_10 = g_54dd0e;
     g_54dda4 = 0xff;
     g_54dda5 = 0xff;
     g_54dda8 = 0xff;
     g_54ddac = 0xff;
     g_54ddb0 = 0xff;
-    QTask_CloseEvent_2(objC10);
+    QTask_CloseEvent_2(entity_10);
     QTask_CloseEvent_2(g_54dd10);
     QTask_CloseEvent_2(g_54dd12);
     QTask_CloseEvent_2(g_54dd14);

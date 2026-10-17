@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Weapon_ConfigRead (VA 0x004071E0; static CFG gate FAIL, CFG score 0.833).
 #include "Weapon_ConfigRead.h"
-void* Weapon_ConfigRead(int32_t a1, void* a2)
+void* Weapon_ConfigRead(int32_t context, void* param_2)
 
 // Sig: int Weapon_ConfigRead(int context, char* cfgText)
 // Note: Reads weapon configuration entries from parsed config text: repeated
@@ -8,25 +8,25 @@ void* Weapon_ConfigRead(int32_t a1, void* a2)
 // context = weapon system context, cfgText = config text buffer. Use within
 // weapon definition parsing flows.
 {
-    void* dstD = a2;
+    void* dest_val = param_2;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC = ~i;
-    int32_t srcS1;
-    int32_t dstD2;
-    dstD2 = memcpy(0x5690f0, dstD - objC, objC & 0xfffffffc);
-    memcpy(dstD2, srcS1, objC & 3);
-    void* result = Config_Compile(a1, a2, 0);
+    int32_t entity_val = ~i;
+    int32_t source_1;
+    int32_t dest_2;
+    dest_2 = memcpy(0x5690f0, dest_val - entity_val, entity_val & 0xfffffffc);
+    memcpy(dest_2, source_1, entity_val & 3);
+    void* result = Config_Compile(context, param_2, 0);
 
     if (result)
     {
@@ -34,31 +34,31 @@ void* Weapon_ConfigRead(int32_t a1, void* a2)
 
         if (*i_1 && i_1)
         {
-            int32_t valA1 = g_afa7e0;
+            int32_t data_1 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD = *i_1;
-                void* objC8;
+                int32_t* temp_val = *i_1;
+                void* entity_8;
 
-                if (!tmpD)
-                    objC8 = nullptr;
+                if (!temp_val)
+                    entity_8 = nullptr;
                 else
                 {
-                    int32_t objC5 = *tmpD;
-                    int32_t objC6 = -(objC5);
-                    objC8 = (objC6 - objC6) & tmpD;
+                    int32_t entity_5 = *temp_val;
+                    int32_t entity_6 = -(entity_5);
+                    entity_8 = (entity_6 - entity_6) & temp_val;
                 }
 
-                *((valA1 << 2) + &g_afa6e0) = objC8;
-                g_afa7e0 = valA1 + 1;
-                uint32_t valA4 = Script_ParseEnumReal32_8();
-                int32_t valA5 = 0;
-                valA5 = i_1[7];
-                (*(((valA4 * 0x180 + valA5) << 2) + &g_a96ae0))(i_1, 0);
-                valA1 = g_afa7e0 - 1;
-                g_afa7e0 = valA1;
-                i_1 = *((valA1 << 2) + &g_afa6e0);
+                *((data_1 << 2) + &g_afa6e0) = entity_8;
+                g_afa7e0 = data_1 + 1;
+                uint32_t data_4 = Script_ParseEnumReal32_8();
+                int32_t data_5 = 0;
+                data_5 = i_1[7];
+                (*(((data_4 * 0x180 + data_5) << 2) + &g_a96ae0))(i_1, 0);
+                data_1 = g_afa7e0 - 1;
+                g_afa7e0 = data_1;
+                i_1 = *((data_1 << 2) + &g_afa6e0);
             } while (i_1);
         }
     }

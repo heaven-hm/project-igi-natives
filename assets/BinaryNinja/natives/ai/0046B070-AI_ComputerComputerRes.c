@@ -3,22 +3,22 @@
 int32_t* AI_ComputerComputerRes()
 
 {
-    char* v_14 = "COMPUTER:computer.res";
-    int32_t* valA;
-    void* objC;
-    void* objC1;
-    int32_t tmpD;
-    int32_t tmpD1;
-    valA = Resource_Load(&g_5bddb0, tmpD, objC, nullptr);
-    char* v_1c = "LANGUAGE:computer.res";
-    g_5bddb0 = valA;
-    int32_t* valA1;
-    void* objC2;
-    int32_t tmpD2;
-    valA1 = Resource_Load(valA, tmpD1, objC1, nullptr);
-    char* v_24 = "LANGUAGE:objectives.res";
-    g_5bddb4 = valA1;
-    g_5bddb8 = Resource_Load(valA1, tmpD2, objC2, nullptr);
+    char* item_14 = "COMPUTER:computer.res";
+    int32_t* data_val;
+    void* entity_val;
+    void* entity_1;
+    int32_t temp_val;
+    int32_t temp_1;
+    data_val = Resource_Load(&g_5bddb0, temp_val, entity_val, nullptr);
+    char* item_1c = "LANGUAGE:computer.res";
+    g_5bddb0 = data_val;
+    int32_t* data_1;
+    void* entity_2;
+    int32_t temp_2;
+    data_1 = Resource_Load(data_val, temp_1, entity_1, nullptr);
+    char* item_24 = "LANGUAGE:objectives.res";
+    g_5bddb4 = data_1;
+    g_5bddb8 = Resource_Load(data_1, temp_2, entity_2, nullptr);
     g_5bddbc = Sys_DispatchOpcode_18("LOCAL:computer/font1.fnt");
     g_5bddc0 = Sys_DispatchOpcode_18("LOCAL:computer/font3.fnt");
     g_5bddc4 = Sys_DispatchOpcode_18("LOCAL:computer/font4.fnt");
@@ -52,19 +52,19 @@ int32_t* AI_ComputerComputerRes()
     Sys_IlfFileCorruptS(0x5be050, "COMPUTER:sphere_3.spr");
     Sys_IlfFileCorruptS(0x5be068, "COMPUTER:objective_1.spr");
     Sys_IlfFileCorruptS(0x5be080, "COMPUTER:objective_2.spr");
-    char (** ctxB)[0x16] = &g_5be260;
+    char (** context_val)[0x16] = &g_5be260;
     char (** i)[0x16] = &g_53f800;
-    int32_t* srcS = &g_5be098;
+    int32_t* source_val = &g_5be098;
     int32_t* result;
 
     do
     {
-        result = Sys_IlfFileCorruptS(srcS, *i);
-        char (* objC3)[0x16] = *i;
+        result = Sys_IlfFileCorruptS(source_val, *i);
+        char (* entity_3)[0x16] = *i;
         i = &i[1];
-        *ctxB = objC3;
-        srcS = &srcS[6];
-        ctxB = &ctxB[1];
+        *context_val = entity_3;
+        source_val = &source_val[6];
+        context_val = &context_val[1];
     } while (i < "COMPUTER:h_scamera2.spr");
 
     return result;

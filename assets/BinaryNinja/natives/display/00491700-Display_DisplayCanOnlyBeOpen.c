@@ -24,9 +24,9 @@ int32_t Display_DisplayCanOnlyBeOpen()
         g_54233c = Display_RestoreDevice_14("SnapshotPrimitive");
         Display_Direct3D();
         Display_Offscreenbuffer();
-        int32_t v_8 = Display_SetDisplayMode_5();
-        int32_t v_4 = 0;
-        Sys_AllocateMemory_3(sub_491910, &v_8);
+        int32_t item_8 = Display_SetDisplayMode_5();
+        int32_t item_4 = 0;
+        Sys_AllocateMemory_3(sub_491910, &item_8);
         Camera_ApplyBandFilter_32(sub_4918f0);
         Camera_ApplyWideScreen_32(sub_491890);
         int32_t result = Camera_ApplyPostProcess_32(sub_491890);

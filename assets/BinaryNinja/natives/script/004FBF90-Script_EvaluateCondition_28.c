@@ -1,31 +1,31 @@
 // Original IGI.EXE function: Script_EvaluateCondition_28 (VA 0x004FBF90; static CFG gate PASS, CFG score 1.000).
 #include "Script_EvaluateCondition_28.h"
-int32_t Script_EvaluateCondition_28(void* a1, float a2, float a3, float a4)
+int32_t Script_EvaluateCondition_28(void* context, float param_2, float param_3, float param_4)
 
 {
-    int32_t v_c = 0;
-    void* objC = *(a1 + 0x1b4);
-    int32_t v_8 = 0;
-    int32_t v_4 = 0;
-    float v_18 = 0f;
-    int32_t v_14 = 0;
-    long double x87_r7_2 = -((a2 * *(objC + 8)));
-    long double x87_r6_3 = x87_r7_2 * *(a1 + 0x8c);
-    v_18 = x87_r7_2 * *(a1 + 0x88);
-    float v_14_1 = x87_r6_3;
-    float v_10 = x87_r7_2 * *(a1 + 0x90);
-    ForceAccumulator_Add(a1 + 0xf0, &v_18);
-    int32_t result = ForceAccumulator_Integrate(a1 + 0xf0, a1 + 0x70);
-    float objC3 = *(a1 + 0x128);
-    long double x87_r7_7 = *(a1 + 0x124) * a4;
-    *(a1 + 0x120) = *(a1 + 0x120) * a4;
-    *(a1 + 0x124) = x87_r7_7;
-    *(a1 + 0x128) = objC3 * a4;
-    float objC6 = *(a1 + 0x110);
-    long double x87_r7_13 = *(a1 + 0x10c) * a3;
-    *(a1 + 0x108) = *(a1 + 0x108) * a3;
-    *(a1 + 0x10c) = x87_r7_13;
-    *(a1 + 0x110) = objC6 * a3;
-    SoundSys_InitSoundSys_17(a1 + 0xf0);
+    int32_t item_c = 0;
+    void* entity_val = *(context + 0x1b4);
+    int32_t item_8 = 0;
+    int32_t item_4 = 0;
+    float item_18 = 0.0f;
+    int32_t item_14 = 0;
+    long double fpu_val_7_2 = -((param_2 * *(entity_val + 8)));
+    long double fpu_val_6_3 = fpu_val_7_2 * *(context + 0x8c);
+    item_18 = fpu_val_7_2 * *(context + 0x88);
+    float item_14_1 = fpu_val_6_3;
+    float item_10 = fpu_val_7_2 * *(context + 0x90);
+    ForceAccumulator_Add(context + 0xf0, &item_18);
+    int32_t result = ForceAccumulator_Integrate(context + 0xf0, context + 0x70);
+    float entity_3 = *(context + 0x128);
+    long double fpu_val_7_7 = *(context + 0x124) * param_4;
+    *(context + 0x120) = *(context + 0x120) * param_4;
+    *(context + 0x124) = fpu_val_7_7;
+    *(context + 0x128) = entity_3 * param_4;
+    float entity_6 = *(context + 0x110);
+    long double fpu_val_7_13 = *(context + 0x10c) * param_3;
+    *(context + 0x108) = *(context + 0x108) * param_3;
+    *(context + 0x10c) = fpu_val_7_13;
+    *(context + 0x110) = entity_6 * param_3;
+    SoundSys_InitSoundSys_17(context + 0xf0);
     return result;
 }

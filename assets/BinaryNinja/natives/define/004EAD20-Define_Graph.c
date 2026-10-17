@@ -1,62 +1,62 @@
 // Original IGI.EXE function: Define_Graph (VA 0x004EAD20; static CFG gate PASS, CFG score 0.980).
 #include "Define_Graph.h"
-int32_t Define_Graph(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, int32_t a7, void* a8, float a9)
+int32_t Define_Graph(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , int32_t param_7, void* param_8, float param_9)
 
 // Sig: void Define_Graph(...)
 // Note: Defines a GRAPH (sound/graph transition graph) entry inside definition
 // blocks - OpenIGI maps it to SoundDefinitionKind.Graph. Parser-context only.
 {
-    void v_188;
-    void* flags = &v_188;
-    char v_1a4 = 1;
-    SoundSys_SetFrequency_14(&v_188);
-    void v_48;
-    Sys_ResolveSymbol_23(a9, 0, &v_48, 0x20);
-    void v_28;
-    Sys_ResolveSymbol_23(a9, 1, &v_28, 0x20);
-    Profile_ValueSet(a9, 2.80259693e-45f);
-    double v_e8 = a1;
-    Profile_ValueSet(a9, 4.20389539e-45f);
-    double v_e0 = a2;
-    Profile_ValueSet(a9, 5.60519386e-45f);
-    double v_d8 = a3;
-    Profile_ValueSet(a9, 7.00649232e-45f);
-    float v_d0 = a4;
-    Profile_ValueSet(a9, 8.40779079e-45f);
-    float v_c0 = a5;
-    Profile_ValueSet(a9, 9.80908925e-45f);
-    float v_bc = a6;
+    void item_188;
+    void* flags = &item_188;
+    char item_1a4 = 1;
+    SoundSys_SetFrequency_14(&item_188);
+    void item_48;
+    Sys_ResolveSymbol_23(param_9, 0, &item_48, 0x20);
+    void item_28;
+    Sys_ResolveSymbol_23(param_9, 1, &item_28, 0x20);
+    Profile_ValueSet(param_9, 2.80259693e-45.0f);
+    double item_e8 = context;
+    Profile_ValueSet(param_9, 4.20389539e-45.0f);
+    double item_e0 = param_2;
+    Profile_ValueSet(param_9, 5.60519386e-45.0f);
+    double item_d8 = param_3;
+    Profile_ValueSet(param_9, 7.00649232e-45.0f);
+    float item_d0 = param_4;
+    Profile_ValueSet(param_9, 8.40779079e-45.0f);
+    float item_c0 = param_5;
+    Profile_ValueSet(param_9, 9.80908925e-45.0f);
+    float item_bc = param_6;
     int16_t idx = 6;
-    int32_t v_b0 = Script_GetArg(a9, 8);
-    int32_t v_ac = Script_GetArg(a9, 9);
-    int32_t v_a4 = Script_GetArg(a9, 0xa);
-    float dstD = 1.68155816e-44f;
-    int32_t v_a8 = Script_GetArg(a9, 0xb);
-    void v_a0;
-    float* flagP = &v_a0;
+    int32_t item_b0 = Script_GetArg(param_9, 8);
+    int32_t item_ac = Script_GetArg(param_9, 9);
+    int32_t item_a4 = Script_GetArg(param_9, 0xa);
+    float dest_val = 1.68155816e-44.0f;
+    int32_t item_a8 = Script_GetArg(param_9, 0xb);
+    void item_a0;
+    float* flagP = &item_a0;
 
     do
     {
-        float valA4 = dstD;
-        dstD += 1;
-        Profile_ValueSet(a9, valA4);
+        float data_4 = dest_val;
+        dest_val += 1;
+        Profile_ValueSet(param_9, data_4);
 🚫🚫🚫        *flagP =
         /* unimplemented  {fstp dword [flagP], fp0} */
         idx += 1;
         flagP = &flagP[1];
-    } while (dstD - 0xc < 0xb);
+    } while (dest_val - 0xc < 0xb);
 
-    void v_74;
-    float* flagP1 = &v_74;
+    void item_74;
+    float* flagP1 = &item_74;
     int32_t i_1 = 0xb;
     int32_t kind;
     int32_t i;
 
     do
     {
-        float valA5 = dstD;
-        dstD += 1;
-        kind = Profile_ValueSet(a9, valA5);
+        float data_5 = dest_val;
+        dest_val += 1;
+        kind = Profile_ValueSet(param_9, data_5);
 🚫🚫🚫        *flagP1 =
         /* unimplemented  {fstp dword [flagP], fp0} */
         idx += 1;
@@ -65,14 +65,14 @@ int32_t Define_Graph(long double a1 @ fp0, long double a2 @ fp1, long double a3 
         i_1 -= 1;
     } while (i != 1);
     kind = g_54dada;
-    float v_1ac = dstD;
-    char v_b4 = 1;
-    QTask_HandleInput(a8, kind, &flags);
-🚫🚫    /* unimplemented  {fild fp0, dword [esp+0x1c]} */
-    float v_1a0 = dstD;
-🚫🚫🚫    double v_198 = /* double v_198 = unimplemented  {fstp qword [esp+0x30], fp0} */;
-    /* unimplemented  {fstp qword [esp+0x30], fp0} */
-    char* v_190 = &g_567c74;
-    memcpy(a7, &v_1a0, 0x18);
-    return a7;
+    float item_1ac = dest_val;
+    char item_b4 = 1;
+    QTask_HandleInput(param_8, kind, &flags);
+🚫🚫    /* unimplemented  {fild fp0, dword [stack_ptr+0x1c]} */
+    float item_1a0 = dest_val;
+🚫🚫🚫    double item_198 = /* double item_198 = unimplemented  {fstp qword [stack_ptr+0x30], fp0} */;
+    /* unimplemented  {fstp qword [stack_ptr+0x30], fp0} */
+    char* item_190 = &g_567c74;
+    memcpy(param_7, &item_1a0, 0x18);
+    return param_7;
 }

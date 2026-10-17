@@ -3,8 +3,8 @@
 void* Env_CheckAmbientArea_12()
 
 {
-    int32_t* objC = **&g_5bda60;
-    int32_t valA = *objC;
-    int32_t valA1 = -(valA);
-    return (valA1 - valA1) & objC;
+    int32_t* entity_val = **&g_5bda60;
+    int32_t data_val = *entity_val;
+    int32_t data_1 = -(data_val);
+    return (data_1 - data_1) & entity_val;
 }

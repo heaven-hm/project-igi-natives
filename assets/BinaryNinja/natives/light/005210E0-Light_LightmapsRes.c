@@ -3,8 +3,8 @@
 int32_t Light_LightmapsRes()
 
 {
-    char* v_4 = "lightmaps.res";
-    char* v_8 = "lightmaps";
+    char* item_4 = "lightmaps.res";
+    char* item_8 = "lightmaps";
     Game_DataSymbolLoad(0xa83b54, "MISSION:%s/%s");
     return 0xa83b54;
 }

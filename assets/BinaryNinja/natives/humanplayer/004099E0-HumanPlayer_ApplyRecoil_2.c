@@ -1,30 +1,30 @@
 // Original IGI.EXE function: HumanPlayer_ApplyRecoil_2 (VA 0x004099E0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_ApplyRecoil_2.h"
-int32_t HumanPlayer_ApplyRecoil_2(void* a1, float a2)
+int32_t HumanPlayer_ApplyRecoil_2(void* context, float param_2)
 
 {
-    float srcS = a2;
-    *(srcS + 0x33d) = 0;
-    a2 = Render_TransformVertices_10(srcS + 0x68, 0f);
-    Human_StateAnimation(srcS, *(a1 + 0x10), 0.200000003f);
-    int32_t valA2 = *(a1 + 0xc) - 1;
+    float source_val = param_2;
+    *(source_val + 0x33d) = 0;
+    param_2 = Render_TransformVertices_10(source_val + 0x68, 0.0f);
+    Human_StateAnimation(source_val, *(context + 0x10), 0.200000003f);
+    int32_t data_2 = *(context + 0xc) - 1;
 
-    if (valA2 <= 0x13)
+    if (data_2 <= 0x13)
     {
-        int32_t objC1 = 0;
-        objC1 = lookup_table_409a68[valA2];
+        int32_t entity_1 = 0;
+        entity_1 = lookup_table_409a68[data_2];
 
-        switch (objC1)
+        switch (entity_1)
         {
             case 0:
             {
-                Render_BindTexture_10(srcS + 0x68, 0, Render_DrawLightmapMesh_10(srcS + 0x68, 0) * a2);
+                Render_BindTexture_10(source_val + 0x68, 0, Render_DrawLightmapMesh_10(source_val + 0x68, 0) * param_2);
                 break;
             }
         }
     }
 
-    int32_t result = HumanPlayer_ApplyRecoil_9(srcS, 2);
-    *(a1 + 0x14) = sub_409a80;
+    int32_t result = HumanPlayer_ApplyRecoil_9(source_val, 2);
+    *(context + 0x14) = sub_409a80;
     return result;
 }

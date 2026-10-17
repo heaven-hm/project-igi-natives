@@ -3,7 +3,7 @@
 void* Graph_Init()
 
 {
-    int32_t v_8c = 0;
+    int32_t item_8c = 0;
     g_54e364 = TaskType_Register("Graph", 0x80, EditorRigidObj_OnEvent(), 0);
     g_54e368 = QTask_UnableToAllocateEvent(0);
     g_54e369 = QTask_UnableToAllocateEvent(0);
@@ -19,28 +19,28 @@ void* Graph_Init()
     QTask_TriggerEvent(g_54e364, 1, AnimSound_LoadParameters);
     QTask_TriggerEvent(g_54e364, 2, Graph_Process);
     QTask_TriggerEvent(g_54e364, 3, sub_4fadb0);
-    int32_t valA13 = Script_ParseEnumReal32_8();
-    QTask_RemoveEventCallback(g_54e364, valA13, Graph_Update);
-    int32_t valA14 = Script_ParseEnumInt32_8();
-    QTask_RemoveEventCallback(g_54e364, valA14, sub_4fae40);
-    int32_t valA15 = Script_CallNativeHandler_8();
-    Script_ParseEnumString_9(Script_ParseEnumString_4(), valA15, Graph_OnEvent);
+    int32_t data_13 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_54e364, data_13, Graph_Update);
+    int32_t data_14 = Script_ParseEnumInt32_8();
+    QTask_RemoveEventCallback(g_54e364, data_14, sub_4fae40);
+    int32_t data_15 = Script_CallNativeHandler_8();
+    Script_ParseEnumString_9(Script_ParseEnumString_4(), data_15, Graph_OnEvent);
     g_a76d10 = Script_EvaluateCondition_7(5);
-    int32_t valA18 = Script_ParseEnumReal32_4();
-    void v_80;
-    void v_60;
-    Script_UndefinedParameterTy(g_a76d10, &v_80, &v_60, valA18, 7, 0);
-    int32_t valA19 = Script_SpawnNewTask_2();
-    void v_1b;
-    Script_UndefinedParameterTy(g_a76d10, &v_80, &v_1b, valA19, 7, 0);
-    int32_t valA20 = Script_ParseEnumInt32_4();
-    void v_18;
-    Script_UndefinedParameterTy(g_a76d10, &v_80, &v_18, valA20, 6, 0);
-    int32_t valA21 = Script_ParseEnumInt32_4();
-    void v_17;
-    Script_UndefinedParameterTy(g_a76d10, &v_80, &v_17, valA21, 6, 0);
-    int32_t valA22 = Script_ParseEnumString_4();
-    Script_UndefinedParameterTy(g_a76d10, &v_80, &v_80, valA22, 7, 0);
+    int32_t data_18 = Script_ParseEnumReal32_4();
+    void item_80;
+    void item_60;
+    Script_UndefinedParameterTy(g_a76d10, &item_80, &item_60, data_18, 7, 0);
+    int32_t data_19 = Script_SpawnNewTask_2();
+    void item_1b;
+    Script_UndefinedParameterTy(g_a76d10, &item_80, &item_1b, data_19, 7, 0);
+    int32_t data_20 = Script_ParseEnumInt32_4();
+    void item_18;
+    Script_UndefinedParameterTy(g_a76d10, &item_80, &item_18, data_20, 6, 0);
+    int32_t data_21 = Script_ParseEnumInt32_4();
+    void item_17;
+    Script_UndefinedParameterTy(g_a76d10, &item_80, &item_17, data_21, 6, 0);
+    int32_t data_22 = Script_ParseEnumString_4();
+    Script_UndefinedParameterTy(g_a76d10, &item_80, &item_80, data_22, 7, 0);
     g_a77248 = &g_a7724c;
     g_a77250 = &g_a77248;
     g_a7724c = 0;

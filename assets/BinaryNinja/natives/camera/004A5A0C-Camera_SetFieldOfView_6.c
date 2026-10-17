@@ -1,66 +1,66 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_6 (VA 0x004A5A0C; static CFG gate FAIL, CFG score 0.667).
 #include "Camera_SetFieldOfView_6.h"
-void* Camera_SetFieldOfView_6(char* a1, char* a2)
+void* Camera_SetFieldOfView_6(char* context, char* param_2)
 
 {
-    int32_t ctxB;
-    int32_t v_28 = ctxB;
-    char* srcS = a2;
-    char v_24[0x20];
-    __builtin_memset(&v_24, 0, 0x20);
+    int32_t context_val;
+    int32_t item_28 = context_val;
+    char* source_val = param_2;
+    char item_24[0x20];
+    memset(&item_24, 0, 0x20);
     char i;
 
     do
     {
-        i = *srcS;
+        i = *source_val;
         uint32_t i_1 = i;
         int32_t saved_frame;
         *(&saved_frame + (i_1 >> 3) - 0x20) |= 1 << (i_1 & 7);
-        srcS = &srcS[1];
+        source_val = &source_val[1];
     } while (i);
-    char* tmpD1 = a1;
+    char* temp_1 = context;
 
-    if (!tmpD1)
-        tmpD1 = g_936060;
+    if (!temp_1)
+        temp_1 = g_936060;
 
-    char valA4;
+    char data_4;
 
     while (true)
     {
-        valA4 = *tmpD1;
-        uint32_t srcS1 = valA4;
+        data_4 = *temp_1;
+        uint32_t source_1 = data_4;
 
-        if (!(v_24[srcS1 >> 3] & 1 << (srcS1 & 7)))
+        if (!(item_24[source_1 >> 3] & 1 << (source_1 & 7)))
             break;
 
-        if (!valA4)
+        if (!data_4)
             break;
 
-        tmpD1 = &tmpD1[1];
+        temp_1 = &temp_1[1];
     }
 
-    char* ctxB3 = tmpD1;
+    char* context_3 = temp_1;
 
     while (true)
     {
-        valA4 = *tmpD1;
+        data_4 = *temp_1;
 
-        if (!valA4)
+        if (!data_4)
             goto label_4a5a96;
 
-        uint32_t srcS3 = valA4;
+        uint32_t source_3 = data_4;
 
-        if (v_24[srcS3 >> 3] & 1 << (srcS3 & 7))
+        if (item_24[source_3 >> 3] & 1 << (source_3 & 7))
         {
-            *tmpD1 = 0;
-            tmpD1 = &tmpD1[1];
+            *temp_1 = 0;
+            temp_1 = &temp_1[1];
         label_4a5a96:
-            int32_t valA7 = ctxB3 - tmpD1;
-            int32_t valA8 = -(valA7);
-            g_936060 = tmpD1;
-            return (valA8 - valA8) & ctxB3;
+            int32_t data_7 = context_3 - temp_1;
+            int32_t data_8 = -(data_7);
+            g_936060 = temp_1;
+            return (data_8 - data_8) & context_3;
         }
 
-        tmpD1 = &tmpD1[1];
+        temp_1 = &temp_1[1];
     }
 }

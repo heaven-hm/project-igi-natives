@@ -1,239 +1,239 @@
 // Original IGI.EXE function: Gun_Cleanup_5 (VA 0x00479D20; static CFG gate PASS, CFG score 0.987).
 #include "Gun_Cleanup_5.h"
-int32_t Gun_Cleanup_5(int32_t* a1, int32_t* a2)
+int32_t Gun_Cleanup_5(int32_t* context, int32_t* param_2)
 
 {
-    int32_t srcS = *a2;
-    int32_t* ctxB = a1[0x4a];
-    int32_t objC = g_c28b44;
-    int32_t tmpD = g_c28b48;
-    float v_180 = 0f;
-    float v_17c = 0f;
+    int32_t source_val = *param_2;
+    int32_t* context_val = context[0x4a];
+    int32_t entity_val = g_c28b44;
+    int32_t temp_val = g_c28b48;
+    float item_180 = 0.0f;
+    float item_17c = 0.0f;
 
-    switch (ctxB[0x186] - 1)
+    switch (context_val[0x186] - 1)
     {
         case 0:
         case 4:
         {
-            Weapon_CheckAmmo_5(a1, srcS);
+            Weapon_CheckAmmo_5(context, source_val);
             break;
         }
         case 1:
         {
-            Weapon_FireBullet_6(a1, srcS);
+            Weapon_FireBullet_6(context, source_val);
             break;
         }
         case 2:
         {
-            Weapon_ReloadClip_6(a1, srcS);
+            Weapon_ReloadClip_6(context, source_val);
             break;
         }
         case 3:
         {
-            Weapon_ComputeAccuracy_6(a1, srcS);
+            Weapon_ComputeAccuracy_6(context, source_val);
             break;
         }
     }
 
-    if (ctxB[0x186])
+    if (context_val[0x186])
     {
-        int32_t* v_190_5 = &ctxB[0x44];
-        void v_104;
-        Game_DataSymbolLoad(&v_104, "weapons/strings/%s");
-        int32_t valA4;
-        void* objC1;
-        valA4 = Sys_CheckHeap_16(&v_104);
-        int32_t* valA5;
+        int32_t* item_190_5 = &context_val[0x44];
+        void item_104;
+        Game_DataSymbolLoad(&item_104, "weapons/strings/%s");
+        int32_t data_4;
+        void* entity_1;
+        data_4 = Sys_CheckHeap_16(&item_104);
+        int32_t* data_5;
 
-        if (!valA4)
-            valA5 = &ctxB[0x44];
+        if (!data_4)
+            data_5 = &context_val[0x44];
         else
         {
-            void* v_194_5 = &v_104;
-            valA5 = Resource_Load(valA4, &v_104, objC1, nullptr);
+            void* item_194_5 = &item_104;
+            data_5 = Resource_Load(data_4, &item_104, entity_1, nullptr);
         }
 
-        Sys_FreeMemory_18(*(srcS + 0x4e0), valA5);
-        int32_t valA7 = Sys_CheckHeap_21(*(srcS + 0x4e0));
-        long double x87_r7_8 = Sys_AllocateMemory_22(*(srcS + 0x4e0));
-        *(*(srcS + 0x4e0) + 4) = objC * 0.984375f - valA7;
-        *(*(srcS + 0x4e0) + 8) = tmpD * 0.895833313f - 2f - x87_r7_8;
-        Sys_CloseFileStream_18(*(srcS + 0x4e0));
-        v_180 = Sys_CheckHeap_21(*(srcS + 0x4e0));
+        Sys_FreeMemory_18(*(source_val + 0x4e0), data_5);
+        int32_t data_7 = Sys_CheckHeap_21(*(source_val + 0x4e0));
+        long double fpu_val_7_8 = Sys_AllocateMemory_22(*(source_val + 0x4e0));
+        *(*(source_val + 0x4e0) + 4) = entity_val * 0.984375f - data_7;
+        *(*(source_val + 0x4e0) + 8) = temp_val * 0.895833313f - 2.0f - fpu_val_7_8;
+        Sys_CloseFileStream_18(*(source_val + 0x4e0));
+        item_180 = Sys_CheckHeap_21(*(source_val + 0x4e0));
     }
 
-    int32_t valA13 = *ctxB - 1;
+    int32_t data_13 = *context_val - 1;
 
-    if (valA13 <= 0x29)
+    if (data_13 <= 0x29)
     {
-        int32_t tmpD4 = 0;
-        tmpD4 = lookup_table_47a234[valA13];
-        int32_t* dstD2;
+        int32_t temp_4 = 0;
+        temp_4 = lookup_table_47a234[data_13];
+        int32_t* dest_2;
 
-        switch (tmpD4)
+        switch (temp_4)
         {
             case 0:
             {
-                dstD2 = srcS + 0x254;
+                dest_2 = source_val + 0x254;
                 goto label_479f3c;
             }
             case 1:
             {
-                dstD2 = srcS + 0x20c;
+                dest_2 = source_val + 0x20c;
                 goto label_479f3c;
             }
             case 2:
             {
-                dstD2 = srcS + 0x2cc;
+                dest_2 = source_val + 0x2cc;
                 goto label_479f3c;
             }
             case 3:
             {
-                dstD2 = srcS + 0x1c4;
+                dest_2 = source_val + 0x1c4;
             label_479f3c:
 
-                if (dstD2)
+                if (dest_2)
                 {
-                    Sys_ResolveSymbol_14(dstD2, objC * 0.984375f - Sys_CloseFileStream_17(dstD2),
-                        tmpD * 0.895833313f - 2f - 2f - Sys_ExecuteBytecode_17(dstD2)
-                            - Sys_AllocateMemory_22(*(srcS + 0x4e0)),
-                        128f, 128f, 128f, 0, 0, 0);
-                    v_17c = Sys_CloseFileStream_17(dstD2);
+                    Sys_ResolveSymbol_14(dest_2, entity_val * 0.984375f - Sys_CloseFileStream_17(dest_2),
+                        temp_val * 0.895833313f - 2.0f - 2.0f - Sys_ExecuteBytecode_17(dest_2)
+                            - Sys_AllocateMemory_22(*(source_val + 0x4e0)),
+                        128.0f, 128.0f, 128.0f, 0, 0, 0);
+                    item_17c = Sys_CloseFileStream_17(dest_2);
                 }
                 break;
             }
             case 4:
             {
-                dstD2 = srcS + 0x374;
+                dest_2 = source_val + 0x374;
                 goto label_479f3c;
             }
             case 5:
             {
-                dstD2 = srcS + 0x2e4;
+                dest_2 = source_val + 0x2e4;
                 goto label_479f3c;
             }
             case 6:
             {
-                dstD2 = srcS + 0x32c;
+                dest_2 = source_val + 0x32c;
                 goto label_479f3c;
             }
             case 7:
             {
-                dstD2 = srcS + 0x284;
+                dest_2 = source_val + 0x284;
                 goto label_479f3c;
             }
             case 8:
             {
-                dstD2 = srcS + 0x314;
+                dest_2 = source_val + 0x314;
                 goto label_479f3c;
             }
             case 9:
             {
-                dstD2 = srcS + 0x224;
+                dest_2 = source_val + 0x224;
                 goto label_479f3c;
             }
             case 0xa:
             {
-                dstD2 = srcS + 0x2b4;
+                dest_2 = source_val + 0x2b4;
                 goto label_479f3c;
             }
             case 0xb:
             {
-                dstD2 = srcS + 0x344;
+                dest_2 = source_val + 0x344;
                 goto label_479f3c;
             }
             case 0xc:
             {
-                dstD2 = srcS + 0x23c;
+                dest_2 = source_val + 0x23c;
                 goto label_479f3c;
             }
             case 0xd:
             {
-                dstD2 = srcS + 0x2fc;
+                dest_2 = source_val + 0x2fc;
                 goto label_479f3c;
             }
             case 0xe:
             {
-                dstD2 = srcS + 0x1dc;
+                dest_2 = source_val + 0x1dc;
                 goto label_479f3c;
             }
             case 0xf:
             {
-                dstD2 = srcS + 0x26c;
+                dest_2 = source_val + 0x26c;
                 goto label_479f3c;
             }
             case 0x10:
             {
-                dstD2 = srcS + 0x1f4;
+                dest_2 = source_val + 0x1f4;
                 goto label_479f3c;
             }
             case 0x11:
             {
-                dstD2 = srcS + 0x35c;
+                dest_2 = source_val + 0x35c;
                 goto label_479f3c;
             }
         }
     }
 
-    int32_t result = ctxB[0x186];
+    int32_t result = context_val[0x186];
 
     if (result)
     {
         g_a84a50 = 0;
-        float v_14c;
-        float* v_150_1 = &v_14c;
+        float item_14c;
+        float* item_150_1 = &item_14c;
         g_a84a58 = 0;
-        int32_t v_134_1 = 0;
-        int32_t v_130;
-        __builtin_strncpy(&v_130, "fff?", 8);
-        int32_t v_138_1 = 0x3f000000;
-        int32_t v_140_1 = 0;
-        int32_t v_13c_1 = 0;
-        v_14c = objC * 0.984375f;
-        int32_t v_144_1 = 0x3f800000;
-        int32_t v_110_1 = 0;
-        int32_t v_10c;
-        __builtin_strncpy(&v_10c, "fff?", 8);
-        long double x87_r7_27 = tmpD * 0.895833313f;
-        int32_t v_114_1 = 0x3f000000;
-        int32_t v_11c_1 = 0;
-        int32_t v_118_1 = 0;
-        int32_t v_120_1 = 0x3f800000;
-        int32_t v_160 = 1;
-        int32_t v_158_1 = 0xffffffff;
-        float v_148_1 = x87_r7_27;
-        long double x87_r6_1 = v_180;
-        long double f0_1 = v_17c;
-        x87_r6_1 - f0_1;
-        int32_t v_154_1 = 2;
-        int32_t v_15c_1 = 0x80000;
-        long double x87_r6_3;
+        int32_t item_134_1 = 0;
+        int32_t item_130;
+        strncpy(&item_130, "fff?", 8);
+        int32_t item_138_1 = 0x3f000000;
+        int32_t item_140_1 = 0;
+        int32_t item_13c_1 = 0;
+        item_14c = entity_val * 0.984375f;
+        int32_t item_144_1 = 0x3f800000;
+        int32_t item_110_1 = 0;
+        int32_t item_10c;
+        strncpy(&item_10c, "fff?", 8);
+        long double fpu_val_7_27 = temp_val * 0.895833313f;
+        int32_t item_114_1 = 0x3f000000;
+        int32_t item_11c_1 = 0;
+        int32_t item_118_1 = 0;
+        int32_t item_120_1 = 0x3f800000;
+        int32_t item_160 = 1;
+        int32_t item_158_1 = 0xffffffff;
+        float item_148_1 = fpu_val_7_27;
+        long double fpu_val_6_1 = item_180;
+        long double f0_1 = item_17c;
+        fpu_val_6_1 - f0_1;
+        int32_t item_154_1 = 2;
+        int32_t item_15c_1 = 0x80000;
+        long double fpu_val_6_3;
 
-        x87_r6_3 = *(&((x87_r6_1 < f0_1 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r6_1, f0_1) ? 1 : 0) << 0xa | (x87_r6_1 == f0_1 ? 1 : 0) << 0xe
-            | 0x3800) + 1) & 0x41 ? v_17c : v_180 + 3f;
+        fpu_val_6_3 = *(&((fpu_val_6_1 < f0_1 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_6_1, f0_1) ? 1 : 0) << 0xa | (fpu_val_6_1 == f0_1 ? 1 : 0) << 0xe
+            | 0x3800) + 1) & 0x41 ? item_17c : item_180 + 3.0f;
 
-        float v_128_1 = v_14c - x87_r6_3;
-        float v_124_1 = x87_r7_27;
-        result = (*((g_a84a54 << 2) + &g_a94e84))(&v_160);
+        float item_128_1 = item_14c - fpu_val_6_3;
+        float item_124_1 = fpu_val_7_27;
+        result = (*((g_a84a54 << 2) + &g_a94e84))(&item_160);
     }
 
-    if (ctxB[0x185] != 1)
+    if (context_val[0x185] != 1)
         return result;
 
-    float v_168_1 = g_c28b44 * 0.5f;
-    float v_164_1 = g_c28b48 * 0.5f;
-    float v_180_4 = Sys_CloseFileStream_17(srcS + 0x74) * 0.5f;
-    int32_t valA22;
-    int32_t objC6;
-    valA22 = Sys_ExecuteBytecode_17(srcS + 0x74);
-    int32_t v_17c_6 = valA22;
-    int32_t v_1ac_1 = objC6;
-    v_17c_6 = v_17c_6 * 0.5f;
-    int32_t v_17c_7 = v_17c_6;
-    float v_1ac_2 = v_164_1 - v_17c_7;
-    v_17c_7 = v_180_4;
-    int32_t v_1b0_1 = v_17c_7;
-    return Sys_CheckHeap_14(srcS + 0x74, v_168_1 - v_17c_7, v_1ac_2, 128f, 128f, 128f, 0, 0, 0,
+    float item_168_1 = g_c28b44 * 0.5f;
+    float item_164_1 = g_c28b48 * 0.5f;
+    float item_180_4 = Sys_CloseFileStream_17(source_val + 0x74) * 0.5f;
+    int32_t data_22;
+    int32_t entity_6;
+    data_22 = Sys_ExecuteBytecode_17(source_val + 0x74);
+    int32_t item_17c_6 = data_22;
+    int32_t item_1ac_1 = entity_6;
+    item_17c_6 = item_17c_6 * 0.5f;
+    int32_t item_17c_7 = item_17c_6;
+    float item_1ac_2 = item_164_1 - item_17c_7;
+    item_17c_7 = item_180_4;
+    int32_t item_1b0_1 = item_17c_7;
+    return Sys_CheckHeap_14(source_val + 0x74, item_168_1 - item_17c_7, item_1ac_2, 128.0f, 128.0f, 128.0f, 0, 0, 0,
         0x3f800000);
 }

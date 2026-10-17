@@ -1,18 +1,18 @@
 // Original IGI.EXE function: Display_FailedToLockFramebuf (VA 0x00494970; static CFG gate PASS, CFG score 1.000).
 #include "Display_FailedToLockFramebuf.h"
-int32_t Display_FailedToLockFramebuf(void* a1)
+int32_t Display_FailedToLockFramebuf(void* context)
 
 {
-    int32_t* valA = g_5ca100;
-    int32_t v_a4 = 0x7c;
-    int32_t valA1 = (*(*valA + 0x64))(valA, 0, &v_a4, 1, 0);
-    void v_4a4;
+    int32_t* data_val = g_5ca100;
+    int32_t item_a4 = 0x7c;
+    int32_t data_1 = (*(*data_val + 0x64))(data_val, 0, &item_a4, 1, 0);
+    void item_4a4;
 
-    if (valA1)
+    if (data_1)
     {
-        Game_DataSymbolLoad(&v_4a4, "Failed to lock framebuffer.");
-        int32_t v_4c0 = DDERR_GENERIC(valA1);
-        void* v_4c4_1 = &v_4a4;
+        Game_DataSymbolLoad(&item_4a4, "Failed to lock framebuffer.");
+        int32_t item_4c0 = DDERR_GENERIC(data_1);
+        void* item_4c4_1 = &item_4a4;
         Error_Show("%s\n\nDirectX error message: %s");
 
         while (true)
@@ -21,37 +21,37 @@ int32_t Display_FailedToLockFramebuf(void* a1)
         return;
     }
 
-    int32_t v_4c;
+    int32_t item_4c;
     int32_t eflags;
-    int32_t valA3;
-    valA3 = __bsf_gprv_memv(v_4c);
-    int32_t v_48;
+    int32_t data_3;
+    data_3 = __bsf_gprv_memv(item_4c);
+    int32_t item_48;
     int32_t eflags_1;
-    char valA5;
-    valA5 = __bsf_gprv_memv(v_48);
-    int32_t v_44;
+    char data_5;
+    data_5 = __bsf_gprv_memv(item_48);
+    int32_t item_44;
     int32_t eflags_2;
-    int32_t valA6;
-    valA6 = __bsf_gprv_memv(v_44);
+    int32_t data_6;
+    data_6 = __bsf_gprv_memv(item_44);
     int32_t eflags_3;
-    int32_t valA7;
-    valA7 = __bsr_gprv_memv(v_4c);
+    int32_t data_7;
+    data_7 = __bsr_gprv_memv(item_4c);
     int32_t eflags_4;
-    char valA9;
-    valA9 = __bsr_gprv_memv(v_48);
+    char data_9;
+    data_9 = __bsr_gprv_memv(item_48);
     int32_t eflags_5;
-    int32_t valA10;
-    valA10 = __bsr_gprv_memv(v_44);
-    int32_t srcS3 = valA7 - valA3 + 1;
-    int32_t* v_80;
-    int32_t* dstD2 = v_80;
-    int32_t ctxB2 = valA10 - valA6 + 1;
-    void* valA14 = *(a1 + 0xc);
-    int32_t v_24 = srcS3;
-    int32_t v_28 = ctxB2;
-    char v_58;
+    int32_t data_10;
+    data_10 = __bsr_gprv_memv(item_44);
+    int32_t source_3 = data_7 - data_3 + 1;
+    int32_t* item_80;
+    int32_t* dest_2 = item_80;
+    int32_t context_2 = data_10 - data_6 + 1;
+    void* data_14 = *(context + 0xc);
+    int32_t item_24 = source_3;
+    int32_t item_28 = context_2;
+    char item_58;
 
-    if (!(v_58 & 0x40))
+    if (!(item_58 & 0x40))
     {
         Error_Show("Invalid framebuffer format");
 
@@ -61,52 +61,52 @@ int32_t Display_FailedToLockFramebuf(void* a1)
         return;
     }
 
-    int32_t v_50;
-    int32_t v_9c;
-    int32_t v_98;
-    int32_t v_94;
+    int32_t item_50;
+    int32_t item_9c;
+    int32_t item_98;
+    int32_t item_94;
 
-    if (v_50 == 0x20)
+    if (item_50 == 0x20)
     {
-        a1 = nullptr;
+        context = nullptr;
 
-        if (v_9c > 0)
+        if (item_9c > 0)
         {
-            int32_t objC7 = v_98;
+            int32_t entity_7 = item_98;
 
             while (true)
             {
-                int32_t tmpD3 = 0;
+                int32_t temp_3 = 0;
 
-                if (objC7 > 0)
+                if (entity_7 > 0)
                 {
                     do
                     {
-                        int32_t srcS4 = *dstD2;
-                        dstD2 = &dstD2[1];
-                        *valA14 = srcS4 >> (valA6 & 0x1f) << ((8 - ctxB2) & 0x1f);
-                        *(valA14 + 1) =
-                            srcS4 >> (valA5 & 0x1f) << ((8 - (valA9 - valA5 + 1)) & 0x1f);
-                        valA14 += 3;
-                        tmpD3 += 1;
-                        *(valA14 - 1) = srcS4 >> (valA3 & 0x1f) << ((8 - srcS3) & 0x1f);
-                        objC7 = v_98;
-                    } while (tmpD3 < objC7);
+                        int32_t source_4 = *dest_2;
+                        dest_2 = &dest_2[1];
+                        *data_14 = source_4 >> (data_6 & 0x1f) << ((8 - context_2) & 0x1f);
+                        *(data_14 + 1) =
+                            source_4 >> (data_5 & 0x1f) << ((8 - (data_9 - data_5 + 1)) & 0x1f);
+                        data_14 += 3;
+                        temp_3 += 1;
+                        *(data_14 - 1) = source_4 >> (data_3 & 0x1f) << ((8 - source_3) & 0x1f);
+                        entity_7 = item_98;
+                    } while (temp_3 < entity_7);
 
-                    srcS3 = v_24;
+                    source_3 = item_24;
                 }
 
-                a1 += 1;
-                dstD2 += v_94 - (objC7 << 2);
+                context += 1;
+                dest_2 += item_94 - (entity_7 << 2);
 
-                if (a1 >= v_9c)
+                if (context >= item_9c)
                     break;
 
-                ctxB2 = v_28;
+                context_2 = item_28;
             }
         }
     }
-    else if (v_50 != 0x10)
+    else if (item_50 != 0x10)
     {
         Error_Show("Invalid framebuffer format");
 
@@ -115,55 +115,55 @@ int32_t Display_FailedToLockFramebuf(void* a1)
     }
     else
     {
-        a1 = nullptr;
+        context = nullptr;
 
-        if (v_9c > 0)
+        if (item_9c > 0)
         {
-            int32_t objC18 = v_98;
+            int32_t entity_18 = item_98;
 
             while (true)
             {
-                int32_t tmpD6 = 0;
+                int32_t temp_6 = 0;
 
-                if (objC18 > 0)
+                if (entity_18 > 0)
                 {
-                    char v_10_3 = (8 - srcS3);
+                    char item_10_3 = (8 - source_3);
 
                     do
                     {
-                        srcS3 = *dstD2;
-                        dstD2 += 2;
-                        *valA14 = srcS3 >> (valA6 & 0x1f) << ((8 - ctxB2) & 0x1f);
-                        *(valA14 + 1) =
-                            srcS3 >> (valA5 & 0x1f) << ((8 - (valA9 - valA5 + 1)) & 0x1f);
-                        valA14 += 3;
-                        tmpD6 += 1;
-                        *(valA14 - 1) = srcS3 >> (valA3 & 0x1f) << (v_10_3 & 0x1f);
-                        objC18 = v_98;
-                    } while (tmpD6 < objC18);
+                        source_3 = *dest_2;
+                        dest_2 += 2;
+                        *data_14 = source_3 >> (data_6 & 0x1f) << ((8 - context_2) & 0x1f);
+                        *(data_14 + 1) =
+                            source_3 >> (data_5 & 0x1f) << ((8 - (data_9 - data_5 + 1)) & 0x1f);
+                        data_14 += 3;
+                        temp_6 += 1;
+                        *(data_14 - 1) = source_3 >> (data_3 & 0x1f) << (item_10_3 & 0x1f);
+                        entity_18 = item_98;
+                    } while (temp_6 < entity_18);
 
-                    srcS3 = v_24;
+                    source_3 = item_24;
                 }
 
-                a1 += 1;
-                dstD2 += v_94 - objC18 * 2;
+                context += 1;
+                dest_2 += item_94 - entity_18 * 2;
 
-                if (a1 >= v_9c)
+                if (context >= item_9c)
                     break;
 
-                ctxB2 = v_28;
+                context_2 = item_28;
             }
         }
     }
-    int32_t* valA19 = g_5ca100;
-    int32_t result = (*(*valA19 + 0x80))(valA19, 0);
+    int32_t* data_19 = g_5ca100;
+    int32_t result = (*(*data_19 + 0x80))(data_19, 0);
 
     if (!result)
         return result;
 
-    Game_DataSymbolLoad(&v_4a4, "Failed to unlock framebuffer.");
-    int32_t v_4c0_1 = DDERR_GENERIC(result);
-    void* v_4c4_2 = &v_4a4;
+    Game_DataSymbolLoad(&item_4a4, "Failed to unlock framebuffer.");
+    int32_t item_4c0_1 = DDERR_GENERIC(result);
+    void* item_4c4_2 = &item_4a4;
     Error_Show("%s\n\nDirectX error message: %s");
 
     while (true)

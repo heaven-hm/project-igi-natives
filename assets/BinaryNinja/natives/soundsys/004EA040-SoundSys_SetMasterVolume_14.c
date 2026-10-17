@@ -1,240 +1,240 @@
 // Original IGI.EXE function: SoundSys_SetMasterVolume_14 (VA 0x004EA040; static CFG gate FAIL, CFG score 0.849).
 #include "SoundSys_SetMasterVolume_14.h"
-int32_t SoundSys_SetMasterVolume_14(void* a1)
+int32_t SoundSys_SetMasterVolume_14(void* context)
 
 {
-    double* v_2c = nullptr;
-    float* v_28 = nullptr;
-    void* srcS = *(a1 + 0x14);
-    char v_35 = 0;
-    int32_t v_24 = 0;
-    uint32_t valA1 = SoundSys_SetFrequency_5();
-    int32_t tmpD = 0;
-    tmpD = *(srcS + 0x1c);
-    int32_t valA2 = *(((valA1 * 0x180 + tmpD) << 2) + &g_a96ae0);
+    double* item_2c = nullptr;
+    float* item_28 = nullptr;
+    void* source_val = *(context + 0x14);
+    char item_35 = 0;
+    int32_t item_24 = 0;
+    uint32_t data_1 = SoundSys_SetFrequency_5();
+    int32_t temp_val = 0;
+    temp_val = *(source_val + 0x1c);
+    int32_t data_2 = *(((data_1 * 0x180 + temp_val) << 2) + &g_a96ae0);
 
-    if (valA2)
-        valA2(srcS, &v_2c);
+    if (data_2)
+        data_2(source_val, &item_2c);
 
-    Display_SetGammaRamp_12(a1 + 0x30);
-    memcpy(a1 + 0x88, a1 + 0xa0, 0x18);
+    Display_SetGammaRamp_12(context + 0x30);
+    memcpy(context + 0x88, context + 0xa0, 0x18);
 
-    if (v_28)
+    if (item_28)
     {
-        double v_20 =
-            v_28[1] * *(a1 + 0x90) + v_28[2] * *(a1 + 0x98) + *v_28 * *(a1 + 0x88);
-        double v_18_1 =
-            v_28[4] * *(a1 + 0x90) + v_28[5] * *(a1 + 0x98) + v_28[3] * *(a1 + 0x88);
-        double v_10_1 =
-            v_28[7] * *(a1 + 0x90) + v_28[8] * *(a1 + 0x98) + v_28[6] * *(a1 + 0x88);
-        memcpy(a1 + 0x88, &v_20, 0x18);
+        double item_20 =
+            item_28[1] * *(context + 0x90) + item_28[2] * *(context + 0x98) + *item_28 * *(context + 0x88);
+        double item_18_1 =
+            item_28[4] * *(context + 0x90) + item_28[5] * *(context + 0x98) + item_28[3] * *(context + 0x88);
+        double item_10_1 =
+            item_28[7] * *(context + 0x90) + item_28[8] * *(context + 0x98) + item_28[6] * *(context + 0x88);
+        memcpy(context + 0x88, &item_20, 0x18);
     }
 
-    double* valA5 = v_2c;
+    double* data_5 = item_2c;
 
-    if (valA5)
+    if (data_5)
     {
-        *(a1 + 0x88) = *valA5 + *(a1 + 0x88);
-        *(a1 + 0x90) = valA5[1] + *(a1 + 0x90);
-        *(a1 + 0x98) = valA5[2] + *(a1 + 0x98);
+        *(context + 0x88) = *data_5 + *(context + 0x88);
+        *(context + 0x90) = data_5[1] + *(context + 0x90);
+        *(context + 0x98) = data_5[2] + *(context + 0x98);
     }
 
-    if (v_24)
+    if (item_24)
     {
-        int32_t valA6 = *(a1 + 0xd4);
+        int32_t data_6 = *(context + 0xd4);
 
-        if (valA6 != 0xffffffff)
-            *(a1 + 0x30) = *(v_24 + (valA6 << 2) + 4);
+        if (data_6 != 0xffffffff)
+            *(context + 0x30) = *(item_24 + (data_6 << 2) + 4);
 
-        int32_t valA7 = *(a1 + 0xd8);
+        int32_t data_7 = *(context + 0xd8);
 
-        if (valA7 != 0xffffffff)
-            *(a1 + 0x34) = *(v_24 + (valA7 << 2) + 4);
+        if (data_7 != 0xffffffff)
+            *(context + 0x34) = *(item_24 + (data_7 << 2) + 4);
 
-        int32_t valA9 = *(a1 + 0xd0);
+        int32_t data_9 = *(context + 0xd0);
 
-        if (valA9 != 0xffffffff)
+        if (data_9 != 0xffffffff)
         {
-            long double x87_r7_19 = *(v_24 + (valA9 << 2) + 4);
+            long double fpu_val_7_19 = *(item_24 + (data_9 << 2) + 4);
 
-            if (!*(a1 + 0xe1))
-                v_35 = x87_r7_19;
+            if (!*(context + 0xe1))
+                item_35 = fpu_val_7_19;
             else
             {
-                long double f4_1 = 0f;
-                x87_r7_19 - f4_1;
+                long double f4_1 = 0.0f;
+                fpu_val_7_19 - f4_1;
 
-                v_35 = !(*(&((x87_r7_19 < f4_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_19, f4_1) ? 1 : 0) << 0xa
-                    | (x87_r7_19 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x40) ? 0 : 1;
+                item_35 = !(*(&((fpu_val_7_19 < f4_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_19, f4_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_19 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x40) ? 0 : 1;
             }
         }
 
-        valA5 = *(a1 + 0xdc);
+        data_5 = *(context + 0xdc);
 
-        if (valA5 != 0xffffffff)
+        if (data_5 != 0xffffffff)
         {
-            char* objC4 = *(v_24 + (valA5 << 2) + 4);
+            char* entity_4 = *(item_24 + (data_5 << 2) + 4);
 
-            if (objC4)
+            if (entity_4)
             {
-                char* dstD2 = a1 + 0x103;
-                char* srcS2 = objC4;
+                char* dest_2 = context + 0x103;
+                char* source_2 = entity_4;
 
                 while (true)
                 {
-                    char tmpD2 = *srcS2;
-                    valA5 = tmpD2;
-                    char f5_1 = *dstD2;
-                    bool c_1 = tmpD2 < f5_1;
+                    char temp_2 = *source_2;
+                    data_5 = temp_2;
+                    char f5_1 = *dest_2;
+                    bool c_1 = temp_2 < f5_1;
 
-                    if (tmpD2 == f5_1)
+                    if (temp_2 == f5_1)
                     {
-                        if (!valA5)
+                        if (!data_5)
                         {
-                            valA5 = nullptr;
+                            data_5 = nullptr;
                             break;
                         }
 
-                        tmpD2 = srcS2[1];
-                        valA5 = tmpD2;
-                        char f10_1 = dstD2[1];
-                        c_1 = tmpD2 < f10_1;
+                        temp_2 = source_2[1];
+                        data_5 = temp_2;
+                        char f10_1 = dest_2[1];
+                        c_1 = temp_2 < f10_1;
 
-                        if (tmpD2 == f10_1)
+                        if (temp_2 == f10_1)
                         {
-                            srcS2 = &srcS2[2];
-                            dstD2 = &dstD2[2];
+                            source_2 = &source_2[2];
+                            dest_2 = &dest_2[2];
 
-                            if (valA5)
+                            if (data_5)
                                 continue;
 
-                            valA5 = nullptr;
+                            data_5 = nullptr;
                             break;
                         }
                     }
 
-                    valA5 = valA5 - valA5 + 1;
+                    data_5 = data_5 - data_5 + 1;
                     break;
                 }
 
-                if (valA5)
+                if (data_5)
                 {
-                    char* dstD3 = objC4;
+                    char* dest_3 = entity_4;
                     int32_t i = 0xffffffff;
 
                     while (i)
                     {
-                        bool cond_1_1 = 0 != *dstD3;
-                        dstD3 = &dstD3[1];
+                        bool flag_1_1 = 0 != *dest_3;
+                        dest_3 = &dest_3[1];
                         i -= 1;
 
-                        if (!cond_1_1)
+                        if (!flag_1_1)
                             break;
                     }
 
-                    int32_t objC5 = ~i;
-                    int32_t srcS4;
-                    int32_t dstD6;
-                    dstD6 = memcpy(a1 + 0x103, dstD3 - objC5, objC5 & 0xfffffffc);
-                    memcpy(dstD6, srcS4, objC5 & 3);
-                    *(a1 + 0x130) = Display_CheckCapabilities_12(a1 + 0x103);
-                    *(a1 + 0x134) = Display_RestoreDevice_12(a1 + 0x103);
-                    *(a1 + 0x28) = 0;
+                    int32_t entity_5 = ~i;
+                    int32_t source_4;
+                    int32_t dest_6;
+                    dest_6 = memcpy(context + 0x103, dest_3 - entity_5, entity_5 & 0xfffffffc);
+                    memcpy(dest_6, source_4, entity_5 & 3);
+                    *(context + 0x130) = Display_CheckCapabilities_12(context + 0x103);
+                    *(context + 0x134) = Display_RestoreDevice_12(context + 0x103);
+                    *(context + 0x28) = 0;
                 }
             }
         }
     }
 
-    long double x87_r7_20 = *(a1 + 0xb8);
-    long double f0 = 0f;
-    x87_r7_20 - f0;
+    long double fpu_val_7_20 = *(context + 0xb8);
+    long double f0 = 0.0f;
+    fpu_val_7_20 - f0;
 
-    if (!(*(&((x87_r7_20 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_20, f0) ? 1 : 0) << 0xa
-        | (x87_r7_20 == f0 ? 1 : 0) << 0xe) + 1) & 1))
+    if (!(*(&((fpu_val_7_20 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_20, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_20 == f0 ? 1 : 0) << 0xe) + 1) & 1))
     {
-        long double x87_r7_21 = *(a1 + 0xb8);
-        long double f1_1 = 1f;
-        x87_r7_21 - f1_1;
+        long double fpu_val_7_21 = *(context + 0xb8);
+        long double f1_1 = 1.0f;
+        fpu_val_7_21 - f1_1;
 
-        if (!(*(&((x87_r7_21 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_21, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_21 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-            *(a1 + 0xb8) = 0x3f800000;
+        if (!(*(&((fpu_val_7_21 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_21, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_21 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+            *(context + 0xb8) = 0x3f800000;
     }
     else
-        *(a1 + 0xb8) = 0;
+        *(context + 0xb8) = 0;
 
-    long double x87_r7_22 = *(a1 + 0xbc);
-    long double f2 = 0f;
-    x87_r7_22 - f2;
+    long double fpu_val_7_22 = *(context + 0xbc);
+    long double f2 = 0.0f;
+    fpu_val_7_22 - f2;
 
-    if (!(*(&((x87_r7_22 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_22, f2) ? 1 : 0) << 0xa
-        | (x87_r7_22 == f2 ? 1 : 0) << 0xe) + 1) & 1))
+    if (!(*(&((fpu_val_7_22 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_22, f2) ? 1 : 0) << 0xa
+        | (fpu_val_7_22 == f2 ? 1 : 0) << 0xe) + 1) & 1))
     {
-        long double x87_r7_23 = *(a1 + 0xbc);
-        long double f3_1 = 1f;
-        x87_r7_23 - f3_1;
+        long double fpu_val_7_23 = *(context + 0xbc);
+        long double f3_1 = 1.0f;
+        fpu_val_7_23 - f3_1;
 
-        if (!(*(&((x87_r7_23 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_23, f3_1) ? 1 : 0) << 0xa
-                | (x87_r7_23 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-            *(a1 + 0xbc) = 0x3f800000;
+        if (!(*(&((fpu_val_7_23 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_23, f3_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_23 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+            *(context + 0xbc) = 0x3f800000;
     }
     else
-        *(a1 + 0xbc) = 0;
+        *(context + 0xbc) = 0;
 
-    long double x87_r7_26 = *(a1 + 0xb8) * *(a1 + 0xbc) * *(a1 + 0x30);
-    memcpy(a1 + 0x50, a1 + 0x88, 0x18);
-    *(a1 + 0x30) = x87_r7_26;
-    *(a1 + 0x40) = *(a1 + 0xc4);
-    *(a1 + 0x48) = *(a1 + 0xc8);
-    long double x87_r7_30 = *(a1 + 0xc0) * *(a1 + 0x34);
-    *(a1 + 0x68) = 0;
-    *(a1 + 0x70) = 0;
-    *(a1 + 0x34) = x87_r7_30;
-    *(a1 + 0x78) = 0;
-    *(a1 + 0x6c) = 0;
-    *(a1 + 0x74) = 0;
-    *(a1 + 0x7c) = 0;
-    *(a1 + 0x80) = *(a1 + 0x128);
+    long double fpu_val_7_26 = *(context + 0xb8) * *(context + 0xbc) * *(context + 0x30);
+    memcpy(context + 0x50, context + 0x88, 0x18);
+    *(context + 0x30) = fpu_val_7_26;
+    *(context + 0x40) = *(context + 0xc4);
+    *(context + 0x48) = *(context + 0xc8);
+    long double fpu_val_7_30 = *(context + 0xc0) * *(context + 0x34);
+    *(context + 0x68) = 0;
+    *(context + 0x70) = 0;
+    *(context + 0x34) = fpu_val_7_30;
+    *(context + 0x78) = 0;
+    *(context + 0x6c) = 0;
+    *(context + 0x74) = 0;
+    *(context + 0x7c) = 0;
+    *(context + 0x80) = *(context + 0x128);
     int16_t result;
     long double fp0;
-    fp0 = SoundSys_StopSoundSample_8(a1 + 0x30);
-    result = *(a1 + 0x123);
-    *(a1 + 0xcc) = fp0;
+    fp0 = SoundSys_StopSoundSample_8(context + 0x30);
+    result = *(context + 0x123);
+    *(context + 0xcc) = fp0;
 
     if (!result)
     {
-        result = v_35;
+        result = item_35;
 
         if (result)
         {
-            *(a1 + 0x128) = 0;
-            *(a1 + 0x123) = 1;
+            *(context + 0x128) = 0;
+            *(context + 0x123) = 1;
         }
     }
     else
     {
-        long double x87_r7_32 = *(a1 + 0x12c);
-        long double f6_1 = 0f;
-        x87_r7_32 - f6_1;
-        result = (x87_r7_32 < f6_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_32, f6_1) ? 1 : 0) << 0xa
-            | (x87_r7_32 == f6_1 ? 1 : 0) << 0xe;
+        long double fpu_val_7_32 = *(context + 0x12c);
+        long double f6_1 = 0.0f;
+        fpu_val_7_32 - f6_1;
+        result = (fpu_val_7_32 < f6_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_32, f6_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_32 == f6_1 ? 1 : 0) << 0xe;
 
         if (*(&result + 1) & 1)
         {
-            result = *(a1 + 0xe0);
+            result = *(context + 0xe0);
 
             if (result)
             {
             label_4ea394:
-                result = v_35;
+                result = item_35;
 
                 if (!result)
-                    *(a1 + 0x123) = 0;
+                    *(context + 0x123) = 0;
             }
             else
             {
-                result = SoundSys_SetFrequency_8(a1 + 0x20);
+                result = SoundSys_SetFrequency_8(context + 0x20);
                 result = !result;
 
                 if (result)
@@ -243,12 +243,12 @@ int32_t SoundSys_SetMasterVolume_14(void* a1)
         }
         else
         {
-            long double x87_r7_33 = *(a1 + 0x128);
-            long double f9_1 = *(a1 + 0x12c);
-            x87_r7_33 - f9_1;
-            result = (x87_r7_33 < f9_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_33, f9_1) ? 1 : 0) << 0xa
-                | (x87_r7_33 == f9_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_33 = *(context + 0x128);
+            long double f9_1 = *(context + 0x12c);
+            fpu_val_7_33 - f9_1;
+            result = (fpu_val_7_33 < f9_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_33, f9_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_33 == f9_1 ? 1 : 0) << 0xe;
 
             if (!(*(&result + 1) & 1))
                 goto label_4ea394;

@@ -1,29 +1,29 @@
 // Original IGI.EXE function: HumanPlayer_ApplyRecoil_7 (VA 0x0040F300; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_ApplyRecoil_7.h"
-int32_t HumanPlayer_ApplyRecoil_7(void* a1, void* a2)
+int32_t HumanPlayer_ApplyRecoil_7(void* context, void* param_2)
 
 {
-    if (*(a2 + 0xd4c) != 0xffffffff)
+    if (*(param_2 + 0xd4c) != 0xffffffff)
     {
-        void* tmpD1 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 4;
-        int32_t objC2 = *(tmpD1 + 0x10);
-        *(a1 + 0x14) = objC2;
-        return objC2(a1, a2);
+        void* temp_1 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 4;
+        int32_t entity_2 = *(temp_1 + 0x10);
+        *(context + 0x14) = entity_2;
+        return entity_2(context, param_2);
     }
 
-    char result = AI_CheckSector_22(*(a2 + 0x4ec));
+    char result = AI_CheckSector_22(*(param_2 + 0x4ec));
 
     if (!result)
         return result;
 
-    *(a2 + 0x4d0) = 1;
-    int32_t tmpD2 = *(a1 + 0x10);
-    *(a1 + 0x10) = 1;
-    void* objC3 = *(a1 + 4);
-    *(a1 + 0xc) = tmpD2;
-    int32_t objC4 = *(objC3 + 4);
-    *(a1 + 0x14) = objC4;
-    return objC4(a1, a2);
+    *(param_2 + 0x4d0) = 1;
+    int32_t temp_2 = *(context + 0x10);
+    *(context + 0x10) = 1;
+    void* entity_3 = *(context + 4);
+    *(context + 0xc) = temp_2;
+    int32_t entity_4 = *(entity_3 + 4);
+    *(context + 0x14) = entity_4;
+    return entity_4(context, param_2);
 }

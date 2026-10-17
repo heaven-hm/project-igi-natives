@@ -1,34 +1,34 @@
 // Original IGI.EXE function: WeaponType_InitType_2 (VA 0x00414F40; static CFG gate PASS, CFG score 0.958).
 #include "WeaponType_InitType_2.h"
-int32_t WeaponType_InitType_2(int32_t a1, void* a2, int32_t a3, char* a4)
+int32_t WeaponType_InitType_2(int32_t context, void* param_2, int32_t param_3, char* param_4)
 
 {
-    int32_t valA = DynObj_LookupHashItem_5();
-    int16_t v_10 = valA;
-    valA = *(a2 + 0x1c);
-    char valA1;
-    int32_t objC;
-    valA1 = TaskType_IsDerivedFrom(valA, v_10);
+    int32_t data_val = DynObj_LookupHashItem_5();
+    int16_t item_10 = data_val;
+    data_val = *(param_2 + 0x1c);
+    char data_1;
+    int32_t entity_val;
+    data_1 = TaskType_IsDerivedFrom(data_val, item_10);
 
-    if (!valA1)
+    if (!data_1)
     {
-        int16_t valA2 = Render_DrawRigidMesh_12();
-        objC = *(a2 + 0x1c);
+        int16_t data_2 = Render_DrawRigidMesh_12();
+        entity_val = *(param_2 + 0x1c);
 
-        if (TaskType_IsDerivedFrom(objC, valA2))
+        if (TaskType_IsDerivedFrom(entity_val, data_2))
         {
-            int32_t* valA4 = DynObj_Missing(a4);
+            int32_t* data_4 = DynObj_Missing(param_4);
 
-            if (valA4 && Render_DrawLightmapMesh_2(*valA4) > a3)
+            if (data_4 && Render_DrawLightmapMesh_2(*data_4) > param_3)
             {
-                char* v_10_4 = a4;
-                int32_t v_14_2 = a3;
-                void* v_18 = a2;
-                return Render_TransformVertices(a1);
+                char* item_10_4 = param_4;
+                int32_t item_14_2 = param_3;
+                void* item_18 = param_2;
+                return Render_TransformVertices(context);
             }
         }
     }
 
-    __builtin_memset(a1, 0, 0x18);
-    return a1;
+    memset(context, 0, 0x18);
+    return context;
 }

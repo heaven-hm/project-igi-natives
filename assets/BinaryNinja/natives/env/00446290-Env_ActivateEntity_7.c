@@ -1,47 +1,47 @@
 // Original IGI.EXE function: Env_ActivateEntity_7 (VA 0x00446290; static CFG gate PASS, CFG score 1.000).
 #include "Env_ActivateEntity_7.h"
-int32_t Env_ActivateEntity_7(float a1)
+int32_t Env_ActivateEntity_7(float context)
 
 {
-    long double x87_r7_2 = *(a1 + 0x108) * *(a1 + 0x138) * 4096f;
-    long double x87_r6_2 = *(a1 + 0x10c) * *(a1 + 0x138) * 4096f;
-    double v_28 = *(a1 + 0x120) * x87_r6_2 + *(a1 + 0x11c) * x87_r7_2;
-    long double x87_r5_8 = *(a1 + 0x12c) * x87_r6_2 + *(a1 + 0x128) * x87_r7_2;
-    double v_18 = *(a1 + 0x114) * x87_r6_2 + *(a1 + 0x110) * x87_r7_2 + *(a1 + 0xf0);
-    double v_10 = v_28 + *(a1 + 0xf8);
-    double v_8 = x87_r5_8 + *(a1 + 0x100);
-    long double x87_r7_5 = *(a1 + 0x9c);
-    long double x87_r6_8 = *(a1 + 0xa0);
-    x87_r6_8 - x87_r7_5;
-    long double x87_r7_6;
+    long double fpu_val_7_2 = *(context + 0x108) * *(context + 0x138) * 4096.0f;
+    long double fpu_val_6_2 = *(context + 0x10c) * *(context + 0x138) * 4096.0f;
+    double item_28 = *(context + 0x120) * fpu_val_6_2 + *(context + 0x11c) * fpu_val_7_2;
+    long double fpu_val_5_8 = *(context + 0x12c) * fpu_val_6_2 + *(context + 0x128) * fpu_val_7_2;
+    double item_18 = *(context + 0x114) * fpu_val_6_2 + *(context + 0x110) * fpu_val_7_2 + *(context + 0xf0);
+    double item_10 = item_28 + *(context + 0xf8);
+    double item_8 = fpu_val_5_8 + *(context + 0x100);
+    long double fpu_val_7_5 = *(context + 0x9c);
+    long double fpu_val_6_8 = *(context + 0xa0);
+    fpu_val_6_8 - fpu_val_7_5;
+    long double fpu_val_7_6;
 
-    if (!(*(&((x87_r6_8 < x87_r7_5 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_8, x87_r7_5) ? 1 : 0) << 0xa
-            | (x87_r6_8 == x87_r7_5 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_6 = *(a1 + 0xa0);
+    if (!(*(&((fpu_val_6_8 < fpu_val_7_5 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_8, fpu_val_7_5) ? 1 : 0) << 0xa
+            | (fpu_val_6_8 == fpu_val_7_5 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_6 = *(context + 0xa0);
     else
-        x87_r7_6 = *(a1 + 0x9c);
+        fpu_val_7_6 = *(context + 0x9c);
 
-    long double x87_r6_9 = *(a1 + 0x98);
-    x87_r6_9 - x87_r7_6;
-    long double x87_r7_8;
+    long double fpu_val_6_9 = *(context + 0x98);
+    fpu_val_6_9 - fpu_val_7_6;
+    long double fpu_val_7_8;
 
-    if (*(&((x87_r6_9 < x87_r7_6 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_9, x87_r7_6) ? 1 : 0) << 0xa
-        | (x87_r6_9 == x87_r7_6 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_9 < fpu_val_7_6 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_9, fpu_val_7_6) ? 1 : 0) << 0xa
+        | (fpu_val_6_9 == fpu_val_7_6 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_9 = *(a1 + 0x9c);
-        long double x87_r6_10 = *(a1 + 0xa0);
-        x87_r6_10 - x87_r7_9;
+        long double fpu_val_7_9 = *(context + 0x9c);
+        long double fpu_val_6_10 = *(context + 0xa0);
+        fpu_val_6_10 - fpu_val_7_9;
 
-        if (!(*(&((x87_r6_10 < x87_r7_9 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_10, x87_r7_9) ? 1 : 0) << 0xa
-                | (x87_r6_10 == x87_r7_9 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_8 = *(a1 + 0xa0);
+        if (!(*(&((fpu_val_6_10 < fpu_val_7_9 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_10, fpu_val_7_9) ? 1 : 0) << 0xa
+                | (fpu_val_6_10 == fpu_val_7_9 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_8 = *(context + 0xa0);
         else
-            x87_r7_8 = *(a1 + 0x9c);
+            fpu_val_7_8 = *(context + 0x9c);
     }
     else
-        x87_r7_8 = *(a1 + 0x98);
+        fpu_val_7_8 = *(context + 0x98);
 
-    float v_38_1 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_8;
-    return WorldObject_CommitTransform(Level_StartMission_4(), a1, &v_18, v_38_1);
+    float item_38_1 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_8;
+    return WorldObject_CommitTransform(Level_StartMission_4(), context, &item_18, item_38_1);
 }

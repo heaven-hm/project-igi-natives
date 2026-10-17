@@ -1,39 +1,39 @@
 // Original IGI.EXE function: Sys_CloseFileStream_20 (VA 0x004B75C0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_CloseFileStream_20.h"
-int32_t* Sys_CloseFileStream_20(void* a1, void* a2)
+int32_t* Sys_CloseFileStream_20(void* context, void* param_2)
 
 {
-    Sys_PopStack_17(a2, 1);
-    int32_t* result = Sys_DispatchOpcode_20(*(a1 + 0x10), *(a1 + 0x14), a2);
+    Sys_PopStack_17(param_2, 1);
+    int32_t* result = Sys_DispatchOpcode_20(*(context + 0x10), *(context + 0x14), param_2);
     int32_t i = 0;
-    int32_t objC1 = 0;
+    int32_t entity_1 = 0;
 
-    if (*(a1 + 0x14) <= 0)
+    if (*(context + 0x14) <= 0)
         return result;
 
-    int32_t ctxB;
-    int32_t v_10 = ctxB;
+    int32_t context_val;
+    int32_t item_10 = context_val;
 
     do
     {
         int32_t j = 0;
 
-        if (*(a1 + 0x10) > 0)
+        if (*(context + 0x10) > 0)
         {
-            char* tmpD4 = (objC1 << 4) + a1 + 0x24;
+            char* temp_4 = (entity_1 << 4) + context + 0x24;
 
             do
             {
-                char ctxB1 = *tmpD4;
-                tmpD4 = &tmpD4[0x10];
-                *(objC1 + result + 0x10) = ctxB1;
-                objC1 += 1;
+                char context_1 = *temp_4;
+                temp_4 = &temp_4[0x10];
+                *(entity_1 + result + 0x10) = context_1;
+                entity_1 += 1;
                 j += 1;
-            } while (j < *(a1 + 0x10));
+            } while (j < *(context + 0x10));
         }
 
         i += 1;
-    } while (i < *(a1 + 0x14));
+    } while (i < *(context + 0x14));
 
     return result;
 }

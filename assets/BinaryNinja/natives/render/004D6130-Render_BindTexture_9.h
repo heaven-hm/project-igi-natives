@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004D6130 Render_BindTexture_9 | gate PASS | openigi True */
-int Render_BindTexture_9(float a1, int a2, int a3, int a4, int a5, int a6, float a7);
+int Render_BindTexture_9(float context, int param_2, int param_3, int param_4, int param_5, int param_6, float param_7);

@@ -1,69 +1,69 @@
 // Original IGI.EXE function: Terrain_BuildMipMaps_6 (VA 0x00517B00; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_BuildMipMaps_6.h"
-int32_t Terrain_BuildMipMaps_6(int32_t a1, int32_t* a2, int32_t* a3, int32_t a4)
+int32_t Terrain_BuildMipMaps_6(int32_t context, int32_t* param_2, int32_t* param_3, int32_t param_4)
 
 {
-    int32_t* objC = a3;
-    int32_t result = a4 >> 1;
-    int32_t ctxB1 = objC >> 1;
-    int32_t v_8 = ctxB1;
+    int32_t* entity_val = param_3;
+    int32_t result = param_4 >> 1;
+    int32_t context_1 = entity_val >> 1;
+    int32_t item_8 = context_1;
 
     if (result > 0)
     {
-        int32_t tmpD1 = a1;
-        int32_t srcS1 = objC << 3;
-        a3 = a2;
-        int32_t v_4_1 = srcS1;
-        int32_t* dstD2 = &a2[objC];
-        a1 = result;
-        a2 = dstD2;
-        bool cond_1_1;
+        int32_t temp_1 = context;
+        int32_t source_1 = entity_val << 3;
+        param_3 = param_2;
+        int32_t item_4_1 = source_1;
+        int32_t* dest_2 = &param_2[entity_val];
+        context = result;
+        param_2 = dest_2;
+        bool flag_1_1;
 
         do
         {
-            int32_t* valA1 = a3;
-            int32_t objC1 = tmpD1 + (ctxB1 << 2);
-            a4 = tmpD1;
-            int32_t v_c_1 = objC1;
+            int32_t* data_1 = param_3;
+            int32_t entity_1 = temp_1 + (context_1 << 2);
+            param_4 = temp_1;
+            int32_t item_c_1 = entity_1;
 
-            if (tmpD1 < objC1)
+            if (temp_1 < entity_1)
             {
                 while (true)
                 {
-                    int32_t objC2 = *valA1;
-                    int32_t tmpD2 = valA1[1];
-                    int32_t srcS2 = *dstD2;
-                    int32_t valA4 = dstD2[1];
-                    int32_t dstD11 = (((srcS2 & 0xff00) + (tmpD2 & 0xff00) + (objC2 & 0xff00)
-                        + (valA4 & 0xff00) + 2) & 0x3fc00) | (((valA4 & 0xff0000) + (srcS2 & 0xff0000)
-                        + (tmpD2 & 0xff0000) + (objC2 & 0xff0000) + 2) & 0x3fc0000);
-                    objC1 = v_c_1;
-                    int32_t dstD14 = (dstD11 | (valA4 + srcS2 + tmpD2 + objC2 + 2)) >> 2 | (((
-                        valA4 >> 2 & 0x3fc00000) + (srcS2 >> 2 & 0x3fc00000) + (tmpD2 >> 2 & 0x3fc00000)
-                        + (objC2 >> 2 & 0x3fc00000) + 0x800000) & 0xff000000);
-                    *a4 = dstD14;
-                    bool cond_3_1 = a4 + 4 < objC1;
-                    a4 += 4;
+                    int32_t entity_2 = *data_1;
+                    int32_t temp_2 = data_1[1];
+                    int32_t source_2 = *dest_2;
+                    int32_t data_4 = dest_2[1];
+                    int32_t dest_11 = (((source_2 & 0xff00) + (temp_2 & 0xff00) + (entity_2 & 0xff00)
+                        + (data_4 & 0xff00) + 2) & 0x3fc00) | (((data_4 & 0xff0000) + (source_2 & 0xff0000)
+                        + (temp_2 & 0xff0000) + (entity_2 & 0xff0000) + 2) & 0x3fc0000);
+                    entity_1 = item_c_1;
+                    int32_t dest_14 = (dest_11 | (data_4 + source_2 + temp_2 + entity_2 + 2)) >> 2 | (((
+                        data_4 >> 2 & 0x3fc00000) + (source_2 >> 2 & 0x3fc00000) + (temp_2 >> 2 & 0x3fc00000)
+                        + (entity_2 >> 2 & 0x3fc00000) + 0x800000) & 0xff000000);
+                    *param_4 = dest_14;
+                    bool flag_3_1 = param_4 + 4 < entity_1;
+                    param_4 += 4;
 
-                    if (!cond_3_1)
+                    if (!flag_3_1)
                         break;
 
-                    valA1 = &valA1[2];
-                    dstD2 = &dstD2[2];
+                    data_1 = &data_1[2];
+                    dest_2 = &dest_2[2];
                 }
 
-                ctxB1 = v_8;
-                srcS1 = v_4_1;
+                context_1 = item_8;
+                source_1 = item_4_1;
             }
 
-            tmpD1 = objC1;
-            a3 += srcS1;
-            dstD2 = a2 + srcS1;
-            result = a1 - 1;
-            cond_1_1 = a1 != 1;
-            a2 = dstD2;
-            a1 = result;
-        } while (cond_1_1);
+            temp_1 = entity_1;
+            param_3 += source_1;
+            dest_2 = param_2 + source_1;
+            result = context - 1;
+            flag_1_1 = context != 1;
+            param_2 = dest_2;
+            context = result;
+        } while (flag_1_1);
     }
 
     return result;

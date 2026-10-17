@@ -1,47 +1,47 @@
 // Original IGI.EXE function: Sys_ExecuteBytecode_26 (VA 0x004BB110; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ExecuteBytecode_26.h"
-char* Sys_ExecuteBytecode_26(int32_t a1, void* a2)
+char* Sys_ExecuteBytecode_26(int32_t context, void* param_2)
 
 {
     char* result = nullptr;
-    char* srcS = a2 + 1;
+    char* source_val = param_2 + 1;
 
-    if (*(a2 + 1) == 0x22)
+    if (*(param_2 + 1) == 0x22)
     {
-        *a1 = 0;
+        *context = 0;
         return 0;
     }
 
-    int32_t ctxB;
-    int32_t v_8 = ctxB;
+    int32_t context_val;
+    int32_t item_8 = context_val;
     char i;
 
     do
     {
-        i = *srcS;
+        i = *source_val;
 
         if (i != 0x5c)
-            result[a1] = i;
+            result[context] = i;
         else
         {
-            char ctxB1 = srcS[1];
-            srcS = &srcS[1];
-            int32_t objC = ctxB1;
+            char context_1 = source_val[1];
+            source_val = &source_val[1];
+            int32_t entity_val = context_1;
 
-            if (objC == 0x6e)
-                result[a1] = 0xa;
-            else if (objC == 0x72)
-                result[a1] = 0xd;
-            else if (objC == 0x74)
-                result[a1] = 9;
+            if (entity_val == 0x6e)
+                result[context] = 0xa;
+            else if (entity_val == 0x72)
+                result[context] = 0xd;
+            else if (entity_val == 0x74)
+                result[context] = 9;
             else
-                result[a1] = ctxB1;
+                result[context] = context_1;
         }
 
-        i = srcS[1];
+        i = source_val[1];
         result = &result[1];
-        srcS = &srcS[1];
+        source_val = &source_val[1];
     } while (i != 0x22);
-    result[a1] = 0;
+    result[context] = 0;
     return result;
 }

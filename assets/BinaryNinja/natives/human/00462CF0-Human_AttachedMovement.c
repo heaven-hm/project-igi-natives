@@ -1,34 +1,34 @@
 // Original IGI.EXE function: Human_AttachedMovement (VA 0x00462CF0; static CFG gate PASS, CFG score 0.889).
 #include "Human_AttachedMovement.h"
-int32_t Human_AttachedMovement(void* a1)
+int32_t Human_AttachedMovement(void* context)
 
 {
-    void* valA = *(a1 + 0x76c);
-    long double x87_r7_3 = *(valA + 0x70) * *(a1 + 0x520) + *(a1 + 0x524) * *(valA + 0x7c)
-        + *(a1 + 0x528) * *(valA + 0x88);
-    long double x87_r6_7 = *(a1 + 0x524) * *(valA + 0x80) + *(valA + 0x74) * *(a1 + 0x520)
-        + *(valA + 0x8c) * *(a1 + 0x528);
-    float v_2c = x87_r6_7;
-    long double x87_r6_11 = *(a1 + 0x524) * *(valA + 0x84) + *(valA + 0x78) * *(a1 + 0x520)
-        + *(a1 + 0x528) * *(valA + 0x90);
-    float v_28 = x87_r6_11;
-    long double x87_r7_4 = x87_r7_3 + *(a1 + 0x770);
-    *(a1 + 0x770) = x87_r7_4;
-    long double x87_r6_13 = v_2c + *(a1 + 0x778);
-    *(a1 + 0x778) = x87_r6_13;
-    long double x87_r5_9 = v_28 + *(a1 + 0x780);
-    *(a1 + 0x780) = x87_r5_9;
-    double v_18 = *(valA + 0x74) * x87_r6_13 + *(valA + 0x70) * x87_r7_4 + *(valA + 0x78) * x87_r5_9;
-    double v_10 = *(valA + 0x84) * x87_r5_9 + *(valA + 0x7c) * x87_r7_4 + *(valA + 0x80) * x87_r6_13;
-    double v_8 = *(valA + 0x90) * x87_r5_9 + *(valA + 0x88) * x87_r7_4 + *(valA + 0x8c) * x87_r6_13;
-    double v_30;
-    memcpy(&v_30, &v_18, 0x18);
-    v_30 = v_18 + *(valA + 0x20);
-    v_28 = v_28 + *(valA + 0x28);
-    double v_20;
-    double v_20_1 = v_20 + *(valA + 0x30);
-    float valA1 = *(a1 + 0xa0);
-    double* v_40 = &v_30;
-    void* v_48 = Level_StartMission_4();
-    return WorldObject_CommitTransform(v_48, a1, v_40, valA1);
+    void* data_val = *(context + 0x76c);
+    long double fpu_val_7_3 = *(data_val + 0x70) * *(context + 0x520) + *(context + 0x524) * *(data_val + 0x7c)
+        + *(context + 0x528) * *(data_val + 0x88);
+    long double fpu_val_6_7 = *(context + 0x524) * *(data_val + 0x80) + *(data_val + 0x74) * *(context + 0x520)
+        + *(data_val + 0x8c) * *(context + 0x528);
+    float item_2c = fpu_val_6_7;
+    long double fpu_val_6_11 = *(context + 0x524) * *(data_val + 0x84) + *(data_val + 0x78) * *(context + 0x520)
+        + *(context + 0x528) * *(data_val + 0x90);
+    float item_28 = fpu_val_6_11;
+    long double fpu_val_7_4 = fpu_val_7_3 + *(context + 0x770);
+    *(context + 0x770) = fpu_val_7_4;
+    long double fpu_val_6_13 = item_2c + *(context + 0x778);
+    *(context + 0x778) = fpu_val_6_13;
+    long double fpu_val_5_9 = item_28 + *(context + 0x780);
+    *(context + 0x780) = fpu_val_5_9;
+    double item_18 = *(data_val + 0x74) * fpu_val_6_13 + *(data_val + 0x70) * fpu_val_7_4 + *(data_val + 0x78) * fpu_val_5_9;
+    double item_10 = *(data_val + 0x84) * fpu_val_5_9 + *(data_val + 0x7c) * fpu_val_7_4 + *(data_val + 0x80) * fpu_val_6_13;
+    double item_8 = *(data_val + 0x90) * fpu_val_5_9 + *(data_val + 0x88) * fpu_val_7_4 + *(data_val + 0x8c) * fpu_val_6_13;
+    double item_30;
+    memcpy(&item_30, &item_18, 0x18);
+    item_30 = item_18 + *(data_val + 0x20);
+    item_28 = item_28 + *(data_val + 0x28);
+    double item_20;
+    double item_20_1 = item_20 + *(data_val + 0x30);
+    float data_1 = *(context + 0xa0);
+    double* item_40 = &item_30;
+    void* item_48 = Level_StartMission_4();
+    return WorldObject_CommitTransform(item_48, context, item_40, data_1);
 }

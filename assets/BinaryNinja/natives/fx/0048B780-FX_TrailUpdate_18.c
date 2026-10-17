@@ -1,97 +1,97 @@
 // Original IGI.EXE function: FX_TrailUpdate_18 (VA 0x0048B780; static CFG gate PASS, CFG score 0.933).
 #include "FX_TrailUpdate_18.h"
-int32_t* FX_TrailUpdate_18(void* a1, void* a2, int32_t* a3, int32_t a4, int32_t a5)
+int32_t* FX_TrailUpdate_18(void* context, void* param_2, int32_t* param_3, int32_t param_4, int32_t param_5)
 
 {
-    int32_t valA = a4 * 5;
+    int32_t data_val = param_4 * 5;
 
-    if (*(a2 + ((a5 + (valA << 2)) << 2) + 0x20) >= 0x19)
+    if (*(param_2 + ((param_5 + (data_val << 2)) << 2) + 0x20) >= 0x19)
     {
-        valA = 0;
-        return valA;
+        data_val = 0;
+        return data_val;
     }
 
-    int32_t valA2;
-    int32_t tmpD1;
-    tmpD1 = HIGHD(*(a2 + 0x14));
-    valA2 = LOWD(*(a2 + 0x14));
-    int32_t valA6;
-    int32_t tmpD2;
-    tmpD2 = HIGHD(*(a2 + 0x18));
-    valA6 = LOWD(*(a2 + 0x18));
-    int32_t v_68 = a5 - ((valA6 - tmpD2) >> 1);
-    float v_30;
-    Script_EvaluateCondition_23(&v_30, a3, 1);
-    double v_48;
-    Script_CallNativeHandler_23(&v_48, a3);
-    *(a1 + 0x3ec0) = 0;
-    *(a1 + 0x3ec4) = 0;
-    long double x87_r7_1 = (a4 - ((valA2 - tmpD1) >> 1)) * 8192f;
-    *(a1 + 0x3eb0) = x87_r7_1;
-    long double x87_r6_1 = v_68 * 8192f;
-    v_68 = x87_r6_1;
-    *(a1 + 0x3eb8) = x87_r6_1;
-    long double x87_r6_3 = a3[9] * -4096f;
-    x87_r7_1 - x87_r6_3;
+    int32_t data_2;
+    int32_t temp_1;
+    temp_1 = HIGHD(*(param_2 + 0x14));
+    data_2 = LOWD(*(param_2 + 0x14));
+    int32_t data_6;
+    int32_t temp_2;
+    temp_2 = HIGHD(*(param_2 + 0x18));
+    data_6 = LOWD(*(param_2 + 0x18));
+    int32_t item_68 = param_5 - ((data_6 - temp_2) >> 1);
+    float item_30;
+    Script_EvaluateCondition_23(&item_30, param_3, 1);
+    double item_48;
+    Script_CallNativeHandler_23(&item_48, param_3);
+    *(context + 0x3ec0) = 0;
+    *(context + 0x3ec4) = 0;
+    long double fpu_val_7_1 = (param_4 - ((data_2 - temp_1) >> 1)) * 8192.0f;
+    *(context + 0x3eb0) = fpu_val_7_1;
+    long double fpu_val_6_1 = item_68 * 8192.0f;
+    item_68 = fpu_val_6_1;
+    *(context + 0x3eb8) = fpu_val_6_1;
+    long double fpu_val_6_3 = param_3[9] * -4096.0f;
+    fpu_val_7_1 - fpu_val_6_3;
 
-    if (!(*(&((x87_r7_1 < x87_r6_3 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, x87_r6_3) ? 1 : 0) << 0xa
-        | (x87_r7_1 == x87_r6_3 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+    if (!(*(&((fpu_val_7_1 < fpu_val_6_3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, fpu_val_6_3) ? 1 : 0) << 0xa
+        | (fpu_val_7_1 == fpu_val_6_3 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
     {
-        long double x87_r6_5 = a3[9] * 4096f;
-        x87_r7_1 - x87_r6_5;
+        long double fpu_val_6_5 = param_3[9] * 4096.0f;
+        fpu_val_7_1 - fpu_val_6_5;
 
-        if (!(*(&((x87_r7_1 < x87_r6_5 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, x87_r6_5) ? 1 : 0) << 0xa
-                | (x87_r7_1 == x87_r6_5 ? 1 : 0) << 0xe) + 1) & 0x41))
-            *(a1 + 0x3eb0) = x87_r6_5;
-    }
-    else
-        *(a1 + 0x3eb0) = x87_r6_3;
-
-    long double x87_r7_6 = a3[9] * -4096f;
-    long double f1 = v_68;
-    x87_r7_6 - f1;
-
-    if (*(&((x87_r7_6 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f1) ? 1 : 0) << 0xa
-        | (x87_r7_6 == f1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
-    {
-        long double x87_r7_9 = a3[9] * 4096f;
-        long double f2_1 = v_68;
-        x87_r7_9 - f2_1;
-
-        if (*(&((x87_r7_9 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_9, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_9 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
-            *(a1 + 0x3eb8) = x87_r7_9;
+        if (!(*(&((fpu_val_7_1 < fpu_val_6_5 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, fpu_val_6_5) ? 1 : 0) << 0xa
+                | (fpu_val_7_1 == fpu_val_6_5 ? 1 : 0) << 0xe) + 1) & 0x41))
+            *(context + 0x3eb0) = fpu_val_6_5;
     }
     else
-        *(a1 + 0x3eb8) = x87_r7_6;
+        *(context + 0x3eb0) = fpu_val_6_3;
 
-    int32_t* valA11 = *(a1 + 0x3ea0);
-    float v_2c;
-    double v_60 = v_2c * *(a1 + 0x3eb8) + v_30 * *(a1 + 0x3eb0);
-    float v_24;
-    float v_20;
-    double v_58 = v_20 * *(a1 + 0x3eb8) + v_24 * *(a1 + 0x3eb0);
-    float v_18;
-    float v_14;
-    double v_50 = v_14 * *(a1 + 0x3eb8) + v_18 * *(a1 + 0x3eb0);
-    long double x87_r7_20 = v_48;
-    memcpy(a1 + 0x3eb0, &v_60, 0x18);
-    *(a1 + 0x3eb0) = x87_r7_20 + *(a1 + 0x3eb0);
-    double v_40;
-    *(a1 + 0x3eb8) = v_40 + *(a1 + 0x3eb8);
-    double v_38;
-    *(a1 + 0x3ec0) = v_38 + *(a1 + 0x3ec0);
+    long double fpu_val_7_6 = param_3[9] * -4096.0f;
+    long double f1 = item_68;
+    fpu_val_7_6 - f1;
 
-    if (valA11)
+    if (*(&((fpu_val_7_6 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f1) ? 1 : 0) << 0xa
+        | (fpu_val_7_6 == f1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        AI_MoveToNode_4(valA11, *(a1 + 0x3ea4), *(a1 + 0x3ea8));
-        *(a1 + 0x3ea0) = 0;
+        long double fpu_val_7_9 = param_3[9] * 4096.0f;
+        long double f2_1 = item_68;
+        fpu_val_7_9 - f2_1;
+
+        if (*(&((fpu_val_7_9 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_9, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_9 == f2_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+            *(context + 0x3eb8) = fpu_val_7_9;
+    }
+    else
+        *(context + 0x3eb8) = fpu_val_7_6;
+
+    int32_t* data_11 = *(context + 0x3ea0);
+    float item_2c;
+    double item_60 = item_2c * *(context + 0x3eb8) + item_30 * *(context + 0x3eb0);
+    float item_24;
+    float item_20;
+    double item_58 = item_20 * *(context + 0x3eb8) + item_24 * *(context + 0x3eb0);
+    float item_18;
+    float item_14;
+    double item_50 = item_14 * *(context + 0x3eb8) + item_18 * *(context + 0x3eb0);
+    long double fpu_val_7_20 = item_48;
+    memcpy(context + 0x3eb0, &item_60, 0x18);
+    *(context + 0x3eb0) = fpu_val_7_20 + *(context + 0x3eb0);
+    double item_40;
+    *(context + 0x3eb8) = item_40 + *(context + 0x3eb8);
+    double item_38;
+    *(context + 0x3ec0) = item_38 + *(context + 0x3ec0);
+
+    if (data_11)
+    {
+        AI_MoveToNode_4(data_11, *(context + 0x3ea4), *(context + 0x3ea8));
+        *(context + 0x3ea0) = 0;
     }
 
-    int32_t* valA13 = AI_TakeCover_4(*(a1 + 0x3b6c), *a3, a4, a5);
-    *(a1 + 0x3ea0) = valA13;
-    *(a1 + 0x3ea4) = a4;
-    *(a1 + 0x3ea8) = a5;
-    valA13 = 1;
-    return valA13;
+    int32_t* data_13 = AI_TakeCover_4(*(context + 0x3b6c), *param_3, param_4, param_5);
+    *(context + 0x3ea0) = data_13;
+    *(context + 0x3ea4) = param_4;
+    *(context + 0x3ea8) = param_5;
+    data_13 = 1;
+    return data_13;
 }

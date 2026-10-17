@@ -1,29 +1,29 @@
 // Original IGI.EXE function: SoundDefSound_Update (VA 0x004E8B80; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefSound_Update.h"
-int32_t SoundDefSound_Update(void* a1, float* a2)
+int32_t SoundDefSound_Update(void* context, float* param_2)
 
 {
-    void* dstD = *(a1 + 0x14);
+    void* dest_val = *(context + 0x14);
     int16_t result;
 
-    if (dstD)
+    if (dest_val)
         result = SoundSys_InitSoundSys_15();
 
-    long double x87_r7_1;
+    long double fpu_val_7_1;
 
-    if (!dstD || *(dstD + 0x1c) != result)
-        x87_r7_1 = *(a1 + 0xd8);
+    if (!dest_val || *(dest_val + 0x1c) != result)
+        fpu_val_7_1 = *(context + 0xd8);
     else
-        x87_r7_1 = Sys_OpenFileStream_11(a1 + 0xa0) + *(a1 + 0xd8);
+        fpu_val_7_1 = Sys_OpenFileStream_11(context + 0xa0) + *(context + 0xd8);
 
-    long double f0 = *a2;
-    x87_r7_1 - f0;
-    result = (x87_r7_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f0) ? 1 : 0) << 0xa
-        | (x87_r7_1 == f0 ? 1 : 0) << 0xe | 0x3800;
+    long double f0 = *param_2;
+    fpu_val_7_1 - f0;
+    result = (fpu_val_7_1 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_1 == f0 ? 1 : 0) << 0xe | 0x3800;
 
     if (*(&result + 1) & 0x41)
         return result;
 
-    *a2 = x87_r7_1;
+    *param_2 = fpu_val_7_1;
     return result;
 }

@@ -1,17 +1,17 @@
 // Original IGI.EXE function: Sys_FreeMemory_16 (VA 0x004B5C90; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_16.h"
-int32_t Sys_FreeMemory_16(int32_t* a1)
+int32_t Sys_FreeMemory_16(int32_t* context)
 
 {
-    int32_t result = a1[9];
-    int32_t* tmpD1;
-    int32_t srcS1;
+    int32_t result = context[9];
+    int32_t* temp_1;
+    int32_t source_1;
 
     switch (result)
     {
         case 0:
         {
-            int32_t* i_1 = a1[5];
+            int32_t* i_1 = context[5];
 
             for (int32_t* i = *i_1; i; i = *i)
             {
@@ -19,49 +19,49 @@ int32_t Sys_FreeMemory_16(int32_t* a1)
                 i_1 = i;
             }
 
-            Camera_ApplyHandiCam_33(a1);
-            Sys_OpenFileStream_5(a1[0xd]);
+            Camera_ApplyHandiCam_33(context);
+            Sys_OpenFileStream_5(context[0xd]);
             goto label_4b5cf2;
         }
         case 1:
         case 4:
         {
-            Camera_ApplyHandiCam_33(&a1[2]);
+            Camera_ApplyHandiCam_33(&context[2]);
             goto label_4b5ced;
         }
         case 2:
         {
-            Sys_OpenFileStream_5(a1[0xd]);
+            Sys_OpenFileStream_5(context[0xd]);
         label_4b5ced:
-            Camera_ApplyHandiCam_33(a1);
+            Camera_ApplyHandiCam_33(context);
         label_4b5cf2:
-            tmpD1 = g_943e34;
+            temp_1 = g_943e34;
             result = g_943e28 - 1;
-            srcS1 = *(tmpD1 + a1);
+            source_1 = *(temp_1 + context);
             g_943e28 = result;
 
-            if (srcS1 != result)
+            if (source_1 != result)
                 goto label_4b5d30;
             break;
         }
         case 3:
         {
-            Camera_ApplyHandiCam_33(a1);
-            tmpD1 = g_943e34;
+            Camera_ApplyHandiCam_33(context);
+            temp_1 = g_943e34;
             result = g_943e28 - 1;
-            srcS1 = *(tmpD1 + a1);
+            source_1 = *(temp_1 + context);
             g_943e28 = result;
 
-            if (srcS1 != result)
+            if (source_1 != result)
             {
             label_4b5d30:
-                int32_t objC2 = g_943e24;
-                result = *(objC2 + (result << 2)) * g_943e30 + g_943e20;
-                int32_t dstD2 = *(objC2 + (srcS1 << 2));
-                int32_t tmpD2 = *(tmpD1 + result);
-                *(objC2 + (srcS1 << 2)) = *(objC2 + (tmpD2 << 2));
-                *(g_943e24 + (tmpD2 << 2)) = dstD2;
-                *(g_943e34 + result) = srcS1;
+                int32_t entity_2 = g_943e24;
+                result = *(entity_2 + (result << 2)) * g_943e30 + g_943e20;
+                int32_t dest_2 = *(entity_2 + (source_1 << 2));
+                int32_t temp_2 = *(temp_1 + result);
+                *(entity_2 + (source_1 << 2)) = *(entity_2 + (temp_2 << 2));
+                *(g_943e24 + (temp_2 << 2)) = dest_2;
+                *(g_943e34 + result) = source_1;
             }
             break;
         }

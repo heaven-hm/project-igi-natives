@@ -1,63 +1,63 @@
 // Original IGI.EXE function: SoundSys_LoadSoundDef_8 (VA 0x004E7030; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_LoadSoundDef_8.h"
-int32_t* SoundSys_LoadSoundDef_8(int32_t* a1, int32_t* a2, float a3)
+int32_t* SoundSys_LoadSoundDef_8(int32_t* context, int32_t* param_2, float param_3)
 
 {
-    long double fpu7 = a3;
+    long double fpu7 = param_3;
     long double f0 = 1.0;
     fpu7 - f0;
-    int32_t valA;
-    valA = (fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
+    int32_t data_val;
+    data_val = (fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe;
 
-    if (!(*(&valA + 1) & 1))
+    if (!(*(&data_val + 1) & 1))
     {
-        *a1 = a2[0xa];
-        return a2;
+        *context = param_2[0xa];
+        return param_2;
     }
 
-    long double x87_r7_1 = a3;
+    long double fpu_val_7_1 = param_3;
     long double f1 = 0.0;
-    x87_r7_1 - f1;
-    valA = (x87_r7_1 < f1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f1) ? 1 : 0) << 0xa
-        | (x87_r7_1 == f1 ? 1 : 0) << 0xe;
+    fpu_val_7_1 - f1;
+    data_val = (fpu_val_7_1 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f1) ? 1 : 0) << 0xa
+        | (fpu_val_7_1 == f1 ? 1 : 0) << 0xe;
 
-    if (*(&valA + 1) & 0x41)
+    if (*(&data_val + 1) & 0x41)
     {
-        *a1 = *a2;
-        return a2;
+        *context = *param_2;
+        return param_2;
     }
 
-    int32_t* tmpD2 = a2;
-    int32_t objC2 = a3 * 10f;
-    float v_10 = objC2 * 0.100000001f;
-    float v_c_2 = (objC2 + 1) * 0.100000001f;
-    a2 = tmpD2[objC2];
-    long double x87_r7_10 = v_10;
-    long double f2 = a3;
-    x87_r7_10 - f2;
-    valA = (x87_r7_10 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_10, f2) ? 1 : 0) << 0xa
-        | (x87_r7_10 == f2 ? 1 : 0) << 0xe;
+    int32_t* temp_2 = param_2;
+    int32_t entity_2 = param_3 * 10.0f;
+    float item_10 = entity_2 * 0.100000001f;
+    float item_c_2 = (entity_2 + 1) * 0.100000001f;
+    param_2 = temp_2[entity_2];
+    long double fpu_val_7_10 = item_10;
+    long double f2 = param_3;
+    fpu_val_7_10 - f2;
+    data_val = (fpu_val_7_10 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_10, f2) ? 1 : 0) << 0xa
+        | (fpu_val_7_10 == f2 ? 1 : 0) << 0xe;
 
-    if (*(&valA + 1) & 0x40)
+    if (*(&data_val + 1) & 0x40)
     {
-        int32_t valA3 = tmpD2[objC2];
-        *a1 = valA3;
-        return valA3;
+        int32_t data_3 = temp_2[entity_2];
+        *context = data_3;
+        return data_3;
     }
 
-    long double x87_r7_11 = v_c_2;
-    long double f3 = a3;
-    x87_r7_11 - f3;
-    valA = (x87_r7_11 < f3 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_11, f3) ? 1 : 0) << 0xa
-        | (x87_r7_11 == f3 ? 1 : 0) << 0xe;
+    long double fpu_val_7_11 = item_c_2;
+    long double f3 = param_3;
+    fpu_val_7_11 - f3;
+    data_val = (fpu_val_7_11 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_11, f3) ? 1 : 0) << 0xa
+        | (fpu_val_7_11 == f3 ? 1 : 0) << 0xe;
 
-    if (!(*(&valA + 1) & 0x40))
+    if (!(*(&data_val + 1) & 0x40))
     {
-        *a1 = (tmpD2[objC2 + 1] - a2) / (v_c_2 - v_10) * (a3 - v_10) + a2;
-        return valA;
+        *context = (temp_2[entity_2 + 1] - param_2) / (item_c_2 - item_10) * (param_3 - item_10) + param_2;
+        return data_val;
     }
 
-    *a1 = tmpD2[objC2 + 1];
-    return a1;
+    *context = temp_2[entity_2 + 1];
+    return context;
 }

@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00508410 EditCamera_OnParsed | gate PASS | openigi False */
-char * EditCamera_OnParsed(void * a1, char * a2);
+char * EditCamera_OnParsed(void * context, char * param_2);

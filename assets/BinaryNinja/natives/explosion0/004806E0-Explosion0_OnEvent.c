@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Explosion0_OnEvent (VA 0x004806E0; static CFG gate PASS, CFG score 1.000).
 #include "Explosion0_OnEvent.h"
-int32_t Explosion0_OnEvent(int32_t a1)
+int32_t Explosion0_OnEvent(int32_t context)
 
 {
-    int32_t* srcS = a1;
-    int32_t valA = srcS[0x3f];
+    int32_t* source_val = context;
+    int32_t data_val = source_val[0x3f];
 
-    if (valA > 0)
+    if (data_val > 0)
     {
-        srcS[0x3f] = valA - 1;
-        return valA - 1;
+        source_val[0x3f] = data_val - 1;
+        return data_val - 1;
     }
 
-    if (!Render_ComputeNormals_2(*srcS[0x1b]))
-        srcS[0x3c] = 0xffffffff;
+    if (!Render_ComputeNormals_2(*source_val[0x1b]))
+        source_val[0x3c] = 0xffffffff;
     else
     {
-        int32_t valA5 = Render_SetupLighting_2(*srcS[0x1b], 0);
-        int32_t v_8_1 = valA5;
-        v_8_1 = (srcS[0x3e] - srcS[0x3d]) / srcS[0x42] * v_8_1;
-        srcS[0x3c] = v_8_1 % valA5;
+        int32_t data_5 = Render_SetupLighting_2(*source_val[0x1b], 0);
+        int32_t item_8_1 = data_5;
+        item_8_1 = (source_val[0x3e] - source_val[0x3d]) / source_val[0x42] * item_8_1;
+        source_val[0x3c] = item_8_1 % data_5;
     }
 
-    int32_t valA10 = srcS[0x3d];
+    int32_t data_10 = source_val[0x3d];
 
-    if (!valA10)
-        return QTask_FindType(srcS);
+    if (!data_10)
+        return QTask_FindType(source_val);
 
-    srcS[0x3d] = valA10 - 1;
-    return valA10 - 1;
+    source_val[0x3d] = data_10 - 1;
+    return data_10 - 1;
 }

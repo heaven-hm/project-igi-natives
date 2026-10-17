@@ -1,19 +1,19 @@
 // Original IGI.EXE function: Menu_DrawWidget_19 (VA 0x00428A60; static CFG gate PASS, CFG score 0.889).
 #include "Menu_DrawWidget_19.h"
-int32_t Menu_DrawWidget_19(void* a1, double* a2)
+int32_t Menu_DrawWidget_19(void* context, double* param_2)
 
 {
-    double v_18;
-    double* v_28 = &v_18;
-    v_18 = *a2 - *(a1 + 0x20);
-    double v_10 = a2[1] - *(a1 + 0x28);
-    double v_8 = a2[2] - *(a1 + 0x30);
-    long double x87_r7_7 = Sys_OpenFileStream_11(v_28) * 0.125;
-    memcpy(&v_18, a2, 0x18);
-    double v_8_1 = x87_r7_7 + v_8;
-    double* v_2c = &v_18;
-    void* v_30 = a1;
+    double item_18;
+    double* item_28 = &item_18;
+    item_18 = *param_2 - *(context + 0x20);
+    double item_10 = param_2[1] - *(context + 0x28);
+    double item_8 = param_2[2] - *(context + 0x30);
+    long double fpu_val_7_7 = Sys_OpenFileStream_11(item_28) * 0.125;
+    memcpy(&item_18, param_2, 0x18);
+    double item_8_1 = fpu_val_7_7 + item_8;
+    double* item_2c = &item_18;
+    void* item_30 = context;
     long double fpu0;
     long double fpu1;
-    return Menu_RequestScreen_20(fpu0, fpu1, v_30, v_2c);
+    return Menu_RequestScreen_20(fpu0, fpu1, item_30, item_2c);
 }

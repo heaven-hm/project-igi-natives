@@ -1,16 +1,16 @@
 // Original IGI.EXE function: Sys_UnhandledOpcode (VA 0x004BE9D0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnhandledOpcode.h"
-int32_t Sys_UnhandledOpcode(int32_t* a1)
+int32_t Sys_UnhandledOpcode(int32_t* context)
 
 {
-    char* valA1 = *a1 + a1[5];
-    char objC1 = *valA1;
-    int32_t objC2;
+    char* data_1 = *context + context[5];
+    char entity_1 = *data_1;
+    int32_t entity_2;
 
-    if (objC1 == 7)
-        objC2 = 3;
-    else if (objC1 == 0xb)
-        objC2 = 4;
+    if (entity_1 == 7)
+        entity_2 = 3;
+    else if (entity_1 == 0xb)
+        entity_2 = 4;
     else
     {
         Error_Show("Unhandled opcode.");
@@ -19,21 +19,21 @@ int32_t Sys_UnhandledOpcode(int32_t* a1)
             /* nop */
     }
 
-    Sys_ReadFileBlock_28(a1, &valA1[1], objC2);
-    int32_t tmpD = a1[5];
+    Sys_ReadFileBlock_28(context, &data_1[1], entity_2);
+    int32_t temp_val = context[5];
     int32_t i = 0xffffffff;
-    int32_t dstD = *a1 + tmpD + 1;
+    int32_t dest_val = *context + temp_val + 1;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    a1[5] = ~i - 1 + tmpD + 2;
+    context[5] = ~i - 1 + temp_val + 2;
     return 0;
 }

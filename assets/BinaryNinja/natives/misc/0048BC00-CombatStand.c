@@ -1,119 +1,119 @@
 // Original IGI.EXE function: CombatStand (VA 0x0048BC00; static CFG gate PASS, CFG score 1.000).
 #include "CombatStand.h"
-int32_t* CombatStand(int32_t* a1, int32_t* a2)
+int32_t* CombatStand(int32_t* context, int32_t* param_2)
 
 {
-    char* v_10 = "Combat - Stand";
-    int32_t v_14 = 0xffffffff;
-    int32_t* v_18 = a1;
-    void* flagP1 = a2[0xa] + 8;
-    FX_SmokeEmit_17(a1, flagP1);
+    char* item_10 = "Combat - Stand";
+    int32_t item_14 = 0xffffffff;
+    int32_t* item_18 = context;
+    void* flagP1 = param_2[0xa] + 8;
+    FX_SmokeEmit_17(context, flagP1);
 
-    if (a1[0xf79])
+    if (context[0xf79])
     {
-        int32_t valA2 = FX_FireBallUpdate_19(a1, flagP1);
+        int32_t data_2 = FX_FireBallUpdate_19(context, flagP1);
 
-        if (!valA2)
-            return FX_FireBallUpdate_18(a1, a2, 0x48c510, 0);
+        if (!data_2)
+            return FX_FireBallUpdate_18(context, param_2, 0x48c510, 0);
 
-        if (valA2 == 1)
+        if (data_2 == 1)
         {
-            void* valA20 = FX_FireBallUpdate_18(a1, a2, 0, FX_StandRollLeft);
-            a1[0xf1f] = 0x3f800000;
-            a1[0xf7d] = 1;
-            return valA20;
+            void* data_20 = FX_FireBallUpdate_18(context, param_2, 0, FX_StandRollLeft);
+            context[0xf1f] = 0x3f800000;
+            context[0xf7d] = 1;
+            return data_20;
         }
 
-        if (valA2 == 2)
+        if (data_2 == 2)
         {
-            void* valA19 = FX_FireBallUpdate_18(a1, a2, 0, FX_StandRollRight);
-            a1[0xf20] = 0x3f800000;
-            a1[0xf7d] = 0xffffffff;
-            return valA19;
+            void* data_19 = FX_FireBallUpdate_18(context, param_2, 0, FX_StandRollRight);
+            context[0xf20] = 0x3f800000;
+            context[0xf7d] = 0xffffffff;
+            return data_19;
         }
 
-        int32_t valA6 = a2[9];
-        void* valA7;
+        int32_t data_6 = param_2[9];
+        void* data_7;
 
-        if (valA6)
+        if (data_6)
         {
-            valA7 = valA6(a1, a2);
+            data_7 = data_6(context, param_2);
 
-            if (!valA7)
-                return valA7;
+            if (!data_7)
+                return data_7;
 
-            a2[9] = 0;
-            return valA7;
+            param_2[9] = 0;
+            return data_7;
         }
 
-        if (!Locomotion_GetState(a1, 0))
+        if (!Locomotion_GetState(context, 0))
         {
-            void* valA9 = Locomotion_GetState(a1, 3);
+            void* data_9 = Locomotion_GetState(context, 3);
 
-            if (valA9)
-                valA9 = AI_WriteChannel(a1, 3, -1f);
+            if (data_9)
+                data_9 = AI_WriteChannel(context, 3, -1.0f);
 
-            char* v_10_4 = "Waiting for stand state";
-            int32_t v_14_6 = 0xffffffff;
-            int32_t* v_18_2 = a1;
-            return valA9;
+            char* item_10_4 = "Waiting for stand state";
+            int32_t item_14_6 = 0xffffffff;
+            int32_t* item_18_2 = context;
+            return data_9;
         }
 
-        valA7 = FX_FragmentSimulate_19(a1, flagP1) + 1;
+        data_7 = FX_FragmentSimulate_19(context, flagP1) + 1;
 
-        if (valA7 > 8)
-            return valA7;
+        if (data_7 > 8)
+            return data_7;
 
-        switch (valA7)
+        switch (data_7)
         {
             case nullptr:
             {
-                char* v_10_7 = "Waiting for patrol command";
-                int32_t v_14_9 = 0xffffffff;
-                int32_t* v_18_10 = a1;
-                return valA7;
+                char* item_10_7 = "Waiting for patrol command";
+                int32_t item_14_9 = 0xffffffff;
+                int32_t* item_18_10 = context;
+                return data_7;
                 break;
             }
             case 1:
             {
-                return FX_FireBallUpdate_18(a1, a2, 0, Combat_Reload);
+                return FX_FireBallUpdate_18(context, param_2, 0, Combat_Reload);
                 break;
             }
             case 2:
             {
-                return FX_FireBallUpdate_18(a1, a2, 0, FX_StandThrowingGrenade);
+                return FX_FireBallUpdate_18(context, param_2, 0, FX_StandThrowingGrenade);
                 break;
             }
             case 3:
             {
-                AI_UpdatePatrol_3(&a1[0xfa2], a1);
-                Combat_BeginBurst(a1, *(flagP1 + 0x20));
+                AI_UpdatePatrol_3(&context[0xfa2], context);
+                Combat_BeginBurst(context, *(flagP1 + 0x20));
                 *(flagP1 + 0x20) = 0;
-                return FX_FireBallUpdate_18(a1, a2, 0, StandFire);
+                return FX_FireBallUpdate_18(context, param_2, 0, StandFire);
                 break;
             }
             case 4:
             {
-                return FX_FireBallUpdate_18(a1, a2, 0, CloseCombat);
+                return FX_FireBallUpdate_18(context, param_2, 0, CloseCombat);
                 break;
             }
             case 5:
             {
-                return FX_FireBallUpdate_18(a1, a2, sub_48c750, 0);
+                return FX_FireBallUpdate_18(context, param_2, sub_48c750, 0);
                 break;
             }
             case 6:
             {
-                return FX_FireBallUpdate_18(a1, a2, CombatFollow_Install, 0);
+                return FX_FireBallUpdate_18(context, param_2, CombatFollow_Install, 0);
                 break;
             }
             case 7:
             {
-                return FX_FireBallUpdate_18(a1, a2, sub_48caa0, 0);
+                return FX_FireBallUpdate_18(context, param_2, sub_48caa0, 0);
                 break;
             }
         }
     }
 
-    return AI_CombatTarget_2(a1, a2);
+    return AI_CombatTarget_2(context, param_2);
 }

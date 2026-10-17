@@ -9,9 +9,9 @@ void* TextureModifier_Create(void* pThis)
     if (*(result + 0xdc))
     {
         int32_t ba5060_1 = g_ba5060;
-        void* eax_1 = g_b97df8 - 1;
-        g_b97df8 = eax_1;
-        result = eax_1 - 4;
+        void* result_val_1 = g_b97df8 - 1;
+        g_b97df8 = result_val_1;
+        result = result_val_1 - 4;
         g_ba5060 = ba5060_1 >> 8;
 
         if (result >= 0)

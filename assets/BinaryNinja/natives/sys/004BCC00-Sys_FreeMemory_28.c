@@ -1,62 +1,62 @@
 // Original IGI.EXE function: Sys_FreeMemory_28 (VA 0x004BCC00; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_28.h"
-int32_t Sys_FreeMemory_28(char* a1, int32_t* a2, int32_t* a3, int32_t* a4)
+int32_t Sys_FreeMemory_28(char* context, int32_t* param_2, int32_t* param_3, int32_t* param_4)
 
 {
-    char* srcS = a1;
+    char* source_val = context;
 
-    if (*(*(srcS + 0x28) + (*(srcS + 0x1c) << 2)) == a4)
+    if (*(*(source_val + 0x28) + (*(source_val + 0x1c) << 2)) == param_4)
     {
-        Sys_UnknownDataType_3(srcS, a2, &a1, nullptr);
-        int32_t dstD2 = *a2;
+        Sys_UnknownDataType_3(source_val, param_2, &context, nullptr);
+        int32_t dest_2 = *param_2;
         int32_t i = 0xffffffff;
-        a1 = *(*(srcS + 0x24) + (*(srcS + 0x18) << 2));
+        context = *(*(source_val + 0x24) + (*(source_val + 0x18) << 2));
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD2;
-            dstD2 += 1;
+            bool flag_0_1 = 0 != *dest_2;
+            dest_2 += 1;
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        *a3 = ~i;
+        *param_3 = ~i;
         return 1;
     }
 
-    if (Sys_OpenFileStream_28(srcS, &a4))
+    if (Sys_OpenFileStream_28(source_val, &param_4))
     {
-        int32_t* objC3 = a4;
-        int32_t valA5 = *objC3;
+        int32_t* entity_3 = param_4;
+        int32_t data_5 = *entity_3;
 
-        if (!valA5 || valA5 == 2)
+        if (!data_5 || data_5 == 2)
         {
-            if (objC3[1] == 3)
+            if (entity_3[1] == 3)
             {
-                int32_t dstD3 = objC3[6];
-                *a2 = dstD3;
+                int32_t dest_3 = entity_3[6];
+                *param_2 = dest_3;
                 int32_t i_1 = 0xffffffff;
 
                 while (i_1)
                 {
-                    bool cond_1_1 = 0 != *dstD3;
-                    dstD3 += 1;
+                    bool flag_1_1 = 0 != *dest_3;
+                    dest_3 += 1;
                     i_1 -= 1;
 
-                    if (!cond_1_1)
+                    if (!flag_1_1)
                         break;
                 }
 
-                *a3 = ~i_1;
+                *param_3 = ~i_1;
             }
 
             return 1;
         }
     }
 
-    *a2 = 0;
-    *a3 = 0;
+    *param_2 = 0;
+    *param_3 = 0;
     return 0;
 }

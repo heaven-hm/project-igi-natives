@@ -1,61 +1,61 @@
 // Original IGI.EXE function: Weapon_EjectShell_7 (VA 0x0047C560; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_EjectShell_7.h"
-int32_t Weapon_EjectShell_7(void* a1)
+int32_t Weapon_EjectShell_7(void* context)
 
 {
-    int32_t ctxB = 0;
-    int32_t valA = *(a1 + 0x9c);
+    int32_t context_val = 0;
+    int32_t data_val = *(context + 0x9c);
 
-    if (valA > 0)
+    if (data_val > 0)
     {
-        int32_t* dstD1 = a1 + 0x900;
+        int32_t* dest_1 = context + 0x900;
 
-        if (0 >= valA)
+        if (0 >= data_val)
             goto label_47c5d3;
 
         while (true)
         {
-            void* valA1 = *dstD1;
+            void* data_1 = *dest_1;
 
-            if (!*(valA1 + 0x34))
+            if (!*(data_1 + 0x34))
             {
-                if (*(valA1 + 0xc0))
-                    Weapon_UpdateMuzzleFlash_7(a1, ctxB);
+                if (*(data_1 + 0xc0))
+                    Weapon_UpdateMuzzleFlash_7(context, context_val);
 
-                *(*dstD1 + 0x30) = 0;
-                int32_t objC2 = *(a1 + 0x9c) - 1;
-                *(a1 + 0x9c) = objC2;
-                *dstD1 = *(a1 + (objC2 << 2) + 0x900);
-                *(a1 + (*(a1 + 0x9c) << 2) + 0x900) = 0;
+                *(*dest_1 + 0x30) = 0;
+                int32_t entity_2 = *(context + 0x9c) - 1;
+                *(context + 0x9c) = entity_2;
+                *dest_1 = *(context + (entity_2 << 2) + 0x900);
+                *(context + (*(context + 0x9c) << 2) + 0x900) = 0;
 
-                if (ctxB < *(a1 + 0x9c))
+                if (context_val < *(context + 0x9c))
                     continue;
             }
 
         label_47c5d3:
-            ctxB += 1;
-            dstD1 = &dstD1[1];
+            context_val += 1;
+            dest_1 = &dest_1[1];
 
-            if (ctxB >= *(a1 + 0x9c))
+            if (context_val >= *(context + 0x9c))
                 break;
         }
     }
 
-    int32_t result = *(a1 + 0x9c);
-    int32_t objC4 = 0;
+    int32_t result = *(context + 0x9c);
+    int32_t entity_4 = 0;
 
     if (result > 0)
     {
-        int32_t* tmpD2 = a1 + 0x900;
+        int32_t* temp_2 = context + 0x900;
 
         do
         {
-            void* valA6 = *tmpD2;
-            tmpD2 = &tmpD2[1];
-            objC4 += 1;
-            *(valA6 + 0x34) -= 1;
-            result = *(a1 + 0x9c);
-        } while (objC4 < result);
+            void* data_6 = *temp_2;
+            temp_2 = &temp_2[1];
+            entity_4 += 1;
+            *(data_6 + 0x34) -= 1;
+            result = *(context + 0x9c);
+        } while (entity_4 < result);
     }
 
     return result;

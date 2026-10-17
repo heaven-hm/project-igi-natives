@@ -1,178 +1,178 @@
 // Original IGI.EXE function: Vehicle_LeftEcco2F2F2F2F (VA 0x00436DA0; static CFG gate PASS, CFG score 0.952).
 #include "Vehicle_LeftEcco2F2F2F2F.h"
-int32_t Vehicle_LeftEcco2F2F2F2F(void* a1)
+int32_t Vehicle_LeftEcco2F2F2F2F(void* context)
 
 {
-    float* objC = a1 + 0x4c;
+    float* entity_val = context + 0x4c;
     int32_t i_3 = 4;
-    float* v_14c = objC;
+    float* item_14c = entity_val;
     int32_t i;
 
     do
     {
-        long double x87_r7_2 = objC[-4] - 0.0111111114f;
-        long double f0_1 = 0f;
-        x87_r7_2 - f0_1;
+        long double fpu_val_7_2 = entity_val[-4] - 0.0111111114f;
+        long double f0_1 = 0.0f;
+        fpu_val_7_2 - f0_1;
 
-        if (*(&((x87_r7_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
-            x87_r7_2 = 0f;
+        if (*(&((fpu_val_7_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+            fpu_val_7_2 = 0.0f;
 
-        objC[-4] = x87_r7_2;
-        long double x87_r7_5 = *objC - 0.0111111114f;
-        long double f1_1 = 0f;
-        x87_r7_5 - f1_1;
+        entity_val[-4] = fpu_val_7_2;
+        long double fpu_val_7_5 = *entity_val - 0.0111111114f;
+        long double f1_1 = 0.0f;
+        fpu_val_7_5 - f1_1;
 
-        if (*(&((x87_r7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_5 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
-            x87_r7_5 = 0f;
+        if (*(&((fpu_val_7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_5 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+            fpu_val_7_5 = 0.0f;
 
-        *objC = x87_r7_5;
-        objC = &objC[1];
+        *entity_val = fpu_val_7_5;
+        entity_val = &entity_val[1];
         i = i_3;
         i_3 -= 1;
     } while (i != 1);
-    void* valA2 = g_57bdac;
-    int32_t ctxB = 0;
-    long double x87_r7_7 = *(valA2 + 8);
-    long double fpu6 = *(valA2 + 0x14);
-    int32_t objC1 = *(valA2 + 0x20);
-    void* v_16c = nullptr;
-    long double x87_r5_1 = v_16c - fpu6;
-    int32_t v_150 = objC1;
-    float v_170 = 0f;
-    v_150 = 0;
-    float v_164 = x87_r5_1;
-    long double x87_r6_3 = v_16c - x87_r7_7;
-    float v_178 = v_164;
-    v_16c = valA2 + 0x28;
-    float v_158 = v_164;
+    void* data_2 = g_57bdac;
+    int32_t context_val = 0;
+    long double fpu_val_7_7 = *(data_2 + 8);
+    long double fpu6 = *(data_2 + 0x14);
+    int32_t entity_1 = *(data_2 + 0x20);
+    void* item_16c = nullptr;
+    long double fpu_val_5_1 = item_16c - fpu6;
+    int32_t item_150 = entity_1;
+    float item_170 = 0.0f;
+    item_150 = 0;
+    float item_164 = fpu_val_5_1;
+    long double fpu_val_6_3 = item_16c - fpu_val_7_7;
+    float item_178 = item_164;
+    item_16c = data_2 + 0x28;
+    float item_158 = item_164;
     int32_t i_1 = 0;
-    float v_160 = -(x87_r6_3);
-    float tmpD = v_160;
-    v_178 = -(v_164);
-    float v_154 = tmpD;
-    float v_174_1 = -(tmpD);
-    float v_170_1 = -(v_170);
-    double v_148;
+    float item_160 = -(fpu_val_6_3);
+    float temp_val = item_160;
+    item_178 = -(item_164);
+    float item_154 = temp_val;
+    float item_174_1 = -(temp_val);
+    float item_170_1 = -(item_170);
+    double item_148;
 
     do
     {
-        int32_t saved_dst;
-        double* tmpD1 = &saved_dst + i_1 + 0x70;
-        memcpy(tmpD1, v_16c, 0x18);
-        float* srcS2 = &v_158;
-        int32_t objC4 = ctxB & 1;
+        int32_t saved_target;
+        double* temp_1 = &saved_target + i_1 + 0x70;
+        memcpy(temp_1, item_16c, 0x18);
+        float* source_2 = &item_158;
+        int32_t entity_4 = context_val & 1;
 
-        if (!objC4)
-            srcS2 = &v_178;
+        if (!entity_4)
+            source_2 = &item_178;
 
-        *(&v_148 + i_1) = *srcS2;
-        float* srcS3 = &v_158;
+        *(&item_148 + i_1) = *source_2;
+        float* source_3 = &item_158;
 
-        if (!objC4)
-            srcS3 = &v_178;
+        if (!entity_4)
+            source_3 = &item_178;
 
-        void v_140;
-        *(&v_140 + i_1) = srcS3[1];
-        float* objC5 = &v_158;
+        void item_140;
+        *(&item_140 + i_1) = source_3[1];
+        float* entity_5 = &item_158;
 
-        if (!objC4)
-            objC5 = &v_178;
+        if (!entity_4)
+            entity_5 = &item_178;
 
-        ctxB += 1;
-        void v_138;
-        *(&v_138 + i_1) = objC5[2];
-        long double x87_r7_19 = *(&v_148 + i_1) * 40960.0;
+        context_val += 1;
+        void item_138;
+        *(&item_138 + i_1) = entity_5[2];
+        long double fpu_val_7_19 = *(&item_148 + i_1) * 40960.0;
         i_1 += 0x18;
-        *(&v_160 + i_1) = x87_r7_19;
-        *(&v_158 + i_1) = *(&v_158 + i_1) * 40960.0;
-        *(&v_150 + i_1) = *(&v_150 + i_1) * 40960.0;
-        *(&v_160 + i_1) = *(&v_160 + i_1) + *tmpD1;
-        void v_128;
-        *(&v_158 + i_1) = *(&v_128 + i_1) + *(&v_158 + i_1);
-        void v_120;
-        *(&v_150 + i_1) = *(&v_120 + i_1) + *(&v_150 + i_1);
+        *(&item_160 + i_1) = fpu_val_7_19;
+        *(&item_158 + i_1) = *(&item_158 + i_1) * 40960.0;
+        *(&item_150 + i_1) = *(&item_150 + i_1) * 40960.0;
+        *(&item_160 + i_1) = *(&item_160 + i_1) + *temp_1;
+        void item_128;
+        *(&item_158 + i_1) = *(&item_128 + i_1) + *(&item_158 + i_1);
+        void item_120;
+        *(&item_150 + i_1) = *(&item_120 + i_1) + *(&item_150 + i_1);
     } while (i_1 < 0x30);
 
-    int32_t v_168 = Level_InitTextures_5(0);
-    void** v_190 = &v_16c;
-    char valA5 = Level_LoadObjects_4();
-    double v_118[0x6];
-    double* v_1a0 = &v_118;
-    int32_t v_1a8 = Level_StartMission_4();
-    void v_e8;
-    DynObj_FindSymbol_11(v_1a8, &v_e8, v_1a0, &v_148, 2, valA5, v_190, 0x20000000);
+    int32_t item_168 = Level_InitTextures_5(0);
+    void** item_190 = &item_16c;
+    char data_5 = Level_LoadObjects_4();
+    double item_118[0x6];
+    double* item_1a0 = &item_118;
+    int32_t item_1a8 = Level_StartMission_4();
+    void item_e8;
+    DynObj_FindSymbol_11(item_1a8, &item_e8, item_1a0, &item_148, 2, data_5, item_190, 0x20000000);
     int32_t i_2 = 0;
-    void v_88;
-    double* srcS4 = &v_88;
+    void item_88;
+    double* source_4 = &item_88;
 
     do
     {
-        if (srcS4[-1])
+        if (source_4[-1])
         {
-            long double x87_r7_30 = *srcS4;
+            long double fpu_val_7_30 = *source_4;
             long double f3_1 = 40960.0;
-            x87_r7_30 - f3_1;
+            fpu_val_7_30 - f3_1;
 
-            if (*(&((x87_r7_30 < f3_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_30, f3_1) ? 1 : 0) << 0xa
-                | (x87_r7_30 == f3_1 ? 1 : 0) << 0xe) + 1) & 1)
+            if (*(&((fpu_val_7_30 < f3_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_30, f3_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_30 == f3_1 ? 1 : 0) << 0xe) + 1) & 1)
             {
-                v_178 = *srcS4 * 0.000244140625;
-                float valA9 = v_178;
-                int32_t objC6;
+                item_178 = *source_4 * 0.000244140625;
+                float data_9 = item_178;
+                int32_t entity_6;
 
-                if (valA9 <= 1)
-                    objC6 = 0;
-                else if (valA9 > 2)
+                if (data_9 <= 1)
+                    entity_6 = 0;
+                else if (data_9 > 2)
                 {
-                    int32_t objC7 = 0;
-                    objC7 = valA9 > 4;
-                    objC6 = objC7 + 2;
+                    int32_t entity_7 = 0;
+                    entity_7 = data_9 > 4;
+                    entity_6 = entity_7 + 2;
                 }
                 else
-                    objC6 = 1;
+                    entity_6 = 1;
 
                 if (!(i_2 & 1))
                 {
-                    long double x87_r7_37 = *(a1 + (objC6 << 2) + 0x4c) + 1f;
-                    long double f4_1 = 1f;
-                    x87_r7_37 - f4_1;
+                    long double fpu_val_7_37 = *(context + (entity_6 << 2) + 0x4c) + 1.0f;
+                    long double f4_1 = 1.0f;
+                    fpu_val_7_37 - f4_1;
 
-                    if (!(*(&((x87_r7_37 < f4_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_37, f4_1) ? 1 : 0) << 0xa
-                            | (x87_r7_37 == f4_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
-                        x87_r7_37 = 1f;
+                    if (!(*(&((fpu_val_7_37 < f4_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_37, f4_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_37 == f4_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                        fpu_val_7_37 = 1.0f;
 
-                    *(a1 + (objC6 << 2) + 0x4c) = x87_r7_37;
+                    *(context + (entity_6 << 2) + 0x4c) = fpu_val_7_37;
                 }
                 else
                 {
-                    long double x87_r7_34 = *(a1 + (objC6 << 2) + 0x3c) + 1f;
-                    long double f5_1 = 1f;
-                    x87_r7_34 - f5_1;
+                    long double fpu_val_7_34 = *(context + (entity_6 << 2) + 0x3c) + 1.0f;
+                    long double f5_1 = 1.0f;
+                    fpu_val_7_34 - f5_1;
 
-                    if (!(*(&((x87_r7_34 < f5_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_34, f5_1) ? 1 : 0) << 0xa
-                            | (x87_r7_34 == f5_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
-                        x87_r7_34 = 1f;
+                    if (!(*(&((fpu_val_7_34 < f5_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_34, f5_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_34 == f5_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                        fpu_val_7_34 = 1.0f;
 
-                    *(a1 + (objC6 << 2) + 0x3c) = x87_r7_34;
+                    *(context + (entity_6 << 2) + 0x3c) = fpu_val_7_34;
                 }
             }
         }
 
         i_2 += 1;
-        srcS4 = &srcS4[0xe];
+        source_4 = &source_4[0xe];
     } while (i_2 < 2);
 
-    v_190 = *(a1 + 0x48);
-    v_1a0 = *(a1 + 0x40);
-    v_1a8 = *(a1 + 0x3c);
+    item_190 = *(context + 0x48);
+    item_1a0 = *(context + 0x40);
+    item_1a8 = *(context + 0x3c);
     SoundSys_Update3DPosition_11("Left ecco: %.2f %.2f %.2f %.2f\n");
-    v_190 = *(a1 + 0x58);
-    v_1a0 = *(a1 + 0x50);
-    v_1a8 = *v_14c;
+    item_190 = *(context + 0x58);
+    item_1a0 = *(context + 0x50);
+    item_1a8 = *item_14c;
     return SoundSys_Update3DPosition_11("Right ecco: %.2f %.2f %.2f %.2f\n");
 }

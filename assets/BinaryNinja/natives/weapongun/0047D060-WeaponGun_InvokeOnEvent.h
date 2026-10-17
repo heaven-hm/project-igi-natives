@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0047D060 WeaponGun_InvokeOnEvent | gate PASS | openigi True */
-void*(void* arg1, int32_t arg2);
+void* WeaponGun_InvokeOnEvent(void* context, int32_t param_2);

@@ -1,129 +1,129 @@
 // Original IGI.EXE function: Missile_Run (VA 0x00428390; static CFG gate PASS, CFG score 0.947).
 #include "Missile_Run.h"
-int32_t Missile_Run(int32_t* a1)
+int32_t Missile_Run(int32_t* context)
 
 {
-    void* flagP = *(a1[0x6d] + 0x2d4);
-    int32_t* valA1 = a1[0x218];
+    void* flagP = *(context[0x6d] + 0x2d4);
+    int32_t* data_1 = context[0x218];
 
-    if (valA1)
+    if (data_1)
     {
-        int32_t valA2 = *valA1;
+        int32_t data_2 = *data_1;
 
-        if (valA2)
-            memcpy(&a1[0x20a], valA2 + 0x20, 0x18);
+        if (data_2)
+            memcpy(&context[0x20a], data_2 + 0x20, 0x18);
     }
 
-    int32_t valA3 = *(flagP + 0x11c);
+    int32_t data_3 = *(flagP + 0x11c);
 
-    if (!valA3)
+    if (!data_3)
     {
-        void* v_ac_1 = &a1[0x20a];
-        Menu_UpdateLanguage_19(a1);
+        void* item_ac_1 = &context[0x20a];
+        Menu_UpdateLanguage_19(context);
     }
-    else if (valA3 == 1)
-        Menu_FormatScreen_19(a1);
-    else if (valA3 == 2)
-        Menu_DrawWidget_19(a1, &a1[0x20a]);
-    else if (valA3 == 3)
-        Menu_HandleInput_19(a1, &a1[0x20a]);
-    else if (valA3 == 4)
-        Menu_PlayMusic_19(a1);
+    else if (data_3 == 1)
+        Menu_FormatScreen_19(context);
+    else if (data_3 == 2)
+        Menu_DrawWidget_19(context, &context[0x20a]);
+    else if (data_3 == 3)
+        Menu_HandleInput_19(context, &context[0x20a]);
+    else if (data_3 == 4)
+        Menu_PlayMusic_19(context);
 
-    long double fpu7 = a1[0x219];
-    long double f0 = 0f;
+    long double fpu7 = context[0x219];
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (!(*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
             | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 0x40) && *(flagP + 0x118))
-        Menu_LeaveMenus_19(a1);
+        Menu_LeaveMenus_19(context);
 
-    Menu_UpdateLanguage_20(a1);
-    Menu_RequestScreen_19(a1);
-    VehicleChild_Dispatch(a1);
-    int32_t* i = a1[2];
+    Menu_UpdateLanguage_20(context);
+    Menu_RequestScreen_19(context);
+    VehicleChild_Dispatch(context);
+    int32_t* i = context[2];
 
     if (*i && i)
     {
-        int32_t tmpD2 = g_afa7e0;
+        int32_t temp_2 = g_afa7e0;
 
         do
         {
-            int32_t* srcS2 = *i;
-            void* valA10;
+            int32_t* source_2 = *i;
+            void* data_10;
 
-            if (!srcS2)
-                valA10 = nullptr;
+            if (!source_2)
+                data_10 = nullptr;
             else
             {
-                int32_t valA7 = *srcS2;
-                int32_t valA8 = -(valA7);
-                valA10 = (valA8 - valA8) & srcS2;
+                int32_t data_7 = *source_2;
+                int32_t data_8 = -(data_7);
+                data_10 = (data_8 - data_8) & source_2;
             }
 
-            *((tmpD2 << 2) + &g_afa6e0) = valA10;
-            int32_t tmpD3 = tmpD2 + 1;
-            int32_t valA11 = 0;
-            g_afa7e0 = tmpD3;
-            valA11 = i[7];
-            int32_t valA12 = *((valA11 << 2) + &g_a970e0);
+            *((temp_2 << 2) + &g_afa6e0) = data_10;
+            int32_t temp_3 = temp_2 + 1;
+            int32_t data_11 = 0;
+            g_afa7e0 = temp_3;
+            data_11 = i[7];
+            int32_t data_12 = *((data_11 << 2) + &g_a970e0);
 
-            if (valA12)
+            if (data_12)
             {
-                valA12(i);
-                tmpD3 = g_afa7e0;
+                data_12(i);
+                temp_3 = g_afa7e0;
             }
 
-            i = *((tmpD3 << 2) + &g_afa6dc);
-            tmpD2 = tmpD3 - 1;
-            g_afa7e0 = tmpD2;
+            i = *((temp_3 << 2) + &g_afa6dc);
+            temp_2 = temp_3 - 1;
+            g_afa7e0 = temp_2;
         } while (i);
     }
 
-    int32_t result = a1[0x6e];
-    int32_t v_98;
-    void v_90;
-    double v_88[0x3];
-    int32_t v_70[0x16];
+    int32_t result = context[0x6e];
+    int32_t item_98;
+    void item_90;
+    double item_88[0x3];
+    int32_t item_70[0x16];
 
     if (!result)
     {
         if (!(*(g_bc2360 + 0x68) & 0x1f))
         {
-            memcpy(&v_88, &a1[8], 0x18);
-            int32_t* v_8c_2 = a1;
-            v_98 = 0;
-            int32_t v_94_2 = 0xc14f4000;
-            DynObj_LookupHashItem_10(Level_StartMission_4(), &v_70, &v_88, 1, &v_98, 0xc, &v_90,
+            memcpy(&item_88, &context[8], 0x18);
+            int32_t* item_8c_2 = context;
+            item_98 = 0;
+            int32_t item_94_2 = 0xc14f4000;
+            DynObj_LookupHashItem_10(Level_StartMission_4(), &item_70, &item_88, 1, &item_98, 0xc, &item_90,
                 0xffffffff);
             int32_t result_1;
             result = result_1;
 
             if (!result)
-                return QTask_FindType(a1);
+                return QTask_FindType(context);
         }
 
         return result;
     }
 
-    int32_t valA13 = 0;
-    char* objC2 = a1 + 0x1d6;
+    int32_t data_13 = 0;
+    char* entity_2 = context + 0x1d6;
 
-    while (!*objC2)
+    while (!*entity_2)
     {
-        valA13 += 1;
-        objC2 = &objC2[0x38];
+        data_13 += 1;
+        entity_2 = &entity_2[0x38];
 
-        if (valA13 >= 0x16)
+        if (data_13 >= 0x16)
             break;
     }
 
-    memcpy(&v_88, &a1[8], 0x18);
-    int32_t* v_8c_1 = a1;
-    v_98 = 0;
-    int32_t v_94_1 = 0xc0c80000;
-    DynObj_LookupHashItem_10(Level_StartMission_4(), &v_70, &v_88, 1, &v_98, 0xc, &v_90, 0xffffffff);
-    FX_SmokeEmit(&v_88, 1, 1, 0x40a00000, 0x46200000, 0x45e00000, 0x45c00000, 0xa, 5, &v_70,
-        "1009_01_1", "explo_03_l", 0x15, 2, 0x47c80000, a1[0x225]);
-    return QTask_FindType(a1);
+    memcpy(&item_88, &context[8], 0x18);
+    int32_t* item_8c_1 = context;
+    item_98 = 0;
+    int32_t item_94_1 = 0xc0c80000;
+    DynObj_LookupHashItem_10(Level_StartMission_4(), &item_70, &item_88, 1, &item_98, 0xc, &item_90, 0xffffffff);
+    FX_SmokeEmit(&item_88, 1, 1, 0x40a00000, 0x46200000, 0x45e00000, 0x45c00000, 0xa, 5, &item_70,
+        "1009_01_1", "explo_03_l", 0x15, 2, 0x47c80000, context[0x225]);
+    return QTask_FindType(context);
 }

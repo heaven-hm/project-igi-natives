@@ -1,10 +1,10 @@
 // Original IGI.EXE function: Camera_ApplyWideScreen_5 (VA 0x004A56E4; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyWideScreen_5.h"
-long double Camera_ApplyWideScreen_5(long double a1 @ fp0, long double a2 @ fp1)
+long double Camera_ApplyWideScreen_5(long double context , long double param_2 )
 
 {
     bool c1 = false;
-    long double result = a2;
+    long double result = param_2;
     bool c0;
     bool c2;
     bool c3;
@@ -13,16 +13,16 @@ long double Camera_ApplyWideScreen_5(long double a1 @ fp0, long double a2 @ fp1)
     {
         if (g_93605c == 1)
         {
-            int16_t x87control;
+            int16_t fpu_control;
             long double result_2;
-            result_2 = Camera_ResetMatrix_16(x87control, result, a1);
+            result_2 = Camera_ResetMatrix_16(fpu_control, result, context);
             result = result_2;
         }
         else
         {
             long double result_1;
             uint8_t f0;
-            result_1 = __fprem(result, a1);
+            result_1 = __fprem(result, context);
             result = result_1;
 
             if (!c2)

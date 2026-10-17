@@ -1,71 +1,71 @@
 // Original IGI.EXE function: DynObj_InsertHashItem_2 (VA 0x004C04B0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_InsertHashItem_2.h"
-uint32_t DynObj_InsertHashItem_2(int32_t* a1, int32_t** a2, char* a3)
+uint32_t DynObj_InsertHashItem_2(int32_t* context, int32_t** param_2, char* param_3)
 
 {
-    uint32_t valA1 = DynObj_LookupHashItem_2(a3, a1[1]);
-    int32_t* flagP = *(*a1 + valA1 * 0xc);
-    int32_t* dstD = *flagP;
+    uint32_t data_1 = DynObj_LookupHashItem_2(param_3, context[1]);
+    int32_t* flagP = *(*context + data_1 * 0xc);
+    int32_t* dest_val = *flagP;
 
-    if (dstD)
+    if (dest_val)
     {
         while (true)
         {
-            char* srcS1 = flagP[2];
-            char* valA2 = a3;
+            char* source_1 = flagP[2];
+            char* data_2 = param_3;
 
             while (true)
             {
-                char tmpD1 = *valA2;
-                char f0_1 = *srcS1;
-                bool c_1 = tmpD1 < f0_1;
+                char temp_1 = *data_2;
+                char f0_1 = *source_1;
+                bool c_1 = temp_1 < f0_1;
 
-                if (tmpD1 == f0_1)
+                if (temp_1 == f0_1)
                 {
-                    if (!tmpD1)
+                    if (!temp_1)
                     {
-                        valA1 = 0;
+                        data_1 = 0;
                         break;
                     }
 
-                    tmpD1 = valA2[1];
-                    char f3_1 = srcS1[1];
-                    c_1 = tmpD1 < f3_1;
+                    temp_1 = data_2[1];
+                    char f3_1 = source_1[1];
+                    c_1 = temp_1 < f3_1;
 
-                    if (tmpD1 == f3_1)
+                    if (temp_1 == f3_1)
                     {
-                        valA2 = &valA2[2];
-                        srcS1 = &srcS1[2];
+                        data_2 = &data_2[2];
+                        source_1 = &source_1[2];
 
-                        if (tmpD1)
+                        if (temp_1)
                             continue;
 
-                        valA1 = 0;
+                        data_1 = 0;
                         break;
                     }
                 }
 
-                valA1 = valA2 - valA2 + 1;
+                data_1 = data_2 - data_2 + 1;
                 break;
             }
 
-            if (!valA1)
+            if (!data_1)
             {
-                int32_t** valA4 = a2;
-                *valA4 = flagP;
-                valA4 = 1;
-                return valA4;
+                int32_t** data_4 = param_2;
+                *data_4 = flagP;
+                data_4 = 1;
+                return data_4;
             }
 
-            flagP = dstD;
-            dstD = *dstD;
+            flagP = dest_val;
+            dest_val = *dest_val;
 
-            if (!dstD)
+            if (!dest_val)
                 break;
         }
     }
 
-    *a2 = nullptr;
-    valA1 = 0;
-    return valA1;
+    *param_2 = nullptr;
+    data_1 = 0;
+    return data_1;
 }

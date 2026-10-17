@@ -1,166 +1,166 @@
 // Original IGI.EXE function: Car_WheelDrive (VA 0x00430D10; static CFG gate PASS, CFG score 1.000).
 #include "Car_WheelDrive.h"
-void* Car_WheelDrive(float* a1, float a2, float a3)
+void* Car_WheelDrive(float* context, float param_2, float param_3)
 
 {
-    float srcS = a1;
-    float dstD = a2;
-    void* tmpD = *(srcS + 0x1b4);
-    int32_t objC = dstD * 5;
-    void* flagP = *(tmpD + 0x2d4);
-    void* ctxB = flagP + (objC << 2);
-    a2 = *(flagP + (objC << 2) + 0x120) * 0.0174532924f * *(srcS + 0x72c);
+    float source_val = context;
+    float dest_val = param_2;
+    void* temp_val = *(source_val + 0x1b4);
+    int32_t entity_val = dest_val * 5;
+    void* flagP = *(temp_val + 0x2d4);
+    void* context_val = flagP + (entity_val << 2);
+    param_2 = *(flagP + (entity_val << 2) + 0x120) * 0.0174532924f * *(source_val + 0x72c);
     float flagP1;
 
-    if (!*(ctxB + 0x11d))
-        flagP1 = a3;
+    if (!*(context_val + 0x11d))
+        flagP1 = param_3;
     else
     {
-        int32_t valA3 = dstD * 7;
-        void* objC1 = srcS + (valA3 << 2);
-        int16_t valA4;
-        valA4 = *(srcS + (valA3 << 2) + 0x75d);
+        int32_t data_3 = dest_val * 7;
+        void* entity_1 = source_val + (data_3 << 2);
+        int16_t data_4;
+        data_4 = *(source_val + (data_3 << 2) + 0x75d);
 
-        if (!valA4)
+        if (!data_4)
         {
         label_430d8b:
-            valA4 = *(srcS + 0x6d9);
+            data_4 = *(source_val + 0x6d9);
 
-            if (valA4)
+            if (data_4)
                 goto label_430dac;
 
-            flagP1 = a3;
+            flagP1 = param_3;
         }
         else
         {
-            long double x87_r7_3 = *(srcS + 0x720);
-            long double f1_1 = 0f;
-            x87_r7_3 - f1_1;
-            valA4 = (x87_r7_3 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_3 == f1_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_3 = *(source_val + 0x720);
+            long double f1_1 = 0.0f;
+            fpu_val_7_3 - f1_1;
+            data_4 = (fpu_val_7_3 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_3 == f1_1 ? 1 : 0) << 0xe;
 
-            if (*(&valA4 + 1) & 0x40)
+            if (*(&data_4 + 1) & 0x40)
                 goto label_430d8b;
 
         label_430dac:
-            float tmpD2 = *(srcS + 0xf8);
-            int32_t v_34_1 = *(objC1 + 0x76c);
-            long double x87_r7_7 =
-                *(*(tmpD + 0x2d4) + 0x1c) * *(srcS + 0x720) * 44.6008873f / *(srcS + 0x758);
-            int32_t v_30_1 = *(objC1 + 0x770);
-            float tmpD5 = *(srcS + 0x74);
-            float tmpD6 = *(srcS + 0x8c);
-            int32_t v_2c_1 = *(objC1 + 0x774);
-            float valA8 = *(srcS + 0x80);
-            long double x87_r6_1 = *(objC1 + 0x760);
-            long double f2_1 = tmpD5;
-            x87_r6_1 - f2_1;
-            int16_t valA9 = (x87_r6_1 < f2_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_1, f2_1) ? 1 : 0) << 0xa
-                | (x87_r6_1 == f2_1 ? 1 : 0) << 0xe | 0x3800;
-            float v_40;
-            float v_3c;
-            float v_38;
+            float temp_2 = *(source_val + 0xf8);
+            int32_t item_34_1 = *(entity_1 + 0x76c);
+            long double fpu_val_7_7 =
+                *(*(temp_val + 0x2d4) + 0x1c) * *(source_val + 0x720) * 44.6008873f / *(source_val + 0x758);
+            int32_t item_30_1 = *(entity_1 + 0x770);
+            float temp_5 = *(source_val + 0x74);
+            float temp_6 = *(source_val + 0x8c);
+            int32_t item_2c_1 = *(entity_1 + 0x774);
+            float data_8 = *(source_val + 0x80);
+            long double fpu_val_6_1 = *(entity_1 + 0x760);
+            long double f2_1 = temp_5;
+            fpu_val_6_1 - f2_1;
+            int16_t data_9 = (fpu_val_6_1 < f2_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_1, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_6_1 == f2_1 ? 1 : 0) << 0xe | 0x3800;
+            float item_40;
+            float item_3c;
+            float item_38;
 
-            if (!(*(&valA9 + 1) & 0x40))
+            if (!(*(&data_9 + 1) & 0x40))
             {
             label_430e43:
-                long double x87_r6_6 = tmpD6 * *(objC1 + 0x764) - valA8 * *(objC1 + 0x768);
-                long double x87_r5_6 = -((tmpD6 * *(objC1 + 0x760) - tmpD5 * *(objC1 + 0x768)));
-                long double x87_r4_5 = valA8 * *(objC1 + 0x760) - tmpD5 * *(objC1 + 0x764);
-                long double x87_r3_7 = x87_r6_6 * *(objC1 + 0x768);
-                long double x87_r3_9 = x87_r4_5 * *(objC1 + 0x760);
-                v_40 = x87_r5_6 * *(objC1 + 0x768) - x87_r4_5 * *(objC1 + 0x764);
-                v_3c = -((x87_r3_7 - x87_r3_9));
-                v_38 = x87_r6_6 * *(objC1 + 0x764) - x87_r5_6 * *(objC1 + 0x760);
+                long double fpu_val_6_6 = temp_6 * *(entity_1 + 0x764) - data_8 * *(entity_1 + 0x768);
+                long double fpu_val_5_6 = -((temp_6 * *(entity_1 + 0x760) - temp_5 * *(entity_1 + 0x768)));
+                long double fpu_val_4_5 = data_8 * *(entity_1 + 0x760) - temp_5 * *(entity_1 + 0x764);
+                long double fpu_val_3_7 = fpu_val_6_6 * *(entity_1 + 0x768);
+                long double fpu_val_3_9 = fpu_val_4_5 * *(entity_1 + 0x760);
+                item_40 = fpu_val_5_6 * *(entity_1 + 0x768) - fpu_val_4_5 * *(entity_1 + 0x764);
+                item_3c = -((fpu_val_3_7 - fpu_val_3_9));
+                item_38 = fpu_val_6_6 * *(entity_1 + 0x764) - fpu_val_5_6 * *(entity_1 + 0x760);
             }
             else
             {
-                long double x87_r6_2 = *(objC1 + 0x764);
-                long double f3_1 = valA8;
-                x87_r6_2 - f3_1;
-                valA9 = (x87_r6_2 < f3_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_2, f3_1) ? 1 : 0) << 0xa
-                    | (x87_r6_2 == f3_1 ? 1 : 0) << 0xe | 0x3800;
+                long double fpu_val_6_2 = *(entity_1 + 0x764);
+                long double f3_1 = data_8;
+                fpu_val_6_2 - f3_1;
+                data_9 = (fpu_val_6_2 < f3_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_2, f3_1) ? 1 : 0) << 0xa
+                    | (fpu_val_6_2 == f3_1 ? 1 : 0) << 0xe | 0x3800;
 
-                if (!(*(&valA9 + 1) & 0x40))
+                if (!(*(&data_9 + 1) & 0x40))
                     goto label_430e43;
 
-                long double x87_r6_3 = *(objC1 + 0x768);
-                long double f4_1 = tmpD6;
-                x87_r6_3 - f4_1;
-                valA9 = (x87_r6_3 < f4_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_3, f4_1) ? 1 : 0) << 0xa
-                    | (x87_r6_3 == f4_1 ? 1 : 0) << 0xe | 0x3800;
+                long double fpu_val_6_3 = *(entity_1 + 0x768);
+                long double f4_1 = temp_6;
+                fpu_val_6_3 - f4_1;
+                data_9 = (fpu_val_6_3 < f4_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_3, f4_1) ? 1 : 0) << 0xa
+                    | (fpu_val_6_3 == f4_1 ? 1 : 0) << 0xe | 0x3800;
 
-                if (!(*(&valA9 + 1) & 0x40))
+                if (!(*(&data_9 + 1) & 0x40))
                     goto label_430e43;
             }
 
-            valA9 = *(flagP + 0x261);
+            data_9 = *(flagP + 0x261);
 
-            if (!valA9)
-                flagP1 = a3;
+            if (!data_9)
+                flagP1 = param_3;
             else
             {
-                flagP1 = a3;
-                x87_r7_7 = Vehicle_InitPlane(srcS, flagP1) * x87_r7_7;
+                flagP1 = param_3;
+                fpu_val_7_7 = Vehicle_InitPlane(source_val, flagP1) * fpu_val_7_7;
             }
 
-            long double x87_r7_10 = x87_r7_7 - tmpD2;
-            v_40 = x87_r7_10 * v_40;
-            float v_3c_1 = x87_r7_10 * v_3c;
-            long double x87_r7_11 = x87_r7_10 * v_38;
-            float v_48_3 =
-                v_3c_1 * *(srcS + 0x80) + v_40 * *(srcS + 0x74) + x87_r7_11 * *(srcS + 0x8c);
-            long double x87_r6_23 = v_40 * *(srcS + 0x78);
-            long double x87_r6_25 = x87_r7_11 * *(srcS + 0x90);
-            v_40 = v_40 * *(srcS + 0x70) + x87_r7_11 * *(srcS + 0x88) + v_3c_1 * *(srcS + 0x7c);
-            float v_68_2 = v_48_3;
-            float v_44_3 = x87_r6_23 + x87_r6_25 + v_3c_1 * *(srcS + 0x84);
-            float v_28;
-            Sys_DispatchOpcode_12(&v_28, -(a2));
-            float v_1c;
-            float v_18;
-            float v_14;
-            float v_48_4 = v_1c * v_40 + v_14 * v_44_3 + v_18 * v_48_3;
-            float v_10;
-            long double x87_r7_26 = v_10 * v_40;
-            float v_24;
-            float v_20;
-            v_40 = v_28 * v_40 + v_20 * v_44_3 + v_24 * v_48_3;
-            float v_3c_3 = v_48_4;
-            float v_c;
-            float v_8;
-            float v_38_2 = x87_r7_26 + v_8 * v_44_3 + v_c * v_48_3;
-            ForceAccumulator_Add(srcS + 0xf0, &v_40);
+            long double fpu_val_7_10 = fpu_val_7_7 - temp_2;
+            item_40 = fpu_val_7_10 * item_40;
+            float item_3c_1 = fpu_val_7_10 * item_3c;
+            long double fpu_val_7_11 = fpu_val_7_10 * item_38;
+            float item_48_3 =
+                item_3c_1 * *(source_val + 0x80) + item_40 * *(source_val + 0x74) + fpu_val_7_11 * *(source_val + 0x8c);
+            long double fpu_val_6_23 = item_40 * *(source_val + 0x78);
+            long double fpu_val_6_25 = fpu_val_7_11 * *(source_val + 0x90);
+            item_40 = item_40 * *(source_val + 0x70) + fpu_val_7_11 * *(source_val + 0x88) + item_3c_1 * *(source_val + 0x7c);
+            float item_68_2 = item_48_3;
+            float item_44_3 = fpu_val_6_23 + fpu_val_6_25 + item_3c_1 * *(source_val + 0x84);
+            float item_28;
+            Sys_DispatchOpcode_12(&item_28, -(param_2));
+            float item_1c;
+            float item_18;
+            float item_14;
+            float item_48_4 = item_1c * item_40 + item_14 * item_44_3 + item_18 * item_48_3;
+            float item_10;
+            long double fpu_val_7_26 = item_10 * item_40;
+            float item_24;
+            float item_20;
+            item_40 = item_28 * item_40 + item_20 * item_44_3 + item_24 * item_48_3;
+            float item_3c_3 = item_48_4;
+            float item_c;
+            float item_8;
+            float item_38_2 = fpu_val_7_26 + item_8 * item_44_3 + item_c * item_48_3;
+            ForceAccumulator_Add(source_val + 0xf0, &item_40);
         }
     }
 
-    void* result = dstD * 7;
-    void* objC5 = srcS + (result << 2);
-    result = *(srcS + (result << 2) + 0x75d);
+    void* result = dest_val * 7;
+    void* entity_5 = source_val + (result << 2);
+    result = *(source_val + (result << 2) + 0x75d);
 
     if (!result || flagP1 < 0)
         return result;
 
-    float v_54_2;
+    float item_54_2;
 
-    if (!*(ctxB + 0x11c))
-        v_54_2 = 0f;
+    if (!*(context_val + 0x11c))
+        item_54_2 = 0.0f;
     else
-        v_54_2 = a2;
+        item_54_2 = param_2;
 
-    float dstD2 = *(srcS + flagP1 * 0x38 + 0x1d8);
-    a3 = *(srcS + flagP1 * 0x38 + 0x1dc);
+    float dest_2 = *(source_val + flagP1 * 0x38 + 0x1d8);
+    param_3 = *(source_val + flagP1 * 0x38 + 0x1dc);
 
-    if (*(srcS + 0x744))
+    if (*(source_val + 0x744))
     {
-        a3 = dstD2;
-        *(srcS + 0x720) = *(srcS + 0x720) * 0.949999988f;
+        param_3 = dest_2;
+        *(source_val + 0x720) = *(source_val + 0x720) * 0.949999988f;
     }
 
-    int32_t v_68_4 = 0x42a3d70a;
-    return Wheel_FrictionDrive(srcS + 0xf0, srcS + 0x70, objC5 + 0x76c, objC5 + 0x760, v_54_2,
-        dstD2, a3);
+    int32_t item_68_4 = 0x42a3d70a;
+    return Wheel_FrictionDrive(source_val + 0xf0, source_val + 0x70, entity_5 + 0x76c, entity_5 + 0x760, item_54_2,
+        dest_2, param_3);
 }

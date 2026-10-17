@@ -1,36 +1,36 @@
 // Original IGI.EXE function: DynObj_MtpNlodvirmodelD (VA 0x004CEBA0; static CFG gate FAIL, CFG score 0.778).
 #include "DynObj_MtpNlodvirmodelD.h"
-void* DynObj_MtpNlodvirmodelD(int32_t a1)
+void* DynObj_MtpNlodvirmodelD(int32_t context)
 
 {
-    int32_t dstD = a1;
+    int32_t dest_val = context;
 
-    if (!dstD)
+    if (!dest_val)
         return 0;
 
-    int32_t valA1 = g_a4edec;
+    int32_t data_1 = g_a4edec;
 
-    if (valA1 < 0x258)
+    if (data_1 < 0x258)
     {
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD;
-            dstD += 1;
+            bool flag_0_1 = 0 != *dest_val;
+            dest_val += 1;
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC = ~i;
-        int32_t srcS1;
-        int32_t dstD3;
-        dstD3 = memcpy(valA1 * 0x48 + &g_a443b4, dstD - objC, objC & 0xfffffffc);
-        memcpy(dstD3, srcS1, objC & 3);
+        int32_t entity_val = ~i;
+        int32_t source_1;
+        int32_t dest_3;
+        dest_3 = memcpy(data_1 * 0x48 + &g_a443b4, dest_val - entity_val, entity_val & 0xfffffffc);
+        memcpy(dest_3, source_1, entity_val & 3);
         g_a4edec += 1;
-        return valA1 * 0x48 + &g_a443a0;
+        return data_1 * 0x48 + &g_a443a0;
     }
 
     int32_t saved_obj = 0x258;

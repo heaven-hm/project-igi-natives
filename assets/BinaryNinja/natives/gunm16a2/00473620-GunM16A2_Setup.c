@@ -1,43 +1,43 @@
 // Original IGI.EXE function: GunM16A2_Setup (VA 0x00473620; static CFG gate PASS, CFG score 1.000).
 #include "GunM16A2_Setup.h"
-int32_t GunM16A2_Setup(int32_t a1, float a2)
+int32_t GunM16A2_Setup(int32_t context, float param_2)
 
 {
-    int32_t* dstD = a2;
+    int32_t* dest_val = param_2;
     int32_t flagP = 0;
-    int32_t* v_18 = nullptr;
-    int32_t srcS = *dstD;
-    (*(((FX_DebrisSpawn_8() * 0x180 + Weapon_ComputeAccuracy_5()) << 2) + &g_a96ae0))(a1, dstD);
-    void* ctxB3 = *(a1 + 0x14);
-    uint32_t valA6 = Weapon_ReloadClip_8();
-    int32_t objC = 0;
-    objC = *(ctxB3 + 0x1c);
-    int32_t valA10 = *(((valA6 * 0x180 + objC) << 2) + &g_a96ae0);
+    int32_t* item_18 = nullptr;
+    int32_t source_val = *dest_val;
+    (*(((FX_DebrisSpawn_8() * 0x180 + Weapon_ComputeAccuracy_5()) << 2) + &g_a96ae0))(context, dest_val);
+    void* context_3 = *(context + 0x14);
+    uint32_t data_6 = Weapon_ReloadClip_8();
+    int32_t entity_val = 0;
+    entity_val = *(context_3 + 0x1c);
+    int32_t data_10 = *(((data_6 * 0x180 + entity_val) << 2) + &g_a96ae0);
 
-    if (valA10)
-        valA10(ctxB3, &v_18);
+    if (data_10)
+        data_10(context_3, &item_18);
 
-    int32_t valA11 = Weapon_FireBullet_8("AMMO_ID_M203");
-    int32_t* valA13 = Weapon_UpdateMuzzleFlash_8(v_18, valA11);
+    int32_t data_11 = Weapon_FireBullet_8("AMMO_ID_M203");
+    int32_t* data_13 = Weapon_UpdateMuzzleFlash_8(item_18, data_11);
 
-    if (valA13)
-        flagP = valA13[1];
+    if (data_13)
+        flagP = data_13[1];
 
-    float v_14;
-    Weapon_UpdateRecoil_6(&a2, &v_14, a1, srcS);
-    int32_t v_3c = flagP;
-    void v_10;
-    Game_DataSymbolLoad(&v_10, "%-4d");
-    Sys_FreeMemory_18(*(srcS + 0x4e0), &v_10);
-    long double fpu7 = Sys_CheckHeap_21(*(srcS + 0x4e0));
-    long double x87_r7_1 = a2 - fpu7;
-    a2 = x87_r7_1;
-    *(*(srcS + 0x4e0) + 4) = x87_r7_1;
-    *(*(srcS + 0x4e0) + 8) = v_14;
-    Sys_CloseFileStream_18(*(srcS + 0x4e0));
-    a2 = a2 - 8f;
-    int32_t valA17 = Sys_CloseFileStream_17(srcS + 0x14c);
-    float tmpD2 = v_14;
-    a2 = a2 - valA17;
-    return Sys_ResolveSymbol_14(srcS + 0x14c, a2, tmpD2, 128f, 128f, 128f, 0, 0, 0);
+    float item_14;
+    Weapon_UpdateRecoil_6(&param_2, &item_14, context, source_val);
+    int32_t item_3c = flagP;
+    void item_10;
+    Game_DataSymbolLoad(&item_10, "%-4d");
+    Sys_FreeMemory_18(*(source_val + 0x4e0), &item_10);
+    long double fpu7 = Sys_CheckHeap_21(*(source_val + 0x4e0));
+    long double fpu_val_7_1 = param_2 - fpu7;
+    param_2 = fpu_val_7_1;
+    *(*(source_val + 0x4e0) + 4) = fpu_val_7_1;
+    *(*(source_val + 0x4e0) + 8) = item_14;
+    Sys_CloseFileStream_18(*(source_val + 0x4e0));
+    param_2 = param_2 - 8.0f;
+    int32_t data_17 = Sys_CloseFileStream_17(source_val + 0x14c);
+    float temp_2 = item_14;
+    param_2 = param_2 - data_17;
+    return Sys_ResolveSymbol_14(source_val + 0x14c, param_2, temp_2, 128.0f, 128.0f, 128.0f, 0, 0, 0);
 }

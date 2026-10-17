@@ -1,113 +1,113 @@
 // Original IGI.EXE function: HumanPlayer_HandleInput_7 (VA 0x0040E9C0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_HandleInput_7.h"
-int32_t* HumanPlayer_HandleInput_7(void* a1, int32_t* a2)
+int32_t* HumanPlayer_HandleInput_7(void* context, int32_t* param_2)
 
 {
-    int32_t* dstD = a2;
-    float valA = dstD[0x357];
-    int32_t* tmpD;
+    int32_t* dest_val = param_2;
+    float data_val = dest_val[0x357];
+    int32_t* temp_val;
 
-    if (dstD[0x356] != valA)
-        tmpD = HumanPlayer_CheckCollision_9(dstD, valA);
+    if (dest_val[0x356] != data_val)
+        temp_val = HumanPlayer_CheckCollision_9(dest_val, data_val);
 
-    void* valA1;
-    int32_t objC1;
-    valA1 = Table_GetAt(&dstD[0x131], 0);
-    void* flagP = valA1;
-    void* v_8 = flagP;
-    void* valA2 = *(a1 + 8);
-    int16_t valA3;
-    valA3 = dstD[0x351];
+    void* data_1;
+    int32_t entity_1;
+    data_1 = Table_GetAt(&dest_val[0x131], 0);
+    void* flagP = data_1;
+    void* item_8 = flagP;
+    void* data_2 = *(context + 8);
+    int16_t data_3;
+    data_3 = dest_val[0x351];
 
-    if (valA3)
+    if (data_3)
     {
-        Human_TaskViewReset(dstD[0x13b]);
-        int32_t* valA4 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0;
-        int32_t valA5 = *valA4;
-        *(a1 + 0x14) = valA5;
-        return valA5(a1, dstD);
+        Human_TaskViewReset(dest_val[0x13b]);
+        int32_t* data_4 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0;
+        int32_t data_5 = *data_4;
+        *(context + 0x14) = data_5;
+        return data_5(context, dest_val);
     }
 
-    long double fpu7 = dstD[0x8e];
-    long double f0 = 0f;
+    long double fpu7 = dest_val[0x8e];
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (!(*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 0x40))
     {
-        long double x87_r7_1 = dstD[0x66];
-        long double f1_1 = 0f;
-        x87_r7_1 - f1_1;
+        long double fpu_val_7_1 = dest_val[0x66];
+        long double f1_1 = 0.0f;
+        fpu_val_7_1 - f1_1;
 
-        if (*(&((x87_r7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40)
+        if (*(&((fpu_val_7_1 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40)
         {
-            a2 = Table_GetAt(&dstD[0x131], 0);
-            int32_t* valA9;
-            valA9 = HumanPlayer_UpdateMotion_11(dstD, Weapon_FireBullet_8("WEAPON_ID_BINOCULARS"));
+            param_2 = Table_GetAt(&dest_val[0x131], 0);
+            int32_t* data_9;
+            data_9 = HumanPlayer_UpdateMotion_11(dest_val, Weapon_FireBullet_8("WEAPON_ID_BINOCULARS"));
 
-            if (valA9)
+            if (data_9)
             {
-                if (valA9 != a2)
+                if (data_9 != param_2)
                 {
-                    objC1 = Script_ExecuteLevelScript_12(&dstD[0x131], nullptr, valA9);
-                    tmpD = a2;
-                    dstD[0x379] = tmpD;
+                    entity_1 = Script_ExecuteLevelScript_12(&dest_val[0x131], nullptr, data_9);
+                    temp_val = param_2;
+                    dest_val[0x379] = temp_val;
                 }
                 else
                 {
-                    int32_t valA10 = Script_SpawnNewTask_12();
-                    int32_t tmpD2 = 0;
-                    tmpD2 = valA9[7];
-                    int32_t objC6;
-                    int32_t tmpD3;
-                    tmpD3 = (*(((valA10 * 0x180 + tmpD2) << 2) + &g_a96ae0))(valA9);
-                    void* valA12 = dstD[0x379];
-                    int32_t* valA13;
-                    valA13 = HumanPlayer_LoadParameters_13(valA12, tmpD3, objC6, valA12);
-                    objC1 = *valA13;
-                    dstD[0x353] = objC1;
-                    dstD[0x379] = 0;
+                    int32_t data_10 = Script_SpawnNewTask_12();
+                    int32_t temp_2 = 0;
+                    temp_2 = data_9[7];
+                    int32_t entity_6;
+                    int32_t temp_3;
+                    temp_3 = (*(((data_10 * 0x180 + temp_2) << 2) + &g_a96ae0))(data_9);
+                    void* data_12 = dest_val[0x379];
+                    int32_t* data_13;
+                    data_13 = HumanPlayer_LoadParameters_13(data_12, temp_3, entity_6, data_12);
+                    entity_1 = *data_13;
+                    dest_val[0x353] = entity_1;
+                    dest_val[0x379] = 0;
                 }
 
-                dstD[0x72] = 0x3f800000;
+                dest_val[0x72] = 0x3f800000;
             }
 
-            flagP = v_8;
+            flagP = item_8;
         }
     }
 
-    int32_t result = dstD[0x379];
+    int32_t result = dest_val[0x379];
 
     if (!result)
     {
         if (flagP)
         {
-            int32_t* valA14 = HumanPlayer_LoadParameters_13(result, tmpD, objC1, flagP);
-            Script_ParseEnumReal32_13(flagP, &v_8);
-            void* valA19;
+            int32_t* data_14 = HumanPlayer_LoadParameters_13(result, temp_val, entity_1, flagP);
+            Script_ParseEnumReal32_13(flagP, &item_8);
+            void* data_19;
 
-            if (!(valA2 & 0x200))
+            if (!(data_2 & 0x200))
             {
-                if (valA2 & 0x400)
+                if (data_2 & 0x400)
                 {
-                    int32_t valA38 = Weapon_FireBullet_8("WEAPON_ID_M16A2");
+                    int32_t data_38 = Weapon_FireBullet_8("WEAPON_ID_M16A2");
 
-                    if (*valA14 != valA38)
+                    if (*data_14 != data_38)
                     {
-                        int32_t valA45 = Weapon_FireBullet_8("WEAPON_ID_PROXIMITYMINE");
+                        int32_t data_45 = Weapon_FireBullet_8("WEAPON_ID_PROXIMITYMINE");
 
-                        if (*valA14 == valA45)
+                        if (*data_14 == data_45)
                         {
-                            *(dstD + 0x4d2) = 1;
-                            void* tmpD9 = *(a1 + 4);
-                            *(a1 + 0xc) = *(a1 + 0x10);
-                            *(a1 + 0x10) = 8;
-                            int32_t valA46 = *(tmpD9 + 0x20);
-                            *(a1 + 0x14) = valA46;
-                            return valA46(a1, dstD);
+                            *(dest_val + 0x4d2) = 1;
+                            void* temp_9 = *(context + 4);
+                            *(context + 0xc) = *(context + 0x10);
+                            *(context + 0x10) = 8;
+                            int32_t data_46 = *(temp_9 + 0x20);
+                            *(context + 0x14) = data_46;
+                            return data_46(context, dest_val);
                         }
                     }
                     else
@@ -115,79 +115,79 @@ int32_t* HumanPlayer_HandleInput_7(void* a1, int32_t* a2)
                         if (g_56e214)
                             goto label_40ecc1;
 
-                        int32_t* valA44 = Weapon_UpdateMuzzleFlash_8(&dstD[0xd0], Weapon_FireBullet_8("AMMO_ID_M203"));
+                        int32_t* data_44 = Weapon_UpdateMuzzleFlash_8(&dest_val[0xd0], Weapon_FireBullet_8("AMMO_ID_M203"));
 
-                        if (valA44)
+                        if (data_44)
                         {
-                            int32_t objC15 = valA44[1];
+                            int32_t entity_15 = data_44[1];
 
-                            if (objC15)
+                            if (entity_15)
                             {
-                                valA44[1] = objC15 - 1;
+                                data_44[1] = entity_15 - 1;
                             label_40ecc1:
-                                void* valA40 = *(a1 + 4);
-                                *(a1 + 0xc) = *(a1 + 0x10);
-                                *(a1 + 0x10) = 6;
-                                int32_t valA41 = *(valA40 + 0x18);
-                                *(a1 + 0x14) = valA41;
-                                return valA41(a1, dstD);
+                                void* data_40 = *(context + 4);
+                                *(context + 0xc) = *(context + 0x10);
+                                *(context + 0x10) = 6;
+                                int32_t data_41 = *(data_40 + 0x18);
+                                *(context + 0x14) = data_41;
+                                return data_41(context, dest_val);
                             }
                         }
                     }
                 }
 
-                valA19 = v_8;
+                data_19 = item_8;
             }
             else
             {
-                int32_t valA16 = valA14[0x184] - 3;
+                int32_t data_16 = data_14[0x184] - 3;
 
-                if (valA16 > 4)
+                if (data_16 > 4)
                 {
                 label_40ec48:
 
-                    if (!v_8)
+                    if (!item_8)
                     {
-                        void* objC12 = *(a1 + 4);
-                        *(a1 + 0xc) = *(a1 + 0x10);
-                        *(a1 + 0x10) = 0xc;
-                        int32_t valA36 = *(objC12 + 0x30);
-                        *(a1 + 0x14) = valA36;
-                        return valA36(a1, dstD);
+                        void* entity_12 = *(context + 4);
+                        *(context + 0xc) = *(context + 0x10);
+                        *(context + 0x10) = 0xc;
+                        int32_t data_36 = *(entity_12 + 0x30);
+                        *(context + 0x14) = data_36;
+                        return data_36(context, dest_val);
                     }
 
-                    void* tmpD7 = *(a1 + 4);
-                    *(a1 + 0xc) = *(a1 + 0x10);
-                    *(a1 + 0x10) = 2;
-                    int32_t valA33 = *(tmpD7 + 8);
-                    *(a1 + 0x14) = valA33;
-                    return valA33(a1, dstD);
+                    void* temp_7 = *(context + 4);
+                    *(context + 0xc) = *(context + 0x10);
+                    *(context + 0x10) = 2;
+                    int32_t data_33 = *(temp_7 + 8);
+                    *(context + 0x14) = data_33;
+                    return data_33(context, dest_val);
                 }
 
-                switch (valA16)
+                switch (data_16)
                 {
                     case 0:
                     {
-                        void* tmpD4 = *(a1 + 4);
-                        *(a1 + 0xc) = *(a1 + 0x10);
-                        *(a1 + 0x10) = 9;
-                        int32_t valA17 = *(tmpD4 + 0x24);
-                        *(a1 + 0x14) = valA17;
-                        return valA17(a1, dstD);
+                        void* temp_4 = *(context + 4);
+                        *(context + 0xc) = *(context + 0x10);
+                        *(context + 0x10) = 9;
+                        int32_t data_17 = *(temp_4 + 0x24);
+                        *(context + 0x14) = data_17;
+                        return data_17(context, dest_val);
                         break;
                     }
                     case 1:
                     {
-                        valA19 = v_8;
+                        data_19 = item_8;
 
-                        if (valA19)
+                        if (data_19)
                         {
-                            void* objC8 = *(a1 + 4);
-                            *(a1 + 0xc) = *(a1 + 0x10);
-                            *(a1 + 0x10) = 7;
-                            int32_t valA21 = *(objC8 + 0x1c);
-                            *(a1 + 0x14) = valA21;
-                            return valA21(a1, dstD);
+                            void* entity_8 = *(context + 4);
+                            *(context + 0xc) = *(context + 0x10);
+                            *(context + 0x10) = 7;
+                            int32_t data_21 = *(entity_8 + 0x1c);
+                            *(context + 0x14) = data_21;
+                            return data_21(context, dest_val);
                         }
                         break;
                     }
@@ -197,155 +197,155 @@ int32_t* HumanPlayer_HandleInput_7(void* a1, int32_t* a2)
                     }
                     case 3:
                     {
-                        int32_t* valA24 = Weapon_UpdateMuzzleFlash_8(&dstD[0xd0], Weapon_FireBullet_8("AMMO_ID_MEDIPACK"));
+                        int32_t* data_24 = Weapon_UpdateMuzzleFlash_8(&dest_val[0xd0], Weapon_FireBullet_8("AMMO_ID_MEDIPACK"));
 
-                        if (valA24 && valA24[1])
+                        if (data_24 && data_24[1])
                         {
-                            long double x87_r7_2 = dstD[0x95];
-                            long double f7_1 = 0f;
-                            x87_r7_2 - f7_1;
+                            long double fpu_val_7_2 = dest_val[0x95];
+                            long double f7_1 = 0.0f;
+                            fpu_val_7_2 - f7_1;
 
-                            if (!(*(&((x87_r7_2 < f7_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_2, f7_1) ? 1 : 0) << 0xa
-                                | (x87_r7_2 == f7_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                            if (!(*(&((fpu_val_7_2 < f7_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_2, f7_1) ? 1 : 0) << 0xa
+                                | (fpu_val_7_2 == f7_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                             {
-                                void* objC10 = *(a1 + 4);
-                                *(a1 + 0xc) = *(a1 + 0x10);
-                                *(a1 + 0x10) = 0xa;
-                                int32_t valA27 = *(objC10 + 0x28);
-                                *(a1 + 0x14) = valA27;
-                                return valA27(a1, dstD);
+                                void* entity_10 = *(context + 4);
+                                *(context + 0xc) = *(context + 0x10);
+                                *(context + 0x10) = 0xa;
+                                int32_t data_27 = *(entity_10 + 0x28);
+                                *(context + 0x14) = data_27;
+                                return data_27(context, dest_val);
                             }
                         }
 
-                        valA19 = v_8;
+                        data_19 = item_8;
                         break;
                     }
                     case 4:
                     {
-                        valA19 = v_8;
+                        data_19 = item_8;
 
-                        if (valA19)
+                        if (data_19)
                         {
-                            void* valA29 = *(a1 + 4);
-                            *(a1 + 0xc) = *(a1 + 0x10);
-                            *(a1 + 0x10) = 8;
-                            int32_t valA30 = *(valA29 + 0x20);
-                            *(a1 + 0x14) = valA30;
-                            return valA30(a1, dstD);
+                            void* data_29 = *(context + 4);
+                            *(context + 0xc) = *(context + 0x10);
+                            *(context + 0x10) = 8;
+                            int32_t data_30 = *(data_29 + 0x20);
+                            *(context + 0x14) = data_30;
+                            return data_30(context, dest_val);
                         }
                         break;
                     }
                 }
             }
 
-            int32_t v_4;
+            int32_t item_4;
 
-            if ((valA2 & 0x800 || !valA19) && (v_4 || g_56e214) && valA19 < valA14[0x192])
+            if ((data_2 & 0x800 || !data_19) && (item_4 || g_56e214) && data_19 < data_14[0x192])
             {
-                Human_TaskViewReset(dstD[0x13b]);
-                void* tmpD10 = *(a1 + 4);
-                *(a1 + 0xc) = *(a1 + 0x10);
-                *(a1 + 0x10) = 3;
-                int32_t valA49 = *(tmpD10 + 0xc);
-                *(a1 + 0x14) = valA49;
-                return valA49(a1, dstD);
+                Human_TaskViewReset(dest_val[0x13b]);
+                void* temp_10 = *(context + 4);
+                *(context + 0xc) = *(context + 0x10);
+                *(context + 0x10) = 3;
+                int32_t data_49 = *(temp_10 + 0xc);
+                *(context + 0x14) = data_49;
+                return data_49(context, dest_val);
             }
 
-            long double x87_r7_3 = dstD[0x78];
-            long double f6_1 = 0f;
-            x87_r7_3 - f6_1;
+            long double fpu_val_7_3 = dest_val[0x78];
+            long double f6_1 = 0.0f;
+            fpu_val_7_3 - f6_1;
 
-            if (!(*(&((x87_r7_3 < f6_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_3, f6_1) ? 1 : 0) << 0xa
-                | (x87_r7_3 == f6_1 ? 1 : 0) << 0xe) + 1) & 0x40) && dstD[0xbd] & 4)
+            if (!(*(&((fpu_val_7_3 < f6_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_3, f6_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_3 == f6_1 ? 1 : 0) << 0xe) + 1) & 0x40) && dest_val[0xbd] & 4)
             {
-                Human_TaskViewReset(dstD[0x13b]);
-                void* tmpD11 = *(a1 + 4);
-                *(a1 + 0xc) = *(a1 + 0x10);
-                *(a1 + 0x10) = 5;
-                int32_t valA53 = *(tmpD11 + 0x14);
-                *(a1 + 0x14) = valA53;
-                return valA53(a1, dstD);
+                Human_TaskViewReset(dest_val[0x13b]);
+                void* temp_11 = *(context + 4);
+                *(context + 0xc) = *(context + 0x10);
+                *(context + 0x10) = 5;
+                int32_t data_53 = *(temp_11 + 0x14);
+                *(context + 0x14) = data_53;
+                return data_53(context, dest_val);
             }
         }
 
-        if (dstD[0x353] != 0xffffffff)
+        if (dest_val[0x353] != 0xffffffff)
         {
-            Human_TaskViewReset(dstD[0x13b]);
-            void* tmpD12 = *(a1 + 4);
-            *(a1 + 0xc) = *(a1 + 0x10);
-            *(a1 + 0x10) = 4;
-            int32_t valA56 = *(tmpD12 + 0x10);
-            *(a1 + 0x14) = valA56;
-            return valA56(a1, dstD);
+            Human_TaskViewReset(dest_val[0x13b]);
+            void* temp_12 = *(context + 4);
+            *(context + 0xc) = *(context + 0x10);
+            *(context + 0x10) = 4;
+            int32_t data_56 = *(temp_12 + 0x10);
+            *(context + 0x14) = data_56;
+            return data_56(context, dest_val);
         }
 
-        int16_t valA58;
-        valA58 = *(dstD + 0x7b9);
+        int16_t data_58;
+        data_58 = *(dest_val + 0x7b9);
 
-        if (valA58)
+        if (data_58)
         {
-            long double x87_r7_4 = dstD[0x75];
-            long double f2_1 = 0f;
-            x87_r7_4 - f2_1;
+            long double fpu_val_7_4 = dest_val[0x75];
+            long double f2_1 = 0.0f;
+            fpu_val_7_4 - f2_1;
 
-            if (*(&((x87_r7_4 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f2_1) ? 1 : 0) << 0xa
-                    | (x87_r7_4 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40)
-                *(dstD + 0x7b9) = 0;
+            if (*(&((fpu_val_7_4 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f2_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_4 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40)
+                *(dest_val + 0x7b9) = 0;
         }
 
-        result = AI_CheckHearing_21(dstD);
+        result = AI_CheckHearing_21(dest_val);
 
         if (result)
         {
-            result = *(dstD + 0x7b9);
+            result = *(dest_val + 0x7b9);
 
             if (!result)
             {
-                long double x87_r7_5 = dstD[0x75];
-                long double f5_1 = 0f;
-                x87_r7_5 - f5_1;
-                result = (x87_r7_5 < f5_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_5, f5_1) ? 1 : 0) << 0xa
-                    | (x87_r7_5 == f5_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_5 = dest_val[0x75];
+                long double f5_1 = 0.0f;
+                fpu_val_7_5 - f5_1;
+                result = (fpu_val_7_5 < f5_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_5, f5_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_5 == f5_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x40))
                 {
-                    a2 = nullptr;
-                    int32_t objC24 = 0;
-                    objC24 = *(AI_CheckHearing_21(dstD) + 0x1c);
-                    uint32_t valA61 = Level_CheckQTaskID_2();
-                    (*(((objC24 + valA61 * 0x180) << 2) + &g_a96ae0))(AI_CheckHearing_21(dstD), &a2);
-                    Human_TaskViewReset(dstD[0x13b]);
-                    return HumanPlayer_PlaySound_5(dstD, a2);
+                    param_2 = nullptr;
+                    int32_t entity_24 = 0;
+                    entity_24 = *(AI_CheckHearing_21(dest_val) + 0x1c);
+                    uint32_t data_61 = Level_CheckQTaskID_2();
+                    (*(((entity_24 + data_61 * 0x180) << 2) + &g_a96ae0))(AI_CheckHearing_21(dest_val), &param_2);
+                    Human_TaskViewReset(dest_val[0x13b]);
+                    return HumanPlayer_PlaySound_5(dest_val, param_2);
                 }
             }
         }
 
-        long double x87_r7_6 = dstD[0x8c];
-        long double f3_1 = 0f;
-        x87_r7_6 - f3_1;
-        result = (x87_r7_6 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f3_1) ? 1 : 0) << 0xa
-            | (x87_r7_6 == f3_1 ? 1 : 0) << 0xe;
+        long double fpu_val_7_6 = dest_val[0x8c];
+        long double f3_1 = 0.0f;
+        fpu_val_7_6 - f3_1;
+        result = (fpu_val_7_6 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f3_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_6 == f3_1 ? 1 : 0) << 0xe;
 
         if (!(*(&result + 1) & 0x40))
         {
-            long double x87_r7_7 = dstD[0x64];
-            long double f4_1 = 0f;
-            x87_r7_7 - f4_1;
-            result = (x87_r7_7 < f4_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_7, f4_1) ? 1 : 0) << 0xa
-                | (x87_r7_7 == f4_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_7 = dest_val[0x64];
+            long double f4_1 = 0.0f;
+            fpu_val_7_7 - f4_1;
+            result = (fpu_val_7_7 < f4_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_7, f4_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_7 == f4_1 ? 1 : 0) << 0xe;
 
-            if (*(&result + 1) & 0x40 && dstD[0xbd] & 4)
+            if (*(&result + 1) & 0x40 && dest_val[0xbd] & 4)
             {
-                Human_TaskViewReset(dstD[0x13b]);
-                void* tmpD16 = *(a1 + 4);
-                *(a1 + 0xc) = *(a1 + 0x10);
-                *(a1 + 0x10) = 0xb;
-                int32_t valA65 = *(tmpD16 + 0x2c);
-                *(a1 + 0x14) = valA65;
-                return valA65(a1, dstD);
+                Human_TaskViewReset(dest_val[0x13b]);
+                void* temp_16 = *(context + 4);
+                *(context + 0xc) = *(context + 0x10);
+                *(context + 0x10) = 0xb;
+                int32_t data_65 = *(temp_16 + 0x2c);
+                *(context + 0x14) = data_65;
+                return data_65(context, dest_val);
             }
         }
     }

@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Display_SetMode (VA 0x00491A90; static CFG gate PASS, CFG score 0.899).
 #include "Display_SetMode.h"
-int32_t Display_SetMode(void* a1)
+int32_t Display_SetMode(void* context)
 
 // Sig: int Display_SetMode(void* modeStruct)
 // Note: Switches the DISPLAY MODE at runtime: validates mode fields vs current
@@ -17,28 +17,28 @@ int32_t Display_SetMode(void* a1)
         Display_CloseDevice_4(g_bcadec);
 
         if (g_5ca02d)
-            Display_OpenDevice_4(a1);
+            Display_OpenDevice_4(context);
 
         RECT rect;
 
         if (!FX_FragmentSimulate_23())
         {
-            int32_t valA14 = GetSystemMetrics(SM_CXSCREEN);
-            int32_t srcS4 = *(a1 + 8);
-            int32_t valA16;
-            int32_t tmpD3;
-            tmpD3 = HIGHD(valA14 - *(a1 + 4));
-            valA16 = LOWD(valA14 - *(a1 + 4));
-            rect.left = (valA16 - tmpD3) >> 1;
-            int32_t valA21;
-            int32_t tmpD4;
-            tmpD4 = HIGHD(GetSystemMetrics(SM_CYSCREEN) - srcS4);
-            valA21 = LOWD(GetSystemMetrics(SM_CYSCREEN) - srcS4);
-            int32_t valA23 = (valA21 - tmpD4) >> 1;
-            int32_t objC13 = rect.left + *(a1 + 4);
-            rect.idx = valA23;
-            rect.right = objC13;
-            rect.bottom = srcS4 + valA23;
+            int32_t data_14 = GetSystemMetrics(SM_CXSCREEN);
+            int32_t source_4 = *(context + 8);
+            int32_t data_16;
+            int32_t temp_3;
+            temp_3 = HIGHD(data_14 - *(context + 4));
+            data_16 = LOWD(data_14 - *(context + 4));
+            rect.left = (data_16 - temp_3) >> 1;
+            int32_t data_21;
+            int32_t temp_4;
+            temp_4 = HIGHD(GetSystemMetrics(SM_CYSCREEN) - source_4);
+            data_21 = LOWD(GetSystemMetrics(SM_CYSCREEN) - source_4);
+            int32_t data_23 = (data_21 - temp_4) >> 1;
+            int32_t entity_13 = rect.left + *(context + 4);
+            rect.idx = data_23;
+            rect.right = entity_13;
+            rect.bottom = source_4 + data_23;
         }
         else
         {
@@ -54,98 +54,98 @@ int32_t Display_SetMode(void* a1)
         SetWindowPos(FX_ExplosionSpawn_22(), nullptr, left, idx, rect.right - left, rect.bottom - idx, 0x44);
         UpdateWindow(FX_ExplosionSpawn_22());
         SetFocus(FX_ExplosionSpawn_22());
-        Sys_FreeMemory_3(*(a1 + 0x18));
-        (*((Display_SwapBuffers_5() << 2) + &g_a94e84))(a1);
+        Sys_FreeMemory_3(*(context + 0x18));
+        (*((Display_SwapBuffers_5() << 2) + &g_a94e84))(context);
         g_5ca02d = 1;
         int32_t i = 0xffffffff;
-        int32_t dstD6 = 0xc28b5c;
+        int32_t dest_6 = 0xc28b5c;
         result = 0;
 
         while (i)
         {
-            bool cond_4_1 = 0 != *dstD6;
-            dstD6 += 1;
+            bool flag_4_1 = 0 != *dest_6;
+            dest_6 += 1;
             i -= 1;
 
-            if (!cond_4_1)
+            if (!flag_4_1)
                 break;
         }
 
-        int32_t objC16 = ~i;
-        int32_t srcS7;
-        int32_t dstD8;
-        dstD8 = memcpy(&g_5c9fa8, dstD6 - objC16, objC16 & 0xfffffffc);
-        memcpy(dstD8, srcS7, objC16 & 3);
+        int32_t entity_16 = ~i;
+        int32_t source_7;
+        int32_t dest_8;
+        dest_8 = memcpy(&g_5c9fa8, dest_6 - entity_16, entity_16 & 0xfffffffc);
+        memcpy(dest_8, source_7, entity_16 & 3);
     }
     else
     {
         int32_t i_1 = 0xffffffff;
-        char* dstD1 = a1 + 0x1c;
+        char* dest_1 = context + 0x1c;
 
         while (i_1)
         {
-            bool cond_1_1 = 0 != *dstD1;
-            dstD1 = &dstD1[1];
+            bool flag_1_1 = 0 != *dest_1;
+            dest_1 = &dest_1[1];
             i_1 -= 1;
 
-            if (!cond_1_1)
+            if (!flag_1_1)
                 break;
         }
 
         if (~i_1 == 1)
         {
-            char* dstD2 = &g_5c9fa8;
+            char* dest_2 = &g_5c9fa8;
             int32_t i_2 = 0xffffffff;
 
             while (i_2)
             {
-                bool cond_3_1 = 0 != *dstD2;
-                dstD2 = &dstD2[1];
+                bool flag_3_1 = 0 != *dest_2;
+                dest_2 = &dest_2[1];
                 i_2 -= 1;
 
-                if (!cond_3_1)
+                if (!flag_3_1)
                     break;
             }
 
-            int32_t objC2 = ~i_2;
-            int32_t srcS2;
-            int32_t dstD5;
-            dstD5 = memcpy(a1 + 0x1c, dstD2 - objC2, objC2 & 0xfffffffc);
-            memcpy(dstD5, srcS2, objC2 & 3);
+            int32_t entity_2 = ~i_2;
+            int32_t source_2;
+            int32_t dest_5;
+            dest_5 = memcpy(context + 0x1c, dest_2 - entity_2, entity_2 & 0xfffffffc);
+            memcpy(dest_5, source_2, entity_2 & 3);
         }
 
-        if (*(a1 + 4) != g_c28b44 || *(a1 + 8) != g_c28b48
-                || *(a1 + 0x10) != g_c28b50 || *(a1 + 0x18) != g_c28b58
-                || *(a1 + 0x16) != g_c28b56)
+        if (*(context + 4) != g_c28b44 || *(context + 8) != g_c28b48
+                || *(context + 0x10) != g_c28b50 || *(context + 0x18) != g_c28b58
+                || *(context + 0x16) != g_c28b56)
             goto label_491b61;
 
-        char* srcS3 = &g_c28b5c;
-        char* valA6 = a1 + 0x1c;
+        char* source_3 = &g_c28b5c;
+        char* data_6 = context + 0x1c;
 
         while (true)
         {
-            char tmpD2 = *valA6;
-            char f1_1 = *srcS3;
-            bool c_1 = tmpD2 < f1_1;
+            char temp_2 = *data_6;
+            char f1_1 = *source_3;
+            bool c_1 = temp_2 < f1_1;
 
-            if (tmpD2 == f1_1)
+            if (temp_2 == f1_1)
             {
-                if (!tmpD2)
+                if (!temp_2)
                 {
                     result = 0;
                     break;
                 }
 
-                tmpD2 = valA6[1];
-                char f4_1 = srcS3[1];
-                c_1 = tmpD2 < f4_1;
+                temp_2 = data_6[1];
+                char f4_1 = source_3[1];
+                c_1 = temp_2 < f4_1;
 
-                if (tmpD2 == f4_1)
+                if (temp_2 == f4_1)
                 {
-                    valA6 = &valA6[2];
-                    srcS3 = &srcS3[2];
+                    data_6 = &data_6[2];
+                    source_3 = &source_3[2];
 
-                    if (tmpD2)
+                    if (temp_2)
                         continue;
 
                     result = 0;
@@ -153,7 +153,7 @@ int32_t Display_SetMode(void* a1)
                 }
             }
 
-            result = valA6 - valA6 + 1;
+            result = data_6 - data_6 + 1;
             break;
         }
 

@@ -5,7 +5,7 @@ int32_t* Siren_Stop(void* pThis, int32_t param)
 
 {
     (*((FX_TrailUpdate() << 2) + &g_a96ae0))(pThis, param);
-    FX_FireBallUpdate_2(pThis, 1f, 0x3f000000, 0x3f000000, 0x3f800000, 0, 5, 4, "explosion_1");
+    FX_FireBallUpdate_2(pThis, 1.0f, 0x3f000000, 0x3f000000, 0x3f800000, 0, 5, 4, "explosion_1");
     *(pThis + 0x2d0) = 0;
     *(pThis + 0x2d1) = 0;
     *(pThis + 0x2d2) = 0;

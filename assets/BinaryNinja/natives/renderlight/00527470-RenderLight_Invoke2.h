@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00527470 RenderLight_Invoke2 | gate PASS | openigi True */
-void*(void* arg1);
+void* RenderLight_Invoke2(void* context);

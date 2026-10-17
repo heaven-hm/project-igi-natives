@@ -1,41 +1,41 @@
 // Original IGI.EXE function: SoundDefGroup_OnEvent (VA 0x004EB670; static CFG gate PASS, CFG score 1.000).
 #include "SoundDefGroup_OnEvent.h"
-int32_t SoundDefGroup_OnEvent(void* a1, int32_t* a2)
+int32_t SoundDefGroup_OnEvent(void* context, int32_t* param_2)
 
 {
-    int32_t result = a2[1];
+    int32_t result = param_2[1];
 
     if (!result)
     {
-        char* valA = *a2;
-        int32_t ctxB;
-        int32_t v_10_1 = ctxB;
-        char* srcS1 = a1 + 0x22;
+        char* data_val = *param_2;
+        int32_t context_val;
+        int32_t item_10_1 = context_val;
+        char* source_1 = context + 0x22;
 
         while (true)
         {
-            char tmpD1 = *valA;
-            char ctxB1 = *srcS1;
-            bool c_1 = tmpD1 < ctxB1;
+            char temp_1 = *data_val;
+            char context_1 = *source_1;
+            bool c_1 = temp_1 < context_1;
 
-            if (tmpD1 == ctxB1)
+            if (temp_1 == context_1)
             {
-                if (!tmpD1)
+                if (!temp_1)
                 {
                     result = 0;
                     break;
                 }
 
-                tmpD1 = valA[1];
-                ctxB1 = srcS1[1];
-                c_1 = tmpD1 < ctxB1;
+                temp_1 = data_val[1];
+                context_1 = source_1[1];
+                c_1 = temp_1 < context_1;
 
-                if (tmpD1 == ctxB1)
+                if (temp_1 == context_1)
                 {
-                    valA = &valA[2];
-                    srcS1 = &srcS1[2];
+                    data_val = &data_val[2];
+                    source_1 = &source_1[2];
 
-                    if (tmpD1)
+                    if (temp_1)
                         continue;
 
                     result = 0;
@@ -43,49 +43,49 @@ int32_t SoundDefGroup_OnEvent(void* a1, int32_t* a2)
                 }
             }
 
-            result = valA - valA + 1;
+            result = data_val - data_val + 1;
             break;
         }
 
         if (!result)
         {
-            a2[1] = a1;
+            param_2[1] = context;
             return result;
         }
 
-        int32_t* i = *(a1 + 8);
+        int32_t* i = *(context + 8);
 
         if (*i && i)
         {
-            int32_t objC2 = g_afa7e0;
+            int32_t entity_2 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD2 = *i;
-                void* valA5;
+                int32_t* temp_2 = *i;
+                void* data_5;
 
-                if (!tmpD2)
-                    valA5 = nullptr;
+                if (!temp_2)
+                    data_5 = nullptr;
                 else
                 {
-                    int32_t valA2 = *tmpD2;
-                    int32_t valA3 = -(valA2);
-                    valA5 = (valA3 - valA3) & tmpD2;
+                    int32_t data_2 = *temp_2;
+                    int32_t data_3 = -(data_2);
+                    data_5 = (data_3 - data_3) & temp_2;
                 }
 
-                *((objC2 << 2) + &g_afa6e0) = valA5;
-                g_afa7e0 = objC2 + 1;
-                uint32_t valA7 = SoundSys_StopSoundSample_5();
-                int32_t objC4 = 0;
-                objC4 = i[7];
-                result = *(((valA7 * 0x180 + objC4) << 2) + &g_a96ae0);
+                *((entity_2 << 2) + &g_afa6e0) = data_5;
+                g_afa7e0 = entity_2 + 1;
+                uint32_t data_7 = SoundSys_StopSoundSample_5();
+                int32_t entity_4 = 0;
+                entity_4 = i[7];
+                result = *(((data_7 * 0x180 + entity_4) << 2) + &g_a96ae0);
 
                 if (result)
-                    result = result(i, a2);
+                    result = result(i, param_2);
 
-                objC2 = g_afa7e0 - 1;
-                g_afa7e0 = objC2;
-                i = *((objC2 << 2) + &g_afa6e0);
+                entity_2 = g_afa7e0 - 1;
+                g_afa7e0 = entity_2;
+                i = *((entity_2 << 2) + &g_afa6e0);
             } while (i);
         }
     }

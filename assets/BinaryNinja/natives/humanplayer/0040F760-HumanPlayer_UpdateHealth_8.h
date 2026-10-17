@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0040F760 HumanPlayer_UpdateHealth_8 | gate PASS | openigi True */
-int HumanPlayer_UpdateHealth_8(int* a1, int a2);
+int HumanPlayer_UpdateHealth_8(int* context, int param_2);

@@ -4,19 +4,19 @@ int32_t Level_SetMission()
 
 {
     int32_t result = g_57bab8;
-    int32_t srcS = 0;
+    int32_t source_val = 0;
 
     if (result > 0)
     {
-        int32_t* dstD1 = &g_57b1c0;
+        int32_t* dest_1 = &g_57b1c0;
 
         do
         {
-            Sys_ReadFileBlock_17(dstD1);
+            Sys_ReadFileBlock_17(dest_1);
             result = g_57bab8;
-            srcS += 1;
-            dstD1 = &dstD1[0xc];
-        } while (srcS < result);
+            source_val += 1;
+            dest_1 = &dest_1[0xc];
+        } while (source_val < result);
     }
 
     return result;

@@ -1,55 +1,55 @@
 // Original IGI.EXE function: Script_EvaluateCondition_23 (VA 0x004F98A0; static CFG gate FAIL, CFG score 0.833).
 #include "Script_EvaluateCondition_23.h"
-void* Script_EvaluateCondition_23(float* a1, void* a2, char a3)
+void* Script_EvaluateCondition_23(float* context, void* param_2, char param_3)
 
 {
-    float* dstD;
+    float* dest_val;
 
-    if (!a3)
+    if (!param_3)
     {
-        dstD = a1;
-        *dstD = 1f;
-        dstD[1] = 0;
-        dstD[2] = 0;
-        dstD[3] = 0;
-        dstD[4] = 0x3f800000;
-        dstD[5] = 0;
-        dstD[6] = 0;
-        dstD[7] = 0;
-        dstD[8] = 0x3f800000;
-        dstD[9] = 0;
+        dest_val = context;
+        *dest_val = 1.0f;
+        dest_val[1] = 0;
+        dest_val[2] = 0;
+        dest_val[3] = 0;
+        dest_val[4] = 0x3f800000;
+        dest_val[5] = 0;
+        dest_val[6] = 0;
+        dest_val[7] = 0;
+        dest_val[8] = 0x3f800000;
+        dest_val[9] = 0;
     }
     else
     {
-        dstD = a1;
-        Sys_DispatchOpcode_12(dstD, *(a2 + 0x20));
+        dest_val = context;
+        Sys_DispatchOpcode_12(dest_val, *(param_2 + 0x20));
     }
 
-    void* result = *(a2 + 0x134);
+    void* result = *(param_2 + 0x134);
 
     if (*(result + 0x64))
     {
-        void* valA1 = *(result + 0x14);
-        float v_28 = *dstD * *(valA1 + 0x70) + dstD[2] * *(valA1 + 0x88) + *(valA1 + 0x7c) * dstD[1];
-        float v_24_1 =
-            *dstD * *(valA1 + 0x74) + *(valA1 + 0x8c) * dstD[2] + *(valA1 + 0x80) * dstD[1];
-        float v_20_1 =
-            dstD[2] * *(valA1 + 0x90) + *(valA1 + 0x78) * *dstD + *(valA1 + 0x84) * dstD[1];
-        float v_1c_1 =
-            *(valA1 + 0x88) * dstD[5] + dstD[4] * *(valA1 + 0x7c) + dstD[3] * *(valA1 + 0x70);
-        float v_18_1 =
-            *(valA1 + 0x8c) * dstD[5] + *(valA1 + 0x80) * dstD[4] + dstD[3] * *(valA1 + 0x74);
-        float v_14_1 =
-            dstD[4] * *(valA1 + 0x84) + *(valA1 + 0x78) * dstD[3] + *(valA1 + 0x90) * dstD[5];
-        float v_10_1 =
-            dstD[6] * *(valA1 + 0x70) + dstD[8] * *(valA1 + 0x88) + *(valA1 + 0x7c) * dstD[7];
-        float v_c_1 =
-            dstD[6] * *(valA1 + 0x74) + *(valA1 + 0x8c) * dstD[8] + *(valA1 + 0x80) * dstD[7];
-        result = *(valA1 + 0x94) + dstD[9] + 1;
+        void* data_1 = *(result + 0x14);
+        float item_28 = *dest_val * *(data_1 + 0x70) + dest_val[2] * *(data_1 + 0x88) + *(data_1 + 0x7c) * dest_val[1];
+        float item_24_1 =
+            *dest_val * *(data_1 + 0x74) + *(data_1 + 0x8c) * dest_val[2] + *(data_1 + 0x80) * dest_val[1];
+        float item_20_1 =
+            dest_val[2] * *(data_1 + 0x90) + *(data_1 + 0x78) * *dest_val + *(data_1 + 0x84) * dest_val[1];
+        float item_1c_1 =
+            *(data_1 + 0x88) * dest_val[5] + dest_val[4] * *(data_1 + 0x7c) + dest_val[3] * *(data_1 + 0x70);
+        float item_18_1 =
+            *(data_1 + 0x8c) * dest_val[5] + *(data_1 + 0x80) * dest_val[4] + dest_val[3] * *(data_1 + 0x74);
+        float item_14_1 =
+            dest_val[4] * *(data_1 + 0x84) + *(data_1 + 0x78) * dest_val[3] + *(data_1 + 0x90) * dest_val[5];
+        float item_10_1 =
+            dest_val[6] * *(data_1 + 0x70) + dest_val[8] * *(data_1 + 0x88) + *(data_1 + 0x7c) * dest_val[7];
+        float item_c_1 =
+            dest_val[6] * *(data_1 + 0x74) + *(data_1 + 0x8c) * dest_val[8] + *(data_1 + 0x80) * dest_val[7];
+        result = *(data_1 + 0x94) + dest_val[9] + 1;
         void* result_1 = result;
-        float v_8_1 =
-            dstD[8] * *(valA1 + 0x90) + *(valA1 + 0x78) * dstD[6] + *(valA1 + 0x84) * dstD[7];
-        memcpy(dstD, &v_28, 0x28);
+        float item_8_1 =
+            dest_val[8] * *(data_1 + 0x90) + *(data_1 + 0x78) * dest_val[6] + *(data_1 + 0x84) * dest_val[7];
+        memcpy(dest_val, &item_28, 0x28);
     }
 
     return result;

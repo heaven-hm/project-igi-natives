@@ -1,226 +1,226 @@
 // Original IGI.EXE function: Binocular_Update (VA 0x00470890; static CFG gate PASS, CFG score 0.958).
 #include "Binocular_Update.h"
-int32_t* Binocular_Update(void* a1, int32_t* a2)
+int32_t* Binocular_Update(void* context, int32_t* param_2)
 
 {
-    void* tmpD = a2[0xb];
-    int32_t* i = *(a1 + 8);
-    void* valA = *(tmpD + 0x4ec);
-    int32_t* valA1 = *(*(a1 + 0x128) + 0x6e4);
-    void* v_4 = tmpD;
+    void* temp_val = param_2[0xb];
+    int32_t* i = *(context + 8);
+    void* data_val = *(temp_val + 0x4ec);
+    int32_t* data_1 = *(*(context + 0x128) + 0x6e4);
+    void* item_4 = temp_val;
 
     if (*i && i)
     {
-        int32_t valA2 = g_afa7e0;
+        int32_t data_2 = g_afa7e0;
 
         do
         {
-            int32_t* dstD1 = *i;
-            void* objC4;
+            int32_t* dest_1 = *i;
+            void* entity_4;
 
-            if (!dstD1)
-                objC4 = nullptr;
+            if (!dest_1)
+                entity_4 = nullptr;
             else
             {
-                int32_t objC1 = *dstD1;
-                int32_t objC2 = -(objC1);
-                objC4 = (objC2 - objC2) & dstD1;
+                int32_t entity_1 = *dest_1;
+                int32_t entity_2 = -(entity_1);
+                entity_4 = (entity_2 - entity_2) & dest_1;
             }
 
-            *((valA2 << 2) + &g_afa6e0) = objC4;
-            g_afa7e0 = valA2 + 1;
-            uint32_t valA5 = AI_AlertAllies_17();
-            int32_t tmpD1 = 0;
-            tmpD1 = i[7];
-            (*(((valA5 * 0x180 + tmpD1) << 2) + &g_a96ae0))(i, a2);
-            valA2 = g_afa7e0 - 1;
-            g_afa7e0 = valA2;
-            i = *((valA2 << 2) + &g_afa6e0);
+            *((data_2 << 2) + &g_afa6e0) = entity_4;
+            g_afa7e0 = data_2 + 1;
+            uint32_t data_5 = AI_AlertAllies_17();
+            int32_t temp_1 = 0;
+            temp_1 = i[7];
+            (*(((data_5 * 0x180 + temp_1) << 2) + &g_a96ae0))(i, param_2);
+            data_2 = g_afa7e0 - 1;
+            g_afa7e0 = data_2;
+            i = *((data_2 << 2) + &g_afa6e0);
         } while (i);
 
-        tmpD = v_4;
+        temp_val = item_4;
     }
 
-    if (*(tmpD + 0xcf5))
+    if (*(temp_val + 0xcf5))
     {
-        *(a1 + 0x1b0) = 0;
-        *(a1 + 0x1b8) = 0;
+        *(context + 0x1b0) = 0;
+        *(context + 0x1b8) = 0;
         return 0;
     }
 
-    if (a2[5] && !*(a1 + 0x1b8))
+    if (param_2[5] && !*(context + 0x1b8))
     {
-        int32_t srcS = a2[1];
+        int32_t source_val = param_2[1];
 
-        if (srcS)
-            memcpy(a1 + 0x150, srcS, 0x18);
+        if (source_val)
+            memcpy(context + 0x150, source_val, 0x18);
 
-        void* valA9 = a2[2];
+        void* data_9 = param_2[2];
 
-        if (!valA9)
+        if (!data_9)
         {
-            int32_t valA13 = *(a1 + 0x80);
-            *(a1 + 0x168) = *(a1 + 0x74);
-            int32_t objC12 = *(a1 + 0x8c);
-            *(a1 + 0x16c) = valA13;
-            *(a1 + 0x170) = objC12;
+            int32_t data_13 = *(context + 0x80);
+            *(context + 0x168) = *(context + 0x74);
+            int32_t entity_12 = *(context + 0x8c);
+            *(context + 0x16c) = data_13;
+            *(context + 0x170) = entity_12;
         }
         else
         {
-            *(a1 + 0x168) = *(valA9 + 4);
-            *(a1 + 0x16c) = *(a2[2] + 0x10);
-            *(a1 + 0x170) = *(a2[2] + 0x1c);
+            *(context + 0x168) = *(data_9 + 4);
+            *(context + 0x16c) = *(param_2[2] + 0x10);
+            *(context + 0x170) = *(param_2[2] + 0x1c);
         }
 
-        if (*(a1 + 0x1b0))
+        if (*(context + 0x1b0))
         {
-            long double fpu7 = *(tmpD + 0x1cc);
-            long double f1 = 0f;
+            long double fpu7 = *(temp_val + 0x1cc);
+            long double f1 = 0.0f;
             fpu7 - f1;
 
             if (*(&((fpu7 < f1 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f1) ? 1 : 0) << 0xa
                 | (fpu7 == f1 ? 1 : 0) << 0xe) + 1) & 0x40)
             {
-                long double x87_r7_1 = *(tmpD + 0x12c);
-                long double f3_1 = 0f;
-                x87_r7_1 - f3_1;
+                long double fpu_val_7_1 = *(temp_val + 0x12c);
+                long double f3_1 = 0.0f;
+                fpu_val_7_1 - f3_1;
 
-                if (!(*(&((x87_r7_1 < f3_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_1, f3_1) ? 1 : 0) << 0xa
-                    | (x87_r7_1 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                if (!(*(&((fpu_val_7_1 < f3_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_1, f3_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_1 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                 {
-                    int32_t valA16 = 0;
-                    valA16 = !*(a1 + 0x1bc);
-                    *(a1 + 0x1bc) = valA16;
+                    int32_t data_16 = 0;
+                    data_16 = !*(context + 0x1bc);
+                    *(context + 0x1bc) = data_16;
                 }
             }
 
-            long double x87_r7_2 = *(tmpD + 0x1cc);
-            long double f2 = 0f;
-            x87_r7_2 - f2;
-            long double x87_r7_3;
+            long double fpu_val_7_2 = *(temp_val + 0x1cc);
+            long double f2 = 0.0f;
+            fpu_val_7_2 - f2;
+            long double fpu_val_7_3;
             long double f5_1;
 
-            if (!(*(&((x87_r7_2 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f2) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f2 ? 1 : 0) << 0xe) + 1) & 0x40))
+            if (!(*(&((fpu_val_7_2 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f2) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f2 ? 1 : 0) << 0xe) + 1) & 0x40))
             {
-                x87_r7_3 = *(tmpD + 0x12c);
-                f5_1 = 0f;
-                x87_r7_3 - f5_1;
+                fpu_val_7_3 = *(temp_val + 0x12c);
+                f5_1 = 0.0f;
+                fpu_val_7_3 - f5_1;
             }
 
-            int32_t* valA19;
+            int32_t* data_19;
 
-            if (*(&((x87_r7_2 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f2) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f2 ? 1 : 0) << 0xe) + 1) & 0x40 || !(*(&(
-                (x87_r7_3 < f5_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f5_1) ? 1 : 0) << 0xa
-                | (x87_r7_3 == f5_1 ? 1 : 0) << 0xe) + 1) & 0x40) || !*(a1 + 0x1bc))
+            if (*(&((fpu_val_7_2 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f2) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f2 ? 1 : 0) << 0xe) + 1) & 0x40 || !(*(&(
+                (fpu_val_7_3 < f5_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f5_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_3 == f5_1 ? 1 : 0) << 0xe) + 1) & 0x40) || !*(context + 0x1bc))
             {
-                long double x87_r7_4 = *(tmpD + 0x1e8);
-                long double f4_1 = 0f;
-                x87_r7_4 - f4_1;
-                long double x87_r7_5;
+                long double fpu_val_7_4 = *(temp_val + 0x1e8);
+                long double f4_1 = 0.0f;
+                fpu_val_7_4 - f4_1;
+                long double fpu_val_7_5;
                 long double f7_1;
 
-                if (*(&((x87_r7_4 < f4_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_4, f4_1) ? 1 : 0) << 0xa
-                    | (x87_r7_4 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x40)
+                if (*(&((fpu_val_7_4 < f4_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_4, f4_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_4 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x40)
                 {
-                    x87_r7_5 = *(tmpD + 0x1cc);
-                    f7_1 = 0f;
-                    x87_r7_5 - f7_1;
+                    fpu_val_7_5 = *(temp_val + 0x1cc);
+                    f7_1 = 0.0f;
+                    fpu_val_7_5 - f7_1;
                 }
 
-                void* objC15;
-                long double x87_r7_9;
+                void* entity_15;
+                long double fpu_val_7_9;
 
-                if (*(&((x87_r7_4 < f4_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_4, f4_1) ? 1 : 0) << 0xa
-                    | (x87_r7_4 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x40 && (*(&(
-                    (x87_r7_5 < f7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f7_1) ? 1 : 0) << 0xa
-                    | (x87_r7_5 == f7_1 ? 1 : 0) << 0xe) + 1) & 0x40 || *(a1 + 0x1bc)))
+                if (*(&((fpu_val_7_4 < f4_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_4, f4_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_4 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x40 && (*(&(
+                    (fpu_val_7_5 < f7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f7_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_5 == f7_1 ? 1 : 0) << 0xe) + 1) & 0x40 || *(context + 0x1bc)))
                 {
-                    long double x87_r7_6 = *(tmpD + 0x1ec);
-                    long double f8_1 = 0f;
-                    x87_r7_6 - f8_1;
+                    long double fpu_val_7_6 = *(temp_val + 0x1ec);
+                    long double f8_1 = 0.0f;
+                    fpu_val_7_6 - f8_1;
 
-                    if (*(&((x87_r7_6 < f8_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_6, f8_1) ? 1 : 0) << 0xa
-                            | (x87_r7_6 == f8_1 ? 1 : 0) << 0xe) + 1) & 0x40)
-                        valA19 = Binocular_Process(a1);
+                    if (*(&((fpu_val_7_6 < f8_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_6, f8_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_6 == f8_1 ? 1 : 0) << 0xe) + 1) & 0x40)
+                        data_19 = Binocular_Process(context);
                     else
                     {
-                        objC15 = valA;
-                        long double x87_r7_7 = *(objC15 + 0x1e4);
-                        long double f9_1 = valA1[2];
-                        x87_r7_7 - f9_1;
+                        entity_15 = data_val;
+                        long double fpu_val_7_7 = *(entity_15 + 0x1e4);
+                        long double f9_1 = data_1[2];
+                        fpu_val_7_7 - f9_1;
 
-                        if (*(&((x87_r7_7 < f9_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_7, f9_1) ? 1 : 0) << 0xa
-                            | (x87_r7_7 == f9_1 ? 1 : 0) << 0xe) + 1) & 1)
+                        if (*(&((fpu_val_7_7 < f9_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_7, f9_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_7 == f9_1 ? 1 : 0) << 0xe) + 1) & 1)
                         {
-                            x87_r7_9 = *(objC15 + 0x1e4) * 1.03999996f;
+                            fpu_val_7_9 = *(entity_15 + 0x1e4) * 1.03999996f;
                             goto label_470ae3;
                         }
 
-                        valA19 = Binocular_Process(a1);
+                        data_19 = Binocular_Process(context);
                     }
                 }
                 else
                 {
-                    objC15 = valA;
-                    long double x87_r7_10 = *(objC15 + 0x1e4);
-                    long double f6_1 = valA1[1];
-                    x87_r7_10 - f6_1;
+                    entity_15 = data_val;
+                    long double fpu_val_7_10 = *(entity_15 + 0x1e4);
+                    long double f6_1 = data_1[1];
+                    fpu_val_7_10 - f6_1;
 
-                    if (*(&((x87_r7_10 < f6_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_10, f6_1) ? 1 : 0) << 0xa
-                            | (x87_r7_10 == f6_1 ? 1 : 0) << 0xe) + 1) & 0x41)
-                        valA19 = Binocular_Process(a1);
+                    if (*(&((fpu_val_7_10 < f6_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_10, f6_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_10 == f6_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+                        data_19 = Binocular_Process(context);
                     else
                     {
-                        x87_r7_9 = *(objC15 + 0x1e4) * 0.959999979f;
+                        fpu_val_7_9 = *(entity_15 + 0x1e4) * 0.959999979f;
                     label_470ae3:
-                        *(objC15 + 0x1e4) = x87_r7_9;
-                        valA19 = *(a1 + 0x1c4);
+                        *(entity_15 + 0x1e4) = fpu_val_7_9;
+                        data_19 = *(context + 0x1c4);
 
-                        if (!valA19 || !*valA19)
+                        if (!data_19 || !*data_19)
                         {
-                            Binocular_Process(a1);
-                            struct status_msg* valA21 = SoundSys_SetMasterVolume_7(v_4, "bin_zoom_1");
+                            Binocular_Process(context);
+                            struct status_msg* data_21 = SoundSys_SetMasterVolume_7(item_4, "bin_zoom_1");
 
-                            if (!valA21)
+                            if (!data_21)
                             {
-                                *(a1 + 0x1b8) = 0;
-                                return valA21;
+                                *(context + 0x1b8) = 0;
+                                return data_21;
                             }
 
-                            int32_t* valA22 = QTask_LinkEventHandler_2(valA21);
-                            *(a1 + 0x1b8) = 0;
-                            *(a1 + 0x1c4) = valA22;
-                            return valA22;
+                            int32_t* data_22 = QTask_LinkEventHandler_2(data_21);
+                            *(context + 0x1b8) = 0;
+                            *(context + 0x1c4) = data_22;
+                            return data_22;
                         }
                     }
                 }
             }
             else
             {
-                *(valA + 0x1e4) = *valA1;
-                Binocular_Process(a1);
-                valA19 = Binocular_Process(a1);
+                *(data_val + 0x1e4) = *data_1;
+                Binocular_Process(context);
+                data_19 = Binocular_Process(context);
             }
 
-            *(a1 + 0x1b8) = 0;
-            return valA19;
+            *(context + 0x1b8) = 0;
+            return data_19;
         }
 
-        AI_CombatTarget_24(*(tmpD + 0x4ec));
-        *(valA + 0x1e4) = *valA1;
-        *(a1 + 0x1b4) = 0;
-        *(a1 + 0x1b0) = 1;
-        *(a1 + 0x1bc) = 0;
+        AI_CombatTarget_24(*(temp_val + 0x4ec));
+        *(data_val + 0x1e4) = *data_1;
+        *(context + 0x1b4) = 0;
+        *(context + 0x1b0) = 1;
+        *(context + 0x1bc) = 0;
     }
 
-    *(a1 + 0x1b8) = 0;
+    *(context + 0x1b8) = 0;
     return 0;
 }

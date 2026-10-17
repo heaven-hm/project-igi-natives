@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Terrain_SampleHeightmap_7 (VA 0x00518190; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SampleHeightmap_7.h"
-long double Terrain_SampleHeightmap_7(double* a1, double a2)
+long double Terrain_SampleHeightmap_7(double* context, double param_2)
 
 {
-    long double x87_r7_3 = a2;
-    long double x87_r6_1 = x87_r7_3 * x87_r7_3;
-    return x87_r6_1 * x87_r7_3 * a1[2] + x87_r6_1 * a1[3] + x87_r7_3 * *a1 + a1[1];
+    long double fpu_val_7_3 = param_2;
+    long double fpu_val_6_1 = fpu_val_7_3 * fpu_val_7_3;
+    return fpu_val_6_1 * fpu_val_7_3 * context[2] + fpu_val_6_1 * context[3] + fpu_val_7_3 * *context + context[1];
 }

@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004E4530 SoundSys_Update3DPosition_2 | gate PASS | openigi False */
-int* SoundSys_Update3DPosition_2(float a1, int* a2, double* a3, float* a4, float* a5, char a6, char a7, int a8, char * a9);
+int* SoundSys_Update3DPosition_2(float context, int* param_2, double* param_3, float* param_4, float* param_5, char param_6, char param_7, int param_8, char * param_9);

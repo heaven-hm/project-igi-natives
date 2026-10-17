@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Terrain_CalculateNormals_5 (VA 0x00517840; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_CalculateNormals_5.h"
-void Terrain_CalculateNormals_5(int32_t* a1)
+void Terrain_CalculateNormals_5(int32_t* context)
 
 {
-    int32_t* i_1 = a1;
+    int32_t* i_1 = context;
 
     if (!i_1)
         return;
@@ -12,10 +12,10 @@ void Terrain_CalculateNormals_5(int32_t* a1)
 
     do
     {
-        int32_t* valA1 = i_1[2];
+        int32_t* data_1 = i_1[2];
 
-        if (valA1)
-            Terrain_CalculateNormals_5(valA1);
+        if (data_1)
+            Terrain_CalculateNormals_5(data_1);
 
         if (i_1[3])
         {

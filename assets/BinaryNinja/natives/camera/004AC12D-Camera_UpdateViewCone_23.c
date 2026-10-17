@@ -1,101 +1,101 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_23 (VA 0x004AC12D; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_23.h"
-void* Camera_UpdateViewCone_23(int32_t a1, uint32_t a2, uint32_t a3)
+void* Camera_UpdateViewCone_23(int32_t context, uint32_t param_2, uint32_t param_3)
 
 {
-    int32_t valA2;
-    void* valA4;
-    char tmpD1;
-    int32_t srcS2;
+    int32_t data_2;
+    void* data_4;
+    char temp_1;
+    int32_t source_2;
 
-    if (a1 < g_c32540)
+    if (context < g_c32540)
     {
-        valA2 = a1 >> 5;
-        srcS2 = (a1 & 0x1f) << 3;
-        valA4 = (&g_c32440)[valA2] + srcS2;
-        tmpD1 = *(valA4 + 4);
+        data_2 = context >> 5;
+        source_2 = (context & 0x1f) << 3;
+        data_4 = (&g_c32440)[data_2] + source_2;
+        temp_1 = *(data_4 + 4);
     }
 
-    if (a1 >= g_c32540 || !(tmpD1 & 1))
+    if (context >= g_c32540 || !(temp_1 & 1))
     {
         g_936068 = 0;
         g_936064 = 9;
     }
     else
     {
-        int32_t v_c_1 = 0;
-        char* lpBuffer_1 = a2;
+        int32_t item_c_1 = 0;
+        char* lpBuffer_1 = param_2;
         uint8_t* lpBuffer = lpBuffer_1;
 
-        if (!a3 || tmpD1 & 2)
+        if (!param_3 || temp_1 & 2)
             return nullptr;
 
-        if (tmpD1 & 0x48)
+        if (temp_1 & 0x48)
         {
-            char valA5 = *(valA4 + 5);
+            char data_5 = *(data_4 + 5);
 
-            if (valA5 != 0xa)
+            if (data_5 != 0xa)
             {
-                a3 -= 1;
-                *lpBuffer_1 = valA5;
+                param_3 -= 1;
+                *lpBuffer_1 = data_5;
                 lpBuffer = &lpBuffer_1[1];
-                v_c_1 = 1;
-                *((&g_c32440)[valA2] + srcS2 + 5) = 0xa;
+                item_c_1 = 1;
+                *((&g_c32440)[data_2] + source_2 + 5) = 0xa;
             }
         }
 
         uint32_t numberOfBytesRead;
 
-        if (ReadFile((&g_c32440)[valA2][(a1 & 0x1f) * 2], lpBuffer, a3, &numberOfBytesRead,
+        if (ReadFile((&g_c32440)[data_2][(context & 0x1f) * 2], lpBuffer, param_3, &numberOfBytesRead,
             nullptr))
         {
-            int32_t valA10 = (&g_c32440)[valA2];
+            int32_t data_10 = (&g_c32440)[data_2];
             uint32_t numberOfBytesRead_1 = numberOfBytesRead;
-            void* result = v_c_1 + numberOfBytesRead_1;
-            char valA11 = *(valA10 + srcS2 + 4);
+            void* result = item_c_1 + numberOfBytesRead_1;
+            char data_11 = *(data_10 + source_2 + 4);
 
-            if (!(valA11 & 0x80))
+            if (!(data_11 & 0x80))
                 return result;
 
             if (!numberOfBytesRead_1 || *lpBuffer_1 != 0xa)
-                valA11 &= 0xfb;
+                data_11 &= 0xfb;
             else
-                valA11 |= 4;
+                data_11 |= 4;
 
-            *(valA10 + srcS2 + 4) = valA11;
-            a3 = a2;
-            void* objC4 = result + a2;
-            void* v_c_2 = objC4;
+            *(data_10 + source_2 + 4) = data_11;
+            param_3 = param_2;
+            void* entity_4 = result + param_2;
+            void* item_c_2 = entity_4;
 
-            if (a2 < objC4)
+            if (param_2 < entity_4)
             {
                 do
                 {
-                    char valA14 = *a3;
+                    char data_14 = *param_3;
 
-                    if (valA14 == 0x1a)
+                    if (data_14 == 0x1a)
                     {
-                        char* srcS3 = (&g_c32440)[valA2] + srcS2 + 4;
-                        char valA22 = *srcS3;
+                        char* source_3 = (&g_c32440)[data_2] + source_2 + 4;
+                        char data_22 = *source_3;
 
-                        if (!(valA22 & 0x40))
-                            *srcS3 = valA22 | 2;
+                        if (!(data_22 & 0x40))
+                            *source_3 = data_22 | 2;
 
                         break;
                     }
 
-                    if (valA14 != 0xd)
+                    if (data_14 != 0xd)
                     {
-                        *lpBuffer_1 = valA14;
+                        *lpBuffer_1 = data_14;
                         lpBuffer_1 = &lpBuffer_1[1];
-                        a3 += 1;
+                        param_3 += 1;
                     }
-                    else if (a3 >= objC4 - 1)
+                    else if (param_3 >= entity_4 - 1)
                     {
-                        a3 += 1;
+                        param_3 += 1;
                         uint8_t buffer;
 
-                        if (ReadFile((&g_c32440)[valA2][(a1 & 0x1f) * 2], &buffer, 1,
+                        if (ReadFile((&g_c32440)[data_2][(context & 0x1f) * 2], &buffer, 1,
                             &numberOfBytesRead, nullptr))
                         {
                             if (numberOfBytesRead)
@@ -113,7 +113,7 @@ void* Camera_UpdateViewCone_23(int32_t a1, uint32_t a2, uint32_t a3)
                         {
                         label_4ac29e:
 
-                            if (*((&g_c32440)[valA2] + srcS2 + 4) & 0x48)
+                            if (*((&g_c32440)[data_2] + source_2 + 4) & 0x48)
                             {
                                 uint8_t buffer_1 = buffer;
 
@@ -126,12 +126,12 @@ void* Camera_UpdateViewCone_23(int32_t a1, uint32_t a2, uint32_t a3)
                                 {
                                     *lpBuffer_1 = 0xd;
                                     lpBuffer_1 = &lpBuffer_1[1];
-                                    *((&g_c32440)[valA2] + srcS2 + 5) = buffer_1;
+                                    *((&g_c32440)[data_2] + source_2 + 5) = buffer_1;
                                 }
                             }
-                            else if (lpBuffer_1 != a2 || buffer != 0xa)
+                            else if (lpBuffer_1 != param_2 || buffer != 0xa)
                             {
-                                Camera_ResetMatrix_9(a1, 0xffffffff, FILE_CURRENT);
+                                Camera_ResetMatrix_9(context, 0xffffffff, FILE_CURRENT);
 
                                 if (buffer != 0xa)
                                 {
@@ -146,34 +146,34 @@ void* Camera_UpdateViewCone_23(int32_t a1, uint32_t a2, uint32_t a3)
                             }
                         }
                     }
-                    else if (*(a3 + 1) != 0xa)
+                    else if (*(param_3 + 1) != 0xa)
                     {
                         *lpBuffer_1 = 0xd;
                         lpBuffer_1 = &lpBuffer_1[1];
-                        a3 += 1;
+                        param_3 += 1;
                     }
                     else
                     {
-                        a3 += 2;
+                        param_3 += 2;
                         *lpBuffer_1 = 0xa;
                         lpBuffer_1 = &lpBuffer_1[1];
                     }
 
-                    objC4 = v_c_2;
-                } while (a3 < objC4);
+                    entity_4 = item_c_2;
+                } while (param_3 < entity_4);
             }
 
-            return lpBuffer_1 - a2;
+            return lpBuffer_1 - param_2;
         }
 
-        enum WIN32_ERROR valA9 = GetLastError();
+        enum WIN32_ERROR data_9 = GetLastError();
 
-        if (valA9 != ERROR_ACCESS_DENIED)
+        if (data_9 != ERROR_ACCESS_DENIED)
         {
-            if (valA9 == ERROR_BROKEN_PIPE)
+            if (data_9 == ERROR_BROKEN_PIPE)
                 return nullptr;
 
-            Camera_UpdateViewCone_22(valA9);
+            Camera_UpdateViewCone_22(data_9);
         }
         else
         {

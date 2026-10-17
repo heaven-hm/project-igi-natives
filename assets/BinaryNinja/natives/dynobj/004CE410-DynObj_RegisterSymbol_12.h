@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004CE410 DynObj_RegisterSymbol_12 | gate PASS | openigi False */
-int DynObj_RegisterSymbol_12(float a1, double* a2, double* a3, char a4, float a5, int a6, int a7, float* a8);
+int DynObj_RegisterSymbol_12(float context, double* param_2, double* param_3, char param_4, float param_5, int param_6, int param_7, float* param_8);

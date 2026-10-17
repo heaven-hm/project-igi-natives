@@ -1,14 +1,14 @@
 // Original IGI.EXE function: Sys_ScriptInternalErrorU (VA 0x004BA3D0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ScriptInternalErrorU.h"
-int32_t Sys_ScriptInternalErrorU(int32_t a1)
+int32_t Sys_ScriptInternalErrorU(int32_t context)
 
 {
-    if (a1 - 1 <= 0x1c)
+    if (context - 1 <= 0x1c)
     {
-        int32_t tmpD1 = 0;
-        tmpD1 = *(a1 + (&jump_table_4ba458[0xf] + 3));
+        int32_t temp_1 = 0;
+        temp_1 = *(context + (&jump_table_4ba458[0xf] + 3));
 
-        switch (tmpD1)
+        switch (temp_1)
         {
             case 0:
             {
@@ -88,7 +88,7 @@ int32_t Sys_ScriptInternalErrorU(int32_t a1)
         }
     }
 
-    int32_t v_4 = a1;
+    int32_t item_4 = context;
     Error_Show("Script: Internal Error: Unknown opcode: %02X.");
 
     while (true)

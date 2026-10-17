@@ -1,35 +1,35 @@
 // Original IGI.EXE function: Display_SwapBuffers_10 (VA 0x00496280; static CFG gate PASS, CFG score 1.000).
 #include "Display_SwapBuffers_10.h"
-int32_t Display_SwapBuffers_10(char* a1, char* a2, int32_t a3, int16_t* a4)
+int32_t Display_SwapBuffers_10(char* context, char* param_2, int32_t param_3, int16_t* param_4)
 
 {
-    int16_t* flagP = a4;
-    int32_t srcS = flagP[3];
-    int16_t tmpD = flagP[2];
-    int32_t v_18 = flagP[1];
-    int32_t objC1 = flagP[4];
-    int32_t v_8 = *((srcS << 1) + &g_543930);
-    char* v_1c = a2;
-    int32_t v_4 = *((objC1 << 1) + &g_543930);
-    int16_t tmpD3;
-    tmpD3 = flagP[5];
-    a2 = a1;
-    int32_t v_10 = srcS;
+    int16_t* flagP = param_4;
+    int32_t source_val = flagP[3];
+    int16_t temp_val = flagP[2];
+    int32_t item_18 = flagP[1];
+    int32_t entity_1 = flagP[4];
+    int32_t item_8 = *((source_val << 1) + &g_543930);
+    char* item_1c = param_2;
+    int32_t item_4 = *((entity_1 << 1) + &g_543930);
+    int16_t temp_3;
+    temp_3 = flagP[5];
+    param_2 = context;
+    int32_t item_10 = source_val;
 
-    if (tmpD3)
+    if (temp_3)
     {
-        char* tmpD4 = nullptr;
-        tmpD4 = *a1;
-        a1 = tmpD4;
-        a2 = &a1[1];
+        char* temp_4 = nullptr;
+        temp_4 = *context;
+        context = temp_4;
+        param_2 = &context[1];
     }
 
-    int32_t result = a3;
+    int32_t result = param_3;
 
     if (result > 0)
     {
-        a3 = result;
-        bool cond_1_1;
+        param_3 = result;
+        bool flag_1_1;
 
         do
         {
@@ -39,87 +39,87 @@ int32_t Display_SwapBuffers_10(char* a1, char* a2, int32_t a3, int16_t* a4)
             {
                 do
                 {
-                    bool objC3 = flagP[5];
-                    char* valA3;
+                    bool entity_3 = flagP[5];
+                    char* data_3;
 
-                    if (!objC3)
+                    if (!entity_3)
                     {
-                        char* valA4 = nullptr;
-                        valA4 = *a2;
-                        a1 = valA4;
-                        a2 = &a2[1];
-                        valA3 = valA4 >> 4;
+                        char* data_4 = nullptr;
+                        data_4 = *param_2;
+                        context = data_4;
+                        param_2 = &param_2[1];
+                        data_3 = data_4 >> 4;
                     }
                     else
-                        valA3 = a1;
+                        data_3 = context;
 
-                    void* valA5 = valA3 & 0xf;
-                    flagP[5] = !objC3;
-                    int32_t objC4 = (&v_10)[i];
-                    int32_t tmpD7 = *(valA5 + 0x543920);
-                    int32_t objC5 = objC4 + tmpD7;
-                    (&v_10)[i] = objC5;
-                    int32_t ctxB1;
+                    void* data_5 = data_3 & 0xf;
+                    flagP[5] = !entity_3;
+                    int32_t entity_4 = (&item_10)[i];
+                    int32_t temp_7 = *(data_5 + 0x543920);
+                    int32_t entity_5 = entity_4 + temp_7;
+                    (&item_10)[i] = entity_5;
+                    int32_t context_1;
 
-                    if (objC4 + tmpD7 >= 0)
+                    if (entity_4 + temp_7 >= 0)
                     {
-                        ctxB1 = 0x58;
+                        context_1 = 0x58;
 
-                        if (objC5 <= 0x58)
-                            ctxB1 = objC5;
+                        if (entity_5 <= 0x58)
+                            context_1 = entity_5;
                     }
                     else
-                        ctxB1 = 0;
+                        context_1 = 0;
 
-                    int32_t srcS1 = (&v_8)[i];
-                    char valA6 = valA5 & 7;
-                    (&v_10)[i] = ctxB1;
-                    int32_t objC7 = srcS1 >> 3;
+                    int32_t source_1 = (&item_8)[i];
+                    char data_6 = data_5 & 7;
+                    (&item_10)[i] = context_1;
+                    int32_t entity_7 = source_1 >> 3;
 
-                    if (valA6 & 4)
-                        objC7 += srcS1;
+                    if (data_6 & 4)
+                        entity_7 += source_1;
 
-                    if (valA6 & 2)
+                    if (data_6 & 2)
                     {
-                        objC7 += srcS1 >> 1;
-                        flagP = a4;
+                        entity_7 += source_1 >> 1;
+                        flagP = param_4;
                     }
 
-                    if (valA6 & 1)
-                        objC7 += srcS1 >> 2;
+                    if (data_6 & 1)
+                        entity_7 += source_1 >> 2;
 
-                    int32_t valA7 = (&v_18)[i];
-                    int32_t valA8;
+                    int32_t data_7 = (&item_18)[i];
+                    int32_t data_8;
 
-                    valA8 = !(valA5 & 8) ? valA7 + objC7 : valA7 - objC7;
+                    data_8 = !(data_5 & 8) ? data_7 + entity_7 : data_7 - entity_7;
 
-                    (&v_18)[i] = valA8;
+                    (&item_18)[i] = data_8;
 
-                    if (valA8 < 0xffff8000)
-                        valA8 = 0xffff8000;
-                    else if (valA8 > 0x7fff)
-                        valA8 = 0x7fff;
+                    if (data_8 < 0xffff8000)
+                        data_8 = 0xffff8000;
+                    else if (data_8 > 0x7fff)
+                        data_8 = 0x7fff;
 
-                    (&v_18)[i] = valA8;
-                    int16_t objC2 = (&v_18)[i];
-                    (&v_8)[i] = *((ctxB1 << 1) + &g_543930);
-                    *v_1c = objC2;
+                    (&item_18)[i] = data_8;
+                    int16_t entity_2 = (&item_18)[i];
+                    (&item_8)[i] = *((context_1 << 1) + &g_543930);
+                    *item_1c = entity_2;
                     i += 1;
-                    v_1c = &v_1c[2];
+                    item_1c = &item_1c[2];
                 } while (i < *flagP);
             }
 
-            result = a3 - 1;
-            cond_1_1 = a3 != 1;
-            a3 = result;
-        } while (cond_1_1);
-        srcS = v_10;
+            result = param_3 - 1;
+            flag_1_1 = param_3 != 1;
+            param_3 = result;
+        } while (flag_1_1);
+        source_val = item_10;
     }
 
-    result = v_18;
-    flagP[3] = srcS;
+    result = item_18;
+    flagP[3] = source_val;
     flagP[1] = result;
-    flagP[2] = tmpD;
-    flagP[4] = objC1;
+    flagP[2] = temp_val;
+    flagP[4] = entity_1;
     return result;
 }

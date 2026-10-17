@@ -4,12 +4,12 @@ uint32_t Script_EvaluateCondition_14()
 
 {
     QTask_CloseEvent_2(g_54e1d8);
-    int32_t objC = g_54e1e4;
+    int32_t entity_val = g_54e1e4;
     g_54e1d8 = 0x181;
-    Script_SpawnNewTask_8(objC);
-    void* tmpD = g_a76c3c;
+    Script_SpawnNewTask_8(entity_val);
+    void* temp_val = g_a76c3c;
     g_54e1e4 = 0xffffffff;
-    DynObj_CreateMagicObject_4(tmpD);
+    DynObj_CreateMagicObject_4(temp_val);
     QTask_InitContext(g_54e1da);
     QTask_InitContext(g_54e1db);
     QTask_InitContext(g_54e1dc);

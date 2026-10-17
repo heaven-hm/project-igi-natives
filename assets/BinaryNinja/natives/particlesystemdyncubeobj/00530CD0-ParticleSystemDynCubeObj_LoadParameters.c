@@ -1,109 +1,109 @@
 // Original IGI.EXE function: ParticleSystemDynCubeObj_LoadParameters (VA 0x00530CD0; static CFG gate FAIL, CFG score 0.778).
 #include "ParticleSystemDynCubeObj_LoadParameters.h"
-int32_t ParticleSystemDynCubeObj_LoadParameters(void* a1)
+int32_t ParticleSystemDynCubeObj_LoadParameters(void* context)
 
 {
-    if (*(a1 + 0xb4))
+    if (*(context + 0xb4))
     {
-        memcpy(a1 + 0x88, &g_bcab08, 0x18);
-        *(a1 + 0xb4) = 0;
+        memcpy(context + 0x88, &g_bcab08, 0x18);
+        *(context + 0xb4) = 0;
     }
 
-    *(a1 + 0xa0) = g_bcab08 - *(a1 + 0x88);
-    int32_t valA1 = *(a1 + 0xac);
-    *(a1 + 0xa4) = g_bcab10 - *(a1 + 0x90);
-    *(a1 + 0xa8) = g_bcab18 - *(a1 + 0x98);
-    memcpy(a1 + 0x88, &g_bcab08, 0x18);
+    *(context + 0xa0) = g_bcab08 - *(context + 0x88);
+    int32_t data_1 = *(context + 0xac);
+    *(context + 0xa4) = g_bcab10 - *(context + 0x90);
+    *(context + 0xa8) = g_bcab18 - *(context + 0x98);
+    memcpy(context + 0x88, &g_bcab08, 0x18);
 
-    if (valA1)
-        valA1(a1);
+    if (data_1)
+        data_1(context);
 
-    int32_t v_74 = 0;
-    int32_t valA3 = ~*(a1 + 0x70);
-    int32_t srcS1 = g_bcab10 & valA3;
-    int32_t v_40 = srcS1;
-    int32_t objC1 = g_bcab18 & valA3;
-    int32_t result = *(a1 + 0x78);
-    int32_t objC2 = *(a1 + 0x6c);
+    int32_t item_74 = 0;
+    int32_t data_3 = ~*(context + 0x70);
+    int32_t source_1 = g_bcab10 & data_3;
+    int32_t item_40 = source_1;
+    int32_t entity_1 = g_bcab18 & data_3;
+    int32_t result = *(context + 0x78);
+    int32_t entity_2 = *(context + 0x6c);
     int32_t result_1 = result;
 
-    if (objC2 * 2 - 1 > 0)
+    if (entity_2 * 2 - 1 > 0)
     {
-        int32_t objC3 = objC2 * result;
-        int32_t v_7c_1 = objC3;
-        int32_t dstD5 = -(result);
-        int32_t v_80_1 = (g_bcab08 & valA3) + objC3;
-        int32_t result_2 = objC2 * 2 - 1;
+        int32_t entity_3 = entity_2 * result;
+        int32_t item_7c_1 = entity_3;
+        int32_t dest_5 = -(result);
+        int32_t item_80_1 = (g_bcab08 & data_3) + entity_3;
+        int32_t result_2 = entity_2 * 2 - 1;
 
         while (true)
         {
-            int32_t v_84_1 = objC3 + srcS1;
-            int32_t dstD7 = -(result);
-            int32_t v_64_1 = objC2 * 2 - 1;
+            int32_t item_84_1 = entity_3 + source_1;
+            int32_t dest_7 = -(result);
+            int32_t item_64_1 = entity_2 * 2 - 1;
 
             while (true)
             {
-                int32_t valA4;
-                int32_t tmpD6;
-                tmpD6 = HIGHD(result);
-                valA4 = LOWD(result);
-                double v_58_1 = v_80_1;
-                double v_50_3 = v_84_1;
-                int32_t srcS5 = ((valA4 - tmpD6) >> 1) + objC3 + objC1;
-                int32_t v_70_1 = srcS5;
-                int32_t v_68_1 = objC2 * 2 - 1;
-                bool cond_2_1;
+                int32_t data_4;
+                int32_t temp_6;
+                temp_6 = HIGHD(result);
+                data_4 = LOWD(result);
+                double item_58_1 = item_80_1;
+                double item_50_3 = item_84_1;
+                int32_t source_5 = ((data_4 - temp_6) >> 1) + entity_3 + entity_1;
+                int32_t item_70_1 = source_5;
+                int32_t item_68_1 = entity_2 * 2 - 1;
+                bool flag_2_1;
 
                 do
                 {
-                    int32_t v_1c_1 = *(&v_58_1 + 4);
-                    long double x87_r7_11 = v_70_1;
-                    float tmpD8 = *(a1 + 0x84);
-                    int32_t v_18_1 = v_50_3;
-                    int32_t v_20 = v_58_1;
-                    v_70_1 = x87_r7_11;
-                    double v_10_1 = x87_r7_11;
-                    int32_t v_14_1 = *(&v_50_3 + 4);
+                    int32_t item_1c_1 = *(&item_58_1 + 4);
+                    long double fpu_val_7_11 = item_70_1;
+                    float temp_8 = *(context + 0x84);
+                    int32_t item_18_1 = item_50_3;
+                    int32_t item_20 = item_58_1;
+                    item_70_1 = fpu_val_7_11;
+                    double item_10_1 = fpu_val_7_11;
+                    int32_t item_14_1 = *(&item_50_3 + 4);
 
-                    if (Particle_FadeParticles_3(&v_20, tmpD8))
+                    if (Particle_FadeParticles_3(&item_20, temp_8))
                     {
-                        int32_t v_38 = v_58_1;
-                        int32_t v_34_1 = *(&v_58_1 + 4);
-                        int32_t v_2c_1 = *(&v_50_3 + 4);
-                        int32_t v_30_1 = v_50_3;
-                        int32_t v_28_1 = v_70_1;
-                        int32_t v_6c;
-                        int32_t v_24_1 = v_6c;
-                        (*(a1 + 0xb0))(a1, &v_38);
-                        v_74 += 1;
+                        int32_t item_38 = item_58_1;
+                        int32_t item_34_1 = *(&item_58_1 + 4);
+                        int32_t item_2c_1 = *(&item_50_3 + 4);
+                        int32_t item_30_1 = item_50_3;
+                        int32_t item_28_1 = item_70_1;
+                        int32_t item_6c;
+                        int32_t item_24_1 = item_6c;
+                        (*(context + 0xb0))(context, &item_38);
+                        item_74 += 1;
                     }
 
-                    srcS5 += dstD7;
-                    cond_2_1 = v_68_1 != 1;
-                    v_70_1 = srcS5;
-                    v_68_1 -= 1;
-                } while (cond_2_1);
-                bool cond_3_1 = v_64_1 != 1;
-                v_84_1 += dstD7;
-                v_64_1 -= 1;
+                    source_5 += dest_7;
+                    flag_2_1 = item_68_1 != 1;
+                    item_70_1 = source_5;
+                    item_68_1 -= 1;
+                } while (flag_2_1);
+                bool flag_3_1 = item_64_1 != 1;
+                item_84_1 += dest_7;
+                item_64_1 -= 1;
 
-                if (!cond_3_1)
+                if (!flag_3_1)
                     break;
 
-                objC3 = v_7c_1;
+                entity_3 = item_7c_1;
                 result = result_1;
             }
 
             result = result_2 - 1;
-            bool cond_4_1 = result_2 != 1;
-            v_80_1 += dstD5;
+            bool flag_4_1 = result_2 != 1;
+            item_80_1 += dest_5;
             result_2 = result;
 
-            if (!cond_4_1)
+            if (!flag_4_1)
                 break;
 
-            srcS1 = v_40;
-            objC3 = v_7c_1;
+            source_1 = item_40;
+            entity_3 = item_7c_1;
             result = result_1;
         }
     }

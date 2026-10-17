@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004A5000 Camera_ApplyLineFilter_3 | gate FAIL | openigi False */
-int Camera_ApplyLineFilter_3(int a1, int a2, int a3, int* a4, int a5, struct _EXCEPTION_REGISTRATION_RECORD* a6, int a7);
+int Camera_ApplyLineFilter_3(int context, int param_2, int param_3, int* param_4, int param_5, struct _EXCEPTION_REGISTRATION_RECORD* param_6, int param_7);

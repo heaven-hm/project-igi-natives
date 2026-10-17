@@ -3,7 +3,7 @@
 uint32_t Vehicle_UpdateCockpit_9()
 
 {
-    int32_t valA;
-    valA = g_53c46c;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_53c46c;
+    return QTask_CloseEvent_2(data_val);
 }

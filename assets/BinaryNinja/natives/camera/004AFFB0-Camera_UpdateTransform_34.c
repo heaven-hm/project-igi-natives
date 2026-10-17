@@ -1,118 +1,118 @@
 // Original IGI.EXE function: Camera_UpdateTransform_34 (VA 0x004AFFB0; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateTransform_34.h"
-int32_t Camera_UpdateTransform_34(int32_t a1, char* a2)
+int32_t Camera_UpdateTransform_34(int32_t context, char* param_2)
 
 {
-    char* valA = nullptr;
-    char* objC = nullptr;
-    int32_t v_410 = 0;
-    int32_t dstD = 1;
-    int32_t v_40c = 0;
+    char* data_val = nullptr;
+    char* entity_val = nullptr;
+    int32_t item_410 = 0;
+    int32_t dest_val = 1;
+    int32_t item_40c = 0;
 
-    if (!*a2)
+    if (!*param_2)
     {
-        *a1 = 0;
+        *context = 0;
         return 1;
     }
 
     do
     {
-        char i_1 = *(objC + a2);
+        char i_1 = *(entity_val + param_2);
 
         if (i_1 - 0x28 > 0x55)
             goto label_4b0083;
 
-        int32_t ctxB2 = 0;
-        ctxB2 = *(i_1 + &jump_table_4b01f0);
-        int32_t v_414;
-        char* v_404;
-        int32_t v_400[0x100];
+        int32_t context_2 = 0;
+        context_2 = *(i_1 + &jump_table_4b01f0);
+        int32_t item_414;
+        char* item_404;
+        int32_t item_400[0x100];
 
-        switch (ctxB2)
+        switch (context_2)
         {
             case 0:
             {
-                v_400[v_410] = valA;
-                v_410 += 1;
+                item_400[item_410] = data_val;
+                item_410 += 1;
             label_4b0083:
-                dstD = 0;
-                v_414 = 0;
+                dest_val = 0;
+                item_414 = 0;
             label_4b0089:
-                valA[a1] = i_1;
-                valA = &valA[1];
-                objC = &objC[1];
+                data_val[context] = i_1;
+                data_val = &data_val[1];
+                entity_val = &entity_val[1];
                 break;
             }
             case 1:
             {
-                dstD = 0;
-                v_414 = 0;
+                dest_val = 0;
+                item_414 = 0;
 
-                if (!v_410)
+                if (!item_410)
                     return 0;
 
-                v_410 -= 1;
+                item_410 -= 1;
                 goto label_4b0089;
             }
             case 2:
             {
-                if (dstD)
+                if (dest_val)
                     return 0;
 
             label_4b0180:
-                dstD = 1;
+                dest_val = 1;
             label_4b0185:
-                valA[a1] = i_1;
-                valA = &valA[1];
-                objC = &objC[1];
-                v_414 = 0;
+                data_val[context] = i_1;
+                data_val = &data_val[1];
+                entity_val = &entity_val[1];
+                item_414 = 0;
                 break;
             }
             case 3:
             {
-                if (dstD)
+                if (dest_val)
                     return 0;
 
-                if (!v_414)
+                if (!item_414)
                 {
-                    dstD = 1;
+                    dest_val = 1;
 
-                    if (*(objC + a2 - 1) != 0x29)
+                    if (*(entity_val + param_2 - 1) != 0x29)
                         goto label_4b0185;
 
-                    void* tmpD7 = v_400[v_410];
-                    void* flagP7 = valA - tmpD7;
+                    void* temp_7 = item_400[item_410];
+                    void* flagP7 = data_val - temp_7;
 
                     if (flagP7 > 0)
                     {
-                        char* ctxB6 = &valA[a1];
-                        char* v_414_1 = tmpD7 + a1;
-                        void* v_408_1 = flagP7;
-                        bool cond_3_1;
+                        char* context_6 = &data_val[context];
+                        char* item_414_1 = temp_7 + context;
+                        void* item_408_1 = flagP7;
+                        bool flag_3_1;
 
                         do
                         {
-                            *ctxB6 = *v_414_1;
-                            ctxB6 = &ctxB6[1];
-                            v_414_1 = &v_414_1[1];
-                            cond_3_1 = v_408_1 != 1;
-                            v_408_1 -= 1;
-                        } while (cond_3_1);
+                            *context_6 = *item_414_1;
+                            context_6 = &context_6[1];
+                            item_414_1 = &item_414_1[1];
+                            flag_3_1 = item_408_1 != 1;
+                            item_408_1 -= 1;
+                        } while (flag_3_1);
                     }
 
-                    char* valA3 = valA + flagP7;
-                    v_414 = 0;
-                    valA3[a1] = 0x2a;
-                    valA = &valA3[1];
-                    objC = &objC[1];
+                    char* data_3 = data_val + flagP7;
+                    item_414 = 0;
+                    data_3[context] = 0x2a;
+                    data_val = &data_3[1];
+                    entity_val = &entity_val[1];
                 }
                 else
                 {
-                    char* i_3 = valA - v_404;
+                    char* i_3 = data_val - item_404;
 
                     if (i_3 > 0)
                     {
-                        char* flagP5 = &v_404[a1];
+                        char* flagP5 = &item_404[context];
                         char* i_2 = i_3;
                         char* i;
 
@@ -125,82 +125,82 @@ int32_t Camera_UpdateTransform_34(int32_t a1, char* a2)
                         } while (i != 1);
                     }
 
-                    char* valA2 = valA + i_3;
-                    dstD = 1;
-                    v_414 = 0;
-                    valA2[a1] = 0x2a;
-                    valA = &valA2[1];
-                    objC = &objC[1];
+                    char* data_2 = data_val + i_3;
+                    dest_val = 1;
+                    item_414 = 0;
+                    data_2[context] = 0x2a;
+                    data_val = &data_2[1];
+                    entity_val = &entity_val[1];
                 }
                 break;
             }
             case 4:
             {
-                dstD = 0;
-                valA[a1] = i_1;
-                valA = &valA[1];
-                objC = &objC[1];
-                v_414 = 0;
-                i_1 = *(objC + a2);
+                dest_val = 0;
+                data_val[context] = i_1;
+                data_val = &data_val[1];
+                entity_val = &entity_val[1];
+                item_414 = 0;
+                i_1 = *(entity_val + param_2);
                 goto label_4b0089;
             }
             case 5:
             {
-                if (dstD)
+                if (dest_val)
                     return 0;
 
                 goto label_4b0180;
             }
             case 6:
             {
-                v_404 = valA;
+                item_404 = data_val;
 
-                for (; i_1 != 0x5d; i_1 = *(objC + a2))
+                for (; i_1 != 0x5d; i_1 = *(entity_val + param_2))
                 {
                     if (!i_1)
                         return 0;
 
                     if (i_1 == 0x2f || i_1 == 0x5c)
                     {
-                        valA[a1] = i_1;
-                        valA = &valA[1];
-                        objC = &objC[1];
+                        data_val[context] = i_1;
+                        data_val = &data_val[1];
+                        entity_val = &entity_val[1];
                     }
 
-                    valA = &valA[1];
-                    i_1 = *(objC + a2);
-                    objC = &objC[1];
-                    valA[a1 - 1] = i_1;
+                    data_val = &data_val[1];
+                    i_1 = *(entity_val + param_2);
+                    entity_val = &entity_val[1];
+                    data_val[context - 1] = i_1;
                 }
 
-                valA = &valA[1];
-                v_414 = 1;
-                char tmpD4 = *(objC + a2);
-                objC = &objC[1];
-                valA[a1 - 1] = tmpD4;
-                dstD = 0;
+                data_val = &data_val[1];
+                item_414 = 1;
+                char temp_4 = *(entity_val + param_2);
+                entity_val = &entity_val[1];
+                data_val[context - 1] = temp_4;
+                dest_val = 0;
                 break;
             }
             case 7:
             {
-                dstD = 0;
+                dest_val = 0;
 
-                if (v_410 || v_40c)
+                if (item_410 || item_40c)
                     return 0;
 
-                v_414 = 0;
-                v_40c = 1;
+                item_414 = 0;
+                item_40c = 1;
                 goto label_4b0089;
             }
             case 8:
             {
-                dstD = 0;
+                dest_val = 0;
 
-                if (!v_40c)
+                if (!item_40c)
                     return 0;
 
-                v_414 = 0;
-                v_40c = 0;
+                item_414 = 0;
+                item_40c = 0;
                 goto label_4b0089;
             }
             case 9:
@@ -208,8 +208,8 @@ int32_t Camera_UpdateTransform_34(int32_t a1, char* a2)
                 goto label_4b0083;
             }
         }
-    } while (*(objC + a2));
+    } while (*(entity_val + param_2));
 
-    valA[a1] = 0;
+    data_val[context] = 0;
     return 1;
 }

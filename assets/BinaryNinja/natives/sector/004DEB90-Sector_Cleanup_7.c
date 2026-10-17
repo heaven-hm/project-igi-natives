@@ -1,45 +1,45 @@
 // Original IGI.EXE function: Sector_Cleanup_7 (VA 0x004DEB90; static CFG gate PASS, CFG score 1.000).
 #include "Sector_Cleanup_7.h"
-int32_t Sector_Cleanup_7(float a1, void* a2)
+int32_t Sector_Cleanup_7(float context, void* param_2)
 
 {
-    int32_t* dstD = a1;
-    long double fpu7 = dstD[0x27];
-    long double fpu6 = dstD[0x28];
+    int32_t* dest_val = context;
+    long double fpu7 = dest_val[0x27];
+    long double fpu6 = dest_val[0x28];
     fpu6 - fpu7;
-    long double x87_r7_1;
+    long double fpu_val_7_1;
 
     if (!(*(&((fpu6 < fpu7 ? 1 : 0) << 8 | (FCMP_UO(fpu6, fpu7) ? 1 : 0) << 0xa
             | (fpu6 == fpu7 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_1 = dstD[0x28];
+        fpu_val_7_1 = dest_val[0x28];
     else
-        x87_r7_1 = dstD[0x27];
+        fpu_val_7_1 = dest_val[0x27];
 
-    long double x87_r6_1 = dstD[0x26];
-    x87_r6_1 - x87_r7_1;
-    long double x87_r7_3;
+    long double fpu_val_6_1 = dest_val[0x26];
+    fpu_val_6_1 - fpu_val_7_1;
+    long double fpu_val_7_3;
 
-    if (*(&((x87_r6_1 < x87_r7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_1) ? 1 : 0) << 0xa
-        | (x87_r6_1 == x87_r7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_1 < fpu_val_7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_1) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == fpu_val_7_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_4 = dstD[0x27];
-        long double x87_r6_2 = dstD[0x28];
-        x87_r6_2 - x87_r7_4;
+        long double fpu_val_7_4 = dest_val[0x27];
+        long double fpu_val_6_2 = dest_val[0x28];
+        fpu_val_6_2 - fpu_val_7_4;
 
-        if (!(*(&((x87_r6_2 < x87_r7_4 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, x87_r7_4) ? 1 : 0) << 0xa
-                | (x87_r6_2 == x87_r7_4 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_3 = dstD[0x28];
+        if (!(*(&((fpu_val_6_2 < fpu_val_7_4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, fpu_val_7_4) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == fpu_val_7_4 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_3 = dest_val[0x28];
         else
-            x87_r7_3 = dstD[0x27];
+            fpu_val_7_3 = dest_val[0x27];
     }
     else
-        x87_r7_3 = dstD[0x26];
+        fpu_val_7_3 = dest_val[0x26];
 
-    long double x87_r7_6 = Render_ComputeNormals(dstD[0x1b]) * x87_r7_3;
-    DynObj_LinkDynamicCube_8(*(a2 + 4), dstD, &dstD[8], x87_r7_6, 1);
-    double* valA2 = DynObj_UpdateDynTree_4(dstD);
-    Render_ComputeNormals_14(*(a2 + 4), dstD, valA2);
-    int32_t* i = dstD[2];
+    long double fpu_val_7_6 = Render_ComputeNormals(dest_val[0x1b]) * fpu_val_7_3;
+    DynObj_LinkDynamicCube_8(*(param_2 + 4), dest_val, &dest_val[8], fpu_val_7_6, 1);
+    double* data_2 = DynObj_UpdateDynTree_4(dest_val);
+    Render_ComputeNormals_14(*(param_2 + 4), dest_val, data_2);
+    int32_t* i = dest_val[2];
     int32_t result;
 
     if (!*i || !i)
@@ -50,27 +50,27 @@ int32_t Sector_Cleanup_7(float a1, void* a2)
 
         do
         {
-            int32_t* tmpD1 = *i;
-            void* objC4;
+            int32_t* temp_1 = *i;
+            void* entity_4;
 
-            if (!tmpD1)
-                objC4 = nullptr;
+            if (!temp_1)
+                entity_4 = nullptr;
             else
             {
-                int32_t objC1 = *tmpD1;
-                int32_t objC2 = -(objC1);
-                objC4 = (objC2 - objC2) & tmpD1;
+                int32_t entity_1 = *temp_1;
+                int32_t entity_2 = -(entity_1);
+                entity_4 = (entity_2 - entity_2) & temp_1;
             }
 
-            *((result << 2) + &g_afa6e0) = objC4;
+            *((result << 2) + &g_afa6e0) = entity_4;
             g_afa7e0 = result + 1;
-            uint32_t valA6 = DynObj_UpdateDynTree_12();
-            int32_t tmpD2 = 0;
-            tmpD2 = i[7];
-            int32_t valA7 = *(((valA6 * 0x180 + tmpD2) << 2) + &g_a96ae0);
+            uint32_t data_6 = DynObj_UpdateDynTree_12();
+            int32_t temp_2 = 0;
+            temp_2 = i[7];
+            int32_t data_7 = *(((data_6 * 0x180 + temp_2) << 2) + &g_a96ae0);
 
-            if (valA7)
-                valA7(i, a2);
+            if (data_7)
+                data_7(i, param_2);
 
             result = g_afa7e0 - 1;
             g_afa7e0 = result;
@@ -78,37 +78,37 @@ int32_t Sector_Cleanup_7(float a1, void* a2)
         } while (i);
     }
 
-    void* dstD1 = dstD[0x3a];
+    void* dest_1 = dest_val[0x3a];
 
-    if (dstD1)
+    if (dest_1)
     {
-        int32_t* i_1 = *(dstD1 + 8);
+        int32_t* i_1 = *(dest_1 + 8);
 
         if (*i_1 && i_1)
         {
             do
             {
-                int32_t* tmpD3 = *i_1;
-                void* objC11;
+                int32_t* temp_3 = *i_1;
+                void* entity_11;
 
-                if (!tmpD3)
-                    objC11 = nullptr;
+                if (!temp_3)
+                    entity_11 = nullptr;
                 else
                 {
-                    int32_t objC8 = *tmpD3;
-                    int32_t objC9 = -(objC8);
-                    objC11 = (objC9 - objC9) & tmpD3;
+                    int32_t entity_8 = *temp_3;
+                    int32_t entity_9 = -(entity_8);
+                    entity_11 = (entity_9 - entity_9) & temp_3;
                 }
 
-                *((result << 2) + &g_afa6e0) = objC11;
+                *((result << 2) + &g_afa6e0) = entity_11;
                 g_afa7e0 = result + 1;
-                uint32_t valA11 = DynObj_UpdateDynTree_12();
-                int32_t objC12 = 0;
-                objC12 = i_1[7];
-                int32_t valA15 = *(((valA11 * 0x180 + objC12) << 2) + &g_a96ae0);
+                uint32_t data_11 = DynObj_UpdateDynTree_12();
+                int32_t entity_12 = 0;
+                entity_12 = i_1[7];
+                int32_t data_15 = *(((data_11 * 0x180 + entity_12) << 2) + &g_a96ae0);
 
-                if (valA15)
-                    valA15(i_1, a2);
+                if (data_15)
+                    data_15(i_1, param_2);
 
                 result = g_afa7e0 - 1;
                 g_afa7e0 = result;

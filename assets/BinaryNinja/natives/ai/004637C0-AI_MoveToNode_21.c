@@ -1,38 +1,38 @@
 // Original IGI.EXE function: AI_MoveToNode_21 (VA 0x004637C0; static CFG gate PASS, CFG score 1.000).
 #include "AI_MoveToNode_21.h"
-uint32_t AI_MoveToNode_21(void* a1, int32_t a2, int32_t a3)
+uint32_t AI_MoveToNode_21(void* context, int32_t param_2, int32_t param_3)
 
 {
-    void* dstD = nullptr;
+    void* dest_val = nullptr;
     uint32_t result = Frames_GetUpdateCounter();
 
-    if (result >= *(a1 + 0x844))
+    if (result >= *(context + 0x844))
     {
-        int32_t* valA = *(a1 + 0x840);
+        int32_t* data_val = *(context + 0x840);
 
-        if (valA)
+        if (data_val)
         {
-            dstD = *valA;
+            dest_val = *data_val;
 
-            if (dstD)
-                SoundSys_SetFrequency_7(dstD);
+            if (dest_val)
+                SoundSys_SetFrequency_7(dest_val);
 
-            Qtask_UpdateList(*(a1 + 0x840));
-            *(a1 + 0x840) = 0;
+            Qtask_UpdateList(*(context + 0x840));
+            *(context + 0x840) = 0;
         }
 
-        *(a1 + 0x844) =
-            0x1e - Sys_AllocateMemory_14(Level_SetMission_5()) * -30f + Frames_GetUpdateCounter();
-        int32_t v_40_1 = Sys_FreeMemory_14(Level_SetMission_5(), a3) + 1;
-        int32_t v_44_1 = a2;
-        char v_20[0x20];
-        Game_DataSymbolLoad(&v_20, "%s%d");
-        result = SoundSys_SetMasterVolume_7(*(a1 + 0x4ec), &v_20);
+        *(context + 0x844) =
+            0x1e - Sys_AllocateMemory_14(Level_SetMission_5()) * -30.0f + Frames_GetUpdateCounter();
+        int32_t item_40_1 = Sys_FreeMemory_14(Level_SetMission_5(), param_3) + 1;
+        int32_t item_44_1 = param_2;
+        char item_20[0x20];
+        Game_DataSymbolLoad(&item_20, "%s%d");
+        result = SoundSys_SetMasterVolume_7(*(context + 0x4ec), &item_20);
 
-        if (dstD)
+        if (dest_val)
         {
-            result = QTask_LinkEventHandler_2(dstD);
-            *(a1 + 0x840) = result;
+            result = QTask_LinkEventHandler_2(dest_val);
+            *(context + 0x840) = result;
         }
     }
 

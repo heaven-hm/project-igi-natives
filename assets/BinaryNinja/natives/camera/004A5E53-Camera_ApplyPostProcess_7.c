@@ -1,56 +1,56 @@
 // Original IGI.EXE function: Camera_ApplyPostProcess_7 (VA 0x004A5E53; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess_7.h"
-int32_t Camera_ApplyPostProcess_7(int32_t a1, EXCEPTION_POINTERS* a2)
+int32_t Camera_ApplyPostProcess_7(int32_t context, EXCEPTION_POINTERS* param_2)
 
 {
-    int32_t* valA = Camera_UpdateViewCone_7(a1);
+    int32_t* data_val = Camera_UpdateViewCone_7(context);
 
-    if (valA)
+    if (data_val)
     {
-        int32_t ctxB1 = valA[2];
+        int32_t context_1 = data_val[2];
 
-        if (ctxB1)
+        if (context_1)
         {
-            if (ctxB1 == 5)
+            if (context_1 == 5)
             {
-                valA[2] = 0;
+                data_val[2] = 0;
                 return 1;
             }
 
-            if (ctxB1 != 1)
+            if (context_1 != 1)
             {
-                int32_t objC1 = g_9360b0;
-                g_9360b0 = a2;
-                int32_t objC3 = valA[1];
+                int32_t entity_1 = g_9360b0;
+                g_9360b0 = param_2;
+                int32_t entity_3 = data_val[1];
 
-                if (objC3 != 8)
+                if (entity_3 != 8)
                 {
-                    valA[2] = 0;
-                    ctxB1(objC3);
+                    data_val[2] = 0;
+                    context_1(entity_3);
                 }
                 else
                 {
-                    int32_t objC4 = g_543fa0;
-                    int32_t tmpD2 = g_543fa4 + objC4;
+                    int32_t entity_4 = g_543fa0;
+                    int32_t temp_2 = g_543fa4 + entity_4;
 
-                    if (objC4 < tmpD2)
+                    if (entity_4 < temp_2)
                     {
-                        int32_t i_1 = tmpD2 - objC4;
-                        int32_t* srcS2 = objC4 * 0xc + &g_543f30;
+                        int32_t i_1 = temp_2 - entity_4;
+                        int32_t* source_2 = entity_4 * 0xc + &g_543f30;
                         int32_t i;
 
                         do
                         {
-                            *srcS2 = 0;
-                            srcS2 = &srcS2[3];
+                            *source_2 = 0;
+                            source_2 = &source_2[3];
                             i = i_1;
                             i_1 -= 1;
                         } while (i != 1);
                     }
 
-                    int32_t srcS3 = g_543fac;
+                    int32_t source_3 = g_543fac;
 
-                    switch (*valA)
+                    switch (*data_val)
                     {
                         case 0xc000008d:
                         {
@@ -89,16 +89,16 @@ int32_t Camera_ApplyPostProcess_7(int32_t a1, EXCEPTION_POINTERS* a2)
                         }
                     }
 
-                    ctxB1(8, g_543fac);
-                    g_543fac = srcS3;
+                    context_1(8, g_543fac);
+                    g_543fac = source_3;
                 }
 
-                g_9360b0 = objC1;
+                g_9360b0 = entity_1;
             }
 
             return 0xffffffff;
         }
     }
 
-    return UnhandledExceptionFilter(a2);
+    return UnhandledExceptionFilter(param_2);
 }

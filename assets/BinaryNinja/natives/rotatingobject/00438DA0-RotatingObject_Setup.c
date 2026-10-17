@@ -1,18 +1,18 @@
 // Original IGI.EXE function: RotatingObject_Setup (VA 0x00438DA0; static CFG gate PASS, CFG score 1.000).
 #include "RotatingObject_Setup.h"
-char* RotatingObject_Setup(void* a1)
+char* RotatingObject_Setup(void* context)
 
 {
-    DynObj_RegisterSymbol_9(*(a1 + 0x68), a1);
-    int32_t* valA1 = *(a1 + 0x1a0);
+    DynObj_RegisterSymbol_9(*(context + 0x68), context);
+    int32_t* data_1 = *(context + 0x1a0);
 
-    if (valA1)
-        Qtask_UpdateList(valA1);
+    if (data_1)
+        Qtask_UpdateList(data_1);
 
-    void* valA2 = *(a1 + 0x1a4);
+    void* data_2 = *(context + 0x1a4);
 
-    if (valA2)
-        DynObj_CreateMagicObject_4(valA2);
+    if (data_2)
+        DynObj_CreateMagicObject_4(data_2);
 
-    return Script_CallNativeHandler_6(a1 + 0x1ac);
+    return Script_CallNativeHandler_6(context + 0x1ac);
 }

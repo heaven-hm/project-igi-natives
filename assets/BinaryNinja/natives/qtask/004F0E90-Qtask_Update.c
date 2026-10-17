@@ -5,10 +5,10 @@ int32_t* Qtask_Update()
 // Sig: void Qtask_Update(void)
 // Note: Update QTask hash table call before loading level.
 {
-    void* valA = g_a758a4;
+    void* data_val = g_a758a4;
 
-    if (valA)
-        QTask_CleanupTypes(valA);
+    if (data_val)
+        QTask_CleanupTypes(data_val);
 
     int32_t* result;
 

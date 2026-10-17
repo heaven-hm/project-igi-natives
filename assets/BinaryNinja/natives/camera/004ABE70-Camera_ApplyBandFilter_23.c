@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_23 (VA 0x004ABE70; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_23.h"
-enum WIN32_ERROR Camera_ApplyBandFilter_23(int32_t a1)
+enum WIN32_ERROR Camera_ApplyBandFilter_23(int32_t context)
 
 {
-    if (a1 < g_c32540 && *((&g_c32440)[a1 >> 5] + ((a1 & 0x1f) << 3) + 4) & 1)
+    if (context < g_c32540 && *((&g_c32440)[context >> 5] + ((context & 0x1f) << 3) + 4) & 1)
     {
         enum WIN32_ERROR result;
 
-        if (FlushFileBuffers(Camera_ApplyLineFilter_23(a1)))
+        if (FlushFileBuffers(Camera_ApplyLineFilter_23(context)))
             result = NO_ERROR;
         else
             result = GetLastError();

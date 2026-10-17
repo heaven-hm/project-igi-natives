@@ -1,38 +1,38 @@
 // Original IGI.EXE function: DynObj_UpdateDynTree (VA 0x004C0260; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_UpdateDynTree.h"
-int32_t DynObj_UpdateDynTree(int32_t* a1, int32_t a2, int32_t a3)
+int32_t DynObj_UpdateDynTree(int32_t* context, int32_t param_2, int32_t param_3)
 
 {
-    int32_t objC;
-    int32_t v_4 = objC;
-    int32_t* objC1 = a1;
+    int32_t entity_val;
+    int32_t item_4 = entity_val;
+    int32_t* entity_1 = context;
     int32_t flagP = 0;
-    int32_t i = objC1[1];
+    int32_t i = entity_1[1];
     int32_t i_1 = 0;
 
     if (i > 0)
     {
         do
         {
-            int32_t* j_1 = *(*objC1 + flagP);
+            int32_t* j_1 = *(*entity_1 + flagP);
             int32_t* j = *j_1;
 
             if (j)
             {
                 do
                 {
-                    a2(j_1[2], j_1[3], a3);
+                    param_2(j_1[2], j_1[3], param_3);
                     j_1 = j;
                     j = *j;
                 } while (j);
 
-                objC1 = a1;
+                entity_1 = context;
             }
 
             i = i_1 + 1;
             flagP += 0xc;
             i_1 = i;
-        } while (i < objC1[1]);
+        } while (i < entity_1[1]);
     }
 
     return i;

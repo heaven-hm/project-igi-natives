@@ -1,29 +1,29 @@
 // Original IGI.EXE function: Terrain_ConnectGraphNode_2 (VA 0x00512940; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_ConnectGraphNode_2.h"
-int32_t Terrain_ConnectGraphNode_2(int32_t a1)
+int32_t Terrain_ConnectGraphNode_2(int32_t context)
 
 {
     void* flagP = nullptr;
-    int32_t ctxB = 0;
-    int32_t valA3;
+    int32_t context_val = 0;
+    int32_t data_3;
 
     if (g_bcab38)
     {
-        int32_t valA7 = g_b015a8;
-        int32_t v_34_1 = 0x20;
-        int32_t v_38_1 = 0x20;
-        int32_t srcS4 = *(g_b015a4 + (valA7 << 2)) * g_b015b0 + g_b015a0;
-        *(g_b015b4 + srcS4) = valA7;
+        int32_t data_7 = g_b015a8;
+        int32_t item_34_1 = 0x20;
+        int32_t item_38_1 = 0x20;
+        int32_t source_4 = *(g_b015a4 + (data_7 << 2)) * g_b015b0 + g_b015a0;
+        *(g_b015b4 + source_4) = data_7;
         g_b015a8 += 1;
-        int32_t dstD5 = a1;
-        int32_t v_3c_1 = *(dstD5 + 0x14) - 16f;
-        int32_t v_40_1 = *(dstD5 + 0x10) - 16f;
-        int32_t v_44_1 = srcS4;
-        a1 = 0xfffffff0;
-        long double x87_r7_5 = 0f;
-        long double x87_r6_1 = 0f;
-        long double x87_r5_1 = 0f;
-        bool cond_2_1;
+        int32_t dest_5 = context;
+        int32_t item_3c_1 = *(dest_5 + 0x14) - 16.0f;
+        int32_t item_40_1 = *(dest_5 + 0x10) - 16.0f;
+        int32_t item_44_1 = source_4;
+        context = 0xfffffff0;
+        long double fpu_val_7_5 = 0.0f;
+        long double fpu_val_6_1 = 0.0f;
+        long double fpu_val_5_1 = 0.0f;
+        bool flag_2_1;
 
         do
         {
@@ -32,90 +32,90 @@ int32_t Terrain_ConnectGraphNode_2(int32_t a1)
 
             do
             {
-                if (*(flagP + 0xa7dc64) && *(srcS4 + (ctxB << 1)) == *(*(dstD5 + 0x24) + (ctxB << 1)))
+                if (*(flagP + 0xa7dc64) && *(source_4 + (context_val << 1)) == *(*(dest_5 + 0x24) + (context_val << 1)))
                 {
-                    x87_r7_5 = x87_r7_5 + 1f;
-                    x87_r6_1 = x87_r6_1 + i_1;
-                    x87_r5_1 = x87_r5_1 + a1;
+                    fpu_val_7_5 = fpu_val_7_5 + 1.0f;
+                    fpu_val_6_1 = fpu_val_6_1 + i_1;
+                    fpu_val_5_1 = fpu_val_5_1 + context;
                 }
 
-                ctxB += 1;
+                context_val += 1;
                 flagP += 1;
                 i += 1;
                 i_1 = i;
             } while (i < 0x10);
 
-            cond_2_1 = a1 + 1 < 0x10;
-            a1 += 1;
-        } while (cond_2_1);
-        long double f1_1 = 0f;
-        x87_r7_5 - f1_1;
+            flag_2_1 = context + 1 < 0x10;
+            context += 1;
+        } while (flag_2_1);
+        long double f1_1 = 0.0f;
+        fpu_val_7_5 - f1_1;
 
-        if (!(*(&((x87_r7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_5 == f1_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x40))
+        if (!(*(&((fpu_val_7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_5 == f1_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x40))
         {
-            *(dstD5 + 0x10) = x87_r6_1 / x87_r7_5 + *(dstD5 + 0x10);
-            *(dstD5 + 0x14) = x87_r5_1 / x87_r7_5 + *(dstD5 + 0x14);
+            *(dest_5 + 0x10) = fpu_val_6_1 / fpu_val_7_5 + *(dest_5 + 0x10);
+            *(dest_5 + 0x14) = fpu_val_5_1 / fpu_val_7_5 + *(dest_5 + 0x14);
         }
 
-        long double x87_r7_7 = x87_r7_5 * 0.0009765625f;
-        int32_t* objC8 = *(dstD5 + 0xc);
-        float v_c = x87_r7_7 * *(dstD5 + 0x18);
-        float v_8_1 = x87_r7_7 * *(dstD5 + 0x1c);
-        float v_4_1 = x87_r7_7 * *(dstD5 + 0x20);
-        Terrain_SampleHeightmap_8(objC8, dstD5 + 0x10, &v_c);
-        int32_t* ctxB2 = g_b015b4;
-        int32_t valA14 = g_b015a8 - 1;
-        int32_t srcS5 = *(ctxB2 + srcS4);
-        g_b015a8 = valA14;
+        long double fpu_val_7_7 = fpu_val_7_5 * 0.0009765625f;
+        int32_t* entity_8 = *(dest_5 + 0xc);
+        float item_c = fpu_val_7_7 * *(dest_5 + 0x18);
+        float item_8_1 = fpu_val_7_7 * *(dest_5 + 0x1c);
+        float item_4_1 = fpu_val_7_7 * *(dest_5 + 0x20);
+        Terrain_SampleHeightmap_8(entity_8, dest_5 + 0x10, &item_c);
+        int32_t* context_2 = g_b015b4;
+        int32_t data_14 = g_b015a8 - 1;
+        int32_t source_5 = *(context_2 + source_4);
+        g_b015a8 = data_14;
 
-        if (srcS5 != valA14)
+        if (source_5 != data_14)
         {
-            int32_t objC9 = g_b015a4;
-            int32_t valA17 = *(objC9 + (valA14 << 2)) * g_b015b0 + g_b015a0;
-            int32_t tmpD5 = *(objC9 + (srcS5 << 2));
-            int32_t ctxB3 = *(ctxB2 + valA17);
-            *(objC9 + (srcS5 << 2)) = *(objC9 + (ctxB3 << 2));
-            *(g_b015a4 + (ctxB3 << 2)) = tmpD5;
-            *(g_b015b4 + valA17) = srcS5;
-            valA14 = g_b015a8;
-            ctxB2 = g_b015b4;
+            int32_t entity_9 = g_b015a4;
+            int32_t data_17 = *(entity_9 + (data_14 << 2)) * g_b015b0 + g_b015a0;
+            int32_t temp_5 = *(entity_9 + (source_5 << 2));
+            int32_t context_3 = *(context_2 + data_17);
+            *(entity_9 + (source_5 << 2)) = *(entity_9 + (context_3 << 2));
+            *(g_b015a4 + (context_3 << 2)) = temp_5;
+            *(g_b015b4 + data_17) = source_5;
+            data_14 = g_b015a8;
+            context_2 = g_b015b4;
         }
 
-        valA3 = valA14 - 1;
-        int32_t objC12 = *(*(dstD5 + 0x24) + ctxB2);
-        g_b015a8 = valA3;
+        data_3 = data_14 - 1;
+        int32_t entity_12 = *(*(dest_5 + 0x24) + context_2);
+        g_b015a8 = data_3;
 
-        if (objC12 != valA3)
+        if (entity_12 != data_3)
         {
-            int32_t tmpD7 = g_b015a4;
-            valA3 = *(tmpD7 + (valA3 << 2)) * g_b015b0 + g_b015a0;
-            int32_t srcS7 = *(tmpD7 + (objC12 << 2));
-            int32_t ctxB4 = *(ctxB2 + valA3);
-            *(tmpD7 + (objC12 << 2)) = *(tmpD7 + (ctxB4 << 2));
-            *(g_b015a4 + (ctxB4 << 2)) = srcS7;
-            *(g_b015b4 + valA3) = objC12;
+            int32_t temp_7 = g_b015a4;
+            data_3 = *(temp_7 + (data_3 << 2)) * g_b015b0 + g_b015a0;
+            int32_t source_7 = *(temp_7 + (entity_12 << 2));
+            int32_t context_4 = *(context_2 + data_3);
+            *(temp_7 + (entity_12 << 2)) = *(temp_7 + (context_4 << 2));
+            *(g_b015a4 + (context_4 << 2)) = source_7;
+            *(g_b015b4 + data_3) = entity_12;
         }
     }
     else
     {
-        int32_t* srcS = g_b015b4;
-        valA3 = g_b015a8 - 1;
-        int32_t tmpD = *(*(a1 + 0x24) + srcS);
-        g_b015a8 = valA3;
+        int32_t* source_val = g_b015b4;
+        data_3 = g_b015a8 - 1;
+        int32_t temp_val = *(*(context + 0x24) + source_val);
+        g_b015a8 = data_3;
 
-        if (tmpD != valA3)
+        if (temp_val != data_3)
         {
-            int32_t objC1 = g_b015a4;
-            int32_t valA6 = *(objC1 + (valA3 << 2)) * g_b015b0 + g_b015a0;
-            int32_t dstD2 = *(objC1 + (tmpD << 2));
-            int32_t srcS1 = *(srcS + valA6);
-            *(objC1 + (tmpD << 2)) = *(objC1 + (srcS1 << 2));
-            *(g_b015a4 + (srcS1 << 2)) = dstD2;
-            *(g_b015b4 + valA6) = tmpD;
-            return valA6;
+            int32_t entity_1 = g_b015a4;
+            int32_t data_6 = *(entity_1 + (data_3 << 2)) * g_b015b0 + g_b015a0;
+            int32_t dest_2 = *(entity_1 + (temp_val << 2));
+            int32_t source_1 = *(source_val + data_6);
+            *(entity_1 + (temp_val << 2)) = *(entity_1 + (source_1 << 2));
+            *(g_b015a4 + (source_1 << 2)) = dest_2;
+            *(g_b015b4 + data_6) = temp_val;
+            return data_6;
         }
     }
 
-    return valA3;
+    return data_3;
 }

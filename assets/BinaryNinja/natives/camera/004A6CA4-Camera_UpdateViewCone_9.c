@@ -1,69 +1,69 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_9 (VA 0x004A6CA4; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_9.h"
-uint32_t Camera_UpdateViewCone_9(int32_t* a1)
+uint32_t Camera_UpdateViewCone_9(int32_t* context)
 
 {
-    int32_t valA = a1[3];
+    int32_t data_val = context[3];
 
-    if (valA & 0x83 && !(valA & 0x40))
+    if (data_val & 0x83 && !(data_val & 0x40))
     {
-        if (!(valA & 2))
+        if (!(data_val & 2))
         {
-            valA |= 1;
-            a1[3] = valA;
+            data_val |= 1;
+            context[3] = data_val;
 
-            if (valA & 0x10c)
-                *a1 = a1[2];
+            if (data_val & 0x10c)
+                *context = context[2];
             else
-                Camera_ResetMatrix_23(a1);
+                Camera_ResetMatrix_23(context);
 
-            void* valA2 = Camera_UpdateViewCone_23(a1[4], a1[2], a1[6]);
-            a1[1] = valA2;
+            void* data_2 = Camera_UpdateViewCone_23(context[4], context[2], context[6]);
+            context[1] = data_2;
 
-            if (valA2 && valA2 != 0xffffffff)
+            if (data_2 && data_2 != 0xffffffff)
             {
-                int32_t tmpD = a1[3];
+                int32_t temp_val = context[3];
 
-                if (!(tmpD & 0x82))
+                if (!(temp_val & 0x82))
                 {
-                    int32_t objC2 = a1[4];
-                    void* dstD4;
+                    int32_t entity_2 = context[4];
+                    void* dest_4;
 
-                    if (objC2 == 0xffffffff)
-                        dstD4 = &g_543fb0;
+                    if (entity_2 == 0xffffffff)
+                        dest_4 = &g_543fb0;
                     else
-                        dstD4 = (&g_c32440)[objC2 >> 5] + ((objC2 & 0x1f) << 3);
+                        dest_4 = (&g_c32440)[entity_2 >> 5] + ((entity_2 & 0x1f) << 3);
 
-                    if ((*(dstD4 + 4) & 0x82) == 0x82)
+                    if ((*(dest_4 + 4) & 0x82) == 0x82)
                     {
-                        *(&tmpD + 1) |= 0x20;
-                        a1[3] = tmpD;
+                        *(&temp_val + 1) |= 0x20;
+                        context[3] = temp_val;
                     }
                 }
 
-                if (a1[6] == 0x200)
+                if (context[6] == 0x200)
                 {
-                    int16_t objC4 = a1[3];
+                    int16_t entity_4 = context[3];
 
-                    if (objC4 & 8 && !(*(&objC4 + 1) & 4))
-                        a1[6] = 0x1000;
+                    if (entity_4 & 8 && !(*(&entity_4 + 1) & 4))
+                        context[6] = 0x1000;
                 }
 
-                char* objC5 = *a1;
-                a1[1] = valA2 - 1;
-                uint32_t result = *objC5;
-                *a1 = &objC5[1];
+                char* entity_5 = *context;
+                context[1] = data_2 - 1;
+                uint32_t result = *entity_5;
+                *context = &entity_5[1];
                 return result;
             }
 
-            int32_t valA4 = -(valA2);
-            a1[3] |= ((valA4 - valA4) & 0x10) + 0x10;
-            a1[1] = 0;
+            int32_t data_4 = -(data_2);
+            context[3] |= ((data_4 - data_4) & 0x10) + 0x10;
+            context[1] = 0;
         }
         else
         {
-            valA |= 0x20;
-            a1[3] = valA;
+            data_val |= 0x20;
+            context[3] = data_val;
         }
     }
 

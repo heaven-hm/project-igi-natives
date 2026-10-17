@@ -1,59 +1,59 @@
 // Original IGI.EXE function: Weapon_UpdateRecoil_8 (VA 0x0047CE70; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_UpdateRecoil_8.h"
-void** Weapon_UpdateRecoil_8(int32_t* a1, int32_t a2, void* a3)
+void** Weapon_UpdateRecoil_8(int32_t* context, int32_t param_2, void* param_3)
 
 {
-    int32_t tmpD = 0;
-    int32_t valA = *a1;
-    int32_t* objC1;
+    int32_t temp_val = 0;
+    int32_t data_val = *context;
+    int32_t* entity_1;
 
-    if (valA > 0)
+    if (data_val > 0)
     {
-        objC1 = &a1[1];
+        entity_1 = &context[1];
 
-        while (*objC1 != a2)
+        while (*entity_1 != param_2)
         {
-            tmpD += 1;
-            objC1 = &objC1[3];
+            temp_val += 1;
+            entity_1 = &entity_1[3];
 
-            if (tmpD >= valA)
+            if (temp_val >= data_val)
                 goto label_47ce98;
         }
     }
 
     void** result;
 
-    if (valA <= 0 || !objC1)
+    if (data_val <= 0 || !entity_1)
     {
     label_47ce98:
-        objC1 = &a1[valA * 3 + 1];
-        result = &objC1[2];
-        *objC1 = a2;
-        *result = a3;
-        *a1 += 1;
+        entity_1 = &context[data_val * 3 + 1];
+        result = &entity_1[2];
+        *entity_1 = param_2;
+        *result = param_3;
+        *context += 1;
     }
     else
     {
-        result = &objC1[2];
-        *result = a3;
+        result = &entity_1[2];
+        *result = param_3;
     }
 
-    void* srcS1 = *result;
+    void* source_1 = *result;
 
-    if (srcS1 != 0xffffffff)
+    if (source_1 != 0xffffffff)
     {
-        int32_t tmpD4 = objC1[1];
+        int32_t temp_4 = entity_1[1];
 
-        if (tmpD4 < 0)
+        if (temp_4 < 0)
         {
-            objC1[1] = 0;
+            entity_1[1] = 0;
             return result;
         }
 
-        if (tmpD4 > srcS1)
+        if (temp_4 > source_1)
         {
             result = *result;
-            objC1[1] = result;
+            entity_1[1] = result;
         }
     }
 

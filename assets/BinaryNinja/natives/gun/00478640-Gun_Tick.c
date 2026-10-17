@@ -1,136 +1,136 @@
 // Original IGI.EXE function: Gun_Tick (VA 0x00478640; static CFG gate PASS, CFG score 1.000).
 #include "Gun_Tick.h"
-uint32_t Gun_Tick(int32_t* a1)
+uint32_t Gun_Tick(int32_t* context)
 
 {
-    void* flagP = a1[0x4a];
+    void* flagP = context[0x4a];
 
-    if (a1[0x51] == 0xfffffffe)
-        a1[0x51] = *(flagP + 0x648);
+    if (context[0x51] == 0xfffffffe)
+        context[0x51] = *(flagP + 0x648);
 
-    if (a1[0x3f])
-        return QTask_FindType(a1);
+    if (context[0x3f])
+        return QTask_FindType(context);
 
-    int32_t valA3 = a1[0x4f];
+    int32_t data_3 = context[0x4f];
 
-    if (valA3)
-        a1[0x4f] = valA3 - 1;
+    if (data_3)
+        context[0x4f] = data_3 - 1;
 
-    int32_t* i = *(a1[0x3a] + 8);
+    int32_t* i = *(context[0x3a] + 8);
 
     if (*i && i)
     {
-        int32_t tmpD1 = g_afa7e0;
+        int32_t temp_1 = g_afa7e0;
 
         do
         {
-            int32_t* dstD1 = *i;
-            void* valA7;
+            int32_t* dest_1 = *i;
+            void* data_7;
 
-            if (!dstD1)
-                valA7 = nullptr;
+            if (!dest_1)
+                data_7 = nullptr;
             else
             {
-                int32_t valA4 = *dstD1;
-                int32_t valA5 = -(valA4);
-                valA7 = (valA5 - valA5) & dstD1;
+                int32_t data_4 = *dest_1;
+                int32_t data_5 = -(data_4);
+                data_7 = (data_5 - data_5) & dest_1;
             }
 
-            *((tmpD1 << 2) + &g_afa6e0) = valA7;
-            int32_t tmpD2 = tmpD1 + 1;
-            int32_t valA8 = 0;
-            g_afa7e0 = tmpD2;
-            valA8 = i[7];
-            valA3 = *((valA8 << 2) + &g_a970e0);
+            *((temp_1 << 2) + &g_afa6e0) = data_7;
+            int32_t temp_2 = temp_1 + 1;
+            int32_t data_8 = 0;
+            g_afa7e0 = temp_2;
+            data_8 = i[7];
+            data_3 = *((data_8 << 2) + &g_a970e0);
 
-            if (valA3)
+            if (data_3)
             {
-                valA3(i);
-                tmpD2 = g_afa7e0;
+                data_3(i);
+                temp_2 = g_afa7e0;
             }
 
-            i = *((tmpD2 << 2) + &g_afa6dc);
-            tmpD1 = tmpD2 - 1;
-            g_afa7e0 = tmpD1;
+            i = *((temp_2 << 2) + &g_afa6dc);
+            temp_1 = temp_2 - 1;
+            g_afa7e0 = temp_1;
         } while (i);
     }
 
-    long double fpu7 = a1[0x66];
-    long double f0 = 0f;
+    long double fpu7 = context[0x66];
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (!(*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
         | (fpu7 == f0 ? 1 : 0) << 0xe) + 1) & 1))
     {
-        long double x87_r7_6 = a1[0x66];
-        long double f1_1 = 0f;
-        x87_r7_6 - f1_1;
+        long double fpu_val_7_6 = context[0x66];
+        long double f1_1 = 0.0f;
+        fpu_val_7_6 - f1_1;
 
-        if (!(*(&((x87_r7_6 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_6 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+        if (!(*(&((fpu_val_7_6 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_6 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41))
         {
-            long double x87_r7_11 = a1[0x66] - 60.0 / (60.0 / *(flagP + 0x644) * 30.0);
-            a1[0x66] = x87_r7_11;
-            long double f3_1 = 0f;
-            x87_r7_11 - f3_1;
+            long double fpu_val_7_11 = context[0x66] - 60.0 / (60.0 / *(flagP + 0x644) * 30.0);
+            context[0x66] = fpu_val_7_11;
+            long double f3_1 = 0.0f;
+            fpu_val_7_11 - f3_1;
 
-            if (*(&((x87_r7_11 < f3_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_11, f3_1) ? 1 : 0) << 0xa
-                    | (x87_r7_11 == f3_1 ? 1 : 0) << 0xe) + 1) & 1)
-                a1[0x66] = 0;
+            if (*(&((fpu_val_7_11 < f3_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_11, f3_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_11 == f3_1 ? 1 : 0) << 0xe) + 1) & 1)
+                context[0x66] = 0;
         }
     }
     else
     {
-        long double x87_r7_5 = 60.0 / (60.0 / *(flagP + 0x644) * 30.0) + a1[0x66];
-        a1[0x66] = x87_r7_5;
-        long double f2_1 = 0f;
-        x87_r7_5 - f2_1;
+        long double fpu_val_7_5 = 60.0 / (60.0 / *(flagP + 0x644) * 30.0) + context[0x66];
+        context[0x66] = fpu_val_7_5;
+        long double f2_1 = 0.0f;
+        fpu_val_7_5 - f2_1;
 
-        if (!(*(&((x87_r7_5 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_5 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x41))
-            a1[0x66] = 0;
+        if (!(*(&((fpu_val_7_5 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_5 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+            context[0x66] = 0;
     }
 
-    int32_t valA10 = a1[0x69];
+    int32_t data_10 = context[0x69];
 
-    if (valA10)
+    if (data_10)
     {
-        int32_t objC1 = a1[0x6a];
+        int32_t entity_1 = context[0x6a];
 
-        if (!objC1)
+        if (!entity_1)
         {
-            a1[0x69] = valA10 + 1;
-            int32_t valA12;
-            int32_t tmpD3;
-            tmpD3 = HIGHD(0x55555556 * 60.0 / *(flagP + 0x644) * 30.0);
-            valA12 = LOWD(0x55555556 * 60.0 / *(flagP + 0x644) * 30.0);
-            a1[0x6a] = tmpD3 + (tmpD3 >> 0x1f);
+            context[0x69] = data_10 + 1;
+            int32_t data_12;
+            int32_t temp_3;
+            temp_3 = HIGHD(0x55555556 * 60.0 / *(flagP + 0x644) * 30.0);
+            data_12 = LOWD(0x55555556 * 60.0 / *(flagP + 0x644) * 30.0);
+            context[0x6a] = temp_3 + (temp_3 >> 0x1f);
         }
         else
-            a1[0x6a] = objC1 - 1;
+            context[0x6a] = entity_1 - 1;
     }
 
-    uint32_t result = a1[0x67];
+    uint32_t result = context[0x67];
 
     if (result)
     {
-        int32_t objC6 = a1[0x68];
+        int32_t entity_6 = context[0x68];
 
-        if (objC6)
+        if (entity_6)
         {
-            a1[0x68] = objC6 - 1;
+            context[0x68] = entity_6 - 1;
             return result;
         }
 
-        a1[0x67] = result + 1;
-        int32_t valA14;
-        int32_t tmpD5;
-        tmpD5 = HIGHD(0x66666667 * 60.0 / *(flagP + 0x644) * 30.0);
-        valA14 = LOWD(0x66666667 * 60.0 / *(flagP + 0x644) * 30.0);
-        int32_t tmpD6 = tmpD5 >> 2;
-        result = tmpD6 >> 0x1f;
-        a1[0x68] = tmpD6 + result;
+        context[0x67] = result + 1;
+        int32_t data_14;
+        int32_t temp_5;
+        temp_5 = HIGHD(0x66666667 * 60.0 / *(flagP + 0x644) * 30.0);
+        data_14 = LOWD(0x66666667 * 60.0 / *(flagP + 0x644) * 30.0);
+        int32_t temp_6 = temp_5 >> 2;
+        result = temp_6 >> 0x1f;
+        context[0x68] = temp_6 + result;
     }
 
     return result;

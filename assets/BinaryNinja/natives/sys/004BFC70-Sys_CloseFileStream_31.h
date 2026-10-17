@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004BFC70 Sys_CloseFileStream_31 | gate PASS | openigi True */
-int Sys_CloseFileStream_31(int* a1, int* a2);
+int Sys_CloseFileStream_31(int* context, int* param_2);

@@ -1,11 +1,11 @@
 // Original IGI.EXE function: Display_SoundInvalidFilename (VA 0x00497390; static CFG gate PASS, CFG score 1.000).
 #include "Display_SoundInvalidFilename.h"
-char* Display_SoundInvalidFilename(char* a1, char* a2)
+char* Display_SoundInvalidFilename(char* context, char* param_2)
 
 {
-    char* result = a2;
-    *a1 = 0;
-    char i = *a2;
+    char* result = param_2;
+    *context = 0;
+    char i = *param_2;
 
     if (i)
     {
@@ -16,7 +16,7 @@ char* Display_SoundInvalidFilename(char* a1, char* a2)
 
             if (!i)
             {
-                char* v_c_1 = a2;
+                char* item_c_1 = param_2;
                 return Warning_Show("SOUND - Invalid filename %s");
             }
         }
@@ -25,7 +25,7 @@ char* Display_SoundInvalidFilename(char* a1, char* a2)
 
         if (result)
         {
-            if (result >= a2)
+            if (result >= param_2)
             {
                 while (true)
                 {
@@ -33,15 +33,15 @@ char* Display_SoundInvalidFilename(char* a1, char* a2)
 
                     if (i == 0x2f || i == 0x5c || i == 0x3a)
                     {
-                        char* srcS1 = result_1 - &result[1];
-                        result = Camera_ApplyLineFilter_5(a1, &result[1], srcS1);
-                        *(srcS1 + a1) = 0;
+                        char* source_1 = result_1 - &result[1];
+                        result = Camera_ApplyLineFilter_5(context, &result[1], source_1);
+                        *(source_1 + context) = 0;
                         break;
                     }
 
                     result -= 1;
 
-                    if (result < a2)
+                    if (result < param_2)
                         return result;
 
                     continue;
@@ -52,6 +52,6 @@ char* Display_SoundInvalidFilename(char* a1, char* a2)
         }
     }
 
-    char* v_c_2 = a2;
+    char* item_c_2 = param_2;
     return Warning_Show("SOUND - Invalid filename %s");
 }

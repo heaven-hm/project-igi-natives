@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Symbol_Remove (VA 0x004C0460; static CFG gate PASS, CFG score 1.000).
 #include "Symbol_Remove.h"
-int32_t Symbol_Remove(int32_t* a1, int32_t* a2)
+int32_t Symbol_Remove(int32_t* context, int32_t* param_2)
 
 // Sig: int Symbol_Remove(int* symTable, char* symName)
 // Note: Removes a symbol from the game-data symbol hash table; warns "Unable to
@@ -8,15 +8,15 @@ int32_t Symbol_Remove(int32_t* a1, int32_t* a2)
 // table, symName = symbol name string. RETURNS non-zero on success. Call after
 // dynamically registered symbols are no longer needed.
 {
-    char* srcS = a2;
+    char* source_val = param_2;
 
-    if (DynObj_InsertHashItem_2(a1, &a2, srcS))
+    if (DynObj_InsertHashItem_2(context, &param_2, source_val))
     {
-        Camera_ApplyHandiCam_33(a2);
-        return Sys_ExecuteBytecode_2(a2);
+        Camera_ApplyHandiCam_33(param_2);
+        return Sys_ExecuteBytecode_2(param_2);
     }
 
-    char* v_8_2 = srcS;
+    char* item_8_2 = source_val;
     Error_Show("Unable to remove symbol "%s" (not registered)");
 
     while (true)

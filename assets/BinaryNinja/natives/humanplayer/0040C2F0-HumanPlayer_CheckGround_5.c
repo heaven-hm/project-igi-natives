@@ -1,59 +1,59 @@
 // Original IGI.EXE function: HumanPlayer_CheckGround_5 (VA 0x0040C2F0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_CheckGround_5.h"
-void* HumanPlayer_CheckGround_5(void* a1, float a2)
+void* HumanPlayer_CheckGround_5(void* context, float param_2)
 
 {
-    float srcS = a2;
-    double* valA = AI_CombatTarget_21(srcS);
-    HumanPlayer_CheckCollision_9(srcS, 0f);
-    FX_DebrisSpawn_14(srcS, 0x54, 0, 0f);
-    *(srcS + 0xd74) = 0;
-    Render_TransformVertices_5(srcS + 0x514, srcS + 0x520, srcS + 0x68);
-    long double x87_r7_3 = *(srcS + 0x80) * *(srcS + 0x528) + *(srcS + 0x7c) * *(srcS + 0x524)
-        + *(srcS + 0x78) * *(srcS + 0x520);
-    float v_58 = x87_r7_3;
-    long double x87_r7_7 = *(srcS + 0x8c) * *(srcS + 0x528) + *(srcS + 0x88) * *(srcS + 0x524)
-        + *(srcS + 0x84) * *(srcS + 0x520);
-    float v_54 = x87_r7_7;
-    long double x87_r7_10 = *(srcS + 0x98) * *(srcS + 0x528) + *(srcS + 0x94) * *(srcS + 0x524);
-    long double x87_r6_11 = *(srcS + 0x90) * *(srcS + 0x520);
-    *(srcS + 0x520) = v_58;
-    *(srcS + 0x524) = v_54;
-    float v_50 = x87_r7_10 + x87_r6_11;
-    *(srcS + 0x528) = v_50;
-    double v_40;
-    float v_28;
-    Env_ActivateEntity_5(valA, &v_40, &v_28);
-    float v_1c;
-    float v_18;
-    v_50 = v_1c * 778.24000000000001 + v_18 * 2457.5999999999999;
-    float v_10;
-    float v_c;
-    double v_48 = v_10 * 778.24000000000001 + v_c * 2457.5999999999999;
-    float v_24;
-    v_40 = v_40 + v_28 * 778.24000000000001 + v_24 * 2457.5999999999999;
-    double v_38;
-    double v_38_1 = v_38 + v_50;
-    double v_30;
-    double v_30_1 = v_30 + v_48;
-    AI_UpdateOrders_19(srcS, &v_40);
-    AI_SelectTarget_19(srcS);
-    float v_60;
-    float v_5c;
-    Sys_Atan2UndefinedInOrig(&v_28, &v_5c, &v_60, &a2);
-    a2 = a2 + 3.14159274f;
-    AI_AlertAllies_19(srcS, a2);
-    HumanPlayer_UpdateAnimation_4(srcS);
-    long double x87_r7_23 = Env_InitLadder_6(valA) * 30f;
-    *(srcS + 0xd64) = 0;
-    v_58 = x87_r7_23;
-    *(srcS + 0xd60) = v_58;
-    Human_ViewCam(srcS, 3);
-    HumanPlayer_CheckCollision_4(srcS);
-    AI_CheckVisibility_20(srcS);
-    AI_UpdateOrders_22(*(srcS + 0x4ec));
-    AI_MoveToNode_22(*(srcS + 0x4ec));
-    void* result = AI_TakeCover_20(srcS);
-    *(a1 + 0x14) = HumanPlayer_UpdateStamina_5;
+    float source_val = param_2;
+    double* data_val = AI_CombatTarget_21(source_val);
+    HumanPlayer_CheckCollision_9(source_val, 0.0f);
+    FX_DebrisSpawn_14(source_val, 0x54, 0, 0.0f);
+    *(source_val + 0xd74) = 0;
+    Render_TransformVertices_5(source_val + 0x514, source_val + 0x520, source_val + 0x68);
+    long double fpu_val_7_3 = *(source_val + 0x80) * *(source_val + 0x528) + *(source_val + 0x7c) * *(source_val + 0x524)
+        + *(source_val + 0x78) * *(source_val + 0x520);
+    float item_58 = fpu_val_7_3;
+    long double fpu_val_7_7 = *(source_val + 0x8c) * *(source_val + 0x528) + *(source_val + 0x88) * *(source_val + 0x524)
+        + *(source_val + 0x84) * *(source_val + 0x520);
+    float item_54 = fpu_val_7_7;
+    long double fpu_val_7_10 = *(source_val + 0x98) * *(source_val + 0x528) + *(source_val + 0x94) * *(source_val + 0x524);
+    long double fpu_val_6_11 = *(source_val + 0x90) * *(source_val + 0x520);
+    *(source_val + 0x520) = item_58;
+    *(source_val + 0x524) = item_54;
+    float item_50 = fpu_val_7_10 + fpu_val_6_11;
+    *(source_val + 0x528) = item_50;
+    double item_40;
+    float item_28;
+    Env_ActivateEntity_5(data_val, &item_40, &item_28);
+    float item_1c;
+    float item_18;
+    item_50 = item_1c * 778.24000000000001 + item_18 * 2457.5999999999999;
+    float item_10;
+    float item_c;
+    double item_48 = item_10 * 778.24000000000001 + item_c * 2457.5999999999999;
+    float item_24;
+    item_40 = item_40 + item_28 * 778.24000000000001 + item_24 * 2457.5999999999999;
+    double item_38;
+    double item_38_1 = item_38 + item_50;
+    double item_30;
+    double item_30_1 = item_30 + item_48;
+    AI_UpdateOrders_19(source_val, &item_40);
+    AI_SelectTarget_19(source_val);
+    float item_60;
+    float item_5c;
+    Sys_Atan2UndefinedInOrig(&item_28, &item_5c, &item_60, &param_2);
+    param_2 = param_2 + 3.14159274f;
+    AI_AlertAllies_19(source_val, param_2);
+    HumanPlayer_UpdateAnimation_4(source_val);
+    long double fpu_val_7_23 = Env_InitLadder_6(data_val) * 30.0f;
+    *(source_val + 0xd64) = 0;
+    item_58 = fpu_val_7_23;
+    *(source_val + 0xd60) = item_58;
+    Human_ViewCam(source_val, 3);
+    HumanPlayer_CheckCollision_4(source_val);
+    AI_CheckVisibility_20(source_val);
+    AI_UpdateOrders_22(*(source_val + 0x4ec));
+    AI_MoveToNode_22(*(source_val + 0x4ec));
+    void* result = AI_TakeCover_20(source_val);
+    *(context + 0x14) = HumanPlayer_UpdateStamina_5;
     return result;
 }

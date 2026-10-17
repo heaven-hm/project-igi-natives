@@ -8,11 +8,11 @@ void HumanPlayer_SetTeam(void* pThis, void* param)
         return;
 
     *(param + 0x4d0) = 1;
-    int32_t esi_1 = *(pThis + 0x10);
+    int32_t source_ptr_1 = *(pThis + 0x10);
     *(pThis + 0x10) = 1;
-    void* ecx_1 = *(pThis + 4);
-    *(pThis + 0xc) = esi_1;
-    int32_t ecx_2 = *(ecx_1 + 4);
-    *(pThis + 0x14) = ecx_2;
-    ecx_2(pThis, param);
+    void* counter_val_1 = *(pThis + 4);
+    *(pThis + 0xc) = source_ptr_1;
+    int32_t counter_val_2 = *(counter_val_1 + 4);
+    *(pThis + 0x14) = counter_val_2;
+    counter_val_2(pThis, param);
 }

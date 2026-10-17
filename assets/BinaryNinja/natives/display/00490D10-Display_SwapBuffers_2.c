@@ -1,130 +1,130 @@
 // Original IGI.EXE function: Display_SwapBuffers_2 (VA 0x00490D10; static CFG gate PASS, CFG score 1.000).
 #include "Display_SwapBuffers_2.h"
-HRESULT Display_SwapBuffers_2(int32_t a1 @ srcS, int32_t a2 @ dstD, float a3)
+HRESULT Display_SwapBuffers_2(int32_t context , int32_t param_2 , float param_3)
 
 {
-    int32_t objC;
-    int32_t tmpD;
+    int32_t entity_val;
+    int32_t temp_val;
 
-    if (*(a3 + 4))
+    if (*(param_3 + 4))
     {
-        int32_t valA2 = Timer_Now();
-        tmpD = *(a3 + 8);
-        objC = *(a3 + 4);
-        *a3 = valA2 - tmpD - objC;
+        int32_t data_2 = Timer_Now();
+        temp_val = *(param_3 + 8);
+        entity_val = *(param_3 + 4);
+        *param_3 = data_2 - temp_val - entity_val;
     }
     else
     {
-        int32_t valA1;
-        valA1 = Timer_Now();
-        *(a3 + 4) = valA1;
+        int32_t data_1;
+        data_1 = Timer_Now();
+        *(param_3 + 4) = data_1;
     }
 
-    void* valA5 = *(a3 + 0x158);
+    void* data_5 = *(param_3 + 0x158);
 
-    if (valA5)
+    if (data_5)
     {
-        char valA6 = Display_SyncVSync_11(valA5, tmpD, objC, valA5);
-        *(a3 + 0x29) = valA6;
+        char data_6 = Display_SyncVSync_11(data_5, temp_val, entity_val, data_5);
+        *(param_3 + 0x29) = data_6;
 
-        if (!valA6)
+        if (!data_6)
         {
-            Display_SetDisplayMode_12(*(a3 + 0x158));
-            Display_CloseDevice_11(*(a3 + 0x158));
-            *(a3 + 0x158) = 0;
+            Display_SetDisplayMode_12(*(param_3 + 0x158));
+            Display_CloseDevice_11(*(param_3 + 0x158));
+            *(param_3 + 0x158) = 0;
         }
         else
         {
-            int32_t valA9;
-            int32_t tmpD1;
-            tmpD1 = HIGHD(0x10624dd3 * *a3 * 0x3c);
-            valA9 = LOWD(0x10624dd3 * *a3 * 0x3c);
-            int32_t objC3 = *(a3 + 0x14);
-            uint32_t tmpD2 = tmpD1 >> 6;
+            int32_t data_9;
+            int32_t temp_1;
+            temp_1 = HIGHD(0x10624dd3 * *param_3 * 0x3c);
+            data_9 = LOWD(0x10624dd3 * *param_3 * 0x3c);
+            int32_t entity_3 = *(param_3 + 0x14);
+            uint32_t temp_2 = temp_1 >> 6;
 
-            if (tmpD2 != objC3)
+            if (temp_2 != entity_3)
             {
-                int32_t i_1 = tmpD2 - objC3;
+                int32_t i_1 = temp_2 - entity_3;
                 int32_t i;
 
                 do
                 {
-                    void v_58;
-                    Display_SetGammaRamp_12(&v_58);
-                    Display_SyncVSync_12(*(a3 + 0x158), &v_58);
+                    void item_58;
+                    Display_SetGammaRamp_12(&item_58);
+                    Display_SyncVSync_12(*(param_3 + 0x158), &item_58);
                     i = i_1;
                     i_1 -= 1;
-                    *(a3 + 0x14) += 1;
+                    *(param_3 + 0x14) += 1;
                 } while (i != 1);
             }
         }
     }
 
-    int32_t valA13 = Timer_Now();
-    HRESULT valA14 = *(a3 + 0xc);
-    int32_t objC9 = valA13 - *(a3 + 8) - *(a3 + 4);
-    *a3 = objC9;
+    int32_t data_13 = Timer_Now();
+    HRESULT data_14 = *(param_3 + 0xc);
+    int32_t entity_9 = data_13 - *(param_3 + 8) - *(param_3 + 4);
+    *param_3 = entity_9;
 
-    if (objC9 >= valA14)
+    if (entity_9 >= data_14)
     {
-        *(a3 + 0x28) = 0;
+        *(param_3 + 0x28) = 0;
     label_490e72:
-        valA14 = *(a3 + 0x29);
+        data_14 = *(param_3 + 0x29);
 
-        if (!valA14)
+        if (!data_14)
         {
-            valA14 = *(a3 + 0x28);
+            data_14 = *(param_3 + 0x28);
 
-            if (!valA14)
+            if (!data_14)
             {
             label_490e81:
-                valA14 = 0;
-                return valA14;
+                data_14 = 0;
+                return data_14;
             }
         }
     }
     else
     {
-        int32_t valA17;
-        int32_t tmpD8;
-        tmpD8 = HIGHD(0x10624dd3 * COMBINE(0, *(a3 + 0xb8)) / *(a3 + 0xb4) * objC9);
-        valA17 = LOWD(0x10624dd3 * COMBINE(0, *(a3 + 0xb8)) / *(a3 + 0xb4) * objC9);
-        valA14 = *(a3 + 0x1c);
-        uint32_t dstD2 = tmpD8 >> 6;
+        int32_t data_17;
+        int32_t temp_8;
+        temp_8 = HIGHD(0x10624dd3 * COMBINE(0, *(param_3 + 0xb8)) / *(param_3 + 0xb4) * entity_9);
+        data_17 = LOWD(0x10624dd3 * COMBINE(0, *(param_3 + 0xb8)) / *(param_3 + 0xb4) * entity_9);
+        data_14 = *(param_3 + 0x1c);
+        uint32_t dest_2 = temp_8 >> 6;
 
-        if (valA14 == dstD2)
+        if (data_14 == dest_2)
             goto label_490e72;
 
-        if (valA14 == 0xffffffff)
+        if (data_14 == 0xffffffff)
         {
-            HRESULT valA18 = Display_ClearSurfaces_2(a3, dstD2, 0, a2, a1);
+            HRESULT data_18 = Display_ClearSurfaces_2(param_3, dest_2, 0, param_2, context);
 
-            if (!valA18)
-                return valA18;
+            if (!data_18)
+                return data_18;
         }
-        else if (dstD2 - valA14 != 1)
+        else if (dest_2 - data_14 != 1)
         {
             do
             {
-                valA14 = Display_ClearSurfaces_2(a3, valA14 + 1, 0x80000000, a2, a1);
+                data_14 = Display_ClearSurfaces_2(param_3, data_14 + 1, 0x80000000, param_2, context);
 
-                if (!valA14)
+                if (!data_14)
                     goto label_490e81;
 
-                valA14 = *(a3 + 0x1c);
-            } while (valA14 != dstD2);
+                data_14 = *(param_3 + 0x1c);
+            } while (data_14 != dest_2);
         }
         else
         {
-            HRESULT valA19 = Display_ClearSurfaces_2(a3, dstD2, 0, a2, a1);
+            HRESULT data_19 = Display_ClearSurfaces_2(param_3, dest_2, 0, param_2, context);
 
-            if (!valA19)
-                return valA19;
+            if (!data_19)
+                return data_19;
         }
 
-        valA14 = Display_RestoreDevice_2(a3);
+        data_14 = Display_RestoreDevice_2(param_3);
     }
 
-    valA14 = 1;
-    return valA14;
+    data_14 = 1;
+    return data_14;
 }

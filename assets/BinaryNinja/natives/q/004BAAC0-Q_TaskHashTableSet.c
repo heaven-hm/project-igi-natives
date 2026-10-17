@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Q_TaskHashTableSet (VA 0x004BAAC0; static CFG gate PASS, CFG score 0.933).
 #include "Q_TaskHashTableSet.h"
-void* Q_TaskHashTableSet(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7)
+void* Q_TaskHashTableSet(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7)
 
 // Sig: void Q_TaskHashTableSet(int** table, void* handler, int nameVal, int p4,
 // int p5, int p6, int p7)
@@ -13,14 +13,14 @@ void* Q_TaskHashTableSet(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_
 // p4-p7 = type/flag slots (see SymbolRegister thunks for known values).
 {
     Qhash_Init(1);
-    int32_t* valA = Mem_Alloc(0x1c, 4);
-    __builtin_memset(valA, 0, 0x1c);
-    valA[5] = Symbol_CheckRegister(g_a43e88, a1, valA);
-    valA[4] = a2;
-    valA[6] = a3;
-    valA[3] = a4;
-    *valA = a5;
-    valA[1] = a6;
-    valA[2] = a7;
+    int32_t* data_val = Mem_Alloc(0x1c, 4);
+    memset(data_val, 0, 0x1c);
+    data_val[5] = Symbol_CheckRegister(g_a43e88, context, data_val);
+    data_val[4] = param_2;
+    data_val[6] = param_3;
+    data_val[3] = param_4;
+    *data_val = param_5;
+    data_val[1] = param_6;
+    data_val[2] = param_7;
     return Qhash_Reset();
 }

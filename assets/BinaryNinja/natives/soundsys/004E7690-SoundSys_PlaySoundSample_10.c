@@ -1,20 +1,20 @@
 // Original IGI.EXE function: SoundSys_PlaySoundSample_10 (VA 0x004E7690; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_PlaySoundSample_10.h"
-int32_t* SoundSys_PlaySoundSample_10(int32_t* a1)
+int32_t* SoundSys_PlaySoundSample_10(int32_t* context)
 
 {
-    if (a1[1])
+    if (context[1])
     {
-        float objC1 = *a1;
+        float entity_1 = *context;
 
-        if (objC1)
+        if (entity_1)
         {
-            float v_20_1 = objC1;
-            float v_24_1 = objC1;
-            return Sys_OpenFileStream_21(objC1, a1[2], a1[3], 128f, 128f, 128f, 0x3f800000, 0x3f800000, 0,
-                a1[8]);
+            float item_20_1 = entity_1;
+            float item_24_1 = entity_1;
+            return Sys_OpenFileStream_21(entity_1, context[2], context[3], 128.0f, 128.0f, 128.0f, 0x3f800000, 0x3f800000, 0,
+                context[8]);
         }
     }
 
-    return a1;
+    return context;
 }

@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Script_ParseEnumString_30 (VA 0x004FDCD0; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumString_30.h"
-double* Script_ParseEnumString_30(double* a1, void* a2)
+double* Script_ParseEnumString_30(double* context, void* param_2)
 
 {
-    *a1 = *(a2 + 0xa0) + *(a2 + 0x88);
-    a1[1] = *(a2 + 0xa8) + *(a2 + 0x90);
-    a1[2] = *(a2 + 0xb0) + *(a2 + 0x98);
-    *a1 = *a1 * 0.5;
-    a1[1] = a1[1] * 0.5;
-    a1[2] = a1[2] * 0.5;
-    return a1;
+    *context = *(param_2 + 0xa0) + *(param_2 + 0x88);
+    context[1] = *(param_2 + 0xa8) + *(param_2 + 0x90);
+    context[2] = *(param_2 + 0xb0) + *(param_2 + 0x98);
+    *context = *context * 0.5;
+    context[1] = context[1] * 0.5;
+    context[2] = context[2] * 0.5;
+    return context;
 }

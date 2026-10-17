@@ -1,28 +1,28 @@
 // Original IGI.EXE function: FX_FragmentSimulate_27 (VA 0x0048F360; static CFG gate PASS, CFG score 0.867).
 #include "FX_FragmentSimulate_27.h"
-void* FX_FragmentSimulate_27(char* a1, int32_t a2)
+void* FX_FragmentSimulate_27(char* context, int32_t param_2)
 
 {
-    int32_t dstD = FX_DebrisSpawn_21();
+    int32_t dest_val = FX_DebrisSpawn_21();
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC = ~i;
-    void v_200;
-    int32_t srcS1;
-    int32_t dstD2;
-    dstD2 = memcpy(&v_200, dstD - objC, objC & 0xfffffffc);
-    memcpy(dstD2, srcS1, objC & 3);
-    void* result = Camera_SetFieldOfView_6(&v_200, " \t");
+    int32_t entity_val = ~i;
+    void item_200;
+    int32_t source_1;
+    int32_t dest_2;
+    dest_2 = memcpy(&item_200, dest_val - entity_val, entity_val & 0xfffffffc);
+    memcpy(dest_2, source_1, entity_val & 3);
+    void* result = Camera_SetFieldOfView_6(&item_200, " \t");
     void* result_2 = result;
     void* result_1 = result_2;
 
@@ -35,101 +35,101 @@ void* FX_FragmentSimulate_27(char* a1, int32_t a2)
 
             while (i_1)
             {
-                bool cond_2_1 = 0 != *result_3;
+                bool flag_2_1 = 0 != *result_3;
                 result_3 += 1;
                 i_1 -= 1;
 
-                if (!cond_2_1)
+                if (!flag_2_1)
                     break;
             }
 
-            char* dstD3 = a1;
+            char* dest_3 = context;
             int32_t i_2 = 0xffffffff;
 
             while (i_2)
             {
-                bool cond_3_1 = 0 != *dstD3;
-                dstD3 = &dstD3[1];
+                bool flag_3_1 = 0 != *dest_3;
+                dest_3 = &dest_3[1];
                 i_2 -= 1;
 
-                if (!cond_3_1)
+                if (!flag_3_1)
                     break;
             }
 
             if (~i_1 - 1 >= ~i_2 - 1)
             {
-                char* dstD4 = a1;
+                char* dest_4 = context;
                 int32_t i_3 = 0xffffffff;
                 int32_t i_4 = 0;
-                char v_205_1 = 1;
+                char item_205_1 = 1;
 
                 while (i_3)
                 {
-                    bool cond_4_1 = 0 != *dstD4;
-                    dstD4 = &dstD4[1];
+                    bool flag_4_1 = 0 != *dest_4;
+                    dest_4 = &dest_4[1];
                     i_3 -= 1;
 
-                    if (!cond_4_1)
+                    if (!flag_4_1)
                         break;
                 }
 
                 if (~i_3 - 1 <= 0)
                     goto label_48f43f;
 
-                char* tmpD2 = a1;
+                char* temp_2 = context;
                 int32_t j;
 
                 do
                 {
-                    if (!v_205_1)
+                    if (!item_205_1)
                         goto label_48f45f;
 
-                    char valA3 = *(result_2 - a1 + tmpD2);
-                    char objC10 = *tmpD2;
+                    char data_3 = *(result_2 - context + temp_2);
+                    char entity_10 = *temp_2;
 
-                    if (valA3 >= 0x61 && valA3 <= 0x7a)
-                        valA3 -= 0x20;
+                    if (data_3 >= 0x61 && data_3 <= 0x7a)
+                        data_3 -= 0x20;
 
-                    if (objC10 >= 0x61 && objC10 <= 0x7a)
-                        objC10 -= 0x20;
+                    if (entity_10 >= 0x61 && entity_10 <= 0x7a)
+                        entity_10 -= 0x20;
 
-                    if (valA3 != objC10)
-                        v_205_1 = 0;
+                    if (data_3 != entity_10)
+                        item_205_1 = 0;
 
                     i_4 += 1;
-                    char* dstD5 = a1;
+                    char* dest_5 = context;
                     j = 0xffffffff;
-                    tmpD2 = &tmpD2[1];
+                    temp_2 = &temp_2[1];
 
                     while (j)
                     {
-                        bool cond_6_1 = 0 != *dstD5;
-                        dstD5 = &dstD5[1];
+                        bool flag_6_1 = 0 != *dest_5;
+                        dest_5 = &dest_5[1];
                         j -= 1;
 
-                        if (!cond_6_1)
+                        if (!flag_6_1)
                             break;
                     }
                 } while (i_4 < ~j - 1);
 
-                if (v_205_1)
+                if (item_205_1)
                 {
                     result_2 = result_1;
                 label_48f43f:
-                    char* dstD6 = a1;
+                    char* dest_6 = context;
                     int32_t i_5 = 0xffffffff;
 
                     while (i_5)
                     {
-                        bool cond_5_1 = 0 != *dstD6;
-                        dstD6 = &dstD6[1];
+                        bool flag_5_1 = 0 != *dest_6;
+                        dest_6 = &dest_6[1];
                         i_5 -= 1;
 
-                        if (!cond_5_1)
+                        if (!flag_5_1)
                             break;
                     }
 
-                    a2(~i_5 - 1 + result_2);
+                    param_2(~i_5 - 1 + result_2);
                 }
             }
 

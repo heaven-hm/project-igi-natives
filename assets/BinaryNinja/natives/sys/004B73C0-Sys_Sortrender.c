@@ -3,7 +3,7 @@
 int32_t Sys_Sortrender()
 
 {
-    int32_t valA = Display_RestoreDevice_14("SortRender");
-    g_943e48 = valA;
-    return Display_SetGammaRamp_14(valA, sub_4b7100);
+    int32_t data_val = Display_RestoreDevice_14("SortRender");
+    g_943e48 = data_val;
+    return Display_SetGammaRamp_14(data_val, sub_4b7100);
 }

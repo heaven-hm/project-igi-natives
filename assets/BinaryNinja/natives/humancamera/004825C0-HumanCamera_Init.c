@@ -3,7 +3,7 @@
 char* HumanCamera_Init()
 
 {
-    int32_t v_4 = 0;
+    int32_t item_4 = 0;
     g_540990 = TaskType_Register("HumanCamera", 0x128, QTask_OpenEvent_2(), 0);
     g_540992 = QTask_UnableToAllocateEvent(0);
     QTask_RemoveEventCallback(g_540990, 0, sub_482650);

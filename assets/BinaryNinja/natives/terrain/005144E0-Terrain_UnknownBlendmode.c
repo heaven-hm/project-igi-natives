@@ -1,62 +1,62 @@
 // Original IGI.EXE function: Terrain_UnknownBlendmode (VA 0x005144E0; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_UnknownBlendmode.h"
-int32_t Terrain_UnknownBlendmode(int32_t a1)
+int32_t Terrain_UnknownBlendmode(int32_t context)
 
 {
-    if (!a1)
+    if (!context)
     {
-        int32_t* valA21 = g_5ca114;
-        (*(*valA21 + 0x50))(valA21, 0x1b, 0);
-        int32_t* valA22 = g_5ca114;
-        (*(*valA22 + 0x50))(valA22, 0x22, g_a7e068);
-        int32_t* valA23 = g_5ca114;
-        (*(*valA23 + 0x50))(valA23, 0x1c, g_5470b4);
-        int32_t* valA24 = g_5ca114;
-        (*(*valA24 + 0x94))(valA24, 0, 1, 4);
-        int32_t* valA25 = g_5ca114;
-        (*(*valA25 + 0x50))(valA25, 0x17, 2);
-        int32_t* valA26 = g_5ca114;
-        return (*(*valA26 + 0x50))(valA26, 0xe, 1);
+        int32_t* data_21 = g_5ca114;
+        (*(*data_21 + 0x50))(data_21, 0x1b, 0);
+        int32_t* data_22 = g_5ca114;
+        (*(*data_22 + 0x50))(data_22, 0x22, g_a7e068);
+        int32_t* data_23 = g_5ca114;
+        (*(*data_23 + 0x50))(data_23, 0x1c, g_5470b4);
+        int32_t* data_24 = g_5ca114;
+        (*(*data_24 + 0x94))(data_24, 0, 1, 4);
+        int32_t* data_25 = g_5ca114;
+        (*(*data_25 + 0x50))(data_25, 0x17, 2);
+        int32_t* data_26 = g_5ca114;
+        return (*(*data_26 + 0x50))(data_26, 0xe, 1);
     }
 
-    if (a1 == 1)
+    if (context == 1)
     {
-        int32_t* valA12 = g_5ca114;
-        (*(*valA12 + 0x50))(valA12, 0x1b, 1);
-        int32_t* valA13 = g_5ca114;
-        (*(*valA13 + 0x50))(valA13, 0x13, 2);
-        int32_t* valA14 = g_5ca114;
-        (*(*valA14 + 0x50))(valA14, 0x14, 2);
-        int32_t* valA15 = g_5ca114;
-        (*(*valA15 + 0x50))(valA15, 0x22, 0);
-        int32_t* valA16 = g_5ca114;
-        (*(*valA16 + 0x50))(valA16, 0x1c, g_5470b4);
-        int32_t* valA17 = g_5ca114;
-        (*(*valA17 + 0x94))(valA17, 0, 1, 4);
-        int32_t* valA18 = g_5ca114;
-        (*(*valA18 + 0x50))(valA18, 0x17, 4);
-        int32_t* valA19 = g_5ca114;
-        return (*(*valA19 + 0x50))(valA19, 0xe, 0);
+        int32_t* data_12 = g_5ca114;
+        (*(*data_12 + 0x50))(data_12, 0x1b, 1);
+        int32_t* data_13 = g_5ca114;
+        (*(*data_13 + 0x50))(data_13, 0x13, 2);
+        int32_t* data_14 = g_5ca114;
+        (*(*data_14 + 0x50))(data_14, 0x14, 2);
+        int32_t* data_15 = g_5ca114;
+        (*(*data_15 + 0x50))(data_15, 0x22, 0);
+        int32_t* data_16 = g_5ca114;
+        (*(*data_16 + 0x50))(data_16, 0x1c, g_5470b4);
+        int32_t* data_17 = g_5ca114;
+        (*(*data_17 + 0x94))(data_17, 0, 1, 4);
+        int32_t* data_18 = g_5ca114;
+        (*(*data_18 + 0x50))(data_18, 0x17, 4);
+        int32_t* data_19 = g_5ca114;
+        return (*(*data_19 + 0x50))(data_19, 0xe, 0);
     }
 
-    if (a1 == 2)
+    if (context == 2)
     {
-        int32_t* valA3 = g_5ca114;
-        (*(*valA3 + 0x50))(valA3, 0x1b, 1);
-        int32_t* valA4 = g_5ca114;
-        (*(*valA4 + 0x50))(valA4, 0x13, 1);
-        int32_t* valA5 = g_5ca114;
-        (*(*valA5 + 0x50))(valA5, 0x22, 0xffffffff);
-        int32_t* valA6 = g_5ca114;
-        (*(*valA6 + 0x50))(valA6, 0x14, 3);
-        int32_t* valA7 = g_5ca114;
-        (*(*valA7 + 0x50))(valA7, 0x1c, g_5470b4);
-        int32_t* valA8 = g_5ca114;
-        (*(*valA8 + 0x94))(valA8, 0, 1, 2);
-        int32_t* valA9 = g_5ca114;
-        (*(*valA9 + 0x50))(valA9, 0x17, 4);
-        int32_t* valA10 = g_5ca114;
-        return (*(*valA10 + 0x50))(valA10, 0xe, 0);
+        int32_t* data_3 = g_5ca114;
+        (*(*data_3 + 0x50))(data_3, 0x1b, 1);
+        int32_t* data_4 = g_5ca114;
+        (*(*data_4 + 0x50))(data_4, 0x13, 1);
+        int32_t* data_5 = g_5ca114;
+        (*(*data_5 + 0x50))(data_5, 0x22, 0xffffffff);
+        int32_t* data_6 = g_5ca114;
+        (*(*data_6 + 0x50))(data_6, 0x14, 3);
+        int32_t* data_7 = g_5ca114;
+        (*(*data_7 + 0x50))(data_7, 0x1c, g_5470b4);
+        int32_t* data_8 = g_5ca114;
+        (*(*data_8 + 0x94))(data_8, 0, 1, 2);
+        int32_t* data_9 = g_5ca114;
+        (*(*data_9 + 0x50))(data_9, 0x17, 4);
+        int32_t* data_10 = g_5ca114;
+        return (*(*data_10 + 0x50))(data_10, 0xe, 0);
     }
 
     Error_Show("Unknown blendmode");

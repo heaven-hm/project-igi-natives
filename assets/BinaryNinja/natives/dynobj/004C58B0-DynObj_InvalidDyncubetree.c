@@ -1,9 +1,9 @@
 // Original IGI.EXE function: DynObj_InvalidDyncubetree (VA 0x004C58B0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_InvalidDyncubetree.h"
-int32_t DynObj_InvalidDyncubetree(int32_t a1)
+int32_t DynObj_InvalidDyncubetree(int32_t context)
 
 {
-    if (a1 > 5)
+    if (context > 5)
     {
         Error_Show("Invalid dyncubetree");
 
@@ -11,7 +11,7 @@ int32_t DynObj_InvalidDyncubetree(int32_t a1)
             /* nop */
     }
     else
-        switch (a1)
+        switch (context)
         {
             case 0:
             {

@@ -1,82 +1,82 @@
 // Original IGI.EXE function: FX_FragmentSimulate_19 (VA 0x0048BFD0; static CFG gate PASS, CFG score 1.000).
 #include "FX_FragmentSimulate_19.h"
-int32_t FX_FragmentSimulate_19(int32_t* a1, void* a2)
+int32_t FX_FragmentSimulate_19(int32_t* context, void* param_2)
 
 {
-    int32_t* srcS = a1;
-    void* flagP = srcS[0xf79];
-    int32_t ctxB = *(a2 + 0x18);
-    *(a2 + 0x18) = 0;
-    Combat_SetAimMode(srcS[0xeaa], srcS, 0xffffffff);
+    int32_t* source_val = context;
+    void* flagP = source_val[0xf79];
+    int32_t context_val = *(param_2 + 0x18);
+    *(param_2 + 0x18) = 0;
+    Combat_SetAimMode(source_val[0xeaa], source_val, 0xffffffff);
 
-    if (srcS[0xf7a] == 0xffffffff)
+    if (source_val[0xf7a] == 0xffffffff)
     {
-        int32_t v_18_1 = 0x3fd33333;
-        void* valA2 = Script_ExecuteLevelScript_23(srcS[0xedb], srcS[0xf8b]);
+        int32_t item_18_1 = 0x3fd33333;
+        void* data_2 = Script_ExecuteLevelScript_23(source_val[0xedb], source_val[0xf8b]);
 
-        if (!Script_FormatString_23(DynObj_UpdateDynTree_4(srcS[5]), valA2, 4.17232506e-08f, 0))
+        if (!Script_FormatString_23(DynObj_UpdateDynTree_4(source_val[5]), data_2, 4.17232506e-08.0f, 0))
             return 4;
     }
 
-    int16_t valA6;
-    valA6 = *(flagP + 0x29);
+    int16_t data_6;
+    data_6 = *(flagP + 0x29);
 
-    if (!valA6)
+    if (!data_6)
     {
-        *(a2 + 0x18) = ctxB + 1;
+        *(param_2 + 0x18) = context_val + 1;
 
-        if ((ctxB + 1) % 0x1e > 0xf)
+        if ((context_val + 1) % 0x1e > 0xf)
         {
-            a1 = nullptr;
-            FX_FindfreepositionStac(&a1, srcS, 0, 5);
-            int32_t* valA30 = a1;
+            context = nullptr;
+            FX_FindfreepositionStac(&context, source_val, 0, 5);
+            int32_t* data_30 = context;
 
-            if (valA30 && *valA30 != srcS[0xf8b])
+            if (data_30 && *data_30 != source_val[0xf8b])
             {
-                srcS[0xf7c] = 0;
-                srcS[0xf7a] = *valA30;
-                *(a2 + 0x18) = 0;
+                source_val[0xf7c] = 0;
+                source_val[0xf7a] = *data_30;
+                *(param_2 + 0x18) = 0;
                 return 5;
             }
         }
 
-        int32_t objC6 = 0;
-        objC6 = *(a2 + 0x18) > srcS[0xf54];
-        return objC6 + 6;
+        int32_t entity_6 = 0;
+        entity_6 = *(param_2 + 0x18) > source_val[0xf54];
+        return entity_6 + 6;
     }
 
-    long double fpu7 = *(a2 + 8);
-    long double f2 = *(srcS + 0x3db0);
+    long double fpu7 = *(param_2 + 8);
+    long double f2 = *(source_val + 0x3db0);
     fpu7 - f2;
 
     if (*(&((fpu7 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f2) ? 1 : 0) << 0xa
             | (fpu7 == f2 ? 1 : 0) << 0xe) + 1) & 1)
         return 3;
 
-    if (!FX_ExplosionSpawn_19(srcS))
+    if (!FX_ExplosionSpawn_19(source_val))
     {
-        long double x87_r7_1 = srcS[0xf64];
-        long double f4 = *(a2 + 8);
-        x87_r7_1 - f4;
+        long double fpu_val_7_1 = source_val[0xf64];
+        long double f4 = *(param_2 + 8);
+        fpu_val_7_1 - f4;
 
-        if (*(&((x87_r7_1 < f4 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f4) ? 1 : 0) << 0xa
-            | (x87_r7_1 == f4 ? 1 : 0) << 0xe) + 1) & 1)
+        if (*(&((fpu_val_7_1 < f4 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f4) ? 1 : 0) << 0xa
+            | (fpu_val_7_1 == f4 ? 1 : 0) << 0xe) + 1) & 1)
         {
-            long double x87_r7_2 = srcS[0xf65];
-            long double f6_1 = *(a2 + 8);
-            x87_r7_2 - f6_1;
-            int16_t valA9 = (x87_r7_2 < f6_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_2, f6_1) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f6_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_2 = source_val[0xf65];
+            long double f6_1 = *(param_2 + 8);
+            fpu_val_7_2 - f6_1;
+            int16_t data_9 = (fpu_val_7_2 < f6_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_2, f6_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f6_1 ? 1 : 0) << 0xe;
 
-            if (!(*(&valA9 + 1) & 0x41))
+            if (!(*(&data_9 + 1) & 0x41))
             {
-                valA9 = *(srcS + 0x3dfd);
+                data_9 = *(source_val + 0x3dfd);
 
-                if (valA9)
+                if (data_9)
                 {
                     long double fp0_1 = Sys_AllocateMemory_14(Level_SetMission_5());
-                    long double f8_1 = srcS[0xf62];
+                    long double f8_1 = source_val[0xf62];
                     fp0_1 - f8_1;
 
                     if (*(&((fp0_1 < f8_1 ? 1 : 0) << 8
@@ -87,54 +87,54 @@ int32_t FX_FragmentSimulate_19(int32_t* a1, void* a2)
             }
         }
 
-        Combat_SetAimMode(srcS[0xeaa], srcS, 1);
+        Combat_SetAimMode(source_val[0xeaa], source_val, 1);
         return 0;
     }
 
-    long double x87_r7_4 = *(a2 + 8);
-    long double f3 = *(srcS + 0x3dc0);
-    x87_r7_4 - f3;
+    long double fpu_val_7_4 = *(param_2 + 8);
+    long double f3 = *(source_val + 0x3dc0);
+    fpu_val_7_4 - f3;
 
-    if (!(*(&((x87_r7_4 < f3 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f3) ? 1 : 0) << 0xa
-        | (x87_r7_4 == f3 ? 1 : 0) << 0xe) + 1) & 0x41))
+    if (!(*(&((fpu_val_7_4 < f3 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f3) ? 1 : 0) << 0xa
+        | (fpu_val_7_4 == f3 ? 1 : 0) << 0xe) + 1) & 0x41))
     {
-        a1 = nullptr;
-        FX_FindfreepositionStac(&a1, srcS, 1, 5);
-        int32_t* valA16 = a1;
+        context = nullptr;
+        FX_FindfreepositionStac(&context, source_val, 1, 5);
+        int32_t* data_16 = context;
 
-        if (valA16)
+        if (data_16)
         {
-            int32_t valA17 = *valA16;
+            int32_t data_17 = *data_16;
 
-            if (valA17 != srcS[0xf8b])
+            if (data_17 != source_val[0xf8b])
             {
-                srcS[0xf7a] = valA17;
+                source_val[0xf7a] = data_17;
                 return 5;
             }
         }
     }
 
-    long double x87_r7_5 = srcS[0xf64];
-    long double f5 = *(a2 + 8);
-    x87_r7_5 - f5;
+    long double fpu_val_7_5 = source_val[0xf64];
+    long double f5 = *(param_2 + 8);
+    fpu_val_7_5 - f5;
 
-    if (*(&((x87_r7_5 < f5 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f5) ? 1 : 0) << 0xa
-        | (x87_r7_5 == f5 ? 1 : 0) << 0xe) + 1) & 1)
+    if (*(&((fpu_val_7_5 < f5 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f5) ? 1 : 0) << 0xa
+        | (fpu_val_7_5 == f5 ? 1 : 0) << 0xe) + 1) & 1)
     {
-        long double x87_r7_6 = srcS[0xf65];
-        long double f7_1 = *(a2 + 8);
-        x87_r7_6 - f7_1;
-        int16_t valA15 = (x87_r7_6 < f7_1 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r7_6, f7_1) ? 1 : 0) << 0xa | (x87_r7_6 == f7_1 ? 1 : 0) << 0xe;
+        long double fpu_val_7_6 = source_val[0xf65];
+        long double f7_1 = *(param_2 + 8);
+        fpu_val_7_6 - f7_1;
+        int16_t data_15 = (fpu_val_7_6 < f7_1 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_7_6, f7_1) ? 1 : 0) << 0xa | (fpu_val_7_6 == f7_1 ? 1 : 0) << 0xe;
 
-        if (!(*(&valA15 + 1) & 0x41))
+        if (!(*(&data_15 + 1) & 0x41))
         {
-            valA15 = *(srcS + 0x3dfd);
+            data_15 = *(source_val + 0x3dfd);
 
-            if (valA15)
+            if (data_15)
             {
                 long double fp0_2 = Sys_AllocateMemory_14(Level_SetMission_5());
-                long double f9_1 = srcS[0xf63];
+                long double f9_1 = source_val[0xf63];
                 fp0_2 - f9_1;
 
                 if (*(&((fp0_2 < f9_1 ? 1 : 0) << 8 | (FCMP_UO(fp0_2, f9_1) ? 1 : 0) << 0xa
@@ -144,12 +144,12 @@ int32_t FX_FragmentSimulate_19(int32_t* a1, void* a2)
         }
     }
 
-    if (AI_UpdateOrders_2(srcS[0xeaa], 0) >= 3)
+    if (AI_UpdateOrders_2(source_val[0xeaa], 0) >= 3)
     {
-        Combat_SetAimMode(srcS[0xeaa], srcS, 2);
+        Combat_SetAimMode(source_val[0xeaa], source_val, 2);
         return 6;
     }
 
-    Combat_SetAimMode(srcS[0xeaa], srcS, 0);
+    Combat_SetAimMode(source_val[0xeaa], source_val, 0);
     return 2;
 }

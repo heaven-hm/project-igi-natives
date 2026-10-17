@@ -3,11 +3,11 @@
 int32_t* FX_LanguageMessagesRes()
 
 {
-    char* v_8 = "LANGUAGE:messages.res";
-    int32_t valA;
-    void* objC;
-    int32_t tmpD;
-    int32_t* result = Resource_Load(valA, tmpD, objC, nullptr);
+    char* item_8 = "LANGUAGE:messages.res";
+    int32_t data_val;
+    void* entity_val;
+    int32_t temp_val;
+    int32_t* result = Resource_Load(data_val, temp_val, entity_val, nullptr);
     g_5c8a40 = result;
     return result;
 }

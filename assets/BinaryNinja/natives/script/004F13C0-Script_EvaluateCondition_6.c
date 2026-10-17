@@ -1,27 +1,27 @@
 // Original IGI.EXE function: Script_EvaluateCondition_6 (VA 0x004F13C0; static CFG gate PASS, CFG score 1.000).
 #include "Script_EvaluateCondition_6.h"
-int32_t Script_EvaluateCondition_6(void* a1, void* a2)
+int32_t Script_EvaluateCondition_6(void* context, void* param_2)
 
 {
     int32_t result = 0;
-    int32_t objC = *(a1 + 0x4c);
+    int32_t entity_val = *(context + 0x4c);
 
-    if (objC > 0)
+    if (entity_val > 0)
     {
-        int32_t* tmpD1 = a1 + 0xc;
+        int32_t* temp_1 = context + 0xc;
 
         do
         {
-            if (**tmpD1 == a2)
+            if (**temp_1 == param_2)
                 return result;
 
             result += 1;
-            tmpD1 = &tmpD1[1];
-        } while (result < objC);
+            temp_1 = &temp_1[1];
+        } while (result < entity_val);
     }
 
-    *(a1 + (*(a1 + 0x4c) << 2) + 0xc) = QTask_LinkEventHandler_2(a2);
-    result = *(a1 + 0x4c) + 1;
-    *(a1 + 0x4c) = result;
+    *(context + (*(context + 0x4c) << 2) + 0xc) = QTask_LinkEventHandler_2(param_2);
+    result = *(context + 0x4c) + 1;
+    *(context + 0x4c) = result;
     return result;
 }

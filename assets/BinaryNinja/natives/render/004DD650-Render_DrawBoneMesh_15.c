@@ -1,63 +1,63 @@
 // Original IGI.EXE function: Render_DrawBoneMesh_15 (VA 0x004DD650; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawBoneMesh_15.h"
-int32_t Render_DrawBoneMesh_15(void* a1, float* a2, float* a3, int32_t a4)
+int32_t Render_DrawBoneMesh_15(void* context, float* param_2, float* param_3, int32_t param_4)
 
 {
-    void* ctxB = a1;
-    void* flagP = *(*(*(*(ctxB + 0x6c) + (a4 << 2)) + 0xc) + 0xc);
+    void* context_val = context;
+    void* flagP = *(*(*(*(context_val + 0x6c) + (param_4 << 2)) + 0xc) + 0xc);
     int32_t i = 0;
-    void* v_14 = flagP;
+    void* item_14 = flagP;
     int32_t i_1 = 0;
 
     if (*(flagP + 0x84) > 0)
     {
-        int32_t v_20_1 = 0;
+        int32_t item_20_1 = 0;
 
         do
         {
-            int32_t valA2 = *(*(flagP + 0x98) + v_20_1 + 0x10);
-            float v_10;
-            float v_8;
+            int32_t data_2 = *(*(flagP + 0x98) + item_20_1 + 0x10);
+            float item_10;
+            float item_8;
 
-            if (Render_DrawSplineMesh_15(ctxB, a4, i_1, a2, a3, &v_8, &v_10))
+            if (Render_DrawSplineMesh_15(context_val, param_4, i_1, param_2, param_3, &item_8, &item_10))
             {
-                long double x87_r7_1 = v_8;
-                long double f0_1 = *a2;
-                x87_r7_1 - f0_1;
+                long double fpu_val_7_1 = item_8;
+                long double f0_1 = *param_2;
+                fpu_val_7_1 - f0_1;
 
-                if (*(&((x87_r7_1 < f0_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_1, f0_1) ? 1 : 0) << 0xa
-                        | (x87_r7_1 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x41)
-                    v_8 = *a2;
+                if (*(&((fpu_val_7_1 < f0_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_1, f0_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_1 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+                    item_8 = *param_2;
 
-                long double x87_r7_2 = a2[1];
-                float v_4;
-                long double f1_1 = v_4;
-                x87_r7_2 - f1_1;
+                long double fpu_val_7_2 = param_2[1];
+                float item_4;
+                long double f1_1 = item_4;
+                fpu_val_7_2 - f1_1;
 
-                if (!(*(&((x87_r7_2 < f1_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_2, f1_1) ? 1 : 0) << 0xa
-                        | (x87_r7_2 == f1_1 ? 1 : 0) << 0xe) + 1) & 1))
-                    v_4 = a2[1];
+                if (!(*(&((fpu_val_7_2 < f1_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_2, f1_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_2 == f1_1 ? 1 : 0) << 0xe) + 1) & 1))
+                    item_4 = param_2[1];
 
-                long double x87_r7_4 = v_10;
-                long double f2_1 = *a3;
-                x87_r7_4 - f2_1;
+                long double fpu_val_7_4 = item_10;
+                long double f2_1 = *param_3;
+                fpu_val_7_4 - f2_1;
 
-                if (!(*(&((x87_r7_4 < f2_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_4, f2_1) ? 1 : 0) << 0xa
-                        | (x87_r7_4 == f2_1 ? 1 : 0) << 0xe) + 1) & 1))
-                    v_10 = *a3;
+                if (!(*(&((fpu_val_7_4 < f2_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_4, f2_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_4 == f2_1 ? 1 : 0) << 0xe) + 1) & 1))
+                    item_10 = *param_3;
 
-                long double x87_r7_5 = a3[1];
-                float v_c;
-                long double f3_1 = v_c;
-                x87_r7_5 - f3_1;
+                long double fpu_val_7_5 = param_3[1];
+                float item_c;
+                long double f3_1 = item_c;
+                fpu_val_7_5 - f3_1;
 
-                if (*(&((x87_r7_5 < f3_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_5, f3_1) ? 1 : 0) << 0xa
-                        | (x87_r7_5 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x41)
-                    v_c = a3[1];
+                if (*(&((fpu_val_7_5 < f3_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_5, f3_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_5 == f3_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+                    item_c = param_3[1];
 
                 int32_t* j_1 = g_a5e354;
                 int32_t* j = j_1;
@@ -66,38 +66,38 @@ int32_t Render_DrawBoneMesh_15(void* a1, float* a2, float* a3, int32_t a4)
                 {
                     do
                     {
-                        if (j != ctxB)
+                        if (j != context_val)
                         {
-                            int32_t valA7 = DynObj_CreateMagicObject_16(j);
-                            int32_t v_18_1 = valA7;
+                            int32_t data_7 = DynObj_CreateMagicObject_16(j);
+                            int32_t item_18_1 = data_7;
 
-                            if (valA7 != 0xffffffff)
+                            if (data_7 != 0xffffffff)
                             {
                                 int32_t k = 0;
-                                void* dstD2 = *(*(*(j[0x1b] + (valA7 << 2)) + 0xc) + 0xc);
+                                void* dest_2 = *(*(*(j[0x1b] + (data_7 << 2)) + 0xc) + 0xc);
 
-                                if (*(dstD2 + 0x84) > 0)
+                                if (*(dest_2 + 0x84) > 0)
                                 {
                                     int32_t flagP1 = 0;
 
                                     do
                                     {
-                                        if (*(*(dstD2 + 0x98) + flagP1 + 0x10) == valA2)
+                                        if (*(*(dest_2 + 0x98) + flagP1 + 0x10) == data_2)
                                         {
-                                            Render_ClipMesh_14(j, &v_8, &v_10, valA7);
-                                            valA7 = v_18_1;
+                                            Render_ClipMesh_14(j, &item_8, &item_10, data_7);
+                                            data_7 = item_18_1;
                                         }
 
                                         k += 1;
                                         flagP1 += 0x14;
-                                    } while (k < *(dstD2 + 0x84));
+                                    } while (k < *(dest_2 + 0x84));
 
-                                    flagP = v_14;
+                                    flagP = item_14;
                                 }
                             }
 
                             j_1 = g_a5e354;
-                            ctxB = a1;
+                            context_val = context;
                         }
 
                         if (j != j_1)
@@ -112,12 +112,12 @@ int32_t Render_DrawBoneMesh_15(void* a1, float* a2, float* a3, int32_t a4)
                         }
                         else
                         {
-                            void* srcS2 = j[0x52];
+                            void* source_2 = j[0x52];
 
-                            if (!srcS2)
+                            if (!source_2)
                                 break;
 
-                            j = *(srcS2 + 8);
+                            j = *(source_2 + 8);
 
                             if (!*j)
                                 break;
@@ -127,7 +127,7 @@ int32_t Render_DrawBoneMesh_15(void* a1, float* a2, float* a3, int32_t a4)
             }
 
             i = i_1 + 1;
-            v_20_1 += 0x14;
+            item_20_1 += 0x14;
             i_1 = i;
         } while (i < *(flagP + 0x84));
     }

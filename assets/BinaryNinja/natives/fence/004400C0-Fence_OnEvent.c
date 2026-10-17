@@ -1,78 +1,78 @@
 // Original IGI.EXE function: Fence_OnEvent (VA 0x004400C0; static CFG gate PASS, CFG score 1.000).
 #include "Fence_OnEvent.h"
-int32_t Fence_OnEvent(void* a1, void* a2)
+int32_t Fence_OnEvent(void* context, void* param_2)
 
 {
     int16_t result;
-    result = *(a1 + 0x11c);
+    result = *(context + 0x11c);
 
     if (!result)
     {
-        long double x87_r7_2 = *(a2 + 8) - *(a1 + 0x20);
-        long double x87_r6_2 = *(a2 + 0x10) - *(a1 + 0x28);
-        long double x87_r5_2 = *(a2 + 0x18) - *(a1 + 0x30);
-        double v_18_1 =
-            *(a1 + 0x88) * x87_r5_2 + *(a1 + 0x7c) * x87_r6_2 + *(a1 + 0x70) * x87_r7_2;
-        double v_10_1 =
-            *(a1 + 0x80) * x87_r6_2 + *(a1 + 0x8c) * x87_r5_2 + *(a1 + 0x74) * x87_r7_2;
-        float v_30;
-        WeaponType_RegisterType_2(&v_30, a1, 0);
-        float v_24;
-        WeaponType_RegisterType_2(&v_24, a1, 1);
-        long double x87_r7_4 = v_10_1;
+        long double fpu_val_7_2 = *(param_2 + 8) - *(context + 0x20);
+        long double fpu_val_6_2 = *(param_2 + 0x10) - *(context + 0x28);
+        long double fpu_val_5_2 = *(param_2 + 0x18) - *(context + 0x30);
+        double item_18_1 =
+            *(context + 0x88) * fpu_val_5_2 + *(context + 0x7c) * fpu_val_6_2 + *(context + 0x70) * fpu_val_7_2;
+        double item_10_1 =
+            *(context + 0x80) * fpu_val_6_2 + *(context + 0x8c) * fpu_val_5_2 + *(context + 0x74) * fpu_val_7_2;
+        float item_30;
+        WeaponType_RegisterType_2(&item_30, context, 0);
+        float item_24;
+        WeaponType_RegisterType_2(&item_24, context, 1);
+        long double fpu_val_7_4 = item_10_1;
         long double f0_1 = 0.0;
-        x87_r7_4 - f0_1;
-        long double x87_r7_5 = v_10_1;
+        fpu_val_7_4 - f0_1;
+        long double fpu_val_7_5 = item_10_1;
 
-        if (*(&((x87_r7_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_4 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
-            x87_r7_5 = -(x87_r7_5);
+        if (*(&((fpu_val_7_4 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_4 == f0_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+            fpu_val_7_5 = -(fpu_val_7_5);
 
-        long double f1_1 = *(a2 + 0x78);
-        x87_r7_5 - f1_1;
-        result = (x87_r7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_5 == f1_1 ? 1 : 0) << 0xe;
+        long double f1_1 = *(param_2 + 0x78);
+        fpu_val_7_5 - f1_1;
+        result = (fpu_val_7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_5 == f1_1 ? 1 : 0) << 0xe;
 
         if (*(&result + 1) & 1)
         {
-            long double x87_r7_6 = v_30;
-            long double f2_1 = v_18_1;
-            x87_r7_6 - f2_1;
-            result = (x87_r7_6 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_6, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_6 == f2_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_6 = item_30;
+            long double f2_1 = item_18_1;
+            fpu_val_7_6 - f2_1;
+            result = (fpu_val_7_6 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_6, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_6 == f2_1 ? 1 : 0) << 0xe;
 
             if (*(&result + 1) & 1)
             {
-                long double x87_r7_7 = v_24;
-                long double f3_1 = v_18_1;
-                x87_r7_7 - f3_1;
-                result = (x87_r7_7 < f3_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_7, f3_1) ? 1 : 0) << 0xa
-                    | (x87_r7_7 == f3_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_7 = item_24;
+                long double f3_1 = item_18_1;
+                fpu_val_7_7 - f3_1;
+                result = (fpu_val_7_7 < f3_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_7, f3_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_7 == f3_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x41))
                 {
-                    long double x87_r7_8 = v_10_1;
+                    long double fpu_val_7_8 = item_10_1;
                     long double f4_1 = 0.0;
-                    x87_r7_8 - f4_1;
-                    int32_t objC1 = *(a2 + 0x3c);
-                    int32_t v_38_1 = *(a2 + 0x30);
-                    float valA1 = *(a1 + 0x80);
-                    int32_t v_3c = *(a2 + 0x24);
-                    int32_t v_34_1 = objC1;
-                    float objC2 = *(a1 + 0x8c);
-                    float v_48 = *(a1 + 0x74);
+                    fpu_val_7_8 - f4_1;
+                    int32_t entity_1 = *(param_2 + 0x3c);
+                    int32_t item_38_1 = *(param_2 + 0x30);
+                    float data_1 = *(context + 0x80);
+                    int32_t item_3c = *(param_2 + 0x24);
+                    int32_t item_34_1 = entity_1;
+                    float entity_2 = *(context + 0x8c);
+                    float item_48 = *(context + 0x74);
 
-                    if (!(*(&((x87_r7_8 < f4_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r7_8, f4_1) ? 1 : 0) << 0xa
-                        | (x87_r7_8 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x41))
+                    if (!(*(&((fpu_val_7_8 < f4_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_7_8, f4_1) ? 1 : 0) << 0xa
+                        | (fpu_val_7_8 == f4_1 ? 1 : 0) << 0xe) + 1) & 0x41))
                     {
-                        v_48 = -(v_48);
-                        float v_44_2 = -(valA1);
-                        float v_40_2 = -(objC2);
+                        item_48 = -(item_48);
+                        float item_44_2 = -(data_1);
+                        float item_40_2 = -(entity_2);
                     }
 
-                    long double fp0_1 = Sys_PushStack_10(&v_3c, &v_48);
+                    long double fp0_1 = Sys_PushStack_10(&item_3c, &item_48);
                     long double f5_1 = 1.04719758f;
                     fp0_1 - f5_1;
                     result = (fp0_1 < f5_1 ? 1 : 0) << 8
@@ -81,9 +81,9 @@ int32_t Fence_OnEvent(void* a1, void* a2)
 
                     if (*(&result + 1) & 1)
                     {
-                        *(a2 + 0x70) = 0;
-                        *(a2 + 0x74) = 0;
-                        *(a2 + 0x80) = a1;
+                        *(param_2 + 0x70) = 0;
+                        *(param_2 + 0x74) = 0;
+                        *(param_2 + 0x80) = context;
                     }
                 }
             }

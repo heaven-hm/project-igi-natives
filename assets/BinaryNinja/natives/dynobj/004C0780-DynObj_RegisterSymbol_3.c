@@ -1,36 +1,36 @@
 // Original IGI.EXE function: DynObj_RegisterSymbol_3 (VA 0x004C0780; static CFG gate PASS, CFG score 0.905).
 #include "DynObj_RegisterSymbol_3.h"
-int32_t __convention("regparm") DynObj_RegisterSymbol_3(int32_t a1, int32_t a2, int32_t a3, void* a4, int32_t* a5)
+int32_t DynObj_RegisterSymbol_3(int32_t context, int32_t param_2, int32_t param_3, void* param_4, int32_t* param_5)
 
 {
-    int32_t v_4 = a3;
-    int32_t* flagP = a5;
-    int32_t dstD = 0;
-    int32_t* ctxB = flagP[2];
+    int32_t item_4 = param_3;
+    int32_t* flagP = param_5;
+    int32_t dest_val = 0;
+    int32_t* context_val = flagP[2];
 
-    if (*ctxB)
+    if (*context_val)
     {
-        void* dstD1 = &ctxB[2];
+        void* dest_1 = &context_val[2];
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_0_1 = 0 != *dstD1;
-            dstD1 += 1;
+            bool flag_0_1 = 0 != *dest_1;
+            dest_1 += 1;
             i -= 1;
 
-            if (!cond_0_1)
+            if (!flag_0_1)
                 break;
         }
 
-        int32_t objC = ~i;
-        int32_t srcS2;
-        int32_t dstD4;
-        dstD4 = memcpy(a4 + 8, dstD1 - objC, objC & 0xfffffffc);
-        memcpy(dstD4, srcS2, objC & 3);
-        *(a4 + 0x2c4) = ctxB[0xb1];
-        Camera_ApplyHandiCam_33(ctxB);
-        Sys_ExecuteBytecode_2(ctxB);
+        int32_t entity_val = ~i;
+        int32_t source_2;
+        int32_t dest_4;
+        dest_4 = memcpy(param_4 + 8, dest_1 - entity_val, entity_val & 0xfffffffc);
+        memcpy(dest_4, source_2, entity_val & 3);
+        *(param_4 + 0x2c4) = context_val[0xb1];
+        Camera_ApplyHandiCam_33(context_val);
+        Sys_ExecuteBytecode_2(context_val);
         return 1;
     }
 
@@ -38,11 +38,11 @@ int32_t __convention("regparm") DynObj_RegisterSymbol_3(int32_t a1, int32_t a2, 
 
     do
     {
-        int32_t* valA2 = flagP[1];
+        int32_t* data_2 = flagP[1];
 
-        if (**valA2)
+        if (**data_2)
         {
-            a5 = nullptr;
+            param_5 = nullptr;
             int32_t* j_1 = **flagP;
             int32_t* j = *j_1;
 
@@ -50,14 +50,14 @@ int32_t __convention("regparm") DynObj_RegisterSymbol_3(int32_t a1, int32_t a2, 
             {
                 do
                 {
-                    if (Sys_AllocateMemory(&v_4, nullptr, *flagP[1], &j_1[0x42], &j_1[0xa42], 0))
+                    if (Sys_AllocateMemory(&item_4, nullptr, *flagP[1], &j_1[0x42], &j_1[0xa42], 0))
                     {
-                        int32_t valA7 = v_4;
+                        int32_t data_7 = item_4;
 
-                        if (valA7 >= dstD)
+                        if (data_7 >= dest_val)
                         {
-                            dstD = valA7;
-                            a5 = j_1;
+                            dest_val = data_7;
+                            param_5 = j_1;
 
                             if (j_1[0x1242])
                                 break;
@@ -68,23 +68,23 @@ int32_t __convention("regparm") DynObj_RegisterSymbol_3(int32_t a1, int32_t a2, 
                     j = *j;
                 } while (j);
 
-                if (a5)
+                if (param_5)
                 {
-                    int32_t valA10 = dstD;
+                    int32_t data_10 = dest_val;
 
-                    if (dstD >= 0x2bc)
-                        valA10 = 0x2bc;
+                    if (dest_val >= 0x2bc)
+                        data_10 = 0x2bc;
 
-                    Camera_ApplyLineFilter_5(a4 + 8, *flagP[1], valA10);
-                    int32_t valA12 = dstD;
+                    Camera_ApplyLineFilter_5(param_4 + 8, *flagP[1], data_10);
+                    int32_t data_12 = dest_val;
 
-                    if (dstD >= 0x2bc)
-                        valA12 = 0x2bc;
+                    if (dest_val >= 0x2bc)
+                        data_12 = 0x2bc;
 
-                    *(valA12 + a4 + 8) = 0;
-                    int32_t* valA13 = flagP[1];
-                    *valA13 += dstD;
-                    *(a4 + 0x2c4) = a5[0x1243];
+                    *(data_12 + param_4 + 8) = 0;
+                    int32_t* data_13 = flagP[1];
+                    *data_13 += dest_val;
+                    *(param_4 + 0x2c4) = param_5[0x1243];
                     return 1;
                 }
             }
@@ -92,7 +92,7 @@ int32_t __convention("regparm") DynObj_RegisterSymbol_3(int32_t a1, int32_t a2, 
             break;
         }
 
-        i_1 = Sys_CheckHeap_30(valA2);
+        i_1 = Sys_CheckHeap_30(data_2);
     } while (i_1);
     return 0;
 }

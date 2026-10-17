@@ -1,93 +1,93 @@
 // Original IGI.EXE function: Menu_LeaveMenus_22 (VA 0x0042DB00; static CFG gate PASS, CFG score 1.000).
 #include "Menu_LeaveMenus_22.h"
-char* Menu_LeaveMenus_22(int32_t a1, int32_t* a2)
+char* Menu_LeaveMenus_22(int32_t context, int32_t* param_2)
 
 {
-    int32_t* srcS = a2;
-    void* flagP = *srcS;
-    float dstD = srcS[1];
-    (*(((SoundSys_Update3DPosition_18() * 0x180 + Script_ExecuteLevelScript_16()) << 2) + &g_a96ae0))(a1, srcS);
-    int32_t valA5 = srcS[2];
-    srcS[2] = valA5 + 1;
-    int32_t valA6 = Script_GetArg(dstD, valA5);
-    *(flagP + 0x118) = valA6;
-    a2 = nullptr;
+    int32_t* source_val = param_2;
+    void* flagP = *source_val;
+    float dest_val = source_val[1];
+    (*(((SoundSys_Update3DPosition_18() * 0x180 + Script_ExecuteLevelScript_16()) << 2) + &g_a96ae0))(context, source_val);
+    int32_t data_5 = source_val[2];
+    source_val[2] = data_5 + 1;
+    int32_t data_6 = Script_GetArg(dest_val, data_5);
+    *(flagP + 0x118) = data_6;
+    param_2 = nullptr;
 
-    if (valA6 > 0)
+    if (data_6 > 0)
     {
-        char* ctxB3 = flagP + 0x11d;
-        bool cond_2_1;
+        char* context_3 = flagP + 0x11d;
+        bool flag_2_1;
 
         do
         {
-            int32_t valA7 = srcS[2];
-            srcS[2] = valA7 + 1;
-            ctxB3[0xffffffff] = Script_GetArg(dstD, valA7);
-            int32_t valA9 = srcS[2];
-            srcS[2] = valA9 + 1;
-            *ctxB3 = Script_GetArg(dstD, valA9);
-            float valA11 = srcS[2];
-            srcS[2] = valA11 + 1;
-            Profile_ValueSet(dstD, valA11);
-🚫🚫🚫            *(ctxB3 + 3) =
-            /* unimplemented  {fstp dword [ctxB+0x3], fp0} */
-            int32_t valA12 = srcS[2];
-            srcS[2] = valA12 + 1;
-            *(ctxB3 + 7) = Script_GetArg(dstD, valA12);
-            float valA14 = srcS[2];
-            srcS[2] = valA14 + 1;
-            Profile_ValueSet(dstD, valA14);
+            int32_t data_7 = source_val[2];
+            source_val[2] = data_7 + 1;
+            context_3[0xffffffff] = Script_GetArg(dest_val, data_7);
+            int32_t data_9 = source_val[2];
+            source_val[2] = data_9 + 1;
+            *context_3 = Script_GetArg(dest_val, data_9);
+            float data_11 = source_val[2];
+            source_val[2] = data_11 + 1;
+            Profile_ValueSet(dest_val, data_11);
+🚫🚫🚫            *(context_3 + 3) =
+            /* unimplemented  {fstp dword [context_val+0x3], fp0} */
+            int32_t data_12 = source_val[2];
+            source_val[2] = data_12 + 1;
+            *(context_3 + 7) = Script_GetArg(dest_val, data_12);
+            float data_14 = source_val[2];
+            source_val[2] = data_14 + 1;
+            Profile_ValueSet(dest_val, data_14);
 🚫🚫            /* unimplemented  {fmul fp0, dword [&g_5333b8]} */
-🚫🚫🚫            *(ctxB3 + 0xb) =
-            /* unimplemented  {fstp dword [ctxB+0xb], fp0} */
-            float valA15 = srcS[2];
-            srcS[2] = valA15 + 1;
-            Profile_ValueSet(dstD, valA15);
-🚫🚫🚫            *(ctxB3 + 0xf) =
-            /* unimplemented  {fstp dword [ctxB+0xf], fp0} */
+🚫🚫🚫            *(context_3 + 0xb) =
+            /* unimplemented  {fstp dword [context_val+0xb], fp0} */
+            float data_15 = source_val[2];
+            source_val[2] = data_15 + 1;
+            Profile_ValueSet(dest_val, data_15);
+🚫🚫🚫            *(context_3 + 0xf) =
+            /* unimplemented  {fstp dword [context_val+0xf], fp0} */
             int16_t idx = idx + 3;
-            ctxB3 = &ctxB3[0x14];
-            cond_2_1 = a2 + 1 < *(flagP + 0x118);
-            a2 += 1;
-        } while (cond_2_1);
+            context_3 = &context_3[0x14];
+            flag_2_1 = param_2 + 1 < *(flagP + 0x118);
+            param_2 += 1;
+        } while (flag_2_1);
     }
 
-    float valA18 = srcS[2];
-    srcS[2] = valA18 + 1;
-    Profile_ValueSet(dstD, valA18);
+    float data_18 = source_val[2];
+    source_val[2] = data_18 + 1;
+    Profile_ValueSet(dest_val, data_18);
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_5333b8]} */
 🚫🚫🚫    *(flagP + 0x25c) =
     /* unimplemented  {fstp dword [flagP+0x25c], fp0} */
-    int32_t valA19 = srcS[2];
-    srcS[2] = valA19 + 1;
-    *(flagP + 0x260) = Script_GetArg(dstD, valA19);
-    int32_t valA21 = srcS[2];
-    srcS[2] = valA21 + 1;
-    *(flagP + 0x261) = Script_GetArg(dstD, valA21);
-    int32_t valA23 = srcS[2];
-    srcS[2] = valA23 + 1;
-    Sys_ResolveSymbol_23(dstD, valA23, flagP + 0x262, 0x20);
-    int32_t valA24 = srcS[2];
-    srcS[2] = valA24 + 1;
-    int32_t valA25 = Script_GetArg(dstD, valA24);
+    int32_t data_19 = source_val[2];
+    source_val[2] = data_19 + 1;
+    *(flagP + 0x260) = Script_GetArg(dest_val, data_19);
+    int32_t data_21 = source_val[2];
+    source_val[2] = data_21 + 1;
+    *(flagP + 0x261) = Script_GetArg(dest_val, data_21);
+    int32_t data_23 = source_val[2];
+    source_val[2] = data_23 + 1;
+    Sys_ResolveSymbol_23(dest_val, data_23, flagP + 0x262, 0x20);
+    int32_t data_24 = source_val[2];
+    source_val[2] = data_24 + 1;
+    int32_t data_25 = Script_GetArg(dest_val, data_24);
     int32_t i = 0;
-    *(flagP + 0x2ac) = valA25;
+    *(flagP + 0x2ac) = data_25;
 
-    if (valA25 > 0)
+    if (data_25 > 0)
     {
-        a2 = flagP + 0x284;
+        param_2 = flagP + 0x284;
 
         do
         {
-            int32_t valA27 = srcS[2];
-            srcS[2] = valA27 + 1;
+            int32_t data_27 = source_val[2];
+            source_val[2] = data_27 + 1;
             i += 1;
-            *a2 = Script_GetArg(dstD, valA27);
-            a2 = &a2[1];
+            *param_2 = Script_GetArg(dest_val, data_27);
+            param_2 = &param_2[1];
         } while (i < *(flagP + 0x2ac));
     }
 
-    int32_t valA30 = srcS[2];
-    srcS[2] = valA30 + 1;
-    return Sys_ResolveSymbol_23(dstD, valA30, flagP + 0x2b0, 0x10);
+    int32_t data_30 = source_val[2];
+    source_val[2] = data_30 + 1;
+    return Sys_ResolveSymbol_23(dest_val, data_30, flagP + 0x2b0, 0x10);
 }

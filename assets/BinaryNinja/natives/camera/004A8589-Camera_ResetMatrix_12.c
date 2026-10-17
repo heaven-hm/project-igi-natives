@@ -1,27 +1,27 @@
 // Original IGI.EXE function: Camera_ResetMatrix_12 (VA 0x004A8589; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix_12.h"
-long double Camera_ResetMatrix_12(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, double a7, int32_t a8)
+long double Camera_ResetMatrix_12(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, double param_7, int32_t param_8)
 
 {
-    int32_t valA = Camera_SetFieldOfView_13(a2);
-    int32_t v_20 = valA;
-    int16_t x87control;
+    int32_t data_val = Camera_SetFieldOfView_13(param_2);
+    int32_t item_20 = data_val;
+    int16_t fpu_control;
 
-    if (!valA)
+    if (!data_val)
     {
-        Camera_UpdateTransform_14(x87control, a8, 0xffff);
-        Camera_UpdateTransform_13(a1);
-        return a7;
+        Camera_UpdateTransform_14(fpu_control, param_8, 0xffff);
+        Camera_UpdateTransform_13(context);
+        return param_7;
     }
 
-    int32_t v_1c = a3;
-    int32_t v_18 = a4;
-    int32_t v_14 = a5;
-    int32_t v_10 = a6;
-    int32_t v_24 = a1;
-    int32_t v_8 = *(&a7 + 4);
-    Camera_UpdateTransform_14(x87control, a8, 0xffff);
-    int32_t* v_34 = &v_24;
-    Camera_UpdateTransform_13(a1);
-    return a7;
+    int32_t item_1c = param_3;
+    int32_t item_18 = param_4;
+    int32_t item_14 = param_5;
+    int32_t item_10 = param_6;
+    int32_t item_24 = context;
+    int32_t item_8 = *(&param_7 + 4);
+    Camera_UpdateTransform_14(fpu_control, param_8, 0xffff);
+    int32_t* item_34 = &item_24;
+    Camera_UpdateTransform_13(context);
+    return param_7;
 }

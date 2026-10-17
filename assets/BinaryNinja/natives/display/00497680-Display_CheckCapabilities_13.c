@@ -1,20 +1,20 @@
 // Original IGI.EXE function: Display_CheckCapabilities_13 (VA 0x00497680; static CFG gate PASS, CFG score 1.000).
 #include "Display_CheckCapabilities_13.h"
-int32_t Display_CheckCapabilities_13(void* a1, int32_t* a2)
+int32_t Display_CheckCapabilities_13(void* context, int32_t* param_2)
 
 {
-    *(a1 + 0x18) = *a2;
-    *(a1 + 0x1c) = a2[1];
-    *(a1 + 0x20) = a2[2];
-    *(a1 + 0x24) = a2[3];
-    *(a1 + 0x28) = a2[2] * 0.5f;
-    *(a1 + 0x2c) = a2[3] * 0.5f;
-    int32_t valA1 = Display_SetGammaRamp_4();
-    float v_8 = *(a1 + 0x18);
-    float v_4 = *(a1 + 0x1c);
-    long double x87_r7_7 = *(a1 + 0x20) + *(a1 + 0x18);
-    *(a1 + 0x10) = valA1;
-    float v_10 = x87_r7_7;
-    float v_c = *(a1 + 0x24) + *(a1 + 0x1c);
-    return Display_CloseDevice_13(a1, &v_8, &v_10);
+    *(context + 0x18) = *param_2;
+    *(context + 0x1c) = param_2[1];
+    *(context + 0x20) = param_2[2];
+    *(context + 0x24) = param_2[3];
+    *(context + 0x28) = param_2[2] * 0.5f;
+    *(context + 0x2c) = param_2[3] * 0.5f;
+    int32_t data_1 = Display_SetGammaRamp_4();
+    float item_8 = *(context + 0x18);
+    float item_4 = *(context + 0x1c);
+    long double fpu_val_7_7 = *(context + 0x20) + *(context + 0x18);
+    *(context + 0x10) = data_1;
+    float item_10 = fpu_val_7_7;
+    float item_c = *(context + 0x24) + *(context + 0x1c);
+    return Display_CloseDevice_13(context, &item_8, &item_10);
 }

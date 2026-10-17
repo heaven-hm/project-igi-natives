@@ -1,37 +1,37 @@
 // Original IGI.EXE function: DynObj_RegisterSymbol_9 (VA 0x004C7560; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_RegisterSymbol_9.h"
-void* DynObj_RegisterSymbol_9(int32_t a1, void* a2)
+void* DynObj_RegisterSymbol_9(int32_t context, void* param_2)
 
 {
-    int32_t ctxB = a1;
-    void* flagP = a2;
-    void* srcS = *(flagP + 0x50);
-    int32_t dstD = 0;
-    *(ctxB + (*(srcS + 0x34) << 2) + 0xe8) = 0;
-    DynObj_InsertHashItem_8(srcS, flagP);
-    DynObj_FindSymbol_9(ctxB, srcS);
-    int32_t objC = 0;
-    a2 = 0xfe;
+    int32_t context_val = context;
+    void* flagP = param_2;
+    void* source_val = *(flagP + 0x50);
+    int32_t dest_val = 0;
+    *(context_val + (*(source_val + 0x34) << 2) + 0xe8) = 0;
+    DynObj_InsertHashItem_8(source_val, flagP);
+    DynObj_FindSymbol_9(context_val, source_val);
+    int32_t entity_val = 0;
+    param_2 = 0xfe;
     void* result;
 
     while (true)
     {
-        int32_t valA1 = *(srcS + 0x34);
-        int32_t tmpD4 = 0;
-        tmpD4 = *(flagP + 0x1c);
-        int16_t ctxB1 = 0;
-        ctxB1 = *(((tmpD4 + dstD) << 2) + &g_a96ae0);
-        *(ctxB + ((objC + valA1 * 0xfe) << 1) + 0x118) -= ctxB1;
-        objC += 1;
-        dstD += 0x180;
-        result = a2 - 1;
-        bool cond_0_1 = a2 != 1;
-        a2 = result;
+        int32_t data_1 = *(source_val + 0x34);
+        int32_t temp_4 = 0;
+        temp_4 = *(flagP + 0x1c);
+        int16_t context_1 = 0;
+        context_1 = *(((temp_4 + dest_val) << 2) + &g_a96ae0);
+        *(context_val + ((entity_val + data_1 * 0xfe) << 1) + 0x118) -= context_1;
+        entity_val += 1;
+        dest_val += 0x180;
+        result = param_2 - 1;
+        bool flag_0_1 = param_2 != 1;
+        param_2 = result;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
 
-        ctxB = a1;
+        context_val = context;
     }
 
     *(flagP + 0x50) = 0;

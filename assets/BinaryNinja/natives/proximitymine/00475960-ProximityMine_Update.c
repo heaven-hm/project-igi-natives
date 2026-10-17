@@ -1,45 +1,45 @@
 // Original IGI.EXE function: ProximityMine_Update (VA 0x00475960; static CFG gate PASS, CFG score 1.000).
 #include "ProximityMine_Update.h"
-int32_t* ProximityMine_Update(int32_t* a1 @ 0x8)
+int32_t* ProximityMine_Update(int32_t* context )
 
 {
-    void* valA1 = *(a1[1] + 0x6e4);
+    void* data_1 = *(context[1] + 0x6e4);
 
-    if (valA1)
+    if (data_1)
     {
-        Sys_ExecuteBytecode_2(valA1);
-        *(a1[1] + 0x6e4) = 0;
+        Sys_ExecuteBytecode_2(data_1);
+        *(context[1] + 0x6e4) = 0;
     }
 
-    int32_t* flagP = Script_FormatString_31(*a1, "Proximitymine - Time before arming (seconds)");
+    int32_t* flagP = Script_FormatString_31(*context, "Proximitymine - Time before arming (seconds)");
 
     if (!flagP)
-        flagP = Script_CallNativeHandler_31(*a1, "Proximitymine - Time before arming (seconds)", 0x40000000);
+        flagP = Script_CallNativeHandler_31(*context, "Proximitymine - Time before arming (seconds)", 0x40000000);
 
-    int32_t* ctxB = Script_FormatString_31(*a1, "Proximitymine - Countdown time (seconds)");
+    int32_t* context_val = Script_FormatString_31(*context, "Proximitymine - Countdown time (seconds)");
 
-    if (!ctxB)
-        ctxB = Script_CallNativeHandler_31(*a1, "Proximitymine - Countdown time (seconds)", 0x3f000000);
+    if (!context_val)
+        context_val = Script_CallNativeHandler_31(*context, "Proximitymine - Countdown time (seconds)", 0x3f000000);
 
-    int32_t* dstD = Script_FormatString_31(*a1, "Proximitymine - Activate radius (meters)");
+    int32_t* dest_val = Script_FormatString_31(*context, "Proximitymine - Activate radius (meters)");
 
-    if (!dstD)
-        dstD = Script_CallNativeHandler_31(*a1, "Proximitymine - Activate radius (meters)", 0x3fc00000);
+    if (!dest_val)
+        dest_val = Script_CallNativeHandler_31(*context, "Proximitymine - Activate radius (meters)", 0x3fc00000);
 
-    int32_t* valA10 = Script_FormatString_31(*a1, "Proximitymine - Explosion radius (meters)");
+    int32_t* data_10 = Script_FormatString_31(*context, "Proximitymine - Explosion radius (meters)");
 
-    if (!valA10)
-        valA10 = Script_CallNativeHandler_31(*a1, "Proximitymine - Explosion radius (meters)", 0x40400000);
+    if (!data_10)
+        data_10 = Script_CallNativeHandler_31(*context, "Proximitymine - Explosion radius (meters)", 0x40400000);
 
-    int32_t objC4 = flagP[0x49];
-    int32_t tmpD3 = ctxB[0x49];
-    int32_t objC5 = dstD[0x49];
-    int32_t tmpD4 = valA10[0x49];
-    *(a1[1] + 0x6e4) = Mem_Alloc(0x10, 4);
-    int32_t* result = *(a1[1] + 0x6e4);
-    *result = objC4;
-    result[1] = tmpD3;
-    result[2] = objC5;
-    result[3] = tmpD4;
+    int32_t entity_4 = flagP[0x49];
+    int32_t temp_3 = context_val[0x49];
+    int32_t entity_5 = dest_val[0x49];
+    int32_t temp_4 = data_10[0x49];
+    *(context[1] + 0x6e4) = Mem_Alloc(0x10, 4);
+    int32_t* result = *(context[1] + 0x6e4);
+    *result = entity_4;
+    result[1] = temp_3;
+    result[2] = entity_5;
+    result[3] = temp_4;
     return result;
 }

@@ -1,31 +1,31 @@
 // Original IGI.EXE function: TerrainLightMap_LoadParameters (VA 0x004F86E0; static CFG gate PASS, CFG score 1.000).
 #include "TerrainLightMap_LoadParameters.h"
-int32_t TerrainLightMap_LoadParameters(void* a1)
+int32_t TerrainLightMap_LoadParameters(void* context)
 
 {
-    char result = *(a1 + 0xcd);
+    char result = *(context + 0xcd);
 
     if (!result)
         return result;
 
-    if (!*(a1 + 0xca))
+    if (!*(context + 0xca))
     {
-        int32_t valA1 = *(a1 + 0xd8);
-        int32_t objC2 = *(*(a1 + 0x68) + 0xdec);
+        int32_t data_1 = *(context + 0xd8);
+        int32_t entity_2 = *(*(context + 0x68) + 0xdec);
 
-        if (valA1 != objC2 - 1)
+        if (data_1 != entity_2 - 1)
         {
-            void* objC3 = *((objC2 << 2) + &g_bc009c);
-            *((valA1 << 2) + &g_bc00a0) = objC3;
-            *(objC3 + 0xd8) = valA1;
+            void* entity_3 = *((entity_2 << 2) + &g_bc009c);
+            *((data_1 << 2) + &g_bc00a0) = entity_3;
+            *(entity_3 + 0xd8) = data_1;
         }
 
-        *(*(a1 + 0x68) + 0xdec) = objC2 - 1;
-        int32_t* objC4 = *(a1 + 0x108);
+        *(*(context + 0x68) + 0xdec) = entity_2 - 1;
+        int32_t* entity_4 = *(context + 0x108);
 
-        if (objC4 && !*(*(a1 + 0xdc) * 0x2c + &g_b81b24))
-            Struct_Clear36(objC4);
+        if (entity_4 && !*(*(context + 0xdc) * 0x2c + &g_b81b24))
+            Struct_Clear36(entity_4);
     }
 
-    return DynObj_RegisterSymbol_9(*(a1 + 0x68), a1);
+    return DynObj_RegisterSymbol_9(*(context + 0x68), context);
 }

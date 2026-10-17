@@ -4,7 +4,7 @@ int32_t Game_Init()
 
 {
     FX_FragmentSimulate_27("Level", sub_415b10);
-    int32_t v_4 = 0;
+    int32_t item_4 = 0;
     g_57b1a2 = TaskType_Register("Game", 0x158, QTask_OpenEvent_2(), 0);
     g_539540 = QTask_UnableToAllocateEvent(0);
     g_539541 = QTask_UnableToAllocateEvent(0);

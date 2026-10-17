@@ -1,22 +1,22 @@
 // Original IGI.EXE function: RotatingObject_LoadParameters (VA 0x00439090; static CFG gate PASS, CFG score 0.917).
 #include "RotatingObject_LoadParameters.h"
-void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
+void* RotatingObject_LoadParameters(long double context , float param_2)
 
 {
-    float flagP = a2;
-    char valA;
-    int32_t objC;
-    valA = Script_FormatString_6(flagP + 0x1ac);
+    float flagP = param_2;
+    char data_val;
+    int32_t entity_val;
+    data_val = Script_FormatString_6(flagP + 0x1ac);
     int16_t idx;
 
-    if (valA)
+    if (data_val)
     {
-        objC = Script_SpawnNewTask_7(flagP + 0x1ac, flagP);
+        entity_val = Script_SpawnNewTask_7(flagP + 0x1ac, flagP);
         idx = 1;
-        int16_t valA2;
-        valA2 = a1;
+        int16_t data_2;
+        data_2 = context;
 
-        if (!valA2 || *(flagP + 0x1a8))
+        if (!data_2 || *(flagP + 0x1a8))
         {
         label_4390cd:
             *(flagP + 0x13c) = 0;
@@ -86,8 +86,8 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
                 if (*(&((c0_4 ? 1 : 0) << 8 | (c2_4 ? 1 : 0) << 0xa | (c3_4 ? 1 : 0) << 0xe
                     | (idx & 7) << 0xb) + 1) & 1)
                 {
-                    objC = *(flagP + 0x13c);
-                    *(flagP + 0x148) = objC;
+                    entity_val = *(flagP + 0x13c);
+                    *(flagP + 0x148) = entity_val;
                 }
             }
         }
@@ -282,8 +282,8 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
             if (!(*(&((c0_12 ? 1 : 0) << 8 | (c2_12 ? 1 : 0) << 0xa | (c3_12 ? 1 : 0) << 0xe
                 | (idx & 7) << 0xb) + 1) & 0x41))
             {
-                objC = *(flagP + 0x144);
-                *(flagP + 0x150) = objC;
+                entity_val = *(flagP + 0x144);
+                *(flagP + 0x150) = entity_val;
             }
         }
     }
@@ -291,7 +291,7 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 🚫🚫    /* unimplemented  {fld fp0, dword [flagP+0x148]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_533678]} */
 🚫🚫    /* unimplemented  {fadd dword [flagP+0x154]} */
-🚫🚫    a2 = /* a2 = unimplemented  {fst dword [esp+0x68], fp0} */;
+🚫🚫    param_2 = /* param_2 = unimplemented  {fst dword [stack_ptr+0x68], fp0} */;
 🚫🚫🚫    *(flagP + 0x154) =
     /* unimplemented  {fstp dword [flagP+0x154], fp0} */
 🚫🚫    /* unimplemented  {fld fp0, dword [flagP+0x14c]} */
@@ -301,11 +301,11 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 🚫🚫    /* unimplemented  {fld fp0, dword [flagP+0x150]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_533678]} */
 🚫🚫    /* unimplemented  {fadd dword [flagP+0x15c]} */
-🚫🚫    char v_58 = /* char v_58 = (unimplemented  {fst dword [esp+0xc], fp0}).b */;
+🚫🚫    char item_58 = /* char item_58 = (unimplemented  {fst dword [stack_ptr+0xc], fp0}).b */;
 🚫🚫🚫    *(flagP + 0x15c) =
     /* unimplemented  {fstp dword [flagP+0x15c], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x68]} */
-⋯    long double f7 = 360f;
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x68]} */
+⋯    long double f7 = 360.0f;
     /* unimplemented  {fcomp fp0, dword [&g_533818]} f- f7 */ - f7;
     bool c0_15 = /* bool c0_15 =
         unimplemented  {fcomp fp0, dword [&g_533818]} f< f7 */ < f7;
@@ -328,7 +328,7 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 🚫🚫            /* unimplemented  {fld fp0, dword [flagP+0x154]} */
 🚫🚫            /* unimplemented  {fsub fp0, dword [&g_533818]} */
 🚫🚫            *(flagP + 0x154) =
-⋯            long double f13_1 = 360f;
+⋯            long double f13_1 = 360.0f;
             /* unimplemented  {fcomp fp0, dword [&g_533818]} f- f13_1 */ - f13_1;
             c0_16 = /* c0_16 =
                 unimplemented  {fcomp fp0, dword [&g_533818]} f< f13_1 */ < f13_1;
@@ -342,7 +342,7 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
             | (top_28 & 7) << 0xb) + 1) & 1));
     }
 
-⋯    long double f12 = 360f;
+⋯    long double f12 = 360.0f;
     /* unimplemented  {fcomp fp0, dword [&g_533818]} f- f12 */ - f12;
     bool c0_17 = /* bool c0_17 =
         unimplemented  {fcomp fp0, dword [&g_533818]} f< f12 */ < f12;
@@ -365,7 +365,7 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 🚫🚫            /* unimplemented  {fld fp0, dword [flagP+0x158]} */
 🚫🚫            /* unimplemented  {fsub fp0, dword [&g_533818]} */
 🚫🚫            *(flagP + 0x158) =
-⋯            long double f18_1 = 360f;
+⋯            long double f18_1 = 360.0f;
             /* unimplemented  {fcomp fp0, dword [&g_533818]} f- f18_1 */ - f18_1;
             c0_18 = /* c0_18 =
                 unimplemented  {fcomp fp0, dword [&g_533818]} f< f18_1 */ < f18_1;
@@ -379,8 +379,8 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
             | (top_31 & 7) << 0xb) + 1) & 1));
     }
 
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0xc]} */
-⋯    long double f17 = 360f;
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0xc]} */
+⋯    long double f17 = 360.0f;
     /* unimplemented  {fcomp fp0, dword [&g_533818]} f- f17 */ - f17;
     bool c0_19 = /* bool c0_19 =
         unimplemented  {fcomp fp0, dword [&g_533818]} f< f17 */ < f17;
@@ -402,7 +402,7 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 🚫🚫            /* unimplemented  {fld fp0, dword [flagP+0x15c]} */
 🚫🚫            /* unimplemented  {fsub fp0, dword [&g_533818]} */
 🚫🚫            *(flagP + 0x15c) =
-⋯            long double f20_1 = 360f;
+⋯            long double f20_1 = 360.0f;
             /* unimplemented  {fcomp fp0, dword [&g_533818]} f- f20_1 */ - f20_1;
             c0_20 = /* c0_20 =
                 unimplemented  {fcomp fp0, dword [&g_533818]} f< f20_1 */ < f20_1;
@@ -418,133 +418,133 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 
 🚫🚫    /* unimplemented  {fld fp0, dword [flagP+0x15c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
-    int32_t v_6c_2 = objC;
-🚫🚫🚫    float v_6c_3 = /* float v_6c_3 = unimplemented  {fstp dword [esp], fp0} */;
-    /* unimplemented  {fstp dword [esp], fp0} */
+    int32_t item_6c_2 = entity_val;
+🚫🚫🚫    float item_6c_3 = /* float item_6c_3 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr], fp0} */
 🚫🚫    /* unimplemented  {fld fp0, dword [flagP+0x158]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
-    int32_t v_70 = objC;
-🚫🚫🚫    float v_70_1 = /* float v_70_1 = unimplemented  {fstp dword [esp], fp0} */;
-    /* unimplemented  {fstp dword [esp], fp0} */
+    int32_t item_70 = entity_val;
+🚫🚫🚫    float item_70_1 = /* float item_70_1 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr], fp0} */
 🚫🚫    /* unimplemented  {fld fp0, dword [flagP+0x154]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
-    int32_t v_74 = objC;
-🚫🚫🚫    float v_74_1 = /* float v_74_1 = unimplemented  {fstp dword [esp], fp0} */;
-    /* unimplemented  {fstp dword [esp], fp0} */
-    float v_50;
-    Sys_ReadFileBlock_12(&v_50, v_74_1, v_70_1, v_6c_3);
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x34]} */
+    int32_t item_74 = entity_val;
+🚫🚫🚫    float item_74_1 = /* float item_74_1 = unimplemented  {fstp dword [stack_ptr], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr], fp0} */
+    float item_50;
+    Sys_ReadFileBlock_12(&item_50, item_74_1, item_70_1, item_6c_3);
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x34]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x164]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x40]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x40]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x168]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x18]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x18]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x160]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_28 = /* float v_28 = unimplemented  {fstp dword [esp+0x40], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x40], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x28]} */
+🚫🚫🚫    float item_28 = /* float item_28 = unimplemented  {fstp dword [stack_ptr+0x40], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x40], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x28]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x164]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x34]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x34]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x168]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x1c]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x1c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x160]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_24 = /* float v_24 = unimplemented  {fstp dword [esp+0x44], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x44], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x2c]} */
+🚫🚫🚫    float item_24 = /* float item_24 = unimplemented  {fstp dword [stack_ptr+0x44], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x44], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x2c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x164]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x38]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x38]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x168]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x20]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x20]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x160]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_20 = /* float v_20 = unimplemented  {fstp dword [esp+0x48], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x48], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x30]} */
+🚫🚫🚫    float item_20 = /* float item_20 = unimplemented  {fstp dword [stack_ptr+0x48], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x48], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x30]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x174]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x18]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x18]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x16c]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x24]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x24]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x170]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_1c = /* float v_1c = unimplemented  {fstp dword [esp+0x4c], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x4c], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x34]} */
+🚫🚫🚫    float item_1c = /* float item_1c = unimplemented  {fstp dword [stack_ptr+0x4c], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x4c], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x34]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x174]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x1c]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x1c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x16c]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x28]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x28]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x170]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_18 = /* float v_18 = unimplemented  {fstp dword [esp+0x50], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x50], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x38]} */
+🚫🚫🚫    float item_18 = /* float item_18 = unimplemented  {fstp dword [stack_ptr+0x50], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x50], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x38]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x174]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x20]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x20]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x16c]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x2c]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x2c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x170]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_14 = /* float v_14 = unimplemented  {fstp dword [esp+0x54], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x54], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x24]} */
+🚫🚫🚫    float item_14 = /* float item_14 = unimplemented  {fstp dword [stack_ptr+0x54], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x54], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x24]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x17c]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x30]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x30]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x180]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x18]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x18]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x178]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-    int32_t v_2c;
-    int32_t v_4 = *(flagP + 0x184) + v_2c + 1;
+    int32_t item_2c;
+    int32_t item_4 = *(flagP + 0x184) + item_2c + 1;
     void* result = *(flagP + 0x1a4);
-🚫🚫🚫    float v_10 = /* float v_10 = unimplemented  {fstp dword [esp+0x58], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x58], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x28]} */
+🚫🚫🚫    float item_10 = /* float item_10 = unimplemented  {fstp dword [stack_ptr+0x58], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x58], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x28]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x17c]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x34]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x34]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x180]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x1c]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x1c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x178]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_c = /* float v_c = unimplemented  {fstp dword [esp+0x5c], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x5c], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x2c]} */
+🚫🚫🚫    float item_c = /* float item_c = unimplemented  {fstp dword [stack_ptr+0x5c], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x5c], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x2c]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x17c]} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x38]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x38]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x180]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [esp+0x20]} */
+🚫🚫    /* unimplemented  {fld fp0, dword [stack_ptr+0x20]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [flagP+0x178]} */
 🚫🚫🚫    /* unimplemented  {faddp fp1, fp0} */
     /* unimplemented  {faddp fp1, fp0} */
-🚫🚫🚫    float v_8 = /* float v_8 = unimplemented  {fstp dword [esp+0x60], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x60], fp0} */
-    memcpy(flagP + 0x70, &v_28, 0x28);
+🚫🚫🚫    float item_8 = /* float item_8 = unimplemented  {fstp dword [stack_ptr+0x60], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x60], fp0} */
+    memcpy(flagP + 0x70, &item_28, 0x28);
 
     if (result)
     {
@@ -559,10 +559,10 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
 🚫🚫🚫        /* unimplemented  {faddp fp1, fp0} */
         /* unimplemented  {faddp fp1, fp0} */
 🚫🚫🚫        *(result + 4) =
-        /* unimplemented  {fstp dword [valA+0x4], fp0} */
+        /* unimplemented  {fstp dword [data_val+0x4], fp0} */
         void* flagP1 = *(flagP + 0x1a4);
 🚫🚫        /* unimplemented  {fld fp0, dword [flagP+0x4]} */
-⋯        long double f21_1 = 0f;
+⋯        long double f21_1 = 0.0f;
         /* unimplemented  {fcomp fp0, dword [&g_5333ec]} f- f21_1 */ - f21_1;
         bool c0_21 = /* bool c0_21 =
             unimplemented  {fcomp fp0, dword [&g_5333ec]} f< f21_1 */ < f21_1;
@@ -583,7 +583,7 @@ void* RotatingObject_LoadParameters(int80_t a1 @ fp0, float a2)
         }
 
 🚫🚫        /* unimplemented  {fld fp0, dword [flagP+0x4]} */
-⋯        long double f22_1 = 1f;
+⋯        long double f22_1 = 1.0f;
         /* unimplemented  {fcomp fp0, dword [&g_5333e0]} f- f22_1 */ - f22_1;
         bool c0_22 = /* bool c0_22 =
             unimplemented  {fcomp fp0, dword [&g_5333e0]} f< f22_1 */ < f22_1;

@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004F6290 Script_ParseEnumString_18 | gate PASS | openigi False */
-int80_t Script_ParseEnumString_18(double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) __location("fp0");
+long double Script_ParseEnumString_18(double context, double param_2, double param_3, double param_4, double param_5, double param_6, double param_7, double param_8, double param_9) ;

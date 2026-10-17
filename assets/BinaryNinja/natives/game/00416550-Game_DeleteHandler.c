@@ -14,10 +14,10 @@ int32_t Game_DeleteHandler()
     SoundSys_EvaluateTrigger_8();
     Qtask_Update();
     Qtask_UpdateList(*(g_57babc + 0x54));
-    int32_t* valA1 = *(g_57babc + 0x48);
+    int32_t* data_1 = *(g_57babc + 0x48);
 
-    if (valA1)
-        QTask_FindType(valA1);
+    if (data_1)
+        QTask_FindType(data_1);
 
     QTask_FindType(*(g_57babc + 0x44));
     Level_SetMission();
@@ -36,7 +36,7 @@ int32_t Game_DeleteHandler()
     Render_ClipMesh_10();
     DynObj_RegisterSymbol_15(*(g_57babc + 0x24));
     DynObj_CreateMagicObject_7(*(g_57babc + 0x20));
-    int32_t v_14 = 0;
+    int32_t item_14 = 0;
     int32_t result = Sys_OpenFileStream_4("MISSION:");
     g_57babc = 0;
     return result;

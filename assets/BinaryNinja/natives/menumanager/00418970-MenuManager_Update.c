@@ -1,51 +1,51 @@
 // Original IGI.EXE function: MenuManager_Update (VA 0x00418970; static CFG gate PASS, CFG score 1.000).
 #include "MenuManager_Update.h"
-int32_t MenuManager_Update(void* a1)
+int32_t MenuManager_Update(void* context)
 
 {
-    if (*(a1 + 0x30) && *(a1 + 0x28) != 9)
+    if (*(context + 0x30) && *(context + 0x28) != 9)
     {
-        Display_ClearSurfaces_13(a1 + 0x266c, 1);
+        Display_ClearSurfaces_13(context + 0x266c, 1);
 
-        if (*(a1 + 0x28) == 2)
+        if (*(context + 0x28) == 2)
         {
-            void* dstD1 = *(a1 + 0x27c8);
-            int32_t valA3 = StatusScreen_GetEvent();
-            int32_t tmpD1 = 0;
-            tmpD1 = *(dstD1 + 0x1c);
-            (*(((valA3 * 0x180 + tmpD1) << 2) + &g_a96ae0))(dstD1);
+            void* dest_1 = *(context + 0x27c8);
+            int32_t data_3 = StatusScreen_GetEvent();
+            int32_t temp_1 = 0;
+            temp_1 = *(dest_1 + 0x1c);
+            (*(((data_3 * 0x180 + temp_1) << 2) + &g_a96ae0))(dest_1);
         }
 
-        if (*(a1 + 0x34))
+        if (*(context + 0x34))
         {
-            void* dstD2 = *(a1 + 0x34);
-            *(a1 + 0xd0) = *(a1 + 0xcc);
-            int32_t valA7 = StatusScreen_GetEvent();
-            int32_t tmpD2 = 0;
-            tmpD2 = *(dstD2 + 0x1c);
-            (*(((valA7 * 0x180 + tmpD2) << 2) + &g_a96ae0))(dstD2);
+            void* dest_2 = *(context + 0x34);
+            *(context + 0xd0) = *(context + 0xcc);
+            int32_t data_7 = StatusScreen_GetEvent();
+            int32_t temp_2 = 0;
+            temp_2 = *(dest_2 + 0x1c);
+            (*(((data_7 * 0x180 + temp_2) << 2) + &g_a96ae0))(dest_2);
         }
 
-        if (*(a1 + 0x30))
+        if (*(context + 0x30))
         {
-            int32_t valA10 = *(a1 + 0x28);
+            int32_t data_10 = *(context + 0x28);
 
-            if (valA10 == 7 || valA10 == 8 || valA10 == 0xf)
-                *(a1 + 0xd0) = 0x10;
+            if (data_10 == 7 || data_10 == 8 || data_10 == 0xf)
+                *(context + 0xd0) = 0x10;
             else
-                *(a1 + 0xd0) = *(a1 + 0xcc);
+                *(context + 0xd0) = *(context + 0xcc);
 
-            void* dstD3 = *(a1 + 0x30);
-            int32_t valA12 = StatusScreen_GetEvent();
-            int32_t tmpD3 = 0;
-            tmpD3 = *(dstD3 + 0x1c);
-            (*(((valA12 * 0x180 + tmpD3) << 2) + &g_a96ae0))(dstD3);
+            void* dest_3 = *(context + 0x30);
+            int32_t data_12 = StatusScreen_GetEvent();
+            int32_t temp_3 = 0;
+            temp_3 = *(dest_3 + 0x1c);
+            (*(((data_12 * 0x180 + temp_3) << 2) + &g_a96ae0))(dest_3);
         }
     }
 
-    int32_t result = *(a1 + 0xc4);
-    int32_t objC10 = *(a1 + 0xcc);
-    *(a1 + 0xc8) = result;
-    *(a1 + 0xc4) = objC10;
+    int32_t result = *(context + 0xc4);
+    int32_t entity_10 = *(context + 0xcc);
+    *(context + 0xc8) = result;
+    *(context + 0xc4) = entity_10;
     return result;
 }

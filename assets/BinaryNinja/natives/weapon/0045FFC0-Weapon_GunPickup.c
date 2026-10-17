@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Weapon_GunPickup (VA 0x0045FFC0; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_GunPickup.h"
-int32_t Weapon_GunPickup(void* a1, int32_t* a2)
+int32_t Weapon_GunPickup(void* context, int32_t* param_2)
 
 // Sig: void Weapon_GunPickup(void* player, void* pickupEntity)
 // Note: Gives a GUN pickup to the player: checks the player's already-carried
@@ -10,50 +10,50 @@ int32_t Weapon_GunPickup(void* a1, int32_t* a2)
 // Params: player = player/Human struct ptr, pickupEntity = the picked-up world
 // entity. Use for custom weapon pickups.
 {
-    char result = *(a1 + 0xcf5);
+    char result = *(context + 0xcf5);
 
     if (result)
         return result;
 
-    int32_t* srcS1 = *(a1 + 8);
+    int32_t* source_1 = *(context + 8);
 
-    if (!*srcS1 || !srcS1)
+    if (!*source_1 || !source_1)
     {
     label_460029:
-        Weapon_EntityCreate(a1, 0, *a2, a2[1], 1);
+        Weapon_EntityCreate(context, 0, *param_2, param_2[1], 1);
     }
     else
     {
         while (true)
         {
-            int32_t valA = Weapon_ComputeAccuracy_5();
-            int16_t v_10_1 = valA;
-            valA = srcS1[7];
+            int32_t data_val = Weapon_ComputeAccuracy_5();
+            int16_t item_10_1 = data_val;
+            data_val = source_1[7];
 
-            if (TaskType_IsDerivedFrom(valA, v_10_1))
+            if (TaskType_IsDerivedFrom(data_val, item_10_1))
             {
-                int32_t* valA2 = srcS1[0x4a];
+                int32_t* data_2 = source_1[0x4a];
 
-                if (valA2 && *valA2 == *a2)
+                if (data_2 && *data_2 == *param_2)
                 {
-                    int32_t* srcS2 = srcS1[0x4b];
+                    int32_t* source_2 = source_1[0x4b];
 
-                    if (srcS2)
-                        Weapon_EjectShell_8(a1 + 0x340, *srcS2, a2[1]);
+                    if (source_2)
+                        Weapon_EjectShell_8(context + 0x340, *source_2, param_2[1]);
 
                     break;
                 }
             }
 
-            srcS1 = *srcS1;
+            source_1 = *source_1;
 
-            if (!srcS1)
+            if (!source_1)
                 goto label_460029;
 
-            if (!*srcS1)
+            if (!*source_1)
                 goto label_460029;
 
-            if (!srcS1)
+            if (!source_1)
                 goto label_460029;
         }
     }

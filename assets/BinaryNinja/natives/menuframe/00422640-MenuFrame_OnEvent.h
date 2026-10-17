@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00422640 MenuFrame_OnEvent | gate PASS | openigi True */
-int MenuFrame_OnEvent(void * a1, int a2);
+int MenuFrame_OnEvent(void * context, int param_2);

@@ -1,23 +1,21 @@
 // Original IGI.EXE function: Render_SetupLighting_7 (VA 0x004D4690; static CFG gate PASS, CFG score 1.000).
 #include "Render_SetupLighting_7.h"
-float Render_SetupLighting_7(int32_t a1, float a2, int32_t* a3) __location("valA")
+float Render_SetupLighting_7(int32_t context, float param_2, int32_t* param_3) {
+    int32_t temp_val = *param_3;
 
-{
-    int32_t tmpD = *a3;
-
-    if (tmpD == 1)
+    if (temp_val == 1)
     {
-        void* objC = a3[1];
-        int32_t tmpD1 = *(objC + 4);
+        void* entity_val = param_3[1];
+        int32_t temp_1 = *(entity_val + 4);
 
-        if (tmpD1)
-            return tmpD1(a1, a2, *(objC + 0x10));
+        if (temp_1)
+            return temp_1(context, param_2, *(entity_val + 0x10));
     }
-    else if (!tmpD)
+    else if (!temp_val)
     {
-        int32_t v_c_2 = a1;
+        int32_t item_c_2 = context;
         long double fpu6;
-        return Render_DrawLightmapMesh_7(fpu6, a2, a3[1]);
+        return Render_DrawLightmapMesh_7(fpu6, param_2, param_3[1]);
     }
 
     return nanf;

@@ -1,18 +1,18 @@
 // Original IGI.EXE function: Sys_OpenFileStream_5 (VA 0x004B1A30; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_5.h"
-int32_t Sys_OpenFileStream_5(void* a1)
+int32_t Sys_OpenFileStream_5(void* context)
 
 {
-    int32_t* valA = Sys_NoFilesLoadedAtAddre(a1);
-    int32_t objC = valA[3];
-    int32_t valA4 = *(objC * 0x8c + &g_943700);
+    int32_t* data_val = Sys_NoFilesLoadedAtAddre(context);
+    int32_t entity_val = data_val[3];
+    int32_t data_4 = *(entity_val * 0x8c + &g_943700);
 
-    if (!valA4)
+    if (!data_4)
     {
-        Sys_ExecuteBytecode_2(a1);
-        return Sys_CheckHeap_25(valA);
+        Sys_ExecuteBytecode_2(context);
+        return Sys_CheckHeap_25(data_val);
     }
 
-    valA4(objC, valA);
-    return Sys_CheckHeap_25(valA);
+    data_4(entity_val, data_val);
+    return Sys_CheckHeap_25(data_val);
 }

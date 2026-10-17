@@ -1,76 +1,76 @@
 // Original IGI.EXE function: Render_SetupLighting_14 (VA 0x004DCDD0; static CFG gate PASS, CFG score 1.000).
 #include "Render_SetupLighting_14.h"
-int32_t Render_SetupLighting_14(void* a1)
+int32_t Render_SetupLighting_14(void* context)
 
 {
-    void* ctxB = a1;
-    int32_t valA = *(ctxB + 0x60);
+    void* context_val = context;
+    int32_t data_val = *(context_val + 0x60);
 
-    if (valA)
+    if (data_val)
     {
-        valA = g_a5e320;
-        int32_t tmpD1 = 0;
+        data_val = g_a5e320;
+        int32_t temp_1 = 0;
 
-        if (valA > 0)
+        if (data_val > 0)
         {
-            int32_t* objC1 = g_a5e31c;
-            int32_t dstD1 = g_a5e318;
-            int32_t* valA3;
+            int32_t* entity_1 = g_a5e31c;
+            int32_t dest_1 = g_a5e318;
+            int32_t* data_3;
 
             while (true)
             {
-                int32_t** valA2 = *objC1 * g_a5e328;
-                valA3 = valA2 + dstD1;
+                int32_t** data_2 = *entity_1 * g_a5e328;
+                data_3 = data_2 + dest_1;
 
-                if (**(valA2 + dstD1) == ctxB)
+                if (**(data_2 + dest_1) == context_val)
                     break;
 
-                int32_t valA4 = g_a5e320;
-                tmpD1 += 1;
-                objC1 = &objC1[1];
+                int32_t data_4 = g_a5e320;
+                temp_1 += 1;
+                entity_1 = &entity_1[1];
 
-                if (tmpD1 >= valA4)
-                    return valA4;
+                if (temp_1 >= data_4)
+                    return data_4;
             }
 
-            void* objC2 = valA3[1];
-            int32_t dstD2 = *(*(objC2 + 0x144) + *valA3);
-            *(objC2 + 0x138) -= 1;
-            void* tmpD3 = valA3[1];
-            int32_t objC3 = *(tmpD3 + 0x138);
+            void* entity_2 = data_3[1];
+            int32_t dest_2 = *(*(entity_2 + 0x144) + *data_3);
+            *(entity_2 + 0x138) -= 1;
+            void* temp_3 = data_3[1];
+            int32_t entity_3 = *(temp_3 + 0x138);
 
-            if (dstD2 != objC3)
+            if (dest_2 != entity_3)
             {
-                int32_t srcS3 = *(tmpD3 + 0x134);
-                int32_t objC6 = *(srcS3 + (objC3 << 2)) * *(tmpD3 + 0x140) + *(tmpD3 + 0x130);
-                int32_t ctxB2 = *(srcS3 + (dstD2 << 2));
-                int32_t tmpD5 = *(*(tmpD3 + 0x144) + objC6);
-                *(srcS3 + (dstD2 << 2)) = *(srcS3 + (tmpD5 << 2));
-                *(*(valA3[1] + 0x134) + (tmpD5 << 2)) = ctxB2;
-                ctxB = a1;
-                *(*(valA3[1] + 0x144) + objC6) = dstD2;
+                int32_t source_3 = *(temp_3 + 0x134);
+                int32_t entity_6 = *(source_3 + (entity_3 << 2)) * *(temp_3 + 0x140) + *(temp_3 + 0x130);
+                int32_t context_2 = *(source_3 + (dest_2 << 2));
+                int32_t temp_5 = *(*(temp_3 + 0x144) + entity_6);
+                *(source_3 + (dest_2 << 2)) = *(source_3 + (temp_5 << 2));
+                *(*(data_3[1] + 0x134) + (temp_5 << 2)) = context_2;
+                context_val = context;
+                *(*(data_3[1] + 0x144) + entity_6) = dest_2;
             }
 
-            *valA3 = 0;
-            int32_t* srcS6 = g_a5e32c;
-            valA = *(srcS6 + valA3);
-            int32_t objC8 = g_a5e320 - 1;
-            g_a5e320 = objC8;
+            *data_3 = 0;
+            int32_t* source_6 = g_a5e32c;
+            data_val = *(source_6 + data_3);
+            int32_t entity_8 = g_a5e320 - 1;
+            g_a5e320 = entity_8;
 
-            if (valA != objC8)
+            if (data_val != entity_8)
             {
-                int32_t tmpD8 = g_a5e31c;
-                int32_t objC11 = *(tmpD8 + (objC8 << 2)) * g_a5e328 + g_a5e318;
-                int32_t dstD4 = *(tmpD8 + (valA << 2));
-                int32_t srcS7 = *(srcS6 + objC11);
-                *(tmpD8 + (valA << 2)) = *(tmpD8 + (srcS7 << 2));
-                *(g_a5e31c + (srcS7 << 2)) = dstD4;
-                *(g_a5e32c + objC11) = valA;
+                int32_t temp_8 = g_a5e31c;
+                int32_t entity_11 = *(temp_8 + (entity_8 << 2)) * g_a5e328 + g_a5e318;
+                int32_t dest_4 = *(temp_8 + (data_val << 2));
+                int32_t source_7 = *(source_6 + entity_11);
+                *(temp_8 + (data_val << 2)) = *(temp_8 + (source_7 << 2));
+                *(g_a5e31c + (source_7 << 2)) = dest_4;
+                *(g_a5e32c + entity_11) = data_val;
             }
 
-            *(ctxB + 0x60) = 0;
+            *(context_val + 0x60) = 0;
         }
     }
 
-    return valA;
+    return data_val;
 }

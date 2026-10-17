@@ -1,22 +1,22 @@
 // Original IGI.EXE function: AI_UpdatePatrol_21 (VA 0x004636A0; static CFG gate PASS, CFG score 1.000).
 #include "AI_UpdatePatrol_21.h"
-int32_t* AI_UpdatePatrol_21(void* a1, int32_t* a2)
+int32_t* AI_UpdatePatrol_21(void* context, int32_t* param_2)
 
 {
-    int32_t* valA = *(a1 + 0x7b4);
+    int32_t* data_val = *(context + 0x7b4);
 
-    if (valA)
+    if (data_val)
     {
-        Qtask_UpdateList(valA);
-        *(a1 + 0x7b4) = 0;
+        Qtask_UpdateList(data_val);
+        *(context + 0x7b4) = 0;
     }
 
-    int32_t* result = a2;
+    int32_t* result = param_2;
 
     if (result)
     {
         result = QTask_LinkEventHandler_2(result);
-        *(a1 + 0x7b4) = result;
+        *(context + 0x7b4) = result;
     }
 
     return result;

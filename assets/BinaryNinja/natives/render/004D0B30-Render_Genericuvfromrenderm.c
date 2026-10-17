@@ -3,19 +3,19 @@
 int32_t Render_Genericuvfromrenderm()
 
 {
-    int32_t objC;
-    int32_t v_4_1 = objC;
-    int32_t v_4 = 0;
+    int32_t entity_val;
+    int32_t item_4_1 = entity_val;
+    int32_t item_4 = 0;
 
     for (void* i = &g_b817c0; i < &g_b81880; )
     {
         i += 0xc;
-        long double x87_r7_2 = v_4 * 0.0666666701f;
-        v_4 += 1;
-        long double x87_r6_2 = x87_r7_2 * 0.699999988f;
-        *(i - 8) = x87_r6_2;
-        *(i - 0xc) = x87_r6_2;
-        *(i - 4) = x87_r7_2 * x87_r7_2 * x87_r7_2 * 40f + 1f;
+        long double fpu_val_7_2 = item_4 * 0.0666666701f;
+        item_4 += 1;
+        long double fpu_val_6_2 = fpu_val_7_2 * 0.699999988f;
+        *(i - 8) = fpu_val_6_2;
+        *(i - 0xc) = fpu_val_6_2;
+        *(i - 4) = fpu_val_7_2 * fpu_val_7_2 * fpu_val_7_2 * 40.0f + 1.0f;
     }
 
     g_548364 = QTask_UnableToAllocateEvent(0);

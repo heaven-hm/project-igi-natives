@@ -1,110 +1,110 @@
 // Original IGI.EXE function: FX_SmokeEmit_10 (VA 0x00488220; static CFG gate PASS, CFG score 1.000).
 #include "FX_SmokeEmit_10.h"
-int32_t FX_SmokeEmit_10(void* a1)
+int32_t FX_SmokeEmit_10(void* context)
 
 {
-    void* dstD = a1;
+    void* dest_val = context;
     void** flagP = nullptr;
-    void** v_10 = nullptr;
-    int32_t* srcS = *(dstD + 8);
+    void** item_10 = nullptr;
+    int32_t* source_val = *(dest_val + 8);
 
-    if (*srcS)
+    if (*source_val)
     {
-        int32_t* v_18_1 = srcS;
+        int32_t* item_18_1 = source_val;
 
-        if (srcS)
+        if (source_val)
         {
             while (true)
             {
-                int32_t* v_14 = nullptr;
-                uint32_t valA2 = Script_ParseEnumInt32_8();
-                int32_t objC1 = 0;
-                objC1 = srcS[7];
-                int32_t valA6 = *(((valA2 * 0x180 + objC1) << 2) + &g_a96ae0);
+                int32_t* item_14 = nullptr;
+                uint32_t data_2 = Script_ParseEnumInt32_8();
+                int32_t entity_1 = 0;
+                entity_1 = source_val[7];
+                int32_t data_6 = *(((data_2 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-                if (valA6)
-                    valA6(srcS, &v_14);
+                if (data_6)
+                    data_6(source_val, &item_14);
 
-                if (!v_14)
+                if (!item_14)
                 {
                 label_48836e:
-                    int32_t* valA20 = *srcS;
+                    int32_t* data_20 = *source_val;
 
-                    if (!valA20 || !*valA20)
+                    if (!data_20 || !*data_20)
                     {
-                        int32_t* srcS3 = srcS[5];
-                        v_18_1 = srcS3;
+                        int32_t* source_3 = source_val[5];
+                        item_18_1 = source_3;
 
-                        if (srcS3[5] == dstD)
+                        if (source_3[5] == dest_val)
                             break;
 
-                        v_10 = v_10[5];
+                        item_10 = item_10[5];
                     }
                     else
-                        v_18_1 = valA20;
+                        item_18_1 = data_20;
                 }
                 else
                 {
-                    void** valA8 = FX_DebrisSpawn_10(flagP, srcS);
+                    void** data_8 = FX_DebrisSpawn_10(flagP, source_val);
 
                     if (!flagP)
-                        *(dstD + 0x7c) = valA8;
+                        *(dest_val + 0x7c) = data_8;
 
-                    valA8[9] = v_14;
-                    valA8[0xa] = Mem_Alloc(*v_14 << 2, 4);
-                    int32_t* valA11 = valA8[9];
+                    data_8[9] = item_14;
+                    data_8[0xa] = Mem_Alloc(*item_14 << 2, 4);
+                    int32_t* data_11 = data_8[9];
                     int32_t i = 0;
 
-                    if (*valA11 > 0)
+                    if (*data_11 > 0)
                     {
-                        int32_t v_c_1 = 0;
+                        int32_t item_c_1 = 0;
 
                         do
                         {
-                            void** srcS2 = valA11[2] + v_c_1;
-                            void* dstD2 = *srcS2 + v_18_1;
-                            char valA13 = Script_SpawnNewTask_9();
-                            int32_t v_8;
-                            Script_ParseEnumString_8(dstD2, srcS2[1], valA13, &v_8);
-                            int32_t valA14 = v_8;
+                            void** source_2 = data_11[2] + item_c_1;
+                            void* dest_2 = *source_2 + item_18_1;
+                            char data_13 = Script_SpawnNewTask_9();
+                            int32_t item_8;
+                            Script_ParseEnumString_8(dest_2, source_2[1], data_13, &item_8);
+                            int32_t data_14 = item_8;
 
-                            if (valA14)
+                            if (data_14)
                             {
-                                *(valA8[0xa] + (i << 2)) = Mem_Alloc(valA14, 4);
-                                int32_t v_4 = *(valA8[0xa] + (i << 2));
-                                char valA17 = Script_ParseEnumInt32_9();
-                                Script_ParseEnumString_8(dstD2, srcS2[1], valA17, &v_4);
+                                *(data_8[0xa] + (i << 2)) = Mem_Alloc(data_14, 4);
+                                int32_t item_4 = *(data_8[0xa] + (i << 2));
+                                char data_17 = Script_ParseEnumInt32_9();
+                                Script_ParseEnumString_8(dest_2, source_2[1], data_17, &item_4);
                             }
 
-                            valA11 = valA8[9];
+                            data_11 = data_8[9];
                             i += 1;
-                            v_c_1 += 0x10;
-                        } while (i < *valA11);
+                            item_c_1 += 0x10;
+                        } while (i < *data_11);
 
-                        dstD = a1;
-                        srcS = v_18_1;
+                        dest_val = context;
+                        source_val = item_18_1;
                     }
 
-                    int32_t* valA19 = srcS[2];
+                    int32_t* data_19 = source_val[2];
 
-                    if (!*valA19 || !valA19)
+                    if (!*data_19 || !data_19)
                         goto label_48836e;
 
-                    v_18_1 = valA19;
-                    v_10 = valA8;
+                    item_18_1 = data_19;
+                    item_10 = data_8;
                 }
 
-                if (!v_18_1)
+                if (!item_18_1)
                     break;
 
-                srcS = v_18_1;
-                flagP = v_10;
+                source_val = item_18_1;
+                flagP = item_10;
             }
         }
     }
 
-    int32_t* objC8 = *(dstD + 8);
-    int32_t valA22 = *objC8;
-    int32_t valA23 = -(valA22);
-    return QTask_FindType((valA23 - valA23) & objC8);
+    int32_t* entity_8 = *(dest_val + 8);
+    int32_t data_22 = *entity_8;
+    int32_t data_23 = -(data_22);
+    return QTask_FindType((data_23 - data_23) & entity_8);
 }

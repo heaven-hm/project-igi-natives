@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Human_TaskViewReset (VA 0x004659E0; static CFG gate PASS, CFG score 1.000).
 #include "Human_TaskViewReset.h"
-void* Human_TaskViewReset(void* a1)
+void* Human_TaskViewReset(void* context)
 
 // Sig: void Human_TaskViewReset(HumanPlayer* human)
 // Note: Resets the human's VIEW TANGENT fields to retail defaults: computes
@@ -14,11 +14,11 @@ void* Human_TaskViewReset(void* a1)
     bool c1;
     bool c2;
     fp0 = __fptan(0.78539818525314331);
-    *(a1 + 0x1ec) = 0;
+    *(context + 0x1ec) = 0;
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    *(a1 + 0x1e4) =
-    /* unimplemented  {fstp dword [valA+0x1e4], fp0} */
+🚫🚫🚫    *(context + 0x1e4) =
+    /* unimplemented  {fstp dword [data_val+0x1e4], fp0} */
 🚫🚫    /* unimplemented  {fld fp0, qword [&g_5339c0]} */
 🚫🚫🚫🚫    long double fp0_1;
     bool c1_1;
@@ -31,7 +31,7 @@ void* Human_TaskViewReset(void* a1)
 
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    *(a1 + 0x1e8) =
-    /* unimplemented  {fstp dword [valA+0x1e8], fp0} */
-    return a1;
+🚫🚫🚫    *(context + 0x1e8) =
+    /* unimplemented  {fstp dword [data_val+0x1e8], fp0} */
+    return context;
 }

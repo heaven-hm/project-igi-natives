@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004BC950 Qvm_ProcessInstructionnotim | gate PASS | openigi True */
-void() __noreturn;
+void Qvm_ProcessInstructionnotim();

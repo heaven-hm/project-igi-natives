@@ -1,28 +1,28 @@
 // Original IGI.EXE function: Menu_FormatScreen_19 (VA 0x00428930; static CFG gate PASS, CFG score 0.889).
 #include "Menu_FormatScreen_19.h"
-int32_t Menu_FormatScreen_19(void* a1)
+int32_t Menu_FormatScreen_19(void* context)
 
 {
-    long double x87_r7_1 = *(a1 + 0x20) - *(a1 + 0x828);
-    int32_t v_54 = 0x40c80000;
-    double v_30 = *(a1 + 0x28) - *(a1 + 0x830);
-    long double x87_r6_3 = *(a1 + 0x30) - *(a1 + 0x838);
-    double v_28 = x87_r6_3;
-    long double x87_r6_6 =
-        x87_r6_3 * *(a1 + 0x850) + v_30 * *(a1 + 0x848) + x87_r7_1 * *(a1 + 0x840);
-    double v_40 = x87_r6_6;
-    double v_38 = x87_r6_6 * x87_r7_1;
-    double v_30_1 = v_40 * v_30;
-    double v_28_1 = v_40 * v_28;
-    double v_20;
-    memcpy(&v_20, &v_38, 0x18);
-    Sys_AllocateMemory_11(&v_20, 0f);
-    v_38 = v_20 + v_38;
-    double v_18;
-    double v_30_2 = v_18 + v_30_1;
-    double v_10;
-    double v_28_2 = v_10 + v_28_1;
+    long double fpu_val_7_1 = *(context + 0x20) - *(context + 0x828);
+    int32_t item_54 = 0x40c80000;
+    double item_30 = *(context + 0x28) - *(context + 0x830);
+    long double fpu_val_6_3 = *(context + 0x30) - *(context + 0x838);
+    double item_28 = fpu_val_6_3;
+    long double fpu_val_6_6 =
+        fpu_val_6_3 * *(context + 0x850) + item_30 * *(context + 0x848) + fpu_val_7_1 * *(context + 0x840);
+    double item_40 = fpu_val_6_6;
+    double item_38 = fpu_val_6_6 * fpu_val_7_1;
+    double item_30_1 = item_40 * item_30;
+    double item_28_1 = item_40 * item_28;
+    double item_20;
+    memcpy(&item_20, &item_38, 0x18);
+    Sys_AllocateMemory_11(&item_20, 0.0f);
+    item_38 = item_20 + item_38;
+    double item_18;
+    double item_30_2 = item_18 + item_30_1;
+    double item_10;
+    double item_28_2 = item_10 + item_28_1;
     long double fpu0;
     long double fpu1;
-    return Menu_RequestScreen_20(fpu0, fpu1, a1, &v_38);
+    return Menu_RequestScreen_20(fpu0, fpu1, context, &item_38);
 }

@@ -1,36 +1,34 @@
 // Original IGI.EXE function: Binocular_Cleanup_3 (VA 0x00470D70; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_Cleanup_3.h"
-float Binocular_Cleanup_3(int32_t* a1 @ 0x8) __location("valA")
+float Binocular_Cleanup_3(int32_t* context ) {
+    void* data_1 = *(context[1] + 0x6e4);
 
-{
-    void* valA1 = *(a1[1] + 0x6e4);
-
-    if (valA1)
+    if (data_1)
     {
-        Sys_ExecuteBytecode_2(valA1);
-        *(a1[1] + 0x6e4) = 0;
+        Sys_ExecuteBytecode_2(data_1);
+        *(context[1] + 0x6e4) = 0;
     }
 
-    int32_t* ctxB = Script_FormatString_31(*a1, "Binocular - Default FOV (degrees)");
+    int32_t* context_val = Script_FormatString_31(*context, "Binocular - Default FOV (degrees)");
 
-    if (!ctxB)
-        ctxB = Script_CallNativeHandler_31(*a1, "Binocular - Default FOV (degrees)", 0x428c0000);
+    if (!context_val)
+        context_val = Script_CallNativeHandler_31(*context, "Binocular - Default FOV (degrees)", 0x428c0000);
 
-    if (!Script_FormatString_31(*a1, "Binocular - Max FOV (degrees)"))
-        Script_CallNativeHandler_31(*a1, "Binocular - Max FOV (degrees)", 0x42b40000);
+    if (!Script_FormatString_31(*context, "Binocular - Max FOV (degrees)"))
+        Script_CallNativeHandler_31(*context, "Binocular - Max FOV (degrees)", 0x42b40000);
 
-    if (!Script_FormatString_31(*a1, "Binocular - Min FOV (degrees)"))
-        Script_CallNativeHandler_31(*a1, "Binocular - Min FOV (degrees)", 0x40a00000);
+    if (!Script_FormatString_31(*context, "Binocular - Min FOV (degrees)"))
+        Script_CallNativeHandler_31(*context, "Binocular - Min FOV (degrees)", 0x40a00000);
 
     long double fp0;
     bool c1;
     bool c2;
-    fp0 = __fptan(ctxB[0x49] * 0.5f * 0.0174532924f);
+    fp0 = __fptan(context_val[0x49] * 0.5f * 0.0174532924f);
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    float v_c = /* float v_c = unimplemented  {fstp dword [esp+0x14], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x14], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [dstD+0x124]} */
+🚫🚫🚫    float item_c = /* float item_c = unimplemented  {fstp dword [stack_ptr+0x14], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x14], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [dest_val+0x124]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_533504]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
 🚫🚫🚫🚫    long double fp0_1;
@@ -44,9 +42,9 @@ float Binocular_Cleanup_3(int32_t* a1 @ 0x8) __location("valA")
 
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    float v_4 = /* float v_4 = unimplemented  {fstp dword [esp+0x1c], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x1c], fp0} */
-🚫🚫    /* unimplemented  {fld fp0, dword [valA+0x124]} */
+🚫🚫🚫    float item_4 = /* float item_4 = unimplemented  {fstp dword [stack_ptr+0x1c], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x1c], fp0} */
+🚫🚫    /* unimplemented  {fld fp0, dword [data_val+0x124]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_533504]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
 🚫🚫🚫🚫    long double fp0_2;
@@ -60,12 +58,12 @@ float Binocular_Cleanup_3(int32_t* a1 @ 0x8) __location("valA")
 
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    float result = /* float result = unimplemented  {fstp dword [esp+0x18], fp0} */;
-    /* unimplemented  {fstp dword [esp+0x18], fp0} */
-    *(a1[1] + 0x6e4) = Mem_Alloc(0xc, 4);
-    float* objC4 = *(a1[1] + 0x6e4);
-    *objC4 = v_c;
-    objC4[1] = result;
-    objC4[2] = v_4;
+🚫🚫🚫    float result = /* float result = unimplemented  {fstp dword [stack_ptr+0x18], fp0} */;
+    /* unimplemented  {fstp dword [stack_ptr+0x18], fp0} */
+    *(context[1] + 0x6e4) = Mem_Alloc(0xc, 4);
+    float* entity_4 = *(context[1] + 0x6e4);
+    *entity_4 = item_c;
+    entity_4[1] = result;
+    entity_4[2] = item_4;
     return result;
 }

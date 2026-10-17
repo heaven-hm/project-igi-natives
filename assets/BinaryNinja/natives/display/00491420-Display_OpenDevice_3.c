@@ -1,140 +1,140 @@
 // Original IGI.EXE function: Display_OpenDevice_3 (VA 0x00491420; static CFG gate PASS, CFG score 1.000).
 #include "Display_OpenDevice_3.h"
-char* Display_OpenDevice_3(char* a1, int32_t* a2)
+char* Display_OpenDevice_3(char* context, int32_t* param_2)
 
 {
-    int32_t* dstD = a2;
+    int32_t* dest_val = param_2;
     int32_t* flagP = nullptr;
-    a2 = nullptr;
-    char objC = dstD[0x1e];
-    char* srcS = dstD[0xd];
-    char* ctxB = srcS;
-    char* v_18 = srcS;
+    param_2 = nullptr;
+    char entity_val = dest_val[0x1e];
+    char* source_val = dest_val[0xd];
+    char* context_val = source_val;
+    char* item_18 = source_val;
     long double fpu7;
 
-    if (!objC)
-        fpu7 = dstD[1];
+    if (!entity_val)
+        fpu7 = dest_val[1];
     else
     {
-        int32_t valA3;
-        char* tmpD;
-        tmpD = HIGHD(*(*(a1 + 0x154) + 4));
-        valA3 = LOWD(*(*(a1 + 0x154) + 4));
-        fpu7 = (valA3 - tmpD) >> 1;
+        int32_t data_3;
+        char* temp_val;
+        temp_val = HIGHD(*(*(context + 0x154) + 4));
+        data_3 = LOWD(*(*(context + 0x154) + 4));
+        fpu7 = (data_3 - temp_val) >> 1;
     }
 
-    float v_10 = dstD[2];
-    char* valA6;
-    long double x87_r7_2;
+    float item_10 = dest_val[2];
+    char* data_6;
+    long double fpu_val_7_2;
 
-    if (!objC)
+    if (!entity_val)
     {
-        valA6 = dstD[1];
-        x87_r7_2 = *(*(a1 + 0x154) + 4) - valA6;
+        data_6 = dest_val[1];
+        fpu_val_7_2 = *(*(context + 0x154) + 4) - data_6;
     }
     else
     {
-        valA6 = a1;
-        x87_r7_2 = *(*(valA6 + 0x154) + 4);
+        data_6 = context;
+        fpu_val_7_2 = *(*(data_6 + 0x154) + 4);
     }
 
-    char tmpD2 = *srcS;
+    char temp_2 = *source_val;
 
-    if (tmpD2)
+    if (temp_2)
     {
-        valA6 = &srcS[1];
-        int32_t* flagP1 = &dstD[0xe];
-        char* v_14_1 = valA6;
+        data_6 = &source_val[1];
+        int32_t* flagP1 = &dest_val[0xe];
+        char* item_14_1 = data_6;
 
-        while (a2 < 7)
+        while (param_2 < 7)
         {
-            if (tmpD2 != 0xd)
+            if (temp_2 != 0xd)
             {
-                if (tmpD2 == 0x20)
+                if (temp_2 == 0x20)
                 {
-                    *srcS = 0;
-                    long double x87_r7_3 = Sys_PopStack_18(*(a1 + (*dstD << 2) + 0x1b8), ctxB);
-                    long double f1_1 = x87_r7_2;
-                    x87_r7_3 - f1_1;
+                    *source_val = 0;
+                    long double fpu_val_7_3 = Sys_PopStack_18(*(context + (*dest_val << 2) + 0x1b8), context_val);
+                    long double f1_1 = fpu_val_7_2;
+                    fpu_val_7_3 - f1_1;
 
-                    if (*(&((x87_r7_3 < f1_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_3, f1_1) ? 1 : 0) << 0xa
-                            | (x87_r7_3 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41)
-                        v_18 = srcS;
+                    if (*(&((fpu_val_7_3 < f1_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_3, f1_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_3 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+                        item_18 = source_val;
                     else
                     {
-                        *flagP1 = ctxB;
+                        *flagP1 = context_val;
                         flagP1 = &flagP1[1];
-                        a2 += 1;
-                        *v_18 = 0;
-                        ctxB = &v_18[1];
-                        v_18 = ctxB;
+                        param_2 += 1;
+                        *item_18 = 0;
+                        context_val = &item_18[1];
+                        item_18 = context_val;
                     }
 
-                    valA6 = v_14_1;
-                    *srcS = 0x20;
+                    data_6 = item_14_1;
+                    *source_val = 0x20;
                 }
 
-                if (*srcS == 0xa)
+                if (*source_val == 0xa)
                 {
-                    *flagP1 = ctxB;
+                    *flagP1 = context_val;
                     flagP1 = &flagP1[1];
-                    a2 += 1;
-                    *srcS = 0;
-                    ctxB = valA6;
-                    v_18 = valA6;
+                    param_2 += 1;
+                    *source_val = 0;
+                    context_val = data_6;
+                    item_18 = data_6;
                 }
             }
 
-            tmpD2 = srcS[1];
-            srcS = &srcS[1];
-            valA6 = &valA6[1];
-            v_14_1 = valA6;
+            temp_2 = source_val[1];
+            source_val = &source_val[1];
+            data_6 = &data_6[1];
+            item_14_1 = data_6;
 
-            if (!tmpD2)
+            if (!temp_2)
                 break;
         }
 
-        flagP = a2;
+        flagP = param_2;
     }
 
-    dstD[flagP + 0xe] = ctxB;
+    dest_val[flagP + 0xe] = context_val;
     int32_t* i_1 = flagP + 1;
-    a2 = i_1;
+    param_2 = i_1;
 
     if (i_1 <= 0)
     {
-        dstD[9] = i_1;
-        return valA6;
+        dest_val[9] = i_1;
+        return data_6;
     }
 
-    int32_t*** srcS1 = &dstD[0x16];
-    int32_t valA16;
+    int32_t*** source_1 = &dest_val[0x16];
+    int32_t data_16;
     int32_t* i;
 
     do
     {
-        int32_t** valA13 = Sys_OpenFileStream_18(*(a1 + (*dstD << 2) + 0x1b8), fpu7, v_10, srcS1[-8]);
-        *srcS1 = valA13;
+        int32_t** data_13 = Sys_OpenFileStream_18(*(context + (*dest_val << 2) + 0x1b8), fpu7, item_10, source_1[-8]);
+        *source_1 = data_13;
 
-        if (dstD[0x1e])
+        if (dest_val[0x1e])
         {
-            int32_t objC8 = valA13[9];
-            objC8 |= 0x80;
-            valA13[9] = objC8;
+            int32_t entity_8 = data_13[9];
+            entity_8 |= 0x80;
+            data_13[9] = entity_8;
         }
 
-        int32_t** valA14 = *srcS1;
-        valA14[9] |= 8;
-        (*srcS1)[5] = dstD[0xa] * 128f;
-        (*srcS1)[6] = dstD[0xb] * 128f;
-        (*srcS1)[7] = dstD[0xc] * 128f;
-        valA16 = Sys_AllocateMemory_22(*srcS1);
-        srcS1 = &srcS1[1];
+        int32_t** data_14 = *source_1;
+        data_14[9] |= 8;
+        (*source_1)[5] = dest_val[0xa] * 128.0f;
+        (*source_1)[6] = dest_val[0xb] * 128.0f;
+        (*source_1)[7] = dest_val[0xc] * 128.0f;
+        data_16 = Sys_AllocateMemory_22(*source_1);
+        source_1 = &source_1[1];
         i = i_1;
         i_1 -= 1;
-        v_10 = valA16 + v_10;
+        item_10 = data_16 + item_10;
     } while (i != 1);
-    dstD[9] = a2;
-    return valA16;
+    dest_val[9] = param_2;
+    return data_16;
 }

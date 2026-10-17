@@ -6,10 +6,10 @@ int32_t Display_CloseDevice()
     if (g_5c8e30)
         goto label_490267;
 
-    int32_t* valA = g_5c8e24;
-    int32_t valA1 = (*(*valA + 0x1c))(valA);
+    int32_t* data_val = g_5c8e24;
+    int32_t data_1 = (*(*data_val + 0x1c))(data_val);
 
-    if (!valA1)
+    if (!data_1)
     {
         g_5c8e30 = 1;
     label_490267:
@@ -17,45 +17,45 @@ int32_t Display_CloseDevice()
 
         if (g_c28c60)
         {
-            valA1 = 0;
-            __builtin_memset(0xc28c62, 0, 0x100);
+            data_1 = 0;
+            memset(0xc28c62, 0, 0x100);
         }
         else
         {
-            int32_t valA3 = FX_SmokeEmit_25();
+            int32_t data_3 = FX_SmokeEmit_25();
 
-            if (valA3)
+            if (data_3)
             {
                 memcpy(0xc28c62, 0xc28e80, 0x100);
-                return valA3;
+                return data_3;
             }
 
-            int32_t* valA4 = g_5c8e24;
-            valA1 = (*(*valA4 + 0x24))(valA4, 0x100, 0xc28c62);
+            int32_t* data_4 = g_5c8e24;
+            data_1 = (*(*data_4 + 0x24))(data_4, 0x100, 0xc28c62);
 
-            if (valA1)
+            if (data_1)
             {
-                int32_t* valA5 = g_5c8e24;
+                int32_t* data_5 = g_5c8e24;
 
-                if ((*(*valA5 + 0x1c))(valA5))
+                if ((*(*data_5 + 0x1c))(data_5))
                 {
-                    valA1 = 0;
-                    __builtin_memset(0xc28c62, 0, 0x100);
+                    data_1 = 0;
+                    memset(0xc28c62, 0, 0x100);
                 }
                 else
                 {
-                    int32_t* valA7 = g_5c8e24;
-                    valA1 = (*(*valA7 + 0x24))(valA7, 0x100, 0xc28c62);
+                    int32_t* data_7 = g_5c8e24;
+                    data_1 = (*(*data_7 + 0x24))(data_7, 0x100, 0xc28c62);
 
-                    if (valA1)
+                    if (data_1)
                     {
-                        valA1 = 0;
-                        __builtin_memset(0xc28c62, 0, 0x100);
+                        data_1 = 0;
+                        memset(0xc28c62, 0, 0x100);
                     }
                 }
             }
         }
     }
 
-    return valA1;
+    return data_1;
 }

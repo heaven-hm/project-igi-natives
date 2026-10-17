@@ -1,63 +1,63 @@
 // Original IGI.EXE function: HumanPlayerInput_LoadParameters (VA 0x0045DCF0; static CFG gate PASS, CFG score 0.917).
 #include "HumanPlayerInput_LoadParameters.h"
-int32_t HumanPlayerInput_LoadParameters(int80_t a1 @ fp0, void* a2)
+int32_t HumanPlayerInput_LoadParameters(long double context , void* param_2)
 
 {
-    void* flagP = *(a2 + 0x14);
-    void v_a0;
+    void* flagP = *(param_2 + 0x14);
+    void item_a0;
 
-    if (!*(a2 + 0x81))
+    if (!*(param_2 + 0x81))
     {
     label_45dd48:
-        void* v_c4_1 = a2;
-        AI_CheckSector_16(&v_a0);
+        void* item_c4_1 = param_2;
+        AI_CheckSector_16(&item_a0);
 
-        if (*(a2 + 0x80))
+        if (*(param_2 + 0x80))
         {
-            int32_t valA5 = *(a2 + 0x18c);
+            int32_t data_5 = *(param_2 + 0x18c);
 
-            if (valA5 < 0x2328)
+            if (data_5 < 0x2328)
             {
-                memcpy(valA5 * 0xa0 + *(a2 + 0x188), &v_a0, 0xa0);
-                int32_t valA7 = *(a2 + 0x190) + 1;
-                *(a2 + 0x18c) += 1;
-                *(a2 + 0x190) = valA7;
+                memcpy(data_5 * 0xa0 + *(param_2 + 0x188), &item_a0, 0xa0);
+                int32_t data_7 = *(param_2 + 0x190) + 1;
+                *(param_2 + 0x18c) += 1;
+                *(param_2 + 0x190) = data_7;
             }
         }
     }
     else
     {
-        int32_t objC1 = *(a2 + 0x190);
+        int32_t entity_1 = *(param_2 + 0x190);
 
-        if (!objC1)
+        if (!entity_1)
             goto label_45dd48;
 
-        int32_t valA1 = *(a2 + 0x18c);
+        int32_t data_1 = *(param_2 + 0x18c);
 
-        if (valA1 >= objC1)
+        if (data_1 >= entity_1)
             goto label_45dd48;
 
-        memcpy(&v_a0, valA1 * 0xa0 + *(a2 + 0x184), 0xa0);
-        *(a2 + 0x18c) = valA1 + 1;
+        memcpy(&item_a0, data_1 * 0xa0 + *(param_2 + 0x184), 0xa0);
+        *(param_2 + 0x18c) = data_1 + 1;
     }
 
-    if (!Script_FormatString_6(a2 + 0x194))
+    if (!Script_FormatString_6(param_2 + 0x194))
         AI_FireWeapon_29(1);
     else
     {
-        Script_SpawnNewTask_7(a2 + 0x194, a2);
-        AI_FireWeapon_29(a1);
+        Script_SpawnNewTask_7(param_2 + 0x194, param_2);
+        AI_FireWeapon_29(context);
     }
 
-    int32_t v_b0 = 0xffffffff;
-    void* v_ac = &v_a0;
-    uint32_t valA11 = Script_ParseEnumReal32_15();
-    int32_t valA12 = 0;
-    valA12 = *(flagP + 0x1c);
-    int32_t result = *(((valA11 * 0x180 + valA12) << 2) + &g_a96ae0);
+    int32_t item_b0 = 0xffffffff;
+    void* item_ac = &item_a0;
+    uint32_t data_11 = Script_ParseEnumReal32_15();
+    int32_t data_12 = 0;
+    data_12 = *(flagP + 0x1c);
+    int32_t result = *(((data_11 * 0x180 + data_12) << 2) + &g_a96ae0);
 
     if (!result)
         return result;
 
-    return result(flagP, &v_b0);
+    return result(flagP, &item_b0);
 }

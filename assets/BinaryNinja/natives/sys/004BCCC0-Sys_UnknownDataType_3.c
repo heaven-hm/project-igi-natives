@@ -1,51 +1,51 @@
 // Original IGI.EXE function: Sys_UnknownDataType_3 (VA 0x004BCCC0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_UnknownDataType_3.h"
-int32_t Sys_UnknownDataType_3(void* a1, int32_t* a2, int32_t* a3, int32_t* a4)
+int32_t Sys_UnknownDataType_3(void* context, int32_t* param_2, int32_t* param_3, int32_t* param_4)
 
 {
-    if (a4)
-        *a4 = *(*(a1 + 0x28) + (*(a1 + 0x1c) << 2));
+    if (param_4)
+        *param_4 = *(*(context + 0x28) + (*(context + 0x1c) << 2));
 
-    int32_t objC1 = *(*(a1 + 0x28) + (*(a1 + 0x1c) << 2));
-    int32_t objC4;
-    int32_t tmpD7;
+    int32_t entity_1 = *(*(context + 0x28) + (*(context + 0x1c) << 2));
+    int32_t entity_4;
+    int32_t temp_7;
 
-    if (objC1 == 1 || objC1 == 2 || objC1 == 5)
+    if (entity_1 == 1 || entity_1 == 2 || entity_1 == 5)
     {
     label_4bcd1a:
 
-        if (a2)
-            *a2 = *(*(a1 + 0x24) + (*(a1 + 0x18) << 2));
+        if (param_2)
+            *param_2 = *(*(context + 0x24) + (*(context + 0x18) << 2));
 
-        int32_t tmpD6 = *(a1 + 0x18);
-        objC4 = 4;
-        *(a1 + 0x1c) += 1;
-        tmpD7 = tmpD6 + 1;
+        int32_t temp_6 = *(context + 0x18);
+        entity_4 = 4;
+        *(context + 0x1c) += 1;
+        temp_7 = temp_6 + 1;
     }
     else
     {
-        int32_t* objC2;
+        int32_t* entity_2;
 
-        if (objC1 != 3)
+        if (entity_1 != 3)
         {
-            if (objC1 == 4)
+            if (entity_1 == 4)
             {
-                objC2 = a2;
+                entity_2 = param_2;
 
-                if (!objC2)
+                if (!entity_2)
                     goto label_4bcd52;
 
                 goto label_4bcd50;
             }
 
-            if (objC1 == 6)
+            if (entity_1 == 6)
                 goto label_4bcd1a;
 
-            if (objC1 == 7)
+            if (entity_1 == 7)
             {
-                objC2 = a2;
+                entity_2 = param_2;
 
-                if (!objC2)
+                if (!entity_2)
                     goto label_4bcd52;
 
                 goto label_4bcd50;
@@ -58,26 +58,26 @@ int32_t Sys_UnknownDataType_3(void* a1, int32_t* a2, int32_t* a3, int32_t* a4)
         }
         else
         {
-            objC2 = a2;
+            entity_2 = param_2;
 
-            if (!objC2)
+            if (!entity_2)
                 goto label_4bcd52;
 
         label_4bcd50:
-            *objC2 = *(a1 + 0x24) + (*(a1 + 0x18) << 2) + 4;
+            *entity_2 = *(context + 0x24) + (*(context + 0x18) << 2) + 4;
         label_4bcd52:
-            int32_t tmpD10 = *(a1 + 0x18);
-            int32_t objC5 = *(a1 + 0x24);
-            objC4 = *(objC5 + (tmpD10 << 2)) + 1;
-            *(a1 + 0x1c) += 1;
-            tmpD7 = tmpD10 + *(objC5 + (tmpD10 << 2)) + 1;
+            int32_t temp_10 = *(context + 0x18);
+            int32_t entity_5 = *(context + 0x24);
+            entity_4 = *(entity_5 + (temp_10 << 2)) + 1;
+            *(context + 0x1c) += 1;
+            temp_7 = temp_10 + *(entity_5 + (temp_10 << 2)) + 1;
         }
     }
 
-    *(a1 + 0x18) = tmpD7;
+    *(context + 0x18) = temp_7;
 
-    if (a3)
-        *a3 = objC4;
+    if (param_3)
+        *param_3 = entity_4;
 
     return 1;
 }

@@ -1,19 +1,19 @@
 // Original IGI.EXE function: SCamera_Cleanup_2 (VA 0x00442070; static CFG gate PASS, CFG score 1.000).
 #include "SCamera_Cleanup_2.h"
-int32_t* SCamera_Cleanup_2(void* a1)
+int32_t* SCamera_Cleanup_2(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x25c4);
+    int32_t* data_val = *(context + 0x25c4);
 
-    if (valA)
+    if (data_val)
     {
-        Qtask_UpdateList(valA);
-        *(a1 + 0x25c4) = 0;
+        Qtask_UpdateList(data_val);
+        *(context + 0x25c4) = 0;
     }
 
-    DynObj_TryingToRemoveUnrigi(Level_InitTextures_4(), a1);
-    DynObj_TryingToRemoveUnrigi(g_57c18c, a1);
-    Render_SetupLighting_14(a1);
-    DynObj_RegisterSymbol_9(*(a1 + 0x68), a1);
-    return FX_TrailUpdate_13(a1 + 0x188);
+    DynObj_TryingToRemoveUnrigi(Level_InitTextures_4(), context);
+    DynObj_TryingToRemoveUnrigi(g_57c18c, context);
+    Render_SetupLighting_14(context);
+    DynObj_RegisterSymbol_9(*(context + 0x68), context);
+    return FX_TrailUpdate_13(context + 0x188);
 }

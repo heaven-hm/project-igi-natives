@@ -3,19 +3,19 @@
 PSTR Camera_ApplyBandFilter_8()
 
 {
-    int32_t objC;
-    int32_t v_4 = objC;
-    int32_t v_8 = objC;
-    int32_t valA = g_9361b8;
+    int32_t entity_val;
+    int32_t item_4 = entity_val;
+    int32_t item_8 = entity_val;
+    int32_t data_val = g_9361b8;
     PSTR lpMultiByteStr_3 = nullptr;
-    PWSTR srcS = nullptr;
+    PWSTR source_val = nullptr;
     char* penv = nullptr;
 
-    if (!valA)
+    if (!data_val)
     {
-        srcS = GetEnvironmentStringsW();
+        source_val = GetEnvironmentStringsW();
 
-        if (!srcS)
+        if (!source_val)
         {
             penv = GetEnvironmentStrings();
 
@@ -51,55 +51,55 @@ PSTR Camera_ApplyBandFilter_8()
                 }
             }
 
-            PSTR srcS1 = Camera_ApplyHandiCam_20(penv_1 - penv + 1);
+            PSTR source_1 = Camera_ApplyHandiCam_20(penv_1 - penv + 1);
 
-            if (srcS1)
-                Camera_ResetMatrix_20(srcS1, penv, penv_1 - penv + 1);
+            if (source_1)
+                Camera_ResetMatrix_20(source_1, penv, penv_1 - penv + 1);
             else
-                srcS1 = nullptr;
+                source_1 = nullptr;
 
             FreeEnvironmentStringsA(penv);
-            return srcS1;
+            return source_1;
         }
 
         g_9361b8 = 1;
     }
-    else if (valA != 1)
+    else if (data_val != 1)
     {
-        if (valA != 2)
+        if (data_val != 2)
             return nullptr;
 
         goto label_4a6414;
     }
 
-    if (!srcS)
+    if (!source_val)
     {
-        srcS = GetEnvironmentStringsW();
+        source_val = GetEnvironmentStringsW();
 
-        if (!srcS)
+        if (!source_val)
             return nullptr;
     }
 
-    PWSTR valA4 = srcS;
+    PWSTR data_4 = source_val;
 
-    if (*srcS)
+    if (*source_val)
     {
         while (true)
         {
-            valA4 = &valA4[1];
+            data_4 = &data_4[1];
 
-            if (!*valA4)
+            if (!*data_4)
             {
-                valA4 = &valA4[1];
+                data_4 = &data_4[1];
 
-                if (!*valA4)
+                if (!*data_4)
                     break;
             }
         }
     }
 
     int32_t cbMultiByte =
-        WideCharToMultiByte(0, 0, srcS, ((valA4 - srcS) >> 1) + 1, nullptr, 0, nullptr, nullptr);
+        WideCharToMultiByte(0, 0, source_val, ((data_4 - source_val) >> 1) + 1, nullptr, 0, nullptr, nullptr);
 
     if (cbMultiByte)
     {
@@ -108,15 +108,15 @@ PSTR Camera_ApplyBandFilter_8()
 
         if (lpMultiByteStr)
         {
-            int32_t valA10;
-            void** objC2;
-            valA10 = WideCharToMultiByte(0, 0, srcS, ((valA4 - srcS) >> 1) + 1, lpMultiByteStr,
+            int32_t data_10;
+            void** entity_2;
+            data_10 = WideCharToMultiByte(0, 0, source_val, ((data_4 - source_val) >> 1) + 1, lpMultiByteStr,
                 cbMultiByte, nullptr, nullptr);
 
-            if (!valA10)
+            if (!data_10)
             {
                 PSTR lpMultiByteStr_2 = lpMultiByteStr_1;
-                Camera_UpdateTransform_9(objC2);
+                Camera_UpdateTransform_9(entity_2);
                 lpMultiByteStr_1 = nullptr;
             }
 
@@ -124,6 +124,6 @@ PSTR Camera_ApplyBandFilter_8()
         }
     }
 
-    FreeEnvironmentStringsW(srcS);
+    FreeEnvironmentStringsW(source_val);
     return lpMultiByteStr_3;
 }

@@ -1,10 +1,10 @@
 // Original IGI.EXE function: SoundSys_SetMasterVolume_8 (VA 0x004E6DB0; static CFG gate PASS, CFG score 0.965).
 #include "SoundSys_SetMasterVolume_8.h"
-void SoundSys_SetMasterVolume_8(int32_t a1, int32_t a2, int32_t a3, int32_t a4, float* a5)
+void SoundSys_SetMasterVolume_8(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, float* param_5)
 
 {
     int32_t* flagP = g_a5e5f4;
-    int32_t ctxB = 0;
+    int32_t context_val = 0;
 
     if (!flagP)
     {
@@ -13,47 +13,47 @@ void SoundSys_SetMasterVolume_8(int32_t a1, int32_t a2, int32_t a3, int32_t a4, 
 
         if (flagP1)
         {
-            float* srcS1 = a5;
-            float* valA1 = &flagP1[8];
-            a5 = valA1;
+            float* source_1 = param_5;
+            float* data_1 = &flagP1[8];
+            param_5 = data_1;
 
-            if (!srcS1)
+            if (!source_1)
             {
-                Display_SetGammaRamp_12(valA1);
-                valA1 = a5;
+                Display_SetGammaRamp_12(data_1);
+                data_1 = param_5;
             }
             else
-                memcpy(valA1, srcS1, 0x58);
+                memcpy(data_1, source_1, 0x58);
 
             if (g_a5e60b)
             {
             label_4e6f65:
-                flagP1[7] = ctxB;
-                flagP1[3] = a2;
-                flagP1[4] = a3;
-                flagP1[2] = a4;
-                flagP1[5] = a1;
+                flagP1[7] = context_val;
+                flagP1[3] = param_2;
+                flagP1[4] = param_3;
+                flagP1[2] = param_4;
+                flagP1[5] = context;
                 flagP1[6] = 0;
                 SoundSys_AttachLipsync_4(flagP1, &g_a5e5ec);
                 SoundSys_LoadSoundDef_4(flagP1, &g_a5e5f4);
             }
             else
             {
-                ctxB = Display_SwapBuffers_11(a2, a3, a4, valA1);
+                context_val = Display_SwapBuffers_11(param_2, param_3, param_4, data_1);
 
-                if (ctxB)
+                if (context_val)
                 {
-                    long double x87_r7_3 = *a5;
-                    long double f0_1 = 0f;
-                    x87_r7_3 - f0_1;
+                    long double fpu_val_7_3 = *param_5;
+                    long double f0_1 = 0.0f;
+                    fpu_val_7_3 - f0_1;
 
-                    if (!(*(&((x87_r7_3 < f0_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_3, f0_1) ? 1 : 0) << 0xa
-                            | (x87_r7_3 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+                    if (!(*(&((fpu_val_7_3 < f0_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_3, f0_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_3 == f0_1 ? 1 : 0) << 0xe) + 1) & 0x40))
                         goto label_4e6f65;
 
-                    Display_SetDisplayMode_12(ctxB);
-                    Display_CloseDevice_11(ctxB);
+                    Display_SetDisplayMode_12(context_val);
+                    Display_CloseDevice_11(context_val);
                     return;
                 }
 
@@ -64,7 +64,7 @@ void SoundSys_SetMasterVolume_8(int32_t a1, int32_t a2, int32_t a3, int32_t a4, 
     }
     else
     {
-        while (flagP[4] != a3 || flagP[5] != a1)
+        while (flagP[4] != param_3 || flagP[5] != context)
         {
             flagP = flagP[1];
 
@@ -77,21 +77,21 @@ void SoundSys_SetMasterVolume_8(int32_t a1, int32_t a2, int32_t a3, int32_t a4, 
 
         flagP[6] = 0;
 
-        if (!a5)
+        if (!param_5)
             Display_SetGammaRamp_12(&flagP[8]);
         else
-            memcpy(&flagP[8], a5, 0x58);
+            memcpy(&flagP[8], param_5, 0x58);
 
-        int32_t valA2 = flagP[7];
+        int32_t data_2 = flagP[7];
 
-        if (!valA2)
+        if (!data_2)
         {
             if (g_a5e60b)
                 goto label_4e6ea8;
 
-            int32_t valA5 = Display_SwapBuffers_11(a2, a3, a4, &flagP[8]);
+            int32_t data_5 = Display_SwapBuffers_11(param_2, param_3, param_4, &flagP[8]);
 
-            if (!valA5)
+            if (!data_5)
             {
             label_4e6eda:
                 SoundSys_AttachLipsync_4(flagP, &g_a5e5f4);
@@ -99,39 +99,39 @@ void SoundSys_SetMasterVolume_8(int32_t a1, int32_t a2, int32_t a3, int32_t a4, 
                 return;
             }
 
-            long double x87_r7_1 = flagP[8];
-            long double f2_1 = 0f;
-            x87_r7_1 - f2_1;
+            long double fpu_val_7_1 = flagP[8];
+            long double f2_1 = 0.0f;
+            fpu_val_7_1 - f2_1;
 
-            if (!(*(&((x87_r7_1 < f2_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_1, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_1 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+            if (!(*(&((fpu_val_7_1 < f2_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_1, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_1 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
             {
-                flagP[7] = valA5;
+                flagP[7] = data_5;
                 goto label_4e6ea8;
             }
 
-            Display_SetDisplayMode_12(valA5);
-            Display_CloseDevice_11(valA5);
+            Display_SetDisplayMode_12(data_5);
+            Display_CloseDevice_11(data_5);
             SoundSys_AttachLipsync_4(flagP, &g_a5e5f4);
             SoundSys_LoadSoundDef_4(flagP, &g_a5e5ec);
             return;
         }
 
-        Display_SyncVSync_12(valA2, &flagP[8]);
+        Display_SyncVSync_12(data_2, &flagP[8]);
     label_4e6ea8:
-        long double x87_r7_2 = flagP[8];
-        long double f1_1 = 0f;
-        x87_r7_2 - f1_1;
+        long double fpu_val_7_2 = flagP[8];
+        long double f1_1 = 0.0f;
+        fpu_val_7_2 - f1_1;
 
-        if (*(&((x87_r7_2 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_2, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_2 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40)
+        if (*(&((fpu_val_7_2 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_2, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_2 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x40)
         {
-            void* valA9 = flagP[7];
+            void* data_9 = flagP[7];
 
-            if (valA9)
+            if (data_9)
             {
-                Display_SetDisplayMode_12(valA9);
+                Display_SetDisplayMode_12(data_9);
                 Display_CloseDevice_11(flagP[7]);
             }
 

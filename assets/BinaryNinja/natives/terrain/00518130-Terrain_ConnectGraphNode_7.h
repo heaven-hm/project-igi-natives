@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00518130 Terrain_ConnectGraphNode_7 | gate PASS | openigi False */
-double* Terrain_ConnectGraphNode_7(double* a1, int a2, int a3, double a4, double a5, double a6);
+double* Terrain_ConnectGraphNode_7(double* context, int param_2, int param_3, double param_4, double param_5, double param_6);

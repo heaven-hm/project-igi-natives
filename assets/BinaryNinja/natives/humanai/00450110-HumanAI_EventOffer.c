@@ -1,15 +1,15 @@
 // Original IGI.EXE function: HumanAI_EventOffer (VA 0x00450110; static CFG gate PASS, CFG score 1.000).
 #include "HumanAI_EventOffer.h"
-double* HumanAI_EventOffer(void* a1, double** a2)
+double* HumanAI_EventOffer(void* context, double** param_2)
 
 {
-    double** srcS = a2;
-    void* dstD = a1;
-    int32_t ctxB = srcS[2];
-    a1 = 1;
+    double** source_val = param_2;
+    void* dest_val = context;
+    int32_t context_val = source_val[2];
+    context = 1;
     double* result;
-    result = *(dstD + 0x3aba);
-    void* flagP = *(dstD + 0x14);
+    result = *(dest_val + 0x3aba);
+    void* flagP = *(dest_val + 0x14);
 
     if (!result)
     {
@@ -17,150 +17,150 @@ double* HumanAI_EventOffer(void* a1, double** a2)
 
         if (result)
         {
-            result = *(dstD + 0x3c70);
+            result = *(dest_val + 0x3c70);
 
-            if (result && flagP != srcS[6] && flagP != srcS[5])
+            if (result && flagP != source_val[6] && flagP != source_val[5])
             {
-                result = *srcS;
+                result = *source_val;
 
-                if (*(dstD + 0x3d14))
+                if (*(dest_val + 0x3d14))
                 {
-                    if (*(result + dstD + 0x8e4))
+                    if (*(result + dest_val + 0x8e4))
                     {
                     label_45018b:
                         result = result * 3 + 0x1bc;
-                        double** objC2 = dstD + (result << 2);
-                        a2 = objC2;
+                        double** entity_2 = dest_val + (result << 2);
+                        param_2 = entity_2;
 
-                        if (!ctxB)
+                        if (!context_val)
                         {
                         label_4502c4:
-                            result = HumanAI_EventQueued(dstD, srcS);
+                            result = HumanAI_EventQueued(dest_val, source_val);
 
                             if (result)
-                                return Camera_SetFieldOfView_33(a2, result);
+                                return Camera_SetFieldOfView_33(param_2, result);
                         }
                         else
                         {
-                            double* tmpD;
+                            double* temp_val;
 
-                            if (ctxB & 2)
+                            if (context_val & 2)
                             {
-                                tmpD = dstD + 0x20;
-                                ctxB &= 0xfffffffd;
+                                temp_val = dest_val + 0x20;
+                                context_val &= 0xfffffffd;
                                 long double fp0_1;
-                                fp0_1 = Sys_DispatchOpcode_11(srcS[4], tmpD);
-                                long double x87_r6_1 = srcS[3];
-                                x87_r6_1 - fp0_1;
-                                result = (x87_r6_1 < fp0_1 ? 1 : 0) << 8
-                                    | (FCMP_UO(x87_r6_1, fp0_1) ? 1 : 0) << 0xa
-                                    | (x87_r6_1 == fp0_1 ? 1 : 0) << 0xe;
+                                fp0_1 = Sys_DispatchOpcode_11(source_val[4], temp_val);
+                                long double fpu_val_6_1 = source_val[3];
+                                fpu_val_6_1 - fp0_1;
+                                result = (fpu_val_6_1 < fp0_1 ? 1 : 0) << 8
+                                    | (FCMP_UO(fpu_val_6_1, fp0_1) ? 1 : 0) << 0xa
+                                    | (fpu_val_6_1 == fp0_1 ? 1 : 0) << 0xe;
 
                                 if (*(&result + 1) & 1)
-                                    a1 = 0;
+                                    context = 0;
                             }
 
-                            if (ctxB & 1)
+                            if (context_val & 1)
                             {
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                 {
-                                    objC2 = *(dstD + 0x3abb);
-                                    ctxB &= 0xfffffffe;
+                                    entity_2 = *(dest_val + 0x3abb);
+                                    context_val &= 0xfffffffe;
                                     long double fpu0;
                                     long double fpu1;
                                     long double fpu2;
-                                    result = AI_TestViewCones(fpu0, fpu1, fpu2, dstD + 0x20, srcS[4],
-                                        objC2);
+                                    result = AI_TestViewCones(fpu0, fpu1, fpu2, dest_val + 0x20, source_val[4],
+                                        entity_2);
 
                                     if (!result)
-                                        a1 = result;
+                                        context = result;
                                 }
                             }
 
-                            if (ctxB & 4)
+                            if (context_val & 4)
                             {
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                 {
-                                    result = srcS[6];
-                                    ctxB &= 0xfffffffb;
+                                    result = source_val[6];
+                                    context_val &= 0xfffffffb;
 
                                     if (!result)
-                                        a1 = 0;
+                                        context = 0;
                                     else
                                     {
-                                        int16_t valA3 = AI_UpdateOrders_17();
-                                        tmpD = *(srcS[6] + 0x1c);
-                                        result = TaskType_IsDerivedFrom(tmpD, valA3);
+                                        int16_t data_3 = AI_UpdateOrders_17();
+                                        temp_val = *(source_val[6] + 0x1c);
+                                        result = TaskType_IsDerivedFrom(temp_val, data_3);
 
                                         if (!result)
-                                            a1 = 0;
+                                            context = 0;
                                     }
                                 }
                             }
 
-                            if (ctxB & 0xc)
+                            if (context_val & 0xc)
                             {
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                 {
-                                    ctxB &= 0xfffffff3;
-                                    result = AI_FireWeapon_19(srcS[6]);
+                                    context_val &= 0xfffffff3;
+                                    result = AI_FireWeapon_19(source_val[6]);
 
                                     if (result)
-                                        a1 = 0;
+                                        context = 0;
                                 }
                             }
 
-                            if (ctxB & 0x14)
+                            if (context_val & 0x14)
                             {
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                 {
-                                    ctxB &= 0xffffffeb;
-                                    result = AI_FireWeapon_19(srcS[6]);
+                                    context_val &= 0xffffffeb;
+                                    result = AI_FireWeapon_19(source_val[6]);
 
                                     if (!result)
-                                        a1 = result;
+                                        context = result;
                                 }
                             }
 
-                            if (ctxB & 0x24)
+                            if (context_val & 0x24)
                             {
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                 {
-                                    ctxB &= 0xffffffdb;
+                                    context_val &= 0xffffffdb;
                                     result = AI_CombatTarget_19(flagP);
 
-                                    if (srcS[1] != result)
-                                        a1 = 0;
+                                    if (source_val[1] != result)
+                                        context = 0;
                                 }
                             }
 
-                            if (!(ctxB & 0x44))
+                            if (!(context_val & 0x44))
                             {
                             label_4502ba:
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                     goto label_4502c4;
                             }
                             else
                             {
-                                result = a1;
+                                result = context;
 
                                 if (result)
                                 {
                                     result = AI_CombatTarget_19(flagP);
 
-                                    if (srcS[1] != result)
+                                    if (source_val[1] != result)
                                         goto label_4502ba;
                                 }
                             }

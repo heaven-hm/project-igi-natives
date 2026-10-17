@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Sound_EventTrigger (VA 0x004E7200; static CFG gate PASS, CFG score 0.963).
 #include "Sound_EventTrigger.h"
-int32_t* Sound_EventTrigger(char* a1, char* a2, int32_t a3)
+int32_t* Sound_EventTrigger(char* context, char* param_2, int32_t param_3)
 
 // Sig: void Sound_EventTrigger(const char* eventName, uint32_t eventId, const
 // SoundEventParams* params)
@@ -15,26 +15,26 @@ int32_t* Sound_EventTrigger(char* a1, char* a2, int32_t a3)
     {
         result = g_a5e610;
 
-        if (*result && *a1)
+        if (*result && *context)
         {
-            char* v_60 = a1;
+            char* item_60 = context;
             int32_t* result_1 = nullptr;
             int32_t i = 0;
 
             if (*result > 0)
             {
-                int32_t* ctxB1 = 8;
+                int32_t* context_1 = 8;
 
                 do
                 {
-                    void* srcS1 = *(ctxB1 + result);
-                    uint32_t valA1 = SoundSys_StopSoundSample_5();
-                    int32_t objC3 = 0;
-                    objC3 = *(srcS1 + 0x1c);
-                    (*(((valA1 * 0x180 + objC3) << 2) + &g_a96ae0))(srcS1, &v_60);
+                    void* source_1 = *(context_1 + result);
+                    uint32_t data_1 = SoundSys_StopSoundSample_5();
+                    int32_t entity_3 = 0;
+                    entity_3 = *(source_1 + 0x1c);
+                    (*(((data_1 * 0x180 + entity_3) << 2) + &g_a96ae0))(source_1, &item_60);
                     result = g_a5e610;
                     i += 1;
-                    ctxB1 = &ctxB1[1];
+                    context_1 = &context_1[1];
                 } while (i < *result);
 
                 result = result_1;
@@ -53,23 +53,23 @@ int32_t* Sound_EventTrigger(char* a1, char* a2, int32_t a3)
 
                             if (result_1[7] != result)
                             {
-                                uint32_t valA6 = Display_CheckCapabilities_12(result_1 + 0xff);
-                                char* v_78 = result_1 + 0xff;
-                                int32_t valA7 = Display_RestoreDevice_12(v_78);
-                                void v_58;
+                                uint32_t data_6 = Display_CheckCapabilities_12(result_1 + 0xff);
+                                char* item_78 = result_1 + 0xff;
+                                int32_t data_7 = Display_RestoreDevice_12(item_78);
+                                void item_58;
 
-                                if (!a3)
-                                    Display_SetGammaRamp_12(&v_58);
+                                if (!param_3)
+                                    Display_SetGammaRamp_12(&item_58);
                                 else
-                                    memcpy(&v_58, a3, 0x20);
+                                    memcpy(&item_58, param_3, 0x20);
 
-                                int32_t valA8 = g_a5e5f8;
-                                g_a5e5f8 = valA8 + 1;
-                                char* valA10 = a2;
-                                valA10 |= 1;
-                                float* v_74_4 = &v_58;
-                                v_78 = valA10;
-                                return SoundSys_SetMasterVolume_8(valA8, valA6, valA7, v_78, v_74_4);
+                                int32_t data_8 = g_a5e5f8;
+                                g_a5e5f8 = data_8 + 1;
+                                char* data_10 = param_2;
+                                data_10 |= 1;
+                                float* item_74_4 = &item_58;
+                                item_78 = data_10;
+                                return SoundSys_SetMasterVolume_8(data_8, data_6, data_7, item_78, item_74_4);
                             }
                         }
                     }

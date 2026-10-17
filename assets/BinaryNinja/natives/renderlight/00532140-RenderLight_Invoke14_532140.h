@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00532140 RenderLight_Invoke14_532140 | gate PASS | openigi True */
-int32_t*(void* arg1);
+int32_t* RenderLight_Invoke14_532140(void* context);

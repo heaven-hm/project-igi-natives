@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004FDF00 Script_FormatString_30 | gate PASS | openigi True */
-struct status_msg* Script_FormatString_30(void * a1, void * a2, unsigned int a3, int* a4, int* a5, int* a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13);
+struct status_msg* Script_FormatString_30(void * context, void * param_2, unsigned int param_3, int* param_4, int* param_5, int* param_6, int param_7, int param_8, int param_9, int param_10, int param_11, int param_12, int param_13);

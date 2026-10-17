@@ -8,13 +8,13 @@ int32_t ProximityMine_Init_2(void* pThis, char* param)
 
     if (result != pThis)
     {
-        int32_t edx_1 = *(pThis + 0x208);
+        int32_t scratch_val_1 = *(pThis + 0x208);
 
-        if (result != edx_1)
+        if (result != scratch_val_1)
         {
             result = *(param + 0xc);
 
-            if (result != pThis && result != edx_1)
+            if (result != pThis && result != scratch_val_1)
             {
                 *param = 1;
                 return result;

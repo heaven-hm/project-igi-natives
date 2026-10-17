@@ -1,32 +1,32 @@
 // Original IGI.EXE function: TextBox_OnEvent (VA 0x0041AD70; static CFG gate PASS, CFG score 1.000).
 #include "TextBox_OnEvent.h"
-int32_t TextBox_OnEvent(void* a1, int32_t a2)
+int32_t TextBox_OnEvent(void* context, int32_t param_2)
 
 {
-    Script_Isexists(a1 + 0x21a4, a1);
-    Script_Isexists(a1 + 0x21f4, a1);
-    int32_t* valA1 = *(a1 + 0x94);
+    Script_Isexists(context + 0x21a4, context);
+    Script_Isexists(context + 0x21f4, context);
+    int32_t* data_1 = *(context + 0x94);
 
-    if (valA1)
+    if (data_1)
     {
-        Sys_ReadFileBlock_18(valA1);
-        *(a1 + 0x94) = 0;
+        Sys_ReadFileBlock_18(data_1);
+        *(context + 0x94) = 0;
     }
 
-    void* valA2 = *(a1 + 0x44);
+    void* data_2 = *(context + 0x44);
 
-    if (valA2)
+    if (data_2)
     {
-        void* valA3 = Menu_HandleInput_3(valA2, a1 + 0x54);
-        *(a1 + 0x98) = valA3;
+        void* data_3 = Menu_HandleInput_3(data_2, context + 0x54);
+        *(context + 0x98) = data_3;
 
-        if (valA3)
+        if (data_3)
         {
-            int32_t** valA4 = Sys_OpenFileStream_18(valA3, 0, 0, &g_567c74);
-            *(a1 + 0x94) = valA4;
-            valA4[8] = 0;
+            int32_t** data_4 = Sys_OpenFileStream_18(data_3, 0, 0, &g_567c74);
+            *(context + 0x94) = data_4;
+            data_4[8] = 0;
         }
     }
 
-    return (*(((Script_ParseEnumReal32_8() * 0x180 + Menu_PlayMusic_13()) << 2) + &g_a96ae0))(a1, a2);
+    return (*(((Script_ParseEnumReal32_8() * 0x180 + Menu_PlayMusic_13()) << 2) + &g_a96ae0))(context, param_2);
 }

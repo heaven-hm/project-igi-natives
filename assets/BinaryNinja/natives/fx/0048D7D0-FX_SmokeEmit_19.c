@@ -1,21 +1,21 @@
 // Original IGI.EXE function: FX_SmokeEmit_19 (VA 0x0048D7D0; static CFG gate PASS, CFG score 1.000).
 #include "FX_SmokeEmit_19.h"
-int32_t FX_SmokeEmit_19(void* a1)
+int32_t FX_SmokeEmit_19(void* context)
 
 {
-    int32_t* valA = *(a1 + 0x3aa8);
+    int32_t* data_val = *(context + 0x3aa8);
 
-    if (valA)
+    if (data_val)
     {
-        AI_AlertAllies_2(valA, a1, *(a1 + 0x3aba));
-        Combat_SetAimMode(*(a1 + 0x3aa8), a1, 0xffffffff);
-        *(a1 + 0x3aa8) = 0;
+        AI_AlertAllies_2(data_val, context, *(context + 0x3aba));
+        Combat_SetAimMode(*(context + 0x3aa8), context, 0xffffffff);
+        *(context + 0x3aa8) = 0;
     }
 
-    char result = Locomotion_GetState(a1, 4);
+    char result = Locomotion_GetState(context, 4);
 
     if (!result)
         return result;
 
-    return AI_WriteChannel(a1, 4, 1f);
+    return AI_WriteChannel(context, 4, 1.0f);
 }

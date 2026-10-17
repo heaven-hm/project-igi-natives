@@ -1,60 +1,60 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_29 (VA 0x004ADB32; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_29.h"
-int32_t Camera_ApplyBandFilter_29(char* a1, int32_t a2, int32_t a3)
+int32_t Camera_ApplyBandFilter_29(char* context, int32_t param_2, int32_t param_3)
 
 {
-    int32_t result = a2;
-    int32_t* ctxB = a3;
-    int32_t v_8 = 0x404e;
-    *ctxB = 0;
-    ctxB[1] = 0;
-    ctxB[2] = 0;
+    int32_t result = param_2;
+    int32_t* context_val = param_3;
+    int32_t item_8 = 0x404e;
+    *context_val = 0;
+    context_val[1] = 0;
+    context_val[2] = 0;
 
     if (result > 0)
     {
-        a3 = result;
+        param_3 = result;
         int32_t i;
 
         do
         {
-            int32_t v_14 = *ctxB;
-            int32_t v_10;
-            int32_t* dstD1 = &v_10;
-            int32_t* srcS2 = &ctxB[1];
-            *dstD1 = *srcS2;
-            dstD1[1] = srcS2[1];
-            Camera_SetFieldOfView_29(ctxB);
-            Camera_SetFieldOfView_29(ctxB);
-            Camera_UpdateTransform_29(ctxB, &v_14);
-            Camera_SetFieldOfView_29(ctxB);
-            v_10 = 0;
-            int32_t v_c_1 = 0;
-            v_14 = *a1;
-            result = Camera_UpdateTransform_29(ctxB, &v_14);
-            a1 = &a1[1];
-            i = a3;
-            a3 -= 1;
+            int32_t item_14 = *context_val;
+            int32_t item_10;
+            int32_t* dest_1 = &item_10;
+            int32_t* source_2 = &context_val[1];
+            *dest_1 = *source_2;
+            dest_1[1] = source_2[1];
+            Camera_SetFieldOfView_29(context_val);
+            Camera_SetFieldOfView_29(context_val);
+            Camera_UpdateTransform_29(context_val, &item_14);
+            Camera_SetFieldOfView_29(context_val);
+            item_10 = 0;
+            int32_t item_c_1 = 0;
+            item_14 = *context;
+            result = Camera_UpdateTransform_29(context_val, &item_14);
+            context = &context[1];
+            i = param_3;
+            param_3 -= 1;
         } while (i != 1);
     }
 
-    while (!ctxB[2])
+    while (!context_val[2])
     {
-        int32_t objC1 = ctxB[1];
-        ctxB[2] = objC1 >> 0x10;
-        int32_t valA4 = *ctxB;
-        result = valA4 << 0x10;
-        v_8 += 0xfff0;
-        ctxB[1] = valA4 >> 0x10 | objC1 << 0x10;
-        *ctxB = result;
+        int32_t entity_1 = context_val[1];
+        context_val[2] = entity_1 >> 0x10;
+        int32_t data_4 = *context_val;
+        result = data_4 << 0x10;
+        item_8 += 0xfff0;
+        context_val[1] = data_4 >> 0x10 | entity_1 << 0x10;
+        *context_val = result;
     }
 
-    while (!(ctxB[2] & 0x8000))
+    while (!(context_val[2] & 0x8000))
     {
-        result = Camera_SetFieldOfView_29(ctxB);
-        v_8 += 0xffff;
+        result = Camera_SetFieldOfView_29(context_val);
+        item_8 += 0xffff;
     }
 
-    result = v_8;
-    *(ctxB + 0xa) = result;
+    result = item_8;
+    *(context_val + 0xa) = result;
     return result;
 }

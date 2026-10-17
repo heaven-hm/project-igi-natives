@@ -17,11 +17,11 @@ int32_t DynObj_RemoveSymbol_6()
     QTask_CleanupTypes_2(0xb, 6);
     QTask_CleanupTypes_2(0xd, 2);
     g_548176 = QTask_UnableToAllocateEvent(0x181);
-    int32_t valA1 = QTask_UnableToAllocateEvent(0x181);
-    g_548177 = valA1;
-    int32_t v_3c = valA1;
-    valA1 = g_54875c;
-    int32_t result = QTask_RemoveEventCallback(valA1, v_3c, DynObj_RegisterSymbol_7);
-    __builtin_memset(&g_a44348, 0, 0x44);
+    int32_t data_1 = QTask_UnableToAllocateEvent(0x181);
+    g_548177 = data_1;
+    int32_t item_3c = data_1;
+    data_1 = g_54875c;
+    int32_t result = QTask_RemoveEventCallback(data_1, item_3c, DynObj_RegisterSymbol_7);
+    memset(&g_a44348, 0, 0x44);
     return result;
 }

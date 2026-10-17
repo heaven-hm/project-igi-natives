@@ -1,90 +1,90 @@
 // Original IGI.EXE function: Camera_ApplyHandiCam_11 (VA 0x004A760B; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyHandiCam_11.h"
-uint32_t Camera_ApplyHandiCam_11(int32_t* a1 @ 0x8)
+uint32_t Camera_ApplyHandiCam_11(int32_t* context )
 
 {
-    int32_t* srcS = a1;
-    int32_t valA = srcS[3];
-    enum WIN32_ERROR ctxB = srcS[4];
+    int32_t* source_val = context;
+    int32_t data_val = source_val[3];
+    enum WIN32_ERROR context_val = source_val[4];
 
-    if (!(valA & 0x82) || valA & 0x40)
+    if (!(data_val & 0x82) || data_val & 0x40)
     {
-        valA |= 0x20;
-        srcS[3] = valA;
+        data_val |= 0x20;
+        source_val[3] = data_val;
     }
     else
     {
-        if (!(valA & 1))
+        if (!(data_val & 1))
             goto label_4a7643;
 
-        srcS[1] = 0;
+        source_val[1] = 0;
 
-        if (!(valA & 0x10))
+        if (!(data_val & 0x10))
         {
-            valA |= 0x20;
-            srcS[3] = valA;
+            data_val |= 0x20;
+            source_val[3] = data_val;
         }
         else
         {
-            valA &= 0xfe;
-            *srcS = srcS[2];
-            srcS[3] = valA;
+            data_val &= 0xfe;
+            *source_val = source_val[2];
+            source_val[3] = data_val;
         label_4a7643:
-            int32_t valA1 = srcS[3];
-            srcS[1] = 0;
-            a1 = nullptr;
-            valA1 &= 0xef;
-            valA1 |= 2;
-            srcS[3] = valA1;
+            int32_t data_1 = source_val[3];
+            source_val[1] = 0;
+            context = nullptr;
+            data_1 &= 0xef;
+            data_1 |= 2;
+            source_val[3] = data_1;
 
-            if (!(valA1 & 0x10c))
+            if (!(data_1 & 0x10c))
             {
-                bool cond_3_1;
+                bool flag_3_1;
 
-                if (srcS == 0x546860 || srcS == 0x546880)
-                    cond_3_1 = Camera_ApplyPostProcess_26(ctxB);
+                if (source_val == 0x546860 || source_val == 0x546880)
+                    flag_3_1 = Camera_ApplyPostProcess_26(context_val);
 
-                if ((srcS != 0x546860 && srcS != 0x546880) || !cond_3_1)
-                    Camera_ResetMatrix_23(srcS);
+                if ((source_val != 0x546860 && source_val != 0x546880) || !flag_3_1)
+                    Camera_ResetMatrix_23(source_val);
             }
 
             int32_t arg_4;
-            uint32_t dstD2;
+            uint32_t dest_2;
 
-            if (!(srcS[3] & 0x108))
+            if (!(source_val[3] & 0x108))
             {
-                dstD2 = 1;
-                a1 = Camera_ApplyHandiCam_23(ctxB, &arg_4, 1);
+                dest_2 = 1;
+                context = Camera_ApplyHandiCam_23(context_val, &arg_4, 1);
             }
             else
             {
-                char* valA3 = srcS[2];
-                dstD2 = *srcS - valA3;
-                *srcS = &valA3[1];
-                srcS[1] = srcS[6] - 1;
+                char* data_3 = source_val[2];
+                dest_2 = *source_val - data_3;
+                *source_val = &data_3[1];
+                source_val[1] = source_val[6] - 1;
 
-                if (dstD2 <= 0)
+                if (dest_2 <= 0)
                 {
-                    void* valA8;
+                    void* data_8;
 
-                    if (ctxB == ~NO_ERROR)
-                        valA8 = &g_543fb0;
+                    if (context_val == ~NO_ERROR)
+                        data_8 = &g_543fb0;
                     else
-                        valA8 = (&g_c32440)[ctxB >> 5] + ((ctxB & ERROR_GEN_FAILURE) << 3);
+                        data_8 = (&g_c32440)[context_val >> 5] + ((context_val & ERROR_GEN_FAILURE) << 3);
 
-                    if (*(valA8 + 4) & 0x20)
-                        Camera_ResetMatrix_9(ctxB, 0, FILE_END);
+                    if (*(data_8 + 4) & 0x20)
+                        Camera_ResetMatrix_9(context_val, 0, FILE_END);
                 }
                 else
-                    a1 = Camera_ApplyHandiCam_23(ctxB, valA3, dstD2);
+                    context = Camera_ApplyHandiCam_23(context_val, data_3, dest_2);
 
-                *srcS[2] = arg_4;
+                *source_val[2] = arg_4;
             }
 
-            if (a1 == dstD2)
+            if (context == dest_2)
                 return arg_4;
 
-            srcS[3] |= 0x20;
+            source_val[3] |= 0x20;
         }
     }
 

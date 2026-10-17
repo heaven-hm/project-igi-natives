@@ -1,47 +1,47 @@
 // Original IGI.EXE function: Display_ClearSurfaces_20 (VA 0x0049FB10; static CFG gate PASS, CFG score 1.000).
 #include "Display_ClearSurfaces_20.h"
-int32_t* Display_ClearSurfaces_20(int32_t* a1)
+int32_t* Display_ClearSurfaces_20(int32_t* context)
 
 {
-    int32_t* srcS = a1;
-    int32_t valA1 = *(*srcS + 0x20);
+    int32_t* source_val = context;
+    int32_t data_1 = *(*source_val + 0x20);
 
-    if (!valA1)
+    if (!data_1)
     {
-        void* valA35 = srcS[1];
-        *(*srcS + 0x24) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA35), 0x52443344), valA35);
-        void* valA39 = srcS[1];
-        void* dstD2 = *(*srcS + 0x24);
-        *(dstD2 + 0x10) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA39), 0x56525458), valA39);
-        void* valA43 = srcS[1];
-        *(dstD2 + 0x14) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA43), 0x52454e44), valA43);
-        Display_OpenDevice_19(nullptr, *srcS, *(dstD2 + 0xc));
+        void* data_35 = source_val[1];
+        *(*source_val + 0x24) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_35), 0x52443344), data_35);
+        void* data_39 = source_val[1];
+        void* dest_2 = *(*source_val + 0x24);
+        *(dest_2 + 0x10) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_39), 0x56525458), data_39);
+        void* data_43 = source_val[1];
+        *(dest_2 + 0x14) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_43), 0x52454e44), data_43);
+        Display_OpenDevice_19(nullptr, *source_val, *(dest_2 + 0xc));
     }
-    else if (valA1 == 1)
+    else if (data_1 == 1)
     {
-        void* valA22 = srcS[1];
-        *(*srcS + 0x24) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA22), 0x52443344), valA22);
-        void* dstD1 = *(*srcS + 0x24);
-        void* valA27 = srcS[1];
-        *(dstD1 + 0x18) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA27), 0x56525458), valA27);
-        void* valA31 = srcS[1];
-        *(dstD1 + 0x1c) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA31), 0x52454e44), valA31);
+        void* data_22 = source_val[1];
+        *(*source_val + 0x24) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_22), 0x52443344), data_22);
+        void* dest_1 = *(*source_val + 0x24);
+        void* data_27 = source_val[1];
+        *(dest_1 + 0x18) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_27), 0x56525458), data_27);
+        void* data_31 = source_val[1];
+        *(dest_1 + 0x1c) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_31), 0x52454e44), data_31);
     }
     else
     {
-        void* dstD;
+        void* dest_val;
 
-        if (valA1 == 3)
+        if (data_1 == 3)
         {
-            void* valA5 = srcS[1];
-            *(*srcS + 0x24) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA5), 0x52443344), valA5);
-            void* valA9 = srcS[1];
-            dstD = *(*srcS + 0x24);
-            *(dstD + 0x14) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA9), 0x56525458), valA9);
-            void* valA13 = srcS[1];
-            *(dstD + 0x1c) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA13), 0x52454e44), valA13);
-            void* valA17 = srcS[1];
-            *(dstD + 0x18) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(valA17), 0x4c544d50), valA17);
+            void* data_5 = source_val[1];
+            *(*source_val + 0x24) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_5), 0x52443344), data_5);
+            void* data_9 = source_val[1];
+            dest_val = *(*source_val + 0x24);
+            *(dest_val + 0x14) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_9), 0x56525458), data_9);
+            void* data_13 = source_val[1];
+            *(dest_val + 0x1c) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_13), 0x52454e44), data_13);
+            void* data_17 = source_val[1];
+            *(dest_val + 0x18) = Sys_CheckHeap_19(Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(data_17), 0x4c544d50), data_17);
         }
         else
         {
@@ -51,40 +51,40 @@ int32_t* Display_ClearSurfaces_20(int32_t* a1)
                 /* nop */
         }
 
-        Display_OpenDevice_19(1, *srcS, *(dstD + 0x10));
+        Display_OpenDevice_19(1, *source_val, *(dest_val + 0x10));
     }
 
-    if (!*(*srcS + 0x28))
+    if (!*(*source_val + 0x28))
     {
-        int32_t* ctxB = Sys_ResolveSymbol_19(srcS[1]);
-        int32_t* flagP = Sys_ResolveSymbol_19(srcS[1]);
-        a1 = Sys_ResolveSymbol_19(srcS[1]);
-        int32_t* v_8 = Sys_ResolveSymbol_19(srcS[1]);
-        int32_t* result = Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(srcS[1]), 0x434d5348);
-        *(*srcS + 0x2c) = 0;
+        int32_t* context_val = Sys_ResolveSymbol_19(source_val[1]);
+        int32_t* flagP = Sys_ResolveSymbol_19(source_val[1]);
+        context = Sys_ResolveSymbol_19(source_val[1]);
+        int32_t* item_8 = Sys_ResolveSymbol_19(source_val[1]);
+        int32_t* result = Sys_ReadFileBlock_20(Sys_ResolveSymbol_19(source_val[1]), 0x434d5348);
+        *(*source_val + 0x2c) = 0;
 
         if (result)
         {
             int32_t* result_1 = 2;
-            *(*srcS + 0x2c) = Sys_CheckHeap_19(result, srcS[1]);
-            void** dstD3 = *(*srcS + 0x2c) + 0x10;
-            bool cond_1_1;
+            *(*source_val + 0x2c) = Sys_CheckHeap_19(result, source_val[1]);
+            void** dest_3 = *(*source_val + 0x2c) + 0x10;
+            bool flag_1_1;
 
             do
             {
-                ctxB = Sys_ReadFileBlock_20(Sys_PopStack_19(ctxB), 0x43565458);
+                context_val = Sys_ReadFileBlock_20(Sys_PopStack_19(context_val), 0x43565458);
                 flagP = Sys_ReadFileBlock_20(Sys_PopStack_19(flagP), 0x43464345);
-                a1 = Sys_ReadFileBlock_20(Sys_PopStack_19(a1), 0x434d4154);
-                v_8 = Sys_ReadFileBlock_20(Sys_PopStack_19(v_8), 0x43535048);
-                dstD3[1] = Sys_CheckHeap_19(ctxB, srcS[1]);
-                *dstD3 = Sys_CheckHeap_19(flagP, srcS[1]);
-                dstD3[2] = Sys_CheckHeap_19(a1, srcS[1]);
-                dstD3[3] = Sys_CheckHeap_19(v_8, srcS[1]);
-                dstD3 = &dstD3[8];
+                context = Sys_ReadFileBlock_20(Sys_PopStack_19(context), 0x434d4154);
+                item_8 = Sys_ReadFileBlock_20(Sys_PopStack_19(item_8), 0x43535048);
+                dest_3[1] = Sys_CheckHeap_19(context_val, source_val[1]);
+                *dest_3 = Sys_CheckHeap_19(flagP, source_val[1]);
+                dest_3[2] = Sys_CheckHeap_19(context, source_val[1]);
+                dest_3[3] = Sys_CheckHeap_19(item_8, source_val[1]);
+                dest_3 = &dest_3[8];
                 result = result_1 - 1;
-                cond_1_1 = result_1 != 1;
+                flag_1_1 = result_1 != 1;
                 result_1 = result;
-            } while (cond_1_1);
+            } while (flag_1_1);
         }
 
         return result;

@@ -1,94 +1,94 @@
 // Original IGI.EXE function: Weapon_ComputeAccuracy_3 (VA 0x00474420; static CFG gate PASS, CFG score 0.867).
 #include "Weapon_ComputeAccuracy_3.h"
-void* Weapon_ComputeAccuracy_3(double* a1)
+void* Weapon_ComputeAccuracy_3(double* context)
 
 {
-    void* result = Table_GetAt(a1 + 0x20c, 0);
+    void* result = Table_GetAt(context + 0x20c, 0);
     void* result_1 = result;
 
     if (result)
     {
-        Sys_DispatchOpcode_12(&a1[0xe], *(a1 + 0x204));
-        long double x87_r7_4 =
-            a1[0x21] * a1[0xe] + a1[0x22] * a1[0x11] + *(a1 + 0x10c) * *(a1 + 0x7c);
-        float v_28 = x87_r7_4;
-        long double x87_r7_8 = a1[0x22] * *(a1 + 0x8c) + *(a1 + 0x10c) * a1[0x10]
-            + a1[0x21] * *(a1 + 0x74);
-        float v_24_1 = x87_r7_8;
-        long double x87_r7_12 =
-            a1[0x22] * a1[0x12] + *(a1 + 0x10c) * *(a1 + 0x84) + a1[0x21] * a1[0xf];
-        float v_20_1 = x87_r7_12;
-        long double x87_r7_16 = a1[0x11] * *(a1 + 0x11c) + a1[0x23] * *(a1 + 0x7c)
-            + a1[0xe] * *(a1 + 0x114);
-        float v_1c_1 = x87_r7_16;
-        long double x87_r7_20 = a1[0x23] * a1[0x10] + *(a1 + 0x11c) * *(a1 + 0x8c)
-            + *(a1 + 0x114) * *(a1 + 0x74);
-        float v_18_1 = x87_r7_20;
-        long double x87_r7_24 = a1[0x23] * *(a1 + 0x84) + *(a1 + 0x11c) * a1[0x12]
-            + *(a1 + 0x114) * a1[0xf];
-        float v_14_1 = x87_r7_24;
-        long double x87_r7_28 =
-            *(a1 + 0x124) * *(a1 + 0x7c) + a1[0x25] * a1[0x11] + a1[0x24] * a1[0xe];
-        float v_10_1 = x87_r7_28;
-        int32_t* valA2 = *(a1 + 0x6c);
-        int32_t v_4_1 = *(a1 + 0x12c) + *(a1 + 0x94) + 1;
-        long double x87_r7_32 = a1[0x25] * *(a1 + 0x8c) + a1[0x24] * *(a1 + 0x74)
-            + a1[0x10] * *(a1 + 0x124);
-        float v_c_1 = x87_r7_32;
-        long double x87_r7_36 =
-            a1[0x25] * a1[0x12] + a1[0x24] * a1[0xf] + *(a1 + 0x84) * *(a1 + 0x124);
-        float v_8_1 = x87_r7_36;
-        memcpy(&a1[0xe], &v_28, 0x28);
-        int32_t valA4;
+        Sys_DispatchOpcode_12(&context[0xe], *(context + 0x204));
+        long double fpu_val_7_4 =
+            context[0x21] * context[0xe] + context[0x22] * context[0x11] + *(context + 0x10c) * *(context + 0x7c);
+        float item_28 = fpu_val_7_4;
+        long double fpu_val_7_8 = context[0x22] * *(context + 0x8c) + *(context + 0x10c) * context[0x10]
+            + context[0x21] * *(context + 0x74);
+        float item_24_1 = fpu_val_7_8;
+        long double fpu_val_7_12 =
+            context[0x22] * context[0x12] + *(context + 0x10c) * *(context + 0x84) + context[0x21] * context[0xf];
+        float item_20_1 = fpu_val_7_12;
+        long double fpu_val_7_16 = context[0x11] * *(context + 0x11c) + context[0x23] * *(context + 0x7c)
+            + context[0xe] * *(context + 0x114);
+        float item_1c_1 = fpu_val_7_16;
+        long double fpu_val_7_20 = context[0x23] * context[0x10] + *(context + 0x11c) * *(context + 0x8c)
+            + *(context + 0x114) * *(context + 0x74);
+        float item_18_1 = fpu_val_7_20;
+        long double fpu_val_7_24 = context[0x23] * *(context + 0x84) + *(context + 0x11c) * context[0x12]
+            + *(context + 0x114) * context[0xf];
+        float item_14_1 = fpu_val_7_24;
+        long double fpu_val_7_28 =
+            *(context + 0x124) * *(context + 0x7c) + context[0x25] * context[0x11] + context[0x24] * context[0xe];
+        float item_10_1 = fpu_val_7_28;
+        int32_t* data_2 = *(context + 0x6c);
+        int32_t item_4_1 = *(context + 0x12c) + *(context + 0x94) + 1;
+        long double fpu_val_7_32 = context[0x25] * *(context + 0x8c) + context[0x24] * *(context + 0x74)
+            + context[0x10] * *(context + 0x124);
+        float item_c_1 = fpu_val_7_32;
+        long double fpu_val_7_36 =
+            context[0x25] * context[0x12] + context[0x24] * context[0xf] + *(context + 0x84) * *(context + 0x124);
+        float item_8_1 = fpu_val_7_36;
+        memcpy(&context[0xe], &item_28, 0x28);
+        int32_t data_4;
 
-        if (!valA2 || *(*(*(*valA2 + 0xc) + 0xc) + 0x7c) >= 1)
-            valA4 = 1;
+        if (!data_2 || *(*(*(*data_2 + 0xc) + 0xc) + 0x7c) >= 1)
+            data_4 = 1;
         else
-            valA4 = 0;
+            data_4 = 0;
 
-        double v_68;
-        WeaponType_UpdateAnim(&v_68, a1, valA4);
-        float valA5 = a1[0x40];
-        v_68 = v_68 + a1[4];
-        double v_60;
-        double v_60_1 = v_60 + a1[5];
-        double v_58;
-        double v_58_1 = v_58 + a1[6];
-        float v_50;
-        Sys_ReadFileBlock_12(&v_50, valA5, 0f, 3.14159274f);
-        float v_44;
-        float v_38;
-        v_28 = v_50 * a1[0xe] + v_38 * a1[0xf] + v_44 * *(a1 + 0x74);
-        float v_4c;
-        float v_40;
-        float v_34;
-        float v_24_2 = v_4c * a1[0xe] + v_34 * a1[0xf] + v_40 * *(a1 + 0x74);
-        float v_48;
-        float v_3c;
-        float v_30;
-        float v_20_2 = v_48 * a1[0xe] + v_30 * a1[0xf] + v_3c * *(a1 + 0x74);
-        float v_1c_2 = v_50 * *(a1 + 0x7c) + v_38 * *(a1 + 0x84) + v_44 * a1[0x10];
-        float v_18_2 = v_4c * *(a1 + 0x7c) + v_34 * *(a1 + 0x84) + v_40 * a1[0x10];
-        float v_14_2 = v_48 * *(a1 + 0x7c) + v_30 * *(a1 + 0x84) + v_3c * a1[0x10];
-        int32_t v_2c;
-        int32_t v_4_2 = *(a1 + 0x94) + v_2c + 1;
-        float v_10_2 = v_50 * a1[0x11] + v_38 * a1[0x12] + v_44 * *(a1 + 0x8c);
-        float v_c_2 = v_4c * a1[0x11] + v_34 * a1[0x12] + v_40 * *(a1 + 0x8c);
-        float v_8_2 = v_48 * a1[0x11] + v_30 * a1[0x12] + v_3c * *(a1 + 0x8c);
-        memcpy(&v_50, &v_28, 0x28);
-        result = Script_FormatString_12(result_1, &v_68, &v_50);
-        memcpy(&a1[0x2e], &v_68, 0x18);
-        void* ctxB1 = a1[0x41];
-        memcpy(&a1[0x31], &v_50, 0x28);
+        double item_68;
+        WeaponType_UpdateAnim(&item_68, context, data_4);
+        float data_5 = context[0x40];
+        item_68 = item_68 + context[4];
+        double item_60;
+        double item_60_1 = item_60 + context[5];
+        double item_58;
+        double item_58_1 = item_58 + context[6];
+        float item_50;
+        Sys_ReadFileBlock_12(&item_50, data_5, 0.0f, 3.14159274f);
+        float item_44;
+        float item_38;
+        item_28 = item_50 * context[0xe] + item_38 * context[0xf] + item_44 * *(context + 0x74);
+        float item_4c;
+        float item_40;
+        float item_34;
+        float item_24_2 = item_4c * context[0xe] + item_34 * context[0xf] + item_40 * *(context + 0x74);
+        float item_48;
+        float item_3c;
+        float item_30;
+        float item_20_2 = item_48 * context[0xe] + item_30 * context[0xf] + item_3c * *(context + 0x74);
+        float item_1c_2 = item_50 * *(context + 0x7c) + item_38 * *(context + 0x84) + item_44 * context[0x10];
+        float item_18_2 = item_4c * *(context + 0x7c) + item_34 * *(context + 0x84) + item_40 * context[0x10];
+        float item_14_2 = item_48 * *(context + 0x7c) + item_30 * *(context + 0x84) + item_3c * context[0x10];
+        int32_t item_2c;
+        int32_t item_4_2 = *(context + 0x94) + item_2c + 1;
+        float item_10_2 = item_50 * context[0x11] + item_38 * context[0x12] + item_44 * *(context + 0x8c);
+        float item_c_2 = item_4c * context[0x11] + item_34 * context[0x12] + item_40 * *(context + 0x8c);
+        float item_8_2 = item_48 * context[0x11] + item_30 * context[0x12] + item_3c * *(context + 0x8c);
+        memcpy(&item_50, &item_28, 0x28);
+        result = Script_FormatString_12(result_1, &item_68, &item_50);
+        memcpy(&context[0x2e], &item_68, 0x18);
+        void* context_1 = context[0x41];
+        memcpy(&context[0x31], &item_50, 0x28);
 
-        if (ctxB1)
+        if (context_1)
         {
-            float v_70_1 = v_3c * 819.200012f - v_40 * 2048f;
-            float v_6c_1 = v_30 * 819.200012f - v_34 * 2048f;
-            v_68 = v_48 * 819.200012f - v_4c * 2048f + v_68;
-            double v_60_2 = v_70_1 + v_60_1;
-            double v_58_2 = v_6c_1 + v_58_1;
-            return AI_AlertAllies_23(*(ctxB1 + 0x4ec), &v_68, &v_50);
+            float item_70_1 = item_3c * 819.200012f - item_40 * 2048.0f;
+            float item_6c_1 = item_30 * 819.200012f - item_34 * 2048.0f;
+            item_68 = item_48 * 819.200012f - item_4c * 2048.0f + item_68;
+            double item_60_2 = item_70_1 + item_60_1;
+            double item_58_2 = item_6c_1 + item_58_1;
+            return AI_AlertAllies_23(*(context_1 + 0x4ec), &item_68, &item_50);
         }
     }
 

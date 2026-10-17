@@ -1,19 +1,19 @@
 // Original IGI.EXE function: Water_Process (VA 0x00518930; static CFG gate PASS, CFG score 1.000).
 #include "Water_Process.h"
-int32_t Water_Process(void* a1, float a2)
+int32_t Water_Process(void* context, float param_2)
 
 {
-    int32_t* srcS = a2;
-    double* valA = srcS[2];
-    long double x87_r7_2 = srcS[1] * 0.5f / srcS[3];
-    long double x87_r6_3 = (*(a1 + 0x4be8) - *valA + srcS[3]) * x87_r7_2;
-    long double x87_r5_4 = (*(a1 + 0x4bf0) - valA[1] + srcS[3]) * x87_r7_2;
-    long double x87_r4_4 = (*(a1 + 0x4c00) - *valA + srcS[3]) * x87_r7_2;
-    float v_20 = x87_r4_4;
-    float v_1c = x87_r5_4;
-    float v_18 = x87_r6_3;
-    long double x87_r7_4 = (*(a1 + 0x4c08) - valA[1] + srcS[3]) * x87_r7_2;
-    float v_14 = x87_r7_4;
-    SoundSys_SetFrequency_3(*srcS, x87_r6_3, x87_r5_4, v_20, v_1c, v_18, v_14);
-    return SoundSys_SetFrequency_3(*srcS, v_20, v_1c, v_18, v_14, x87_r4_4, x87_r7_4);
+    int32_t* source_val = param_2;
+    double* data_val = source_val[2];
+    long double fpu_val_7_2 = source_val[1] * 0.5f / source_val[3];
+    long double fpu_val_6_3 = (*(context + 0x4be8) - *data_val + source_val[3]) * fpu_val_7_2;
+    long double fpu_val_5_4 = (*(context + 0x4bf0) - data_val[1] + source_val[3]) * fpu_val_7_2;
+    long double fpu_val_4_4 = (*(context + 0x4c00) - *data_val + source_val[3]) * fpu_val_7_2;
+    float item_20 = fpu_val_4_4;
+    float item_1c = fpu_val_5_4;
+    float item_18 = fpu_val_6_3;
+    long double fpu_val_7_4 = (*(context + 0x4c08) - data_val[1] + source_val[3]) * fpu_val_7_2;
+    float item_14 = fpu_val_7_4;
+    SoundSys_SetFrequency_3(*source_val, fpu_val_6_3, fpu_val_5_4, item_20, item_1c, item_18, item_14);
+    return SoundSys_SetFrequency_3(*source_val, item_20, item_1c, item_18, item_14, fpu_val_4_4, fpu_val_7_4);
 }

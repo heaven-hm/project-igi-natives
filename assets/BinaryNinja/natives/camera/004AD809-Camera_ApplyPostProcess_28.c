@@ -1,10 +1,10 @@
 // Original IGI.EXE function: Camera_ApplyPostProcess_28 (VA 0x004AD809; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess_28.h"
-char* Camera_ApplyPostProcess_28(uint32_t a1, int32_t a2)
+char* Camera_ApplyPostProcess_28(uint32_t context, int32_t param_2)
 
 {
-    uint32_t dwBytes = a1 * a2;
-    a1 = dwBytes;
+    uint32_t dwBytes = context * param_2;
+    context = dwBytes;
 
     if (dwBytes <= 0xffffffe0)
     {
@@ -14,18 +14,18 @@ char* Camera_ApplyPostProcess_28(uint32_t a1, int32_t a2)
         dwBytes = (dwBytes + 0xf) & 0xfffffff0;
     }
 
-    bool cond_1_1;
+    bool flag_1_1;
 
     do
     {
         if (dwBytes <= 0xffffffe0)
         {
-            int32_t valA1 = g_c3242c;
+            int32_t data_1 = g_c3242c;
             char* result;
 
-            if (valA1 != 3)
+            if (data_1 != 3)
             {
-                if (valA1 == 2 && dwBytes <= g_5466d4)
+                if (data_1 == 2 && dwBytes <= g_5466d4)
                 {
                     result = Camera_ApplyWideScreen_22(dwBytes >> 4);
 
@@ -36,13 +36,13 @@ char* Camera_ApplyPostProcess_28(uint32_t a1, int32_t a2)
                     }
                 }
             }
-            else if (a1 <= g_c321fc)
+            else if (context <= g_c321fc)
             {
-                result = Camera_ApplyPostProcess_21(a1);
+                result = Camera_ApplyPostProcess_21(context);
 
                 if (result)
                 {
-                    Camera_ApplyBandFilter_26(result, 0, a1);
+                    Camera_ApplyBandFilter_26(result, 0, context);
                     return result;
                 }
             }
@@ -55,7 +55,7 @@ char* Camera_ApplyPostProcess_28(uint32_t a1, int32_t a2)
         else if (!g_936250)
             return nullptr;
 
-        cond_1_1 = !Camera_ApplyHandiCam_28(dwBytes);
-    } while (!cond_1_1);
+        flag_1_1 = !Camera_ApplyHandiCam_28(dwBytes);
+    } while (!flag_1_1);
     return nullptr;
 }

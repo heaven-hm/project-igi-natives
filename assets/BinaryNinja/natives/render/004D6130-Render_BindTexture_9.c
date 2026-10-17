@@ -1,21 +1,21 @@
 // Original IGI.EXE function: Render_BindTexture_9 (VA 0x004D6130; static CFG gate PASS, CFG score 1.000).
 #include "Render_BindTexture_9.h"
-int32_t Render_BindTexture_9(float a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, float a7)
+int32_t Render_BindTexture_9(float context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, float param_7)
 
 {
-    int32_t* valA = a1;
-    int32_t* srcS = valA[2] + a2 * 0x84;
-    a1 = a7 * 4800f / g_a54658;
-    int32_t* valA3;
+    int32_t* data_val = context;
+    int32_t* source_val = data_val[2] + param_2 * 0x84;
+    context = param_7 * 4800.0f / g_a54658;
+    int32_t* data_3;
 
-    if (a5 >= 0)
-        valA3 = Render_DrawSplineMesh_8(*valA, a2, a5, a6);
+    if (param_5 >= 0)
+        data_3 = Render_DrawSplineMesh_8(*data_val, param_2, param_5, param_6);
     else
-        valA3 = Render_BindTexture_7(srcS);
+        data_3 = Render_BindTexture_7(source_val);
 
-    Render_ComputeNormals_9(srcS, Render_DrawSplineMesh_6(1, Render_DrawRigidMesh_9(a2, a3, a4), 1, valA3, 0, 0, 0, 0, 0, 0), a1,
+    Render_ComputeNormals_9(source_val, Render_DrawSplineMesh_6(1, Render_DrawRigidMesh_9(param_2, param_3, param_4), 1, data_3, 0, 0, 0, 0, 0, 0), context,
         0);
-    int32_t result = srcS[1] | 0x20000;
-    srcS[1] = result;
+    int32_t result = source_val[1] | 0x20000;
+    source_val[1] = result;
     return result;
 }

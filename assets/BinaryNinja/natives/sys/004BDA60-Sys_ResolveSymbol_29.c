@@ -1,126 +1,126 @@
 // Original IGI.EXE function: Sys_ResolveSymbol_29 (VA 0x004BDA60; static CFG gate PASS, CFG score 1.000).
 #include "Sys_ResolveSymbol_29.h"
-void* Sys_ResolveSymbol_29(int32_t a1)
+void* Sys_ResolveSymbol_29(int32_t context)
 
 {
-    int32_t* srcS = a1;
-    Sys_ExecuteBytecode_29(srcS);
-    float v_18;
-    int32_t dstD = Sys_CloseFileStream_28(srcS, &a1, &v_18);
-    char* v_10;
+    int32_t* source_val = context;
+    Sys_ExecuteBytecode_29(source_val);
+    float item_18;
+    int32_t dest_val = Sys_CloseFileStream_28(source_val, &context, &item_18);
+    char* item_10;
 
-    if (dstD)
+    if (dest_val)
     {
     label_4bdab2:
-        int32_t* v_14;
+        int32_t* item_14;
 
-        if (Sys_OpenFileStream_28(srcS, &v_14))
+        if (Sys_OpenFileStream_28(source_val, &item_14))
         {
-            int32_t* valA3 = v_14;
+            int32_t* data_3 = item_14;
 
-            if (*valA3)
+            if (*data_3)
             {
-                int32_t tmpD8 = srcS[5];
-                srcS[8] = 8;
-                srcS[4] = tmpD8;
-                return Sys_DispatchOpcode_29(srcS);
+                int32_t temp_8 = source_val[5];
+                source_val[8] = 8;
+                source_val[4] = temp_8;
+                return Sys_DispatchOpcode_29(source_val);
             }
 
-            int32_t objC1 = valA3[1];
+            int32_t entity_1 = data_3[1];
 
-            if (objC1 == 1)
+            if (entity_1 == 1)
             {
-                int32_t objC5;
+                int32_t entity_5;
 
-                if (dstD == objC1)
+                if (dest_val == entity_1)
                 {
-                    int32_t objC2 = valA3[3];
+                    int32_t entity_2 = data_3[3];
 
-                    if (objC2 == 1)
+                    if (entity_2 == 1)
                     {
-                        *valA3[6] = a1;
-                        objC5 = a1;
+                        *data_3[6] = context;
+                        entity_5 = context;
                     }
                     else
                     {
-                        int32_t* tmpD = valA3[6];
+                        int32_t* temp_val = data_3[6];
 
-                        if (objC2 == 2)
+                        if (entity_2 == 2)
                         {
-                            *tmpD = a1;
-                            objC5 = a1;
+                            *temp_val = context;
+                            entity_5 = context;
                         }
                         else
                         {
-                            *tmpD = a1;
-                            objC5 = a1;
+                            *temp_val = context;
+                            entity_5 = context;
                         }
                     }
 
                     goto label_4bdb12;
                 }
 
-                if (dstD == 2)
+                if (dest_val == 2)
                 {
-                    *valA3[6] = v_18;
-                    objC5 = v_18;
+                    *data_3[6] = item_18;
+                    entity_5 = item_18;
                 label_4bdb12:
-                    Sys_PushStack_29(srcS, objC5);
-                    int32_t valA8 = srcS[5] + 1;
-                    srcS[5] = valA8;
-                    return valA8;
+                    Sys_PushStack_29(source_val, entity_5);
+                    int32_t data_8 = source_val[5] + 1;
+                    source_val[5] = data_8;
+                    return data_8;
                 }
             }
-            else if (objC1 == 2)
+            else if (entity_1 == 2)
             {
-                if (dstD == 1)
+                if (dest_val == 1)
                 {
-                    int32_t v_24_3 = objC1;
-                    *valA3[6] = a1;
-                    Sys_PopStack_29(srcS, a1);
-                    int32_t valA11 = srcS[5] + 1;
-                    srcS[5] = valA11;
-                    return valA11;
+                    int32_t item_24_3 = entity_1;
+                    *data_3[6] = context;
+                    Sys_PopStack_29(source_val, context);
+                    int32_t data_11 = source_val[5] + 1;
+                    source_val[5] = data_11;
+                    return data_11;
                 }
 
-                if (dstD == 2)
+                if (dest_val == 2)
                 {
-                    *valA3[6] = v_18;
-                    Sys_PopStack_29(srcS, v_18);
-                    int32_t valA14 = srcS[5] + 1;
-                    srcS[5] = valA14;
-                    return valA14;
+                    *data_3[6] = item_18;
+                    Sys_PopStack_29(source_val, item_18);
+                    int32_t data_14 = source_val[5] + 1;
+                    source_val[5] = data_14;
+                    return data_14;
                 }
             }
-            else if (objC1 == 3 && dstD == objC1)
+            else if (entity_1 == 3 && dest_val == entity_1)
             {
-                Camera_ApplyLineFilter_5(valA3[6], v_10, valA3[3] - 1);
-                int32_t* valA15 = v_14;
-                *(valA15[6] + valA15[3] - 1) = 0;
-                Sys_ReadFileBlock_28(srcS, v_14[6], 3);
-                int32_t valA18 = srcS[5] + 1;
-                srcS[5] = valA18;
-                return valA18;
+                Camera_ApplyLineFilter_5(data_3[6], item_10, data_3[3] - 1);
+                int32_t* data_15 = item_14;
+                *(data_15[6] + data_15[3] - 1) = 0;
+                Sys_ReadFileBlock_28(source_val, item_14[6], 3);
+                int32_t data_18 = source_val[5] + 1;
+                source_val[5] = data_18;
+                return data_18;
             }
         }
     }
     else
     {
-        int32_t v_c;
-        int32_t valA1 = Sys_FreeMemory_28(srcS, &v_10, &v_c, 3);
-        int32_t dstD2 = -(valA1);
-        dstD = (dstD2 - dstD2) & 3;
+        int32_t item_c;
+        int32_t data_1 = Sys_FreeMemory_28(source_val, &item_10, &item_c, 3);
+        int32_t dest_2 = -(data_1);
+        dest_val = (dest_2 - dest_2) & 3;
 
-        if (dstD)
+        if (dest_val)
             goto label_4bdab2;
     }
-    void* valA21 = srcS[8];
+    void* data_21 = source_val[8];
 
-    if (valA21)
-        return valA21;
+    if (data_21)
+        return data_21;
 
-    int32_t valA20 = srcS[5];
-    srcS[8] = 0xb;
-    srcS[4] = valA20;
-    return Sys_DispatchOpcode_29(srcS);
+    int32_t data_20 = source_val[5];
+    source_val[8] = 0xb;
+    source_val[4] = data_20;
+    return Sys_DispatchOpcode_29(source_val);
 }

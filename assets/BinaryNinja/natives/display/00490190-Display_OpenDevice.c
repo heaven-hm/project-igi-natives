@@ -1,18 +1,18 @@
 // Original IGI.EXE function: Display_OpenDevice (VA 0x00490190; static CFG gate PASS, CFG score 1.000).
 #include "Display_OpenDevice.h"
-int32_t Display_OpenDevice(int32_t a1, int32_t a2)
+int32_t Display_OpenDevice(int32_t context, int32_t param_2)
 
 {
-    if (a1 - 0x11 <= 0x17)
+    if (context - 0x11 <= 0x17)
     {
-        int32_t objC1 = 0;
-        objC1 = *(a1 + (&jump_table_4901f4[3] + 3));
+        int32_t entity_1 = 0;
+        entity_1 = *(context + (&jump_table_4901f4[3] + 3));
 
-        switch (objC1)
+        switch (entity_1)
         {
             case 0:
             {
-                return ((a2 >> 1 & 0x800000) | (a2 & 0x7f0000)) >> 0x10;
+                return ((param_2 >> 1 & 0x800000) | (param_2 & 0x7f0000)) >> 0x10;
                 break;
             }
             case 1:
@@ -48,5 +48,5 @@ int32_t Display_OpenDevice(int32_t a1, int32_t a2)
         }
     }
 
-    return a2 >> 0x10 & 0x7f;
+    return param_2 >> 0x10 & 0x7f;
 }

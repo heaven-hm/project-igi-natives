@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0047AAB0 Weapon_UpdateRecoil_6 | gate PASS | openigi False */
-int Weapon_UpdateRecoil_6(float* a1, float* a2, int a3, int a4);
+int Weapon_UpdateRecoil_6(float* context, float* param_2, int param_3, int param_4);

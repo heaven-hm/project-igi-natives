@@ -3,59 +3,59 @@
 int32_t Render_IllegalAllocInfo()
 
 {
-    int32_t objC;
-    int32_t v_4 = objC;
+    int32_t entity_val;
+    int32_t item_4 = entity_val;
     int32_t i_1 = 0;
-    int32_t* ctxB = &g_b04358;
+    int32_t* context_val = &g_b04358;
     int32_t i;
 
     do
     {
-        int32_t* valA1 = *ctxB;
+        int32_t* data_1 = *context_val;
 
-        if (valA1)
+        if (data_1)
         {
-            int32_t objC1 = ctxB[-1];
-            int32_t valA6;
-            int32_t tmpD1;
+            int32_t entity_1 = context_val[-1];
+            int32_t data_6;
+            int32_t temp_1;
 
-            if (!objC1)
+            if (!entity_1)
             {
-                int32_t* srcS1 = g_b12b74;
-                tmpD1 = *(valA1 + srcS1);
-                int32_t valA3 = g_b12b68 - 1;
-                g_b12b68 = valA3;
+                int32_t* source_1 = g_b12b74;
+                temp_1 = *(data_1 + source_1);
+                int32_t data_3 = g_b12b68 - 1;
+                g_b12b68 = data_3;
 
-                if (tmpD1 != valA3)
+                if (temp_1 != data_3)
                 {
-                    int32_t objC2 = g_b12b64;
-                    valA6 = *(objC2 + (valA3 << 2)) * g_b12b70 + g_b12b60;
-                    int32_t dstD2 = *(objC2 + (tmpD1 << 2));
-                    int32_t srcS2 = *(srcS1 + valA6);
-                    *(objC2 + (tmpD1 << 2)) = *(objC2 + (srcS2 << 2));
-                    *(g_b12b64 + (srcS2 << 2)) = dstD2;
-                    *(g_b12b74 + valA6) = tmpD1;
+                    int32_t entity_2 = g_b12b64;
+                    data_6 = *(entity_2 + (data_3 << 2)) * g_b12b70 + g_b12b60;
+                    int32_t dest_2 = *(entity_2 + (temp_1 << 2));
+                    int32_t source_2 = *(source_1 + data_6);
+                    *(entity_2 + (temp_1 << 2)) = *(entity_2 + (source_2 << 2));
+                    *(g_b12b64 + (source_2 << 2)) = dest_2;
+                    *(g_b12b74 + data_6) = temp_1;
                 }
             }
-            else if (objC1 == 1)
+            else if (entity_1 == 1)
             {
-                int32_t* srcS3 = g_b12c54;
-                tmpD1 = *(valA1 + srcS3);
-                int32_t valA8 = g_b12c48 - 1;
-                g_b12c48 = valA8;
+                int32_t* source_3 = g_b12c54;
+                temp_1 = *(data_1 + source_3);
+                int32_t data_8 = g_b12c48 - 1;
+                g_b12c48 = data_8;
 
-                if (tmpD1 != valA8)
+                if (temp_1 != data_8)
                 {
-                    int32_t objC5 = g_b12c44;
-                    valA6 = *(objC5 + (valA8 << 2)) * g_b12c50 + g_b12c40;
-                    int32_t dstD4 = *(objC5 + (tmpD1 << 2));
-                    int32_t srcS4 = *(srcS3 + valA6);
-                    *(objC5 + (tmpD1 << 2)) = *(objC5 + (srcS4 << 2));
-                    *(g_b12c44 + (srcS4 << 2)) = dstD4;
-                    *(g_b12c54 + valA6) = tmpD1;
+                    int32_t entity_5 = g_b12c44;
+                    data_6 = *(entity_5 + (data_8 << 2)) * g_b12c50 + g_b12c40;
+                    int32_t dest_4 = *(entity_5 + (temp_1 << 2));
+                    int32_t source_4 = *(source_3 + data_6);
+                    *(entity_5 + (temp_1 << 2)) = *(entity_5 + (source_4 << 2));
+                    *(g_b12c44 + (source_4 << 2)) = dest_4;
+                    *(g_b12c54 + data_6) = temp_1;
                 }
             }
-            else if (objC1 != 2)
+            else if (entity_1 != 2)
             {
                 Error_Show("Illegal alloc info");
 
@@ -64,29 +64,29 @@ int32_t Render_IllegalAllocInfo()
             }
             else
             {
-                int32_t* srcS5 = g_b16cd4;
-                tmpD1 = *(valA1 + srcS5);
-                int32_t valA12 = g_b16cc8 - 1;
-                g_b16cc8 = valA12;
+                int32_t* source_5 = g_b16cd4;
+                temp_1 = *(data_1 + source_5);
+                int32_t data_12 = g_b16cc8 - 1;
+                g_b16cc8 = data_12;
 
-                if (tmpD1 != valA12)
+                if (temp_1 != data_12)
                 {
-                    int32_t objC7 = g_b16cc4;
-                    valA6 = *(objC7 + (valA12 << 2)) * g_b16cd0 + g_b16cc0;
-                    int32_t dstD6 = *(objC7 + (tmpD1 << 2));
-                    int32_t srcS6 = *(srcS5 + valA6);
-                    *(objC7 + (tmpD1 << 2)) = *(objC7 + (srcS6 << 2));
-                    *(g_b16cc4 + (srcS6 << 2)) = dstD6;
-                    *(g_b16cd4 + valA6) = tmpD1;
+                    int32_t entity_7 = g_b16cc4;
+                    data_6 = *(entity_7 + (data_12 << 2)) * g_b16cd0 + g_b16cc0;
+                    int32_t dest_6 = *(entity_7 + (temp_1 << 2));
+                    int32_t source_6 = *(source_5 + data_6);
+                    *(entity_7 + (temp_1 << 2)) = *(entity_7 + (source_6 << 2));
+                    *(g_b16cc4 + (source_6 << 2)) = dest_6;
+                    *(g_b16cd4 + data_6) = temp_1;
                 }
             }
-            *ctxB = 0;
-            *ctxB = 0;
+            *context_val = 0;
+            *context_val = 0;
         }
 
-        ctxB[-2] = 0xffffffff;
+        context_val[-2] = 0xffffffff;
         i = i_1 + 1;
-        ctxB = &ctxB[7];
+        context_val = &context_val[7];
         i_1 = i;
     } while (i < 0x800);
 

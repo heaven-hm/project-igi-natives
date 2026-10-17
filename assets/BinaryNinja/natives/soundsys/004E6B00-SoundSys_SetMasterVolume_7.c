@@ -1,41 +1,41 @@
 // Original IGI.EXE function: SoundSys_SetMasterVolume_7 (VA 0x004E6B00; static CFG gate PASS, CFG score 1.000).
 #include "SoundSys_SetMasterVolume_7.h"
-struct status_msg* SoundSys_SetMasterVolume_7(void* a1, char* a2)
+struct status_msg* SoundSys_SetMasterVolume_7(void* context, char* param_2)
 
 {
     if (!g_a5e60a)
     {
-        int32_t* valA = g_a5e610;
+        int32_t* data_val = g_a5e610;
 
-        if (*valA && *a2)
+        if (*data_val && *param_2)
         {
-            char* v_10 = a2;
+            char* item_10 = param_2;
             int32_t* flags_1 = nullptr;
             int32_t i = 0;
 
-            if (*valA > 0)
+            if (*data_val > 0)
             {
                 int32_t flagP1 = 8;
                 int32_t kind_1;
 
                 do
                 {
-                    void* srcS1 = *(valA + flagP1);
-                    uint32_t valA2 = SoundSys_StopSoundSample_5();
-                    int32_t objC3 = 0;
-                    objC3 = *(srcS1 + 0x1c);
-                    kind_1 = (*(((valA2 * 0x180 + objC3) << 2) + &g_a96ae0))(srcS1, &v_10);
-                    valA = g_a5e610;
+                    void* source_1 = *(data_val + flagP1);
+                    uint32_t data_2 = SoundSys_StopSoundSample_5();
+                    int32_t entity_3 = 0;
+                    entity_3 = *(source_1 + 0x1c);
+                    kind_1 = (*(((data_2 * 0x180 + entity_3) << 2) + &g_a96ae0))(source_1, &item_10);
+                    data_val = g_a5e610;
                     i += 1;
                     flagP1 += 4;
-                } while (i < *valA);
+                } while (i < *data_val);
 
                 if (flags_1)
                 {
                     kind_1 = flags_1[7];
                     int32_t* flags = flags_1;
-                    char v_4 = 0;
-                    struct status_msg* kind = QTask_HandleInput(a1, kind_1, &flags);
+                    char item_4 = 0;
+                    struct status_msg* kind = QTask_HandleInput(context, kind_1, &flags);
                     struct status_msg* ctx = kind;
                     int32_t* i_1 = flags_1[2];
 

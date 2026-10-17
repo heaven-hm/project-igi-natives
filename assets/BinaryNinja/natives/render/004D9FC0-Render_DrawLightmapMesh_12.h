@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004D9FC0 Render_DrawLightmapMesh_12 | gate PASS | openigi False */
-struct status_msg* Render_DrawLightmapMesh_12(double* a1, double* a2, int* a3, unsigned int a4, unsigned int a5, unsigned int a6, unsigned int a7, unsigned int a8);
+struct status_msg* Render_DrawLightmapMesh_12(double* context, double* param_2, int* param_3, unsigned int param_4, unsigned int param_5, unsigned int param_6, unsigned int param_7, unsigned int param_8);

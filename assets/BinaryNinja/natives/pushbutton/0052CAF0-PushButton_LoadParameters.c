@@ -1,14 +1,14 @@
 // Original IGI.EXE function: PushButton_LoadParameters (VA 0x0052CAF0; static CFG gate PASS, CFG score 1.000).
 #include "PushButton_LoadParameters.h"
-int32_t PushButton_LoadParameters(void* a1, int32_t* a2)
+int32_t PushButton_LoadParameters(void* context, int32_t* param_2)
 
 {
-    int32_t result = *(a1 + 0x78);
+    int32_t result = *(context + 0x78);
 
     if (!result)
         return result;
 
-    *(a1 + 0x74) = a1;
-    Sys_ExecuteBytecode_18(result, a1 + 0x5c);
-    return EditRigidObjAttachedToBone_Process_2(a2, a1 + 0x54);
+    *(context + 0x74) = context;
+    Sys_ExecuteBytecode_18(result, context + 0x5c);
+    return EditRigidObjAttachedToBone_Process_2(param_2, context + 0x54);
 }

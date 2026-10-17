@@ -3,7 +3,7 @@
 uint32_t Weapon_CheckAmmo_2()
 
 {
-    int32_t valA;
-    valA = g_5be36c;
-    return QTask_CloseEvent_2(valA);
+    int32_t data_val;
+    data_val = g_5be36c;
+    return QTask_CloseEvent_2(data_val);
 }

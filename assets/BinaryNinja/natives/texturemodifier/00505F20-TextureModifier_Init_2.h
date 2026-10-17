@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00505F20 TextureModifier_Init_2 | gate PASS | openigi True */
-void*(void* arg1);
+void* TextureModifier_Init_2(void* context);

@@ -1,144 +1,142 @@
 // Original IGI.EXE function: Render_SkinBones_8 (VA 0x004D4B60; static CFG gate PASS, CFG score 1.000).
 #include "Render_SkinBones_8.h"
-float Render_SkinBones_8(int32_t a1, float a2, float a3, float a4) __location("valA")
+float Render_SkinBones_8(int32_t context, float param_2, float param_3, float param_4) {
+    float source_val = param_4;
+    void* data_val = *(source_val + 0x30);
 
-{
-    float srcS = a4;
-    void* valA = *(srcS + 0x30);
+    if (data_val)
+        *(data_val + 4) = *(source_val + 0x2c);
 
-    if (valA)
-        *(valA + 4) = *(srcS + 0x2c);
+    int32_t* dest_val = param_3;
+    *(source_val + 8) &= 0xfffffeff;
+    dest_val[1] &= 0xfffffeff;
+    float temp_2 = *(source_val + 0x2c);
+    param_3 = *(source_val + 0x28) + *(source_val + 0x2c);
+    *(source_val + 0x2c) = param_3;
+    float data_1;
 
-    int32_t* dstD = a3;
-    *(srcS + 8) &= 0xfffffeff;
-    dstD[1] &= 0xfffffeff;
-    float tmpD2 = *(srcS + 0x2c);
-    a3 = *(srcS + 0x28) + *(srcS + 0x2c);
-    *(srcS + 0x2c) = a3;
-    float valA1;
+    if (context)
+        data_1 = *(*(source_val + 0xc) + 0x10);
 
-    if (a1)
-        valA1 = *(*(srcS + 0xc) + 0x10);
-
-    int32_t objC5;
+    int32_t entity_5;
     float result;
 
-    if (!a1 || !valA1 || *valA1 <= 0)
+    if (!context || !data_1 || *data_1 <= 0)
     {
-        result = a2;
-        objC5 = 0;
+        result = param_2;
+        entity_5 = 0;
     }
     else
     {
-        long double x87_r7_2;
+        long double fpu_val_7_2;
         long double f2_1;
 
-        if (*((srcS + 8) + 1) & 0x80)
+        if (*((source_val + 8) + 1) & 0x80)
         {
-            x87_r7_2 = tmpD2;
-            f2_1 = a3;
-            x87_r7_2 - f2_1;
+            fpu_val_7_2 = temp_2;
+            f2_1 = param_3;
+            fpu_val_7_2 - f2_1;
         }
 
-        float valA4;
+        float data_4;
 
-        if (!(*((srcS + 8) + 1) & 0x80) || *(&((x87_r7_2 < f2_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_2, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_2 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40)
-            valA4 = a2;
+        if (!(*((source_val + 8) + 1) & 0x80) || *(&((fpu_val_7_2 < f2_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_2, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_2 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40)
+            data_4 = param_2;
         else
-            valA4 = Render_ComputeNormals_8(a1, a2, dstD, srcS, tmpD2, tmpD2);
+            data_4 = Render_ComputeNormals_8(context, param_2, dest_val, source_val, temp_2, temp_2);
 
-        objC5 = 1;
-        result = Render_ComputeNormals_8(a1, valA4, dstD, srcS, tmpD2, *(srcS + 0x2c));
+        entity_5 = 1;
+        result = Render_ComputeNormals_8(context, data_4, dest_val, source_val, temp_2, *(source_val + 0x2c));
     }
 
-    long double x87_r7_3 = *(srcS + 0x2c);
-    long double f0 = **(srcS + 0xc);
-    x87_r7_3 - f0;
-    int32_t valA6;
+    long double fpu_val_7_3 = *(source_val + 0x2c);
+    long double f0 = **(source_val + 0xc);
+    fpu_val_7_3 - f0;
+    int32_t data_6;
 
-    if (!(*(&((x87_r7_3 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f0) ? 1 : 0) << 0xa
-            | (x87_r7_3 == f0 ? 1 : 0) << 0xe) + 1) & 1))
-        valA6 = *(srcS + 8);
+    if (!(*(&((fpu_val_7_3 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f0) ? 1 : 0) << 0xa
+            | (fpu_val_7_3 == f0 ? 1 : 0) << 0xe) + 1) & 1))
+        data_6 = *(source_val + 8);
 
-    if (!(*(&((x87_r7_3 < f0 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f0) ? 1 : 0) << 0xa
-        | (x87_r7_3 == f0 ? 1 : 0) << 0xe) + 1) & 1) && !(valA6 & 2))
+    if (!(*(&((fpu_val_7_3 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f0) ? 1 : 0) << 0xa
+        | (fpu_val_7_3 == f0 ? 1 : 0) << 0xe) + 1) & 1) && !(data_6 & 2))
     {
     label_4d4c4a:
-        *(&valA6 + 1) |= 1;
-        *(srcS + 8) = valA6;
-        int32_t valA7 = dstD[1];
-        *(&valA7 + 1) |= 1;
-        dstD[1] = valA7;
-        char valA8 = *(srcS + 8);
+        *(&data_6 + 1) |= 1;
+        *(source_val + 8) = data_6;
+        int32_t data_7 = dest_val[1];
+        *(&data_7 + 1) |= 1;
+        dest_val[1] = data_7;
+        char data_8 = *(source_val + 8);
 
-        if (!(valA8 & 1))
+        if (!(data_8 & 1))
         {
-            if (valA8 & 2)
+            if (data_8 & 2)
             {
-                int32_t valA23 = *(srcS + 8);
-                *(srcS + 0x2c) = 0;
-                *(&valA23 + 1) &= 0x7f;
-                *(srcS + 8) = valA23;
+                int32_t data_23 = *(source_val + 8);
+                *(source_val + 0x2c) = 0;
+                *(&data_23 + 1) &= 0x7f;
+                *(source_val + 8) = data_23;
                 return result;
             }
 
-            *(srcS + 0x2c) = **(srcS + 0xc);
+            *(source_val + 0x2c) = **(source_val + 0xc);
         }
         else
         {
-            float* valA9 = *(srcS + 0xc);
+            float* data_9 = *(source_val + 0xc);
 
-            if (!(valA8 & 2))
+            if (!(data_8 & 2))
             {
-                a4 = -1f;
-                *(srcS + 0x2c) = *(srcS + 0x2c) - *valA9;
+                param_4 = -1.0f;
+                *(source_val + 0x2c) = *(source_val + 0x2c) - *data_9;
             }
             else
             {
-                *(srcS + 0x2c) = *valA9 + *(srcS + 0x2c);
-                a4 = *valA9 + 1f;
+                *(source_val + 0x2c) = *data_9 + *(source_val + 0x2c);
+                param_4 = *data_9 + 1.0f;
             }
 
-            if (objC5)
-                result = Render_ComputeNormals_8(a1, result, dstD, srcS, a4, *(srcS + 0x2c));
+            if (entity_5)
+                result = Render_ComputeNormals_8(context, result, dest_val, source_val, param_4, *(source_val + 0x2c));
 
-            if (!*dstD)
+            if (!*dest_val)
             {
-                int16_t objC8 = *(srcS + 8);
+                int16_t entity_8 = *(source_val + 8);
 
-                if (!(*(&objC8 + 1) & 0x80))
+                if (!(*(&entity_8 + 1) & 0x80))
                 {
-                    int32_t* valA11 = *(srcS + 0xc);
-                    float tmpD6 = *(srcS + 0x2c);
-                    int32_t* dstD1 = valA11[2];
+                    int32_t* data_11 = *(source_val + 0xc);
+                    float temp_6 = *(source_val + 0x2c);
+                    int32_t* dest_1 = data_11[2];
 
-                    if (!(objC8 & 2))
+                    if (!(entity_8 & 2))
                     {
-                        *(srcS + 0x2c) = *valA11;
-                        Render_DrawLightmapMesh_8(nullptr, nullptr, srcS);
-                        *(srcS + 0x10) = *dstD1[1] - *(srcS + 0x1c);
-                        *(srcS + 0x14) = *(dstD1[1] + 4) - *(srcS + 0x20);
-                        long double x87_r7_22 = *(dstD1[1] + 8) - *(srcS + 0x24);
-                        int32_t valA21 = *(srcS + 8);
-                        *(srcS + 0x2c) = tmpD6;
-                        *(&valA21 + 1) &= 0x7f;
-                        *(srcS + 8) = valA21;
-                        *(srcS + 0x18) = x87_r7_22;
+                        *(source_val + 0x2c) = *data_11;
+                        Render_DrawLightmapMesh_8(nullptr, nullptr, source_val);
+                        *(source_val + 0x10) = *dest_1[1] - *(source_val + 0x1c);
+                        *(source_val + 0x14) = *(dest_1[1] + 4) - *(source_val + 0x20);
+                        long double fpu_val_7_22 = *(dest_1[1] + 8) - *(source_val + 0x24);
+                        int32_t data_21 = *(source_val + 8);
+                        *(source_val + 0x2c) = temp_6;
+                        *(&data_21 + 1) &= 0x7f;
+                        *(source_val + 8) = data_21;
+                        *(source_val + 0x18) = fpu_val_7_22;
                         return result;
                     }
 
-                    *(srcS + 0x2c) = 0;
-                    Render_DrawLightmapMesh_8(nullptr, nullptr, srcS);
-                    *(srcS + 0x10) = *(dstD1[1] + *dstD1 * 0x28 - 0x28) - *(srcS + 0x1c);
-                    *(srcS + 0x14) = *(dstD1[1] + *dstD1 * 0x28 - 0x24) - *(srcS + 0x20);
-                    int32_t valA17 = *(srcS + 8);
-                    *(&valA17 + 1) &= 0x7f;
-                    long double x87_r7_16 = *(dstD1[1] + *dstD1 * 0x28 - 0x20) - *(srcS + 0x24);
-                    *(srcS + 8) = valA17;
-                    *(srcS + 0x2c) = tmpD6;
-                    *(srcS + 0x18) = x87_r7_16;
+                    *(source_val + 0x2c) = 0;
+                    Render_DrawLightmapMesh_8(nullptr, nullptr, source_val);
+                    *(source_val + 0x10) = *(dest_1[1] + *dest_1 * 0x28 - 0x28) - *(source_val + 0x1c);
+                    *(source_val + 0x14) = *(dest_1[1] + *dest_1 * 0x28 - 0x24) - *(source_val + 0x20);
+                    int32_t data_17 = *(source_val + 8);
+                    *(&data_17 + 1) &= 0x7f;
+                    long double fpu_val_7_16 = *(dest_1[1] + *dest_1 * 0x28 - 0x20) - *(source_val + 0x24);
+                    *(source_val + 8) = data_17;
+                    *(source_val + 0x2c) = temp_6;
+                    *(source_val + 0x18) = fpu_val_7_16;
                     return result;
                 }
             }
@@ -146,22 +144,22 @@ float Render_SkinBones_8(int32_t a1, float a2, float a3, float a4) __location("v
     }
     else
     {
-        long double x87_r7_4 = *(srcS + 0x2c);
-        long double f1_1 = 0f;
-        x87_r7_4 - f1_1;
+        long double fpu_val_7_4 = *(source_val + 0x2c);
+        long double f1_1 = 0.0f;
+        fpu_val_7_4 - f1_1;
 
-        if (*(&((x87_r7_4 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_4, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_4 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41)
+        if (*(&((fpu_val_7_4 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_4, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_4 == f1_1 ? 1 : 0) << 0xe) + 1) & 0x41)
         {
-            valA6 = *(srcS + 8);
+            data_6 = *(source_val + 8);
 
-            if (valA6 & 2)
+            if (data_6 & 2)
                 goto label_4d4c4a;
         }
     }
 
-    int32_t valA26 = *(srcS + 8);
-    *(&valA26 + 1) &= 0x7f;
-    *(srcS + 8) = valA26;
+    int32_t data_26 = *(source_val + 8);
+    *(&data_26 + 1) &= 0x7f;
+    *(source_val + 8) = data_26;
     return result;
 }

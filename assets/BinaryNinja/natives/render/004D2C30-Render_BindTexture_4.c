@@ -5,18 +5,18 @@ int32_t Render_BindTexture_4()
 {
     Render_DrawRigidMesh_7(0, 0);
     g_a54678 = 1;
-    int32_t* objC = &g_a538f0;
+    int32_t* entity_val = &g_a538f0;
 
     for (int32_t* i = &g_a542f4; i < &g_a545f4; )
     {
         i[-1] = 0;
         *i = 0;
-        objC[9] = 0;
+        entity_val[9] = 0;
         i[1] = 0;
-        *objC = 0;
-        objC[1] = 0;
+        *entity_val = 0;
+        entity_val[1] = 0;
         i = &i[3];
-        objC = &objC[0xa];
+        entity_val = &entity_val[0xa];
     }
 
     Sys_FreeMemory_2(&g_a54640, 0x10, 0x80, 4);

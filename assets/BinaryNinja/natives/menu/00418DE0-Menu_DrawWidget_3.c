@@ -1,29 +1,29 @@
 // Original IGI.EXE function: Menu_DrawWidget_3 (VA 0x00418DE0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_DrawWidget_3.h"
-void* Menu_DrawWidget_3(void* a1, char* a2)
+void* Menu_DrawWidget_3(void* context, char* param_2)
 
 {
-    int32_t srcS = 0;
+    int32_t source_val = 0;
 
-    if (*(a1 + 0x2664) > 0)
+    if (*(context + 0x2664) > 0)
     {
-        char* dstD1 = a1 + 0x7e4;
-        int32_t valA;
+        char* dest_1 = context + 0x7e4;
+        int32_t data_val;
 
         do
         {
-            int32_t valA1;
-            int32_t objC;
-            int32_t tmpD;
-            valA1 = Camera_UpdateTransform_6(valA, tmpD, objC, a2, dstD1);
+            int32_t data_1;
+            int32_t entity_val;
+            int32_t temp_val;
+            data_1 = Camera_UpdateTransform_6(data_val, temp_val, entity_val, param_2, dest_1);
 
-            if (!valA1)
-                return a1 + srcS * 0x58 + 0x824;
+            if (!data_1)
+                return context + source_val * 0x58 + 0x824;
 
-            valA = *(a1 + 0x2664);
-            srcS += 1;
-            dstD1 = &dstD1[0x58];
-        } while (srcS < valA);
+            data_val = *(context + 0x2664);
+            source_val += 1;
+            dest_1 = &dest_1[0x58];
+        } while (source_val < data_val);
     }
 
     return 0;

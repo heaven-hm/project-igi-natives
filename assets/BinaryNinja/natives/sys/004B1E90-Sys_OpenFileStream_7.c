@@ -1,42 +1,42 @@
 // Original IGI.EXE function: Sys_OpenFileStream_7 (VA 0x004B1E90; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_7.h"
-char* Sys_OpenFileStream_7(char* a1, int32_t a2, int32_t a3)
+char* Sys_OpenFileStream_7(char* context, int32_t param_2, int32_t param_3)
 
 {
-    int32_t dstD = a3;
+    int32_t dest_val = param_3;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t objC = ~i;
-    char* objC1 = objC - 1;
+    int32_t entity_val = ~i;
+    char* entity_1 = entity_val - 1;
 
-    if (objC != 1)
+    if (entity_val != 1)
     {
-        while (objC1[a3] != 0x2e)
+        while (entity_1[param_3] != 0x2e)
         {
-            char* f1_1 = objC1;
-            objC1 -= 1;
+            char* f1_1 = entity_1;
+            entity_1 -= 1;
 
             if (f1_1 == 1)
                 break;
         }
     }
 
-    char* result = &objC1[a3];
+    char* result = &entity_1[param_3];
 
-    if (!a1)
+    if (!context)
         return result;
 
-    Camera_ApplyLineFilter_5(a1, result, a2 - 1);
-    a1[a2 - 1] = 0;
+    Camera_ApplyLineFilter_5(context, result, param_2 - 1);
+    context[param_2 - 1] = 0;
     return result;
 }

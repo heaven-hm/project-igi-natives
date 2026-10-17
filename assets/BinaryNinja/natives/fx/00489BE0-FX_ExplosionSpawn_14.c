@@ -1,21 +1,21 @@
 // Original IGI.EXE function: FX_ExplosionSpawn_14 (VA 0x00489BE0; static CFG gate PASS, CFG score 1.000).
 #include "FX_ExplosionSpawn_14.h"
-int32_t* FX_ExplosionSpawn_14(void* a1, int32_t a2)
+int32_t* FX_ExplosionSpawn_14(void* context, int32_t param_2)
 
 {
-    int32_t ctxB;
-    int32_t v_4 = ctxB;
-    int32_t* result = *(a1 + 0x18);
+    int32_t context_val;
+    int32_t item_4 = context_val;
+    int32_t* result = *(context + 0x18);
 
     for (int32_t* i = *result; i; i = *i)
     {
-        if (*(result + 0x2a) && *result[2] == a2)
+        if (*(result + 0x2a) && *result[2] == param_2)
             return result;
 
         result = i;
     }
 
-    result = *(a1 + 0x24);
+    result = *(context + 0x24);
     int32_t* result_1 = *result;
 
     if (!result_1)
@@ -23,7 +23,7 @@ int32_t* FX_ExplosionSpawn_14(void* a1, int32_t a2)
 
     while (true)
     {
-        if (*(result + 0x2a) && *result[2] == a2)
+        if (*(result + 0x2a) && *result[2] == param_2)
             return result;
 
         result = result_1;

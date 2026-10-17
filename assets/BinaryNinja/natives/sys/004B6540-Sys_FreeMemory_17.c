@@ -1,19 +1,19 @@
 // Original IGI.EXE function: Sys_FreeMemory_17 (VA 0x004B6540; static CFG gate PASS, CFG score 1.000).
 #include "Sys_FreeMemory_17.h"
-int32_t Sys_FreeMemory_17(void* a1, int32_t a2, int32_t a3, int16_t a4, int16_t a5, int16_t a6, int16_t a7, int16_t a8, int32_t a9, float a10, float a11, float a12, float a13)
+int32_t Sys_FreeMemory_17(void* context, int32_t param_2, int32_t param_3, int16_t param_4, int16_t param_5, int16_t param_6, int16_t param_7, int16_t param_8, int32_t param_9, float param_10, float param_11, float param_12, float param_13)
 
 {
-    int32_t result = a2 * 0x24;
-    *(*(a1 + 8) + result + 8) = a6;
-    *(*(a1 + 8) + result + 0xa) = a7;
-    *(*(a1 + 8) + result + 0xc) = a4;
-    *(*(a1 + 8) + result + 0xe) = a5;
-    *(*(a1 + 8) + result + 0x10) = a8;
-    *(*(a1 + 8) + result + 4) = a9;
-    (*(a1 + 8))[a2 * 9] = *(a1 + 4) + a3 * 0x24;
-    *(*(a1 + 8) + result + 0x14) = a10;
-    *(*(a1 + 8) + result + 0x18) = a11;
-    *(*(a1 + 8) + result + 0x1c) = a12;
-    *(*(a1 + 8) + result + 0x20) = a13;
+    int32_t result = param_2 * 0x24;
+    *(*(context + 8) + result + 8) = param_6;
+    *(*(context + 8) + result + 0xa) = param_7;
+    *(*(context + 8) + result + 0xc) = param_4;
+    *(*(context + 8) + result + 0xe) = param_5;
+    *(*(context + 8) + result + 0x10) = param_8;
+    *(*(context + 8) + result + 4) = param_9;
+    (*(context + 8))[param_2 * 9] = *(context + 4) + param_3 * 0x24;
+    *(*(context + 8) + result + 0x14) = param_10;
+    *(*(context + 8) + result + 0x18) = param_11;
+    *(*(context + 8) + result + 0x1c) = param_12;
+    *(*(context + 8) + result + 0x20) = param_13;
     return result;
 }

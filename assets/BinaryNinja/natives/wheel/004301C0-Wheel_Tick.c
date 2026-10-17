@@ -1,95 +1,95 @@
 // Original IGI.EXE function: Wheel_Tick (VA 0x004301C0; static CFG gate PASS, CFG score 1.000).
 #include "Wheel_Tick.h"
-int32_t Wheel_Tick(float a1)
+int32_t Wheel_Tick(float context)
 
 {
-    int32_t* srcS = a1;
-    int32_t result_1 = srcS[0x4c];
-    int16_t valA = Script_ExecuteLevelScript_16();
-    int32_t objC;
-    objC = *(srcS[0x4c] + 0x1c);
-    int32_t result = TaskType_IsDerivedFrom(objC, valA);
+    int32_t* source_val = context;
+    int32_t result_1 = source_val[0x4c];
+    int16_t data_val = Script_ExecuteLevelScript_16();
+    int32_t entity_val;
+    entity_val = *(source_val[0x4c] + 0x1c);
+    int32_t result = TaskType_IsDerivedFrom(entity_val, data_val);
 
     if (result)
     {
-        if (srcS[0x54])
-            return QTask_FindType(srcS);
+        if (source_val[0x54])
+            return QTask_FindType(source_val);
 
-        float flagP1 = srcS[0x4c];
-        int16_t valA4 = Menu_LeaveMenus_23();
+        float flagP1 = source_val[0x4c];
+        int16_t data_4 = Menu_LeaveMenus_23();
 
-        if (*(flagP1 + 0x1c) != valA4)
-            srcS[0x4e] = *(result_1 + 0x720);
+        if (*(flagP1 + 0x1c) != data_4)
+            source_val[0x4e] = *(result_1 + 0x720);
         else
         {
-            a1 = 0f;
-            void* objC1 = *(srcS[0x53] + 0x2d4);
-            void* ctxB1 = *(*(flagP1 + 0x1b4) + 0x2d4);
-            int32_t valA7 = srcS[0x52] * 5;
-            int32_t dstD = *(ctxB1 + (valA7 << 2) + 0x124);
+            context = 0.0f;
+            void* entity_1 = *(source_val[0x53] + 0x2d4);
+            void* context_1 = *(*(flagP1 + 0x1b4) + 0x2d4);
+            int32_t data_7 = source_val[0x52] * 5;
+            int32_t dest_val = *(context_1 + (data_7 << 2) + 0x124);
 
-            if (dstD < 0)
-                dstD = 0xfffffff6 - dstD;
+            if (dest_val < 0)
+                dest_val = 0xfffffff6 - dest_val;
 
-            int32_t objC4 = dstD * 7;
-            int16_t valA10;
+            int32_t entity_4 = dest_val * 7;
+            int16_t data_10;
 
-            if (*(flagP1 + (objC4 << 3) + 0x1d6))
+            if (*(flagP1 + (entity_4 << 3) + 0x1d6))
             {
-                float v_c;
-                SoundSys_SetMasterVolume_17(&v_c, flagP1 + 0xf0, flagP1 + (objC4 << 3) + 0x1c8);
-                float v_4;
-                long double x87_r7_1 = v_4;
-                float v_8;
-                long double x87_r6_1 = v_8;
-                long double x87_r5_1 = v_c;
-                long double x87_r4_5 =
-                    sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_1 * x87_r7_1);
-                a1 = x87_r4_5;
+                float item_c;
+                SoundSys_SetMasterVolume_17(&item_c, flagP1 + 0xf0, flagP1 + (entity_4 << 3) + 0x1c8);
+                float item_4;
+                long double fpu_val_7_1 = item_4;
+                float item_8;
+                long double fpu_val_6_1 = item_8;
+                long double fpu_val_5_1 = item_c;
+                long double fpu_val_4_5 =
+                    sqrtl(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_1 * fpu_val_7_1);
+                context = fpu_val_4_5;
                 long double f0_1 = 40.9599991f;
-                x87_r4_5 - f0_1;
-                valA10 = (x87_r4_5 < f0_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r4_5, f0_1) ? 1 : 0) << 0xa
-                    | (x87_r4_5 == f0_1 ? 1 : 0) << 0xe;
+                fpu_val_4_5 - f0_1;
+                data_10 = (fpu_val_4_5 < f0_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_4_5, f0_1) ? 1 : 0) << 0xa
+                    | (fpu_val_4_5 == f0_1 ? 1 : 0) << 0xe;
 
-                if (*(&valA10 + 1) & 1)
-                    a1 = 0f;
+                if (*(&data_10 + 1) & 1)
+                    context = 0.0f;
             }
-            else if (*(ctxB1 + (valA7 << 2) + 0x11d))
-                a1 = *(result_1 + 0x720) * 44.6008873f * *(*(*(result_1 + 0x1b4) + 0x2d4) + 0x1c)
+            else if (*(context_1 + (data_7 << 2) + 0x11d))
+                context = *(result_1 + 0x720) * 44.6008873f * *(*(*(result_1 + 0x1b4) + 0x2d4) + 0x1c)
                     / *(flagP1 + 0x758) * 0.600000024f;
 
-            valA10 = *(ctxB1 + 0x261);
+            data_10 = *(context_1 + 0x261);
 
-            if (valA10)
-                a1 = Vehicle_InitPlane(flagP1, dstD) * a1;
+            if (data_10)
+                context = Vehicle_InitPlane(flagP1, dest_val) * context;
 
-            void* ctxB2 = ctxB1 + srcS[0x52] * 0x14;
-            srcS[0x4e] =
-                a1 / (*(objC1 + 0x2e8) * 6.2831853071795889) * 6.2831853071795889 * 0.300000012f
-                + srcS[0x4e] * 0.699999988f;
-            int16_t valA15;
-            valA15 = *(ctxB2 + 0x11c);
+            void* context_2 = context_1 + source_val[0x52] * 0x14;
+            source_val[0x4e] =
+                context / (*(entity_1 + 0x2e8) * 6.2831853071795889) * 6.2831853071795889 * 0.300000012f
+                + source_val[0x4e] * 0.699999988f;
+            int16_t data_15;
+            data_15 = *(context_2 + 0x11c);
 
-            if (valA15)
-                srcS[0x51] = -((*(ctxB2 + 0x120) * *(result_1 + 0x72c) * 0.0174532924f));
+            if (data_15)
+                source_val[0x51] = -((*(context_2 + 0x120) * *(result_1 + 0x72c) * 0.0174532924f));
 
-            long double x87_r7_19 = srcS[0x4f];
-            long double f2_1 = 0f;
-            x87_r7_19 - f2_1;
+            long double fpu_val_7_19 = source_val[0x4f];
+            long double f2_1 = 0.0f;
+            fpu_val_7_19 - f2_1;
 
-            if (!(*(&((x87_r7_19 < f2_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_19, f2_1) ? 1 : 0) << 0xa
-                | (x87_r7_19 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
+            if (!(*(&((fpu_val_7_19 < f2_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_19, f2_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_19 == f2_1 ? 1 : 0) << 0xe) + 1) & 0x40))
             {
-                int32_t ctxB3 = *(ctxB2 + 0x124);
+                int32_t context_3 = *(context_2 + 0x124);
 
-                if (ctxB3 >= 0)
+                if (context_3 >= 0)
                 {
-                    void* valA16 = *(srcS[0x53] + 0x2d4);
-                    float objC10 = *(valA16 + 0x2ec);
-                    float v_2c_3 = objC10;
-                    Vehicle_UpdateRudder(flagP1, ctxB3, srcS[0x4f] * *(valA16 + 0x2ec), objC10);
+                    void* data_16 = *(source_val[0x53] + 0x2d4);
+                    float entity_10 = *(data_16 + 0x2ec);
+                    float item_2c_3 = entity_10;
+                    Vehicle_UpdateRudder(flagP1, context_3, source_val[0x4f] * *(data_16 + 0x2ec), entity_10);
                 }
             }
         }
@@ -97,22 +97,22 @@ int32_t Wheel_Tick(float a1)
         result = result_1;
 
         if (*(result + 0x744))
-            srcS[0x4e] = 0;
+            source_val[0x4e] = 0;
 
-        long double x87_r7_22 = srcS[0x4f];
-        long double f1_1 = 0f;
-        x87_r7_22 - f1_1;
-        result = (x87_r7_22 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_22, f1_1) ? 1 : 0) << 0xa
-            | (x87_r7_22 == f1_1 ? 1 : 0) << 0xe;
+        long double fpu_val_7_22 = source_val[0x4f];
+        long double f1_1 = 0.0f;
+        fpu_val_7_22 - f1_1;
+        result = (fpu_val_7_22 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_22, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_7_22 == f1_1 ? 1 : 0) << 0xe;
 
         if (!(*(&result + 1) & 0x40))
         {
-            srcS[0x4e] = 0;
-            srcS[0x50] = 0;
+            source_val[0x4e] = 0;
+            source_val[0x50] = 0;
         }
 
-        srcS[0x50] = srcS[0x50] - srcS[0x4e];
-        int32_t* i_1 = srcS[2];
+        source_val[0x50] = source_val[0x50] - source_val[0x4e];
+        int32_t* i_1 = source_val[2];
 
         if (*i_1)
         {
@@ -120,38 +120,38 @@ int32_t Wheel_Tick(float a1)
 
             if (i)
             {
-                int32_t tmpD6 = g_afa7e0;
+                int32_t temp_6 = g_afa7e0;
 
                 do
                 {
-                    int32_t* srcS1 = *i;
-                    void* valA20;
+                    int32_t* source_1 = *i;
+                    void* data_20;
 
-                    if (!srcS1)
-                        valA20 = nullptr;
+                    if (!source_1)
+                        data_20 = nullptr;
                     else
                     {
-                        int32_t valA17 = *srcS1;
-                        int32_t valA18 = -(valA17);
-                        valA20 = (valA18 - valA18) & srcS1;
+                        int32_t data_17 = *source_1;
+                        int32_t data_18 = -(data_17);
+                        data_20 = (data_18 - data_18) & source_1;
                     }
 
-                    *((tmpD6 << 2) + &g_afa6e0) = valA20;
-                    int32_t tmpD7 = tmpD6 + 1;
-                    int32_t valA21 = 0;
-                    g_afa7e0 = tmpD7;
-                    valA21 = i[7];
-                    result = *((valA21 << 2) + &g_a970e0);
+                    *((temp_6 << 2) + &g_afa6e0) = data_20;
+                    int32_t temp_7 = temp_6 + 1;
+                    int32_t data_21 = 0;
+                    g_afa7e0 = temp_7;
+                    data_21 = i[7];
+                    result = *((data_21 << 2) + &g_a970e0);
 
                     if (result)
                     {
                         result = result(i);
-                        tmpD7 = g_afa7e0;
+                        temp_7 = g_afa7e0;
                     }
 
-                    i = *((tmpD7 << 2) + &g_afa6dc);
-                    tmpD6 = tmpD7 - 1;
-                    g_afa7e0 = tmpD6;
+                    i = *((temp_7 << 2) + &g_afa6dc);
+                    temp_6 = temp_7 - 1;
+                    g_afa7e0 = temp_6;
                 } while (i);
             }
         }

@@ -1,45 +1,45 @@
 // Original IGI.EXE function: Elevator_OnEvent (VA 0x0043E1F0; static CFG gate PASS, CFG score 1.000).
 #include "Elevator_OnEvent.h"
-void* Elevator_OnEvent(float a1)
+void* Elevator_OnEvent(float context)
 
 {
-    Vehicle_InitPlane_9(a1);
-    void* result = a1 + 0xf0;
-    int32_t* i = *(a1 + 8);
+    Vehicle_InitPlane_9(context);
+    void* result = context + 0xf0;
+    int32_t* i = *(context + 8);
     void* result_1 = result;
-    void* v_4 = a1 + 0x70;
+    void* item_4 = context + 0x70;
 
     if (*i && i)
     {
-        int32_t objC1 = g_afa7e0;
+        int32_t entity_1 = g_afa7e0;
 
         do
         {
-            int32_t* tmpD1 = *i;
-            void* valA3;
+            int32_t* temp_1 = *i;
+            void* data_3;
 
-            if (!tmpD1)
-                valA3 = nullptr;
+            if (!temp_1)
+                data_3 = nullptr;
             else
             {
-                int32_t valA = *tmpD1;
-                int32_t valA1 = -(valA);
-                valA3 = (valA1 - valA1) & tmpD1;
+                int32_t data_val = *temp_1;
+                int32_t data_1 = -(data_val);
+                data_3 = (data_1 - data_1) & temp_1;
             }
 
-            *((objC1 << 2) + &g_afa6e0) = valA3;
-            g_afa7e0 = objC1 + 1;
-            uint32_t valA5 = DynObj_CreateMagicObject_6();
-            int32_t valA6 = 0;
-            valA6 = i[7];
-            result = *(((valA5 * 0x180 + valA6) << 2) + &g_a96ae0);
+            *((entity_1 << 2) + &g_afa6e0) = data_3;
+            g_afa7e0 = entity_1 + 1;
+            uint32_t data_5 = DynObj_CreateMagicObject_6();
+            int32_t data_6 = 0;
+            data_6 = i[7];
+            result = *(((data_5 * 0x180 + data_6) << 2) + &g_a96ae0);
 
             if (result)
                 result = result(i, &result_1);
 
-            objC1 = g_afa7e0 - 1;
-            g_afa7e0 = objC1;
-            i = *((objC1 << 2) + &g_afa6e0);
+            entity_1 = g_afa7e0 - 1;
+            g_afa7e0 = entity_1;
+            i = *((entity_1 << 2) + &g_afa6e0);
         } while (i);
     }
 

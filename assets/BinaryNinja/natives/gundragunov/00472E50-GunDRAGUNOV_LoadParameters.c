@@ -1,102 +1,102 @@
 // Original IGI.EXE function: GunDRAGUNOV_LoadParameters (VA 0x00472E50; static CFG gate PASS, CFG score 1.000).
 #include "GunDRAGUNOV_LoadParameters.h"
-void* GunDRAGUNOV_LoadParameters(float* a1, void* a2)
+void* GunDRAGUNOV_LoadParameters(float* context, void* param_2)
 
 {
-    void* dstD = *(a2 + 0x2c);
-    float* tmpD = *(a1[0x4a] + 0x6e4);
-    void* valA = *(dstD + 0x4ec);
-    (*(((AI_AlertAllies_17() * 0x180 + Weapon_ComputeAccuracy_5()) << 2) + &g_a96ae0))(a1, a2);
-    void* result = *(a2 + 0x1c);
-    a1[0x6c] = result;
+    void* dest_val = *(param_2 + 0x2c);
+    float* temp_val = *(context[0x4a] + 0x6e4);
+    void* data_val = *(dest_val + 0x4ec);
+    (*(((AI_AlertAllies_17() * 0x180 + Weapon_ComputeAccuracy_5()) << 2) + &g_a96ae0))(context, param_2);
+    void* result = *(param_2 + 0x1c);
+    context[0x6c] = result;
 
-    if (*(a2 + 0x14))
+    if (*(param_2 + 0x14))
     {
         if (!result)
         {
-            long double x87_r7_17 = *(dstD + 0x1cc);
-            long double f0_1 = 0f;
-            x87_r7_17 - f0_1;
-            result = (x87_r7_17 < f0_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r7_17, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_17 == f0_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_17 = *(dest_val + 0x1cc);
+            long double f0_1 = 0.0f;
+            fpu_val_7_17 - f0_1;
+            result = (fpu_val_7_17 < f0_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_7_17, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_17 == f0_1 ? 1 : 0) << 0xe;
 
             if (!(*(&result + 1) & 0x40))
             {
-                long double x87_r7_18 = *(dstD + 0x12c);
-                long double f2_1 = 0f;
-                x87_r7_18 - f2_1;
-                result = (x87_r7_18 < f2_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_18, f2_1) ? 1 : 0) << 0xa
-                    | (x87_r7_18 == f2_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_18 = *(dest_val + 0x12c);
+                long double f2_1 = 0.0f;
+                fpu_val_7_18 - f2_1;
+                result = (fpu_val_7_18 < f2_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_18, f2_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_18 == f2_1 ? 1 : 0) << 0xe;
 
                 if (*(&result + 1) & 0x40)
-                    return AI_CombatTarget_24(*(dstD + 0x4ec));
+                    return AI_CombatTarget_24(*(dest_val + 0x4ec));
             }
         }
         else
         {
-            *(a2 + 0x20) = *(a2 + 0x20) * 0.0500000007f;
-            *(a2 + 0x24) = *(a2 + 0x24) * 0.0500000007f;
-            long double x87_r7_5 = *(dstD + 0x1cc);
-            long double f1_1 = 0f;
-            x87_r7_5 - f1_1;
-            result = (x87_r7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_5, f1_1) ? 1 : 0) << 0xa
-                | (x87_r7_5 == f1_1 ? 1 : 0) << 0xe;
+            *(param_2 + 0x20) = *(param_2 + 0x20) * 0.0500000007f;
+            *(param_2 + 0x24) = *(param_2 + 0x24) * 0.0500000007f;
+            long double fpu_val_7_5 = *(dest_val + 0x1cc);
+            long double f1_1 = 0.0f;
+            fpu_val_7_5 - f1_1;
+            result = (fpu_val_7_5 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_5, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_5 == f1_1 ? 1 : 0) << 0xe;
 
             if (!(*(&result + 1) & 0x40))
             {
-                long double x87_r7_6 = *(dstD + 0x12c);
-                long double f4_1 = 0f;
-                x87_r7_6 - f4_1;
-                result = (x87_r7_6 < f4_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_6, f4_1) ? 1 : 0) << 0xa
-                    | (x87_r7_6 == f4_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_6 = *(dest_val + 0x12c);
+                long double f4_1 = 0.0f;
+                fpu_val_7_6 - f4_1;
+                result = (fpu_val_7_6 < f4_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_6, f4_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_6 == f4_1 ? 1 : 0) << 0xe;
 
                 if (*(&result + 1) & 0x40)
-                    result = Human_TaskViewReset(*(dstD + 0x4ec));
+                    result = Human_TaskViewReset(*(dest_val + 0x4ec));
             }
 
-            long double x87_r7_7 = *(dstD + 0x1e8);
-            long double f3_1 = 0f;
-            x87_r7_7 - f3_1;
-            result = (x87_r7_7 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_7, f3_1) ? 1 : 0) << 0xa
-                | (x87_r7_7 == f3_1 ? 1 : 0) << 0xe;
+            long double fpu_val_7_7 = *(dest_val + 0x1e8);
+            long double f3_1 = 0.0f;
+            fpu_val_7_7 - f3_1;
+            result = (fpu_val_7_7 < f3_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_7, f3_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_7 == f3_1 ? 1 : 0) << 0xe;
 
             if (!(*(&result + 1) & 0x40))
             {
             label_472fc4:
-                long double x87_r7_12 = *(valA + 0x1e4);
-                long double f5_1 = *tmpD;
-                x87_r7_12 - f5_1;
-                result = (x87_r7_12 < f5_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_12, f5_1) ? 1 : 0) << 0xa
-                    | (x87_r7_12 == f5_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_12 = *(data_val + 0x1e4);
+                long double f5_1 = *temp_val;
+                fpu_val_7_12 - f5_1;
+                result = (fpu_val_7_12 < f5_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_12, f5_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_12 == f5_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x41))
                 {
-                    *(valA + 0x1e4) = *(valA + 0x1e4) * 0.959999979f;
-                    *(valA + 0x1e8) = *(valA + 0x1e8) * 0.959999979f;
+                    *(data_val + 0x1e4) = *(data_val + 0x1e4) * 0.959999979f;
+                    *(data_val + 0x1e8) = *(data_val + 0x1e8) * 0.959999979f;
                 }
             }
             else
             {
-                long double x87_r7_8 = *(dstD + 0x12c);
-                long double f6_1 = 0f;
-                x87_r7_8 - f6_1;
-                result = (x87_r7_8 < f6_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_8, f6_1) ? 1 : 0) << 0xa
-                    | (x87_r7_8 == f6_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_8 = *(dest_val + 0x12c);
+                long double f6_1 = 0.0f;
+                fpu_val_7_8 - f6_1;
+                result = (fpu_val_7_8 < f6_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_8, f6_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_8 == f6_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x40))
                     goto label_472fc4;
 
-                long double x87_r7_9 = *(dstD + 0x1ec);
-                long double f7_1 = 0f;
-                x87_r7_9 - f7_1;
-                result = (x87_r7_9 < f7_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r7_9, f7_1) ? 1 : 0) << 0xa
-                    | (x87_r7_9 == f7_1 ? 1 : 0) << 0xe;
+                long double fpu_val_7_9 = *(dest_val + 0x1ec);
+                long double f7_1 = 0.0f;
+                fpu_val_7_9 - f7_1;
+                result = (fpu_val_7_9 < f7_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_7_9, f7_1) ? 1 : 0) << 0xa
+                    | (fpu_val_7_9 == f7_1 ? 1 : 0) << 0xe;
 
                 if (!(*(&result + 1) & 0x40))
                 {
@@ -112,49 +112,49 @@ void* GunDRAGUNOV_LoadParameters(float* a1, void* a2)
 🚫🚫🚫                    /* unimplemented  {fstp fp0, fp0} */
                     /* unimplemented  {fstp fp0, fp0} */
                     int16_t top_2 = top_1 + 1;
-🚫🚫🚫🚫🚫                    long double f8_1 = *(valA + 0x1e4);
-                    /* unimplemented  {fcom fp0, dword [objC+0x1e4]} f- f8_1 */ - f8_1;
+🚫🚫🚫🚫🚫                    long double f8_1 = *(data_val + 0x1e4);
+                    /* unimplemented  {fcom fp0, dword [entity_val+0x1e4]} f- f8_1 */ - f8_1;
                     bool c0_6 = /* bool c0_6 =
-                        unimplemented  {fcom fp0, dword [objC+0x1e4]} f< f8_1 */ < f8_1;
+                        unimplemented  {fcom fp0, dword [entity_val+0x1e4]} f< f8_1 */ < f8_1;
                     bool c2_7 = FCMP_UO(/* bool c2_7 =
-                        is_unordered.t(unimplemented  {fcom fp0, dword [objC+0x1e4]}, f8_1) */,
+                        is_unordered.t(unimplemented  {fcom fp0, dword [entity_val+0x1e4]}, f8_1) */,
                         f8_1);
                     bool c3_6 = /* bool c3_6 =
-                        unimplemented  {fcom fp0, dword [objC+0x1e4]} f== f8_1 */ == f8_1;
+                        unimplemented  {fcom fp0, dword [entity_val+0x1e4]} f== f8_1 */ == f8_1;
                     result = (c0_6 ? 1 : 0) << 8 | (c2_7 ? 1 : 0) << 0xa | (c3_6 ? 1 : 0) << 0xe
                         | (top_2 & 7) << 0xb;
 
                     if (!(*(&result + 1) & 0x41))
                     {
-🚫🚫                        /* unimplemented  {fld fp0, dword [objC+0x1e4]} */
+🚫🚫                        /* unimplemented  {fld fp0, dword [entity_val+0x1e4]} */
 🚫🚫                        /* unimplemented  {fmul fp0, dword [&g_533a80]} */
-🚫🚫🚫                        *(valA + 0x1e4) = /* *(valA + 0x1e4) =
-                            unimplemented  {fstp dword [objC+0x1e4], fp0} */;
-                        /* unimplemented  {fstp dword [objC+0x1e4], fp0} */
-🚫🚫                        /* unimplemented  {fld fp0, dword [objC+0x1e8]} */
+🚫🚫🚫                        *(data_val + 0x1e4) = /* *(data_val + 0x1e4) =
+                            unimplemented  {fstp dword [entity_val+0x1e4], fp0} */;
+                        /* unimplemented  {fstp dword [entity_val+0x1e4], fp0} */
+🚫🚫                        /* unimplemented  {fld fp0, dword [entity_val+0x1e8]} */
 🚫🚫                        /* unimplemented  {fmul fp0, dword [&g_533a80]} */
-🚫🚫🚫                        *(valA + 0x1e8) = /* *(valA + 0x1e8) =
-                            unimplemented  {fstp dword [objC+0x1e8], fp0} */;
-                        /* unimplemented  {fstp dword [objC+0x1e8], fp0} */
+🚫🚫🚫                        *(data_val + 0x1e8) = /* *(data_val + 0x1e8) =
+                            unimplemented  {fstp dword [entity_val+0x1e8], fp0} */;
+                        /* unimplemented  {fstp dword [entity_val+0x1e8], fp0} */
                     }
 
-🚫🚫🚫🚫🚫                    long double f9_1 = *(valA + 0x1e4);
-                    /* unimplemented  {fcom fp0, dword [objC+0x1e4]} f- f9_1 */ - f9_1;
+🚫🚫🚫🚫🚫                    long double f9_1 = *(data_val + 0x1e4);
+                    /* unimplemented  {fcom fp0, dword [entity_val+0x1e4]} f- f9_1 */ - f9_1;
                     bool c0_7 = /* bool c0_7 =
-                        unimplemented  {fcom fp0, dword [objC+0x1e4]} f< f9_1 */ < f9_1;
+                        unimplemented  {fcom fp0, dword [entity_val+0x1e4]} f< f9_1 */ < f9_1;
                     bool c2_8 = FCMP_UO(/* bool c2_8 =
-                        is_unordered.t(unimplemented  {fcom fp0, dword [objC+0x1e4]}, f9_1) */,
+                        is_unordered.t(unimplemented  {fcom fp0, dword [entity_val+0x1e4]}, f9_1) */,
                         f9_1);
                     bool c3_7 = /* bool c3_7 =
-                        unimplemented  {fcom fp0, dword [objC+0x1e4]} f== f9_1 */ == f9_1;
+                        unimplemented  {fcom fp0, dword [entity_val+0x1e4]} f== f9_1 */ == f9_1;
                     result = (c0_7 ? 1 : 0) << 8 | (c2_8 ? 1 : 0) << 0xa | (c3_7 ? 1 : 0) << 0xe
                         | (top_2 & 7) << 0xb;
 
                     if (*(&result + 1) & 1)
                     {
-🚫🚫🚫                        *(valA + 0x1e4) = /* *(valA + 0x1e4) =
-                            unimplemented  {fstp dword [objC+0x1e4], fp0} */;
-                        /* unimplemented  {fstp dword [objC+0x1e4], fp0} */
+🚫🚫🚫                        *(data_val + 0x1e4) = /* *(data_val + 0x1e4) =
+                            unimplemented  {fstp dword [entity_val+0x1e4], fp0} */;
+                        /* unimplemented  {fstp dword [entity_val+0x1e4], fp0} */
 🚫🚫                        /* unimplemented  {fld fp0, qword [&g_5339c0]} */
 🚫🚫🚫🚫                        long double fp0_2;
                         bool c1_2;
@@ -167,9 +167,9 @@ void* GunDRAGUNOV_LoadParameters(float* a1, void* a2)
 
 🚫🚫🚫                        /* unimplemented  {fstp fp0, fp0} */
                         /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫                        *(valA + 0x1e8) = /* *(valA + 0x1e8) =
-                            unimplemented  {fstp dword [objC+0x1e8], fp0} */;
-                        /* unimplemented  {fstp dword [objC+0x1e8], fp0} */
+🚫🚫🚫                        *(data_val + 0x1e8) = /* *(data_val + 0x1e8) =
+                            unimplemented  {fstp dword [entity_val+0x1e8], fp0} */;
+                        /* unimplemented  {fstp dword [entity_val+0x1e8], fp0} */
                         return result;
                     }
 

@@ -1,79 +1,79 @@
 // Original IGI.EXE function: KnifeStab_Update (VA 0x0046DFB0; static CFG gate PASS, CFG score 0.917).
 #include "KnifeStab_Update.h"
-int32_t KnifeStab_Update(int32_t* a1, float a2)
+int32_t KnifeStab_Update(int32_t* context, float param_2)
 
 {
-    int32_t v_e8;
-    __builtin_memset(&v_e8, 0, 0x14);
-    void v_b0;
-    Sys_OpenFileStream_12(&v_b0, a1[5], a2);
-    float v_94;
-    double v_f8 = v_94;
-    double v_c8;
-    memcpy(&v_c8, a1[2], 0x18);
-    float v_a0;
-    double v_100_1 = v_a0 * 8192.0;
-    double v_f8_1 = v_f8 * 8192.0;
-    int32_t objC2 = a1[1];
-    float v_ac;
-    double v_88 = v_c8 + v_ac * 8192.0;
-    int32_t tmpD2 = *a1;
-    int32_t v_118_1 = 0xffffffff;
-    double* v_11c_1 = &v_e8;
-    int32_t v_e4 = 0;
-    int32_t v_e0 = objC2;
-    double v_c0;
-    double v_80 = v_c0 + v_100_1;
-    int32_t v_dc = tmpD2;
-    int32_t v_d8 = 0x3f800000;
-    double v_b8;
-    double v_78 = v_b8 + v_f8_1;
-    char valA1 = Level_StartMission_2();
-    int32_t* v_124 = 1;
-    double* v_128 = &v_88;
-    void* v_70;
-    DynObj_FindSymbol_11(Level_StartMission_4(), &v_70, &v_c8, v_128, v_124, valA1, v_11c_1,
-        v_118_1);
-    int32_t v_18;
+    int32_t item_e8;
+    memset(&item_e8, 0, 0x14);
+    void item_b0;
+    Sys_OpenFileStream_12(&item_b0, context[5], param_2);
+    float item_94;
+    double item_f8 = item_94;
+    double item_c8;
+    memcpy(&item_c8, context[2], 0x18);
+    float item_a0;
+    double item_100_1 = item_a0 * 8192.0;
+    double item_f8_1 = item_f8 * 8192.0;
+    int32_t entity_2 = context[1];
+    float item_ac;
+    double item_88 = item_c8 + item_ac * 8192.0;
+    int32_t temp_2 = *context;
+    int32_t item_118_1 = 0xffffffff;
+    double* item_11c_1 = &item_e8;
+    int32_t item_e4 = 0;
+    int32_t item_e0 = entity_2;
+    double item_c0;
+    double item_80 = item_c0 + item_100_1;
+    int32_t item_dc = temp_2;
+    int32_t item_d8 = 0x3f800000;
+    double item_b8;
+    double item_78 = item_b8 + item_f8_1;
+    char data_1 = Level_StartMission_2();
+    int32_t* item_124 = 1;
+    double* item_128 = &item_88;
+    void* item_70;
+    DynObj_FindSymbol_11(Level_StartMission_4(), &item_70, &item_c8, item_128, item_124, data_1, item_11c_1,
+        item_118_1);
+    int32_t item_18;
 
-    if (v_18)
+    if (item_18)
     {
-        int32_t* v_108;
-        __builtin_memset(&v_108, 0, 0x20);
-        v_108 = &v_70;
-        *(&v_100_1 + 4) = v_a0;
-        void* valA5 = a1[8];
-        *(&v_f8_1 + 4) = 0;
-        v_100_1 = v_ac;
-        v_f8_1 = v_94;
-        void* v_f0_1 = valA5;
-        int32_t v_ec_1 = a1[9];
-        int32_t v_104_1 = *(valA5 + 0x654);
+        int32_t* item_108;
+        memset(&item_108, 0, 0x20);
+        item_108 = &item_70;
+        *(&item_100_1 + 4) = item_a0;
+        void* data_5 = context[8];
+        *(&item_f8_1 + 4) = 0;
+        item_100_1 = item_ac;
+        item_f8_1 = item_94;
+        void* item_f0_1 = data_5;
+        int32_t item_ec_1 = context[9];
+        int32_t item_104_1 = *(data_5 + 0x654);
 
-        if (v_70)
+        if (item_70)
         {
-            uint32_t valA9 = Level_LoadLevel_3();
-            int32_t tmpD5 = 0;
-            tmpD5 = *(v_70 + 0x1c);
+            uint32_t data_9 = Level_LoadLevel_3();
+            int32_t temp_5 = 0;
+            temp_5 = *(item_70 + 0x1c);
 
-            if (*(((valA9 * 0x180 + tmpD5) << 2) + &g_a96ae0))
+            if (*(((data_9 * 0x180 + temp_5) << 2) + &g_a96ae0))
             {
-                int16_t valA11 = AI_UpdateOrders_17();
-                tmpD5 = *(v_70 + 0x1c);
+                int16_t data_11 = AI_UpdateOrders_17();
+                temp_5 = *(item_70 + 0x1c);
 
-                if (TaskType_IsDerivedFrom(tmpD5, valA11))
+                if (TaskType_IsDerivedFrom(temp_5, data_11))
                 {
-                    void* valA14 = *(v_70 + 0x800);
+                    void* data_14 = *(item_70 + 0x800);
 
-                    if (valA14 && !AI_CheckSector_3(valA14))
-                        int32_t v_104_2 = 0x447a0000;
+                    if (data_14 && !AI_CheckSector_3(data_14))
+                        int32_t item_104_2 = 0x447a0000;
                 }
 
-                uint32_t valA17 = Level_LoadLevel_3();
-                int32_t tmpD6 = 0;
-                void* valA18 = v_70;
-                tmpD6 = *(valA18 + 0x1c);
-                (*(((valA17 * 0x180 + tmpD6) << 2) + &g_a96ae0))(valA18, &v_108);
+                uint32_t data_17 = Level_LoadLevel_3();
+                int32_t temp_6 = 0;
+                void* data_18 = item_70;
+                temp_6 = *(data_18 + 0x1c);
+                (*(((data_17 * 0x180 + temp_6) << 2) + &g_a96ae0))(data_18, &item_108);
                 return 1;
             }
         }

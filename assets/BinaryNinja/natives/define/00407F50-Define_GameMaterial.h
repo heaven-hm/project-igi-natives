@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00407F50 Define_GameMaterial | gate PASS | openigi True */
-int Define_GameMaterial(long double a1, long double a2, long double a3, long double a4, int a5, float a6);
+int Define_GameMaterial(long double context, long double param_2, long double param_3, long double param_4, int param_5, float param_6);

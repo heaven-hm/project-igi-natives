@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Camera_ResetFrameCounters (VA 0x004D9950; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetFrameCounters.h"
-void* Camera_ResetFrameCounters(void* a1)
+void* Camera_ResetFrameCounters(void* context)
 
 // Sig: void Camera_ResetFrameCounters(CameraContext* camCtx)
 // Note: Resets the camera frame-selection fields camCtx+0x4C to -1 and
@@ -9,7 +9,7 @@ void* Camera_ResetFrameCounters(void* a1)
 // Ghidra/r2: exact boundary, 1 basic block, 0 CFG edges, cdecl 1-argument
 // store.
 {
-    *(a1 + 0x4c) = 0xffffffff;
-    *(a1 + 0x50) = 0;
-    return a1;
+    *(context + 0x4c) = 0xffffffff;
+    *(context + 0x50) = 0;
+    return context;
 }

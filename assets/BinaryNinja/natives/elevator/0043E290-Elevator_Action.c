@@ -1,39 +1,39 @@
 // Original IGI.EXE function: Elevator_Action (VA 0x0043E290; static CFG gate FAIL, CFG score 0.833).
 #include "Elevator_Action.h"
-void* Elevator_Action(void* a1, void** a2)
+void* Elevator_Action(void* context, void** param_2)
 
 {
-    int32_t valA = 0;
-    valA = *(a1 + 0x1c);
-    (*((valA << 2) + &g_a970e0))(a1);
-    g_57c0f0 = *(a1 + 0x20) - *(a1 + 0x108);
-    g_57c0f8 = *(a1 + 0x28) - *(a1 + 0x110);
-    g_57c100 = *(a1 + 0x30) - *(a1 + 0x118);
-    float tmpD = *(a1 + 0x154);
-    float v_50 = *(a1 + 0x148);
-    float objC1 = *(a1 + 0x160);
-    float tmpD1 = *(a1 + 0x14c);
-    float objC2 = *(a1 + 0x158);
-    float tmpD2 = *(a1 + 0x164);
-    float objC3 = *(a1 + 0x150);
-    float tmpD3 = *(a1 + 0x15c);
-    float objC4 = *(a1 + 0x168);
-    int32_t tmpD4 = *(a1 + 0x16c);
-    int32_t v_2c = tmpD4;
-    memcpy(0x57c110, &v_50, 0x28);
-    float v_28 = tmpD1 * *(a1 + 0x74) + objC3 * *(a1 + 0x78) + v_50 * *(a1 + 0x70);
-    float v_24 = objC2 * *(a1 + 0x74) + tmpD3 * *(a1 + 0x78) + tmpD * *(a1 + 0x70);
-    float v_20 = tmpD2 * *(a1 + 0x74) + objC4 * *(a1 + 0x78) + objC1 * *(a1 + 0x70);
-    float v_1c = objC3 * *(a1 + 0x84) + v_50 * *(a1 + 0x7c) + tmpD1 * *(a1 + 0x80);
-    int32_t v_4 = *(a1 + 0x94) + tmpD4 + 1;
-    float v_18 = tmpD3 * *(a1 + 0x84) + tmpD * *(a1 + 0x7c) + objC2 * *(a1 + 0x80);
-    float v_14 = objC4 * *(a1 + 0x84) + objC1 * *(a1 + 0x7c) + tmpD2 * *(a1 + 0x80);
-    float v_10 = tmpD1 * *(a1 + 0x8c) + objC3 * *(a1 + 0x90) + v_50 * *(a1 + 0x88);
-    float v_c = objC2 * *(a1 + 0x8c) + tmpD3 * *(a1 + 0x90) + tmpD * *(a1 + 0x88);
-    float v_8 = tmpD2 * *(a1 + 0x8c) + objC4 * *(a1 + 0x90) + objC1 * *(a1 + 0x88);
-    memcpy(0x57c110, &v_28, 0x28);
-    *a2 = a1 + 0x20;
-    a2[2] = &g_57c0f0;
-    a2[1] = 0x57c110;
-    return a1 + 0x20;
+    int32_t data_val = 0;
+    data_val = *(context + 0x1c);
+    (*((data_val << 2) + &g_a970e0))(context);
+    g_57c0f0 = *(context + 0x20) - *(context + 0x108);
+    g_57c0f8 = *(context + 0x28) - *(context + 0x110);
+    g_57c100 = *(context + 0x30) - *(context + 0x118);
+    float temp_val = *(context + 0x154);
+    float item_50 = *(context + 0x148);
+    float entity_1 = *(context + 0x160);
+    float temp_1 = *(context + 0x14c);
+    float entity_2 = *(context + 0x158);
+    float temp_2 = *(context + 0x164);
+    float entity_3 = *(context + 0x150);
+    float temp_3 = *(context + 0x15c);
+    float entity_4 = *(context + 0x168);
+    int32_t temp_4 = *(context + 0x16c);
+    int32_t item_2c = temp_4;
+    memcpy(0x57c110, &item_50, 0x28);
+    float item_28 = temp_1 * *(context + 0x74) + entity_3 * *(context + 0x78) + item_50 * *(context + 0x70);
+    float item_24 = entity_2 * *(context + 0x74) + temp_3 * *(context + 0x78) + temp_val * *(context + 0x70);
+    float item_20 = temp_2 * *(context + 0x74) + entity_4 * *(context + 0x78) + entity_1 * *(context + 0x70);
+    float item_1c = entity_3 * *(context + 0x84) + item_50 * *(context + 0x7c) + temp_1 * *(context + 0x80);
+    int32_t item_4 = *(context + 0x94) + temp_4 + 1;
+    float item_18 = temp_3 * *(context + 0x84) + temp_val * *(context + 0x7c) + entity_2 * *(context + 0x80);
+    float item_14 = entity_4 * *(context + 0x84) + entity_1 * *(context + 0x7c) + temp_2 * *(context + 0x80);
+    float item_10 = temp_1 * *(context + 0x8c) + entity_3 * *(context + 0x90) + item_50 * *(context + 0x88);
+    float item_c = entity_2 * *(context + 0x8c) + temp_3 * *(context + 0x90) + temp_val * *(context + 0x88);
+    float item_8 = temp_2 * *(context + 0x8c) + entity_4 * *(context + 0x90) + entity_1 * *(context + 0x88);
+    memcpy(0x57c110, &item_28, 0x28);
+    *param_2 = context + 0x20;
+    param_2[2] = &g_57c0f0;
+    param_2[1] = 0x57c110;
+    return context + 0x20;
 }

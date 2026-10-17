@@ -1,17 +1,17 @@
 // Original IGI.EXE function: Physics_CheckHullCollision (VA 0x00502130; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CheckHullCollision.h"
-void* Physics_CheckHullCollision(int32_t a1)
+void* Physics_CheckHullCollision(int32_t context)
 
 {
-    void* valA = Script_ExecuteLevelScript_4(a1);
-    int32_t srcS = 0;
+    void* data_val = Script_ExecuteLevelScript_4(context);
+    int32_t source_val = 0;
 
-    if (!valA)
-        return valA;
+    if (!data_val)
+        return data_val;
 
-    for (int32_t* i = QTask_DeleteTask_2(valA, g_a7a620); i;
+    for (int32_t* i = QTask_DeleteTask_2(data_val, g_a7a620); i;
             i = QTask_TriggerEvent_2(i, g_a7a620))
-        srcS += 1;
+        source_val += 1;
 
-    return srcS;
+    return source_val;
 }

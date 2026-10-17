@@ -1,71 +1,71 @@
 // Original IGI.EXE function: Menu_RequestScreen_13 (VA 0x00423AC0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_RequestScreen_13.h"
-int32_t Menu_RequestScreen_13(int32_t a1, float a2)
+int32_t Menu_RequestScreen_13(int32_t context, float param_2)
 
 {
-    int32_t dstD = *(a1 + 0x354);
-    int32_t result = dstD + 0xa;
-    int32_t v_1c = (g_c28b48 >> 1) + *(a1 + 0x24) - 0xf0;
+    int32_t dest_val = *(context + 0x354);
+    int32_t result = dest_val + 0xa;
+    int32_t item_1c = (g_c28b48 >> 1) + *(context + 0x24) - 0xf0;
     int32_t result_1 = result;
 
-    if (dstD < result)
+    if (dest_val < result)
     {
-        int32_t* objC2 = a1 + (dstD << 2) + 0x154;
-        int32_t* v_18_1 = objC2;
-        float v_10_1 = a2 * 0.5f;
-        long double x87_r7_3 = (g_c28b44 >> 1) + *(a1 + 0x20) - 0x140;
-        a1 = x87_r7_3;
+        int32_t* entity_2 = context + (dest_val << 2) + 0x154;
+        int32_t* item_18_1 = entity_2;
+        float item_10_1 = param_2 * 0.5f;
+        long double fpu_val_7_3 = (g_c28b44 >> 1) + *(context + 0x20) - 0x140;
+        context = fpu_val_7_3;
 
         while (true)
         {
-            int32_t* valA4 = objC2[-0x40];
-            int32_t* srcS1 = *objC2;
+            int32_t* data_4 = entity_2[-0x40];
+            int32_t* source_1 = *entity_2;
 
-            if (valA4 && srcS1)
+            if (data_4 && source_1)
             {
-                int32_t tmpD2 = valA4[9];
-                valA4[5] = 0;
-                valA4[7] = 0;
-                valA4[1] = a1 + 4f;
-                valA4[6] = 0x43000000;
-                valA4[9] = tmpD2 | 0x80000;
-                valA4[4] = a2;
-                long double x87_r7_8 = v_1c + 5f;
-                valA4[2] = x87_r7_8;
-                Sys_CloseFileStream_18(valA4);
-                srcS1[9] |= 0x80000;
-                srcS1[5] = 0x43000000;
-                srcS1[6] = 0x42aa0000;
-                srcS1[1] = a1 + 214f;
-                srcS1[7] = 0;
-                srcS1[4] = a2;
-                srcS1[2] = x87_r7_8;
-                Sys_CloseFileStream_18(srcS1);
+                int32_t temp_2 = data_4[9];
+                data_4[5] = 0;
+                data_4[7] = 0;
+                data_4[1] = context + 4.0f;
+                data_4[6] = 0x43000000;
+                data_4[9] = temp_2 | 0x80000;
+                data_4[4] = param_2;
+                long double fpu_val_7_8 = item_1c + 5.0f;
+                data_4[2] = fpu_val_7_8;
+                Sys_CloseFileStream_18(data_4);
+                source_1[9] |= 0x80000;
+                source_1[5] = 0x43000000;
+                source_1[6] = 0x42aa0000;
+                source_1[1] = context + 214.0f;
+                source_1[7] = 0;
+                source_1[4] = param_2;
+                source_1[2] = fpu_val_7_8;
+                Sys_CloseFileStream_18(source_1);
             }
 
-            float v_14_1 = 16f;
-            int32_t ctxB2 = dstD & 1;
+            float item_14_1 = 16.0f;
+            int32_t context_2 = dest_val & 1;
 
-            if (!ctxB2)
-                v_14_1 = 32f;
+            if (!context_2)
+                item_14_1 = 32.0f;
 
-            float v_c_2 = v_1c;
-            Sys_ExecuteBytecode_14(a1, v_c_2, 210f, 20f, 0f, v_14_1, 0f, v_10_1, 0x80000, 0);
-            float v_10_2 = 32f;
+            float item_c_2 = item_1c;
+            Sys_ExecuteBytecode_14(context, item_c_2, 210.0f, 20.0f, 0.0f, item_14_1, 0.0f, item_10_1, 0x80000, 0);
+            float item_10_2 = 32.0f;
 
-            if (!ctxB2)
-                v_10_2 = 48f;
+            if (!context_2)
+                item_10_2 = 48.0f;
 
-            Sys_ExecuteBytecode_14(x87_r7_3 + 210f, v_c_2, 150f, 20f, 0f, v_10_2, 0f, v_10_1, 0x80000, 0);
+            Sys_ExecuteBytecode_14(fpu_val_7_3 + 210.0f, item_c_2, 150.0f, 20.0f, 0.0f, item_10_2, 0.0f, item_10_1, 0x80000, 0);
             result = result_1;
-            dstD += 1;
-            v_1c += 0x14;
-            v_18_1 = &v_18_1[1];
+            dest_val += 1;
+            item_1c += 0x14;
+            item_18_1 = &item_18_1[1];
 
-            if (dstD >= result)
+            if (dest_val >= result)
                 break;
 
-            objC2 = v_18_1;
+            entity_2 = item_18_1;
         }
     }
 

@@ -1,225 +1,225 @@
 // Original IGI.EXE function: Vehicle_CheckFlightDynamics_3 (VA 0x00434310; static CFG gate PASS, CFG score 0.949).
 #include "Vehicle_CheckFlightDynamics_3.h"
-int32_t* Vehicle_CheckFlightDynamics_3(double* a1)
+int32_t* Vehicle_CheckFlightDynamics_3(double* context)
 
 {
-    int32_t* srcS = nullptr;
-    int32_t* v_318 = nullptr;
-    int16_t valA = Vehicle_UpdateRudder_5();
-    int32_t* i = QTask_DeleteTask_2(a1[0x1d], valA);
+    int32_t* source_val = nullptr;
+    int32_t* item_318 = nullptr;
+    int16_t data_val = Vehicle_UpdateRudder_5();
+    int32_t* i = QTask_DeleteTask_2(context[0x1d], data_val);
     int32_t* i_3 = i;
     int32_t* i_2 = nullptr;
-    int32_t v_310 = 0xffffffff;
-    int32_t v_30c = 0xffefffff;
+    int32_t item_310 = 0xffffffff;
+    int32_t item_30c = 0xffefffff;
 
     if (i_3)
     {
-        void v_278;
-        int32_t* v_328_1 = &v_278;
-        void v_1f8;
-        float* dstD1 = &v_1f8;
+        void item_278;
+        int32_t* item_328_1 = &item_278;
+        void item_1f8;
+        float* dest_1 = &item_1f8;
         i = nullptr;
-        int32_t v_304;
-        int32_t* v_320_1 = &v_304;
-        float* v_324_1 = &v_1f8;
+        int32_t item_304;
+        int32_t* item_320_1 = &item_304;
+        float* item_324_1 = &item_1f8;
         int32_t* i_1 = nullptr;
-        double* v_344;
+        double* item_344;
 
         for (; i < 0x60; i = i_1)
         {
-            int32_t v_33c_1 = 0;
-            int32_t saved_dst;
-            v_344 = &saved_dst + i + 0x60;
-            WeaponType_UpdateAnim(v_344, i_3, v_33c_1);
+            int32_t item_33c_1 = 0;
+            int32_t saved_target;
+            item_344 = &saved_target + i + 0x60;
+            WeaponType_UpdateAnim(item_344, i_3, item_33c_1);
             int32_t* i_4 = i_1;
-            *dstD1 = *(&saved_dst + i + 0x60);
-            void v_2d0;
-            dstD1[1] = *(&v_2d0 + i_4);
-            void v_2c8;
-            long double x87_r7_3 = *(&v_2c8 + i_4);
-            dstD1[2] = x87_r7_3;
-            float v_2e8_1 = x87_r7_3 * i_3[0x23] + i_3[0x20] * dstD1[1] + i_3[0x1d] * *dstD1;
-            long double x87_r7_5 = x87_r7_3 * i_3[0x24] + i_3[0x21] * dstD1[1];
-            long double x87_r6_12 = i_3[0x1e] * *dstD1;
-            *dstD1 = x87_r7_3 * i_3[0x22] + i_3[0x1f] * dstD1[1] + i_3[0x1c] * *dstD1;
-            dstD1[1] = v_2e8_1;
-            long double x87_r7_7 = *(i_3 + 0xf0);
-            dstD1[2] = x87_r7_5 + x87_r6_12;
-            long double x87_r7_8 = x87_r7_7 + *dstD1;
-            *v_328_1 = 0;
-            v_328_1[1] = 0xc0c00000;
-            *dstD1 = x87_r7_8;
-            v_318 += 1;
-            dstD1[1] = *(i_3 + 0xf8) + dstD1[1];
-            dstD1[2] = *(i_3 + 0x100) + dstD1[2];
-            *(&saved_dst + i + 0x60) = *(i_3 + 0x20) + *(&saved_dst + i + 0x60);
-            *(&v_2d0 + i_4) = *(i_3 + 0x28) + *(&v_2d0 + i_4);
-            *(&v_2c8 + i_4) = *(i_3 + 0x30) + *(&v_2c8 + i_4) + 8192.0;
-            memcpy(&v_344 + i_4 + 0xec, &saved_dst + i + 0x60, 0x18);
-            void v_248;
-            *(&v_248 + i_4) = *(&v_248 + i_4) - 8192.0;
-            *v_320_1 = i_3;
-            v_324_1 = &v_324_1[3];
-            v_328_1 = &v_328_1[2];
+            *dest_1 = *(&saved_target + i + 0x60);
+            void item_2d0;
+            dest_1[1] = *(&item_2d0 + i_4);
+            void item_2c8;
+            long double fpu_val_7_3 = *(&item_2c8 + i_4);
+            dest_1[2] = fpu_val_7_3;
+            float item_2e8_1 = fpu_val_7_3 * i_3[0x23] + i_3[0x20] * dest_1[1] + i_3[0x1d] * *dest_1;
+            long double fpu_val_7_5 = fpu_val_7_3 * i_3[0x24] + i_3[0x21] * dest_1[1];
+            long double fpu_val_6_12 = i_3[0x1e] * *dest_1;
+            *dest_1 = fpu_val_7_3 * i_3[0x22] + i_3[0x1f] * dest_1[1] + i_3[0x1c] * *dest_1;
+            dest_1[1] = item_2e8_1;
+            long double fpu_val_7_7 = *(i_3 + 0xf0);
+            dest_1[2] = fpu_val_7_5 + fpu_val_6_12;
+            long double fpu_val_7_8 = fpu_val_7_7 + *dest_1;
+            *item_328_1 = 0;
+            item_328_1[1] = 0xc0c00000;
+            *dest_1 = fpu_val_7_8;
+            item_318 += 1;
+            dest_1[1] = *(i_3 + 0xf8) + dest_1[1];
+            dest_1[2] = *(i_3 + 0x100) + dest_1[2];
+            *(&saved_target + i + 0x60) = *(i_3 + 0x20) + *(&saved_target + i + 0x60);
+            *(&item_2d0 + i_4) = *(i_3 + 0x28) + *(&item_2d0 + i_4);
+            *(&item_2c8 + i_4) = *(i_3 + 0x30) + *(&item_2c8 + i_4) + 8192.0;
+            memcpy(&item_344 + i_4 + 0xec, &saved_target + i + 0x60, 0x18);
+            void item_248;
+            *(&item_248 + i_4) = *(&item_248 + i_4) - 8192.0;
+            *item_320_1 = i_3;
+            item_324_1 = &item_324_1[3];
+            item_328_1 = &item_328_1[2];
             i_1 = &i_4[6];
-            v_320_1 = &v_320_1[1];
+            item_320_1 = &item_320_1[1];
             i = QTask_TriggerEvent_2(i_3, Vehicle_UpdateRudder_5());
-            srcS = v_318;
+            source_val = item_318;
             i_3 = i;
 
             if (!i_3)
                 break;
 
-            dstD1 = v_324_1;
+            dest_1 = item_324_1;
         }
 
-        if (srcS)
+        if (source_val)
         {
-            double* dstD5 = a1;
-            int32_t v_33c_2 = 0xffffffff;
-            void v_2e0;
-            double* v_340_2 = &v_2e0;
-            v_344 = 0xc;
-            double* v_2dc_1 = dstD5;
-            double v_2d8;
-            double v_258[0x2];
-            void v_1c8;
-            i = DynObj_FindSymbol_11(Level_StartMission_4(), &v_1c8, &v_2d8, &v_258, srcS, v_344,
-                v_340_2, v_33c_2);
+            double* dest_5 = context;
+            int32_t item_33c_2 = 0xffffffff;
+            void item_2e0;
+            double* item_340_2 = &item_2e0;
+            item_344 = 0xc;
+            double* item_2dc_1 = dest_5;
+            double item_2d8;
+            double item_258[0x2];
+            void item_1c8;
+            i = DynObj_FindSymbol_11(Level_StartMission_4(), &item_1c8, &item_2d8, &item_258, source_val, item_344,
+                item_340_2, item_33c_2);
 
-            if (srcS > 0)
+            if (source_val > 0)
             {
-                void v_168;
-                double* ctxB = &v_168;
-                int32_t* v_328_2 = &v_1f8;
-                double* objC5 = &v_278;
-                double* v_320_2 = &v_278;
-                int32_t* v_324_2 = srcS;
-                double v_2f4;
-                bool cond_1_1;
+                void item_168;
+                double* context_val = &item_168;
+                int32_t* item_328_2 = &item_1f8;
+                double* entity_5 = &item_278;
+                double* item_320_2 = &item_278;
+                int32_t* item_324_2 = source_val;
+                double item_2f4;
+                bool flag_1_1;
 
                 do
                 {
-                    if (ctxB[-1])
+                    if (context_val[-1])
                     {
-                        long double x87_r7_22 = *objC5;
+                        long double fpu_val_7_22 = *entity_5;
                         long double f1_1 = 0.0;
-                        x87_r7_22 - f1_1;
-                        long double x87_r7_23 = *objC5;
+                        fpu_val_7_22 - f1_1;
+                        long double fpu_val_7_23 = *entity_5;
 
-                        if (*(&((x87_r7_22 < f1_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r7_22, f1_1) ? 1 : 0) << 0xa
-                                | (x87_r7_22 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
-                            x87_r7_23 = -(x87_r7_23);
+                        if (*(&((fpu_val_7_22 < f1_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_7_22, f1_1) ? 1 : 0) << 0xa
+                                | (fpu_val_7_22 == f1_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+                            fpu_val_7_23 = -(fpu_val_7_23);
 
-                        long double f2_1 = *ctxB;
-                        x87_r7_23 - f2_1;
+                        long double f2_1 = *context_val;
+                        fpu_val_7_23 - f2_1;
 
-                        if (!(*(&((x87_r7_23 < f2_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r7_23, f2_1) ? 1 : 0) << 0xa
-                            | (x87_r7_23 == f2_1 ? 1 : 0) << 0xe) + 1) & 1))
+                        if (!(*(&((fpu_val_7_23 < f2_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_7_23, f2_1) ? 1 : 0) << 0xa
+                            | (fpu_val_7_23 == f2_1 ? 1 : 0) << 0xe) + 1) & 1))
                         {
-                            long double x87_r7_25 = 8192.0 - *ctxB;
-                            long double x87_r6_13 = *ctxB;
+                            long double fpu_val_7_25 = 8192.0 - *context_val;
+                            long double fpu_val_6_13 = *context_val;
                             long double f3_1 = 7577.6000000000004;
-                            x87_r6_13 - f3_1;
-                            v_304 = 0;
-                            int32_t v_300_1 = 0;
-                            double* srcS4;
+                            fpu_val_6_13 - f3_1;
+                            item_304 = 0;
+                            int32_t item_300_1 = 0;
+                            double* source_4;
 
-                            if (!(*(&((x87_r6_13 < f3_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r6_13, f3_1) ? 1 : 0) << 0xa
-                                | (x87_r6_13 == f3_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                            if (!(*(&((fpu_val_6_13 < f3_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_6_13, f3_1) ? 1 : 0) << 0xa
+                                | (fpu_val_6_13 == f3_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
                             {
-                                srcS4 = a1;
-                                float v_2fc_2 = x87_r7_25 * 0.0016276041666666667 *
-                                    *(*(a1 + 0x1b4) + 8) * 17.8403549f;
+                                source_4 = context;
+                                float item_2fc_2 = fpu_val_7_25 * 0.0016276041666666667 *
+                                    *(*(context + 0x1b4) + 8) * 17.8403549f;
                             }
                             else
                             {
-                                srcS4 = a1;
-                                float v_2fc_1 = ((7577.6001f - *ctxB) * 0.0001319679f + 1f) *
-                                    *(*(srcS4 + 0x1b4) + 8) * 17.8403549f;
-                                long double x87_r7_34 = 7577.6000000000004 - *ctxB;
-                                long double x87_r6_14 = v_310;
-                                x87_r6_14 - x87_r7_34;
+                                source_4 = context;
+                                float item_2fc_1 = ((7577.6001f - *context_val) * 0.0001319679f + 1.0f) *
+                                    *(*(source_4 + 0x1b4) + 8) * 17.8403549f;
+                                long double fpu_val_7_34 = 7577.6000000000004 - *context_val;
+                                long double fpu_val_6_14 = item_310;
+                                fpu_val_6_14 - fpu_val_7_34;
 
-                                if (!(*(&((x87_r6_14 < x87_r7_34 ? 1 : 0) << 8
-                                        | (FCMP_UO(x87_r6_14, x87_r7_34) ? 1 : 0) << 0xa
-                                        | (x87_r6_14 == x87_r7_34 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                                if (!(*(&((fpu_val_6_14 < fpu_val_7_34 ? 1 : 0) << 8
+                                        | (FCMP_UO(fpu_val_6_14, fpu_val_7_34) ? 1 : 0) << 0xa
+                                        | (fpu_val_6_14 == fpu_val_7_34 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
                                     i_2 = 1;
                                 else
                                 {
-                                    v_310 = x87_r7_34;
+                                    item_310 = fpu_val_7_34;
                                     i_2 = 1;
                                 }
                             }
 
-                            int32_t v_2f8_1 = *v_328_2;
-                            v_2f4 = v_328_2[1];
-                            *(&v_2f4 + 4) = v_328_2[2];
-                            ForceAccumulator_Add(&dstD5[0x1e], &v_304);
-                            objC5 = v_320_2;
-                            dstD5[0x21] = dstD5[0x21] * srcS4[0xe4] * 0.800000012f;
-                            *(dstD5 + 0x10c) = *(dstD5 + 0x10c) * srcS4[0xe4] * 0.800000012f;
-                            dstD5[0x24] = dstD5[0x24] * 0.980000019f;
-                            *(dstD5 + 0x124) = *(dstD5 + 0x124) * 0.980000019f;
-                            dstD5[0x25] = dstD5[0x25] * 0.980000019f;
-                            dstD5 = a1;
+                            int32_t item_2f8_1 = *item_328_2;
+                            item_2f4 = item_328_2[1];
+                            *(&item_2f4 + 4) = item_328_2[2];
+                            ForceAccumulator_Add(&dest_5[0x1e], &item_304);
+                            entity_5 = item_320_2;
+                            dest_5[0x21] = dest_5[0x21] * source_4[0xe4] * 0.800000012f;
+                            *(dest_5 + 0x10c) = *(dest_5 + 0x10c) * source_4[0xe4] * 0.800000012f;
+                            dest_5[0x24] = dest_5[0x24] * 0.980000019f;
+                            *(dest_5 + 0x124) = *(dest_5 + 0x124) * 0.980000019f;
+                            dest_5[0x25] = dest_5[0x25] * 0.980000019f;
+                            dest_5 = context;
                         }
                     }
 
-                    objC5 = &objC5[1];
-                    ctxB = &ctxB[0xe];
-                    cond_1_1 = v_324_2 != 1;
-                    v_320_2 = objC5;
-                    v_328_2 = &v_328_2[3];
-                    v_324_2 -= 1;
-                } while (cond_1_1);
+                    entity_5 = &entity_5[1];
+                    context_val = &context_val[0xe];
+                    flag_1_1 = item_324_2 != 1;
+                    item_320_2 = entity_5;
+                    item_328_2 = &item_328_2[3];
+                    item_324_2 -= 1;
+                } while (flag_1_1);
                 i = i_2;
 
                 if (i)
                 {
-                    memcpy(&v_304, &dstD5[4], 0x18);
-                    double v_2f4_1 = v_2f4 + v_310;
-                    long double x87_r7_53 = *(a1 + 0x9c);
-                    long double x87_r6_15 = a1[0x14];
-                    x87_r6_15 - x87_r7_53;
-                    long double x87_r7_54;
+                    memcpy(&item_304, &dest_5[4], 0x18);
+                    double item_2f4_1 = item_2f4 + item_310;
+                    long double fpu_val_7_53 = *(context + 0x9c);
+                    long double fpu_val_6_15 = context[0x14];
+                    fpu_val_6_15 - fpu_val_7_53;
+                    long double fpu_val_7_54;
 
-                    if (!(*(&((x87_r6_15 < x87_r7_53 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r6_15, x87_r7_53) ? 1 : 0) << 0xa
-                            | (x87_r6_15 == x87_r7_53 ? 1 : 0) << 0xe) + 1) & 1))
-                        x87_r7_54 = a1[0x14];
+                    if (!(*(&((fpu_val_6_15 < fpu_val_7_53 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_6_15, fpu_val_7_53) ? 1 : 0) << 0xa
+                            | (fpu_val_6_15 == fpu_val_7_53 ? 1 : 0) << 0xe) + 1) & 1))
+                        fpu_val_7_54 = context[0x14];
                     else
-                        x87_r7_54 = *(a1 + 0x9c);
+                        fpu_val_7_54 = *(context + 0x9c);
 
-                    long double x87_r6_16 = a1[0x13];
-                    x87_r6_16 - x87_r7_54;
-                    long double x87_r7_56;
+                    long double fpu_val_6_16 = context[0x13];
+                    fpu_val_6_16 - fpu_val_7_54;
+                    long double fpu_val_7_56;
 
-                    if (*(&((x87_r6_16 < x87_r7_54 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r6_16, x87_r7_54) ? 1 : 0) << 0xa
-                        | (x87_r6_16 == x87_r7_54 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+                    if (*(&((fpu_val_6_16 < fpu_val_7_54 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_6_16, fpu_val_7_54) ? 1 : 0) << 0xa
+                        | (fpu_val_6_16 == fpu_val_7_54 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
                     {
-                        long double x87_r7_57 = *(a1 + 0x9c);
-                        long double x87_r6_17 = a1[0x14];
-                        x87_r6_17 - x87_r7_57;
+                        long double fpu_val_7_57 = *(context + 0x9c);
+                        long double fpu_val_6_17 = context[0x14];
+                        fpu_val_6_17 - fpu_val_7_57;
 
-                        if (!(*(&((x87_r6_17 < x87_r7_57 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r6_17, x87_r7_57) ? 1 : 0) << 0xa
-                                | (x87_r6_17 == x87_r7_57 ? 1 : 0) << 0xe) + 1) & 1))
-                            x87_r7_56 = a1[0x14];
+                        if (!(*(&((fpu_val_6_17 < fpu_val_7_57 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_6_17, fpu_val_7_57) ? 1 : 0) << 0xa
+                                | (fpu_val_6_17 == fpu_val_7_57 ? 1 : 0) << 0xe) + 1) & 1))
+                            fpu_val_7_56 = context[0x14];
                         else
-                            x87_r7_56 = *(a1 + 0x9c);
+                            fpu_val_7_56 = *(context + 0x9c);
                     }
                     else
-                        x87_r7_56 = a1[0x13];
+                        fpu_val_7_56 = context[0x13];
 
-                    float v_33c_5 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_56;
-                    double* v_340_4 = &v_304;
-                    v_344 = a1;
-                    return WorldObject_CommitTransform(Level_StartMission_4(), v_344, v_340_4, v_33c_5);
+                    float item_33c_5 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_56;
+                    double* item_340_4 = &item_304;
+                    item_344 = context;
+                    return WorldObject_CommitTransform(Level_StartMission_4(), item_344, item_340_4, item_33c_5);
                 }
             }
         }

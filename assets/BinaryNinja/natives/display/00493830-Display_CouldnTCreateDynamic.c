@@ -3,21 +3,21 @@
 int32_t Display_CouldnTCreateDynamic()
 
 {
-    int32_t valA = g_bcad74;
-    int32_t valA1 = -(valA);
-    int32_t v_410 = ((valA1 - valA1) & 0xfffff800) + 0x10800;
-    int32_t* valA5 = g_5ca110;
-    int32_t v_414 = 0x10;
-    int32_t v_40c = 0x112;
-    int32_t v_408 = 0xfa0;
-    int32_t valA6 = (*(*valA5 + 0x14))(valA5, &v_414, &g_bcad90, 0);
-    void v_400;
+    int32_t data_val = g_bcad74;
+    int32_t data_1 = -(data_val);
+    int32_t item_410 = ((data_1 - data_1) & 0xfffff800) + 0x10800;
+    int32_t* data_5 = g_5ca110;
+    int32_t item_414 = 0x10;
+    int32_t item_40c = 0x112;
+    int32_t item_408 = 0xfa0;
+    int32_t data_6 = (*(*data_5 + 0x14))(data_5, &item_414, &g_bcad90, 0);
+    void item_400;
 
-    if (valA6)
+    if (data_6)
     {
-        Game_DataSymbolLoad(&v_400, "Couldn't create dynamic vertex buffer");
-        int32_t v_42c_1 = DDERR_GENERIC(valA6);
-        void* v_430 = &v_400;
+        Game_DataSymbolLoad(&item_400, "Couldn't create dynamic vertex buffer");
+        int32_t item_42c_1 = DDERR_GENERIC(data_6);
+        void* item_430 = &item_400;
         Error_Show("%s\n\nDirectX error message: %s");
 
         while (true)
@@ -26,21 +26,21 @@ int32_t Display_CouldnTCreateDynamic()
         return;
     }
 
-    int32_t tmpD = g_bcad74;
-    int32_t* valA8 = g_5ca110;
-    int32_t tmpD1 = -(tmpD);
+    int32_t temp_val = g_bcad74;
+    int32_t* data_8 = g_5ca110;
+    int32_t temp_1 = -(temp_val);
     g_bcad94 = 0xfa0;
-    int32_t v_410_1 = ((tmpD1 - tmpD1) & 0xfffff800) + 0x10800;
-    v_414 = 0x10;
-    int32_t v_40c_1 = 0x142;
-    int32_t v_408_1 = 0x3e8;
-    int32_t valA9 = (*(*valA8 + 0x14))(valA8, &v_414, &g_bcad80, 0);
+    int32_t item_410_1 = ((temp_1 - temp_1) & 0xfffff800) + 0x10800;
+    item_414 = 0x10;
+    int32_t item_40c_1 = 0x142;
+    int32_t item_408_1 = 0x3e8;
+    int32_t data_9 = (*(*data_8 + 0x14))(data_8, &item_414, &g_bcad80, 0);
 
-    if (valA9)
+    if (data_9)
     {
-        Game_DataSymbolLoad(&v_400, "Couldn't create dynamic vertex buffer");
-        int32_t v_42c_3 = DDERR_GENERIC(valA9);
-        void* v_430_1 = &v_400;
+        Game_DataSymbolLoad(&item_400, "Couldn't create dynamic vertex buffer");
+        int32_t item_42c_3 = DDERR_GENERIC(data_9);
+        void* item_430_1 = &item_400;
         Error_Show("%s\n\nDirectX error message: %s");
 
         while (true)
@@ -49,37 +49,37 @@ int32_t Display_CouldnTCreateDynamic()
         return;
     }
 
-    int32_t tmpD5 = g_bcad74;
-    int32_t* valA11 = g_5ca110;
-    int32_t tmpD6 = -(tmpD5);
+    int32_t temp_5 = g_bcad74;
+    int32_t* data_11 = g_5ca110;
+    int32_t temp_6 = -(temp_5);
     g_bcad84 = 0x3e8;
-    v_414 = 0x10;
-    int32_t v_410_2 = ((tmpD6 - tmpD6) & 0xfffff800) + 0x10800;
-    int32_t v_40c_2 = 0x144;
-    int32_t v_408_2 = 0x3e8;
-    int32_t valA12 = (*(*valA11 + 0x14))(valA11, &v_414, &g_bcad00, 0);
+    item_414 = 0x10;
+    int32_t item_410_2 = ((temp_6 - temp_6) & 0xfffff800) + 0x10800;
+    int32_t item_40c_2 = 0x144;
+    int32_t item_408_2 = 0x3e8;
+    int32_t data_12 = (*(*data_11 + 0x14))(data_11, &item_414, &g_bcad00, 0);
 
-    if (!valA12)
+    if (!data_12)
     {
-        int32_t* valA14 = g_bcad00;
+        int32_t* data_14 = g_bcad00;
         g_bcad04 = 0x3e8;
-        (*(*valA14 + 4))(valA14);
-        int32_t* valA15 = g_bcad00;
-        (*(*valA15 + 8))(valA15);
-        int32_t* valA16 = g_bcad00;
-        void v_404;
-        (*(*valA16 + 0xc))(valA16, 0, &v_404, 0);
-        int32_t* valA17 = g_bcad00;
-        (*(*valA17 + 4))(valA17);
-        int32_t* valA18 = g_bcad00;
-        (*(*valA18 + 8))(valA18);
-        int32_t* valA19 = g_bcad00;
-        return (*(*valA19 + 0x10))(valA19);
+        (*(*data_14 + 4))(data_14);
+        int32_t* data_15 = g_bcad00;
+        (*(*data_15 + 8))(data_15);
+        int32_t* data_16 = g_bcad00;
+        void item_404;
+        (*(*data_16 + 0xc))(data_16, 0, &item_404, 0);
+        int32_t* data_17 = g_bcad00;
+        (*(*data_17 + 4))(data_17);
+        int32_t* data_18 = g_bcad00;
+        (*(*data_18 + 8))(data_18);
+        int32_t* data_19 = g_bcad00;
+        return (*(*data_19 + 0x10))(data_19);
     }
 
-    Game_DataSymbolLoad(&v_400, "Couldn't create dynamic vertex buffer");
-    int32_t v_42c_5 = DDERR_GENERIC(valA12);
-    void* v_430_2 = &v_400;
+    Game_DataSymbolLoad(&item_400, "Couldn't create dynamic vertex buffer");
+    int32_t item_42c_5 = DDERR_GENERIC(data_12);
+    void* item_430_2 = &item_400;
     Error_Show("%s\n\nDirectX error message: %s");
 
     while (true)

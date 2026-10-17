@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004BD9E0 Sys_DispatchOpcode_29 | gate PASS | openigi False */
-void * Sys_DispatchOpcode_29(void * a1);
+void * Sys_DispatchOpcode_29(void * context);

@@ -1,51 +1,51 @@
 // Original IGI.EXE function: DDERR_GENERIC (VA 0x00492BE0; static CFG gate PASS, CFG score 1.000).
 #include "DDERR_GENERIC.h"
-int32_t DDERR_GENERIC(int32_t a1)
+int32_t DDERR_GENERIC(int32_t context)
 
 {
-    if (a1 <= 0x8876023d)
+    if (context <= 0x8876023d)
     {
-        if (a1 == 0x8876023d)
+        if (context == 0x8876023d)
             return "DDERR_NOPALETTEHW";
 
-        if (a1 <= 0x88760140)
+        if (context <= 0x88760140)
         {
-            if (a1 == 0x88760140)
+            if (context == 0x88760140)
                 return "DDERR_NOT8BITCOLOR";
 
-            if (a1 <= 0x887600aa)
+            if (context <= 0x887600aa)
             {
-                if (a1 == 0x887600aa)
+                if (context == 0x887600aa)
                     return "DDERR_NO3D";
 
-                if (a1 <= 0x8876005a)
+                if (context <= 0x8876005a)
                 {
-                    if (a1 == 0x8876005a)
+                    if (context == 0x8876005a)
                         return "DDERR_HEIGHTALIGN";
 
-                    if (a1 <= 0x88760005)
+                    if (context <= 0x88760005)
                     {
-                        if (a1 == 0x88760005)
+                        if (context == 0x88760005)
                             return "DDERR_ALREADYINITIALIZED";
 
-                        if (a1 == 0x8007000e)
+                        if (context == 0x8007000e)
                             return "DDERR_OUTOFMEMORY";
 
-                        if (a1 == 0x80004001)
+                        if (context == 0x80004001)
                             return "DDERR_UNSUPPORTED";
 
-                        if (a1 == 0x80004005)
+                        if (context == 0x80004005)
                             return "DDERR_GENERIC";
 
-                        if (a1 == 0x80070057)
+                        if (context == 0x80070057)
                             return "DDERR_INVALIDPARAMS";
                     }
-                    else if (a1 + 0x7789fff6 <= 0x2d)
+                    else if (context + 0x7789fff6 <= 0x2d)
                     {
-                        int32_t objC1 = 0;
-                        objC1 = *(a1 + 0x77d33082);
+                        int32_t entity_1 = 0;
+                        entity_1 = *(context + 0x77d33082);
 
-                        switch (objC1)
+                        switch (entity_1)
                         {
                             case 0:
                             {
@@ -70,12 +70,12 @@ int32_t DDERR_GENERIC(int32_t a1)
                         }
                     }
                 }
-                else if (a1 + 0x7789ffa1 <= 0x41)
+                else if (context + 0x7789ffa1 <= 0x41)
                 {
-                    int32_t tmpD1 = 0;
-                    tmpD1 = *(a1 + 0x77d33081);
+                    int32_t temp_1 = 0;
+                    temp_1 = *(context + 0x77d33081);
 
-                    switch (tmpD1)
+                    switch (temp_1)
                     {
                         case 0:
                         {
@@ -120,12 +120,12 @@ int32_t DDERR_GENERIC(int32_t a1)
                     }
                 }
             }
-            else if (a1 + 0x7789ff4c <= 0x89)
+            else if (context + 0x7789ff4c <= 0x89)
             {
-                int32_t objC2 = 0;
-                objC2 = *(a1 + 0x77d330bc);
+                int32_t entity_2 = 0;
+                entity_2 = *(context + 0x77d330bc);
 
-                switch (objC2)
+                switch (entity_2)
                 {
                     case 0:
                     {
@@ -220,12 +220,12 @@ int32_t DDERR_GENERIC(int32_t a1)
                 }
             }
         }
-        else if (a1 + 0x7789feb6 <= 0xf2)
+        else if (context + 0x7789feb6 <= 0xf2)
         {
-            int32_t tmpD2 = 0;
-            tmpD2 = *(a1 + 0x77d3314a);
+            int32_t temp_2 = 0;
+            temp_2 = *(context + 0x77d3314a);
 
-            switch (tmpD2)
+            switch (temp_2)
             {
                 case 0:
                 {
@@ -415,12 +415,12 @@ int32_t DDERR_GENERIC(int32_t a1)
             }
         }
     }
-    else if (a1 + 0x7789fdc2 <= 0xc8)
+    else if (context + 0x7789fdc2 <= 0xc8)
     {
-        int32_t objC3 = 0;
-        objC3 = *(a1 + 0x77d33276);
+        int32_t entity_3 = 0;
+        entity_3 = *(context + 0x77d33276);
 
-        switch (objC3)
+        switch (entity_3)
         {
             case 0:
             {

@@ -1,38 +1,38 @@
 // Original IGI.EXE function: WeaponType_UpdateAnim (VA 0x00414E20; static CFG gate PASS, CFG score 0.963).
 #include "WeaponType_UpdateAnim.h"
-double* WeaponType_UpdateAnim(double* a1, double* a2, int32_t a3)
+double* WeaponType_UpdateAnim(double* context, double* param_2, int32_t param_3)
 
 {
-    int32_t valA = DynObj_LookupHashItem_5();
-    int16_t v_c = valA;
-    valA = *(a2 + 0x1c);
+    int32_t data_val = DynObj_LookupHashItem_5();
+    int16_t item_c = data_val;
+    data_val = *(param_2 + 0x1c);
 
-    if (!TaskType_IsDerivedFrom(valA, v_c))
+    if (!TaskType_IsDerivedFrom(data_val, item_c))
     {
-        int32_t valA5 = Render_DrawRigidMesh_12();
-        int16_t v_c_3 = valA5;
-        valA5 = *(a2 + 0x1c);
+        int32_t data_5 = Render_DrawRigidMesh_12();
+        int16_t item_c_3 = data_5;
+        data_5 = *(param_2 + 0x1c);
 
-        if (TaskType_IsDerivedFrom(valA5, v_c_3))
+        if (TaskType_IsDerivedFrom(data_5, item_c_3))
         {
-            int32_t* valA7 = *(a2 + 0x74);
+            int32_t* data_7 = *(param_2 + 0x74);
 
-            if (valA7 && Render_DrawLightmapMesh_2(*valA7) > a3)
+            if (data_7 && Render_DrawLightmapMesh_2(*data_7) > param_3)
             {
-                int32_t v_c_5 = a3;
-                double* v_10_3 = a2;
-                return Render_TransformVertices(a1);
+                int32_t item_c_5 = param_3;
+                double* item_10_3 = param_2;
+                return Render_TransformVertices(context);
             }
         }
     }
     else
     {
-        int32_t* valA2 = *(a2 + 0x6c);
+        int32_t* data_2 = *(param_2 + 0x6c);
 
-        if (valA2 && Render_DrawLightmapMesh_2(*valA2) > a3)
-            return Render_ClipMesh(a1, a2, a3);
+        if (data_2 && Render_DrawLightmapMesh_2(*data_2) > param_3)
+            return Render_ClipMesh(context, param_2, param_3);
     }
 
-    __builtin_memset(a1, 0, 0x18);
-    return a1;
+    memset(context, 0, 0x18);
+    return context;
 }

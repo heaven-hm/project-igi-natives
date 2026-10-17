@@ -1,87 +1,87 @@
 // Original IGI.EXE function: Particle_EmitParticles_2 (VA 0x00530630; static CFG gate PASS, CFG score 1.000).
 #include "Particle_EmitParticles_2.h"
-int32_t Particle_EmitParticles_2(int32_t a1, int32_t a2, int16_t a3, int16_t* a4)
+int32_t Particle_EmitParticles_2(int32_t context, int32_t param_2, int16_t param_3, int16_t* param_4)
 
 {
-    if (!a3)
+    if (!param_3)
         return 0;
 
-    int32_t valA1 = a1;
-    int32_t objC = a3;
-    valA1 = *(valA1 + 0x3004);
+    int32_t data_1 = context;
+    int32_t entity_val = param_3;
+    data_1 = *(data_1 + 0x3004);
     int32_t i_2 = 0;
-    int16_t v_c = valA1;
-    int16_t* objC4;
-    int16_t tmpD2;
+    int16_t item_c = data_1;
+    int16_t* entity_4;
+    int16_t temp_2;
     int32_t i_1;
-    int32_t srcS1;
+    int32_t source_1;
 
     while (true)
     {
-        int32_t tmpD1 = objC;
+        int32_t temp_1 = entity_val;
         int32_t i = 0;
-        int32_t objC1 = valA1;
-        int32_t ctxB1;
+        int32_t entity_1 = data_1;
+        int32_t context_1;
 
         do
         {
-            ctxB1 = 0;
-            ctxB1 = (objC1 & 0x7ff)[a2];
-            valA1 = nullptr;
-            valA1 = (tmpD1 & 0x7ff)[a2];
+            context_1 = 0;
+            context_1 = (entity_1 & 0x7ff)[param_2];
+            data_1 = nullptr;
+            data_1 = (temp_1 & 0x7ff)[param_2];
 
-            if (valA1 != ctxB1)
+            if (data_1 != context_1)
                 break;
 
             i += 1;
-            objC1 += 1;
-            tmpD1 += 1;
+            entity_1 += 1;
+            temp_1 += 1;
         } while (i < 0x82);
 
         i_1 = i_2;
 
         if (i < i_1)
-            tmpD2 = v_c;
+            temp_2 = item_c;
         else
         {
-            tmpD2 = v_c;
+            temp_2 = item_c;
             i_1 = i;
             i_2 = i_1;
-            *a4 = tmpD2;
+            *param_4 = temp_2;
 
             if (i >= 0x82)
             {
-                Particle_FadeParticles(a1, tmpD2, a3);
+                Particle_FadeParticles(context, temp_2, param_3);
                 return i;
             }
         }
 
-        int32_t objC3 = tmpD2;
+        int32_t entity_3 = temp_2;
 
-        if (valA1 - ctxB1 < 0)
+        if (data_1 - context_1 < 0)
         {
-            srcS1 = a1;
-            objC4 = srcS1 + objC3 * 6 + 2;
+            source_1 = context;
+            entity_4 = source_1 + entity_3 * 6 + 2;
         }
         else
         {
-            srcS1 = a1;
-            valA1 = objC3 * 3;
-            objC4 = srcS1 + (valA1 << 1) + 4;
+            source_1 = context;
+            data_1 = entity_3 * 3;
+            entity_4 = source_1 + (data_1 << 1) + 4;
         }
 
-        valA1 = *objC4;
+        data_1 = *entity_4;
 
-        if (!valA1)
+        if (!data_1)
             break;
 
-        v_c = valA1;
+        item_c = data_1;
     }
 
-    *objC4 = a3;
-    int16_t* objC8 = srcS1 + objC * 6;
-    *objC8 = tmpD2;
-    objC8[2] = 0;
-    objC8[1] = 0;
+    *entity_4 = param_3;
+    int16_t* entity_8 = source_1 + entity_val * 6;
+    *entity_8 = temp_2;
+    entity_8[2] = 0;
+    entity_8[1] = 0;
     return i_1;
 }

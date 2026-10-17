@@ -1,38 +1,38 @@
 // Original IGI.EXE function: Human_BaseDamage (VA 0x0045F930; static CFG gate PASS, CFG score 1.000).
 #include "Human_BaseDamage.h"
-int32_t Human_BaseDamage(void* a1, int32_t* a2)
+int32_t Human_BaseDamage(void* context, int32_t* param_2)
 
 {
-    AI_UpdateOrders_21(a1, &a2[2], *a2);
-    int16_t result = AI_CheckHearing_19(a1);
+    AI_UpdateOrders_21(context, &param_2[2], *param_2);
+    int16_t result = AI_CheckHearing_19(context);
 
     if (!result)
     {
     label_45f965:
-        result = *(a1 + 0xcf6);
+        result = *(context + 0xcf6);
 
         if (result)
         {
-            int32_t valA1 = FX_000011(a1, a2);
-            *(a1 + 0x2e8) = valA1;
-            FX_FragmentSimulate_14(a1 + 0x254, valA1);
-            long double x87_r7_2 = (a1 + 0x254)[valA1 * 2 + 4] * a2[1];
-            (a1 + 0x254)[valA1 * 2 + 3] = x87_r7_2 + (a1 + 0x254)[valA1 * 2 + 3];
-            long double x87_r7_3 = x87_r7_2 + *(a1 + 0x254);
-            *(a1 + 0x254) = x87_r7_3;
-            long double f0_1 = *(a1 + 0x258);
-            x87_r7_3 - f0_1;
-            int32_t objC1 = *(a1 + 0x2f4);
-            result = (x87_r7_3 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_3, f0_1) ? 1 : 0) << 0xa
-                | (x87_r7_3 == f0_1 ? 1 : 0) << 0xe;
+            int32_t data_1 = FX_000011(context, param_2);
+            *(context + 0x2e8) = data_1;
+            FX_FragmentSimulate_14(context + 0x254, data_1);
+            long double fpu_val_7_2 = (context + 0x254)[data_1 * 2 + 4] * param_2[1];
+            (context + 0x254)[data_1 * 2 + 3] = fpu_val_7_2 + (context + 0x254)[data_1 * 2 + 3];
+            long double fpu_val_7_3 = fpu_val_7_2 + *(context + 0x254);
+            *(context + 0x254) = fpu_val_7_3;
+            long double f0_1 = *(context + 0x258);
+            fpu_val_7_3 - f0_1;
+            int32_t entity_1 = *(context + 0x2f4);
+            result = (fpu_val_7_3 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_3, f0_1) ? 1 : 0) << 0xa
+                | (fpu_val_7_3 == f0_1 ? 1 : 0) << 0xe;
 
             if (!(*(&result + 1) & 1))
             {
-                objC1 |= 0x20000;
-                *(a1 + 0xcf5) = 1;
+                entity_1 |= 0x20000;
+                *(context + 0xcf5) = 1;
             }
 
-            *(a1 + 0x2f4) = objC1;
+            *(context + 0x2f4) = entity_1;
         }
     }
     else

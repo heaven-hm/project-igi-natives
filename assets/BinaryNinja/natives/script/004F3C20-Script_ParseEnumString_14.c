@@ -1,21 +1,21 @@
 // Original IGI.EXE function: Script_ParseEnumString_14 (VA 0x004F3C20; static CFG gate PASS, CFG score 1.000).
 #include "Script_ParseEnumString_14.h"
-int32_t Script_ParseEnumString_14(void* a1)
+int32_t Script_ParseEnumString_14(void* context)
 
 {
-    char result = *(a1 + 0x200f5);
+    char result = *(context + 0x200f5);
 
     if (!result)
         return result;
 
-    void v_c0;
-    Script_ParseEnumString_6(&v_c0, a1);
-    void* v_d0_1 = &v_c0;
-    *(a1 + 0x200f5) = 0;
-    void v_80;
-    Game_DataSymbolLoad(&v_80, "%s.isRun");
-    Game_DataSymbolRemoveThunk(&v_80);
-    void* v_e0_1 = &v_c0;
-    Game_DataSymbolLoad(&v_80, "%s.nTick");
-    return Game_DataSymbolRemoveThunk(&v_80);
+    void item_c0;
+    Script_ParseEnumString_6(&item_c0, context);
+    void* item_d0_1 = &item_c0;
+    *(context + 0x200f5) = 0;
+    void item_80;
+    Game_DataSymbolLoad(&item_80, "%s.isRun");
+    Game_DataSymbolRemoveThunk(&item_80);
+    void* item_e0_1 = &item_c0;
+    Game_DataSymbolLoad(&item_80, "%s.nTick");
+    return Game_DataSymbolRemoveThunk(&item_80);
 }

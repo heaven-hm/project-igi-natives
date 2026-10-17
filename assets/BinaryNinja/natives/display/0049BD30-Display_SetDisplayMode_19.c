@@ -12,48 +12,48 @@ int32_t Display_SetDisplayMode_19()
 
         do
         {
-            int32_t* valA = *flagP1;
-            (*(*valA + 8))(valA);
-            int32_t* valA1 = g_5ca110;
+            int32_t* data_val = *flagP1;
+            (*(*data_val + 8))(data_val);
+            int32_t* data_1 = g_5ca110;
             *flagP1 = 0;
-            (*(*valA1 + 0x14))(valA1, &flagP1[1], flagP1, 0);
-            int32_t* ctxB1 = flagP1[6];
-            int32_t* srcS1 = *ctxB1;
-            int32_t* v_c_1 = srcS1;
+            (*(*data_1 + 0x14))(data_1, &flagP1[1], flagP1, 0);
+            int32_t* context_1 = flagP1[6];
+            int32_t* source_1 = *context_1;
+            int32_t* item_c_1 = source_1;
 
-            if (srcS1)
+            if (source_1)
             {
                 while (true)
                 {
-                    int32_t* valA2 = *ctxB1[4];
-                    int32_t v_4;
+                    int32_t* data_2 = *context_1[4];
+                    int32_t item_4;
 
-                    if (!(*(*valA2 + 0xc))(valA2, 0x20, &v_4, 0))
+                    if (!(*(*data_2 + 0xc))(data_2, 0x20, &item_4, 0))
                     {
-                        int32_t valA4 = flagP1[5];
-                        int32_t dstD1 = 0;
-                        dstD1 = ctxB1[3];
-                        int32_t objC4 = 0;
-                        objC4 = *(ctxB1 + 0xe);
-                        int32_t objC5 = objC4 * valA4;
-                        int32_t srcS3;
-                        int32_t dstD4;
-                        dstD4 =
-                            memcpy(dstD1 * valA4 + v_4, ctxB1[5], objC5 & 0xfffffffc);
-                        memcpy(dstD4, srcS3, objC5 & 3);
-                        int32_t* valA7 = *ctxB1[4];
-                        (*(*valA7 + 0x10))(valA7);
-                        srcS1 = v_c_1;
+                        int32_t data_4 = flagP1[5];
+                        int32_t dest_1 = 0;
+                        dest_1 = context_1[3];
+                        int32_t entity_4 = 0;
+                        entity_4 = *(context_1 + 0xe);
+                        int32_t entity_5 = entity_4 * data_4;
+                        int32_t source_3;
+                        int32_t dest_4;
+                        dest_4 =
+                            memcpy(dest_1 * data_4 + item_4, context_1[5], entity_5 & 0xfffffffc);
+                        memcpy(dest_4, source_3, entity_5 & 3);
+                        int32_t* data_7 = *context_1[4];
+                        (*(*data_7 + 0x10))(data_7);
+                        source_1 = item_c_1;
                     }
 
-                    ctxB1 = srcS1;
-                    int32_t* srcS4 = *srcS1;
-                    v_c_1 = srcS4;
+                    context_1 = source_1;
+                    int32_t* source_4 = *source_1;
+                    item_c_1 = source_4;
 
-                    if (!srcS4)
+                    if (!source_4)
                         break;
 
-                    srcS1 = v_c_1;
+                    source_1 = item_c_1;
                 }
             }
 

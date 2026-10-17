@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004B23B0 Sys_FreeMemory_8 | gate PASS | openigi True */
-int Sys_FreeMemory_8(int* a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+int Sys_FreeMemory_8(int* context, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9);

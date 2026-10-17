@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 0051FD60 WeatherWaterSky_Invoke11 | gate PASS | openigi True */
-int32_t(float arg1, char* arg2);
+int32_t WeatherWaterSky_Invoke11(float context, char* param_2);

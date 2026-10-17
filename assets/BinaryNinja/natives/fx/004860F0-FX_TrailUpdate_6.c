@@ -1,42 +1,42 @@
 // Original IGI.EXE function: FX_TrailUpdate_6 (VA 0x004860F0; static CFG gate PASS, CFG score 1.000).
 #include "FX_TrailUpdate_6.h"
-int32_t FX_TrailUpdate_6(int32_t a1, int32_t a2, float a3, float a4)
+int32_t FX_TrailUpdate_6(int32_t context, int32_t param_2, float param_3, float param_4)
 
 {
-    float v_4 = a3;
-    float v_8 = a4;
-    int32_t tmpD = a2 * 0x40b;
-    void* srcS = a1 + (tmpD << 2);
-    int32_t* valA6 = *(a1 + (tmpD << 2) + 0x3c);
+    float item_4 = param_3;
+    float item_8 = param_4;
+    int32_t temp_val = param_2 * 0x40b;
+    void* source_val = context + (temp_val << 2);
+    int32_t* data_6 = *(context + (temp_val << 2) + 0x3c);
 
-    if (valA6 && *(srcS + 0x24) > 9)
-        Sys_ResolveSymbol_14(valA6, a3, a4, 128f, 128f, 128f, 0, 0, 0);
+    if (data_6 && *(source_val + 0x24) > 9)
+        Sys_ResolveSymbol_14(data_6, param_3, param_4, 128.0f, 128.0f, 128.0f, 0, 0, 0);
 
-    void* valA7 = *(srcS + 0x3c);
+    void* data_7 = *(source_val + 0x3c);
 
-    if (valA7)
-        a3 = Sys_CloseFileStream_17(valA7) + a3;
+    if (data_7)
+        param_3 = Sys_CloseFileStream_17(data_7) + param_3;
 
-    int32_t* srcS1 = srcS + 0x30;
+    int32_t* source_1 = source_val + 0x30;
     int32_t i_1 = 3;
-    long double x87_r7_6 = a4 + 2f;
-    a4 = x87_r7_6;
+    long double fpu_val_7_6 = param_4 + 2.0f;
+    param_4 = fpu_val_7_6;
     int32_t i;
 
     do
     {
-        *(*srcS1 + 0x14) = 0;
-        *(*srcS1 + 0x18) = 0x42f00000;
-        *(*srcS1 + 0x1c) = 0;
-        *(*srcS1 + 4) = a3 + 3f;
-        *(*srcS1 + 8) = x87_r7_6;
-        Sys_CloseFileStream_18(*srcS1);
-        long double x87_r7_7 = Sys_AllocateMemory_22(*srcS1);
-        srcS1 = &srcS1[1];
+        *(*source_1 + 0x14) = 0;
+        *(*source_1 + 0x18) = 0x42f00000;
+        *(*source_1 + 0x1c) = 0;
+        *(*source_1 + 4) = param_3 + 3.0f;
+        *(*source_1 + 8) = fpu_val_7_6;
+        Sys_CloseFileStream_18(*source_1);
+        long double fpu_val_7_7 = Sys_AllocateMemory_22(*source_1);
+        source_1 = &source_1[1];
         i = i_1;
         i_1 -= 1;
-        x87_r7_6 = x87_r7_7 + a4;
-        a4 = x87_r7_6;
+        fpu_val_7_6 = fpu_val_7_7 + param_4;
+        param_4 = fpu_val_7_6;
     } while (i != 1);
-    return FX_ExplosionSpawn_7(a1, a2, v_4, v_8, 0);
+    return FX_ExplosionSpawn_7(context, param_2, item_4, item_8, 0);
 }

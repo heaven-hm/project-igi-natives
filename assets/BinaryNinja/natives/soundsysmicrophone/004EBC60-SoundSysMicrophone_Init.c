@@ -3,7 +3,7 @@
 int32_t SoundSysMicrophone_Init()
 
 {
-    int32_t v_4 = 0;
+    int32_t item_4 = 0;
     g_54db68 = TaskType_Register("SoundSysMicrophone", 0x68, QTask_OpenEvent_2(), 0);
     g_54db6a = QTask_UnableToAllocateEvent(0);
     QTask_RemoveEventCallback(g_54db68, 0, AIGraph_LoadParameters);

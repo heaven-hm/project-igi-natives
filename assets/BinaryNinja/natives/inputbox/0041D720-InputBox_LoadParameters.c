@@ -1,99 +1,99 @@
 // Original IGI.EXE function: InputBox_LoadParameters (VA 0x0041D720; static CFG gate PASS, CFG score 0.974).
 #include "InputBox_LoadParameters.h"
-int32_t InputBox_LoadParameters(void* a1)
+int32_t InputBox_LoadParameters(void* context)
 
 {
-    long double x87_r7_1 = (Menu_FormatScreen_4(*(a1 + 0x44)) - 8) * 0.125f;
-    long double f2 = 0f;
-    x87_r7_1 - f2;
-    float v_18c;
+    long double fpu_val_7_1 = (Menu_FormatScreen_4(*(context + 0x44)) - 8) * 0.125f;
+    long double f2 = 0.0f;
+    fpu_val_7_1 - f2;
+    float item_18c;
 
-    v_18c = *(&((x87_r7_1 < f2 ? 1 : 0) << 8 | (FCMP_UO(x87_r7_1, f2) ? 1 : 0) << 0xa
-        | (x87_r7_1 == f2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0f : x87_r7_1;
+    item_18c = *(&((fpu_val_7_1 < f2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_7_1, f2) ? 1 : 0) << 0xa
+        | (fpu_val_7_1 == f2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41 ? 0.0f : fpu_val_7_1;
 
-    (*(((Menu_PlayMusic_13() + StatusScreen_GetEvent() * 0x180) << 2) + &g_a96ae0))(a1);
+    (*(((Menu_PlayMusic_13() + StatusScreen_GetEvent() * 0x180) << 2) + &g_a96ae0))(context);
 
-    if (*(a1 + 0x19c))
+    if (*(context + 0x19c))
     {
-        char* dstD3 = a1 + 0x54;
-        int32_t valA9 = *(a1 + 0x20) + 2;
-        int32_t valA11 = *(a1 + 0x24) + 2;
+        char* dest_3 = context + 0x54;
+        int32_t data_9 = *(context + 0x20) + 2;
+        int32_t data_11 = *(context + 0x24) + 2;
 
-        if (*(a1 + 0x196))
+        if (*(context + 0x196))
         {
             int32_t i = 0xffffffff;
-            int32_t valA13 = 0;
+            int32_t data_13 = 0;
 
             while (i)
             {
-                bool cond_0_1 = 0 != *dstD3;
-                dstD3 = &dstD3[1];
+                bool flag_0_1 = 0 != *dest_3;
+                dest_3 = &dest_3[1];
                 i -= 1;
 
-                if (!cond_0_1)
+                if (!flag_0_1)
                     break;
             }
 
-            char v_100[0x100];
+            char item_100[0x100];
 
             if (~i - 1 > 0)
             {
-                __builtin_memset(__builtin_memset(&v_100, 0x2a2a2a2a, (~i - 1) & 0xfffffffc),
+                memset(memset(&item_100, 0x2a2a2a2a, (~i - 1) & 0xfffffffc),
                     0x2a, (~i - 1) & 3);
-                valA13 = ~i - 1;
+                data_13 = ~i - 1;
             }
 
-            v_100[valA13] = 0;
-            dstD3 = &v_100;
+            item_100[data_13] = 0;
+            dest_3 = &item_100;
         }
 
-        Sys_FreeMemory_18(*(a1 + 0x19c), dstD3);
-        *(*(a1 + 0x19c) + 4) = valA9;
-        *(*(a1 + 0x19c) + 8) = valA11;
-        void* valA16 = *(a1 + 0x19c);
-        *(valA16 + 0x24) |= 0x80000;
-        *(*(a1 + 0x19c) + 0x10) = v_18c;
-        Sys_CloseFileStream_18(*(a1 + 0x19c));
+        Sys_FreeMemory_18(*(context + 0x19c), dest_3);
+        *(*(context + 0x19c) + 4) = data_9;
+        *(*(context + 0x19c) + 8) = data_11;
+        void* data_16 = *(context + 0x19c);
+        *(data_16 + 0x24) |= 0x80000;
+        *(*(context + 0x19c) + 0x10) = item_18c;
+        Sys_CloseFileStream_18(*(context + 0x19c));
 
-        if (*(a1 + 0x195) && ((Frames_GetUpdateCounter() << 1) / Frames_Get()) & 1)
+        if (*(context + 0x195) && ((Frames_GetUpdateCounter() << 1) / Frames_Get()) & 1)
         {
-            void v_12c;
-            Camera_ApplyLineFilter_5(&v_12c, dstD3, *(a1 + 0x1a0));
-            int32_t valA25 = *(a1 + 0x1a0);
-            int32_t* tmpD7 = *(a1 + 0x19c);
-            *(&v_12c + valA25) = 0x61;
-            char v_12b[0x2b];
-            v_12b[valA25] = 0;
-            Sys_FreeMemory_18(tmpD7, &v_12c);
-            int32_t v_138_1 = 0x3f800000;
-            int32_t valA28 = valA9 + Sys_CheckHeap_21(*(a1 + 0x19c)) - 6;
-            int32_t tmpD10 = g_a84a54;
-            int32_t v_15c_1 = 0x3f800000;
-            float v_174 = valA28;
-            long double x87_r7_6 = valA11 + 0xa;
-            int32_t v_134_1 = 0x3f800000;
-            int32_t v_158_1 = 0x3f800000;
-            float v_170_1 = x87_r7_6;
-            int32_t v_130_1 = 0x3f800000;
-            int32_t v_154_1 = 0x3f800000;
-            int32_t v_144_1 = 0;
-            int32_t v_168_1 = 0;
-            float v_150_1 = valA28 + 6;
-            int32_t v_140_1 = 0;
-            int32_t v_164_1 = 0;
-            float v_14c_1 = x87_r7_6;
-            int32_t v_148_1 = 0x3f800000;
-            int32_t v_16c_1 = 0x3f800000;
-            int32_t v_184_1 = 0;
-            int32_t v_188 = 1;
-            int32_t v_180_1 = 0;
-            int32_t v_17c_1 = 2;
-            float* v_178_1 = &v_174;
+            void item_12c;
+            Camera_ApplyLineFilter_5(&item_12c, dest_3, *(context + 0x1a0));
+            int32_t data_25 = *(context + 0x1a0);
+            int32_t* temp_7 = *(context + 0x19c);
+            *(&item_12c + data_25) = 0x61;
+            char item_12b[0x2b];
+            item_12b[data_25] = 0;
+            Sys_FreeMemory_18(temp_7, &item_12c);
+            int32_t item_138_1 = 0x3f800000;
+            int32_t data_28 = data_9 + Sys_CheckHeap_21(*(context + 0x19c)) - 6;
+            int32_t temp_10 = g_a84a54;
+            int32_t item_15c_1 = 0x3f800000;
+            float item_174 = data_28;
+            long double fpu_val_7_6 = data_11 + 0xa;
+            int32_t item_134_1 = 0x3f800000;
+            int32_t item_158_1 = 0x3f800000;
+            float item_170_1 = fpu_val_7_6;
+            int32_t item_130_1 = 0x3f800000;
+            int32_t item_154_1 = 0x3f800000;
+            int32_t item_144_1 = 0;
+            int32_t item_168_1 = 0;
+            float item_150_1 = data_28 + 6;
+            int32_t item_140_1 = 0;
+            int32_t item_164_1 = 0;
+            float item_14c_1 = fpu_val_7_6;
+            int32_t item_148_1 = 0x3f800000;
+            int32_t item_16c_1 = 0x3f800000;
+            int32_t item_184_1 = 0;
+            int32_t item_188 = 1;
+            int32_t item_180_1 = 0;
+            int32_t item_17c_1 = 2;
+            float* item_178_1 = &item_174;
             g_a84a50 = 0;
             g_a84a58 = 0;
-            (*((tmpD10 << 2) + &g_a94e84))(&v_188);
+            (*((temp_10 << 2) + &g_a94e84))(&item_188);
         }
     }
 
-    return Menu_DrawWidget_14(a1, 0.5f, v_18c, *(a1 + 0x4d));
+    return Menu_DrawWidget_14(context, 0.5f, item_18c, *(context + 0x4d));
 }

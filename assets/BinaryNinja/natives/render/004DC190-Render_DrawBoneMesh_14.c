@@ -1,70 +1,70 @@
 // Original IGI.EXE function: Render_DrawBoneMesh_14 (VA 0x004DC190; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawBoneMesh_14.h"
-void Render_DrawBoneMesh_14(int32_t* a1, int32_t a2, int32_t* a3)
+void Render_DrawBoneMesh_14(int32_t* context, int32_t param_2, int32_t* param_3)
 
 {
-    int32_t* i = a3;
+    int32_t* i = param_3;
 
     while (i)
     {
-        int32_t valA1 = Render_ComputeNormals_15();
-        int16_t v_14_1 = valA1;
-        valA1 = i[7];
-        char valA;
-        int32_t objC1;
-        valA = TaskType_IsDerivedFrom(valA1, v_14_1);
+        int32_t data_1 = Render_ComputeNormals_15();
+        int16_t item_14_1 = data_1;
+        data_1 = i[7];
+        char data_val;
+        int32_t entity_1;
+        data_val = TaskType_IsDerivedFrom(data_1, item_14_1);
 
-        if (!valA)
+        if (!data_val)
         {
-            int16_t valA2 = DynObj_LookupHashItem_5();
-            objC1 = i[7];
+            int16_t data_2 = DynObj_LookupHashItem_5();
+            entity_1 = i[7];
 
-            if (TaskType_IsDerivedFrom(objC1, valA2))
+            if (TaskType_IsDerivedFrom(entity_1, data_2))
             {
-                int32_t* tmpD1 = i[0x1b];
+                int32_t* temp_1 = i[0x1b];
 
-                if (tmpD1 && *(*(*(*tmpD1 + 0xc) + 0xc) + 0x20) == 3)
+                if (temp_1 && *(*(*(*temp_1 + 0xc) + 0xc) + 0x20) == 3)
                 {
                     int32_t j = 0;
-                    i[0x37] = a2 + *a1 * 0x24 + 0x18;
+                    i[0x37] = param_2 + *context * 0x24 + 0x18;
 
-                    if (tmpD1[0xf] > 0)
+                    if (temp_1[0xf] > 0)
                     {
-                        a3 = tmpD1;
+                        param_3 = temp_1;
 
                         do
                         {
-                            *(a2 + *a1 * 0x24 + 0x18) = 0;
-                            *(a2 + *a1 * 0x24 + 0x20) = i;
-                            *(a2 + (*a1 + 1) * 0x24) = &i[0x1c];
-                            *(a2 + *a1 * 0x24 + 0x28) = &i[8];
-                            *(a2 + *a1 * 0x24 + 0x2c) = i[0x36];
-                            *(a2 + *a1 * 0x24 + 0x30) = j;
-                            *(a2 + *a1 * 0x24 + 0x34) = tmpD1[0xf];
-                            *(a2 + *a1 * 0x24 + 0x1c) = *a3;
-                            *(a2 + *a1 * 0x24 + 0x38) = 0;
+                            *(param_2 + *context * 0x24 + 0x18) = 0;
+                            *(param_2 + *context * 0x24 + 0x20) = i;
+                            *(param_2 + (*context + 1) * 0x24) = &i[0x1c];
+                            *(param_2 + *context * 0x24 + 0x28) = &i[8];
+                            *(param_2 + *context * 0x24 + 0x2c) = i[0x36];
+                            *(param_2 + *context * 0x24 + 0x30) = j;
+                            *(param_2 + *context * 0x24 + 0x34) = temp_1[0xf];
+                            *(param_2 + *context * 0x24 + 0x1c) = *param_3;
+                            *(param_2 + *context * 0x24 + 0x38) = 0;
                             j += 1;
-                            *a1 += 1;
-                            a3 = &a3[1];
-                        } while (j < tmpD1[0xf]);
+                            *context += 1;
+                            param_3 = &param_3[1];
+                        } while (j < temp_1[0xf]);
                     }
                 }
 
-                void* valA32 = i[0x3a];
+                void* data_32 = i[0x3a];
 
-                if (valA32)
+                if (data_32)
                 {
-                    int32_t* objC4 = *(valA32 + 8);
-                    int32_t valA33 = *objC4;
-                    int32_t valA34 = -(valA33);
-                    Render_DrawBoneMesh_14(a1, a2, (valA34 - valA34) & objC4);
+                    int32_t* entity_4 = *(data_32 + 8);
+                    int32_t data_33 = *entity_4;
+                    int32_t data_34 = -(data_33);
+                    Render_DrawBoneMesh_14(context, param_2, (data_34 - data_34) & entity_4);
                 }
             }
 
-            int32_t* objC5 = i[2];
-            int32_t valA37 = *objC5;
-            int32_t valA38 = -(valA37);
-            Render_DrawBoneMesh_14(a1, a2, (valA38 - valA38) & objC5);
+            int32_t* entity_5 = i[2];
+            int32_t data_37 = *entity_5;
+            int32_t data_38 = -(data_37);
+            Render_DrawBoneMesh_14(context, param_2, (data_38 - data_38) & entity_5);
         }
 
         i = *i;

@@ -1,12 +1,12 @@
 // Original IGI.EXE function: Menu_HandleInput_4 (VA 0x00419070; static CFG gate PASS, CFG score 1.000).
 #include "Menu_HandleInput_4.h"
-int32_t Menu_HandleInput_4(void* a1)
+int32_t Menu_HandleInput_4(void* context)
 
 {
-    char* objC = *(a1 + 8);
+    char* entity_val = *(context + 8);
 
-    if (!objC)
+    if (!entity_val)
         return 0;
 
-    return Sys_ReadFileBlock_24(objC);
+    return Sys_ReadFileBlock_24(entity_val);
 }

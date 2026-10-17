@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00423EB0 ControlsMenu_InitOffsets | gate PASS | openigi True */
-void*(void* arg1);
+void* ControlsMenu_InitOffsets(void* context);

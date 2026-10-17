@@ -1,27 +1,27 @@
 // Original IGI.EXE function: Camera_ApplyHandiCam_29 (VA 0x004ADBF9; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyHandiCam_29.h"
-int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7)
+int32_t Camera_ApplyHandiCam_29(int16_t* context, char** param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7)
 
 {
-    int32_t ctxB;
-    int32_t v_64 = ctxB;
-    char* i_20 = a3;
-    void v_60;
-    char* v_10 = &v_60;
-    int32_t valA = 0;
-    int32_t tmpD = 1;
-    int16_t v_2c = 0;
-    int32_t v_1c = 1;
-    int32_t v_8 = 0;
-    int32_t v_14 = 0;
-    int32_t v_28 = 0;
-    int32_t v_24 = 0;
-    int32_t v_30 = 0;
-    int32_t v_34 = 0;
-    int32_t v_20 = 0;
-    int32_t v_c = 0;
+    int32_t context_val;
+    int32_t item_64 = context_val;
+    char* i_20 = param_3;
+    void item_60;
+    char* item_10 = &item_60;
+    int32_t data_val = 0;
+    int32_t temp_val = 1;
+    int16_t item_2c = 0;
+    int32_t item_1c = 1;
+    int32_t item_8 = 0;
+    int32_t item_14 = 0;
+    int32_t item_28 = 0;
+    int32_t item_24 = 0;
+    int32_t item_30 = 0;
+    int32_t item_34 = 0;
+    int32_t item_20 = 0;
+    int32_t item_c = 0;
     int32_t result = 0;
-    a3 = i_20;
+    param_3 = i_20;
 
     while (true)
     {
@@ -34,18 +34,18 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
             {
                 char i = *i_20;
                 i_20 = &i_20[1];
-                int32_t v_70_1;
+                int32_t item_70_1;
 
-                switch (valA)
+                switch (data_val)
                 {
                     case 0:
                     {
                         if (i >= 0x31 && i <= 0x39)
                         {
                         label_4adc6d:
-                            v_70_1 = 3;
+                            item_70_1 = 3;
                         label_4ade91:
-                            valA = v_70_1;
+                            data_val = item_70_1;
                             i_20 -= 1;
                             continue;
                         }
@@ -55,14 +55,14 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
 
                             if (i_1 == 0x2b)
                             {
-                                v_2c = 0;
-                                valA = 2;
+                                item_2c = 0;
+                                data_val = 2;
                                 continue;
                             }
                             else if (i_1 == 0x2d)
                             {
-                                v_2c = -0x8000;
-                                valA = 2;
+                                item_2c = -0x8000;
+                                data_val = 2;
                                 continue;
                             }
                             else
@@ -73,40 +73,40 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                                     break;
                                 }
 
-                                valA = 1;
+                                data_val = 1;
                                 continue;
                             }
                         }
                         else
                         {
                         label_4adc7c:
-                            valA = 5;
+                            data_val = 5;
                             continue;
                         }
                         break;
                     }
                     case 1:
                     {
-                        v_14 = 1;
+                        item_14 = 1;
 
                         if (i >= 0x31 && i <= 0x39)
                             goto label_4adc6d;
 
                         if (i == g_544280)
                         {
-                            valA = 4;
+                            data_val = 4;
                             continue;
                         }
                         else if (i == 0x2b || i == 0x2d)
                         {
                         label_4add01:
                             i_20 -= 1;
-                            valA = 0xb;
+                            data_val = 0xb;
                             continue;
                         }
                         else if (i == 0x30)
                         {
-                            valA = 1;
+                            data_val = 1;
                             continue;
                         }
                         else
@@ -119,7 +119,7 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                                 break;
                             }
 
-                            valA = 6;
+                            data_val = 6;
                             continue;
                         }
                         break;
@@ -134,48 +134,48 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
 
                         if (i != 0x30)
                         {
-                            i_20 = a3;
+                            i_20 = param_3;
                             break;
                         }
 
-                        valA = 1;
+                        data_val = 1;
                         continue;
                     }
                     case 3:
                     {
-                        v_14 = 1;
+                        item_14 = 1;
 
                         while (true)
                         {
-                            BOOL valA5;
+                            BOOL data_5;
 
                             if (g_54427c <= 1)
                             {
                                 i_14 = g_544070;
                                 uint32_t i_3 = i;
                                 i_3 = *(i_14 + (i_3 << 1));
-                                valA5 = i_3 & 4;
+                                data_5 = i_3 & 4;
                             }
                             else
                             {
                                 uint32_t i_2 = i;
                                 uint32_t i_15 = i_2;
-                                valA5 = Camera_ApplyBandFilter_12(i_2, 1, i_14, 4);
+                                data_5 = Camera_ApplyBandFilter_12(i_2, 1, i_14, 4);
                                 i_14 = 4;
-                                tmpD = 1;
+                                temp_val = 1;
                             }
 
-                            if (!valA5)
+                            if (!data_5)
                                 break;
 
-                            if (v_8 >= 0x19)
-                                v_c += 1;
+                            if (item_8 >= 0x19)
+                                item_c += 1;
                             else
                             {
-                                char* valA6 = v_10;
-                                v_8 += 1;
-                                v_10 = &v_10[1];
-                                *valA6 = i - 0x30;
+                                char* data_6 = item_10;
+                                item_8 += 1;
+                                item_10 = &item_10[1];
+                                *data_6 = i - 0x30;
                             }
 
                             i = *i_20;
@@ -184,7 +184,7 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
 
                         if (i == g_544280)
                         {
-                            valA = 4;
+                            data_val = 4;
                             continue;
                         }
 
@@ -197,14 +197,14 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                     }
                     case 4:
                     {
-                        v_14 = 1;
-                        v_28 = 1;
+                        item_14 = 1;
+                        item_28 = 1;
 
-                        if (!v_8)
+                        if (!item_8)
                         {
                             while (i == 0x30)
                             {
-                                v_c -= 1;
+                                item_c -= 1;
                                 i = *i_20;
                                 i_20 = &i_20[1];
                             }
@@ -212,34 +212,34 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
 
                         while (true)
                         {
-                            BOOL valA7;
+                            BOOL data_7;
 
                             if (g_54427c <= 1)
                             {
                                 i_14 = g_544070;
                                 uint32_t i_5 = i;
                                 i_5 = *(i_14 + (i_5 << 1));
-                                valA7 = i_5 & 4;
+                                data_7 = i_5 & 4;
                             }
                             else
                             {
                                 uint32_t i_4 = i;
                                 uint32_t i_16 = i_4;
-                                valA7 = Camera_ApplyBandFilter_12(i_4, 1, i_14, 4);
+                                data_7 = Camera_ApplyBandFilter_12(i_4, 1, i_14, 4);
                                 i_14 = 4;
-                                tmpD = 1;
+                                temp_val = 1;
                             }
 
-                            if (!valA7)
+                            if (!data_7)
                                 break;
 
-                            if (v_8 < 0x19)
+                            if (item_8 < 0x19)
                             {
-                                char* valA8 = v_10;
-                                v_8 += 1;
-                                v_10 = &v_10[1];
-                                v_c -= 1;
-                                *valA8 = i - 0x30;
+                                char* data_8 = item_10;
+                                item_8 += 1;
+                                item_10 = &item_10[1];
+                                item_c -= 1;
+                                *data_8 = i - 0x30;
                             }
 
                             i = *i_20;
@@ -250,44 +250,44 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                     }
                     case 5:
                     {
-                        v_28 = 1;
-                        BOOL valA9;
+                        item_28 = 1;
+                        BOOL data_9;
 
                         if (g_54427c <= 1)
                         {
                             i_14 = g_544070;
                             uint32_t i_7 = i;
                             i_7 = *(i_14 + (i_7 << 1));
-                            valA9 = i_7 & 4;
+                            data_9 = i_7 & 4;
                         }
                         else
                         {
                             uint32_t i_6 = i;
                             uint32_t i_17 = i_6;
-                            valA9 = Camera_ApplyBandFilter_12(i_6, 1, i_14, 4);
+                            data_9 = Camera_ApplyBandFilter_12(i_6, 1, i_14, 4);
                             i_14 = 4;
-                            tmpD = 1;
+                            temp_val = 1;
                         }
 
-                        if (!valA9)
+                        if (!data_9)
                         {
-                            i_20 = a3;
+                            i_20 = param_3;
                             break;
                         }
 
-                        valA = 4;
+                        data_val = 4;
                         i_20 -= 1;
                         continue;
                     }
                     case 6:
                     {
                         i_14 = &i_20[0xfffffffe];
-                        a3 = i_14;
+                        param_3 = i_14;
 
                         if (i >= 0x31 && i <= 0x39)
                         {
                         label_4ade8f:
-                            v_70_1 = 9;
+                            item_70_1 = 9;
                             goto label_4ade91;
                         }
 
@@ -313,17 +313,17 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
 
                         if (i != 0x30)
                         {
-                            i_20 = a3;
+                            i_20 = param_3;
                             break;
                         }
 
                     label_4ade60:
-                        valA = 8;
+                        data_val = 8;
                         continue;
                     }
                     case 8:
                     {
-                        v_24 = 1;
+                        item_24 = 1;
 
                         while (i == 0x30)
                         {
@@ -340,37 +340,37 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                     }
                     case 9:
                     {
-                        v_24 = 1;
-                        int32_t srcS1 = 0;
+                        item_24 = 1;
+                        int32_t source_1 = 0;
 
                         while (true)
                         {
-                            BOOL valA17;
+                            BOOL data_17;
 
                             if (g_54427c <= 1)
                             {
                                 i_14 = g_544070;
                                 uint32_t i_11 = i;
                                 i_11 = *(i_14 + (i_11 << 1));
-                                valA17 = i_11 & 4;
+                                data_17 = i_11 & 4;
                             }
                             else
                             {
                                 uint32_t i_10 = i;
                                 uint32_t i_18 = i_10;
-                                valA17 = Camera_ApplyBandFilter_12(i_10, tmpD, i_14, 4);
+                                data_17 = Camera_ApplyBandFilter_12(i_10, temp_val, i_14, 4);
                                 i_14 = 4;
                             }
 
-                            if (!valA17)
+                            if (!data_17)
                                 break;
 
                             i_14 = i;
-                            srcS1 = i_14 + srcS1 * 0xa - 0x30;
+                            source_1 = i_14 + source_1 * 0xa - 0x30;
 
-                            if (srcS1 > 0x1450)
+                            if (source_1 > 0x1450)
                             {
-                                srcS1 = 0x1451;
+                                source_1 = 0x1451;
                                 break;
                             }
 
@@ -378,28 +378,28 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                             i_20 = &i_20[1];
                         }
 
-                        v_20 = srcS1;
+                        item_20 = source_1;
 
                         while (true)
                         {
-                            BOOL valA19;
+                            BOOL data_19;
 
                             if (g_54427c <= 1)
                             {
                                 i_14 = g_544070;
                                 uint32_t i_13 = i;
                                 i_13 = *(i_14 + (i_13 << 1));
-                                valA19 = i_13 & 4;
+                                data_19 = i_13 & 4;
                             }
                             else
                             {
                                 uint32_t i_12 = i;
                                 uint32_t i_19 = i_12;
-                                valA19 = Camera_ApplyBandFilter_12(i_12, tmpD, i_14, 4);
+                                data_19 = Camera_ApplyBandFilter_12(i_12, temp_val, i_14, 4);
                                 i_14 = 4;
                             }
 
-                            if (!valA19)
+                            if (!data_19)
                                 break;
 
                             i = *i_20;
@@ -412,21 +412,21 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                     }
                     case 0xb:
                     {
-                        if (!a7)
+                        if (!param_7)
                         {
                             i_20 -= 1;
-                            valA = 0xa;
+                            data_val = 0xa;
                         }
                         else
                         {
                             int32_t i_9 = i;
                             i_14 = &i_20[0xffffffff];
-                            a3 = i_14;
+                            param_3 = i_14;
 
                             if (i_9 == 0x2b)
                             {
                             label_4adec7:
-                                valA = 7;
+                                data_val = 7;
                                 continue;
                             }
                             else
@@ -438,8 +438,8 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                                 }
 
                             label_4adebb:
-                                v_1c = 0xffffffff;
-                                valA = 7;
+                                item_1c = 0xffffffff;
+                                data_val = 7;
                                 continue;
                             }
                         }
@@ -447,126 +447,126 @@ int32_t Camera_ApplyHandiCam_29(int16_t* a1, char** a2, int32_t a3, int32_t a4, 
                     }
                 }
 
-                if (valA == 0xa)
+                if (data_val == 0xa)
                     break;
             }
 
-            *a2 = i_20;
-            int16_t valA25;
-            int16_t tmpD1;
-            int32_t ctxB1;
-            int32_t srcS2;
+            *param_2 = i_20;
+            int16_t data_25;
+            int16_t temp_1;
+            int32_t context_1;
+            int32_t source_2;
 
-            if (!v_14)
+            if (!item_14)
             {
-                tmpD1 = 0;
-                valA25 = 0;
-                srcS2 = 0;
-                ctxB1 = 0;
+                temp_1 = 0;
+                data_25 = 0;
+                source_2 = 0;
+                context_1 = 0;
                 result = 4;
             }
             else
             {
-                char* valA22;
+                char* data_22;
 
-                if (v_8 <= 0x18)
-                    valA22 = v_10;
+                if (item_8 <= 0x18)
+                    data_22 = item_10;
                 else
                 {
-                    char v_49;
+                    char item_49;
 
-                    if (v_49 >= 5)
-                        char v_49_1 = v_49 + 1;
+                    if (item_49 >= 5)
+                        char item_49_1 = item_49 + 1;
 
-                    v_8 = 0x18;
-                    valA22 = v_10 - 1;
-                    v_c += 1;
+                    item_8 = 0x18;
+                    data_22 = item_10 - 1;
+                    item_c += 1;
                 }
 
-                if (v_8 <= 0)
+                if (item_8 <= 0)
                 {
-                    tmpD1 = 0;
-                    valA25 = 0;
-                    srcS2 = 0;
-                    ctxB1 = 0;
+                    temp_1 = 0;
+                    data_25 = 0;
+                    source_2 = 0;
+                    context_1 = 0;
                 }
                 else
                 {
                     while (true)
                     {
-                        valA22 -= 1;
+                        data_22 -= 1;
 
-                        if (*valA22)
+                        if (*data_22)
                             break;
 
-                        v_8 -= 1;
-                        v_c += 1;
+                        item_8 -= 1;
+                        item_c += 1;
                     }
 
-                    int32_t v_44;
-                    Camera_ApplyBandFilter_29(&v_60, v_8, &v_44);
-                    int32_t valA23 = v_20;
+                    int32_t item_44;
+                    Camera_ApplyBandFilter_29(&item_60, item_8, &item_44);
+                    int32_t data_23 = item_20;
 
-                    if (v_1c < 0)
-                        valA23 = -(valA23);
+                    if (item_1c < 0)
+                        data_23 = -(data_23);
 
-                    int32_t valA24 = valA23 + v_c;
+                    int32_t data_24 = data_23 + item_c;
 
-                    if (!v_24)
-                        valA24 += a5;
+                    if (!item_24)
+                        data_24 += param_5;
 
-                    if (!v_28)
-                        valA24 -= a6;
+                    if (!item_28)
+                        data_24 -= param_6;
 
-                    if (valA24 <= 0x1450)
+                    if (data_24 <= 0x1450)
                     {
-                        if (valA24 < 0xffffebb0)
+                        if (data_24 < 0xffffebb0)
                         {
-                            v_34 = 1;
+                            item_34 = 1;
                             goto label_4adff8;
                         }
 
-                        Camera_UpdateViewCone_29(&v_44, valA24, a4);
-                        tmpD1 = v_44;
-                        ctxB1 = *(&v_44 + 2);
-                        int32_t v_3e;
-                        srcS2 = v_3e;
-                        int16_t v_3a;
-                        valA25 = v_3a;
+                        Camera_UpdateViewCone_29(&item_44, data_24, param_4);
+                        temp_1 = item_44;
+                        context_1 = *(&item_44 + 2);
+                        int32_t item_3e;
+                        source_2 = item_3e;
+                        int16_t item_3a;
+                        data_25 = item_3a;
                     }
                     else
                     {
-                        v_30 = 1;
+                        item_30 = 1;
                     label_4adff8:
-                        ctxB1 = a3;
-                        srcS2 = a3;
-                        valA25 = a3;
-                        tmpD1 = a3;
+                        context_1 = param_3;
+                        source_2 = param_3;
+                        data_25 = param_3;
+                        temp_1 = param_3;
                     }
                 }
 
-                if (v_30)
+                if (item_30)
                 {
-                    ctxB1 = 0;
-                    valA25 = 0x7fff;
-                    srcS2 = 0x80000000;
-                    tmpD1 = 0;
+                    context_1 = 0;
+                    data_25 = 0x7fff;
+                    source_2 = 0x80000000;
+                    temp_1 = 0;
                     result = 2;
                 }
-                else if (v_34)
+                else if (item_34)
                 {
-                    tmpD1 = 0;
-                    valA25 = 0;
-                    srcS2 = 0;
-                    ctxB1 = 0;
+                    temp_1 = 0;
+                    data_25 = 0;
+                    source_2 = 0;
+                    context_1 = 0;
                     result = 1;
                 }
             }
 
-            *(a1 + 6) = srcS2;
-            *(a1 + 2) = ctxB1;
-            a1[5] = valA25 | v_2c;
-            *a1 = tmpD1;
+            *(context + 6) = source_2;
+            *(context + 2) = context_1;
+            context[5] = data_25 | item_2c;
+            *context = temp_1;
             return result;
         }
 

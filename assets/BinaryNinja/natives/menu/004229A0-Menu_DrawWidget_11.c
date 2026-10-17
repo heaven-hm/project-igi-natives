@@ -1,23 +1,23 @@
 // Original IGI.EXE function: Menu_DrawWidget_11 (VA 0x004229A0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_DrawWidget_11.h"
-int32_t Menu_DrawWidget_11(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6)
+int32_t Menu_DrawWidget_11(int32_t context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6)
 
 {
-    int32_t result = *(a1 + (a5 << 2) + 0x94);
+    int32_t result = *(context + (param_5 << 2) + 0x94);
 
     if (result)
     {
-        int32_t valA;
-        int32_t objC1;
-        valA = Sys_ExecuteBytecode_17(result);
-        int32_t i_1 = a4 / valA;
-        result = a6;
+        int32_t data_val;
+        int32_t entity_1;
+        data_val = Sys_ExecuteBytecode_17(result);
+        int32_t i_1 = param_4 / data_val;
+        result = param_6;
 
         if (result)
         {
-            result = Sys_CloseFileStream_17(*(a1 + (a5 << 2) + 0x94));
-            objC1 = a2 - result;
-            a2 = objC1;
+            result = Sys_CloseFileStream_17(*(context + (param_5 << 2) + 0x94));
+            entity_1 = param_2 - result;
+            param_2 = entity_1;
         }
 
         if (i_1 > 0)
@@ -26,13 +26,13 @@ int32_t Menu_DrawWidget_11(int32_t a1, int32_t a2, int32_t a3, int32_t a4, int32
 
             do
             {
-                int32_t v_2c_1 = objC1;
-                result = Sys_ResolveSymbol_14(*(a1 + (a5 << 2) + 0x94), a2, a3, 128f, 128f, 128f, 0,
+                int32_t item_2c_1 = entity_1;
+                result = Sys_ResolveSymbol_14(*(context + (param_5 << 2) + 0x94), param_2, param_3, 128.0f, 128.0f, 128.0f, 0,
                     0, 0xffffffff);
-                objC1 = a3 + valA;
+                entity_1 = param_3 + data_val;
                 i = i_1;
                 i_1 -= 1;
-                a3 = objC1;
+                param_3 = entity_1;
             } while (i != 1);
         }
     }

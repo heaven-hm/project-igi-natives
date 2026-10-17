@@ -1,96 +1,96 @@
 // Original IGI.EXE function: Display_CreateSurface_2 (VA 0x00491280; static CFG gate PASS, CFG score 0.933).
 #include "Display_CreateSurface_2.h"
-char* Display_CreateSurface_2(char* a1, int32_t* a2)
+char* Display_CreateSurface_2(char* context, int32_t* param_2)
 
 {
-    char* flagP = a1;
-    int32_t valA = *(flagP + 0x1148);
-    *(flagP + 0x1148) = valA + 1;
-    *(flagP + valA * 0x7c + 0x1dc) = a2[9] * 0x3e8;
-    *(flagP + valA * 0x7c + 0x1e0) = a2[0xa] * 0x3e8;
-    *(flagP + valA * 0x7c + 0x1d4) = a2[4];
-    *(flagP + valA * 0x7c + 0x1e4) = a2[0xb] * 0x3e8;
-    *(flagP + valA * 0x7c + 0x1d8) = a2[5];
-    *(flagP + valA * 0x7c + 0x1e8) = a2[0xc] * 0x3e8;
-    *(flagP + valA * 0x7c + 0x1f0) = a2[6];
-    *(flagP + valA * 0x7c + 0x1f4) = a2[7];
-    *(flagP + valA * 0x7c + 0x1f8) = a2[8];
-    *(flagP + valA * 0x7c + 0x1cc) = a2[2];
-    *(flagP + valA * 0x7c + 0x1d0) = a2[3];
-    *(flagP + valA * 0x7c + 0x1c8) = a2[1];
-    flagP[valA * 0x7c + 0x240] = a2[0xd];
-    void* tmpD7 = *a2;
-    void* dstD = tmpD7;
+    char* flagP = context;
+    int32_t data_val = *(flagP + 0x1148);
+    *(flagP + 0x1148) = data_val + 1;
+    *(flagP + data_val * 0x7c + 0x1dc) = param_2[9] * 0x3e8;
+    *(flagP + data_val * 0x7c + 0x1e0) = param_2[0xa] * 0x3e8;
+    *(flagP + data_val * 0x7c + 0x1d4) = param_2[4];
+    *(flagP + data_val * 0x7c + 0x1e4) = param_2[0xb] * 0x3e8;
+    *(flagP + data_val * 0x7c + 0x1d8) = param_2[5];
+    *(flagP + data_val * 0x7c + 0x1e8) = param_2[0xc] * 0x3e8;
+    *(flagP + data_val * 0x7c + 0x1f0) = param_2[6];
+    *(flagP + data_val * 0x7c + 0x1f4) = param_2[7];
+    *(flagP + data_val * 0x7c + 0x1f8) = param_2[8];
+    *(flagP + data_val * 0x7c + 0x1cc) = param_2[2];
+    *(flagP + data_val * 0x7c + 0x1d0) = param_2[3];
+    *(flagP + data_val * 0x7c + 0x1c8) = param_2[1];
+    flagP[data_val * 0x7c + 0x240] = param_2[0xd];
+    void* temp_7 = *param_2;
+    void* dest_val = temp_7;
     int32_t i = 0xffffffff;
 
     while (i)
     {
-        bool cond_0_1 = 0 != *dstD;
-        dstD += 1;
+        bool flag_0_1 = 0 != *dest_val;
+        dest_val += 1;
         i -= 1;
 
-        if (!cond_0_1)
+        if (!flag_0_1)
             break;
     }
 
-    int32_t valA19;
-    int32_t tmpD8;
+    int32_t data_19;
+    int32_t temp_8;
 
     if (~i - 1 < 0x80)
-        valA19 = Sys_CheckHeap_16(tmpD7);
+        data_19 = Sys_CheckHeap_16(temp_7);
 
-    if (~i - 1 >= 0x80 || !valA19)
+    if (~i - 1 >= 0x80 || !data_19)
     {
-        int32_t dstD5 = *a2;
+        int32_t dest_5 = *param_2;
         int32_t i_1 = 0xffffffff;
 
         while (i_1)
         {
-            bool cond_1_1 = 0 != *dstD5;
-            dstD5 += 1;
+            bool flag_1_1 = 0 != *dest_5;
+            dest_5 += 1;
             i_1 -= 1;
 
-            if (!cond_1_1)
+            if (!flag_1_1)
                 break;
         }
 
-        char* valA25 = Mem_Alloc(~i_1 + 4, 4);
-        *(flagP + valA * 0x7c + 0x1fc) = valA25;
-        int32_t v_24_2 = *a2;
-        Game_DataSymbolLoad(valA25, "RM: %s");
+        char* data_25 = Mem_Alloc(~i_1 + 4, 4);
+        *(flagP + data_val * 0x7c + 0x1fc) = data_25;
+        int32_t item_24_2 = *param_2;
+        Game_DataSymbolLoad(data_25, "RM: %s");
     }
     else
     {
-        void* objC10 = *a2;
-        void* v_20 = objC10;
-        a1 = nullptr;
-        int32_t* dstD1 = Resource_Load(&a1, tmpD8, objC10, &a1);
-        a2 = dstD1;
+        void* entity_10 = *param_2;
+        void* item_20 = entity_10;
+        context = nullptr;
+        int32_t* dest_1 = Resource_Load(&context, temp_8, entity_10, &context);
+        param_2 = dest_1;
 
-        if (dstD1)
+        if (dest_1)
         {
-            void* valA22 = Mem_Alloc(a1, 4);
+            void* data_22 = Mem_Alloc(context, 4);
             int32_t i_2 = 0xffffffff;
-            *(flagP + valA * 0x7c + 0x1fc) = valA22;
+            *(flagP + data_val * 0x7c + 0x1fc) = data_22;
 
             while (i_2)
             {
-                bool cond_3_1 = 0 != *dstD1;
-                dstD1 += 1;
+                bool flag_3_1 = 0 != *dest_1;
+                dest_1 += 1;
                 i_2 -= 1;
 
-                if (!cond_3_1)
+                if (!flag_3_1)
                     break;
             }
 
-            int32_t objC11 = ~i_2;
-            int32_t srcS2;
-            int32_t dstD4;
-            dstD4 = memcpy(valA22, dstD1 - objC11, objC11 & 0xfffffffc);
-            memcpy(dstD4, srcS2, objC11 & 3);
-            Resource_Flush(a2);
+            int32_t entity_11 = ~i_2;
+            int32_t source_2;
+            int32_t dest_4;
+            dest_4 = memcpy(data_22, dest_1 - entity_11, entity_11 & 0xfffffffc);
+            memcpy(dest_4, source_2, entity_11 & 3);
+            Resource_Flush(param_2);
         }
     }
 
-    return Display_OpenDevice_3(flagP, &flagP[valA * 0x7c + 0x1c8]);
+    return Display_OpenDevice_3(flagP, &flagP[data_val * 0x7c + 0x1c8]);
 }

@@ -1,24 +1,24 @@
 // Original IGI.EXE function: Physics_CouldnTGetSurfaceDes (VA 0x0050AC90; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CouldnTGetSurfaceDes.h"
-int32_t Physics_CouldnTGetSurfaceDes(int32_t* a1)
+int32_t Physics_CouldnTGetSurfaceDes(int32_t* context)
 
 {
-    int32_t* valA = a1;
+    int32_t* data_val = context;
     int32_t result = 0;
 
-    if (valA)
+    if (data_val)
     {
         while (true)
         {
-            int32_t v_47c = 0x7c;
-            int32_t valA1 = (*(*valA + 0x58))(valA, &v_47c);
-            void v_400;
+            int32_t item_47c = 0x7c;
+            int32_t data_1 = (*(*data_val + 0x58))(data_val, &item_47c);
+            void item_400;
 
-            if (valA1)
+            if (data_1)
             {
-                Game_DataSymbolLoad(&v_400, "Couldn't get surface description");
-                int32_t v_4a4 = DDERR_GENERIC(valA1);
-                void* v_4a8 = &v_400;
+                Game_DataSymbolLoad(&item_400, "Couldn't get surface description");
+                int32_t item_4a4 = DDERR_GENERIC(data_1);
+                void* item_4a8 = &item_400;
                 Error_Show("%s\n\nDirectX error message: %s");
 
                 while (true)
@@ -26,26 +26,26 @@ int32_t Physics_CouldnTGetSurfaceDes(int32_t* a1)
             }
             else
             {
-                int32_t (* v_48c)() = nullptr;
-                int32_t v_474;
-                int32_t v_470;
-                int32_t v_428;
-                result += (v_428 >> 3) * v_474 * v_470;
-                int32_t* valA6 = a1;
-                int32_t v_488_1 = 0;
-                int32_t v_484_1 = 0;
-                v_48c = QTask_CreateTask;
-                int32_t v_480_1 = 0;
-                int32_t valA7 = (*(*valA6 + 0x30))(valA6, &v_48c, &a1);
+                int32_t (* item_48c)() = nullptr;
+                int32_t item_474;
+                int32_t item_470;
+                int32_t item_428;
+                result += (item_428 >> 3) * item_474 * item_470;
+                int32_t* data_6 = context;
+                int32_t item_488_1 = 0;
+                int32_t item_484_1 = 0;
+                item_48c = QTask_CreateTask;
+                int32_t item_480_1 = 0;
+                int32_t data_7 = (*(*data_6 + 0x30))(data_6, &item_48c, &context);
 
-                if (valA7 == 0x887600ff)
+                if (data_7 == 0x887600ff)
                     break;
 
-                if (valA7)
+                if (data_7)
                 {
-                    Game_DataSymbolLoad(&v_400, "Couldn't get attached surface");
-                    int32_t v_4a4_1 = DDERR_GENERIC(valA7);
-                    void* v_4a8_1 = &v_400;
+                    Game_DataSymbolLoad(&item_400, "Couldn't get attached surface");
+                    int32_t item_4a4_1 = DDERR_GENERIC(data_7);
+                    void* item_4a8_1 = &item_400;
                     Error_Show("%s\n\nDirectX error message: %s");
 
                     while (true)
@@ -53,9 +53,9 @@ int32_t Physics_CouldnTGetSurfaceDes(int32_t* a1)
                 }
                 else
                 {
-                    valA = a1;
+                    data_val = context;
 
-                    if (!valA)
+                    if (!data_val)
                         break;
                 }
             }

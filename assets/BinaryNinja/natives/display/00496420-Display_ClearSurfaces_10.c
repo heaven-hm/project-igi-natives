@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Display_ClearSurfaces_10 (VA 0x00496420; static CFG gate PASS, CFG score 1.000).
 #include "Display_ClearSurfaces_10.h"
-int16_t* Display_ClearSurfaces_10(int16_t* a1, int16_t a2)
+int16_t* Display_ClearSurfaces_10(int16_t* context, int16_t param_2)
 
 {
-    *a1 = a2;
-    a1[3] = 0;
-    a1[1] = 0;
-    a1[4] = 0;
-    a1[2] = 0;
-    a1[5] = 0;
-    return a1;
+    *context = param_2;
+    context[3] = 0;
+    context[1] = 0;
+    context[4] = 0;
+    context[2] = 0;
+    context[5] = 0;
+    return context;
 }

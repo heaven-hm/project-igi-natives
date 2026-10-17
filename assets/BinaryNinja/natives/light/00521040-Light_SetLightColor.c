@@ -3,27 +3,27 @@
 void* Light_SetLightColor()
 
 {
-    void* valA2 = g_a839d0;
+    void* data_2 = g_a839d0;
 
-    if (valA2)
+    if (data_2)
     {
-        Sys_ExecuteBytecode_2(valA2);
+        Sys_ExecuteBytecode_2(data_2);
         g_a839d0 = 0;
     }
 
-    void* valA = g_a839f0;
+    void* data_val = g_a839f0;
 
-    if (valA)
+    if (data_val)
     {
-        Sys_ExecuteBytecode_2(valA);
+        Sys_ExecuteBytecode_2(data_val);
         g_a839f0 = 0;
     }
 
-    void* valA1 = g_a83c54;
+    void* data_1 = g_a83c54;
 
-    if (valA1)
+    if (data_1)
     {
-        Sys_ExecuteBytecode_2(valA1);
+        Sys_ExecuteBytecode_2(data_1);
         g_a83c54 = 0;
     }
 

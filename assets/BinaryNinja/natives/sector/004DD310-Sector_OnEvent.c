@@ -1,16 +1,14 @@
 // Original IGI.EXE function: Sector_OnEvent (VA 0x004DD310; static CFG gate PASS, CFG score 1.000).
 #include "Sector_OnEvent.h"
-float Sector_OnEvent(float a1) __location("valA")
-
-{
-    float result = a1;
-    int32_t tmpD = g_bcabd4;
-    int32_t v_8 = g_bcabd0;
+float Sector_OnEvent(float context) {
+    float result = context;
+    int32_t temp_val = g_bcabd4;
+    int32_t item_8 = g_bcabd0;
     g_a5e354 = result;
-    int32_t v_10 = g_bcabd8;
-    int32_t v_4 = tmpD;
+    int32_t item_10 = g_bcabd8;
+    int32_t item_4 = temp_val;
     float result_1 = result;
-    int32_t v_c = g_bcabdc;
+    int32_t item_c = g_bcabdc;
 
     if (*(result + 0x6c))
     {
@@ -25,67 +23,67 @@ float Sector_OnEvent(float a1) __location("valA")
         label_4dd381:
             g_a5e35c = Render_SkinBones_13(&g_a5e334);
             Render_ComputeNormals_12(&g_a5e330, &g_a5e310);
-            int32_t objC3 = g_bcabd4;
-            int32_t tmpD2 = g_bcabd8;
-            float v_18 = g_bcabd0;
-            int32_t valA2 = g_bcabdc;
-            int32_t v_14_1 = objC3;
-            int32_t v_20 = tmpD2;
-            int32_t v_1c_1 = valA2;
-            int32_t valA3 = DynObj_CreateMagicObject_16(result_1);
+            int32_t entity_3 = g_bcabd4;
+            int32_t temp_2 = g_bcabd8;
+            float item_18 = g_bcabd0;
+            int32_t data_2 = g_bcabdc;
+            int32_t item_14_1 = entity_3;
+            int32_t item_20 = temp_2;
+            int32_t item_1c_1 = data_2;
+            int32_t data_3 = DynObj_CreateMagicObject_16(result_1);
 
-            if (valA3 != 0xffffffff)
-                Render_ClipMesh_14(result_1, &v_18, &v_20, valA3);
+            if (data_3 != 0xffffffff)
+                Render_ClipMesh_14(result_1, &item_18, &item_20, data_3);
 
             int32_t i = g_a5e340;
-            int32_t srcS = 0;
-            bool cond_1_1 = !i;
+            int32_t source_val = 0;
+            bool flag_1_1 = !i;
 
             if (i > 0)
             {
                 do
                 {
-                    int32_t* valA7 = *(g_a5e33c + (srcS << 2)) * g_a5e348 + g_a5e338;
-                    int32_t __saved_ebx_2 = valA7[5];
-                    Render_DrawRigidMesh_15(valA7[6], valA7, &valA7[2]);
+                    int32_t* data_7 = *(g_a5e33c + (source_val << 2)) * g_a5e348 + g_a5e338;
+                    int32_t saved_ebx_2 = data_7[5];
+                    Render_DrawRigidMesh_15(data_7[6], data_7, &data_7[2]);
                     i = g_a5e340;
-                    srcS += 1;
-                } while (srcS < i);
+                    source_val += 1;
+                } while (source_val < i);
 
-                cond_1_1 = !i;
+                flag_1_1 = !i;
             }
 
-            if (!cond_1_1)
+            if (!flag_1_1)
             {
-                int32_t* srcS1 = g_a5e34c;
-                int32_t* objC6 = g_a5e33c;
-                int32_t ctxB1 = g_a5e338;
-                int32_t dstD1 = g_a5e348;
+                int32_t* source_1 = g_a5e34c;
+                int32_t* entity_6 = g_a5e33c;
+                int32_t context_1 = g_a5e338;
+                int32_t dest_1 = g_a5e348;
 
                 do
                 {
                     i -= 1;
-                    int32_t tmpD7 = *(*objC6 * dstD1 + srcS1 + ctxB1);
+                    int32_t temp_7 = *(*entity_6 * dest_1 + source_1 + context_1);
                     g_a5e340 = i;
 
-                    if (tmpD7 != i)
+                    if (temp_7 != i)
                     {
-                        int32_t dstD2 = objC6[tmpD7];
-                        int32_t valA11 = objC6[i] * dstD1 + ctxB1;
-                        int32_t srcS2 = *(srcS1 + valA11);
-                        objC6[tmpD7] = objC6[srcS2];
-                        *(g_a5e33c + (srcS2 << 2)) = dstD2;
-                        *(g_a5e34c + valA11) = tmpD7;
-                        srcS1 = g_a5e34c;
-                        dstD1 = g_a5e348;
-                        objC6 = g_a5e33c;
-                        ctxB1 = g_a5e338;
+                        int32_t dest_2 = entity_6[temp_7];
+                        int32_t data_11 = entity_6[i] * dest_1 + context_1;
+                        int32_t source_2 = *(source_1 + data_11);
+                        entity_6[temp_7] = entity_6[source_2];
+                        *(g_a5e33c + (source_2 << 2)) = dest_2;
+                        *(g_a5e34c + data_11) = temp_7;
+                        source_1 = g_a5e34c;
+                        dest_1 = g_a5e348;
+                        entity_6 = g_a5e33c;
+                        context_1 = g_a5e338;
                         i = g_a5e340;
                     }
                 } while (i);
             }
 
-            return Display_CloseDevice_13(0xbcaba0, &v_8, &v_10);
+            return Display_CloseDevice_13(0xbcaba0, &item_8, &item_10);
         }
     }
 

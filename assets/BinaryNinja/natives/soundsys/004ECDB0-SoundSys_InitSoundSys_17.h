@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004ECDB0 SoundSys_InitSoundSys_17 | gate PASS | openigi False */
-float SoundSys_InitSoundSys_17(void * a1) __location("valA");
+float SoundSys_InitSoundSys_17(void * context) ;

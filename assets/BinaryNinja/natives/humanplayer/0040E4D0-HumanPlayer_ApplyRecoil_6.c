@@ -1,38 +1,38 @@
 // Original IGI.EXE function: HumanPlayer_ApplyRecoil_6 (VA 0x0040E4D0; static CFG gate PASS, CFG score 1.000).
 #include "HumanPlayer_ApplyRecoil_6.h"
-int32_t HumanPlayer_ApplyRecoil_6(void* a1, void* a2)
+int32_t HumanPlayer_ApplyRecoil_6(void* context, void* param_2)
 
 {
-    int32_t result = *(a1 + 8);
+    int32_t result = *(context + 8);
 
     if (result & 0x20000)
     {
-        void* objC1 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0x2f;
-        int32_t valA1 = *(objC1 + 0xbc);
-        *(a1 + 0x14) = valA1;
-        return valA1(a1, a2);
+        void* entity_1 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0x2f;
+        int32_t data_1 = *(entity_1 + 0xbc);
+        *(context + 0x14) = data_1;
+        return data_1(context, param_2);
     }
 
     if (result & 0x10000)
     {
-        void* objC2 = *(a1 + 4);
-        *(a1 + 0xc) = *(a1 + 0x10);
-        *(a1 + 0x10) = 0x2e;
-        int32_t valA4 = *(objC2 + 0xb8);
-        *(a1 + 0x14) = valA4;
-        return valA4(a1, a2);
+        void* entity_2 = *(context + 4);
+        *(context + 0xc) = *(context + 0x10);
+        *(context + 0x10) = 0x2e;
+        int32_t data_4 = *(entity_2 + 0xb8);
+        *(context + 0x14) = data_4;
+        return data_4(context, param_2);
     }
 
     if (!(result & 1))
         return result;
 
-    HumanPlayer_LoadParameters_6(a2);
-    int32_t* objC3 = *(a1 + 4);
-    *(a1 + 0xc) = *(a1 + 0x10);
-    *(a1 + 0x10) = 0;
-    int32_t valA7 = *objC3;
-    *(a1 + 0x14) = valA7;
-    return valA7(a1, a2);
+    HumanPlayer_LoadParameters_6(param_2);
+    int32_t* entity_3 = *(context + 4);
+    *(context + 0xc) = *(context + 0x10);
+    *(context + 0x10) = 0;
+    int32_t data_7 = *entity_3;
+    *(context + 0x14) = data_7;
+    return data_7(context, param_2);
 }

@@ -1,27 +1,27 @@
 // Original IGI.EXE function: Menu_UpdateLanguage_8 (VA 0x0041CB40; static CFG gate PASS, CFG score 1.000).
 #include "Menu_UpdateLanguage_8.h"
-int32_t Menu_UpdateLanguage_8(int32_t* a1, char* a2 @ 0xc, int32_t a3)
+int32_t Menu_UpdateLanguage_8(int32_t* context, char* param_2 , int32_t param_3)
 
 {
-    int32_t objC;
-    int32_t v_4 = objC;
-    char* dstD = a2;
+    int32_t entity_val;
+    int32_t item_4 = entity_val;
+    char* dest_val = param_2;
     int32_t result = 0;
-    char* flagP = dstD;
+    char* flagP = dest_val;
 
-    if (!dstD)
+    if (!dest_val)
         return 0;
 
-    char i = *dstD;
+    char i = *dest_val;
 
     if (i)
     {
-        int32_t ctxB;
-        int32_t v_10_1 = ctxB;
+        int32_t context_val;
+        int32_t item_10_1 = context_val;
 
         do
         {
-            char* srcS1 = dstD;
+            char* source_1 = dest_val;
 
             if (i)
             {
@@ -33,58 +33,58 @@ int32_t Menu_UpdateLanguage_8(int32_t* a1, char* a2 @ 0xc, int32_t a3)
                     if (i == 0xa)
                         break;
 
-                    i = srcS1[1];
-                    srcS1 = &srcS1[1];
+                    i = source_1[1];
+                    source_1 = &source_1[1];
 
                     if (!i)
                         break;
                 }
             }
 
-            char ctxB1 = *srcS1;
-            *srcS1 = 0;
-            Sys_FreeMemory_18(a1, flagP);
-            *srcS1 = ctxB1;
+            char context_1 = *source_1;
+            *source_1 = 0;
+            Sys_FreeMemory_18(context, flagP);
+            *source_1 = context_1;
 
-            if (Sys_CheckHeap_21(a1) > a3 && dstD != flagP)
+            if (Sys_CheckHeap_21(context) > param_3 && dest_val != flagP)
             {
-                dstD[0xffffffff] = 0;
-                flagP = dstD;
+                dest_val[0xffffffff] = 0;
+                flagP = dest_val;
                 result += 1;
             }
 
-            int32_t valA6 = *srcS1;
+            int32_t data_6 = *source_1;
 
-            if (valA6 <= 0x20)
+            if (data_6 <= 0x20)
             {
-                int32_t tmpD1 = 0;
-                tmpD1 = lookup_table_41cc1c[valA6];
+                int32_t temp_1 = 0;
+                temp_1 = lookup_table_41cc1c[data_6];
 
-                switch (tmpD1)
+                switch (temp_1)
                 {
                     case 0:
                     {
-                        dstD = srcS1;
+                        dest_val = source_1;
                         result += 1;
                         break;
                     }
                     case 1:
                     {
-                        dstD = &srcS1[1];
+                        dest_val = &source_1[1];
                         break;
                     }
                     case 2:
                     {
-                        dstD = &srcS1[1];
-                        *srcS1 = 0;
+                        dest_val = &source_1[1];
+                        *source_1 = 0;
                         result += 1;
-                        flagP = dstD;
+                        flagP = dest_val;
                         break;
                     }
                 }
             }
 
-            i = *dstD;
+            i = *dest_val;
         } while (i);
     }
 

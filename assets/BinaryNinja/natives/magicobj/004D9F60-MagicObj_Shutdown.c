@@ -9,12 +9,12 @@ uint32_t MagicObj_Shutdown()
 // boundary, 1 basic block, 0 CFG edges, cdecl no-argument function.
 {
     QTask_CloseEvent_2(g_548648);
-    char objC = g_54864a;
+    char entity_val = g_54864a;
     g_548648 = 0x181;
-    QTask_InitContext(objC);
-    char tmpD = g_54864b;
+    QTask_InitContext(entity_val);
+    char temp_val = g_54864b;
     g_54864a = 0xff;
-    uint32_t result = QTask_InitContext(tmpD);
+    uint32_t result = QTask_InitContext(temp_val);
     g_54864b = 0xff;
     return result;
 }

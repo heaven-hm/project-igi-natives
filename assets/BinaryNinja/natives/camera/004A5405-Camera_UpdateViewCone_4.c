@@ -1,72 +1,72 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_4 (VA 0x004A5405; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_4.h"
-int32_t Camera_UpdateViewCone_4(char* a1)
+int32_t Camera_UpdateViewCone_4(char* context)
 
 {
-    char* dstD = a1;
-    BOOL valA2;
-    wchar16 (* objC)[0x21];
-    int32_t tmpD;
+    char* dest_val = context;
+    BOOL data_2;
+    wchar16 (* entity_val)[0x21];
+    int32_t temp_val;
 
     while (true)
     {
         if (g_54427c <= 1)
         {
-            uint32_t valA3 = *dstD;
-            objC = g_544070;
-            valA3 = (*objC)[valA3];
-            valA2 = valA3 & 8;
+            uint32_t data_3 = *dest_val;
+            entity_val = g_544070;
+            data_3 = (*entity_val)[data_3];
+            data_2 = data_3 & 8;
         }
         else
         {
-            uint32_t valA1 = *dstD;
-            uint32_t v_18_1 = valA1;
-            valA2 = Camera_ApplyBandFilter_12(valA1, tmpD, objC, 8);
-            objC = 8;
+            uint32_t data_1 = *dest_val;
+            uint32_t item_18_1 = data_1;
+            data_2 = Camera_ApplyBandFilter_12(data_1, temp_val, entity_val, 8);
+            entity_val = 8;
         }
 
-        if (!valA2)
+        if (!data_2)
             break;
 
-        dstD = &dstD[1];
+        dest_val = &dest_val[1];
     }
 
-    uint32_t srcS = *dstD;
-    char* dstD1 = &dstD[1];
-    uint32_t flagP = srcS;
+    uint32_t source_val = *dest_val;
+    char* dest_1 = &dest_val[1];
+    uint32_t flagP = source_val;
 
-    if (srcS == 0x2d || srcS == 0x2b)
+    if (source_val == 0x2d || source_val == 0x2b)
     {
-        srcS = *dstD1;
-        dstD1 = &dstD1[1];
+        source_val = *dest_1;
+        dest_1 = &dest_1[1];
     }
 
     int32_t result = 0;
 
     while (true)
     {
-        BOOL valA4;
+        BOOL data_4;
 
         if (g_54427c <= 1)
         {
-            wchar16 (* valA5)[0x21] = g_544070;
-            valA5 = (*valA5)[srcS];
-            valA4 = valA5 & 4;
+            wchar16 (* data_5)[0x21] = g_544070;
+            data_5 = (*data_5)[source_val];
+            data_4 = data_5 & 4;
         }
         else
         {
-            uint32_t v_18_2 = srcS;
-            valA4 = Camera_ApplyBandFilter_12(valA2, tmpD, objC, 4);
-            objC = 4;
+            uint32_t item_18_2 = source_val;
+            data_4 = Camera_ApplyBandFilter_12(data_2, temp_val, entity_val, 4);
+            entity_val = 4;
         }
 
-        if (!valA4)
+        if (!data_4)
             break;
 
-        valA2 = result * 5;
-        result = srcS + (valA2 << 1) - 0x30;
-        srcS = *dstD1;
-        dstD1 = &dstD1[1];
+        data_2 = result * 5;
+        result = source_val + (data_2 << 1) - 0x30;
+        source_val = *dest_1;
+        dest_1 = &dest_1[1];
     }
 
     if (flagP != 0x2d)

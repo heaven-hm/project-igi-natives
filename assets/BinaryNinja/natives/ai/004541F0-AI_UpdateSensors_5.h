@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004541F0 AI_UpdateSensors_5 | gate PASS | openigi False */
-int AI_UpdateSensors_5(void * a1, void * a2);
+int AI_UpdateSensors_5(void * context, void * param_2);

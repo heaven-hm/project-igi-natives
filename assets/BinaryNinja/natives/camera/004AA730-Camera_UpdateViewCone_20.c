@@ -1,42 +1,42 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_20 (VA 0x004AA730; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_20.h"
-void* Camera_UpdateViewCone_20(char* a1)
+void* Camera_UpdateViewCone_20(char* context)
 
 {
-    char* objC = a1;
+    char* entity_val = context;
 
-    while (objC & 3)
+    while (entity_val & 3)
     {
-        int32_t valA;
-        valA = *objC;
-        objC = &objC[1];
+        int32_t data_val;
+        data_val = *entity_val;
+        entity_val = &entity_val[1];
 
-        if (!valA)
-            return &objC[0xffffffff] - a1;
+        if (!data_val)
+            return &entity_val[0xffffffff] - context;
     }
 
     while (true)
     {
-        int32_t valA2 = *objC;
-        objC = &objC[4];
+        int32_t data_2 = *entity_val;
+        entity_val = &entity_val[4];
 
-        if ((valA2 ^ 0xffffffff ^ (0x7efefeff + valA2)) & 0x81010100)
+        if ((data_2 ^ 0xffffffff ^ (0x7efefeff + data_2)) & 0x81010100)
         {
-            int32_t valA5 = *(objC - 4);
+            int32_t data_5 = *(entity_val - 4);
 
-            if (!valA5)
-                return &objC[0xfffffffc] - a1;
+            if (!data_5)
+                return &entity_val[0xfffffffc] - context;
 
-            if (!*(&valA5 + 1))
-                return &objC[0xfffffffd] - a1;
+            if (!*(&data_5 + 1))
+                return &entity_val[0xfffffffd] - context;
 
-            if (!(valA5 & 0xff0000))
-                return &objC[0xfffffffe] - a1;
+            if (!(data_5 & 0xff0000))
+                return &entity_val[0xfffffffe] - context;
 
-            if (!(valA5 & 0xff000000))
+            if (!(data_5 & 0xff000000))
                 break;
         }
     }
 
-    return &objC[0xffffffff] - a1;
+    return &entity_val[0xffffffff] - context;
 }

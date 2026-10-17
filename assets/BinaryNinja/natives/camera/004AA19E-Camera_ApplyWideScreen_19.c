@@ -1,9 +1,9 @@
 // Original IGI.EXE function: Camera_ApplyWideScreen_19 (VA 0x004AA19E; static CFG gate PASS, CFG score 0.917).
 #include "Camera_ApplyWideScreen_19.h"
-int32_t Camera_ApplyWideScreen_19(uint32_t a1)
+int32_t Camera_ApplyWideScreen_19(uint32_t context)
 
 {
-    uint32_t CodePage = Camera_ApplyPostProcess_19(a1);
+    uint32_t CodePage = Camera_ApplyPostProcess_19(context);
 
     if (CodePage != g_c32200)
     {
@@ -14,69 +14,69 @@ int32_t Camera_ApplyWideScreen_19(uint32_t a1)
         }
         else
         {
-            int32_t tmpD1 = 0;
-            int32_t* valA = &g_5445b8;
+            int32_t temp_1 = 0;
+            int32_t* data_val = &g_5445b8;
 
             while (true)
             {
-                if (*valA == CodePage)
+                if (*data_val == CodePage)
                 {
                     void* i = nullptr;
-                    int32_t srcS2 = tmpD1 * 0x30;
-                    *__builtin_memset(0xc32320, 0, 0x100) = 0;
-                    char* ctxB1 = srcS2 + 0x5445c8;
+                    int32_t source_2 = temp_1 * 0x30;
+                    *memset(0xc32320, 0, 0x100) = 0;
+                    char* context_1 = source_2 + 0x5445c8;
 
                     do
                     {
-                        char* objC2 = ctxB1;
+                        char* entity_2 = context_1;
 
-                        if (*ctxB1)
+                        if (*context_1)
                         {
                             do
                             {
-                                char tmpD4 = objC2[1];
+                                char temp_4 = entity_2[1];
 
-                                if (!tmpD4)
+                                if (!temp_4)
                                     break;
 
-                                uint32_t valA2 = *objC2;
-                                uint32_t dstD5 = tmpD4;
+                                uint32_t data_2 = *entity_2;
+                                uint32_t dest_5 = temp_4;
 
-                                if (valA2 <= dstD5)
+                                if (data_2 <= dest_5)
                                 {
-                                    char tmpD6 = *(i + 0x5445b0);
+                                    char temp_6 = *(i + 0x5445b0);
 
                                     do
                                     {
-                                        *(valA2 + 0xc32321) |= tmpD6;
-                                        valA2 += 1;
-                                    } while (valA2 <= dstD5);
+                                        *(data_2 + 0xc32321) |= temp_6;
+                                        data_2 += 1;
+                                    } while (data_2 <= dest_5);
                                 }
 
-                                objC2 = &objC2[2];
-                            } while (*objC2);
+                                entity_2 = &entity_2[2];
+                            } while (*entity_2);
                         }
 
                         i += 1;
-                        ctxB1 = &ctxB1[8];
+                        context_1 = &context_1[8];
                     } while (i < 4);
 
                     g_c3221c = 1;
                     g_c32200 = CodePage;
-                    int32_t valA4 = Camera_UpdateViewCone_19(CodePage);
-                    g_c32210 = *(srcS2 + 0x5445bc);
-                    int32_t* dstD6 = &g_c32214;
-                    int32_t* srcS4 = srcS2 + 0x5445c0;
-                    *dstD6 = *srcS4;
-                    g_c32424 = valA4;
-                    dstD6[1] = srcS4[1];
+                    int32_t data_4 = Camera_UpdateViewCone_19(CodePage);
+                    g_c32210 = *(source_2 + 0x5445bc);
+                    int32_t* dest_6 = &g_c32214;
+                    int32_t* source_4 = source_2 + 0x5445c0;
+                    *dest_6 = *source_4;
+                    g_c32424 = data_4;
+                    dest_6[1] = source_4[1];
                     break;
                 }
 
-                valA = &valA[0xc];
-                tmpD1 += 1;
+                data_val = &data_val[0xc];
+                temp_1 += 1;
 
-                if (valA >= 0x5446a8)
+                if (data_val >= 0x5446a8)
                 {
                     CPINFO cPInfo;
 
@@ -88,32 +88,32 @@ int32_t Camera_ApplyWideScreen_19(uint32_t a1)
                         goto label_4aa321;
                     }
 
-                    bool cond_2_1 = cPInfo.MaxCharSize <= 1;
+                    bool flag_2_1 = cPInfo.MaxCharSize <= 1;
                     g_c32200 = CodePage;
-                    *__builtin_memset(0xc32320, 0, 0x100) = 0;
+                    *memset(0xc32320, 0, 0x100) = 0;
                     g_c32424 = 0;
 
-                    if (cond_2_1)
+                    if (flag_2_1)
                         g_c3221c = 0;
                     else
                     {
                         if (cPInfo.LeadByte[0])
                         {
-                            v_15;
-                            char* objC1 = &v_15;
+                            item_15;
+                            char* entity_1 = &item_15;
 
                             do
                             {
-                                char tmpD3 = *objC1;
+                                char temp_3 = *entity_1;
 
-                                if (!tmpD3)
+                                if (!temp_3)
                                     break;
 
-                                for (uint32_t i_1 = objC1[0xffffffff]; i_1 <= tmpD3; i_1 += 1)
+                                for (uint32_t i_1 = entity_1[0xffffffff]; i_1 <= temp_3; i_1 += 1)
                                     *(i_1 + 0xc32321) |= 4;
 
-                                objC1 = &objC1[2];
-                            } while (objC1[0xffffffff]);
+                                entity_1 = &entity_1[2];
+                            } while (entity_1[0xffffffff]);
                         }
 
                         for (void* i_2 = 1; i_2 < 0xff; i_2 += 1)
@@ -124,9 +124,9 @@ int32_t Camera_ApplyWideScreen_19(uint32_t a1)
                     }
 
                     g_c32210 = 0;
-                    int32_t* dstD9 = &g_c32214;
-                    *dstD9 = 0;
-                    dstD9[1] = 0;
+                    int32_t* dest_9 = &g_c32214;
+                    *dest_9 = 0;
+                    dest_9[1] = 0;
                     goto label_4aa326;
                 }
             }

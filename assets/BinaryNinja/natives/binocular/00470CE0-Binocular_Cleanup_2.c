@@ -1,29 +1,29 @@
 // Original IGI.EXE function: Binocular_Cleanup_2 (VA 0x00470CE0; static CFG gate PASS, CFG score 1.000).
 #include "Binocular_Cleanup_2.h"
-int32_t Binocular_Cleanup_2(int32_t a1 @ 0x8)
+int32_t Binocular_Cleanup_2(int32_t context )
 
 {
-    int32_t* dstD = a1;
-    int32_t srcS = dstD[2];
-    float* ctxB = *dstD;
-    int32_t valA3;
-    int32_t tmpD;
-    tmpD = HIGHD(Script_GetArg(dstD[1], srcS));
-    valA3 = LOWD(Script_GetArg(dstD[1], srcS));
+    int32_t* dest_val = context;
+    int32_t source_val = dest_val[2];
+    float* context_val = *dest_val;
+    int32_t data_3;
+    int32_t temp_val;
+    temp_val = HIGHD(Script_GetArg(dest_val[1], source_val));
+    data_3 = LOWD(Script_GetArg(dest_val[1], source_val));
     long double fp0;
     bool c1;
     bool c2;
-    fp0 = __fptan(((valA3 - tmpD) >> 1) * 0.0174532924f);
+    fp0 = __fptan(((data_3 - temp_val) >> 1) * 0.0174532924f);
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    ctxB[1] = /* ctxB[1] = unimplemented  {fstp dword [ctxB+0x4], fp0} */;
-    /* unimplemented  {fstp dword [ctxB+0x4], fp0} */
-    int32_t valA8;
-    int32_t tmpD1;
-    tmpD1 = HIGHD(Script_GetArg(dstD[1], srcS + 1));
-    valA8 = LOWD(Script_GetArg(dstD[1], srcS + 1));
-    a1 = (valA8 - tmpD1) >> 1;
-🚫🚫    /* unimplemented  {fild fp0, dword [esp+0x28]} */
+🚫🚫🚫    context_val[1] = /* context_val[1] = unimplemented  {fstp dword [context_val+0x4], fp0} */;
+    /* unimplemented  {fstp dword [context_val+0x4], fp0} */
+    int32_t data_8;
+    int32_t temp_1;
+    temp_1 = HIGHD(Script_GetArg(dest_val[1], source_val + 1));
+    data_8 = LOWD(Script_GetArg(dest_val[1], source_val + 1));
+    context = (data_8 - temp_1) >> 1;
+🚫🚫    /* unimplemented  {fild fp0, dword [stack_ptr+0x28]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
 🚫🚫🚫🚫    long double fp0_1;
     bool c1_1;
@@ -36,15 +36,15 @@ int32_t Binocular_Cleanup_2(int32_t a1 @ 0x8)
 
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    ctxB[2] = /* ctxB[2] = unimplemented  {fstp dword [ctxB+0x8], fp0} */;
-    /* unimplemented  {fstp dword [ctxB+0x8], fp0} */
-    int32_t valA12;
-    int32_t tmpD3;
-    tmpD3 = HIGHD(Script_GetArg(dstD[1], srcS + 2));
-    valA12 = LOWD(Script_GetArg(dstD[1], srcS + 2));
-    int32_t result = (valA12 - tmpD3) >> 1;
-    a1 = result;
-🚫🚫    /* unimplemented  {fild fp0, dword [esp+0x14]} */
+🚫🚫🚫    context_val[2] = /* context_val[2] = unimplemented  {fstp dword [context_val+0x8], fp0} */;
+    /* unimplemented  {fstp dword [context_val+0x8], fp0} */
+    int32_t data_12;
+    int32_t temp_3;
+    temp_3 = HIGHD(Script_GetArg(dest_val[1], source_val + 2));
+    data_12 = LOWD(Script_GetArg(dest_val[1], source_val + 2));
+    int32_t result = (data_12 - temp_3) >> 1;
+    context = result;
+🚫🚫    /* unimplemented  {fild fp0, dword [stack_ptr+0x14]} */
 🚫🚫    /* unimplemented  {fmul fp0, dword [&g_53367c]} */
 🚫🚫🚫🚫    long double fp0_2;
     bool c1_2;
@@ -57,8 +57,8 @@ int32_t Binocular_Cleanup_2(int32_t a1 @ 0x8)
 
 🚫🚫🚫    /* unimplemented  {fstp fp0, fp0} */
     /* unimplemented  {fstp fp0, fp0} */
-🚫🚫🚫    *ctxB =
-    /* unimplemented  {fstp dword [ctxB], fp0} */
-    dstD[2] = srcS + 3;
+🚫🚫🚫    *context_val =
+    /* unimplemented  {fstp dword [context_val], fp0} */
+    dest_val[2] = source_val + 3;
     return result;
 }

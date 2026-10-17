@@ -1,203 +1,203 @@
 // Original IGI.EXE function: FX_RmS (VA 0x00486650; static CFG gate PASS, CFG score 0.952).
 #include "FX_RmS.h"
-char* FX_RmS(char (** a1)[0x16], void* a2)
+char* FX_RmS(char (** context)[0x16], void* param_2)
 
 {
-    char (** ctxB)[0x16] = a1;
-    int32_t dstD = 0;
-    char* result = &ctxB[0x10];
-    int32_t v_28 = 0;
+    char (** context_val)[0x16] = context;
+    int32_t dest_val = 0;
+    char* result = &context_val[0x10];
+    int32_t item_28 = 0;
 
     while (*result)
     {
-        dstD += 1;
+        dest_val += 1;
         result = &result[0x102c];
 
-        if (dstD >= 0x18)
+        if (dest_val >= 0x18)
             break;
     }
 
-    if (dstD != 0x18)
+    if (dest_val != 0x18)
     {
-        void* srcS1 = a2;
-        int32_t flagP2 = dstD * 0x102c;
-        ctxB[dstD * 0x40b + 0x10] = 1;
-        int32_t* valA4;
-        int32_t objC1;
-        valA4 = QTask_LinkEventHandler_2(srcS1);
-        ctxB[dstD * 0x40b + 8] = valA4;
-        ctxB[dstD * 0x40b + 9] = 0;
-        ctxB[dstD * 0x40b + 0xa] = 0;
-        ctxB[dstD * 0x40b + 0x11] = 0;
-        ctxB[dstD * 0x40b + 0x12] = 0;
-        ctxB[dstD * 0x40b + 0xf] = 0;
+        void* source_1 = param_2;
+        int32_t flagP2 = dest_val * 0x102c;
+        context_val[dest_val * 0x40b + 0x10] = 1;
+        int32_t* data_4;
+        int32_t entity_1;
+        data_4 = QTask_LinkEventHandler_2(source_1);
+        context_val[dest_val * 0x40b + 8] = data_4;
+        context_val[dest_val * 0x40b + 9] = 0;
+        context_val[dest_val * 0x40b + 0xa] = 0;
+        context_val[dest_val * 0x40b + 0x11] = 0;
+        context_val[dest_val * 0x40b + 0x12] = 0;
+        context_val[dest_val * 0x40b + 0xf] = 0;
 
-        if (*(srcS1 + 0xb4))
+        if (*(source_1 + 0xb4))
         {
-            char (** srcS2)[0x16] = &g_540b60;
-            int32_t valA7 = StatusScreen_Get();
-            int32_t tmpD1 = 0;
-            a1 = &g_540b60;
+            char (** source_2)[0x16] = &g_540b60;
+            int32_t data_7 = StatusScreen_Get();
+            int32_t temp_1 = 0;
+            context = &g_540b60;
 
             while (true)
             {
-                char* srcS3 = *srcS2;
-                char* dstD1 = a2 + 0xb4;
+                char* source_3 = *source_2;
+                char* dest_1 = param_2 + 0xb4;
 
                 while (true)
                 {
-                    char valA9 = *dstD1;
-                    objC1 = valA9;
-                    char f1_1 = *srcS3;
-                    bool c_1 = valA9 < f1_1;
+                    char data_9 = *dest_1;
+                    entity_1 = data_9;
+                    char f1_1 = *source_3;
+                    bool c_1 = data_9 < f1_1;
 
-                    if (valA9 == f1_1)
+                    if (data_9 == f1_1)
                     {
-                        if (!objC1)
+                        if (!entity_1)
                         {
-                            objC1 = 0;
+                            entity_1 = 0;
                             break;
                         }
 
-                        valA9 = dstD1[1];
-                        objC1 = valA9;
-                        char f4_1 = srcS3[1];
-                        c_1 = valA9 < f4_1;
+                        data_9 = dest_1[1];
+                        entity_1 = data_9;
+                        char f4_1 = source_3[1];
+                        c_1 = data_9 < f4_1;
 
-                        if (valA9 == f4_1)
+                        if (data_9 == f4_1)
                         {
-                            dstD1 = &dstD1[2];
-                            srcS3 = &srcS3[2];
+                            dest_1 = &dest_1[2];
+                            source_3 = &source_3[2];
 
-                            if (objC1)
+                            if (entity_1)
                                 continue;
 
-                            objC1 = 0;
+                            entity_1 = 0;
                             break;
                         }
                     }
 
-                    objC1 = objC1 - objC1 + 1;
+                    entity_1 = entity_1 - entity_1 + 1;
                     break;
                 }
 
-                if (!objC1)
+                if (!entity_1)
                 {
-                    ctxB[dstD * 0x40b + 0xf] = valA7 + tmpD1 * 0x18 + 0x38c;
+                    context_val[dest_val * 0x40b + 0xf] = data_7 + temp_1 * 0x18 + 0x38c;
                     break;
                 }
 
-                tmpD1 += 1;
-                srcS2 = &a1[1];
-                a1 = srcS2;
+                temp_1 += 1;
+                source_2 = &context[1];
+                context = source_2;
 
-                if (tmpD1 >= 4)
+                if (temp_1 >= 4)
                     break;
             }
 
-            srcS1 = a2;
+            source_1 = param_2;
         }
 
         Qhash_Init(1);
-        void* valA11 = FX_Font4Fnt(ctxB, dstD);
-        int32_t* dstD2 = &ctxB[dstD * 0x40b + 0xc];
-        a1 = 3;
-        bool cond_1_1;
+        void* data_11 = FX_Font4Fnt(context_val, dest_val);
+        int32_t* dest_2 = &context_val[dest_val * 0x40b + 0xc];
+        context = 3;
+        bool flag_1_1;
 
         do
         {
-            *dstD2 = Sys_OpenFileStream_18(valA11, 0, 0, &g_567c74);
-            dstD2 = &dstD2[1];
-            cond_1_1 = a1 != 1;
-            a1 -= 1;
-        } while (cond_1_1);
+            *dest_2 = Sys_OpenFileStream_18(data_11, 0, 0, &g_567c74);
+            dest_2 = &dest_2[1];
+            flag_1_1 = context != 1;
+            context -= 1;
+        } while (flag_1_1);
         Qhash_Reset();
 
-        if (*(srcS1 + 0x1b4))
+        if (*(source_1 + 0x1b4))
         {
-            int32_t v_20 = 0x3f800000;
-            int32_t v_1c_1 = 0x3f800000;
-            int32_t v_18_1 = 0;
-            Sound_EventTrigger(srcS1 + 0x1b4, 1, &v_20);
+            int32_t item_20 = 0x3f800000;
+            int32_t item_1c_1 = 0x3f800000;
+            int32_t item_18_1 = 0;
+            Sound_EventTrigger(source_1 + 0x1b4, 1, &item_20);
         }
 
-        void* tmpD3 = *(srcS1 + 0xb0);
+        void* temp_3 = *(source_1 + 0xb0);
         int32_t i = 0xffffffff;
-        void* dstD3 = tmpD3;
+        void* dest_3 = temp_3;
 
         while (i)
         {
-            bool cond_2_1 = 0 != *dstD3;
-            dstD3 += 1;
+            bool flag_2_1 = 0 != *dest_3;
+            dest_3 += 1;
             i -= 1;
 
-            if (!cond_2_1)
+            if (!flag_2_1)
                 break;
         }
 
-        int32_t valA16;
-        void* objC9;
-        int32_t tmpD4;
+        int32_t data_16;
+        void* entity_9;
+        int32_t temp_4;
 
         if (~i - 1 < 0x80)
-            valA16 = Sys_CheckHeap_16(tmpD3);
+            data_16 = Sys_CheckHeap_16(temp_3);
 
-        if (~i - 1 >= 0x80 || !valA16)
+        if (~i - 1 >= 0x80 || !data_16)
         {
-            int32_t v_3c_5 = *(srcS1 + 0xb0);
-            Game_DataSymbolLoad(&ctxB[dstD * 0x40b + 0x13], "RM: %s");
+            int32_t item_3c_5 = *(source_1 + 0xb0);
+            Game_DataSymbolLoad(&context_val[dest_val * 0x40b + 0x13], "RM: %s");
         }
         else
         {
-            int32_t valA17 = *(srcS1 + 0xb0);
-            int32_t v_40_2 = valA17;
-            int32_t* valA18 = Resource_Load(valA17, tmpD4, objC9, nullptr);
+            int32_t data_17 = *(source_1 + 0xb0);
+            int32_t item_40_2 = data_17;
+            int32_t* data_18 = Resource_Load(data_17, temp_4, entity_9, nullptr);
             int32_t i_1 = 0xffffffff;
-            int32_t* dstD4 = valA18;
+            int32_t* dest_4 = data_18;
 
             while (i_1)
             {
-                bool cond_4_1 = 0 != *dstD4;
-                dstD4 += 1;
+                bool flag_4_1 = 0 != *dest_4;
+                dest_4 += 1;
                 i_1 -= 1;
 
-                if (!cond_4_1)
+                if (!flag_4_1)
                     break;
             }
 
-            int32_t objC10 = ~i_1;
-            int32_t srcS6;
-            int32_t dstD7;
-            dstD7 = memcpy(&ctxB[dstD * 0x40b + 0x13], dstD4 - objC10, objC10 & 0xfffffffc);
-            memcpy(dstD7, srcS6, objC10 & 3);
+            int32_t entity_10 = ~i_1;
+            int32_t source_6;
+            int32_t dest_7;
+            dest_7 = memcpy(&context_val[dest_val * 0x40b + 0x13], dest_4 - entity_10, entity_10 & 0xfffffffc);
+            memcpy(dest_7, source_6, entity_10 & 3);
 
-            if (!*(a2 + 0x1c6))
-                AI_CheckHearing_26(valA18);
+            if (!*(param_2 + 0x1c6))
+                AI_CheckHearing_26(data_18);
 
-            srcS1 = a2;
+            source_1 = param_2;
         }
 
-        if (*(srcS1 + 0x1c6))
+        if (*(source_1 + 0x1c6))
         {
-            void* dstD8 = &ctxB[dstD * 0x40b + 0x13];
+            void* dest_8 = &context_val[dest_val * 0x40b + 0x13];
             int32_t i_2 = 0xffffffff;
 
             while (i_2)
             {
-                bool cond_5_1 = 0 != *dstD8;
-                dstD8 += 1;
+                bool flag_5_1 = 0 != *dest_8;
+                dest_8 += 1;
                 i_2 -= 1;
 
-                if (!cond_5_1)
+                if (!flag_5_1)
                     break;
             }
 
-            ctxB[dstD * 0x40b + 0xb] = ~i_2 - 1 + flagP2 + ctxB + 0x4c;
-            return ~i_2 - 1 + flagP2 + ctxB + 0x4c;
+            context_val[dest_val * 0x40b + 0xb] = ~i_2 - 1 + flagP2 + context_val + 0x4c;
+            return ~i_2 - 1 + flagP2 + context_val + 0x4c;
         }
 
-        result = &ctxB[dstD * 0x40b + 0x13];
-        ctxB[dstD * 0x40b + 0xb] = result;
+        result = &context_val[dest_val * 0x40b + 0x13];
+        context_val[dest_val * 0x40b + 0xb] = result;
     }
 
     return result;

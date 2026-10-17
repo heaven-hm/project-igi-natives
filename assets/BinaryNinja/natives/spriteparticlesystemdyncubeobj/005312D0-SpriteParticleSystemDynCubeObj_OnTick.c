@@ -1,8 +1,8 @@
 // Original IGI.EXE function: SpriteParticleSystemDynCubeObj_OnTick (VA 0x005312D0; static CFG gate PASS, CFG score 1.000).
 #include "SpriteParticleSystemDynCubeObj_OnTick.h"
-int32_t SpriteParticleSystemDynCubeObj_OnTick(void* a1, void* a2, double* a3, float a4)
+int32_t SpriteParticleSystemDynCubeObj_OnTick(void* context, void* param_2, double* param_3, float param_4)
 
 {
-    *(a2 + 0x74) = a4;
-    return WorldObject_CommitTransform(a1, a2, a3, a4);
+    *(param_2 + 0x74) = param_4;
+    return WorldObject_CommitTransform(context, param_2, param_3, param_4);
 }

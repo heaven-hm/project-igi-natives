@@ -1,127 +1,127 @@
 // Original IGI.EXE function: AreaActivate_Setup (VA 0x005045F0; static CFG gate FAIL, CFG score 0.750).
 #include "AreaActivate_Setup.h"
-int32_t AreaActivate_Setup(void* a1)
+int32_t AreaActivate_Setup(void* context)
 
 {
     long double fpu7 = -1.7976931348623157e+308;
-    double v_28 = fpu7;
-    int32_t valA = *(a1 + 0xb0);
-    int32_t v_50 = 0xffffffff;
-    int32_t v_4c = 0x7fefffff;
-    int32_t v_48 = 0xffffffff;
-    int32_t v_44 = 0x7fefffff;
+    double item_28 = fpu7;
+    int32_t data_val = *(context + 0xb0);
+    int32_t item_50 = 0xffffffff;
+    int32_t item_4c = 0x7fefffff;
+    int32_t item_48 = 0xffffffff;
+    int32_t item_44 = 0x7fefffff;
     int32_t result_1 = 0xffffffff;
-    int32_t v_3c = 0x7fefffff;
-    int32_t v_38 = 0xffffffff;
-    int32_t v_34 = 0xffefffff;
+    int32_t item_3c = 0x7fefffff;
+    int32_t item_38 = 0xffffffff;
+    int32_t item_34 = 0xffefffff;
     int32_t result_2 = 0xffffffff;
-    int32_t v_2c = 0xffefffff;
-    *(a1 + 0xac) = 0;
+    int32_t item_2c = 0xffefffff;
+    *(context + 0xac) = 0;
 
-    if (valA)
+    if (data_val)
     {
-        fpu7 = v_28;
-        *(a1 + 0xac) = Sys_CheckHeap_22(valA);
+        fpu7 = item_28;
+        *(context + 0xac) = Sys_CheckHeap_22(data_val);
     }
 
-    *(a1 + 0x90) = *(a1 + 0x9c);
-    *(a1 + 0x94) = *(a1 + 0xa0);
-    *(a1 + 0x98) = *(a1 + 0xa4);
-    float v_78 = *(a1 + 0x90) * 0.5f;
-    long double x87_r6_3 = *(a1 + 0x94) * 0.5f;
-    *(a1 + 0x90) = v_78;
+    *(context + 0x90) = *(context + 0x9c);
+    *(context + 0x94) = *(context + 0xa0);
+    *(context + 0x98) = *(context + 0xa4);
+    float item_78 = *(context + 0x90) * 0.5f;
+    long double fpu_val_6_3 = *(context + 0x94) * 0.5f;
+    *(context + 0x90) = item_78;
     int32_t i = 0;
-    float v_74 = x87_r6_3;
-    long double x87_r6_5 = *(a1 + 0x98) * 0.5f;
-    *(a1 + 0x94) = v_74;
-    float v_70 = x87_r6_5;
-    *(a1 + 0x98) = v_70;
+    float item_74 = fpu_val_6_3;
+    long double fpu_val_6_5 = *(context + 0x98) * 0.5f;
+    *(context + 0x94) = item_74;
+    float item_70 = fpu_val_6_5;
+    *(context + 0x98) = item_70;
     int32_t result;
 
     do
     {
-        long double x87_r6_7 = v_78 * (1 - ((i & 1) << 1));
+        long double fpu_val_6_7 = item_78 * (1 - ((i & 1) << 1));
         result = i >> 1 & 2;
-        long double x87_r5_5 = (1 - (i & 2)) * v_74;
-        double v_60_2 = x87_r5_5;
-        long double x87_r4_2 = (1 - result) * v_70;
-        double v_58_2 = x87_r4_2;
-        double v_20 =
-            *(a1 + 0x6c) * x87_r5_5 + *(a1 + 0x70) * x87_r4_2 + *(a1 + 0x68) * x87_r6_7;
-        double v_18_1 =
-            *(a1 + 0x78) * x87_r5_5 + *(a1 + 0x7c) * x87_r4_2 + *(a1 + 0x74) * x87_r6_7;
-        double v_10_1 =
-            *(a1 + 0x84) * x87_r5_5 + *(a1 + 0x88) * x87_r4_2 + *(a1 + 0x80) * x87_r6_7;
-        void v_68;
-        memcpy(&v_68, &v_20, 0x18);
-        long double x87_r6_10 = v_20 + *(a1 + 0x50);
-        long double x87_r5_8 = v_60_2 + *(a1 + 0x58);
-        double v_60_3 = x87_r5_8;
-        double v_58_3 = v_58_2 + *(a1 + 0x60);
-        long double x87_r4_6 = v_50;
-        x87_r4_6 - x87_r6_10;
-        result = (x87_r4_6 < x87_r6_10 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_6, x87_r6_10) ? 1 : 0) << 0xa
-            | (x87_r4_6 == x87_r6_10 ? 1 : 0) << 0xe | 0x2800;
+        long double fpu_val_5_5 = (1 - (i & 2)) * item_74;
+        double item_60_2 = fpu_val_5_5;
+        long double fpu_val_4_2 = (1 - result) * item_70;
+        double item_58_2 = fpu_val_4_2;
+        double item_20 =
+            *(context + 0x6c) * fpu_val_5_5 + *(context + 0x70) * fpu_val_4_2 + *(context + 0x68) * fpu_val_6_7;
+        double item_18_1 =
+            *(context + 0x78) * fpu_val_5_5 + *(context + 0x7c) * fpu_val_4_2 + *(context + 0x74) * fpu_val_6_7;
+        double item_10_1 =
+            *(context + 0x84) * fpu_val_5_5 + *(context + 0x88) * fpu_val_4_2 + *(context + 0x80) * fpu_val_6_7;
+        void item_68;
+        memcpy(&item_68, &item_20, 0x18);
+        long double fpu_val_6_10 = item_20 + *(context + 0x50);
+        long double fpu_val_5_8 = item_60_2 + *(context + 0x58);
+        double item_60_3 = fpu_val_5_8;
+        double item_58_3 = item_58_2 + *(context + 0x60);
+        long double fpu_val_4_6 = item_50;
+        fpu_val_4_6 - fpu_val_6_10;
+        result = (fpu_val_4_6 < fpu_val_6_10 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_6, fpu_val_6_10) ? 1 : 0) << 0xa
+            | (fpu_val_4_6 == fpu_val_6_10 ? 1 : 0) << 0xe | 0x2800;
 
         if (!(*(&result + 1) & 1))
-            v_50 = x87_r6_10;
+            item_50 = fpu_val_6_10;
 
-        long double x87_r4_8 = v_48;
-        x87_r4_8 - x87_r5_8;
-        result = (x87_r4_8 < x87_r5_8 ? 1 : 0) << 8 | (FCMP_UO(x87_r4_8, x87_r5_8) ? 1 : 0) << 0xa
-            | (x87_r4_8 == x87_r5_8 ? 1 : 0) << 0xe | 0x2800;
+        long double fpu_val_4_8 = item_48;
+        fpu_val_4_8 - fpu_val_5_8;
+        result = (fpu_val_4_8 < fpu_val_5_8 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_4_8, fpu_val_5_8) ? 1 : 0) << 0xa
+            | (fpu_val_4_8 == fpu_val_5_8 ? 1 : 0) << 0xe | 0x2800;
 
         if (!(*(&result + 1) & 1))
-            v_48 = x87_r5_8;
+            item_48 = fpu_val_5_8;
 
-        long double x87_r5_10 = result_1;
-        long double f0_1 = v_58_3;
-        x87_r5_10 - f0_1;
-        result = (x87_r5_10 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r5_10, f0_1) ? 1 : 0) << 0xa
-            | (x87_r5_10 == f0_1 ? 1 : 0) << 0xe | 0x3000;
+        long double fpu_val_5_10 = result_1;
+        long double f0_1 = item_58_3;
+        fpu_val_5_10 - f0_1;
+        result = (fpu_val_5_10 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_5_10, f0_1) ? 1 : 0) << 0xa
+            | (fpu_val_5_10 == f0_1 ? 1 : 0) << 0xe | 0x3000;
 
         if (!(*(&result + 1) & 1))
         {
-            result = v_58_3;
+            result = item_58_3;
             result_1 = result;
-            int32_t v_3c_1 = *(&v_58_3 + 4);
+            int32_t item_3c_1 = *(&item_58_3 + 4);
         }
 
-        long double x87_r5_11 = v_38;
-        x87_r5_11 - x87_r6_10;
-        result = (x87_r5_11 < x87_r6_10 ? 1 : 0) << 8
-            | (FCMP_UO(x87_r5_11, x87_r6_10) ? 1 : 0) << 0xa
-            | (x87_r5_11 == x87_r6_10 ? 1 : 0) << 0xe | 0x3000;
+        long double fpu_val_5_11 = item_38;
+        fpu_val_5_11 - fpu_val_6_10;
+        result = (fpu_val_5_11 < fpu_val_6_10 ? 1 : 0) << 8
+            | (FCMP_UO(fpu_val_5_11, fpu_val_6_10) ? 1 : 0) << 0xa
+            | (fpu_val_5_11 == fpu_val_6_10 ? 1 : 0) << 0xe | 0x3000;
 
         if (*(&result + 1) & 0x41)
-            v_38 = x87_r6_10;
+            item_38 = fpu_val_6_10;
 
-        long double x87_r6_12 = result_2;
-        long double f1_1 = v_60_3;
-        x87_r6_12 - f1_1;
-        result = (x87_r6_12 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, f1_1) ? 1 : 0) << 0xa
-            | (x87_r6_12 == f1_1 ? 1 : 0) << 0xe | 0x3800;
+        long double fpu_val_6_12 = result_2;
+        long double f1_1 = item_60_3;
+        fpu_val_6_12 - f1_1;
+        result = (fpu_val_6_12 < f1_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, f1_1) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == f1_1 ? 1 : 0) << 0xe | 0x3800;
 
         if (*(&result + 1) & 0x41)
         {
-            result = v_60_3;
+            result = item_60_3;
             result_2 = result;
-            int32_t v_2c_1 = *(&v_60_3 + 4);
+            int32_t item_2c_1 = *(&item_60_3 + 4);
         }
 
-        long double f2_1 = v_58_3;
+        long double f2_1 = item_58_3;
         fpu7 - f2_1;
         result = (fpu7 < f2_1 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f2_1) ? 1 : 0) << 0xa
             | (fpu7 == f2_1 ? 1 : 0) << 0xe | 0x3800;
 
         if (*(&result + 1) & 0x41)
-            fpu7 = v_58_3;
+            fpu7 = item_58_3;
 
         i += 1;
     } while (i < 8);
 
-    double v_28_1 = fpu7;
-    memcpy(a1 + 0x20, &v_50, 0x18);
-    memcpy(a1 + 0x38, &v_38, 0x18);
+    double item_28_1 = fpu7;
+    memcpy(context + 0x20, &item_50, 0x18);
+    memcpy(context + 0x38, &item_38, 0x18);
     return result;
 }

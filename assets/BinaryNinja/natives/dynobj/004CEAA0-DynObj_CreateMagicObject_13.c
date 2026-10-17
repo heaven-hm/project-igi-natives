@@ -1,37 +1,37 @@
 // Original IGI.EXE function: DynObj_CreateMagicObject_13 (VA 0x004CEAA0; static CFG gate PASS, CFG score 1.000).
 #include "DynObj_CreateMagicObject_13.h"
-void* DynObj_CreateMagicObject_13(void* a1, int32_t a2, int32_t* a3)
+void* DynObj_CreateMagicObject_13(void* context, int32_t param_2, int32_t* param_3)
 
 {
-    int32_t valA = *(a1 + 4);
-    int32_t* objC = a1 + 0xc;
-    int32_t valA2 = *objC;
+    int32_t data_val = *(context + 4);
+    int32_t* entity_val = context + 0xc;
+    int32_t data_2 = *entity_val;
 
-    if (a2
-        != (((valA2 & 0xff0000) | valA2 >> 0x10) >> 8 | ((valA2 & 0xff00) | valA2 << 0x10) << 8))
+    if (param_2
+        != (((data_2 & 0xff0000) | data_2 >> 0x10) >> 8 | ((data_2 & 0xff00) | data_2 << 0x10) << 8))
     {
-        int32_t valA6;
+        int32_t data_6;
 
         do
         {
-            int32_t valA4 = objC[1];
-            objC = objC + (((((valA4 & 0xff0000) | valA4 >> 0x10) >> 8
-                | ((valA4 & 0xff00) | valA4 << 0x10) << 8) + 3) & 0xfffffffc) + 8;
+            int32_t data_4 = entity_val[1];
+            entity_val = entity_val + (((((data_4 & 0xff0000) | data_4 >> 0x10) >> 8
+                | ((data_4 & 0xff00) | data_4 << 0x10) << 8) + 3) & 0xfffffffc) + 8;
 
-            if (objC >= (((valA & 0xff0000) | valA >> 0x10) >> 8 | (valA << 0x10 | (valA & 0xff00)) << 8)
-                    + a1 + 8)
+            if (entity_val >= (((data_val & 0xff0000) | data_val >> 0x10) >> 8 | (data_val << 0x10 | (data_val & 0xff00)) << 8)
+                    + context + 8)
                 return 0;
 
-            valA6 = *objC;
-        } while (a2 !=
-            (((valA6 & 0xff0000) | valA6 >> 0x10) >> 8 | ((valA6 & 0xff00) | valA6 << 0x10) << 8));
+            data_6 = *entity_val;
+        } while (param_2 !=
+            (((data_6 & 0xff0000) | data_6 >> 0x10) >> 8 | ((data_6 & 0xff00) | data_6 << 0x10) << 8));
     }
 
-    if (a3)
+    if (param_3)
     {
-        int32_t valA8 = objC[1];
-        *a3 = ((valA8 & 0xff0000) | valA8 >> 0x10) >> 8 | ((valA8 & 0xff00) | valA8 << 0x10) << 8;
+        int32_t data_8 = entity_val[1];
+        *param_3 = ((data_8 & 0xff0000) | data_8 >> 0x10) >> 8 | ((data_8 & 0xff00) | data_8 << 0x10) << 8;
     }
 
-    return &objC[2];
+    return &entity_val[2];
 }

@@ -3,24 +3,24 @@
 int32_t* SkyTask_Init()
 
 {
-    int32_t v_7c = 0;
-    int16_t valA1 = TaskType_Register("SkyTask", 0x78, QTask_OpenEvent_2(), 0);
-    g_54f6e4 = valA1;
-    QTask_RemoveEventCallback(valA1, 4, sub_52c7a0);
+    int32_t item_7c = 0;
+    int16_t data_1 = TaskType_Register("SkyTask", 0x78, QTask_OpenEvent_2(), 0);
+    g_54f6e4 = data_1;
+    QTask_RemoveEventCallback(data_1, 4, sub_52c7a0);
     QTask_RemoveEventCallback(g_54f6e4, 0, sub_52c7c0);
     QTask_TriggerEvent(g_54f6e4, 2, sub_520f20);
-    int32_t valA3 = Script_ParseEnumReal32_8();
-    QTask_RemoveEventCallback(g_54f6e4, valA3, AIGraph_LoadParameters);
-    int32_t valA4 = Script_ParseEnumInt32_8();
-    int32_t v_80_1 = valA4;
-    valA4 = g_54f6e4;
-    QTask_RemoveEventCallback(valA4, v_80_1, sub_52c790);
+    int32_t data_3 = Script_ParseEnumReal32_8();
+    QTask_RemoveEventCallback(g_54f6e4, data_3, AIGraph_LoadParameters);
+    int32_t data_4 = Script_ParseEnumInt32_8();
+    int32_t item_80_1 = data_4;
+    data_4 = g_54f6e4;
+    QTask_RemoveEventCallback(data_4, item_80_1, sub_52c790);
     g_a84558 = Script_EvaluateCondition_7(2);
-    int32_t valA6 = Script_EvaluateCondition_2();
-    void v_78;
-    void v_8;
-    Script_UndefinedParameterTy(g_a84558, &v_78, &v_8, valA6, 7, 0);
-    int32_t valA8 = Script_ParseEnumString_2();
-    void v_c;
-    return Script_UndefinedParameterTy(g_a84558, &v_78, &v_c, valA8, 7, 0);
+    int32_t data_6 = Script_EvaluateCondition_2();
+    void item_78;
+    void item_8;
+    Script_UndefinedParameterTy(g_a84558, &item_78, &item_8, data_6, 7, 0);
+    int32_t data_8 = Script_ParseEnumString_2();
+    void item_c;
+    return Script_UndefinedParameterTy(g_a84558, &item_78, &item_c, data_8, 7, 0);
 }

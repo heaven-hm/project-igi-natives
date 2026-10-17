@@ -1,32 +1,32 @@
 // Original IGI.EXE function: Sys_CloseFileStream_15 (VA 0x004B5560; static CFG gate FAIL, CFG score 0.667).
 #include "Sys_CloseFileStream_15.h"
-int32_t Sys_CloseFileStream_15(int32_t* a1, int32_t a2, int32_t a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10, int32_t a11, int32_t a12, int32_t a13, int32_t a14, int32_t a15, int32_t a16, int32_t a17, float a18, float a19, float a20, int32_t a21, int32_t a22, int32_t a23, int32_t a24, int32_t a25)
+int32_t Sys_CloseFileStream_15(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4, int32_t param_5, int32_t param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10, int32_t param_11, int32_t param_12, int32_t param_13, int32_t param_14, int32_t param_15, int32_t param_16, int32_t param_17, float param_18, float param_19, float param_20, int32_t param_21, int32_t param_22, int32_t param_23, int32_t param_24, int32_t a25)
 
 {
-    int32_t v_a4 = 0;
-    long double x87_r7_1 = a18 * 0.0078125f;
-    float v_78 = x87_r7_1;
-    float v_54 = x87_r7_1;
-    float v_30 = x87_r7_1;
-    float v_c = x87_r7_1;
-    long double x87_r7_3 = a19 * 0.0078125f;
-    float v_74 = x87_r7_3;
-    float v_50 = x87_r7_3;
-    float v_2c = x87_r7_3;
-    float v_8 = x87_r7_3;
-    int32_t v_90 = a2;
-    long double x87_r7_5 = a20 * 0.0078125f;
-    int32_t* v_94 = &v_90;
-    float v_70 = x87_r7_5;
-    float v_4c = x87_r7_5;
-    float v_28 = x87_r7_5;
-    float v_4 = x87_r7_5;
-    int32_t v_98 = 4;
-    g_a84a50 = *(a1[2] + a23 * 0x24);
-    g_a84a58 = *a1;
-    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&v_a4, v_a4, a24, a25, v_98,
-        v_94, v_90, a3, a21, a10, a11, a22, v_78, v_74, v_70, a4, a5,
-        a21, a12, a13, a22, v_54, v_50, v_4c, a6, a7, a21, a14, a15, a22,
-        v_30, v_2c, v_28, a8, a9, a21, a16, a17, a22, v_c, v_8, v_4);
+    int32_t item_a4 = 0;
+    long double fpu_val_7_1 = param_18 * 0.0078125f;
+    float item_78 = fpu_val_7_1;
+    float item_54 = fpu_val_7_1;
+    float item_30 = fpu_val_7_1;
+    float item_c = fpu_val_7_1;
+    long double fpu_val_7_3 = param_19 * 0.0078125f;
+    float item_74 = fpu_val_7_3;
+    float item_50 = fpu_val_7_3;
+    float item_2c = fpu_val_7_3;
+    float item_8 = fpu_val_7_3;
+    int32_t item_90 = param_2;
+    long double fpu_val_7_5 = param_20 * 0.0078125f;
+    int32_t* item_94 = &item_90;
+    float item_70 = fpu_val_7_5;
+    float item_4c = fpu_val_7_5;
+    float item_28 = fpu_val_7_5;
+    float item_4 = fpu_val_7_5;
+    int32_t item_98 = 4;
+    g_a84a50 = *(context[2] + param_23 * 0x24);
+    g_a84a58 = *context;
+    int32_t result = (*((g_a84a54 << 2) + &g_a94e84))(&item_a4, item_a4, param_24, a25, item_98,
+        item_94, item_90, param_3, param_21, param_10, param_11, param_22, item_78, item_74, item_70, param_4, param_5,
+        param_21, param_12, param_13, param_22, item_54, item_50, item_4c, param_6, param_7, param_21, param_14, param_15, param_22,
+        item_30, item_2c, item_28, param_8, param_9, param_21, param_16, param_17, param_22, item_c, item_8, item_4);
     return result;
 }

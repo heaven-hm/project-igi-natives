@@ -1,33 +1,33 @@
 // Original IGI.EXE function: Terrain_CalculateNormals_4 (VA 0x00516E83; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_CalculateNormals_4.h"
-int32_t Terrain_CalculateNormals_4(int32_t a1)
+int32_t Terrain_CalculateNormals_4(int32_t context)
 
 {
-    int32_t dstD = 0;
-    void v_1c;
-    char* v_8;
-    char valA = Camera_ApplyHandiCam_29(&v_1c, &v_8, a1, 0, 0, 0, 0);
-    int32_t v_10;
+    int32_t dest_val = 0;
+    void item_1c;
+    char* item_8;
+    char data_val = Camera_ApplyHandiCam_29(&item_1c, &item_8, context, 0, 0, 0, 0);
+    int32_t item_10;
 
-    if (!(valA & 4))
+    if (!(data_val & 4))
     {
-        int32_t valA1 = Camera_ApplyWideScreen_25(&v_1c, &v_10);
+        int32_t data_1 = Camera_ApplyWideScreen_25(&item_1c, &item_10);
 
-        if (valA & 2 || valA1 == 1)
-            dstD = 0x80;
+        if (data_val & 2 || data_1 == 1)
+            dest_val = 0x80;
 
-        if (valA & 1 || valA1 == 2)
-            dstD |= 0x100;
+        if (data_val & 1 || data_1 == 2)
+            dest_val |= 0x100;
     }
     else
     {
-        dstD = 0x200;
-        v_10 = 0;
-        int32_t v_c_1 = 0;
+        dest_val = 0x200;
+        item_10 = 0;
+        int32_t item_c_1 = 0;
     }
 
-    **&g_54ec40 = dstD;
-    *(g_54ec40 + 4) = v_8 - a1;
-    *(g_54ec40 + 0x10) = v_10;
+    **&g_54ec40 = dest_val;
+    *(g_54ec40 + 4) = item_8 - context;
+    *(g_54ec40 + 0x10) = item_10;
     return g_54ec40;
 }

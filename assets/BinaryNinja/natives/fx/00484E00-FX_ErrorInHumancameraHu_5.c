@@ -1,35 +1,35 @@
 // Original IGI.EXE function: FX_ErrorInHumancameraHu_5 (VA 0x00484E00; static CFG gate PASS, CFG score 1.000).
 #include "FX_ErrorInHumancameraHu_5.h"
-int32_t* FX_ErrorInHumancameraHu_5(int32_t a1)
+int32_t* FX_ErrorInHumancameraHu_5(int32_t context)
 
 {
-    int32_t srcS = 0;
+    int32_t source_val = 0;
     int32_t* i;
 
     for (i = &g_5c1188; i < 0x5c1588; )
     {
         if (*(i + 5))
         {
-            int32_t objC3 = **i;
+            int32_t entity_3 = **i;
 
-            if (!objC3)
+            if (!entity_3)
             {
                 Error_Show("ERROR IN HUMANCAMERA HUMANLIST");
 
                 while (true)
                     /* nop */
             }
-            else if (objC3 == a1)
+            else if (entity_3 == context)
             {
-                int32_t valA = Qtask_UpdateList(*((srcS << 3) + &g_5c1188));
-                *((srcS << 3) + &g_5c1188) = 0;
-                *((srcS << 3) + &g_5c118d) = 0;
-                return valA;
+                int32_t data_val = Qtask_UpdateList(*((source_val << 3) + &g_5c1188));
+                *((source_val << 3) + &g_5c1188) = 0;
+                *((source_val << 3) + &g_5c118d) = 0;
+                return data_val;
             }
         }
 
         i = &i[2];
-        srcS += 1;
+        source_val += 1;
     }
 
     return i;

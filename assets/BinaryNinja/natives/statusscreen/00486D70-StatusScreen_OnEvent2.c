@@ -34,25 +34,25 @@ int32_t StatusScreen_OnEvent2(void* pThis)
     Sys_ReadFileBlock_17(pThis + 0x344);
     Sys_ReadFileBlock_17(pThis + 0x35c);
     Sys_ReadFileBlock_17(pThis + 0x374);
-    int32_t* edi = pThis + 0x38c;
+    int32_t* dest_ptr = pThis + 0x38c;
     int32_t i_2 = 4;
     int32_t i;
 
     do
     {
-        Sys_ReadFileBlock_17(edi);
-        edi = &edi[6];
+        Sys_ReadFileBlock_17(dest_ptr);
+        dest_ptr = &dest_ptr[6];
         i = i_2;
         i_2 -= 1;
     } while (i != 1);
-    int32_t* edi_1 = pThis + 0x3ec;
+    int32_t* dest_ptr_1 = pThis + 0x3ec;
     int32_t i_3 = 0xa;
     int32_t i_1;
 
     do
     {
-        Sys_ReadFileBlock_17(edi_1);
-        edi_1 = &edi_1[6];
+        Sys_ReadFileBlock_17(dest_ptr_1);
+        dest_ptr_1 = &dest_ptr_1[6];
         i_1 = i_3;
         i_3 -= 1;
     } while (i_1 != 1);

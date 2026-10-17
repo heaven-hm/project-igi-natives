@@ -1,49 +1,47 @@
 // Original IGI.EXE function: Camera_ApplyBandFilter_24 (VA 0x004AC66B; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyBandFilter_24.h"
-int32_t Camera_ApplyBandFilter_24(int16_t a1) __pure
-
-{
+int32_t Camera_ApplyBandFilter_24(int16_t context) {
     int32_t result = 0;
 
-    if (a1 & 1)
+    if (context & 1)
         result = 0x10;
 
-    if (a1 & 4)
+    if (context & 4)
         result |= 8;
 
-    if (a1 & 8)
+    if (context & 8)
         result |= 4;
 
-    if (a1 & 0x10)
+    if (context & 0x10)
         result |= 2;
 
-    if (a1 & 0x20)
+    if (context & 0x20)
         result |= 1;
 
-    if (a1 & 2)
+    if (context & 2)
         result |= 0x80000;
 
-    uint32_t objC = a1;
-    int32_t tmpD1 = objC & 0xc00;
+    uint32_t entity_val = context;
+    int32_t temp_1 = entity_val & 0xc00;
 
-    if (tmpD1)
+    if (temp_1)
     {
-        if (tmpD1 == 0x400)
+        if (temp_1 == 0x400)
             *(&result + 1) |= 1;
-        else if (tmpD1 == 0x800)
+        else if (temp_1 == 0x800)
             result |= 0x200;
-        else if (tmpD1 == 0xc00)
+        else if (temp_1 == 0xc00)
             result |= 0x300;
     }
 
-    int32_t objC1 = objC & 0x300;
+    int32_t entity_1 = entity_val & 0x300;
 
-    if (!objC1)
+    if (!entity_1)
         result |= 0x20000;
-    else if (objC1 == 0x200)
+    else if (entity_1 == 0x200)
         result |= 0x10000;
 
-    if (!(*(&a1 + 1) & 0x10))
+    if (!(*(&context + 1) & 0x10))
         return result;
 
     return result | 0x40000;

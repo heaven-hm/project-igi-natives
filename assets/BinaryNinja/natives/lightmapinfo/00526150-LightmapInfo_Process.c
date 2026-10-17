@@ -1,81 +1,81 @@
 // Original IGI.EXE function: LightmapInfo_Process (VA 0x00526150; static CFG gate PASS, CFG score 1.000).
 #include "LightmapInfo_Process.h"
-int32_t LightmapInfo_Process(void* a1, int32_t* a2)
+int32_t LightmapInfo_Process(void* context, int32_t* param_2)
 
 {
-    int32_t* dstD = a2;
-    void* ctxB = a1;
+    int32_t* dest_val = param_2;
+    void* context_val = context;
     int32_t* i = nullptr;
-    int32_t* srcS = *(dstD[1] + 0xc8) + *dstD * 0xc + 4;
-    a2 = nullptr;
+    int32_t* source_val = *(dest_val[1] + 0xc8) + *dest_val * 0xc + 4;
+    param_2 = nullptr;
     int32_t result;
 
     do
     {
-        float v_24;
-        float v_20;
-        float v_1c;
+        float item_24;
+        float item_20;
+        float item_1c;
 
         if (!i)
         {
-            v_24 = *(ctxB + 0x30);
-            v_20 = *(ctxB + 0x34);
-            v_1c = *(ctxB + 0x38);
+            item_24 = *(context_val + 0x30);
+            item_20 = *(context_val + 0x34);
+            item_1c = *(context_val + 0x38);
         }
         else if (i == 1)
         {
-            v_24 = *(ctxB + 0x3c);
-            v_20 = *(ctxB + 0x40);
-            v_1c = *(ctxB + 0x44);
+            item_24 = *(context_val + 0x3c);
+            item_20 = *(context_val + 0x40);
+            item_1c = *(context_val + 0x44);
         }
 
-        int32_t tmpD6 = 0;
-        long double x87_r7_2 = *(*(dstD[1] + 0x88) + 8) * 0.000244140625f;
-        result = srcS[2];
-        long double x87_r7_3 = x87_r7_2 + x87_r7_2;
+        int32_t temp_6 = 0;
+        long double fpu_val_7_2 = *(*(dest_val[1] + 0x88) + 8) * 0.000244140625f;
+        result = source_val[2];
+        long double fpu_val_7_3 = fpu_val_7_2 + fpu_val_7_2;
         int32_t result_1 = result;
-        long double x87_r7_4 = x87_r7_3 * x87_r7_3;
-        v_24 = x87_r7_4 * v_24;
-        v_20 = x87_r7_4 * v_20;
-        v_1c = x87_r7_4 * v_1c;
+        long double fpu_val_7_4 = fpu_val_7_3 * fpu_val_7_3;
+        item_24 = fpu_val_7_4 * item_24;
+        item_20 = fpu_val_7_4 * item_20;
+        item_1c = fpu_val_7_4 * item_1c;
 
         if (result > 0)
         {
             do
             {
-                int32_t valA11 = *srcS;
-                float v_30_1 = v_24;
-                long double x87_r7_7 = v_24 * *(valA11 + (tmpD6 << 2));
-                float v_2c_2 = v_20 * *(valA11 + (tmpD6 << 2));
-                long double x87_r6_9 = v_1c * *(valA11 + (tmpD6 << 2));
-                int32_t objC4 = *(srcS[1] + (tmpD6 << 2));
-                tmpD6 += 1;
-                float* valA14 = *(dstD[2] + (objC4 << 2));
-                float* objC5 = *(dstD[3] + (objC4 << 2));
-                float v_30_2 = x87_r7_7 + x87_r7_7;
-                long double x87_r7_9 = v_2c_2;
-                float v_18_1 = v_30_2;
-                float v_c_1 = v_30_2;
-                float v_2c_3 = x87_r7_9 + x87_r7_9;
-                long double x87_r7_11 = x87_r6_9;
-                float v_28_3 = x87_r7_11 + x87_r7_11;
-                long double x87_r7_14 = v_30_2 * 0.5f;
-                *valA14 = x87_r7_14 + *valA14;
-                valA14[1] = v_2c_3 * 0.5f + valA14[1];
-                valA14[2] = v_28_3 * 0.5f + valA14[2];
+                int32_t data_11 = *source_val;
+                float item_30_1 = item_24;
+                long double fpu_val_7_7 = item_24 * *(data_11 + (temp_6 << 2));
+                float item_2c_2 = item_20 * *(data_11 + (temp_6 << 2));
+                long double fpu_val_6_9 = item_1c * *(data_11 + (temp_6 << 2));
+                int32_t entity_4 = *(source_val[1] + (temp_6 << 2));
+                temp_6 += 1;
+                float* data_14 = *(dest_val[2] + (entity_4 << 2));
+                float* entity_5 = *(dest_val[3] + (entity_4 << 2));
+                float item_30_2 = fpu_val_7_7 + fpu_val_7_7;
+                long double fpu_val_7_9 = item_2c_2;
+                float item_18_1 = item_30_2;
+                float item_c_1 = item_30_2;
+                float item_2c_3 = fpu_val_7_9 + fpu_val_7_9;
+                long double fpu_val_7_11 = fpu_val_6_9;
+                float item_28_3 = fpu_val_7_11 + fpu_val_7_11;
+                long double fpu_val_7_14 = item_30_2 * 0.5f;
+                *data_14 = fpu_val_7_14 + *data_14;
+                data_14[1] = item_2c_3 * 0.5f + data_14[1];
+                data_14[2] = item_28_3 * 0.5f + data_14[2];
                 result = result_1;
-                *objC5 = x87_r7_14 + *objC5;
-                objC5[1] = v_2c_3 * 0.5f + objC5[1];
-                objC5[2] = v_28_3 * 0.5f + objC5[2];
-            } while (tmpD6 < result);
+                *entity_5 = fpu_val_7_14 + *entity_5;
+                entity_5[1] = item_2c_3 * 0.5f + entity_5[1];
+                entity_5[2] = item_28_3 * 0.5f + entity_5[2];
+            } while (temp_6 < result);
 
-            ctxB = a1;
-            i = a2;
+            context_val = context;
+            i = param_2;
         }
 
-        srcS = &srcS[3];
+        source_val = &source_val[3];
         i += 1;
-        a2 = i;
+        param_2 = i;
     } while (i < 1);
 
     return result;

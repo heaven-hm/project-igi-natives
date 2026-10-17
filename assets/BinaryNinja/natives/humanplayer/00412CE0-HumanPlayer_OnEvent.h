@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 00412CE0 HumanPlayer_OnEvent | gate PASS | openigi False */
-int HumanPlayer_OnEvent(float a1, float* a2);
+int HumanPlayer_OnEvent(float context, float* param_2);

@@ -1,24 +1,24 @@
 // Original IGI.EXE function: FlatSky_Update (VA 0x0051EB40; static CFG gate PASS, CFG score 1.000).
 #include "FlatSky_Update.h"
-int32_t FlatSky_Update(void* a1)
+int32_t FlatSky_Update(void* context)
 
 {
-    int32_t objC1 = Display_SetBackgroundColourFn(*(a1 + 0x78) * 255f, *(a1 + 0x7c) * 255f,
-        *(a1 + 0x80) * 255f);
+    int32_t entity_1 = Display_SetBackgroundColourFn(*(context + 0x78) * 255.0f, *(context + 0x7c) * 255.0f,
+        *(context + 0x80) * 255.0f);
 
-    if (*(a1 + 0xc8))
+    if (*(context + 0xc8))
     {
-        *(a1 + 0xb0) = *(a1 + 0xbc);
-        *(a1 + 0xb4) = *(a1 + 0xc0);
-        *(a1 + 0xb8) = *(a1 + 0xc4);
-        *(a1 + 0x98) = *(a1 + 0xa4);
-        *(a1 + 0x9c) = *(a1 + 0xa8);
-        objC1 = *(a1 + 0xac);
-        *(a1 + 0xa0) = objC1;
+        *(context + 0xb0) = *(context + 0xbc);
+        *(context + 0xb4) = *(context + 0xc0);
+        *(context + 0xb8) = *(context + 0xc4);
+        *(context + 0x98) = *(context + 0xa4);
+        *(context + 0x9c) = *(context + 0xa8);
+        entity_1 = *(context + 0xac);
+        *(context + 0xa0) = entity_1;
     }
 
-    int32_t v_10_1 = objC1;
-    Light_ComputeDirectionalLight_10(*(a1 + 0x84), *(a1 + 0x88) * 3.14159274f * 0.00555555569f);
-    return Light_SampleLightmap_9(*(a1 + 0x84), a1 + 0x8c, a1 + 0xa4, a1 + 0x98, a1 + 0xbc,
-        a1 + 0xb0);
+    int32_t item_10_1 = entity_1;
+    Light_ComputeDirectionalLight_10(*(context + 0x84), *(context + 0x88) * 3.14159274f * 0.00555555569f);
+    return Light_SampleLightmap_9(*(context + 0x84), context + 0x8c, context + 0xa4, context + 0x98, context + 0xbc,
+        context + 0xb0);
 }

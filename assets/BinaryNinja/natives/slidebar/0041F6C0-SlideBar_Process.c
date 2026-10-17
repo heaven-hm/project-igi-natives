@@ -1,17 +1,17 @@
 // Original IGI.EXE function: SlideBar_Process (VA 0x0041F6C0; static CFG gate PASS, CFG score 1.000).
 #include "SlideBar_Process.h"
-int32_t SlideBar_Process(void* a1)
+int32_t SlideBar_Process(void* context)
 
 {
-    Script_CallNativeHandler_6(a1 + 0xb8);
-    Script_CallNativeHandler_6(a1 + 0x108);
-    Script_CallNativeHandler_6(a1 + 0x158);
-    Script_CallNativeHandler_6(a1 + 0x1a8);
-    Script_CallNativeHandler_6(a1 + 0x1f8);
-    Menu_FormatScreen_3(*(a1 + 0x98));
-    Menu_FormatScreen_3(*(a1 + 0x9c));
-    int32_t valA3 = Script_SpawnNewTask_6();
-    int32_t tmpD2 = 0;
-    tmpD2 = *(a1 + 0x1c);
-    return (*(((valA3 * 0x180 + tmpD2) << 2) + &g_a96ae0))(a1);
+    Script_CallNativeHandler_6(context + 0xb8);
+    Script_CallNativeHandler_6(context + 0x108);
+    Script_CallNativeHandler_6(context + 0x158);
+    Script_CallNativeHandler_6(context + 0x1a8);
+    Script_CallNativeHandler_6(context + 0x1f8);
+    Menu_FormatScreen_3(*(context + 0x98));
+    Menu_FormatScreen_3(*(context + 0x9c));
+    int32_t data_3 = Script_SpawnNewTask_6();
+    int32_t temp_2 = 0;
+    temp_2 = *(context + 0x1c);
+    return (*(((data_3 * 0x180 + temp_2) << 2) + &g_a96ae0))(context);
 }

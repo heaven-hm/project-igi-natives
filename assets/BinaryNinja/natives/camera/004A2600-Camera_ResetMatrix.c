@@ -1,28 +1,28 @@
 // Original IGI.EXE function: Camera_ResetMatrix (VA 0x004A2600; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ResetMatrix.h"
-int32_t Camera_ResetMatrix(void* a1)
+int32_t Camera_ResetMatrix(void* context)
 
 {
     int32_t i_1 = 4;
-    int32_t srcS1 =
-        *(a1 + 0x6c) * 128f - ((((*(a1 + 0x64) * -128f) << 8) + *(a1 + 0x68) * -128f) << 8);
-    int32_t tmpD2 = 0x935c10;
+    int32_t source_1 =
+        *(context + 0x6c) * 128.0f - ((((*(context + 0x64) * -128.0f) << 8) + *(context + 0x68) * -128.0f) << 8);
+    int32_t temp_2 = 0x935c10;
     int32_t result =
-        *(a1 + 0x6c) * 255f - ((((*(a1 + 0x64) * -255f) << 8) + *(a1 + 0x68) * -255f) << 8);
+        *(context + 0x6c) * 255.0f - ((((*(context + 0x64) * -255.0f) << 8) + *(context + 0x68) * -255.0f) << 8);
     int32_t i;
 
     do
     {
-        int32_t tmpD3 = tmpD2 + 0x80;
-        int32_t objC8;
-        int32_t dstD2;
-        dstD2 = __memfill_u32(tmpD2, srcS1, 0x20);
-        tmpD2 = tmpD3 + 0x80;
+        int32_t temp_3 = temp_2 + 0x80;
+        int32_t entity_8;
+        int32_t dest_2;
+        dest_2 = __memfill_u32(temp_2, source_1, 0x20);
+        temp_2 = temp_3 + 0x80;
         i = i_1;
         i_1 -= 1;
-        int32_t objC9;
-        int32_t dstD4;
-        dstD4 = __memfill_u32(tmpD3, result, 0x20);
+        int32_t entity_9;
+        int32_t dest_4;
+        dest_4 = __memfill_u32(temp_3, result, 0x20);
     } while (i != 1);
     return result;
 }

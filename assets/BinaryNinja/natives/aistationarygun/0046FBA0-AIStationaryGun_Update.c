@@ -1,139 +1,139 @@
 // Original IGI.EXE function: AIStationaryGun_Update (VA 0x0046FBA0; static CFG gate PASS, CFG score 0.875).
 #include "AIStationaryGun_Update.h"
-int32_t AIStationaryGun_Update(double* a1, int32_t* a2)
+int32_t AIStationaryGun_Update(double* context, int32_t* param_2)
 
 {
-    float* valA = a2[1];
-    double v_94 = valA[2] * a1[0x20] + valA[1] * a1[0x1f] + *valA * a1[0x1e];
-    double v_8c = valA[5] * a1[0x20] + valA[4] * a1[0x1f] + valA[3] * a1[0x1e];
-    double* valA1 = *a2;
-    double v_84 = valA[8] * a1[0x20] + valA[7] * a1[0x1f] + valA[6] * a1[0x1e];
-    long double x87_r7_12 = v_94;
-    double v_40;
-    memcpy(&v_40, &v_94, 0x18);
-    v_40 = x87_r7_12 + *valA1;
-    double v_38;
-    double v_38_1 = v_38 + valA1[1];
-    double v_30;
-    double v_30_1 = v_30 + valA1[2];
-    long double x87_r7_18 = *(a1 + 0x9c);
-    long double x87_r6_12 = a1[0x14];
-    x87_r6_12 - x87_r7_18;
-    long double x87_r7_19;
+    float* data_val = param_2[1];
+    double item_94 = data_val[2] * context[0x20] + data_val[1] * context[0x1f] + *data_val * context[0x1e];
+    double item_8c = data_val[5] * context[0x20] + data_val[4] * context[0x1f] + data_val[3] * context[0x1e];
+    double* data_1 = *param_2;
+    double item_84 = data_val[8] * context[0x20] + data_val[7] * context[0x1f] + data_val[6] * context[0x1e];
+    long double fpu_val_7_12 = item_94;
+    double item_40;
+    memcpy(&item_40, &item_94, 0x18);
+    item_40 = fpu_val_7_12 + *data_1;
+    double item_38;
+    double item_38_1 = item_38 + data_1[1];
+    double item_30;
+    double item_30_1 = item_30 + data_1[2];
+    long double fpu_val_7_18 = *(context + 0x9c);
+    long double fpu_val_6_12 = context[0x14];
+    fpu_val_6_12 - fpu_val_7_18;
+    long double fpu_val_7_19;
 
-    if (!(*(&((x87_r6_12 < x87_r7_18 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_12, x87_r7_18) ? 1 : 0) << 0xa
-            | (x87_r6_12 == x87_r7_18 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_19 = a1[0x14];
+    if (!(*(&((fpu_val_6_12 < fpu_val_7_18 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_12, fpu_val_7_18) ? 1 : 0) << 0xa
+            | (fpu_val_6_12 == fpu_val_7_18 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_19 = context[0x14];
     else
-        x87_r7_19 = *(a1 + 0x9c);
+        fpu_val_7_19 = *(context + 0x9c);
 
-    long double x87_r6_13 = a1[0x13];
-    x87_r6_13 - x87_r7_19;
-    long double x87_r7_21;
+    long double fpu_val_6_13 = context[0x13];
+    fpu_val_6_13 - fpu_val_7_19;
+    long double fpu_val_7_21;
 
-    if (*(&((x87_r6_13 < x87_r7_19 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_13, x87_r7_19) ? 1 : 0) << 0xa
-        | (x87_r6_13 == x87_r7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_13 < fpu_val_7_19 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_13, fpu_val_7_19) ? 1 : 0) << 0xa
+        | (fpu_val_6_13 == fpu_val_7_19 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_22 = *(a1 + 0x9c);
-        long double x87_r6_14 = a1[0x14];
-        x87_r6_14 - x87_r7_22;
+        long double fpu_val_7_22 = *(context + 0x9c);
+        long double fpu_val_6_14 = context[0x14];
+        fpu_val_6_14 - fpu_val_7_22;
 
-        if (!(*(&((x87_r6_14 < x87_r7_22 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_14, x87_r7_22) ? 1 : 0) << 0xa
-                | (x87_r6_14 == x87_r7_22 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_21 = a1[0x14];
+        if (!(*(&((fpu_val_6_14 < fpu_val_7_22 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_14, fpu_val_7_22) ? 1 : 0) << 0xa
+                | (fpu_val_6_14 == fpu_val_7_22 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_21 = context[0x14];
         else
-            x87_r7_21 = *(a1 + 0x9c);
+            fpu_val_7_21 = *(context + 0x9c);
     }
     else
-        x87_r7_21 = a1[0x13];
+        fpu_val_7_21 = context[0x13];
 
-    long double x87_r7_24 = Render_ComputeNormals(*(a1 + 0x6c)) * x87_r7_21;
-    void* tmpD = a1[0xd];
-    float v_a8_1 = x87_r7_24;
-    double* i_1 = &v_40;
-    WorldObject_CommitTransform(tmpD, a1, i_1, v_a8_1);
-    float valA4 = a1[0x38];
-    float v_68;
-    int32_t* v_bc = &v_68;
-    Sys_DispatchOpcode_12(v_bc, valA4);
-    float v_5c;
-    float v_50;
-    v_94 = v_50 * a1[0x22] + v_68 * a1[0x21] + v_5c * *(a1 + 0x10c);
-    float v_64;
-    float v_58;
-    float v_4c;
-    *(&v_94 + 4) = v_4c * a1[0x22] + v_64 * a1[0x21] + v_58 * *(a1 + 0x10c);
-    float v_60;
-    float v_54;
-    float v_48;
-    v_8c = v_48 * a1[0x22] + v_60 * a1[0x21] + v_54 * *(a1 + 0x10c);
-    *(&v_8c + 4) = v_50 * *(a1 + 0x11c) + v_68 * *(a1 + 0x114) + v_5c * a1[0x23];
-    v_84 = v_4c * *(a1 + 0x11c) + v_64 * *(a1 + 0x114) + v_58 * a1[0x23];
-    *(&v_84 + 4) = v_48 * *(a1 + 0x11c) + v_60 * *(a1 + 0x114) + v_54 * a1[0x23];
-    int32_t v_44;
-    int32_t tmpD2 = *(a1 + 0x12c) + v_44 + 1;
-    float* valA6 = a2[1];
-    int32_t v_70 = tmpD2;
-    float v_7c = v_50 * a1[0x25] + v_68 * a1[0x24] + v_5c * *(a1 + 0x124);
-    float v_78 = v_4c * a1[0x25] + v_64 * a1[0x24] + v_58 * *(a1 + 0x124);
-    float v_74 = v_48 * a1[0x25] + v_60 * a1[0x24] + v_54 * *(a1 + 0x124);
-    memcpy(&v_68, &v_94, 0x28);
-    float v_28 = *(&v_8c + 4) * valA6[1] + v_94 * *valA6 + v_7c * valA6[2];
-    float v_24 = v_84 * valA6[1] + *(&v_94 + 4) * *valA6 + v_78 * valA6[2];
-    float v_20 = *(&v_84 + 4) * valA6[1] + v_8c * *valA6 + v_74 * valA6[2];
-    float v_1c = *(&v_8c + 4) * valA6[4] + v_7c * valA6[5] + v_94 * valA6[3];
-    int32_t v_4 = valA6[9] + tmpD2 + 1;
-    float v_18 = v_84 * valA6[4] + v_78 * valA6[5] + *(&v_94 + 4) * valA6[3];
-    float v_14 = *(&v_84 + 4) * valA6[4] + v_74 * valA6[5] + v_8c * valA6[3];
-    float v_10 = *(&v_8c + 4) * valA6[7] + v_7c * valA6[8] + v_94 * valA6[6];
-    float v_c = v_84 * valA6[7] + v_78 * valA6[8] + *(&v_94 + 4) * valA6[6];
-    float v_8 = *(&v_84 + 4) * valA6[7] + v_74 * valA6[8] + v_8c * valA6[6];
-    memcpy(&a1[0xe], &v_28, 0x28);
-    Weapon_ReloadClip(a1);
-    double* i = a1[1];
+    long double fpu_val_7_24 = Render_ComputeNormals(*(context + 0x6c)) * fpu_val_7_21;
+    void* temp_val = context[0xd];
+    float item_a8_1 = fpu_val_7_24;
+    double* i_1 = &item_40;
+    WorldObject_CommitTransform(temp_val, context, i_1, item_a8_1);
+    float data_4 = context[0x38];
+    float item_68;
+    int32_t* item_bc = &item_68;
+    Sys_DispatchOpcode_12(item_bc, data_4);
+    float item_5c;
+    float item_50;
+    item_94 = item_50 * context[0x22] + item_68 * context[0x21] + item_5c * *(context + 0x10c);
+    float item_64;
+    float item_58;
+    float item_4c;
+    *(&item_94 + 4) = item_4c * context[0x22] + item_64 * context[0x21] + item_58 * *(context + 0x10c);
+    float item_60;
+    float item_54;
+    float item_48;
+    item_8c = item_48 * context[0x22] + item_60 * context[0x21] + item_54 * *(context + 0x10c);
+    *(&item_8c + 4) = item_50 * *(context + 0x11c) + item_68 * *(context + 0x114) + item_5c * context[0x23];
+    item_84 = item_4c * *(context + 0x11c) + item_64 * *(context + 0x114) + item_58 * context[0x23];
+    *(&item_84 + 4) = item_48 * *(context + 0x11c) + item_60 * *(context + 0x114) + item_54 * context[0x23];
+    int32_t item_44;
+    int32_t temp_2 = *(context + 0x12c) + item_44 + 1;
+    float* data_6 = param_2[1];
+    int32_t item_70 = temp_2;
+    float item_7c = item_50 * context[0x25] + item_68 * context[0x24] + item_5c * *(context + 0x124);
+    float item_78 = item_4c * context[0x25] + item_64 * context[0x24] + item_58 * *(context + 0x124);
+    float item_74 = item_48 * context[0x25] + item_60 * context[0x24] + item_54 * *(context + 0x124);
+    memcpy(&item_68, &item_94, 0x28);
+    float item_28 = *(&item_8c + 4) * data_6[1] + item_94 * *data_6 + item_7c * data_6[2];
+    float item_24 = item_84 * data_6[1] + *(&item_94 + 4) * *data_6 + item_78 * data_6[2];
+    float item_20 = *(&item_84 + 4) * data_6[1] + item_8c * *data_6 + item_74 * data_6[2];
+    float item_1c = *(&item_8c + 4) * data_6[4] + item_7c * data_6[5] + item_94 * data_6[3];
+    int32_t item_4 = data_6[9] + temp_2 + 1;
+    float item_18 = item_84 * data_6[4] + item_78 * data_6[5] + *(&item_94 + 4) * data_6[3];
+    float item_14 = *(&item_84 + 4) * data_6[4] + item_74 * data_6[5] + item_8c * data_6[3];
+    float item_10 = *(&item_8c + 4) * data_6[7] + item_7c * data_6[8] + item_94 * data_6[6];
+    float item_c = item_84 * data_6[7] + item_78 * data_6[8] + *(&item_94 + 4) * data_6[6];
+    float item_8 = *(&item_84 + 4) * data_6[7] + item_74 * data_6[8] + item_8c * data_6[6];
+    memcpy(&context[0xe], &item_28, 0x28);
+    Weapon_ReloadClip(context);
+    double* i = context[1];
     int32_t result = *i;
 
     if (result && i)
     {
-        *(&v_94 + 4) = &a1[0xe];
-        v_94 = &a1[4];
+        *(&item_94 + 4) = &context[0xe];
+        item_94 = &context[4];
 
         if (result && i)
         {
-            int32_t objC1 = g_afa7e0;
+            int32_t entity_1 = g_afa7e0;
 
             do
             {
-                int32_t* tmpD4 = *i;
-                void* valA10;
+                int32_t* temp_4 = *i;
+                void* data_10;
 
-                if (!tmpD4)
-                    valA10 = nullptr;
+                if (!temp_4)
+                    data_10 = nullptr;
                 else
                 {
-                    int32_t valA7 = *tmpD4;
-                    int32_t valA8 = -(valA7);
-                    valA10 = (valA8 - valA8) & tmpD4;
+                    int32_t data_7 = *temp_4;
+                    int32_t data_8 = -(data_7);
+                    data_10 = (data_8 - data_8) & temp_4;
                 }
 
-                *((objC1 << 2) + &g_afa6e0) = valA10;
-                g_afa7e0 = objC1 + 1;
-                uint32_t valA12 = MagicObj_GetEventId();
-                int32_t objC3 = 0;
-                objC3 = *(i + 0x1c);
-                result = *(((valA12 * 0x180 + objC3) << 2) + &g_a96ae0);
+                *((entity_1 << 2) + &g_afa6e0) = data_10;
+                g_afa7e0 = entity_1 + 1;
+                uint32_t data_12 = MagicObj_GetEventId();
+                int32_t entity_3 = 0;
+                entity_3 = *(i + 0x1c);
+                result = *(((data_12 * 0x180 + entity_3) << 2) + &g_a96ae0);
 
                 if (result)
                 {
-                    double* v_a8_2 = &v_94;
+                    double* item_a8_2 = &item_94;
                     i_1 = i;
-                    result = result(i_1, v_a8_2);
+                    result = result(i_1, item_a8_2);
                 }
 
-                objC1 = g_afa7e0 - 1;
-                g_afa7e0 = objC1;
-                i = *((objC1 << 2) + &g_afa6e0);
+                entity_1 = g_afa7e0 - 1;
+                g_afa7e0 = entity_1;
+                i = *((entity_1 << 2) + &g_afa6e0);
             } while (i);
         }
     }

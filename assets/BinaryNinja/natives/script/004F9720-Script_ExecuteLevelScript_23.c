@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Script_ExecuteLevelScript_23 (VA 0x004F9720; static CFG gate PASS, CFG score 1.000).
 #include "Script_ExecuteLevelScript_23.h"
-void* Script_ExecuteLevelScript_23(void* a1, int32_t a2)
+void* Script_ExecuteLevelScript_23(void* context, int32_t param_2)
 
 {
-    if (!*(a1 + 0x6c) || a2 >= *(a1 + 0x58) || a2 < 0 || a2 == 0xffffffff)
+    if (!*(context + 0x6c) || param_2 >= *(context + 0x58) || param_2 < 0 || param_2 == 0xffffffff)
         return 0;
 
-    int32_t* valA4 = Script_UndefinedGraphnodeda(a1) * a2 + *(a1 + 0x6c);
-    int32_t valA6 = *valA4 + 1;
-    int32_t valA7 = -(valA6);
-    return (valA7 - valA7) & valA4;
+    int32_t* data_4 = Script_UndefinedGraphnodeda(context) * param_2 + *(context + 0x6c);
+    int32_t data_6 = *data_4 + 1;
+    int32_t data_7 = -(data_6);
+    return (data_7 - data_7) & data_4;
 }

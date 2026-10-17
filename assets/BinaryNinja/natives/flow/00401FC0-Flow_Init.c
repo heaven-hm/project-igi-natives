@@ -3,10 +3,10 @@
 void* Flow_Init()
 
 {
-    int32_t v_4 = 0;
-    int16_t valA1 = TaskType_Register("Flow", 0x54, QTask_OpenEvent_2(), 0);
-    g_567c7c = valA1;
-    QTask_RemoveEventCallback(valA1, 0, sub_402070);
+    int32_t item_4 = 0;
+    int16_t data_1 = TaskType_Register("Flow", 0x54, QTask_OpenEvent_2(), 0);
+    g_567c7c = data_1;
+    QTask_RemoveEventCallback(data_1, 0, sub_402070);
     QTask_TriggerEvent(g_567c7c, 1, Flow_LoadParameters);
     QTask_TriggerEvent(g_567c7c, 2, sub_402740);
     TaskType_Set("FLOW_EVENT_QUIT", 1);

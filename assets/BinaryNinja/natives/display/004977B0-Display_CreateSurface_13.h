@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004977B0 Display_CreateSurface_13 | gate PASS | openigi False */
-int** Display_CreateSurface_13(int a1, int a2);
+int** Display_CreateSurface_13(int context, int param_2);

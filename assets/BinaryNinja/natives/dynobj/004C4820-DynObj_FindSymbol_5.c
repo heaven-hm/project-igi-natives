@@ -5,26 +5,26 @@ uint32_t DynObj_FindSymbol_5()
 {
     QTask_LinkEventHandler_3(0x8000000);
     QTask_CloseEvent_2(g_547f42);
-    int32_t valA1 = g_a4433c;
+    int32_t data_1 = g_a4433c;
     int32_t i = 0;
     g_547f42 = 0x181;
 
-    if (valA1 > 0)
+    if (data_1 > 0)
     {
-        int32_t* srcS1 = &g_b97e24;
+        int32_t* source_1 = &g_b97e24;
 
         do
         {
-            void* valA2 = *srcS1;
+            void* data_2 = *source_1;
 
-            if (valA2)
+            if (data_2)
             {
-                Sys_ExecuteBytecode_2(valA2);
-                *srcS1 = 0;
+                Sys_ExecuteBytecode_2(data_2);
+                *source_1 = 0;
             }
 
             i += 1;
-            srcS1 = &srcS1[0xa];
+            source_1 = &source_1[0xa];
         } while (i < g_a4433c);
     }
 

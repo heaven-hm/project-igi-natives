@@ -1,253 +1,253 @@
 // Original IGI.EXE function: Camera_ApplyPostProcess_21 (VA 0x004AB0E4; static CFG gate PASS, CFG score 1.000).
 #include "Camera_ApplyPostProcess_21.h"
-void* Camera_ApplyPostProcess_21(int32_t* a1)
+void* Camera_ApplyPostProcess_21(int32_t* context)
 
 {
-    int32_t* tmpD = g_c321f8;
-    void* dstD = &tmpD[g_c321f4 * 5];
-    void* objC1 = (a1 + 0x17) & 0xfffffff0;
-    uint32_t v_10;
-    uint32_t v_c;
-    uint32_t srcS;
+    int32_t* temp_val = g_c321f8;
+    void* dest_val = &temp_val[g_c321f4 * 5];
+    void* entity_1 = (context + 0x17) & 0xfffffff0;
+    uint32_t item_10;
+    uint32_t item_c;
+    uint32_t source_val;
 
-    if ((objC1 >> 4) - 1 >= 0x20)
+    if ((entity_1 >> 4) - 1 >= 0x20)
     {
-        srcS = 0;
-        v_10 = 0;
-        v_c = 0xffffffff >> ((((objC1 >> 4) - 1) - 0x20) & 0x1f);
+        source_val = 0;
+        item_10 = 0;
+        item_c = 0xffffffff >> ((((entity_1 >> 4) - 1) - 0x20) & 0x1f);
     }
     else
     {
-        srcS = 0xffffffff >> (((objC1 >> 4) - 1) & 0x1f);
-        v_c = 0xffffffff;
-        v_10 = srcS;
+        source_val = 0xffffffff >> (((entity_1 >> 4) - 1) & 0x1f);
+        item_c = 0xffffffff;
+        item_10 = source_val;
     }
 
-    int32_t* valA4 = g_c321ec;
-    int32_t* ctxB = valA4;
-    a1 = ctxB;
+    int32_t* data_4 = g_c321ec;
+    int32_t* context_val = data_4;
+    context = context_val;
 
-    if (ctxB < dstD)
+    if (context_val < dest_val)
     {
-        while (!((ctxB[1] & v_c) | (*ctxB & srcS)))
+        while (!((context_val[1] & item_c) | (*context_val & source_val)))
         {
-            ctxB = &ctxB[5];
-            a1 = ctxB;
+            context_val = &context_val[5];
+            context = context_val;
 
-            if (ctxB >= dstD)
+            if (context_val >= dest_val)
                 break;
         }
     }
 
-    if (ctxB == dstD)
+    if (context_val == dest_val)
     {
-        ctxB = tmpD;
-        bool cond_4_1;
+        context_val = temp_val;
+        bool flag_4_1;
 
         while (true)
         {
-            cond_4_1 = ctxB != valA4;
-            a1 = ctxB;
+            flag_4_1 = context_val != data_4;
+            context = context_val;
 
-            if (ctxB >= valA4)
+            if (context_val >= data_4)
                 break;
 
-            if ((ctxB[1] & v_c) | (*ctxB & srcS))
+            if ((context_val[1] & item_c) | (*context_val & source_val))
             {
-                cond_4_1 = ctxB != valA4;
+                flag_4_1 = context_val != data_4;
                 break;
             }
 
-            ctxB = &ctxB[5];
+            context_val = &context_val[5];
         }
 
-        if (!cond_4_1)
+        if (!flag_4_1)
         {
-            bool cond_5_1;
+            bool flag_5_1;
 
             while (true)
             {
-                cond_5_1 = ctxB != dstD;
+                flag_5_1 = context_val != dest_val;
 
-                if (ctxB >= dstD)
+                if (context_val >= dest_val)
                     break;
 
-                if (ctxB[2])
+                if (context_val[2])
                 {
-                    cond_5_1 = ctxB != dstD;
+                    flag_5_1 = context_val != dest_val;
                     break;
                 }
 
-                ctxB = &ctxB[5];
-                a1 = ctxB;
+                context_val = &context_val[5];
+                context = context_val;
             }
 
-            if (!cond_5_1)
+            if (!flag_5_1)
             {
-                ctxB = tmpD;
-                bool cond_7_1;
+                context_val = temp_val;
+                bool flag_7_1;
 
                 while (true)
                 {
-                    cond_7_1 = ctxB != valA4;
-                    a1 = ctxB;
+                    flag_7_1 = context_val != data_4;
+                    context = context_val;
 
-                    if (ctxB >= valA4)
+                    if (context_val >= data_4)
                         break;
 
-                    if (ctxB[2])
+                    if (context_val[2])
                     {
-                        cond_7_1 = ctxB != valA4;
+                        flag_7_1 = context_val != data_4;
                         break;
                     }
 
-                    ctxB = &ctxB[5];
+                    context_val = &context_val[5];
                 }
 
-                if (!cond_7_1)
+                if (!flag_7_1)
                 {
-                    ctxB = Camera_UpdateViewCone_21();
-                    a1 = ctxB;
+                    context_val = Camera_UpdateViewCone_21();
+                    context = context_val;
 
-                    if (!ctxB)
+                    if (!context_val)
                         return nullptr;
                 }
             }
 
-            *ctxB[4] = Camera_ResetMatrix_21(ctxB);
+            *context_val[4] = Camera_ResetMatrix_21(context_val);
 
-            if (*ctxB[4] == 0xffffffff)
+            if (*context_val[4] == 0xffffffff)
                 return nullptr;
         }
     }
 
-    g_c321ec = ctxB;
-    int32_t* valA8 = ctxB[4];
-    int32_t tmpD1 = *valA8;
-    int32_t v_8_1 = tmpD1;
+    g_c321ec = context_val;
+    int32_t* data_8 = context_val[4];
+    int32_t temp_1 = *data_8;
+    int32_t item_8_1 = temp_1;
 
-    if (tmpD1 == 0xffffffff || !((valA8[tmpD1 + 0x31] & v_c) | (valA8[tmpD1 + 0x11] & srcS)))
+    if (temp_1 == 0xffffffff || !((data_8[temp_1 + 0x31] & item_c) | (data_8[temp_1 + 0x11] & source_val)))
     {
-        v_8_1 = 0;
-        void* objC15 = &valA8[0x11];
-        srcS = v_10;
+        item_8_1 = 0;
+        void* entity_15 = &data_8[0x11];
+        source_val = item_10;
 
-        if (!((valA8[0x31] & v_c) | (valA8[0x11] & v_10)))
+        if (!((data_8[0x31] & item_c) | (data_8[0x11] & item_10)))
         {
-            int32_t tmpD6;
+            int32_t temp_6;
 
             do
             {
-                v_8_1 += 1;
-                tmpD6 = *(objC15 + 0x84) & v_c;
-                objC15 += 4;
-            } while (!(tmpD6 | (srcS & *objC15)));
+                item_8_1 += 1;
+                temp_6 = *(entity_15 + 0x84) & item_c;
+                entity_15 += 4;
+            } while (!(temp_6 | (source_val & *entity_15)));
         }
 
-        tmpD1 = v_8_1;
+        temp_1 = item_8_1;
     }
 
-    int32_t dstD9 = 0;
-    int32_t i = valA8[tmpD1 + 0x11] & srcS;
+    int32_t dest_9 = 0;
+    int32_t i = data_8[temp_1 + 0x11] & source_val;
 
     if (!i)
     {
-        i = valA8[tmpD1 + 0x31] & v_c;
-        dstD9 = 0x20;
+        i = data_8[temp_1 + 0x31] & item_c;
+        dest_9 = 0x20;
     }
 
     while (i >= 0)
     {
         i <<= 1;
-        dstD9 += 1;
+        dest_9 += 1;
     }
 
-    int32_t* tmpD8 = valA8[tmpD1 * 0x81 + 0x51 + dstD9 * 2 + 1];
-    void* objC23 = *tmpD8 - objC1;
-    int32_t srcS5 = (objC23 >> 4) - 1;
+    int32_t* temp_8 = data_8[temp_1 * 0x81 + 0x51 + dest_9 * 2 + 1];
+    void* entity_23 = *temp_8 - entity_1;
+    int32_t source_5 = (entity_23 >> 4) - 1;
 
-    if (srcS5 > 0x3f)
-        srcS5 = 0x3f;
+    if (source_5 > 0x3f)
+        source_5 = 0x3f;
 
-    if (srcS5 == dstD9)
+    if (source_5 == dest_9)
     {
     label_4ab39b:
 
-        if (objC23)
+        if (entity_23)
         {
-            *tmpD8 = objC23;
-            *(objC23 + tmpD8 - 4) = objC23;
+            *temp_8 = entity_23;
+            *(entity_23 + temp_8 - 4) = entity_23;
         }
     }
     else
     {
-        if (tmpD8[1] == tmpD8[2])
+        if (temp_8[1] == temp_8[2])
         {
-            if (dstD9 >= 0x20)
+            if (dest_9 >= 0x20)
             {
-                uint32_t ctxB5 = ~(0x80000000 >> ((dstD9 - 0x20) & 0x1f));
-                valA8[v_8_1 + 0x31] &= ctxB5;
-                char f1_1 = *(valA8 + dstD9 + 4);
-                *(valA8 + dstD9 + 4) -= 1;
+                uint32_t context_5 = ~(0x80000000 >> ((dest_9 - 0x20) & 0x1f));
+                data_8[item_8_1 + 0x31] &= context_5;
+                char f1_1 = *(data_8 + dest_9 + 4);
+                *(data_8 + dest_9 + 4) -= 1;
 
                 if (f1_1 != 1)
-                    ctxB = a1;
+                    context_val = context;
                 else
                 {
-                    ctxB = a1;
-                    ctxB[1] &= ctxB5;
+                    context_val = context;
+                    context_val[1] &= context_5;
                 }
             }
             else
             {
-                uint32_t ctxB2 = ~(0x80000000 >> (dstD9 & 0x1f));
-                valA8[v_8_1 + 0x11] &= ctxB2;
-                char f2_1 = *(valA8 + dstD9 + 4);
-                *(valA8 + dstD9 + 4) -= 1;
+                uint32_t context_2 = ~(0x80000000 >> (dest_9 & 0x1f));
+                data_8[item_8_1 + 0x11] &= context_2;
+                char f2_1 = *(data_8 + dest_9 + 4);
+                *(data_8 + dest_9 + 4) -= 1;
 
                 if (f2_1 != 1)
-                    ctxB = a1;
+                    context_val = context;
                 else
                 {
-                    ctxB = a1;
-                    *ctxB &= ctxB2;
+                    context_val = context;
+                    *context_val &= context_2;
                 }
             }
         }
 
-        *(tmpD8[2] + 4) = tmpD8[1];
-        *(tmpD8[1] + 8) = tmpD8[2];
+        *(temp_8[2] + 4) = temp_8[1];
+        *(temp_8[1] + 8) = temp_8[2];
 
-        if (objC23)
+        if (entity_23)
         {
-            void* objC35 = &valA8[tmpD1 * 0x81 + 0x51 + srcS5 * 2];
-            tmpD8[1] = valA8[tmpD1 * 0x81 + 0x51 + srcS5 * 2 + 1];
-            tmpD8[2] = objC35;
-            *(objC35 + 4) = tmpD8;
-            *(tmpD8[1] + 8) = tmpD8;
+            void* entity_35 = &data_8[temp_1 * 0x81 + 0x51 + source_5 * 2];
+            temp_8[1] = data_8[temp_1 * 0x81 + 0x51 + source_5 * 2 + 1];
+            temp_8[2] = entity_35;
+            *(entity_35 + 4) = temp_8;
+            *(temp_8[1] + 8) = temp_8;
 
-            if (tmpD8[1] == tmpD8[2])
+            if (temp_8[1] == temp_8[2])
             {
-                char objC38 = *(srcS5 + valA8 + 4);
-                *(&a1 + 3) = objC38;
+                char entity_38 = *(source_5 + data_8 + 4);
+                *(&context + 3) = entity_38;
 
-                if (srcS5 >= 0x20)
+                if (source_5 >= 0x20)
                 {
-                    *(srcS5 + valA8 + 4) = objC38 + 1;
+                    *(source_5 + data_8 + 4) = entity_38 + 1;
 
-                    if (!*(&a1 + 3))
-                        ctxB[1] |= 0x80000000 >> ((srcS5 - 0x20) & 0x1f);
+                    if (!*(&context + 3))
+                        context_val[1] |= 0x80000000 >> ((source_5 - 0x20) & 0x1f);
 
-                    valA8[v_8_1 + 0x31] |= 0x80000000 >> ((srcS5 - 0x20) & 0x1f);
+                    data_8[item_8_1 + 0x31] |= 0x80000000 >> ((source_5 - 0x20) & 0x1f);
                 }
                 else
                 {
-                    *(srcS5 + valA8 + 4) = objC38 + 1;
+                    *(source_5 + data_8 + 4) = entity_38 + 1;
 
-                    if (!*(&a1 + 3))
-                        *ctxB |= 0x80000000 >> (srcS5 & 0x1f);
+                    if (!*(&context + 3))
+                        *context_val |= 0x80000000 >> (source_5 & 0x1f);
 
-                    valA8[v_8_1 + 0x11] |= 0x80000000 >> (srcS5 & 0x1f);
+                    data_8[item_8_1 + 0x11] |= 0x80000000 >> (source_5 & 0x1f);
                 }
             }
 
@@ -255,15 +255,15 @@ void* Camera_ApplyPostProcess_21(int32_t* a1)
         }
     }
 
-    void** tmpD9 = tmpD8 + objC23;
-    *tmpD9 = objC1 + 1;
-    *(tmpD9 + objC1 - 4) = objC1 + 1;
-    int32_t objC46 = valA8[tmpD1 * 0x81 + 0x51];
-    valA8[tmpD1 * 0x81 + 0x51] = objC46 + 1;
+    void** temp_9 = temp_8 + entity_23;
+    *temp_9 = entity_1 + 1;
+    *(temp_9 + entity_1 - 4) = entity_1 + 1;
+    int32_t entity_46 = data_8[temp_1 * 0x81 + 0x51];
+    data_8[temp_1 * 0x81 + 0x51] = entity_46 + 1;
 
-    if (!objC46 && ctxB == g_c321f0 && v_8_1 == g_c321e8)
+    if (!entity_46 && context_val == g_c321f0 && item_8_1 == g_c321e8)
         g_c321f0 = 0;
 
-    *valA8 = v_8_1;
-    return &tmpD9[1];
+    *data_8 = item_8_1;
+    return &temp_9[1];
 }

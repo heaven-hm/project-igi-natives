@@ -1,11 +1,11 @@
 // Original IGI.EXE function: Camera_SetFieldOfView_33 (VA 0x004AF8F0; static CFG gate PASS, CFG score 1.000).
 #include "Camera_SetFieldOfView_33.h"
-void* Camera_SetFieldOfView_33(void* a1, void** a2)
+void* Camera_SetFieldOfView_33(void* context, void** param_2)
 
 {
-    a2[1] = *(a1 + 8);
-    *a2 = a1 + 4;
-    **(a1 + 8) = a2;
-    *(a1 + 8) = a2;
-    return a1;
+    param_2[1] = *(context + 8);
+    *param_2 = context + 4;
+    **(context + 8) = param_2;
+    *(context + 8) = param_2;
+    return context;
 }

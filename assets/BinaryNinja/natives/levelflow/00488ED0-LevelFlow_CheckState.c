@@ -8,7 +8,7 @@ int32_t* LevelFlow_CheckState(void* pThis)
     Level_InitSprites_6();
     Script_ExecuteLevelScript_6(pThis + 0x7c);
     Script_ExecuteLevelScript_6(pThis + 0xcc);
-    __builtin_memset(pThis + 0x20, 0, 0x18);
+    memset(pThis + 0x20, 0, 0x18);
     *(pThis + 0x38) = 0x3f800000;
     *(pThis + 0x3c) = 0;
     *(pThis + 0x40) = 0;
@@ -26,10 +26,10 @@ int32_t* LevelFlow_CheckState(void* pThis)
     *(pThis + 0x61) = 0;
     *(pThis + 0x68) = 0;
     *(pThis + 0x11c) = 0;
-    int32_t* eax_1 = Config_GetActivePlayerProfileRecord();
+    int32_t* result_val_1 = Config_GetActivePlayerProfileRecord();
 
-    if (eax_1)
-        *(pThis + 0x64) = *eax_1;
+    if (result_val_1)
+        *(pThis + 0x64) = *result_val_1;
     else
     {
         Warning_Show("LevelFlow: No player profile found");

@@ -1,68 +1,68 @@
 // Original IGI.EXE function: Weapon_FireBullet_6 (VA 0x0047A360; static CFG gate PASS, CFG score 1.000).
 #include "Weapon_FireBullet_6.h"
-int32_t Weapon_FireBullet_6(void* a1, float a2)
+int32_t Weapon_FireBullet_6(void* context, float param_2)
 
 {
-    void* dstD = a1;
-    int32_t* valA = *(dstD + 0x128);
-    int32_t* ctxB = *(dstD + 0x12c);
-    int32_t* v_24 = nullptr;
-    a1 = nullptr;
-    int32_t objC = g_c28b44;
-    int32_t tmpD = g_c28b48;
-    int32_t flagP = *(dstD + 0x144);
-    void* srcS = *(dstD + 0x14);
-    uint32_t valA2 = Weapon_ReloadClip_8();
-    int32_t objC1 = 0;
-    objC1 = *(srcS + 0x1c);
-    int32_t valA6 = *(((valA2 * 0x180 + objC1) << 2) + &g_a96ae0);
+    void* dest_val = context;
+    int32_t* data_val = *(dest_val + 0x128);
+    int32_t* context_val = *(dest_val + 0x12c);
+    int32_t* item_24 = nullptr;
+    context = nullptr;
+    int32_t entity_val = g_c28b44;
+    int32_t temp_val = g_c28b48;
+    int32_t flagP = *(dest_val + 0x144);
+    void* source_val = *(dest_val + 0x14);
+    uint32_t data_2 = Weapon_ReloadClip_8();
+    int32_t entity_1 = 0;
+    entity_1 = *(source_val + 0x1c);
+    int32_t data_6 = *(((data_2 * 0x180 + entity_1) << 2) + &g_a96ae0);
 
-    if (valA6)
-        valA6(srcS, &v_24);
+    if (data_6)
+        data_6(source_val, &item_24);
 
-    int32_t* valA8 = Weapon_UpdateMuzzleFlash_8(v_24, *ctxB);
+    int32_t* data_8 = Weapon_UpdateMuzzleFlash_8(item_24, *context_val);
 
-    if (valA8)
-        a1 = valA8[1];
+    if (data_8)
+        context = data_8[1];
 
-    int32_t f0 = flagP * 0x3c / valA[0x192];
-    valA[0x192];
+    int32_t f0 = flagP * 0x3c / data_val[0x192];
+    data_val[0x192];
     int32_t flagP1 = 0x3c - f0;
 
     if (0x3c - f0 < 0)
         flagP1 = 0;
 
-    float srcS1 = a2;
-    int32_t* ctxB1;
+    float source_1 = param_2;
+    int32_t* context_1;
 
-    if (*valA != 0xc)
-        ctxB1 = srcS1 + 0xec;
+    if (*data_val != 0xc)
+        context_1 = source_1 + 0xec;
     else
     {
         flagP1 = 0;
-        ctxB1 = srcS1 + 0xd4;
+        context_1 = source_1 + 0xd4;
 
         if (!flagP)
-            ctxB1 = nullptr;
+            context_1 = nullptr;
 
-        if (*(dstD + 0x144))
-            a1 += 1;
+        if (*(dest_val + 0x144))
+            context += 1;
     }
 
-    void* v_38_3 = a1;
-    void v_10;
-    Game_DataSymbolLoad(&v_10, "%-4d");
-    Sys_FreeMemory_18(*(srcS1 + 0x4e0), &v_10);
-    a2 = objC * 0.984375f - 4f;
-    *(*(srcS1 + 0x4e0) + 4) = a2 - Sys_CheckHeap_21(*(srcS1 + 0x4e0));
-    long double x87_r7_7 = tmpD * 0.895833313f + 4f;
-    float v_14_1 = x87_r7_7;
-    *(*(srcS1 + 0x4e0) + 8) = x87_r7_7;
-    int32_t result = Sys_CloseFileStream_18(*(srcS1 + 0x4e0));
+    void* item_38_3 = context;
+    void item_10;
+    Game_DataSymbolLoad(&item_10, "%-4d");
+    Sys_FreeMemory_18(*(source_1 + 0x4e0), &item_10);
+    param_2 = entity_val * 0.984375f - 4.0f;
+    *(*(source_1 + 0x4e0) + 4) = param_2 - Sys_CheckHeap_21(*(source_1 + 0x4e0));
+    long double fpu_val_7_7 = temp_val * 0.895833313f + 4.0f;
+    float item_14_1 = fpu_val_7_7;
+    *(*(source_1 + 0x4e0) + 8) = fpu_val_7_7;
+    int32_t result = Sys_CloseFileStream_18(*(source_1 + 0x4e0));
 
-    if (!ctxB1)
+    if (!context_1)
         return result;
 
-    return Sys_ResolveSymbol_14(ctxB1, a2 - 8f - Sys_CloseFileStream_17(ctxB1) - Sys_CheckHeap_21(*(srcS1 + 0x4e0)),
-        v_14_1, 128f, 128f, 128f, flagP1, 0, 0);
+    return Sys_ResolveSymbol_14(context_1, param_2 - 8.0f - Sys_CloseFileStream_17(context_1) - Sys_CheckHeap_21(*(source_1 + 0x4e0)),
+        item_14_1, 128.0f, 128.0f, 128.0f, flagP1, 0, 0);
 }

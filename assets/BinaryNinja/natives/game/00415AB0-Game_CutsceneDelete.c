@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Game_CutsceneDelete (VA 0x00415AB0; static CFG gate FAIL, CFG score 0.833).
 #include "Game_CutsceneDelete.h"
-int32_t Game_CutsceneDelete(int32_t a1)
+int32_t Game_CutsceneDelete(int32_t context)
 
 // Sig: void Game_CutsceneDelete(void)
 // Note: Deletes/ends the running cutscene and frees its resources. Takes no
@@ -14,18 +14,18 @@ int32_t Game_CutsceneDelete(int32_t a1)
 // complete instantly (generic - kills intro+outro in all levels). LEVEL4
 // example verified via OpenIGI QvmDisasm.
 {
-    int32_t* valA1 = g_57bab0;
+    int32_t* data_1 = g_57bab0;
 
-    while (*valA1)
+    while (*data_1)
     {
-        QTask_FindType(valA1[2]);
-        valA1 = g_57bab0;
+        QTask_FindType(data_1[2]);
+        data_1 = g_57bab0;
     }
 
-    int32_t v_18 = 1;
-    int32_t v_10 = 0;
-    int32_t v_c = 0x3ff00000;
-    char* v_8 = &g_567c74;
-    memcpy(a1, &v_18, 0x18);
-    return a1;
+    int32_t item_18 = 1;
+    int32_t item_10 = 0;
+    int32_t item_c = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(context, &item_18, 0x18);
+    return context;
 }

@@ -1,29 +1,29 @@
 // Original IGI.EXE function: Env_TriggerAlarm_13 (VA 0x0044FE50; static CFG gate PASS, CFG score 1.000).
 #include "Env_TriggerAlarm_13.h"
-int32_t Env_TriggerAlarm_13(void* a1, void** a2)
+int32_t Env_TriggerAlarm_13(void* context, void** param_2)
 
 {
-    Camera_ApplyHandiCam_33(a2);
-    int32_t* valA = a2[0xb];
+    Camera_ApplyHandiCam_33(param_2);
+    int32_t* data_val = param_2[0xb];
 
-    if (valA)
+    if (data_val)
     {
-        Qtask_UpdateList(valA);
-        a2[0xb] = 0;
+        Qtask_UpdateList(data_val);
+        param_2[0xb] = 0;
     }
 
-    int32_t* valA1 = a2[0xa];
+    int32_t* data_1 = param_2[0xa];
 
-    if (valA1)
+    if (data_1)
     {
-        Qtask_UpdateList(valA1);
-        a2[0xa] = 0;
+        Qtask_UpdateList(data_1);
+        param_2[0xa] = 0;
     }
 
-    a2[1] = 0;
-    *a2 = nullptr;
-    Camera_SetFieldOfView_33(a1 + 0x810, a2);
-    int32_t result = *(a1 + 0x8e0) - 1;
-    *(a1 + 0x8e0) = result;
+    param_2[1] = 0;
+    *param_2 = nullptr;
+    Camera_SetFieldOfView_33(context + 0x810, param_2);
+    int32_t result = *(context + 0x8e0) - 1;
+    *(context + 0x8e0) = result;
     return result;
 }

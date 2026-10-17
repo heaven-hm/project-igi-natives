@@ -1,13 +1,13 @@
 // Original IGI.EXE function: Physics_CheckHullCollision_8 (VA 0x005096C0; static CFG gate PASS, CFG score 1.000).
 #include "Physics_CheckHullCollision_8.h"
-void* Physics_CheckHullCollision_8(void* a1, int32_t a2, int32_t a3)
+void* Physics_CheckHullCollision_8(void* context, int32_t param_2, int32_t param_3)
 
 {
-    if (!*(a1 + 0xb8))
+    if (!*(context + 0xb8))
         return 0;
 
-    int32_t* valA1 = Physics_InterpolateWaypoint_8(a1, a2, a3);
-    int32_t valA3 = *valA1 + 1;
-    int32_t valA4 = -(valA3);
-    return (valA4 - valA4) & valA1;
+    int32_t* data_1 = Physics_InterpolateWaypoint_8(context, param_2, param_3);
+    int32_t data_3 = *data_1 + 1;
+    int32_t data_4 = -(data_3);
+    return (data_4 - data_4) & data_1;
 }

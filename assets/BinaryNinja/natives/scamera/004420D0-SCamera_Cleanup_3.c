@@ -1,88 +1,88 @@
 // Original IGI.EXE function: SCamera_Cleanup_3 (VA 0x004420D0; static CFG gate PASS, CFG score 0.939).
 #include "SCamera_Cleanup_3.h"
-int32_t SCamera_Cleanup_3(float a1)
+int32_t SCamera_Cleanup_3(float context)
 
 {
-    double* srcS = a1;
-    void* ctxB = srcS[0x4ba];
-    char* v_30 = ctxB + 0x128;
-    char* valA1 = DynObj_Missing(v_30);
+    double* source_val = context;
+    void* context_val = source_val[0x4ba];
+    char* item_30 = context_val + 0x128;
+    char* data_1 = DynObj_Missing(item_30);
 
-    if (valA1)
+    if (data_1)
     {
-        v_30 = valA1;
-        DynObj_CreateMagicObject_5(srcS, v_30);
+        item_30 = data_1;
+        DynObj_CreateMagicObject_5(source_val, item_30);
     }
 
-    double* objC = srcS[0x4ba];
-    v_30 = nullptr;
-    double v_18;
-    WeaponType_UpdateAnim(&v_18, objC, v_30);
-    v_18 = v_18 + *(ctxB + 0x20);
-    double v_10;
-    double v_10_1 = v_10 + *(ctxB + 0x28);
-    double v_8;
-    double v_8_1 = v_8 + *(ctxB + 0x30);
-    long double x87_r7_6 = *(srcS + 0x9c);
-    long double fpu6 = srcS[0x14];
-    fpu6 - x87_r7_6;
-    long double x87_r7_7;
+    double* entity_val = source_val[0x4ba];
+    item_30 = nullptr;
+    double item_18;
+    WeaponType_UpdateAnim(&item_18, entity_val, item_30);
+    item_18 = item_18 + *(context_val + 0x20);
+    double item_10;
+    double item_10_1 = item_10 + *(context_val + 0x28);
+    double item_8;
+    double item_8_1 = item_8 + *(context_val + 0x30);
+    long double fpu_val_7_6 = *(source_val + 0x9c);
+    long double fpu6 = source_val[0x14];
+    fpu6 - fpu_val_7_6;
+    long double fpu_val_7_7;
 
-    if (!(*(&((fpu6 < x87_r7_6 ? 1 : 0) << 8 | (FCMP_UO(fpu6, x87_r7_6) ? 1 : 0) << 0xa
-            | (fpu6 == x87_r7_6 ? 1 : 0) << 0xe) + 1) & 1))
-        x87_r7_7 = srcS[0x14];
+    if (!(*(&((fpu6 < fpu_val_7_6 ? 1 : 0) << 8 | (FCMP_UO(fpu6, fpu_val_7_6) ? 1 : 0) << 0xa
+            | (fpu6 == fpu_val_7_6 ? 1 : 0) << 0xe) + 1) & 1))
+        fpu_val_7_7 = source_val[0x14];
     else
-        x87_r7_7 = *(srcS + 0x9c);
+        fpu_val_7_7 = *(source_val + 0x9c);
 
-    long double x87_r6_1 = srcS[0x13];
-    x87_r6_1 - x87_r7_7;
-    long double x87_r7_9;
+    long double fpu_val_6_1 = source_val[0x13];
+    fpu_val_6_1 - fpu_val_7_7;
+    long double fpu_val_7_9;
 
-    if (*(&((x87_r6_1 < x87_r7_7 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_1, x87_r7_7) ? 1 : 0) << 0xa
-        | (x87_r6_1 == x87_r7_7 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+    if (*(&((fpu_val_6_1 < fpu_val_7_7 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_1, fpu_val_7_7) ? 1 : 0) << 0xa
+        | (fpu_val_6_1 == fpu_val_7_7 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
     {
-        long double x87_r7_10 = *(srcS + 0x9c);
-        long double x87_r6_2 = srcS[0x14];
-        x87_r6_2 - x87_r7_10;
+        long double fpu_val_7_10 = *(source_val + 0x9c);
+        long double fpu_val_6_2 = source_val[0x14];
+        fpu_val_6_2 - fpu_val_7_10;
 
-        if (!(*(&((x87_r6_2 < x87_r7_10 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r6_2, x87_r7_10) ? 1 : 0) << 0xa
-                | (x87_r6_2 == x87_r7_10 ? 1 : 0) << 0xe) + 1) & 1))
-            x87_r7_9 = srcS[0x14];
+        if (!(*(&((fpu_val_6_2 < fpu_val_7_10 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_6_2, fpu_val_7_10) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == fpu_val_7_10 ? 1 : 0) << 0xe) + 1) & 1))
+            fpu_val_7_9 = source_val[0x14];
         else
-            x87_r7_9 = *(srcS + 0x9c);
+            fpu_val_7_9 = *(source_val + 0x9c);
     }
     else
-        x87_r7_9 = srcS[0x13];
+        fpu_val_7_9 = source_val[0x13];
 
-    v_30 = *(srcS + 0x6c);
-    long double x87_r7_12 = Render_ComputeNormals(v_30) * x87_r7_9;
-    void* tmpD = srcS[0xd];
-    v_30 = x87_r7_12;
-    WorldObject_CommitTransform(tmpD, srcS, &v_18, v_30);
-    double* valA5 = DynObj_UpdateDynTree_4(srcS);
-    Render_BindTexture_14(srcS[0xd], srcS, valA5);
-    long double x87_r7_13 = *(ctxB + 0x120);
-    srcS[0x1e] = x87_r7_13;
-    v_30 = *(ctxB + 0x108) + *(ctxB + 0x124);
-    Sys_ReadFileBlock_12(&srcS[0xe], x87_r7_13, 0f, v_30);
-    WeaponType_UpdateAnim(&v_18, srcS, 1);
-    v_18 = v_18 + srcS[4];
-    double v_10_2 = v_10_1 + srcS[5];
-    double v_8_2 = v_8_1 + srcS[6];
-    memcpy(&srcS[0x22], &v_18, 0x18);
-    memcpy(&srcS[0x25], &srcS[0xe], 0x28);
-    int32_t valA9;
-    int32_t tmpD1;
-    tmpD1 = HIGHD(*(ctxB + 0x154));
-    valA9 = LOWD(*(ctxB + 0x154));
-    srcS[0x2a] = ((valA9 - tmpD1) >> 1) * 0.0174532924f;
-    int32_t valA13;
-    int32_t tmpD2;
-    tmpD2 = HIGHD(*(ctxB + 0x156));
-    valA13 = LOWD(*(ctxB + 0x156));
-    int32_t result = (valA13 - tmpD2) >> 1;
-    srcS[0x2b] = result * 0.0174532924f;
-    srcS[0x2c] = *(ctxB + 0x158) * 4096f;
+    item_30 = *(source_val + 0x6c);
+    long double fpu_val_7_12 = Render_ComputeNormals(item_30) * fpu_val_7_9;
+    void* temp_val = source_val[0xd];
+    item_30 = fpu_val_7_12;
+    WorldObject_CommitTransform(temp_val, source_val, &item_18, item_30);
+    double* data_5 = DynObj_UpdateDynTree_4(source_val);
+    Render_BindTexture_14(source_val[0xd], source_val, data_5);
+    long double fpu_val_7_13 = *(context_val + 0x120);
+    source_val[0x1e] = fpu_val_7_13;
+    item_30 = *(context_val + 0x108) + *(context_val + 0x124);
+    Sys_ReadFileBlock_12(&source_val[0xe], fpu_val_7_13, 0.0f, item_30);
+    WeaponType_UpdateAnim(&item_18, source_val, 1);
+    item_18 = item_18 + source_val[4];
+    double item_10_2 = item_10_1 + source_val[5];
+    double item_8_2 = item_8_1 + source_val[6];
+    memcpy(&source_val[0x22], &item_18, 0x18);
+    memcpy(&source_val[0x25], &source_val[0xe], 0x28);
+    int32_t data_9;
+    int32_t temp_1;
+    temp_1 = HIGHD(*(context_val + 0x154));
+    data_9 = LOWD(*(context_val + 0x154));
+    source_val[0x2a] = ((data_9 - temp_1) >> 1) * 0.0174532924f;
+    int32_t data_13;
+    int32_t temp_2;
+    temp_2 = HIGHD(*(context_val + 0x156));
+    data_13 = LOWD(*(context_val + 0x156));
+    int32_t result = (data_13 - temp_2) >> 1;
+    source_val[0x2b] = result * 0.0174532924f;
+    source_val[0x2c] = *(context_val + 0x158) * 4096.0f;
     return result;
 }

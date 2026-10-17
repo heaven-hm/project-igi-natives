@@ -1,6 +1,6 @@
 // Original IGI.EXE function: Script_BufInit (VA 0x004C0200; static CFG gate PASS, CFG score 1.000).
 #include "Script_BufInit.h"
-int32_t* Script_BufInit(int32_t* a1, int32_t a2, int32_t a3, int32_t a4)
+int32_t* Script_BufInit(int32_t* context, int32_t param_2, int32_t param_3, int32_t param_4)
 
 // Sig: void Script_BufInit(int* outBuf1, int buf2, int buf3, int bufSize)
 // Note: Initialises the four header fields of a SCRIPT BUFFER structure
@@ -8,11 +8,11 @@ int32_t* Script_BufInit(int32_t* a1, int32_t a2, int32_t a3, int32_t a4)
 // outBuf1 = buffer struct to init, buf2/buf3 = buffer pointers/ids, bufSize =
 // size field. Call before handing a buffer to the QVM assembler/parsers.
 {
-    *a1 = a2;
-    a1[7] = a3;
-    a1[0xb] = a4;
-    a1[4] = &a1[2];
-    a1[2] = &a1[3];
-    a1[3] = 0;
-    return a1;
+    *context = param_2;
+    context[7] = param_3;
+    context[0xb] = param_4;
+    context[4] = &context[2];
+    context[2] = &context[3];
+    context[3] = 0;
+    return context;
 }

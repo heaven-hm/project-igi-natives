@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004CC2A0 DynObj_FindSymbol_11 | gate PASS | openigi True */
-int* DynObj_FindSymbol_11(int a1, int* a2, double* a3, double* a4, int* a5, char a6, double* a7, int a8);
+int* DynObj_FindSymbol_11(int context, int* param_2, double* param_3, double* param_4, int* param_5, char param_6, double* param_7, int param_8);

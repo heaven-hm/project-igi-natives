@@ -7,7 +7,7 @@ int32_t Mem_DeallocAll()
 // allocation list via 0x4B0D10), then warns "%d block(s) of memory have not
 // been deallocated." Takes no args - NOT a single-pointer free.
 {
-    int32_t dstD = 0;
+    int32_t dest_val = 0;
     int32_t* i_1 = g_a960f0;
     int32_t* i = *i_1;
 
@@ -16,21 +16,21 @@ int32_t Mem_DeallocAll()
         Sys_ExecuteBytecode_2(i_1[2]);
         i_1 = i;
         i = *i;
-        dstD += 1;
+        dest_val += 1;
     }
 
     g_9422fc = 0;
     Sys_DispatchOpcode_2();
 
-    if (dstD)
+    if (dest_val)
     {
-        char* valA1 = &g_567c74;
+        char* data_1 = &g_567c74;
 
-        if (dstD != 1)
-            valA1 = &g_541078;
+        if (dest_val != 1)
+            data_1 = &g_541078;
 
-        char* v_c_2 = valA1;
-        int32_t v_10_1 = dstD;
+        char* item_c_2 = data_1;
+        int32_t item_10_1 = dest_val;
         Warning_Show("%d block%s of memory have not been deallocated.");
     }
 
@@ -39,6 +39,6 @@ int32_t Mem_DeallocAll()
     if (!result)
         return result;
 
-    int32_t __saved_esi_1 = result;
+    int32_t saved_esi_1 = result;
     return Warning_Show("Internal memory allocator inconsistency: Totalalloc: %d");
 }

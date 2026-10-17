@@ -1,55 +1,55 @@
 // Original IGI.EXE function: Particle_UpdateParticlePhysics_2 (VA 0x00530740; static CFG gate PASS, CFG score 1.000).
 #include "Particle_UpdateParticlePhysics_2.h"
-int32_t Particle_UpdateParticlePhysics_2(int32_t* a1 @ 0x8, int32_t* a2)
+int32_t Particle_UpdateParticlePhysics_2(int32_t* context , int32_t* param_2)
 
 {
-    int32_t objC;
-    int32_t v_4_1 = objC;
-    char* dstD = *a2;
-    char* valA1 = Mem_Alloc(0x800, 4);
-    char* srcS = 1;
+    int32_t entity_val;
+    int32_t item_4_1 = entity_val;
+    char* dest_val = *param_2;
+    char* data_1 = Mem_Alloc(0x800, 4);
+    char* source_val = 1;
 
     while (true)
     {
-        if (!Particle_FadeParticles_2(a1))
+        if (!Particle_FadeParticles_2(context))
         {
-            int32_t flagP2 = Particle_ResetEmitters_2(a1, 0xb);
-            int32_t v_4 = flagP2;
+            int32_t flagP2 = Particle_ResetEmitters_2(context, 0xb);
+            int32_t item_4 = flagP2;
 
             if (!flagP2)
                 break;
 
-            int32_t valA5 = Particle_ResetEmitters_2(a1, 7);
-            int32_t tmpD1 = 0;
+            int32_t data_5 = Particle_ResetEmitters_2(context, 7);
+            int32_t temp_1 = 0;
 
-            if (valA5 + 2 >= 0)
+            if (data_5 + 2 >= 0)
             {
                 while (true)
                 {
-                    dstD = &dstD[1];
-                    char objC3 = valA1[(flagP2 + tmpD1) & 0x7ff];
-                    dstD[0xffffffff] = objC3;
-                    *(&srcS[1] + valA1 - 1) = objC3;
-                    srcS = &srcS[1] & 0x7ff;
-                    tmpD1 += 1;
+                    dest_val = &dest_val[1];
+                    char entity_3 = data_1[(flagP2 + temp_1) & 0x7ff];
+                    dest_val[0xffffffff] = entity_3;
+                    *(&source_val[1] + data_1 - 1) = entity_3;
+                    source_val = &source_val[1] & 0x7ff;
+                    temp_1 += 1;
 
-                    if (tmpD1 > valA5 + 2)
+                    if (temp_1 > data_5 + 2)
                         break;
 
-                    flagP2 = v_4;
+                    flagP2 = item_4;
                 }
             }
         }
         else
         {
-            char valA3 = Particle_ResetEmitters_2(a1, 8);
-            *dstD = valA3;
-            dstD = &dstD[1];
-            *(srcS + valA1) = valA3;
-            srcS = &srcS[1] & 0x7ff;
+            char data_3 = Particle_ResetEmitters_2(context, 8);
+            *dest_val = data_3;
+            dest_val = &dest_val[1];
+            *(source_val + data_1) = data_3;
+            source_val = &source_val[1] & 0x7ff;
         }
     }
 
-    *a2 = dstD;
-    return Sys_ExecuteBytecode_2(valA1);
+    *param_2 = dest_val;
+    return Sys_ExecuteBytecode_2(data_1);
 }

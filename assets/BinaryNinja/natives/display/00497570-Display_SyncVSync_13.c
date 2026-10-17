@@ -1,19 +1,19 @@
 // Original IGI.EXE function: Display_SyncVSync_13 (VA 0x00497570; static CFG gate PASS, CFG score 1.000).
 #include "Display_SyncVSync_13.h"
-int32_t* Display_SyncVSync_13(void* a1, int32_t a2)
+int32_t* Display_SyncVSync_13(void* context, int32_t param_2)
 
 {
-    *(a1 + 8) = 0xffffffff;
-    int32_t v_18 = 0;
-    int32_t v_14 = 0;
-    int32_t v_10 = 0;
-    int32_t v_c = 0;
-    Display_CheckCapabilities_13(a1, &v_18);
-    *(a1 + 0x40) = a2;
-    *(a1 + 0x44) = Mem_Alloc(a2 * 0xc, 4);
-    void* valA1 = Mem_Alloc(0xc, 4);
-    int32_t* tmpD = *(a1 + 0x44);
-    *(a1 + 0x48) = valA1;
-    Display_SwapBuffers_14(tmpD, a2);
-    return Display_SwapBuffers_14(*(a1 + 0x48), 1);
+    *(context + 8) = 0xffffffff;
+    int32_t item_18 = 0;
+    int32_t item_14 = 0;
+    int32_t item_10 = 0;
+    int32_t item_c = 0;
+    Display_CheckCapabilities_13(context, &item_18);
+    *(context + 0x40) = param_2;
+    *(context + 0x44) = Mem_Alloc(param_2 * 0xc, 4);
+    void* data_1 = Mem_Alloc(0xc, 4);
+    int32_t* temp_val = *(context + 0x44);
+    *(context + 0x48) = data_1;
+    Display_SwapBuffers_14(temp_val, param_2);
+    return Display_SwapBuffers_14(*(context + 0x48), 1);
 }

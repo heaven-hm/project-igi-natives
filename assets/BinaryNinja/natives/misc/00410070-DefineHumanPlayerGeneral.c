@@ -1,6 +1,6 @@
 // Original IGI.EXE function: DefineHumanPlayerGeneral (VA 0x00410070; static CFG gate PASS, CFG score 0.972).
 #include "DefineHumanPlayerGeneral.h"
-int32_t DefineHumanPlayerGeneral(long double a1 @ fp0, long double a2 @ fp1, long double a3 @ fp2, long double a4 @ fp3, long double a5 @ fp4, long double a6 @ fp5, long double a7 @ fp6, long double a8 @ fp7, int32_t a9, float a10 @ 0xc)
+int32_t DefineHumanPlayerGeneral(long double context , long double param_2 , long double param_3 , long double param_4 , long double param_5 , long double param_6 , long double param_7 , long double param_8 , int32_t param_9, float param_10 )
 
 // Sig: unknown DefineHumanPlayerGeneral(unknown param1, unknown param2)
 // Note: Registered at 0x41001B via registrar 0x4B8890 (push 0x410070 +
@@ -13,57 +13,57 @@ int32_t DefineHumanPlayerGeneral(long double a1 @ fp0, long double a2 @ fp1, lon
 // re-agent reverser/checker loop ran on this native (C decompilation pending
 // ARM64 native port).
 {
-    float v_30 = 0f;
-    Profile_ValueSet(a10, v_30);
-    g_56e1e8 = a1;
-    Profile_ValueSet(a10, 1.40129846e-45f);
-    g_56e1ec = a2 * 4096000f * 9.25925906e-06f;
-    Profile_ValueSet(a10, 2.80259693e-45f);
-    g_56e1f0 = a3 * 4096000f * 9.25925906e-06f;
-    Profile_ValueSet(a10, 4.20389539e-45f);
-    g_56e1f4 = a4 * 4096000f * 9.25925906e-06f;
-    Profile_ValueSet(a10, 5.60519386e-45f);
-    g_56e1f8 = a5 * 4096.0;
-    Profile_ValueSet(a10, 7.00649232e-45f);
-    g_56e1fc = a6 * 4096.0;
-    Profile_ValueSet(a10, 8.40779079e-45f);
-    g_56e200 = a7 * 30.0;
-    Profile_ValueSet(a10, 9.80908925e-45f);
-    float dstD = 1.26116862e-44f;
-    g_56e204 = a8;
-    v_30 = 1.12103877e-44f;
-    Profile_ValueSet(a10, v_30);
-    g_56e208 = a1;
+    float item_30 = 0.0f;
+    Profile_ValueSet(param_10, item_30);
+    g_56e1e8 = context;
+    Profile_ValueSet(param_10, 1.40129846e-45.0f);
+    g_56e1ec = param_2 * 4096000.0f * 9.25925906e-06.0f;
+    Profile_ValueSet(param_10, 2.80259693e-45.0f);
+    g_56e1f0 = param_3 * 4096000.0f * 9.25925906e-06.0f;
+    Profile_ValueSet(param_10, 4.20389539e-45.0f);
+    g_56e1f4 = param_4 * 4096000.0f * 9.25925906e-06.0f;
+    Profile_ValueSet(param_10, 5.60519386e-45.0f);
+    g_56e1f8 = param_5 * 4096.0;
+    Profile_ValueSet(param_10, 7.00649232e-45.0f);
+    g_56e1fc = param_6 * 4096.0;
+    Profile_ValueSet(param_10, 8.40779079e-45.0f);
+    g_56e200 = param_7 * 30.0;
+    Profile_ValueSet(param_10, 9.80908925e-45.0f);
+    float dest_val = 1.26116862e-44.0f;
+    g_56e204 = param_8;
+    item_30 = 1.12103877e-44.0f;
+    Profile_ValueSet(param_10, item_30);
+    g_56e208 = context;
     int16_t idx = 9;
-    float* ctxB = &g_5389f8;
+    float* context_val = &g_5389f8;
 
     do
     {
-        float valA1 = dstD;
-        dstD += 1;
-        v_30 = valA1;
-        Profile_ValueSet(a10, v_30);
-🚫🚫🚫        *ctxB =
-        /* unimplemented  {fstp dword [ctxB], fp0} */
+        float data_1 = dest_val;
+        dest_val += 1;
+        item_30 = data_1;
+        Profile_ValueSet(param_10, item_30);
+🚫🚫🚫        *context_val =
+        /* unimplemented  {fstp dword [context_val], fp0} */
         idx += 1;
-        ctxB = &ctxB[4];
-    } while (dstD - 9 < 0x11);
+        context_val = &context_val[4];
+    } while (dest_val - 9 < 0x11);
 
     for (float* i = &g_538b08; i < &g_538c18; i = &i[4])
     {
-        float valA2 = dstD;
-        dstD += 1;
-        v_30 = valA2;
-        Profile_ValueSet(a10, v_30);
+        float data_2 = dest_val;
+        dest_val += 1;
+        item_30 = data_2;
+        Profile_ValueSet(param_10, item_30);
 🚫🚫🚫        *i =
-        /* unimplemented  {fstp dword [ctxB], fp0} */
+        /* unimplemented  {fstp dword [context_val], fp0} */
         idx += 1;
     }
 
-    int32_t v_18 = 1;
-    int32_t v_10 = 0;
-    int32_t v_c = 0x3ff00000;
-    char* v_8 = &g_567c74;
-    memcpy(a9, &v_18, 0x18);
-    return a9;
+    int32_t item_18 = 1;
+    int32_t item_10 = 0;
+    int32_t item_c = 0x3ff00000;
+    char* item_8 = &g_567c74;
+    memcpy(param_9, &item_18, 0x18);
+    return param_9;
 }

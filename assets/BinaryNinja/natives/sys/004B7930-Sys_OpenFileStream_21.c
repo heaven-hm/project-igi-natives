@@ -1,141 +1,141 @@
 // Original IGI.EXE function: Sys_OpenFileStream_21 (VA 0x004B7930; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_21.h"
-int32_t Sys_OpenFileStream_21(float a1, float a2, float a3, float a4, float a5, float a6, int32_t a7, int32_t a8, int32_t a9, int32_t a10)
+int32_t Sys_OpenFileStream_21(float context, float param_2, float param_3, float param_4, float param_5, float param_6, int32_t param_7, int32_t param_8, int32_t param_9, int32_t param_10)
 
 {
-    int32_t* ctxB = a1;
-    int32_t* dstD = ctxB[2];
-    int32_t valA = Sys_CloseFileStream_17(dstD);
-    int32_t valA1 = Sys_ExecuteBytecode_17(dstD);
-    float v_20 = a3;
-    int32_t valA3 = *ctxB;
-    int32_t srcS = 0;
+    int32_t* context_val = context;
+    int32_t* dest_val = context_val[2];
+    int32_t data_val = Sys_CloseFileStream_17(dest_val);
+    int32_t data_1 = Sys_ExecuteBytecode_17(dest_val);
+    float item_20 = param_3;
+    int32_t data_3 = *context_val;
+    int32_t source_val = 0;
 
-    if (!valA3)
+    if (!data_3)
     {
-        int32_t objC1 = 0;
-        int32_t v_18_1 = 0;
-        a3 = 0f;
+        int32_t entity_1 = 0;
+        int32_t item_18_1 = 0;
+        param_3 = 0.0f;
 
-        if (*(ctxB + 6) > 0)
+        if (*(context_val + 6) > 0)
         {
-            int32_t srcS2 = a9 & 0x80;
-            int32_t v_10_1 = srcS2;
-            int32_t valA15;
+            int32_t source_2 = param_9 & 0x80;
+            int32_t item_10_1 = source_2;
+            int32_t data_15;
 
             do
             {
-                if (srcS2)
+                if (source_2)
                 {
-                    int32_t valA5;
-                    int32_t tmpD2;
-                    tmpD2 = HIGHD(*(ctxB[3] + (objC1 << 1)));
-                    valA5 = LOWD(*(ctxB[3] + (objC1 << 1)));
-                    a1 = a2 - ((valA5 - tmpD2) >> 1);
+                    int32_t data_5;
+                    int32_t temp_2;
+                    temp_2 = HIGHD(*(context_val[3] + (entity_1 << 1)));
+                    data_5 = LOWD(*(context_val[3] + (entity_1 << 1)));
+                    context = param_2 - ((data_5 - temp_2) >> 1);
                 }
-                else if (!(a9 & 0x100))
-                    a1 = a2;
+                else if (!(param_9 & 0x100))
+                    context = param_2;
                 else
-                    a1 = a2 - *(ctxB[3] + (objC1 << 1));
+                    context = param_2 - *(context_val[3] + (entity_1 << 1));
 
-                int32_t v_1c_1 = 0;
+                int32_t item_1c_1 = 0;
 
-                if (ctxB[1] > 0)
+                if (context_val[1] > 0)
                 {
-                    bool cond_6_1;
+                    bool flag_6_1;
 
                     do
                     {
-                        char valA8 = *(a3 + ctxB + 0x10);
+                        char data_8 = *(param_3 + context_val + 0x10);
 
-                        if (valA8)
+                        if (data_8)
                         {
-                            Sys_AllocateMemory_15(dstD, a1, v_20, a4, a5, a6, a7, a8, valA8 - 1,
-                                a9, a10);
-                            objC1 = v_18_1;
+                            Sys_AllocateMemory_15(dest_val, context, item_20, param_4, param_5, param_6, param_7, param_8, data_8 - 1,
+                                param_9, param_10);
+                            entity_1 = item_18_1;
                         }
 
-                        a1 = valA + a1;
-                        a3 += 1;
-                        cond_6_1 = v_1c_1 + 1 < ctxB[1];
-                        v_1c_1 += 1;
-                    } while (cond_6_1);
-                    srcS2 = v_10_1;
+                        context = data_val + context;
+                        param_3 += 1;
+                        flag_6_1 = item_1c_1 + 1 < context_val[1];
+                        item_1c_1 += 1;
+                    } while (flag_6_1);
+                    source_2 = item_10_1;
                 }
 
-                valA15 = *(ctxB + 6);
-                objC1 += 1;
-                v_18_1 = objC1;
-                v_20 = valA1 + v_20;
-            } while (objC1 < valA15);
+                data_15 = *(context_val + 6);
+                entity_1 += 1;
+                item_18_1 = entity_1;
+                item_20 = data_1 + item_20;
+            } while (entity_1 < data_15);
 
-            return valA15;
+            return data_15;
         }
     }
-    else if (valA3 == 1)
+    else if (data_3 == 1)
     {
-        valA3 = Sys_DispatchOpcode_17(dstD);
-        int32_t v_14_1 = valA3;
-        int32_t v_18_2 = 0;
-        a3 = 0f;
+        data_3 = Sys_DispatchOpcode_17(dest_val);
+        int32_t item_14_1 = data_3;
+        int32_t item_18_2 = 0;
+        param_3 = 0.0f;
 
-        if (*(ctxB + 6) > 0)
+        if (*(context_val + 6) > 0)
         {
-            int32_t objC5 = a9;
-            int32_t flagP3 = objC5 & 0x80;
-            int32_t v_10_2 = flagP3;
+            int32_t entity_5 = param_9;
+            int32_t flagP3 = entity_5 & 0x80;
+            int32_t item_10_2 = flagP3;
 
             do
             {
                 if (flagP3)
                 {
-                    int32_t valA17;
-                    int32_t tmpD9;
-                    tmpD9 = HIGHD(*(ctxB[3] + (srcS << 1)));
-                    valA17 = LOWD(*(ctxB[3] + (srcS << 1)));
-                    a1 = a2 - ((valA17 - tmpD9) >> 1);
+                    int32_t data_17;
+                    int32_t temp_9;
+                    temp_9 = HIGHD(*(context_val[3] + (source_val << 1)));
+                    data_17 = LOWD(*(context_val[3] + (source_val << 1)));
+                    context = param_2 - ((data_17 - temp_9) >> 1);
                 }
-                else if (!(*(&objC5 + 1) & 1))
-                    a1 = a2;
+                else if (!(*(&entity_5 + 1) & 1))
+                    context = param_2;
                 else
-                    a1 = a2 - *(ctxB[3] + (srcS << 1));
+                    context = param_2 - *(context_val[3] + (source_val << 1));
 
-                float v_1c_2 = 0f;
+                float item_1c_2 = 0.0f;
 
-                if (ctxB[1] > 0)
+                if (context_val[1] > 0)
                 {
-                    bool cond_7_1;
+                    bool flag_7_1;
 
                     do
                     {
-                        char valA20 = *(a3 + ctxB + 0x10);
+                        char data_20 = *(param_3 + context_val + 0x10);
 
-                        if (!valA20)
-                            a1 = v_14_1 + a1;
+                        if (!data_20)
+                            context = item_14_1 + context;
                         else
                         {
-                            uint32_t srcS5 = valA20 - 1;
-                            Sys_AllocateMemory_15(dstD, a1, v_20, a4, a5, a6, a7, a8, srcS5,
-                                objC5, a10);
-                            srcS = v_18_2;
-                            objC5 = a9;
-                            a1 = *(dstD[2] + srcS5 * 0x24 + 0x10) + a1;
+                            uint32_t source_5 = data_20 - 1;
+                            Sys_AllocateMemory_15(dest_val, context, item_20, param_4, param_5, param_6, param_7, param_8, source_5,
+                                entity_5, param_10);
+                            source_val = item_18_2;
+                            entity_5 = param_9;
+                            context = *(dest_val[2] + source_5 * 0x24 + 0x10) + context;
                         }
 
-                        a3 += 1;
-                        cond_7_1 = v_1c_2 + 1 < ctxB[1];
-                        v_1c_2 += 1;
-                    } while (cond_7_1);
-                    flagP3 = v_10_2;
+                        param_3 += 1;
+                        flag_7_1 = item_1c_2 + 1 < context_val[1];
+                        item_1c_2 += 1;
+                    } while (flag_7_1);
+                    flagP3 = item_10_2;
                 }
 
-                valA3 = *(ctxB + 6);
-                srcS += 1;
-                v_18_2 = srcS;
-                v_20 = valA1 + v_20;
-            } while (srcS < valA3);
+                data_3 = *(context_val + 6);
+                source_val += 1;
+                item_18_2 = source_val;
+                item_20 = data_1 + item_20;
+            } while (source_val < data_3);
         }
     }
 
-    return valA3;
+    return data_3;
 }

@@ -1,23 +1,23 @@
 // Original IGI.EXE function: GunCABarrel_LoadParameters (VA 0x004727F0; static CFG gate PASS, CFG score 0.857).
 #include "GunCABarrel_LoadParameters.h"
-int32_t* GunCABarrel_LoadParameters(void* a1, int32_t* a2)
+int32_t* GunCABarrel_LoadParameters(void* context, int32_t* param_2)
 
 {
-    void* valA1 = DynObj_Missing(*a2);
+    void* data_1 = DynObj_Missing(*param_2);
 
-    if (valA1)
+    if (data_1)
     {
-        memcpy(a1 + 0xf0, &a2[8], 0x18);
-        memcpy(a1 + 0x108, &a2[0x18], 0x28);
-        DynObj_LookupHashItem_6(a2[1], a1, valA1);
-        *(a1 + 0xec) = 0;
-        memcpy(a1 + 0x70, &a2[0xe], 0x28);
-        int32_t flagP1 = a2[0x22];
-        *(a1 + 0x130) = flagP1;
-        return Car_GunCreate(a1, a1, flagP1);
+        memcpy(context + 0xf0, &param_2[8], 0x18);
+        memcpy(context + 0x108, &param_2[0x18], 0x28);
+        DynObj_LookupHashItem_6(param_2[1], context, data_1);
+        *(context + 0xec) = 0;
+        memcpy(context + 0x70, &param_2[0xe], 0x28);
+        int32_t flagP1 = param_2[0x22];
+        *(context + 0x130) = flagP1;
+        return Car_GunCreate(context, context, flagP1);
     }
 
-    int32_t __saved_ebx_1 = *a2;
+    int32_t saved_ebx_1 = *param_2;
     Error_Show("VirModel "%s" not available");
 
     while (true)

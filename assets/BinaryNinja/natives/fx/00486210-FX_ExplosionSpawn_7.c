@@ -1,128 +1,128 @@
 // Original IGI.EXE function: FX_ExplosionSpawn_7 (VA 0x00486210; static CFG gate PASS, CFG score 1.000).
 #include "FX_ExplosionSpawn_7.h"
-int32_t FX_ExplosionSpawn_7(int32_t a1, int32_t a2, float a3, float a4, int32_t a5)
+int32_t FX_ExplosionSpawn_7(int32_t context, int32_t param_2, float param_3, float param_4, int32_t param_5)
 
 {
-    int32_t valA4 = a2 * 0x40b;
-    float tmpD = *(a1 + (valA4 << 2) + 0x44);
-    void* objC2 = a1 + (valA4 << 2);
-    float v_d8 = *(objC2 + 0x48);
-    int32_t valA7;
-    int32_t tmpD2;
-    tmpD2 = HIGHD(0x38e38e39 * (9 - *(objC2 + 0x24)));
-    valA7 = LOWD(0x38e38e39 * (9 - *(objC2 + 0x24)));
-    int32_t tmpD3 = tmpD2 >> 1;
-    long double fpu7 = tmpD3 + (tmpD3 >> 0x1f);
-    long double f0 = 0f;
+    int32_t data_4 = param_2 * 0x40b;
+    float temp_val = *(context + (data_4 << 2) + 0x44);
+    void* entity_2 = context + (data_4 << 2);
+    float item_d8 = *(entity_2 + 0x48);
+    int32_t data_7;
+    int32_t temp_2;
+    temp_2 = HIGHD(0x38e38e39 * (9 - *(entity_2 + 0x24)));
+    data_7 = LOWD(0x38e38e39 * (9 - *(entity_2 + 0x24)));
+    int32_t temp_3 = temp_2 >> 1;
+    long double fpu7 = temp_3 + (temp_3 >> 0x1f);
+    long double f0 = 0.0f;
     fpu7 - f0;
 
     if (*(&((fpu7 < f0 ? 1 : 0) << 8 | (FCMP_UO(fpu7, f0) ? 1 : 0) << 0xa
             | (fpu7 == f0 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
-        fpu7 = 0f;
+        fpu7 = 0.0f;
 
-    void* objC3 = *(objC2 + 0x3c);
-    float v_cc = fpu7 * 0.600000024f + 0.150000006f;
-    long double x87_r7_4;
+    void* entity_3 = *(entity_2 + 0x3c);
+    float item_cc = fpu7 * 0.600000024f + 0.150000006f;
+    long double fpu_val_7_4;
 
-    if (!objC3)
-        x87_r7_4 = 37f;
+    if (!entity_3)
+        fpu_val_7_4 = 37.0f;
     else
     {
-        int32_t valA11;
-        valA11 = Sys_ExecuteBytecode_17(objC3);
-        x87_r7_4 = valA11;
+        int32_t data_11;
+        data_11 = Sys_ExecuteBytecode_17(entity_3);
+        fpu_val_7_4 = data_11;
     }
 
-    float v_dc = a3 + 117.5f;
-    long double x87_r7_5 = x87_r7_4 * 0.5f;
-    void* v_10c = objC3;
+    float item_dc = param_3 + 117.5f;
+    long double fpu_val_7_5 = fpu_val_7_4 * 0.5f;
+    void* item_10c = entity_3;
     g_a84a50 = 0;
     g_a84a58 = 0;
-    float v_d4_2 = x87_r7_5 + a4;
-    float v_e0_1 = tmpD * 117.5f;
-    float v_d0 = v_dc - v_e0_1;
-    long double x87_r7_6 = x87_r7_5 * v_d8;
-    v_d8 = v_d4_2 - x87_r7_6;
-    float v_dc_1 = v_e0_1 + v_dc;
-    float v_e0_2 = x87_r7_6 + v_d4_2;
-    void* v_110 = objC3;
-    Sys_DispatchOpcode_14(v_d0, v_d8, v_dc_1 - v_d0, v_e0_2 - v_d8, 0f, 0f, 0f, 0x3ea8f5c3,
-        0x3f800000, 0x80000, a5);
-    float objC5 = v_d8;
-    float v_b4 = v_d0;
-    float v_b0 = objC5;
-    float v_90 = v_dc_1;
-    float v_8c = objC5;
-    float v_6c = v_d0;
-    int32_t v_9c = 0;
-    int32_t v_98 = 0x3f000000;
-    int32_t v_94 = 0;
-    float v_a0 = v_cc;
-    int32_t v_a8 = 0;
-    int32_t v_a4 = 0;
-    int32_t v_ac = 0x3f800000;
-    int32_t v_78 = 0;
-    int32_t v_74 = 0x3f000000;
-    int32_t v_70 = 0;
-    float v_7c = v_cc;
-    int32_t v_84 = 0;
-    int32_t v_80 = 0;
-    int32_t v_88 = 0x3f800000;
-    float v_68 = v_e0_2;
-    int32_t v_54 = 0;
-    int32_t v_50 = 0x3f000000;
-    int32_t v_4c = 0;
-    float v_58 = v_cc;
-    int32_t v_60 = 0;
-    int32_t v_5c = 0;
-    int32_t v_64 = 0x3f800000;
-    float v_48 = v_dc_1;
-    float v_44 = v_e0_2;
-    float v_34 = v_cc;
-    int32_t tmpD7 = g_a84a54;
-    int32_t v_30 = 0;
-    int32_t v_2c = 0x3f800000;
-    int32_t v_28 = 0;
-    int32_t v_3c = 0;
-    int32_t v_38 = 0;
-    int32_t v_40 = 0x3f800000;
-    int32_t v_c4 = 0x80000;
-    int32_t v_c8 = 0;
-    int32_t v_c0 = a5;
-    int32_t v_bc = 4;
-    float* v_b8 = &v_b4;
-    (*((tmpD7 << 2) + &g_a94e84))(&v_c8);
-    int32_t* valA16 = &v_98;
+    float item_d4_2 = fpu_val_7_5 + param_4;
+    float item_e0_1 = temp_val * 117.5f;
+    float item_d0 = item_dc - item_e0_1;
+    long double fpu_val_7_6 = fpu_val_7_5 * item_d8;
+    item_d8 = item_d4_2 - fpu_val_7_6;
+    float item_dc_1 = item_e0_1 + item_dc;
+    float item_e0_2 = fpu_val_7_6 + item_d4_2;
+    void* item_110 = entity_3;
+    Sys_DispatchOpcode_14(item_d0, item_d8, item_dc_1 - item_d0, item_e0_2 - item_d8, 0.0f, 0.0f, 0.0f, 0x3ea8f5c3,
+        0x3f800000, 0x80000, param_5);
+    float entity_5 = item_d8;
+    float item_b4 = item_d0;
+    float item_b0 = entity_5;
+    float item_90 = item_dc_1;
+    float item_8c = entity_5;
+    float item_6c = item_d0;
+    int32_t item_9c = 0;
+    int32_t item_98 = 0x3f000000;
+    int32_t item_94 = 0;
+    float item_a0 = item_cc;
+    int32_t item_a8 = 0;
+    int32_t item_a4 = 0;
+    int32_t item_ac = 0x3f800000;
+    int32_t item_78 = 0;
+    int32_t item_74 = 0x3f000000;
+    int32_t item_70 = 0;
+    float item_7c = item_cc;
+    int32_t item_84 = 0;
+    int32_t item_80 = 0;
+    int32_t item_88 = 0x3f800000;
+    float item_68 = item_e0_2;
+    int32_t item_54 = 0;
+    int32_t item_50 = 0x3f000000;
+    int32_t item_4c = 0;
+    float item_58 = item_cc;
+    int32_t item_60 = 0;
+    int32_t item_5c = 0;
+    int32_t item_64 = 0x3f800000;
+    float item_48 = item_dc_1;
+    float item_44 = item_e0_2;
+    float item_34 = item_cc;
+    int32_t temp_7 = g_a84a54;
+    int32_t item_30 = 0;
+    int32_t item_2c = 0x3f800000;
+    int32_t item_28 = 0;
+    int32_t item_3c = 0;
+    int32_t item_38 = 0;
+    int32_t item_40 = 0x3f800000;
+    int32_t item_c4 = 0x80000;
+    int32_t item_c8 = 0;
+    int32_t item_c0 = param_5;
+    int32_t item_bc = 4;
+    float* item_b8 = &item_b4;
+    (*((temp_7 << 2) + &g_a94e84))(&item_c8);
+    int32_t* data_16 = &item_98;
     int32_t i_1 = 4;
     int32_t i;
 
     do
     {
-        valA16[-1] = 0;
-        __builtin_strncpy(valA16, "fff?", 8);
-        valA16[-2] = 0x3f000000;
-        valA16[-4] = 0;
-        valA16[-3] = 0;
-        valA16[-5] = 0x3f800000;
-        valA16 = &valA16[9];
+        data_16[-1] = 0;
+        strncpy(data_16, "fff?", 8);
+        data_16[-2] = 0x3f000000;
+        data_16[-4] = 0;
+        data_16[-3] = 0;
+        data_16[-5] = 0x3f800000;
+        data_16 = &data_16[9];
         i = i_1;
         i_1 -= 1;
     } while (i != 1);
-    float objC7 = v_d8;
-    v_b4 = v_d0;
-    float v_b0_1 = objC7;
-    float v_90_1 = v_dc_1;
-    float v_6c_1 = v_dc_1;
-    float v_8c_1 = objC7;
-    float v_44_1 = v_e0_2;
-    float v_68_1 = v_e0_2;
-    v_48 = v_d0;
-    void v_24;
-    memcpy(&v_24, &v_b4, 0x24);
-    int32_t objC10 = g_a84a54;
-    v_c8 = 1;
-    int32_t v_c0_1 = a5;
-    int32_t v_bc_1 = 5;
-    float* v_b8_1 = &v_b4;
-    return (*((objC10 << 2) + &g_a94e84))(&v_c8);
+    float entity_7 = item_d8;
+    item_b4 = item_d0;
+    float item_b0_1 = entity_7;
+    float item_90_1 = item_dc_1;
+    float item_6c_1 = item_dc_1;
+    float item_8c_1 = entity_7;
+    float item_44_1 = item_e0_2;
+    float item_68_1 = item_e0_2;
+    item_48 = item_d0;
+    void item_24;
+    memcpy(&item_24, &item_b4, 0x24);
+    int32_t entity_10 = g_a84a54;
+    item_c8 = 1;
+    int32_t item_c0_1 = param_5;
+    int32_t item_bc_1 = 5;
+    float* item_b8_1 = &item_b4;
+    return (*((entity_10 << 2) + &g_a94e84))(&item_c8);
 }

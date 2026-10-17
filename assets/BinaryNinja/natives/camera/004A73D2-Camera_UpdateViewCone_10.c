@@ -1,82 +1,82 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_10 (VA 0x004A73D2; static CFG gate PASS, CFG score 1.000).
 #include "Camera_UpdateViewCone_10.h"
-char* Camera_UpdateViewCone_10(double* a1, char* a2, int32_t a3)
+char* Camera_UpdateViewCone_10(double* context, char* param_2, int32_t param_3)
 
 {
-    int32_t ctxB;
-    int32_t* srcS;
+    int32_t context_val;
+    int32_t* source_val;
 
     if (!g_9361c4)
     {
-        int32_t objC;
-        int32_t v_14_1 = objC;
-        int32_t v_18_1 = objC;
-        v_18_1 = *a1;
+        int32_t entity_val;
+        int32_t item_14_1 = entity_val;
+        int32_t item_18_1 = entity_val;
+        item_18_1 = *context;
         Camera_SetFieldOfView_26();
-        ctxB = a3;
-        srcS = &g_936238;
-        void* valA5 = nullptr;
-        valA5 = g_936238 == 0x2d;
-        Camera_UpdateTransform_26(valA5 + a2, g_93623c + ctxB, &g_936238);
+        context_val = param_3;
+        source_val = &g_936238;
+        void* data_5 = nullptr;
+        data_5 = g_936238 == 0x2d;
+        Camera_UpdateTransform_26(data_5 + param_2, g_93623c + context_val, &g_936238);
     }
     else
     {
-        int32_t valA = g_9361c8;
-        ctxB = a3;
-        srcS = g_9361c0;
+        int32_t data_val = g_9361c8;
+        context_val = param_3;
+        source_val = g_9361c0;
 
-        if (valA == ctxB)
+        if (data_val == context_val)
         {
-            void* objC1 = nullptr;
-            objC1 = *srcS == 0x2d;
-            char* objC3 = objC1 + valA + a2;
-            *objC3 = 0x30;
-            objC3[1] = 0;
+            void* entity_1 = nullptr;
+            entity_1 = *source_val == 0x2d;
+            char* entity_3 = entity_1 + data_val + param_2;
+            *entity_3 = 0x30;
+            entity_3[1] = 0;
         }
     }
 
-    char* dstD = a2;
+    char* dest_val = param_2;
 
-    if (*srcS == 0x2d)
+    if (*source_val == 0x2d)
     {
-        *a2 = 0x2d;
-        dstD = &a2[1];
+        *param_2 = 0x2d;
+        dest_val = &param_2[1];
     }
 
-    int32_t valA7 = srcS[1];
-    char* dstD1;
+    int32_t data_7 = source_val[1];
+    char* dest_1;
 
-    if (valA7 > 0)
-        dstD1 = &dstD[valA7];
+    if (data_7 > 0)
+        dest_1 = &dest_val[data_7];
     else
     {
-        Camera_ApplyBandFilter_11(dstD, 1);
-        *dstD = 0x30;
-        dstD1 = &dstD[1];
+        Camera_ApplyBandFilter_11(dest_val, 1);
+        *dest_val = 0x30;
+        dest_1 = &dest_val[1];
     }
 
-    if (ctxB > 0)
+    if (context_val > 0)
     {
-        Camera_ApplyBandFilter_11(dstD1, 1);
-        *dstD1 = g_544280;
-        int32_t srcS1 = srcS[1];
+        Camera_ApplyBandFilter_11(dest_1, 1);
+        *dest_1 = g_544280;
+        int32_t source_1 = source_val[1];
 
-        if (srcS1 < 0)
+        if (source_1 < 0)
         {
             if (!g_9361c4)
             {
-                int32_t srcS2 = -(srcS1);
+                int32_t source_2 = -(source_1);
 
-                if (ctxB >= srcS2)
-                    ctxB = srcS2;
+                if (context_val >= source_2)
+                    context_val = source_2;
             }
             else
-                ctxB = -(srcS1);
+                context_val = -(source_1);
 
-            Camera_ApplyBandFilter_11(&dstD1[1], ctxB);
-            Camera_ApplyBandFilter_26(&dstD1[1], 0x30, ctxB);
+            Camera_ApplyBandFilter_11(&dest_1[1], context_val);
+            Camera_ApplyBandFilter_26(&dest_1[1], 0x30, context_val);
         }
     }
 
-    return a2;
+    return param_2;
 }

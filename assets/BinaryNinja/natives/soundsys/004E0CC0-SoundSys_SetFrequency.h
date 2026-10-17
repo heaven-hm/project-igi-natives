@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004E0CC0 SoundSys_SetFrequency | gate PASS | openigi False */
-struct status_msg* SoundSys_SetFrequency(void * a1, unsigned int a2, unsigned int a3, unsigned int a4, unsigned int a5, unsigned int a6, unsigned int a7, unsigned int a8, unsigned int a9);
+struct status_msg* SoundSys_SetFrequency(void * context, unsigned int param_2, unsigned int param_3, unsigned int param_4, unsigned int param_5, unsigned int param_6, unsigned int param_7, unsigned int param_8, unsigned int param_9);

@@ -1,28 +1,28 @@
 // Original IGI.EXE function: AI_CheckHearing_23 (VA 0x00465730; static CFG gate PASS, CFG score 1.000).
 #include "AI_CheckHearing_23.h"
-int32_t AI_CheckHearing_23(void* a1)
+int32_t AI_CheckHearing_23(void* context)
 
 {
-    char result = *(a1 + 0xd9);
+    char result = *(context + 0xd9);
 
     if (!result)
         return result;
 
-    double v_18;
-    AI_FireWeapon_23(&v_18, a1);
-    long double x87_r7_1 = *(a1 + 0x1f0);
-    long double x87_r6_1 = *(a1 + 0x1f4);
-    long double x87_r5_1 = *(a1 + 0x1f8);
-    float objC1 = *(a1 + 0xa0);
-    float v_20_1 =
-        x87_r5_1 * *(a1 + 0x8c) + x87_r6_1 * *(a1 + 0x88) + x87_r7_1 * *(a1 + 0x84);
-    long double x87_r7_3 =
-        x87_r5_1 * *(a1 + 0x98) + x87_r6_1 * *(a1 + 0x94) + x87_r7_1 * *(a1 + 0x90);
-    v_18 =
-        x87_r5_1 * *(a1 + 0x80) + x87_r6_1 * *(a1 + 0x7c) + x87_r7_1 * *(a1 + 0x78) + v_18;
-    double v_10;
-    double v_10_1 = v_20_1 + v_10;
-    double v_8;
-    double v_8_1 = x87_r7_3 + v_8;
-    return WorldObject_CommitTransform(Level_StartMission_4(), a1, &v_18, objC1);
+    double item_18;
+    AI_FireWeapon_23(&item_18, context);
+    long double fpu_val_7_1 = *(context + 0x1f0);
+    long double fpu_val_6_1 = *(context + 0x1f4);
+    long double fpu_val_5_1 = *(context + 0x1f8);
+    float entity_1 = *(context + 0xa0);
+    float item_20_1 =
+        fpu_val_5_1 * *(context + 0x8c) + fpu_val_6_1 * *(context + 0x88) + fpu_val_7_1 * *(context + 0x84);
+    long double fpu_val_7_3 =
+        fpu_val_5_1 * *(context + 0x98) + fpu_val_6_1 * *(context + 0x94) + fpu_val_7_1 * *(context + 0x90);
+    item_18 =
+        fpu_val_5_1 * *(context + 0x80) + fpu_val_6_1 * *(context + 0x7c) + fpu_val_7_1 * *(context + 0x78) + item_18;
+    double item_10;
+    double item_10_1 = item_20_1 + item_10;
+    double item_8;
+    double item_8_1 = fpu_val_7_3 + item_8;
+    return WorldObject_CommitTransform(Level_StartMission_4(), context, &item_18, entity_1);
 }

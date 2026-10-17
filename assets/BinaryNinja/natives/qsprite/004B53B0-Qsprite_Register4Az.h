@@ -1,4 +1,4 @@
 #pragma once
 #include <stdint.h>
 /* 004B53B0 Qsprite_Register4Az | gate FAIL | openigi False */
-int Qsprite_Register4Az(int* a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, float a10, float a11, float a12, int a13, int a14, int a15, int a16, int a17);
+int Qsprite_Register4Az(int* context, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9, float param_10, float param_11, float param_12, int param_13, int param_14, int param_15, int param_16, int param_17);

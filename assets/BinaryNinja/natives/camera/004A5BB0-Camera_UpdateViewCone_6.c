@@ -1,79 +1,79 @@
 // Original IGI.EXE function: Camera_UpdateViewCone_6 (VA 0x004A5BB0; static CFG gate FAIL, CFG score 0.473).
 #include "Camera_UpdateViewCone_6.h"
-char* Camera_UpdateViewCone_6(char* a1, char* a2)
+char* Camera_UpdateViewCone_6(char* context, char* param_2)
 
 {
-    int16_t tmpD;
-    tmpD = *a2;
-    char* result = a1;
+    int16_t temp_val;
+    temp_val = *param_2;
+    char* result = context;
 
-    if (!tmpD)
+    if (!temp_val)
         return result;
 
-    *(&tmpD + 1) = a2[1];
+    *(&temp_val + 1) = param_2[1];
 
-    if (!*(&tmpD + 1))
+    if (!*(&temp_val + 1))
     {
-        int32_t valA2 = 0;
-        valA2 = tmpD;
+        int32_t data_2 = 0;
+        data_2 = temp_val;
         /* tailcall */
-        return sub_4aa0a6(valA2, a1);
+        return sub_4aa0a6(data_2, context);
     }
 
     while (true)
     {
-        char* objC = a2;
-        int16_t valA;
-        valA = *result;
-        char* srcS2 = &result[1];
+        char* entity_val = param_2;
+        int16_t data_val;
+        data_val = *result;
+        char* source_2 = &result[1];
 
-        if (valA != tmpD)
+        if (data_val != temp_val)
         {
-            if (!valA)
+            if (!data_val)
                 return 0;
 
             while (true)
             {
-                valA = *srcS2;
-                srcS2 = &srcS2[1];
+                data_val = *source_2;
+                source_2 = &source_2[1];
             label_4a5bdc:
 
-                if (valA == tmpD)
+                if (data_val == temp_val)
                     break;
 
-                if (!valA)
+                if (!data_val)
                     return 0;
             }
         }
 
-        valA = *srcS2;
-        srcS2 = &srcS2[1];
+        data_val = *source_2;
+        source_2 = &source_2[1];
 
-        if (valA != *(&tmpD + 1))
+        if (data_val != *(&temp_val + 1))
             break;
 
-        result = &srcS2[0xffffffff];
+        result = &source_2[0xffffffff];
 
         while (true)
         {
-            *(&valA + 1) = objC[2];
+            *(&data_val + 1) = entity_val[2];
 
-            if (*(&valA + 1))
+            if (*(&data_val + 1))
             {
-                valA = *srcS2;
-                srcS2 = &srcS2[2];
+                data_val = *source_2;
+                source_2 = &source_2[2];
 
-                if (valA != *(&valA + 1))
+                if (data_val != *(&data_val + 1))
                     break;
 
-                valA = objC[3];
+                data_val = entity_val[3];
 
-                if (valA)
+                if (data_val)
                 {
-                    *(&valA + 1) = srcS2[0xffffffff];
-                    objC = &objC[2];
+                    *(&data_val + 1) = source_2[0xffffffff];
+                    entity_val = &entity_val[2];
 
-                    if (valA != *(&valA + 1))
+                    if (data_val != *(&data_val + 1))
                         break;
 
                     continue;

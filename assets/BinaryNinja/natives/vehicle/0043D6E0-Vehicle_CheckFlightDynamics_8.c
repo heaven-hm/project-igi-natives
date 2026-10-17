@@ -1,144 +1,142 @@
 // Original IGI.EXE function: Vehicle_CheckFlightDynamics_8 (VA 0x0043D6E0; static CFG gate PASS, CFG score 1.000).
 #include "Vehicle_CheckFlightDynamics_8.h"
-float Vehicle_CheckFlightDynamics_8(float a1) __location("valA")
-
-{
-    float srcS = a1;
-    float result = *(srcS + 0x180);
+float Vehicle_CheckFlightDynamics_8(float context) {
+    float source_val = context;
+    float result = *(source_val + 0x180);
 
     if (result != 0xffffffff)
     {
         Physics_SimulateRigidBody(result);
-        result = Physics_CheckHullCollision(*(srcS + 0x180));
+        result = Physics_CheckHullCollision(*(source_val + 0x180));
 
         if (result)
         {
-            long double fp0_2 = Physics_ApplyImpulse(*(srcS + 0x180), *(srcS + 0x19c));
-            long double x87_r6_2 = fp0_2 - *(srcS + 0x184);
-            long double f0_1 = 0f;
-            x87_r6_2 - f0_1;
-            long double x87_r5_1 = x87_r6_2;
+            long double fp0_2 = Physics_ApplyImpulse(*(source_val + 0x180), *(source_val + 0x19c));
+            long double fpu_val_6_2 = fp0_2 - *(source_val + 0x184);
+            long double f0_1 = 0.0f;
+            fpu_val_6_2 - f0_1;
+            long double fpu_val_5_1 = fpu_val_6_2;
 
-            if (*(&((x87_r6_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, f0_1) ? 1 : 0) << 0xa
-                    | (x87_r6_2 == f0_1 ? 1 : 0) << 0xe | 0x2800) + 1) & 1)
-                x87_r5_1 = -(x87_r5_1);
+            if (*(&((fpu_val_6_2 < f0_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, f0_1) ? 1 : 0) << 0xa
+                    | (fpu_val_6_2 == f0_1 ? 1 : 0) << 0xe | 0x2800) + 1) & 1)
+                fpu_val_5_1 = -(fpu_val_5_1);
 
-            long double f1_1 = 16384f;
-            x87_r5_1 - f1_1;
+            long double f1_1 = 16384.0f;
+            fpu_val_5_1 - f1_1;
 
-            if (!(*(&((x87_r5_1 < f1_1 ? 1 : 0) << 8
-                | (FCMP_UO(x87_r5_1, f1_1) ? 1 : 0) << 0xa
-                | (x87_r5_1 == f1_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1))
+            if (!(*(&((fpu_val_5_1 < f1_1 ? 1 : 0) << 8
+                | (FCMP_UO(fpu_val_5_1, f1_1) ? 1 : 0) << 0xa
+                | (fpu_val_5_1 == f1_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1))
             {
-                long double x87_r5_6 = *(srcS + 0x190);
-                long double f2_1 = *(srcS + 0x194);
-                x87_r5_6 - f2_1;
+                long double fpu_val_5_6 = *(source_val + 0x190);
+                long double f2_1 = *(source_val + 0x194);
+                fpu_val_5_6 - f2_1;
 
-                if (!(*(&((x87_r5_6 < f2_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r5_6, f2_1) ? 1 : 0) << 0xa
-                    | (x87_r5_6 == f2_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1))
+                if (!(*(&((fpu_val_5_6 < f2_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_5_6, f2_1) ? 1 : 0) << 0xa
+                    | (fpu_val_5_6 == f2_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1))
                 {
-                    long double x87_r5_9 = *(srcS + 0x190);
-                    long double f4_1 = *(srcS + 0x194);
-                    x87_r5_9 - f4_1;
+                    long double fpu_val_5_9 = *(source_val + 0x190);
+                    long double f4_1 = *(source_val + 0x194);
+                    fpu_val_5_9 - f4_1;
 
-                    if (!(*(&((x87_r5_9 < f4_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r5_9, f4_1) ? 1 : 0) << 0xa
-                        | (x87_r5_9 == f4_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41))
+                    if (!(*(&((fpu_val_5_9 < f4_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_5_9, f4_1) ? 1 : 0) << 0xa
+                        | (fpu_val_5_9 == f4_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41))
                     {
-                        long double x87_r5_11 = *(srcS + 0x190) - *(srcS + 0x198);
-                        *(srcS + 0x190) = x87_r5_11;
-                        long double f8_1 = *(srcS + 0x194);
-                        x87_r5_11 - f8_1;
+                        long double fpu_val_5_11 = *(source_val + 0x190) - *(source_val + 0x198);
+                        *(source_val + 0x190) = fpu_val_5_11;
+                        long double f8_1 = *(source_val + 0x194);
+                        fpu_val_5_11 - f8_1;
 
-                        if (*(&((x87_r5_11 < f8_1 ? 1 : 0) << 8
-                                | (FCMP_UO(x87_r5_11, f8_1) ? 1 : 0) << 0xa
-                                | (x87_r5_11 == f8_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1)
-                            *(srcS + 0x190) = *(srcS + 0x194);
+                        if (*(&((fpu_val_5_11 < f8_1 ? 1 : 0) << 8
+                                | (FCMP_UO(fpu_val_5_11, f8_1) ? 1 : 0) << 0xa
+                                | (fpu_val_5_11 == f8_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 1)
+                            *(source_val + 0x190) = *(source_val + 0x194);
                     }
                 }
                 else
                 {
-                    long double x87_r5_8 = *(srcS + 0x198) + *(srcS + 0x190);
-                    *(srcS + 0x190) = x87_r5_8;
-                    long double f5_1 = *(srcS + 0x194);
-                    x87_r5_8 - f5_1;
+                    long double fpu_val_5_8 = *(source_val + 0x198) + *(source_val + 0x190);
+                    *(source_val + 0x190) = fpu_val_5_8;
+                    long double f5_1 = *(source_val + 0x194);
+                    fpu_val_5_8 - f5_1;
 
-                    if (!(*(&((x87_r5_8 < f5_1 ? 1 : 0) << 8
-                            | (FCMP_UO(x87_r5_8, f5_1) ? 1 : 0) << 0xa
-                            | (x87_r5_8 == f5_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41))
-                        *(srcS + 0x190) = *(srcS + 0x194);
+                    if (!(*(&((fpu_val_5_8 < f5_1 ? 1 : 0) << 8
+                            | (FCMP_UO(fpu_val_5_8, f5_1) ? 1 : 0) << 0xa
+                            | (fpu_val_5_8 == f5_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41))
+                        *(source_val + 0x190) = *(source_val + 0x194);
                 }
             }
             else
             {
-                long double f3_1 = 0f;
-                x87_r6_2 - f3_1;
-                long double x87_r5_2 = x87_r6_2;
+                long double f3_1 = 0.0f;
+                fpu_val_6_2 - f3_1;
+                long double fpu_val_5_2 = fpu_val_6_2;
 
-                if (*(&((x87_r6_2 < f3_1 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r6_2, f3_1) ? 1 : 0) << 0xa
-                        | (x87_r6_2 == f3_1 ? 1 : 0) << 0xe | 0x2800) + 1) & 1)
-                    x87_r5_2 = -(x87_r5_2);
+                if (*(&((fpu_val_6_2 < f3_1 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_6_2, f3_1) ? 1 : 0) << 0xa
+                        | (fpu_val_6_2 == f3_1 ? 1 : 0) << 0xe | 0x2800) + 1) & 1)
+                    fpu_val_5_2 = -(fpu_val_5_2);
 
-                long double x87_r5_4 = x87_r5_2 * *(srcS + 0x194) * 6.10351562e-05f;
+                long double fpu_val_5_4 = fpu_val_5_2 * *(source_val + 0x194) * 6.10351562e-05.0f;
                 long double f6_1 = 0.100000001f;
-                x87_r5_4 - f6_1;
-                *(srcS + 0x190) = x87_r5_4;
-                bool c1_1 = /* bool c1_1 = unknown  {fst dword [srcS+0x190], fp0} */;
+                fpu_val_5_4 - f6_1;
+                *(source_val + 0x190) = fpu_val_5_4;
+                bool c1_1 = /* bool c1_1 = unknown  {fst dword [source_val+0x190], fp0} */;
 
-                if (*(&((x87_r5_4 < f6_1 ? 1 : 0) << 8 | (c1_1 ? 1 : 0) << 9
-                        | (FCMP_UO(x87_r5_4, f6_1) ? 1 : 0) << 0xa
-                        | (x87_r5_4 == f6_1 ? 1 : 0) << 0xe | 0x2800) + 1) & 0x41)
-                    x87_r5_4 = 0.100000001f;
+                if (*(&((fpu_val_5_4 < f6_1 ? 1 : 0) << 8 | (c1_1 ? 1 : 0) << 9
+                        | (FCMP_UO(fpu_val_5_4, f6_1) ? 1 : 0) << 0xa
+                        | (fpu_val_5_4 == f6_1 ? 1 : 0) << 0xe | 0x2800) + 1) & 0x41)
+                    fpu_val_5_4 = 0.100000001f;
 
-                *(srcS + 0x190) = x87_r5_4;
+                *(source_val + 0x190) = fpu_val_5_4;
             }
 
-            a1 = *(srcS + 0x190) * 136.53334f;
+            context = *(source_val + 0x190) * 136.53334f;
             long double f7_1 = 0.00100000005f;
-            x87_r6_2 - f7_1;
+            fpu_val_6_2 - f7_1;
 
-            if (*(&((x87_r6_2 < f7_1 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_2, f7_1) ? 1 : 0) << 0xa
-                | (x87_r6_2 == f7_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41)
+            if (*(&((fpu_val_6_2 < f7_1 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_2, f7_1) ? 1 : 0) << 0xa
+                | (fpu_val_6_2 == f7_1 ? 1 : 0) << 0xe | 0x3000) + 1) & 0x41)
             {
                 long double f9_1 = -0.00100000005f;
-                x87_r6_2 - f9_1;
+                fpu_val_6_2 - f9_1;
 
-                if (*(&((x87_r6_2 < f9_1 ? 1 : 0) << 8
-                    | (FCMP_UO(x87_r6_2, f9_1) ? 1 : 0) << 0xa
-                    | (x87_r6_2 == f9_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
+                if (*(&((fpu_val_6_2 < f9_1 ? 1 : 0) << 8
+                    | (FCMP_UO(fpu_val_6_2, f9_1) ? 1 : 0) << 0xa
+                    | (fpu_val_6_2 == f9_1 ? 1 : 0) << 0xe | 0x3800) + 1) & 1)
                 {
-                    long double x87_r6_7 = *(srcS + 0x184) - a1;
-                    x87_r6_7 - fp0_2;
+                    long double fpu_val_6_7 = *(source_val + 0x184) - context;
+                    fpu_val_6_7 - fp0_2;
 
-                    if (!(*(&((x87_r6_7 < fp0_2 ? 1 : 0) << 8
-                        | (FCMP_UO(x87_r6_7, fp0_2) ? 1 : 0) << 0xa
-                        | (x87_r6_7 == fp0_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
+                    if (!(*(&((fpu_val_6_7 < fp0_2 ? 1 : 0) << 8
+                        | (FCMP_UO(fpu_val_6_7, fp0_2) ? 1 : 0) << 0xa
+                        | (fpu_val_6_7 == fp0_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 1))
                     {
-                        *(srcS + 0x184) = x87_r6_7;
-                        Vehicle_InitPlane_9(srcS);
-                        return Vehicle_InitHeli_9(srcS);
+                        *(source_val + 0x184) = fpu_val_6_7;
+                        Vehicle_InitPlane_9(source_val);
+                        return Vehicle_InitHeli_9(source_val);
                     }
                 }
             }
             else
             {
-                long double x87_r6_5 = a1 + *(srcS + 0x184);
-                x87_r6_5 - fp0_2;
+                long double fpu_val_6_5 = context + *(source_val + 0x184);
+                fpu_val_6_5 - fp0_2;
 
-                if (*(&((x87_r6_5 < fp0_2 ? 1 : 0) << 8 | (FCMP_UO(x87_r6_5, fp0_2) ? 1 : 0) << 0xa
-                    | (x87_r6_5 == fp0_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
+                if (*(&((fpu_val_6_5 < fp0_2 ? 1 : 0) << 8 | (FCMP_UO(fpu_val_6_5, fp0_2) ? 1 : 0) << 0xa
+                    | (fpu_val_6_5 == fp0_2 ? 1 : 0) << 0xe | 0x3800) + 1) & 0x41)
                 {
-                    *(srcS + 0x184) = x87_r6_5;
-                    Vehicle_InitPlane_9(srcS);
-                    return Vehicle_InitHeli_9(srcS);
+                    *(source_val + 0x184) = fpu_val_6_5;
+                    Vehicle_InitPlane_9(source_val);
+                    return Vehicle_InitHeli_9(source_val);
                 }
             }
 
-            *(srcS + 0x184) = fp0_2;
-            Vehicle_InitPlane_9(srcS);
-            return Vehicle_InitHeli_9(srcS);
+            *(source_val + 0x184) = fp0_2;
+            Vehicle_InitPlane_9(source_val);
+            return Vehicle_InitHeli_9(source_val);
         }
     }
 

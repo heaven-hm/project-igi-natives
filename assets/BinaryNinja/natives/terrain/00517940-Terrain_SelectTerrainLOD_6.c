@@ -1,20 +1,20 @@
 // Original IGI.EXE function: Terrain_SelectTerrainLOD_6 (VA 0x00517940; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SelectTerrainLOD_6.h"
-void** Terrain_SelectTerrainLOD_6(void* a1, int32_t a2)
+void** Terrain_SelectTerrainLOD_6(void* context, int32_t param_2)
 
 {
-    for (void** i = *(a1 + 8); i; i = *i)
+    for (void** i = *(context + 8); i; i = *i)
     {
-        int32_t valA = i[4];
+        int32_t data_val = i[4];
 
-        if (valA == 0x464f524d)
+        if (data_val == 0x464f524d)
         {
-            void** valA1 = Terrain_SelectTerrainLOD_6(i, a2);
+            void** data_1 = Terrain_SelectTerrainLOD_6(i, param_2);
 
-            if (valA1)
-                return valA1;
+            if (data_1)
+                return data_1;
         }
-        else if (valA == a2)
+        else if (data_val == param_2)
             return i;
     }
 

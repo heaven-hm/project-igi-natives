@@ -1,82 +1,82 @@
 // Original IGI.EXE function: Menu_Manager (VA 0x00418B00; static CFG gate PASS, CFG score 0.914).
 #include "Menu_Manager.h"
-int32_t* Menu_Manager(void* a1, void* a2, char a3, char a4, char a5)
+int32_t* Menu_Manager(void* context, void* param_2, char param_3, char param_4, char param_5)
 
 // Sig: int* Menu_Manager(int p1,char *menu_str,char p3,char p4,int p5)
 // Note: MenuManager load for inagame or Mainmenu,Params:  p1: 0057BABC
 // ,p3,p4,p5: 0.
 {
-    if (a3)
+    if (param_3)
     {
-        void* valA = Config_GetActivePlayerProfileRecord();
-        void v_11c;
-        __builtin_memset(&v_11c, 0, 0x11c);
-        int32_t v_104_1 = Display_CheckCapabilities_7();
-        char v_106_1 = 1;
-        int32_t v_118;
-        memcpy(&v_118,
+        void* data_val = Config_GetActivePlayerProfileRecord();
+        void item_11c;
+        memset(&item_11c, 0, 0x11c);
+        int32_t item_104_1 = Display_CheckCapabilities_7();
+        char item_106_1 = 1;
+        int32_t item_118;
+        memcpy(&item_118,
             "\x80\x02\x00\x00\xe0\x01\x00\x00\x01\x00\x00\x00\x10\x00\x00\x00\x01", 0x11);
-        int32_t v_104_2 = Display_CheckCapabilities_7();
-        char* valA3 = valA + 0x11f;
-        char v_106_2 = 1;
+        int32_t item_104_2 = Display_CheckCapabilities_7();
+        char* data_3 = data_val + 0x11f;
+        char item_106_2 = 1;
 
-        if (!valA3)
-            valA3 = &g_567c74;
+        if (!data_3)
+            data_3 = &g_567c74;
 
-        char* dstD1 = valA3;
+        char* dest_1 = data_3;
         int32_t i = 0xffffffff;
 
         while (i)
         {
-            bool cond_3_1 = 0 != *dstD1;
-            dstD1 = &dstD1[1];
+            bool flag_3_1 = 0 != *dest_1;
+            dest_1 = &dest_1[1];
             i -= 1;
 
-            if (!cond_3_1)
+            if (!flag_3_1)
                 break;
         }
 
-        int32_t objC1 = ~i;
-        void v_80;
-        int32_t srcS2;
-        int32_t dstD3;
-        dstD3 = memcpy(&v_80, dstD1 - objC1, objC1 & 0xfffffffc);
-        char* valA5 = valA + 0x1f;
-        memcpy(dstD3, srcS2, objC1 & 3);
+        int32_t entity_1 = ~i;
+        void item_80;
+        int32_t source_2;
+        int32_t dest_3;
+        dest_3 = memcpy(&item_80, dest_1 - entity_1, entity_1 & 0xfffffffc);
+        char* data_5 = data_val + 0x1f;
+        memcpy(dest_3, source_2, entity_1 & 3);
 
-        if (!valA5)
-            valA5 = &g_567c74;
+        if (!data_5)
+            data_5 = &g_567c74;
 
-        char* dstD4 = valA5;
+        char* dest_4 = data_5;
         int32_t i_1 = 0xffffffff;
 
         while (i_1)
         {
-            bool cond_5_1 = 0 != *dstD4;
-            dstD4 = &dstD4[1];
+            bool flag_5_1 = 0 != *dest_4;
+            dest_4 = &dest_4[1];
             i_1 -= 1;
 
-            if (!cond_5_1)
+            if (!flag_5_1)
                 break;
         }
 
-        int32_t objC5 = ~i_1;
-        char v_134_1 = 0;
-        void v_100;
-        int32_t srcS4;
-        int32_t dstD6;
-        dstD6 = memcpy(&v_100, dstD4 - objC5, objC5 & 0xfffffffc);
-        memcpy(dstD6, srcS4, objC5 & 3);
-        Screen_Process(&v_11c, v_134_1);
-        Display_SetMode(&v_11c);
+        int32_t entity_5 = ~i_1;
+        char item_134_1 = 0;
+        void item_100;
+        int32_t source_4;
+        int32_t dest_6;
+        dest_6 = memcpy(&item_100, dest_4 - entity_5, entity_5 & 0xfffffffc);
+        memcpy(dest_6, source_4, entity_5 & 3);
+        Screen_Process(&item_11c, item_134_1);
+        Display_SetMode(&item_11c);
     }
 
-    void* dstD7 = a2;
-    int32_t* valA7 = Qvm_Load(dstD7);
+    void* dest_7 = param_2;
+    int32_t* data_7 = Qvm_Load(dest_7);
 
-    if (!valA7)
+    if (!data_7)
     {
-        void* v_134_9 = dstD7;
+        void* item_134_9 = dest_7;
         Error_Show("Failed to load menumanager: '%s'");
 
         while (true)
@@ -85,42 +85,42 @@ int32_t* Menu_Manager(void* a1, void* a2, char a3, char a4, char a5)
         return;
     }
 
-    Script_Init(dstD7, 1, 0, 0);
-    Script_SetSymbolContext("Task_New", a1);
-    Qvm_Execute(valA7);
-    Qvm_Cleanup(valA7);
-    int32_t* result = QTask_DeleteTask_2(a1, Menu_UpdateLanguage_3());
+    Script_Init(dest_7, 1, 0, 0);
+    Script_SetSymbolContext("Task_New", context);
+    Qvm_Execute(data_7);
+    Qvm_Cleanup(data_7);
+    int32_t* result = QTask_DeleteTask_2(context, Menu_UpdateLanguage_3());
     int32_t i_2 = 0xffffffff;
 
     while (i_2)
     {
-        bool cond_2_1 = 0 != *dstD7;
-        dstD7 += 1;
+        bool flag_2_1 = 0 != *dest_7;
+        dest_7 += 1;
         i_2 -= 1;
 
-        if (!cond_2_1)
+        if (!flag_2_1)
             break;
     }
 
-    int32_t objC9 = ~i_2;
-    int32_t srcS7;
-    int32_t dstD10;
-    dstD10 = memcpy(result + 0x26c5, dstD7 - objC9, objC9 & 0xfffffffc);
-    memcpy(dstD10, srcS7, objC9 & 3);
-    char v_11d = 1;
-    int32_t tmpD1 = QTask_ProcessQueue_2(a1, Script_ParseEnumReal32_8(), &v_11d);
-    tmpD1 = a4;
-    char f0 = tmpD1;
-    tmpD1 = -(tmpD1);
-    v_11d = 0;
-    result[0xa] = ((tmpD1 - tmpD1) & 0xfffffff7) + 9;
+    int32_t entity_9 = ~i_2;
+    int32_t source_7;
+    int32_t dest_10;
+    dest_10 = memcpy(result + 0x26c5, dest_7 - entity_9, entity_9 & 0xfffffffc);
+    memcpy(dest_10, source_7, entity_9 & 3);
+    char item_11d = 1;
+    int32_t temp_1 = QTask_ProcessQueue_2(context, Script_ParseEnumReal32_8(), &item_11d);
+    temp_1 = param_4;
+    char f0 = temp_1;
+    temp_1 = -(temp_1);
+    item_11d = 0;
+    result[0xa] = ((temp_1 - temp_1) & 0xfffffff7) + 9;
 
     if (!g_539828)
         result[8] = 0x384;
 
     g_539828 = 0;
 
-    if (!a3)
+    if (!param_3)
     {
         result[0x9ae] = 0xffffffff;
         result[0xa0b] = 0;
@@ -134,20 +134,20 @@ int32_t* Menu_Manager(void* a1, void* a2, char a3, char a4, char a5)
         result[0xa0b] = 1;
     }
 
-    char* v_134_6 = &g_536298;
-    char* v_138_4 = ".\ymbe.afp";
+    char* item_134_6 = &g_536298;
+    char* item_138_4 = ".\ymbe.afp";
     result[0xa0e] = 0;
-    *(result + 0x26c3) = a5;
-    int32_t* valA15 = File_Open(v_138_4, v_134_6);
+    *(result + 0x26c3) = param_5;
+    int32_t* data_15 = File_Open(item_138_4, item_134_6);
 
-    if (valA15)
+    if (data_15)
     {
-        Camera_ApplyLineFilter_4(valA15, nullptr, FILE_BEGIN);
-        int32_t objC13 = 0;
-        objC13 = Camera_SetFieldOfView_4(valA15) == 0x40;
-        Camera_UpdateTransform_4(valA15);
+        Camera_ApplyLineFilter_4(data_15, nullptr, FILE_BEGIN);
+        int32_t entity_13 = 0;
+        entity_13 = Camera_SetFieldOfView_4(data_15) == 0x40;
+        Camera_UpdateTransform_4(data_15);
 
-        if (objC13)
+        if (entity_13)
             return result;
     }
 

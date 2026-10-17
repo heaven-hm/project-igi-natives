@@ -1,78 +1,78 @@
 // Original IGI.EXE function: Display_MeshFormatNotSupport (VA 0x0049B4B0; static CFG gate FAIL, CFG score 0.809).
 #include "Display_MeshFormatNotSupport.h"
-void* Display_MeshFormatNotSupport(void* a1)
+void* Display_MeshFormatNotSupport(void* context)
 
 {
-    int32_t* ctxB = a1 * 0xfa8 + &g_7205c0;
-    int32_t tmpD1 = *((a1 << 2) + &g_543cb8);
-    int32_t* v_18 = ctxB;
-    int32_t objC4;
+    int32_t* context_val = context * 0xfa8 + &g_7205c0;
+    int32_t temp_1 = *((context << 2) + &g_543cb8);
+    int32_t* item_18 = context_val;
+    int32_t entity_4;
 
     if (!g_bcad74)
-        objC4 = *((a1 << 2) + &g_543cc4);
+        entity_4 = *((context << 2) + &g_543cc4);
     else
-        objC4 = *((a1 << 2) + &g_543cd0);
+        entity_4 = *((context << 2) + &g_543cd0);
 
-    int32_t valA1 = g_72350c;
-    g_72350c = valA1 + 1;
-    int32_t* valA3 = ctxB[0x3e8];
-    int32_t* valA4 = g_5ca110;
-    void* srcS1 = valA1 * 0x24 + &g_7ac0a0;
-    int32_t v_10 = 0x10;
-    a1 = srcS1;
-    (*(*valA4 + 0x14))(valA4, &v_10, srcS1, 0);
+    int32_t data_1 = g_72350c;
+    g_72350c = data_1 + 1;
+    int32_t* data_3 = context_val[0x3e8];
+    int32_t* data_4 = g_5ca110;
+    void* source_1 = data_1 * 0x24 + &g_7ac0a0;
+    int32_t item_10 = 0x10;
+    context = source_1;
+    (*(*data_4 + 0x14))(data_4, &item_10, source_1, 0);
     int32_t flagP = 0;
     void* i_1 = nullptr;
-    *(srcS1 + 4) = v_10;
-    *(srcS1 + 8) = objC4;
-    *(srcS1 + 0xc) = tmpD1;
-    *(srcS1 + 0x1c) = 0;
-    *(srcS1 + 0x10) = valA3;
-    void* i = srcS1 + 0x1c;
-    *(srcS1 + 0x18) = i;
-    *(srcS1 + 0x20) = srcS1 + 0x18;
+    *(source_1 + 4) = item_10;
+    *(source_1 + 8) = entity_4;
+    *(source_1 + 0xc) = temp_1;
+    *(source_1 + 0x1c) = 0;
+    *(source_1 + 0x10) = data_3;
+    void* i = source_1 + 0x1c;
+    *(source_1 + 0x18) = i;
+    *(source_1 + 0x20) = source_1 + 0x18;
 
-    if (ctxB[0x3e9] > 0)
+    if (context_val[0x3e9] > 0)
     {
-        int32_t* v_24_1 = ctxB;
+        int32_t* item_24_1 = context_val;
 
         do
         {
-            void* valA7 = *v_24_1;
-            int32_t objC9 = *(valA7 + 0x20);
-            int32_t valA16;
+            void* data_7 = *item_24_1;
+            int32_t entity_9 = *(data_7 + 0x20);
+            int32_t data_16;
 
-            if (!objC9)
+            if (!entity_9)
             {
-                void* ctxB2 = *(valA7 + 0x24);
-                int16_t tmpD7 = *(ctxB2 + 0xc);
-                int32_t valA17 = *(ctxB2 + 0x10);
-                *(ctxB2 + 0x24) = flagP;
-                *(ctxB2 + 0x26) = tmpD7;
-                *(ctxB2 + 0x28) = srcS1;
-                *(ctxB2 + 0x20) = 1;
-                *(ctxB2 + 0x2c) = valA17;
-                int32_t v_1c = 0;
-                int32_t* valA18 = **(ctxB2 + 0x28);
-                (*(*valA18 + 0xc))(valA18, 0x20, &v_1c, 0);
-                int32_t objC24 = *(ctxB2 + 0xc) << 5;
-                int32_t srcS5;
-                int32_t dstD6;
-                dstD6 = memcpy((flagP << 5) + v_1c, *(ctxB2 + 0x10), objC24 & 0xfffffffc);
-                memcpy(dstD6, srcS5, objC24 & 3);
-                int32_t* valA20 = **(ctxB2 + 0x28);
-                (*(*valA20 + 0x10))(valA20);
-                *(a1 + 0x14) = 0x20;
-                Camera_SetFieldOfView_33(a1 + 0x18, ctxB2 + 0x18);
-                valA16 = *(ctxB2 + 0xc);
+                void* context_2 = *(data_7 + 0x24);
+                int16_t temp_7 = *(context_2 + 0xc);
+                int32_t data_17 = *(context_2 + 0x10);
+                *(context_2 + 0x24) = flagP;
+                *(context_2 + 0x26) = temp_7;
+                *(context_2 + 0x28) = source_1;
+                *(context_2 + 0x20) = 1;
+                *(context_2 + 0x2c) = data_17;
+                int32_t item_1c = 0;
+                int32_t* data_18 = **(context_2 + 0x28);
+                (*(*data_18 + 0xc))(data_18, 0x20, &item_1c, 0);
+                int32_t entity_24 = *(context_2 + 0xc) << 5;
+                int32_t source_5;
+                int32_t dest_6;
+                dest_6 = memcpy((flagP << 5) + item_1c, *(context_2 + 0x10), entity_24 & 0xfffffffc);
+                memcpy(dest_6, source_5, entity_24 & 3);
+                int32_t* data_20 = **(context_2 + 0x28);
+                (*(*data_20 + 0x10))(data_20);
+                *(context + 0x14) = 0x20;
+                Camera_SetFieldOfView_33(context + 0x18, context_2 + 0x18);
+                data_16 = *(context_2 + 0xc);
             label_49b6a7:
-                srcS1 = a1;
-                ctxB = v_18;
-                flagP += valA16;
+                source_1 = context;
+                context_val = item_18;
+                flagP += data_16;
             }
-            else if (objC9 != 1)
+            else if (entity_9 != 1)
             {
-                if (objC9 != 3)
+                if (entity_9 != 3)
                 {
                     Error_Show("Mesh format not supported");
 
@@ -81,39 +81,39 @@ void* Display_MeshFormatNotSupport(void* a1)
                 }
                 else
                 {
-                    void* ctxB1 = *(valA7 + 0x24);
-                    int16_t objC13 = *(ctxB1 + 0x10);
-                    int32_t tmpD4 = *(ctxB1 + 0x14);
-                    *(ctxB1 + 0x2c) = flagP;
-                    *(ctxB1 + 0x2e) = objC13;
-                    *(ctxB1 + 0x30) = srcS1;
-                    *(ctxB1 + 0x28) = 1;
-                    *(ctxB1 + 0x34) = tmpD4;
-                    int32_t v_20 = 0;
-                    int32_t* valA9 = **(ctxB1 + 0x30);
-                    (*(*valA9 + 0xc))(valA9, 0x20, &v_20, 0);
-                    int32_t objC16 = *(ctxB1 + 0x10) * 0x28;
-                    int32_t srcS3;
-                    int32_t dstD2;
-                    dstD2 =
-                        memcpy(v_20 + flagP * 0x28, *(ctxB1 + 0x14), objC16 & 0xfffffffc);
-                    memcpy(dstD2, srcS3, objC16 & 3);
-                    int32_t* valA13 = **(ctxB1 + 0x30);
-                    (*(*valA13 + 0x10))(valA13);
-                    *(a1 + 0x14) = 0x28;
-                    Camera_SetFieldOfView_33(a1 + 0x18, ctxB1 + 0x20);
-                    valA16 = *(ctxB1 + 0x10);
+                    void* context_1 = *(data_7 + 0x24);
+                    int16_t entity_13 = *(context_1 + 0x10);
+                    int32_t temp_4 = *(context_1 + 0x14);
+                    *(context_1 + 0x2c) = flagP;
+                    *(context_1 + 0x2e) = entity_13;
+                    *(context_1 + 0x30) = source_1;
+                    *(context_1 + 0x28) = 1;
+                    *(context_1 + 0x34) = temp_4;
+                    int32_t item_20 = 0;
+                    int32_t* data_9 = **(context_1 + 0x30);
+                    (*(*data_9 + 0xc))(data_9, 0x20, &item_20, 0);
+                    int32_t entity_16 = *(context_1 + 0x10) * 0x28;
+                    int32_t source_3;
+                    int32_t dest_2;
+                    dest_2 =
+                        memcpy(item_20 + flagP * 0x28, *(context_1 + 0x14), entity_16 & 0xfffffffc);
+                    memcpy(dest_2, source_3, entity_16 & 3);
+                    int32_t* data_13 = **(context_1 + 0x30);
+                    (*(*data_13 + 0x10))(data_13);
+                    *(context + 0x14) = 0x28;
+                    Camera_SetFieldOfView_33(context + 0x18, context_1 + 0x20);
+                    data_16 = *(context_1 + 0x10);
                 }
 
                 goto label_49b6a7;
             }
             i = i_1 + 1;
             i_1 = i;
-            v_24_1 = &v_24_1[1];
-        } while (i < ctxB[0x3e9]);
+            item_24_1 = &item_24_1[1];
+        } while (i < context_val[0x3e9]);
     }
 
-    ctxB[0x3e9] = 0;
-    ctxB[0x3e8] = 0;
+    context_val[0x3e9] = 0;
+    context_val[0x3e8] = 0;
     return i;
 }

@@ -1,29 +1,29 @@
 // Original IGI.EXE function: MenuFrame_LoadParameters (VA 0x00422A50; static CFG gate PASS, CFG score 1.000).
 #include "MenuFrame_LoadParameters.h"
-int32_t MenuFrame_LoadParameters(void* a1)
+int32_t MenuFrame_LoadParameters(void* context)
 
 {
-    if (*(a1 + 0x4c))
+    if (*(context + 0x4c))
     {
-        int32_t tmpD2 = Menu_UpdateLanguage_14(a1, *(a1 + 0x20), *(a1 + 0x24),
-            *(a1 + 0x28), *(a1 + 0x2c), nullptr, nullptr);
+        int32_t temp_2 = Menu_UpdateLanguage_14(context, *(context + 0x20), *(context + 0x24),
+            *(context + 0x28), *(context + 0x2c), nullptr, nullptr);
 
-        if (*(a1 + 0x49) && !*(a1 + 0x48))
-            tmpD2 = menu_high(*(a1 + 0x44), a1);
+        if (*(context + 0x49) && !*(context + 0x48))
+            temp_2 = menu_high(*(context + 0x44), context);
 
-        int32_t* i = *(a1 + 8);
+        int32_t* i = *(context + 8);
 
         if (*i && i)
         {
             do
             {
-                int16_t valA5 = Menu_PlayMusic_13();
-                tmpD2 = i[7];
+                int16_t data_5 = Menu_PlayMusic_13();
+                temp_2 = i[7];
 
-                if (TaskType_IsDerivedFrom(tmpD2, valA5))
+                if (TaskType_IsDerivedFrom(temp_2, data_5))
                 {
-                    i[0x14] = *(a1 + 0x50);
-                    *(i + 0x4d) = *(a1 + 0x4d);
+                    i[0x14] = *(context + 0x50);
+                    *(i + 0x4d) = *(context + 0x4d);
                 }
 
                 i = *i;
@@ -37,6 +37,6 @@ int32_t MenuFrame_LoadParameters(void* a1)
         }
     }
 
-    *(a1 + 0x50) = 0;
-    return (*((Menu_PlayMusic_13() << 2) + &g_a970e0))(a1);
+    *(context + 0x50) = 0;
+    return (*((Menu_PlayMusic_13() << 2) + &g_a970e0))(context);
 }

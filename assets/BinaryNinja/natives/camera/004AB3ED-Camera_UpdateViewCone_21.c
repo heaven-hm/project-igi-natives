@@ -3,30 +3,30 @@
 int32_t* Camera_UpdateViewCone_21()
 
 {
-    int32_t valA3 = g_c321f4;
-    int32_t objC = g_c321e4;
+    int32_t data_3 = g_c321f4;
+    int32_t entity_val = g_c321e4;
 
-    if (valA3 != objC)
+    if (data_3 != entity_val)
         goto label_4ab446;
 
-    int32_t valA2 = HeapReAlloc(g_c32428, HEAP_NONE, g_c321f8, (objC * 5 + 0x50) << 2);
+    int32_t data_2 = HeapReAlloc(g_c32428, HEAP_NONE, g_c321f8, (entity_val * 5 + 0x50) << 2);
 
-    if (valA2)
+    if (data_2)
     {
         g_c321e4 += 0x10;
-        g_c321f8 = valA2;
-        valA3 = g_c321f4;
+        g_c321f8 = data_2;
+        data_3 = g_c321f4;
     label_4ab446:
-        int32_t* result = g_c321f8 + valA3 * 0x14;
-        int32_t valA5 = HeapAlloc(g_c32428, HEAP_ZERO_MEMORY, 0x41c4);
-        result[4] = valA5;
+        int32_t* result = g_c321f8 + data_3 * 0x14;
+        int32_t data_5 = HeapAlloc(g_c32428, HEAP_ZERO_MEMORY, 0x41c4);
+        result[4] = data_5;
 
-        if (valA5)
+        if (data_5)
         {
-            int32_t valA6 = VirtualAlloc(nullptr, 0x100000, MEM_RESERVE, PAGE_READWRITE);
-            result[3] = valA6;
+            int32_t data_6 = VirtualAlloc(nullptr, 0x100000, MEM_RESERVE, PAGE_READWRITE);
+            result[3] = data_6;
 
-            if (valA6)
+            if (data_6)
             {
                 result[2] = 0xffffffff;
                 *result = 0;

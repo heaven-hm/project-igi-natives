@@ -1,140 +1,140 @@
 // Original IGI.EXE function: Render_DrawSplineMesh_11 (VA 0x004D6D40; static CFG gate PASS, CFG score 1.000).
 #include "Render_DrawSplineMesh_11.h"
-int32_t* Render_DrawSplineMesh_11(int32_t* a1)
+int32_t* Render_DrawSplineMesh_11(int32_t* context)
 
 {
-    int32_t* result = a1;
-    int32_t dstD = *(result * 0xc + &g_a542f0);
-    int32_t v_54 = dstD;
+    int32_t* result = context;
+    int32_t dest_val = *(result * 0xc + &g_a542f0);
+    int32_t item_54 = dest_val;
 
-    if (dstD > 0)
+    if (dest_val > 0)
     {
-        int32_t valA1 = result * 0x28;
-        int32_t objC1 = *(valA1 + 0xa53914);
-        result = *(valA1 + &g_a538f4);
+        int32_t data_1 = result * 0x28;
+        int32_t entity_1 = *(data_1 + 0xa53914);
+        result = *(data_1 + &g_a538f4);
 
-        if (objC1 > 0)
+        if (entity_1 > 0)
         {
             int32_t* result_1 = result;
-            int32_t v_60_1 = objC1;
-            bool cond_1_1;
+            int32_t item_60_1 = entity_1;
+            bool flag_1_1;
 
             do
             {
-                void* valA2 = *result;
+                void* data_2 = *result;
 
-                if (valA2 && dstD > 0)
+                if (data_2 && dest_val > 0)
                 {
-                    int32_t* ctxB2 = *(valA2 + 0xc) + 4;
-                    int32_t v_68_1 = dstD;
-                    bool cond_3_1;
+                    int32_t* context_2 = *(data_2 + 0xc) + 4;
+                    int32_t item_68_1 = dest_val;
+                    bool flag_3_1;
 
                     do
                     {
-                        int32_t srcS1 = ctxB2[-1];
-                        int32_t v_6c_1 = srcS1;
+                        int32_t source_1 = context_2[-1];
+                        int32_t item_6c_1 = source_1;
 
-                        if (srcS1 > 1 && !ctxB2[1])
+                        if (source_1 > 1 && !context_2[1])
                         {
-                            int32_t flagP1 = srcS1 << 3;
-                            ctxB2[1] = Mem_Alloc(flagP1, 4);
+                            int32_t flagP1 = source_1 << 3;
+                            context_2[1] = Mem_Alloc(flagP1, 4);
 
                             if (g_a54678)
-                                ctxB2[2] = Mem_Alloc(flagP1, 4);
+                                context_2[2] = Mem_Alloc(flagP1, 4);
 
                             int32_t flagP2 = 0;
 
-                            if (srcS1 > 0)
+                            if (source_1 > 0)
                             {
-                                float* dstD1 = nullptr;
+                                float* dest_1 = nullptr;
 
                                 do
                                 {
-                                    int32_t f1_1 = (flagP2 + 1) % srcS1;
+                                    int32_t f1_1 = (flagP2 + 1) % source_1;
 
-                                    if (f1_1 || *(valA2 + 7) & 0x80)
+                                    if (f1_1 || *(data_2 + 7) & 0x80)
                                     {
-                                        int32_t valA14 = *ctxB2;
-                                        a1 = nullptr;
-                                        float v_3c = *(dstD1 + valA14);
-                                        float v_38_1 = *(dstD1 + valA14 + 4);
-                                        float v_34_1 = *(dstD1 + valA14 + 8);
-                                        int32_t v_2c_1 = 0;
-                                        float v_30_1 = *(dstD1 + valA14 + 0xc);
-                                        int32_t tmpD5 = ctxB2[1];
-                                        int32_t srcS3 = f1_1 * 0x34;
-                                        float v_50 = *(srcS3 + valA14);
-                                        float v_4c_1 = *(srcS3 + valA14 + 4);
-                                        float v_48_1 = *(srcS3 + valA14 + 8);
-                                        float* valA15 = tmpD5 + (flagP2 << 3);
-                                        float v_44_1 = *(srcS3 + valA14 + 0xc);
-                                        int32_t v_40_1 = 0;
-                                        Sys_CloseFileStream_13(&a1, valA15, &valA15[1], &v_3c, &v_50);
+                                        int32_t data_14 = *context_2;
+                                        context = nullptr;
+                                        float item_3c = *(dest_1 + data_14);
+                                        float item_38_1 = *(dest_1 + data_14 + 4);
+                                        float item_34_1 = *(dest_1 + data_14 + 8);
+                                        int32_t item_2c_1 = 0;
+                                        float item_30_1 = *(dest_1 + data_14 + 0xc);
+                                        int32_t temp_5 = context_2[1];
+                                        int32_t source_3 = f1_1 * 0x34;
+                                        float item_50 = *(source_3 + data_14);
+                                        float item_4c_1 = *(source_3 + data_14 + 4);
+                                        float item_48_1 = *(source_3 + data_14 + 8);
+                                        float* data_15 = temp_5 + (flagP2 << 3);
+                                        float item_44_1 = *(source_3 + data_14 + 0xc);
+                                        int32_t item_40_1 = 0;
+                                        Sys_CloseFileStream_13(&context, data_15, &data_15[1], &item_3c, &item_50);
 
-                                        if (a1)
+                                        if (context)
                                         {
-                                            int32_t valA17 = ctxB2[1];
-                                            *(valA17 + (flagP2 << 3)) =
-                                                *(valA17 + (flagP2 << 3)) + 6.28318548f;
+                                            int32_t data_17 = context_2[1];
+                                            *(data_17 + (flagP2 << 3)) =
+                                                *(data_17 + (flagP2 << 3)) + 6.28318548f;
                                         }
 
                                         if (g_a54678)
                                         {
-                                            int32_t valA20 = *ctxB2;
-                                            float v_14 = *(dstD1 + valA20 + 0x14);
-                                            float v_10_1 = *(dstD1 + valA20 + 0x18);
-                                            float v_c_1 = *(dstD1 + valA20 + 0x1c);
-                                            int32_t v_4_1 = 0;
-                                            float v_8_1 = *(dstD1 + valA20 + 0x20);
-                                            float v_28 = *(srcS3 + valA20 + 0x24);
-                                            float v_24_1 = *(srcS3 + valA20 + 0x28);
-                                            float v_20_1 = *(srcS3 + valA20 + 0x2c);
-                                            int32_t v_18_1 = 0;
-                                            float v_1c_1 = *(srcS3 + valA20 + 0x30);
-                                            float* valA21 = ctxB2[2] + (flagP2 << 3);
-                                            Sys_CloseFileStream_13(&a1, valA21, &valA21[1], &v_14, &v_28);
+                                            int32_t data_20 = *context_2;
+                                            float item_14 = *(dest_1 + data_20 + 0x14);
+                                            float item_10_1 = *(dest_1 + data_20 + 0x18);
+                                            float item_c_1 = *(dest_1 + data_20 + 0x1c);
+                                            int32_t item_4_1 = 0;
+                                            float item_8_1 = *(dest_1 + data_20 + 0x20);
+                                            float item_28 = *(source_3 + data_20 + 0x24);
+                                            float item_24_1 = *(source_3 + data_20 + 0x28);
+                                            float item_20_1 = *(source_3 + data_20 + 0x2c);
+                                            int32_t item_18_1 = 0;
+                                            float item_1c_1 = *(source_3 + data_20 + 0x30);
+                                            float* data_21 = context_2[2] + (flagP2 << 3);
+                                            Sys_CloseFileStream_13(&context, data_21, &data_21[1], &item_14, &item_28);
 
-                                            if (a1)
+                                            if (context)
                                             {
-                                                int32_t objC5 = ctxB2[2];
-                                                *(objC5 + (flagP2 << 3)) =
-                                                    *(objC5 + (flagP2 << 3)) + 6.28318548f;
+                                                int32_t entity_5 = context_2[2];
+                                                *(entity_5 + (flagP2 << 3)) =
+                                                    *(entity_5 + (flagP2 << 3)) + 6.28318548f;
                                             }
                                         }
 
-                                        srcS1 = v_6c_1;
+                                        source_1 = item_6c_1;
                                     }
                                     else
                                     {
-                                        *(ctxB2[1] + (flagP2 << 3)) = 0;
-                                        *(ctxB2[1] + (flagP2 << 3) + 4) = 0;
+                                        *(context_2[1] + (flagP2 << 3)) = 0;
+                                        *(context_2[1] + (flagP2 << 3) + 4) = 0;
 
                                         if (g_a54678)
                                         {
-                                            *(ctxB2[2] + (flagP2 << 3)) = 0;
-                                            *(ctxB2[2] + (flagP2 << 3) + 4) = 0;
+                                            *(context_2[2] + (flagP2 << 3)) = 0;
+                                            *(context_2[2] + (flagP2 << 3) + 4) = 0;
                                         }
                                     }
 
                                     flagP2 += 1;
-                                    dstD1 = &dstD1[0xd];
-                                } while (flagP2 < srcS1);
+                                    dest_1 = &dest_1[0xd];
+                                } while (flagP2 < source_1);
 
-                                dstD = v_54;
+                                dest_val = item_54;
                             }
                         }
 
-                        ctxB2 = &ctxB2[4];
-                        cond_3_1 = v_68_1 != 1;
-                        v_68_1 -= 1;
-                    } while (cond_3_1);
+                        context_2 = &context_2[4];
+                        flag_3_1 = item_68_1 != 1;
+                        item_68_1 -= 1;
+                    } while (flag_3_1);
                 }
 
                 result = &result_1[1];
-                cond_1_1 = v_60_1 != 1;
+                flag_1_1 = item_60_1 != 1;
                 result_1 = result;
-                v_60_1 -= 1;
-            } while (cond_1_1);
+                item_60_1 -= 1;
+            } while (flag_1_1);
         }
     }
 

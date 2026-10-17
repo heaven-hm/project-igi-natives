@@ -1,27 +1,27 @@
 // Original IGI.EXE function: FX_ErrorInHumancameraHu (VA 0x00482880; static CFG gate PASS, CFG score 1.000).
 #include "FX_ErrorInHumancameraHu.h"
-int32_t* FX_ErrorInHumancameraHu(void* a1)
+int32_t* FX_ErrorInHumancameraHu(void* context)
 
 {
-    int32_t objC = 0;
-    char* valA = &g_5c118d;
+    int32_t entity_val = 0;
+    char* data_val = &g_5c118d;
 
-    while (!*valA)
+    while (!*data_val)
     {
-        valA = &valA[8];
-        objC += 1;
+        data_val = &data_val[8];
+        entity_val += 1;
 
-        if (valA >= 0x5c158d)
-            return valA;
+        if (data_val >= 0x5c158d)
+            return data_val;
     }
 
-    int32_t* valA1 = *((objC << 3) + &g_5c1188);
+    int32_t* data_1 = *((entity_val << 3) + &g_5c1188);
 
-    if (*valA1)
+    if (*data_1)
     {
-        *(a1 + 0x68) = valA1;
-        *(a1 + 0x118) = objC;
-        return valA1;
+        *(context + 0x68) = data_1;
+        *(context + 0x118) = entity_val;
+        return data_1;
     }
 
     Error_Show("ERROR IN HUMANCAMERA HUMANLIST");

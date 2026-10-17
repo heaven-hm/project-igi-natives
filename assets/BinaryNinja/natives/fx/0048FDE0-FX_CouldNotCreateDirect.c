@@ -16,9 +16,9 @@ void* FX_CouldNotCreateDirect()
         return;
     }
 
-    int32_t* valA2 = g_5c8e14;
+    int32_t* data_2 = g_5c8e14;
 
-    if ((*(*valA2 + 0x24))(valA2, 0x534910, 0x5349b0, &g_5c8e1c, 0))
+    if ((*(*data_2 + 0x24))(data_2, 0x534910, 0x5349b0, &g_5c8e1c, 0))
     {
         Error_Show("Could not create DirectInput device mouse!");
 
@@ -28,9 +28,9 @@ void* FX_CouldNotCreateDirect()
         return;
     }
 
-    int32_t* valA4 = g_5c8e1c;
+    int32_t* data_4 = g_5c8e1c;
 
-    if ((*(*valA4 + 0x2c))(valA4, 0x5348b0))
+    if ((*(*data_4 + 0x2c))(data_4, 0x5348b0))
     {
         Error_Show("Could not set data format for mouse!");
 
@@ -40,12 +40,12 @@ void* FX_CouldNotCreateDirect()
         return;
     }
 
-    int32_t dstD;
-    int32_t v_c = dstD;
-    int32_t dstD1 = **&g_5c8e1c;
-    int32_t valA7 = FX_ExplosionSpawn_22();
+    int32_t dest_val;
+    int32_t item_c = dest_val;
+    int32_t dest_1 = **&g_5c8e1c;
+    int32_t data_7 = FX_ExplosionSpawn_22();
 
-    if (!(*(dstD1 + 0x34))(g_5c8e1c, valA7, 6))
+    if (!(*(dest_1 + 0x34))(g_5c8e1c, data_7, 6))
     {
         FX_CouldNotGetMouseCaps();
         g_5c8e10 = 0;

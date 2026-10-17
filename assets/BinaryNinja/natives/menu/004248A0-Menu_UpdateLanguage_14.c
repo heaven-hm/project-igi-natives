@@ -1,10 +1,10 @@
 // Original IGI.EXE function: Menu_UpdateLanguage_14 (VA 0x004248A0; static CFG gate PASS, CFG score 1.000).
 #include "Menu_UpdateLanguage_14.h"
-char* Menu_UpdateLanguage_14(void* a1, void* a2, int32_t a3, char* a4, int32_t a5, int32_t* a6, char** a7)
+char* Menu_UpdateLanguage_14(void* context, void* param_2, int32_t param_3, char* param_4, int32_t param_5, int32_t* param_6, char** param_7)
 
 {
-    void* ctxB = a1;
-    char* result = *(ctxB + 0x44);
+    void* context_val = context;
+    char* result = *(context_val + 0x44);
     char* result_1;
 
     if (!result)
@@ -15,72 +15,72 @@ char* Menu_UpdateLanguage_14(void* a1, void* a2, int32_t a3, char* a4, int32_t a
         result_1 = result;
     }
 
-    int32_t objC = *(result_1 + 0xc);
+    int32_t entity_val = *(result_1 + 0xc);
 
-    if (objC <= a2)
+    if (entity_val <= param_2)
         result = 0;
     else
     {
-        int32_t tmpD = *(result_1 + 0x10);
+        int32_t temp_val = *(result_1 + 0x10);
 
-        if (tmpD <= a3)
+        if (temp_val <= param_3)
             result = 0;
         else
         {
-            result = a4;
+            result = param_4;
 
-            if (objC >= a2 + result || tmpD >= a3 + a5)
+            if (entity_val >= param_2 + result || temp_val >= param_3 + param_5)
                 result = 0;
             else
                 result = 1;
         }
     }
 
-    char tmpD1 = *result_1;
-    a1 = result;
-    char objC2;
+    char temp_1 = *result_1;
+    context = result;
+    char entity_2;
 
-    if ((!tmpD1 || !*(ctxB + 0x4a)) && (!result_1[1] || !result))
-        objC2 = 0;
+    if ((!temp_1 || !*(context_val + 0x4a)) && (!result_1[1] || !result))
+        entity_2 = 0;
     else
-        objC2 = 1;
+        entity_2 = 1;
 
-    if (!*(ctxB + 0x4a) || !result_1[2] || !result)
+    if (!*(context_val + 0x4a) || !result_1[2] || !result)
         result = 0;
     else
         result = 1;
 
-    if (!tmpD1)
+    if (!temp_1)
     {
-        if (!a1)
-            tmpD1 = 0;
+        if (!context)
+            temp_1 = 0;
         else
-            tmpD1 = 1;
+            temp_1 = 1;
     }
-    else if (!objC2 || !a1)
-        tmpD1 = 0;
+    else if (!entity_2 || !context)
+        temp_1 = 0;
     else
-        tmpD1 = 1;
+        temp_1 = 1;
 
-    *(ctxB + 0x4a) = objC2;
-    char objC3;
+    *(context_val + 0x4a) = entity_2;
+    char entity_3;
 
-    if (*(ctxB + 0x49) || result_1[3])
-        objC3 = 1;
+    if (*(context_val + 0x49) || result_1[3])
+        entity_3 = 1;
     else
-        objC3 = 0;
+        entity_3 = 0;
 
-    *(ctxB + 0x48) = objC3;
-    *(ctxB + 0x49) = tmpD1;
-    *(ctxB + 0x4b) = result;
+    *(context_val + 0x48) = entity_3;
+    *(context_val + 0x49) = temp_1;
+    *(context_val + 0x4b) = result;
 
-    if (a6)
-        *a6 = *(result_1 + 0xc);
+    if (param_6)
+        *param_6 = *(result_1 + 0xc);
 
-    if (a7)
+    if (param_7)
     {
         result = *(result_1 + 0x10);
-        *a7 = result;
+        *param_7 = result;
     }
 
     return result;

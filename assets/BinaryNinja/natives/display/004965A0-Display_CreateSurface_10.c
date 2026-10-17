@@ -1,34 +1,34 @@
 // Original IGI.EXE function: Display_CreateSurface_10 (VA 0x004965A0; static CFG gate PASS, CFG score 1.000).
 #include "Display_CreateSurface_10.h"
-int32_t* Display_CreateSurface_10(int32_t* a1)
+int32_t* Display_CreateSurface_10(int32_t* context)
 
 {
-    void v_20;
-    Display_SoundInvalidFilename(&v_20, a1);
-    int32_t* result = Display_CheckCapabilities_10(0x5ca1b8, Display_CheckCapabilities_12(&v_20), Display_RestoreDevice_12(&v_20));
+    void item_20;
+    Display_SoundInvalidFilename(&item_20, context);
+    int32_t* result = Display_CheckCapabilities_10(0x5ca1b8, Display_CheckCapabilities_12(&item_20), Display_RestoreDevice_12(&item_20));
 
     if (result)
     {
-        int32_t v_30_1 = 0x5ca1b8;
+        int32_t item_30_1 = 0x5ca1b8;
         Display_OpenDevice_11(result);
-        int32_t* valA2 = result[9];
+        int32_t* data_2 = result[9];
 
-        if (valA2)
-            (*(*valA2 + 8))(valA2);
+        if (data_2)
+            (*(*data_2 + 8))(data_2);
 
-        void* valA3 = result[0xa];
+        void* data_3 = result[0xa];
 
-        if (valA3)
+        if (data_3)
         {
-            Sys_ExecuteBytecode_2(valA3);
+            Sys_ExecuteBytecode_2(data_3);
             result[0xa] = 0;
         }
 
         Sys_ExecuteBytecode_2(result);
-        result = Sys_CheckHeap_16(a1);
+        result = Sys_CheckHeap_16(context);
 
         if (result)
-            return Resource_Unload(a1);
+            return Resource_Unload(context);
     }
 
     return result;

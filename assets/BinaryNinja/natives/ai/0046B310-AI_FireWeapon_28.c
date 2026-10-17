@@ -4,13 +4,13 @@ int32_t AI_FireWeapon_28()
 
 {
     int32_t i_1 = 0x13;
-    int32_t* dstD = &g_5be098;
+    int32_t* dest_val = &g_5be098;
     int32_t i;
 
     do
     {
-        Sys_ReadFileBlock_17(dstD);
-        dstD = &dstD[6];
+        Sys_ReadFileBlock_17(dest_val);
+        dest_val = &dest_val[6];
         i = i_1;
         i_1 -= 1;
     } while (i != 1);

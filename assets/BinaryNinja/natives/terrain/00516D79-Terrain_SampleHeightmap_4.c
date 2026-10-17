@@ -1,104 +1,104 @@
 // Original IGI.EXE function: Terrain_SampleHeightmap_4 (VA 0x00516D79; static CFG gate PASS, CFG score 1.000).
 #include "Terrain_SampleHeightmap_4.h"
-uint32_t Terrain_SampleHeightmap_4(char* a1, int32_t a2, uint32_t a3, int32_t* a4)
+uint32_t Terrain_SampleHeightmap_4(char* context, int32_t param_2, uint32_t param_3, int32_t* param_4)
 
 {
-    int32_t objC;
-    int32_t v_8 = objC;
-    uint32_t dstD1 = a2 * a3;
-    uint32_t v_8_1 = dstD1;
-    uint32_t ctxB = dstD1;
+    int32_t entity_val;
+    int32_t item_8 = entity_val;
+    uint32_t dest_1 = param_2 * param_3;
+    uint32_t item_8_1 = dest_1;
+    uint32_t context_val = dest_1;
 
-    if (!dstD1)
+    if (!dest_1)
         return 0;
 
-    int32_t* srcS1 = a4;
+    int32_t* source_1 = param_4;
 
-    if (!(srcS1[3] & 0x10c))
-        a4 = 0x1000;
+    if (!(source_1[3] & 0x10c))
+        param_4 = 0x1000;
     else
-        a4 = srcS1[6];
+        param_4 = source_1[6];
 
-    uint32_t valA12;
+    uint32_t data_12;
 
     while (true)
     {
-        int32_t objC2 = srcS1[3] & 0x108;
-        uint32_t valA3;
+        int32_t entity_2 = source_1[3] & 0x108;
+        uint32_t data_3;
 
-        if (objC2)
-            valA3 = srcS1[1];
+        if (entity_2)
+            data_3 = source_1[1];
 
-        if (objC2 && valA3)
+        if (entity_2 && data_3)
         {
-            uint32_t dstD2 = ctxB;
+            uint32_t dest_2 = context_val;
 
-            if (ctxB >= valA3)
-                dstD2 = valA3;
+            if (context_val >= data_3)
+                dest_2 = data_3;
 
-            Camera_ResetMatrix_20(*srcS1, a1, dstD2);
-            srcS1[1] -= dstD2;
-            *srcS1 += dstD2;
-            ctxB -= dstD2;
-            a1 = &a1[dstD2];
-            dstD1 = v_8_1;
+            Camera_ResetMatrix_20(*source_1, context, dest_2);
+            source_1[1] -= dest_2;
+            *source_1 += dest_2;
+            context_val -= dest_2;
+            context = &context[dest_2];
+            dest_1 = item_8_1;
         }
-        else if (ctxB < a4)
+        else if (context_val < param_4)
         {
-            int32_t v_1c_3 = *a1;
+            int32_t item_1c_3 = *context;
 
-            if (Camera_ApplyHandiCam_11(srcS1) == 0xffffffff)
+            if (Camera_ApplyHandiCam_11(source_1) == 0xffffffff)
             {
-                valA12 = dstD1;
+                data_12 = dest_1;
                 break;
             }
 
-            a1 = &a1[1];
-            int32_t* valA11 = srcS1[6];
-            ctxB -= 1;
-            a4 = valA11;
+            context = &context[1];
+            int32_t* data_11 = source_1[6];
+            context_val -= 1;
+            param_4 = data_11;
 
-            if (valA11 <= 0)
-                a4 = 1;
+            if (data_11 <= 0)
+                param_4 = 1;
         }
         else
         {
-            bool cond_3_1;
+            bool flag_3_1;
 
-            if (objC2)
-                cond_3_1 = Camera_ApplyHandiCam_9(srcS1);
+            if (entity_2)
+                flag_3_1 = Camera_ApplyHandiCam_9(source_1);
 
-            if (objC2 && cond_3_1)
+            if (entity_2 && flag_3_1)
             {
-                valA12 = dstD1;
+                data_12 = dest_1;
                 break;
             }
 
-            uint32_t dstD4;
+            uint32_t dest_4;
 
-            dstD4 = !a4 ? ctxB : ctxB - COMBINE(0, ctxB) % a4;
+            dest_4 = !param_4 ? context_val : context_val - COMBINE(0, context_val) % param_4;
 
-            int32_t valA7 = Camera_ApplyHandiCam_23(srcS1[4], a1, dstD4);
+            int32_t data_7 = Camera_ApplyHandiCam_23(source_1[4], context, dest_4);
 
-            if (valA7 != 0xffffffff)
+            if (data_7 != 0xffffffff)
             {
-                a1 = &a1[valA7];
-                ctxB -= valA7;
+                context = &context[data_7];
+                context_val -= data_7;
             }
 
-            if (valA7 == 0xffffffff || valA7 < dstD4)
+            if (data_7 == 0xffffffff || data_7 < dest_4)
             {
-                srcS1[3] |= 0x20;
-                valA12 = v_8_1;
+                source_1[3] |= 0x20;
+                data_12 = item_8_1;
                 break;
             }
 
-            dstD1 = v_8_1;
+            dest_1 = item_8_1;
         }
 
-        if (!ctxB)
-            return a3;
+        if (!context_val)
+            return param_3;
     }
 
-    return COMBINE(0, valA12 - ctxB) / a2;
+    return COMBINE(0, data_12 - context_val) / param_2;
 }

@@ -1,55 +1,55 @@
 // Original IGI.EXE function: Sys_OpenFileStream_24 (VA 0x004B9040; static CFG gate PASS, CFG score 1.000).
 #include "Sys_OpenFileStream_24.h"
-int32_t Sys_OpenFileStream_24(long double a1 @ fp2, char* a2, void* a3)
+int32_t Sys_OpenFileStream_24(long double context , char* param_2, void* param_3)
 
 {
-    int32_t valA = *(a3 + 4);
-    int32_t valA3;
+    int32_t data_val = *(param_3 + 4);
+    int32_t data_3;
 
-    if (valA == 1)
+    if (data_val == 1)
     {
-        int32_t valA11 = *(a3 + 0xc);
+        int32_t data_11 = *(param_3 + 0xc);
 
-        if (valA11 != 1)
+        if (data_11 != 1)
         {
-            if (valA11 == 2)
+            if (data_11 == 2)
             {
-                int32_t valA15 = Sys_ReadFileBlock_24(a2);
-                **(a3 + 0x18) = valA15;
-                return valA15;
+                int32_t data_15 = Sys_ReadFileBlock_24(param_2);
+                **(param_3 + 0x18) = data_15;
+                return data_15;
             }
 
-            int32_t valA14 = Sys_ReadFileBlock_24(a2);
-            **(a3 + 0x18) = valA14;
-            return valA14;
+            int32_t data_14 = Sys_ReadFileBlock_24(param_2);
+            **(param_3 + 0x18) = data_14;
+            return data_14;
         }
 
-        valA3 = Sys_ReadFileBlock_24(a2);
-        **(a3 + 0x18) = valA3;
+        data_3 = Sys_ReadFileBlock_24(param_2);
+        **(param_3 + 0x18) = data_3;
     }
     else
     {
-        if (valA == 2)
+        if (data_val == 2)
         {
             long double fpu0;
             long double fpu1;
-            int32_t valA10 = Sys_DispatchOpcode_24(fpu0, fpu1, a2);
-            **(a3 + 0x18) = a1;
-            return valA10;
+            int32_t data_10 = Sys_DispatchOpcode_24(fpu0, fpu1, param_2);
+            **(param_3 + 0x18) = context;
+            return data_10;
         }
 
-        valA3 = valA - 3;
+        data_3 = data_val - 3;
 
-        if (valA == 3)
+        if (data_val == 3)
         {
-            int32_t valA5 = *(a3 + 0xc) - 1;
-            void v_800;
-            char* valA6 = Sys_SyntaxErrorInStringE(a2, &v_800, 0x800);
-            char* valA8 = Camera_ApplyLineFilter_5(*(a3 + 0x18), valA6, valA5);
-            *(*(a3 + 0x18) + *(a3 + 0xc) - 1) = 0;
-            return valA8;
+            int32_t data_5 = *(param_3 + 0xc) - 1;
+            void item_800;
+            char* data_6 = Sys_SyntaxErrorInStringE(param_2, &item_800, 0x800);
+            char* data_8 = Camera_ApplyLineFilter_5(*(param_3 + 0x18), data_6, data_5);
+            *(*(param_3 + 0x18) + *(param_3 + 0xc) - 1) = 0;
+            return data_8;
         }
     }
 
-    return valA3;
+    return data_3;
 }

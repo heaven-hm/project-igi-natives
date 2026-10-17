@@ -1,45 +1,45 @@
 // Original IGI.EXE function: Script_FormatString_14 (VA 0x004F3EF0; static CFG gate PASS, CFG score 0.889).
 #include "Script_FormatString_14.h"
-void* const Script_FormatString_14(int32_t a1, int32_t a2)
+void* const Script_FormatString_14(int32_t context, int32_t param_2)
 
 {
-    void* const valA1;
+    void* const data_1;
 
-    if (a2)
-        valA1 = *(a1 + 0x20154);
+    if (param_2)
+        data_1 = *(context + 0x20154);
 
-    if (!a2 || a2 < valA1)
+    if (!param_2 || param_2 < data_1)
     {
-        valA1 = nullptr;
-        __builtin_memset(a1 + 0x6c, 0, 0x88);
-        *(a1 + 0x20154) = 0;
+        data_1 = nullptr;
+        memset(context + 0x6c, 0, 0x88);
+        *(context + 0x20154) = 0;
 
-        if (a2 >= 0)
+        if (param_2 >= 0)
         {
-            int32_t i_1 = a2 + 1;
+            int32_t i_1 = param_2 + 1;
             int32_t i;
 
             do
             {
-                valA1 = Script_SpawnNewTask_15(a1);
+                data_1 = Script_SpawnNewTask_15(context);
                 i = i_1;
                 i_1 -= 1;
             } while (i != 1);
         }
     }
-    else if (a2 > valA1)
+    else if (param_2 > data_1)
     {
-        int32_t objC2;
+        int32_t entity_2;
 
         do
         {
-            Script_SpawnNewTask_15(a1);
-            objC2 = *(a1 + 0x20154) + 1;
-            *(a1 + 0x20154) = objC2;
-        } while (a2 > objC2);
+            Script_SpawnNewTask_15(context);
+            entity_2 = *(context + 0x20154) + 1;
+            *(context + 0x20154) = entity_2;
+        } while (param_2 > entity_2);
 
-        return objC2;
+        return entity_2;
     }
 
-    return valA1;
+    return data_1;
 }

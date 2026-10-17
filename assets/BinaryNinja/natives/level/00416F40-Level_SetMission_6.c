@@ -6,10 +6,10 @@ int32_t* Level_SetMission_6()
     if (StatusScreen_Get())
         StatusList_Clear(*(StatusScreen_Get() + 0x4e4));
 
-    void* valA2 = **(g_57babc + 0x54);
+    void* data_2 = **(g_57babc + 0x54);
 
-    if (valA2)
-        QTask_CleanupTypes(valA2);
+    if (data_2)
+        QTask_CleanupTypes(data_2);
 
     int32_t* result;
 

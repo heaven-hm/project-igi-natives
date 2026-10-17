@@ -1,10 +1,10 @@
 // Original IGI.EXE function: Sys_DispatchOpcode_11 (VA 0x004B32B0; static CFG gate PASS, CFG score 1.000).
 #include "Sys_DispatchOpcode_11.h"
-long double Sys_DispatchOpcode_11(double* a1, double* a2)
+long double Sys_DispatchOpcode_11(double* context, double* param_2)
 
 {
-    long double x87_r7_1 = *a1 - *a2;
-    long double x87_r6_1 = a1[1] - a2[1];
-    long double x87_r5_1 = a1[2] - a2[2];
-    return sqrtl(x87_r5_1 * x87_r5_1 + x87_r6_1 * x87_r6_1 + x87_r7_1 * x87_r7_1);
+    long double fpu_val_7_1 = *context - *param_2;
+    long double fpu_val_6_1 = context[1] - param_2[1];
+    long double fpu_val_5_1 = context[2] - param_2[2];
+    return sqrtl(fpu_val_5_1 * fpu_val_5_1 + fpu_val_6_1 * fpu_val_6_1 + fpu_val_7_1 * fpu_val_7_1);
 }

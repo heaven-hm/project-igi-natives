@@ -18,9 +18,9 @@ int32_t SoundSysController_SetParent(int32_t pThis, int32_t param)
     }
 
     int32_t result = ~i;
-    int32_t esi_1;
-    int32_t edi_2;
-    edi_2 = __builtin_memcpy(pThis + 0x20, param_1 - result, result & 0xfffffffc);
-    __builtin_memcpy(edi_2, esi_1, result & 3);
+    int32_t source_ptr_1;
+    int32_t dest_ptr_2;
+    dest_ptr_2 = memcpy(pThis + 0x20, param_1 - result, result & 0xfffffffc);
+    memcpy(dest_ptr_2, source_ptr_1, result & 3);
     return result;
 }
