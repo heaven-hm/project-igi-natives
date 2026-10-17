@@ -121,6 +121,7 @@ void FallLanding(void *human_player)
         if (!isnan(landing_damage) && landing_damage != 0.0f)
         {
             const float maximum_health = *(float *)(player_state + 0x258);
+            // Retail event strings: 0x00538D5C, 0x00538D4C, and 0x00538D3C.
             const char *fall_sound_name = "player_fall_1";
 
             if (landing_damage >= maximum_health * g_5333c8)
